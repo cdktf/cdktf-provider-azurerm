@@ -53,8 +53,11 @@ export interface SqlVirtualNetworkRuleTimeouts {
   readonly update?: string;
 }
 
-function sqlVirtualNetworkRuleTimeoutsToTerraform(struct?: SqlVirtualNetworkRuleTimeouts): any {
+function sqlVirtualNetworkRuleTimeoutsToTerraform(struct?: SqlVirtualNetworkRuleTimeoutsOutputReference | SqlVirtualNetworkRuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -63,6 +66,80 @@ function sqlVirtualNetworkRuleTimeoutsToTerraform(struct?: SqlVirtualNetworkRule
   }
 }
 
+export class SqlVirtualNetworkRuleTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sql_virtual_network_rule.html azurerm_sql_virtual_network_rule}
@@ -114,11 +191,11 @@ export class SqlVirtualNetworkRule extends cdktf.TerraformResource {
   }
 
   // ignore_missing_vnet_service_endpoint - computed: false, optional: true, required: false
-  private _ignoreMissingVnetServiceEndpoint?: boolean | cdktf.IResolvable;
+  private _ignoreMissingVnetServiceEndpoint?: boolean | cdktf.IResolvable | undefined; 
   public get ignoreMissingVnetServiceEndpoint() {
-    return this.getBooleanAttribute('ignore_missing_vnet_service_endpoint');
+    return this.getBooleanAttribute('ignore_missing_vnet_service_endpoint') as any;
   }
-  public set ignoreMissingVnetServiceEndpoint(value: boolean | cdktf.IResolvable ) {
+  public set ignoreMissingVnetServiceEndpoint(value: boolean | cdktf.IResolvable | undefined) {
     this._ignoreMissingVnetServiceEndpoint = value;
   }
   public resetIgnoreMissingVnetServiceEndpoint() {
@@ -130,7 +207,7 @@ export class SqlVirtualNetworkRule extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -143,7 +220,7 @@ export class SqlVirtualNetworkRule extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -156,7 +233,7 @@ export class SqlVirtualNetworkRule extends cdktf.TerraformResource {
   }
 
   // server_name - computed: false, optional: false, required: true
-  private _serverName: string;
+  private _serverName?: string; 
   public get serverName() {
     return this.getStringAttribute('server_name');
   }
@@ -169,7 +246,7 @@ export class SqlVirtualNetworkRule extends cdktf.TerraformResource {
   }
 
   // subnet_id - computed: false, optional: false, required: true
-  private _subnetId: string;
+  private _subnetId?: string; 
   public get subnetId() {
     return this.getStringAttribute('subnet_id');
   }
@@ -182,11 +259,12 @@ export class SqlVirtualNetworkRule extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SqlVirtualNetworkRuleTimeouts;
+  private _timeouts?: SqlVirtualNetworkRuleTimeouts | undefined; 
+  private __timeoutsOutput = new SqlVirtualNetworkRuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SqlVirtualNetworkRuleTimeouts ) {
+  public putTimeouts(value: SqlVirtualNetworkRuleTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

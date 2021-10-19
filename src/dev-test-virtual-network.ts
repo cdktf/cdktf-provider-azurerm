@@ -32,7 +32,7 @@ export interface DevTestVirtualNetworkConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network.html#subnet DevTestVirtualNetwork#subnet}
   */
-  readonly subnet?: DevTestVirtualNetworkSubnet[];
+  readonly subnet?: DevTestVirtualNetworkSubnet;
   /**
   * timeouts block
   * 
@@ -51,14 +51,59 @@ export interface DevTestVirtualNetworkSubnet {
   readonly usePublicIpAddress?: string;
 }
 
-function devTestVirtualNetworkSubnetToTerraform(struct?: DevTestVirtualNetworkSubnet): any {
+function devTestVirtualNetworkSubnetToTerraform(struct?: DevTestVirtualNetworkSubnetOutputReference | DevTestVirtualNetworkSubnet): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     use_in_virtual_machine_creation: cdktf.stringToTerraform(struct!.useInVirtualMachineCreation),
     use_public_ip_address: cdktf.stringToTerraform(struct!.usePublicIpAddress),
   }
 }
 
+export class DevTestVirtualNetworkSubnetOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // use_in_virtual_machine_creation - computed: false, optional: true, required: false
+  private _useInVirtualMachineCreation?: string | undefined; 
+  public get useInVirtualMachineCreation() {
+    return this.getStringAttribute('use_in_virtual_machine_creation');
+  }
+  public set useInVirtualMachineCreation(value: string | undefined) {
+    this._useInVirtualMachineCreation = value;
+  }
+  public resetUseInVirtualMachineCreation() {
+    this._useInVirtualMachineCreation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useInVirtualMachineCreationInput() {
+    return this._useInVirtualMachineCreation
+  }
+
+  // use_public_ip_address - computed: false, optional: true, required: false
+  private _usePublicIpAddress?: string | undefined; 
+  public get usePublicIpAddress() {
+    return this.getStringAttribute('use_public_ip_address');
+  }
+  public set usePublicIpAddress(value: string | undefined) {
+    this._usePublicIpAddress = value;
+  }
+  public resetUsePublicIpAddress() {
+    this._usePublicIpAddress = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usePublicIpAddressInput() {
+    return this._usePublicIpAddress
+  }
+}
 export interface DevTestVirtualNetworkTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network.html#create DevTestVirtualNetwork#create}
@@ -78,8 +123,11 @@ export interface DevTestVirtualNetworkTimeouts {
   readonly update?: string;
 }
 
-function devTestVirtualNetworkTimeoutsToTerraform(struct?: DevTestVirtualNetworkTimeouts): any {
+function devTestVirtualNetworkTimeoutsToTerraform(struct?: DevTestVirtualNetworkTimeoutsOutputReference | DevTestVirtualNetworkTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -88,6 +136,80 @@ function devTestVirtualNetworkTimeoutsToTerraform(struct?: DevTestVirtualNetwork
   }
 }
 
+export class DevTestVirtualNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dev_test_virtual_network.html azurerm_dev_test_virtual_network}
@@ -135,11 +257,11 @@ export class DevTestVirtualNetwork extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -156,7 +278,7 @@ export class DevTestVirtualNetwork extends cdktf.TerraformResource {
   }
 
   // lab_name - computed: false, optional: false, required: true
-  private _labName: string;
+  private _labName?: string; 
   public get labName() {
     return this.getStringAttribute('lab_name');
   }
@@ -169,7 +291,7 @@ export class DevTestVirtualNetwork extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -182,7 +304,7 @@ export class DevTestVirtualNetwork extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -195,11 +317,12 @@ export class DevTestVirtualNetwork extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -216,11 +339,12 @@ export class DevTestVirtualNetwork extends cdktf.TerraformResource {
   }
 
   // subnet - computed: false, optional: true, required: false
-  private _subnet?: DevTestVirtualNetworkSubnet[];
+  private _subnet?: DevTestVirtualNetworkSubnet | undefined; 
+  private __subnetOutput = new DevTestVirtualNetworkSubnetOutputReference(this as any, "subnet", true);
   public get subnet() {
-    return this.interpolationForAttribute('subnet') as any;
+    return this.__subnetOutput;
   }
-  public set subnet(value: DevTestVirtualNetworkSubnet[] ) {
+  public putSubnet(value: DevTestVirtualNetworkSubnet | undefined) {
     this._subnet = value;
   }
   public resetSubnet() {
@@ -232,11 +356,12 @@ export class DevTestVirtualNetwork extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DevTestVirtualNetworkTimeouts;
+  private _timeouts?: DevTestVirtualNetworkTimeouts | undefined; 
+  private __timeoutsOutput = new DevTestVirtualNetworkTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DevTestVirtualNetworkTimeouts ) {
+  public putTimeouts(value: DevTestVirtualNetworkTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -258,7 +383,7 @@ export class DevTestVirtualNetwork extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      subnet: cdktf.listMapper(devTestVirtualNetworkSubnetToTerraform)(this._subnet),
+      subnet: devTestVirtualNetworkSubnetToTerraform(this._subnet),
       timeouts: devTestVirtualNetworkTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -41,8 +41,11 @@ export interface SentinelDataConnectorAzureSecurityCenterTimeouts {
   readonly read?: string;
 }
 
-function sentinelDataConnectorAzureSecurityCenterTimeoutsToTerraform(struct?: SentinelDataConnectorAzureSecurityCenterTimeouts): any {
+function sentinelDataConnectorAzureSecurityCenterTimeoutsToTerraform(struct?: SentinelDataConnectorAzureSecurityCenterTimeoutsOutputReference | SentinelDataConnectorAzureSecurityCenterTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -50,6 +53,64 @@ function sentinelDataConnectorAzureSecurityCenterTimeoutsToTerraform(struct?: Se
   }
 }
 
+export class SentinelDataConnectorAzureSecurityCenterTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_azure_security_center.html azurerm_sentinel_data_connector_azure_security_center}
@@ -99,7 +160,7 @@ export class SentinelDataConnectorAzureSecurityCenter extends cdktf.TerraformRes
   }
 
   // log_analytics_workspace_id - computed: false, optional: false, required: true
-  private _logAnalyticsWorkspaceId: string;
+  private _logAnalyticsWorkspaceId?: string; 
   public get logAnalyticsWorkspaceId() {
     return this.getStringAttribute('log_analytics_workspace_id');
   }
@@ -112,7 +173,7 @@ export class SentinelDataConnectorAzureSecurityCenter extends cdktf.TerraformRes
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -125,11 +186,11 @@ export class SentinelDataConnectorAzureSecurityCenter extends cdktf.TerraformRes
   }
 
   // subscription_id - computed: true, optional: true, required: false
-  private _subscriptionId?: string;
+  private _subscriptionId?: string | undefined; 
   public get subscriptionId() {
     return this.getStringAttribute('subscription_id');
   }
-  public set subscriptionId(value: string) {
+  public set subscriptionId(value: string | undefined) {
     this._subscriptionId = value;
   }
   public resetSubscriptionId() {
@@ -141,11 +202,12 @@ export class SentinelDataConnectorAzureSecurityCenter extends cdktf.TerraformRes
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SentinelDataConnectorAzureSecurityCenterTimeouts;
+  private _timeouts?: SentinelDataConnectorAzureSecurityCenterTimeouts | undefined; 
+  private __timeoutsOutput = new SentinelDataConnectorAzureSecurityCenterTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SentinelDataConnectorAzureSecurityCenterTimeouts ) {
+  public putTimeouts(value: SentinelDataConnectorAzureSecurityCenterTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

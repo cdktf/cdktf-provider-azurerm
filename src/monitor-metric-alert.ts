@@ -70,7 +70,7 @@ export interface MonitorMetricAlertConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#application_insights_web_test_location_availability_criteria MonitorMetricAlert#application_insights_web_test_location_availability_criteria}
   */
-  readonly applicationInsightsWebTestLocationAvailabilityCriteria?: MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria[];
+  readonly applicationInsightsWebTestLocationAvailabilityCriteria?: MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria;
   /**
   * criteria block
   * 
@@ -82,7 +82,7 @@ export interface MonitorMetricAlertConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#dynamic_criteria MonitorMetricAlert#dynamic_criteria}
   */
-  readonly dynamicCriteria?: MonitorMetricAlertDynamicCriteria[];
+  readonly dynamicCriteria?: MonitorMetricAlertDynamicCriteria;
   /**
   * timeouts block
   * 
@@ -103,6 +103,9 @@ export interface MonitorMetricAlertAction {
 
 function monitorMetricAlertActionToTerraform(struct?: MonitorMetricAlertAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     action_group_id: cdktf.stringToTerraform(struct!.actionGroupId),
     webhook_properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.webhookProperties),
@@ -124,8 +127,11 @@ export interface MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilit
   readonly webTestId: string;
 }
 
-function monitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaToTerraform(struct?: MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria): any {
+function monitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaToTerraform(struct?: MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaOutputReference | MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     component_id: cdktf.stringToTerraform(struct!.componentId),
     failed_location_count: cdktf.numberToTerraform(struct!.failedLocationCount),
@@ -133,6 +139,55 @@ function monitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteri
   }
 }
 
+export class MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // component_id - computed: false, optional: false, required: true
+  private _componentId?: string; 
+  public get componentId() {
+    return this.getStringAttribute('component_id');
+  }
+  public set componentId(value: string) {
+    this._componentId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get componentIdInput() {
+    return this._componentId
+  }
+
+  // failed_location_count - computed: false, optional: false, required: true
+  private _failedLocationCount?: number; 
+  public get failedLocationCount() {
+    return this.getNumberAttribute('failed_location_count');
+  }
+  public set failedLocationCount(value: number) {
+    this._failedLocationCount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failedLocationCountInput() {
+    return this._failedLocationCount
+  }
+
+  // web_test_id - computed: false, optional: false, required: true
+  private _webTestId?: string; 
+  public get webTestId() {
+    return this.getStringAttribute('web_test_id');
+  }
+  public set webTestId(value: string) {
+    this._webTestId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get webTestIdInput() {
+    return this._webTestId
+  }
+}
 export interface MonitorMetricAlertCriteriaDimension {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#name MonitorMetricAlert#name}
@@ -150,6 +205,9 @@ export interface MonitorMetricAlertCriteriaDimension {
 
 function monitorMetricAlertCriteriaDimensionToTerraform(struct?: MonitorMetricAlertCriteriaDimension): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     operator: cdktf.stringToTerraform(struct!.operator),
@@ -192,6 +250,9 @@ export interface MonitorMetricAlertCriteria {
 
 function monitorMetricAlertCriteriaToTerraform(struct?: MonitorMetricAlertCriteria): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     aggregation: cdktf.stringToTerraform(struct!.aggregation),
     metric_name: cdktf.stringToTerraform(struct!.metricName),
@@ -220,6 +281,9 @@ export interface MonitorMetricAlertDynamicCriteriaDimension {
 
 function monitorMetricAlertDynamicCriteriaDimensionToTerraform(struct?: MonitorMetricAlertDynamicCriteriaDimension): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     operator: cdktf.stringToTerraform(struct!.operator),
@@ -272,8 +336,11 @@ export interface MonitorMetricAlertDynamicCriteria {
   readonly dimension?: MonitorMetricAlertDynamicCriteriaDimension[];
 }
 
-function monitorMetricAlertDynamicCriteriaToTerraform(struct?: MonitorMetricAlertDynamicCriteria): any {
+function monitorMetricAlertDynamicCriteriaToTerraform(struct?: MonitorMetricAlertDynamicCriteriaOutputReference | MonitorMetricAlertDynamicCriteria): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     aggregation: cdktf.stringToTerraform(struct!.aggregation),
     alert_sensitivity: cdktf.stringToTerraform(struct!.alertSensitivity),
@@ -288,6 +355,162 @@ function monitorMetricAlertDynamicCriteriaToTerraform(struct?: MonitorMetricAler
   }
 }
 
+export class MonitorMetricAlertDynamicCriteriaOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // aggregation - computed: false, optional: false, required: true
+  private _aggregation?: string; 
+  public get aggregation() {
+    return this.getStringAttribute('aggregation');
+  }
+  public set aggregation(value: string) {
+    this._aggregation = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aggregationInput() {
+    return this._aggregation
+  }
+
+  // alert_sensitivity - computed: false, optional: false, required: true
+  private _alertSensitivity?: string; 
+  public get alertSensitivity() {
+    return this.getStringAttribute('alert_sensitivity');
+  }
+  public set alertSensitivity(value: string) {
+    this._alertSensitivity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get alertSensitivityInput() {
+    return this._alertSensitivity
+  }
+
+  // evaluation_failure_count - computed: false, optional: true, required: false
+  private _evaluationFailureCount?: number | undefined; 
+  public get evaluationFailureCount() {
+    return this.getNumberAttribute('evaluation_failure_count');
+  }
+  public set evaluationFailureCount(value: number | undefined) {
+    this._evaluationFailureCount = value;
+  }
+  public resetEvaluationFailureCount() {
+    this._evaluationFailureCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get evaluationFailureCountInput() {
+    return this._evaluationFailureCount
+  }
+
+  // evaluation_total_count - computed: false, optional: true, required: false
+  private _evaluationTotalCount?: number | undefined; 
+  public get evaluationTotalCount() {
+    return this.getNumberAttribute('evaluation_total_count');
+  }
+  public set evaluationTotalCount(value: number | undefined) {
+    this._evaluationTotalCount = value;
+  }
+  public resetEvaluationTotalCount() {
+    this._evaluationTotalCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get evaluationTotalCountInput() {
+    return this._evaluationTotalCount
+  }
+
+  // ignore_data_before - computed: false, optional: true, required: false
+  private _ignoreDataBefore?: string | undefined; 
+  public get ignoreDataBefore() {
+    return this.getStringAttribute('ignore_data_before');
+  }
+  public set ignoreDataBefore(value: string | undefined) {
+    this._ignoreDataBefore = value;
+  }
+  public resetIgnoreDataBefore() {
+    this._ignoreDataBefore = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ignoreDataBeforeInput() {
+    return this._ignoreDataBefore
+  }
+
+  // metric_name - computed: false, optional: false, required: true
+  private _metricName?: string; 
+  public get metricName() {
+    return this.getStringAttribute('metric_name');
+  }
+  public set metricName(value: string) {
+    this._metricName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metricNameInput() {
+    return this._metricName
+  }
+
+  // metric_namespace - computed: false, optional: false, required: true
+  private _metricNamespace?: string; 
+  public get metricNamespace() {
+    return this.getStringAttribute('metric_namespace');
+  }
+  public set metricNamespace(value: string) {
+    this._metricNamespace = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metricNamespaceInput() {
+    return this._metricNamespace
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator
+  }
+
+  // skip_metric_validation - computed: false, optional: true, required: false
+  private _skipMetricValidation?: boolean | cdktf.IResolvable | undefined; 
+  public get skipMetricValidation() {
+    return this.getBooleanAttribute('skip_metric_validation') as any;
+  }
+  public set skipMetricValidation(value: boolean | cdktf.IResolvable | undefined) {
+    this._skipMetricValidation = value;
+  }
+  public resetSkipMetricValidation() {
+    this._skipMetricValidation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skipMetricValidationInput() {
+    return this._skipMetricValidation
+  }
+
+  // dimension - computed: false, optional: true, required: false
+  private _dimension?: MonitorMetricAlertDynamicCriteriaDimension[] | undefined; 
+  public get dimension() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('dimension') as any;
+  }
+  public set dimension(value: MonitorMetricAlertDynamicCriteriaDimension[] | undefined) {
+    this._dimension = value;
+  }
+  public resetDimension() {
+    this._dimension = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dimensionInput() {
+    return this._dimension
+  }
+}
 export interface MonitorMetricAlertTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html#create MonitorMetricAlert#create}
@@ -307,8 +530,11 @@ export interface MonitorMetricAlertTimeouts {
   readonly update?: string;
 }
 
-function monitorMetricAlertTimeoutsToTerraform(struct?: MonitorMetricAlertTimeouts): any {
+function monitorMetricAlertTimeoutsToTerraform(struct?: MonitorMetricAlertTimeoutsOutputReference | MonitorMetricAlertTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -317,6 +543,80 @@ function monitorMetricAlertTimeoutsToTerraform(struct?: MonitorMetricAlertTimeou
   }
 }
 
+export class MonitorMetricAlertTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_metric_alert.html azurerm_monitor_metric_alert}
@@ -374,11 +674,11 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   // ==========
 
   // auto_mitigate - computed: false, optional: true, required: false
-  private _autoMitigate?: boolean | cdktf.IResolvable;
+  private _autoMitigate?: boolean | cdktf.IResolvable | undefined; 
   public get autoMitigate() {
-    return this.getBooleanAttribute('auto_mitigate');
+    return this.getBooleanAttribute('auto_mitigate') as any;
   }
-  public set autoMitigate(value: boolean | cdktf.IResolvable ) {
+  public set autoMitigate(value: boolean | cdktf.IResolvable | undefined) {
     this._autoMitigate = value;
   }
   public resetAutoMitigate() {
@@ -390,11 +690,11 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -406,11 +706,11 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable;
+  private _enabled?: boolean | cdktf.IResolvable | undefined; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable ) {
+  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -422,11 +722,11 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // frequency - computed: false, optional: true, required: false
-  private _frequency?: string;
+  private _frequency?: string | undefined; 
   public get frequency() {
     return this.getStringAttribute('frequency');
   }
-  public set frequency(value: string ) {
+  public set frequency(value: string | undefined) {
     this._frequency = value;
   }
   public resetFrequency() {
@@ -443,7 +743,7 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -456,7 +756,7 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -469,7 +769,7 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // scopes - computed: false, optional: false, required: true
-  private _scopes: string[];
+  private _scopes?: string[]; 
   public get scopes() {
     return this.getListAttribute('scopes');
   }
@@ -482,11 +782,11 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // severity - computed: false, optional: true, required: false
-  private _severity?: number;
+  private _severity?: number | undefined; 
   public get severity() {
     return this.getNumberAttribute('severity');
   }
-  public set severity(value: number ) {
+  public set severity(value: number | undefined) {
     this._severity = value;
   }
   public resetSeverity() {
@@ -498,11 +798,12 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -514,11 +815,11 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // target_resource_location - computed: true, optional: true, required: false
-  private _targetResourceLocation?: string;
+  private _targetResourceLocation?: string | undefined; 
   public get targetResourceLocation() {
     return this.getStringAttribute('target_resource_location');
   }
-  public set targetResourceLocation(value: string) {
+  public set targetResourceLocation(value: string | undefined) {
     this._targetResourceLocation = value;
   }
   public resetTargetResourceLocation() {
@@ -530,11 +831,11 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // target_resource_type - computed: true, optional: true, required: false
-  private _targetResourceType?: string;
+  private _targetResourceType?: string | undefined; 
   public get targetResourceType() {
     return this.getStringAttribute('target_resource_type');
   }
-  public set targetResourceType(value: string) {
+  public set targetResourceType(value: string | undefined) {
     this._targetResourceType = value;
   }
   public resetTargetResourceType() {
@@ -546,11 +847,11 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // window_size - computed: false, optional: true, required: false
-  private _windowSize?: string;
+  private _windowSize?: string | undefined; 
   public get windowSize() {
     return this.getStringAttribute('window_size');
   }
-  public set windowSize(value: string ) {
+  public set windowSize(value: string | undefined) {
     this._windowSize = value;
   }
   public resetWindowSize() {
@@ -562,11 +863,12 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // action - computed: false, optional: true, required: false
-  private _action?: MonitorMetricAlertAction[];
+  private _action?: MonitorMetricAlertAction[] | undefined; 
   public get action() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('action') as any;
   }
-  public set action(value: MonitorMetricAlertAction[] ) {
+  public set action(value: MonitorMetricAlertAction[] | undefined) {
     this._action = value;
   }
   public resetAction() {
@@ -578,11 +880,12 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // application_insights_web_test_location_availability_criteria - computed: false, optional: true, required: false
-  private _applicationInsightsWebTestLocationAvailabilityCriteria?: MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria[];
+  private _applicationInsightsWebTestLocationAvailabilityCriteria?: MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria | undefined; 
+  private __applicationInsightsWebTestLocationAvailabilityCriteriaOutput = new MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaOutputReference(this as any, "application_insights_web_test_location_availability_criteria", true);
   public get applicationInsightsWebTestLocationAvailabilityCriteria() {
-    return this.interpolationForAttribute('application_insights_web_test_location_availability_criteria') as any;
+    return this.__applicationInsightsWebTestLocationAvailabilityCriteriaOutput;
   }
-  public set applicationInsightsWebTestLocationAvailabilityCriteria(value: MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria[] ) {
+  public putApplicationInsightsWebTestLocationAvailabilityCriteria(value: MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria | undefined) {
     this._applicationInsightsWebTestLocationAvailabilityCriteria = value;
   }
   public resetApplicationInsightsWebTestLocationAvailabilityCriteria() {
@@ -594,11 +897,12 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // criteria - computed: false, optional: true, required: false
-  private _criteria?: MonitorMetricAlertCriteria[];
+  private _criteria?: MonitorMetricAlertCriteria[] | undefined; 
   public get criteria() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('criteria') as any;
   }
-  public set criteria(value: MonitorMetricAlertCriteria[] ) {
+  public set criteria(value: MonitorMetricAlertCriteria[] | undefined) {
     this._criteria = value;
   }
   public resetCriteria() {
@@ -610,11 +914,12 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // dynamic_criteria - computed: false, optional: true, required: false
-  private _dynamicCriteria?: MonitorMetricAlertDynamicCriteria[];
+  private _dynamicCriteria?: MonitorMetricAlertDynamicCriteria | undefined; 
+  private __dynamicCriteriaOutput = new MonitorMetricAlertDynamicCriteriaOutputReference(this as any, "dynamic_criteria", true);
   public get dynamicCriteria() {
-    return this.interpolationForAttribute('dynamic_criteria') as any;
+    return this.__dynamicCriteriaOutput;
   }
-  public set dynamicCriteria(value: MonitorMetricAlertDynamicCriteria[] ) {
+  public putDynamicCriteria(value: MonitorMetricAlertDynamicCriteria | undefined) {
     this._dynamicCriteria = value;
   }
   public resetDynamicCriteria() {
@@ -626,11 +931,12 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MonitorMetricAlertTimeouts;
+  private _timeouts?: MonitorMetricAlertTimeouts | undefined; 
+  private __timeoutsOutput = new MonitorMetricAlertTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: MonitorMetricAlertTimeouts ) {
+  public putTimeouts(value: MonitorMetricAlertTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -660,9 +966,9 @@ export class MonitorMetricAlert extends cdktf.TerraformResource {
       target_resource_type: cdktf.stringToTerraform(this._targetResourceType),
       window_size: cdktf.stringToTerraform(this._windowSize),
       action: cdktf.listMapper(monitorMetricAlertActionToTerraform)(this._action),
-      application_insights_web_test_location_availability_criteria: cdktf.listMapper(monitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaToTerraform)(this._applicationInsightsWebTestLocationAvailabilityCriteria),
+      application_insights_web_test_location_availability_criteria: monitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaToTerraform(this._applicationInsightsWebTestLocationAvailabilityCriteria),
       criteria: cdktf.listMapper(monitorMetricAlertCriteriaToTerraform)(this._criteria),
-      dynamic_criteria: cdktf.listMapper(monitorMetricAlertDynamicCriteriaToTerraform)(this._dynamicCriteria),
+      dynamic_criteria: monitorMetricAlertDynamicCriteriaToTerraform(this._dynamicCriteria),
       timeouts: monitorMetricAlertTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -46,7 +46,7 @@ export interface ImageConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#os_disk Image#os_disk}
   */
-  readonly osDisk?: ImageOsDisk[];
+  readonly osDisk?: ImageOsDisk;
   /**
   * timeouts block
   * 
@@ -79,6 +79,9 @@ export interface ImageDataDisk {
 
 function imageDataDiskToTerraform(struct?: ImageDataDisk): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     blob_uri: cdktf.stringToTerraform(struct!.blobUri),
     caching: cdktf.stringToTerraform(struct!.caching),
@@ -115,8 +118,11 @@ export interface ImageOsDisk {
   readonly sizeGb?: number;
 }
 
-function imageOsDiskToTerraform(struct?: ImageOsDisk): any {
+function imageOsDiskToTerraform(struct?: ImageOsDiskOutputReference | ImageOsDisk): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     blob_uri: cdktf.stringToTerraform(struct!.blobUri),
     caching: cdktf.stringToTerraform(struct!.caching),
@@ -127,6 +133,112 @@ function imageOsDiskToTerraform(struct?: ImageOsDisk): any {
   }
 }
 
+export class ImageOsDiskOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // blob_uri - computed: true, optional: true, required: false
+  private _blobUri?: string | undefined; 
+  public get blobUri() {
+    return this.getStringAttribute('blob_uri');
+  }
+  public set blobUri(value: string | undefined) {
+    this._blobUri = value;
+  }
+  public resetBlobUri() {
+    this._blobUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get blobUriInput() {
+    return this._blobUri
+  }
+
+  // caching - computed: false, optional: true, required: false
+  private _caching?: string | undefined; 
+  public get caching() {
+    return this.getStringAttribute('caching');
+  }
+  public set caching(value: string | undefined) {
+    this._caching = value;
+  }
+  public resetCaching() {
+    this._caching = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cachingInput() {
+    return this._caching
+  }
+
+  // managed_disk_id - computed: true, optional: true, required: false
+  private _managedDiskId?: string | undefined; 
+  public get managedDiskId() {
+    return this.getStringAttribute('managed_disk_id');
+  }
+  public set managedDiskId(value: string | undefined) {
+    this._managedDiskId = value;
+  }
+  public resetManagedDiskId() {
+    this._managedDiskId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedDiskIdInput() {
+    return this._managedDiskId
+  }
+
+  // os_state - computed: false, optional: true, required: false
+  private _osState?: string | undefined; 
+  public get osState() {
+    return this.getStringAttribute('os_state');
+  }
+  public set osState(value: string | undefined) {
+    this._osState = value;
+  }
+  public resetOsState() {
+    this._osState = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osStateInput() {
+    return this._osState
+  }
+
+  // os_type - computed: false, optional: true, required: false
+  private _osType?: string | undefined; 
+  public get osType() {
+    return this.getStringAttribute('os_type');
+  }
+  public set osType(value: string | undefined) {
+    this._osType = value;
+  }
+  public resetOsType() {
+    this._osType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get osTypeInput() {
+    return this._osType
+  }
+
+  // size_gb - computed: true, optional: true, required: false
+  private _sizeGb?: number | undefined; 
+  public get sizeGb() {
+    return this.getNumberAttribute('size_gb');
+  }
+  public set sizeGb(value: number | undefined) {
+    this._sizeGb = value;
+  }
+  public resetSizeGb() {
+    this._sizeGb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sizeGbInput() {
+    return this._sizeGb
+  }
+}
 export interface ImageTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#create Image#create}
@@ -146,8 +258,11 @@ export interface ImageTimeouts {
   readonly update?: string;
 }
 
-function imageTimeoutsToTerraform(struct?: ImageTimeouts): any {
+function imageTimeoutsToTerraform(struct?: ImageTimeoutsOutputReference | ImageTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -156,6 +271,80 @@ function imageTimeoutsToTerraform(struct?: ImageTimeouts): any {
   }
 }
 
+export class ImageTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/image.html azurerm_image}
@@ -206,11 +395,11 @@ export class Image extends cdktf.TerraformResource {
   // ==========
 
   // hyper_v_generation - computed: false, optional: true, required: false
-  private _hyperVGeneration?: string;
+  private _hyperVGeneration?: string | undefined; 
   public get hyperVGeneration() {
     return this.getStringAttribute('hyper_v_generation');
   }
-  public set hyperVGeneration(value: string ) {
+  public set hyperVGeneration(value: string | undefined) {
     this._hyperVGeneration = value;
   }
   public resetHyperVGeneration() {
@@ -227,7 +416,7 @@ export class Image extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -240,7 +429,7 @@ export class Image extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -253,7 +442,7 @@ export class Image extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -266,11 +455,11 @@ export class Image extends cdktf.TerraformResource {
   }
 
   // source_virtual_machine_id - computed: false, optional: true, required: false
-  private _sourceVirtualMachineId?: string;
+  private _sourceVirtualMachineId?: string | undefined; 
   public get sourceVirtualMachineId() {
     return this.getStringAttribute('source_virtual_machine_id');
   }
-  public set sourceVirtualMachineId(value: string ) {
+  public set sourceVirtualMachineId(value: string | undefined) {
     this._sourceVirtualMachineId = value;
   }
   public resetSourceVirtualMachineId() {
@@ -282,11 +471,12 @@ export class Image extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -298,11 +488,11 @@ export class Image extends cdktf.TerraformResource {
   }
 
   // zone_resilient - computed: false, optional: true, required: false
-  private _zoneResilient?: boolean | cdktf.IResolvable;
+  private _zoneResilient?: boolean | cdktf.IResolvable | undefined; 
   public get zoneResilient() {
-    return this.getBooleanAttribute('zone_resilient');
+    return this.getBooleanAttribute('zone_resilient') as any;
   }
-  public set zoneResilient(value: boolean | cdktf.IResolvable ) {
+  public set zoneResilient(value: boolean | cdktf.IResolvable | undefined) {
     this._zoneResilient = value;
   }
   public resetZoneResilient() {
@@ -314,11 +504,12 @@ export class Image extends cdktf.TerraformResource {
   }
 
   // data_disk - computed: false, optional: true, required: false
-  private _dataDisk?: ImageDataDisk[];
+  private _dataDisk?: ImageDataDisk[] | undefined; 
   public get dataDisk() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('data_disk') as any;
   }
-  public set dataDisk(value: ImageDataDisk[] ) {
+  public set dataDisk(value: ImageDataDisk[] | undefined) {
     this._dataDisk = value;
   }
   public resetDataDisk() {
@@ -330,11 +521,12 @@ export class Image extends cdktf.TerraformResource {
   }
 
   // os_disk - computed: false, optional: true, required: false
-  private _osDisk?: ImageOsDisk[];
+  private _osDisk?: ImageOsDisk | undefined; 
+  private __osDiskOutput = new ImageOsDiskOutputReference(this as any, "os_disk", true);
   public get osDisk() {
-    return this.interpolationForAttribute('os_disk') as any;
+    return this.__osDiskOutput;
   }
-  public set osDisk(value: ImageOsDisk[] ) {
+  public putOsDisk(value: ImageOsDisk | undefined) {
     this._osDisk = value;
   }
   public resetOsDisk() {
@@ -346,11 +538,12 @@ export class Image extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ImageTimeouts;
+  private _timeouts?: ImageTimeouts | undefined; 
+  private __timeoutsOutput = new ImageTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ImageTimeouts ) {
+  public putTimeouts(value: ImageTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -375,7 +568,7 @@ export class Image extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       zone_resilient: cdktf.booleanToTerraform(this._zoneResilient),
       data_disk: cdktf.listMapper(imageDataDiskToTerraform)(this._dataDisk),
-      os_disk: cdktf.listMapper(imageOsDiskToTerraform)(this._osDisk),
+      os_disk: imageOsDiskToTerraform(this._osDisk),
       timeouts: imageTimeoutsToTerraform(this._timeouts),
     };
   }

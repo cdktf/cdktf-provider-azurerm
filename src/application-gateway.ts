@@ -46,7 +46,7 @@ export interface ApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#autoscale_configuration ApplicationGateway#autoscale_configuration}
   */
-  readonly autoscaleConfiguration?: ApplicationGatewayAutoscaleConfiguration[];
+  readonly autoscaleConfiguration?: ApplicationGatewayAutoscaleConfiguration;
   /**
   * backend_address_pool block
   * 
@@ -94,7 +94,7 @@ export interface ApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#identity ApplicationGateway#identity}
   */
-  readonly identity?: ApplicationGatewayIdentity[];
+  readonly identity?: ApplicationGatewayIdentity;
   /**
   * probe block
   * 
@@ -124,7 +124,7 @@ export interface ApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#sku ApplicationGateway#sku}
   */
-  readonly sku: ApplicationGatewaySku[];
+  readonly sku: ApplicationGatewaySku;
   /**
   * ssl_certificate block
   * 
@@ -172,7 +172,7 @@ export interface ApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#waf_configuration ApplicationGateway#waf_configuration}
   */
-  readonly wafConfiguration?: ApplicationGatewayWafConfiguration[];
+  readonly wafConfiguration?: ApplicationGatewayWafConfiguration;
 }
 export interface ApplicationGatewayAuthenticationCertificate {
   /**
@@ -187,6 +187,9 @@ export interface ApplicationGatewayAuthenticationCertificate {
 
 function applicationGatewayAuthenticationCertificateToTerraform(struct?: ApplicationGatewayAuthenticationCertificate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     data: cdktf.stringToTerraform(struct!.data),
     name: cdktf.stringToTerraform(struct!.name),
@@ -204,14 +207,56 @@ export interface ApplicationGatewayAutoscaleConfiguration {
   readonly minCapacity: number;
 }
 
-function applicationGatewayAutoscaleConfigurationToTerraform(struct?: ApplicationGatewayAutoscaleConfiguration): any {
+function applicationGatewayAutoscaleConfigurationToTerraform(struct?: ApplicationGatewayAutoscaleConfigurationOutputReference | ApplicationGatewayAutoscaleConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     max_capacity: cdktf.numberToTerraform(struct!.maxCapacity),
     min_capacity: cdktf.numberToTerraform(struct!.minCapacity),
   }
 }
 
+export class ApplicationGatewayAutoscaleConfigurationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // max_capacity - computed: false, optional: true, required: false
+  private _maxCapacity?: number | undefined; 
+  public get maxCapacity() {
+    return this.getNumberAttribute('max_capacity');
+  }
+  public set maxCapacity(value: number | undefined) {
+    this._maxCapacity = value;
+  }
+  public resetMaxCapacity() {
+    this._maxCapacity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxCapacityInput() {
+    return this._maxCapacity
+  }
+
+  // min_capacity - computed: false, optional: false, required: true
+  private _minCapacity?: number; 
+  public get minCapacity() {
+    return this.getNumberAttribute('min_capacity');
+  }
+  public set minCapacity(value: number) {
+    this._minCapacity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minCapacityInput() {
+    return this._minCapacity
+  }
+}
 export interface ApplicationGatewayBackendAddressPool {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#fqdns ApplicationGateway#fqdns}
@@ -229,6 +274,9 @@ export interface ApplicationGatewayBackendAddressPool {
 
 function applicationGatewayBackendAddressPoolToTerraform(struct?: ApplicationGatewayBackendAddressPool): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     fqdns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.fqdns),
     ip_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ipAddresses),
@@ -245,6 +293,9 @@ export interface ApplicationGatewayBackendHttpSettingsAuthenticationCertificate 
 
 function applicationGatewayBackendHttpSettingsAuthenticationCertificateToTerraform(struct?: ApplicationGatewayBackendHttpSettingsAuthenticationCertificate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
   }
@@ -261,14 +312,53 @@ export interface ApplicationGatewayBackendHttpSettingsConnectionDraining {
   readonly enabled: boolean | cdktf.IResolvable;
 }
 
-function applicationGatewayBackendHttpSettingsConnectionDrainingToTerraform(struct?: ApplicationGatewayBackendHttpSettingsConnectionDraining): any {
+function applicationGatewayBackendHttpSettingsConnectionDrainingToTerraform(struct?: ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputReference | ApplicationGatewayBackendHttpSettingsConnectionDraining): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     drain_timeout_sec: cdktf.numberToTerraform(struct!.drainTimeoutSec),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
   }
 }
 
+export class ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // drain_timeout_sec - computed: false, optional: false, required: true
+  private _drainTimeoutSec?: number; 
+  public get drainTimeoutSec() {
+    return this.getNumberAttribute('drain_timeout_sec');
+  }
+  public set drainTimeoutSec(value: number) {
+    this._drainTimeoutSec = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get drainTimeoutSecInput() {
+    return this._drainTimeoutSec
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled') as any;
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
+  }
+}
 export interface ApplicationGatewayBackendHttpSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#affinity_cookie_name ApplicationGateway#affinity_cookie_name}
@@ -325,11 +415,14 @@ export interface ApplicationGatewayBackendHttpSettings {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#connection_draining ApplicationGateway#connection_draining}
   */
-  readonly connectionDraining?: ApplicationGatewayBackendHttpSettingsConnectionDraining[];
+  readonly connectionDraining?: ApplicationGatewayBackendHttpSettingsConnectionDraining;
 }
 
 function applicationGatewayBackendHttpSettingsToTerraform(struct?: ApplicationGatewayBackendHttpSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     affinity_cookie_name: cdktf.stringToTerraform(struct!.affinityCookieName),
     cookie_based_affinity: cdktf.stringToTerraform(struct!.cookieBasedAffinity),
@@ -343,7 +436,7 @@ function applicationGatewayBackendHttpSettingsToTerraform(struct?: ApplicationGa
     request_timeout: cdktf.numberToTerraform(struct!.requestTimeout),
     trusted_root_certificate_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.trustedRootCertificateNames),
     authentication_certificate: cdktf.listMapper(applicationGatewayBackendHttpSettingsAuthenticationCertificateToTerraform)(struct!.authenticationCertificate),
-    connection_draining: cdktf.listMapper(applicationGatewayBackendHttpSettingsConnectionDrainingToTerraform)(struct!.connectionDraining),
+    connection_draining: applicationGatewayBackendHttpSettingsConnectionDrainingToTerraform(struct!.connectionDraining),
   }
 }
 
@@ -360,6 +453,9 @@ export interface ApplicationGatewayCustomErrorConfiguration {
 
 function applicationGatewayCustomErrorConfigurationToTerraform(struct?: ApplicationGatewayCustomErrorConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     custom_error_page_url: cdktf.stringToTerraform(struct!.customErrorPageUrl),
     status_code: cdktf.stringToTerraform(struct!.statusCode),
@@ -391,6 +487,9 @@ export interface ApplicationGatewayFrontendIpConfiguration {
 
 function applicationGatewayFrontendIpConfigurationToTerraform(struct?: ApplicationGatewayFrontendIpConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     private_ip_address: cdktf.stringToTerraform(struct!.privateIpAddress),
@@ -413,6 +512,9 @@ export interface ApplicationGatewayFrontendPort {
 
 function applicationGatewayFrontendPortToTerraform(struct?: ApplicationGatewayFrontendPort): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     port: cdktf.numberToTerraform(struct!.port),
@@ -432,6 +534,9 @@ export interface ApplicationGatewayGatewayIpConfiguration {
 
 function applicationGatewayGatewayIpConfigurationToTerraform(struct?: ApplicationGatewayGatewayIpConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
@@ -451,6 +556,9 @@ export interface ApplicationGatewayHttpListenerCustomErrorConfiguration {
 
 function applicationGatewayHttpListenerCustomErrorConfigurationToTerraform(struct?: ApplicationGatewayHttpListenerCustomErrorConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     custom_error_page_url: cdktf.stringToTerraform(struct!.customErrorPageUrl),
     status_code: cdktf.stringToTerraform(struct!.statusCode),
@@ -508,6 +616,9 @@ export interface ApplicationGatewayHttpListener {
 
 function applicationGatewayHttpListenerToTerraform(struct?: ApplicationGatewayHttpListener): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     firewall_policy_id: cdktf.stringToTerraform(struct!.firewallPolicyId),
     frontend_ip_configuration_name: cdktf.stringToTerraform(struct!.frontendIpConfigurationName),
@@ -534,14 +645,56 @@ export interface ApplicationGatewayIdentity {
   readonly type?: string;
 }
 
-function applicationGatewayIdentityToTerraform(struct?: ApplicationGatewayIdentity): any {
+function applicationGatewayIdentityToTerraform(struct?: ApplicationGatewayIdentityOutputReference | ApplicationGatewayIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
 
+export class ApplicationGatewayIdentityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // identity_ids - computed: false, optional: false, required: true
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string | undefined; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string | undefined) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+}
 export interface ApplicationGatewayProbeMatch {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#body ApplicationGateway#body}
@@ -553,14 +706,59 @@ export interface ApplicationGatewayProbeMatch {
   readonly statusCode?: string[];
 }
 
-function applicationGatewayProbeMatchToTerraform(struct?: ApplicationGatewayProbeMatch): any {
+function applicationGatewayProbeMatchToTerraform(struct?: ApplicationGatewayProbeMatchOutputReference | ApplicationGatewayProbeMatch): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     body: cdktf.stringToTerraform(struct!.body),
     status_code: cdktf.listMapper(cdktf.stringToTerraform)(struct!.statusCode),
   }
 }
 
+export class ApplicationGatewayProbeMatchOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // body - computed: false, optional: true, required: false
+  private _body?: string | undefined; 
+  public get body() {
+    return this.getStringAttribute('body');
+  }
+  public set body(value: string | undefined) {
+    this._body = value;
+  }
+  public resetBody() {
+    this._body = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bodyInput() {
+    return this._body
+  }
+
+  // status_code - computed: false, optional: true, required: false
+  private _statusCode?: string[] | undefined; 
+  public get statusCode() {
+    return this.getListAttribute('status_code');
+  }
+  public set statusCode(value: string[] | undefined) {
+    this._statusCode = value;
+  }
+  public resetStatusCode() {
+    this._statusCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusCodeInput() {
+    return this._statusCode
+  }
+}
 export interface ApplicationGatewayProbe {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#host ApplicationGateway#host}
@@ -607,11 +805,14 @@ export interface ApplicationGatewayProbe {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#match ApplicationGateway#match}
   */
-  readonly match?: ApplicationGatewayProbeMatch[];
+  readonly match?: ApplicationGatewayProbeMatch;
 }
 
 function applicationGatewayProbeToTerraform(struct?: ApplicationGatewayProbe): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     host: cdktf.stringToTerraform(struct!.host),
     interval: cdktf.numberToTerraform(struct!.interval),
@@ -623,7 +824,7 @@ function applicationGatewayProbeToTerraform(struct?: ApplicationGatewayProbe): a
     protocol: cdktf.stringToTerraform(struct!.protocol),
     timeout: cdktf.numberToTerraform(struct!.timeout),
     unhealthy_threshold: cdktf.numberToTerraform(struct!.unhealthyThreshold),
-    match: cdktf.listMapper(applicationGatewayProbeMatchToTerraform)(struct!.match),
+    match: applicationGatewayProbeMatchToTerraform(struct!.match),
   }
 }
 
@@ -656,6 +857,9 @@ export interface ApplicationGatewayRedirectConfiguration {
 
 function applicationGatewayRedirectConfigurationToTerraform(struct?: ApplicationGatewayRedirectConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     include_path: cdktf.booleanToTerraform(struct!.includePath),
     include_query_string: cdktf.booleanToTerraform(struct!.includeQueryString),
@@ -703,6 +907,9 @@ export interface ApplicationGatewayRequestRoutingRule {
 
 function applicationGatewayRequestRoutingRuleToTerraform(struct?: ApplicationGatewayRequestRoutingRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     backend_address_pool_name: cdktf.stringToTerraform(struct!.backendAddressPoolName),
     backend_http_settings_name: cdktf.stringToTerraform(struct!.backendHttpSettingsName),
@@ -736,6 +943,9 @@ export interface ApplicationGatewayRewriteRuleSetRewriteRuleCondition {
 
 function applicationGatewayRewriteRuleSetRewriteRuleConditionToTerraform(struct?: ApplicationGatewayRewriteRuleSetRewriteRuleCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     ignore_case: cdktf.booleanToTerraform(struct!.ignoreCase),
     negate: cdktf.booleanToTerraform(struct!.negate),
@@ -757,6 +967,9 @@ export interface ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigu
 
 function applicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationToTerraform(struct?: ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     header_name: cdktf.stringToTerraform(struct!.headerName),
     header_value: cdktf.stringToTerraform(struct!.headerValue),
@@ -776,6 +989,9 @@ export interface ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfig
 
 function applicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationToTerraform(struct?: ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     header_name: cdktf.stringToTerraform(struct!.headerName),
     header_value: cdktf.stringToTerraform(struct!.headerValue),
@@ -797,8 +1013,11 @@ export interface ApplicationGatewayRewriteRuleSetRewriteRuleUrl {
   readonly reroute?: boolean | cdktf.IResolvable;
 }
 
-function applicationGatewayRewriteRuleSetRewriteRuleUrlToTerraform(struct?: ApplicationGatewayRewriteRuleSetRewriteRuleUrl): any {
+function applicationGatewayRewriteRuleSetRewriteRuleUrlToTerraform(struct?: ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference | ApplicationGatewayRewriteRuleSetRewriteRuleUrl): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     path: cdktf.stringToTerraform(struct!.path),
     query_string: cdktf.stringToTerraform(struct!.queryString),
@@ -806,6 +1025,64 @@ function applicationGatewayRewriteRuleSetRewriteRuleUrlToTerraform(struct?: Appl
   }
 }
 
+export class ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // path - computed: false, optional: true, required: false
+  private _path?: string | undefined; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string | undefined) {
+    this._path = value;
+  }
+  public resetPath() {
+    this._path = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path
+  }
+
+  // query_string - computed: false, optional: true, required: false
+  private _queryString?: string | undefined; 
+  public get queryString() {
+    return this.getStringAttribute('query_string');
+  }
+  public set queryString(value: string | undefined) {
+    this._queryString = value;
+  }
+  public resetQueryString() {
+    this._queryString = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queryStringInput() {
+    return this._queryString
+  }
+
+  // reroute - computed: false, optional: true, required: false
+  private _reroute?: boolean | cdktf.IResolvable | undefined; 
+  public get reroute() {
+    return this.getBooleanAttribute('reroute') as any;
+  }
+  public set reroute(value: boolean | cdktf.IResolvable | undefined) {
+    this._reroute = value;
+  }
+  public resetReroute() {
+    this._reroute = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rerouteInput() {
+    return this._reroute
+  }
+}
 export interface ApplicationGatewayRewriteRuleSetRewriteRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
@@ -838,18 +1115,21 @@ export interface ApplicationGatewayRewriteRuleSetRewriteRule {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#url ApplicationGateway#url}
   */
-  readonly url?: ApplicationGatewayRewriteRuleSetRewriteRuleUrl[];
+  readonly url?: ApplicationGatewayRewriteRuleSetRewriteRuleUrl;
 }
 
 function applicationGatewayRewriteRuleSetRewriteRuleToTerraform(struct?: ApplicationGatewayRewriteRuleSetRewriteRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     rule_sequence: cdktf.numberToTerraform(struct!.ruleSequence),
     condition: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleConditionToTerraform)(struct!.condition),
     request_header_configuration: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationToTerraform)(struct!.requestHeaderConfiguration),
     response_header_configuration: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationToTerraform)(struct!.responseHeaderConfiguration),
-    url: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleUrlToTerraform)(struct!.url),
+    url: applicationGatewayRewriteRuleSetRewriteRuleUrlToTerraform(struct!.url),
   }
 }
 
@@ -868,6 +1148,9 @@ export interface ApplicationGatewayRewriteRuleSet {
 
 function applicationGatewayRewriteRuleSetToTerraform(struct?: ApplicationGatewayRewriteRuleSet): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     rewrite_rule: cdktf.listMapper(applicationGatewayRewriteRuleSetRewriteRuleToTerraform)(struct!.rewriteRule),
@@ -889,8 +1172,11 @@ export interface ApplicationGatewaySku {
   readonly tier: string;
 }
 
-function applicationGatewaySkuToTerraform(struct?: ApplicationGatewaySku): any {
+function applicationGatewaySkuToTerraform(struct?: ApplicationGatewaySkuOutputReference | ApplicationGatewaySku): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     capacity: cdktf.numberToTerraform(struct!.capacity),
     name: cdktf.stringToTerraform(struct!.name),
@@ -898,6 +1184,58 @@ function applicationGatewaySkuToTerraform(struct?: ApplicationGatewaySku): any {
   }
 }
 
+export class ApplicationGatewaySkuOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // capacity - computed: false, optional: true, required: false
+  private _capacity?: number | undefined; 
+  public get capacity() {
+    return this.getNumberAttribute('capacity');
+  }
+  public set capacity(value: number | undefined) {
+    this._capacity = value;
+  }
+  public resetCapacity() {
+    this._capacity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityInput() {
+    return this._capacity
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // tier - computed: false, optional: false, required: true
+  private _tier?: string; 
+  public get tier() {
+    return this.getStringAttribute('tier');
+  }
+  public set tier(value: string) {
+    this._tier = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tierInput() {
+    return this._tier
+  }
+}
 export interface ApplicationGatewaySslCertificate {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#data ApplicationGateway#data}
@@ -919,6 +1257,9 @@ export interface ApplicationGatewaySslCertificate {
 
 function applicationGatewaySslCertificateToTerraform(struct?: ApplicationGatewaySslCertificate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     data: cdktf.stringToTerraform(struct!.data),
     key_vault_secret_id: cdktf.stringToTerraform(struct!.keyVaultSecretId),
@@ -952,6 +1293,9 @@ export interface ApplicationGatewaySslPolicy {
 
 function applicationGatewaySslPolicyToTerraform(struct?: ApplicationGatewaySslPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     cipher_suites: cdktf.listMapper(cdktf.stringToTerraform)(struct!.cipherSuites),
     disabled_protocols: cdktf.listMapper(cdktf.stringToTerraform)(struct!.disabledProtocols),
@@ -986,6 +1330,9 @@ export interface ApplicationGatewaySslProfileSslPolicy {
 
 function applicationGatewaySslProfileSslPolicyToTerraform(struct?: ApplicationGatewaySslProfileSslPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     cipher_suites: cdktf.listMapper(cdktf.stringToTerraform)(struct!.cipherSuites),
     disabled_protocols: cdktf.listMapper(cdktf.stringToTerraform)(struct!.disabledProtocols),
@@ -1018,6 +1365,9 @@ export interface ApplicationGatewaySslProfile {
 
 function applicationGatewaySslProfileToTerraform(struct?: ApplicationGatewaySslProfile): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     trusted_client_certificate_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.trustedClientCertificateNames),
@@ -1045,8 +1395,11 @@ export interface ApplicationGatewayTimeouts {
   readonly update?: string;
 }
 
-function applicationGatewayTimeoutsToTerraform(struct?: ApplicationGatewayTimeouts): any {
+function applicationGatewayTimeoutsToTerraform(struct?: ApplicationGatewayTimeoutsOutputReference | ApplicationGatewayTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -1055,6 +1408,80 @@ function applicationGatewayTimeoutsToTerraform(struct?: ApplicationGatewayTimeou
   }
 }
 
+export class ApplicationGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 export interface ApplicationGatewayTrustedClientCertificate {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#data ApplicationGateway#data}
@@ -1068,6 +1495,9 @@ export interface ApplicationGatewayTrustedClientCertificate {
 
 function applicationGatewayTrustedClientCertificateToTerraform(struct?: ApplicationGatewayTrustedClientCertificate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     data: cdktf.stringToTerraform(struct!.data),
     name: cdktf.stringToTerraform(struct!.name),
@@ -1087,6 +1517,9 @@ export interface ApplicationGatewayTrustedRootCertificate {
 
 function applicationGatewayTrustedRootCertificateToTerraform(struct?: ApplicationGatewayTrustedRootCertificate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     data: cdktf.stringToTerraform(struct!.data),
     name: cdktf.stringToTerraform(struct!.name),
@@ -1126,6 +1559,9 @@ export interface ApplicationGatewayUrlPathMapPathRule {
 
 function applicationGatewayUrlPathMapPathRuleToTerraform(struct?: ApplicationGatewayUrlPathMapPathRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     backend_address_pool_name: cdktf.stringToTerraform(struct!.backendAddressPoolName),
     backend_http_settings_name: cdktf.stringToTerraform(struct!.backendHttpSettingsName),
@@ -1168,6 +1604,9 @@ export interface ApplicationGatewayUrlPathMap {
 
 function applicationGatewayUrlPathMapToTerraform(struct?: ApplicationGatewayUrlPathMap): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     default_backend_address_pool_name: cdktf.stringToTerraform(struct!.defaultBackendAddressPoolName),
     default_backend_http_settings_name: cdktf.stringToTerraform(struct!.defaultBackendHttpSettingsName),
@@ -1191,6 +1630,9 @@ export interface ApplicationGatewayWafConfigurationDisabledRuleGroup {
 
 function applicationGatewayWafConfigurationDisabledRuleGroupToTerraform(struct?: ApplicationGatewayWafConfigurationDisabledRuleGroup): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     rule_group_name: cdktf.stringToTerraform(struct!.ruleGroupName),
     rules: cdktf.listMapper(cdktf.numberToTerraform)(struct!.rules),
@@ -1214,6 +1656,9 @@ export interface ApplicationGatewayWafConfigurationExclusion {
 
 function applicationGatewayWafConfigurationExclusionToTerraform(struct?: ApplicationGatewayWafConfigurationExclusion): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     match_variable: cdktf.stringToTerraform(struct!.matchVariable),
     selector: cdktf.stringToTerraform(struct!.selector),
@@ -1264,8 +1709,11 @@ export interface ApplicationGatewayWafConfiguration {
   readonly exclusion?: ApplicationGatewayWafConfigurationExclusion[];
 }
 
-function applicationGatewayWafConfigurationToTerraform(struct?: ApplicationGatewayWafConfiguration): any {
+function applicationGatewayWafConfigurationToTerraform(struct?: ApplicationGatewayWafConfigurationOutputReference | ApplicationGatewayWafConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     file_upload_limit_mb: cdktf.numberToTerraform(struct!.fileUploadLimitMb),
@@ -1279,6 +1727,153 @@ function applicationGatewayWafConfigurationToTerraform(struct?: ApplicationGatew
   }
 }
 
+export class ApplicationGatewayWafConfigurationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled') as any;
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
+  }
+
+  // file_upload_limit_mb - computed: false, optional: true, required: false
+  private _fileUploadLimitMb?: number | undefined; 
+  public get fileUploadLimitMb() {
+    return this.getNumberAttribute('file_upload_limit_mb');
+  }
+  public set fileUploadLimitMb(value: number | undefined) {
+    this._fileUploadLimitMb = value;
+  }
+  public resetFileUploadLimitMb() {
+    this._fileUploadLimitMb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fileUploadLimitMbInput() {
+    return this._fileUploadLimitMb
+  }
+
+  // firewall_mode - computed: false, optional: false, required: true
+  private _firewallMode?: string; 
+  public get firewallMode() {
+    return this.getStringAttribute('firewall_mode');
+  }
+  public set firewallMode(value: string) {
+    this._firewallMode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get firewallModeInput() {
+    return this._firewallMode
+  }
+
+  // max_request_body_size_kb - computed: false, optional: true, required: false
+  private _maxRequestBodySizeKb?: number | undefined; 
+  public get maxRequestBodySizeKb() {
+    return this.getNumberAttribute('max_request_body_size_kb');
+  }
+  public set maxRequestBodySizeKb(value: number | undefined) {
+    this._maxRequestBodySizeKb = value;
+  }
+  public resetMaxRequestBodySizeKb() {
+    this._maxRequestBodySizeKb = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxRequestBodySizeKbInput() {
+    return this._maxRequestBodySizeKb
+  }
+
+  // request_body_check - computed: false, optional: true, required: false
+  private _requestBodyCheck?: boolean | cdktf.IResolvable | undefined; 
+  public get requestBodyCheck() {
+    return this.getBooleanAttribute('request_body_check') as any;
+  }
+  public set requestBodyCheck(value: boolean | cdktf.IResolvable | undefined) {
+    this._requestBodyCheck = value;
+  }
+  public resetRequestBodyCheck() {
+    this._requestBodyCheck = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestBodyCheckInput() {
+    return this._requestBodyCheck
+  }
+
+  // rule_set_type - computed: false, optional: true, required: false
+  private _ruleSetType?: string | undefined; 
+  public get ruleSetType() {
+    return this.getStringAttribute('rule_set_type');
+  }
+  public set ruleSetType(value: string | undefined) {
+    this._ruleSetType = value;
+  }
+  public resetRuleSetType() {
+    this._ruleSetType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleSetTypeInput() {
+    return this._ruleSetType
+  }
+
+  // rule_set_version - computed: false, optional: false, required: true
+  private _ruleSetVersion?: string; 
+  public get ruleSetVersion() {
+    return this.getStringAttribute('rule_set_version');
+  }
+  public set ruleSetVersion(value: string) {
+    this._ruleSetVersion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleSetVersionInput() {
+    return this._ruleSetVersion
+  }
+
+  // disabled_rule_group - computed: false, optional: true, required: false
+  private _disabledRuleGroup?: ApplicationGatewayWafConfigurationDisabledRuleGroup[] | undefined; 
+  public get disabledRuleGroup() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('disabled_rule_group') as any;
+  }
+  public set disabledRuleGroup(value: ApplicationGatewayWafConfigurationDisabledRuleGroup[] | undefined) {
+    this._disabledRuleGroup = value;
+  }
+  public resetDisabledRuleGroup() {
+    this._disabledRuleGroup = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledRuleGroupInput() {
+    return this._disabledRuleGroup
+  }
+
+  // exclusion - computed: false, optional: true, required: false
+  private _exclusion?: ApplicationGatewayWafConfigurationExclusion[] | undefined; 
+  public get exclusion() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('exclusion') as any;
+  }
+  public set exclusion(value: ApplicationGatewayWafConfigurationExclusion[] | undefined) {
+    this._exclusion = value;
+  }
+  public resetExclusion() {
+    this._exclusion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get exclusionInput() {
+    return this._exclusion
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html azurerm_application_gateway}
@@ -1349,11 +1944,11 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   // ==========
 
   // enable_http2 - computed: false, optional: true, required: false
-  private _enableHttp2?: boolean | cdktf.IResolvable;
+  private _enableHttp2?: boolean | cdktf.IResolvable | undefined; 
   public get enableHttp2() {
-    return this.getBooleanAttribute('enable_http2');
+    return this.getBooleanAttribute('enable_http2') as any;
   }
-  public set enableHttp2(value: boolean | cdktf.IResolvable ) {
+  public set enableHttp2(value: boolean | cdktf.IResolvable | undefined) {
     this._enableHttp2 = value;
   }
   public resetEnableHttp2() {
@@ -1365,11 +1960,11 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // firewall_policy_id - computed: false, optional: true, required: false
-  private _firewallPolicyId?: string;
+  private _firewallPolicyId?: string | undefined; 
   public get firewallPolicyId() {
     return this.getStringAttribute('firewall_policy_id');
   }
-  public set firewallPolicyId(value: string ) {
+  public set firewallPolicyId(value: string | undefined) {
     this._firewallPolicyId = value;
   }
   public resetFirewallPolicyId() {
@@ -1386,7 +1981,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -1399,7 +1994,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -1412,7 +2007,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -1425,11 +2020,12 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -1441,11 +2037,11 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // zones - computed: false, optional: true, required: false
-  private _zones?: string[];
+  private _zones?: string[] | undefined; 
   public get zones() {
     return this.getListAttribute('zones');
   }
-  public set zones(value: string[] ) {
+  public set zones(value: string[] | undefined) {
     this._zones = value;
   }
   public resetZones() {
@@ -1457,11 +2053,12 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // authentication_certificate - computed: false, optional: true, required: false
-  private _authenticationCertificate?: ApplicationGatewayAuthenticationCertificate[];
+  private _authenticationCertificate?: ApplicationGatewayAuthenticationCertificate[] | undefined; 
   public get authenticationCertificate() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('authentication_certificate') as any;
   }
-  public set authenticationCertificate(value: ApplicationGatewayAuthenticationCertificate[] ) {
+  public set authenticationCertificate(value: ApplicationGatewayAuthenticationCertificate[] | undefined) {
     this._authenticationCertificate = value;
   }
   public resetAuthenticationCertificate() {
@@ -1473,11 +2070,12 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // autoscale_configuration - computed: false, optional: true, required: false
-  private _autoscaleConfiguration?: ApplicationGatewayAutoscaleConfiguration[];
+  private _autoscaleConfiguration?: ApplicationGatewayAutoscaleConfiguration | undefined; 
+  private __autoscaleConfigurationOutput = new ApplicationGatewayAutoscaleConfigurationOutputReference(this as any, "autoscale_configuration", true);
   public get autoscaleConfiguration() {
-    return this.interpolationForAttribute('autoscale_configuration') as any;
+    return this.__autoscaleConfigurationOutput;
   }
-  public set autoscaleConfiguration(value: ApplicationGatewayAutoscaleConfiguration[] ) {
+  public putAutoscaleConfiguration(value: ApplicationGatewayAutoscaleConfiguration | undefined) {
     this._autoscaleConfiguration = value;
   }
   public resetAutoscaleConfiguration() {
@@ -1489,8 +2087,9 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // backend_address_pool - computed: false, optional: false, required: true
-  private _backendAddressPool: ApplicationGatewayBackendAddressPool[];
+  private _backendAddressPool?: ApplicationGatewayBackendAddressPool[]; 
   public get backendAddressPool() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('backend_address_pool') as any;
   }
   public set backendAddressPool(value: ApplicationGatewayBackendAddressPool[]) {
@@ -1502,8 +2101,9 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // backend_http_settings - computed: false, optional: false, required: true
-  private _backendHttpSettings: ApplicationGatewayBackendHttpSettings[];
+  private _backendHttpSettings?: ApplicationGatewayBackendHttpSettings[]; 
   public get backendHttpSettings() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('backend_http_settings') as any;
   }
   public set backendHttpSettings(value: ApplicationGatewayBackendHttpSettings[]) {
@@ -1515,11 +2115,12 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // custom_error_configuration - computed: false, optional: true, required: false
-  private _customErrorConfiguration?: ApplicationGatewayCustomErrorConfiguration[];
+  private _customErrorConfiguration?: ApplicationGatewayCustomErrorConfiguration[] | undefined; 
   public get customErrorConfiguration() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('custom_error_configuration') as any;
   }
-  public set customErrorConfiguration(value: ApplicationGatewayCustomErrorConfiguration[] ) {
+  public set customErrorConfiguration(value: ApplicationGatewayCustomErrorConfiguration[] | undefined) {
     this._customErrorConfiguration = value;
   }
   public resetCustomErrorConfiguration() {
@@ -1531,8 +2132,9 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // frontend_ip_configuration - computed: false, optional: false, required: true
-  private _frontendIpConfiguration: ApplicationGatewayFrontendIpConfiguration[];
+  private _frontendIpConfiguration?: ApplicationGatewayFrontendIpConfiguration[]; 
   public get frontendIpConfiguration() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('frontend_ip_configuration') as any;
   }
   public set frontendIpConfiguration(value: ApplicationGatewayFrontendIpConfiguration[]) {
@@ -1544,8 +2146,9 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // frontend_port - computed: false, optional: false, required: true
-  private _frontendPort: ApplicationGatewayFrontendPort[];
+  private _frontendPort?: ApplicationGatewayFrontendPort[]; 
   public get frontendPort() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('frontend_port') as any;
   }
   public set frontendPort(value: ApplicationGatewayFrontendPort[]) {
@@ -1557,8 +2160,9 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // gateway_ip_configuration - computed: false, optional: false, required: true
-  private _gatewayIpConfiguration: ApplicationGatewayGatewayIpConfiguration[];
+  private _gatewayIpConfiguration?: ApplicationGatewayGatewayIpConfiguration[]; 
   public get gatewayIpConfiguration() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('gateway_ip_configuration') as any;
   }
   public set gatewayIpConfiguration(value: ApplicationGatewayGatewayIpConfiguration[]) {
@@ -1570,8 +2174,9 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // http_listener - computed: false, optional: false, required: true
-  private _httpListener: ApplicationGatewayHttpListener[];
+  private _httpListener?: ApplicationGatewayHttpListener[]; 
   public get httpListener() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('http_listener') as any;
   }
   public set httpListener(value: ApplicationGatewayHttpListener[]) {
@@ -1583,11 +2188,12 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: ApplicationGatewayIdentity[];
+  private _identity?: ApplicationGatewayIdentity | undefined; 
+  private __identityOutput = new ApplicationGatewayIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.interpolationForAttribute('identity') as any;
+    return this.__identityOutput;
   }
-  public set identity(value: ApplicationGatewayIdentity[] ) {
+  public putIdentity(value: ApplicationGatewayIdentity | undefined) {
     this._identity = value;
   }
   public resetIdentity() {
@@ -1599,11 +2205,12 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // probe - computed: false, optional: true, required: false
-  private _probe?: ApplicationGatewayProbe[];
+  private _probe?: ApplicationGatewayProbe[] | undefined; 
   public get probe() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('probe') as any;
   }
-  public set probe(value: ApplicationGatewayProbe[] ) {
+  public set probe(value: ApplicationGatewayProbe[] | undefined) {
     this._probe = value;
   }
   public resetProbe() {
@@ -1615,11 +2222,12 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // redirect_configuration - computed: false, optional: true, required: false
-  private _redirectConfiguration?: ApplicationGatewayRedirectConfiguration[];
+  private _redirectConfiguration?: ApplicationGatewayRedirectConfiguration[] | undefined; 
   public get redirectConfiguration() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('redirect_configuration') as any;
   }
-  public set redirectConfiguration(value: ApplicationGatewayRedirectConfiguration[] ) {
+  public set redirectConfiguration(value: ApplicationGatewayRedirectConfiguration[] | undefined) {
     this._redirectConfiguration = value;
   }
   public resetRedirectConfiguration() {
@@ -1631,8 +2239,9 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // request_routing_rule - computed: false, optional: false, required: true
-  private _requestRoutingRule: ApplicationGatewayRequestRoutingRule[];
+  private _requestRoutingRule?: ApplicationGatewayRequestRoutingRule[]; 
   public get requestRoutingRule() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('request_routing_rule') as any;
   }
   public set requestRoutingRule(value: ApplicationGatewayRequestRoutingRule[]) {
@@ -1644,11 +2253,12 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // rewrite_rule_set - computed: false, optional: true, required: false
-  private _rewriteRuleSet?: ApplicationGatewayRewriteRuleSet[];
+  private _rewriteRuleSet?: ApplicationGatewayRewriteRuleSet[] | undefined; 
   public get rewriteRuleSet() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('rewrite_rule_set') as any;
   }
-  public set rewriteRuleSet(value: ApplicationGatewayRewriteRuleSet[] ) {
+  public set rewriteRuleSet(value: ApplicationGatewayRewriteRuleSet[] | undefined) {
     this._rewriteRuleSet = value;
   }
   public resetRewriteRuleSet() {
@@ -1660,11 +2270,12 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // sku - computed: false, optional: false, required: true
-  private _sku: ApplicationGatewaySku[];
+  private _sku?: ApplicationGatewaySku; 
+  private __skuOutput = new ApplicationGatewaySkuOutputReference(this as any, "sku", true);
   public get sku() {
-    return this.interpolationForAttribute('sku') as any;
+    return this.__skuOutput;
   }
-  public set sku(value: ApplicationGatewaySku[]) {
+  public putSku(value: ApplicationGatewaySku) {
     this._sku = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -1673,11 +2284,12 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // ssl_certificate - computed: false, optional: true, required: false
-  private _sslCertificate?: ApplicationGatewaySslCertificate[];
+  private _sslCertificate?: ApplicationGatewaySslCertificate[] | undefined; 
   public get sslCertificate() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ssl_certificate') as any;
   }
-  public set sslCertificate(value: ApplicationGatewaySslCertificate[] ) {
+  public set sslCertificate(value: ApplicationGatewaySslCertificate[] | undefined) {
     this._sslCertificate = value;
   }
   public resetSslCertificate() {
@@ -1689,11 +2301,12 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // ssl_policy - computed: false, optional: true, required: false
-  private _sslPolicy?: ApplicationGatewaySslPolicy[];
+  private _sslPolicy?: ApplicationGatewaySslPolicy[] | undefined; 
   public get sslPolicy() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ssl_policy') as any;
   }
-  public set sslPolicy(value: ApplicationGatewaySslPolicy[] ) {
+  public set sslPolicy(value: ApplicationGatewaySslPolicy[] | undefined) {
     this._sslPolicy = value;
   }
   public resetSslPolicy() {
@@ -1705,11 +2318,12 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // ssl_profile - computed: false, optional: true, required: false
-  private _sslProfile?: ApplicationGatewaySslProfile[];
+  private _sslProfile?: ApplicationGatewaySslProfile[] | undefined; 
   public get sslProfile() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ssl_profile') as any;
   }
-  public set sslProfile(value: ApplicationGatewaySslProfile[] ) {
+  public set sslProfile(value: ApplicationGatewaySslProfile[] | undefined) {
     this._sslProfile = value;
   }
   public resetSslProfile() {
@@ -1721,11 +2335,12 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ApplicationGatewayTimeouts;
+  private _timeouts?: ApplicationGatewayTimeouts | undefined; 
+  private __timeoutsOutput = new ApplicationGatewayTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ApplicationGatewayTimeouts ) {
+  public putTimeouts(value: ApplicationGatewayTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -1737,11 +2352,12 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // trusted_client_certificate - computed: false, optional: true, required: false
-  private _trustedClientCertificate?: ApplicationGatewayTrustedClientCertificate[];
+  private _trustedClientCertificate?: ApplicationGatewayTrustedClientCertificate[] | undefined; 
   public get trustedClientCertificate() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('trusted_client_certificate') as any;
   }
-  public set trustedClientCertificate(value: ApplicationGatewayTrustedClientCertificate[] ) {
+  public set trustedClientCertificate(value: ApplicationGatewayTrustedClientCertificate[] | undefined) {
     this._trustedClientCertificate = value;
   }
   public resetTrustedClientCertificate() {
@@ -1753,11 +2369,12 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // trusted_root_certificate - computed: false, optional: true, required: false
-  private _trustedRootCertificate?: ApplicationGatewayTrustedRootCertificate[];
+  private _trustedRootCertificate?: ApplicationGatewayTrustedRootCertificate[] | undefined; 
   public get trustedRootCertificate() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('trusted_root_certificate') as any;
   }
-  public set trustedRootCertificate(value: ApplicationGatewayTrustedRootCertificate[] ) {
+  public set trustedRootCertificate(value: ApplicationGatewayTrustedRootCertificate[] | undefined) {
     this._trustedRootCertificate = value;
   }
   public resetTrustedRootCertificate() {
@@ -1769,11 +2386,12 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // url_path_map - computed: false, optional: true, required: false
-  private _urlPathMap?: ApplicationGatewayUrlPathMap[];
+  private _urlPathMap?: ApplicationGatewayUrlPathMap[] | undefined; 
   public get urlPathMap() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('url_path_map') as any;
   }
-  public set urlPathMap(value: ApplicationGatewayUrlPathMap[] ) {
+  public set urlPathMap(value: ApplicationGatewayUrlPathMap[] | undefined) {
     this._urlPathMap = value;
   }
   public resetUrlPathMap() {
@@ -1785,11 +2403,12 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // waf_configuration - computed: false, optional: true, required: false
-  private _wafConfiguration?: ApplicationGatewayWafConfiguration[];
+  private _wafConfiguration?: ApplicationGatewayWafConfiguration | undefined; 
+  private __wafConfigurationOutput = new ApplicationGatewayWafConfigurationOutputReference(this as any, "waf_configuration", true);
   public get wafConfiguration() {
-    return this.interpolationForAttribute('waf_configuration') as any;
+    return this.__wafConfigurationOutput;
   }
-  public set wafConfiguration(value: ApplicationGatewayWafConfiguration[] ) {
+  public putWafConfiguration(value: ApplicationGatewayWafConfiguration | undefined) {
     this._wafConfiguration = value;
   }
   public resetWafConfiguration() {
@@ -1814,7 +2433,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       authentication_certificate: cdktf.listMapper(applicationGatewayAuthenticationCertificateToTerraform)(this._authenticationCertificate),
-      autoscale_configuration: cdktf.listMapper(applicationGatewayAutoscaleConfigurationToTerraform)(this._autoscaleConfiguration),
+      autoscale_configuration: applicationGatewayAutoscaleConfigurationToTerraform(this._autoscaleConfiguration),
       backend_address_pool: cdktf.listMapper(applicationGatewayBackendAddressPoolToTerraform)(this._backendAddressPool),
       backend_http_settings: cdktf.listMapper(applicationGatewayBackendHttpSettingsToTerraform)(this._backendHttpSettings),
       custom_error_configuration: cdktf.listMapper(applicationGatewayCustomErrorConfigurationToTerraform)(this._customErrorConfiguration),
@@ -1822,12 +2441,12 @@ export class ApplicationGateway extends cdktf.TerraformResource {
       frontend_port: cdktf.listMapper(applicationGatewayFrontendPortToTerraform)(this._frontendPort),
       gateway_ip_configuration: cdktf.listMapper(applicationGatewayGatewayIpConfigurationToTerraform)(this._gatewayIpConfiguration),
       http_listener: cdktf.listMapper(applicationGatewayHttpListenerToTerraform)(this._httpListener),
-      identity: cdktf.listMapper(applicationGatewayIdentityToTerraform)(this._identity),
+      identity: applicationGatewayIdentityToTerraform(this._identity),
       probe: cdktf.listMapper(applicationGatewayProbeToTerraform)(this._probe),
       redirect_configuration: cdktf.listMapper(applicationGatewayRedirectConfigurationToTerraform)(this._redirectConfiguration),
       request_routing_rule: cdktf.listMapper(applicationGatewayRequestRoutingRuleToTerraform)(this._requestRoutingRule),
       rewrite_rule_set: cdktf.listMapper(applicationGatewayRewriteRuleSetToTerraform)(this._rewriteRuleSet),
-      sku: cdktf.listMapper(applicationGatewaySkuToTerraform)(this._sku),
+      sku: applicationGatewaySkuToTerraform(this._sku),
       ssl_certificate: cdktf.listMapper(applicationGatewaySslCertificateToTerraform)(this._sslCertificate),
       ssl_policy: cdktf.listMapper(applicationGatewaySslPolicyToTerraform)(this._sslPolicy),
       ssl_profile: cdktf.listMapper(applicationGatewaySslProfileToTerraform)(this._sslProfile),
@@ -1835,7 +2454,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
       trusted_client_certificate: cdktf.listMapper(applicationGatewayTrustedClientCertificateToTerraform)(this._trustedClientCertificate),
       trusted_root_certificate: cdktf.listMapper(applicationGatewayTrustedRootCertificateToTerraform)(this._trustedRootCertificate),
       url_path_map: cdktf.listMapper(applicationGatewayUrlPathMapToTerraform)(this._urlPathMap),
-      waf_configuration: cdktf.listMapper(applicationGatewayWafConfigurationToTerraform)(this._wafConfiguration),
+      waf_configuration: applicationGatewayWafConfigurationToTerraform(this._wafConfiguration),
     };
   }
 }

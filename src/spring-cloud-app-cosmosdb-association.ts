@@ -73,8 +73,11 @@ export interface SpringCloudAppCosmosdbAssociationTimeouts {
   readonly update?: string;
 }
 
-function springCloudAppCosmosdbAssociationTimeoutsToTerraform(struct?: SpringCloudAppCosmosdbAssociationTimeouts): any {
+function springCloudAppCosmosdbAssociationTimeoutsToTerraform(struct?: SpringCloudAppCosmosdbAssociationTimeoutsOutputReference | SpringCloudAppCosmosdbAssociationTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -83,6 +86,80 @@ function springCloudAppCosmosdbAssociationTimeoutsToTerraform(struct?: SpringClo
   }
 }
 
+export class SpringCloudAppCosmosdbAssociationTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_cosmosdb_association.html azurerm_spring_cloud_app_cosmosdb_association}
@@ -134,7 +211,7 @@ export class SpringCloudAppCosmosdbAssociation extends cdktf.TerraformResource {
   // ==========
 
   // api_type - computed: false, optional: false, required: true
-  private _apiType: string;
+  private _apiType?: string; 
   public get apiType() {
     return this.getStringAttribute('api_type');
   }
@@ -147,7 +224,7 @@ export class SpringCloudAppCosmosdbAssociation extends cdktf.TerraformResource {
   }
 
   // cosmosdb_access_key - computed: false, optional: false, required: true
-  private _cosmosdbAccessKey: string;
+  private _cosmosdbAccessKey?: string; 
   public get cosmosdbAccessKey() {
     return this.getStringAttribute('cosmosdb_access_key');
   }
@@ -160,7 +237,7 @@ export class SpringCloudAppCosmosdbAssociation extends cdktf.TerraformResource {
   }
 
   // cosmosdb_account_id - computed: false, optional: false, required: true
-  private _cosmosdbAccountId: string;
+  private _cosmosdbAccountId?: string; 
   public get cosmosdbAccountId() {
     return this.getStringAttribute('cosmosdb_account_id');
   }
@@ -173,11 +250,11 @@ export class SpringCloudAppCosmosdbAssociation extends cdktf.TerraformResource {
   }
 
   // cosmosdb_cassandra_keyspace_name - computed: false, optional: true, required: false
-  private _cosmosdbCassandraKeyspaceName?: string;
+  private _cosmosdbCassandraKeyspaceName?: string | undefined; 
   public get cosmosdbCassandraKeyspaceName() {
     return this.getStringAttribute('cosmosdb_cassandra_keyspace_name');
   }
-  public set cosmosdbCassandraKeyspaceName(value: string ) {
+  public set cosmosdbCassandraKeyspaceName(value: string | undefined) {
     this._cosmosdbCassandraKeyspaceName = value;
   }
   public resetCosmosdbCassandraKeyspaceName() {
@@ -189,11 +266,11 @@ export class SpringCloudAppCosmosdbAssociation extends cdktf.TerraformResource {
   }
 
   // cosmosdb_gremlin_database_name - computed: false, optional: true, required: false
-  private _cosmosdbGremlinDatabaseName?: string;
+  private _cosmosdbGremlinDatabaseName?: string | undefined; 
   public get cosmosdbGremlinDatabaseName() {
     return this.getStringAttribute('cosmosdb_gremlin_database_name');
   }
-  public set cosmosdbGremlinDatabaseName(value: string ) {
+  public set cosmosdbGremlinDatabaseName(value: string | undefined) {
     this._cosmosdbGremlinDatabaseName = value;
   }
   public resetCosmosdbGremlinDatabaseName() {
@@ -205,11 +282,11 @@ export class SpringCloudAppCosmosdbAssociation extends cdktf.TerraformResource {
   }
 
   // cosmosdb_gremlin_graph_name - computed: false, optional: true, required: false
-  private _cosmosdbGremlinGraphName?: string;
+  private _cosmosdbGremlinGraphName?: string | undefined; 
   public get cosmosdbGremlinGraphName() {
     return this.getStringAttribute('cosmosdb_gremlin_graph_name');
   }
-  public set cosmosdbGremlinGraphName(value: string ) {
+  public set cosmosdbGremlinGraphName(value: string | undefined) {
     this._cosmosdbGremlinGraphName = value;
   }
   public resetCosmosdbGremlinGraphName() {
@@ -221,11 +298,11 @@ export class SpringCloudAppCosmosdbAssociation extends cdktf.TerraformResource {
   }
 
   // cosmosdb_mongo_database_name - computed: false, optional: true, required: false
-  private _cosmosdbMongoDatabaseName?: string;
+  private _cosmosdbMongoDatabaseName?: string | undefined; 
   public get cosmosdbMongoDatabaseName() {
     return this.getStringAttribute('cosmosdb_mongo_database_name');
   }
-  public set cosmosdbMongoDatabaseName(value: string ) {
+  public set cosmosdbMongoDatabaseName(value: string | undefined) {
     this._cosmosdbMongoDatabaseName = value;
   }
   public resetCosmosdbMongoDatabaseName() {
@@ -237,11 +314,11 @@ export class SpringCloudAppCosmosdbAssociation extends cdktf.TerraformResource {
   }
 
   // cosmosdb_sql_database_name - computed: false, optional: true, required: false
-  private _cosmosdbSqlDatabaseName?: string;
+  private _cosmosdbSqlDatabaseName?: string | undefined; 
   public get cosmosdbSqlDatabaseName() {
     return this.getStringAttribute('cosmosdb_sql_database_name');
   }
-  public set cosmosdbSqlDatabaseName(value: string ) {
+  public set cosmosdbSqlDatabaseName(value: string | undefined) {
     this._cosmosdbSqlDatabaseName = value;
   }
   public resetCosmosdbSqlDatabaseName() {
@@ -258,7 +335,7 @@ export class SpringCloudAppCosmosdbAssociation extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -271,7 +348,7 @@ export class SpringCloudAppCosmosdbAssociation extends cdktf.TerraformResource {
   }
 
   // spring_cloud_app_id - computed: false, optional: false, required: true
-  private _springCloudAppId: string;
+  private _springCloudAppId?: string; 
   public get springCloudAppId() {
     return this.getStringAttribute('spring_cloud_app_id');
   }
@@ -284,11 +361,12 @@ export class SpringCloudAppCosmosdbAssociation extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SpringCloudAppCosmosdbAssociationTimeouts;
+  private _timeouts?: SpringCloudAppCosmosdbAssociationTimeouts | undefined; 
+  private __timeoutsOutput = new SpringCloudAppCosmosdbAssociationTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SpringCloudAppCosmosdbAssociationTimeouts ) {
+  public putTimeouts(value: SpringCloudAppCosmosdbAssociationTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

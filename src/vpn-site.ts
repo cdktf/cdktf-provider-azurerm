@@ -63,14 +63,53 @@ export interface VpnSiteLinkBgp {
   readonly peeringAddress: string;
 }
 
-function vpnSiteLinkBgpToTerraform(struct?: VpnSiteLinkBgp): any {
+function vpnSiteLinkBgpToTerraform(struct?: VpnSiteLinkBgpOutputReference | VpnSiteLinkBgp): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     asn: cdktf.numberToTerraform(struct!.asn),
     peering_address: cdktf.stringToTerraform(struct!.peeringAddress),
   }
 }
 
+export class VpnSiteLinkBgpOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // asn - computed: false, optional: false, required: true
+  private _asn?: number; 
+  public get asn() {
+    return this.getNumberAttribute('asn');
+  }
+  public set asn(value: number) {
+    this._asn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get asnInput() {
+    return this._asn
+  }
+
+  // peering_address - computed: false, optional: false, required: true
+  private _peeringAddress?: string; 
+  public get peeringAddress() {
+    return this.getStringAttribute('peering_address');
+  }
+  public set peeringAddress(value: string) {
+    this._peeringAddress = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get peeringAddressInput() {
+    return this._peeringAddress
+  }
+}
 export interface VpnSiteLink {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#fqdn VpnSite#fqdn}
@@ -97,18 +136,21 @@ export interface VpnSiteLink {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html#bgp VpnSite#bgp}
   */
-  readonly bgp?: VpnSiteLinkBgp[];
+  readonly bgp?: VpnSiteLinkBgp;
 }
 
 function vpnSiteLinkToTerraform(struct?: VpnSiteLink): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     fqdn: cdktf.stringToTerraform(struct!.fqdn),
     ip_address: cdktf.stringToTerraform(struct!.ipAddress),
     name: cdktf.stringToTerraform(struct!.name),
     provider_name: cdktf.stringToTerraform(struct!.providerName),
     speed_in_mbps: cdktf.numberToTerraform(struct!.speedInMbps),
-    bgp: cdktf.listMapper(vpnSiteLinkBgpToTerraform)(struct!.bgp),
+    bgp: vpnSiteLinkBgpToTerraform(struct!.bgp),
   }
 }
 
@@ -131,8 +173,11 @@ export interface VpnSiteTimeouts {
   readonly update?: string;
 }
 
-function vpnSiteTimeoutsToTerraform(struct?: VpnSiteTimeouts): any {
+function vpnSiteTimeoutsToTerraform(struct?: VpnSiteTimeoutsOutputReference | VpnSiteTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -141,6 +186,80 @@ function vpnSiteTimeoutsToTerraform(struct?: VpnSiteTimeouts): any {
   }
 }
 
+export class VpnSiteTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_site.html azurerm_vpn_site}
@@ -191,11 +310,11 @@ export class VpnSite extends cdktf.TerraformResource {
   // ==========
 
   // address_cidrs - computed: false, optional: true, required: false
-  private _addressCidrs?: string[];
+  private _addressCidrs?: string[] | undefined; 
   public get addressCidrs() {
     return this.getListAttribute('address_cidrs');
   }
-  public set addressCidrs(value: string[] ) {
+  public set addressCidrs(value: string[] | undefined) {
     this._addressCidrs = value;
   }
   public resetAddressCidrs() {
@@ -207,11 +326,11 @@ export class VpnSite extends cdktf.TerraformResource {
   }
 
   // device_model - computed: false, optional: true, required: false
-  private _deviceModel?: string;
+  private _deviceModel?: string | undefined; 
   public get deviceModel() {
     return this.getStringAttribute('device_model');
   }
-  public set deviceModel(value: string ) {
+  public set deviceModel(value: string | undefined) {
     this._deviceModel = value;
   }
   public resetDeviceModel() {
@@ -223,11 +342,11 @@ export class VpnSite extends cdktf.TerraformResource {
   }
 
   // device_vendor - computed: false, optional: true, required: false
-  private _deviceVendor?: string;
+  private _deviceVendor?: string | undefined; 
   public get deviceVendor() {
     return this.getStringAttribute('device_vendor');
   }
-  public set deviceVendor(value: string ) {
+  public set deviceVendor(value: string | undefined) {
     this._deviceVendor = value;
   }
   public resetDeviceVendor() {
@@ -244,7 +363,7 @@ export class VpnSite extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -257,7 +376,7 @@ export class VpnSite extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -270,7 +389,7 @@ export class VpnSite extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -283,11 +402,12 @@ export class VpnSite extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -299,7 +419,7 @@ export class VpnSite extends cdktf.TerraformResource {
   }
 
   // virtual_wan_id - computed: false, optional: false, required: true
-  private _virtualWanId: string;
+  private _virtualWanId?: string; 
   public get virtualWanId() {
     return this.getStringAttribute('virtual_wan_id');
   }
@@ -312,11 +432,12 @@ export class VpnSite extends cdktf.TerraformResource {
   }
 
   // link - computed: false, optional: true, required: false
-  private _link?: VpnSiteLink[];
+  private _link?: VpnSiteLink[] | undefined; 
   public get link() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('link') as any;
   }
-  public set link(value: VpnSiteLink[] ) {
+  public set link(value: VpnSiteLink[] | undefined) {
     this._link = value;
   }
   public resetLink() {
@@ -328,11 +449,12 @@ export class VpnSite extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VpnSiteTimeouts;
+  private _timeouts?: VpnSiteTimeouts | undefined; 
+  private __timeoutsOutput = new VpnSiteTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: VpnSiteTimeouts ) {
+  public putTimeouts(value: VpnSiteTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

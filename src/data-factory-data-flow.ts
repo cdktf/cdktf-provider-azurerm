@@ -67,14 +67,57 @@ export interface DataFactoryDataFlowSinkDataset {
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataFactoryDataFlowSinkDatasetToTerraform(struct?: DataFactoryDataFlowSinkDataset): any {
+function dataFactoryDataFlowSinkDatasetToTerraform(struct?: DataFactoryDataFlowSinkDatasetOutputReference | DataFactoryDataFlowSinkDataset): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     parameters: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
   }
 }
 
+export class DataFactoryDataFlowSinkDatasetOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get parameters() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('parameters') as any;
+  }
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters
+  }
+}
 export interface DataFactoryDataFlowSinkLinkedService {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#name DataFactoryDataFlow#name}
@@ -86,14 +129,57 @@ export interface DataFactoryDataFlowSinkLinkedService {
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataFactoryDataFlowSinkLinkedServiceToTerraform(struct?: DataFactoryDataFlowSinkLinkedService): any {
+function dataFactoryDataFlowSinkLinkedServiceToTerraform(struct?: DataFactoryDataFlowSinkLinkedServiceOutputReference | DataFactoryDataFlowSinkLinkedService): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     parameters: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
   }
 }
 
+export class DataFactoryDataFlowSinkLinkedServiceOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get parameters() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('parameters') as any;
+  }
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters
+  }
+}
 export interface DataFactoryDataFlowSinkSchemaLinkedService {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#name DataFactoryDataFlow#name}
@@ -105,14 +191,57 @@ export interface DataFactoryDataFlowSinkSchemaLinkedService {
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataFactoryDataFlowSinkSchemaLinkedServiceToTerraform(struct?: DataFactoryDataFlowSinkSchemaLinkedService): any {
+function dataFactoryDataFlowSinkSchemaLinkedServiceToTerraform(struct?: DataFactoryDataFlowSinkSchemaLinkedServiceOutputReference | DataFactoryDataFlowSinkSchemaLinkedService): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     parameters: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
   }
 }
 
+export class DataFactoryDataFlowSinkSchemaLinkedServiceOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get parameters() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('parameters') as any;
+  }
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters
+  }
+}
 export interface DataFactoryDataFlowSink {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#description DataFactoryDataFlow#description}
@@ -127,29 +256,32 @@ export interface DataFactoryDataFlowSink {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#dataset DataFactoryDataFlow#dataset}
   */
-  readonly dataset?: DataFactoryDataFlowSinkDataset[];
+  readonly dataset?: DataFactoryDataFlowSinkDataset;
   /**
   * linked_service block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#linked_service DataFactoryDataFlow#linked_service}
   */
-  readonly linkedService?: DataFactoryDataFlowSinkLinkedService[];
+  readonly linkedService?: DataFactoryDataFlowSinkLinkedService;
   /**
   * schema_linked_service block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#schema_linked_service DataFactoryDataFlow#schema_linked_service}
   */
-  readonly schemaLinkedService?: DataFactoryDataFlowSinkSchemaLinkedService[];
+  readonly schemaLinkedService?: DataFactoryDataFlowSinkSchemaLinkedService;
 }
 
 function dataFactoryDataFlowSinkToTerraform(struct?: DataFactoryDataFlowSink): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     name: cdktf.stringToTerraform(struct!.name),
-    dataset: cdktf.listMapper(dataFactoryDataFlowSinkDatasetToTerraform)(struct!.dataset),
-    linked_service: cdktf.listMapper(dataFactoryDataFlowSinkLinkedServiceToTerraform)(struct!.linkedService),
-    schema_linked_service: cdktf.listMapper(dataFactoryDataFlowSinkSchemaLinkedServiceToTerraform)(struct!.schemaLinkedService),
+    dataset: dataFactoryDataFlowSinkDatasetToTerraform(struct!.dataset),
+    linked_service: dataFactoryDataFlowSinkLinkedServiceToTerraform(struct!.linkedService),
+    schema_linked_service: dataFactoryDataFlowSinkSchemaLinkedServiceToTerraform(struct!.schemaLinkedService),
   }
 }
 
@@ -164,14 +296,57 @@ export interface DataFactoryDataFlowSourceDataset {
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataFactoryDataFlowSourceDatasetToTerraform(struct?: DataFactoryDataFlowSourceDataset): any {
+function dataFactoryDataFlowSourceDatasetToTerraform(struct?: DataFactoryDataFlowSourceDatasetOutputReference | DataFactoryDataFlowSourceDataset): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     parameters: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
   }
 }
 
+export class DataFactoryDataFlowSourceDatasetOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get parameters() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('parameters') as any;
+  }
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters
+  }
+}
 export interface DataFactoryDataFlowSourceLinkedService {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#name DataFactoryDataFlow#name}
@@ -183,14 +358,57 @@ export interface DataFactoryDataFlowSourceLinkedService {
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataFactoryDataFlowSourceLinkedServiceToTerraform(struct?: DataFactoryDataFlowSourceLinkedService): any {
+function dataFactoryDataFlowSourceLinkedServiceToTerraform(struct?: DataFactoryDataFlowSourceLinkedServiceOutputReference | DataFactoryDataFlowSourceLinkedService): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     parameters: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
   }
 }
 
+export class DataFactoryDataFlowSourceLinkedServiceOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get parameters() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('parameters') as any;
+  }
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters
+  }
+}
 export interface DataFactoryDataFlowSourceSchemaLinkedService {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#name DataFactoryDataFlow#name}
@@ -202,14 +420,57 @@ export interface DataFactoryDataFlowSourceSchemaLinkedService {
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataFactoryDataFlowSourceSchemaLinkedServiceToTerraform(struct?: DataFactoryDataFlowSourceSchemaLinkedService): any {
+function dataFactoryDataFlowSourceSchemaLinkedServiceToTerraform(struct?: DataFactoryDataFlowSourceSchemaLinkedServiceOutputReference | DataFactoryDataFlowSourceSchemaLinkedService): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     parameters: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
   }
 }
 
+export class DataFactoryDataFlowSourceSchemaLinkedServiceOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get parameters() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('parameters') as any;
+  }
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters
+  }
+}
 export interface DataFactoryDataFlowSource {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#description DataFactoryDataFlow#description}
@@ -224,29 +485,32 @@ export interface DataFactoryDataFlowSource {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#dataset DataFactoryDataFlow#dataset}
   */
-  readonly dataset?: DataFactoryDataFlowSourceDataset[];
+  readonly dataset?: DataFactoryDataFlowSourceDataset;
   /**
   * linked_service block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#linked_service DataFactoryDataFlow#linked_service}
   */
-  readonly linkedService?: DataFactoryDataFlowSourceLinkedService[];
+  readonly linkedService?: DataFactoryDataFlowSourceLinkedService;
   /**
   * schema_linked_service block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#schema_linked_service DataFactoryDataFlow#schema_linked_service}
   */
-  readonly schemaLinkedService?: DataFactoryDataFlowSourceSchemaLinkedService[];
+  readonly schemaLinkedService?: DataFactoryDataFlowSourceSchemaLinkedService;
 }
 
 function dataFactoryDataFlowSourceToTerraform(struct?: DataFactoryDataFlowSource): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     name: cdktf.stringToTerraform(struct!.name),
-    dataset: cdktf.listMapper(dataFactoryDataFlowSourceDatasetToTerraform)(struct!.dataset),
-    linked_service: cdktf.listMapper(dataFactoryDataFlowSourceLinkedServiceToTerraform)(struct!.linkedService),
-    schema_linked_service: cdktf.listMapper(dataFactoryDataFlowSourceSchemaLinkedServiceToTerraform)(struct!.schemaLinkedService),
+    dataset: dataFactoryDataFlowSourceDatasetToTerraform(struct!.dataset),
+    linked_service: dataFactoryDataFlowSourceLinkedServiceToTerraform(struct!.linkedService),
+    schema_linked_service: dataFactoryDataFlowSourceSchemaLinkedServiceToTerraform(struct!.schemaLinkedService),
   }
 }
 
@@ -269,8 +533,11 @@ export interface DataFactoryDataFlowTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryDataFlowTimeoutsToTerraform(struct?: DataFactoryDataFlowTimeouts): any {
+function dataFactoryDataFlowTimeoutsToTerraform(struct?: DataFactoryDataFlowTimeoutsOutputReference | DataFactoryDataFlowTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -279,6 +546,80 @@ function dataFactoryDataFlowTimeoutsToTerraform(struct?: DataFactoryDataFlowTime
   }
 }
 
+export class DataFactoryDataFlowTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 export interface DataFactoryDataFlowTransformation {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#description DataFactoryDataFlow#description}
@@ -292,6 +633,9 @@ export interface DataFactoryDataFlowTransformation {
 
 function dataFactoryDataFlowTransformationToTerraform(struct?: DataFactoryDataFlowTransformation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     name: cdktf.stringToTerraform(struct!.name),
@@ -348,11 +692,11 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   // ==========
 
   // annotations - computed: false, optional: true, required: false
-  private _annotations?: string[];
+  private _annotations?: string[] | undefined; 
   public get annotations() {
     return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] ) {
+  public set annotations(value: string[] | undefined) {
     this._annotations = value;
   }
   public resetAnnotations() {
@@ -364,7 +708,7 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
 
   // data_factory_id - computed: false, optional: false, required: true
-  private _dataFactoryId: string;
+  private _dataFactoryId?: string; 
   public get dataFactoryId() {
     return this.getStringAttribute('data_factory_id');
   }
@@ -377,11 +721,11 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -393,11 +737,11 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
 
   // folder - computed: false, optional: true, required: false
-  private _folder?: string;
+  private _folder?: string | undefined; 
   public get folder() {
     return this.getStringAttribute('folder');
   }
-  public set folder(value: string ) {
+  public set folder(value: string | undefined) {
     this._folder = value;
   }
   public resetFolder() {
@@ -414,7 +758,7 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -427,7 +771,7 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
 
   // script - computed: false, optional: false, required: true
-  private _script: string;
+  private _script?: string; 
   public get script() {
     return this.getStringAttribute('script');
   }
@@ -440,8 +784,9 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
 
   // sink - computed: false, optional: false, required: true
-  private _sink: DataFactoryDataFlowSink[];
+  private _sink?: DataFactoryDataFlowSink[]; 
   public get sink() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('sink') as any;
   }
   public set sink(value: DataFactoryDataFlowSink[]) {
@@ -453,8 +798,9 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
 
   // source - computed: false, optional: false, required: true
-  private _source: DataFactoryDataFlowSource[];
+  private _source?: DataFactoryDataFlowSource[]; 
   public get source() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('source') as any;
   }
   public set source(value: DataFactoryDataFlowSource[]) {
@@ -466,11 +812,12 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryDataFlowTimeouts;
+  private _timeouts?: DataFactoryDataFlowTimeouts | undefined; 
+  private __timeoutsOutput = new DataFactoryDataFlowTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataFactoryDataFlowTimeouts ) {
+  public putTimeouts(value: DataFactoryDataFlowTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -482,11 +829,12 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
 
   // transformation - computed: false, optional: true, required: false
-  private _transformation?: DataFactoryDataFlowTransformation[];
+  private _transformation?: DataFactoryDataFlowTransformation[] | undefined; 
   public get transformation() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('transformation') as any;
   }
-  public set transformation(value: DataFactoryDataFlowTransformation[] ) {
+  public set transformation(value: DataFactoryDataFlowTransformation[] | undefined) {
     this._transformation = value;
   }
   public resetTransformation() {

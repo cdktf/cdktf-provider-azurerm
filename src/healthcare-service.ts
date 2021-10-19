@@ -48,13 +48,13 @@ export interface HealthcareServiceConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#authentication_configuration HealthcareService#authentication_configuration}
   */
-  readonly authenticationConfiguration?: HealthcareServiceAuthenticationConfiguration[];
+  readonly authenticationConfiguration?: HealthcareServiceAuthenticationConfiguration;
   /**
   * cors_configuration block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#cors_configuration HealthcareService#cors_configuration}
   */
-  readonly corsConfiguration?: HealthcareServiceCorsConfiguration[];
+  readonly corsConfiguration?: HealthcareServiceCorsConfiguration;
   /**
   * timeouts block
   * 
@@ -77,8 +77,11 @@ export interface HealthcareServiceAuthenticationConfiguration {
   readonly smartProxyEnabled?: boolean | cdktf.IResolvable;
 }
 
-function healthcareServiceAuthenticationConfigurationToTerraform(struct?: HealthcareServiceAuthenticationConfiguration): any {
+function healthcareServiceAuthenticationConfigurationToTerraform(struct?: HealthcareServiceAuthenticationConfigurationOutputReference | HealthcareServiceAuthenticationConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     audience: cdktf.stringToTerraform(struct!.audience),
     authority: cdktf.stringToTerraform(struct!.authority),
@@ -86,6 +89,64 @@ function healthcareServiceAuthenticationConfigurationToTerraform(struct?: Health
   }
 }
 
+export class HealthcareServiceAuthenticationConfigurationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // audience - computed: false, optional: true, required: false
+  private _audience?: string | undefined; 
+  public get audience() {
+    return this.getStringAttribute('audience');
+  }
+  public set audience(value: string | undefined) {
+    this._audience = value;
+  }
+  public resetAudience() {
+    this._audience = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get audienceInput() {
+    return this._audience
+  }
+
+  // authority - computed: false, optional: true, required: false
+  private _authority?: string | undefined; 
+  public get authority() {
+    return this.getStringAttribute('authority');
+  }
+  public set authority(value: string | undefined) {
+    this._authority = value;
+  }
+  public resetAuthority() {
+    this._authority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authorityInput() {
+    return this._authority
+  }
+
+  // smart_proxy_enabled - computed: false, optional: true, required: false
+  private _smartProxyEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get smartProxyEnabled() {
+    return this.getBooleanAttribute('smart_proxy_enabled') as any;
+  }
+  public set smartProxyEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._smartProxyEnabled = value;
+  }
+  public resetSmartProxyEnabled() {
+    this._smartProxyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get smartProxyEnabledInput() {
+    return this._smartProxyEnabled
+  }
+}
 export interface HealthcareServiceCorsConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#allow_credentials HealthcareService#allow_credentials}
@@ -109,8 +170,11 @@ export interface HealthcareServiceCorsConfiguration {
   readonly maxAgeInSeconds?: number;
 }
 
-function healthcareServiceCorsConfigurationToTerraform(struct?: HealthcareServiceCorsConfiguration): any {
+function healthcareServiceCorsConfigurationToTerraform(struct?: HealthcareServiceCorsConfigurationOutputReference | HealthcareServiceCorsConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     allow_credentials: cdktf.booleanToTerraform(struct!.allowCredentials),
     allowed_headers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedHeaders),
@@ -120,6 +184,96 @@ function healthcareServiceCorsConfigurationToTerraform(struct?: HealthcareServic
   }
 }
 
+export class HealthcareServiceCorsConfigurationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // allow_credentials - computed: false, optional: true, required: false
+  private _allowCredentials?: boolean | cdktf.IResolvable | undefined; 
+  public get allowCredentials() {
+    return this.getBooleanAttribute('allow_credentials') as any;
+  }
+  public set allowCredentials(value: boolean | cdktf.IResolvable | undefined) {
+    this._allowCredentials = value;
+  }
+  public resetAllowCredentials() {
+    this._allowCredentials = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowCredentialsInput() {
+    return this._allowCredentials
+  }
+
+  // allowed_headers - computed: false, optional: true, required: false
+  private _allowedHeaders?: string[] | undefined; 
+  public get allowedHeaders() {
+    return this.getListAttribute('allowed_headers');
+  }
+  public set allowedHeaders(value: string[] | undefined) {
+    this._allowedHeaders = value;
+  }
+  public resetAllowedHeaders() {
+    this._allowedHeaders = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedHeadersInput() {
+    return this._allowedHeaders
+  }
+
+  // allowed_methods - computed: false, optional: true, required: false
+  private _allowedMethods?: string[] | undefined; 
+  public get allowedMethods() {
+    return this.getListAttribute('allowed_methods');
+  }
+  public set allowedMethods(value: string[] | undefined) {
+    this._allowedMethods = value;
+  }
+  public resetAllowedMethods() {
+    this._allowedMethods = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedMethodsInput() {
+    return this._allowedMethods
+  }
+
+  // allowed_origins - computed: false, optional: true, required: false
+  private _allowedOrigins?: string[] | undefined; 
+  public get allowedOrigins() {
+    return this.getListAttribute('allowed_origins');
+  }
+  public set allowedOrigins(value: string[] | undefined) {
+    this._allowedOrigins = value;
+  }
+  public resetAllowedOrigins() {
+    this._allowedOrigins = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get allowedOriginsInput() {
+    return this._allowedOrigins
+  }
+
+  // max_age_in_seconds - computed: false, optional: true, required: false
+  private _maxAgeInSeconds?: number | undefined; 
+  public get maxAgeInSeconds() {
+    return this.getNumberAttribute('max_age_in_seconds');
+  }
+  public set maxAgeInSeconds(value: number | undefined) {
+    this._maxAgeInSeconds = value;
+  }
+  public resetMaxAgeInSeconds() {
+    this._maxAgeInSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxAgeInSecondsInput() {
+    return this._maxAgeInSeconds
+  }
+}
 export interface HealthcareServiceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#create HealthcareService#create}
@@ -139,8 +293,11 @@ export interface HealthcareServiceTimeouts {
   readonly update?: string;
 }
 
-function healthcareServiceTimeoutsToTerraform(struct?: HealthcareServiceTimeouts): any {
+function healthcareServiceTimeoutsToTerraform(struct?: HealthcareServiceTimeoutsOutputReference | HealthcareServiceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -149,6 +306,80 @@ function healthcareServiceTimeoutsToTerraform(struct?: HealthcareServiceTimeouts
   }
 }
 
+export class HealthcareServiceTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html azurerm_healthcare_service}
@@ -201,11 +432,11 @@ export class HealthcareService extends cdktf.TerraformResource {
   // ==========
 
   // access_policy_object_ids - computed: false, optional: true, required: false
-  private _accessPolicyObjectIds?: string[];
+  private _accessPolicyObjectIds?: string[] | undefined; 
   public get accessPolicyObjectIds() {
     return this.getListAttribute('access_policy_object_ids');
   }
-  public set accessPolicyObjectIds(value: string[] ) {
+  public set accessPolicyObjectIds(value: string[] | undefined) {
     this._accessPolicyObjectIds = value;
   }
   public resetAccessPolicyObjectIds() {
@@ -217,11 +448,11 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // cosmosdb_key_vault_key_versionless_id - computed: false, optional: true, required: false
-  private _cosmosdbKeyVaultKeyVersionlessId?: string;
+  private _cosmosdbKeyVaultKeyVersionlessId?: string | undefined; 
   public get cosmosdbKeyVaultKeyVersionlessId() {
     return this.getStringAttribute('cosmosdb_key_vault_key_versionless_id');
   }
-  public set cosmosdbKeyVaultKeyVersionlessId(value: string ) {
+  public set cosmosdbKeyVaultKeyVersionlessId(value: string | undefined) {
     this._cosmosdbKeyVaultKeyVersionlessId = value;
   }
   public resetCosmosdbKeyVaultKeyVersionlessId() {
@@ -233,11 +464,11 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // cosmosdb_throughput - computed: false, optional: true, required: false
-  private _cosmosdbThroughput?: number;
+  private _cosmosdbThroughput?: number | undefined; 
   public get cosmosdbThroughput() {
     return this.getNumberAttribute('cosmosdb_throughput');
   }
-  public set cosmosdbThroughput(value: number ) {
+  public set cosmosdbThroughput(value: number | undefined) {
     this._cosmosdbThroughput = value;
   }
   public resetCosmosdbThroughput() {
@@ -254,11 +485,11 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // kind - computed: false, optional: true, required: false
-  private _kind?: string;
+  private _kind?: string | undefined; 
   public get kind() {
     return this.getStringAttribute('kind');
   }
-  public set kind(value: string ) {
+  public set kind(value: string | undefined) {
     this._kind = value;
   }
   public resetKind() {
@@ -270,7 +501,7 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -283,7 +514,7 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -296,11 +527,11 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled');
+    return this.getBooleanAttribute('public_network_access_enabled') as any;
   }
-  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable ) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -312,7 +543,7 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -325,11 +556,12 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -341,11 +573,12 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // authentication_configuration - computed: false, optional: true, required: false
-  private _authenticationConfiguration?: HealthcareServiceAuthenticationConfiguration[];
+  private _authenticationConfiguration?: HealthcareServiceAuthenticationConfiguration | undefined; 
+  private __authenticationConfigurationOutput = new HealthcareServiceAuthenticationConfigurationOutputReference(this as any, "authentication_configuration", true);
   public get authenticationConfiguration() {
-    return this.interpolationForAttribute('authentication_configuration') as any;
+    return this.__authenticationConfigurationOutput;
   }
-  public set authenticationConfiguration(value: HealthcareServiceAuthenticationConfiguration[] ) {
+  public putAuthenticationConfiguration(value: HealthcareServiceAuthenticationConfiguration | undefined) {
     this._authenticationConfiguration = value;
   }
   public resetAuthenticationConfiguration() {
@@ -357,11 +590,12 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // cors_configuration - computed: false, optional: true, required: false
-  private _corsConfiguration?: HealthcareServiceCorsConfiguration[];
+  private _corsConfiguration?: HealthcareServiceCorsConfiguration | undefined; 
+  private __corsConfigurationOutput = new HealthcareServiceCorsConfigurationOutputReference(this as any, "cors_configuration", true);
   public get corsConfiguration() {
-    return this.interpolationForAttribute('cors_configuration') as any;
+    return this.__corsConfigurationOutput;
   }
-  public set corsConfiguration(value: HealthcareServiceCorsConfiguration[] ) {
+  public putCorsConfiguration(value: HealthcareServiceCorsConfiguration | undefined) {
     this._corsConfiguration = value;
   }
   public resetCorsConfiguration() {
@@ -373,11 +607,12 @@ export class HealthcareService extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: HealthcareServiceTimeouts;
+  private _timeouts?: HealthcareServiceTimeouts | undefined; 
+  private __timeoutsOutput = new HealthcareServiceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: HealthcareServiceTimeouts ) {
+  public putTimeouts(value: HealthcareServiceTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -403,8 +638,8 @@ export class HealthcareService extends cdktf.TerraformResource {
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      authentication_configuration: cdktf.listMapper(healthcareServiceAuthenticationConfigurationToTerraform)(this._authenticationConfiguration),
-      cors_configuration: cdktf.listMapper(healthcareServiceCorsConfigurationToTerraform)(this._corsConfiguration),
+      authentication_configuration: healthcareServiceAuthenticationConfigurationToTerraform(this._authenticationConfiguration),
+      cors_configuration: healthcareServiceCorsConfigurationToTerraform(this._corsConfiguration),
       timeouts: healthcareServiceTimeoutsToTerraform(this._timeouts),
     };
   }

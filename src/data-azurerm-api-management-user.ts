@@ -33,13 +33,42 @@ export interface DataAzurermApiManagementUserTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermApiManagementUserTimeoutsToTerraform(struct?: DataAzurermApiManagementUserTimeouts): any {
+function dataAzurermApiManagementUserTimeoutsToTerraform(struct?: DataAzurermApiManagementUserTimeoutsOutputReference | DataAzurermApiManagementUserTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermApiManagementUserTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_user.html azurerm_api_management_user}
@@ -84,7 +113,7 @@ export class DataAzurermApiManagementUser extends cdktf.TerraformDataSource {
   // ==========
 
   // api_management_name - computed: false, optional: false, required: true
-  private _apiManagementName: string;
+  private _apiManagementName?: string; 
   public get apiManagementName() {
     return this.getStringAttribute('api_management_name');
   }
@@ -122,7 +151,7 @@ export class DataAzurermApiManagementUser extends cdktf.TerraformDataSource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -140,7 +169,7 @@ export class DataAzurermApiManagementUser extends cdktf.TerraformDataSource {
   }
 
   // user_id - computed: false, optional: false, required: true
-  private _userId: string;
+  private _userId?: string; 
   public get userId() {
     return this.getStringAttribute('user_id');
   }
@@ -153,11 +182,12 @@ export class DataAzurermApiManagementUser extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermApiManagementUserTimeouts;
+  private _timeouts?: DataAzurermApiManagementUserTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermApiManagementUserTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermApiManagementUserTimeouts ) {
+  public putTimeouts(value: DataAzurermApiManagementUserTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

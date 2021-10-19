@@ -36,31 +36,31 @@ export interface BackupPolicyVmConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#backup BackupPolicyVm#backup}
   */
-  readonly backup: BackupPolicyVmBackup[];
+  readonly backup: BackupPolicyVmBackup;
   /**
   * retention_daily block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#retention_daily BackupPolicyVm#retention_daily}
   */
-  readonly retentionDaily?: BackupPolicyVmRetentionDaily[];
+  readonly retentionDaily?: BackupPolicyVmRetentionDaily;
   /**
   * retention_monthly block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#retention_monthly BackupPolicyVm#retention_monthly}
   */
-  readonly retentionMonthly?: BackupPolicyVmRetentionMonthly[];
+  readonly retentionMonthly?: BackupPolicyVmRetentionMonthly;
   /**
   * retention_weekly block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#retention_weekly BackupPolicyVm#retention_weekly}
   */
-  readonly retentionWeekly?: BackupPolicyVmRetentionWeekly[];
+  readonly retentionWeekly?: BackupPolicyVmRetentionWeekly;
   /**
   * retention_yearly block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#retention_yearly BackupPolicyVm#retention_yearly}
   */
-  readonly retentionYearly?: BackupPolicyVmRetentionYearly[];
+  readonly retentionYearly?: BackupPolicyVmRetentionYearly;
   /**
   * timeouts block
   * 
@@ -83,8 +83,11 @@ export interface BackupPolicyVmBackup {
   readonly weekdays?: string[];
 }
 
-function backupPolicyVmBackupToTerraform(struct?: BackupPolicyVmBackup): any {
+function backupPolicyVmBackupToTerraform(struct?: BackupPolicyVmBackupOutputReference | BackupPolicyVmBackup): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     frequency: cdktf.stringToTerraform(struct!.frequency),
     time: cdktf.stringToTerraform(struct!.time),
@@ -92,6 +95,58 @@ function backupPolicyVmBackupToTerraform(struct?: BackupPolicyVmBackup): any {
   }
 }
 
+export class BackupPolicyVmBackupOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // frequency - computed: false, optional: false, required: true
+  private _frequency?: string; 
+  public get frequency() {
+    return this.getStringAttribute('frequency');
+  }
+  public set frequency(value: string) {
+    this._frequency = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get frequencyInput() {
+    return this._frequency
+  }
+
+  // time - computed: false, optional: false, required: true
+  private _time?: string; 
+  public get time() {
+    return this.getStringAttribute('time');
+  }
+  public set time(value: string) {
+    this._time = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeInput() {
+    return this._time
+  }
+
+  // weekdays - computed: false, optional: true, required: false
+  private _weekdays?: string[] | undefined; 
+  public get weekdays() {
+    return this.getListAttribute('weekdays');
+  }
+  public set weekdays(value: string[] | undefined) {
+    this._weekdays = value;
+  }
+  public resetWeekdays() {
+    this._weekdays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weekdaysInput() {
+    return this._weekdays
+  }
+}
 export interface BackupPolicyVmRetentionDaily {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#count BackupPolicyVm#count}
@@ -99,13 +154,39 @@ export interface BackupPolicyVmRetentionDaily {
   readonly count: number;
 }
 
-function backupPolicyVmRetentionDailyToTerraform(struct?: BackupPolicyVmRetentionDaily): any {
+function backupPolicyVmRetentionDailyToTerraform(struct?: BackupPolicyVmRetentionDailyOutputReference | BackupPolicyVmRetentionDaily): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     count: cdktf.numberToTerraform(struct!.count),
   }
 }
 
+export class BackupPolicyVmRetentionDailyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // count - computed: false, optional: false, required: true
+  private _count?: number; 
+  public get count() {
+    return this.getNumberAttribute('count');
+  }
+  public set count(value: number) {
+    this._count = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countInput() {
+    return this._count
+  }
+}
 export interface BackupPolicyVmRetentionMonthly {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#count BackupPolicyVm#count}
@@ -121,8 +202,11 @@ export interface BackupPolicyVmRetentionMonthly {
   readonly weeks: string[];
 }
 
-function backupPolicyVmRetentionMonthlyToTerraform(struct?: BackupPolicyVmRetentionMonthly): any {
+function backupPolicyVmRetentionMonthlyToTerraform(struct?: BackupPolicyVmRetentionMonthlyOutputReference | BackupPolicyVmRetentionMonthly): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     count: cdktf.numberToTerraform(struct!.count),
     weekdays: cdktf.listMapper(cdktf.stringToTerraform)(struct!.weekdays),
@@ -130,6 +214,55 @@ function backupPolicyVmRetentionMonthlyToTerraform(struct?: BackupPolicyVmRetent
   }
 }
 
+export class BackupPolicyVmRetentionMonthlyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // count - computed: false, optional: false, required: true
+  private _count?: number; 
+  public get count() {
+    return this.getNumberAttribute('count');
+  }
+  public set count(value: number) {
+    this._count = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countInput() {
+    return this._count
+  }
+
+  // weekdays - computed: false, optional: false, required: true
+  private _weekdays?: string[]; 
+  public get weekdays() {
+    return this.getListAttribute('weekdays');
+  }
+  public set weekdays(value: string[]) {
+    this._weekdays = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weekdaysInput() {
+    return this._weekdays
+  }
+
+  // weeks - computed: false, optional: false, required: true
+  private _weeks?: string[]; 
+  public get weeks() {
+    return this.getListAttribute('weeks');
+  }
+  public set weeks(value: string[]) {
+    this._weeks = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weeksInput() {
+    return this._weeks
+  }
+}
 export interface BackupPolicyVmRetentionWeekly {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#count BackupPolicyVm#count}
@@ -141,14 +274,53 @@ export interface BackupPolicyVmRetentionWeekly {
   readonly weekdays: string[];
 }
 
-function backupPolicyVmRetentionWeeklyToTerraform(struct?: BackupPolicyVmRetentionWeekly): any {
+function backupPolicyVmRetentionWeeklyToTerraform(struct?: BackupPolicyVmRetentionWeeklyOutputReference | BackupPolicyVmRetentionWeekly): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     count: cdktf.numberToTerraform(struct!.count),
     weekdays: cdktf.listMapper(cdktf.stringToTerraform)(struct!.weekdays),
   }
 }
 
+export class BackupPolicyVmRetentionWeeklyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // count - computed: false, optional: false, required: true
+  private _count?: number; 
+  public get count() {
+    return this.getNumberAttribute('count');
+  }
+  public set count(value: number) {
+    this._count = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countInput() {
+    return this._count
+  }
+
+  // weekdays - computed: false, optional: false, required: true
+  private _weekdays?: string[]; 
+  public get weekdays() {
+    return this.getListAttribute('weekdays');
+  }
+  public set weekdays(value: string[]) {
+    this._weekdays = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weekdaysInput() {
+    return this._weekdays
+  }
+}
 export interface BackupPolicyVmRetentionYearly {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#count BackupPolicyVm#count}
@@ -168,8 +340,11 @@ export interface BackupPolicyVmRetentionYearly {
   readonly weeks: string[];
 }
 
-function backupPolicyVmRetentionYearlyToTerraform(struct?: BackupPolicyVmRetentionYearly): any {
+function backupPolicyVmRetentionYearlyToTerraform(struct?: BackupPolicyVmRetentionYearlyOutputReference | BackupPolicyVmRetentionYearly): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     count: cdktf.numberToTerraform(struct!.count),
     months: cdktf.listMapper(cdktf.stringToTerraform)(struct!.months),
@@ -178,6 +353,68 @@ function backupPolicyVmRetentionYearlyToTerraform(struct?: BackupPolicyVmRetenti
   }
 }
 
+export class BackupPolicyVmRetentionYearlyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // count - computed: false, optional: false, required: true
+  private _count?: number; 
+  public get count() {
+    return this.getNumberAttribute('count');
+  }
+  public set count(value: number) {
+    this._count = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countInput() {
+    return this._count
+  }
+
+  // months - computed: false, optional: false, required: true
+  private _months?: string[]; 
+  public get months() {
+    return this.getListAttribute('months');
+  }
+  public set months(value: string[]) {
+    this._months = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get monthsInput() {
+    return this._months
+  }
+
+  // weekdays - computed: false, optional: false, required: true
+  private _weekdays?: string[]; 
+  public get weekdays() {
+    return this.getListAttribute('weekdays');
+  }
+  public set weekdays(value: string[]) {
+    this._weekdays = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weekdaysInput() {
+    return this._weekdays
+  }
+
+  // weeks - computed: false, optional: false, required: true
+  private _weeks?: string[]; 
+  public get weeks() {
+    return this.getListAttribute('weeks');
+  }
+  public set weeks(value: string[]) {
+    this._weeks = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get weeksInput() {
+    return this._weeks
+  }
+}
 export interface BackupPolicyVmTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html#create BackupPolicyVm#create}
@@ -197,8 +434,11 @@ export interface BackupPolicyVmTimeouts {
   readonly update?: string;
 }
 
-function backupPolicyVmTimeoutsToTerraform(struct?: BackupPolicyVmTimeouts): any {
+function backupPolicyVmTimeoutsToTerraform(struct?: BackupPolicyVmTimeoutsOutputReference | BackupPolicyVmTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -207,6 +447,80 @@ function backupPolicyVmTimeoutsToTerraform(struct?: BackupPolicyVmTimeouts): any
   }
 }
 
+export class BackupPolicyVmTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/backup_policy_vm.html azurerm_backup_policy_vm}
@@ -264,11 +578,11 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   }
 
   // instant_restore_retention_days - computed: true, optional: true, required: false
-  private _instantRestoreRetentionDays?: number;
+  private _instantRestoreRetentionDays?: number | undefined; 
   public get instantRestoreRetentionDays() {
     return this.getNumberAttribute('instant_restore_retention_days');
   }
-  public set instantRestoreRetentionDays(value: number) {
+  public set instantRestoreRetentionDays(value: number | undefined) {
     this._instantRestoreRetentionDays = value;
   }
   public resetInstantRestoreRetentionDays() {
@@ -280,7 +594,7 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -293,7 +607,7 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   }
 
   // recovery_vault_name - computed: false, optional: false, required: true
-  private _recoveryVaultName: string;
+  private _recoveryVaultName?: string; 
   public get recoveryVaultName() {
     return this.getStringAttribute('recovery_vault_name');
   }
@@ -306,7 +620,7 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -319,11 +633,12 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -335,11 +650,11 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   }
 
   // timezone - computed: false, optional: true, required: false
-  private _timezone?: string;
+  private _timezone?: string | undefined; 
   public get timezone() {
     return this.getStringAttribute('timezone');
   }
-  public set timezone(value: string ) {
+  public set timezone(value: string | undefined) {
     this._timezone = value;
   }
   public resetTimezone() {
@@ -351,11 +666,12 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   }
 
   // backup - computed: false, optional: false, required: true
-  private _backup: BackupPolicyVmBackup[];
+  private _backup?: BackupPolicyVmBackup; 
+  private __backupOutput = new BackupPolicyVmBackupOutputReference(this as any, "backup", true);
   public get backup() {
-    return this.interpolationForAttribute('backup') as any;
+    return this.__backupOutput;
   }
-  public set backup(value: BackupPolicyVmBackup[]) {
+  public putBackup(value: BackupPolicyVmBackup) {
     this._backup = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -364,11 +680,12 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   }
 
   // retention_daily - computed: false, optional: true, required: false
-  private _retentionDaily?: BackupPolicyVmRetentionDaily[];
+  private _retentionDaily?: BackupPolicyVmRetentionDaily | undefined; 
+  private __retentionDailyOutput = new BackupPolicyVmRetentionDailyOutputReference(this as any, "retention_daily", true);
   public get retentionDaily() {
-    return this.interpolationForAttribute('retention_daily') as any;
+    return this.__retentionDailyOutput;
   }
-  public set retentionDaily(value: BackupPolicyVmRetentionDaily[] ) {
+  public putRetentionDaily(value: BackupPolicyVmRetentionDaily | undefined) {
     this._retentionDaily = value;
   }
   public resetRetentionDaily() {
@@ -380,11 +697,12 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   }
 
   // retention_monthly - computed: false, optional: true, required: false
-  private _retentionMonthly?: BackupPolicyVmRetentionMonthly[];
+  private _retentionMonthly?: BackupPolicyVmRetentionMonthly | undefined; 
+  private __retentionMonthlyOutput = new BackupPolicyVmRetentionMonthlyOutputReference(this as any, "retention_monthly", true);
   public get retentionMonthly() {
-    return this.interpolationForAttribute('retention_monthly') as any;
+    return this.__retentionMonthlyOutput;
   }
-  public set retentionMonthly(value: BackupPolicyVmRetentionMonthly[] ) {
+  public putRetentionMonthly(value: BackupPolicyVmRetentionMonthly | undefined) {
     this._retentionMonthly = value;
   }
   public resetRetentionMonthly() {
@@ -396,11 +714,12 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   }
 
   // retention_weekly - computed: false, optional: true, required: false
-  private _retentionWeekly?: BackupPolicyVmRetentionWeekly[];
+  private _retentionWeekly?: BackupPolicyVmRetentionWeekly | undefined; 
+  private __retentionWeeklyOutput = new BackupPolicyVmRetentionWeeklyOutputReference(this as any, "retention_weekly", true);
   public get retentionWeekly() {
-    return this.interpolationForAttribute('retention_weekly') as any;
+    return this.__retentionWeeklyOutput;
   }
-  public set retentionWeekly(value: BackupPolicyVmRetentionWeekly[] ) {
+  public putRetentionWeekly(value: BackupPolicyVmRetentionWeekly | undefined) {
     this._retentionWeekly = value;
   }
   public resetRetentionWeekly() {
@@ -412,11 +731,12 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   }
 
   // retention_yearly - computed: false, optional: true, required: false
-  private _retentionYearly?: BackupPolicyVmRetentionYearly[];
+  private _retentionYearly?: BackupPolicyVmRetentionYearly | undefined; 
+  private __retentionYearlyOutput = new BackupPolicyVmRetentionYearlyOutputReference(this as any, "retention_yearly", true);
   public get retentionYearly() {
-    return this.interpolationForAttribute('retention_yearly') as any;
+    return this.__retentionYearlyOutput;
   }
-  public set retentionYearly(value: BackupPolicyVmRetentionYearly[] ) {
+  public putRetentionYearly(value: BackupPolicyVmRetentionYearly | undefined) {
     this._retentionYearly = value;
   }
   public resetRetentionYearly() {
@@ -428,11 +748,12 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: BackupPolicyVmTimeouts;
+  private _timeouts?: BackupPolicyVmTimeouts | undefined; 
+  private __timeoutsOutput = new BackupPolicyVmTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: BackupPolicyVmTimeouts ) {
+  public putTimeouts(value: BackupPolicyVmTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -455,11 +776,11 @@ export class BackupPolicyVm extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       timezone: cdktf.stringToTerraform(this._timezone),
-      backup: cdktf.listMapper(backupPolicyVmBackupToTerraform)(this._backup),
-      retention_daily: cdktf.listMapper(backupPolicyVmRetentionDailyToTerraform)(this._retentionDaily),
-      retention_monthly: cdktf.listMapper(backupPolicyVmRetentionMonthlyToTerraform)(this._retentionMonthly),
-      retention_weekly: cdktf.listMapper(backupPolicyVmRetentionWeeklyToTerraform)(this._retentionWeekly),
-      retention_yearly: cdktf.listMapper(backupPolicyVmRetentionYearlyToTerraform)(this._retentionYearly),
+      backup: backupPolicyVmBackupToTerraform(this._backup),
+      retention_daily: backupPolicyVmRetentionDailyToTerraform(this._retentionDaily),
+      retention_monthly: backupPolicyVmRetentionMonthlyToTerraform(this._retentionMonthly),
+      retention_weekly: backupPolicyVmRetentionWeeklyToTerraform(this._retentionWeekly),
+      retention_yearly: backupPolicyVmRetentionYearlyToTerraform(this._retentionYearly),
       timeouts: backupPolicyVmTimeoutsToTerraform(this._timeouts),
     };
   }

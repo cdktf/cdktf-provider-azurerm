@@ -33,13 +33,42 @@ export interface DataAzurermNetworkServiceTagsTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermNetworkServiceTagsTimeoutsToTerraform(struct?: DataAzurermNetworkServiceTagsTimeouts): any {
+function dataAzurermNetworkServiceTagsTimeoutsToTerraform(struct?: DataAzurermNetworkServiceTagsTimeoutsOutputReference | DataAzurermNetworkServiceTagsTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermNetworkServiceTagsTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/network_service_tags.html azurerm_network_service_tags}
@@ -104,7 +133,7 @@ export class DataAzurermNetworkServiceTags extends cdktf.TerraformDataSource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -117,11 +146,11 @@ export class DataAzurermNetworkServiceTags extends cdktf.TerraformDataSource {
   }
 
   // location_filter - computed: false, optional: true, required: false
-  private _locationFilter?: string;
+  private _locationFilter?: string | undefined; 
   public get locationFilter() {
     return this.getStringAttribute('location_filter');
   }
-  public set locationFilter(value: string ) {
+  public set locationFilter(value: string | undefined) {
     this._locationFilter = value;
   }
   public resetLocationFilter() {
@@ -133,7 +162,7 @@ export class DataAzurermNetworkServiceTags extends cdktf.TerraformDataSource {
   }
 
   // service - computed: false, optional: false, required: true
-  private _service: string;
+  private _service?: string; 
   public get service() {
     return this.getStringAttribute('service');
   }
@@ -146,11 +175,12 @@ export class DataAzurermNetworkServiceTags extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermNetworkServiceTagsTimeouts;
+  private _timeouts?: DataAzurermNetworkServiceTagsTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermNetworkServiceTagsTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermNetworkServiceTagsTimeouts ) {
+  public putTimeouts(value: DataAzurermNetworkServiceTagsTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

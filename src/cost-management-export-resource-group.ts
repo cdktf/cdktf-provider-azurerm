@@ -36,13 +36,13 @@ export interface CostManagementExportResourceGroupConfig extends cdktf.Terraform
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#delivery_info CostManagementExportResourceGroup#delivery_info}
   */
-  readonly deliveryInfo: CostManagementExportResourceGroupDeliveryInfo[];
+  readonly deliveryInfo: CostManagementExportResourceGroupDeliveryInfo;
   /**
   * query block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#query CostManagementExportResourceGroup#query}
   */
-  readonly query: CostManagementExportResourceGroupQuery[];
+  readonly query: CostManagementExportResourceGroupQuery;
   /**
   * timeouts block
   * 
@@ -65,8 +65,11 @@ export interface CostManagementExportResourceGroupDeliveryInfo {
   readonly storageAccountId: string;
 }
 
-function costManagementExportResourceGroupDeliveryInfoToTerraform(struct?: CostManagementExportResourceGroupDeliveryInfo): any {
+function costManagementExportResourceGroupDeliveryInfoToTerraform(struct?: CostManagementExportResourceGroupDeliveryInfoOutputReference | CostManagementExportResourceGroupDeliveryInfo): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     container_name: cdktf.stringToTerraform(struct!.containerName),
     root_folder_path: cdktf.stringToTerraform(struct!.rootFolderPath),
@@ -74,6 +77,55 @@ function costManagementExportResourceGroupDeliveryInfoToTerraform(struct?: CostM
   }
 }
 
+export class CostManagementExportResourceGroupDeliveryInfoOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // container_name - computed: false, optional: false, required: true
+  private _containerName?: string; 
+  public get containerName() {
+    return this.getStringAttribute('container_name');
+  }
+  public set containerName(value: string) {
+    this._containerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get containerNameInput() {
+    return this._containerName
+  }
+
+  // root_folder_path - computed: false, optional: false, required: true
+  private _rootFolderPath?: string; 
+  public get rootFolderPath() {
+    return this.getStringAttribute('root_folder_path');
+  }
+  public set rootFolderPath(value: string) {
+    this._rootFolderPath = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rootFolderPathInput() {
+    return this._rootFolderPath
+  }
+
+  // storage_account_id - computed: false, optional: false, required: true
+  private _storageAccountId?: string; 
+  public get storageAccountId() {
+    return this.getStringAttribute('storage_account_id');
+  }
+  public set storageAccountId(value: string) {
+    this._storageAccountId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountIdInput() {
+    return this._storageAccountId
+  }
+}
 export interface CostManagementExportResourceGroupQuery {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#time_frame CostManagementExportResourceGroup#time_frame}
@@ -85,14 +137,53 @@ export interface CostManagementExportResourceGroupQuery {
   readonly type: string;
 }
 
-function costManagementExportResourceGroupQueryToTerraform(struct?: CostManagementExportResourceGroupQuery): any {
+function costManagementExportResourceGroupQueryToTerraform(struct?: CostManagementExportResourceGroupQueryOutputReference | CostManagementExportResourceGroupQuery): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     time_frame: cdktf.stringToTerraform(struct!.timeFrame),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
 
+export class CostManagementExportResourceGroupQueryOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // time_frame - computed: false, optional: false, required: true
+  private _timeFrame?: string; 
+  public get timeFrame() {
+    return this.getStringAttribute('time_frame');
+  }
+  public set timeFrame(value: string) {
+    this._timeFrame = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeFrameInput() {
+    return this._timeFrame
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+}
 export interface CostManagementExportResourceGroupTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html#create CostManagementExportResourceGroup#create}
@@ -112,8 +203,11 @@ export interface CostManagementExportResourceGroupTimeouts {
   readonly update?: string;
 }
 
-function costManagementExportResourceGroupTimeoutsToTerraform(struct?: CostManagementExportResourceGroupTimeouts): any {
+function costManagementExportResourceGroupTimeoutsToTerraform(struct?: CostManagementExportResourceGroupTimeoutsOutputReference | CostManagementExportResourceGroupTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -122,6 +216,80 @@ function costManagementExportResourceGroupTimeoutsToTerraform(struct?: CostManag
   }
 }
 
+export class CostManagementExportResourceGroupTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cost_management_export_resource_group.html azurerm_cost_management_export_resource_group}
@@ -171,11 +339,11 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   // ==========
 
   // active - computed: false, optional: true, required: false
-  private _active?: boolean | cdktf.IResolvable;
+  private _active?: boolean | cdktf.IResolvable | undefined; 
   public get active() {
-    return this.getBooleanAttribute('active');
+    return this.getBooleanAttribute('active') as any;
   }
-  public set active(value: boolean | cdktf.IResolvable ) {
+  public set active(value: boolean | cdktf.IResolvable | undefined) {
     this._active = value;
   }
   public resetActive() {
@@ -192,7 +360,7 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -205,7 +373,7 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   }
 
   // recurrence_period_end - computed: false, optional: false, required: true
-  private _recurrencePeriodEnd: string;
+  private _recurrencePeriodEnd?: string; 
   public get recurrencePeriodEnd() {
     return this.getStringAttribute('recurrence_period_end');
   }
@@ -218,7 +386,7 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   }
 
   // recurrence_period_start - computed: false, optional: false, required: true
-  private _recurrencePeriodStart: string;
+  private _recurrencePeriodStart?: string; 
   public get recurrencePeriodStart() {
     return this.getStringAttribute('recurrence_period_start');
   }
@@ -231,7 +399,7 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   }
 
   // recurrence_type - computed: false, optional: false, required: true
-  private _recurrenceType: string;
+  private _recurrenceType?: string; 
   public get recurrenceType() {
     return this.getStringAttribute('recurrence_type');
   }
@@ -244,7 +412,7 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   }
 
   // resource_group_id - computed: false, optional: false, required: true
-  private _resourceGroupId: string;
+  private _resourceGroupId?: string; 
   public get resourceGroupId() {
     return this.getStringAttribute('resource_group_id');
   }
@@ -257,11 +425,12 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   }
 
   // delivery_info - computed: false, optional: false, required: true
-  private _deliveryInfo: CostManagementExportResourceGroupDeliveryInfo[];
+  private _deliveryInfo?: CostManagementExportResourceGroupDeliveryInfo; 
+  private __deliveryInfoOutput = new CostManagementExportResourceGroupDeliveryInfoOutputReference(this as any, "delivery_info", true);
   public get deliveryInfo() {
-    return this.interpolationForAttribute('delivery_info') as any;
+    return this.__deliveryInfoOutput;
   }
-  public set deliveryInfo(value: CostManagementExportResourceGroupDeliveryInfo[]) {
+  public putDeliveryInfo(value: CostManagementExportResourceGroupDeliveryInfo) {
     this._deliveryInfo = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -270,11 +439,12 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   }
 
   // query - computed: false, optional: false, required: true
-  private _query: CostManagementExportResourceGroupQuery[];
+  private _query?: CostManagementExportResourceGroupQuery; 
+  private __queryOutput = new CostManagementExportResourceGroupQueryOutputReference(this as any, "query", true);
   public get query() {
-    return this.interpolationForAttribute('query') as any;
+    return this.__queryOutput;
   }
-  public set query(value: CostManagementExportResourceGroupQuery[]) {
+  public putQuery(value: CostManagementExportResourceGroupQuery) {
     this._query = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -283,11 +453,12 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: CostManagementExportResourceGroupTimeouts;
+  private _timeouts?: CostManagementExportResourceGroupTimeouts | undefined; 
+  private __timeoutsOutput = new CostManagementExportResourceGroupTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: CostManagementExportResourceGroupTimeouts ) {
+  public putTimeouts(value: CostManagementExportResourceGroupTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -310,8 +481,8 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
       recurrence_period_start: cdktf.stringToTerraform(this._recurrencePeriodStart),
       recurrence_type: cdktf.stringToTerraform(this._recurrenceType),
       resource_group_id: cdktf.stringToTerraform(this._resourceGroupId),
-      delivery_info: cdktf.listMapper(costManagementExportResourceGroupDeliveryInfoToTerraform)(this._deliveryInfo),
-      query: cdktf.listMapper(costManagementExportResourceGroupQueryToTerraform)(this._query),
+      delivery_info: costManagementExportResourceGroupDeliveryInfoToTerraform(this._deliveryInfo),
+      query: costManagementExportResourceGroupQueryToTerraform(this._query),
       timeouts: costManagementExportResourceGroupTimeoutsToTerraform(this._timeouts),
     };
   }

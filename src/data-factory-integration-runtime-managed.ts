@@ -52,13 +52,13 @@ export interface DataFactoryIntegrationRuntimeManagedConfig extends cdktf.Terraf
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#catalog_info DataFactoryIntegrationRuntimeManaged#catalog_info}
   */
-  readonly catalogInfo?: DataFactoryIntegrationRuntimeManagedCatalogInfo[];
+  readonly catalogInfo?: DataFactoryIntegrationRuntimeManagedCatalogInfo;
   /**
   * custom_setup_script block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#custom_setup_script DataFactoryIntegrationRuntimeManaged#custom_setup_script}
   */
-  readonly customSetupScript?: DataFactoryIntegrationRuntimeManagedCustomSetupScript[];
+  readonly customSetupScript?: DataFactoryIntegrationRuntimeManagedCustomSetupScript;
   /**
   * timeouts block
   * 
@@ -70,7 +70,7 @@ export interface DataFactoryIntegrationRuntimeManagedConfig extends cdktf.Terraf
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#vnet_integration DataFactoryIntegrationRuntimeManaged#vnet_integration}
   */
-  readonly vnetIntegration?: DataFactoryIntegrationRuntimeManagedVnetIntegration[];
+  readonly vnetIntegration?: DataFactoryIntegrationRuntimeManagedVnetIntegration;
 }
 export interface DataFactoryIntegrationRuntimeManagedCatalogInfo {
   /**
@@ -91,8 +91,11 @@ export interface DataFactoryIntegrationRuntimeManagedCatalogInfo {
   readonly serverEndpoint: string;
 }
 
-function dataFactoryIntegrationRuntimeManagedCatalogInfoToTerraform(struct?: DataFactoryIntegrationRuntimeManagedCatalogInfo): any {
+function dataFactoryIntegrationRuntimeManagedCatalogInfoToTerraform(struct?: DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference | DataFactoryIntegrationRuntimeManagedCatalogInfo): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     administrator_login: cdktf.stringToTerraform(struct!.administratorLogin),
     administrator_password: cdktf.stringToTerraform(struct!.administratorPassword),
@@ -101,6 +104,77 @@ function dataFactoryIntegrationRuntimeManagedCatalogInfoToTerraform(struct?: Dat
   }
 }
 
+export class DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // administrator_login - computed: false, optional: true, required: false
+  private _administratorLogin?: string | undefined; 
+  public get administratorLogin() {
+    return this.getStringAttribute('administrator_login');
+  }
+  public set administratorLogin(value: string | undefined) {
+    this._administratorLogin = value;
+  }
+  public resetAdministratorLogin() {
+    this._administratorLogin = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get administratorLoginInput() {
+    return this._administratorLogin
+  }
+
+  // administrator_password - computed: false, optional: true, required: false
+  private _administratorPassword?: string | undefined; 
+  public get administratorPassword() {
+    return this.getStringAttribute('administrator_password');
+  }
+  public set administratorPassword(value: string | undefined) {
+    this._administratorPassword = value;
+  }
+  public resetAdministratorPassword() {
+    this._administratorPassword = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get administratorPasswordInput() {
+    return this._administratorPassword
+  }
+
+  // pricing_tier - computed: false, optional: true, required: false
+  private _pricingTier?: string | undefined; 
+  public get pricingTier() {
+    return this.getStringAttribute('pricing_tier');
+  }
+  public set pricingTier(value: string | undefined) {
+    this._pricingTier = value;
+  }
+  public resetPricingTier() {
+    this._pricingTier = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pricingTierInput() {
+    return this._pricingTier
+  }
+
+  // server_endpoint - computed: false, optional: false, required: true
+  private _serverEndpoint?: string; 
+  public get serverEndpoint() {
+    return this.getStringAttribute('server_endpoint');
+  }
+  public set serverEndpoint(value: string) {
+    this._serverEndpoint = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverEndpointInput() {
+    return this._serverEndpoint
+  }
+}
 export interface DataFactoryIntegrationRuntimeManagedCustomSetupScript {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#blob_container_uri DataFactoryIntegrationRuntimeManaged#blob_container_uri}
@@ -112,14 +186,53 @@ export interface DataFactoryIntegrationRuntimeManagedCustomSetupScript {
   readonly sasToken: string;
 }
 
-function dataFactoryIntegrationRuntimeManagedCustomSetupScriptToTerraform(struct?: DataFactoryIntegrationRuntimeManagedCustomSetupScript): any {
+function dataFactoryIntegrationRuntimeManagedCustomSetupScriptToTerraform(struct?: DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReference | DataFactoryIntegrationRuntimeManagedCustomSetupScript): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     blob_container_uri: cdktf.stringToTerraform(struct!.blobContainerUri),
     sas_token: cdktf.stringToTerraform(struct!.sasToken),
   }
 }
 
+export class DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // blob_container_uri - computed: false, optional: false, required: true
+  private _blobContainerUri?: string; 
+  public get blobContainerUri() {
+    return this.getStringAttribute('blob_container_uri');
+  }
+  public set blobContainerUri(value: string) {
+    this._blobContainerUri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get blobContainerUriInput() {
+    return this._blobContainerUri
+  }
+
+  // sas_token - computed: false, optional: false, required: true
+  private _sasToken?: string; 
+  public get sasToken() {
+    return this.getStringAttribute('sas_token');
+  }
+  public set sasToken(value: string) {
+    this._sasToken = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sasTokenInput() {
+    return this._sasToken
+  }
+}
 export interface DataFactoryIntegrationRuntimeManagedTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#create DataFactoryIntegrationRuntimeManaged#create}
@@ -139,8 +252,11 @@ export interface DataFactoryIntegrationRuntimeManagedTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryIntegrationRuntimeManagedTimeoutsToTerraform(struct?: DataFactoryIntegrationRuntimeManagedTimeouts): any {
+function dataFactoryIntegrationRuntimeManagedTimeoutsToTerraform(struct?: DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference | DataFactoryIntegrationRuntimeManagedTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -149,6 +265,80 @@ function dataFactoryIntegrationRuntimeManagedTimeoutsToTerraform(struct?: DataFa
   }
 }
 
+export class DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 export interface DataFactoryIntegrationRuntimeManagedVnetIntegration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html#subnet_name DataFactoryIntegrationRuntimeManaged#subnet_name}
@@ -160,14 +350,53 @@ export interface DataFactoryIntegrationRuntimeManagedVnetIntegration {
   readonly vnetId: string;
 }
 
-function dataFactoryIntegrationRuntimeManagedVnetIntegrationToTerraform(struct?: DataFactoryIntegrationRuntimeManagedVnetIntegration): any {
+function dataFactoryIntegrationRuntimeManagedVnetIntegrationToTerraform(struct?: DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference | DataFactoryIntegrationRuntimeManagedVnetIntegration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     subnet_name: cdktf.stringToTerraform(struct!.subnetName),
     vnet_id: cdktf.stringToTerraform(struct!.vnetId),
   }
 }
 
+export class DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // subnet_name - computed: false, optional: false, required: true
+  private _subnetName?: string; 
+  public get subnetName() {
+    return this.getStringAttribute('subnet_name');
+  }
+  public set subnetName(value: string) {
+    this._subnetName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetNameInput() {
+    return this._subnetName
+  }
+
+  // vnet_id - computed: false, optional: false, required: true
+  private _vnetId?: string; 
+  public get vnetId() {
+    return this.getStringAttribute('vnet_id');
+  }
+  public set vnetId(value: string) {
+    this._vnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vnetIdInput() {
+    return this._vnetId
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_managed.html azurerm_data_factory_integration_runtime_managed}
@@ -222,7 +451,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   // ==========
 
   // data_factory_name - computed: false, optional: false, required: true
-  private _dataFactoryName: string;
+  private _dataFactoryName?: string; 
   public get dataFactoryName() {
     return this.getStringAttribute('data_factory_name');
   }
@@ -235,11 +464,11 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -251,11 +480,11 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // edition - computed: false, optional: true, required: false
-  private _edition?: string;
+  private _edition?: string | undefined; 
   public get edition() {
     return this.getStringAttribute('edition');
   }
-  public set edition(value: string ) {
+  public set edition(value: string | undefined) {
     this._edition = value;
   }
   public resetEdition() {
@@ -272,11 +501,11 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // license_type - computed: false, optional: true, required: false
-  private _licenseType?: string;
+  private _licenseType?: string | undefined; 
   public get licenseType() {
     return this.getStringAttribute('license_type');
   }
-  public set licenseType(value: string ) {
+  public set licenseType(value: string | undefined) {
     this._licenseType = value;
   }
   public resetLicenseType() {
@@ -288,7 +517,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -301,11 +530,11 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // max_parallel_executions_per_node - computed: false, optional: true, required: false
-  private _maxParallelExecutionsPerNode?: number;
+  private _maxParallelExecutionsPerNode?: number | undefined; 
   public get maxParallelExecutionsPerNode() {
     return this.getNumberAttribute('max_parallel_executions_per_node');
   }
-  public set maxParallelExecutionsPerNode(value: number ) {
+  public set maxParallelExecutionsPerNode(value: number | undefined) {
     this._maxParallelExecutionsPerNode = value;
   }
   public resetMaxParallelExecutionsPerNode() {
@@ -317,7 +546,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -330,7 +559,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // node_size - computed: false, optional: false, required: true
-  private _nodeSize: string;
+  private _nodeSize?: string; 
   public get nodeSize() {
     return this.getStringAttribute('node_size');
   }
@@ -343,11 +572,11 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // number_of_nodes - computed: false, optional: true, required: false
-  private _numberOfNodes?: number;
+  private _numberOfNodes?: number | undefined; 
   public get numberOfNodes() {
     return this.getNumberAttribute('number_of_nodes');
   }
-  public set numberOfNodes(value: number ) {
+  public set numberOfNodes(value: number | undefined) {
     this._numberOfNodes = value;
   }
   public resetNumberOfNodes() {
@@ -359,7 +588,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -372,11 +601,12 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // catalog_info - computed: false, optional: true, required: false
-  private _catalogInfo?: DataFactoryIntegrationRuntimeManagedCatalogInfo[];
+  private _catalogInfo?: DataFactoryIntegrationRuntimeManagedCatalogInfo | undefined; 
+  private __catalogInfoOutput = new DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference(this as any, "catalog_info", true);
   public get catalogInfo() {
-    return this.interpolationForAttribute('catalog_info') as any;
+    return this.__catalogInfoOutput;
   }
-  public set catalogInfo(value: DataFactoryIntegrationRuntimeManagedCatalogInfo[] ) {
+  public putCatalogInfo(value: DataFactoryIntegrationRuntimeManagedCatalogInfo | undefined) {
     this._catalogInfo = value;
   }
   public resetCatalogInfo() {
@@ -388,11 +618,12 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // custom_setup_script - computed: false, optional: true, required: false
-  private _customSetupScript?: DataFactoryIntegrationRuntimeManagedCustomSetupScript[];
+  private _customSetupScript?: DataFactoryIntegrationRuntimeManagedCustomSetupScript | undefined; 
+  private __customSetupScriptOutput = new DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReference(this as any, "custom_setup_script", true);
   public get customSetupScript() {
-    return this.interpolationForAttribute('custom_setup_script') as any;
+    return this.__customSetupScriptOutput;
   }
-  public set customSetupScript(value: DataFactoryIntegrationRuntimeManagedCustomSetupScript[] ) {
+  public putCustomSetupScript(value: DataFactoryIntegrationRuntimeManagedCustomSetupScript | undefined) {
     this._customSetupScript = value;
   }
   public resetCustomSetupScript() {
@@ -404,11 +635,12 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryIntegrationRuntimeManagedTimeouts;
+  private _timeouts?: DataFactoryIntegrationRuntimeManagedTimeouts | undefined; 
+  private __timeoutsOutput = new DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataFactoryIntegrationRuntimeManagedTimeouts ) {
+  public putTimeouts(value: DataFactoryIntegrationRuntimeManagedTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -420,11 +652,12 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // vnet_integration - computed: false, optional: true, required: false
-  private _vnetIntegration?: DataFactoryIntegrationRuntimeManagedVnetIntegration[];
+  private _vnetIntegration?: DataFactoryIntegrationRuntimeManagedVnetIntegration | undefined; 
+  private __vnetIntegrationOutput = new DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference(this as any, "vnet_integration", true);
   public get vnetIntegration() {
-    return this.interpolationForAttribute('vnet_integration') as any;
+    return this.__vnetIntegrationOutput;
   }
-  public set vnetIntegration(value: DataFactoryIntegrationRuntimeManagedVnetIntegration[] ) {
+  public putVnetIntegration(value: DataFactoryIntegrationRuntimeManagedVnetIntegration | undefined) {
     this._vnetIntegration = value;
   }
   public resetVnetIntegration() {
@@ -451,10 +684,10 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
       node_size: cdktf.stringToTerraform(this._nodeSize),
       number_of_nodes: cdktf.numberToTerraform(this._numberOfNodes),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      catalog_info: cdktf.listMapper(dataFactoryIntegrationRuntimeManagedCatalogInfoToTerraform)(this._catalogInfo),
-      custom_setup_script: cdktf.listMapper(dataFactoryIntegrationRuntimeManagedCustomSetupScriptToTerraform)(this._customSetupScript),
+      catalog_info: dataFactoryIntegrationRuntimeManagedCatalogInfoToTerraform(this._catalogInfo),
+      custom_setup_script: dataFactoryIntegrationRuntimeManagedCustomSetupScriptToTerraform(this._customSetupScript),
       timeouts: dataFactoryIntegrationRuntimeManagedTimeoutsToTerraform(this._timeouts),
-      vnet_integration: cdktf.listMapper(dataFactoryIntegrationRuntimeManagedVnetIntegrationToTerraform)(this._vnetIntegration),
+      vnet_integration: dataFactoryIntegrationRuntimeManagedVnetIntegrationToTerraform(this._vnetIntegration),
     };
   }
 }

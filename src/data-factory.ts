@@ -40,7 +40,7 @@ export interface DataFactoryConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#github_configuration DataFactory#github_configuration}
   */
-  readonly githubConfiguration?: DataFactoryGithubConfiguration[];
+  readonly githubConfiguration?: DataFactoryGithubConfiguration;
   /**
   * global_parameter block
   * 
@@ -52,7 +52,7 @@ export interface DataFactoryConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#identity DataFactory#identity}
   */
-  readonly identity?: DataFactoryIdentity[];
+  readonly identity?: DataFactoryIdentity;
   /**
   * timeouts block
   * 
@@ -64,7 +64,7 @@ export interface DataFactoryConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#vsts_configuration DataFactory#vsts_configuration}
   */
-  readonly vstsConfiguration?: DataFactoryVstsConfiguration[];
+  readonly vstsConfiguration?: DataFactoryVstsConfiguration;
 }
 export interface DataFactoryGithubConfiguration {
   /**
@@ -89,8 +89,11 @@ export interface DataFactoryGithubConfiguration {
   readonly rootFolder: string;
 }
 
-function dataFactoryGithubConfigurationToTerraform(struct?: DataFactoryGithubConfiguration): any {
+function dataFactoryGithubConfigurationToTerraform(struct?: DataFactoryGithubConfigurationOutputReference | DataFactoryGithubConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     account_name: cdktf.stringToTerraform(struct!.accountName),
     branch_name: cdktf.stringToTerraform(struct!.branchName),
@@ -100,6 +103,81 @@ function dataFactoryGithubConfigurationToTerraform(struct?: DataFactoryGithubCon
   }
 }
 
+export class DataFactoryGithubConfigurationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // account_name - computed: false, optional: false, required: true
+  private _accountName?: string; 
+  public get accountName() {
+    return this.getStringAttribute('account_name');
+  }
+  public set accountName(value: string) {
+    this._accountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountNameInput() {
+    return this._accountName
+  }
+
+  // branch_name - computed: false, optional: false, required: true
+  private _branchName?: string; 
+  public get branchName() {
+    return this.getStringAttribute('branch_name');
+  }
+  public set branchName(value: string) {
+    this._branchName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get branchNameInput() {
+    return this._branchName
+  }
+
+  // git_url - computed: false, optional: false, required: true
+  private _gitUrl?: string; 
+  public get gitUrl() {
+    return this.getStringAttribute('git_url');
+  }
+  public set gitUrl(value: string) {
+    this._gitUrl = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get gitUrlInput() {
+    return this._gitUrl
+  }
+
+  // repository_name - computed: false, optional: false, required: true
+  private _repositoryName?: string; 
+  public get repositoryName() {
+    return this.getStringAttribute('repository_name');
+  }
+  public set repositoryName(value: string) {
+    this._repositoryName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repositoryNameInput() {
+    return this._repositoryName
+  }
+
+  // root_folder - computed: false, optional: false, required: true
+  private _rootFolder?: string; 
+  public get rootFolder() {
+    return this.getStringAttribute('root_folder');
+  }
+  public set rootFolder(value: string) {
+    this._rootFolder = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rootFolderInput() {
+    return this._rootFolder
+  }
+}
 export interface DataFactoryGlobalParameter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#name DataFactory#name}
@@ -117,6 +195,9 @@ export interface DataFactoryGlobalParameter {
 
 function dataFactoryGlobalParameterToTerraform(struct?: DataFactoryGlobalParameter): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     type: cdktf.stringToTerraform(struct!.type),
@@ -135,14 +216,56 @@ export interface DataFactoryIdentity {
   readonly type: string;
 }
 
-function dataFactoryIdentityToTerraform(struct?: DataFactoryIdentity): any {
+function dataFactoryIdentityToTerraform(struct?: DataFactoryIdentityOutputReference | DataFactoryIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
 
+export class DataFactoryIdentityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[] | undefined; 
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+  public set identityIds(value: string[] | undefined) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+}
 export interface DataFactoryTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#create DataFactory#create}
@@ -162,8 +285,11 @@ export interface DataFactoryTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryTimeoutsToTerraform(struct?: DataFactoryTimeouts): any {
+function dataFactoryTimeoutsToTerraform(struct?: DataFactoryTimeoutsOutputReference | DataFactoryTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -172,6 +298,80 @@ function dataFactoryTimeoutsToTerraform(struct?: DataFactoryTimeouts): any {
   }
 }
 
+export class DataFactoryTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 export interface DataFactoryVstsConfiguration {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html#account_name DataFactory#account_name}
@@ -199,8 +399,11 @@ export interface DataFactoryVstsConfiguration {
   readonly tenantId: string;
 }
 
-function dataFactoryVstsConfigurationToTerraform(struct?: DataFactoryVstsConfiguration): any {
+function dataFactoryVstsConfigurationToTerraform(struct?: DataFactoryVstsConfigurationOutputReference | DataFactoryVstsConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     account_name: cdktf.stringToTerraform(struct!.accountName),
     branch_name: cdktf.stringToTerraform(struct!.branchName),
@@ -211,6 +414,94 @@ function dataFactoryVstsConfigurationToTerraform(struct?: DataFactoryVstsConfigu
   }
 }
 
+export class DataFactoryVstsConfigurationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // account_name - computed: false, optional: false, required: true
+  private _accountName?: string; 
+  public get accountName() {
+    return this.getStringAttribute('account_name');
+  }
+  public set accountName(value: string) {
+    this._accountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountNameInput() {
+    return this._accountName
+  }
+
+  // branch_name - computed: false, optional: false, required: true
+  private _branchName?: string; 
+  public get branchName() {
+    return this.getStringAttribute('branch_name');
+  }
+  public set branchName(value: string) {
+    this._branchName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get branchNameInput() {
+    return this._branchName
+  }
+
+  // project_name - computed: false, optional: false, required: true
+  private _projectName?: string; 
+  public get projectName() {
+    return this.getStringAttribute('project_name');
+  }
+  public set projectName(value: string) {
+    this._projectName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get projectNameInput() {
+    return this._projectName
+  }
+
+  // repository_name - computed: false, optional: false, required: true
+  private _repositoryName?: string; 
+  public get repositoryName() {
+    return this.getStringAttribute('repository_name');
+  }
+  public set repositoryName(value: string) {
+    this._repositoryName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get repositoryNameInput() {
+    return this._repositoryName
+  }
+
+  // root_folder - computed: false, optional: false, required: true
+  private _rootFolder?: string; 
+  public get rootFolder() {
+    return this.getStringAttribute('root_folder');
+  }
+  public set rootFolder(value: string) {
+    this._rootFolder = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get rootFolderInput() {
+    return this._rootFolder
+  }
+
+  // tenant_id - computed: false, optional: false, required: true
+  private _tenantId?: string; 
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+  public set tenantId(value: string) {
+    this._tenantId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenantIdInput() {
+    return this._tenantId
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory.html azurerm_data_factory}
@@ -263,11 +554,11 @@ export class DataFactory extends cdktf.TerraformResource {
   // ==========
 
   // customer_managed_key_id - computed: false, optional: true, required: false
-  private _customerManagedKeyId?: string;
+  private _customerManagedKeyId?: string | undefined; 
   public get customerManagedKeyId() {
     return this.getStringAttribute('customer_managed_key_id');
   }
-  public set customerManagedKeyId(value: string ) {
+  public set customerManagedKeyId(value: string | undefined) {
     this._customerManagedKeyId = value;
   }
   public resetCustomerManagedKeyId() {
@@ -284,7 +575,7 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -297,11 +588,11 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // managed_virtual_network_enabled - computed: false, optional: true, required: false
-  private _managedVirtualNetworkEnabled?: boolean | cdktf.IResolvable;
+  private _managedVirtualNetworkEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get managedVirtualNetworkEnabled() {
-    return this.getBooleanAttribute('managed_virtual_network_enabled');
+    return this.getBooleanAttribute('managed_virtual_network_enabled') as any;
   }
-  public set managedVirtualNetworkEnabled(value: boolean | cdktf.IResolvable ) {
+  public set managedVirtualNetworkEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._managedVirtualNetworkEnabled = value;
   }
   public resetManagedVirtualNetworkEnabled() {
@@ -313,7 +604,7 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -326,11 +617,11 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // public_network_enabled - computed: false, optional: true, required: false
-  private _publicNetworkEnabled?: boolean | cdktf.IResolvable;
+  private _publicNetworkEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get publicNetworkEnabled() {
-    return this.getBooleanAttribute('public_network_enabled');
+    return this.getBooleanAttribute('public_network_enabled') as any;
   }
-  public set publicNetworkEnabled(value: boolean | cdktf.IResolvable ) {
+  public set publicNetworkEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._publicNetworkEnabled = value;
   }
   public resetPublicNetworkEnabled() {
@@ -342,7 +633,7 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -355,11 +646,12 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -371,11 +663,12 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // github_configuration - computed: false, optional: true, required: false
-  private _githubConfiguration?: DataFactoryGithubConfiguration[];
+  private _githubConfiguration?: DataFactoryGithubConfiguration | undefined; 
+  private __githubConfigurationOutput = new DataFactoryGithubConfigurationOutputReference(this as any, "github_configuration", true);
   public get githubConfiguration() {
-    return this.interpolationForAttribute('github_configuration') as any;
+    return this.__githubConfigurationOutput;
   }
-  public set githubConfiguration(value: DataFactoryGithubConfiguration[] ) {
+  public putGithubConfiguration(value: DataFactoryGithubConfiguration | undefined) {
     this._githubConfiguration = value;
   }
   public resetGithubConfiguration() {
@@ -387,11 +680,12 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // global_parameter - computed: false, optional: true, required: false
-  private _globalParameter?: DataFactoryGlobalParameter[];
+  private _globalParameter?: DataFactoryGlobalParameter[] | undefined; 
   public get globalParameter() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('global_parameter') as any;
   }
-  public set globalParameter(value: DataFactoryGlobalParameter[] ) {
+  public set globalParameter(value: DataFactoryGlobalParameter[] | undefined) {
     this._globalParameter = value;
   }
   public resetGlobalParameter() {
@@ -403,11 +697,12 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: DataFactoryIdentity[];
+  private _identity?: DataFactoryIdentity | undefined; 
+  private __identityOutput = new DataFactoryIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.interpolationForAttribute('identity') as any;
+    return this.__identityOutput;
   }
-  public set identity(value: DataFactoryIdentity[] ) {
+  public putIdentity(value: DataFactoryIdentity | undefined) {
     this._identity = value;
   }
   public resetIdentity() {
@@ -419,11 +714,12 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryTimeouts;
+  private _timeouts?: DataFactoryTimeouts | undefined; 
+  private __timeoutsOutput = new DataFactoryTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataFactoryTimeouts ) {
+  public putTimeouts(value: DataFactoryTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -435,11 +731,12 @@ export class DataFactory extends cdktf.TerraformResource {
   }
 
   // vsts_configuration - computed: false, optional: true, required: false
-  private _vstsConfiguration?: DataFactoryVstsConfiguration[];
+  private _vstsConfiguration?: DataFactoryVstsConfiguration | undefined; 
+  private __vstsConfigurationOutput = new DataFactoryVstsConfigurationOutputReference(this as any, "vsts_configuration", true);
   public get vstsConfiguration() {
-    return this.interpolationForAttribute('vsts_configuration') as any;
+    return this.__vstsConfigurationOutput;
   }
-  public set vstsConfiguration(value: DataFactoryVstsConfiguration[] ) {
+  public putVstsConfiguration(value: DataFactoryVstsConfiguration | undefined) {
     this._vstsConfiguration = value;
   }
   public resetVstsConfiguration() {
@@ -463,11 +760,11 @@ export class DataFactory extends cdktf.TerraformResource {
       public_network_enabled: cdktf.booleanToTerraform(this._publicNetworkEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      github_configuration: cdktf.listMapper(dataFactoryGithubConfigurationToTerraform)(this._githubConfiguration),
+      github_configuration: dataFactoryGithubConfigurationToTerraform(this._githubConfiguration),
       global_parameter: cdktf.listMapper(dataFactoryGlobalParameterToTerraform)(this._globalParameter),
-      identity: cdktf.listMapper(dataFactoryIdentityToTerraform)(this._identity),
+      identity: dataFactoryIdentityToTerraform(this._identity),
       timeouts: dataFactoryTimeoutsToTerraform(this._timeouts),
-      vsts_configuration: cdktf.listMapper(dataFactoryVstsConfigurationToTerraform)(this._vstsConfiguration),
+      vsts_configuration: dataFactoryVstsConfigurationToTerraform(this._vstsConfiguration),
     };
   }
 }

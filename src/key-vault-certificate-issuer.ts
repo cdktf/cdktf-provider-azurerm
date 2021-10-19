@@ -65,6 +65,9 @@ export interface KeyVaultCertificateIssuerAdmin {
 
 function keyVaultCertificateIssuerAdminToTerraform(struct?: KeyVaultCertificateIssuerAdmin): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     email_address: cdktf.stringToTerraform(struct!.emailAddress),
     first_name: cdktf.stringToTerraform(struct!.firstName),
@@ -92,8 +95,11 @@ export interface KeyVaultCertificateIssuerTimeouts {
   readonly update?: string;
 }
 
-function keyVaultCertificateIssuerTimeoutsToTerraform(struct?: KeyVaultCertificateIssuerTimeouts): any {
+function keyVaultCertificateIssuerTimeoutsToTerraform(struct?: KeyVaultCertificateIssuerTimeoutsOutputReference | KeyVaultCertificateIssuerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -102,6 +108,80 @@ function keyVaultCertificateIssuerTimeoutsToTerraform(struct?: KeyVaultCertifica
   }
 }
 
+export class KeyVaultCertificateIssuerTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate_issuer.html azurerm_key_vault_certificate_issuer}
@@ -150,11 +230,11 @@ export class KeyVaultCertificateIssuer extends cdktf.TerraformResource {
   // ==========
 
   // account_id - computed: false, optional: true, required: false
-  private _accountId?: string;
+  private _accountId?: string | undefined; 
   public get accountId() {
     return this.getStringAttribute('account_id');
   }
-  public set accountId(value: string ) {
+  public set accountId(value: string | undefined) {
     this._accountId = value;
   }
   public resetAccountId() {
@@ -171,7 +251,7 @@ export class KeyVaultCertificateIssuer extends cdktf.TerraformResource {
   }
 
   // key_vault_id - computed: false, optional: false, required: true
-  private _keyVaultId: string;
+  private _keyVaultId?: string; 
   public get keyVaultId() {
     return this.getStringAttribute('key_vault_id');
   }
@@ -184,7 +264,7 @@ export class KeyVaultCertificateIssuer extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -197,11 +277,11 @@ export class KeyVaultCertificateIssuer extends cdktf.TerraformResource {
   }
 
   // org_id - computed: false, optional: true, required: false
-  private _orgId?: string;
+  private _orgId?: string | undefined; 
   public get orgId() {
     return this.getStringAttribute('org_id');
   }
-  public set orgId(value: string ) {
+  public set orgId(value: string | undefined) {
     this._orgId = value;
   }
   public resetOrgId() {
@@ -213,11 +293,11 @@ export class KeyVaultCertificateIssuer extends cdktf.TerraformResource {
   }
 
   // password - computed: false, optional: true, required: false
-  private _password?: string;
+  private _password?: string | undefined; 
   public get password() {
     return this.getStringAttribute('password');
   }
-  public set password(value: string ) {
+  public set password(value: string | undefined) {
     this._password = value;
   }
   public resetPassword() {
@@ -229,7 +309,7 @@ export class KeyVaultCertificateIssuer extends cdktf.TerraformResource {
   }
 
   // provider_name - computed: false, optional: false, required: true
-  private _providerName: string;
+  private _providerName?: string; 
   public get providerName() {
     return this.getStringAttribute('provider_name');
   }
@@ -242,11 +322,12 @@ export class KeyVaultCertificateIssuer extends cdktf.TerraformResource {
   }
 
   // admin - computed: false, optional: true, required: false
-  private _admin?: KeyVaultCertificateIssuerAdmin[];
+  private _admin?: KeyVaultCertificateIssuerAdmin[] | undefined; 
   public get admin() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('admin') as any;
   }
-  public set admin(value: KeyVaultCertificateIssuerAdmin[] ) {
+  public set admin(value: KeyVaultCertificateIssuerAdmin[] | undefined) {
     this._admin = value;
   }
   public resetAdmin() {
@@ -258,11 +339,12 @@ export class KeyVaultCertificateIssuer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: KeyVaultCertificateIssuerTimeouts;
+  private _timeouts?: KeyVaultCertificateIssuerTimeouts | undefined; 
+  private __timeoutsOutput = new KeyVaultCertificateIssuerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: KeyVaultCertificateIssuerTimeouts ) {
+  public putTimeouts(value: KeyVaultCertificateIssuerTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

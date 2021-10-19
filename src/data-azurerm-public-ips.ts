@@ -68,13 +68,42 @@ export interface DataAzurermPublicIpsTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermPublicIpsTimeoutsToTerraform(struct?: DataAzurermPublicIpsTimeouts): any {
+function dataAzurermPublicIpsTimeoutsToTerraform(struct?: DataAzurermPublicIpsTimeoutsOutputReference | DataAzurermPublicIpsTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermPublicIpsTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/public_ips.html azurerm_public_ips}
@@ -121,11 +150,11 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
   // ==========
 
   // allocation_type - computed: false, optional: true, required: false
-  private _allocationType?: string;
+  private _allocationType?: string | undefined; 
   public get allocationType() {
     return this.getStringAttribute('allocation_type');
   }
-  public set allocationType(value: string ) {
+  public set allocationType(value: string | undefined) {
     this._allocationType = value;
   }
   public resetAllocationType() {
@@ -137,11 +166,11 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
   }
 
   // attached - computed: false, optional: true, required: false
-  private _attached?: boolean | cdktf.IResolvable;
+  private _attached?: boolean | cdktf.IResolvable | undefined; 
   public get attached() {
-    return this.getBooleanAttribute('attached');
+    return this.getBooleanAttribute('attached') as any;
   }
-  public set attached(value: boolean | cdktf.IResolvable ) {
+  public set attached(value: boolean | cdktf.IResolvable | undefined) {
     this._attached = value;
   }
   public resetAttached() {
@@ -153,11 +182,11 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
   }
 
   // attachment_status - computed: false, optional: true, required: false
-  private _attachmentStatus?: string;
+  private _attachmentStatus?: string | undefined; 
   public get attachmentStatus() {
     return this.getStringAttribute('attachment_status');
   }
-  public set attachmentStatus(value: string ) {
+  public set attachmentStatus(value: string | undefined) {
     this._attachmentStatus = value;
   }
   public resetAttachmentStatus() {
@@ -174,11 +203,11 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
   }
 
   // name_prefix - computed: false, optional: true, required: false
-  private _namePrefix?: string;
+  private _namePrefix?: string | undefined; 
   public get namePrefix() {
     return this.getStringAttribute('name_prefix');
   }
-  public set namePrefix(value: string ) {
+  public set namePrefix(value: string | undefined) {
     this._namePrefix = value;
   }
   public resetNamePrefix() {
@@ -195,7 +224,7 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -208,11 +237,12 @@ export class DataAzurermPublicIps extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermPublicIpsTimeouts;
+  private _timeouts?: DataAzurermPublicIpsTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermPublicIpsTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermPublicIpsTimeouts ) {
+  public putTimeouts(value: DataAzurermPublicIpsTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

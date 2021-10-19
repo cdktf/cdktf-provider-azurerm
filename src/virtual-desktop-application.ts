@@ -73,8 +73,11 @@ export interface VirtualDesktopApplicationTimeouts {
   readonly update?: string;
 }
 
-function virtualDesktopApplicationTimeoutsToTerraform(struct?: VirtualDesktopApplicationTimeouts): any {
+function virtualDesktopApplicationTimeoutsToTerraform(struct?: VirtualDesktopApplicationTimeoutsOutputReference | VirtualDesktopApplicationTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -83,6 +86,80 @@ function virtualDesktopApplicationTimeoutsToTerraform(struct?: VirtualDesktopApp
   }
 }
 
+export class VirtualDesktopApplicationTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html azurerm_virtual_desktop_application}
@@ -134,7 +211,7 @@ export class VirtualDesktopApplication extends cdktf.TerraformResource {
   // ==========
 
   // application_group_id - computed: false, optional: false, required: true
-  private _applicationGroupId: string;
+  private _applicationGroupId?: string; 
   public get applicationGroupId() {
     return this.getStringAttribute('application_group_id');
   }
@@ -147,7 +224,7 @@ export class VirtualDesktopApplication extends cdktf.TerraformResource {
   }
 
   // command_line_argument_policy - computed: false, optional: false, required: true
-  private _commandLineArgumentPolicy: string;
+  private _commandLineArgumentPolicy?: string; 
   public get commandLineArgumentPolicy() {
     return this.getStringAttribute('command_line_argument_policy');
   }
@@ -160,11 +237,11 @@ export class VirtualDesktopApplication extends cdktf.TerraformResource {
   }
 
   // command_line_arguments - computed: false, optional: true, required: false
-  private _commandLineArguments?: string;
+  private _commandLineArguments?: string | undefined; 
   public get commandLineArguments() {
     return this.getStringAttribute('command_line_arguments');
   }
-  public set commandLineArguments(value: string ) {
+  public set commandLineArguments(value: string | undefined) {
     this._commandLineArguments = value;
   }
   public resetCommandLineArguments() {
@@ -176,11 +253,11 @@ export class VirtualDesktopApplication extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -192,11 +269,11 @@ export class VirtualDesktopApplication extends cdktf.TerraformResource {
   }
 
   // friendly_name - computed: true, optional: true, required: false
-  private _friendlyName?: string;
+  private _friendlyName?: string | undefined; 
   public get friendlyName() {
     return this.getStringAttribute('friendly_name');
   }
-  public set friendlyName(value: string) {
+  public set friendlyName(value: string | undefined) {
     this._friendlyName = value;
   }
   public resetFriendlyName() {
@@ -208,11 +285,11 @@ export class VirtualDesktopApplication extends cdktf.TerraformResource {
   }
 
   // icon_index - computed: false, optional: true, required: false
-  private _iconIndex?: number;
+  private _iconIndex?: number | undefined; 
   public get iconIndex() {
     return this.getNumberAttribute('icon_index');
   }
-  public set iconIndex(value: number ) {
+  public set iconIndex(value: number | undefined) {
     this._iconIndex = value;
   }
   public resetIconIndex() {
@@ -224,11 +301,11 @@ export class VirtualDesktopApplication extends cdktf.TerraformResource {
   }
 
   // icon_path - computed: true, optional: true, required: false
-  private _iconPath?: string;
+  private _iconPath?: string | undefined; 
   public get iconPath() {
     return this.getStringAttribute('icon_path');
   }
-  public set iconPath(value: string) {
+  public set iconPath(value: string | undefined) {
     this._iconPath = value;
   }
   public resetIconPath() {
@@ -245,7 +322,7 @@ export class VirtualDesktopApplication extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -258,7 +335,7 @@ export class VirtualDesktopApplication extends cdktf.TerraformResource {
   }
 
   // path - computed: false, optional: false, required: true
-  private _path: string;
+  private _path?: string; 
   public get path() {
     return this.getStringAttribute('path');
   }
@@ -271,11 +348,11 @@ export class VirtualDesktopApplication extends cdktf.TerraformResource {
   }
 
   // show_in_portal - computed: false, optional: true, required: false
-  private _showInPortal?: boolean | cdktf.IResolvable;
+  private _showInPortal?: boolean | cdktf.IResolvable | undefined; 
   public get showInPortal() {
-    return this.getBooleanAttribute('show_in_portal');
+    return this.getBooleanAttribute('show_in_portal') as any;
   }
-  public set showInPortal(value: boolean | cdktf.IResolvable ) {
+  public set showInPortal(value: boolean | cdktf.IResolvable | undefined) {
     this._showInPortal = value;
   }
   public resetShowInPortal() {
@@ -287,11 +364,12 @@ export class VirtualDesktopApplication extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VirtualDesktopApplicationTimeouts;
+  private _timeouts?: VirtualDesktopApplicationTimeouts | undefined; 
+  private __timeoutsOutput = new VirtualDesktopApplicationTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: VirtualDesktopApplicationTimeouts ) {
+  public putTimeouts(value: VirtualDesktopApplicationTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

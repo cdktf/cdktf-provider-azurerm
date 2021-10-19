@@ -36,7 +36,7 @@ export interface EventgridSystemTopicConfig extends cdktf.TerraformMetaArguments
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#identity EventgridSystemTopic#identity}
   */
-  readonly identity?: EventgridSystemTopicIdentity[];
+  readonly identity?: EventgridSystemTopicIdentity;
   /**
   * timeouts block
   * 
@@ -55,14 +55,56 @@ export interface EventgridSystemTopicIdentity {
   readonly type: string;
 }
 
-function eventgridSystemTopicIdentityToTerraform(struct?: EventgridSystemTopicIdentity): any {
+function eventgridSystemTopicIdentityToTerraform(struct?: EventgridSystemTopicIdentityOutputReference | EventgridSystemTopicIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
 
+export class EventgridSystemTopicIdentityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[] | undefined; 
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+  public set identityIds(value: string[] | undefined) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+}
 export interface EventgridSystemTopicTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#create EventgridSystemTopic#create}
@@ -82,8 +124,11 @@ export interface EventgridSystemTopicTimeouts {
   readonly update?: string;
 }
 
-function eventgridSystemTopicTimeoutsToTerraform(struct?: EventgridSystemTopicTimeouts): any {
+function eventgridSystemTopicTimeoutsToTerraform(struct?: EventgridSystemTopicTimeoutsOutputReference | EventgridSystemTopicTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -92,6 +137,80 @@ function eventgridSystemTopicTimeoutsToTerraform(struct?: EventgridSystemTopicTi
   }
 }
 
+export class EventgridSystemTopicTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html azurerm_eventgrid_system_topic}
@@ -145,7 +264,7 @@ export class EventgridSystemTopic extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -163,7 +282,7 @@ export class EventgridSystemTopic extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -176,7 +295,7 @@ export class EventgridSystemTopic extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -189,7 +308,7 @@ export class EventgridSystemTopic extends cdktf.TerraformResource {
   }
 
   // source_arm_resource_id - computed: false, optional: false, required: true
-  private _sourceArmResourceId: string;
+  private _sourceArmResourceId?: string; 
   public get sourceArmResourceId() {
     return this.getStringAttribute('source_arm_resource_id');
   }
@@ -202,11 +321,12 @@ export class EventgridSystemTopic extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -218,7 +338,7 @@ export class EventgridSystemTopic extends cdktf.TerraformResource {
   }
 
   // topic_type - computed: false, optional: false, required: true
-  private _topicType: string;
+  private _topicType?: string; 
   public get topicType() {
     return this.getStringAttribute('topic_type');
   }
@@ -231,11 +351,12 @@ export class EventgridSystemTopic extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: EventgridSystemTopicIdentity[];
+  private _identity?: EventgridSystemTopicIdentity | undefined; 
+  private __identityOutput = new EventgridSystemTopicIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.interpolationForAttribute('identity') as any;
+    return this.__identityOutput;
   }
-  public set identity(value: EventgridSystemTopicIdentity[] ) {
+  public putIdentity(value: EventgridSystemTopicIdentity | undefined) {
     this._identity = value;
   }
   public resetIdentity() {
@@ -247,11 +368,12 @@ export class EventgridSystemTopic extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: EventgridSystemTopicTimeouts;
+  private _timeouts?: EventgridSystemTopicTimeouts | undefined; 
+  private __timeoutsOutput = new EventgridSystemTopicTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: EventgridSystemTopicTimeouts ) {
+  public putTimeouts(value: EventgridSystemTopicTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -274,7 +396,7 @@ export class EventgridSystemTopic extends cdktf.TerraformResource {
       source_arm_resource_id: cdktf.stringToTerraform(this._sourceArmResourceId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       topic_type: cdktf.stringToTerraform(this._topicType),
-      identity: cdktf.listMapper(eventgridSystemTopicIdentityToTerraform)(this._identity),
+      identity: eventgridSystemTopicIdentityToTerraform(this._identity),
       timeouts: eventgridSystemTopicTimeoutsToTerraform(this._timeouts),
     };
   }

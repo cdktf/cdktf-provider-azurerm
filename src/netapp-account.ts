@@ -28,7 +28,7 @@ export interface NetappAccountConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html#active_directory NetappAccount#active_directory}
   */
-  readonly activeDirectory?: NetappAccountActiveDirectory[];
+  readonly activeDirectory?: NetappAccountActiveDirectory;
   /**
   * timeouts block
   * 
@@ -63,8 +63,11 @@ export interface NetappAccountActiveDirectory {
   readonly username: string;
 }
 
-function netappAccountActiveDirectoryToTerraform(struct?: NetappAccountActiveDirectory): any {
+function netappAccountActiveDirectoryToTerraform(struct?: NetappAccountActiveDirectoryOutputReference | NetappAccountActiveDirectory): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.dnsServers),
     domain: cdktf.stringToTerraform(struct!.domain),
@@ -75,6 +78,97 @@ function netappAccountActiveDirectoryToTerraform(struct?: NetappAccountActiveDir
   }
 }
 
+export class NetappAccountActiveDirectoryOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // dns_servers - computed: false, optional: false, required: true
+  private _dnsServers?: string[]; 
+  public get dnsServers() {
+    return this.getListAttribute('dns_servers');
+  }
+  public set dnsServers(value: string[]) {
+    this._dnsServers = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsServersInput() {
+    return this._dnsServers
+  }
+
+  // domain - computed: false, optional: false, required: true
+  private _domain?: string; 
+  public get domain() {
+    return this.getStringAttribute('domain');
+  }
+  public set domain(value: string) {
+    this._domain = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainInput() {
+    return this._domain
+  }
+
+  // organizational_unit - computed: false, optional: true, required: false
+  private _organizationalUnit?: string | undefined; 
+  public get organizationalUnit() {
+    return this.getStringAttribute('organizational_unit');
+  }
+  public set organizationalUnit(value: string | undefined) {
+    this._organizationalUnit = value;
+  }
+  public resetOrganizationalUnit() {
+    this._organizationalUnit = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get organizationalUnitInput() {
+    return this._organizationalUnit
+  }
+
+  // password - computed: false, optional: false, required: true
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password
+  }
+
+  // smb_server_name - computed: false, optional: false, required: true
+  private _smbServerName?: string; 
+  public get smbServerName() {
+    return this.getStringAttribute('smb_server_name');
+  }
+  public set smbServerName(value: string) {
+    this._smbServerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get smbServerNameInput() {
+    return this._smbServerName
+  }
+
+  // username - computed: false, optional: false, required: true
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username
+  }
+}
 export interface NetappAccountTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html#create NetappAccount#create}
@@ -94,8 +188,11 @@ export interface NetappAccountTimeouts {
   readonly update?: string;
 }
 
-function netappAccountTimeoutsToTerraform(struct?: NetappAccountTimeouts): any {
+function netappAccountTimeoutsToTerraform(struct?: NetappAccountTimeoutsOutputReference | NetappAccountTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -104,6 +201,80 @@ function netappAccountTimeoutsToTerraform(struct?: NetappAccountTimeouts): any {
   }
 }
 
+export class NetappAccountTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_account.html azurerm_netapp_account}
@@ -155,7 +326,7 @@ export class NetappAccount extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -168,7 +339,7 @@ export class NetappAccount extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -181,7 +352,7 @@ export class NetappAccount extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -194,11 +365,12 @@ export class NetappAccount extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -210,11 +382,12 @@ export class NetappAccount extends cdktf.TerraformResource {
   }
 
   // active_directory - computed: false, optional: true, required: false
-  private _activeDirectory?: NetappAccountActiveDirectory[];
+  private _activeDirectory?: NetappAccountActiveDirectory | undefined; 
+  private __activeDirectoryOutput = new NetappAccountActiveDirectoryOutputReference(this as any, "active_directory", true);
   public get activeDirectory() {
-    return this.interpolationForAttribute('active_directory') as any;
+    return this.__activeDirectoryOutput;
   }
-  public set activeDirectory(value: NetappAccountActiveDirectory[] ) {
+  public putActiveDirectory(value: NetappAccountActiveDirectory | undefined) {
     this._activeDirectory = value;
   }
   public resetActiveDirectory() {
@@ -226,11 +399,12 @@ export class NetappAccount extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: NetappAccountTimeouts;
+  private _timeouts?: NetappAccountTimeouts | undefined; 
+  private __timeoutsOutput = new NetappAccountTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: NetappAccountTimeouts ) {
+  public putTimeouts(value: NetappAccountTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -251,7 +425,7 @@ export class NetappAccount extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      active_directory: cdktf.listMapper(netappAccountActiveDirectoryToTerraform)(this._activeDirectory),
+      active_directory: netappAccountActiveDirectoryToTerraform(this._activeDirectory),
       timeouts: netappAccountTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -53,6 +53,9 @@ export interface StorageShareAclAccessPolicy {
 
 function storageShareAclAccessPolicyToTerraform(struct?: StorageShareAclAccessPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     expiry: cdktf.stringToTerraform(struct!.expiry),
     permissions: cdktf.stringToTerraform(struct!.permissions),
@@ -75,6 +78,9 @@ export interface StorageShareAcl {
 
 function storageShareAclToTerraform(struct?: StorageShareAcl): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     id: cdktf.stringToTerraform(struct!.id),
     access_policy: cdktf.listMapper(storageShareAclAccessPolicyToTerraform)(struct!.accessPolicy),
@@ -100,8 +106,11 @@ export interface StorageShareTimeouts {
   readonly update?: string;
 }
 
-function storageShareTimeoutsToTerraform(struct?: StorageShareTimeouts): any {
+function storageShareTimeoutsToTerraform(struct?: StorageShareTimeoutsOutputReference | StorageShareTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -110,6 +119,80 @@ function storageShareTimeoutsToTerraform(struct?: StorageShareTimeouts): any {
   }
 }
 
+export class StorageShareTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html azurerm_storage_share}
@@ -161,11 +244,12 @@ export class StorageShare extends cdktf.TerraformResource {
   }
 
   // metadata - computed: true, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable
-  public get metadata(): { [key: string]: string } | cdktf.IResolvable {
-    return this.interpolationForAttribute('metadata') as any; // Getting the computed value is not yet implemented
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get metadata() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -177,7 +261,7 @@ export class StorageShare extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -190,11 +274,11 @@ export class StorageShare extends cdktf.TerraformResource {
   }
 
   // quota - computed: false, optional: true, required: false
-  private _quota?: number;
+  private _quota?: number | undefined; 
   public get quota() {
     return this.getNumberAttribute('quota');
   }
-  public set quota(value: number ) {
+  public set quota(value: number | undefined) {
     this._quota = value;
   }
   public resetQuota() {
@@ -211,7 +295,7 @@ export class StorageShare extends cdktf.TerraformResource {
   }
 
   // storage_account_name - computed: false, optional: false, required: true
-  private _storageAccountName: string;
+  private _storageAccountName?: string; 
   public get storageAccountName() {
     return this.getStringAttribute('storage_account_name');
   }
@@ -229,11 +313,12 @@ export class StorageShare extends cdktf.TerraformResource {
   }
 
   // acl - computed: false, optional: true, required: false
-  private _acl?: StorageShareAcl[];
+  private _acl?: StorageShareAcl[] | undefined; 
   public get acl() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('acl') as any;
   }
-  public set acl(value: StorageShareAcl[] ) {
+  public set acl(value: StorageShareAcl[] | undefined) {
     this._acl = value;
   }
   public resetAcl() {
@@ -245,11 +330,12 @@ export class StorageShare extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: StorageShareTimeouts;
+  private _timeouts?: StorageShareTimeouts | undefined; 
+  private __timeoutsOutput = new StorageShareTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: StorageShareTimeouts ) {
+  public putTimeouts(value: StorageShareTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

@@ -73,16 +73,19 @@ export class DataAzurermStorageManagementPolicyRuleActions extends cdktf.Complex
 
   // base_blob - computed: true, optional: false, required: false
   public get baseBlob() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('base_blob') as any;
   }
 
   // snapshot - computed: true, optional: false, required: false
   public get snapshot() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('snapshot') as any;
   }
 
   // version - computed: true, optional: false, required: false
   public get version() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('version') as any;
   }
 }
@@ -112,6 +115,7 @@ export class DataAzurermStorageManagementPolicyRuleFilters extends cdktf.Complex
 
   // match_blob_index_tag - computed: true, optional: false, required: false
   public get matchBlobIndexTag() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('match_blob_index_tag') as any;
   }
 
@@ -124,16 +128,18 @@ export class DataAzurermStorageManagementPolicyRule extends cdktf.ComplexCompute
 
   // actions - computed: true, optional: false, required: false
   public get actions() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('actions') as any;
   }
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
 
   // filters - computed: true, optional: false, required: false
   public get filters() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('filters') as any;
   }
 
@@ -149,13 +155,42 @@ export interface DataAzurermStorageManagementPolicyTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermStorageManagementPolicyTimeoutsToTerraform(struct?: DataAzurermStorageManagementPolicyTimeouts): any {
+function dataAzurermStorageManagementPolicyTimeoutsToTerraform(struct?: DataAzurermStorageManagementPolicyTimeoutsOutputReference | DataAzurermStorageManagementPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermStorageManagementPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_management_policy.html azurerm_storage_management_policy}
@@ -208,7 +243,7 @@ export class DataAzurermStorageManagementPolicy extends cdktf.TerraformDataSourc
   }
 
   // storage_account_id - computed: false, optional: false, required: true
-  private _storageAccountId: string;
+  private _storageAccountId?: string; 
   public get storageAccountId() {
     return this.getStringAttribute('storage_account_id');
   }
@@ -221,11 +256,12 @@ export class DataAzurermStorageManagementPolicy extends cdktf.TerraformDataSourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermStorageManagementPolicyTimeouts;
+  private _timeouts?: DataAzurermStorageManagementPolicyTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermStorageManagementPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermStorageManagementPolicyTimeouts ) {
+  public putTimeouts(value: DataAzurermStorageManagementPolicyTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

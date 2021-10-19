@@ -77,8 +77,11 @@ export interface SentinelAlertRuleMsSecurityIncidentTimeouts {
   readonly update?: string;
 }
 
-function sentinelAlertRuleMsSecurityIncidentTimeoutsToTerraform(struct?: SentinelAlertRuleMsSecurityIncidentTimeouts): any {
+function sentinelAlertRuleMsSecurityIncidentTimeoutsToTerraform(struct?: SentinelAlertRuleMsSecurityIncidentTimeoutsOutputReference | SentinelAlertRuleMsSecurityIncidentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -87,6 +90,80 @@ function sentinelAlertRuleMsSecurityIncidentTimeoutsToTerraform(struct?: Sentine
   }
 }
 
+export class SentinelAlertRuleMsSecurityIncidentTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_ms_security_incident.html azurerm_sentinel_alert_rule_ms_security_incident}
@@ -139,11 +216,11 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   // ==========
 
   // alert_rule_template_guid - computed: false, optional: true, required: false
-  private _alertRuleTemplateGuid?: string;
+  private _alertRuleTemplateGuid?: string | undefined; 
   public get alertRuleTemplateGuid() {
     return this.getStringAttribute('alert_rule_template_guid');
   }
-  public set alertRuleTemplateGuid(value: string ) {
+  public set alertRuleTemplateGuid(value: string | undefined) {
     this._alertRuleTemplateGuid = value;
   }
   public resetAlertRuleTemplateGuid() {
@@ -155,11 +232,11 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -171,7 +248,7 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   }
 
   // display_name - computed: false, optional: false, required: true
-  private _displayName: string;
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -184,11 +261,11 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   }
 
   // display_name_exclude_filter - computed: false, optional: true, required: false
-  private _displayNameExcludeFilter?: string[];
+  private _displayNameExcludeFilter?: string[] | undefined; 
   public get displayNameExcludeFilter() {
     return this.getListAttribute('display_name_exclude_filter');
   }
-  public set displayNameExcludeFilter(value: string[] ) {
+  public set displayNameExcludeFilter(value: string[] | undefined) {
     this._displayNameExcludeFilter = value;
   }
   public resetDisplayNameExcludeFilter() {
@@ -200,11 +277,11 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   }
 
   // display_name_filter - computed: true, optional: true, required: false
-  private _displayNameFilter?: string[];
+  private _displayNameFilter?: string[] | undefined; 
   public get displayNameFilter() {
     return this.getListAttribute('display_name_filter');
   }
-  public set displayNameFilter(value: string[]) {
+  public set displayNameFilter(value: string[] | undefined) {
     this._displayNameFilter = value;
   }
   public resetDisplayNameFilter() {
@@ -216,11 +293,11 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable;
+  private _enabled?: boolean | cdktf.IResolvable | undefined; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable ) {
+  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -237,7 +314,7 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   }
 
   // log_analytics_workspace_id - computed: false, optional: false, required: true
-  private _logAnalyticsWorkspaceId: string;
+  private _logAnalyticsWorkspaceId?: string; 
   public get logAnalyticsWorkspaceId() {
     return this.getStringAttribute('log_analytics_workspace_id');
   }
@@ -250,7 +327,7 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -263,7 +340,7 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   }
 
   // product_filter - computed: false, optional: false, required: true
-  private _productFilter: string;
+  private _productFilter?: string; 
   public get productFilter() {
     return this.getStringAttribute('product_filter');
   }
@@ -276,7 +353,7 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   }
 
   // severity_filter - computed: false, optional: false, required: true
-  private _severityFilter: string[];
+  private _severityFilter?: string[]; 
   public get severityFilter() {
     return this.getListAttribute('severity_filter');
   }
@@ -289,11 +366,11 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   }
 
   // text_whitelist - computed: true, optional: true, required: false
-  private _textWhitelist?: string[];
+  private _textWhitelist?: string[] | undefined; 
   public get textWhitelist() {
     return this.getListAttribute('text_whitelist');
   }
-  public set textWhitelist(value: string[]) {
+  public set textWhitelist(value: string[] | undefined) {
     this._textWhitelist = value;
   }
   public resetTextWhitelist() {
@@ -305,11 +382,12 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SentinelAlertRuleMsSecurityIncidentTimeouts;
+  private _timeouts?: SentinelAlertRuleMsSecurityIncidentTimeouts | undefined; 
+  private __timeoutsOutput = new SentinelAlertRuleMsSecurityIncidentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SentinelAlertRuleMsSecurityIncidentTimeouts ) {
+  public putTimeouts(value: SentinelAlertRuleMsSecurityIncidentTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

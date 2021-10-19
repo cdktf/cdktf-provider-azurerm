@@ -53,8 +53,11 @@ export interface SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts {
   readonly update?: string;
 }
 
-function sentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsToTerraform(struct?: SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts): any {
+function sentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsToTerraform(struct?: SentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsOutputReference | SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -63,6 +66,80 @@ function sentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsToTerraform(struc
   }
 }
 
+export class SentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_data_connector_microsoft_cloud_app_security.html azurerm_sentinel_data_connector_microsoft_cloud_app_security}
@@ -109,11 +186,11 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
   // ==========
 
   // alerts_enabled - computed: false, optional: true, required: false
-  private _alertsEnabled?: boolean | cdktf.IResolvable;
+  private _alertsEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get alertsEnabled() {
-    return this.getBooleanAttribute('alerts_enabled');
+    return this.getBooleanAttribute('alerts_enabled') as any;
   }
-  public set alertsEnabled(value: boolean | cdktf.IResolvable ) {
+  public set alertsEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._alertsEnabled = value;
   }
   public resetAlertsEnabled() {
@@ -125,11 +202,11 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
   }
 
   // discovery_logs_enabled - computed: false, optional: true, required: false
-  private _discoveryLogsEnabled?: boolean | cdktf.IResolvable;
+  private _discoveryLogsEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get discoveryLogsEnabled() {
-    return this.getBooleanAttribute('discovery_logs_enabled');
+    return this.getBooleanAttribute('discovery_logs_enabled') as any;
   }
-  public set discoveryLogsEnabled(value: boolean | cdktf.IResolvable ) {
+  public set discoveryLogsEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._discoveryLogsEnabled = value;
   }
   public resetDiscoveryLogsEnabled() {
@@ -146,7 +223,7 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
   }
 
   // log_analytics_workspace_id - computed: false, optional: false, required: true
-  private _logAnalyticsWorkspaceId: string;
+  private _logAnalyticsWorkspaceId?: string; 
   public get logAnalyticsWorkspaceId() {
     return this.getStringAttribute('log_analytics_workspace_id');
   }
@@ -159,7 +236,7 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -172,11 +249,11 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
   }
 
   // tenant_id - computed: true, optional: true, required: false
-  private _tenantId?: string;
+  private _tenantId?: string | undefined; 
   public get tenantId() {
     return this.getStringAttribute('tenant_id');
   }
-  public set tenantId(value: string) {
+  public set tenantId(value: string | undefined) {
     this._tenantId = value;
   }
   public resetTenantId() {
@@ -188,11 +265,12 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts;
+  private _timeouts?: SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts | undefined; 
+  private __timeoutsOutput = new SentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts ) {
+  public putTimeouts(value: SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

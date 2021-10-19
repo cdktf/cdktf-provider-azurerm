@@ -33,13 +33,42 @@ export interface DataAzurermKubernetesServiceVersionsTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermKubernetesServiceVersionsTimeoutsToTerraform(struct?: DataAzurermKubernetesServiceVersionsTimeouts): any {
+function dataAzurermKubernetesServiceVersionsTimeoutsToTerraform(struct?: DataAzurermKubernetesServiceVersionsTimeoutsOutputReference | DataAzurermKubernetesServiceVersionsTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermKubernetesServiceVersionsTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html azurerm_kubernetes_service_versions}
@@ -89,11 +118,11 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
   }
 
   // include_preview - computed: false, optional: true, required: false
-  private _includePreview?: boolean | cdktf.IResolvable;
+  private _includePreview?: boolean | cdktf.IResolvable | undefined; 
   public get includePreview() {
-    return this.getBooleanAttribute('include_preview');
+    return this.getBooleanAttribute('include_preview') as any;
   }
-  public set includePreview(value: boolean | cdktf.IResolvable ) {
+  public set includePreview(value: boolean | cdktf.IResolvable | undefined) {
     this._includePreview = value;
   }
   public resetIncludePreview() {
@@ -110,7 +139,7 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -123,11 +152,11 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
   }
 
   // version_prefix - computed: false, optional: true, required: false
-  private _versionPrefix?: string;
+  private _versionPrefix?: string | undefined; 
   public get versionPrefix() {
     return this.getStringAttribute('version_prefix');
   }
-  public set versionPrefix(value: string ) {
+  public set versionPrefix(value: string | undefined) {
     this._versionPrefix = value;
   }
   public resetVersionPrefix() {
@@ -144,11 +173,12 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermKubernetesServiceVersionsTimeouts;
+  private _timeouts?: DataAzurermKubernetesServiceVersionsTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermKubernetesServiceVersionsTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermKubernetesServiceVersionsTimeouts ) {
+  public putTimeouts(value: DataAzurermKubernetesServiceVersionsTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

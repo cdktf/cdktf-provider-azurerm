@@ -36,7 +36,7 @@ export interface MonitorAutoscaleSettingConfig extends cdktf.TerraformMetaArgume
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#notification MonitorAutoscaleSetting#notification}
   */
-  readonly notification?: MonitorAutoscaleSettingNotification[];
+  readonly notification?: MonitorAutoscaleSettingNotification;
   /**
   * profile block
   * 
@@ -65,8 +65,11 @@ export interface MonitorAutoscaleSettingNotificationEmail {
   readonly sendToSubscriptionCoAdministrator?: boolean | cdktf.IResolvable;
 }
 
-function monitorAutoscaleSettingNotificationEmailToTerraform(struct?: MonitorAutoscaleSettingNotificationEmail): any {
+function monitorAutoscaleSettingNotificationEmailToTerraform(struct?: MonitorAutoscaleSettingNotificationEmailOutputReference | MonitorAutoscaleSettingNotificationEmail): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     custom_emails: cdktf.listMapper(cdktf.stringToTerraform)(struct!.customEmails),
     send_to_subscription_administrator: cdktf.booleanToTerraform(struct!.sendToSubscriptionAdministrator),
@@ -74,6 +77,64 @@ function monitorAutoscaleSettingNotificationEmailToTerraform(struct?: MonitorAut
   }
 }
 
+export class MonitorAutoscaleSettingNotificationEmailOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // custom_emails - computed: false, optional: true, required: false
+  private _customEmails?: string[] | undefined; 
+  public get customEmails() {
+    return this.getListAttribute('custom_emails');
+  }
+  public set customEmails(value: string[] | undefined) {
+    this._customEmails = value;
+  }
+  public resetCustomEmails() {
+    this._customEmails = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customEmailsInput() {
+    return this._customEmails
+  }
+
+  // send_to_subscription_administrator - computed: false, optional: true, required: false
+  private _sendToSubscriptionAdministrator?: boolean | cdktf.IResolvable | undefined; 
+  public get sendToSubscriptionAdministrator() {
+    return this.getBooleanAttribute('send_to_subscription_administrator') as any;
+  }
+  public set sendToSubscriptionAdministrator(value: boolean | cdktf.IResolvable | undefined) {
+    this._sendToSubscriptionAdministrator = value;
+  }
+  public resetSendToSubscriptionAdministrator() {
+    this._sendToSubscriptionAdministrator = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sendToSubscriptionAdministratorInput() {
+    return this._sendToSubscriptionAdministrator
+  }
+
+  // send_to_subscription_co_administrator - computed: false, optional: true, required: false
+  private _sendToSubscriptionCoAdministrator?: boolean | cdktf.IResolvable | undefined; 
+  public get sendToSubscriptionCoAdministrator() {
+    return this.getBooleanAttribute('send_to_subscription_co_administrator') as any;
+  }
+  public set sendToSubscriptionCoAdministrator(value: boolean | cdktf.IResolvable | undefined) {
+    this._sendToSubscriptionCoAdministrator = value;
+  }
+  public resetSendToSubscriptionCoAdministrator() {
+    this._sendToSubscriptionCoAdministrator = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sendToSubscriptionCoAdministratorInput() {
+    return this._sendToSubscriptionCoAdministrator
+  }
+}
 export interface MonitorAutoscaleSettingNotificationWebhook {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#properties MonitorAutoscaleSetting#properties}
@@ -87,6 +148,9 @@ export interface MonitorAutoscaleSettingNotificationWebhook {
 
 function monitorAutoscaleSettingNotificationWebhookToTerraform(struct?: MonitorAutoscaleSettingNotificationWebhook): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.properties),
     service_uri: cdktf.stringToTerraform(struct!.serviceUri),
@@ -99,7 +163,7 @@ export interface MonitorAutoscaleSettingNotification {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#email MonitorAutoscaleSetting#email}
   */
-  readonly email?: MonitorAutoscaleSettingNotificationEmail[];
+  readonly email?: MonitorAutoscaleSettingNotificationEmail;
   /**
   * webhook block
   * 
@@ -108,14 +172,61 @@ export interface MonitorAutoscaleSettingNotification {
   readonly webhook?: MonitorAutoscaleSettingNotificationWebhook[];
 }
 
-function monitorAutoscaleSettingNotificationToTerraform(struct?: MonitorAutoscaleSettingNotification): any {
+function monitorAutoscaleSettingNotificationToTerraform(struct?: MonitorAutoscaleSettingNotificationOutputReference | MonitorAutoscaleSettingNotification): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    email: cdktf.listMapper(monitorAutoscaleSettingNotificationEmailToTerraform)(struct!.email),
+    email: monitorAutoscaleSettingNotificationEmailToTerraform(struct!.email),
     webhook: cdktf.listMapper(monitorAutoscaleSettingNotificationWebhookToTerraform)(struct!.webhook),
   }
 }
 
+export class MonitorAutoscaleSettingNotificationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // email - computed: false, optional: true, required: false
+  private _email?: MonitorAutoscaleSettingNotificationEmail | undefined; 
+  private __emailOutput = new MonitorAutoscaleSettingNotificationEmailOutputReference(this as any, "email", true);
+  public get email() {
+    return this.__emailOutput;
+  }
+  public putEmail(value: MonitorAutoscaleSettingNotificationEmail | undefined) {
+    this._email = value;
+  }
+  public resetEmail() {
+    this._email = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get emailInput() {
+    return this._email
+  }
+
+  // webhook - computed: false, optional: true, required: false
+  private _webhook?: MonitorAutoscaleSettingNotificationWebhook[] | undefined; 
+  public get webhook() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('webhook') as any;
+  }
+  public set webhook(value: MonitorAutoscaleSettingNotificationWebhook[] | undefined) {
+    this._webhook = value;
+  }
+  public resetWebhook() {
+    this._webhook = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get webhookInput() {
+    return this._webhook
+  }
+}
 export interface MonitorAutoscaleSettingProfileCapacity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#default MonitorAutoscaleSetting#default}
@@ -131,8 +242,11 @@ export interface MonitorAutoscaleSettingProfileCapacity {
   readonly minimum: number;
 }
 
-function monitorAutoscaleSettingProfileCapacityToTerraform(struct?: MonitorAutoscaleSettingProfileCapacity): any {
+function monitorAutoscaleSettingProfileCapacityToTerraform(struct?: MonitorAutoscaleSettingProfileCapacityOutputReference | MonitorAutoscaleSettingProfileCapacity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     default: cdktf.numberToTerraform(struct!.default),
     maximum: cdktf.numberToTerraform(struct!.maximum),
@@ -140,6 +254,55 @@ function monitorAutoscaleSettingProfileCapacityToTerraform(struct?: MonitorAutos
   }
 }
 
+export class MonitorAutoscaleSettingProfileCapacityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // default - computed: false, optional: false, required: true
+  private _default?: number; 
+  public get default() {
+    return this.getNumberAttribute('default');
+  }
+  public set default(value: number) {
+    this._default = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultInput() {
+    return this._default
+  }
+
+  // maximum - computed: false, optional: false, required: true
+  private _maximum?: number; 
+  public get maximum() {
+    return this.getNumberAttribute('maximum');
+  }
+  public set maximum(value: number) {
+    this._maximum = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maximumInput() {
+    return this._maximum
+  }
+
+  // minimum - computed: false, optional: false, required: true
+  private _minimum?: number; 
+  public get minimum() {
+    return this.getNumberAttribute('minimum');
+  }
+  public set minimum(value: number) {
+    this._minimum = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minimumInput() {
+    return this._minimum
+  }
+}
 export interface MonitorAutoscaleSettingProfileFixedDate {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#end MonitorAutoscaleSetting#end}
@@ -155,8 +318,11 @@ export interface MonitorAutoscaleSettingProfileFixedDate {
   readonly timezone?: string;
 }
 
-function monitorAutoscaleSettingProfileFixedDateToTerraform(struct?: MonitorAutoscaleSettingProfileFixedDate): any {
+function monitorAutoscaleSettingProfileFixedDateToTerraform(struct?: MonitorAutoscaleSettingProfileFixedDateOutputReference | MonitorAutoscaleSettingProfileFixedDate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     end: cdktf.stringToTerraform(struct!.end),
     start: cdktf.stringToTerraform(struct!.start),
@@ -164,6 +330,58 @@ function monitorAutoscaleSettingProfileFixedDateToTerraform(struct?: MonitorAuto
   }
 }
 
+export class MonitorAutoscaleSettingProfileFixedDateOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // end - computed: false, optional: false, required: true
+  private _end?: string; 
+  public get end() {
+    return this.getStringAttribute('end');
+  }
+  public set end(value: string) {
+    this._end = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endInput() {
+    return this._end
+  }
+
+  // start - computed: false, optional: false, required: true
+  private _start?: string; 
+  public get start() {
+    return this.getStringAttribute('start');
+  }
+  public set start(value: string) {
+    this._start = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startInput() {
+    return this._start
+  }
+
+  // timezone - computed: false, optional: true, required: false
+  private _timezone?: string | undefined; 
+  public get timezone() {
+    return this.getStringAttribute('timezone');
+  }
+  public set timezone(value: string | undefined) {
+    this._timezone = value;
+  }
+  public resetTimezone() {
+    this._timezone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timezoneInput() {
+    return this._timezone
+  }
+}
 export interface MonitorAutoscaleSettingProfileRecurrence {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#days MonitorAutoscaleSetting#days}
@@ -183,8 +401,11 @@ export interface MonitorAutoscaleSettingProfileRecurrence {
   readonly timezone?: string;
 }
 
-function monitorAutoscaleSettingProfileRecurrenceToTerraform(struct?: MonitorAutoscaleSettingProfileRecurrence): any {
+function monitorAutoscaleSettingProfileRecurrenceToTerraform(struct?: MonitorAutoscaleSettingProfileRecurrenceOutputReference | MonitorAutoscaleSettingProfileRecurrence): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     days: cdktf.listMapper(cdktf.stringToTerraform)(struct!.days),
     hours: cdktf.listMapper(cdktf.numberToTerraform)(struct!.hours),
@@ -193,6 +414,73 @@ function monitorAutoscaleSettingProfileRecurrenceToTerraform(struct?: MonitorAut
   }
 }
 
+export class MonitorAutoscaleSettingProfileRecurrenceOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // days - computed: false, optional: false, required: true
+  private _days?: string[]; 
+  public get days() {
+    return this.getListAttribute('days');
+  }
+  public set days(value: string[]) {
+    this._days = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysInput() {
+    return this._days
+  }
+
+  // hours - computed: false, optional: false, required: true
+  private _hours?: number[]; 
+  public get hours() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('hours') as any;
+  }
+  public set hours(value: number[]) {
+    this._hours = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hoursInput() {
+    return this._hours
+  }
+
+  // minutes - computed: false, optional: false, required: true
+  private _minutes?: number[]; 
+  public get minutes() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('minutes') as any;
+  }
+  public set minutes(value: number[]) {
+    this._minutes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minutesInput() {
+    return this._minutes
+  }
+
+  // timezone - computed: false, optional: true, required: false
+  private _timezone?: string | undefined; 
+  public get timezone() {
+    return this.getStringAttribute('timezone');
+  }
+  public set timezone(value: string | undefined) {
+    this._timezone = value;
+  }
+  public resetTimezone() {
+    this._timezone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timezoneInput() {
+    return this._timezone
+  }
+}
 export interface MonitorAutoscaleSettingProfileRuleMetricTriggerDimensions {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#name MonitorAutoscaleSetting#name}
@@ -210,6 +498,9 @@ export interface MonitorAutoscaleSettingProfileRuleMetricTriggerDimensions {
 
 function monitorAutoscaleSettingProfileRuleMetricTriggerDimensionsToTerraform(struct?: MonitorAutoscaleSettingProfileRuleMetricTriggerDimensions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     operator: cdktf.stringToTerraform(struct!.operator),
@@ -266,8 +557,11 @@ export interface MonitorAutoscaleSettingProfileRuleMetricTrigger {
   readonly dimensions?: MonitorAutoscaleSettingProfileRuleMetricTriggerDimensions[];
 }
 
-function monitorAutoscaleSettingProfileRuleMetricTriggerToTerraform(struct?: MonitorAutoscaleSettingProfileRuleMetricTrigger): any {
+function monitorAutoscaleSettingProfileRuleMetricTriggerToTerraform(struct?: MonitorAutoscaleSettingProfileRuleMetricTriggerOutputReference | MonitorAutoscaleSettingProfileRuleMetricTrigger): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     divide_by_instance_count: cdktf.booleanToTerraform(struct!.divideByInstanceCount),
     metric_name: cdktf.stringToTerraform(struct!.metricName),
@@ -283,6 +577,169 @@ function monitorAutoscaleSettingProfileRuleMetricTriggerToTerraform(struct?: Mon
   }
 }
 
+export class MonitorAutoscaleSettingProfileRuleMetricTriggerOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // divide_by_instance_count - computed: false, optional: true, required: false
+  private _divideByInstanceCount?: boolean | cdktf.IResolvable | undefined; 
+  public get divideByInstanceCount() {
+    return this.getBooleanAttribute('divide_by_instance_count') as any;
+  }
+  public set divideByInstanceCount(value: boolean | cdktf.IResolvable | undefined) {
+    this._divideByInstanceCount = value;
+  }
+  public resetDivideByInstanceCount() {
+    this._divideByInstanceCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get divideByInstanceCountInput() {
+    return this._divideByInstanceCount
+  }
+
+  // metric_name - computed: false, optional: false, required: true
+  private _metricName?: string; 
+  public get metricName() {
+    return this.getStringAttribute('metric_name');
+  }
+  public set metricName(value: string) {
+    this._metricName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metricNameInput() {
+    return this._metricName
+  }
+
+  // metric_namespace - computed: false, optional: true, required: false
+  private _metricNamespace?: string | undefined; 
+  public get metricNamespace() {
+    return this.getStringAttribute('metric_namespace');
+  }
+  public set metricNamespace(value: string | undefined) {
+    this._metricNamespace = value;
+  }
+  public resetMetricNamespace() {
+    this._metricNamespace = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metricNamespaceInput() {
+    return this._metricNamespace
+  }
+
+  // metric_resource_id - computed: false, optional: false, required: true
+  private _metricResourceId?: string; 
+  public get metricResourceId() {
+    return this.getStringAttribute('metric_resource_id');
+  }
+  public set metricResourceId(value: string) {
+    this._metricResourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metricResourceIdInput() {
+    return this._metricResourceId
+  }
+
+  // operator - computed: false, optional: false, required: true
+  private _operator?: string; 
+  public get operator() {
+    return this.getStringAttribute('operator');
+  }
+  public set operator(value: string) {
+    this._operator = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get operatorInput() {
+    return this._operator
+  }
+
+  // statistic - computed: false, optional: false, required: true
+  private _statistic?: string; 
+  public get statistic() {
+    return this.getStringAttribute('statistic');
+  }
+  public set statistic(value: string) {
+    this._statistic = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statisticInput() {
+    return this._statistic
+  }
+
+  // threshold - computed: false, optional: false, required: true
+  private _threshold?: number; 
+  public get threshold() {
+    return this.getNumberAttribute('threshold');
+  }
+  public set threshold(value: number) {
+    this._threshold = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get thresholdInput() {
+    return this._threshold
+  }
+
+  // time_aggregation - computed: false, optional: false, required: true
+  private _timeAggregation?: string; 
+  public get timeAggregation() {
+    return this.getStringAttribute('time_aggregation');
+  }
+  public set timeAggregation(value: string) {
+    this._timeAggregation = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeAggregationInput() {
+    return this._timeAggregation
+  }
+
+  // time_grain - computed: false, optional: false, required: true
+  private _timeGrain?: string; 
+  public get timeGrain() {
+    return this.getStringAttribute('time_grain');
+  }
+  public set timeGrain(value: string) {
+    this._timeGrain = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeGrainInput() {
+    return this._timeGrain
+  }
+
+  // time_window - computed: false, optional: false, required: true
+  private _timeWindow?: string; 
+  public get timeWindow() {
+    return this.getStringAttribute('time_window');
+  }
+  public set timeWindow(value: string) {
+    this._timeWindow = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeWindowInput() {
+    return this._timeWindow
+  }
+
+  // dimensions - computed: false, optional: true, required: false
+  private _dimensions?: MonitorAutoscaleSettingProfileRuleMetricTriggerDimensions[] | undefined; 
+  public get dimensions() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('dimensions') as any;
+  }
+  public set dimensions(value: MonitorAutoscaleSettingProfileRuleMetricTriggerDimensions[] | undefined) {
+    this._dimensions = value;
+  }
+  public resetDimensions() {
+    this._dimensions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dimensionsInput() {
+    return this._dimensions
+  }
+}
 export interface MonitorAutoscaleSettingProfileRuleScaleAction {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#cooldown MonitorAutoscaleSetting#cooldown}
@@ -302,8 +759,11 @@ export interface MonitorAutoscaleSettingProfileRuleScaleAction {
   readonly value: number;
 }
 
-function monitorAutoscaleSettingProfileRuleScaleActionToTerraform(struct?: MonitorAutoscaleSettingProfileRuleScaleAction): any {
+function monitorAutoscaleSettingProfileRuleScaleActionToTerraform(struct?: MonitorAutoscaleSettingProfileRuleScaleActionOutputReference | MonitorAutoscaleSettingProfileRuleScaleAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     cooldown: cdktf.stringToTerraform(struct!.cooldown),
     direction: cdktf.stringToTerraform(struct!.direction),
@@ -312,26 +772,91 @@ function monitorAutoscaleSettingProfileRuleScaleActionToTerraform(struct?: Monit
   }
 }
 
+export class MonitorAutoscaleSettingProfileRuleScaleActionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cooldown - computed: false, optional: false, required: true
+  private _cooldown?: string; 
+  public get cooldown() {
+    return this.getStringAttribute('cooldown');
+  }
+  public set cooldown(value: string) {
+    this._cooldown = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cooldownInput() {
+    return this._cooldown
+  }
+
+  // direction - computed: false, optional: false, required: true
+  private _direction?: string; 
+  public get direction() {
+    return this.getStringAttribute('direction');
+  }
+  public set direction(value: string) {
+    this._direction = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get directionInput() {
+    return this._direction
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: number; 
+  public get value() {
+    return this.getNumberAttribute('value');
+  }
+  public set value(value: number) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value
+  }
+}
 export interface MonitorAutoscaleSettingProfileRule {
   /**
   * metric_trigger block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#metric_trigger MonitorAutoscaleSetting#metric_trigger}
   */
-  readonly metricTrigger: MonitorAutoscaleSettingProfileRuleMetricTrigger[];
+  readonly metricTrigger: MonitorAutoscaleSettingProfileRuleMetricTrigger;
   /**
   * scale_action block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#scale_action MonitorAutoscaleSetting#scale_action}
   */
-  readonly scaleAction: MonitorAutoscaleSettingProfileRuleScaleAction[];
+  readonly scaleAction: MonitorAutoscaleSettingProfileRuleScaleAction;
 }
 
 function monitorAutoscaleSettingProfileRuleToTerraform(struct?: MonitorAutoscaleSettingProfileRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    metric_trigger: cdktf.listMapper(monitorAutoscaleSettingProfileRuleMetricTriggerToTerraform)(struct!.metricTrigger),
-    scale_action: cdktf.listMapper(monitorAutoscaleSettingProfileRuleScaleActionToTerraform)(struct!.scaleAction),
+    metric_trigger: monitorAutoscaleSettingProfileRuleMetricTriggerToTerraform(struct!.metricTrigger),
+    scale_action: monitorAutoscaleSettingProfileRuleScaleActionToTerraform(struct!.scaleAction),
   }
 }
 
@@ -345,19 +870,19 @@ export interface MonitorAutoscaleSettingProfile {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#capacity MonitorAutoscaleSetting#capacity}
   */
-  readonly capacity: MonitorAutoscaleSettingProfileCapacity[];
+  readonly capacity: MonitorAutoscaleSettingProfileCapacity;
   /**
   * fixed_date block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#fixed_date MonitorAutoscaleSetting#fixed_date}
   */
-  readonly fixedDate?: MonitorAutoscaleSettingProfileFixedDate[];
+  readonly fixedDate?: MonitorAutoscaleSettingProfileFixedDate;
   /**
   * recurrence block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html#recurrence MonitorAutoscaleSetting#recurrence}
   */
-  readonly recurrence?: MonitorAutoscaleSettingProfileRecurrence[];
+  readonly recurrence?: MonitorAutoscaleSettingProfileRecurrence;
   /**
   * rule block
   * 
@@ -368,11 +893,14 @@ export interface MonitorAutoscaleSettingProfile {
 
 function monitorAutoscaleSettingProfileToTerraform(struct?: MonitorAutoscaleSettingProfile): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
-    capacity: cdktf.listMapper(monitorAutoscaleSettingProfileCapacityToTerraform)(struct!.capacity),
-    fixed_date: cdktf.listMapper(monitorAutoscaleSettingProfileFixedDateToTerraform)(struct!.fixedDate),
-    recurrence: cdktf.listMapper(monitorAutoscaleSettingProfileRecurrenceToTerraform)(struct!.recurrence),
+    capacity: monitorAutoscaleSettingProfileCapacityToTerraform(struct!.capacity),
+    fixed_date: monitorAutoscaleSettingProfileFixedDateToTerraform(struct!.fixedDate),
+    recurrence: monitorAutoscaleSettingProfileRecurrenceToTerraform(struct!.recurrence),
     rule: cdktf.listMapper(monitorAutoscaleSettingProfileRuleToTerraform)(struct!.rule),
   }
 }
@@ -396,8 +924,11 @@ export interface MonitorAutoscaleSettingTimeouts {
   readonly update?: string;
 }
 
-function monitorAutoscaleSettingTimeoutsToTerraform(struct?: MonitorAutoscaleSettingTimeouts): any {
+function monitorAutoscaleSettingTimeoutsToTerraform(struct?: MonitorAutoscaleSettingTimeoutsOutputReference | MonitorAutoscaleSettingTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -406,6 +937,80 @@ function monitorAutoscaleSettingTimeoutsToTerraform(struct?: MonitorAutoscaleSet
   }
 }
 
+export class MonitorAutoscaleSettingTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_autoscale_setting.html azurerm_monitor_autoscale_setting}
@@ -455,11 +1060,11 @@ export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
   // ==========
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable;
+  private _enabled?: boolean | cdktf.IResolvable | undefined; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable ) {
+  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -476,7 +1081,7 @@ export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -489,7 +1094,7 @@ export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -502,7 +1107,7 @@ export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -515,11 +1120,12 @@ export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -531,7 +1137,7 @@ export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
   }
 
   // target_resource_id - computed: false, optional: false, required: true
-  private _targetResourceId: string;
+  private _targetResourceId?: string; 
   public get targetResourceId() {
     return this.getStringAttribute('target_resource_id');
   }
@@ -544,11 +1150,12 @@ export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
   }
 
   // notification - computed: false, optional: true, required: false
-  private _notification?: MonitorAutoscaleSettingNotification[];
+  private _notification?: MonitorAutoscaleSettingNotification | undefined; 
+  private __notificationOutput = new MonitorAutoscaleSettingNotificationOutputReference(this as any, "notification", true);
   public get notification() {
-    return this.interpolationForAttribute('notification') as any;
+    return this.__notificationOutput;
   }
-  public set notification(value: MonitorAutoscaleSettingNotification[] ) {
+  public putNotification(value: MonitorAutoscaleSettingNotification | undefined) {
     this._notification = value;
   }
   public resetNotification() {
@@ -560,8 +1167,9 @@ export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
   }
 
   // profile - computed: false, optional: false, required: true
-  private _profile: MonitorAutoscaleSettingProfile[];
+  private _profile?: MonitorAutoscaleSettingProfile[]; 
   public get profile() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('profile') as any;
   }
   public set profile(value: MonitorAutoscaleSettingProfile[]) {
@@ -573,11 +1181,12 @@ export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MonitorAutoscaleSettingTimeouts;
+  private _timeouts?: MonitorAutoscaleSettingTimeouts | undefined; 
+  private __timeoutsOutput = new MonitorAutoscaleSettingTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: MonitorAutoscaleSettingTimeouts ) {
+  public putTimeouts(value: MonitorAutoscaleSettingTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -600,7 +1209,7 @@ export class MonitorAutoscaleSetting extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
-      notification: cdktf.listMapper(monitorAutoscaleSettingNotificationToTerraform)(this._notification),
+      notification: monitorAutoscaleSettingNotificationToTerraform(this._notification),
       profile: cdktf.listMapper(monitorAutoscaleSettingProfileToTerraform)(this._profile),
       timeouts: monitorAutoscaleSettingTimeoutsToTerraform(this._timeouts),
     };

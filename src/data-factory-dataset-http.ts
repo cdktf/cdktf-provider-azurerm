@@ -85,6 +85,9 @@ export interface DataFactoryDatasetHttpSchemaColumn {
 
 function dataFactoryDatasetHttpSchemaColumnToTerraform(struct?: DataFactoryDatasetHttpSchemaColumn): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     name: cdktf.stringToTerraform(struct!.name),
@@ -111,8 +114,11 @@ export interface DataFactoryDatasetHttpTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryDatasetHttpTimeoutsToTerraform(struct?: DataFactoryDatasetHttpTimeouts): any {
+function dataFactoryDatasetHttpTimeoutsToTerraform(struct?: DataFactoryDatasetHttpTimeoutsOutputReference | DataFactoryDatasetHttpTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -121,6 +127,80 @@ function dataFactoryDatasetHttpTimeoutsToTerraform(struct?: DataFactoryDatasetHt
   }
 }
 
+export class DataFactoryDatasetHttpTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_http.html azurerm_data_factory_dataset_http}
@@ -175,11 +255,12 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get additionalProperties() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -191,11 +272,11 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   }
 
   // annotations - computed: false, optional: true, required: false
-  private _annotations?: string[];
+  private _annotations?: string[] | undefined; 
   public get annotations() {
     return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] ) {
+  public set annotations(value: string[] | undefined) {
     this._annotations = value;
   }
   public resetAnnotations() {
@@ -207,7 +288,7 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   }
 
   // data_factory_name - computed: false, optional: false, required: true
-  private _dataFactoryName: string;
+  private _dataFactoryName?: string; 
   public get dataFactoryName() {
     return this.getStringAttribute('data_factory_name');
   }
@@ -220,11 +301,11 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -236,11 +317,11 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   }
 
   // folder - computed: false, optional: true, required: false
-  private _folder?: string;
+  private _folder?: string | undefined; 
   public get folder() {
     return this.getStringAttribute('folder');
   }
-  public set folder(value: string ) {
+  public set folder(value: string | undefined) {
     this._folder = value;
   }
   public resetFolder() {
@@ -257,7 +338,7 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   }
 
   // linked_service_name - computed: false, optional: false, required: true
-  private _linkedServiceName: string;
+  private _linkedServiceName?: string; 
   public get linkedServiceName() {
     return this.getStringAttribute('linked_service_name');
   }
@@ -270,7 +351,7 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -283,11 +364,12 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get parameters() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -299,11 +381,11 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   }
 
   // relative_url - computed: false, optional: true, required: false
-  private _relativeUrl?: string;
+  private _relativeUrl?: string | undefined; 
   public get relativeUrl() {
     return this.getStringAttribute('relative_url');
   }
-  public set relativeUrl(value: string ) {
+  public set relativeUrl(value: string | undefined) {
     this._relativeUrl = value;
   }
   public resetRelativeUrl() {
@@ -315,11 +397,11 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   }
 
   // request_body - computed: false, optional: true, required: false
-  private _requestBody?: string;
+  private _requestBody?: string | undefined; 
   public get requestBody() {
     return this.getStringAttribute('request_body');
   }
-  public set requestBody(value: string ) {
+  public set requestBody(value: string | undefined) {
     this._requestBody = value;
   }
   public resetRequestBody() {
@@ -331,11 +413,11 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   }
 
   // request_method - computed: false, optional: true, required: false
-  private _requestMethod?: string;
+  private _requestMethod?: string | undefined; 
   public get requestMethod() {
     return this.getStringAttribute('request_method');
   }
-  public set requestMethod(value: string ) {
+  public set requestMethod(value: string | undefined) {
     this._requestMethod = value;
   }
   public resetRequestMethod() {
@@ -347,7 +429,7 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -360,11 +442,12 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   }
 
   // schema_column - computed: false, optional: true, required: false
-  private _schemaColumn?: DataFactoryDatasetHttpSchemaColumn[];
+  private _schemaColumn?: DataFactoryDatasetHttpSchemaColumn[] | undefined; 
   public get schemaColumn() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('schema_column') as any;
   }
-  public set schemaColumn(value: DataFactoryDatasetHttpSchemaColumn[] ) {
+  public set schemaColumn(value: DataFactoryDatasetHttpSchemaColumn[] | undefined) {
     this._schemaColumn = value;
   }
   public resetSchemaColumn() {
@@ -376,11 +459,12 @@ export class DataFactoryDatasetHttp extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryDatasetHttpTimeouts;
+  private _timeouts?: DataFactoryDatasetHttpTimeouts | undefined; 
+  private __timeoutsOutput = new DataFactoryDatasetHttpTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataFactoryDatasetHttpTimeouts ) {
+  public putTimeouts(value: DataFactoryDatasetHttpTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

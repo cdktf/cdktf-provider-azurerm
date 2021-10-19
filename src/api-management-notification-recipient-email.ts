@@ -41,8 +41,11 @@ export interface ApiManagementNotificationRecipientEmailTimeouts {
   readonly read?: string;
 }
 
-function apiManagementNotificationRecipientEmailTimeoutsToTerraform(struct?: ApiManagementNotificationRecipientEmailTimeouts): any {
+function apiManagementNotificationRecipientEmailTimeoutsToTerraform(struct?: ApiManagementNotificationRecipientEmailTimeoutsOutputReference | ApiManagementNotificationRecipientEmailTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -50,6 +53,64 @@ function apiManagementNotificationRecipientEmailTimeoutsToTerraform(struct?: Api
   }
 }
 
+export class ApiManagementNotificationRecipientEmailTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email.html azurerm_api_management_notification_recipient_email}
@@ -94,7 +155,7 @@ export class ApiManagementNotificationRecipientEmail extends cdktf.TerraformReso
   // ==========
 
   // api_management_id - computed: false, optional: false, required: true
-  private _apiManagementId: string;
+  private _apiManagementId?: string; 
   public get apiManagementId() {
     return this.getStringAttribute('api_management_id');
   }
@@ -107,7 +168,7 @@ export class ApiManagementNotificationRecipientEmail extends cdktf.TerraformReso
   }
 
   // email - computed: false, optional: false, required: true
-  private _email: string;
+  private _email?: string; 
   public get email() {
     return this.getStringAttribute('email');
   }
@@ -125,7 +186,7 @@ export class ApiManagementNotificationRecipientEmail extends cdktf.TerraformReso
   }
 
   // notification_type - computed: false, optional: false, required: true
-  private _notificationType: string;
+  private _notificationType?: string; 
   public get notificationType() {
     return this.getStringAttribute('notification_type');
   }
@@ -138,11 +199,12 @@ export class ApiManagementNotificationRecipientEmail extends cdktf.TerraformReso
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ApiManagementNotificationRecipientEmailTimeouts;
+  private _timeouts?: ApiManagementNotificationRecipientEmailTimeouts | undefined; 
+  private __timeoutsOutput = new ApiManagementNotificationRecipientEmailTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ApiManagementNotificationRecipientEmailTimeouts ) {
+  public putTimeouts(value: ApiManagementNotificationRecipientEmailTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

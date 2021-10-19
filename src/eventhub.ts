@@ -36,7 +36,7 @@ export interface EventhubConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#capture_description Eventhub#capture_description}
   */
-  readonly captureDescription?: EventhubCaptureDescription[];
+  readonly captureDescription?: EventhubCaptureDescription;
   /**
   * timeouts block
   * 
@@ -63,8 +63,11 @@ export interface EventhubCaptureDescriptionDestination {
   readonly storageAccountId: string;
 }
 
-function eventhubCaptureDescriptionDestinationToTerraform(struct?: EventhubCaptureDescriptionDestination): any {
+function eventhubCaptureDescriptionDestinationToTerraform(struct?: EventhubCaptureDescriptionDestinationOutputReference | EventhubCaptureDescriptionDestination): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     archive_name_format: cdktf.stringToTerraform(struct!.archiveNameFormat),
     blob_container_name: cdktf.stringToTerraform(struct!.blobContainerName),
@@ -73,6 +76,68 @@ function eventhubCaptureDescriptionDestinationToTerraform(struct?: EventhubCaptu
   }
 }
 
+export class EventhubCaptureDescriptionDestinationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // archive_name_format - computed: false, optional: false, required: true
+  private _archiveNameFormat?: string; 
+  public get archiveNameFormat() {
+    return this.getStringAttribute('archive_name_format');
+  }
+  public set archiveNameFormat(value: string) {
+    this._archiveNameFormat = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get archiveNameFormatInput() {
+    return this._archiveNameFormat
+  }
+
+  // blob_container_name - computed: false, optional: false, required: true
+  private _blobContainerName?: string; 
+  public get blobContainerName() {
+    return this.getStringAttribute('blob_container_name');
+  }
+  public set blobContainerName(value: string) {
+    this._blobContainerName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get blobContainerNameInput() {
+    return this._blobContainerName
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // storage_account_id - computed: false, optional: false, required: true
+  private _storageAccountId?: string; 
+  public get storageAccountId() {
+    return this.getStringAttribute('storage_account_id');
+  }
+  public set storageAccountId(value: string) {
+    this._storageAccountId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountIdInput() {
+    return this._storageAccountId
+  }
+}
 export interface EventhubCaptureDescription {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#enabled Eventhub#enabled}
@@ -99,21 +164,122 @@ export interface EventhubCaptureDescription {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#destination Eventhub#destination}
   */
-  readonly destination: EventhubCaptureDescriptionDestination[];
+  readonly destination: EventhubCaptureDescriptionDestination;
 }
 
-function eventhubCaptureDescriptionToTerraform(struct?: EventhubCaptureDescription): any {
+function eventhubCaptureDescriptionToTerraform(struct?: EventhubCaptureDescriptionOutputReference | EventhubCaptureDescription): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     encoding: cdktf.stringToTerraform(struct!.encoding),
     interval_in_seconds: cdktf.numberToTerraform(struct!.intervalInSeconds),
     size_limit_in_bytes: cdktf.numberToTerraform(struct!.sizeLimitInBytes),
     skip_empty_archives: cdktf.booleanToTerraform(struct!.skipEmptyArchives),
-    destination: cdktf.listMapper(eventhubCaptureDescriptionDestinationToTerraform)(struct!.destination),
+    destination: eventhubCaptureDescriptionDestinationToTerraform(struct!.destination),
   }
 }
 
+export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled') as any;
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
+  }
+
+  // encoding - computed: false, optional: false, required: true
+  private _encoding?: string; 
+  public get encoding() {
+    return this.getStringAttribute('encoding');
+  }
+  public set encoding(value: string) {
+    this._encoding = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encodingInput() {
+    return this._encoding
+  }
+
+  // interval_in_seconds - computed: false, optional: true, required: false
+  private _intervalInSeconds?: number | undefined; 
+  public get intervalInSeconds() {
+    return this.getNumberAttribute('interval_in_seconds');
+  }
+  public set intervalInSeconds(value: number | undefined) {
+    this._intervalInSeconds = value;
+  }
+  public resetIntervalInSeconds() {
+    this._intervalInSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get intervalInSecondsInput() {
+    return this._intervalInSeconds
+  }
+
+  // size_limit_in_bytes - computed: false, optional: true, required: false
+  private _sizeLimitInBytes?: number | undefined; 
+  public get sizeLimitInBytes() {
+    return this.getNumberAttribute('size_limit_in_bytes');
+  }
+  public set sizeLimitInBytes(value: number | undefined) {
+    this._sizeLimitInBytes = value;
+  }
+  public resetSizeLimitInBytes() {
+    this._sizeLimitInBytes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sizeLimitInBytesInput() {
+    return this._sizeLimitInBytes
+  }
+
+  // skip_empty_archives - computed: false, optional: true, required: false
+  private _skipEmptyArchives?: boolean | cdktf.IResolvable | undefined; 
+  public get skipEmptyArchives() {
+    return this.getBooleanAttribute('skip_empty_archives') as any;
+  }
+  public set skipEmptyArchives(value: boolean | cdktf.IResolvable | undefined) {
+    this._skipEmptyArchives = value;
+  }
+  public resetSkipEmptyArchives() {
+    this._skipEmptyArchives = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skipEmptyArchivesInput() {
+    return this._skipEmptyArchives
+  }
+
+  // destination - computed: false, optional: false, required: true
+  private _destination?: EventhubCaptureDescriptionDestination; 
+  private __destinationOutput = new EventhubCaptureDescriptionDestinationOutputReference(this as any, "destination", true);
+  public get destination() {
+    return this.__destinationOutput;
+  }
+  public putDestination(value: EventhubCaptureDescriptionDestination) {
+    this._destination = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get destinationInput() {
+    return this._destination
+  }
+}
 export interface EventhubTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html#create Eventhub#create}
@@ -133,8 +299,11 @@ export interface EventhubTimeouts {
   readonly update?: string;
 }
 
-function eventhubTimeoutsToTerraform(struct?: EventhubTimeouts): any {
+function eventhubTimeoutsToTerraform(struct?: EventhubTimeoutsOutputReference | EventhubTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -143,6 +312,80 @@ function eventhubTimeoutsToTerraform(struct?: EventhubTimeouts): any {
   }
 }
 
+export class EventhubTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub.html azurerm_eventhub}
@@ -196,7 +439,7 @@ export class Eventhub extends cdktf.TerraformResource {
   }
 
   // message_retention - computed: false, optional: false, required: true
-  private _messageRetention: number;
+  private _messageRetention?: number; 
   public get messageRetention() {
     return this.getNumberAttribute('message_retention');
   }
@@ -209,7 +452,7 @@ export class Eventhub extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -222,7 +465,7 @@ export class Eventhub extends cdktf.TerraformResource {
   }
 
   // namespace_name - computed: false, optional: false, required: true
-  private _namespaceName: string;
+  private _namespaceName?: string; 
   public get namespaceName() {
     return this.getStringAttribute('namespace_name');
   }
@@ -235,7 +478,7 @@ export class Eventhub extends cdktf.TerraformResource {
   }
 
   // partition_count - computed: false, optional: false, required: true
-  private _partitionCount: number;
+  private _partitionCount?: number; 
   public get partitionCount() {
     return this.getNumberAttribute('partition_count');
   }
@@ -253,7 +496,7 @@ export class Eventhub extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -266,11 +509,11 @@ export class Eventhub extends cdktf.TerraformResource {
   }
 
   // status - computed: false, optional: true, required: false
-  private _status?: string;
+  private _status?: string | undefined; 
   public get status() {
     return this.getStringAttribute('status');
   }
-  public set status(value: string ) {
+  public set status(value: string | undefined) {
     this._status = value;
   }
   public resetStatus() {
@@ -282,11 +525,12 @@ export class Eventhub extends cdktf.TerraformResource {
   }
 
   // capture_description - computed: false, optional: true, required: false
-  private _captureDescription?: EventhubCaptureDescription[];
+  private _captureDescription?: EventhubCaptureDescription | undefined; 
+  private __captureDescriptionOutput = new EventhubCaptureDescriptionOutputReference(this as any, "capture_description", true);
   public get captureDescription() {
-    return this.interpolationForAttribute('capture_description') as any;
+    return this.__captureDescriptionOutput;
   }
-  public set captureDescription(value: EventhubCaptureDescription[] ) {
+  public putCaptureDescription(value: EventhubCaptureDescription | undefined) {
     this._captureDescription = value;
   }
   public resetCaptureDescription() {
@@ -298,11 +542,12 @@ export class Eventhub extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: EventhubTimeouts;
+  private _timeouts?: EventhubTimeouts | undefined; 
+  private __timeoutsOutput = new EventhubTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: EventhubTimeouts ) {
+  public putTimeouts(value: EventhubTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -325,7 +570,7 @@ export class Eventhub extends cdktf.TerraformResource {
       partition_count: cdktf.numberToTerraform(this._partitionCount),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       status: cdktf.stringToTerraform(this._status),
-      capture_description: cdktf.listMapper(eventhubCaptureDescriptionToTerraform)(this._captureDescription),
+      capture_description: eventhubCaptureDescriptionToTerraform(this._captureDescription),
       timeouts: eventhubTimeoutsToTerraform(this._timeouts),
     };
   }

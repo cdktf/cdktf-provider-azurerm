@@ -26,14 +26,14 @@ export class DataAzurermKubernetesClusterAddonProfileAzurePolicy extends cdktf.C
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
 }
 export class DataAzurermKubernetesClusterAddonProfileHttpApplicationRouting extends cdktf.ComplexComputedList {
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
 
   // http_application_routing_zone_name - computed: true, optional: false, required: false
@@ -67,7 +67,7 @@ export class DataAzurermKubernetesClusterAddonProfileIngressApplicationGateway e
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
 
   // gateway_id - computed: true, optional: false, required: false
@@ -77,6 +77,7 @@ export class DataAzurermKubernetesClusterAddonProfileIngressApplicationGateway e
 
   // ingress_application_gateway_identity - computed: true, optional: false, required: false
   public get ingressApplicationGatewayIdentity() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ingress_application_gateway_identity') as any;
   }
 
@@ -94,7 +95,7 @@ export class DataAzurermKubernetesClusterAddonProfileKubeDashboard extends cdktf
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
 }
 export class DataAzurermKubernetesClusterAddonProfileOmsAgentOmsAgentIdentity extends cdktf.ComplexComputedList {
@@ -118,7 +119,7 @@ export class DataAzurermKubernetesClusterAddonProfileOmsAgent extends cdktf.Comp
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
 
   // log_analytics_workspace_id - computed: true, optional: false, required: false
@@ -128,6 +129,7 @@ export class DataAzurermKubernetesClusterAddonProfileOmsAgent extends cdktf.Comp
 
   // oms_agent_identity - computed: true, optional: false, required: false
   public get omsAgentIdentity() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('oms_agent_identity') as any;
   }
 }
@@ -135,26 +137,31 @@ export class DataAzurermKubernetesClusterAddonProfile extends cdktf.ComplexCompu
 
   // azure_policy - computed: true, optional: false, required: false
   public get azurePolicy() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('azure_policy') as any;
   }
 
   // http_application_routing - computed: true, optional: false, required: false
   public get httpApplicationRouting() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('http_application_routing') as any;
   }
 
   // ingress_application_gateway - computed: true, optional: false, required: false
   public get ingressApplicationGateway() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ingress_application_gateway') as any;
   }
 
   // kube_dashboard - computed: true, optional: false, required: false
   public get kubeDashboard() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('kube_dashboard') as any;
   }
 
   // oms_agent - computed: true, optional: false, required: false
   public get omsAgent() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('oms_agent') as any;
   }
 }
@@ -179,12 +186,12 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends cdktf.ComplexC
 
   // enable_auto_scaling - computed: true, optional: false, required: false
   public get enableAutoScaling() {
-    return this.getBooleanAttribute('enable_auto_scaling');
+    return this.getBooleanAttribute('enable_auto_scaling') as any;
   }
 
   // enable_node_public_ip - computed: true, optional: false, required: false
   public get enableNodePublicIp() {
-    return this.getBooleanAttribute('enable_node_public_ip');
+    return this.getBooleanAttribute('enable_node_public_ip') as any;
   }
 
   // max_count - computed: true, optional: false, required: false
@@ -209,6 +216,7 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends cdktf.ComplexC
 
   // node_labels - computed: true, optional: false, required: false
   public get nodeLabels() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('node_labels') as any;
   }
 
@@ -239,6 +247,7 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends cdktf.ComplexC
 
   // tags - computed: true, optional: false, required: false
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
 
@@ -249,6 +258,7 @@ export class DataAzurermKubernetesClusterAgentPoolProfile extends cdktf.ComplexC
 
   // upgrade_settings - computed: true, optional: false, required: false
   public get upgradeSettings() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('upgrade_settings') as any;
   }
 
@@ -381,6 +391,7 @@ export class DataAzurermKubernetesClusterLinuxProfile extends cdktf.ComplexCompu
 
   // ssh_key - computed: true, optional: false, required: false
   public get sshKey() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ssh_key') as any;
   }
 }
@@ -435,7 +446,7 @@ export class DataAzurermKubernetesClusterRoleBasedAccessControlAzureActiveDirect
 
   // managed - computed: true, optional: false, required: false
   public get managed() {
-    return this.getBooleanAttribute('managed');
+    return this.getBooleanAttribute('managed') as any;
   }
 
   // server_app_id - computed: true, optional: false, required: false
@@ -452,12 +463,13 @@ export class DataAzurermKubernetesClusterRoleBasedAccessControl extends cdktf.Co
 
   // azure_active_directory - computed: true, optional: false, required: false
   public get azureActiveDirectory() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('azure_active_directory') as any;
   }
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
 }
 export class DataAzurermKubernetesClusterServicePrincipal extends cdktf.ComplexComputedList {
@@ -481,13 +493,42 @@ export interface DataAzurermKubernetesClusterTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermKubernetesClusterTimeoutsToTerraform(struct?: DataAzurermKubernetesClusterTimeouts): any {
+function dataAzurermKubernetesClusterTimeoutsToTerraform(struct?: DataAzurermKubernetesClusterTimeoutsOutputReference | DataAzurermKubernetesClusterTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermKubernetesClusterTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster.html azurerm_kubernetes_cluster}
@@ -611,7 +652,7 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -635,7 +676,7 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
 
   // private_cluster_enabled - computed: true, optional: false, required: false
   public get privateClusterEnabled() {
-    return this.getBooleanAttribute('private_cluster_enabled');
+    return this.getBooleanAttribute('private_cluster_enabled') as any;
   }
 
   // private_fqdn - computed: true, optional: false, required: false
@@ -645,11 +686,11 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
 
   // private_link_enabled - computed: true, optional: false, required: false
   public get privateLinkEnabled() {
-    return this.getBooleanAttribute('private_link_enabled');
+    return this.getBooleanAttribute('private_link_enabled') as any;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -682,11 +723,12 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermKubernetesClusterTimeouts;
+  private _timeouts?: DataAzurermKubernetesClusterTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermKubernetesClusterTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermKubernetesClusterTimeouts ) {
+  public putTimeouts(value: DataAzurermKubernetesClusterTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

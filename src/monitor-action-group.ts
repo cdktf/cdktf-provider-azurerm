@@ -111,6 +111,9 @@ export interface MonitorActionGroupArmRoleReceiver {
 
 function monitorActionGroupArmRoleReceiverToTerraform(struct?: MonitorActionGroupArmRoleReceiver): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     role_id: cdktf.stringToTerraform(struct!.roleId),
@@ -151,6 +154,9 @@ export interface MonitorActionGroupAutomationRunbookReceiver {
 
 function monitorActionGroupAutomationRunbookReceiverToTerraform(struct?: MonitorActionGroupAutomationRunbookReceiver): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     automation_account_id: cdktf.stringToTerraform(struct!.automationAccountId),
     is_global_runbook: cdktf.booleanToTerraform(struct!.isGlobalRunbook),
@@ -175,6 +181,9 @@ export interface MonitorActionGroupAzureAppPushReceiver {
 
 function monitorActionGroupAzureAppPushReceiverToTerraform(struct?: MonitorActionGroupAzureAppPushReceiver): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     email_address: cdktf.stringToTerraform(struct!.emailAddress),
     name: cdktf.stringToTerraform(struct!.name),
@@ -206,6 +215,9 @@ export interface MonitorActionGroupAzureFunctionReceiver {
 
 function monitorActionGroupAzureFunctionReceiverToTerraform(struct?: MonitorActionGroupAzureFunctionReceiver): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     function_app_resource_id: cdktf.stringToTerraform(struct!.functionAppResourceId),
     function_name: cdktf.stringToTerraform(struct!.functionName),
@@ -232,6 +244,9 @@ export interface MonitorActionGroupEmailReceiver {
 
 function monitorActionGroupEmailReceiverToTerraform(struct?: MonitorActionGroupEmailReceiver): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     email_address: cdktf.stringToTerraform(struct!.emailAddress),
     name: cdktf.stringToTerraform(struct!.name),
@@ -264,6 +279,9 @@ export interface MonitorActionGroupItsmReceiver {
 
 function monitorActionGroupItsmReceiverToTerraform(struct?: MonitorActionGroupItsmReceiver): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     connection_id: cdktf.stringToTerraform(struct!.connectionId),
     name: cdktf.stringToTerraform(struct!.name),
@@ -294,6 +312,9 @@ export interface MonitorActionGroupLogicAppReceiver {
 
 function monitorActionGroupLogicAppReceiverToTerraform(struct?: MonitorActionGroupLogicAppReceiver): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     callback_url: cdktf.stringToTerraform(struct!.callbackUrl),
     name: cdktf.stringToTerraform(struct!.name),
@@ -319,6 +340,9 @@ export interface MonitorActionGroupSmsReceiver {
 
 function monitorActionGroupSmsReceiverToTerraform(struct?: MonitorActionGroupSmsReceiver): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     country_code: cdktf.stringToTerraform(struct!.countryCode),
     name: cdktf.stringToTerraform(struct!.name),
@@ -345,8 +369,11 @@ export interface MonitorActionGroupTimeouts {
   readonly update?: string;
 }
 
-function monitorActionGroupTimeoutsToTerraform(struct?: MonitorActionGroupTimeouts): any {
+function monitorActionGroupTimeoutsToTerraform(struct?: MonitorActionGroupTimeoutsOutputReference | MonitorActionGroupTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -355,6 +382,80 @@ function monitorActionGroupTimeoutsToTerraform(struct?: MonitorActionGroupTimeou
   }
 }
 
+export class MonitorActionGroupTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 export interface MonitorActionGroupVoiceReceiver {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#country_code MonitorActionGroup#country_code}
@@ -372,6 +473,9 @@ export interface MonitorActionGroupVoiceReceiver {
 
 function monitorActionGroupVoiceReceiverToTerraform(struct?: MonitorActionGroupVoiceReceiver): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     country_code: cdktf.stringToTerraform(struct!.countryCode),
     name: cdktf.stringToTerraform(struct!.name),
@@ -394,8 +498,11 @@ export interface MonitorActionGroupWebhookReceiverAadAuth {
   readonly tenantId?: string;
 }
 
-function monitorActionGroupWebhookReceiverAadAuthToTerraform(struct?: MonitorActionGroupWebhookReceiverAadAuth): any {
+function monitorActionGroupWebhookReceiverAadAuthToTerraform(struct?: MonitorActionGroupWebhookReceiverAadAuthOutputReference | MonitorActionGroupWebhookReceiverAadAuth): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     identifier_uri: cdktf.stringToTerraform(struct!.identifierUri),
     object_id: cdktf.stringToTerraform(struct!.objectId),
@@ -403,6 +510,61 @@ function monitorActionGroupWebhookReceiverAadAuthToTerraform(struct?: MonitorAct
   }
 }
 
+export class MonitorActionGroupWebhookReceiverAadAuthOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // identifier_uri - computed: true, optional: true, required: false
+  private _identifierUri?: string | undefined; 
+  public get identifierUri() {
+    return this.getStringAttribute('identifier_uri');
+  }
+  public set identifierUri(value: string | undefined) {
+    this._identifierUri = value;
+  }
+  public resetIdentifierUri() {
+    this._identifierUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identifierUriInput() {
+    return this._identifierUri
+  }
+
+  // object_id - computed: false, optional: false, required: true
+  private _objectId?: string; 
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+  public set objectId(value: string) {
+    this._objectId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get objectIdInput() {
+    return this._objectId
+  }
+
+  // tenant_id - computed: true, optional: true, required: false
+  private _tenantId?: string | undefined; 
+  public get tenantId() {
+    return this.getStringAttribute('tenant_id');
+  }
+  public set tenantId(value: string | undefined) {
+    this._tenantId = value;
+  }
+  public resetTenantId() {
+    this._tenantId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tenantIdInput() {
+    return this._tenantId
+  }
+}
 export interface MonitorActionGroupWebhookReceiver {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#name MonitorActionGroup#name}
@@ -421,16 +583,19 @@ export interface MonitorActionGroupWebhookReceiver {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#aad_auth MonitorActionGroup#aad_auth}
   */
-  readonly aadAuth?: MonitorActionGroupWebhookReceiverAadAuth[];
+  readonly aadAuth?: MonitorActionGroupWebhookReceiverAadAuth;
 }
 
 function monitorActionGroupWebhookReceiverToTerraform(struct?: MonitorActionGroupWebhookReceiver): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     service_uri: cdktf.stringToTerraform(struct!.serviceUri),
     use_common_alert_schema: cdktf.booleanToTerraform(struct!.useCommonAlertSchema),
-    aad_auth: cdktf.listMapper(monitorActionGroupWebhookReceiverAadAuthToTerraform)(struct!.aadAuth),
+    aad_auth: monitorActionGroupWebhookReceiverAadAuthToTerraform(struct!.aadAuth),
   }
 }
 
@@ -490,11 +655,11 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   // ==========
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable;
+  private _enabled?: boolean | cdktf.IResolvable | undefined; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable ) {
+  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -511,7 +676,7 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -524,7 +689,7 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -537,7 +702,7 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   }
 
   // short_name - computed: false, optional: false, required: true
-  private _shortName: string;
+  private _shortName?: string; 
   public get shortName() {
     return this.getStringAttribute('short_name');
   }
@@ -550,11 +715,12 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -566,11 +732,12 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   }
 
   // arm_role_receiver - computed: false, optional: true, required: false
-  private _armRoleReceiver?: MonitorActionGroupArmRoleReceiver[];
+  private _armRoleReceiver?: MonitorActionGroupArmRoleReceiver[] | undefined; 
   public get armRoleReceiver() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('arm_role_receiver') as any;
   }
-  public set armRoleReceiver(value: MonitorActionGroupArmRoleReceiver[] ) {
+  public set armRoleReceiver(value: MonitorActionGroupArmRoleReceiver[] | undefined) {
     this._armRoleReceiver = value;
   }
   public resetArmRoleReceiver() {
@@ -582,11 +749,12 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   }
 
   // automation_runbook_receiver - computed: false, optional: true, required: false
-  private _automationRunbookReceiver?: MonitorActionGroupAutomationRunbookReceiver[];
+  private _automationRunbookReceiver?: MonitorActionGroupAutomationRunbookReceiver[] | undefined; 
   public get automationRunbookReceiver() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('automation_runbook_receiver') as any;
   }
-  public set automationRunbookReceiver(value: MonitorActionGroupAutomationRunbookReceiver[] ) {
+  public set automationRunbookReceiver(value: MonitorActionGroupAutomationRunbookReceiver[] | undefined) {
     this._automationRunbookReceiver = value;
   }
   public resetAutomationRunbookReceiver() {
@@ -598,11 +766,12 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   }
 
   // azure_app_push_receiver - computed: false, optional: true, required: false
-  private _azureAppPushReceiver?: MonitorActionGroupAzureAppPushReceiver[];
+  private _azureAppPushReceiver?: MonitorActionGroupAzureAppPushReceiver[] | undefined; 
   public get azureAppPushReceiver() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('azure_app_push_receiver') as any;
   }
-  public set azureAppPushReceiver(value: MonitorActionGroupAzureAppPushReceiver[] ) {
+  public set azureAppPushReceiver(value: MonitorActionGroupAzureAppPushReceiver[] | undefined) {
     this._azureAppPushReceiver = value;
   }
   public resetAzureAppPushReceiver() {
@@ -614,11 +783,12 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   }
 
   // azure_function_receiver - computed: false, optional: true, required: false
-  private _azureFunctionReceiver?: MonitorActionGroupAzureFunctionReceiver[];
+  private _azureFunctionReceiver?: MonitorActionGroupAzureFunctionReceiver[] | undefined; 
   public get azureFunctionReceiver() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('azure_function_receiver') as any;
   }
-  public set azureFunctionReceiver(value: MonitorActionGroupAzureFunctionReceiver[] ) {
+  public set azureFunctionReceiver(value: MonitorActionGroupAzureFunctionReceiver[] | undefined) {
     this._azureFunctionReceiver = value;
   }
   public resetAzureFunctionReceiver() {
@@ -630,11 +800,12 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   }
 
   // email_receiver - computed: false, optional: true, required: false
-  private _emailReceiver?: MonitorActionGroupEmailReceiver[];
+  private _emailReceiver?: MonitorActionGroupEmailReceiver[] | undefined; 
   public get emailReceiver() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('email_receiver') as any;
   }
-  public set emailReceiver(value: MonitorActionGroupEmailReceiver[] ) {
+  public set emailReceiver(value: MonitorActionGroupEmailReceiver[] | undefined) {
     this._emailReceiver = value;
   }
   public resetEmailReceiver() {
@@ -646,11 +817,12 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   }
 
   // itsm_receiver - computed: false, optional: true, required: false
-  private _itsmReceiver?: MonitorActionGroupItsmReceiver[];
+  private _itsmReceiver?: MonitorActionGroupItsmReceiver[] | undefined; 
   public get itsmReceiver() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('itsm_receiver') as any;
   }
-  public set itsmReceiver(value: MonitorActionGroupItsmReceiver[] ) {
+  public set itsmReceiver(value: MonitorActionGroupItsmReceiver[] | undefined) {
     this._itsmReceiver = value;
   }
   public resetItsmReceiver() {
@@ -662,11 +834,12 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   }
 
   // logic_app_receiver - computed: false, optional: true, required: false
-  private _logicAppReceiver?: MonitorActionGroupLogicAppReceiver[];
+  private _logicAppReceiver?: MonitorActionGroupLogicAppReceiver[] | undefined; 
   public get logicAppReceiver() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('logic_app_receiver') as any;
   }
-  public set logicAppReceiver(value: MonitorActionGroupLogicAppReceiver[] ) {
+  public set logicAppReceiver(value: MonitorActionGroupLogicAppReceiver[] | undefined) {
     this._logicAppReceiver = value;
   }
   public resetLogicAppReceiver() {
@@ -678,11 +851,12 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   }
 
   // sms_receiver - computed: false, optional: true, required: false
-  private _smsReceiver?: MonitorActionGroupSmsReceiver[];
+  private _smsReceiver?: MonitorActionGroupSmsReceiver[] | undefined; 
   public get smsReceiver() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('sms_receiver') as any;
   }
-  public set smsReceiver(value: MonitorActionGroupSmsReceiver[] ) {
+  public set smsReceiver(value: MonitorActionGroupSmsReceiver[] | undefined) {
     this._smsReceiver = value;
   }
   public resetSmsReceiver() {
@@ -694,11 +868,12 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MonitorActionGroupTimeouts;
+  private _timeouts?: MonitorActionGroupTimeouts | undefined; 
+  private __timeoutsOutput = new MonitorActionGroupTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: MonitorActionGroupTimeouts ) {
+  public putTimeouts(value: MonitorActionGroupTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -710,11 +885,12 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   }
 
   // voice_receiver - computed: false, optional: true, required: false
-  private _voiceReceiver?: MonitorActionGroupVoiceReceiver[];
+  private _voiceReceiver?: MonitorActionGroupVoiceReceiver[] | undefined; 
   public get voiceReceiver() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('voice_receiver') as any;
   }
-  public set voiceReceiver(value: MonitorActionGroupVoiceReceiver[] ) {
+  public set voiceReceiver(value: MonitorActionGroupVoiceReceiver[] | undefined) {
     this._voiceReceiver = value;
   }
   public resetVoiceReceiver() {
@@ -726,11 +902,12 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
   }
 
   // webhook_receiver - computed: false, optional: true, required: false
-  private _webhookReceiver?: MonitorActionGroupWebhookReceiver[];
+  private _webhookReceiver?: MonitorActionGroupWebhookReceiver[] | undefined; 
   public get webhookReceiver() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('webhook_receiver') as any;
   }
-  public set webhookReceiver(value: MonitorActionGroupWebhookReceiver[] ) {
+  public set webhookReceiver(value: MonitorActionGroupWebhookReceiver[] | undefined) {
     this._webhookReceiver = value;
   }
   public resetWebhookReceiver() {

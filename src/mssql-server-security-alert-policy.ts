@@ -69,8 +69,11 @@ export interface MssqlServerSecurityAlertPolicyTimeouts {
   readonly update?: string;
 }
 
-function mssqlServerSecurityAlertPolicyTimeoutsToTerraform(struct?: MssqlServerSecurityAlertPolicyTimeouts): any {
+function mssqlServerSecurityAlertPolicyTimeoutsToTerraform(struct?: MssqlServerSecurityAlertPolicyTimeoutsOutputReference | MssqlServerSecurityAlertPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -79,6 +82,80 @@ function mssqlServerSecurityAlertPolicyTimeoutsToTerraform(struct?: MssqlServerS
   }
 }
 
+export class MssqlServerSecurityAlertPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_security_alert_policy.html azurerm_mssql_server_security_alert_policy}
@@ -129,11 +206,11 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
   // ==========
 
   // disabled_alerts - computed: false, optional: true, required: false
-  private _disabledAlerts?: string[];
+  private _disabledAlerts?: string[] | undefined; 
   public get disabledAlerts() {
     return this.getListAttribute('disabled_alerts');
   }
-  public set disabledAlerts(value: string[] ) {
+  public set disabledAlerts(value: string[] | undefined) {
     this._disabledAlerts = value;
   }
   public resetDisabledAlerts() {
@@ -145,11 +222,11 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
   }
 
   // email_account_admins - computed: false, optional: true, required: false
-  private _emailAccountAdmins?: boolean | cdktf.IResolvable;
+  private _emailAccountAdmins?: boolean | cdktf.IResolvable | undefined; 
   public get emailAccountAdmins() {
-    return this.getBooleanAttribute('email_account_admins');
+    return this.getBooleanAttribute('email_account_admins') as any;
   }
-  public set emailAccountAdmins(value: boolean | cdktf.IResolvable ) {
+  public set emailAccountAdmins(value: boolean | cdktf.IResolvable | undefined) {
     this._emailAccountAdmins = value;
   }
   public resetEmailAccountAdmins() {
@@ -161,11 +238,11 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
   }
 
   // email_addresses - computed: false, optional: true, required: false
-  private _emailAddresses?: string[];
+  private _emailAddresses?: string[] | undefined; 
   public get emailAddresses() {
     return this.getListAttribute('email_addresses');
   }
-  public set emailAddresses(value: string[] ) {
+  public set emailAddresses(value: string[] | undefined) {
     this._emailAddresses = value;
   }
   public resetEmailAddresses() {
@@ -182,7 +259,7 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -195,11 +272,11 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
   }
 
   // retention_days - computed: false, optional: true, required: false
-  private _retentionDays?: number;
+  private _retentionDays?: number | undefined; 
   public get retentionDays() {
     return this.getNumberAttribute('retention_days');
   }
-  public set retentionDays(value: number ) {
+  public set retentionDays(value: number | undefined) {
     this._retentionDays = value;
   }
   public resetRetentionDays() {
@@ -211,7 +288,7 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
   }
 
   // server_name - computed: false, optional: false, required: true
-  private _serverName: string;
+  private _serverName?: string; 
   public get serverName() {
     return this.getStringAttribute('server_name');
   }
@@ -224,7 +301,7 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
   }
 
   // state - computed: false, optional: false, required: true
-  private _state: string;
+  private _state?: string; 
   public get state() {
     return this.getStringAttribute('state');
   }
@@ -237,11 +314,11 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
   }
 
   // storage_account_access_key - computed: false, optional: true, required: false
-  private _storageAccountAccessKey?: string;
+  private _storageAccountAccessKey?: string | undefined; 
   public get storageAccountAccessKey() {
     return this.getStringAttribute('storage_account_access_key');
   }
-  public set storageAccountAccessKey(value: string ) {
+  public set storageAccountAccessKey(value: string | undefined) {
     this._storageAccountAccessKey = value;
   }
   public resetStorageAccountAccessKey() {
@@ -253,11 +330,11 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
   }
 
   // storage_endpoint - computed: false, optional: true, required: false
-  private _storageEndpoint?: string;
+  private _storageEndpoint?: string | undefined; 
   public get storageEndpoint() {
     return this.getStringAttribute('storage_endpoint');
   }
-  public set storageEndpoint(value: string ) {
+  public set storageEndpoint(value: string | undefined) {
     this._storageEndpoint = value;
   }
   public resetStorageEndpoint() {
@@ -269,11 +346,12 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MssqlServerSecurityAlertPolicyTimeouts;
+  private _timeouts?: MssqlServerSecurityAlertPolicyTimeouts | undefined; 
+  private __timeoutsOutput = new MssqlServerSecurityAlertPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: MssqlServerSecurityAlertPolicyTimeouts ) {
+  public putTimeouts(value: MssqlServerSecurityAlertPolicyTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

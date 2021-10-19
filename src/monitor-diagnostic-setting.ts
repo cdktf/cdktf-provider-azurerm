@@ -65,14 +65,56 @@ export interface MonitorDiagnosticSettingLogRetentionPolicy {
   readonly enabled: boolean | cdktf.IResolvable;
 }
 
-function monitorDiagnosticSettingLogRetentionPolicyToTerraform(struct?: MonitorDiagnosticSettingLogRetentionPolicy): any {
+function monitorDiagnosticSettingLogRetentionPolicyToTerraform(struct?: MonitorDiagnosticSettingLogRetentionPolicyOutputReference | MonitorDiagnosticSettingLogRetentionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     days: cdktf.numberToTerraform(struct!.days),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
   }
 }
 
+export class MonitorDiagnosticSettingLogRetentionPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // days - computed: false, optional: true, required: false
+  private _days?: number | undefined; 
+  public get days() {
+    return this.getNumberAttribute('days');
+  }
+  public set days(value: number | undefined) {
+    this._days = value;
+  }
+  public resetDays() {
+    this._days = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysInput() {
+    return this._days
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled') as any;
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
+  }
+}
 export interface MonitorDiagnosticSettingLog {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting.html#category MonitorDiagnosticSetting#category}
@@ -87,15 +129,18 @@ export interface MonitorDiagnosticSettingLog {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting.html#retention_policy MonitorDiagnosticSetting#retention_policy}
   */
-  readonly retentionPolicy?: MonitorDiagnosticSettingLogRetentionPolicy[];
+  readonly retentionPolicy?: MonitorDiagnosticSettingLogRetentionPolicy;
 }
 
 function monitorDiagnosticSettingLogToTerraform(struct?: MonitorDiagnosticSettingLog): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     category: cdktf.stringToTerraform(struct!.category),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
-    retention_policy: cdktf.listMapper(monitorDiagnosticSettingLogRetentionPolicyToTerraform)(struct!.retentionPolicy),
+    retention_policy: monitorDiagnosticSettingLogRetentionPolicyToTerraform(struct!.retentionPolicy),
   }
 }
 
@@ -110,14 +155,56 @@ export interface MonitorDiagnosticSettingMetricRetentionPolicy {
   readonly enabled: boolean | cdktf.IResolvable;
 }
 
-function monitorDiagnosticSettingMetricRetentionPolicyToTerraform(struct?: MonitorDiagnosticSettingMetricRetentionPolicy): any {
+function monitorDiagnosticSettingMetricRetentionPolicyToTerraform(struct?: MonitorDiagnosticSettingMetricRetentionPolicyOutputReference | MonitorDiagnosticSettingMetricRetentionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     days: cdktf.numberToTerraform(struct!.days),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
   }
 }
 
+export class MonitorDiagnosticSettingMetricRetentionPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // days - computed: false, optional: true, required: false
+  private _days?: number | undefined; 
+  public get days() {
+    return this.getNumberAttribute('days');
+  }
+  public set days(value: number | undefined) {
+    this._days = value;
+  }
+  public resetDays() {
+    this._days = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysInput() {
+    return this._days
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled') as any;
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
+  }
+}
 export interface MonitorDiagnosticSettingMetric {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting.html#category MonitorDiagnosticSetting#category}
@@ -132,15 +219,18 @@ export interface MonitorDiagnosticSettingMetric {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting.html#retention_policy MonitorDiagnosticSetting#retention_policy}
   */
-  readonly retentionPolicy?: MonitorDiagnosticSettingMetricRetentionPolicy[];
+  readonly retentionPolicy?: MonitorDiagnosticSettingMetricRetentionPolicy;
 }
 
 function monitorDiagnosticSettingMetricToTerraform(struct?: MonitorDiagnosticSettingMetric): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     category: cdktf.stringToTerraform(struct!.category),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
-    retention_policy: cdktf.listMapper(monitorDiagnosticSettingMetricRetentionPolicyToTerraform)(struct!.retentionPolicy),
+    retention_policy: monitorDiagnosticSettingMetricRetentionPolicyToTerraform(struct!.retentionPolicy),
   }
 }
 
@@ -163,8 +253,11 @@ export interface MonitorDiagnosticSettingTimeouts {
   readonly update?: string;
 }
 
-function monitorDiagnosticSettingTimeoutsToTerraform(struct?: MonitorDiagnosticSettingTimeouts): any {
+function monitorDiagnosticSettingTimeoutsToTerraform(struct?: MonitorDiagnosticSettingTimeoutsOutputReference | MonitorDiagnosticSettingTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -173,6 +266,80 @@ function monitorDiagnosticSettingTimeoutsToTerraform(struct?: MonitorDiagnosticS
   }
 }
 
+export class MonitorDiagnosticSettingTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_diagnostic_setting.html azurerm_monitor_diagnostic_setting}
@@ -223,11 +390,11 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
   // ==========
 
   // eventhub_authorization_rule_id - computed: false, optional: true, required: false
-  private _eventhubAuthorizationRuleId?: string;
+  private _eventhubAuthorizationRuleId?: string | undefined; 
   public get eventhubAuthorizationRuleId() {
     return this.getStringAttribute('eventhub_authorization_rule_id');
   }
-  public set eventhubAuthorizationRuleId(value: string ) {
+  public set eventhubAuthorizationRuleId(value: string | undefined) {
     this._eventhubAuthorizationRuleId = value;
   }
   public resetEventhubAuthorizationRuleId() {
@@ -239,11 +406,11 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
   }
 
   // eventhub_name - computed: false, optional: true, required: false
-  private _eventhubName?: string;
+  private _eventhubName?: string | undefined; 
   public get eventhubName() {
     return this.getStringAttribute('eventhub_name');
   }
-  public set eventhubName(value: string ) {
+  public set eventhubName(value: string | undefined) {
     this._eventhubName = value;
   }
   public resetEventhubName() {
@@ -260,11 +427,11 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
   }
 
   // log_analytics_destination_type - computed: false, optional: true, required: false
-  private _logAnalyticsDestinationType?: string;
+  private _logAnalyticsDestinationType?: string | undefined; 
   public get logAnalyticsDestinationType() {
     return this.getStringAttribute('log_analytics_destination_type');
   }
-  public set logAnalyticsDestinationType(value: string ) {
+  public set logAnalyticsDestinationType(value: string | undefined) {
     this._logAnalyticsDestinationType = value;
   }
   public resetLogAnalyticsDestinationType() {
@@ -276,11 +443,11 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
   }
 
   // log_analytics_workspace_id - computed: false, optional: true, required: false
-  private _logAnalyticsWorkspaceId?: string;
+  private _logAnalyticsWorkspaceId?: string | undefined; 
   public get logAnalyticsWorkspaceId() {
     return this.getStringAttribute('log_analytics_workspace_id');
   }
-  public set logAnalyticsWorkspaceId(value: string ) {
+  public set logAnalyticsWorkspaceId(value: string | undefined) {
     this._logAnalyticsWorkspaceId = value;
   }
   public resetLogAnalyticsWorkspaceId() {
@@ -292,7 +459,7 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -305,11 +472,11 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
   }
 
   // storage_account_id - computed: false, optional: true, required: false
-  private _storageAccountId?: string;
+  private _storageAccountId?: string | undefined; 
   public get storageAccountId() {
     return this.getStringAttribute('storage_account_id');
   }
-  public set storageAccountId(value: string ) {
+  public set storageAccountId(value: string | undefined) {
     this._storageAccountId = value;
   }
   public resetStorageAccountId() {
@@ -321,7 +488,7 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
   }
 
   // target_resource_id - computed: false, optional: false, required: true
-  private _targetResourceId: string;
+  private _targetResourceId?: string; 
   public get targetResourceId() {
     return this.getStringAttribute('target_resource_id');
   }
@@ -334,11 +501,12 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
   }
 
   // log - computed: false, optional: true, required: false
-  private _log?: MonitorDiagnosticSettingLog[];
+  private _log?: MonitorDiagnosticSettingLog[] | undefined; 
   public get log() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('log') as any;
   }
-  public set log(value: MonitorDiagnosticSettingLog[] ) {
+  public set log(value: MonitorDiagnosticSettingLog[] | undefined) {
     this._log = value;
   }
   public resetLog() {
@@ -350,11 +518,12 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
   }
 
   // metric - computed: false, optional: true, required: false
-  private _metric?: MonitorDiagnosticSettingMetric[];
+  private _metric?: MonitorDiagnosticSettingMetric[] | undefined; 
   public get metric() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('metric') as any;
   }
-  public set metric(value: MonitorDiagnosticSettingMetric[] ) {
+  public set metric(value: MonitorDiagnosticSettingMetric[] | undefined) {
     this._metric = value;
   }
   public resetMetric() {
@@ -366,11 +535,12 @@ export class MonitorDiagnosticSetting extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MonitorDiagnosticSettingTimeouts;
+  private _timeouts?: MonitorDiagnosticSettingTimeouts | undefined; 
+  private __timeoutsOutput = new MonitorDiagnosticSettingTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: MonitorDiagnosticSettingTimeouts ) {
+  public putTimeouts(value: MonitorDiagnosticSettingTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

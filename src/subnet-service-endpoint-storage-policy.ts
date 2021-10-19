@@ -28,7 +28,7 @@ export interface SubnetServiceEndpointStoragePolicyConfig extends cdktf.Terrafor
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_service_endpoint_storage_policy.html#definition SubnetServiceEndpointStoragePolicy#definition}
   */
-  readonly definition?: SubnetServiceEndpointStoragePolicyDefinition[];
+  readonly definition?: SubnetServiceEndpointStoragePolicyDefinition;
   /**
   * timeouts block
   * 
@@ -51,8 +51,11 @@ export interface SubnetServiceEndpointStoragePolicyDefinition {
   readonly serviceResources: string[];
 }
 
-function subnetServiceEndpointStoragePolicyDefinitionToTerraform(struct?: SubnetServiceEndpointStoragePolicyDefinition): any {
+function subnetServiceEndpointStoragePolicyDefinitionToTerraform(struct?: SubnetServiceEndpointStoragePolicyDefinitionOutputReference | SubnetServiceEndpointStoragePolicyDefinition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     description: cdktf.stringToTerraform(struct!.description),
     name: cdktf.stringToTerraform(struct!.name),
@@ -60,6 +63,58 @@ function subnetServiceEndpointStoragePolicyDefinitionToTerraform(struct?: Subnet
   }
 }
 
+export class SubnetServiceEndpointStoragePolicyDefinitionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // description - computed: false, optional: true, required: false
+  private _description?: string | undefined; 
+  public get description() {
+    return this.getStringAttribute('description');
+  }
+  public set description(value: string | undefined) {
+    this._description = value;
+  }
+  public resetDescription() {
+    this._description = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get descriptionInput() {
+    return this._description
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // service_resources - computed: false, optional: false, required: true
+  private _serviceResources?: string[]; 
+  public get serviceResources() {
+    return this.getListAttribute('service_resources');
+  }
+  public set serviceResources(value: string[]) {
+    this._serviceResources = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceResourcesInput() {
+    return this._serviceResources
+  }
+}
 export interface SubnetServiceEndpointStoragePolicyTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_service_endpoint_storage_policy.html#create SubnetServiceEndpointStoragePolicy#create}
@@ -79,8 +134,11 @@ export interface SubnetServiceEndpointStoragePolicyTimeouts {
   readonly update?: string;
 }
 
-function subnetServiceEndpointStoragePolicyTimeoutsToTerraform(struct?: SubnetServiceEndpointStoragePolicyTimeouts): any {
+function subnetServiceEndpointStoragePolicyTimeoutsToTerraform(struct?: SubnetServiceEndpointStoragePolicyTimeoutsOutputReference | SubnetServiceEndpointStoragePolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -89,6 +147,80 @@ function subnetServiceEndpointStoragePolicyTimeoutsToTerraform(struct?: SubnetSe
   }
 }
 
+export class SubnetServiceEndpointStoragePolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_service_endpoint_storage_policy.html azurerm_subnet_service_endpoint_storage_policy}
@@ -140,7 +272,7 @@ export class SubnetServiceEndpointStoragePolicy extends cdktf.TerraformResource 
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -153,7 +285,7 @@ export class SubnetServiceEndpointStoragePolicy extends cdktf.TerraformResource 
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -166,7 +298,7 @@ export class SubnetServiceEndpointStoragePolicy extends cdktf.TerraformResource 
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -179,11 +311,12 @@ export class SubnetServiceEndpointStoragePolicy extends cdktf.TerraformResource 
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -195,11 +328,12 @@ export class SubnetServiceEndpointStoragePolicy extends cdktf.TerraformResource 
   }
 
   // definition - computed: false, optional: true, required: false
-  private _definition?: SubnetServiceEndpointStoragePolicyDefinition[];
+  private _definition?: SubnetServiceEndpointStoragePolicyDefinition | undefined; 
+  private __definitionOutput = new SubnetServiceEndpointStoragePolicyDefinitionOutputReference(this as any, "definition", true);
   public get definition() {
-    return this.interpolationForAttribute('definition') as any;
+    return this.__definitionOutput;
   }
-  public set definition(value: SubnetServiceEndpointStoragePolicyDefinition[] ) {
+  public putDefinition(value: SubnetServiceEndpointStoragePolicyDefinition | undefined) {
     this._definition = value;
   }
   public resetDefinition() {
@@ -211,11 +345,12 @@ export class SubnetServiceEndpointStoragePolicy extends cdktf.TerraformResource 
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SubnetServiceEndpointStoragePolicyTimeouts;
+  private _timeouts?: SubnetServiceEndpointStoragePolicyTimeouts | undefined; 
+  private __timeoutsOutput = new SubnetServiceEndpointStoragePolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SubnetServiceEndpointStoragePolicyTimeouts ) {
+  public putTimeouts(value: SubnetServiceEndpointStoragePolicyTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -236,7 +371,7 @@ export class SubnetServiceEndpointStoragePolicy extends cdktf.TerraformResource 
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      definition: cdktf.listMapper(subnetServiceEndpointStoragePolicyDefinitionToTerraform)(this._definition),
+      definition: subnetServiceEndpointStoragePolicyDefinitionToTerraform(this._definition),
       timeouts: subnetServiceEndpointStoragePolicyTimeoutsToTerraform(this._timeouts),
     };
   }

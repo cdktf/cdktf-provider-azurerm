@@ -44,43 +44,43 @@ export interface HdinsightInteractiveQueryClusterConfig extends cdktf.TerraformM
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#component_version HdinsightInteractiveQueryCluster#component_version}
   */
-  readonly componentVersion: HdinsightInteractiveQueryClusterComponentVersion[];
+  readonly componentVersion: HdinsightInteractiveQueryClusterComponentVersion;
   /**
   * gateway block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#gateway HdinsightInteractiveQueryCluster#gateway}
   */
-  readonly gateway: HdinsightInteractiveQueryClusterGateway[];
+  readonly gateway: HdinsightInteractiveQueryClusterGateway;
   /**
   * metastores block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#metastores HdinsightInteractiveQueryCluster#metastores}
   */
-  readonly metastores?: HdinsightInteractiveQueryClusterMetastores[];
+  readonly metastores?: HdinsightInteractiveQueryClusterMetastores;
   /**
   * monitor block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#monitor HdinsightInteractiveQueryCluster#monitor}
   */
-  readonly monitor?: HdinsightInteractiveQueryClusterMonitor[];
+  readonly monitor?: HdinsightInteractiveQueryClusterMonitor;
   /**
   * network block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#network HdinsightInteractiveQueryCluster#network}
   */
-  readonly network?: HdinsightInteractiveQueryClusterNetwork[];
+  readonly network?: HdinsightInteractiveQueryClusterNetwork;
   /**
   * roles block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#roles HdinsightInteractiveQueryCluster#roles}
   */
-  readonly roles: HdinsightInteractiveQueryClusterRoles[];
+  readonly roles: HdinsightInteractiveQueryClusterRoles;
   /**
   * security_profile block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#security_profile HdinsightInteractiveQueryCluster#security_profile}
   */
-  readonly securityProfile?: HdinsightInteractiveQueryClusterSecurityProfile[];
+  readonly securityProfile?: HdinsightInteractiveQueryClusterSecurityProfile;
   /**
   * storage_account block
   * 
@@ -92,7 +92,7 @@ export interface HdinsightInteractiveQueryClusterConfig extends cdktf.TerraformM
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#storage_account_gen2 HdinsightInteractiveQueryCluster#storage_account_gen2}
   */
-  readonly storageAccountGen2?: HdinsightInteractiveQueryClusterStorageAccountGen2[];
+  readonly storageAccountGen2?: HdinsightInteractiveQueryClusterStorageAccountGen2;
   /**
   * timeouts block
   * 
@@ -107,13 +107,39 @@ export interface HdinsightInteractiveQueryClusterComponentVersion {
   readonly interactiveHive: string;
 }
 
-function hdinsightInteractiveQueryClusterComponentVersionToTerraform(struct?: HdinsightInteractiveQueryClusterComponentVersion): any {
+function hdinsightInteractiveQueryClusterComponentVersionToTerraform(struct?: HdinsightInteractiveQueryClusterComponentVersionOutputReference | HdinsightInteractiveQueryClusterComponentVersion): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     interactive_hive: cdktf.stringToTerraform(struct!.interactiveHive),
   }
 }
 
+export class HdinsightInteractiveQueryClusterComponentVersionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // interactive_hive - computed: false, optional: false, required: true
+  private _interactiveHive?: string; 
+  public get interactiveHive() {
+    return this.getStringAttribute('interactive_hive');
+  }
+  public set interactiveHive(value: string) {
+    this._interactiveHive = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get interactiveHiveInput() {
+    return this._interactiveHive
+  }
+}
 export interface HdinsightInteractiveQueryClusterGateway {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#enabled HdinsightInteractiveQueryCluster#enabled}
@@ -129,8 +155,11 @@ export interface HdinsightInteractiveQueryClusterGateway {
   readonly username: string;
 }
 
-function hdinsightInteractiveQueryClusterGatewayToTerraform(struct?: HdinsightInteractiveQueryClusterGateway): any {
+function hdinsightInteractiveQueryClusterGatewayToTerraform(struct?: HdinsightInteractiveQueryClusterGatewayOutputReference | HdinsightInteractiveQueryClusterGateway): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     password: cdktf.stringToTerraform(struct!.password),
@@ -138,6 +167,58 @@ function hdinsightInteractiveQueryClusterGatewayToTerraform(struct?: HdinsightIn
   }
 }
 
+export class HdinsightInteractiveQueryClusterGatewayOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled') as any;
+  }
+  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
+  }
+
+  // password - computed: false, optional: false, required: true
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password
+  }
+
+  // username - computed: false, optional: false, required: true
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username
+  }
+}
 export interface HdinsightInteractiveQueryClusterMetastoresAmbari {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#database_name HdinsightInteractiveQueryCluster#database_name}
@@ -157,8 +238,11 @@ export interface HdinsightInteractiveQueryClusterMetastoresAmbari {
   readonly username: string;
 }
 
-function hdinsightInteractiveQueryClusterMetastoresAmbariToTerraform(struct?: HdinsightInteractiveQueryClusterMetastoresAmbari): any {
+function hdinsightInteractiveQueryClusterMetastoresAmbariToTerraform(struct?: HdinsightInteractiveQueryClusterMetastoresAmbariOutputReference | HdinsightInteractiveQueryClusterMetastoresAmbari): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     database_name: cdktf.stringToTerraform(struct!.databaseName),
     password: cdktf.stringToTerraform(struct!.password),
@@ -167,6 +251,68 @@ function hdinsightInteractiveQueryClusterMetastoresAmbariToTerraform(struct?: Hd
   }
 }
 
+export class HdinsightInteractiveQueryClusterMetastoresAmbariOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // database_name - computed: false, optional: false, required: true
+  private _databaseName?: string; 
+  public get databaseName() {
+    return this.getStringAttribute('database_name');
+  }
+  public set databaseName(value: string) {
+    this._databaseName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get databaseNameInput() {
+    return this._databaseName
+  }
+
+  // password - computed: false, optional: false, required: true
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password
+  }
+
+  // server - computed: false, optional: false, required: true
+  private _server?: string; 
+  public get server() {
+    return this.getStringAttribute('server');
+  }
+  public set server(value: string) {
+    this._server = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverInput() {
+    return this._server
+  }
+
+  // username - computed: false, optional: false, required: true
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username
+  }
+}
 export interface HdinsightInteractiveQueryClusterMetastoresHive {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#database_name HdinsightInteractiveQueryCluster#database_name}
@@ -186,8 +332,11 @@ export interface HdinsightInteractiveQueryClusterMetastoresHive {
   readonly username: string;
 }
 
-function hdinsightInteractiveQueryClusterMetastoresHiveToTerraform(struct?: HdinsightInteractiveQueryClusterMetastoresHive): any {
+function hdinsightInteractiveQueryClusterMetastoresHiveToTerraform(struct?: HdinsightInteractiveQueryClusterMetastoresHiveOutputReference | HdinsightInteractiveQueryClusterMetastoresHive): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     database_name: cdktf.stringToTerraform(struct!.databaseName),
     password: cdktf.stringToTerraform(struct!.password),
@@ -196,6 +345,68 @@ function hdinsightInteractiveQueryClusterMetastoresHiveToTerraform(struct?: Hdin
   }
 }
 
+export class HdinsightInteractiveQueryClusterMetastoresHiveOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // database_name - computed: false, optional: false, required: true
+  private _databaseName?: string; 
+  public get databaseName() {
+    return this.getStringAttribute('database_name');
+  }
+  public set databaseName(value: string) {
+    this._databaseName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get databaseNameInput() {
+    return this._databaseName
+  }
+
+  // password - computed: false, optional: false, required: true
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password
+  }
+
+  // server - computed: false, optional: false, required: true
+  private _server?: string; 
+  public get server() {
+    return this.getStringAttribute('server');
+  }
+  public set server(value: string) {
+    this._server = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverInput() {
+    return this._server
+  }
+
+  // username - computed: false, optional: false, required: true
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username
+  }
+}
 export interface HdinsightInteractiveQueryClusterMetastoresOozie {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#database_name HdinsightInteractiveQueryCluster#database_name}
@@ -215,8 +426,11 @@ export interface HdinsightInteractiveQueryClusterMetastoresOozie {
   readonly username: string;
 }
 
-function hdinsightInteractiveQueryClusterMetastoresOozieToTerraform(struct?: HdinsightInteractiveQueryClusterMetastoresOozie): any {
+function hdinsightInteractiveQueryClusterMetastoresOozieToTerraform(struct?: HdinsightInteractiveQueryClusterMetastoresOozieOutputReference | HdinsightInteractiveQueryClusterMetastoresOozie): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     database_name: cdktf.stringToTerraform(struct!.databaseName),
     password: cdktf.stringToTerraform(struct!.password),
@@ -225,36 +439,162 @@ function hdinsightInteractiveQueryClusterMetastoresOozieToTerraform(struct?: Hdi
   }
 }
 
+export class HdinsightInteractiveQueryClusterMetastoresOozieOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // database_name - computed: false, optional: false, required: true
+  private _databaseName?: string; 
+  public get databaseName() {
+    return this.getStringAttribute('database_name');
+  }
+  public set databaseName(value: string) {
+    this._databaseName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get databaseNameInput() {
+    return this._databaseName
+  }
+
+  // password - computed: false, optional: false, required: true
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password
+  }
+
+  // server - computed: false, optional: false, required: true
+  private _server?: string; 
+  public get server() {
+    return this.getStringAttribute('server');
+  }
+  public set server(value: string) {
+    this._server = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverInput() {
+    return this._server
+  }
+
+  // username - computed: false, optional: false, required: true
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username
+  }
+}
 export interface HdinsightInteractiveQueryClusterMetastores {
   /**
   * ambari block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#ambari HdinsightInteractiveQueryCluster#ambari}
   */
-  readonly ambari?: HdinsightInteractiveQueryClusterMetastoresAmbari[];
+  readonly ambari?: HdinsightInteractiveQueryClusterMetastoresAmbari;
   /**
   * hive block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#hive HdinsightInteractiveQueryCluster#hive}
   */
-  readonly hive?: HdinsightInteractiveQueryClusterMetastoresHive[];
+  readonly hive?: HdinsightInteractiveQueryClusterMetastoresHive;
   /**
   * oozie block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#oozie HdinsightInteractiveQueryCluster#oozie}
   */
-  readonly oozie?: HdinsightInteractiveQueryClusterMetastoresOozie[];
+  readonly oozie?: HdinsightInteractiveQueryClusterMetastoresOozie;
 }
 
-function hdinsightInteractiveQueryClusterMetastoresToTerraform(struct?: HdinsightInteractiveQueryClusterMetastores): any {
+function hdinsightInteractiveQueryClusterMetastoresToTerraform(struct?: HdinsightInteractiveQueryClusterMetastoresOutputReference | HdinsightInteractiveQueryClusterMetastores): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    ambari: cdktf.listMapper(hdinsightInteractiveQueryClusterMetastoresAmbariToTerraform)(struct!.ambari),
-    hive: cdktf.listMapper(hdinsightInteractiveQueryClusterMetastoresHiveToTerraform)(struct!.hive),
-    oozie: cdktf.listMapper(hdinsightInteractiveQueryClusterMetastoresOozieToTerraform)(struct!.oozie),
+    ambari: hdinsightInteractiveQueryClusterMetastoresAmbariToTerraform(struct!.ambari),
+    hive: hdinsightInteractiveQueryClusterMetastoresHiveToTerraform(struct!.hive),
+    oozie: hdinsightInteractiveQueryClusterMetastoresOozieToTerraform(struct!.oozie),
   }
 }
 
+export class HdinsightInteractiveQueryClusterMetastoresOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // ambari - computed: false, optional: true, required: false
+  private _ambari?: HdinsightInteractiveQueryClusterMetastoresAmbari | undefined; 
+  private __ambariOutput = new HdinsightInteractiveQueryClusterMetastoresAmbariOutputReference(this as any, "ambari", true);
+  public get ambari() {
+    return this.__ambariOutput;
+  }
+  public putAmbari(value: HdinsightInteractiveQueryClusterMetastoresAmbari | undefined) {
+    this._ambari = value;
+  }
+  public resetAmbari() {
+    this._ambari = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ambariInput() {
+    return this._ambari
+  }
+
+  // hive - computed: false, optional: true, required: false
+  private _hive?: HdinsightInteractiveQueryClusterMetastoresHive | undefined; 
+  private __hiveOutput = new HdinsightInteractiveQueryClusterMetastoresHiveOutputReference(this as any, "hive", true);
+  public get hive() {
+    return this.__hiveOutput;
+  }
+  public putHive(value: HdinsightInteractiveQueryClusterMetastoresHive | undefined) {
+    this._hive = value;
+  }
+  public resetHive() {
+    this._hive = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hiveInput() {
+    return this._hive
+  }
+
+  // oozie - computed: false, optional: true, required: false
+  private _oozie?: HdinsightInteractiveQueryClusterMetastoresOozie | undefined; 
+  private __oozieOutput = new HdinsightInteractiveQueryClusterMetastoresOozieOutputReference(this as any, "oozie", true);
+  public get oozie() {
+    return this.__oozieOutput;
+  }
+  public putOozie(value: HdinsightInteractiveQueryClusterMetastoresOozie | undefined) {
+    this._oozie = value;
+  }
+  public resetOozie() {
+    this._oozie = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get oozieInput() {
+    return this._oozie
+  }
+}
 export interface HdinsightInteractiveQueryClusterMonitor {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#log_analytics_workspace_id HdinsightInteractiveQueryCluster#log_analytics_workspace_id}
@@ -266,14 +606,53 @@ export interface HdinsightInteractiveQueryClusterMonitor {
   readonly primaryKey: string;
 }
 
-function hdinsightInteractiveQueryClusterMonitorToTerraform(struct?: HdinsightInteractiveQueryClusterMonitor): any {
+function hdinsightInteractiveQueryClusterMonitorToTerraform(struct?: HdinsightInteractiveQueryClusterMonitorOutputReference | HdinsightInteractiveQueryClusterMonitor): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     log_analytics_workspace_id: cdktf.stringToTerraform(struct!.logAnalyticsWorkspaceId),
     primary_key: cdktf.stringToTerraform(struct!.primaryKey),
   }
 }
 
+export class HdinsightInteractiveQueryClusterMonitorOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // log_analytics_workspace_id - computed: false, optional: false, required: true
+  private _logAnalyticsWorkspaceId?: string; 
+  public get logAnalyticsWorkspaceId() {
+    return this.getStringAttribute('log_analytics_workspace_id');
+  }
+  public set logAnalyticsWorkspaceId(value: string) {
+    this._logAnalyticsWorkspaceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logAnalyticsWorkspaceIdInput() {
+    return this._logAnalyticsWorkspaceId
+  }
+
+  // primary_key - computed: false, optional: false, required: true
+  private _primaryKey?: string; 
+  public get primaryKey() {
+    return this.getStringAttribute('primary_key');
+  }
+  public set primaryKey(value: string) {
+    this._primaryKey = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get primaryKeyInput() {
+    return this._primaryKey
+  }
+}
 export interface HdinsightInteractiveQueryClusterNetwork {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#connection_direction HdinsightInteractiveQueryCluster#connection_direction}
@@ -285,14 +664,59 @@ export interface HdinsightInteractiveQueryClusterNetwork {
   readonly privateLinkEnabled?: boolean | cdktf.IResolvable;
 }
 
-function hdinsightInteractiveQueryClusterNetworkToTerraform(struct?: HdinsightInteractiveQueryClusterNetwork): any {
+function hdinsightInteractiveQueryClusterNetworkToTerraform(struct?: HdinsightInteractiveQueryClusterNetworkOutputReference | HdinsightInteractiveQueryClusterNetwork): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     connection_direction: cdktf.stringToTerraform(struct!.connectionDirection),
     private_link_enabled: cdktf.booleanToTerraform(struct!.privateLinkEnabled),
   }
 }
 
+export class HdinsightInteractiveQueryClusterNetworkOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // connection_direction - computed: false, optional: true, required: false
+  private _connectionDirection?: string | undefined; 
+  public get connectionDirection() {
+    return this.getStringAttribute('connection_direction');
+  }
+  public set connectionDirection(value: string | undefined) {
+    this._connectionDirection = value;
+  }
+  public resetConnectionDirection() {
+    this._connectionDirection = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionDirectionInput() {
+    return this._connectionDirection
+  }
+
+  // private_link_enabled - computed: false, optional: true, required: false
+  private _privateLinkEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get privateLinkEnabled() {
+    return this.getBooleanAttribute('private_link_enabled') as any;
+  }
+  public set privateLinkEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._privateLinkEnabled = value;
+  }
+  public resetPrivateLinkEnabled() {
+    this._privateLinkEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateLinkEnabledInput() {
+    return this._privateLinkEnabled
+  }
+}
 export interface HdinsightInteractiveQueryClusterRolesHeadNode {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#password HdinsightInteractiveQueryCluster#password}
@@ -320,8 +744,11 @@ export interface HdinsightInteractiveQueryClusterRolesHeadNode {
   readonly vmSize: string;
 }
 
-function hdinsightInteractiveQueryClusterRolesHeadNodeToTerraform(struct?: HdinsightInteractiveQueryClusterRolesHeadNode): any {
+function hdinsightInteractiveQueryClusterRolesHeadNodeToTerraform(struct?: HdinsightInteractiveQueryClusterRolesHeadNodeOutputReference | HdinsightInteractiveQueryClusterRolesHeadNode): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     password: cdktf.stringToTerraform(struct!.password),
     ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
@@ -332,6 +759,106 @@ function hdinsightInteractiveQueryClusterRolesHeadNodeToTerraform(struct?: Hdins
   }
 }
 
+export class HdinsightInteractiveQueryClusterRolesHeadNodeOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // password - computed: false, optional: true, required: false
+  private _password?: string | undefined; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string | undefined) {
+    this._password = value;
+  }
+  public resetPassword() {
+    this._password = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password
+  }
+
+  // ssh_keys - computed: false, optional: true, required: false
+  private _sshKeys?: string[] | undefined; 
+  public get sshKeys() {
+    return this.getListAttribute('ssh_keys');
+  }
+  public set sshKeys(value: string[] | undefined) {
+    this._sshKeys = value;
+  }
+  public resetSshKeys() {
+    this._sshKeys = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sshKeysInput() {
+    return this._sshKeys
+  }
+
+  // subnet_id - computed: false, optional: true, required: false
+  private _subnetId?: string | undefined; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string | undefined) {
+    this._subnetId = value;
+  }
+  public resetSubnetId() {
+    this._subnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId
+  }
+
+  // username - computed: false, optional: false, required: true
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username
+  }
+
+  // virtual_network_id - computed: false, optional: true, required: false
+  private _virtualNetworkId?: string | undefined; 
+  public get virtualNetworkId() {
+    return this.getStringAttribute('virtual_network_id');
+  }
+  public set virtualNetworkId(value: string | undefined) {
+    this._virtualNetworkId = value;
+  }
+  public resetVirtualNetworkId() {
+    this._virtualNetworkId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkIdInput() {
+    return this._virtualNetworkId
+  }
+
+  // vm_size - computed: false, optional: false, required: true
+  private _vmSize?: string; 
+  public get vmSize() {
+    return this.getStringAttribute('vm_size');
+  }
+  public set vmSize(value: string) {
+    this._vmSize = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vmSizeInput() {
+    return this._vmSize
+  }
+}
 export interface HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleCapacity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#max_instance_count HdinsightInteractiveQueryCluster#max_instance_count}
@@ -343,14 +870,53 @@ export interface HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleCapacit
   readonly minInstanceCount: number;
 }
 
-function hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleCapacityToTerraform(struct?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleCapacity): any {
+function hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleCapacityToTerraform(struct?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleCapacityOutputReference | HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleCapacity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     max_instance_count: cdktf.numberToTerraform(struct!.maxInstanceCount),
     min_instance_count: cdktf.numberToTerraform(struct!.minInstanceCount),
   }
 }
 
+export class HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleCapacityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // max_instance_count - computed: false, optional: false, required: true
+  private _maxInstanceCount?: number; 
+  public get maxInstanceCount() {
+    return this.getNumberAttribute('max_instance_count');
+  }
+  public set maxInstanceCount(value: number) {
+    this._maxInstanceCount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxInstanceCountInput() {
+    return this._maxInstanceCount
+  }
+
+  // min_instance_count - computed: false, optional: false, required: true
+  private _minInstanceCount?: number; 
+  public get minInstanceCount() {
+    return this.getNumberAttribute('min_instance_count');
+  }
+  public set minInstanceCount(value: number) {
+    this._minInstanceCount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minInstanceCountInput() {
+    return this._minInstanceCount
+  }
+}
 export interface HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceSchedule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#days HdinsightInteractiveQueryCluster#days}
@@ -368,6 +934,9 @@ export interface HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurre
 
 function hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceScheduleToTerraform(struct?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceSchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     days: cdktf.listMapper(cdktf.stringToTerraform)(struct!.days),
     target_instance_count: cdktf.numberToTerraform(struct!.targetInstanceCount),
@@ -388,37 +957,124 @@ export interface HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurre
   readonly schedule: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[];
 }
 
-function hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceToTerraform(struct?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrence): any {
+function hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceToTerraform(struct?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceOutputReference | HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrence): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     timezone: cdktf.stringToTerraform(struct!.timezone),
     schedule: cdktf.listMapper(hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceScheduleToTerraform)(struct!.schedule),
   }
 }
 
+export class HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // timezone - computed: false, optional: false, required: true
+  private _timezone?: string; 
+  public get timezone() {
+    return this.getStringAttribute('timezone');
+  }
+  public set timezone(value: string) {
+    this._timezone = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timezoneInput() {
+    return this._timezone
+  }
+
+  // schedule - computed: false, optional: false, required: true
+  private _schedule?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[]; 
+  public get schedule() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('schedule') as any;
+  }
+  public set schedule(value: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceSchedule[]) {
+    this._schedule = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scheduleInput() {
+    return this._schedule
+  }
+}
 export interface HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscale {
   /**
   * capacity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#capacity HdinsightInteractiveQueryCluster#capacity}
   */
-  readonly capacity?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleCapacity[];
+  readonly capacity?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleCapacity;
   /**
   * recurrence block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#recurrence HdinsightInteractiveQueryCluster#recurrence}
   */
-  readonly recurrence?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrence[];
+  readonly recurrence?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrence;
 }
 
-function hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleToTerraform(struct?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscale): any {
+function hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleToTerraform(struct?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleOutputReference | HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscale): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    capacity: cdktf.listMapper(hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleCapacityToTerraform)(struct!.capacity),
-    recurrence: cdktf.listMapper(hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceToTerraform)(struct!.recurrence),
+    capacity: hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleCapacityToTerraform(struct!.capacity),
+    recurrence: hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceToTerraform(struct!.recurrence),
   }
 }
 
+export class HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // capacity - computed: false, optional: true, required: false
+  private _capacity?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleCapacity | undefined; 
+  private __capacityOutput = new HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleCapacityOutputReference(this as any, "capacity", true);
+  public get capacity() {
+    return this.__capacityOutput;
+  }
+  public putCapacity(value: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleCapacity | undefined) {
+    this._capacity = value;
+  }
+  public resetCapacity() {
+    this._capacity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityInput() {
+    return this._capacity
+  }
+
+  // recurrence - computed: false, optional: true, required: false
+  private _recurrence?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrence | undefined; 
+  private __recurrenceOutput = new HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrenceOutputReference(this as any, "recurrence", true);
+  public get recurrence() {
+    return this.__recurrenceOutput;
+  }
+  public putRecurrence(value: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleRecurrence | undefined) {
+    this._recurrence = value;
+  }
+  public resetRecurrence() {
+    this._recurrence = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get recurrenceInput() {
+    return this._recurrence
+  }
+}
 export interface HdinsightInteractiveQueryClusterRolesWorkerNode {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#min_instance_count HdinsightInteractiveQueryCluster#min_instance_count}
@@ -457,11 +1113,14 @@ export interface HdinsightInteractiveQueryClusterRolesWorkerNode {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#autoscale HdinsightInteractiveQueryCluster#autoscale}
   */
-  readonly autoscale?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscale[];
+  readonly autoscale?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscale;
 }
 
-function hdinsightInteractiveQueryClusterRolesWorkerNodeToTerraform(struct?: HdinsightInteractiveQueryClusterRolesWorkerNode): any {
+function hdinsightInteractiveQueryClusterRolesWorkerNodeToTerraform(struct?: HdinsightInteractiveQueryClusterRolesWorkerNodeOutputReference | HdinsightInteractiveQueryClusterRolesWorkerNode): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     min_instance_count: cdktf.numberToTerraform(struct!.minInstanceCount),
     password: cdktf.stringToTerraform(struct!.password),
@@ -471,10 +1130,156 @@ function hdinsightInteractiveQueryClusterRolesWorkerNodeToTerraform(struct?: Hdi
     username: cdktf.stringToTerraform(struct!.username),
     virtual_network_id: cdktf.stringToTerraform(struct!.virtualNetworkId),
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
-    autoscale: cdktf.listMapper(hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleToTerraform)(struct!.autoscale),
+    autoscale: hdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleToTerraform(struct!.autoscale),
   }
 }
 
+export class HdinsightInteractiveQueryClusterRolesWorkerNodeOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // min_instance_count - computed: true, optional: true, required: false
+  private _minInstanceCount?: number | undefined; 
+  public get minInstanceCount() {
+    return this.getNumberAttribute('min_instance_count');
+  }
+  public set minInstanceCount(value: number | undefined) {
+    this._minInstanceCount = value;
+  }
+  public resetMinInstanceCount() {
+    this._minInstanceCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minInstanceCountInput() {
+    return this._minInstanceCount
+  }
+
+  // password - computed: false, optional: true, required: false
+  private _password?: string | undefined; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string | undefined) {
+    this._password = value;
+  }
+  public resetPassword() {
+    this._password = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password
+  }
+
+  // ssh_keys - computed: false, optional: true, required: false
+  private _sshKeys?: string[] | undefined; 
+  public get sshKeys() {
+    return this.getListAttribute('ssh_keys');
+  }
+  public set sshKeys(value: string[] | undefined) {
+    this._sshKeys = value;
+  }
+  public resetSshKeys() {
+    this._sshKeys = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sshKeysInput() {
+    return this._sshKeys
+  }
+
+  // subnet_id - computed: false, optional: true, required: false
+  private _subnetId?: string | undefined; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string | undefined) {
+    this._subnetId = value;
+  }
+  public resetSubnetId() {
+    this._subnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId
+  }
+
+  // target_instance_count - computed: false, optional: false, required: true
+  private _targetInstanceCount?: number; 
+  public get targetInstanceCount() {
+    return this.getNumberAttribute('target_instance_count');
+  }
+  public set targetInstanceCount(value: number) {
+    this._targetInstanceCount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get targetInstanceCountInput() {
+    return this._targetInstanceCount
+  }
+
+  // username - computed: false, optional: false, required: true
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username
+  }
+
+  // virtual_network_id - computed: false, optional: true, required: false
+  private _virtualNetworkId?: string | undefined; 
+  public get virtualNetworkId() {
+    return this.getStringAttribute('virtual_network_id');
+  }
+  public set virtualNetworkId(value: string | undefined) {
+    this._virtualNetworkId = value;
+  }
+  public resetVirtualNetworkId() {
+    this._virtualNetworkId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkIdInput() {
+    return this._virtualNetworkId
+  }
+
+  // vm_size - computed: false, optional: false, required: true
+  private _vmSize?: string; 
+  public get vmSize() {
+    return this.getStringAttribute('vm_size');
+  }
+  public set vmSize(value: string) {
+    this._vmSize = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vmSizeInput() {
+    return this._vmSize
+  }
+
+  // autoscale - computed: false, optional: true, required: false
+  private _autoscale?: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscale | undefined; 
+  private __autoscaleOutput = new HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscaleOutputReference(this as any, "autoscale", true);
+  public get autoscale() {
+    return this.__autoscaleOutput;
+  }
+  public putAutoscale(value: HdinsightInteractiveQueryClusterRolesWorkerNodeAutoscale | undefined) {
+    this._autoscale = value;
+  }
+  public resetAutoscale() {
+    this._autoscale = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoscaleInput() {
+    return this._autoscale
+  }
+}
 export interface HdinsightInteractiveQueryClusterRolesZookeeperNode {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#password HdinsightInteractiveQueryCluster#password}
@@ -502,8 +1307,11 @@ export interface HdinsightInteractiveQueryClusterRolesZookeeperNode {
   readonly vmSize: string;
 }
 
-function hdinsightInteractiveQueryClusterRolesZookeeperNodeToTerraform(struct?: HdinsightInteractiveQueryClusterRolesZookeeperNode): any {
+function hdinsightInteractiveQueryClusterRolesZookeeperNodeToTerraform(struct?: HdinsightInteractiveQueryClusterRolesZookeeperNodeOutputReference | HdinsightInteractiveQueryClusterRolesZookeeperNode): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     password: cdktf.stringToTerraform(struct!.password),
     ssh_keys: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sshKeys),
@@ -514,36 +1322,191 @@ function hdinsightInteractiveQueryClusterRolesZookeeperNodeToTerraform(struct?: 
   }
 }
 
+export class HdinsightInteractiveQueryClusterRolesZookeeperNodeOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // password - computed: false, optional: true, required: false
+  private _password?: string | undefined; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string | undefined) {
+    this._password = value;
+  }
+  public resetPassword() {
+    this._password = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password
+  }
+
+  // ssh_keys - computed: false, optional: true, required: false
+  private _sshKeys?: string[] | undefined; 
+  public get sshKeys() {
+    return this.getListAttribute('ssh_keys');
+  }
+  public set sshKeys(value: string[] | undefined) {
+    this._sshKeys = value;
+  }
+  public resetSshKeys() {
+    this._sshKeys = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sshKeysInput() {
+    return this._sshKeys
+  }
+
+  // subnet_id - computed: false, optional: true, required: false
+  private _subnetId?: string | undefined; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string | undefined) {
+    this._subnetId = value;
+  }
+  public resetSubnetId() {
+    this._subnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId
+  }
+
+  // username - computed: false, optional: false, required: true
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username
+  }
+
+  // virtual_network_id - computed: false, optional: true, required: false
+  private _virtualNetworkId?: string | undefined; 
+  public get virtualNetworkId() {
+    return this.getStringAttribute('virtual_network_id');
+  }
+  public set virtualNetworkId(value: string | undefined) {
+    this._virtualNetworkId = value;
+  }
+  public resetVirtualNetworkId() {
+    this._virtualNetworkId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkIdInput() {
+    return this._virtualNetworkId
+  }
+
+  // vm_size - computed: false, optional: false, required: true
+  private _vmSize?: string; 
+  public get vmSize() {
+    return this.getStringAttribute('vm_size');
+  }
+  public set vmSize(value: string) {
+    this._vmSize = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vmSizeInput() {
+    return this._vmSize
+  }
+}
 export interface HdinsightInteractiveQueryClusterRoles {
   /**
   * head_node block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#head_node HdinsightInteractiveQueryCluster#head_node}
   */
-  readonly headNode: HdinsightInteractiveQueryClusterRolesHeadNode[];
+  readonly headNode: HdinsightInteractiveQueryClusterRolesHeadNode;
   /**
   * worker_node block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#worker_node HdinsightInteractiveQueryCluster#worker_node}
   */
-  readonly workerNode: HdinsightInteractiveQueryClusterRolesWorkerNode[];
+  readonly workerNode: HdinsightInteractiveQueryClusterRolesWorkerNode;
   /**
   * zookeeper_node block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#zookeeper_node HdinsightInteractiveQueryCluster#zookeeper_node}
   */
-  readonly zookeeperNode: HdinsightInteractiveQueryClusterRolesZookeeperNode[];
+  readonly zookeeperNode: HdinsightInteractiveQueryClusterRolesZookeeperNode;
 }
 
-function hdinsightInteractiveQueryClusterRolesToTerraform(struct?: HdinsightInteractiveQueryClusterRoles): any {
+function hdinsightInteractiveQueryClusterRolesToTerraform(struct?: HdinsightInteractiveQueryClusterRolesOutputReference | HdinsightInteractiveQueryClusterRoles): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
-    head_node: cdktf.listMapper(hdinsightInteractiveQueryClusterRolesHeadNodeToTerraform)(struct!.headNode),
-    worker_node: cdktf.listMapper(hdinsightInteractiveQueryClusterRolesWorkerNodeToTerraform)(struct!.workerNode),
-    zookeeper_node: cdktf.listMapper(hdinsightInteractiveQueryClusterRolesZookeeperNodeToTerraform)(struct!.zookeeperNode),
+    head_node: hdinsightInteractiveQueryClusterRolesHeadNodeToTerraform(struct!.headNode),
+    worker_node: hdinsightInteractiveQueryClusterRolesWorkerNodeToTerraform(struct!.workerNode),
+    zookeeper_node: hdinsightInteractiveQueryClusterRolesZookeeperNodeToTerraform(struct!.zookeeperNode),
   }
 }
 
+export class HdinsightInteractiveQueryClusterRolesOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // head_node - computed: false, optional: false, required: true
+  private _headNode?: HdinsightInteractiveQueryClusterRolesHeadNode; 
+  private __headNodeOutput = new HdinsightInteractiveQueryClusterRolesHeadNodeOutputReference(this as any, "head_node", true);
+  public get headNode() {
+    return this.__headNodeOutput;
+  }
+  public putHeadNode(value: HdinsightInteractiveQueryClusterRolesHeadNode) {
+    this._headNode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get headNodeInput() {
+    return this._headNode
+  }
+
+  // worker_node - computed: false, optional: false, required: true
+  private _workerNode?: HdinsightInteractiveQueryClusterRolesWorkerNode; 
+  private __workerNodeOutput = new HdinsightInteractiveQueryClusterRolesWorkerNodeOutputReference(this as any, "worker_node", true);
+  public get workerNode() {
+    return this.__workerNodeOutput;
+  }
+  public putWorkerNode(value: HdinsightInteractiveQueryClusterRolesWorkerNode) {
+    this._workerNode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workerNodeInput() {
+    return this._workerNode
+  }
+
+  // zookeeper_node - computed: false, optional: false, required: true
+  private _zookeeperNode?: HdinsightInteractiveQueryClusterRolesZookeeperNode; 
+  private __zookeeperNodeOutput = new HdinsightInteractiveQueryClusterRolesZookeeperNodeOutputReference(this as any, "zookeeper_node", true);
+  public get zookeeperNode() {
+    return this.__zookeeperNodeOutput;
+  }
+  public putZookeeperNode(value: HdinsightInteractiveQueryClusterRolesZookeeperNode) {
+    this._zookeeperNode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get zookeeperNodeInput() {
+    return this._zookeeperNode
+  }
+}
 export interface HdinsightInteractiveQueryClusterSecurityProfile {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#aadds_resource_id HdinsightInteractiveQueryCluster#aadds_resource_id}
@@ -575,8 +1538,11 @@ export interface HdinsightInteractiveQueryClusterSecurityProfile {
   readonly msiResourceId: string;
 }
 
-function hdinsightInteractiveQueryClusterSecurityProfileToTerraform(struct?: HdinsightInteractiveQueryClusterSecurityProfile): any {
+function hdinsightInteractiveQueryClusterSecurityProfileToTerraform(struct?: HdinsightInteractiveQueryClusterSecurityProfileOutputReference | HdinsightInteractiveQueryClusterSecurityProfile): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     aadds_resource_id: cdktf.stringToTerraform(struct!.aaddsResourceId),
     cluster_users_group_dns: cdktf.listMapper(cdktf.stringToTerraform)(struct!.clusterUsersGroupDns),
@@ -588,6 +1554,110 @@ function hdinsightInteractiveQueryClusterSecurityProfileToTerraform(struct?: Hdi
   }
 }
 
+export class HdinsightInteractiveQueryClusterSecurityProfileOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // aadds_resource_id - computed: false, optional: false, required: true
+  private _aaddsResourceId?: string; 
+  public get aaddsResourceId() {
+    return this.getStringAttribute('aadds_resource_id');
+  }
+  public set aaddsResourceId(value: string) {
+    this._aaddsResourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get aaddsResourceIdInput() {
+    return this._aaddsResourceId
+  }
+
+  // cluster_users_group_dns - computed: false, optional: true, required: false
+  private _clusterUsersGroupDns?: string[] | undefined; 
+  public get clusterUsersGroupDns() {
+    return this.getListAttribute('cluster_users_group_dns');
+  }
+  public set clusterUsersGroupDns(value: string[] | undefined) {
+    this._clusterUsersGroupDns = value;
+  }
+  public resetClusterUsersGroupDns() {
+    this._clusterUsersGroupDns = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clusterUsersGroupDnsInput() {
+    return this._clusterUsersGroupDns
+  }
+
+  // domain_name - computed: false, optional: false, required: true
+  private _domainName?: string; 
+  public get domainName() {
+    return this.getStringAttribute('domain_name');
+  }
+  public set domainName(value: string) {
+    this._domainName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainNameInput() {
+    return this._domainName
+  }
+
+  // domain_user_password - computed: false, optional: false, required: true
+  private _domainUserPassword?: string; 
+  public get domainUserPassword() {
+    return this.getStringAttribute('domain_user_password');
+  }
+  public set domainUserPassword(value: string) {
+    this._domainUserPassword = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainUserPasswordInput() {
+    return this._domainUserPassword
+  }
+
+  // domain_username - computed: false, optional: false, required: true
+  private _domainUsername?: string; 
+  public get domainUsername() {
+    return this.getStringAttribute('domain_username');
+  }
+  public set domainUsername(value: string) {
+    this._domainUsername = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainUsernameInput() {
+    return this._domainUsername
+  }
+
+  // ldaps_urls - computed: false, optional: false, required: true
+  private _ldapsUrls?: string[]; 
+  public get ldapsUrls() {
+    return this.getListAttribute('ldaps_urls');
+  }
+  public set ldapsUrls(value: string[]) {
+    this._ldapsUrls = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ldapsUrlsInput() {
+    return this._ldapsUrls
+  }
+
+  // msi_resource_id - computed: false, optional: false, required: true
+  private _msiResourceId?: string; 
+  public get msiResourceId() {
+    return this.getStringAttribute('msi_resource_id');
+  }
+  public set msiResourceId(value: string) {
+    this._msiResourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get msiResourceIdInput() {
+    return this._msiResourceId
+  }
+}
 export interface HdinsightInteractiveQueryClusterStorageAccount {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#is_default HdinsightInteractiveQueryCluster#is_default}
@@ -605,6 +1675,9 @@ export interface HdinsightInteractiveQueryClusterStorageAccount {
 
 function hdinsightInteractiveQueryClusterStorageAccountToTerraform(struct?: HdinsightInteractiveQueryClusterStorageAccount): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     is_default: cdktf.booleanToTerraform(struct!.isDefault),
     storage_account_key: cdktf.stringToTerraform(struct!.storageAccountKey),
@@ -631,8 +1704,11 @@ export interface HdinsightInteractiveQueryClusterStorageAccountGen2 {
   readonly storageResourceId: string;
 }
 
-function hdinsightInteractiveQueryClusterStorageAccountGen2ToTerraform(struct?: HdinsightInteractiveQueryClusterStorageAccountGen2): any {
+function hdinsightInteractiveQueryClusterStorageAccountGen2ToTerraform(struct?: HdinsightInteractiveQueryClusterStorageAccountGen2OutputReference | HdinsightInteractiveQueryClusterStorageAccountGen2): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     filesystem_id: cdktf.stringToTerraform(struct!.filesystemId),
     is_default: cdktf.booleanToTerraform(struct!.isDefault),
@@ -641,6 +1717,68 @@ function hdinsightInteractiveQueryClusterStorageAccountGen2ToTerraform(struct?: 
   }
 }
 
+export class HdinsightInteractiveQueryClusterStorageAccountGen2OutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // filesystem_id - computed: false, optional: false, required: true
+  private _filesystemId?: string; 
+  public get filesystemId() {
+    return this.getStringAttribute('filesystem_id');
+  }
+  public set filesystemId(value: string) {
+    this._filesystemId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filesystemIdInput() {
+    return this._filesystemId
+  }
+
+  // is_default - computed: false, optional: false, required: true
+  private _isDefault?: boolean | cdktf.IResolvable; 
+  public get isDefault() {
+    return this.getBooleanAttribute('is_default') as any;
+  }
+  public set isDefault(value: boolean | cdktf.IResolvable) {
+    this._isDefault = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isDefaultInput() {
+    return this._isDefault
+  }
+
+  // managed_identity_resource_id - computed: false, optional: false, required: true
+  private _managedIdentityResourceId?: string; 
+  public get managedIdentityResourceId() {
+    return this.getStringAttribute('managed_identity_resource_id');
+  }
+  public set managedIdentityResourceId(value: string) {
+    this._managedIdentityResourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedIdentityResourceIdInput() {
+    return this._managedIdentityResourceId
+  }
+
+  // storage_resource_id - computed: false, optional: false, required: true
+  private _storageResourceId?: string; 
+  public get storageResourceId() {
+    return this.getStringAttribute('storage_resource_id');
+  }
+  public set storageResourceId(value: string) {
+    this._storageResourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageResourceIdInput() {
+    return this._storageResourceId
+  }
+}
 export interface HdinsightInteractiveQueryClusterTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html#create HdinsightInteractiveQueryCluster#create}
@@ -660,8 +1798,11 @@ export interface HdinsightInteractiveQueryClusterTimeouts {
   readonly update?: string;
 }
 
-function hdinsightInteractiveQueryClusterTimeoutsToTerraform(struct?: HdinsightInteractiveQueryClusterTimeouts): any {
+function hdinsightInteractiveQueryClusterTimeoutsToTerraform(struct?: HdinsightInteractiveQueryClusterTimeoutsOutputReference | HdinsightInteractiveQueryClusterTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -670,6 +1811,80 @@ function hdinsightInteractiveQueryClusterTimeoutsToTerraform(struct?: HdinsightI
   }
 }
 
+export class HdinsightInteractiveQueryClusterTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_interactive_query_cluster.html azurerm_hdinsight_interactive_query_cluster}
@@ -728,7 +1943,7 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   // ==========
 
   // cluster_version - computed: false, optional: false, required: true
-  private _clusterVersion: string;
+  private _clusterVersion?: string; 
   public get clusterVersion() {
     return this.getStringAttribute('cluster_version');
   }
@@ -741,11 +1956,11 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   }
 
   // encryption_in_transit_enabled - computed: true, optional: true, required: false
-  private _encryptionInTransitEnabled?: boolean | cdktf.IResolvable;
+  private _encryptionInTransitEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get encryptionInTransitEnabled() {
-    return this.getBooleanAttribute('encryption_in_transit_enabled');
+    return this.getBooleanAttribute('encryption_in_transit_enabled') as any;
   }
-  public set encryptionInTransitEnabled(value: boolean | cdktf.IResolvable) {
+  public set encryptionInTransitEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._encryptionInTransitEnabled = value;
   }
   public resetEncryptionInTransitEnabled() {
@@ -767,7 +1982,7 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -780,7 +1995,7 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -793,7 +2008,7 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -811,11 +2026,12 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -827,7 +2043,7 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   }
 
   // tier - computed: false, optional: false, required: true
-  private _tier: string;
+  private _tier?: string; 
   public get tier() {
     return this.getStringAttribute('tier');
   }
@@ -840,11 +2056,11 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   }
 
   // tls_min_version - computed: false, optional: true, required: false
-  private _tlsMinVersion?: string;
+  private _tlsMinVersion?: string | undefined; 
   public get tlsMinVersion() {
     return this.getStringAttribute('tls_min_version');
   }
-  public set tlsMinVersion(value: string ) {
+  public set tlsMinVersion(value: string | undefined) {
     this._tlsMinVersion = value;
   }
   public resetTlsMinVersion() {
@@ -856,11 +2072,12 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   }
 
   // component_version - computed: false, optional: false, required: true
-  private _componentVersion: HdinsightInteractiveQueryClusterComponentVersion[];
+  private _componentVersion?: HdinsightInteractiveQueryClusterComponentVersion; 
+  private __componentVersionOutput = new HdinsightInteractiveQueryClusterComponentVersionOutputReference(this as any, "component_version", true);
   public get componentVersion() {
-    return this.interpolationForAttribute('component_version') as any;
+    return this.__componentVersionOutput;
   }
-  public set componentVersion(value: HdinsightInteractiveQueryClusterComponentVersion[]) {
+  public putComponentVersion(value: HdinsightInteractiveQueryClusterComponentVersion) {
     this._componentVersion = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -869,11 +2086,12 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   }
 
   // gateway - computed: false, optional: false, required: true
-  private _gateway: HdinsightInteractiveQueryClusterGateway[];
+  private _gateway?: HdinsightInteractiveQueryClusterGateway; 
+  private __gatewayOutput = new HdinsightInteractiveQueryClusterGatewayOutputReference(this as any, "gateway", true);
   public get gateway() {
-    return this.interpolationForAttribute('gateway') as any;
+    return this.__gatewayOutput;
   }
-  public set gateway(value: HdinsightInteractiveQueryClusterGateway[]) {
+  public putGateway(value: HdinsightInteractiveQueryClusterGateway) {
     this._gateway = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -882,11 +2100,12 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   }
 
   // metastores - computed: false, optional: true, required: false
-  private _metastores?: HdinsightInteractiveQueryClusterMetastores[];
+  private _metastores?: HdinsightInteractiveQueryClusterMetastores | undefined; 
+  private __metastoresOutput = new HdinsightInteractiveQueryClusterMetastoresOutputReference(this as any, "metastores", true);
   public get metastores() {
-    return this.interpolationForAttribute('metastores') as any;
+    return this.__metastoresOutput;
   }
-  public set metastores(value: HdinsightInteractiveQueryClusterMetastores[] ) {
+  public putMetastores(value: HdinsightInteractiveQueryClusterMetastores | undefined) {
     this._metastores = value;
   }
   public resetMetastores() {
@@ -898,11 +2117,12 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   }
 
   // monitor - computed: false, optional: true, required: false
-  private _monitor?: HdinsightInteractiveQueryClusterMonitor[];
+  private _monitor?: HdinsightInteractiveQueryClusterMonitor | undefined; 
+  private __monitorOutput = new HdinsightInteractiveQueryClusterMonitorOutputReference(this as any, "monitor", true);
   public get monitor() {
-    return this.interpolationForAttribute('monitor') as any;
+    return this.__monitorOutput;
   }
-  public set monitor(value: HdinsightInteractiveQueryClusterMonitor[] ) {
+  public putMonitor(value: HdinsightInteractiveQueryClusterMonitor | undefined) {
     this._monitor = value;
   }
   public resetMonitor() {
@@ -914,11 +2134,12 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   }
 
   // network - computed: false, optional: true, required: false
-  private _network?: HdinsightInteractiveQueryClusterNetwork[];
+  private _network?: HdinsightInteractiveQueryClusterNetwork | undefined; 
+  private __networkOutput = new HdinsightInteractiveQueryClusterNetworkOutputReference(this as any, "network", true);
   public get network() {
-    return this.interpolationForAttribute('network') as any;
+    return this.__networkOutput;
   }
-  public set network(value: HdinsightInteractiveQueryClusterNetwork[] ) {
+  public putNetwork(value: HdinsightInteractiveQueryClusterNetwork | undefined) {
     this._network = value;
   }
   public resetNetwork() {
@@ -930,11 +2151,12 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   }
 
   // roles - computed: false, optional: false, required: true
-  private _roles: HdinsightInteractiveQueryClusterRoles[];
+  private _roles?: HdinsightInteractiveQueryClusterRoles; 
+  private __rolesOutput = new HdinsightInteractiveQueryClusterRolesOutputReference(this as any, "roles", true);
   public get roles() {
-    return this.interpolationForAttribute('roles') as any;
+    return this.__rolesOutput;
   }
-  public set roles(value: HdinsightInteractiveQueryClusterRoles[]) {
+  public putRoles(value: HdinsightInteractiveQueryClusterRoles) {
     this._roles = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -943,11 +2165,12 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   }
 
   // security_profile - computed: false, optional: true, required: false
-  private _securityProfile?: HdinsightInteractiveQueryClusterSecurityProfile[];
+  private _securityProfile?: HdinsightInteractiveQueryClusterSecurityProfile | undefined; 
+  private __securityProfileOutput = new HdinsightInteractiveQueryClusterSecurityProfileOutputReference(this as any, "security_profile", true);
   public get securityProfile() {
-    return this.interpolationForAttribute('security_profile') as any;
+    return this.__securityProfileOutput;
   }
-  public set securityProfile(value: HdinsightInteractiveQueryClusterSecurityProfile[] ) {
+  public putSecurityProfile(value: HdinsightInteractiveQueryClusterSecurityProfile | undefined) {
     this._securityProfile = value;
   }
   public resetSecurityProfile() {
@@ -959,11 +2182,12 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   }
 
   // storage_account - computed: false, optional: true, required: false
-  private _storageAccount?: HdinsightInteractiveQueryClusterStorageAccount[];
+  private _storageAccount?: HdinsightInteractiveQueryClusterStorageAccount[] | undefined; 
   public get storageAccount() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('storage_account') as any;
   }
-  public set storageAccount(value: HdinsightInteractiveQueryClusterStorageAccount[] ) {
+  public set storageAccount(value: HdinsightInteractiveQueryClusterStorageAccount[] | undefined) {
     this._storageAccount = value;
   }
   public resetStorageAccount() {
@@ -975,11 +2199,12 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   }
 
   // storage_account_gen2 - computed: false, optional: true, required: false
-  private _storageAccountGen2?: HdinsightInteractiveQueryClusterStorageAccountGen2[];
+  private _storageAccountGen2?: HdinsightInteractiveQueryClusterStorageAccountGen2 | undefined; 
+  private __storageAccountGen2Output = new HdinsightInteractiveQueryClusterStorageAccountGen2OutputReference(this as any, "storage_account_gen2", true);
   public get storageAccountGen2() {
-    return this.interpolationForAttribute('storage_account_gen2') as any;
+    return this.__storageAccountGen2Output;
   }
-  public set storageAccountGen2(value: HdinsightInteractiveQueryClusterStorageAccountGen2[] ) {
+  public putStorageAccountGen2(value: HdinsightInteractiveQueryClusterStorageAccountGen2 | undefined) {
     this._storageAccountGen2 = value;
   }
   public resetStorageAccountGen2() {
@@ -991,11 +2216,12 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: HdinsightInteractiveQueryClusterTimeouts;
+  private _timeouts?: HdinsightInteractiveQueryClusterTimeouts | undefined; 
+  private __timeoutsOutput = new HdinsightInteractiveQueryClusterTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: HdinsightInteractiveQueryClusterTimeouts ) {
+  public putTimeouts(value: HdinsightInteractiveQueryClusterTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -1020,15 +2246,15 @@ export class HdinsightInteractiveQueryCluster extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       tier: cdktf.stringToTerraform(this._tier),
       tls_min_version: cdktf.stringToTerraform(this._tlsMinVersion),
-      component_version: cdktf.listMapper(hdinsightInteractiveQueryClusterComponentVersionToTerraform)(this._componentVersion),
-      gateway: cdktf.listMapper(hdinsightInteractiveQueryClusterGatewayToTerraform)(this._gateway),
-      metastores: cdktf.listMapper(hdinsightInteractiveQueryClusterMetastoresToTerraform)(this._metastores),
-      monitor: cdktf.listMapper(hdinsightInteractiveQueryClusterMonitorToTerraform)(this._monitor),
-      network: cdktf.listMapper(hdinsightInteractiveQueryClusterNetworkToTerraform)(this._network),
-      roles: cdktf.listMapper(hdinsightInteractiveQueryClusterRolesToTerraform)(this._roles),
-      security_profile: cdktf.listMapper(hdinsightInteractiveQueryClusterSecurityProfileToTerraform)(this._securityProfile),
+      component_version: hdinsightInteractiveQueryClusterComponentVersionToTerraform(this._componentVersion),
+      gateway: hdinsightInteractiveQueryClusterGatewayToTerraform(this._gateway),
+      metastores: hdinsightInteractiveQueryClusterMetastoresToTerraform(this._metastores),
+      monitor: hdinsightInteractiveQueryClusterMonitorToTerraform(this._monitor),
+      network: hdinsightInteractiveQueryClusterNetworkToTerraform(this._network),
+      roles: hdinsightInteractiveQueryClusterRolesToTerraform(this._roles),
+      security_profile: hdinsightInteractiveQueryClusterSecurityProfileToTerraform(this._securityProfile),
       storage_account: cdktf.listMapper(hdinsightInteractiveQueryClusterStorageAccountToTerraform)(this._storageAccount),
-      storage_account_gen2: cdktf.listMapper(hdinsightInteractiveQueryClusterStorageAccountGen2ToTerraform)(this._storageAccountGen2),
+      storage_account_gen2: hdinsightInteractiveQueryClusterStorageAccountGen2ToTerraform(this._storageAccountGen2),
       timeouts: hdinsightInteractiveQueryClusterTimeoutsToTerraform(this._timeouts),
     };
   }

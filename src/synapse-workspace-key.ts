@@ -49,8 +49,11 @@ export interface SynapseWorkspaceKeyTimeouts {
   readonly update?: string;
 }
 
-function synapseWorkspaceKeyTimeoutsToTerraform(struct?: SynapseWorkspaceKeyTimeouts): any {
+function synapseWorkspaceKeyTimeoutsToTerraform(struct?: SynapseWorkspaceKeyTimeoutsOutputReference | SynapseWorkspaceKeyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -59,6 +62,80 @@ function synapseWorkspaceKeyTimeoutsToTerraform(struct?: SynapseWorkspaceKeyTime
   }
 }
 
+export class SynapseWorkspaceKeyTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_key.html azurerm_synapse_workspace_key}
@@ -104,9 +181,9 @@ export class SynapseWorkspaceKey extends cdktf.TerraformResource {
   // ==========
 
   // active - computed: false, optional: false, required: true
-  private _active: boolean | cdktf.IResolvable;
+  private _active?: boolean | cdktf.IResolvable; 
   public get active() {
-    return this.getBooleanAttribute('active');
+    return this.getBooleanAttribute('active') as any;
   }
   public set active(value: boolean | cdktf.IResolvable) {
     this._active = value;
@@ -117,7 +194,7 @@ export class SynapseWorkspaceKey extends cdktf.TerraformResource {
   }
 
   // cusomter_managed_key_name - computed: false, optional: false, required: true
-  private _cusomterManagedKeyName: string;
+  private _cusomterManagedKeyName?: string; 
   public get cusomterManagedKeyName() {
     return this.getStringAttribute('cusomter_managed_key_name');
   }
@@ -130,11 +207,11 @@ export class SynapseWorkspaceKey extends cdktf.TerraformResource {
   }
 
   // customer_managed_key_versionless_id - computed: false, optional: true, required: false
-  private _customerManagedKeyVersionlessId?: string;
+  private _customerManagedKeyVersionlessId?: string | undefined; 
   public get customerManagedKeyVersionlessId() {
     return this.getStringAttribute('customer_managed_key_versionless_id');
   }
-  public set customerManagedKeyVersionlessId(value: string ) {
+  public set customerManagedKeyVersionlessId(value: string | undefined) {
     this._customerManagedKeyVersionlessId = value;
   }
   public resetCustomerManagedKeyVersionlessId() {
@@ -151,7 +228,7 @@ export class SynapseWorkspaceKey extends cdktf.TerraformResource {
   }
 
   // synapse_workspace_id - computed: false, optional: false, required: true
-  private _synapseWorkspaceId: string;
+  private _synapseWorkspaceId?: string; 
   public get synapseWorkspaceId() {
     return this.getStringAttribute('synapse_workspace_id');
   }
@@ -164,11 +241,12 @@ export class SynapseWorkspaceKey extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SynapseWorkspaceKeyTimeouts;
+  private _timeouts?: SynapseWorkspaceKeyTimeouts | undefined; 
+  private __timeoutsOutput = new SynapseWorkspaceKeyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SynapseWorkspaceKeyTimeouts ) {
+  public putTimeouts(value: SynapseWorkspaceKeyTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

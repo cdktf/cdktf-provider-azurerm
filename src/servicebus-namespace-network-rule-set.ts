@@ -49,6 +49,9 @@ export interface ServicebusNamespaceNetworkRuleSetNetworkRules {
 
 function servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform(struct?: ServicebusNamespaceNetworkRuleSetNetworkRules): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     ignore_missing_vnet_service_endpoint: cdktf.booleanToTerraform(struct!.ignoreMissingVnetServiceEndpoint),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
@@ -74,8 +77,11 @@ export interface ServicebusNamespaceNetworkRuleSetTimeouts {
   readonly update?: string;
 }
 
-function servicebusNamespaceNetworkRuleSetTimeoutsToTerraform(struct?: ServicebusNamespaceNetworkRuleSetTimeouts): any {
+function servicebusNamespaceNetworkRuleSetTimeoutsToTerraform(struct?: ServicebusNamespaceNetworkRuleSetTimeoutsOutputReference | ServicebusNamespaceNetworkRuleSetTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -84,6 +90,80 @@ function servicebusNamespaceNetworkRuleSetTimeoutsToTerraform(struct?: Servicebu
   }
 }
 
+export class ServicebusNamespaceNetworkRuleSetTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html azurerm_servicebus_namespace_network_rule_set}
@@ -130,11 +210,11 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   // ==========
 
   // default_action - computed: false, optional: true, required: false
-  private _defaultAction?: string;
+  private _defaultAction?: string | undefined; 
   public get defaultAction() {
     return this.getStringAttribute('default_action');
   }
-  public set defaultAction(value: string ) {
+  public set defaultAction(value: string | undefined) {
     this._defaultAction = value;
   }
   public resetDefaultAction() {
@@ -151,11 +231,11 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   }
 
   // ip_rules - computed: false, optional: true, required: false
-  private _ipRules?: string[];
+  private _ipRules?: string[] | undefined; 
   public get ipRules() {
     return this.getListAttribute('ip_rules');
   }
-  public set ipRules(value: string[] ) {
+  public set ipRules(value: string[] | undefined) {
     this._ipRules = value;
   }
   public resetIpRules() {
@@ -167,7 +247,7 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   }
 
   // namespace_name - computed: false, optional: false, required: true
-  private _namespaceName: string;
+  private _namespaceName?: string; 
   public get namespaceName() {
     return this.getStringAttribute('namespace_name');
   }
@@ -180,7 +260,7 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -193,11 +273,12 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   }
 
   // network_rules - computed: false, optional: true, required: false
-  private _networkRules?: ServicebusNamespaceNetworkRuleSetNetworkRules[];
+  private _networkRules?: ServicebusNamespaceNetworkRuleSetNetworkRules[] | undefined; 
   public get networkRules() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('network_rules') as any;
   }
-  public set networkRules(value: ServicebusNamespaceNetworkRuleSetNetworkRules[] ) {
+  public set networkRules(value: ServicebusNamespaceNetworkRuleSetNetworkRules[] | undefined) {
     this._networkRules = value;
   }
   public resetNetworkRules() {
@@ -209,11 +290,12 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ServicebusNamespaceNetworkRuleSetTimeouts;
+  private _timeouts?: ServicebusNamespaceNetworkRuleSetTimeouts | undefined; 
+  private __timeoutsOutput = new ServicebusNamespaceNetworkRuleSetTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ServicebusNamespaceNetworkRuleSetTimeouts ) {
+  public putTimeouts(value: ServicebusNamespaceNetworkRuleSetTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

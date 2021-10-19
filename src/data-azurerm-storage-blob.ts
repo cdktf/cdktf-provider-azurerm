@@ -37,13 +37,42 @@ export interface DataAzurermStorageBlobTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermStorageBlobTimeoutsToTerraform(struct?: DataAzurermStorageBlobTimeouts): any {
+function dataAzurermStorageBlobTimeoutsToTerraform(struct?: DataAzurermStorageBlobTimeoutsOutputReference | DataAzurermStorageBlobTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermStorageBlobTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_blob.html azurerm_storage_blob}
@@ -109,11 +138,12 @@ export class DataAzurermStorageBlob extends cdktf.TerraformDataSource {
   }
 
   // metadata - computed: true, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable
-  public get metadata(): { [key: string]: string } | cdktf.IResolvable {
-    return this.interpolationForAttribute('metadata') as any; // Getting the computed value is not yet implemented
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get metadata() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -125,7 +155,7 @@ export class DataAzurermStorageBlob extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -138,7 +168,7 @@ export class DataAzurermStorageBlob extends cdktf.TerraformDataSource {
   }
 
   // storage_account_name - computed: false, optional: false, required: true
-  private _storageAccountName: string;
+  private _storageAccountName?: string; 
   public get storageAccountName() {
     return this.getStringAttribute('storage_account_name');
   }
@@ -151,7 +181,7 @@ export class DataAzurermStorageBlob extends cdktf.TerraformDataSource {
   }
 
   // storage_container_name - computed: false, optional: false, required: true
-  private _storageContainerName: string;
+  private _storageContainerName?: string; 
   public get storageContainerName() {
     return this.getStringAttribute('storage_container_name');
   }
@@ -174,11 +204,12 @@ export class DataAzurermStorageBlob extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermStorageBlobTimeouts;
+  private _timeouts?: DataAzurermStorageBlobTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermStorageBlobTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermStorageBlobTimeouts ) {
+  public putTimeouts(value: DataAzurermStorageBlobTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

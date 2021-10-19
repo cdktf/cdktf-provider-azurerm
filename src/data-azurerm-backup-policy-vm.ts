@@ -33,13 +33,42 @@ export interface DataAzurermBackupPolicyVmTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermBackupPolicyVmTimeoutsToTerraform(struct?: DataAzurermBackupPolicyVmTimeouts): any {
+function dataAzurermBackupPolicyVmTimeoutsToTerraform(struct?: DataAzurermBackupPolicyVmTimeoutsOutputReference | DataAzurermBackupPolicyVmTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermBackupPolicyVmTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm.html azurerm_backup_policy_vm}
@@ -89,7 +118,7 @@ export class DataAzurermBackupPolicyVm extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -102,7 +131,7 @@ export class DataAzurermBackupPolicyVm extends cdktf.TerraformDataSource {
   }
 
   // recovery_vault_name - computed: false, optional: false, required: true
-  private _recoveryVaultName: string;
+  private _recoveryVaultName?: string; 
   public get recoveryVaultName() {
     return this.getStringAttribute('recovery_vault_name');
   }
@@ -115,7 +144,7 @@ export class DataAzurermBackupPolicyVm extends cdktf.TerraformDataSource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -133,11 +162,12 @@ export class DataAzurermBackupPolicyVm extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermBackupPolicyVmTimeouts;
+  private _timeouts?: DataAzurermBackupPolicyVmTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermBackupPolicyVmTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermBackupPolicyVmTimeouts ) {
+  public putTimeouts(value: DataAzurermBackupPolicyVmTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

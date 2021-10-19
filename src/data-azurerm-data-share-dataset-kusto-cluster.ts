@@ -29,13 +29,42 @@ export interface DataAzurermDataShareDatasetKustoClusterTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermDataShareDatasetKustoClusterTimeoutsToTerraform(struct?: DataAzurermDataShareDatasetKustoClusterTimeouts): any {
+function dataAzurermDataShareDatasetKustoClusterTimeoutsToTerraform(struct?: DataAzurermDataShareDatasetKustoClusterTimeoutsOutputReference | DataAzurermDataShareDatasetKustoClusterTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermDataShareDatasetKustoClusterTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_kusto_cluster.html azurerm_data_share_dataset_kusto_cluster}
@@ -99,7 +128,7 @@ export class DataAzurermDataShareDatasetKustoCluster extends cdktf.TerraformData
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -112,7 +141,7 @@ export class DataAzurermDataShareDatasetKustoCluster extends cdktf.TerraformData
   }
 
   // share_id - computed: false, optional: false, required: true
-  private _shareId: string;
+  private _shareId?: string; 
   public get shareId() {
     return this.getStringAttribute('share_id');
   }
@@ -125,11 +154,12 @@ export class DataAzurermDataShareDatasetKustoCluster extends cdktf.TerraformData
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermDataShareDatasetKustoClusterTimeouts;
+  private _timeouts?: DataAzurermDataShareDatasetKustoClusterTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermDataShareDatasetKustoClusterTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermDataShareDatasetKustoClusterTimeouts ) {
+  public putTimeouts(value: DataAzurermDataShareDatasetKustoClusterTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

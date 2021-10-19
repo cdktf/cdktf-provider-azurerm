@@ -67,14 +67,56 @@ export interface SubnetDelegationServiceDelegation {
   readonly name: string;
 }
 
-function subnetDelegationServiceDelegationToTerraform(struct?: SubnetDelegationServiceDelegation): any {
+function subnetDelegationServiceDelegationToTerraform(struct?: SubnetDelegationServiceDelegationOutputReference | SubnetDelegationServiceDelegation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     actions: cdktf.listMapper(cdktf.stringToTerraform)(struct!.actions),
     name: cdktf.stringToTerraform(struct!.name),
   }
 }
 
+export class SubnetDelegationServiceDelegationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // actions - computed: false, optional: true, required: false
+  private _actions?: string[] | undefined; 
+  public get actions() {
+    return this.getListAttribute('actions');
+  }
+  public set actions(value: string[] | undefined) {
+    this._actions = value;
+  }
+  public resetActions() {
+    this._actions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get actionsInput() {
+    return this._actions
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+}
 export interface SubnetDelegation {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet.html#name Subnet#name}
@@ -85,14 +127,17 @@ export interface SubnetDelegation {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet.html#service_delegation Subnet#service_delegation}
   */
-  readonly serviceDelegation: SubnetDelegationServiceDelegation[];
+  readonly serviceDelegation: SubnetDelegationServiceDelegation;
 }
 
 function subnetDelegationToTerraform(struct?: SubnetDelegation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
-    service_delegation: cdktf.listMapper(subnetDelegationServiceDelegationToTerraform)(struct!.serviceDelegation),
+    service_delegation: subnetDelegationServiceDelegationToTerraform(struct!.serviceDelegation),
   }
 }
 
@@ -115,8 +160,11 @@ export interface SubnetTimeouts {
   readonly update?: string;
 }
 
-function subnetTimeoutsToTerraform(struct?: SubnetTimeouts): any {
+function subnetTimeoutsToTerraform(struct?: SubnetTimeoutsOutputReference | SubnetTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -125,6 +173,80 @@ function subnetTimeoutsToTerraform(struct?: SubnetTimeouts): any {
   }
 }
 
+export class SubnetTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/subnet.html azurerm_subnet}
@@ -176,11 +298,11 @@ export class Subnet extends cdktf.TerraformResource {
   // ==========
 
   // address_prefix - computed: true, optional: true, required: false
-  private _addressPrefix?: string;
+  private _addressPrefix?: string | undefined; 
   public get addressPrefix() {
     return this.getStringAttribute('address_prefix');
   }
-  public set addressPrefix(value: string) {
+  public set addressPrefix(value: string | undefined) {
     this._addressPrefix = value;
   }
   public resetAddressPrefix() {
@@ -192,11 +314,11 @@ export class Subnet extends cdktf.TerraformResource {
   }
 
   // address_prefixes - computed: true, optional: true, required: false
-  private _addressPrefixes?: string[];
+  private _addressPrefixes?: string[] | undefined; 
   public get addressPrefixes() {
     return this.getListAttribute('address_prefixes');
   }
-  public set addressPrefixes(value: string[]) {
+  public set addressPrefixes(value: string[] | undefined) {
     this._addressPrefixes = value;
   }
   public resetAddressPrefixes() {
@@ -208,11 +330,11 @@ export class Subnet extends cdktf.TerraformResource {
   }
 
   // enforce_private_link_endpoint_network_policies - computed: false, optional: true, required: false
-  private _enforcePrivateLinkEndpointNetworkPolicies?: boolean | cdktf.IResolvable;
+  private _enforcePrivateLinkEndpointNetworkPolicies?: boolean | cdktf.IResolvable | undefined; 
   public get enforcePrivateLinkEndpointNetworkPolicies() {
-    return this.getBooleanAttribute('enforce_private_link_endpoint_network_policies');
+    return this.getBooleanAttribute('enforce_private_link_endpoint_network_policies') as any;
   }
-  public set enforcePrivateLinkEndpointNetworkPolicies(value: boolean | cdktf.IResolvable ) {
+  public set enforcePrivateLinkEndpointNetworkPolicies(value: boolean | cdktf.IResolvable | undefined) {
     this._enforcePrivateLinkEndpointNetworkPolicies = value;
   }
   public resetEnforcePrivateLinkEndpointNetworkPolicies() {
@@ -224,11 +346,11 @@ export class Subnet extends cdktf.TerraformResource {
   }
 
   // enforce_private_link_service_network_policies - computed: false, optional: true, required: false
-  private _enforcePrivateLinkServiceNetworkPolicies?: boolean | cdktf.IResolvable;
+  private _enforcePrivateLinkServiceNetworkPolicies?: boolean | cdktf.IResolvable | undefined; 
   public get enforcePrivateLinkServiceNetworkPolicies() {
-    return this.getBooleanAttribute('enforce_private_link_service_network_policies');
+    return this.getBooleanAttribute('enforce_private_link_service_network_policies') as any;
   }
-  public set enforcePrivateLinkServiceNetworkPolicies(value: boolean | cdktf.IResolvable ) {
+  public set enforcePrivateLinkServiceNetworkPolicies(value: boolean | cdktf.IResolvable | undefined) {
     this._enforcePrivateLinkServiceNetworkPolicies = value;
   }
   public resetEnforcePrivateLinkServiceNetworkPolicies() {
@@ -245,7 +367,7 @@ export class Subnet extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -258,7 +380,7 @@ export class Subnet extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -271,11 +393,11 @@ export class Subnet extends cdktf.TerraformResource {
   }
 
   // service_endpoint_policy_ids - computed: false, optional: true, required: false
-  private _serviceEndpointPolicyIds?: string[];
+  private _serviceEndpointPolicyIds?: string[] | undefined; 
   public get serviceEndpointPolicyIds() {
     return this.getListAttribute('service_endpoint_policy_ids');
   }
-  public set serviceEndpointPolicyIds(value: string[] ) {
+  public set serviceEndpointPolicyIds(value: string[] | undefined) {
     this._serviceEndpointPolicyIds = value;
   }
   public resetServiceEndpointPolicyIds() {
@@ -287,11 +409,11 @@ export class Subnet extends cdktf.TerraformResource {
   }
 
   // service_endpoints - computed: false, optional: true, required: false
-  private _serviceEndpoints?: string[];
+  private _serviceEndpoints?: string[] | undefined; 
   public get serviceEndpoints() {
     return this.getListAttribute('service_endpoints');
   }
-  public set serviceEndpoints(value: string[] ) {
+  public set serviceEndpoints(value: string[] | undefined) {
     this._serviceEndpoints = value;
   }
   public resetServiceEndpoints() {
@@ -303,7 +425,7 @@ export class Subnet extends cdktf.TerraformResource {
   }
 
   // virtual_network_name - computed: false, optional: false, required: true
-  private _virtualNetworkName: string;
+  private _virtualNetworkName?: string; 
   public get virtualNetworkName() {
     return this.getStringAttribute('virtual_network_name');
   }
@@ -316,11 +438,12 @@ export class Subnet extends cdktf.TerraformResource {
   }
 
   // delegation - computed: false, optional: true, required: false
-  private _delegation?: SubnetDelegation[];
+  private _delegation?: SubnetDelegation[] | undefined; 
   public get delegation() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('delegation') as any;
   }
-  public set delegation(value: SubnetDelegation[] ) {
+  public set delegation(value: SubnetDelegation[] | undefined) {
     this._delegation = value;
   }
   public resetDelegation() {
@@ -332,11 +455,12 @@ export class Subnet extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SubnetTimeouts;
+  private _timeouts?: SubnetTimeouts | undefined; 
+  private __timeoutsOutput = new SubnetTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SubnetTimeouts ) {
+  public putTimeouts(value: SubnetTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

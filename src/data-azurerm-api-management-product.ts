@@ -33,13 +33,42 @@ export interface DataAzurermApiManagementProductTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermApiManagementProductTimeoutsToTerraform(struct?: DataAzurermApiManagementProductTimeouts): any {
+function dataAzurermApiManagementProductTimeoutsToTerraform(struct?: DataAzurermApiManagementProductTimeoutsOutputReference | DataAzurermApiManagementProductTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermApiManagementProductTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product.html azurerm_api_management_product}
@@ -84,7 +113,7 @@ export class DataAzurermApiManagementProduct extends cdktf.TerraformDataSource {
   // ==========
 
   // api_management_name - computed: false, optional: false, required: true
-  private _apiManagementName: string;
+  private _apiManagementName?: string; 
   public get apiManagementName() {
     return this.getStringAttribute('api_management_name');
   }
@@ -98,7 +127,7 @@ export class DataAzurermApiManagementProduct extends cdktf.TerraformDataSource {
 
   // approval_required - computed: true, optional: false, required: false
   public get approvalRequired() {
-    return this.getBooleanAttribute('approval_required');
+    return this.getBooleanAttribute('approval_required') as any;
   }
 
   // description - computed: true, optional: false, required: false
@@ -117,7 +146,7 @@ export class DataAzurermApiManagementProduct extends cdktf.TerraformDataSource {
   }
 
   // product_id - computed: false, optional: false, required: true
-  private _productId: string;
+  private _productId?: string; 
   public get productId() {
     return this.getStringAttribute('product_id');
   }
@@ -131,11 +160,11 @@ export class DataAzurermApiManagementProduct extends cdktf.TerraformDataSource {
 
   // published - computed: true, optional: false, required: false
   public get published() {
-    return this.getBooleanAttribute('published');
+    return this.getBooleanAttribute('published') as any;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -149,7 +178,7 @@ export class DataAzurermApiManagementProduct extends cdktf.TerraformDataSource {
 
   // subscription_required - computed: true, optional: false, required: false
   public get subscriptionRequired() {
-    return this.getBooleanAttribute('subscription_required');
+    return this.getBooleanAttribute('subscription_required') as any;
   }
 
   // subscriptions_limit - computed: true, optional: false, required: false
@@ -163,11 +192,12 @@ export class DataAzurermApiManagementProduct extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermApiManagementProductTimeouts;
+  private _timeouts?: DataAzurermApiManagementProductTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermApiManagementProductTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermApiManagementProductTimeouts ) {
+  public putTimeouts(value: DataAzurermApiManagementProductTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

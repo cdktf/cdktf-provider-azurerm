@@ -44,7 +44,7 @@ export interface NetworkWatcherFlowLogConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher_flow_log.html#retention_policy NetworkWatcherFlowLog#retention_policy}
   */
-  readonly retentionPolicy: NetworkWatcherFlowLogRetentionPolicy[];
+  readonly retentionPolicy: NetworkWatcherFlowLogRetentionPolicy;
   /**
   * timeouts block
   * 
@@ -56,7 +56,7 @@ export interface NetworkWatcherFlowLogConfig extends cdktf.TerraformMetaArgument
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher_flow_log.html#traffic_analytics NetworkWatcherFlowLog#traffic_analytics}
   */
-  readonly trafficAnalytics?: NetworkWatcherFlowLogTrafficAnalytics[];
+  readonly trafficAnalytics?: NetworkWatcherFlowLogTrafficAnalytics;
 }
 export interface NetworkWatcherFlowLogRetentionPolicy {
   /**
@@ -69,14 +69,53 @@ export interface NetworkWatcherFlowLogRetentionPolicy {
   readonly enabled: boolean | cdktf.IResolvable;
 }
 
-function networkWatcherFlowLogRetentionPolicyToTerraform(struct?: NetworkWatcherFlowLogRetentionPolicy): any {
+function networkWatcherFlowLogRetentionPolicyToTerraform(struct?: NetworkWatcherFlowLogRetentionPolicyOutputReference | NetworkWatcherFlowLogRetentionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     days: cdktf.numberToTerraform(struct!.days),
     enabled: cdktf.booleanToTerraform(struct!.enabled),
   }
 }
 
+export class NetworkWatcherFlowLogRetentionPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // days - computed: false, optional: false, required: true
+  private _days?: number; 
+  public get days() {
+    return this.getNumberAttribute('days');
+  }
+  public set days(value: number) {
+    this._days = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get daysInput() {
+    return this._days
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled') as any;
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
+  }
+}
 export interface NetworkWatcherFlowLogTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher_flow_log.html#create NetworkWatcherFlowLog#create}
@@ -96,8 +135,11 @@ export interface NetworkWatcherFlowLogTimeouts {
   readonly update?: string;
 }
 
-function networkWatcherFlowLogTimeoutsToTerraform(struct?: NetworkWatcherFlowLogTimeouts): any {
+function networkWatcherFlowLogTimeoutsToTerraform(struct?: NetworkWatcherFlowLogTimeoutsOutputReference | NetworkWatcherFlowLogTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -106,6 +148,80 @@ function networkWatcherFlowLogTimeoutsToTerraform(struct?: NetworkWatcherFlowLog
   }
 }
 
+export class NetworkWatcherFlowLogTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 export interface NetworkWatcherFlowLogTrafficAnalytics {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher_flow_log.html#enabled NetworkWatcherFlowLog#enabled}
@@ -129,8 +245,11 @@ export interface NetworkWatcherFlowLogTrafficAnalytics {
   readonly workspaceResourceId: string;
 }
 
-function networkWatcherFlowLogTrafficAnalyticsToTerraform(struct?: NetworkWatcherFlowLogTrafficAnalytics): any {
+function networkWatcherFlowLogTrafficAnalyticsToTerraform(struct?: NetworkWatcherFlowLogTrafficAnalyticsOutputReference | NetworkWatcherFlowLogTrafficAnalytics): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     interval_in_minutes: cdktf.numberToTerraform(struct!.intervalInMinutes),
@@ -140,6 +259,84 @@ function networkWatcherFlowLogTrafficAnalyticsToTerraform(struct?: NetworkWatche
   }
 }
 
+export class NetworkWatcherFlowLogTrafficAnalyticsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled') as any;
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
+  }
+
+  // interval_in_minutes - computed: false, optional: true, required: false
+  private _intervalInMinutes?: number | undefined; 
+  public get intervalInMinutes() {
+    return this.getNumberAttribute('interval_in_minutes');
+  }
+  public set intervalInMinutes(value: number | undefined) {
+    this._intervalInMinutes = value;
+  }
+  public resetIntervalInMinutes() {
+    this._intervalInMinutes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get intervalInMinutesInput() {
+    return this._intervalInMinutes
+  }
+
+  // workspace_id - computed: false, optional: false, required: true
+  private _workspaceId?: string; 
+  public get workspaceId() {
+    return this.getStringAttribute('workspace_id');
+  }
+  public set workspaceId(value: string) {
+    this._workspaceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workspaceIdInput() {
+    return this._workspaceId
+  }
+
+  // workspace_region - computed: false, optional: false, required: true
+  private _workspaceRegion?: string; 
+  public get workspaceRegion() {
+    return this.getStringAttribute('workspace_region');
+  }
+  public set workspaceRegion(value: string) {
+    this._workspaceRegion = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workspaceRegionInput() {
+    return this._workspaceRegion
+  }
+
+  // workspace_resource_id - computed: false, optional: false, required: true
+  private _workspaceResourceId?: string; 
+  public get workspaceResourceId() {
+    return this.getStringAttribute('workspace_resource_id');
+  }
+  public set workspaceResourceId(value: string) {
+    this._workspaceResourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workspaceResourceIdInput() {
+    return this._workspaceResourceId
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher_flow_log.html azurerm_network_watcher_flow_log}
@@ -191,9 +388,9 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   // ==========
 
   // enabled - computed: false, optional: false, required: true
-  private _enabled: boolean | cdktf.IResolvable;
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
   public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
@@ -209,11 +406,11 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
 
   // location - computed: true, optional: true, required: false
-  private _location?: string;
+  private _location?: string | undefined; 
   public get location() {
     return this.getStringAttribute('location');
   }
-  public set location(value: string) {
+  public set location(value: string | undefined) {
     this._location = value;
   }
   public resetLocation() {
@@ -230,7 +427,7 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
 
   // network_security_group_id - computed: false, optional: false, required: true
-  private _networkSecurityGroupId: string;
+  private _networkSecurityGroupId?: string; 
   public get networkSecurityGroupId() {
     return this.getStringAttribute('network_security_group_id');
   }
@@ -243,7 +440,7 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
 
   // network_watcher_name - computed: false, optional: false, required: true
-  private _networkWatcherName: string;
+  private _networkWatcherName?: string; 
   public get networkWatcherName() {
     return this.getStringAttribute('network_watcher_name');
   }
@@ -256,7 +453,7 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -269,7 +466,7 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
 
   // storage_account_id - computed: false, optional: false, required: true
-  private _storageAccountId: string;
+  private _storageAccountId?: string; 
   public get storageAccountId() {
     return this.getStringAttribute('storage_account_id');
   }
@@ -282,11 +479,12 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -298,11 +496,11 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
 
   // version - computed: true, optional: true, required: false
-  private _version?: number;
+  private _version?: number | undefined; 
   public get version() {
     return this.getNumberAttribute('version');
   }
-  public set version(value: number) {
+  public set version(value: number | undefined) {
     this._version = value;
   }
   public resetVersion() {
@@ -314,11 +512,12 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
 
   // retention_policy - computed: false, optional: false, required: true
-  private _retentionPolicy: NetworkWatcherFlowLogRetentionPolicy[];
+  private _retentionPolicy?: NetworkWatcherFlowLogRetentionPolicy; 
+  private __retentionPolicyOutput = new NetworkWatcherFlowLogRetentionPolicyOutputReference(this as any, "retention_policy", true);
   public get retentionPolicy() {
-    return this.interpolationForAttribute('retention_policy') as any;
+    return this.__retentionPolicyOutput;
   }
-  public set retentionPolicy(value: NetworkWatcherFlowLogRetentionPolicy[]) {
+  public putRetentionPolicy(value: NetworkWatcherFlowLogRetentionPolicy) {
     this._retentionPolicy = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -327,11 +526,12 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: NetworkWatcherFlowLogTimeouts;
+  private _timeouts?: NetworkWatcherFlowLogTimeouts | undefined; 
+  private __timeoutsOutput = new NetworkWatcherFlowLogTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: NetworkWatcherFlowLogTimeouts ) {
+  public putTimeouts(value: NetworkWatcherFlowLogTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -343,11 +543,12 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
 
   // traffic_analytics - computed: false, optional: true, required: false
-  private _trafficAnalytics?: NetworkWatcherFlowLogTrafficAnalytics[];
+  private _trafficAnalytics?: NetworkWatcherFlowLogTrafficAnalytics | undefined; 
+  private __trafficAnalyticsOutput = new NetworkWatcherFlowLogTrafficAnalyticsOutputReference(this as any, "traffic_analytics", true);
   public get trafficAnalytics() {
-    return this.interpolationForAttribute('traffic_analytics') as any;
+    return this.__trafficAnalyticsOutput;
   }
-  public set trafficAnalytics(value: NetworkWatcherFlowLogTrafficAnalytics[] ) {
+  public putTrafficAnalytics(value: NetworkWatcherFlowLogTrafficAnalytics | undefined) {
     this._trafficAnalytics = value;
   }
   public resetTrafficAnalytics() {
@@ -372,9 +573,9 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       version: cdktf.numberToTerraform(this._version),
-      retention_policy: cdktf.listMapper(networkWatcherFlowLogRetentionPolicyToTerraform)(this._retentionPolicy),
+      retention_policy: networkWatcherFlowLogRetentionPolicyToTerraform(this._retentionPolicy),
       timeouts: networkWatcherFlowLogTimeoutsToTerraform(this._timeouts),
-      traffic_analytics: cdktf.listMapper(networkWatcherFlowLogTrafficAnalyticsToTerraform)(this._trafficAnalytics),
+      traffic_analytics: networkWatcherFlowLogTrafficAnalyticsToTerraform(this._trafficAnalytics),
     };
   }
 }

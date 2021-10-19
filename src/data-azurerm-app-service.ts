@@ -48,7 +48,7 @@ export class DataAzurermAppServiceSiteConfigCors extends cdktf.ComplexComputedLi
 
   // support_credentials - computed: true, optional: false, required: false
   public get supportCredentials() {
-    return this.getBooleanAttribute('support_credentials');
+    return this.getBooleanAttribute('support_credentials') as any;
   }
 }
 export class DataAzurermAppServiceSiteConfigIpRestrictionHeaders extends cdktf.ComplexComputedList {
@@ -82,6 +82,7 @@ export class DataAzurermAppServiceSiteConfigIpRestriction extends cdktf.ComplexC
 
   // headers - computed: true, optional: false, required: false
   public get headers() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('headers') as any;
   }
 
@@ -141,6 +142,7 @@ export class DataAzurermAppServiceSiteConfigScmIpRestriction extends cdktf.Compl
 
   // headers - computed: true, optional: false, required: false
   public get headers() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('headers') as any;
   }
 
@@ -173,7 +175,7 @@ export class DataAzurermAppServiceSiteConfig extends cdktf.ComplexComputedList {
 
   // acr_use_managed_identity_credentials - computed: true, optional: false, required: false
   public get acrUseManagedIdentityCredentials() {
-    return this.getBooleanAttribute('acr_use_managed_identity_credentials');
+    return this.getBooleanAttribute('acr_use_managed_identity_credentials') as any;
   }
 
   // acr_user_managed_identity_client_id - computed: true, optional: false, required: false
@@ -183,7 +185,7 @@ export class DataAzurermAppServiceSiteConfig extends cdktf.ComplexComputedList {
 
   // always_on - computed: true, optional: false, required: false
   public get alwaysOn() {
-    return this.getBooleanAttribute('always_on');
+    return this.getBooleanAttribute('always_on') as any;
   }
 
   // app_command_line - computed: true, optional: false, required: false
@@ -193,6 +195,7 @@ export class DataAzurermAppServiceSiteConfig extends cdktf.ComplexComputedList {
 
   // cors - computed: true, optional: false, required: false
   public get cors() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('cors') as any;
   }
 
@@ -218,11 +221,12 @@ export class DataAzurermAppServiceSiteConfig extends cdktf.ComplexComputedList {
 
   // http2_enabled - computed: true, optional: false, required: false
   public get http2Enabled() {
-    return this.getBooleanAttribute('http2_enabled');
+    return this.getBooleanAttribute('http2_enabled') as any;
   }
 
   // ip_restriction - computed: true, optional: false, required: false
   public get ipRestriction() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ip_restriction') as any;
   }
 
@@ -248,7 +252,7 @@ export class DataAzurermAppServiceSiteConfig extends cdktf.ComplexComputedList {
 
   // local_mysql_enabled - computed: true, optional: false, required: false
   public get localMysqlEnabled() {
-    return this.getBooleanAttribute('local_mysql_enabled');
+    return this.getBooleanAttribute('local_mysql_enabled') as any;
   }
 
   // managed_pipeline_mode - computed: true, optional: false, required: false
@@ -278,7 +282,7 @@ export class DataAzurermAppServiceSiteConfig extends cdktf.ComplexComputedList {
 
   // remote_debugging_enabled - computed: true, optional: false, required: false
   public get remoteDebuggingEnabled() {
-    return this.getBooleanAttribute('remote_debugging_enabled');
+    return this.getBooleanAttribute('remote_debugging_enabled') as any;
   }
 
   // remote_debugging_version - computed: true, optional: false, required: false
@@ -288,6 +292,7 @@ export class DataAzurermAppServiceSiteConfig extends cdktf.ComplexComputedList {
 
   // scm_ip_restriction - computed: true, optional: false, required: false
   public get scmIpRestriction() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('scm_ip_restriction') as any;
   }
 
@@ -298,22 +303,22 @@ export class DataAzurermAppServiceSiteConfig extends cdktf.ComplexComputedList {
 
   // scm_use_main_ip_restriction - computed: true, optional: false, required: false
   public get scmUseMainIpRestriction() {
-    return this.getBooleanAttribute('scm_use_main_ip_restriction');
+    return this.getBooleanAttribute('scm_use_main_ip_restriction') as any;
   }
 
   // use_32_bit_worker_process - computed: true, optional: false, required: false
   public get use32BitWorkerProcess() {
-    return this.getBooleanAttribute('use_32_bit_worker_process');
+    return this.getBooleanAttribute('use_32_bit_worker_process') as any;
   }
 
   // vnet_route_all_enabled - computed: true, optional: false, required: false
   public get vnetRouteAllEnabled() {
-    return this.getBooleanAttribute('vnet_route_all_enabled');
+    return this.getBooleanAttribute('vnet_route_all_enabled') as any;
   }
 
   // websockets_enabled - computed: true, optional: false, required: false
   public get websocketsEnabled() {
-    return this.getBooleanAttribute('websockets_enabled');
+    return this.getBooleanAttribute('websockets_enabled') as any;
   }
 
   // windows_fx_version - computed: true, optional: false, required: false
@@ -342,7 +347,7 @@ export class DataAzurermAppServiceSourceControl extends cdktf.ComplexComputedLis
 
   // manual_integration - computed: true, optional: false, required: false
   public get manualIntegration() {
-    return this.getBooleanAttribute('manual_integration');
+    return this.getBooleanAttribute('manual_integration') as any;
   }
 
   // repo_url - computed: true, optional: false, required: false
@@ -352,12 +357,12 @@ export class DataAzurermAppServiceSourceControl extends cdktf.ComplexComputedLis
 
   // rollback_enabled - computed: true, optional: false, required: false
   public get rollbackEnabled() {
-    return this.getBooleanAttribute('rollback_enabled');
+    return this.getBooleanAttribute('rollback_enabled') as any;
   }
 
   // use_mercurial - computed: true, optional: false, required: false
   public get useMercurial() {
-    return this.getBooleanAttribute('use_mercurial');
+    return this.getBooleanAttribute('use_mercurial') as any;
   }
 }
 export interface DataAzurermAppServiceTimeouts {
@@ -367,13 +372,42 @@ export interface DataAzurermAppServiceTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermAppServiceTimeoutsToTerraform(struct?: DataAzurermAppServiceTimeouts): any {
+function dataAzurermAppServiceTimeoutsToTerraform(struct?: DataAzurermAppServiceTimeoutsOutputReference | DataAzurermAppServiceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermAppServiceTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_service.html azurerm_app_service}
@@ -428,12 +462,12 @@ export class DataAzurermAppService extends cdktf.TerraformDataSource {
 
   // client_affinity_enabled - computed: true, optional: false, required: false
   public get clientAffinityEnabled() {
-    return this.getBooleanAttribute('client_affinity_enabled');
+    return this.getBooleanAttribute('client_affinity_enabled') as any;
   }
 
   // client_cert_enabled - computed: true, optional: false, required: false
   public get clientCertEnabled() {
-    return this.getBooleanAttribute('client_cert_enabled');
+    return this.getBooleanAttribute('client_cert_enabled') as any;
   }
 
   // connection_string - computed: true, optional: false, required: false
@@ -453,12 +487,12 @@ export class DataAzurermAppService extends cdktf.TerraformDataSource {
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
 
   // https_only - computed: true, optional: false, required: false
   public get httpsOnly() {
-    return this.getBooleanAttribute('https_only');
+    return this.getBooleanAttribute('https_only') as any;
   }
 
   // id - computed: true, optional: true, required: false
@@ -472,7 +506,7 @@ export class DataAzurermAppService extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -505,7 +539,7 @@ export class DataAzurermAppService extends cdktf.TerraformDataSource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -538,11 +572,12 @@ export class DataAzurermAppService extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermAppServiceTimeouts;
+  private _timeouts?: DataAzurermAppServiceTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermAppServiceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermAppServiceTimeouts ) {
+  public putTimeouts(value: DataAzurermAppServiceTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

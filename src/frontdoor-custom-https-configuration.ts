@@ -20,7 +20,7 @@ export interface FrontdoorCustomHttpsConfigurationConfig extends cdktf.Terraform
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration.html#custom_https_configuration FrontdoorCustomHttpsConfiguration#custom_https_configuration}
   */
-  readonly customHttpsConfiguration?: FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration[];
+  readonly customHttpsConfiguration?: FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration;
   /**
   * timeouts block
   * 
@@ -47,8 +47,11 @@ export interface FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration {
   readonly certificateSource?: string;
 }
 
-function frontdoorCustomHttpsConfigurationCustomHttpsConfigurationToTerraform(struct?: FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration): any {
+function frontdoorCustomHttpsConfigurationCustomHttpsConfigurationToTerraform(struct?: FrontdoorCustomHttpsConfigurationCustomHttpsConfigurationOutputReference | FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     azure_key_vault_certificate_secret_name: cdktf.stringToTerraform(struct!.azureKeyVaultCertificateSecretName),
     azure_key_vault_certificate_secret_version: cdktf.stringToTerraform(struct!.azureKeyVaultCertificateSecretVersion),
@@ -57,6 +60,80 @@ function frontdoorCustomHttpsConfigurationCustomHttpsConfigurationToTerraform(st
   }
 }
 
+export class FrontdoorCustomHttpsConfigurationCustomHttpsConfigurationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // azure_key_vault_certificate_secret_name - computed: false, optional: true, required: false
+  private _azureKeyVaultCertificateSecretName?: string | undefined; 
+  public get azureKeyVaultCertificateSecretName() {
+    return this.getStringAttribute('azure_key_vault_certificate_secret_name');
+  }
+  public set azureKeyVaultCertificateSecretName(value: string | undefined) {
+    this._azureKeyVaultCertificateSecretName = value;
+  }
+  public resetAzureKeyVaultCertificateSecretName() {
+    this._azureKeyVaultCertificateSecretName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureKeyVaultCertificateSecretNameInput() {
+    return this._azureKeyVaultCertificateSecretName
+  }
+
+  // azure_key_vault_certificate_secret_version - computed: false, optional: true, required: false
+  private _azureKeyVaultCertificateSecretVersion?: string | undefined; 
+  public get azureKeyVaultCertificateSecretVersion() {
+    return this.getStringAttribute('azure_key_vault_certificate_secret_version');
+  }
+  public set azureKeyVaultCertificateSecretVersion(value: string | undefined) {
+    this._azureKeyVaultCertificateSecretVersion = value;
+  }
+  public resetAzureKeyVaultCertificateSecretVersion() {
+    this._azureKeyVaultCertificateSecretVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureKeyVaultCertificateSecretVersionInput() {
+    return this._azureKeyVaultCertificateSecretVersion
+  }
+
+  // azure_key_vault_certificate_vault_id - computed: false, optional: true, required: false
+  private _azureKeyVaultCertificateVaultId?: string | undefined; 
+  public get azureKeyVaultCertificateVaultId() {
+    return this.getStringAttribute('azure_key_vault_certificate_vault_id');
+  }
+  public set azureKeyVaultCertificateVaultId(value: string | undefined) {
+    this._azureKeyVaultCertificateVaultId = value;
+  }
+  public resetAzureKeyVaultCertificateVaultId() {
+    this._azureKeyVaultCertificateVaultId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureKeyVaultCertificateVaultIdInput() {
+    return this._azureKeyVaultCertificateVaultId
+  }
+
+  // certificate_source - computed: false, optional: true, required: false
+  private _certificateSource?: string | undefined; 
+  public get certificateSource() {
+    return this.getStringAttribute('certificate_source');
+  }
+  public set certificateSource(value: string | undefined) {
+    this._certificateSource = value;
+  }
+  public resetCertificateSource() {
+    this._certificateSource = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateSourceInput() {
+    return this._certificateSource
+  }
+}
 export interface FrontdoorCustomHttpsConfigurationTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration.html#create FrontdoorCustomHttpsConfiguration#create}
@@ -76,8 +153,11 @@ export interface FrontdoorCustomHttpsConfigurationTimeouts {
   readonly update?: string;
 }
 
-function frontdoorCustomHttpsConfigurationTimeoutsToTerraform(struct?: FrontdoorCustomHttpsConfigurationTimeouts): any {
+function frontdoorCustomHttpsConfigurationTimeoutsToTerraform(struct?: FrontdoorCustomHttpsConfigurationTimeoutsOutputReference | FrontdoorCustomHttpsConfigurationTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -86,6 +166,80 @@ function frontdoorCustomHttpsConfigurationTimeoutsToTerraform(struct?: Frontdoor
   }
 }
 
+export class FrontdoorCustomHttpsConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_custom_https_configuration.html azurerm_frontdoor_custom_https_configuration}
@@ -130,9 +284,9 @@ export class FrontdoorCustomHttpsConfiguration extends cdktf.TerraformResource {
   // ==========
 
   // custom_https_provisioning_enabled - computed: false, optional: false, required: true
-  private _customHttpsProvisioningEnabled: boolean | cdktf.IResolvable;
+  private _customHttpsProvisioningEnabled?: boolean | cdktf.IResolvable; 
   public get customHttpsProvisioningEnabled() {
-    return this.getBooleanAttribute('custom_https_provisioning_enabled');
+    return this.getBooleanAttribute('custom_https_provisioning_enabled') as any;
   }
   public set customHttpsProvisioningEnabled(value: boolean | cdktf.IResolvable) {
     this._customHttpsProvisioningEnabled = value;
@@ -143,7 +297,7 @@ export class FrontdoorCustomHttpsConfiguration extends cdktf.TerraformResource {
   }
 
   // frontend_endpoint_id - computed: false, optional: false, required: true
-  private _frontendEndpointId: string;
+  private _frontendEndpointId?: string; 
   public get frontendEndpointId() {
     return this.getStringAttribute('frontend_endpoint_id');
   }
@@ -161,11 +315,12 @@ export class FrontdoorCustomHttpsConfiguration extends cdktf.TerraformResource {
   }
 
   // custom_https_configuration - computed: false, optional: true, required: false
-  private _customHttpsConfiguration?: FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration[];
+  private _customHttpsConfiguration?: FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration | undefined; 
+  private __customHttpsConfigurationOutput = new FrontdoorCustomHttpsConfigurationCustomHttpsConfigurationOutputReference(this as any, "custom_https_configuration", true);
   public get customHttpsConfiguration() {
-    return this.interpolationForAttribute('custom_https_configuration') as any;
+    return this.__customHttpsConfigurationOutput;
   }
-  public set customHttpsConfiguration(value: FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration[] ) {
+  public putCustomHttpsConfiguration(value: FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration | undefined) {
     this._customHttpsConfiguration = value;
   }
   public resetCustomHttpsConfiguration() {
@@ -177,11 +332,12 @@ export class FrontdoorCustomHttpsConfiguration extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: FrontdoorCustomHttpsConfigurationTimeouts;
+  private _timeouts?: FrontdoorCustomHttpsConfigurationTimeouts | undefined; 
+  private __timeoutsOutput = new FrontdoorCustomHttpsConfigurationTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: FrontdoorCustomHttpsConfigurationTimeouts ) {
+  public putTimeouts(value: FrontdoorCustomHttpsConfigurationTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -200,7 +356,7 @@ export class FrontdoorCustomHttpsConfiguration extends cdktf.TerraformResource {
     return {
       custom_https_provisioning_enabled: cdktf.booleanToTerraform(this._customHttpsProvisioningEnabled),
       frontend_endpoint_id: cdktf.stringToTerraform(this._frontendEndpointId),
-      custom_https_configuration: cdktf.listMapper(frontdoorCustomHttpsConfigurationCustomHttpsConfigurationToTerraform)(this._customHttpsConfiguration),
+      custom_https_configuration: frontdoorCustomHttpsConfigurationCustomHttpsConfigurationToTerraform(this._customHttpsConfiguration),
       timeouts: frontdoorCustomHttpsConfigurationTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -85,6 +85,7 @@ export class DataAzurermImagesImages extends cdktf.ComplexComputedList {
 
   // data_disk - computed: true, optional: false, required: false
   public get dataDisk() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('data_disk') as any;
   }
 
@@ -100,17 +101,19 @@ export class DataAzurermImagesImages extends cdktf.ComplexComputedList {
 
   // os_disk - computed: true, optional: false, required: false
   public get osDisk() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('os_disk') as any;
   }
 
   // tags - computed: true, optional: false, required: false
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
 
   // zone_resilient - computed: true, optional: false, required: false
   public get zoneResilient() {
-    return this.getBooleanAttribute('zone_resilient');
+    return this.getBooleanAttribute('zone_resilient') as any;
   }
 }
 export interface DataAzurermImagesTimeouts {
@@ -120,13 +123,42 @@ export interface DataAzurermImagesTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermImagesTimeoutsToTerraform(struct?: DataAzurermImagesTimeouts): any {
+function dataAzurermImagesTimeoutsToTerraform(struct?: DataAzurermImagesTimeoutsOutputReference | DataAzurermImagesTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermImagesTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/images.html azurerm_images}
@@ -180,7 +212,7 @@ export class DataAzurermImages extends cdktf.TerraformDataSource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -193,11 +225,12 @@ export class DataAzurermImages extends cdktf.TerraformDataSource {
   }
 
   // tags_filter - computed: false, optional: true, required: false
-  private _tagsFilter?: { [key: string]: string } | cdktf.IResolvable;
+  private _tagsFilter?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tagsFilter() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags_filter') as any;
   }
-  public set tagsFilter(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tagsFilter(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tagsFilter = value;
   }
   public resetTagsFilter() {
@@ -209,11 +242,12 @@ export class DataAzurermImages extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermImagesTimeouts;
+  private _timeouts?: DataAzurermImagesTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermImagesTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermImagesTimeouts ) {
+  public putTimeouts(value: DataAzurermImagesTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

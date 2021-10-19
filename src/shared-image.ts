@@ -60,13 +60,13 @@ export interface SharedImageConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#identifier SharedImage#identifier}
   */
-  readonly identifier: SharedImageIdentifier[];
+  readonly identifier: SharedImageIdentifier;
   /**
   * purchase_plan block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#purchase_plan SharedImage#purchase_plan}
   */
-  readonly purchasePlan?: SharedImagePurchasePlan[];
+  readonly purchasePlan?: SharedImagePurchasePlan;
   /**
   * timeouts block
   * 
@@ -89,8 +89,11 @@ export interface SharedImageIdentifier {
   readonly sku: string;
 }
 
-function sharedImageIdentifierToTerraform(struct?: SharedImageIdentifier): any {
+function sharedImageIdentifierToTerraform(struct?: SharedImageIdentifierOutputReference | SharedImageIdentifier): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     offer: cdktf.stringToTerraform(struct!.offer),
     publisher: cdktf.stringToTerraform(struct!.publisher),
@@ -98,6 +101,55 @@ function sharedImageIdentifierToTerraform(struct?: SharedImageIdentifier): any {
   }
 }
 
+export class SharedImageIdentifierOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // offer - computed: false, optional: false, required: true
+  private _offer?: string; 
+  public get offer() {
+    return this.getStringAttribute('offer');
+  }
+  public set offer(value: string) {
+    this._offer = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get offerInput() {
+    return this._offer
+  }
+
+  // publisher - computed: false, optional: false, required: true
+  private _publisher?: string; 
+  public get publisher() {
+    return this.getStringAttribute('publisher');
+  }
+  public set publisher(value: string) {
+    this._publisher = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publisherInput() {
+    return this._publisher
+  }
+
+  // sku - computed: false, optional: false, required: true
+  private _sku?: string; 
+  public get sku() {
+    return this.getStringAttribute('sku');
+  }
+  public set sku(value: string) {
+    this._sku = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuInput() {
+    return this._sku
+  }
+}
 export interface SharedImagePurchasePlan {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#name SharedImage#name}
@@ -113,8 +165,11 @@ export interface SharedImagePurchasePlan {
   readonly publisher?: string;
 }
 
-function sharedImagePurchasePlanToTerraform(struct?: SharedImagePurchasePlan): any {
+function sharedImagePurchasePlanToTerraform(struct?: SharedImagePurchasePlanOutputReference | SharedImagePurchasePlan): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     product: cdktf.stringToTerraform(struct!.product),
@@ -122,6 +177,61 @@ function sharedImagePurchasePlanToTerraform(struct?: SharedImagePurchasePlan): a
   }
 }
 
+export class SharedImagePurchasePlanOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // product - computed: false, optional: true, required: false
+  private _product?: string | undefined; 
+  public get product() {
+    return this.getStringAttribute('product');
+  }
+  public set product(value: string | undefined) {
+    this._product = value;
+  }
+  public resetProduct() {
+    this._product = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get productInput() {
+    return this._product
+  }
+
+  // publisher - computed: false, optional: true, required: false
+  private _publisher?: string | undefined; 
+  public get publisher() {
+    return this.getStringAttribute('publisher');
+  }
+  public set publisher(value: string | undefined) {
+    this._publisher = value;
+  }
+  public resetPublisher() {
+    this._publisher = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publisherInput() {
+    return this._publisher
+  }
+}
 export interface SharedImageTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#create SharedImage#create}
@@ -141,8 +251,11 @@ export interface SharedImageTimeouts {
   readonly update?: string;
 }
 
-function sharedImageTimeoutsToTerraform(struct?: SharedImageTimeouts): any {
+function sharedImageTimeoutsToTerraform(struct?: SharedImageTimeoutsOutputReference | SharedImageTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -151,6 +264,80 @@ function sharedImageTimeoutsToTerraform(struct?: SharedImageTimeouts): any {
   }
 }
 
+export class SharedImageTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html azurerm_shared_image}
@@ -206,11 +393,11 @@ export class SharedImage extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -222,11 +409,11 @@ export class SharedImage extends cdktf.TerraformResource {
   }
 
   // eula - computed: false, optional: true, required: false
-  private _eula?: string;
+  private _eula?: string | undefined; 
   public get eula() {
     return this.getStringAttribute('eula');
   }
-  public set eula(value: string ) {
+  public set eula(value: string | undefined) {
     this._eula = value;
   }
   public resetEula() {
@@ -238,7 +425,7 @@ export class SharedImage extends cdktf.TerraformResource {
   }
 
   // gallery_name - computed: false, optional: false, required: true
-  private _galleryName: string;
+  private _galleryName?: string; 
   public get galleryName() {
     return this.getStringAttribute('gallery_name');
   }
@@ -251,11 +438,11 @@ export class SharedImage extends cdktf.TerraformResource {
   }
 
   // hyper_v_generation - computed: false, optional: true, required: false
-  private _hyperVGeneration?: string;
+  private _hyperVGeneration?: string | undefined; 
   public get hyperVGeneration() {
     return this.getStringAttribute('hyper_v_generation');
   }
-  public set hyperVGeneration(value: string ) {
+  public set hyperVGeneration(value: string | undefined) {
     this._hyperVGeneration = value;
   }
   public resetHyperVGeneration() {
@@ -272,7 +459,7 @@ export class SharedImage extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -285,7 +472,7 @@ export class SharedImage extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -298,7 +485,7 @@ export class SharedImage extends cdktf.TerraformResource {
   }
 
   // os_type - computed: false, optional: false, required: true
-  private _osType: string;
+  private _osType?: string; 
   public get osType() {
     return this.getStringAttribute('os_type');
   }
@@ -311,11 +498,11 @@ export class SharedImage extends cdktf.TerraformResource {
   }
 
   // privacy_statement_uri - computed: false, optional: true, required: false
-  private _privacyStatementUri?: string;
+  private _privacyStatementUri?: string | undefined; 
   public get privacyStatementUri() {
     return this.getStringAttribute('privacy_statement_uri');
   }
-  public set privacyStatementUri(value: string ) {
+  public set privacyStatementUri(value: string | undefined) {
     this._privacyStatementUri = value;
   }
   public resetPrivacyStatementUri() {
@@ -327,11 +514,11 @@ export class SharedImage extends cdktf.TerraformResource {
   }
 
   // release_note_uri - computed: false, optional: true, required: false
-  private _releaseNoteUri?: string;
+  private _releaseNoteUri?: string | undefined; 
   public get releaseNoteUri() {
     return this.getStringAttribute('release_note_uri');
   }
-  public set releaseNoteUri(value: string ) {
+  public set releaseNoteUri(value: string | undefined) {
     this._releaseNoteUri = value;
   }
   public resetReleaseNoteUri() {
@@ -343,7 +530,7 @@ export class SharedImage extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -356,11 +543,11 @@ export class SharedImage extends cdktf.TerraformResource {
   }
 
   // specialized - computed: false, optional: true, required: false
-  private _specialized?: boolean | cdktf.IResolvable;
+  private _specialized?: boolean | cdktf.IResolvable | undefined; 
   public get specialized() {
-    return this.getBooleanAttribute('specialized');
+    return this.getBooleanAttribute('specialized') as any;
   }
-  public set specialized(value: boolean | cdktf.IResolvable ) {
+  public set specialized(value: boolean | cdktf.IResolvable | undefined) {
     this._specialized = value;
   }
   public resetSpecialized() {
@@ -372,11 +559,12 @@ export class SharedImage extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -388,11 +576,12 @@ export class SharedImage extends cdktf.TerraformResource {
   }
 
   // identifier - computed: false, optional: false, required: true
-  private _identifier: SharedImageIdentifier[];
+  private _identifier?: SharedImageIdentifier; 
+  private __identifierOutput = new SharedImageIdentifierOutputReference(this as any, "identifier", true);
   public get identifier() {
-    return this.interpolationForAttribute('identifier') as any;
+    return this.__identifierOutput;
   }
-  public set identifier(value: SharedImageIdentifier[]) {
+  public putIdentifier(value: SharedImageIdentifier) {
     this._identifier = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -401,11 +590,12 @@ export class SharedImage extends cdktf.TerraformResource {
   }
 
   // purchase_plan - computed: false, optional: true, required: false
-  private _purchasePlan?: SharedImagePurchasePlan[];
+  private _purchasePlan?: SharedImagePurchasePlan | undefined; 
+  private __purchasePlanOutput = new SharedImagePurchasePlanOutputReference(this as any, "purchase_plan", true);
   public get purchasePlan() {
-    return this.interpolationForAttribute('purchase_plan') as any;
+    return this.__purchasePlanOutput;
   }
-  public set purchasePlan(value: SharedImagePurchasePlan[] ) {
+  public putPurchasePlan(value: SharedImagePurchasePlan | undefined) {
     this._purchasePlan = value;
   }
   public resetPurchasePlan() {
@@ -417,11 +607,12 @@ export class SharedImage extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SharedImageTimeouts;
+  private _timeouts?: SharedImageTimeouts | undefined; 
+  private __timeoutsOutput = new SharedImageTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SharedImageTimeouts ) {
+  public putTimeouts(value: SharedImageTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -450,8 +641,8 @@ export class SharedImage extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       specialized: cdktf.booleanToTerraform(this._specialized),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      identifier: cdktf.listMapper(sharedImageIdentifierToTerraform)(this._identifier),
-      purchase_plan: cdktf.listMapper(sharedImagePurchasePlanToTerraform)(this._purchasePlan),
+      identifier: sharedImageIdentifierToTerraform(this._identifier),
+      purchase_plan: sharedImagePurchasePlanToTerraform(this._purchasePlan),
       timeouts: sharedImageTimeoutsToTerraform(this._timeouts),
     };
   }

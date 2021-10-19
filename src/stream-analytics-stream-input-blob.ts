@@ -48,7 +48,7 @@ export interface StreamAnalyticsStreamInputBlobConfig extends cdktf.TerraformMet
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#serialization StreamAnalyticsStreamInputBlob#serialization}
   */
-  readonly serialization: StreamAnalyticsStreamInputBlobSerialization[];
+  readonly serialization: StreamAnalyticsStreamInputBlobSerialization;
   /**
   * timeouts block
   * 
@@ -71,8 +71,11 @@ export interface StreamAnalyticsStreamInputBlobSerialization {
   readonly type: string;
 }
 
-function streamAnalyticsStreamInputBlobSerializationToTerraform(struct?: StreamAnalyticsStreamInputBlobSerialization): any {
+function streamAnalyticsStreamInputBlobSerializationToTerraform(struct?: StreamAnalyticsStreamInputBlobSerializationOutputReference | StreamAnalyticsStreamInputBlobSerialization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     encoding: cdktf.stringToTerraform(struct!.encoding),
     field_delimiter: cdktf.stringToTerraform(struct!.fieldDelimiter),
@@ -80,6 +83,61 @@ function streamAnalyticsStreamInputBlobSerializationToTerraform(struct?: StreamA
   }
 }
 
+export class StreamAnalyticsStreamInputBlobSerializationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // encoding - computed: false, optional: true, required: false
+  private _encoding?: string | undefined; 
+  public get encoding() {
+    return this.getStringAttribute('encoding');
+  }
+  public set encoding(value: string | undefined) {
+    this._encoding = value;
+  }
+  public resetEncoding() {
+    this._encoding = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encodingInput() {
+    return this._encoding
+  }
+
+  // field_delimiter - computed: false, optional: true, required: false
+  private _fieldDelimiter?: string | undefined; 
+  public get fieldDelimiter() {
+    return this.getStringAttribute('field_delimiter');
+  }
+  public set fieldDelimiter(value: string | undefined) {
+    this._fieldDelimiter = value;
+  }
+  public resetFieldDelimiter() {
+    this._fieldDelimiter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fieldDelimiterInput() {
+    return this._fieldDelimiter
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+}
 export interface StreamAnalyticsStreamInputBlobTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#create StreamAnalyticsStreamInputBlob#create}
@@ -99,8 +157,11 @@ export interface StreamAnalyticsStreamInputBlobTimeouts {
   readonly update?: string;
 }
 
-function streamAnalyticsStreamInputBlobTimeoutsToTerraform(struct?: StreamAnalyticsStreamInputBlobTimeouts): any {
+function streamAnalyticsStreamInputBlobTimeoutsToTerraform(struct?: StreamAnalyticsStreamInputBlobTimeoutsOutputReference | StreamAnalyticsStreamInputBlobTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -109,6 +170,80 @@ function streamAnalyticsStreamInputBlobTimeoutsToTerraform(struct?: StreamAnalyt
   }
 }
 
+export class StreamAnalyticsStreamInputBlobTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html azurerm_stream_analytics_stream_input_blob}
@@ -160,7 +295,7 @@ export class StreamAnalyticsStreamInputBlob extends cdktf.TerraformResource {
   // ==========
 
   // date_format - computed: false, optional: false, required: true
-  private _dateFormat: string;
+  private _dateFormat?: string; 
   public get dateFormat() {
     return this.getStringAttribute('date_format');
   }
@@ -178,7 +313,7 @@ export class StreamAnalyticsStreamInputBlob extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -191,7 +326,7 @@ export class StreamAnalyticsStreamInputBlob extends cdktf.TerraformResource {
   }
 
   // path_pattern - computed: false, optional: false, required: true
-  private _pathPattern: string;
+  private _pathPattern?: string; 
   public get pathPattern() {
     return this.getStringAttribute('path_pattern');
   }
@@ -204,7 +339,7 @@ export class StreamAnalyticsStreamInputBlob extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -217,7 +352,7 @@ export class StreamAnalyticsStreamInputBlob extends cdktf.TerraformResource {
   }
 
   // storage_account_key - computed: false, optional: false, required: true
-  private _storageAccountKey: string;
+  private _storageAccountKey?: string; 
   public get storageAccountKey() {
     return this.getStringAttribute('storage_account_key');
   }
@@ -230,7 +365,7 @@ export class StreamAnalyticsStreamInputBlob extends cdktf.TerraformResource {
   }
 
   // storage_account_name - computed: false, optional: false, required: true
-  private _storageAccountName: string;
+  private _storageAccountName?: string; 
   public get storageAccountName() {
     return this.getStringAttribute('storage_account_name');
   }
@@ -243,7 +378,7 @@ export class StreamAnalyticsStreamInputBlob extends cdktf.TerraformResource {
   }
 
   // storage_container_name - computed: false, optional: false, required: true
-  private _storageContainerName: string;
+  private _storageContainerName?: string; 
   public get storageContainerName() {
     return this.getStringAttribute('storage_container_name');
   }
@@ -256,7 +391,7 @@ export class StreamAnalyticsStreamInputBlob extends cdktf.TerraformResource {
   }
 
   // stream_analytics_job_name - computed: false, optional: false, required: true
-  private _streamAnalyticsJobName: string;
+  private _streamAnalyticsJobName?: string; 
   public get streamAnalyticsJobName() {
     return this.getStringAttribute('stream_analytics_job_name');
   }
@@ -269,7 +404,7 @@ export class StreamAnalyticsStreamInputBlob extends cdktf.TerraformResource {
   }
 
   // time_format - computed: false, optional: false, required: true
-  private _timeFormat: string;
+  private _timeFormat?: string; 
   public get timeFormat() {
     return this.getStringAttribute('time_format');
   }
@@ -282,11 +417,12 @@ export class StreamAnalyticsStreamInputBlob extends cdktf.TerraformResource {
   }
 
   // serialization - computed: false, optional: false, required: true
-  private _serialization: StreamAnalyticsStreamInputBlobSerialization[];
+  private _serialization?: StreamAnalyticsStreamInputBlobSerialization; 
+  private __serializationOutput = new StreamAnalyticsStreamInputBlobSerializationOutputReference(this as any, "serialization", true);
   public get serialization() {
-    return this.interpolationForAttribute('serialization') as any;
+    return this.__serializationOutput;
   }
-  public set serialization(value: StreamAnalyticsStreamInputBlobSerialization[]) {
+  public putSerialization(value: StreamAnalyticsStreamInputBlobSerialization) {
     this._serialization = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -295,11 +431,12 @@ export class StreamAnalyticsStreamInputBlob extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: StreamAnalyticsStreamInputBlobTimeouts;
+  private _timeouts?: StreamAnalyticsStreamInputBlobTimeouts | undefined; 
+  private __timeoutsOutput = new StreamAnalyticsStreamInputBlobTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: StreamAnalyticsStreamInputBlobTimeouts ) {
+  public putTimeouts(value: StreamAnalyticsStreamInputBlobTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -325,7 +462,7 @@ export class StreamAnalyticsStreamInputBlob extends cdktf.TerraformResource {
       storage_container_name: cdktf.stringToTerraform(this._storageContainerName),
       stream_analytics_job_name: cdktf.stringToTerraform(this._streamAnalyticsJobName),
       time_format: cdktf.stringToTerraform(this._timeFormat),
-      serialization: cdktf.listMapper(streamAnalyticsStreamInputBlobSerializationToTerraform)(this._serialization),
+      serialization: streamAnalyticsStreamInputBlobSerializationToTerraform(this._serialization),
       timeouts: streamAnalyticsStreamInputBlobTimeoutsToTerraform(this._timeouts),
     };
   }

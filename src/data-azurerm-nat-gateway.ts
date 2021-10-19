@@ -37,13 +37,42 @@ export interface DataAzurermNatGatewayTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermNatGatewayTimeoutsToTerraform(struct?: DataAzurermNatGatewayTimeouts): any {
+function dataAzurermNatGatewayTimeoutsToTerraform(struct?: DataAzurermNatGatewayTimeoutsOutputReference | DataAzurermNatGatewayTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermNatGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/nat_gateway.html azurerm_nat_gateway}
@@ -104,7 +133,7 @@ export class DataAzurermNatGateway extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -117,11 +146,11 @@ export class DataAzurermNatGateway extends cdktf.TerraformDataSource {
   }
 
   // public_ip_address_ids - computed: true, optional: true, required: false
-  private _publicIpAddressIds?: string[];
+  private _publicIpAddressIds?: string[] | undefined; 
   public get publicIpAddressIds() {
     return this.getListAttribute('public_ip_address_ids');
   }
-  public set publicIpAddressIds(value: string[]) {
+  public set publicIpAddressIds(value: string[] | undefined) {
     this._publicIpAddressIds = value;
   }
   public resetPublicIpAddressIds() {
@@ -133,11 +162,11 @@ export class DataAzurermNatGateway extends cdktf.TerraformDataSource {
   }
 
   // public_ip_prefix_ids - computed: true, optional: true, required: false
-  private _publicIpPrefixIds?: string[];
+  private _publicIpPrefixIds?: string[] | undefined; 
   public get publicIpPrefixIds() {
     return this.getListAttribute('public_ip_prefix_ids');
   }
-  public set publicIpPrefixIds(value: string[]) {
+  public set publicIpPrefixIds(value: string[] | undefined) {
     this._publicIpPrefixIds = value;
   }
   public resetPublicIpPrefixIds() {
@@ -149,7 +178,7 @@ export class DataAzurermNatGateway extends cdktf.TerraformDataSource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -182,11 +211,12 @@ export class DataAzurermNatGateway extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermNatGatewayTimeouts;
+  private _timeouts?: DataAzurermNatGatewayTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermNatGatewayTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermNatGatewayTimeouts ) {
+  public putTimeouts(value: DataAzurermNatGatewayTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

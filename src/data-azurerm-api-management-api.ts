@@ -49,13 +49,42 @@ export interface DataAzurermApiManagementApiTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermApiManagementApiTimeoutsToTerraform(struct?: DataAzurermApiManagementApiTimeouts): any {
+function dataAzurermApiManagementApiTimeoutsToTerraform(struct?: DataAzurermApiManagementApiTimeoutsOutputReference | DataAzurermApiManagementApiTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermApiManagementApiTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api.html azurerm_api_management_api}
@@ -101,7 +130,7 @@ export class DataAzurermApiManagementApi extends cdktf.TerraformDataSource {
   // ==========
 
   // api_management_name - computed: false, optional: false, required: true
-  private _apiManagementName: string;
+  private _apiManagementName?: string; 
   public get apiManagementName() {
     return this.getStringAttribute('api_management_name');
   }
@@ -130,16 +159,16 @@ export class DataAzurermApiManagementApi extends cdktf.TerraformDataSource {
 
   // is_current - computed: true, optional: false, required: false
   public get isCurrent() {
-    return this.getBooleanAttribute('is_current');
+    return this.getBooleanAttribute('is_current') as any;
   }
 
   // is_online - computed: true, optional: false, required: false
   public get isOnline() {
-    return this.getBooleanAttribute('is_online');
+    return this.getBooleanAttribute('is_online') as any;
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -162,7 +191,7 @@ export class DataAzurermApiManagementApi extends cdktf.TerraformDataSource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -175,7 +204,7 @@ export class DataAzurermApiManagementApi extends cdktf.TerraformDataSource {
   }
 
   // revision - computed: false, optional: false, required: true
-  private _revision: string;
+  private _revision?: string; 
   public get revision() {
     return this.getStringAttribute('revision');
   }
@@ -194,7 +223,7 @@ export class DataAzurermApiManagementApi extends cdktf.TerraformDataSource {
 
   // soap_pass_through - computed: true, optional: false, required: false
   public get soapPassThrough() {
-    return this.getBooleanAttribute('soap_pass_through');
+    return this.getBooleanAttribute('soap_pass_through') as any;
   }
 
   // subscription_key_parameter_names - computed: true, optional: false, required: false
@@ -204,7 +233,7 @@ export class DataAzurermApiManagementApi extends cdktf.TerraformDataSource {
 
   // subscription_required - computed: true, optional: false, required: false
   public get subscriptionRequired() {
-    return this.getBooleanAttribute('subscription_required');
+    return this.getBooleanAttribute('subscription_required') as any;
   }
 
   // version - computed: true, optional: false, required: false
@@ -218,11 +247,12 @@ export class DataAzurermApiManagementApi extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermApiManagementApiTimeouts;
+  private _timeouts?: DataAzurermApiManagementApiTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermApiManagementApiTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermApiManagementApiTimeouts ) {
+  public putTimeouts(value: DataAzurermApiManagementApiTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

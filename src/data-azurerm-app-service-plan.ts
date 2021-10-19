@@ -46,13 +46,42 @@ export interface DataAzurermAppServicePlanTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermAppServicePlanTimeoutsToTerraform(struct?: DataAzurermAppServicePlanTimeouts): any {
+function dataAzurermAppServicePlanTimeoutsToTerraform(struct?: DataAzurermAppServicePlanTimeoutsOutputReference | DataAzurermAppServicePlanTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermAppServicePlanTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_plan.html azurerm_app_service_plan}
@@ -107,7 +136,7 @@ export class DataAzurermAppServicePlan extends cdktf.TerraformDataSource {
 
   // is_xenon - computed: true, optional: false, required: false
   public get isXenon() {
-    return this.getBooleanAttribute('is_xenon');
+    return this.getBooleanAttribute('is_xenon') as any;
   }
 
   // kind - computed: true, optional: false, required: false
@@ -131,7 +160,7 @@ export class DataAzurermAppServicePlan extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -145,16 +174,16 @@ export class DataAzurermAppServicePlan extends cdktf.TerraformDataSource {
 
   // per_site_scaling - computed: true, optional: false, required: false
   public get perSiteScaling() {
-    return this.getBooleanAttribute('per_site_scaling');
+    return this.getBooleanAttribute('per_site_scaling') as any;
   }
 
   // reserved - computed: true, optional: false, required: false
   public get reserved() {
-    return this.getBooleanAttribute('reserved');
+    return this.getBooleanAttribute('reserved') as any;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -178,15 +207,16 @@ export class DataAzurermAppServicePlan extends cdktf.TerraformDataSource {
 
   // zone_redundant - computed: true, optional: false, required: false
   public get zoneRedundant() {
-    return this.getBooleanAttribute('zone_redundant');
+    return this.getBooleanAttribute('zone_redundant') as any;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermAppServicePlanTimeouts;
+  private _timeouts?: DataAzurermAppServicePlanTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermAppServicePlanTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermAppServicePlanTimeouts ) {
+  public putTimeouts(value: DataAzurermAppServicePlanTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

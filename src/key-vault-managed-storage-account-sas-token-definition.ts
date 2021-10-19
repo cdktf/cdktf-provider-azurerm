@@ -57,8 +57,11 @@ export interface KeyVaultManagedStorageAccountSasTokenDefinitionTimeouts {
   readonly update?: string;
 }
 
-function keyVaultManagedStorageAccountSasTokenDefinitionTimeoutsToTerraform(struct?: KeyVaultManagedStorageAccountSasTokenDefinitionTimeouts): any {
+function keyVaultManagedStorageAccountSasTokenDefinitionTimeoutsToTerraform(struct?: KeyVaultManagedStorageAccountSasTokenDefinitionTimeoutsOutputReference | KeyVaultManagedStorageAccountSasTokenDefinitionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -67,6 +70,80 @@ function keyVaultManagedStorageAccountSasTokenDefinitionTimeoutsToTerraform(stru
   }
 }
 
+export class KeyVaultManagedStorageAccountSasTokenDefinitionTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account_sas_token_definition.html azurerm_key_vault_managed_storage_account_sas_token_definition}
@@ -119,7 +196,7 @@ export class KeyVaultManagedStorageAccountSasTokenDefinition extends cdktf.Terra
   }
 
   // managed_storage_account_id - computed: false, optional: false, required: true
-  private _managedStorageAccountId: string;
+  private _managedStorageAccountId?: string; 
   public get managedStorageAccountId() {
     return this.getStringAttribute('managed_storage_account_id');
   }
@@ -132,7 +209,7 @@ export class KeyVaultManagedStorageAccountSasTokenDefinition extends cdktf.Terra
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -145,7 +222,7 @@ export class KeyVaultManagedStorageAccountSasTokenDefinition extends cdktf.Terra
   }
 
   // sas_template_uri - computed: false, optional: false, required: true
-  private _sasTemplateUri: string;
+  private _sasTemplateUri?: string; 
   public get sasTemplateUri() {
     return this.getStringAttribute('sas_template_uri');
   }
@@ -158,7 +235,7 @@ export class KeyVaultManagedStorageAccountSasTokenDefinition extends cdktf.Terra
   }
 
   // sas_type - computed: false, optional: false, required: true
-  private _sasType: string;
+  private _sasType?: string; 
   public get sasType() {
     return this.getStringAttribute('sas_type');
   }
@@ -176,11 +253,12 @@ export class KeyVaultManagedStorageAccountSasTokenDefinition extends cdktf.Terra
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -192,7 +270,7 @@ export class KeyVaultManagedStorageAccountSasTokenDefinition extends cdktf.Terra
   }
 
   // validity_period - computed: false, optional: false, required: true
-  private _validityPeriod: string;
+  private _validityPeriod?: string; 
   public get validityPeriod() {
     return this.getStringAttribute('validity_period');
   }
@@ -205,11 +283,12 @@ export class KeyVaultManagedStorageAccountSasTokenDefinition extends cdktf.Terra
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: KeyVaultManagedStorageAccountSasTokenDefinitionTimeouts;
+  private _timeouts?: KeyVaultManagedStorageAccountSasTokenDefinitionTimeouts | undefined; 
+  private __timeoutsOutput = new KeyVaultManagedStorageAccountSasTokenDefinitionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: KeyVaultManagedStorageAccountSasTokenDefinitionTimeouts ) {
+  public putTimeouts(value: KeyVaultManagedStorageAccountSasTokenDefinitionTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

@@ -36,7 +36,7 @@ export interface ExpressRouteConnectionConfig extends cdktf.TerraformMetaArgumen
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#routing ExpressRouteConnection#routing}
   */
-  readonly routing?: ExpressRouteConnectionRouting[];
+  readonly routing?: ExpressRouteConnectionRouting;
   /**
   * timeouts block
   * 
@@ -55,14 +55,59 @@ export interface ExpressRouteConnectionRoutingPropagatedRouteTable {
   readonly routeTableIds?: string[];
 }
 
-function expressRouteConnectionRoutingPropagatedRouteTableToTerraform(struct?: ExpressRouteConnectionRoutingPropagatedRouteTable): any {
+function expressRouteConnectionRoutingPropagatedRouteTableToTerraform(struct?: ExpressRouteConnectionRoutingPropagatedRouteTableOutputReference | ExpressRouteConnectionRoutingPropagatedRouteTable): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     labels: cdktf.listMapper(cdktf.stringToTerraform)(struct!.labels),
     route_table_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.routeTableIds),
   }
 }
 
+export class ExpressRouteConnectionRoutingPropagatedRouteTableOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // labels - computed: true, optional: true, required: false
+  private _labels?: string[] | undefined; 
+  public get labels() {
+    return this.getListAttribute('labels');
+  }
+  public set labels(value: string[] | undefined) {
+    this._labels = value;
+  }
+  public resetLabels() {
+    this._labels = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelsInput() {
+    return this._labels
+  }
+
+  // route_table_ids - computed: true, optional: true, required: false
+  private _routeTableIds?: string[] | undefined; 
+  public get routeTableIds() {
+    return this.getListAttribute('route_table_ids');
+  }
+  public set routeTableIds(value: string[] | undefined) {
+    this._routeTableIds = value;
+  }
+  public resetRouteTableIds() {
+    this._routeTableIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routeTableIdsInput() {
+    return this._routeTableIds
+  }
+}
 export interface ExpressRouteConnectionRouting {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#associated_route_table_id ExpressRouteConnection#associated_route_table_id}
@@ -73,17 +118,63 @@ export interface ExpressRouteConnectionRouting {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#propagated_route_table ExpressRouteConnection#propagated_route_table}
   */
-  readonly propagatedRouteTable?: ExpressRouteConnectionRoutingPropagatedRouteTable[];
+  readonly propagatedRouteTable?: ExpressRouteConnectionRoutingPropagatedRouteTable;
 }
 
-function expressRouteConnectionRoutingToTerraform(struct?: ExpressRouteConnectionRouting): any {
+function expressRouteConnectionRoutingToTerraform(struct?: ExpressRouteConnectionRoutingOutputReference | ExpressRouteConnectionRouting): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     associated_route_table_id: cdktf.stringToTerraform(struct!.associatedRouteTableId),
-    propagated_route_table: cdktf.listMapper(expressRouteConnectionRoutingPropagatedRouteTableToTerraform)(struct!.propagatedRouteTable),
+    propagated_route_table: expressRouteConnectionRoutingPropagatedRouteTableToTerraform(struct!.propagatedRouteTable),
   }
 }
 
+export class ExpressRouteConnectionRoutingOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // associated_route_table_id - computed: true, optional: true, required: false
+  private _associatedRouteTableId?: string | undefined; 
+  public get associatedRouteTableId() {
+    return this.getStringAttribute('associated_route_table_id');
+  }
+  public set associatedRouteTableId(value: string | undefined) {
+    this._associatedRouteTableId = value;
+  }
+  public resetAssociatedRouteTableId() {
+    this._associatedRouteTableId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get associatedRouteTableIdInput() {
+    return this._associatedRouteTableId
+  }
+
+  // propagated_route_table - computed: false, optional: true, required: false
+  private _propagatedRouteTable?: ExpressRouteConnectionRoutingPropagatedRouteTable | undefined; 
+  private __propagatedRouteTableOutput = new ExpressRouteConnectionRoutingPropagatedRouteTableOutputReference(this as any, "propagated_route_table", true);
+  public get propagatedRouteTable() {
+    return this.__propagatedRouteTableOutput;
+  }
+  public putPropagatedRouteTable(value: ExpressRouteConnectionRoutingPropagatedRouteTable | undefined) {
+    this._propagatedRouteTable = value;
+  }
+  public resetPropagatedRouteTable() {
+    this._propagatedRouteTable = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get propagatedRouteTableInput() {
+    return this._propagatedRouteTable
+  }
+}
 export interface ExpressRouteConnectionTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#create ExpressRouteConnection#create}
@@ -103,8 +194,11 @@ export interface ExpressRouteConnectionTimeouts {
   readonly update?: string;
 }
 
-function expressRouteConnectionTimeoutsToTerraform(struct?: ExpressRouteConnectionTimeouts): any {
+function expressRouteConnectionTimeoutsToTerraform(struct?: ExpressRouteConnectionTimeoutsOutputReference | ExpressRouteConnectionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -113,6 +207,80 @@ function expressRouteConnectionTimeoutsToTerraform(struct?: ExpressRouteConnecti
   }
 }
 
+export class ExpressRouteConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html azurerm_express_route_connection}
@@ -161,11 +329,11 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
   // ==========
 
   // authorization_key - computed: false, optional: true, required: false
-  private _authorizationKey?: string;
+  private _authorizationKey?: string | undefined; 
   public get authorizationKey() {
     return this.getStringAttribute('authorization_key');
   }
-  public set authorizationKey(value: string ) {
+  public set authorizationKey(value: string | undefined) {
     this._authorizationKey = value;
   }
   public resetAuthorizationKey() {
@@ -177,11 +345,11 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
   }
 
   // enable_internet_security - computed: false, optional: true, required: false
-  private _enableInternetSecurity?: boolean | cdktf.IResolvable;
+  private _enableInternetSecurity?: boolean | cdktf.IResolvable | undefined; 
   public get enableInternetSecurity() {
-    return this.getBooleanAttribute('enable_internet_security');
+    return this.getBooleanAttribute('enable_internet_security') as any;
   }
-  public set enableInternetSecurity(value: boolean | cdktf.IResolvable ) {
+  public set enableInternetSecurity(value: boolean | cdktf.IResolvable | undefined) {
     this._enableInternetSecurity = value;
   }
   public resetEnableInternetSecurity() {
@@ -193,7 +361,7 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
   }
 
   // express_route_circuit_peering_id - computed: false, optional: false, required: true
-  private _expressRouteCircuitPeeringId: string;
+  private _expressRouteCircuitPeeringId?: string; 
   public get expressRouteCircuitPeeringId() {
     return this.getStringAttribute('express_route_circuit_peering_id');
   }
@@ -206,7 +374,7 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
   }
 
   // express_route_gateway_id - computed: false, optional: false, required: true
-  private _expressRouteGatewayId: string;
+  private _expressRouteGatewayId?: string; 
   public get expressRouteGatewayId() {
     return this.getStringAttribute('express_route_gateway_id');
   }
@@ -224,7 +392,7 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -237,11 +405,11 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
   }
 
   // routing_weight - computed: false, optional: true, required: false
-  private _routingWeight?: number;
+  private _routingWeight?: number | undefined; 
   public get routingWeight() {
     return this.getNumberAttribute('routing_weight');
   }
-  public set routingWeight(value: number ) {
+  public set routingWeight(value: number | undefined) {
     this._routingWeight = value;
   }
   public resetRoutingWeight() {
@@ -253,11 +421,12 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
   }
 
   // routing - computed: false, optional: true, required: false
-  private _routing?: ExpressRouteConnectionRouting[];
+  private _routing?: ExpressRouteConnectionRouting | undefined; 
+  private __routingOutput = new ExpressRouteConnectionRoutingOutputReference(this as any, "routing", true);
   public get routing() {
-    return this.interpolationForAttribute('routing') as any;
+    return this.__routingOutput;
   }
-  public set routing(value: ExpressRouteConnectionRouting[] ) {
+  public putRouting(value: ExpressRouteConnectionRouting | undefined) {
     this._routing = value;
   }
   public resetRouting() {
@@ -269,11 +438,12 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ExpressRouteConnectionTimeouts;
+  private _timeouts?: ExpressRouteConnectionTimeouts | undefined; 
+  private __timeoutsOutput = new ExpressRouteConnectionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ExpressRouteConnectionTimeouts ) {
+  public putTimeouts(value: ExpressRouteConnectionTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -296,7 +466,7 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
       express_route_gateway_id: cdktf.stringToTerraform(this._expressRouteGatewayId),
       name: cdktf.stringToTerraform(this._name),
       routing_weight: cdktf.numberToTerraform(this._routingWeight),
-      routing: cdktf.listMapper(expressRouteConnectionRoutingToTerraform)(this._routing),
+      routing: expressRouteConnectionRoutingToTerraform(this._routing),
       timeouts: expressRouteConnectionTimeoutsToTerraform(this._timeouts),
     };
   }

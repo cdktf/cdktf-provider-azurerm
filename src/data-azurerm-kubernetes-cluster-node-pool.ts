@@ -40,13 +40,42 @@ export interface DataAzurermKubernetesClusterNodePoolTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermKubernetesClusterNodePoolTimeoutsToTerraform(struct?: DataAzurermKubernetesClusterNodePoolTimeouts): any {
+function dataAzurermKubernetesClusterNodePoolTimeoutsToTerraform(struct?: DataAzurermKubernetesClusterNodePoolTimeoutsOutputReference | DataAzurermKubernetesClusterNodePoolTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermKubernetesClusterNodePoolTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool.html azurerm_kubernetes_cluster_node_pool}
@@ -97,12 +126,12 @@ export class DataAzurermKubernetesClusterNodePool extends cdktf.TerraformDataSou
 
   // enable_auto_scaling - computed: true, optional: false, required: false
   public get enableAutoScaling() {
-    return this.getBooleanAttribute('enable_auto_scaling');
+    return this.getBooleanAttribute('enable_auto_scaling') as any;
   }
 
   // enable_node_public_ip - computed: true, optional: false, required: false
   public get enableNodePublicIp() {
-    return this.getBooleanAttribute('enable_node_public_ip');
+    return this.getBooleanAttribute('enable_node_public_ip') as any;
   }
 
   // eviction_policy - computed: true, optional: false, required: false
@@ -116,7 +145,7 @@ export class DataAzurermKubernetesClusterNodePool extends cdktf.TerraformDataSou
   }
 
   // kubernetes_cluster_name - computed: false, optional: false, required: true
-  private _kubernetesClusterName: string;
+  private _kubernetesClusterName?: string; 
   public get kubernetesClusterName() {
     return this.getStringAttribute('kubernetes_cluster_name');
   }
@@ -149,7 +178,7 @@ export class DataAzurermKubernetesClusterNodePool extends cdktf.TerraformDataSou
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -212,7 +241,7 @@ export class DataAzurermKubernetesClusterNodePool extends cdktf.TerraformDataSou
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -250,11 +279,12 @@ export class DataAzurermKubernetesClusterNodePool extends cdktf.TerraformDataSou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermKubernetesClusterNodePoolTimeouts;
+  private _timeouts?: DataAzurermKubernetesClusterNodePoolTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermKubernetesClusterNodePoolTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermKubernetesClusterNodePoolTimeouts ) {
+  public putTimeouts(value: DataAzurermKubernetesClusterNodePoolTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

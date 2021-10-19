@@ -53,6 +53,9 @@ export interface FrontdoorRulesEngineRuleActionRequestHeader {
 
 function frontdoorRulesEngineRuleActionRequestHeaderToTerraform(struct?: FrontdoorRulesEngineRuleActionRequestHeader): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     header_action_type: cdktf.stringToTerraform(struct!.headerActionType),
     header_name: cdktf.stringToTerraform(struct!.headerName),
@@ -77,6 +80,9 @@ export interface FrontdoorRulesEngineRuleActionResponseHeader {
 
 function frontdoorRulesEngineRuleActionResponseHeaderToTerraform(struct?: FrontdoorRulesEngineRuleActionResponseHeader): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     header_action_type: cdktf.stringToTerraform(struct!.headerActionType),
     header_name: cdktf.stringToTerraform(struct!.headerName),
@@ -99,14 +105,61 @@ export interface FrontdoorRulesEngineRuleAction {
   readonly responseHeader?: FrontdoorRulesEngineRuleActionResponseHeader[];
 }
 
-function frontdoorRulesEngineRuleActionToTerraform(struct?: FrontdoorRulesEngineRuleAction): any {
+function frontdoorRulesEngineRuleActionToTerraform(struct?: FrontdoorRulesEngineRuleActionOutputReference | FrontdoorRulesEngineRuleAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     request_header: cdktf.listMapper(frontdoorRulesEngineRuleActionRequestHeaderToTerraform)(struct!.requestHeader),
     response_header: cdktf.listMapper(frontdoorRulesEngineRuleActionResponseHeaderToTerraform)(struct!.responseHeader),
   }
 }
 
+export class FrontdoorRulesEngineRuleActionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // request_header - computed: false, optional: true, required: false
+  private _requestHeader?: FrontdoorRulesEngineRuleActionRequestHeader[] | undefined; 
+  public get requestHeader() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('request_header') as any;
+  }
+  public set requestHeader(value: FrontdoorRulesEngineRuleActionRequestHeader[] | undefined) {
+    this._requestHeader = value;
+  }
+  public resetRequestHeader() {
+    this._requestHeader = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get requestHeaderInput() {
+    return this._requestHeader
+  }
+
+  // response_header - computed: false, optional: true, required: false
+  private _responseHeader?: FrontdoorRulesEngineRuleActionResponseHeader[] | undefined; 
+  public get responseHeader() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('response_header') as any;
+  }
+  public set responseHeader(value: FrontdoorRulesEngineRuleActionResponseHeader[] | undefined) {
+    this._responseHeader = value;
+  }
+  public resetResponseHeader() {
+    this._responseHeader = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get responseHeaderInput() {
+    return this._responseHeader
+  }
+}
 export interface FrontdoorRulesEngineRuleMatchCondition {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_rules_engine.html#negate_condition FrontdoorRulesEngine#negate_condition}
@@ -136,6 +189,9 @@ export interface FrontdoorRulesEngineRuleMatchCondition {
 
 function frontdoorRulesEngineRuleMatchConditionToTerraform(struct?: FrontdoorRulesEngineRuleMatchCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     negate_condition: cdktf.booleanToTerraform(struct!.negateCondition),
     operator: cdktf.stringToTerraform(struct!.operator),
@@ -160,7 +216,7 @@ export interface FrontdoorRulesEngineRule {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_rules_engine.html#action FrontdoorRulesEngine#action}
   */
-  readonly action?: FrontdoorRulesEngineRuleAction[];
+  readonly action?: FrontdoorRulesEngineRuleAction;
   /**
   * match_condition block
   * 
@@ -171,10 +227,13 @@ export interface FrontdoorRulesEngineRule {
 
 function frontdoorRulesEngineRuleToTerraform(struct?: FrontdoorRulesEngineRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     priority: cdktf.numberToTerraform(struct!.priority),
-    action: cdktf.listMapper(frontdoorRulesEngineRuleActionToTerraform)(struct!.action),
+    action: frontdoorRulesEngineRuleActionToTerraform(struct!.action),
     match_condition: cdktf.listMapper(frontdoorRulesEngineRuleMatchConditionToTerraform)(struct!.matchCondition),
   }
 }
@@ -198,8 +257,11 @@ export interface FrontdoorRulesEngineTimeouts {
   readonly update?: string;
 }
 
-function frontdoorRulesEngineTimeoutsToTerraform(struct?: FrontdoorRulesEngineTimeouts): any {
+function frontdoorRulesEngineTimeoutsToTerraform(struct?: FrontdoorRulesEngineTimeoutsOutputReference | FrontdoorRulesEngineTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -208,6 +270,80 @@ function frontdoorRulesEngineTimeoutsToTerraform(struct?: FrontdoorRulesEngineTi
   }
 }
 
+export class FrontdoorRulesEngineTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_rules_engine.html azurerm_frontdoor_rules_engine}
@@ -254,11 +390,11 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
   // ==========
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable;
+  private _enabled?: boolean | cdktf.IResolvable | undefined; 
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable ) {
+  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -270,7 +406,7 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
   }
 
   // frontdoor_name - computed: false, optional: false, required: true
-  private _frontdoorName: string;
+  private _frontdoorName?: string; 
   public get frontdoorName() {
     return this.getStringAttribute('frontdoor_name');
   }
@@ -293,7 +429,7 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -306,7 +442,7 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -319,11 +455,12 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule?: FrontdoorRulesEngineRule[];
+  private _rule?: FrontdoorRulesEngineRule[] | undefined; 
   public get rule() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('rule') as any;
   }
-  public set rule(value: FrontdoorRulesEngineRule[] ) {
+  public set rule(value: FrontdoorRulesEngineRule[] | undefined) {
     this._rule = value;
   }
   public resetRule() {
@@ -335,11 +472,12 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: FrontdoorRulesEngineTimeouts;
+  private _timeouts?: FrontdoorRulesEngineTimeouts | undefined; 
+  private __timeoutsOutput = new FrontdoorRulesEngineTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: FrontdoorRulesEngineTimeouts ) {
+  public putTimeouts(value: FrontdoorRulesEngineTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

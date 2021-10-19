@@ -44,7 +44,7 @@ export interface DataFactoryLinkedCustomServiceConfig extends cdktf.TerraformMet
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#integration_runtime DataFactoryLinkedCustomService#integration_runtime}
   */
-  readonly integrationRuntime?: DataFactoryLinkedCustomServiceIntegrationRuntime[];
+  readonly integrationRuntime?: DataFactoryLinkedCustomServiceIntegrationRuntime;
   /**
   * timeouts block
   * 
@@ -63,14 +63,57 @@ export interface DataFactoryLinkedCustomServiceIntegrationRuntime {
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataFactoryLinkedCustomServiceIntegrationRuntimeToTerraform(struct?: DataFactoryLinkedCustomServiceIntegrationRuntime): any {
+function dataFactoryLinkedCustomServiceIntegrationRuntimeToTerraform(struct?: DataFactoryLinkedCustomServiceIntegrationRuntimeOutputReference | DataFactoryLinkedCustomServiceIntegrationRuntime): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     parameters: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
   }
 }
 
+export class DataFactoryLinkedCustomServiceIntegrationRuntimeOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // parameters - computed: false, optional: true, required: false
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get parameters() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('parameters') as any;
+  }
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+    this._parameters = value;
+  }
+  public resetParameters() {
+    this._parameters = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parametersInput() {
+    return this._parameters
+  }
+}
 export interface DataFactoryLinkedCustomServiceTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#create DataFactoryLinkedCustomService#create}
@@ -90,8 +133,11 @@ export interface DataFactoryLinkedCustomServiceTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryLinkedCustomServiceTimeoutsToTerraform(struct?: DataFactoryLinkedCustomServiceTimeouts): any {
+function dataFactoryLinkedCustomServiceTimeoutsToTerraform(struct?: DataFactoryLinkedCustomServiceTimeoutsOutputReference | DataFactoryLinkedCustomServiceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -100,6 +146,80 @@ function dataFactoryLinkedCustomServiceTimeoutsToTerraform(struct?: DataFactoryL
   }
 }
 
+export class DataFactoryLinkedCustomServiceTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html azurerm_data_factory_linked_custom_service}
@@ -150,11 +270,12 @@ export class DataFactoryLinkedCustomService extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get additionalProperties() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -166,11 +287,11 @@ export class DataFactoryLinkedCustomService extends cdktf.TerraformResource {
   }
 
   // annotations - computed: false, optional: true, required: false
-  private _annotations?: string[];
+  private _annotations?: string[] | undefined; 
   public get annotations() {
     return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] ) {
+  public set annotations(value: string[] | undefined) {
     this._annotations = value;
   }
   public resetAnnotations() {
@@ -182,7 +303,7 @@ export class DataFactoryLinkedCustomService extends cdktf.TerraformResource {
   }
 
   // data_factory_id - computed: false, optional: false, required: true
-  private _dataFactoryId: string;
+  private _dataFactoryId?: string; 
   public get dataFactoryId() {
     return this.getStringAttribute('data_factory_id');
   }
@@ -195,11 +316,11 @@ export class DataFactoryLinkedCustomService extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -216,7 +337,7 @@ export class DataFactoryLinkedCustomService extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -229,11 +350,12 @@ export class DataFactoryLinkedCustomService extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get parameters() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -245,7 +367,7 @@ export class DataFactoryLinkedCustomService extends cdktf.TerraformResource {
   }
 
   // type - computed: false, optional: false, required: true
-  private _type: string;
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
@@ -258,7 +380,7 @@ export class DataFactoryLinkedCustomService extends cdktf.TerraformResource {
   }
 
   // type_properties_json - computed: false, optional: false, required: true
-  private _typePropertiesJson: string;
+  private _typePropertiesJson?: string; 
   public get typePropertiesJson() {
     return this.getStringAttribute('type_properties_json');
   }
@@ -271,11 +393,12 @@ export class DataFactoryLinkedCustomService extends cdktf.TerraformResource {
   }
 
   // integration_runtime - computed: false, optional: true, required: false
-  private _integrationRuntime?: DataFactoryLinkedCustomServiceIntegrationRuntime[];
+  private _integrationRuntime?: DataFactoryLinkedCustomServiceIntegrationRuntime | undefined; 
+  private __integrationRuntimeOutput = new DataFactoryLinkedCustomServiceIntegrationRuntimeOutputReference(this as any, "integration_runtime", true);
   public get integrationRuntime() {
-    return this.interpolationForAttribute('integration_runtime') as any;
+    return this.__integrationRuntimeOutput;
   }
-  public set integrationRuntime(value: DataFactoryLinkedCustomServiceIntegrationRuntime[] ) {
+  public putIntegrationRuntime(value: DataFactoryLinkedCustomServiceIntegrationRuntime | undefined) {
     this._integrationRuntime = value;
   }
   public resetIntegrationRuntime() {
@@ -287,11 +410,12 @@ export class DataFactoryLinkedCustomService extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryLinkedCustomServiceTimeouts;
+  private _timeouts?: DataFactoryLinkedCustomServiceTimeouts | undefined; 
+  private __timeoutsOutput = new DataFactoryLinkedCustomServiceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataFactoryLinkedCustomServiceTimeouts ) {
+  public putTimeouts(value: DataFactoryLinkedCustomServiceTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -316,7 +440,7 @@ export class DataFactoryLinkedCustomService extends cdktf.TerraformResource {
       parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
       type: cdktf.stringToTerraform(this._type),
       type_properties_json: cdktf.stringToTerraform(this._typePropertiesJson),
-      integration_runtime: cdktf.listMapper(dataFactoryLinkedCustomServiceIntegrationRuntimeToTerraform)(this._integrationRuntime),
+      integration_runtime: dataFactoryLinkedCustomServiceIntegrationRuntimeToTerraform(this._integrationRuntime),
       timeouts: dataFactoryLinkedCustomServiceTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -43,6 +43,7 @@ export class DataAzurermMonitorScheduledQueryRulesLogCriteria extends cdktf.Comp
 
   // dimension - computed: true, optional: false, required: false
   public get dimension() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('dimension') as any;
   }
 
@@ -58,13 +59,42 @@ export interface DataAzurermMonitorScheduledQueryRulesLogTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermMonitorScheduledQueryRulesLogTimeoutsToTerraform(struct?: DataAzurermMonitorScheduledQueryRulesLogTimeouts): any {
+function dataAzurermMonitorScheduledQueryRulesLogTimeoutsToTerraform(struct?: DataAzurermMonitorScheduledQueryRulesLogTimeoutsOutputReference | DataAzurermMonitorScheduledQueryRulesLogTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermMonitorScheduledQueryRulesLogTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_scheduled_query_rules_log.html azurerm_monitor_scheduled_query_rules_log}
@@ -129,7 +159,7 @@ export class DataAzurermMonitorScheduledQueryRulesLog extends cdktf.TerraformDat
 
   // enabled - computed: true, optional: false, required: false
   public get enabled() {
-    return this.getBooleanAttribute('enabled');
+    return this.getBooleanAttribute('enabled') as any;
   }
 
   // id - computed: true, optional: true, required: false
@@ -143,7 +173,7 @@ export class DataAzurermMonitorScheduledQueryRulesLog extends cdktf.TerraformDat
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -156,7 +186,7 @@ export class DataAzurermMonitorScheduledQueryRulesLog extends cdktf.TerraformDat
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -174,11 +204,12 @@ export class DataAzurermMonitorScheduledQueryRulesLog extends cdktf.TerraformDat
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermMonitorScheduledQueryRulesLogTimeouts;
+  private _timeouts?: DataAzurermMonitorScheduledQueryRulesLogTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermMonitorScheduledQueryRulesLogTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermMonitorScheduledQueryRulesLogTimeouts ) {
+  public putTimeouts(value: DataAzurermMonitorScheduledQueryRulesLogTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

@@ -24,7 +24,7 @@ export interface PolicyVirtualMachineConfigurationAssignmentConfig extends cdktf
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_virtual_machine_configuration_assignment.html#configuration PolicyVirtualMachineConfigurationAssignment#configuration}
   */
-  readonly configuration: PolicyVirtualMachineConfigurationAssignmentConfiguration[];
+  readonly configuration: PolicyVirtualMachineConfigurationAssignmentConfiguration;
   /**
   * timeouts block
   * 
@@ -45,6 +45,9 @@ export interface PolicyVirtualMachineConfigurationAssignmentConfigurationParamet
 
 function policyVirtualMachineConfigurationAssignmentConfigurationParameterToTerraform(struct?: PolicyVirtualMachineConfigurationAssignmentConfigurationParameter): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     value: cdktf.stringToTerraform(struct!.value),
@@ -80,8 +83,11 @@ export interface PolicyVirtualMachineConfigurationAssignmentConfiguration {
   readonly parameter?: PolicyVirtualMachineConfigurationAssignmentConfigurationParameter[];
 }
 
-function policyVirtualMachineConfigurationAssignmentConfigurationToTerraform(struct?: PolicyVirtualMachineConfigurationAssignmentConfiguration): any {
+function policyVirtualMachineConfigurationAssignmentConfigurationToTerraform(struct?: PolicyVirtualMachineConfigurationAssignmentConfigurationOutputReference | PolicyVirtualMachineConfigurationAssignmentConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     assignment_type: cdktf.stringToTerraform(struct!.assignmentType),
     content_hash: cdktf.stringToTerraform(struct!.contentHash),
@@ -92,6 +98,113 @@ function policyVirtualMachineConfigurationAssignmentConfigurationToTerraform(str
   }
 }
 
+export class PolicyVirtualMachineConfigurationAssignmentConfigurationOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // assignment_type - computed: false, optional: true, required: false
+  private _assignmentType?: string | undefined; 
+  public get assignmentType() {
+    return this.getStringAttribute('assignment_type');
+  }
+  public set assignmentType(value: string | undefined) {
+    this._assignmentType = value;
+  }
+  public resetAssignmentType() {
+    this._assignmentType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get assignmentTypeInput() {
+    return this._assignmentType
+  }
+
+  // content_hash - computed: true, optional: true, required: false
+  private _contentHash?: string | undefined; 
+  public get contentHash() {
+    return this.getStringAttribute('content_hash');
+  }
+  public set contentHash(value: string | undefined) {
+    this._contentHash = value;
+  }
+  public resetContentHash() {
+    this._contentHash = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentHashInput() {
+    return this._contentHash
+  }
+
+  // content_uri - computed: true, optional: true, required: false
+  private _contentUri?: string | undefined; 
+  public get contentUri() {
+    return this.getStringAttribute('content_uri');
+  }
+  public set contentUri(value: string | undefined) {
+    this._contentUri = value;
+  }
+  public resetContentUri() {
+    this._contentUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentUriInput() {
+    return this._contentUri
+  }
+
+  // name - computed: false, optional: true, required: false
+  private _name?: string | undefined; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string | undefined) {
+    this._name = value;
+  }
+  public resetName() {
+    this._name = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // version - computed: false, optional: true, required: false
+  private _version?: string | undefined; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string | undefined) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version
+  }
+
+  // parameter - computed: false, optional: true, required: false
+  private _parameter?: PolicyVirtualMachineConfigurationAssignmentConfigurationParameter[] | undefined; 
+  public get parameter() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('parameter') as any;
+  }
+  public set parameter(value: PolicyVirtualMachineConfigurationAssignmentConfigurationParameter[] | undefined) {
+    this._parameter = value;
+  }
+  public resetParameter() {
+    this._parameter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get parameterInput() {
+    return this._parameter
+  }
+}
 export interface PolicyVirtualMachineConfigurationAssignmentTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/policy_virtual_machine_configuration_assignment.html#create PolicyVirtualMachineConfigurationAssignment#create}
@@ -111,8 +224,11 @@ export interface PolicyVirtualMachineConfigurationAssignmentTimeouts {
   readonly update?: string;
 }
 
-function policyVirtualMachineConfigurationAssignmentTimeoutsToTerraform(struct?: PolicyVirtualMachineConfigurationAssignmentTimeouts): any {
+function policyVirtualMachineConfigurationAssignmentTimeoutsToTerraform(struct?: PolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference | PolicyVirtualMachineConfigurationAssignmentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -121,6 +237,80 @@ function policyVirtualMachineConfigurationAssignmentTimeoutsToTerraform(struct?:
   }
 }
 
+export class PolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/policy_virtual_machine_configuration_assignment.html azurerm_policy_virtual_machine_configuration_assignment}
@@ -171,7 +361,7 @@ export class PolicyVirtualMachineConfigurationAssignment extends cdktf.Terraform
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -184,7 +374,7 @@ export class PolicyVirtualMachineConfigurationAssignment extends cdktf.Terraform
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -197,7 +387,7 @@ export class PolicyVirtualMachineConfigurationAssignment extends cdktf.Terraform
   }
 
   // virtual_machine_id - computed: false, optional: false, required: true
-  private _virtualMachineId: string;
+  private _virtualMachineId?: string; 
   public get virtualMachineId() {
     return this.getStringAttribute('virtual_machine_id');
   }
@@ -210,11 +400,12 @@ export class PolicyVirtualMachineConfigurationAssignment extends cdktf.Terraform
   }
 
   // configuration - computed: false, optional: false, required: true
-  private _configuration: PolicyVirtualMachineConfigurationAssignmentConfiguration[];
+  private _configuration?: PolicyVirtualMachineConfigurationAssignmentConfiguration; 
+  private __configurationOutput = new PolicyVirtualMachineConfigurationAssignmentConfigurationOutputReference(this as any, "configuration", true);
   public get configuration() {
-    return this.interpolationForAttribute('configuration') as any;
+    return this.__configurationOutput;
   }
-  public set configuration(value: PolicyVirtualMachineConfigurationAssignmentConfiguration[]) {
+  public putConfiguration(value: PolicyVirtualMachineConfigurationAssignmentConfiguration) {
     this._configuration = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -223,11 +414,12 @@ export class PolicyVirtualMachineConfigurationAssignment extends cdktf.Terraform
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: PolicyVirtualMachineConfigurationAssignmentTimeouts;
+  private _timeouts?: PolicyVirtualMachineConfigurationAssignmentTimeouts | undefined; 
+  private __timeoutsOutput = new PolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: PolicyVirtualMachineConfigurationAssignmentTimeouts ) {
+  public putTimeouts(value: PolicyVirtualMachineConfigurationAssignmentTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -247,7 +439,7 @@ export class PolicyVirtualMachineConfigurationAssignment extends cdktf.Terraform
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       virtual_machine_id: cdktf.stringToTerraform(this._virtualMachineId),
-      configuration: cdktf.listMapper(policyVirtualMachineConfigurationAssignmentConfigurationToTerraform)(this._configuration),
+      configuration: policyVirtualMachineConfigurationAssignmentConfigurationToTerraform(this._configuration),
       timeouts: policyVirtualMachineConfigurationAssignmentTimeoutsToTerraform(this._timeouts),
     };
   }

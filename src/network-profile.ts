@@ -28,7 +28,7 @@ export interface NetworkProfileConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile.html#container_network_interface NetworkProfile#container_network_interface}
   */
-  readonly containerNetworkInterface: NetworkProfileContainerNetworkInterface[];
+  readonly containerNetworkInterface: NetworkProfileContainerNetworkInterface;
   /**
   * timeouts block
   * 
@@ -49,6 +49,9 @@ export interface NetworkProfileContainerNetworkInterfaceIpConfiguration {
 
 function networkProfileContainerNetworkInterfaceIpConfigurationToTerraform(struct?: NetworkProfileContainerNetworkInterfaceIpConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
@@ -68,14 +71,54 @@ export interface NetworkProfileContainerNetworkInterface {
   readonly ipConfiguration: NetworkProfileContainerNetworkInterfaceIpConfiguration[];
 }
 
-function networkProfileContainerNetworkInterfaceToTerraform(struct?: NetworkProfileContainerNetworkInterface): any {
+function networkProfileContainerNetworkInterfaceToTerraform(struct?: NetworkProfileContainerNetworkInterfaceOutputReference | NetworkProfileContainerNetworkInterface): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     ip_configuration: cdktf.listMapper(networkProfileContainerNetworkInterfaceIpConfigurationToTerraform)(struct!.ipConfiguration),
   }
 }
 
+export class NetworkProfileContainerNetworkInterfaceOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // ip_configuration - computed: false, optional: false, required: true
+  private _ipConfiguration?: NetworkProfileContainerNetworkInterfaceIpConfiguration[]; 
+  public get ipConfiguration() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('ip_configuration') as any;
+  }
+  public set ipConfiguration(value: NetworkProfileContainerNetworkInterfaceIpConfiguration[]) {
+    this._ipConfiguration = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipConfigurationInput() {
+    return this._ipConfiguration
+  }
+}
 export interface NetworkProfileTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile.html#create NetworkProfile#create}
@@ -95,8 +138,11 @@ export interface NetworkProfileTimeouts {
   readonly update?: string;
 }
 
-function networkProfileTimeoutsToTerraform(struct?: NetworkProfileTimeouts): any {
+function networkProfileTimeoutsToTerraform(struct?: NetworkProfileTimeoutsOutputReference | NetworkProfileTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -105,6 +151,80 @@ function networkProfileTimeoutsToTerraform(struct?: NetworkProfileTimeouts): any
   }
 }
 
+export class NetworkProfileTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_profile.html azurerm_network_profile}
@@ -161,7 +281,7 @@ export class NetworkProfile extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -174,7 +294,7 @@ export class NetworkProfile extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -187,7 +307,7 @@ export class NetworkProfile extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -200,11 +320,12 @@ export class NetworkProfile extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -216,11 +337,12 @@ export class NetworkProfile extends cdktf.TerraformResource {
   }
 
   // container_network_interface - computed: false, optional: false, required: true
-  private _containerNetworkInterface: NetworkProfileContainerNetworkInterface[];
+  private _containerNetworkInterface?: NetworkProfileContainerNetworkInterface; 
+  private __containerNetworkInterfaceOutput = new NetworkProfileContainerNetworkInterfaceOutputReference(this as any, "container_network_interface", true);
   public get containerNetworkInterface() {
-    return this.interpolationForAttribute('container_network_interface') as any;
+    return this.__containerNetworkInterfaceOutput;
   }
-  public set containerNetworkInterface(value: NetworkProfileContainerNetworkInterface[]) {
+  public putContainerNetworkInterface(value: NetworkProfileContainerNetworkInterface) {
     this._containerNetworkInterface = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -229,11 +351,12 @@ export class NetworkProfile extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: NetworkProfileTimeouts;
+  private _timeouts?: NetworkProfileTimeouts | undefined; 
+  private __timeoutsOutput = new NetworkProfileTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: NetworkProfileTimeouts ) {
+  public putTimeouts(value: NetworkProfileTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -254,7 +377,7 @@ export class NetworkProfile extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      container_network_interface: cdktf.listMapper(networkProfileContainerNetworkInterfaceToTerraform)(this._containerNetworkInterface),
+      container_network_interface: networkProfileContainerNetworkInterfaceToTerraform(this._containerNetworkInterface),
       timeouts: networkProfileTimeoutsToTerraform(this._timeouts),
     };
   }

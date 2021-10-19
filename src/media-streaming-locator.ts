@@ -85,6 +85,9 @@ export interface MediaStreamingLocatorContentKey {
 
 function mediaStreamingLocatorContentKeyToTerraform(struct?: MediaStreamingLocatorContentKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     content_key_id: cdktf.stringToTerraform(struct!.contentKeyId),
     label_reference_in_streaming_policy: cdktf.stringToTerraform(struct!.labelReferenceInStreamingPolicy),
@@ -109,8 +112,11 @@ export interface MediaStreamingLocatorTimeouts {
   readonly read?: string;
 }
 
-function mediaStreamingLocatorTimeoutsToTerraform(struct?: MediaStreamingLocatorTimeouts): any {
+function mediaStreamingLocatorTimeoutsToTerraform(struct?: MediaStreamingLocatorTimeoutsOutputReference | MediaStreamingLocatorTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -118,6 +124,64 @@ function mediaStreamingLocatorTimeoutsToTerraform(struct?: MediaStreamingLocator
   }
 }
 
+export class MediaStreamingLocatorTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_locator.html azurerm_media_streaming_locator}
@@ -170,11 +234,11 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
   // ==========
 
   // alternative_media_id - computed: false, optional: true, required: false
-  private _alternativeMediaId?: string;
+  private _alternativeMediaId?: string | undefined; 
   public get alternativeMediaId() {
     return this.getStringAttribute('alternative_media_id');
   }
-  public set alternativeMediaId(value: string ) {
+  public set alternativeMediaId(value: string | undefined) {
     this._alternativeMediaId = value;
   }
   public resetAlternativeMediaId() {
@@ -186,7 +250,7 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
   }
 
   // asset_name - computed: false, optional: false, required: true
-  private _assetName: string;
+  private _assetName?: string; 
   public get assetName() {
     return this.getStringAttribute('asset_name');
   }
@@ -199,11 +263,11 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
   }
 
   // default_content_key_policy_name - computed: false, optional: true, required: false
-  private _defaultContentKeyPolicyName?: string;
+  private _defaultContentKeyPolicyName?: string | undefined; 
   public get defaultContentKeyPolicyName() {
     return this.getStringAttribute('default_content_key_policy_name');
   }
-  public set defaultContentKeyPolicyName(value: string ) {
+  public set defaultContentKeyPolicyName(value: string | undefined) {
     this._defaultContentKeyPolicyName = value;
   }
   public resetDefaultContentKeyPolicyName() {
@@ -215,11 +279,11 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
   }
 
   // end_time - computed: true, optional: true, required: false
-  private _endTime?: string;
+  private _endTime?: string | undefined; 
   public get endTime() {
     return this.getStringAttribute('end_time');
   }
-  public set endTime(value: string) {
+  public set endTime(value: string | undefined) {
     this._endTime = value;
   }
   public resetEndTime() {
@@ -236,7 +300,7 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
   }
 
   // media_services_account_name - computed: false, optional: false, required: true
-  private _mediaServicesAccountName: string;
+  private _mediaServicesAccountName?: string; 
   public get mediaServicesAccountName() {
     return this.getStringAttribute('media_services_account_name');
   }
@@ -249,7 +313,7 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -262,7 +326,7 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -275,11 +339,11 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
   }
 
   // start_time - computed: false, optional: true, required: false
-  private _startTime?: string;
+  private _startTime?: string | undefined; 
   public get startTime() {
     return this.getStringAttribute('start_time');
   }
-  public set startTime(value: string ) {
+  public set startTime(value: string | undefined) {
     this._startTime = value;
   }
   public resetStartTime() {
@@ -291,11 +355,11 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
   }
 
   // streaming_locator_id - computed: true, optional: true, required: false
-  private _streamingLocatorId?: string;
+  private _streamingLocatorId?: string | undefined; 
   public get streamingLocatorId() {
     return this.getStringAttribute('streaming_locator_id');
   }
-  public set streamingLocatorId(value: string) {
+  public set streamingLocatorId(value: string | undefined) {
     this._streamingLocatorId = value;
   }
   public resetStreamingLocatorId() {
@@ -307,7 +371,7 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
   }
 
   // streaming_policy_name - computed: false, optional: false, required: true
-  private _streamingPolicyName: string;
+  private _streamingPolicyName?: string; 
   public get streamingPolicyName() {
     return this.getStringAttribute('streaming_policy_name');
   }
@@ -320,11 +384,12 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
   }
 
   // content_key - computed: false, optional: true, required: false
-  private _contentKey?: MediaStreamingLocatorContentKey[];
+  private _contentKey?: MediaStreamingLocatorContentKey[] | undefined; 
   public get contentKey() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('content_key') as any;
   }
-  public set contentKey(value: MediaStreamingLocatorContentKey[] ) {
+  public set contentKey(value: MediaStreamingLocatorContentKey[] | undefined) {
     this._contentKey = value;
   }
   public resetContentKey() {
@@ -336,11 +401,12 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MediaStreamingLocatorTimeouts;
+  private _timeouts?: MediaStreamingLocatorTimeouts | undefined; 
+  private __timeoutsOutput = new MediaStreamingLocatorTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: MediaStreamingLocatorTimeouts ) {
+  public putTimeouts(value: MediaStreamingLocatorTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

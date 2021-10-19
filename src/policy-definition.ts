@@ -73,8 +73,11 @@ export interface PolicyDefinitionTimeouts {
   readonly update?: string;
 }
 
-function policyDefinitionTimeoutsToTerraform(struct?: PolicyDefinitionTimeouts): any {
+function policyDefinitionTimeoutsToTerraform(struct?: PolicyDefinitionTimeoutsOutputReference | PolicyDefinitionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -83,6 +86,80 @@ function policyDefinitionTimeoutsToTerraform(struct?: PolicyDefinitionTimeouts):
   }
 }
 
+export class PolicyDefinitionTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html azurerm_policy_definition}
@@ -134,11 +211,11 @@ export class PolicyDefinition extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -150,7 +227,7 @@ export class PolicyDefinition extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: false, required: true
-  private _displayName: string;
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -168,11 +245,11 @@ export class PolicyDefinition extends cdktf.TerraformResource {
   }
 
   // management_group_id - computed: true, optional: true, required: false
-  private _managementGroupId?: string;
+  private _managementGroupId?: string | undefined; 
   public get managementGroupId() {
     return this.getStringAttribute('management_group_id');
   }
-  public set managementGroupId(value: string) {
+  public set managementGroupId(value: string | undefined) {
     this._managementGroupId = value;
   }
   public resetManagementGroupId() {
@@ -184,11 +261,11 @@ export class PolicyDefinition extends cdktf.TerraformResource {
   }
 
   // management_group_name - computed: true, optional: true, required: false
-  private _managementGroupName?: string;
+  private _managementGroupName?: string | undefined; 
   public get managementGroupName() {
     return this.getStringAttribute('management_group_name');
   }
-  public set managementGroupName(value: string) {
+  public set managementGroupName(value: string | undefined) {
     this._managementGroupName = value;
   }
   public resetManagementGroupName() {
@@ -200,11 +277,11 @@ export class PolicyDefinition extends cdktf.TerraformResource {
   }
 
   // metadata - computed: true, optional: true, required: false
-  private _metadata?: string;
+  private _metadata?: string | undefined; 
   public get metadata() {
     return this.getStringAttribute('metadata');
   }
-  public set metadata(value: string) {
+  public set metadata(value: string | undefined) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -216,7 +293,7 @@ export class PolicyDefinition extends cdktf.TerraformResource {
   }
 
   // mode - computed: false, optional: false, required: true
-  private _mode: string;
+  private _mode?: string; 
   public get mode() {
     return this.getStringAttribute('mode');
   }
@@ -229,7 +306,7 @@ export class PolicyDefinition extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -242,11 +319,11 @@ export class PolicyDefinition extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: string;
+  private _parameters?: string | undefined; 
   public get parameters() {
     return this.getStringAttribute('parameters');
   }
-  public set parameters(value: string ) {
+  public set parameters(value: string | undefined) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -258,11 +335,11 @@ export class PolicyDefinition extends cdktf.TerraformResource {
   }
 
   // policy_rule - computed: false, optional: true, required: false
-  private _policyRule?: string;
+  private _policyRule?: string | undefined; 
   public get policyRule() {
     return this.getStringAttribute('policy_rule');
   }
-  public set policyRule(value: string ) {
+  public set policyRule(value: string | undefined) {
     this._policyRule = value;
   }
   public resetPolicyRule() {
@@ -274,7 +351,7 @@ export class PolicyDefinition extends cdktf.TerraformResource {
   }
 
   // policy_type - computed: false, optional: false, required: true
-  private _policyType: string;
+  private _policyType?: string; 
   public get policyType() {
     return this.getStringAttribute('policy_type');
   }
@@ -287,11 +364,12 @@ export class PolicyDefinition extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: PolicyDefinitionTimeouts;
+  private _timeouts?: PolicyDefinitionTimeouts | undefined; 
+  private __timeoutsOutput = new PolicyDefinitionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: PolicyDefinitionTimeouts ) {
+  public putTimeouts(value: PolicyDefinitionTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

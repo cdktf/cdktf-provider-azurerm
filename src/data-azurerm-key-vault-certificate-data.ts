@@ -33,13 +33,42 @@ export interface DataAzurermKeyVaultCertificateDataTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermKeyVaultCertificateDataTimeoutsToTerraform(struct?: DataAzurermKeyVaultCertificateDataTimeouts): any {
+function dataAzurermKeyVaultCertificateDataTimeoutsToTerraform(struct?: DataAzurermKeyVaultCertificateDataTimeoutsOutputReference | DataAzurermKeyVaultCertificateDataTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermKeyVaultCertificateDataTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_certificate_data.html azurerm_key_vault_certificate_data}
@@ -109,7 +138,7 @@ export class DataAzurermKeyVaultCertificateData extends cdktf.TerraformDataSourc
   }
 
   // key_vault_id - computed: false, optional: false, required: true
-  private _keyVaultId: string;
+  private _keyVaultId?: string; 
   public get keyVaultId() {
     return this.getStringAttribute('key_vault_id');
   }
@@ -122,7 +151,7 @@ export class DataAzurermKeyVaultCertificateData extends cdktf.TerraformDataSourc
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -150,11 +179,11 @@ export class DataAzurermKeyVaultCertificateData extends cdktf.TerraformDataSourc
   }
 
   // version - computed: true, optional: true, required: false
-  private _version?: string;
+  private _version?: string | undefined; 
   public get version() {
     return this.getStringAttribute('version');
   }
-  public set version(value: string) {
+  public set version(value: string | undefined) {
     this._version = value;
   }
   public resetVersion() {
@@ -166,11 +195,12 @@ export class DataAzurermKeyVaultCertificateData extends cdktf.TerraformDataSourc
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermKeyVaultCertificateDataTimeouts;
+  private _timeouts?: DataAzurermKeyVaultCertificateDataTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermKeyVaultCertificateDataTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermKeyVaultCertificateDataTimeouts ) {
+  public putTimeouts(value: DataAzurermKeyVaultCertificateDataTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

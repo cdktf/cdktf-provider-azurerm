@@ -44,13 +44,13 @@ export interface LogicAppIntegrationAccountAgreementConfig extends cdktf.Terrafo
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#guest_identity LogicAppIntegrationAccountAgreement#guest_identity}
   */
-  readonly guestIdentity: LogicAppIntegrationAccountAgreementGuestIdentity[];
+  readonly guestIdentity: LogicAppIntegrationAccountAgreementGuestIdentity;
   /**
   * host_identity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#host_identity LogicAppIntegrationAccountAgreement#host_identity}
   */
-  readonly hostIdentity: LogicAppIntegrationAccountAgreementHostIdentity[];
+  readonly hostIdentity: LogicAppIntegrationAccountAgreementHostIdentity;
   /**
   * timeouts block
   * 
@@ -69,14 +69,53 @@ export interface LogicAppIntegrationAccountAgreementGuestIdentity {
   readonly value: string;
 }
 
-function logicAppIntegrationAccountAgreementGuestIdentityToTerraform(struct?: LogicAppIntegrationAccountAgreementGuestIdentity): any {
+function logicAppIntegrationAccountAgreementGuestIdentityToTerraform(struct?: LogicAppIntegrationAccountAgreementGuestIdentityOutputReference | LogicAppIntegrationAccountAgreementGuestIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     qualifier: cdktf.stringToTerraform(struct!.qualifier),
     value: cdktf.stringToTerraform(struct!.value),
   }
 }
 
+export class LogicAppIntegrationAccountAgreementGuestIdentityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // qualifier - computed: false, optional: false, required: true
+  private _qualifier?: string; 
+  public get qualifier() {
+    return this.getStringAttribute('qualifier');
+  }
+  public set qualifier(value: string) {
+    this._qualifier = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get qualifierInput() {
+    return this._qualifier
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value
+  }
+}
 export interface LogicAppIntegrationAccountAgreementHostIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#qualifier LogicAppIntegrationAccountAgreement#qualifier}
@@ -88,14 +127,53 @@ export interface LogicAppIntegrationAccountAgreementHostIdentity {
   readonly value: string;
 }
 
-function logicAppIntegrationAccountAgreementHostIdentityToTerraform(struct?: LogicAppIntegrationAccountAgreementHostIdentity): any {
+function logicAppIntegrationAccountAgreementHostIdentityToTerraform(struct?: LogicAppIntegrationAccountAgreementHostIdentityOutputReference | LogicAppIntegrationAccountAgreementHostIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     qualifier: cdktf.stringToTerraform(struct!.qualifier),
     value: cdktf.stringToTerraform(struct!.value),
   }
 }
 
+export class LogicAppIntegrationAccountAgreementHostIdentityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // qualifier - computed: false, optional: false, required: true
+  private _qualifier?: string; 
+  public get qualifier() {
+    return this.getStringAttribute('qualifier');
+  }
+  public set qualifier(value: string) {
+    this._qualifier = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get qualifierInput() {
+    return this._qualifier
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value
+  }
+}
 export interface LogicAppIntegrationAccountAgreementTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#create LogicAppIntegrationAccountAgreement#create}
@@ -115,8 +193,11 @@ export interface LogicAppIntegrationAccountAgreementTimeouts {
   readonly update?: string;
 }
 
-function logicAppIntegrationAccountAgreementTimeoutsToTerraform(struct?: LogicAppIntegrationAccountAgreementTimeouts): any {
+function logicAppIntegrationAccountAgreementTimeoutsToTerraform(struct?: LogicAppIntegrationAccountAgreementTimeoutsOutputReference | LogicAppIntegrationAccountAgreementTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -125,6 +206,80 @@ function logicAppIntegrationAccountAgreementTimeoutsToTerraform(struct?: LogicAp
   }
 }
 
+export class LogicAppIntegrationAccountAgreementTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html azurerm_logic_app_integration_account_agreement}
@@ -176,7 +331,7 @@ export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource
   // ==========
 
   // agreement_type - computed: false, optional: false, required: true
-  private _agreementType: string;
+  private _agreementType?: string; 
   public get agreementType() {
     return this.getStringAttribute('agreement_type');
   }
@@ -189,7 +344,7 @@ export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource
   }
 
   // content - computed: false, optional: false, required: true
-  private _content: string;
+  private _content?: string; 
   public get content() {
     return this.getStringAttribute('content');
   }
@@ -202,7 +357,7 @@ export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource
   }
 
   // guest_partner_name - computed: false, optional: false, required: true
-  private _guestPartnerName: string;
+  private _guestPartnerName?: string; 
   public get guestPartnerName() {
     return this.getStringAttribute('guest_partner_name');
   }
@@ -215,7 +370,7 @@ export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource
   }
 
   // host_partner_name - computed: false, optional: false, required: true
-  private _hostPartnerName: string;
+  private _hostPartnerName?: string; 
   public get hostPartnerName() {
     return this.getStringAttribute('host_partner_name');
   }
@@ -233,7 +388,7 @@ export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource
   }
 
   // integration_account_name - computed: false, optional: false, required: true
-  private _integrationAccountName: string;
+  private _integrationAccountName?: string; 
   public get integrationAccountName() {
     return this.getStringAttribute('integration_account_name');
   }
@@ -246,11 +401,12 @@ export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable;
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get metadata() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -262,7 +418,7 @@ export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -275,7 +431,7 @@ export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -288,11 +444,12 @@ export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource
   }
 
   // guest_identity - computed: false, optional: false, required: true
-  private _guestIdentity: LogicAppIntegrationAccountAgreementGuestIdentity[];
+  private _guestIdentity?: LogicAppIntegrationAccountAgreementGuestIdentity; 
+  private __guestIdentityOutput = new LogicAppIntegrationAccountAgreementGuestIdentityOutputReference(this as any, "guest_identity", true);
   public get guestIdentity() {
-    return this.interpolationForAttribute('guest_identity') as any;
+    return this.__guestIdentityOutput;
   }
-  public set guestIdentity(value: LogicAppIntegrationAccountAgreementGuestIdentity[]) {
+  public putGuestIdentity(value: LogicAppIntegrationAccountAgreementGuestIdentity) {
     this._guestIdentity = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -301,11 +458,12 @@ export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource
   }
 
   // host_identity - computed: false, optional: false, required: true
-  private _hostIdentity: LogicAppIntegrationAccountAgreementHostIdentity[];
+  private _hostIdentity?: LogicAppIntegrationAccountAgreementHostIdentity; 
+  private __hostIdentityOutput = new LogicAppIntegrationAccountAgreementHostIdentityOutputReference(this as any, "host_identity", true);
   public get hostIdentity() {
-    return this.interpolationForAttribute('host_identity') as any;
+    return this.__hostIdentityOutput;
   }
-  public set hostIdentity(value: LogicAppIntegrationAccountAgreementHostIdentity[]) {
+  public putHostIdentity(value: LogicAppIntegrationAccountAgreementHostIdentity) {
     this._hostIdentity = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -314,11 +472,12 @@ export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LogicAppIntegrationAccountAgreementTimeouts;
+  private _timeouts?: LogicAppIntegrationAccountAgreementTimeouts | undefined; 
+  private __timeoutsOutput = new LogicAppIntegrationAccountAgreementTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: LogicAppIntegrationAccountAgreementTimeouts ) {
+  public putTimeouts(value: LogicAppIntegrationAccountAgreementTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -343,8 +502,8 @@ export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource
       metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      guest_identity: cdktf.listMapper(logicAppIntegrationAccountAgreementGuestIdentityToTerraform)(this._guestIdentity),
-      host_identity: cdktf.listMapper(logicAppIntegrationAccountAgreementHostIdentityToTerraform)(this._hostIdentity),
+      guest_identity: logicAppIntegrationAccountAgreementGuestIdentityToTerraform(this._guestIdentity),
+      host_identity: logicAppIntegrationAccountAgreementHostIdentityToTerraform(this._hostIdentity),
       timeouts: logicAppIntegrationAccountAgreementTimeoutsToTerraform(this._timeouts),
     };
   }

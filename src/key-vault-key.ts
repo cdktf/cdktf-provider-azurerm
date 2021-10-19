@@ -69,8 +69,11 @@ export interface KeyVaultKeyTimeouts {
   readonly update?: string;
 }
 
-function keyVaultKeyTimeoutsToTerraform(struct?: KeyVaultKeyTimeouts): any {
+function keyVaultKeyTimeoutsToTerraform(struct?: KeyVaultKeyTimeoutsOutputReference | KeyVaultKeyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -79,6 +82,80 @@ function keyVaultKeyTimeoutsToTerraform(struct?: KeyVaultKeyTimeouts): any {
   }
 }
 
+export class KeyVaultKeyTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_key.html azurerm_key_vault_key}
@@ -129,11 +206,11 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   // ==========
 
   // curve - computed: true, optional: true, required: false
-  private _curve?: string;
+  private _curve?: string | undefined; 
   public get curve() {
     return this.getStringAttribute('curve');
   }
-  public set curve(value: string) {
+  public set curve(value: string | undefined) {
     this._curve = value;
   }
   public resetCurve() {
@@ -150,11 +227,11 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
 
   // expiration_date - computed: false, optional: true, required: false
-  private _expirationDate?: string;
+  private _expirationDate?: string | undefined; 
   public get expirationDate() {
     return this.getStringAttribute('expiration_date');
   }
-  public set expirationDate(value: string ) {
+  public set expirationDate(value: string | undefined) {
     this._expirationDate = value;
   }
   public resetExpirationDate() {
@@ -171,7 +248,7 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
 
   // key_opts - computed: false, optional: false, required: true
-  private _keyOpts: string[];
+  private _keyOpts?: string[]; 
   public get keyOpts() {
     return this.getListAttribute('key_opts');
   }
@@ -184,11 +261,11 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
 
   // key_size - computed: false, optional: true, required: false
-  private _keySize?: number;
+  private _keySize?: number | undefined; 
   public get keySize() {
     return this.getNumberAttribute('key_size');
   }
-  public set keySize(value: number ) {
+  public set keySize(value: number | undefined) {
     this._keySize = value;
   }
   public resetKeySize() {
@@ -200,7 +277,7 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
 
   // key_type - computed: false, optional: false, required: true
-  private _keyType: string;
+  private _keyType?: string; 
   public get keyType() {
     return this.getStringAttribute('key_type');
   }
@@ -213,7 +290,7 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
 
   // key_vault_id - computed: false, optional: false, required: true
-  private _keyVaultId: string;
+  private _keyVaultId?: string; 
   public get keyVaultId() {
     return this.getStringAttribute('key_vault_id');
   }
@@ -231,7 +308,7 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -244,11 +321,11 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
 
   // not_before_date - computed: false, optional: true, required: false
-  private _notBeforeDate?: string;
+  private _notBeforeDate?: string | undefined; 
   public get notBeforeDate() {
     return this.getStringAttribute('not_before_date');
   }
-  public set notBeforeDate(value: string ) {
+  public set notBeforeDate(value: string | undefined) {
     this._notBeforeDate = value;
   }
   public resetNotBeforeDate() {
@@ -260,11 +337,12 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -296,11 +374,12 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: KeyVaultKeyTimeouts;
+  private _timeouts?: KeyVaultKeyTimeouts | undefined; 
+  private __timeoutsOutput = new KeyVaultKeyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: KeyVaultKeyTimeouts ) {
+  public putTimeouts(value: KeyVaultKeyTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

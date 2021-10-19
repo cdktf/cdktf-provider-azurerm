@@ -53,8 +53,11 @@ export interface StorageEncryptionScopeTimeouts {
   readonly update?: string;
 }
 
-function storageEncryptionScopeTimeoutsToTerraform(struct?: StorageEncryptionScopeTimeouts): any {
+function storageEncryptionScopeTimeoutsToTerraform(struct?: StorageEncryptionScopeTimeoutsOutputReference | StorageEncryptionScopeTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -63,6 +66,80 @@ function storageEncryptionScopeTimeoutsToTerraform(struct?: StorageEncryptionSco
   }
 }
 
+export class StorageEncryptionScopeTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope.html azurerm_storage_encryption_scope}
@@ -114,11 +191,11 @@ export class StorageEncryptionScope extends cdktf.TerraformResource {
   }
 
   // infrastructure_encryption_required - computed: false, optional: true, required: false
-  private _infrastructureEncryptionRequired?: boolean | cdktf.IResolvable;
+  private _infrastructureEncryptionRequired?: boolean | cdktf.IResolvable | undefined; 
   public get infrastructureEncryptionRequired() {
-    return this.getBooleanAttribute('infrastructure_encryption_required');
+    return this.getBooleanAttribute('infrastructure_encryption_required') as any;
   }
-  public set infrastructureEncryptionRequired(value: boolean | cdktf.IResolvable ) {
+  public set infrastructureEncryptionRequired(value: boolean | cdktf.IResolvable | undefined) {
     this._infrastructureEncryptionRequired = value;
   }
   public resetInfrastructureEncryptionRequired() {
@@ -130,11 +207,11 @@ export class StorageEncryptionScope extends cdktf.TerraformResource {
   }
 
   // key_vault_key_id - computed: false, optional: true, required: false
-  private _keyVaultKeyId?: string;
+  private _keyVaultKeyId?: string | undefined; 
   public get keyVaultKeyId() {
     return this.getStringAttribute('key_vault_key_id');
   }
-  public set keyVaultKeyId(value: string ) {
+  public set keyVaultKeyId(value: string | undefined) {
     this._keyVaultKeyId = value;
   }
   public resetKeyVaultKeyId() {
@@ -146,7 +223,7 @@ export class StorageEncryptionScope extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -159,7 +236,7 @@ export class StorageEncryptionScope extends cdktf.TerraformResource {
   }
 
   // source - computed: false, optional: false, required: true
-  private _source: string;
+  private _source?: string; 
   public get source() {
     return this.getStringAttribute('source');
   }
@@ -172,7 +249,7 @@ export class StorageEncryptionScope extends cdktf.TerraformResource {
   }
 
   // storage_account_id - computed: false, optional: false, required: true
-  private _storageAccountId: string;
+  private _storageAccountId?: string; 
   public get storageAccountId() {
     return this.getStringAttribute('storage_account_id');
   }
@@ -185,11 +262,12 @@ export class StorageEncryptionScope extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: StorageEncryptionScopeTimeouts;
+  private _timeouts?: StorageEncryptionScopeTimeouts | undefined; 
+  private __timeoutsOutput = new StorageEncryptionScopeTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: StorageEncryptionScopeTimeouts ) {
+  public putTimeouts(value: StorageEncryptionScopeTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

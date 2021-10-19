@@ -38,7 +38,7 @@ export interface LighthouseDefinitionConfig extends cdktf.TerraformMetaArguments
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html#plan LighthouseDefinition#plan}
   */
-  readonly plan?: LighthouseDefinitionPlan[];
+  readonly plan?: LighthouseDefinitionPlan;
   /**
   * timeouts block
   * 
@@ -67,6 +67,9 @@ export interface LighthouseDefinitionAuthorization {
 
 function lighthouseDefinitionAuthorizationToTerraform(struct?: LighthouseDefinitionAuthorization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     delegated_role_definition_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.delegatedRoleDefinitionIds),
     principal_display_name: cdktf.stringToTerraform(struct!.principalDisplayName),
@@ -94,8 +97,11 @@ export interface LighthouseDefinitionPlan {
   readonly version: string;
 }
 
-function lighthouseDefinitionPlanToTerraform(struct?: LighthouseDefinitionPlan): any {
+function lighthouseDefinitionPlanToTerraform(struct?: LighthouseDefinitionPlanOutputReference | LighthouseDefinitionPlan): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     product: cdktf.stringToTerraform(struct!.product),
@@ -104,6 +110,68 @@ function lighthouseDefinitionPlanToTerraform(struct?: LighthouseDefinitionPlan):
   }
 }
 
+export class LighthouseDefinitionPlanOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // product - computed: false, optional: false, required: true
+  private _product?: string; 
+  public get product() {
+    return this.getStringAttribute('product');
+  }
+  public set product(value: string) {
+    this._product = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get productInput() {
+    return this._product
+  }
+
+  // publisher - computed: false, optional: false, required: true
+  private _publisher?: string; 
+  public get publisher() {
+    return this.getStringAttribute('publisher');
+  }
+  public set publisher(value: string) {
+    this._publisher = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publisherInput() {
+    return this._publisher
+  }
+
+  // version - computed: false, optional: false, required: true
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version
+  }
+}
 export interface LighthouseDefinitionTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html#create LighthouseDefinition#create}
@@ -123,8 +191,11 @@ export interface LighthouseDefinitionTimeouts {
   readonly update?: string;
 }
 
-function lighthouseDefinitionTimeoutsToTerraform(struct?: LighthouseDefinitionTimeouts): any {
+function lighthouseDefinitionTimeoutsToTerraform(struct?: LighthouseDefinitionTimeoutsOutputReference | LighthouseDefinitionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -133,6 +204,80 @@ function lighthouseDefinitionTimeoutsToTerraform(struct?: LighthouseDefinitionTi
   }
 }
 
+export class LighthouseDefinitionTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_definition.html azurerm_lighthouse_definition}
@@ -181,11 +326,11 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -202,11 +347,11 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   }
 
   // lighthouse_definition_id - computed: true, optional: true, required: false
-  private _lighthouseDefinitionId?: string;
+  private _lighthouseDefinitionId?: string | undefined; 
   public get lighthouseDefinitionId() {
     return this.getStringAttribute('lighthouse_definition_id');
   }
-  public set lighthouseDefinitionId(value: string) {
+  public set lighthouseDefinitionId(value: string | undefined) {
     this._lighthouseDefinitionId = value;
   }
   public resetLighthouseDefinitionId() {
@@ -218,7 +363,7 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   }
 
   // managing_tenant_id - computed: false, optional: false, required: true
-  private _managingTenantId: string;
+  private _managingTenantId?: string; 
   public get managingTenantId() {
     return this.getStringAttribute('managing_tenant_id');
   }
@@ -231,7 +376,7 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -244,7 +389,7 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   }
 
   // scope - computed: false, optional: false, required: true
-  private _scope: string;
+  private _scope?: string; 
   public get scope() {
     return this.getStringAttribute('scope');
   }
@@ -257,8 +402,9 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   }
 
   // authorization - computed: false, optional: false, required: true
-  private _authorization: LighthouseDefinitionAuthorization[];
+  private _authorization?: LighthouseDefinitionAuthorization[]; 
   public get authorization() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('authorization') as any;
   }
   public set authorization(value: LighthouseDefinitionAuthorization[]) {
@@ -270,11 +416,12 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   }
 
   // plan - computed: false, optional: true, required: false
-  private _plan?: LighthouseDefinitionPlan[];
+  private _plan?: LighthouseDefinitionPlan | undefined; 
+  private __planOutput = new LighthouseDefinitionPlanOutputReference(this as any, "plan", true);
   public get plan() {
-    return this.interpolationForAttribute('plan') as any;
+    return this.__planOutput;
   }
-  public set plan(value: LighthouseDefinitionPlan[] ) {
+  public putPlan(value: LighthouseDefinitionPlan | undefined) {
     this._plan = value;
   }
   public resetPlan() {
@@ -286,11 +433,12 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LighthouseDefinitionTimeouts;
+  private _timeouts?: LighthouseDefinitionTimeouts | undefined; 
+  private __timeoutsOutput = new LighthouseDefinitionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: LighthouseDefinitionTimeouts ) {
+  public putTimeouts(value: LighthouseDefinitionTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -313,7 +461,7 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       scope: cdktf.stringToTerraform(this._scope),
       authorization: cdktf.listMapper(lighthouseDefinitionAuthorizationToTerraform)(this._authorization),
-      plan: cdktf.listMapper(lighthouseDefinitionPlanToTerraform)(this._plan),
+      plan: lighthouseDefinitionPlanToTerraform(this._plan),
       timeouts: lighthouseDefinitionTimeoutsToTerraform(this._timeouts),
     };
   }

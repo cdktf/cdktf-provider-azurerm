@@ -61,6 +61,9 @@ export interface StorageAccountNetworkRulesPrivateLinkAccessA {
 
 function storageAccountNetworkRulesPrivateLinkAccessAToTerraform(struct?: StorageAccountNetworkRulesPrivateLinkAccessA): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     endpoint_resource_id: cdktf.stringToTerraform(struct!.endpointResourceId),
     endpoint_tenant_id: cdktf.stringToTerraform(struct!.endpointTenantId),
@@ -86,8 +89,11 @@ export interface StorageAccountNetworkRulesTimeouts {
   readonly update?: string;
 }
 
-function storageAccountNetworkRulesTimeoutsToTerraform(struct?: StorageAccountNetworkRulesTimeouts): any {
+function storageAccountNetworkRulesTimeoutsToTerraform(struct?: StorageAccountNetworkRulesTimeoutsOutputReference | StorageAccountNetworkRulesTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -96,6 +102,80 @@ function storageAccountNetworkRulesTimeoutsToTerraform(struct?: StorageAccountNe
   }
 }
 
+export class StorageAccountNetworkRulesTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html azurerm_storage_account_network_rules}
@@ -145,11 +225,11 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   // ==========
 
   // bypass - computed: true, optional: true, required: false
-  private _bypass?: string[];
+  private _bypass?: string[] | undefined; 
   public get bypass() {
     return this.getListAttribute('bypass');
   }
-  public set bypass(value: string[]) {
+  public set bypass(value: string[] | undefined) {
     this._bypass = value;
   }
   public resetBypass() {
@@ -161,7 +241,7 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   }
 
   // default_action - computed: false, optional: false, required: true
-  private _defaultAction: string;
+  private _defaultAction?: string; 
   public get defaultAction() {
     return this.getStringAttribute('default_action');
   }
@@ -179,11 +259,11 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   }
 
   // ip_rules - computed: true, optional: true, required: false
-  private _ipRules?: string[];
+  private _ipRules?: string[] | undefined; 
   public get ipRules() {
     return this.getListAttribute('ip_rules');
   }
-  public set ipRules(value: string[]) {
+  public set ipRules(value: string[] | undefined) {
     this._ipRules = value;
   }
   public resetIpRules() {
@@ -195,11 +275,11 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: true, optional: true, required: false
-  private _resourceGroupName?: string;
+  private _resourceGroupName?: string | undefined; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
-  public set resourceGroupName(value: string) {
+  public set resourceGroupName(value: string | undefined) {
     this._resourceGroupName = value;
   }
   public resetResourceGroupName() {
@@ -211,11 +291,11 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   }
 
   // storage_account_id - computed: true, optional: true, required: false
-  private _storageAccountId?: string;
+  private _storageAccountId?: string | undefined; 
   public get storageAccountId() {
     return this.getStringAttribute('storage_account_id');
   }
-  public set storageAccountId(value: string) {
+  public set storageAccountId(value: string | undefined) {
     this._storageAccountId = value;
   }
   public resetStorageAccountId() {
@@ -227,11 +307,11 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   }
 
   // storage_account_name - computed: true, optional: true, required: false
-  private _storageAccountName?: string;
+  private _storageAccountName?: string | undefined; 
   public get storageAccountName() {
     return this.getStringAttribute('storage_account_name');
   }
-  public set storageAccountName(value: string) {
+  public set storageAccountName(value: string | undefined) {
     this._storageAccountName = value;
   }
   public resetStorageAccountName() {
@@ -243,11 +323,11 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   }
 
   // virtual_network_subnet_ids - computed: true, optional: true, required: false
-  private _virtualNetworkSubnetIds?: string[];
+  private _virtualNetworkSubnetIds?: string[] | undefined; 
   public get virtualNetworkSubnetIds() {
     return this.getListAttribute('virtual_network_subnet_ids');
   }
-  public set virtualNetworkSubnetIds(value: string[]) {
+  public set virtualNetworkSubnetIds(value: string[] | undefined) {
     this._virtualNetworkSubnetIds = value;
   }
   public resetVirtualNetworkSubnetIds() {
@@ -259,11 +339,12 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   }
 
   // private_link_access - computed: false, optional: true, required: false
-  private _privateLinkAccess?: StorageAccountNetworkRulesPrivateLinkAccessA[];
+  private _privateLinkAccess?: StorageAccountNetworkRulesPrivateLinkAccessA[] | undefined; 
   public get privateLinkAccess() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('private_link_access') as any;
   }
-  public set privateLinkAccess(value: StorageAccountNetworkRulesPrivateLinkAccessA[] ) {
+  public set privateLinkAccess(value: StorageAccountNetworkRulesPrivateLinkAccessA[] | undefined) {
     this._privateLinkAccess = value;
   }
   public resetPrivateLinkAccess() {
@@ -275,11 +356,12 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: StorageAccountNetworkRulesTimeouts;
+  private _timeouts?: StorageAccountNetworkRulesTimeouts | undefined; 
+  private __timeoutsOutput = new StorageAccountNetworkRulesTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: StorageAccountNetworkRulesTimeouts ) {
+  public putTimeouts(value: StorageAccountNetworkRulesTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

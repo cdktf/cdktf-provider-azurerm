@@ -69,8 +69,11 @@ export interface VirtualWanTimeouts {
   readonly update?: string;
 }
 
-function virtualWanTimeoutsToTerraform(struct?: VirtualWanTimeouts): any {
+function virtualWanTimeoutsToTerraform(struct?: VirtualWanTimeoutsOutputReference | VirtualWanTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -79,6 +82,80 @@ function virtualWanTimeoutsToTerraform(struct?: VirtualWanTimeouts): any {
   }
 }
 
+export class VirtualWanTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_wan.html azurerm_virtual_wan}
@@ -129,11 +206,11 @@ export class VirtualWan extends cdktf.TerraformResource {
   // ==========
 
   // allow_branch_to_branch_traffic - computed: false, optional: true, required: false
-  private _allowBranchToBranchTraffic?: boolean | cdktf.IResolvable;
+  private _allowBranchToBranchTraffic?: boolean | cdktf.IResolvable | undefined; 
   public get allowBranchToBranchTraffic() {
-    return this.getBooleanAttribute('allow_branch_to_branch_traffic');
+    return this.getBooleanAttribute('allow_branch_to_branch_traffic') as any;
   }
-  public set allowBranchToBranchTraffic(value: boolean | cdktf.IResolvable ) {
+  public set allowBranchToBranchTraffic(value: boolean | cdktf.IResolvable | undefined) {
     this._allowBranchToBranchTraffic = value;
   }
   public resetAllowBranchToBranchTraffic() {
@@ -145,11 +222,11 @@ export class VirtualWan extends cdktf.TerraformResource {
   }
 
   // allow_vnet_to_vnet_traffic - computed: false, optional: true, required: false
-  private _allowVnetToVnetTraffic?: boolean | cdktf.IResolvable;
+  private _allowVnetToVnetTraffic?: boolean | cdktf.IResolvable | undefined; 
   public get allowVnetToVnetTraffic() {
-    return this.getBooleanAttribute('allow_vnet_to_vnet_traffic');
+    return this.getBooleanAttribute('allow_vnet_to_vnet_traffic') as any;
   }
-  public set allowVnetToVnetTraffic(value: boolean | cdktf.IResolvable ) {
+  public set allowVnetToVnetTraffic(value: boolean | cdktf.IResolvable | undefined) {
     this._allowVnetToVnetTraffic = value;
   }
   public resetAllowVnetToVnetTraffic() {
@@ -161,11 +238,11 @@ export class VirtualWan extends cdktf.TerraformResource {
   }
 
   // disable_vpn_encryption - computed: false, optional: true, required: false
-  private _disableVpnEncryption?: boolean | cdktf.IResolvable;
+  private _disableVpnEncryption?: boolean | cdktf.IResolvable | undefined; 
   public get disableVpnEncryption() {
-    return this.getBooleanAttribute('disable_vpn_encryption');
+    return this.getBooleanAttribute('disable_vpn_encryption') as any;
   }
-  public set disableVpnEncryption(value: boolean | cdktf.IResolvable ) {
+  public set disableVpnEncryption(value: boolean | cdktf.IResolvable | undefined) {
     this._disableVpnEncryption = value;
   }
   public resetDisableVpnEncryption() {
@@ -182,7 +259,7 @@ export class VirtualWan extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -195,7 +272,7 @@ export class VirtualWan extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -208,11 +285,11 @@ export class VirtualWan extends cdktf.TerraformResource {
   }
 
   // office365_local_breakout_category - computed: false, optional: true, required: false
-  private _office365LocalBreakoutCategory?: string;
+  private _office365LocalBreakoutCategory?: string | undefined; 
   public get office365LocalBreakoutCategory() {
     return this.getStringAttribute('office365_local_breakout_category');
   }
-  public set office365LocalBreakoutCategory(value: string ) {
+  public set office365LocalBreakoutCategory(value: string | undefined) {
     this._office365LocalBreakoutCategory = value;
   }
   public resetOffice365LocalBreakoutCategory() {
@@ -224,7 +301,7 @@ export class VirtualWan extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -237,11 +314,12 @@ export class VirtualWan extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -253,11 +331,11 @@ export class VirtualWan extends cdktf.TerraformResource {
   }
 
   // type - computed: false, optional: true, required: false
-  private _type?: string;
+  private _type?: string | undefined; 
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string ) {
+  public set type(value: string | undefined) {
     this._type = value;
   }
   public resetType() {
@@ -269,11 +347,12 @@ export class VirtualWan extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VirtualWanTimeouts;
+  private _timeouts?: VirtualWanTimeouts | undefined; 
+  private __timeoutsOutput = new VirtualWanTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: VirtualWanTimeouts ) {
+  public putTimeouts(value: VirtualWanTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

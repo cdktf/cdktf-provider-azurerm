@@ -57,8 +57,11 @@ export interface VirtualHubIpTimeouts {
   readonly update?: string;
 }
 
-function virtualHubIpTimeoutsToTerraform(struct?: VirtualHubIpTimeouts): any {
+function virtualHubIpTimeoutsToTerraform(struct?: VirtualHubIpTimeoutsOutputReference | VirtualHubIpTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -67,6 +70,80 @@ function virtualHubIpTimeoutsToTerraform(struct?: VirtualHubIpTimeouts): any {
   }
 }
 
+export class VirtualHubIpTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_ip.html azurerm_virtual_hub_ip}
@@ -119,7 +196,7 @@ export class VirtualHubIp extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -132,11 +209,11 @@ export class VirtualHubIp extends cdktf.TerraformResource {
   }
 
   // private_ip_address - computed: false, optional: true, required: false
-  private _privateIpAddress?: string;
+  private _privateIpAddress?: string | undefined; 
   public get privateIpAddress() {
     return this.getStringAttribute('private_ip_address');
   }
-  public set privateIpAddress(value: string ) {
+  public set privateIpAddress(value: string | undefined) {
     this._privateIpAddress = value;
   }
   public resetPrivateIpAddress() {
@@ -148,11 +225,11 @@ export class VirtualHubIp extends cdktf.TerraformResource {
   }
 
   // private_ip_allocation_method - computed: false, optional: true, required: false
-  private _privateIpAllocationMethod?: string;
+  private _privateIpAllocationMethod?: string | undefined; 
   public get privateIpAllocationMethod() {
     return this.getStringAttribute('private_ip_allocation_method');
   }
-  public set privateIpAllocationMethod(value: string ) {
+  public set privateIpAllocationMethod(value: string | undefined) {
     this._privateIpAllocationMethod = value;
   }
   public resetPrivateIpAllocationMethod() {
@@ -164,11 +241,11 @@ export class VirtualHubIp extends cdktf.TerraformResource {
   }
 
   // public_ip_address_id - computed: false, optional: true, required: false
-  private _publicIpAddressId?: string;
+  private _publicIpAddressId?: string | undefined; 
   public get publicIpAddressId() {
     return this.getStringAttribute('public_ip_address_id');
   }
-  public set publicIpAddressId(value: string ) {
+  public set publicIpAddressId(value: string | undefined) {
     this._publicIpAddressId = value;
   }
   public resetPublicIpAddressId() {
@@ -180,7 +257,7 @@ export class VirtualHubIp extends cdktf.TerraformResource {
   }
 
   // subnet_id - computed: false, optional: false, required: true
-  private _subnetId: string;
+  private _subnetId?: string; 
   public get subnetId() {
     return this.getStringAttribute('subnet_id');
   }
@@ -193,7 +270,7 @@ export class VirtualHubIp extends cdktf.TerraformResource {
   }
 
   // virtual_hub_id - computed: false, optional: false, required: true
-  private _virtualHubId: string;
+  private _virtualHubId?: string; 
   public get virtualHubId() {
     return this.getStringAttribute('virtual_hub_id');
   }
@@ -206,11 +283,12 @@ export class VirtualHubIp extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VirtualHubIpTimeouts;
+  private _timeouts?: VirtualHubIpTimeouts | undefined; 
+  private __timeoutsOutput = new VirtualHubIpTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: VirtualHubIpTimeouts ) {
+  public putTimeouts(value: VirtualHubIpTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

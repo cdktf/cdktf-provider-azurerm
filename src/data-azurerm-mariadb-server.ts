@@ -51,13 +51,42 @@ export interface DataAzurermMariadbServerTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermMariadbServerTimeoutsToTerraform(struct?: DataAzurermMariadbServerTimeouts): any {
+function dataAzurermMariadbServerTimeoutsToTerraform(struct?: DataAzurermMariadbServerTimeoutsOutputReference | DataAzurermMariadbServerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermMariadbServerTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/mariadb_server.html azurerm_mariadb_server}
@@ -121,7 +150,7 @@ export class DataAzurermMariadbServer extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -134,7 +163,7 @@ export class DataAzurermMariadbServer extends cdktf.TerraformDataSource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -172,11 +201,12 @@ export class DataAzurermMariadbServer extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermMariadbServerTimeouts;
+  private _timeouts?: DataAzurermMariadbServerTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermMariadbServerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermMariadbServerTimeouts ) {
+  public putTimeouts(value: DataAzurermMariadbServerTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

@@ -53,8 +53,11 @@ export interface DataShareDatasetDataLakeGen2Timeouts {
   readonly read?: string;
 }
 
-function dataShareDatasetDataLakeGen2TimeoutsToTerraform(struct?: DataShareDatasetDataLakeGen2Timeouts): any {
+function dataShareDatasetDataLakeGen2TimeoutsToTerraform(struct?: DataShareDatasetDataLakeGen2TimeoutsOutputReference | DataShareDatasetDataLakeGen2Timeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -62,6 +65,64 @@ function dataShareDatasetDataLakeGen2TimeoutsToTerraform(struct?: DataShareDatas
   }
 }
 
+export class DataShareDatasetDataLakeGen2TimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_data_lake_gen2.html azurerm_data_share_dataset_data_lake_gen2}
@@ -114,11 +175,11 @@ export class DataShareDatasetDataLakeGen2 extends cdktf.TerraformResource {
   }
 
   // file_path - computed: false, optional: true, required: false
-  private _filePath?: string;
+  private _filePath?: string | undefined; 
   public get filePath() {
     return this.getStringAttribute('file_path');
   }
-  public set filePath(value: string ) {
+  public set filePath(value: string | undefined) {
     this._filePath = value;
   }
   public resetFilePath() {
@@ -130,7 +191,7 @@ export class DataShareDatasetDataLakeGen2 extends cdktf.TerraformResource {
   }
 
   // file_system_name - computed: false, optional: false, required: true
-  private _fileSystemName: string;
+  private _fileSystemName?: string; 
   public get fileSystemName() {
     return this.getStringAttribute('file_system_name');
   }
@@ -143,11 +204,11 @@ export class DataShareDatasetDataLakeGen2 extends cdktf.TerraformResource {
   }
 
   // folder_path - computed: false, optional: true, required: false
-  private _folderPath?: string;
+  private _folderPath?: string | undefined; 
   public get folderPath() {
     return this.getStringAttribute('folder_path');
   }
-  public set folderPath(value: string ) {
+  public set folderPath(value: string | undefined) {
     this._folderPath = value;
   }
   public resetFolderPath() {
@@ -164,7 +225,7 @@ export class DataShareDatasetDataLakeGen2 extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -177,7 +238,7 @@ export class DataShareDatasetDataLakeGen2 extends cdktf.TerraformResource {
   }
 
   // share_id - computed: false, optional: false, required: true
-  private _shareId: string;
+  private _shareId?: string; 
   public get shareId() {
     return this.getStringAttribute('share_id');
   }
@@ -190,7 +251,7 @@ export class DataShareDatasetDataLakeGen2 extends cdktf.TerraformResource {
   }
 
   // storage_account_id - computed: false, optional: false, required: true
-  private _storageAccountId: string;
+  private _storageAccountId?: string; 
   public get storageAccountId() {
     return this.getStringAttribute('storage_account_id');
   }
@@ -203,11 +264,12 @@ export class DataShareDatasetDataLakeGen2 extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataShareDatasetDataLakeGen2Timeouts;
+  private _timeouts?: DataShareDatasetDataLakeGen2Timeouts | undefined; 
+  private __timeoutsOutput = new DataShareDatasetDataLakeGen2TimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataShareDatasetDataLakeGen2Timeouts ) {
+  public putTimeouts(value: DataShareDatasetDataLakeGen2Timeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

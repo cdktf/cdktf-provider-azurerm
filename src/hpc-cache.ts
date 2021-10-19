@@ -52,31 +52,31 @@ export interface HpcCacheConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#default_access_policy HpcCache#default_access_policy}
   */
-  readonly defaultAccessPolicy?: HpcCacheDefaultAccessPolicy[];
+  readonly defaultAccessPolicy?: HpcCacheDefaultAccessPolicy;
   /**
   * directory_active_directory block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#directory_active_directory HpcCache#directory_active_directory}
   */
-  readonly directoryActiveDirectory?: HpcCacheDirectoryActiveDirectory[];
+  readonly directoryActiveDirectory?: HpcCacheDirectoryActiveDirectory;
   /**
   * directory_flat_file block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#directory_flat_file HpcCache#directory_flat_file}
   */
-  readonly directoryFlatFile?: HpcCacheDirectoryFlatFile[];
+  readonly directoryFlatFile?: HpcCacheDirectoryFlatFile;
   /**
   * directory_ldap block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#directory_ldap HpcCache#directory_ldap}
   */
-  readonly directoryLdap?: HpcCacheDirectoryLdap[];
+  readonly directoryLdap?: HpcCacheDirectoryLdap;
   /**
   * dns block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#dns HpcCache#dns}
   */
-  readonly dns?: HpcCacheDns[];
+  readonly dns?: HpcCacheDns;
   /**
   * timeouts block
   * 
@@ -121,6 +121,9 @@ export interface HpcCacheDefaultAccessPolicyAccessRule {
 
 function hpcCacheDefaultAccessPolicyAccessRuleToTerraform(struct?: HpcCacheDefaultAccessPolicyAccessRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     access: cdktf.stringToTerraform(struct!.access),
     anonymous_gid: cdktf.numberToTerraform(struct!.anonymousGid),
@@ -142,13 +145,40 @@ export interface HpcCacheDefaultAccessPolicy {
   readonly accessRule: HpcCacheDefaultAccessPolicyAccessRule[];
 }
 
-function hpcCacheDefaultAccessPolicyToTerraform(struct?: HpcCacheDefaultAccessPolicy): any {
+function hpcCacheDefaultAccessPolicyToTerraform(struct?: HpcCacheDefaultAccessPolicyOutputReference | HpcCacheDefaultAccessPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     access_rule: cdktf.listMapper(hpcCacheDefaultAccessPolicyAccessRuleToTerraform)(struct!.accessRule),
   }
 }
 
+export class HpcCacheDefaultAccessPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // access_rule - computed: false, optional: false, required: true
+  private _accessRule?: HpcCacheDefaultAccessPolicyAccessRule[]; 
+  public get accessRule() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('access_rule') as any;
+  }
+  public set accessRule(value: HpcCacheDefaultAccessPolicyAccessRule[]) {
+    this._accessRule = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accessRuleInput() {
+    return this._accessRule
+  }
+}
 export interface HpcCacheDirectoryActiveDirectory {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#cache_netbios_name HpcCache#cache_netbios_name}
@@ -180,8 +210,11 @@ export interface HpcCacheDirectoryActiveDirectory {
   readonly username: string;
 }
 
-function hpcCacheDirectoryActiveDirectoryToTerraform(struct?: HpcCacheDirectoryActiveDirectory): any {
+function hpcCacheDirectoryActiveDirectoryToTerraform(struct?: HpcCacheDirectoryActiveDirectoryOutputReference | HpcCacheDirectoryActiveDirectory): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     cache_netbios_name: cdktf.stringToTerraform(struct!.cacheNetbiosName),
     dns_primary_ip: cdktf.stringToTerraform(struct!.dnsPrimaryIp),
@@ -193,6 +226,110 @@ function hpcCacheDirectoryActiveDirectoryToTerraform(struct?: HpcCacheDirectoryA
   }
 }
 
+export class HpcCacheDirectoryActiveDirectoryOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cache_netbios_name - computed: false, optional: false, required: true
+  private _cacheNetbiosName?: string; 
+  public get cacheNetbiosName() {
+    return this.getStringAttribute('cache_netbios_name');
+  }
+  public set cacheNetbiosName(value: string) {
+    this._cacheNetbiosName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheNetbiosNameInput() {
+    return this._cacheNetbiosName
+  }
+
+  // dns_primary_ip - computed: false, optional: false, required: true
+  private _dnsPrimaryIp?: string; 
+  public get dnsPrimaryIp() {
+    return this.getStringAttribute('dns_primary_ip');
+  }
+  public set dnsPrimaryIp(value: string) {
+    this._dnsPrimaryIp = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsPrimaryIpInput() {
+    return this._dnsPrimaryIp
+  }
+
+  // dns_secondary_ip - computed: false, optional: true, required: false
+  private _dnsSecondaryIp?: string | undefined; 
+  public get dnsSecondaryIp() {
+    return this.getStringAttribute('dns_secondary_ip');
+  }
+  public set dnsSecondaryIp(value: string | undefined) {
+    this._dnsSecondaryIp = value;
+  }
+  public resetDnsSecondaryIp() {
+    this._dnsSecondaryIp = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsSecondaryIpInput() {
+    return this._dnsSecondaryIp
+  }
+
+  // domain_name - computed: false, optional: false, required: true
+  private _domainName?: string; 
+  public get domainName() {
+    return this.getStringAttribute('domain_name');
+  }
+  public set domainName(value: string) {
+    this._domainName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainNameInput() {
+    return this._domainName
+  }
+
+  // domain_netbios_name - computed: false, optional: false, required: true
+  private _domainNetbiosName?: string; 
+  public get domainNetbiosName() {
+    return this.getStringAttribute('domain_netbios_name');
+  }
+  public set domainNetbiosName(value: string) {
+    this._domainNetbiosName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get domainNetbiosNameInput() {
+    return this._domainNetbiosName
+  }
+
+  // password - computed: false, optional: false, required: true
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password
+  }
+
+  // username - computed: false, optional: false, required: true
+  private _username?: string; 
+  public get username() {
+    return this.getStringAttribute('username');
+  }
+  public set username(value: string) {
+    this._username = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get usernameInput() {
+    return this._username
+  }
+}
 export interface HpcCacheDirectoryFlatFile {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#group_file_uri HpcCache#group_file_uri}
@@ -204,14 +341,53 @@ export interface HpcCacheDirectoryFlatFile {
   readonly passwordFileUri: string;
 }
 
-function hpcCacheDirectoryFlatFileToTerraform(struct?: HpcCacheDirectoryFlatFile): any {
+function hpcCacheDirectoryFlatFileToTerraform(struct?: HpcCacheDirectoryFlatFileOutputReference | HpcCacheDirectoryFlatFile): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     group_file_uri: cdktf.stringToTerraform(struct!.groupFileUri),
     password_file_uri: cdktf.stringToTerraform(struct!.passwordFileUri),
   }
 }
 
+export class HpcCacheDirectoryFlatFileOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // group_file_uri - computed: false, optional: false, required: true
+  private _groupFileUri?: string; 
+  public get groupFileUri() {
+    return this.getStringAttribute('group_file_uri');
+  }
+  public set groupFileUri(value: string) {
+    this._groupFileUri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get groupFileUriInput() {
+    return this._groupFileUri
+  }
+
+  // password_file_uri - computed: false, optional: false, required: true
+  private _passwordFileUri?: string; 
+  public get passwordFileUri() {
+    return this.getStringAttribute('password_file_uri');
+  }
+  public set passwordFileUri(value: string) {
+    this._passwordFileUri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordFileUriInput() {
+    return this._passwordFileUri
+  }
+}
 export interface HpcCacheDirectoryLdapBind {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#dn HpcCache#dn}
@@ -223,14 +399,53 @@ export interface HpcCacheDirectoryLdapBind {
   readonly password: string;
 }
 
-function hpcCacheDirectoryLdapBindToTerraform(struct?: HpcCacheDirectoryLdapBind): any {
+function hpcCacheDirectoryLdapBindToTerraform(struct?: HpcCacheDirectoryLdapBindOutputReference | HpcCacheDirectoryLdapBind): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     dn: cdktf.stringToTerraform(struct!.dn),
     password: cdktf.stringToTerraform(struct!.password),
   }
 }
 
+export class HpcCacheDirectoryLdapBindOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // dn - computed: false, optional: false, required: true
+  private _dn?: string; 
+  public get dn() {
+    return this.getStringAttribute('dn');
+  }
+  public set dn(value: string) {
+    this._dn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnInput() {
+    return this._dn
+  }
+
+  // password - computed: false, optional: false, required: true
+  private _password?: string; 
+  public get password() {
+    return this.getStringAttribute('password');
+  }
+  public set password(value: string) {
+    this._password = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get passwordInput() {
+    return this._password
+  }
+}
 export interface HpcCacheDirectoryLdap {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#base_dn HpcCache#base_dn}
@@ -257,21 +472,125 @@ export interface HpcCacheDirectoryLdap {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#bind HpcCache#bind}
   */
-  readonly bind?: HpcCacheDirectoryLdapBind[];
+  readonly bind?: HpcCacheDirectoryLdapBind;
 }
 
-function hpcCacheDirectoryLdapToTerraform(struct?: HpcCacheDirectoryLdap): any {
+function hpcCacheDirectoryLdapToTerraform(struct?: HpcCacheDirectoryLdapOutputReference | HpcCacheDirectoryLdap): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     base_dn: cdktf.stringToTerraform(struct!.baseDn),
     certificate_validation_uri: cdktf.stringToTerraform(struct!.certificateValidationUri),
     download_certificate_automatically: cdktf.booleanToTerraform(struct!.downloadCertificateAutomatically),
     encrypted: cdktf.booleanToTerraform(struct!.encrypted),
     server: cdktf.stringToTerraform(struct!.server),
-    bind: cdktf.listMapper(hpcCacheDirectoryLdapBindToTerraform)(struct!.bind),
+    bind: hpcCacheDirectoryLdapBindToTerraform(struct!.bind),
   }
 }
 
+export class HpcCacheDirectoryLdapOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // base_dn - computed: false, optional: false, required: true
+  private _baseDn?: string; 
+  public get baseDn() {
+    return this.getStringAttribute('base_dn');
+  }
+  public set baseDn(value: string) {
+    this._baseDn = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get baseDnInput() {
+    return this._baseDn
+  }
+
+  // certificate_validation_uri - computed: false, optional: true, required: false
+  private _certificateValidationUri?: string | undefined; 
+  public get certificateValidationUri() {
+    return this.getStringAttribute('certificate_validation_uri');
+  }
+  public set certificateValidationUri(value: string | undefined) {
+    this._certificateValidationUri = value;
+  }
+  public resetCertificateValidationUri() {
+    this._certificateValidationUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateValidationUriInput() {
+    return this._certificateValidationUri
+  }
+
+  // download_certificate_automatically - computed: false, optional: true, required: false
+  private _downloadCertificateAutomatically?: boolean | cdktf.IResolvable | undefined; 
+  public get downloadCertificateAutomatically() {
+    return this.getBooleanAttribute('download_certificate_automatically') as any;
+  }
+  public set downloadCertificateAutomatically(value: boolean | cdktf.IResolvable | undefined) {
+    this._downloadCertificateAutomatically = value;
+  }
+  public resetDownloadCertificateAutomatically() {
+    this._downloadCertificateAutomatically = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get downloadCertificateAutomaticallyInput() {
+    return this._downloadCertificateAutomatically
+  }
+
+  // encrypted - computed: false, optional: true, required: false
+  private _encrypted?: boolean | cdktf.IResolvable | undefined; 
+  public get encrypted() {
+    return this.getBooleanAttribute('encrypted') as any;
+  }
+  public set encrypted(value: boolean | cdktf.IResolvable | undefined) {
+    this._encrypted = value;
+  }
+  public resetEncrypted() {
+    this._encrypted = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptedInput() {
+    return this._encrypted
+  }
+
+  // server - computed: false, optional: false, required: true
+  private _server?: string; 
+  public get server() {
+    return this.getStringAttribute('server');
+  }
+  public set server(value: string) {
+    this._server = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serverInput() {
+    return this._server
+  }
+
+  // bind - computed: false, optional: true, required: false
+  private _bind?: HpcCacheDirectoryLdapBind | undefined; 
+  private __bindOutput = new HpcCacheDirectoryLdapBindOutputReference(this as any, "bind", true);
+  public get bind() {
+    return this.__bindOutput;
+  }
+  public putBind(value: HpcCacheDirectoryLdapBind | undefined) {
+    this._bind = value;
+  }
+  public resetBind() {
+    this._bind = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bindInput() {
+    return this._bind
+  }
+}
 export interface HpcCacheDns {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#search_domain HpcCache#search_domain}
@@ -283,14 +602,56 @@ export interface HpcCacheDns {
   readonly servers: string[];
 }
 
-function hpcCacheDnsToTerraform(struct?: HpcCacheDns): any {
+function hpcCacheDnsToTerraform(struct?: HpcCacheDnsOutputReference | HpcCacheDns): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     search_domain: cdktf.stringToTerraform(struct!.searchDomain),
     servers: cdktf.listMapper(cdktf.stringToTerraform)(struct!.servers),
   }
 }
 
+export class HpcCacheDnsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // search_domain - computed: false, optional: true, required: false
+  private _searchDomain?: string | undefined; 
+  public get searchDomain() {
+    return this.getStringAttribute('search_domain');
+  }
+  public set searchDomain(value: string | undefined) {
+    this._searchDomain = value;
+  }
+  public resetSearchDomain() {
+    this._searchDomain = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get searchDomainInput() {
+    return this._searchDomain
+  }
+
+  // servers - computed: false, optional: false, required: true
+  private _servers?: string[]; 
+  public get servers() {
+    return this.getListAttribute('servers');
+  }
+  public set servers(value: string[]) {
+    this._servers = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serversInput() {
+    return this._servers
+  }
+}
 export interface HpcCacheTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html#create HpcCache#create}
@@ -310,8 +671,11 @@ export interface HpcCacheTimeouts {
   readonly update?: string;
 }
 
-function hpcCacheTimeoutsToTerraform(struct?: HpcCacheTimeouts): any {
+function hpcCacheTimeoutsToTerraform(struct?: HpcCacheTimeoutsOutputReference | HpcCacheTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -320,6 +684,80 @@ function hpcCacheTimeoutsToTerraform(struct?: HpcCacheTimeouts): any {
   }
 }
 
+export class HpcCacheTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/hpc_cache.html azurerm_hpc_cache}
@@ -376,7 +814,7 @@ export class HpcCache extends cdktf.TerraformResource {
   // ==========
 
   // cache_size_in_gb - computed: false, optional: false, required: true
-  private _cacheSizeInGb: number;
+  private _cacheSizeInGb?: number; 
   public get cacheSizeInGb() {
     return this.getNumberAttribute('cache_size_in_gb');
   }
@@ -394,7 +832,7 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -412,11 +850,11 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // mtu - computed: false, optional: true, required: false
-  private _mtu?: number;
+  private _mtu?: number | undefined; 
   public get mtu() {
     return this.getNumberAttribute('mtu');
   }
-  public set mtu(value: number ) {
+  public set mtu(value: number | undefined) {
     this._mtu = value;
   }
   public resetMtu() {
@@ -428,7 +866,7 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -441,11 +879,11 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // ntp_server - computed: false, optional: true, required: false
-  private _ntpServer?: string;
+  private _ntpServer?: string | undefined; 
   public get ntpServer() {
     return this.getStringAttribute('ntp_server');
   }
-  public set ntpServer(value: string ) {
+  public set ntpServer(value: string | undefined) {
     this._ntpServer = value;
   }
   public resetNtpServer() {
@@ -457,7 +895,7 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -470,11 +908,11 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // root_squash_enabled - computed: true, optional: true, required: false
-  private _rootSquashEnabled?: boolean | cdktf.IResolvable;
+  private _rootSquashEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get rootSquashEnabled() {
-    return this.getBooleanAttribute('root_squash_enabled');
+    return this.getBooleanAttribute('root_squash_enabled') as any;
   }
-  public set rootSquashEnabled(value: boolean | cdktf.IResolvable) {
+  public set rootSquashEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._rootSquashEnabled = value;
   }
   public resetRootSquashEnabled() {
@@ -486,7 +924,7 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // sku_name - computed: false, optional: false, required: true
-  private _skuName: string;
+  private _skuName?: string; 
   public get skuName() {
     return this.getStringAttribute('sku_name');
   }
@@ -499,7 +937,7 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // subnet_id - computed: false, optional: false, required: true
-  private _subnetId: string;
+  private _subnetId?: string; 
   public get subnetId() {
     return this.getStringAttribute('subnet_id');
   }
@@ -512,11 +950,12 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -528,11 +967,12 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // default_access_policy - computed: false, optional: true, required: false
-  private _defaultAccessPolicy?: HpcCacheDefaultAccessPolicy[];
+  private _defaultAccessPolicy?: HpcCacheDefaultAccessPolicy | undefined; 
+  private __defaultAccessPolicyOutput = new HpcCacheDefaultAccessPolicyOutputReference(this as any, "default_access_policy", true);
   public get defaultAccessPolicy() {
-    return this.interpolationForAttribute('default_access_policy') as any;
+    return this.__defaultAccessPolicyOutput;
   }
-  public set defaultAccessPolicy(value: HpcCacheDefaultAccessPolicy[] ) {
+  public putDefaultAccessPolicy(value: HpcCacheDefaultAccessPolicy | undefined) {
     this._defaultAccessPolicy = value;
   }
   public resetDefaultAccessPolicy() {
@@ -544,11 +984,12 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // directory_active_directory - computed: false, optional: true, required: false
-  private _directoryActiveDirectory?: HpcCacheDirectoryActiveDirectory[];
+  private _directoryActiveDirectory?: HpcCacheDirectoryActiveDirectory | undefined; 
+  private __directoryActiveDirectoryOutput = new HpcCacheDirectoryActiveDirectoryOutputReference(this as any, "directory_active_directory", true);
   public get directoryActiveDirectory() {
-    return this.interpolationForAttribute('directory_active_directory') as any;
+    return this.__directoryActiveDirectoryOutput;
   }
-  public set directoryActiveDirectory(value: HpcCacheDirectoryActiveDirectory[] ) {
+  public putDirectoryActiveDirectory(value: HpcCacheDirectoryActiveDirectory | undefined) {
     this._directoryActiveDirectory = value;
   }
   public resetDirectoryActiveDirectory() {
@@ -560,11 +1001,12 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // directory_flat_file - computed: false, optional: true, required: false
-  private _directoryFlatFile?: HpcCacheDirectoryFlatFile[];
+  private _directoryFlatFile?: HpcCacheDirectoryFlatFile | undefined; 
+  private __directoryFlatFileOutput = new HpcCacheDirectoryFlatFileOutputReference(this as any, "directory_flat_file", true);
   public get directoryFlatFile() {
-    return this.interpolationForAttribute('directory_flat_file') as any;
+    return this.__directoryFlatFileOutput;
   }
-  public set directoryFlatFile(value: HpcCacheDirectoryFlatFile[] ) {
+  public putDirectoryFlatFile(value: HpcCacheDirectoryFlatFile | undefined) {
     this._directoryFlatFile = value;
   }
   public resetDirectoryFlatFile() {
@@ -576,11 +1018,12 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // directory_ldap - computed: false, optional: true, required: false
-  private _directoryLdap?: HpcCacheDirectoryLdap[];
+  private _directoryLdap?: HpcCacheDirectoryLdap | undefined; 
+  private __directoryLdapOutput = new HpcCacheDirectoryLdapOutputReference(this as any, "directory_ldap", true);
   public get directoryLdap() {
-    return this.interpolationForAttribute('directory_ldap') as any;
+    return this.__directoryLdapOutput;
   }
-  public set directoryLdap(value: HpcCacheDirectoryLdap[] ) {
+  public putDirectoryLdap(value: HpcCacheDirectoryLdap | undefined) {
     this._directoryLdap = value;
   }
   public resetDirectoryLdap() {
@@ -592,11 +1035,12 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // dns - computed: false, optional: true, required: false
-  private _dns?: HpcCacheDns[];
+  private _dns?: HpcCacheDns | undefined; 
+  private __dnsOutput = new HpcCacheDnsOutputReference(this as any, "dns", true);
   public get dns() {
-    return this.interpolationForAttribute('dns') as any;
+    return this.__dnsOutput;
   }
-  public set dns(value: HpcCacheDns[] ) {
+  public putDns(value: HpcCacheDns | undefined) {
     this._dns = value;
   }
   public resetDns() {
@@ -608,11 +1052,12 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: HpcCacheTimeouts;
+  private _timeouts?: HpcCacheTimeouts | undefined; 
+  private __timeoutsOutput = new HpcCacheTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: HpcCacheTimeouts ) {
+  public putTimeouts(value: HpcCacheTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -639,11 +1084,11 @@ export class HpcCache extends cdktf.TerraformResource {
       sku_name: cdktf.stringToTerraform(this._skuName),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      default_access_policy: cdktf.listMapper(hpcCacheDefaultAccessPolicyToTerraform)(this._defaultAccessPolicy),
-      directory_active_directory: cdktf.listMapper(hpcCacheDirectoryActiveDirectoryToTerraform)(this._directoryActiveDirectory),
-      directory_flat_file: cdktf.listMapper(hpcCacheDirectoryFlatFileToTerraform)(this._directoryFlatFile),
-      directory_ldap: cdktf.listMapper(hpcCacheDirectoryLdapToTerraform)(this._directoryLdap),
-      dns: cdktf.listMapper(hpcCacheDnsToTerraform)(this._dns),
+      default_access_policy: hpcCacheDefaultAccessPolicyToTerraform(this._defaultAccessPolicy),
+      directory_active_directory: hpcCacheDirectoryActiveDirectoryToTerraform(this._directoryActiveDirectory),
+      directory_flat_file: hpcCacheDirectoryFlatFileToTerraform(this._directoryFlatFile),
+      directory_ldap: hpcCacheDirectoryLdapToTerraform(this._directoryLdap),
+      dns: hpcCacheDnsToTerraform(this._dns),
       timeouts: hpcCacheTimeoutsToTerraform(this._timeouts),
     };
   }

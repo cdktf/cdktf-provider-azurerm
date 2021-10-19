@@ -33,13 +33,42 @@ export interface DataAzurermBillingMcaAccountScopeTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermBillingMcaAccountScopeTimeoutsToTerraform(struct?: DataAzurermBillingMcaAccountScopeTimeouts): any {
+function dataAzurermBillingMcaAccountScopeTimeoutsToTerraform(struct?: DataAzurermBillingMcaAccountScopeTimeoutsOutputReference | DataAzurermBillingMcaAccountScopeTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermBillingMcaAccountScopeTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mca_account_scope.html azurerm_billing_mca_account_scope}
@@ -84,7 +113,7 @@ export class DataAzurermBillingMcaAccountScope extends cdktf.TerraformDataSource
   // ==========
 
   // billing_account_name - computed: false, optional: false, required: true
-  private _billingAccountName: string;
+  private _billingAccountName?: string; 
   public get billingAccountName() {
     return this.getStringAttribute('billing_account_name');
   }
@@ -97,7 +126,7 @@ export class DataAzurermBillingMcaAccountScope extends cdktf.TerraformDataSource
   }
 
   // billing_profile_name - computed: false, optional: false, required: true
-  private _billingProfileName: string;
+  private _billingProfileName?: string; 
   public get billingProfileName() {
     return this.getStringAttribute('billing_profile_name');
   }
@@ -115,7 +144,7 @@ export class DataAzurermBillingMcaAccountScope extends cdktf.TerraformDataSource
   }
 
   // invoice_section_name - computed: false, optional: false, required: true
-  private _invoiceSectionName: string;
+  private _invoiceSectionName?: string; 
   public get invoiceSectionName() {
     return this.getStringAttribute('invoice_section_name');
   }
@@ -128,11 +157,12 @@ export class DataAzurermBillingMcaAccountScope extends cdktf.TerraformDataSource
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermBillingMcaAccountScopeTimeouts;
+  private _timeouts?: DataAzurermBillingMcaAccountScopeTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermBillingMcaAccountScopeTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermBillingMcaAccountScopeTimeouts ) {
+  public putTimeouts(value: DataAzurermBillingMcaAccountScopeTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

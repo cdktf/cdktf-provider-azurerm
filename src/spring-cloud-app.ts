@@ -36,13 +36,13 @@ export interface SpringCloudAppConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#identity SpringCloudApp#identity}
   */
-  readonly identity?: SpringCloudAppIdentity[];
+  readonly identity?: SpringCloudAppIdentity;
   /**
   * persistent_disk block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#persistent_disk SpringCloudApp#persistent_disk}
   */
-  readonly persistentDisk?: SpringCloudAppPersistentDisk[];
+  readonly persistentDisk?: SpringCloudAppPersistentDisk;
   /**
   * timeouts block
   * 
@@ -57,13 +57,42 @@ export interface SpringCloudAppIdentity {
   readonly type?: string;
 }
 
-function springCloudAppIdentityToTerraform(struct?: SpringCloudAppIdentity): any {
+function springCloudAppIdentityToTerraform(struct?: SpringCloudAppIdentityOutputReference | SpringCloudAppIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
 
+export class SpringCloudAppIdentityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // type - computed: false, optional: true, required: false
+  private _type?: string | undefined; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string | undefined) {
+    this._type = value;
+  }
+  public resetType() {
+    this._type = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+}
 export interface SpringCloudAppPersistentDisk {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#mount_path SpringCloudApp#mount_path}
@@ -75,14 +104,56 @@ export interface SpringCloudAppPersistentDisk {
   readonly sizeInGb: number;
 }
 
-function springCloudAppPersistentDiskToTerraform(struct?: SpringCloudAppPersistentDisk): any {
+function springCloudAppPersistentDiskToTerraform(struct?: SpringCloudAppPersistentDiskOutputReference | SpringCloudAppPersistentDisk): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     mount_path: cdktf.stringToTerraform(struct!.mountPath),
     size_in_gb: cdktf.numberToTerraform(struct!.sizeInGb),
   }
 }
 
+export class SpringCloudAppPersistentDiskOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // mount_path - computed: false, optional: true, required: false
+  private _mountPath?: string | undefined; 
+  public get mountPath() {
+    return this.getStringAttribute('mount_path');
+  }
+  public set mountPath(value: string | undefined) {
+    this._mountPath = value;
+  }
+  public resetMountPath() {
+    this._mountPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get mountPathInput() {
+    return this._mountPath
+  }
+
+  // size_in_gb - computed: false, optional: false, required: true
+  private _sizeInGb?: number; 
+  public get sizeInGb() {
+    return this.getNumberAttribute('size_in_gb');
+  }
+  public set sizeInGb(value: number) {
+    this._sizeInGb = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sizeInGbInput() {
+    return this._sizeInGb
+  }
+}
 export interface SpringCloudAppTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html#create SpringCloudApp#create}
@@ -102,8 +173,11 @@ export interface SpringCloudAppTimeouts {
   readonly update?: string;
 }
 
-function springCloudAppTimeoutsToTerraform(struct?: SpringCloudAppTimeouts): any {
+function springCloudAppTimeoutsToTerraform(struct?: SpringCloudAppTimeoutsOutputReference | SpringCloudAppTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -112,6 +186,80 @@ function springCloudAppTimeoutsToTerraform(struct?: SpringCloudAppTimeouts): any
   }
 }
 
+export class SpringCloudAppTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app.html azurerm_spring_cloud_app}
@@ -166,11 +314,11 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
 
   // https_only - computed: false, optional: true, required: false
-  private _httpsOnly?: boolean | cdktf.IResolvable;
+  private _httpsOnly?: boolean | cdktf.IResolvable | undefined; 
   public get httpsOnly() {
-    return this.getBooleanAttribute('https_only');
+    return this.getBooleanAttribute('https_only') as any;
   }
-  public set httpsOnly(value: boolean | cdktf.IResolvable ) {
+  public set httpsOnly(value: boolean | cdktf.IResolvable | undefined) {
     this._httpsOnly = value;
   }
   public resetHttpsOnly() {
@@ -187,11 +335,11 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
 
   // is_public - computed: false, optional: true, required: false
-  private _isPublic?: boolean | cdktf.IResolvable;
+  private _isPublic?: boolean | cdktf.IResolvable | undefined; 
   public get isPublic() {
-    return this.getBooleanAttribute('is_public');
+    return this.getBooleanAttribute('is_public') as any;
   }
-  public set isPublic(value: boolean | cdktf.IResolvable ) {
+  public set isPublic(value: boolean | cdktf.IResolvable | undefined) {
     this._isPublic = value;
   }
   public resetIsPublic() {
@@ -203,7 +351,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -216,7 +364,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -229,7 +377,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
 
   // service_name - computed: false, optional: false, required: true
-  private _serviceName: string;
+  private _serviceName?: string; 
   public get serviceName() {
     return this.getStringAttribute('service_name');
   }
@@ -242,11 +390,11 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
 
   // tls_enabled - computed: false, optional: true, required: false
-  private _tlsEnabled?: boolean | cdktf.IResolvable;
+  private _tlsEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get tlsEnabled() {
-    return this.getBooleanAttribute('tls_enabled');
+    return this.getBooleanAttribute('tls_enabled') as any;
   }
-  public set tlsEnabled(value: boolean | cdktf.IResolvable ) {
+  public set tlsEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._tlsEnabled = value;
   }
   public resetTlsEnabled() {
@@ -263,11 +411,12 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: SpringCloudAppIdentity[];
+  private _identity?: SpringCloudAppIdentity | undefined; 
+  private __identityOutput = new SpringCloudAppIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.interpolationForAttribute('identity') as any;
+    return this.__identityOutput;
   }
-  public set identity(value: SpringCloudAppIdentity[] ) {
+  public putIdentity(value: SpringCloudAppIdentity | undefined) {
     this._identity = value;
   }
   public resetIdentity() {
@@ -279,11 +428,12 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
 
   // persistent_disk - computed: false, optional: true, required: false
-  private _persistentDisk?: SpringCloudAppPersistentDisk[];
+  private _persistentDisk?: SpringCloudAppPersistentDisk | undefined; 
+  private __persistentDiskOutput = new SpringCloudAppPersistentDiskOutputReference(this as any, "persistent_disk", true);
   public get persistentDisk() {
-    return this.interpolationForAttribute('persistent_disk') as any;
+    return this.__persistentDiskOutput;
   }
-  public set persistentDisk(value: SpringCloudAppPersistentDisk[] ) {
+  public putPersistentDisk(value: SpringCloudAppPersistentDisk | undefined) {
     this._persistentDisk = value;
   }
   public resetPersistentDisk() {
@@ -295,11 +445,12 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SpringCloudAppTimeouts;
+  private _timeouts?: SpringCloudAppTimeouts | undefined; 
+  private __timeoutsOutput = new SpringCloudAppTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: SpringCloudAppTimeouts ) {
+  public putTimeouts(value: SpringCloudAppTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -322,8 +473,8 @@ export class SpringCloudApp extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_name: cdktf.stringToTerraform(this._serviceName),
       tls_enabled: cdktf.booleanToTerraform(this._tlsEnabled),
-      identity: cdktf.listMapper(springCloudAppIdentityToTerraform)(this._identity),
-      persistent_disk: cdktf.listMapper(springCloudAppPersistentDiskToTerraform)(this._persistentDisk),
+      identity: springCloudAppIdentityToTerraform(this._identity),
+      persistent_disk: springCloudAppPersistentDiskToTerraform(this._persistentDisk),
       timeouts: springCloudAppTimeoutsToTerraform(this._timeouts),
     };
   }

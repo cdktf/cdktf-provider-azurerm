@@ -40,13 +40,42 @@ export interface DataAzurermStorageAccountTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermStorageAccountTimeoutsToTerraform(struct?: DataAzurermStorageAccountTimeouts): any {
+function dataAzurermStorageAccountTimeoutsToTerraform(struct?: DataAzurermStorageAccountTimeoutsOutputReference | DataAzurermStorageAccountTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermStorageAccountTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account.html azurerm_storage_account}
@@ -112,7 +141,7 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
 
   // allow_blob_public_access - computed: true, optional: false, required: false
   public get allowBlobPublicAccess() {
-    return this.getBooleanAttribute('allow_blob_public_access');
+    return this.getBooleanAttribute('allow_blob_public_access') as any;
   }
 
   // custom_domain - computed: true, optional: false, required: false
@@ -122,7 +151,7 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
 
   // enable_https_traffic_only - computed: true, optional: false, required: false
   public get enableHttpsTrafficOnly() {
-    return this.getBooleanAttribute('enable_https_traffic_only');
+    return this.getBooleanAttribute('enable_https_traffic_only') as any;
   }
 
   // id - computed: true, optional: true, required: false
@@ -132,7 +161,7 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
 
   // is_hns_enabled - computed: true, optional: false, required: false
   public get isHnsEnabled() {
-    return this.getBooleanAttribute('is_hns_enabled');
+    return this.getBooleanAttribute('is_hns_enabled') as any;
   }
 
   // location - computed: true, optional: false, required: false
@@ -141,11 +170,11 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
   }
 
   // min_tls_version - computed: false, optional: true, required: false
-  private _minTlsVersion?: string;
+  private _minTlsVersion?: string | undefined; 
   public get minTlsVersion() {
     return this.getStringAttribute('min_tls_version');
   }
-  public set minTlsVersion(value: string ) {
+  public set minTlsVersion(value: string | undefined) {
     this._minTlsVersion = value;
   }
   public resetMinTlsVersion() {
@@ -157,7 +186,7 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -250,7 +279,7 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -348,11 +377,12 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermStorageAccountTimeouts;
+  private _timeouts?: DataAzurermStorageAccountTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermStorageAccountTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermStorageAccountTimeouts ) {
+  public putTimeouts(value: DataAzurermStorageAccountTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

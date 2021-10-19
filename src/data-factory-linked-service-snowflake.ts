@@ -48,7 +48,7 @@ export interface DataFactoryLinkedServiceSnowflakeConfig extends cdktf.Terraform
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#key_vault_password DataFactoryLinkedServiceSnowflake#key_vault_password}
   */
-  readonly keyVaultPassword?: DataFactoryLinkedServiceSnowflakeKeyVaultPassword[];
+  readonly keyVaultPassword?: DataFactoryLinkedServiceSnowflakeKeyVaultPassword;
   /**
   * timeouts block
   * 
@@ -67,14 +67,53 @@ export interface DataFactoryLinkedServiceSnowflakeKeyVaultPassword {
   readonly secretName: string;
 }
 
-function dataFactoryLinkedServiceSnowflakeKeyVaultPasswordToTerraform(struct?: DataFactoryLinkedServiceSnowflakeKeyVaultPassword): any {
+function dataFactoryLinkedServiceSnowflakeKeyVaultPasswordToTerraform(struct?: DataFactoryLinkedServiceSnowflakeKeyVaultPasswordOutputReference | DataFactoryLinkedServiceSnowflakeKeyVaultPassword): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     linked_service_name: cdktf.stringToTerraform(struct!.linkedServiceName),
     secret_name: cdktf.stringToTerraform(struct!.secretName),
   }
 }
 
+export class DataFactoryLinkedServiceSnowflakeKeyVaultPasswordOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // linked_service_name - computed: false, optional: false, required: true
+  private _linkedServiceName?: string; 
+  public get linkedServiceName() {
+    return this.getStringAttribute('linked_service_name');
+  }
+  public set linkedServiceName(value: string) {
+    this._linkedServiceName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linkedServiceNameInput() {
+    return this._linkedServiceName
+  }
+
+  // secret_name - computed: false, optional: false, required: true
+  private _secretName?: string; 
+  public get secretName() {
+    return this.getStringAttribute('secret_name');
+  }
+  public set secretName(value: string) {
+    this._secretName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretNameInput() {
+    return this._secretName
+  }
+}
 export interface DataFactoryLinkedServiceSnowflakeTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#create DataFactoryLinkedServiceSnowflake#create}
@@ -94,8 +133,11 @@ export interface DataFactoryLinkedServiceSnowflakeTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryLinkedServiceSnowflakeTimeoutsToTerraform(struct?: DataFactoryLinkedServiceSnowflakeTimeouts): any {
+function dataFactoryLinkedServiceSnowflakeTimeoutsToTerraform(struct?: DataFactoryLinkedServiceSnowflakeTimeoutsOutputReference | DataFactoryLinkedServiceSnowflakeTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -104,6 +146,80 @@ function dataFactoryLinkedServiceSnowflakeTimeoutsToTerraform(struct?: DataFacto
   }
 }
 
+export class DataFactoryLinkedServiceSnowflakeTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html azurerm_data_factory_linked_service_snowflake}
@@ -155,11 +271,12 @@ export class DataFactoryLinkedServiceSnowflake extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get additionalProperties() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -171,11 +288,11 @@ export class DataFactoryLinkedServiceSnowflake extends cdktf.TerraformResource {
   }
 
   // annotations - computed: false, optional: true, required: false
-  private _annotations?: string[];
+  private _annotations?: string[] | undefined; 
   public get annotations() {
     return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] ) {
+  public set annotations(value: string[] | undefined) {
     this._annotations = value;
   }
   public resetAnnotations() {
@@ -187,7 +304,7 @@ export class DataFactoryLinkedServiceSnowflake extends cdktf.TerraformResource {
   }
 
   // connection_string - computed: false, optional: false, required: true
-  private _connectionString: string;
+  private _connectionString?: string; 
   public get connectionString() {
     return this.getStringAttribute('connection_string');
   }
@@ -200,7 +317,7 @@ export class DataFactoryLinkedServiceSnowflake extends cdktf.TerraformResource {
   }
 
   // data_factory_name - computed: false, optional: false, required: true
-  private _dataFactoryName: string;
+  private _dataFactoryName?: string; 
   public get dataFactoryName() {
     return this.getStringAttribute('data_factory_name');
   }
@@ -213,11 +330,11 @@ export class DataFactoryLinkedServiceSnowflake extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -234,11 +351,11 @@ export class DataFactoryLinkedServiceSnowflake extends cdktf.TerraformResource {
   }
 
   // integration_runtime_name - computed: false, optional: true, required: false
-  private _integrationRuntimeName?: string;
+  private _integrationRuntimeName?: string | undefined; 
   public get integrationRuntimeName() {
     return this.getStringAttribute('integration_runtime_name');
   }
-  public set integrationRuntimeName(value: string ) {
+  public set integrationRuntimeName(value: string | undefined) {
     this._integrationRuntimeName = value;
   }
   public resetIntegrationRuntimeName() {
@@ -250,7 +367,7 @@ export class DataFactoryLinkedServiceSnowflake extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -263,11 +380,12 @@ export class DataFactoryLinkedServiceSnowflake extends cdktf.TerraformResource {
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable;
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get parameters() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -279,7 +397,7 @@ export class DataFactoryLinkedServiceSnowflake extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -292,11 +410,12 @@ export class DataFactoryLinkedServiceSnowflake extends cdktf.TerraformResource {
   }
 
   // key_vault_password - computed: false, optional: true, required: false
-  private _keyVaultPassword?: DataFactoryLinkedServiceSnowflakeKeyVaultPassword[];
+  private _keyVaultPassword?: DataFactoryLinkedServiceSnowflakeKeyVaultPassword | undefined; 
+  private __keyVaultPasswordOutput = new DataFactoryLinkedServiceSnowflakeKeyVaultPasswordOutputReference(this as any, "key_vault_password", true);
   public get keyVaultPassword() {
-    return this.interpolationForAttribute('key_vault_password') as any;
+    return this.__keyVaultPasswordOutput;
   }
-  public set keyVaultPassword(value: DataFactoryLinkedServiceSnowflakeKeyVaultPassword[] ) {
+  public putKeyVaultPassword(value: DataFactoryLinkedServiceSnowflakeKeyVaultPassword | undefined) {
     this._keyVaultPassword = value;
   }
   public resetKeyVaultPassword() {
@@ -308,11 +427,12 @@ export class DataFactoryLinkedServiceSnowflake extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryLinkedServiceSnowflakeTimeouts;
+  private _timeouts?: DataFactoryLinkedServiceSnowflakeTimeouts | undefined; 
+  private __timeoutsOutput = new DataFactoryLinkedServiceSnowflakeTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataFactoryLinkedServiceSnowflakeTimeouts ) {
+  public putTimeouts(value: DataFactoryLinkedServiceSnowflakeTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -338,7 +458,7 @@ export class DataFactoryLinkedServiceSnowflake extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      key_vault_password: cdktf.listMapper(dataFactoryLinkedServiceSnowflakeKeyVaultPasswordToTerraform)(this._keyVaultPassword),
+      key_vault_password: dataFactoryLinkedServiceSnowflakeKeyVaultPasswordToTerraform(this._keyVaultPassword),
       timeouts: dataFactoryLinkedServiceSnowflakeTimeoutsToTerraform(this._timeouts),
     };
   }

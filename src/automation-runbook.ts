@@ -56,7 +56,7 @@ export interface AutomationRunbookConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#publish_content_link AutomationRunbook#publish_content_link}
   */
-  readonly publishContentLink?: AutomationRunbookPublishContentLink[];
+  readonly publishContentLink?: AutomationRunbookPublishContentLink;
   /**
   * timeouts block
   * 
@@ -85,6 +85,9 @@ export interface AutomationRunbookJobSchedule {
 
 function automationRunbookJobScheduleToTerraform(struct?: AutomationRunbookJobSchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     job_schedule_id: struct!.jobScheduleId === undefined ? null : cdktf.stringToTerraform(struct!.jobScheduleId),
     parameters: struct!.parameters === undefined ? null : cdktf.hashMapper(cdktf.anyToTerraform)(struct!.parameters),
@@ -104,14 +107,53 @@ export interface AutomationRunbookPublishContentLinkHash {
   readonly value: string;
 }
 
-function automationRunbookPublishContentLinkHashToTerraform(struct?: AutomationRunbookPublishContentLinkHash): any {
+function automationRunbookPublishContentLinkHashToTerraform(struct?: AutomationRunbookPublishContentLinkHashOutputReference | AutomationRunbookPublishContentLinkHash): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     algorithm: cdktf.stringToTerraform(struct!.algorithm),
     value: cdktf.stringToTerraform(struct!.value),
   }
 }
 
+export class AutomationRunbookPublishContentLinkHashOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // algorithm - computed: false, optional: false, required: true
+  private _algorithm?: string; 
+  public get algorithm() {
+    return this.getStringAttribute('algorithm');
+  }
+  public set algorithm(value: string) {
+    this._algorithm = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get algorithmInput() {
+    return this._algorithm
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value
+  }
+}
 export interface AutomationRunbookPublishContentLink {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#uri AutomationRunbook#uri}
@@ -126,18 +168,77 @@ export interface AutomationRunbookPublishContentLink {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#hash AutomationRunbook#hash}
   */
-  readonly hash?: AutomationRunbookPublishContentLinkHash[];
+  readonly hash?: AutomationRunbookPublishContentLinkHash;
 }
 
-function automationRunbookPublishContentLinkToTerraform(struct?: AutomationRunbookPublishContentLink): any {
+function automationRunbookPublishContentLinkToTerraform(struct?: AutomationRunbookPublishContentLinkOutputReference | AutomationRunbookPublishContentLink): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     uri: cdktf.stringToTerraform(struct!.uri),
     version: cdktf.stringToTerraform(struct!.version),
-    hash: cdktf.listMapper(automationRunbookPublishContentLinkHashToTerraform)(struct!.hash),
+    hash: automationRunbookPublishContentLinkHashToTerraform(struct!.hash),
   }
 }
 
+export class AutomationRunbookPublishContentLinkOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // uri - computed: false, optional: false, required: true
+  private _uri?: string; 
+  public get uri() {
+    return this.getStringAttribute('uri');
+  }
+  public set uri(value: string) {
+    this._uri = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get uriInput() {
+    return this._uri
+  }
+
+  // version - computed: false, optional: true, required: false
+  private _version?: string | undefined; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string | undefined) {
+    this._version = value;
+  }
+  public resetVersion() {
+    this._version = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version
+  }
+
+  // hash - computed: false, optional: true, required: false
+  private _hash?: AutomationRunbookPublishContentLinkHash | undefined; 
+  private __hashOutput = new AutomationRunbookPublishContentLinkHashOutputReference(this as any, "hash", true);
+  public get hash() {
+    return this.__hashOutput;
+  }
+  public putHash(value: AutomationRunbookPublishContentLinkHash | undefined) {
+    this._hash = value;
+  }
+  public resetHash() {
+    this._hash = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hashInput() {
+    return this._hash
+  }
+}
 export interface AutomationRunbookTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html#create AutomationRunbook#create}
@@ -157,8 +258,11 @@ export interface AutomationRunbookTimeouts {
   readonly update?: string;
 }
 
-function automationRunbookTimeoutsToTerraform(struct?: AutomationRunbookTimeouts): any {
+function automationRunbookTimeoutsToTerraform(struct?: AutomationRunbookTimeoutsOutputReference | AutomationRunbookTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -167,6 +271,80 @@ function automationRunbookTimeoutsToTerraform(struct?: AutomationRunbookTimeouts
   }
 }
 
+export class AutomationRunbookTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_runbook.html azurerm_automation_runbook}
@@ -220,7 +398,7 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   // ==========
 
   // automation_account_name - computed: false, optional: false, required: true
-  private _automationAccountName: string;
+  private _automationAccountName?: string; 
   public get automationAccountName() {
     return this.getStringAttribute('automation_account_name');
   }
@@ -233,11 +411,11 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   }
 
   // content - computed: true, optional: true, required: false
-  private _content?: string;
+  private _content?: string | undefined; 
   public get content() {
     return this.getStringAttribute('content');
   }
-  public set content(value: string) {
+  public set content(value: string | undefined) {
     this._content = value;
   }
   public resetContent() {
@@ -249,11 +427,11 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -270,11 +448,12 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   }
 
   // job_schedule - computed: true, optional: true, required: false
-  private _jobSchedule?: AutomationRunbookJobSchedule[]
-  public get jobSchedule(): AutomationRunbookJobSchedule[] {
-    return this.interpolationForAttribute('job_schedule') as any; // Getting the computed value is not yet implemented
+  private _jobSchedule?: AutomationRunbookJobSchedule[] | undefined; 
+  public get jobSchedule() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('job_schedule') as any;
   }
-  public set jobSchedule(value: AutomationRunbookJobSchedule[]) {
+  public set jobSchedule(value: AutomationRunbookJobSchedule[] | undefined) {
     this._jobSchedule = value;
   }
   public resetJobSchedule() {
@@ -286,7 +465,7 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -299,9 +478,9 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   }
 
   // log_progress - computed: false, optional: false, required: true
-  private _logProgress: boolean | cdktf.IResolvable;
+  private _logProgress?: boolean | cdktf.IResolvable; 
   public get logProgress() {
-    return this.getBooleanAttribute('log_progress');
+    return this.getBooleanAttribute('log_progress') as any;
   }
   public set logProgress(value: boolean | cdktf.IResolvable) {
     this._logProgress = value;
@@ -312,9 +491,9 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   }
 
   // log_verbose - computed: false, optional: false, required: true
-  private _logVerbose: boolean | cdktf.IResolvable;
+  private _logVerbose?: boolean | cdktf.IResolvable; 
   public get logVerbose() {
-    return this.getBooleanAttribute('log_verbose');
+    return this.getBooleanAttribute('log_verbose') as any;
   }
   public set logVerbose(value: boolean | cdktf.IResolvable) {
     this._logVerbose = value;
@@ -325,7 +504,7 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -338,7 +517,7 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -351,7 +530,7 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   }
 
   // runbook_type - computed: false, optional: false, required: true
-  private _runbookType: string;
+  private _runbookType?: string; 
   public get runbookType() {
     return this.getStringAttribute('runbook_type');
   }
@@ -364,11 +543,12 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -380,11 +560,12 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   }
 
   // publish_content_link - computed: false, optional: true, required: false
-  private _publishContentLink?: AutomationRunbookPublishContentLink[];
+  private _publishContentLink?: AutomationRunbookPublishContentLink | undefined; 
+  private __publishContentLinkOutput = new AutomationRunbookPublishContentLinkOutputReference(this as any, "publish_content_link", true);
   public get publishContentLink() {
-    return this.interpolationForAttribute('publish_content_link') as any;
+    return this.__publishContentLinkOutput;
   }
-  public set publishContentLink(value: AutomationRunbookPublishContentLink[] ) {
+  public putPublishContentLink(value: AutomationRunbookPublishContentLink | undefined) {
     this._publishContentLink = value;
   }
   public resetPublishContentLink() {
@@ -396,11 +577,12 @@ export class AutomationRunbook extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AutomationRunbookTimeouts;
+  private _timeouts?: AutomationRunbookTimeouts | undefined; 
+  private __timeoutsOutput = new AutomationRunbookTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: AutomationRunbookTimeouts ) {
+  public putTimeouts(value: AutomationRunbookTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -428,7 +610,7 @@ export class AutomationRunbook extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       runbook_type: cdktf.stringToTerraform(this._runbookType),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      publish_content_link: cdktf.listMapper(automationRunbookPublishContentLinkToTerraform)(this._publishContentLink),
+      publish_content_link: automationRunbookPublishContentLinkToTerraform(this._publishContentLink),
       timeouts: automationRunbookTimeoutsToTerraform(this._timeouts),
     };
   }

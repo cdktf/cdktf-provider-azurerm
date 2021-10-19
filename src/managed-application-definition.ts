@@ -77,6 +77,9 @@ export interface ManagedApplicationDefinitionAuthorization {
 
 function managedApplicationDefinitionAuthorizationToTerraform(struct?: ManagedApplicationDefinitionAuthorization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     role_definition_id: cdktf.stringToTerraform(struct!.roleDefinitionId),
     service_principal_id: cdktf.stringToTerraform(struct!.servicePrincipalId),
@@ -102,8 +105,11 @@ export interface ManagedApplicationDefinitionTimeouts {
   readonly update?: string;
 }
 
-function managedApplicationDefinitionTimeoutsToTerraform(struct?: ManagedApplicationDefinitionTimeouts): any {
+function managedApplicationDefinitionTimeoutsToTerraform(struct?: ManagedApplicationDefinitionTimeoutsOutputReference | ManagedApplicationDefinitionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -112,6 +118,80 @@ function managedApplicationDefinitionTimeoutsToTerraform(struct?: ManagedApplica
   }
 }
 
+export class ManagedApplicationDefinitionTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application_definition.html azurerm_managed_application_definition}
@@ -165,11 +245,11 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   // ==========
 
   // create_ui_definition - computed: false, optional: true, required: false
-  private _createUiDefinition?: string;
+  private _createUiDefinition?: string | undefined; 
   public get createUiDefinition() {
     return this.getStringAttribute('create_ui_definition');
   }
-  public set createUiDefinition(value: string ) {
+  public set createUiDefinition(value: string | undefined) {
     this._createUiDefinition = value;
   }
   public resetCreateUiDefinition() {
@@ -181,11 +261,11 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -197,7 +277,7 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: false, required: true
-  private _displayName: string;
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -215,7 +295,7 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -228,7 +308,7 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   }
 
   // lock_level - computed: false, optional: false, required: true
-  private _lockLevel: string;
+  private _lockLevel?: string; 
   public get lockLevel() {
     return this.getStringAttribute('lock_level');
   }
@@ -241,11 +321,11 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   }
 
   // main_template - computed: false, optional: true, required: false
-  private _mainTemplate?: string;
+  private _mainTemplate?: string | undefined; 
   public get mainTemplate() {
     return this.getStringAttribute('main_template');
   }
-  public set mainTemplate(value: string ) {
+  public set mainTemplate(value: string | undefined) {
     this._mainTemplate = value;
   }
   public resetMainTemplate() {
@@ -257,7 +337,7 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -270,11 +350,11 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   }
 
   // package_enabled - computed: false, optional: true, required: false
-  private _packageEnabled?: boolean | cdktf.IResolvable;
+  private _packageEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get packageEnabled() {
-    return this.getBooleanAttribute('package_enabled');
+    return this.getBooleanAttribute('package_enabled') as any;
   }
-  public set packageEnabled(value: boolean | cdktf.IResolvable ) {
+  public set packageEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._packageEnabled = value;
   }
   public resetPackageEnabled() {
@@ -286,11 +366,11 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   }
 
   // package_file_uri - computed: false, optional: true, required: false
-  private _packageFileUri?: string;
+  private _packageFileUri?: string | undefined; 
   public get packageFileUri() {
     return this.getStringAttribute('package_file_uri');
   }
-  public set packageFileUri(value: string ) {
+  public set packageFileUri(value: string | undefined) {
     this._packageFileUri = value;
   }
   public resetPackageFileUri() {
@@ -302,7 +382,7 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -315,11 +395,12 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -331,11 +412,12 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   }
 
   // authorization - computed: false, optional: true, required: false
-  private _authorization?: ManagedApplicationDefinitionAuthorization[];
+  private _authorization?: ManagedApplicationDefinitionAuthorization[] | undefined; 
   public get authorization() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('authorization') as any;
   }
-  public set authorization(value: ManagedApplicationDefinitionAuthorization[] ) {
+  public set authorization(value: ManagedApplicationDefinitionAuthorization[] | undefined) {
     this._authorization = value;
   }
   public resetAuthorization() {
@@ -347,11 +429,12 @@ export class ManagedApplicationDefinition extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ManagedApplicationDefinitionTimeouts;
+  private _timeouts?: ManagedApplicationDefinitionTimeouts | undefined; 
+  private __timeoutsOutput = new ManagedApplicationDefinitionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ManagedApplicationDefinitionTimeouts ) {
+  public putTimeouts(value: ManagedApplicationDefinitionTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

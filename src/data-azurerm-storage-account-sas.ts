@@ -36,19 +36,19 @@ export interface DataAzurermStorageAccountSasConfig extends cdktf.TerraformMetaA
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#permissions DataAzurermStorageAccountSas#permissions}
   */
-  readonly permissions: DataAzurermStorageAccountSasPermissions[];
+  readonly permissions: DataAzurermStorageAccountSasPermissions;
   /**
   * resource_types block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#resource_types DataAzurermStorageAccountSas#resource_types}
   */
-  readonly resourceTypes: DataAzurermStorageAccountSasResourceTypes[];
+  readonly resourceTypes: DataAzurermStorageAccountSasResourceTypes;
   /**
   * services block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#services DataAzurermStorageAccountSas#services}
   */
-  readonly services: DataAzurermStorageAccountSasServices[];
+  readonly services: DataAzurermStorageAccountSasServices;
   /**
   * timeouts block
   * 
@@ -91,8 +91,11 @@ export interface DataAzurermStorageAccountSasPermissions {
   readonly write: boolean | cdktf.IResolvable;
 }
 
-function dataAzurermStorageAccountSasPermissionsToTerraform(struct?: DataAzurermStorageAccountSasPermissions): any {
+function dataAzurermStorageAccountSasPermissionsToTerraform(struct?: DataAzurermStorageAccountSasPermissionsOutputReference | DataAzurermStorageAccountSasPermissions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     add: cdktf.booleanToTerraform(struct!.add),
     create: cdktf.booleanToTerraform(struct!.create),
@@ -105,6 +108,120 @@ function dataAzurermStorageAccountSasPermissionsToTerraform(struct?: DataAzurerm
   }
 }
 
+export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // add - computed: false, optional: false, required: true
+  private _add?: boolean | cdktf.IResolvable; 
+  public get add() {
+    return this.getBooleanAttribute('add') as any;
+  }
+  public set add(value: boolean | cdktf.IResolvable) {
+    this._add = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addInput() {
+    return this._add
+  }
+
+  // create - computed: false, optional: false, required: true
+  private _create?: boolean | cdktf.IResolvable; 
+  public get create() {
+    return this.getBooleanAttribute('create') as any;
+  }
+  public set create(value: boolean | cdktf.IResolvable) {
+    this._create = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: false, required: true
+  private _delete?: boolean | cdktf.IResolvable; 
+  public get delete() {
+    return this.getBooleanAttribute('delete') as any;
+  }
+  public set delete(value: boolean | cdktf.IResolvable) {
+    this._delete = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // list - computed: false, optional: false, required: true
+  private _list?: boolean | cdktf.IResolvable; 
+  public get list() {
+    return this.getBooleanAttribute('list') as any;
+  }
+  public set list(value: boolean | cdktf.IResolvable) {
+    this._list = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get listInput() {
+    return this._list
+  }
+
+  // process - computed: false, optional: false, required: true
+  private _process?: boolean | cdktf.IResolvable; 
+  public get process() {
+    return this.getBooleanAttribute('process') as any;
+  }
+  public set process(value: boolean | cdktf.IResolvable) {
+    this._process = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get processInput() {
+    return this._process
+  }
+
+  // read - computed: false, optional: false, required: true
+  private _read?: boolean | cdktf.IResolvable; 
+  public get read() {
+    return this.getBooleanAttribute('read') as any;
+  }
+  public set read(value: boolean | cdktf.IResolvable) {
+    this._read = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: false, required: true
+  private _update?: boolean | cdktf.IResolvable; 
+  public get update() {
+    return this.getBooleanAttribute('update') as any;
+  }
+  public set update(value: boolean | cdktf.IResolvable) {
+    this._update = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+
+  // write - computed: false, optional: false, required: true
+  private _write?: boolean | cdktf.IResolvable; 
+  public get write() {
+    return this.getBooleanAttribute('write') as any;
+  }
+  public set write(value: boolean | cdktf.IResolvable) {
+    this._write = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get writeInput() {
+    return this._write
+  }
+}
 export interface DataAzurermStorageAccountSasResourceTypes {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#container DataAzurermStorageAccountSas#container}
@@ -120,8 +237,11 @@ export interface DataAzurermStorageAccountSasResourceTypes {
   readonly service: boolean | cdktf.IResolvable;
 }
 
-function dataAzurermStorageAccountSasResourceTypesToTerraform(struct?: DataAzurermStorageAccountSasResourceTypes): any {
+function dataAzurermStorageAccountSasResourceTypesToTerraform(struct?: DataAzurermStorageAccountSasResourceTypesOutputReference | DataAzurermStorageAccountSasResourceTypes): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     container: cdktf.booleanToTerraform(struct!.container),
     object: cdktf.booleanToTerraform(struct!.object),
@@ -129,6 +249,55 @@ function dataAzurermStorageAccountSasResourceTypesToTerraform(struct?: DataAzure
   }
 }
 
+export class DataAzurermStorageAccountSasResourceTypesOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // container - computed: false, optional: false, required: true
+  private _container?: boolean | cdktf.IResolvable; 
+  public get container() {
+    return this.getBooleanAttribute('container') as any;
+  }
+  public set container(value: boolean | cdktf.IResolvable) {
+    this._container = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get containerInput() {
+    return this._container
+  }
+
+  // object - computed: false, optional: false, required: true
+  private _object?: boolean | cdktf.IResolvable; 
+  public get object() {
+    return this.getBooleanAttribute('object') as any;
+  }
+  public set object(value: boolean | cdktf.IResolvable) {
+    this._object = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get objectInput() {
+    return this._object
+  }
+
+  // service - computed: false, optional: false, required: true
+  private _service?: boolean | cdktf.IResolvable; 
+  public get service() {
+    return this.getBooleanAttribute('service') as any;
+  }
+  public set service(value: boolean | cdktf.IResolvable) {
+    this._service = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceInput() {
+    return this._service
+  }
+}
 export interface DataAzurermStorageAccountSasServices {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#blob DataAzurermStorageAccountSas#blob}
@@ -148,8 +317,11 @@ export interface DataAzurermStorageAccountSasServices {
   readonly table: boolean | cdktf.IResolvable;
 }
 
-function dataAzurermStorageAccountSasServicesToTerraform(struct?: DataAzurermStorageAccountSasServices): any {
+function dataAzurermStorageAccountSasServicesToTerraform(struct?: DataAzurermStorageAccountSasServicesOutputReference | DataAzurermStorageAccountSasServices): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     blob: cdktf.booleanToTerraform(struct!.blob),
     file: cdktf.booleanToTerraform(struct!.file),
@@ -158,6 +330,68 @@ function dataAzurermStorageAccountSasServicesToTerraform(struct?: DataAzurermSto
   }
 }
 
+export class DataAzurermStorageAccountSasServicesOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // blob - computed: false, optional: false, required: true
+  private _blob?: boolean | cdktf.IResolvable; 
+  public get blob() {
+    return this.getBooleanAttribute('blob') as any;
+  }
+  public set blob(value: boolean | cdktf.IResolvable) {
+    this._blob = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get blobInput() {
+    return this._blob
+  }
+
+  // file - computed: false, optional: false, required: true
+  private _file?: boolean | cdktf.IResolvable; 
+  public get file() {
+    return this.getBooleanAttribute('file') as any;
+  }
+  public set file(value: boolean | cdktf.IResolvable) {
+    this._file = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fileInput() {
+    return this._file
+  }
+
+  // queue - computed: false, optional: false, required: true
+  private _queue?: boolean | cdktf.IResolvable; 
+  public get queue() {
+    return this.getBooleanAttribute('queue') as any;
+  }
+  public set queue(value: boolean | cdktf.IResolvable) {
+    this._queue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queueInput() {
+    return this._queue
+  }
+
+  // table - computed: false, optional: false, required: true
+  private _table?: boolean | cdktf.IResolvable; 
+  public get table() {
+    return this.getBooleanAttribute('table') as any;
+  }
+  public set table(value: boolean | cdktf.IResolvable) {
+    this._table = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableInput() {
+    return this._table
+  }
+}
 export interface DataAzurermStorageAccountSasTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#read DataAzurermStorageAccountSas#read}
@@ -165,13 +399,42 @@ export interface DataAzurermStorageAccountSasTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermStorageAccountSasTimeoutsToTerraform(struct?: DataAzurermStorageAccountSasTimeouts): any {
+function dataAzurermStorageAccountSasTimeoutsToTerraform(struct?: DataAzurermStorageAccountSasTimeoutsOutputReference | DataAzurermStorageAccountSasTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
 }
 
+export class DataAzurermStorageAccountSasTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html azurerm_storage_account_sas}
@@ -222,7 +485,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   // ==========
 
   // connection_string - computed: false, optional: false, required: true
-  private _connectionString: string;
+  private _connectionString?: string; 
   public get connectionString() {
     return this.getStringAttribute('connection_string');
   }
@@ -235,7 +498,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // expiry - computed: false, optional: false, required: true
-  private _expiry: string;
+  private _expiry?: string; 
   public get expiry() {
     return this.getStringAttribute('expiry');
   }
@@ -248,11 +511,11 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // https_only - computed: false, optional: true, required: false
-  private _httpsOnly?: boolean | cdktf.IResolvable;
+  private _httpsOnly?: boolean | cdktf.IResolvable | undefined; 
   public get httpsOnly() {
-    return this.getBooleanAttribute('https_only');
+    return this.getBooleanAttribute('https_only') as any;
   }
-  public set httpsOnly(value: boolean | cdktf.IResolvable ) {
+  public set httpsOnly(value: boolean | cdktf.IResolvable | undefined) {
     this._httpsOnly = value;
   }
   public resetHttpsOnly() {
@@ -269,11 +532,11 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // ip_addresses - computed: false, optional: true, required: false
-  private _ipAddresses?: string;
+  private _ipAddresses?: string | undefined; 
   public get ipAddresses() {
     return this.getStringAttribute('ip_addresses');
   }
-  public set ipAddresses(value: string ) {
+  public set ipAddresses(value: string | undefined) {
     this._ipAddresses = value;
   }
   public resetIpAddresses() {
@@ -290,11 +553,11 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // signed_version - computed: false, optional: true, required: false
-  private _signedVersion?: string;
+  private _signedVersion?: string | undefined; 
   public get signedVersion() {
     return this.getStringAttribute('signed_version');
   }
-  public set signedVersion(value: string ) {
+  public set signedVersion(value: string | undefined) {
     this._signedVersion = value;
   }
   public resetSignedVersion() {
@@ -306,7 +569,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // start - computed: false, optional: false, required: true
-  private _start: string;
+  private _start?: string; 
   public get start() {
     return this.getStringAttribute('start');
   }
@@ -319,11 +582,12 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // permissions - computed: false, optional: false, required: true
-  private _permissions: DataAzurermStorageAccountSasPermissions[];
+  private _permissions?: DataAzurermStorageAccountSasPermissions; 
+  private __permissionsOutput = new DataAzurermStorageAccountSasPermissionsOutputReference(this as any, "permissions", true);
   public get permissions() {
-    return this.interpolationForAttribute('permissions') as any;
+    return this.__permissionsOutput;
   }
-  public set permissions(value: DataAzurermStorageAccountSasPermissions[]) {
+  public putPermissions(value: DataAzurermStorageAccountSasPermissions) {
     this._permissions = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -332,11 +596,12 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // resource_types - computed: false, optional: false, required: true
-  private _resourceTypes: DataAzurermStorageAccountSasResourceTypes[];
+  private _resourceTypes?: DataAzurermStorageAccountSasResourceTypes; 
+  private __resourceTypesOutput = new DataAzurermStorageAccountSasResourceTypesOutputReference(this as any, "resource_types", true);
   public get resourceTypes() {
-    return this.interpolationForAttribute('resource_types') as any;
+    return this.__resourceTypesOutput;
   }
-  public set resourceTypes(value: DataAzurermStorageAccountSasResourceTypes[]) {
+  public putResourceTypes(value: DataAzurermStorageAccountSasResourceTypes) {
     this._resourceTypes = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -345,11 +610,12 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // services - computed: false, optional: false, required: true
-  private _services: DataAzurermStorageAccountSasServices[];
+  private _services?: DataAzurermStorageAccountSasServices; 
+  private __servicesOutput = new DataAzurermStorageAccountSasServicesOutputReference(this as any, "services", true);
   public get services() {
-    return this.interpolationForAttribute('services') as any;
+    return this.__servicesOutput;
   }
-  public set services(value: DataAzurermStorageAccountSasServices[]) {
+  public putServices(value: DataAzurermStorageAccountSasServices) {
     this._services = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -358,11 +624,12 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermStorageAccountSasTimeouts;
+  private _timeouts?: DataAzurermStorageAccountSasTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermStorageAccountSasTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataAzurermStorageAccountSasTimeouts ) {
+  public putTimeouts(value: DataAzurermStorageAccountSasTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -385,9 +652,9 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
       ip_addresses: cdktf.stringToTerraform(this._ipAddresses),
       signed_version: cdktf.stringToTerraform(this._signedVersion),
       start: cdktf.stringToTerraform(this._start),
-      permissions: cdktf.listMapper(dataAzurermStorageAccountSasPermissionsToTerraform)(this._permissions),
-      resource_types: cdktf.listMapper(dataAzurermStorageAccountSasResourceTypesToTerraform)(this._resourceTypes),
-      services: cdktf.listMapper(dataAzurermStorageAccountSasServicesToTerraform)(this._services),
+      permissions: dataAzurermStorageAccountSasPermissionsToTerraform(this._permissions),
+      resource_types: dataAzurermStorageAccountSasResourceTypesToTerraform(this._resourceTypes),
+      services: dataAzurermStorageAccountSasServicesToTerraform(this._services),
       timeouts: dataAzurermStorageAccountSasTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -48,19 +48,19 @@ export interface MachineLearningComputeClusterConfig extends cdktf.TerraformMeta
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#identity MachineLearningComputeCluster#identity}
   */
-  readonly identity?: MachineLearningComputeClusterIdentity[];
+  readonly identity?: MachineLearningComputeClusterIdentity;
   /**
   * scale_settings block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#scale_settings MachineLearningComputeCluster#scale_settings}
   */
-  readonly scaleSettings: MachineLearningComputeClusterScaleSettings[];
+  readonly scaleSettings: MachineLearningComputeClusterScaleSettings;
   /**
   * ssh block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#ssh MachineLearningComputeCluster#ssh}
   */
-  readonly ssh?: MachineLearningComputeClusterSsh[];
+  readonly ssh?: MachineLearningComputeClusterSsh;
   /**
   * timeouts block
   * 
@@ -79,14 +79,56 @@ export interface MachineLearningComputeClusterIdentity {
   readonly type: string;
 }
 
-function machineLearningComputeClusterIdentityToTerraform(struct?: MachineLearningComputeClusterIdentity): any {
+function machineLearningComputeClusterIdentityToTerraform(struct?: MachineLearningComputeClusterIdentityOutputReference | MachineLearningComputeClusterIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
 
+export class MachineLearningComputeClusterIdentityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[] | undefined; 
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+  public set identityIds(value: string[] | undefined) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
+}
 export interface MachineLearningComputeClusterScaleSettings {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#max_node_count MachineLearningComputeCluster#max_node_count}
@@ -102,8 +144,11 @@ export interface MachineLearningComputeClusterScaleSettings {
   readonly scaleDownNodesAfterIdleDuration: string;
 }
 
-function machineLearningComputeClusterScaleSettingsToTerraform(struct?: MachineLearningComputeClusterScaleSettings): any {
+function machineLearningComputeClusterScaleSettingsToTerraform(struct?: MachineLearningComputeClusterScaleSettingsOutputReference | MachineLearningComputeClusterScaleSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     max_node_count: cdktf.numberToTerraform(struct!.maxNodeCount),
     min_node_count: cdktf.numberToTerraform(struct!.minNodeCount),
@@ -111,6 +156,55 @@ function machineLearningComputeClusterScaleSettingsToTerraform(struct?: MachineL
   }
 }
 
+export class MachineLearningComputeClusterScaleSettingsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // max_node_count - computed: false, optional: false, required: true
+  private _maxNodeCount?: number; 
+  public get maxNodeCount() {
+    return this.getNumberAttribute('max_node_count');
+  }
+  public set maxNodeCount(value: number) {
+    this._maxNodeCount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxNodeCountInput() {
+    return this._maxNodeCount
+  }
+
+  // min_node_count - computed: false, optional: false, required: true
+  private _minNodeCount?: number; 
+  public get minNodeCount() {
+    return this.getNumberAttribute('min_node_count');
+  }
+  public set minNodeCount(value: number) {
+    this._minNodeCount = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minNodeCountInput() {
+    return this._minNodeCount
+  }
+
+  // scale_down_nodes_after_idle_duration - computed: false, optional: false, required: true
+  private _scaleDownNodesAfterIdleDuration?: string; 
+  public get scaleDownNodesAfterIdleDuration() {
+    return this.getStringAttribute('scale_down_nodes_after_idle_duration');
+  }
+  public set scaleDownNodesAfterIdleDuration(value: string) {
+    this._scaleDownNodesAfterIdleDuration = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scaleDownNodesAfterIdleDurationInput() {
+    return this._scaleDownNodesAfterIdleDuration
+  }
+}
 export interface MachineLearningComputeClusterSsh {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#admin_password MachineLearningComputeCluster#admin_password}
@@ -126,8 +220,11 @@ export interface MachineLearningComputeClusterSsh {
   readonly keyValue?: string;
 }
 
-function machineLearningComputeClusterSshToTerraform(struct?: MachineLearningComputeClusterSsh): any {
+function machineLearningComputeClusterSshToTerraform(struct?: MachineLearningComputeClusterSshOutputReference | MachineLearningComputeClusterSsh): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     admin_password: cdktf.stringToTerraform(struct!.adminPassword),
     admin_username: cdktf.stringToTerraform(struct!.adminUsername),
@@ -135,6 +232,61 @@ function machineLearningComputeClusterSshToTerraform(struct?: MachineLearningCom
   }
 }
 
+export class MachineLearningComputeClusterSshOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // admin_password - computed: false, optional: true, required: false
+  private _adminPassword?: string | undefined; 
+  public get adminPassword() {
+    return this.getStringAttribute('admin_password');
+  }
+  public set adminPassword(value: string | undefined) {
+    this._adminPassword = value;
+  }
+  public resetAdminPassword() {
+    this._adminPassword = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get adminPasswordInput() {
+    return this._adminPassword
+  }
+
+  // admin_username - computed: false, optional: false, required: true
+  private _adminUsername?: string; 
+  public get adminUsername() {
+    return this.getStringAttribute('admin_username');
+  }
+  public set adminUsername(value: string) {
+    this._adminUsername = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get adminUsernameInput() {
+    return this._adminUsername
+  }
+
+  // key_value - computed: false, optional: true, required: false
+  private _keyValue?: string | undefined; 
+  public get keyValue() {
+    return this.getStringAttribute('key_value');
+  }
+  public set keyValue(value: string | undefined) {
+    this._keyValue = value;
+  }
+  public resetKeyValue() {
+    this._keyValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyValueInput() {
+    return this._keyValue
+  }
+}
 export interface MachineLearningComputeClusterTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#create MachineLearningComputeCluster#create}
@@ -150,8 +302,11 @@ export interface MachineLearningComputeClusterTimeouts {
   readonly read?: string;
 }
 
-function machineLearningComputeClusterTimeoutsToTerraform(struct?: MachineLearningComputeClusterTimeouts): any {
+function machineLearningComputeClusterTimeoutsToTerraform(struct?: MachineLearningComputeClusterTimeoutsOutputReference | MachineLearningComputeClusterTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -159,6 +314,64 @@ function machineLearningComputeClusterTimeoutsToTerraform(struct?: MachineLearni
   }
 }
 
+export class MachineLearningComputeClusterTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html azurerm_machine_learning_compute_cluster}
@@ -212,11 +425,11 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -233,7 +446,7 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -246,7 +459,7 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
   }
 
   // machine_learning_workspace_id - computed: false, optional: false, required: true
-  private _machineLearningWorkspaceId: string;
+  private _machineLearningWorkspaceId?: string; 
   public get machineLearningWorkspaceId() {
     return this.getStringAttribute('machine_learning_workspace_id');
   }
@@ -259,7 +472,7 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -272,11 +485,11 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
   }
 
   // ssh_public_access_enabled - computed: true, optional: true, required: false
-  private _sshPublicAccessEnabled?: boolean | cdktf.IResolvable;
+  private _sshPublicAccessEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get sshPublicAccessEnabled() {
-    return this.getBooleanAttribute('ssh_public_access_enabled');
+    return this.getBooleanAttribute('ssh_public_access_enabled') as any;
   }
-  public set sshPublicAccessEnabled(value: boolean | cdktf.IResolvable) {
+  public set sshPublicAccessEnabled(value: boolean | cdktf.IResolvable | undefined) {
     this._sshPublicAccessEnabled = value;
   }
   public resetSshPublicAccessEnabled() {
@@ -288,11 +501,11 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
   }
 
   // subnet_resource_id - computed: false, optional: true, required: false
-  private _subnetResourceId?: string;
+  private _subnetResourceId?: string | undefined; 
   public get subnetResourceId() {
     return this.getStringAttribute('subnet_resource_id');
   }
-  public set subnetResourceId(value: string ) {
+  public set subnetResourceId(value: string | undefined) {
     this._subnetResourceId = value;
   }
   public resetSubnetResourceId() {
@@ -304,11 +517,12 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -320,7 +534,7 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
   }
 
   // vm_priority - computed: false, optional: false, required: true
-  private _vmPriority: string;
+  private _vmPriority?: string; 
   public get vmPriority() {
     return this.getStringAttribute('vm_priority');
   }
@@ -333,7 +547,7 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
   }
 
   // vm_size - computed: false, optional: false, required: true
-  private _vmSize: string;
+  private _vmSize?: string; 
   public get vmSize() {
     return this.getStringAttribute('vm_size');
   }
@@ -346,11 +560,12 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: MachineLearningComputeClusterIdentity[];
+  private _identity?: MachineLearningComputeClusterIdentity | undefined; 
+  private __identityOutput = new MachineLearningComputeClusterIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.interpolationForAttribute('identity') as any;
+    return this.__identityOutput;
   }
-  public set identity(value: MachineLearningComputeClusterIdentity[] ) {
+  public putIdentity(value: MachineLearningComputeClusterIdentity | undefined) {
     this._identity = value;
   }
   public resetIdentity() {
@@ -362,11 +577,12 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
   }
 
   // scale_settings - computed: false, optional: false, required: true
-  private _scaleSettings: MachineLearningComputeClusterScaleSettings[];
+  private _scaleSettings?: MachineLearningComputeClusterScaleSettings; 
+  private __scaleSettingsOutput = new MachineLearningComputeClusterScaleSettingsOutputReference(this as any, "scale_settings", true);
   public get scaleSettings() {
-    return this.interpolationForAttribute('scale_settings') as any;
+    return this.__scaleSettingsOutput;
   }
-  public set scaleSettings(value: MachineLearningComputeClusterScaleSettings[]) {
+  public putScaleSettings(value: MachineLearningComputeClusterScaleSettings) {
     this._scaleSettings = value;
   }
   // Temporarily expose input value. Use with caution.
@@ -375,11 +591,12 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
   }
 
   // ssh - computed: false, optional: true, required: false
-  private _ssh?: MachineLearningComputeClusterSsh[];
+  private _ssh?: MachineLearningComputeClusterSsh | undefined; 
+  private __sshOutput = new MachineLearningComputeClusterSshOutputReference(this as any, "ssh", true);
   public get ssh() {
-    return this.interpolationForAttribute('ssh') as any;
+    return this.__sshOutput;
   }
-  public set ssh(value: MachineLearningComputeClusterSsh[] ) {
+  public putSsh(value: MachineLearningComputeClusterSsh | undefined) {
     this._ssh = value;
   }
   public resetSsh() {
@@ -391,11 +608,12 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MachineLearningComputeClusterTimeouts;
+  private _timeouts?: MachineLearningComputeClusterTimeouts | undefined; 
+  private __timeoutsOutput = new MachineLearningComputeClusterTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: MachineLearningComputeClusterTimeouts ) {
+  public putTimeouts(value: MachineLearningComputeClusterTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -421,9 +639,9 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       vm_priority: cdktf.stringToTerraform(this._vmPriority),
       vm_size: cdktf.stringToTerraform(this._vmSize),
-      identity: cdktf.listMapper(machineLearningComputeClusterIdentityToTerraform)(this._identity),
-      scale_settings: cdktf.listMapper(machineLearningComputeClusterScaleSettingsToTerraform)(this._scaleSettings),
-      ssh: cdktf.listMapper(machineLearningComputeClusterSshToTerraform)(this._ssh),
+      identity: machineLearningComputeClusterIdentityToTerraform(this._identity),
+      scale_settings: machineLearningComputeClusterScaleSettingsToTerraform(this._scaleSettings),
+      ssh: machineLearningComputeClusterSshToTerraform(this._ssh),
       timeouts: machineLearningComputeClusterTimeoutsToTerraform(this._timeouts),
     };
   }

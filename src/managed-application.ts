@@ -48,7 +48,7 @@ export interface ManagedApplicationConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#plan ManagedApplication#plan}
   */
-  readonly plan?: ManagedApplicationPlan[];
+  readonly plan?: ManagedApplicationPlan;
   /**
   * timeouts block
   * 
@@ -79,8 +79,11 @@ export interface ManagedApplicationPlan {
   readonly version: string;
 }
 
-function managedApplicationPlanToTerraform(struct?: ManagedApplicationPlan): any {
+function managedApplicationPlanToTerraform(struct?: ManagedApplicationPlanOutputReference | ManagedApplicationPlan): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     product: cdktf.stringToTerraform(struct!.product),
@@ -90,6 +93,84 @@ function managedApplicationPlanToTerraform(struct?: ManagedApplicationPlan): any
   }
 }
 
+export class ManagedApplicationPlanOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // product - computed: false, optional: false, required: true
+  private _product?: string; 
+  public get product() {
+    return this.getStringAttribute('product');
+  }
+  public set product(value: string) {
+    this._product = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get productInput() {
+    return this._product
+  }
+
+  // promotion_code - computed: false, optional: true, required: false
+  private _promotionCode?: string | undefined; 
+  public get promotionCode() {
+    return this.getStringAttribute('promotion_code');
+  }
+  public set promotionCode(value: string | undefined) {
+    this._promotionCode = value;
+  }
+  public resetPromotionCode() {
+    this._promotionCode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get promotionCodeInput() {
+    return this._promotionCode
+  }
+
+  // publisher - computed: false, optional: false, required: true
+  private _publisher?: string; 
+  public get publisher() {
+    return this.getStringAttribute('publisher');
+  }
+  public set publisher(value: string) {
+    this._publisher = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publisherInput() {
+    return this._publisher
+  }
+
+  // version - computed: false, optional: false, required: true
+  private _version?: string; 
+  public get version() {
+    return this.getStringAttribute('version');
+  }
+  public set version(value: string) {
+    this._version = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get versionInput() {
+    return this._version
+  }
+}
 export interface ManagedApplicationTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html#create ManagedApplication#create}
@@ -109,8 +190,11 @@ export interface ManagedApplicationTimeouts {
   readonly update?: string;
 }
 
-function managedApplicationTimeoutsToTerraform(struct?: ManagedApplicationTimeouts): any {
+function managedApplicationTimeoutsToTerraform(struct?: ManagedApplicationTimeoutsOutputReference | ManagedApplicationTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -119,6 +203,80 @@ function managedApplicationTimeoutsToTerraform(struct?: ManagedApplicationTimeou
   }
 }
 
+export class ManagedApplicationTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/managed_application.html azurerm_managed_application}
@@ -170,11 +328,11 @@ export class ManagedApplication extends cdktf.TerraformResource {
   // ==========
 
   // application_definition_id - computed: false, optional: true, required: false
-  private _applicationDefinitionId?: string;
+  private _applicationDefinitionId?: string | undefined; 
   public get applicationDefinitionId() {
     return this.getStringAttribute('application_definition_id');
   }
-  public set applicationDefinitionId(value: string ) {
+  public set applicationDefinitionId(value: string | undefined) {
     this._applicationDefinitionId = value;
   }
   public resetApplicationDefinitionId() {
@@ -191,7 +349,7 @@ export class ManagedApplication extends cdktf.TerraformResource {
   }
 
   // kind - computed: false, optional: false, required: true
-  private _kind: string;
+  private _kind?: string; 
   public get kind() {
     return this.getStringAttribute('kind');
   }
@@ -204,7 +362,7 @@ export class ManagedApplication extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -217,7 +375,7 @@ export class ManagedApplication extends cdktf.TerraformResource {
   }
 
   // managed_resource_group_name - computed: false, optional: false, required: true
-  private _managedResourceGroupName: string;
+  private _managedResourceGroupName?: string; 
   public get managedResourceGroupName() {
     return this.getStringAttribute('managed_resource_group_name');
   }
@@ -230,7 +388,7 @@ export class ManagedApplication extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -248,11 +406,11 @@ export class ManagedApplication extends cdktf.TerraformResource {
   }
 
   // parameter_values - computed: true, optional: true, required: false
-  private _parameterValues?: string;
+  private _parameterValues?: string | undefined; 
   public get parameterValues() {
     return this.getStringAttribute('parameter_values');
   }
-  public set parameterValues(value: string) {
+  public set parameterValues(value: string | undefined) {
     this._parameterValues = value;
   }
   public resetParameterValues() {
@@ -264,11 +422,12 @@ export class ManagedApplication extends cdktf.TerraformResource {
   }
 
   // parameters - computed: true, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable
-  public get parameters(): { [key: string]: string } | cdktf.IResolvable {
-    return this.interpolationForAttribute('parameters') as any; // Getting the computed value is not yet implemented
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  public get parameters() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -280,7 +439,7 @@ export class ManagedApplication extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -293,11 +452,12 @@ export class ManagedApplication extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -309,11 +469,12 @@ export class ManagedApplication extends cdktf.TerraformResource {
   }
 
   // plan - computed: false, optional: true, required: false
-  private _plan?: ManagedApplicationPlan[];
+  private _plan?: ManagedApplicationPlan | undefined; 
+  private __planOutput = new ManagedApplicationPlanOutputReference(this as any, "plan", true);
   public get plan() {
-    return this.interpolationForAttribute('plan') as any;
+    return this.__planOutput;
   }
-  public set plan(value: ManagedApplicationPlan[] ) {
+  public putPlan(value: ManagedApplicationPlan | undefined) {
     this._plan = value;
   }
   public resetPlan() {
@@ -325,11 +486,12 @@ export class ManagedApplication extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ManagedApplicationTimeouts;
+  private _timeouts?: ManagedApplicationTimeouts | undefined; 
+  private __timeoutsOutput = new ManagedApplicationTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ManagedApplicationTimeouts ) {
+  public putTimeouts(value: ManagedApplicationTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -355,7 +517,7 @@ export class ManagedApplication extends cdktf.TerraformResource {
       parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      plan: cdktf.listMapper(managedApplicationPlanToTerraform)(this._plan),
+      plan: managedApplicationPlanToTerraform(this._plan),
       timeouts: managedApplicationTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -76,13 +76,13 @@ export interface PostgresqlFlexibleServerConfig extends cdktf.TerraformMetaArgum
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#high_availability PostgresqlFlexibleServer#high_availability}
   */
-  readonly highAvailability?: PostgresqlFlexibleServerHighAvailability[];
+  readonly highAvailability?: PostgresqlFlexibleServerHighAvailability;
   /**
   * maintenance_window block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#maintenance_window PostgresqlFlexibleServer#maintenance_window}
   */
-  readonly maintenanceWindow?: PostgresqlFlexibleServerMaintenanceWindow[];
+  readonly maintenanceWindow?: PostgresqlFlexibleServerMaintenanceWindow;
   /**
   * timeouts block
   * 
@@ -101,14 +101,56 @@ export interface PostgresqlFlexibleServerHighAvailability {
   readonly standbyAvailabilityZone?: string;
 }
 
-function postgresqlFlexibleServerHighAvailabilityToTerraform(struct?: PostgresqlFlexibleServerHighAvailability): any {
+function postgresqlFlexibleServerHighAvailabilityToTerraform(struct?: PostgresqlFlexibleServerHighAvailabilityOutputReference | PostgresqlFlexibleServerHighAvailability): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     mode: cdktf.stringToTerraform(struct!.mode),
     standby_availability_zone: cdktf.stringToTerraform(struct!.standbyAvailabilityZone),
   }
 }
 
+export class PostgresqlFlexibleServerHighAvailabilityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // mode - computed: false, optional: false, required: true
+  private _mode?: string; 
+  public get mode() {
+    return this.getStringAttribute('mode');
+  }
+  public set mode(value: string) {
+    this._mode = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get modeInput() {
+    return this._mode
+  }
+
+  // standby_availability_zone - computed: true, optional: true, required: false
+  private _standbyAvailabilityZone?: string | undefined; 
+  public get standbyAvailabilityZone() {
+    return this.getStringAttribute('standby_availability_zone');
+  }
+  public set standbyAvailabilityZone(value: string | undefined) {
+    this._standbyAvailabilityZone = value;
+  }
+  public resetStandbyAvailabilityZone() {
+    this._standbyAvailabilityZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get standbyAvailabilityZoneInput() {
+    return this._standbyAvailabilityZone
+  }
+}
 export interface PostgresqlFlexibleServerMaintenanceWindow {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#day_of_week PostgresqlFlexibleServer#day_of_week}
@@ -124,8 +166,11 @@ export interface PostgresqlFlexibleServerMaintenanceWindow {
   readonly startMinute?: number;
 }
 
-function postgresqlFlexibleServerMaintenanceWindowToTerraform(struct?: PostgresqlFlexibleServerMaintenanceWindow): any {
+function postgresqlFlexibleServerMaintenanceWindowToTerraform(struct?: PostgresqlFlexibleServerMaintenanceWindowOutputReference | PostgresqlFlexibleServerMaintenanceWindow): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     day_of_week: cdktf.numberToTerraform(struct!.dayOfWeek),
     start_hour: cdktf.numberToTerraform(struct!.startHour),
@@ -133,6 +178,64 @@ function postgresqlFlexibleServerMaintenanceWindowToTerraform(struct?: Postgresq
   }
 }
 
+export class PostgresqlFlexibleServerMaintenanceWindowOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // day_of_week - computed: false, optional: true, required: false
+  private _dayOfWeek?: number | undefined; 
+  public get dayOfWeek() {
+    return this.getNumberAttribute('day_of_week');
+  }
+  public set dayOfWeek(value: number | undefined) {
+    this._dayOfWeek = value;
+  }
+  public resetDayOfWeek() {
+    this._dayOfWeek = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dayOfWeekInput() {
+    return this._dayOfWeek
+  }
+
+  // start_hour - computed: false, optional: true, required: false
+  private _startHour?: number | undefined; 
+  public get startHour() {
+    return this.getNumberAttribute('start_hour');
+  }
+  public set startHour(value: number | undefined) {
+    this._startHour = value;
+  }
+  public resetStartHour() {
+    this._startHour = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startHourInput() {
+    return this._startHour
+  }
+
+  // start_minute - computed: false, optional: true, required: false
+  private _startMinute?: number | undefined; 
+  public get startMinute() {
+    return this.getNumberAttribute('start_minute');
+  }
+  public set startMinute(value: number | undefined) {
+    this._startMinute = value;
+  }
+  public resetStartMinute() {
+    this._startMinute = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startMinuteInput() {
+    return this._startMinute
+  }
+}
 export interface PostgresqlFlexibleServerTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#create PostgresqlFlexibleServer#create}
@@ -152,8 +255,11 @@ export interface PostgresqlFlexibleServerTimeouts {
   readonly update?: string;
 }
 
-function postgresqlFlexibleServerTimeoutsToTerraform(struct?: PostgresqlFlexibleServerTimeouts): any {
+function postgresqlFlexibleServerTimeoutsToTerraform(struct?: PostgresqlFlexibleServerTimeoutsOutputReference | PostgresqlFlexibleServerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -162,6 +268,80 @@ function postgresqlFlexibleServerTimeoutsToTerraform(struct?: PostgresqlFlexible
   }
 }
 
+export class PostgresqlFlexibleServerTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html azurerm_postgresql_flexible_server}
@@ -221,11 +401,11 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   // ==========
 
   // administrator_login - computed: true, optional: true, required: false
-  private _administratorLogin?: string;
+  private _administratorLogin?: string | undefined; 
   public get administratorLogin() {
     return this.getStringAttribute('administrator_login');
   }
-  public set administratorLogin(value: string) {
+  public set administratorLogin(value: string | undefined) {
     this._administratorLogin = value;
   }
   public resetAdministratorLogin() {
@@ -237,11 +417,11 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // administrator_password - computed: false, optional: true, required: false
-  private _administratorPassword?: string;
+  private _administratorPassword?: string | undefined; 
   public get administratorPassword() {
     return this.getStringAttribute('administrator_password');
   }
-  public set administratorPassword(value: string ) {
+  public set administratorPassword(value: string | undefined) {
     this._administratorPassword = value;
   }
   public resetAdministratorPassword() {
@@ -253,11 +433,11 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // backup_retention_days - computed: true, optional: true, required: false
-  private _backupRetentionDays?: number;
+  private _backupRetentionDays?: number | undefined; 
   public get backupRetentionDays() {
     return this.getNumberAttribute('backup_retention_days');
   }
-  public set backupRetentionDays(value: number) {
+  public set backupRetentionDays(value: number | undefined) {
     this._backupRetentionDays = value;
   }
   public resetBackupRetentionDays() {
@@ -274,11 +454,11 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // create_mode - computed: false, optional: true, required: false
-  private _createMode?: string;
+  private _createMode?: string | undefined; 
   public get createMode() {
     return this.getStringAttribute('create_mode');
   }
-  public set createMode(value: string ) {
+  public set createMode(value: string | undefined) {
     this._createMode = value;
   }
   public resetCreateMode() {
@@ -290,11 +470,11 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // delegated_subnet_id - computed: false, optional: true, required: false
-  private _delegatedSubnetId?: string;
+  private _delegatedSubnetId?: string | undefined; 
   public get delegatedSubnetId() {
     return this.getStringAttribute('delegated_subnet_id');
   }
-  public set delegatedSubnetId(value: string ) {
+  public set delegatedSubnetId(value: string | undefined) {
     this._delegatedSubnetId = value;
   }
   public resetDelegatedSubnetId() {
@@ -316,7 +496,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -329,7 +509,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -342,11 +522,11 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // point_in_time_restore_time_in_utc - computed: false, optional: true, required: false
-  private _pointInTimeRestoreTimeInUtc?: string;
+  private _pointInTimeRestoreTimeInUtc?: string | undefined; 
   public get pointInTimeRestoreTimeInUtc() {
     return this.getStringAttribute('point_in_time_restore_time_in_utc');
   }
-  public set pointInTimeRestoreTimeInUtc(value: string ) {
+  public set pointInTimeRestoreTimeInUtc(value: string | undefined) {
     this._pointInTimeRestoreTimeInUtc = value;
   }
   public resetPointInTimeRestoreTimeInUtc() {
@@ -358,11 +538,11 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // private_dns_zone_id - computed: true, optional: true, required: false
-  private _privateDnsZoneId?: string;
+  private _privateDnsZoneId?: string | undefined; 
   public get privateDnsZoneId() {
     return this.getStringAttribute('private_dns_zone_id');
   }
-  public set privateDnsZoneId(value: string) {
+  public set privateDnsZoneId(value: string | undefined) {
     this._privateDnsZoneId = value;
   }
   public resetPrivateDnsZoneId() {
@@ -375,11 +555,11 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
 
   // public_network_access_enabled - computed: true, optional: false, required: false
   public get publicNetworkAccessEnabled() {
-    return this.getBooleanAttribute('public_network_access_enabled');
+    return this.getBooleanAttribute('public_network_access_enabled') as any;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -392,11 +572,11 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // sku_name - computed: true, optional: true, required: false
-  private _skuName?: string;
+  private _skuName?: string | undefined; 
   public get skuName() {
     return this.getStringAttribute('sku_name');
   }
-  public set skuName(value: string) {
+  public set skuName(value: string | undefined) {
     this._skuName = value;
   }
   public resetSkuName() {
@@ -408,11 +588,11 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // source_server_id - computed: false, optional: true, required: false
-  private _sourceServerId?: string;
+  private _sourceServerId?: string | undefined; 
   public get sourceServerId() {
     return this.getStringAttribute('source_server_id');
   }
-  public set sourceServerId(value: string ) {
+  public set sourceServerId(value: string | undefined) {
     this._sourceServerId = value;
   }
   public resetSourceServerId() {
@@ -424,11 +604,11 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // storage_mb - computed: true, optional: true, required: false
-  private _storageMb?: number;
+  private _storageMb?: number | undefined; 
   public get storageMb() {
     return this.getNumberAttribute('storage_mb');
   }
-  public set storageMb(value: number) {
+  public set storageMb(value: number | undefined) {
     this._storageMb = value;
   }
   public resetStorageMb() {
@@ -440,11 +620,12 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -456,11 +637,11 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // version - computed: true, optional: true, required: false
-  private _version?: string;
+  private _version?: string | undefined; 
   public get version() {
     return this.getStringAttribute('version');
   }
-  public set version(value: string) {
+  public set version(value: string | undefined) {
     this._version = value;
   }
   public resetVersion() {
@@ -472,11 +653,11 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // zone - computed: true, optional: true, required: false
-  private _zone?: string;
+  private _zone?: string | undefined; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string) {
+  public set zone(value: string | undefined) {
     this._zone = value;
   }
   public resetZone() {
@@ -488,11 +669,12 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // high_availability - computed: false, optional: true, required: false
-  private _highAvailability?: PostgresqlFlexibleServerHighAvailability[];
+  private _highAvailability?: PostgresqlFlexibleServerHighAvailability | undefined; 
+  private __highAvailabilityOutput = new PostgresqlFlexibleServerHighAvailabilityOutputReference(this as any, "high_availability", true);
   public get highAvailability() {
-    return this.interpolationForAttribute('high_availability') as any;
+    return this.__highAvailabilityOutput;
   }
-  public set highAvailability(value: PostgresqlFlexibleServerHighAvailability[] ) {
+  public putHighAvailability(value: PostgresqlFlexibleServerHighAvailability | undefined) {
     this._highAvailability = value;
   }
   public resetHighAvailability() {
@@ -504,11 +686,12 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // maintenance_window - computed: false, optional: true, required: false
-  private _maintenanceWindow?: PostgresqlFlexibleServerMaintenanceWindow[];
+  private _maintenanceWindow?: PostgresqlFlexibleServerMaintenanceWindow | undefined; 
+  private __maintenanceWindowOutput = new PostgresqlFlexibleServerMaintenanceWindowOutputReference(this as any, "maintenance_window", true);
   public get maintenanceWindow() {
-    return this.interpolationForAttribute('maintenance_window') as any;
+    return this.__maintenanceWindowOutput;
   }
-  public set maintenanceWindow(value: PostgresqlFlexibleServerMaintenanceWindow[] ) {
+  public putMaintenanceWindow(value: PostgresqlFlexibleServerMaintenanceWindow | undefined) {
     this._maintenanceWindow = value;
   }
   public resetMaintenanceWindow() {
@@ -520,11 +703,12 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: PostgresqlFlexibleServerTimeouts;
+  private _timeouts?: PostgresqlFlexibleServerTimeouts | undefined; 
+  private __timeoutsOutput = new PostgresqlFlexibleServerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: PostgresqlFlexibleServerTimeouts ) {
+  public putTimeouts(value: PostgresqlFlexibleServerTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -557,8 +741,8 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
       zone: cdktf.stringToTerraform(this._zone),
-      high_availability: cdktf.listMapper(postgresqlFlexibleServerHighAvailabilityToTerraform)(this._highAvailability),
-      maintenance_window: cdktf.listMapper(postgresqlFlexibleServerMaintenanceWindowToTerraform)(this._maintenanceWindow),
+      high_availability: postgresqlFlexibleServerHighAvailabilityToTerraform(this._highAvailability),
+      maintenance_window: postgresqlFlexibleServerMaintenanceWindowToTerraform(this._maintenanceWindow),
       timeouts: postgresqlFlexibleServerTimeoutsToTerraform(this._timeouts),
     };
   }

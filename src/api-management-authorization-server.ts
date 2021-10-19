@@ -111,8 +111,11 @@ export interface ApiManagementAuthorizationServerTimeouts {
   readonly update?: string;
 }
 
-function apiManagementAuthorizationServerTimeoutsToTerraform(struct?: ApiManagementAuthorizationServerTimeouts): any {
+function apiManagementAuthorizationServerTimeoutsToTerraform(struct?: ApiManagementAuthorizationServerTimeoutsOutputReference | ApiManagementAuthorizationServerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -121,6 +124,80 @@ function apiManagementAuthorizationServerTimeoutsToTerraform(struct?: ApiManagem
   }
 }
 
+export class ApiManagementAuthorizationServerTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 export interface ApiManagementAuthorizationServerTokenBodyParameter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#name ApiManagementAuthorizationServer#name}
@@ -134,6 +211,9 @@ export interface ApiManagementAuthorizationServerTokenBodyParameter {
 
 function apiManagementAuthorizationServerTokenBodyParameterToTerraform(struct?: ApiManagementAuthorizationServerTokenBodyParameter): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     name: cdktf.stringToTerraform(struct!.name),
     value: cdktf.stringToTerraform(struct!.value),
@@ -200,7 +280,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   // ==========
 
   // api_management_name - computed: false, optional: false, required: true
-  private _apiManagementName: string;
+  private _apiManagementName?: string; 
   public get apiManagementName() {
     return this.getStringAttribute('api_management_name');
   }
@@ -213,7 +293,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // authorization_endpoint - computed: false, optional: false, required: true
-  private _authorizationEndpoint: string;
+  private _authorizationEndpoint?: string; 
   public get authorizationEndpoint() {
     return this.getStringAttribute('authorization_endpoint');
   }
@@ -226,7 +306,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // authorization_methods - computed: false, optional: false, required: true
-  private _authorizationMethods: string[];
+  private _authorizationMethods?: string[]; 
   public get authorizationMethods() {
     return this.getListAttribute('authorization_methods');
   }
@@ -239,11 +319,11 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // bearer_token_sending_methods - computed: false, optional: true, required: false
-  private _bearerTokenSendingMethods?: string[];
+  private _bearerTokenSendingMethods?: string[] | undefined; 
   public get bearerTokenSendingMethods() {
     return this.getListAttribute('bearer_token_sending_methods');
   }
-  public set bearerTokenSendingMethods(value: string[] ) {
+  public set bearerTokenSendingMethods(value: string[] | undefined) {
     this._bearerTokenSendingMethods = value;
   }
   public resetBearerTokenSendingMethods() {
@@ -255,11 +335,11 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // client_authentication_method - computed: false, optional: true, required: false
-  private _clientAuthenticationMethod?: string[];
+  private _clientAuthenticationMethod?: string[] | undefined; 
   public get clientAuthenticationMethod() {
     return this.getListAttribute('client_authentication_method');
   }
-  public set clientAuthenticationMethod(value: string[] ) {
+  public set clientAuthenticationMethod(value: string[] | undefined) {
     this._clientAuthenticationMethod = value;
   }
   public resetClientAuthenticationMethod() {
@@ -271,7 +351,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // client_id - computed: false, optional: false, required: true
-  private _clientId: string;
+  private _clientId?: string; 
   public get clientId() {
     return this.getStringAttribute('client_id');
   }
@@ -284,7 +364,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // client_registration_endpoint - computed: false, optional: false, required: true
-  private _clientRegistrationEndpoint: string;
+  private _clientRegistrationEndpoint?: string; 
   public get clientRegistrationEndpoint() {
     return this.getStringAttribute('client_registration_endpoint');
   }
@@ -297,11 +377,11 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // client_secret - computed: false, optional: true, required: false
-  private _clientSecret?: string;
+  private _clientSecret?: string | undefined; 
   public get clientSecret() {
     return this.getStringAttribute('client_secret');
   }
-  public set clientSecret(value: string ) {
+  public set clientSecret(value: string | undefined) {
     this._clientSecret = value;
   }
   public resetClientSecret() {
@@ -313,11 +393,11 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // default_scope - computed: false, optional: true, required: false
-  private _defaultScope?: string;
+  private _defaultScope?: string | undefined; 
   public get defaultScope() {
     return this.getStringAttribute('default_scope');
   }
-  public set defaultScope(value: string ) {
+  public set defaultScope(value: string | undefined) {
     this._defaultScope = value;
   }
   public resetDefaultScope() {
@@ -329,11 +409,11 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string;
+  private _description?: string | undefined; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string ) {
+  public set description(value: string | undefined) {
     this._description = value;
   }
   public resetDescription() {
@@ -345,7 +425,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // display_name - computed: false, optional: false, required: true
-  private _displayName: string;
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
@@ -358,7 +438,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // grant_types - computed: false, optional: false, required: true
-  private _grantTypes: string[];
+  private _grantTypes?: string[]; 
   public get grantTypes() {
     return this.getListAttribute('grant_types');
   }
@@ -376,7 +456,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -389,7 +469,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -402,11 +482,11 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // resource_owner_password - computed: false, optional: true, required: false
-  private _resourceOwnerPassword?: string;
+  private _resourceOwnerPassword?: string | undefined; 
   public get resourceOwnerPassword() {
     return this.getStringAttribute('resource_owner_password');
   }
-  public set resourceOwnerPassword(value: string ) {
+  public set resourceOwnerPassword(value: string | undefined) {
     this._resourceOwnerPassword = value;
   }
   public resetResourceOwnerPassword() {
@@ -418,11 +498,11 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // resource_owner_username - computed: false, optional: true, required: false
-  private _resourceOwnerUsername?: string;
+  private _resourceOwnerUsername?: string | undefined; 
   public get resourceOwnerUsername() {
     return this.getStringAttribute('resource_owner_username');
   }
-  public set resourceOwnerUsername(value: string ) {
+  public set resourceOwnerUsername(value: string | undefined) {
     this._resourceOwnerUsername = value;
   }
   public resetResourceOwnerUsername() {
@@ -434,11 +514,11 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // support_state - computed: false, optional: true, required: false
-  private _supportState?: boolean | cdktf.IResolvable;
+  private _supportState?: boolean | cdktf.IResolvable | undefined; 
   public get supportState() {
-    return this.getBooleanAttribute('support_state');
+    return this.getBooleanAttribute('support_state') as any;
   }
-  public set supportState(value: boolean | cdktf.IResolvable ) {
+  public set supportState(value: boolean | cdktf.IResolvable | undefined) {
     this._supportState = value;
   }
   public resetSupportState() {
@@ -450,11 +530,11 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // token_endpoint - computed: false, optional: true, required: false
-  private _tokenEndpoint?: string;
+  private _tokenEndpoint?: string | undefined; 
   public get tokenEndpoint() {
     return this.getStringAttribute('token_endpoint');
   }
-  public set tokenEndpoint(value: string ) {
+  public set tokenEndpoint(value: string | undefined) {
     this._tokenEndpoint = value;
   }
   public resetTokenEndpoint() {
@@ -466,11 +546,12 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ApiManagementAuthorizationServerTimeouts;
+  private _timeouts?: ApiManagementAuthorizationServerTimeouts | undefined; 
+  private __timeoutsOutput = new ApiManagementAuthorizationServerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: ApiManagementAuthorizationServerTimeouts ) {
+  public putTimeouts(value: ApiManagementAuthorizationServerTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
@@ -482,11 +563,12 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   }
 
   // token_body_parameter - computed: false, optional: true, required: false
-  private _tokenBodyParameter?: ApiManagementAuthorizationServerTokenBodyParameter[];
+  private _tokenBodyParameter?: ApiManagementAuthorizationServerTokenBodyParameter[] | undefined; 
   public get tokenBodyParameter() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('token_body_parameter') as any;
   }
-  public set tokenBodyParameter(value: ApiManagementAuthorizationServerTokenBodyParameter[] ) {
+  public set tokenBodyParameter(value: ApiManagementAuthorizationServerTokenBodyParameter[] | undefined) {
     this._tokenBodyParameter = value;
   }
   public resetTokenBodyParameter() {

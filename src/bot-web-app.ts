@@ -85,8 +85,11 @@ export interface BotWebAppTimeouts {
   readonly update?: string;
 }
 
-function botWebAppTimeoutsToTerraform(struct?: BotWebAppTimeouts): any {
+function botWebAppTimeoutsToTerraform(struct?: BotWebAppTimeoutsOutputReference | BotWebAppTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -95,6 +98,80 @@ function botWebAppTimeoutsToTerraform(struct?: BotWebAppTimeouts): any {
   }
 }
 
+export class BotWebAppTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_web_app.html azurerm_bot_web_app}
@@ -149,11 +226,11 @@ export class BotWebApp extends cdktf.TerraformResource {
   // ==========
 
   // developer_app_insights_api_key - computed: true, optional: true, required: false
-  private _developerAppInsightsApiKey?: string;
+  private _developerAppInsightsApiKey?: string | undefined; 
   public get developerAppInsightsApiKey() {
     return this.getStringAttribute('developer_app_insights_api_key');
   }
-  public set developerAppInsightsApiKey(value: string) {
+  public set developerAppInsightsApiKey(value: string | undefined) {
     this._developerAppInsightsApiKey = value;
   }
   public resetDeveloperAppInsightsApiKey() {
@@ -165,11 +242,11 @@ export class BotWebApp extends cdktf.TerraformResource {
   }
 
   // developer_app_insights_application_id - computed: true, optional: true, required: false
-  private _developerAppInsightsApplicationId?: string;
+  private _developerAppInsightsApplicationId?: string | undefined; 
   public get developerAppInsightsApplicationId() {
     return this.getStringAttribute('developer_app_insights_application_id');
   }
-  public set developerAppInsightsApplicationId(value: string) {
+  public set developerAppInsightsApplicationId(value: string | undefined) {
     this._developerAppInsightsApplicationId = value;
   }
   public resetDeveloperAppInsightsApplicationId() {
@@ -181,11 +258,11 @@ export class BotWebApp extends cdktf.TerraformResource {
   }
 
   // developer_app_insights_key - computed: true, optional: true, required: false
-  private _developerAppInsightsKey?: string;
+  private _developerAppInsightsKey?: string | undefined; 
   public get developerAppInsightsKey() {
     return this.getStringAttribute('developer_app_insights_key');
   }
-  public set developerAppInsightsKey(value: string) {
+  public set developerAppInsightsKey(value: string | undefined) {
     this._developerAppInsightsKey = value;
   }
   public resetDeveloperAppInsightsKey() {
@@ -197,11 +274,11 @@ export class BotWebApp extends cdktf.TerraformResource {
   }
 
   // display_name - computed: true, optional: true, required: false
-  private _displayName?: string;
+  private _displayName?: string | undefined; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string) {
+  public set displayName(value: string | undefined) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -213,11 +290,11 @@ export class BotWebApp extends cdktf.TerraformResource {
   }
 
   // endpoint - computed: false, optional: true, required: false
-  private _endpoint?: string;
+  private _endpoint?: string | undefined; 
   public get endpoint() {
     return this.getStringAttribute('endpoint');
   }
-  public set endpoint(value: string ) {
+  public set endpoint(value: string | undefined) {
     this._endpoint = value;
   }
   public resetEndpoint() {
@@ -234,7 +311,7 @@ export class BotWebApp extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: false, required: true
-  private _location: string;
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
@@ -247,11 +324,11 @@ export class BotWebApp extends cdktf.TerraformResource {
   }
 
   // luis_app_ids - computed: false, optional: true, required: false
-  private _luisAppIds?: string[];
+  private _luisAppIds?: string[] | undefined; 
   public get luisAppIds() {
     return this.getListAttribute('luis_app_ids');
   }
-  public set luisAppIds(value: string[] ) {
+  public set luisAppIds(value: string[] | undefined) {
     this._luisAppIds = value;
   }
   public resetLuisAppIds() {
@@ -263,11 +340,11 @@ export class BotWebApp extends cdktf.TerraformResource {
   }
 
   // luis_key - computed: false, optional: true, required: false
-  private _luisKey?: string;
+  private _luisKey?: string | undefined; 
   public get luisKey() {
     return this.getStringAttribute('luis_key');
   }
-  public set luisKey(value: string ) {
+  public set luisKey(value: string | undefined) {
     this._luisKey = value;
   }
   public resetLuisKey() {
@@ -279,7 +356,7 @@ export class BotWebApp extends cdktf.TerraformResource {
   }
 
   // microsoft_app_id - computed: false, optional: false, required: true
-  private _microsoftAppId: string;
+  private _microsoftAppId?: string; 
   public get microsoftAppId() {
     return this.getStringAttribute('microsoft_app_id');
   }
@@ -292,7 +369,7 @@ export class BotWebApp extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -305,7 +382,7 @@ export class BotWebApp extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: false, optional: false, required: true
-  private _resourceGroupName: string;
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
@@ -318,7 +395,7 @@ export class BotWebApp extends cdktf.TerraformResource {
   }
 
   // sku - computed: false, optional: false, required: true
-  private _sku: string;
+  private _sku?: string; 
   public get sku() {
     return this.getStringAttribute('sku');
   }
@@ -331,11 +408,12 @@ export class BotWebApp extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable;
+  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {
+    // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable ) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
     this._tags = value;
   }
   public resetTags() {
@@ -347,11 +425,12 @@ export class BotWebApp extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: BotWebAppTimeouts;
+  private _timeouts?: BotWebAppTimeouts | undefined; 
+  private __timeoutsOutput = new BotWebAppTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: BotWebAppTimeouts ) {
+  public putTimeouts(value: BotWebAppTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {

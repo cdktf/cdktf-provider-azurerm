@@ -41,8 +41,11 @@ export interface DataShareDatasetKustoDatabaseTimeouts {
   readonly read?: string;
 }
 
-function dataShareDatasetKustoDatabaseTimeoutsToTerraform(struct?: DataShareDatasetKustoDatabaseTimeouts): any {
+function dataShareDatasetKustoDatabaseTimeoutsToTerraform(struct?: DataShareDatasetKustoDatabaseTimeoutsOutputReference | DataShareDatasetKustoDatabaseTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
   return {
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
@@ -50,6 +53,64 @@ function dataShareDatasetKustoDatabaseTimeoutsToTerraform(struct?: DataShareData
   }
 }
 
+export class DataShareDatasetKustoDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string | undefined; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string | undefined) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string | undefined; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string | undefined) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html azurerm_data_share_dataset_kusto_database}
@@ -109,7 +170,7 @@ export class DataShareDatasetKustoDatabase extends cdktf.TerraformResource {
   }
 
   // kusto_database_id - computed: false, optional: false, required: true
-  private _kustoDatabaseId: string;
+  private _kustoDatabaseId?: string; 
   public get kustoDatabaseId() {
     return this.getStringAttribute('kusto_database_id');
   }
@@ -122,7 +183,7 @@ export class DataShareDatasetKustoDatabase extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: false, required: true
-  private _name: string;
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
@@ -135,7 +196,7 @@ export class DataShareDatasetKustoDatabase extends cdktf.TerraformResource {
   }
 
   // share_id - computed: false, optional: false, required: true
-  private _shareId: string;
+  private _shareId?: string; 
   public get shareId() {
     return this.getStringAttribute('share_id');
   }
@@ -148,11 +209,12 @@ export class DataShareDatasetKustoDatabase extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataShareDatasetKustoDatabaseTimeouts;
+  private _timeouts?: DataShareDatasetKustoDatabaseTimeouts | undefined; 
+  private __timeoutsOutput = new DataShareDatasetKustoDatabaseTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.interpolationForAttribute('timeouts') as any;
+    return this.__timeoutsOutput;
   }
-  public set timeouts(value: DataShareDatasetKustoDatabaseTimeouts ) {
+  public putTimeouts(value: DataShareDatasetKustoDatabaseTimeouts | undefined) {
     this._timeouts = value;
   }
   public resetTimeouts() {
