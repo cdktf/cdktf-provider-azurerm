@@ -117,6 +117,10 @@ export interface ContainerRegistryGeoreplications {
   */
   readonly location?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#regional_endpoint_enabled ContainerRegistry#regional_endpoint_enabled}
+  */
+  readonly regionalEndpointEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#tags ContainerRegistry#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
@@ -133,6 +137,7 @@ function containerRegistryGeoreplicationsToTerraform(struct?: ContainerRegistryG
   }
   return {
     location: cdktf.stringToTerraform(struct!.location),
+    regional_endpoint_enabled: cdktf.booleanToTerraform(struct!.regionalEndpointEnabled),
     tags: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.tags),
     zone_redundancy_enabled: cdktf.booleanToTerraform(struct!.zoneRedundancyEnabled),
   }

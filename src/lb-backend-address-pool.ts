@@ -31,6 +31,12 @@ export interface LbBackendAddressPoolConfig extends cdktf.TerraformMetaArguments
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html#timeouts LbBackendAddressPool#timeouts}
   */
   readonly timeouts?: LbBackendAddressPoolTimeouts;
+  /**
+  * tunnel_interface block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html#tunnel_interface LbBackendAddressPool#tunnel_interface}
+  */
+  readonly tunnelInterface?: LbBackendAddressPoolTunnelInterface[];
 }
 export interface LbBackendAddressPoolBackendAddress {
   /**
@@ -165,6 +171,38 @@ export class LbBackendAddressPoolTimeoutsOutputReference extends cdktf.ComplexOb
     return this._update
   }
 }
+export interface LbBackendAddressPoolTunnelInterface {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html#identifier LbBackendAddressPool#identifier}
+  */
+  readonly identifier: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html#port LbBackendAddressPool#port}
+  */
+  readonly port: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html#protocol LbBackendAddressPool#protocol}
+  */
+  readonly protocol: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html#type LbBackendAddressPool#type}
+  */
+  readonly type: string;
+}
+
+function lbBackendAddressPoolTunnelInterfaceToTerraform(struct?: LbBackendAddressPoolTunnelInterface): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identifier: cdktf.numberToTerraform(struct!.identifier),
+    port: cdktf.numberToTerraform(struct!.port),
+    protocol: cdktf.stringToTerraform(struct!.protocol),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/lb_backend_address_pool.html azurerm_lb_backend_address_pool}
@@ -203,6 +241,7 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._backendAddress = config.backendAddress;
     this._timeouts = config.timeouts;
+    this._tunnelInterface = config.tunnelInterface;
   }
 
   // ==========
@@ -305,6 +344,23 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
     return this._timeouts
   }
 
+  // tunnel_interface - computed: false, optional: true, required: false
+  private _tunnelInterface?: LbBackendAddressPoolTunnelInterface[] | undefined; 
+  public get tunnelInterface() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('tunnel_interface') as any;
+  }
+  public set tunnelInterface(value: LbBackendAddressPoolTunnelInterface[] | undefined) {
+    this._tunnelInterface = value;
+  }
+  public resetTunnelInterface() {
+    this._tunnelInterface = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tunnelInterfaceInput() {
+    return this._tunnelInterface
+  }
+
   // =========
   // SYNTHESIS
   // =========
@@ -316,6 +372,7 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       backend_address: cdktf.listMapper(lbBackendAddressPoolBackendAddressToTerraform)(this._backendAddress),
       timeouts: lbBackendAddressPoolTimeoutsToTerraform(this._timeouts),
+      tunnel_interface: cdktf.listMapper(lbBackendAddressPoolTunnelInterfaceToTerraform)(this._tunnelInterface),
     };
   }
 }

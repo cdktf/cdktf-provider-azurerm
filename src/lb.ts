@@ -50,6 +50,10 @@ export interface LbFrontendIpConfiguration {
   */
   readonly availabilityZone?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#gateway_load_balancer_frontend_ip_configuration_id Lb#gateway_load_balancer_frontend_ip_configuration_id}
+  */
+  readonly gatewayLoadBalancerFrontendIpConfigurationId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb.html#name Lb#name}
   */
   readonly name: string;
@@ -90,6 +94,7 @@ function lbFrontendIpConfigurationToTerraform(struct?: LbFrontendIpConfiguration
   }
   return {
     availability_zone: cdktf.stringToTerraform(struct!.availabilityZone),
+    gateway_load_balancer_frontend_ip_configuration_id: cdktf.stringToTerraform(struct!.gatewayLoadBalancerFrontendIpConfigurationId),
     name: cdktf.stringToTerraform(struct!.name),
     private_ip_address: cdktf.stringToTerraform(struct!.privateIpAddress),
     private_ip_address_allocation: cdktf.stringToTerraform(struct!.privateIpAddressAllocation),

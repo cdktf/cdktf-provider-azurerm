@@ -107,6 +107,11 @@ export class DataAzurermDiskEncryptionSet extends cdktf.TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
+  // auto_key_rotation_enabled - computed: true, optional: false, required: false
+  public get autoKeyRotationEnabled() {
+    return this.getBooleanAttribute('auto_key_rotation_enabled') as any;
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');

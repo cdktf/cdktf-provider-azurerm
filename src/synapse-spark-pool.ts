@@ -8,6 +8,18 @@ import * as cdktf from 'cdktf';
 
 export interface SynapseSparkPoolConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#cache_size SynapseSparkPool#cache_size}
+  */
+  readonly cacheSize?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#compute_isolation_enabled SynapseSparkPool#compute_isolation_enabled}
+  */
+  readonly computeIsolationEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#dynamic_executor_allocation_enabled SynapseSparkPool#dynamic_executor_allocation_enabled}
+  */
+  readonly dynamicExecutorAllocationEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#name SynapseSparkPool#name}
   */
   readonly name: string;
@@ -23,6 +35,10 @@ export interface SynapseSparkPoolConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#node_size_family SynapseSparkPool#node_size_family}
   */
   readonly nodeSizeFamily: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#session_level_packages_enabled SynapseSparkPool#session_level_packages_enabled}
+  */
+  readonly sessionLevelPackagesEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#spark_events_folder SynapseSparkPool#spark_events_folder}
   */
@@ -61,6 +77,12 @@ export interface SynapseSparkPoolConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#library_requirement SynapseSparkPool#library_requirement}
   */
   readonly libraryRequirement?: SynapseSparkPoolLibraryRequirement;
+  /**
+  * spark_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#spark_config SynapseSparkPool#spark_config}
+  */
+  readonly sparkConfig?: SynapseSparkPoolSparkConfig;
   /**
   * timeouts block
   * 
@@ -189,6 +211,64 @@ function synapseSparkPoolLibraryRequirementToTerraform(struct?: SynapseSparkPool
 }
 
 export class SynapseSparkPoolLibraryRequirementOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // content - computed: false, optional: false, required: true
+  private _content?: string; 
+  public get content() {
+    return this.getStringAttribute('content');
+  }
+  public set content(value: string) {
+    this._content = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contentInput() {
+    return this._content
+  }
+
+  // filename - computed: false, optional: false, required: true
+  private _filename?: string; 
+  public get filename() {
+    return this.getStringAttribute('filename');
+  }
+  public set filename(value: string) {
+    this._filename = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filenameInput() {
+    return this._filename
+  }
+}
+export interface SynapseSparkPoolSparkConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#content SynapseSparkPool#content}
+  */
+  readonly content: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_spark_pool.html#filename SynapseSparkPool#filename}
+  */
+  readonly filename: string;
+}
+
+function synapseSparkPoolSparkConfigToTerraform(struct?: SynapseSparkPoolSparkConfigOutputReference | SynapseSparkPoolSparkConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    content: cdktf.stringToTerraform(struct!.content),
+    filename: cdktf.stringToTerraform(struct!.filename),
+  }
+}
+
+export class SynapseSparkPoolSparkConfigOutputReference extends cdktf.ComplexObject {
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -363,10 +443,14 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._cacheSize = config.cacheSize;
+    this._computeIsolationEnabled = config.computeIsolationEnabled;
+    this._dynamicExecutorAllocationEnabled = config.dynamicExecutorAllocationEnabled;
     this._name = config.name;
     this._nodeCount = config.nodeCount;
     this._nodeSize = config.nodeSize;
     this._nodeSizeFamily = config.nodeSizeFamily;
+    this._sessionLevelPackagesEnabled = config.sessionLevelPackagesEnabled;
     this._sparkEventsFolder = config.sparkEventsFolder;
     this._sparkLogFolder = config.sparkLogFolder;
     this._sparkVersion = config.sparkVersion;
@@ -375,12 +459,61 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
     this._autoPause = config.autoPause;
     this._autoScale = config.autoScale;
     this._libraryRequirement = config.libraryRequirement;
+    this._sparkConfig = config.sparkConfig;
     this._timeouts = config.timeouts;
   }
 
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // cache_size - computed: false, optional: true, required: false
+  private _cacheSize?: number | undefined; 
+  public get cacheSize() {
+    return this.getNumberAttribute('cache_size');
+  }
+  public set cacheSize(value: number | undefined) {
+    this._cacheSize = value;
+  }
+  public resetCacheSize() {
+    this._cacheSize = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheSizeInput() {
+    return this._cacheSize
+  }
+
+  // compute_isolation_enabled - computed: false, optional: true, required: false
+  private _computeIsolationEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get computeIsolationEnabled() {
+    return this.getBooleanAttribute('compute_isolation_enabled') as any;
+  }
+  public set computeIsolationEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._computeIsolationEnabled = value;
+  }
+  public resetComputeIsolationEnabled() {
+    this._computeIsolationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get computeIsolationEnabledInput() {
+    return this._computeIsolationEnabled
+  }
+
+  // dynamic_executor_allocation_enabled - computed: false, optional: true, required: false
+  private _dynamicExecutorAllocationEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get dynamicExecutorAllocationEnabled() {
+    return this.getBooleanAttribute('dynamic_executor_allocation_enabled') as any;
+  }
+  public set dynamicExecutorAllocationEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._dynamicExecutorAllocationEnabled = value;
+  }
+  public resetDynamicExecutorAllocationEnabled() {
+    this._dynamicExecutorAllocationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dynamicExecutorAllocationEnabledInput() {
+    return this._dynamicExecutorAllocationEnabled
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {
@@ -440,6 +573,22 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nodeSizeFamilyInput() {
     return this._nodeSizeFamily
+  }
+
+  // session_level_packages_enabled - computed: false, optional: true, required: false
+  private _sessionLevelPackagesEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get sessionLevelPackagesEnabled() {
+    return this.getBooleanAttribute('session_level_packages_enabled') as any;
+  }
+  public set sessionLevelPackagesEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._sessionLevelPackagesEnabled = value;
+  }
+  public resetSessionLevelPackagesEnabled() {
+    this._sessionLevelPackagesEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sessionLevelPackagesEnabledInput() {
+    return this._sessionLevelPackagesEnabled
   }
 
   // spark_events_folder - computed: false, optional: true, required: false
@@ -571,6 +720,23 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
     return this._libraryRequirement
   }
 
+  // spark_config - computed: false, optional: true, required: false
+  private _sparkConfig?: SynapseSparkPoolSparkConfig | undefined; 
+  private __sparkConfigOutput = new SynapseSparkPoolSparkConfigOutputReference(this as any, "spark_config", true);
+  public get sparkConfig() {
+    return this.__sparkConfigOutput;
+  }
+  public putSparkConfig(value: SynapseSparkPoolSparkConfig | undefined) {
+    this._sparkConfig = value;
+  }
+  public resetSparkConfig() {
+    this._sparkConfig = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sparkConfigInput() {
+    return this._sparkConfig
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SynapseSparkPoolTimeouts | undefined; 
   private __timeoutsOutput = new SynapseSparkPoolTimeoutsOutputReference(this as any, "timeouts", true);
@@ -594,10 +760,14 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      cache_size: cdktf.numberToTerraform(this._cacheSize),
+      compute_isolation_enabled: cdktf.booleanToTerraform(this._computeIsolationEnabled),
+      dynamic_executor_allocation_enabled: cdktf.booleanToTerraform(this._dynamicExecutorAllocationEnabled),
       name: cdktf.stringToTerraform(this._name),
       node_count: cdktf.numberToTerraform(this._nodeCount),
       node_size: cdktf.stringToTerraform(this._nodeSize),
       node_size_family: cdktf.stringToTerraform(this._nodeSizeFamily),
+      session_level_packages_enabled: cdktf.booleanToTerraform(this._sessionLevelPackagesEnabled),
       spark_events_folder: cdktf.stringToTerraform(this._sparkEventsFolder),
       spark_log_folder: cdktf.stringToTerraform(this._sparkLogFolder),
       spark_version: cdktf.stringToTerraform(this._sparkVersion),
@@ -606,6 +776,7 @@ export class SynapseSparkPool extends cdktf.TerraformResource {
       auto_pause: synapseSparkPoolAutoPauseToTerraform(this._autoPause),
       auto_scale: synapseSparkPoolAutoScaleToTerraform(this._autoScale),
       library_requirement: synapseSparkPoolLibraryRequirementToTerraform(this._libraryRequirement),
+      spark_config: synapseSparkPoolSparkConfigToTerraform(this._sparkConfig),
       timeouts: synapseSparkPoolTimeoutsToTerraform(this._timeouts),
     };
   }

@@ -157,6 +157,26 @@ export class DataAzurermVirtualMachine extends cdktf.TerraformDataSource {
     return this._name
   }
 
+  // private_ip_address - computed: true, optional: false, required: false
+  public get privateIpAddress() {
+    return this.getStringAttribute('private_ip_address');
+  }
+
+  // private_ip_addresses - computed: true, optional: false, required: false
+  public get privateIpAddresses() {
+    return this.getListAttribute('private_ip_addresses');
+  }
+
+  // public_ip_address - computed: true, optional: false, required: false
+  public get publicIpAddress() {
+    return this.getStringAttribute('public_ip_address');
+  }
+
+  // public_ip_addresses - computed: true, optional: false, required: false
+  public get publicIpAddresses() {
+    return this.getListAttribute('public_ip_addresses');
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName?: string; 
   public get resourceGroupName() {

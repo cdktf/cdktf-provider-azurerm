@@ -12,6 +12,10 @@ export interface LbRuleConfig extends cdktf.TerraformMetaArguments {
   */
   readonly backendAddressPoolId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#backend_address_pool_ids LbRule#backend_address_pool_ids}
+  */
+  readonly backendAddressPoolIds?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_rule.html#backend_port LbRule#backend_port}
   */
   readonly backendPort: number;
@@ -210,6 +214,7 @@ export class LbRule extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._backendAddressPoolId = config.backendAddressPoolId;
+    this._backendAddressPoolIds = config.backendAddressPoolIds;
     this._backendPort = config.backendPort;
     this._disableOutboundSnat = config.disableOutboundSnat;
     this._enableFloatingIp = config.enableFloatingIp;
@@ -244,6 +249,22 @@ export class LbRule extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get backendAddressPoolIdInput() {
     return this._backendAddressPoolId
+  }
+
+  // backend_address_pool_ids - computed: true, optional: true, required: false
+  private _backendAddressPoolIds?: string[] | undefined; 
+  public get backendAddressPoolIds() {
+    return this.getListAttribute('backend_address_pool_ids');
+  }
+  public set backendAddressPoolIds(value: string[] | undefined) {
+    this._backendAddressPoolIds = value;
+  }
+  public resetBackendAddressPoolIds() {
+    this._backendAddressPoolIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get backendAddressPoolIdsInput() {
+    return this._backendAddressPoolIds
   }
 
   // backend_port - computed: false, optional: false, required: true
@@ -467,6 +488,7 @@ export class LbRule extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       backend_address_pool_id: cdktf.stringToTerraform(this._backendAddressPoolId),
+      backend_address_pool_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._backendAddressPoolIds),
       backend_port: cdktf.numberToTerraform(this._backendPort),
       disable_outbound_snat: cdktf.booleanToTerraform(this._disableOutboundSnat),
       enable_floating_ip: cdktf.booleanToTerraform(this._enableFloatingIp),

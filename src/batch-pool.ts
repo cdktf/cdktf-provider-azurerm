@@ -68,6 +68,12 @@ export interface BatchPoolConfig extends cdktf.TerraformMetaArguments {
   */
   readonly fixedScale?: BatchPoolFixedScale;
   /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#identity BatchPool#identity}
+  */
+  readonly identity?: BatchPoolIdentity;
+  /**
   * network_configuration block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#network_configuration BatchPool#network_configuration}
@@ -381,6 +387,64 @@ export class BatchPoolFixedScaleOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get targetLowPriorityNodesInput() {
     return this._targetLowPriorityNodes
+  }
+}
+export interface BatchPoolIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#identity_ids BatchPool#identity_ids}
+  */
+  readonly identityIds: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#type BatchPool#type}
+  */
+  readonly type: string;
+}
+
+function batchPoolIdentityToTerraform(struct?: BatchPoolIdentityOutputReference | BatchPoolIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class BatchPoolIdentityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // identity_ids - computed: false, optional: false, required: true
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
   }
 }
 export interface BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules {
@@ -1156,6 +1220,7 @@ export class BatchPool extends cdktf.TerraformResource {
     this._certificate = config.certificate;
     this._containerConfiguration = config.containerConfiguration;
     this._fixedScale = config.fixedScale;
+    this._identity = config.identity;
     this._networkConfiguration = config.networkConfiguration;
     this._startTask = config.startTask;
     this._storageImageReference = config.storageImageReference;
@@ -1369,6 +1434,23 @@ export class BatchPool extends cdktf.TerraformResource {
     return this._fixedScale
   }
 
+  // identity - computed: false, optional: true, required: false
+  private _identity?: BatchPoolIdentity | undefined; 
+  private __identityOutput = new BatchPoolIdentityOutputReference(this as any, "identity", true);
+  public get identity() {
+    return this.__identityOutput;
+  }
+  public putIdentity(value: BatchPoolIdentity | undefined) {
+    this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
+  }
+
   // network_configuration - computed: false, optional: true, required: false
   private _networkConfiguration?: BatchPoolNetworkConfiguration | undefined; 
   private __networkConfigurationOutput = new BatchPoolNetworkConfigurationOutputReference(this as any, "network_configuration", true);
@@ -1453,6 +1535,7 @@ export class BatchPool extends cdktf.TerraformResource {
       certificate: cdktf.listMapper(batchPoolCertificateToTerraform)(this._certificate),
       container_configuration: batchPoolContainerConfigurationToTerraform(this._containerConfiguration),
       fixed_scale: batchPoolFixedScaleToTerraform(this._fixedScale),
+      identity: batchPoolIdentityToTerraform(this._identity),
       network_configuration: batchPoolNetworkConfigurationToTerraform(this._networkConfiguration),
       start_task: batchPoolStartTaskToTerraform(this._startTask),
       storage_image_reference: batchPoolStorageImageReferenceToTerraform(this._storageImageReference),

@@ -16,10 +16,6 @@ export interface DataAzurermPublicIpPrefixConfig extends cdktf.TerraformMetaArgu
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ip_prefix.html#zones DataAzurermPublicIpPrefix#zones}
-  */
-  readonly zones?: string[];
-  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/public_ip_prefix.html#timeouts DataAzurermPublicIpPrefix#timeouts}
@@ -104,7 +100,6 @@ export class DataAzurermPublicIpPrefix extends cdktf.TerraformDataSource {
     });
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._zones = config.zones;
     this._timeouts = config.timeouts;
   }
 
@@ -168,20 +163,9 @@ export class DataAzurermPublicIpPrefix extends cdktf.TerraformDataSource {
     return new cdktf.StringMap(this, 'tags').lookup(key);
   }
 
-  // zones - computed: true, optional: true, required: false
-  private _zones?: string[] | undefined; 
+  // zones - computed: true, optional: false, required: false
   public get zones() {
     return this.getListAttribute('zones');
-  }
-  public set zones(value: string[] | undefined) {
-    this._zones = value;
-  }
-  public resetZones() {
-    this._zones = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get zonesInput() {
-    return this._zones
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -209,7 +193,6 @@ export class DataAzurermPublicIpPrefix extends cdktf.TerraformDataSource {
     return {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       timeouts: dataAzurermPublicIpPrefixTimeoutsToTerraform(this._timeouts),
     };
   }

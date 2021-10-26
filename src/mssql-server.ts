@@ -113,6 +113,10 @@ function mssqlServerExtendedAuditingPolicyToTerraform(struct?: MssqlServerExtend
 
 export interface MssqlServerAzureadAdministrator {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#azuread_authentication_only MssqlServer#azuread_authentication_only}
+  */
+  readonly azureadAuthenticationOnly?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#login_username MssqlServer#login_username}
   */
   readonly loginUsername: string;
@@ -132,6 +136,7 @@ function mssqlServerAzureadAdministratorToTerraform(struct?: MssqlServerAzureadA
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    azuread_authentication_only: cdktf.booleanToTerraform(struct!.azureadAuthenticationOnly),
     login_username: cdktf.stringToTerraform(struct!.loginUsername),
     object_id: cdktf.stringToTerraform(struct!.objectId),
     tenant_id: cdktf.stringToTerraform(struct!.tenantId),
@@ -146,6 +151,22 @@ export class MssqlServerAzureadAdministratorOutputReference extends cdktf.Comple
   */
   public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // azuread_authentication_only - computed: true, optional: true, required: false
+  private _azureadAuthenticationOnly?: boolean | cdktf.IResolvable | undefined; 
+  public get azureadAuthenticationOnly() {
+    return this.getBooleanAttribute('azuread_authentication_only') as any;
+  }
+  public set azureadAuthenticationOnly(value: boolean | cdktf.IResolvable | undefined) {
+    this._azureadAuthenticationOnly = value;
+  }
+  public resetAzureadAuthenticationOnly() {
+    this._azureadAuthenticationOnly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureadAuthenticationOnlyInput() {
+    return this._azureadAuthenticationOnly
   }
 
   // login_username - computed: false, optional: false, required: true
