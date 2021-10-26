@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface DiskEncryptionSetConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html#auto_key_rotation_enabled DiskEncryptionSet#auto_key_rotation_enabled}
+  */
+  readonly autoKeyRotationEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html#key_vault_key_id DiskEncryptionSet#key_vault_key_id}
   */
   readonly keyVaultKeyId: string;
@@ -219,6 +223,7 @@ export class DiskEncryptionSet extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._autoKeyRotationEnabled = config.autoKeyRotationEnabled;
     this._keyVaultKeyId = config.keyVaultKeyId;
     this._location = config.location;
     this._name = config.name;
@@ -231,6 +236,22 @@ export class DiskEncryptionSet extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // auto_key_rotation_enabled - computed: false, optional: true, required: false
+  private _autoKeyRotationEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get autoKeyRotationEnabled() {
+    return this.getBooleanAttribute('auto_key_rotation_enabled') as any;
+  }
+  public set autoKeyRotationEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._autoKeyRotationEnabled = value;
+  }
+  public resetAutoKeyRotationEnabled() {
+    this._autoKeyRotationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoKeyRotationEnabledInput() {
+    return this._autoKeyRotationEnabled
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {
@@ -343,6 +364,7 @@ export class DiskEncryptionSet extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      auto_key_rotation_enabled: cdktf.booleanToTerraform(this._autoKeyRotationEnabled),
       key_vault_key_id: cdktf.stringToTerraform(this._keyVaultKeyId),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

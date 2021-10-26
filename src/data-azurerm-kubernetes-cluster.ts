@@ -133,6 +133,13 @@ export class DataAzurermKubernetesClusterAddonProfileOmsAgent extends cdktf.Comp
     return this.interpolationForAttribute('oms_agent_identity') as any;
   }
 }
+export class DataAzurermKubernetesClusterAddonProfileOpenServiceMesh extends cdktf.ComplexComputedList {
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled') as any;
+  }
+}
 export class DataAzurermKubernetesClusterAddonProfile extends cdktf.ComplexComputedList {
 
   // azure_policy - computed: true, optional: false, required: false
@@ -163,6 +170,12 @@ export class DataAzurermKubernetesClusterAddonProfile extends cdktf.ComplexCompu
   public get omsAgent() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('oms_agent') as any;
+  }
+
+  // open_service_mesh - computed: true, optional: false, required: false
+  public get openServiceMesh() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('open_service_mesh') as any;
   }
 }
 export class DataAzurermKubernetesClusterAgentPoolProfileUpgradeSettings extends cdktf.ComplexComputedList {

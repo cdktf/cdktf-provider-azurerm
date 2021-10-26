@@ -54,6 +54,10 @@ export interface NetworkInterfaceConfig extends cdktf.TerraformMetaArguments {
 }
 export interface NetworkInterfaceIpConfiguration {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#gateway_load_balancer_frontend_ip_configuration_id NetworkInterface#gateway_load_balancer_frontend_ip_configuration_id}
+  */
+  readonly gatewayLoadBalancerFrontendIpConfigurationId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface.html#name NetworkInterface#name}
   */
   readonly name: string;
@@ -89,6 +93,7 @@ function networkInterfaceIpConfigurationToTerraform(struct?: NetworkInterfaceIpC
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    gateway_load_balancer_frontend_ip_configuration_id: cdktf.stringToTerraform(struct!.gatewayLoadBalancerFrontendIpConfigurationId),
     name: cdktf.stringToTerraform(struct!.name),
     primary: cdktf.booleanToTerraform(struct!.primary),
     private_ip_address: cdktf.stringToTerraform(struct!.privateIpAddress),

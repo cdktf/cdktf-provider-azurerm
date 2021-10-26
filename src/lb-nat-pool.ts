@@ -12,6 +12,10 @@ export interface LbNatPoolConfig extends cdktf.TerraformMetaArguments {
   */
   readonly backendPort: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_pool.html#floating_ip_enabled LbNatPool#floating_ip_enabled}
+  */
+  readonly floatingIpEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_pool.html#frontend_ip_configuration_name LbNatPool#frontend_ip_configuration_name}
   */
   readonly frontendIpConfigurationName: string;
@@ -23,6 +27,10 @@ export interface LbNatPoolConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_pool.html#frontend_port_start LbNatPool#frontend_port_start}
   */
   readonly frontendPortStart: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_pool.html#idle_timeout_in_minutes LbNatPool#idle_timeout_in_minutes}
+  */
+  readonly idleTimeoutInMinutes?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_pool.html#loadbalancer_id LbNatPool#loadbalancer_id}
   */
@@ -39,6 +47,10 @@ export interface LbNatPoolConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_pool.html#resource_group_name LbNatPool#resource_group_name}
   */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_nat_pool.html#tcp_reset_enabled LbNatPool#tcp_reset_enabled}
+  */
+  readonly tcpResetEnabled?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
@@ -186,13 +198,16 @@ export class LbNatPool extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._backendPort = config.backendPort;
+    this._floatingIpEnabled = config.floatingIpEnabled;
     this._frontendIpConfigurationName = config.frontendIpConfigurationName;
     this._frontendPortEnd = config.frontendPortEnd;
     this._frontendPortStart = config.frontendPortStart;
+    this._idleTimeoutInMinutes = config.idleTimeoutInMinutes;
     this._loadbalancerId = config.loadbalancerId;
     this._name = config.name;
     this._protocol = config.protocol;
     this._resourceGroupName = config.resourceGroupName;
+    this._tcpResetEnabled = config.tcpResetEnabled;
     this._timeouts = config.timeouts;
   }
 
@@ -211,6 +226,22 @@ export class LbNatPool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get backendPortInput() {
     return this._backendPort
+  }
+
+  // floating_ip_enabled - computed: false, optional: true, required: false
+  private _floatingIpEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get floatingIpEnabled() {
+    return this.getBooleanAttribute('floating_ip_enabled') as any;
+  }
+  public set floatingIpEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._floatingIpEnabled = value;
+  }
+  public resetFloatingIpEnabled() {
+    this._floatingIpEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get floatingIpEnabledInput() {
+    return this._floatingIpEnabled
   }
 
   // frontend_ip_configuration_id - computed: true, optional: false, required: false
@@ -260,6 +291,22 @@ export class LbNatPool extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // idle_timeout_in_minutes - computed: false, optional: true, required: false
+  private _idleTimeoutInMinutes?: number | undefined; 
+  public get idleTimeoutInMinutes() {
+    return this.getNumberAttribute('idle_timeout_in_minutes');
+  }
+  public set idleTimeoutInMinutes(value: number | undefined) {
+    this._idleTimeoutInMinutes = value;
+  }
+  public resetIdleTimeoutInMinutes() {
+    this._idleTimeoutInMinutes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idleTimeoutInMinutesInput() {
+    return this._idleTimeoutInMinutes
   }
 
   // loadbalancer_id - computed: false, optional: false, required: true
@@ -314,6 +361,22 @@ export class LbNatPool extends cdktf.TerraformResource {
     return this._resourceGroupName
   }
 
+  // tcp_reset_enabled - computed: false, optional: true, required: false
+  private _tcpResetEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get tcpResetEnabled() {
+    return this.getBooleanAttribute('tcp_reset_enabled') as any;
+  }
+  public set tcpResetEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._tcpResetEnabled = value;
+  }
+  public resetTcpResetEnabled() {
+    this._tcpResetEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tcpResetEnabledInput() {
+    return this._tcpResetEnabled
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: LbNatPoolTimeouts | undefined; 
   private __timeoutsOutput = new LbNatPoolTimeoutsOutputReference(this as any, "timeouts", true);
@@ -338,13 +401,16 @@ export class LbNatPool extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       backend_port: cdktf.numberToTerraform(this._backendPort),
+      floating_ip_enabled: cdktf.booleanToTerraform(this._floatingIpEnabled),
       frontend_ip_configuration_name: cdktf.stringToTerraform(this._frontendIpConfigurationName),
       frontend_port_end: cdktf.numberToTerraform(this._frontendPortEnd),
       frontend_port_start: cdktf.numberToTerraform(this._frontendPortStart),
+      idle_timeout_in_minutes: cdktf.numberToTerraform(this._idleTimeoutInMinutes),
       loadbalancer_id: cdktf.stringToTerraform(this._loadbalancerId),
       name: cdktf.stringToTerraform(this._name),
       protocol: cdktf.stringToTerraform(this._protocol),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      tcp_reset_enabled: cdktf.booleanToTerraform(this._tcpResetEnabled),
       timeouts: lbNatPoolTimeoutsToTerraform(this._timeouts),
     };
   }

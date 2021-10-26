@@ -16,10 +16,6 @@ export interface DataAzurermFirewallConfig extends cdktf.TerraformMetaArguments 
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/firewall.html#zones DataAzurermFirewall#zones}
-  */
-  readonly zones?: string[];
-  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/firewall.html#timeouts DataAzurermFirewall#timeouts}
@@ -170,7 +166,6 @@ export class DataAzurermFirewall extends cdktf.TerraformDataSource {
     });
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._zones = config.zones;
     this._timeouts = config.timeouts;
   }
 
@@ -259,20 +254,9 @@ export class DataAzurermFirewall extends cdktf.TerraformDataSource {
     return new DataAzurermFirewallVirtualHub(this, 'virtual_hub', index);
   }
 
-  // zones - computed: true, optional: true, required: false
-  private _zones?: string[] | undefined; 
+  // zones - computed: true, optional: false, required: false
   public get zones() {
     return this.getListAttribute('zones');
-  }
-  public set zones(value: string[] | undefined) {
-    this._zones = value;
-  }
-  public resetZones() {
-    this._zones = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get zonesInput() {
-    return this._zones
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -300,7 +284,6 @@ export class DataAzurermFirewall extends cdktf.TerraformDataSource {
     return {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       timeouts: dataAzurermFirewallTimeoutsToTerraform(this._timeouts),
     };
   }

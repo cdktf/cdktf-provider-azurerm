@@ -36,17 +36,33 @@ export interface IotSecurityDeviceGroupConfig extends cdktf.TerraformMetaArgumen
 }
 export interface IotSecurityDeviceGroupAllowRule {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#connection_from_ips_not_allowed IotSecurityDeviceGroup#connection_from_ips_not_allowed}
+  */
+  readonly connectionFromIpsNotAllowed?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#connection_to_ip_not_allowed IotSecurityDeviceGroup#connection_to_ip_not_allowed}
   */
   readonly connectionToIpNotAllowed?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#connection_to_ips_not_allowed IotSecurityDeviceGroup#connection_to_ips_not_allowed}
+  */
+  readonly connectionToIpsNotAllowed?: string[];
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#local_user_not_allowed IotSecurityDeviceGroup#local_user_not_allowed}
   */
   readonly localUserNotAllowed?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#local_users_not_allowed IotSecurityDeviceGroup#local_users_not_allowed}
+  */
+  readonly localUsersNotAllowed?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#process_not_allowed IotSecurityDeviceGroup#process_not_allowed}
   */
   readonly processNotAllowed?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_device_group.html#processes_not_allowed IotSecurityDeviceGroup#processes_not_allowed}
+  */
+  readonly processesNotAllowed?: string[];
 }
 
 function iotSecurityDeviceGroupAllowRuleToTerraform(struct?: IotSecurityDeviceGroupAllowRuleOutputReference | IotSecurityDeviceGroupAllowRule): any {
@@ -55,9 +71,13 @@ function iotSecurityDeviceGroupAllowRuleToTerraform(struct?: IotSecurityDeviceGr
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    connection_from_ips_not_allowed: cdktf.listMapper(cdktf.stringToTerraform)(struct!.connectionFromIpsNotAllowed),
     connection_to_ip_not_allowed: cdktf.listMapper(cdktf.stringToTerraform)(struct!.connectionToIpNotAllowed),
+    connection_to_ips_not_allowed: cdktf.listMapper(cdktf.stringToTerraform)(struct!.connectionToIpsNotAllowed),
     local_user_not_allowed: cdktf.listMapper(cdktf.stringToTerraform)(struct!.localUserNotAllowed),
+    local_users_not_allowed: cdktf.listMapper(cdktf.stringToTerraform)(struct!.localUsersNotAllowed),
     process_not_allowed: cdktf.listMapper(cdktf.stringToTerraform)(struct!.processNotAllowed),
+    processes_not_allowed: cdktf.listMapper(cdktf.stringToTerraform)(struct!.processesNotAllowed),
   }
 }
 
@@ -69,6 +89,22 @@ export class IotSecurityDeviceGroupAllowRuleOutputReference extends cdktf.Comple
   */
   public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // connection_from_ips_not_allowed - computed: false, optional: true, required: false
+  private _connectionFromIpsNotAllowed?: string[] | undefined; 
+  public get connectionFromIpsNotAllowed() {
+    return this.getListAttribute('connection_from_ips_not_allowed');
+  }
+  public set connectionFromIpsNotAllowed(value: string[] | undefined) {
+    this._connectionFromIpsNotAllowed = value;
+  }
+  public resetConnectionFromIpsNotAllowed() {
+    this._connectionFromIpsNotAllowed = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionFromIpsNotAllowedInput() {
+    return this._connectionFromIpsNotAllowed
   }
 
   // connection_to_ip_not_allowed - computed: false, optional: true, required: false
@@ -87,6 +123,22 @@ export class IotSecurityDeviceGroupAllowRuleOutputReference extends cdktf.Comple
     return this._connectionToIpNotAllowed
   }
 
+  // connection_to_ips_not_allowed - computed: false, optional: true, required: false
+  private _connectionToIpsNotAllowed?: string[] | undefined; 
+  public get connectionToIpsNotAllowed() {
+    return this.getListAttribute('connection_to_ips_not_allowed');
+  }
+  public set connectionToIpsNotAllowed(value: string[] | undefined) {
+    this._connectionToIpsNotAllowed = value;
+  }
+  public resetConnectionToIpsNotAllowed() {
+    this._connectionToIpsNotAllowed = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionToIpsNotAllowedInput() {
+    return this._connectionToIpsNotAllowed
+  }
+
   // local_user_not_allowed - computed: false, optional: true, required: false
   private _localUserNotAllowed?: string[] | undefined; 
   public get localUserNotAllowed() {
@@ -103,6 +155,22 @@ export class IotSecurityDeviceGroupAllowRuleOutputReference extends cdktf.Comple
     return this._localUserNotAllowed
   }
 
+  // local_users_not_allowed - computed: false, optional: true, required: false
+  private _localUsersNotAllowed?: string[] | undefined; 
+  public get localUsersNotAllowed() {
+    return this.getListAttribute('local_users_not_allowed');
+  }
+  public set localUsersNotAllowed(value: string[] | undefined) {
+    this._localUsersNotAllowed = value;
+  }
+  public resetLocalUsersNotAllowed() {
+    this._localUsersNotAllowed = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localUsersNotAllowedInput() {
+    return this._localUsersNotAllowed
+  }
+
   // process_not_allowed - computed: false, optional: true, required: false
   private _processNotAllowed?: string[] | undefined; 
   public get processNotAllowed() {
@@ -117,6 +185,22 @@ export class IotSecurityDeviceGroupAllowRuleOutputReference extends cdktf.Comple
   // Temporarily expose input value. Use with caution.
   public get processNotAllowedInput() {
     return this._processNotAllowed
+  }
+
+  // processes_not_allowed - computed: false, optional: true, required: false
+  private _processesNotAllowed?: string[] | undefined; 
+  public get processesNotAllowed() {
+    return this.getListAttribute('processes_not_allowed');
+  }
+  public set processesNotAllowed(value: string[] | undefined) {
+    this._processesNotAllowed = value;
+  }
+  public resetProcessesNotAllowed() {
+    this._processesNotAllowed = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get processesNotAllowedInput() {
+    return this._processesNotAllowed
   }
 }
 export interface IotSecurityDeviceGroupRangeRule {

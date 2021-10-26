@@ -20,10 +20,6 @@ export interface DataAzurermManagedDiskConfig extends cdktf.TerraformMetaArgumen
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk.html#zones DataAzurermManagedDisk#zones}
-  */
-  readonly zones?: string[];
-  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk.html#timeouts DataAzurermManagedDisk#timeouts}
@@ -109,7 +105,6 @@ export class DataAzurermManagedDisk extends cdktf.TerraformDataSource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._zones = config.zones;
     this._timeouts = config.timeouts;
   }
 
@@ -220,20 +215,9 @@ export class DataAzurermManagedDisk extends cdktf.TerraformDataSource {
     return this._tags
   }
 
-  // zones - computed: true, optional: true, required: false
-  private _zones?: string[] | undefined; 
+  // zones - computed: true, optional: false, required: false
   public get zones() {
     return this.getListAttribute('zones');
-  }
-  public set zones(value: string[] | undefined) {
-    this._zones = value;
-  }
-  public resetZones() {
-    this._zones = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get zonesInput() {
-    return this._zones
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -262,7 +246,6 @@ export class DataAzurermManagedDisk extends cdktf.TerraformDataSource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       timeouts: dataAzurermManagedDiskTimeoutsToTerraform(this._timeouts),
     };
   }

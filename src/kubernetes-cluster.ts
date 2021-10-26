@@ -582,6 +582,46 @@ export class KubernetesClusterAddonProfileOmsAgentOutputReference extends cdktf.
     return this._logAnalyticsWorkspaceId
   }
 }
+export interface KubernetesClusterAddonProfileOpenServiceMesh {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enabled KubernetesCluster#enabled}
+  */
+  readonly enabled: boolean | cdktf.IResolvable;
+}
+
+function kubernetesClusterAddonProfileOpenServiceMeshToTerraform(struct?: KubernetesClusterAddonProfileOpenServiceMeshOutputReference | KubernetesClusterAddonProfileOpenServiceMesh): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+  }
+}
+
+export class KubernetesClusterAddonProfileOpenServiceMeshOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled') as any;
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
+  }
+}
 export interface KubernetesClusterAddonProfile {
   /**
   * aci_connector_linux block
@@ -619,6 +659,12 @@ export interface KubernetesClusterAddonProfile {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#oms_agent KubernetesCluster#oms_agent}
   */
   readonly omsAgent?: KubernetesClusterAddonProfileOmsAgent;
+  /**
+  * open_service_mesh block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#open_service_mesh KubernetesCluster#open_service_mesh}
+  */
+  readonly openServiceMesh?: KubernetesClusterAddonProfileOpenServiceMesh;
 }
 
 function kubernetesClusterAddonProfileToTerraform(struct?: KubernetesClusterAddonProfileOutputReference | KubernetesClusterAddonProfile): any {
@@ -633,6 +679,7 @@ function kubernetesClusterAddonProfileToTerraform(struct?: KubernetesClusterAddo
     ingress_application_gateway: kubernetesClusterAddonProfileIngressApplicationGatewayToTerraform(struct!.ingressApplicationGateway),
     kube_dashboard: kubernetesClusterAddonProfileKubeDashboardToTerraform(struct!.kubeDashboard),
     oms_agent: kubernetesClusterAddonProfileOmsAgentToTerraform(struct!.omsAgent),
+    open_service_mesh: kubernetesClusterAddonProfileOpenServiceMeshToTerraform(struct!.openServiceMesh),
   }
 }
 
@@ -746,6 +793,23 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   // Temporarily expose input value. Use with caution.
   public get omsAgentInput() {
     return this._omsAgent
+  }
+
+  // open_service_mesh - computed: false, optional: true, required: false
+  private _openServiceMesh?: KubernetesClusterAddonProfileOpenServiceMesh | undefined; 
+  private __openServiceMeshOutput = new KubernetesClusterAddonProfileOpenServiceMeshOutputReference(this as any, "open_service_mesh", true);
+  public get openServiceMesh() {
+    return this.__openServiceMeshOutput;
+  }
+  public putOpenServiceMesh(value: KubernetesClusterAddonProfileOpenServiceMesh | undefined) {
+    this._openServiceMesh = value;
+  }
+  public resetOpenServiceMesh() {
+    this._openServiceMesh = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get openServiceMeshInput() {
+    return this._openServiceMesh
   }
 }
 export interface KubernetesClusterAutoScalerProfile {

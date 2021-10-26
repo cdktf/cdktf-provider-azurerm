@@ -36,6 +36,12 @@ export interface BatchAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_account.html#identity BatchAccount#identity}
+  */
+  readonly identity?: BatchAccountIdentity;
+  /**
   * key_vault_reference block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_account.html#key_vault_reference BatchAccount#key_vault_reference}
@@ -47,6 +53,67 @@ export interface BatchAccountConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_account.html#timeouts BatchAccount#timeouts}
   */
   readonly timeouts?: BatchAccountTimeouts;
+}
+export interface BatchAccountIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_account.html#identity_ids BatchAccount#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_account.html#type BatchAccount#type}
+  */
+  readonly type: string;
+}
+
+function batchAccountIdentityToTerraform(struct?: BatchAccountIdentityOutputReference | BatchAccountIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class BatchAccountIdentityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[] | undefined; 
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+  public set identityIds(value: string[] | undefined) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type
+  }
 }
 export interface BatchAccountKeyVaultReference {
   /**
@@ -252,6 +319,7 @@ export class BatchAccount extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._storageAccountId = config.storageAccountId;
     this._tags = config.tags;
+    this._identity = config.identity;
     this._keyVaultReference = config.keyVaultReference;
     this._timeouts = config.timeouts;
   }
@@ -384,6 +452,23 @@ export class BatchAccount extends cdktf.TerraformResource {
     return this._tags
   }
 
+  // identity - computed: false, optional: true, required: false
+  private _identity?: BatchAccountIdentity | undefined; 
+  private __identityOutput = new BatchAccountIdentityOutputReference(this as any, "identity", true);
+  public get identity() {
+    return this.__identityOutput;
+  }
+  public putIdentity(value: BatchAccountIdentity | undefined) {
+    this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity
+  }
+
   // key_vault_reference - computed: false, optional: true, required: false
   private _keyVaultReference?: BatchAccountKeyVaultReference | undefined; 
   private __keyVaultReferenceOutput = new BatchAccountKeyVaultReferenceOutputReference(this as any, "key_vault_reference", true);
@@ -431,6 +516,7 @@ export class BatchAccount extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      identity: batchAccountIdentityToTerraform(this._identity),
       key_vault_reference: batchAccountKeyVaultReferenceToTerraform(this._keyVaultReference),
       timeouts: batchAccountTimeoutsToTerraform(this._timeouts),
     };

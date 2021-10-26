@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface IotSecuritySolutionConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#disabled_data_sources IotSecuritySolution#disabled_data_sources}
+  */
+  readonly disabledDataSources?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#display_name IotSecuritySolution#display_name}
   */
   readonly displayName: string;
@@ -56,6 +60,12 @@ export interface IotSecuritySolutionConfig extends cdktf.TerraformMetaArguments 
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * additional_workspace block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#additional_workspace IotSecuritySolution#additional_workspace}
+  */
+  readonly additionalWorkspace?: IotSecuritySolutionAdditionalWorkspace[];
+  /**
   * recommendations_enabled block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#recommendations_enabled IotSecuritySolution#recommendations_enabled}
@@ -68,6 +78,28 @@ export interface IotSecuritySolutionConfig extends cdktf.TerraformMetaArguments 
   */
   readonly timeouts?: IotSecuritySolutionTimeouts;
 }
+export interface IotSecuritySolutionAdditionalWorkspace {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#data_types IotSecuritySolution#data_types}
+  */
+  readonly dataTypes: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#workspace_id IotSecuritySolution#workspace_id}
+  */
+  readonly workspaceId: string;
+}
+
+function iotSecuritySolutionAdditionalWorkspaceToTerraform(struct?: IotSecuritySolutionAdditionalWorkspace): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    data_types: cdktf.listMapper(cdktf.stringToTerraform)(struct!.dataTypes),
+    workspace_id: cdktf.stringToTerraform(struct!.workspaceId),
+  }
+}
+
 export interface IotSecuritySolutionRecommendationsEnabled {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iot_security_solution.html#acr_authentication IotSecuritySolution#acr_authentication}
@@ -565,6 +597,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._disabledDataSources = config.disabledDataSources;
     this._displayName = config.displayName;
     this._enabled = config.enabled;
     this._eventsToExport = config.eventsToExport;
@@ -577,6 +610,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
     this._querySubscriptionIds = config.querySubscriptionIds;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
+    this._additionalWorkspace = config.additionalWorkspace;
     this._recommendationsEnabled = config.recommendationsEnabled;
     this._timeouts = config.timeouts;
   }
@@ -584,6 +618,22 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // disabled_data_sources - computed: false, optional: true, required: false
+  private _disabledDataSources?: string[] | undefined; 
+  public get disabledDataSources() {
+    return this.getListAttribute('disabled_data_sources');
+  }
+  public set disabledDataSources(value: string[] | undefined) {
+    this._disabledDataSources = value;
+  }
+  public resetDisabledDataSources() {
+    this._disabledDataSources = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledDataSourcesInput() {
+    return this._disabledDataSources
+  }
 
   // display_name - computed: false, optional: false, required: true
   private _displayName?: string; 
@@ -768,6 +818,23 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
     return this._tags
   }
 
+  // additional_workspace - computed: false, optional: true, required: false
+  private _additionalWorkspace?: IotSecuritySolutionAdditionalWorkspace[] | undefined; 
+  public get additionalWorkspace() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('additional_workspace') as any;
+  }
+  public set additionalWorkspace(value: IotSecuritySolutionAdditionalWorkspace[] | undefined) {
+    this._additionalWorkspace = value;
+  }
+  public resetAdditionalWorkspace() {
+    this._additionalWorkspace = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get additionalWorkspaceInput() {
+    return this._additionalWorkspace
+  }
+
   // recommendations_enabled - computed: false, optional: true, required: false
   private _recommendationsEnabled?: IotSecuritySolutionRecommendationsEnabled | undefined; 
   private __recommendationsEnabledOutput = new IotSecuritySolutionRecommendationsEnabledOutputReference(this as any, "recommendations_enabled", true);
@@ -808,6 +875,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      disabled_data_sources: cdktf.listMapper(cdktf.stringToTerraform)(this._disabledDataSources),
       display_name: cdktf.stringToTerraform(this._displayName),
       enabled: cdktf.booleanToTerraform(this._enabled),
       events_to_export: cdktf.listMapper(cdktf.stringToTerraform)(this._eventsToExport),
@@ -820,6 +888,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
       query_subscription_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._querySubscriptionIds),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      additional_workspace: cdktf.listMapper(iotSecuritySolutionAdditionalWorkspaceToTerraform)(this._additionalWorkspace),
       recommendations_enabled: iotSecuritySolutionRecommendationsEnabledToTerraform(this._recommendationsEnabled),
       timeouts: iotSecuritySolutionTimeoutsToTerraform(this._timeouts),
     };
