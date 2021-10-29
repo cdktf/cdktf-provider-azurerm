@@ -44,7 +44,7 @@ export interface FirewallApplicationRuleCollectionRuleProtocol {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#port FirewallApplicationRuleCollection#port}
   */
-  readonly port?: number;
+  readonly port: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_application_rule_collection.html#type FirewallApplicationRuleCollection#type}
   */

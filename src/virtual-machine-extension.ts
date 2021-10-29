@@ -12,6 +12,10 @@ export interface VirtualMachineExtensionConfig extends cdktf.TerraformMetaArgume
   */
   readonly autoUpgradeMinorVersion?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#automatic_upgrade_enabled VirtualMachineExtension#automatic_upgrade_enabled}
+  */
+  readonly automaticUpgradeEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_machine_extension.html#name VirtualMachineExtension#name}
   */
   readonly name: string;
@@ -190,6 +194,7 @@ export class VirtualMachineExtension extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._autoUpgradeMinorVersion = config.autoUpgradeMinorVersion;
+    this._automaticUpgradeEnabled = config.automaticUpgradeEnabled;
     this._name = config.name;
     this._protectedSettings = config.protectedSettings;
     this._publisher = config.publisher;
@@ -219,6 +224,22 @@ export class VirtualMachineExtension extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get autoUpgradeMinorVersionInput() {
     return this._autoUpgradeMinorVersion
+  }
+
+  // automatic_upgrade_enabled - computed: false, optional: true, required: false
+  private _automaticUpgradeEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get automaticUpgradeEnabled() {
+    return this.getBooleanAttribute('automatic_upgrade_enabled') as any;
+  }
+  public set automaticUpgradeEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._automaticUpgradeEnabled = value;
+  }
+  public resetAutomaticUpgradeEnabled() {
+    this._automaticUpgradeEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get automaticUpgradeEnabledInput() {
+    return this._automaticUpgradeEnabled
   }
 
   // id - computed: true, optional: true, required: false
@@ -364,6 +385,7 @@ export class VirtualMachineExtension extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auto_upgrade_minor_version: cdktf.booleanToTerraform(this._autoUpgradeMinorVersion),
+      automatic_upgrade_enabled: cdktf.booleanToTerraform(this._automaticUpgradeEnabled),
       name: cdktf.stringToTerraform(this._name),
       protected_settings: cdktf.stringToTerraform(this._protectedSettings),
       publisher: cdktf.stringToTerraform(this._publisher),

@@ -4307,6 +4307,11 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     return this._nodeResourceGroup
   }
 
+  // portal_fqdn - computed: true, optional: false, required: false
+  public get portalFqdn() {
+    return this.getStringAttribute('portal_fqdn');
+  }
+
   // private_cluster_enabled - computed: true, optional: true, required: false
   private _privateClusterEnabled?: boolean | cdktf.IResolvable | undefined; 
   public get privateClusterEnabled() {

@@ -34,6 +34,11 @@ export class DataAzurermNetworkInterfaceIpConfiguration extends cdktf.ComplexCom
     return this.getListAttribute('application_security_group_ids');
   }
 
+  // gateway_load_balancer_frontend_ip_configuration_id - computed: true, optional: false, required: false
+  public get gatewayLoadBalancerFrontendIpConfigurationId() {
+    return this.getStringAttribute('gateway_load_balancer_frontend_ip_configuration_id');
+  }
+
   // load_balancer_backend_address_pools_ids - computed: true, optional: false, required: false
   public get loadBalancerBackendAddressPoolsIds() {
     return this.getListAttribute('load_balancer_backend_address_pools_ids');

@@ -112,6 +112,11 @@ export class DataAzurermVirtualHub extends cdktf.TerraformDataSource {
     return this.getStringAttribute('address_prefix');
   }
 
+  // default_route_table_id - computed: true, optional: false, required: false
+  public get defaultRouteTableId() {
+    return this.getStringAttribute('default_route_table_id');
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');

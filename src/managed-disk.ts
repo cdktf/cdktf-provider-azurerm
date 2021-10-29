@@ -88,6 +88,10 @@ export interface ManagedDiskConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tier?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#trusted_launch_enabled ManagedDisk#trusted_launch_enabled}
+  */
+  readonly trustedLaunchEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#zones ManagedDisk#zones}
   */
   readonly zones?: string[];
@@ -467,6 +471,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
     this._storageAccountType = config.storageAccountType;
     this._tags = config.tags;
     this._tier = config.tier;
+    this._trustedLaunchEnabled = config.trustedLaunchEnabled;
     this._zones = config.zones;
     this._encryptionSettings = config.encryptionSettings;
     this._timeouts = config.timeouts;
@@ -787,6 +792,22 @@ export class ManagedDisk extends cdktf.TerraformResource {
     return this._tier
   }
 
+  // trusted_launch_enabled - computed: false, optional: true, required: false
+  private _trustedLaunchEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get trustedLaunchEnabled() {
+    return this.getBooleanAttribute('trusted_launch_enabled') as any;
+  }
+  public set trustedLaunchEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._trustedLaunchEnabled = value;
+  }
+  public resetTrustedLaunchEnabled() {
+    this._trustedLaunchEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustedLaunchEnabledInput() {
+    return this._trustedLaunchEnabled
+  }
+
   // zones - computed: false, optional: true, required: false
   private _zones?: string[] | undefined; 
   public get zones() {
@@ -863,6 +884,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
       storage_account_type: cdktf.stringToTerraform(this._storageAccountType),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       tier: cdktf.stringToTerraform(this._tier),
+      trusted_launch_enabled: cdktf.booleanToTerraform(this._trustedLaunchEnabled),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       encryption_settings: managedDiskEncryptionSettingsToTerraform(this._encryptionSettings),
       timeouts: managedDiskTimeoutsToTerraform(this._timeouts),

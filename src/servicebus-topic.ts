@@ -32,6 +32,10 @@ export interface ServicebusTopicConfig extends cdktf.TerraformMetaArguments {
   */
   readonly enablePartitioning?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#max_message_size_in_kilobytes ServicebusTopic#max_message_size_in_kilobytes}
+  */
+  readonly maxMessageSizeInKilobytes?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#max_size_in_megabytes ServicebusTopic#max_size_in_megabytes}
   */
   readonly maxSizeInMegabytes?: number;
@@ -211,6 +215,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
     this._enableBatchedOperations = config.enableBatchedOperations;
     this._enableExpress = config.enableExpress;
     this._enablePartitioning = config.enablePartitioning;
+    this._maxMessageSizeInKilobytes = config.maxMessageSizeInKilobytes;
     this._maxSizeInMegabytes = config.maxSizeInMegabytes;
     this._name = config.name;
     this._namespaceName = config.namespaceName;
@@ -324,6 +329,22 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // max_message_size_in_kilobytes - computed: true, optional: true, required: false
+  private _maxMessageSizeInKilobytes?: number | undefined; 
+  public get maxMessageSizeInKilobytes() {
+    return this.getNumberAttribute('max_message_size_in_kilobytes');
+  }
+  public set maxMessageSizeInKilobytes(value: number | undefined) {
+    this._maxMessageSizeInKilobytes = value;
+  }
+  public resetMaxMessageSizeInKilobytes() {
+    this._maxMessageSizeInKilobytes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxMessageSizeInKilobytesInput() {
+    return this._maxMessageSizeInKilobytes
   }
 
   // max_size_in_megabytes - computed: true, optional: true, required: false
@@ -458,6 +479,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
       enable_batched_operations: cdktf.booleanToTerraform(this._enableBatchedOperations),
       enable_express: cdktf.booleanToTerraform(this._enableExpress),
       enable_partitioning: cdktf.booleanToTerraform(this._enablePartitioning),
+      max_message_size_in_kilobytes: cdktf.numberToTerraform(this._maxMessageSizeInKilobytes),
       max_size_in_megabytes: cdktf.numberToTerraform(this._maxSizeInMegabytes),
       name: cdktf.stringToTerraform(this._name),
       namespace_name: cdktf.stringToTerraform(this._namespaceName),

@@ -520,6 +520,10 @@ export interface WindowsVirtualMachineScaleSetExtension {
   */
   readonly autoUpgradeMinorVersion?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#automatic_upgrade_enabled WindowsVirtualMachineScaleSet#automatic_upgrade_enabled}
+  */
+  readonly automaticUpgradeEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#force_update_tag WindowsVirtualMachineScaleSet#force_update_tag}
   */
   readonly forceUpdateTag?: string;
@@ -560,6 +564,7 @@ function windowsVirtualMachineScaleSetExtensionToTerraform(struct?: WindowsVirtu
   }
   return {
     auto_upgrade_minor_version: cdktf.booleanToTerraform(struct!.autoUpgradeMinorVersion),
+    automatic_upgrade_enabled: cdktf.booleanToTerraform(struct!.automaticUpgradeEnabled),
     force_update_tag: cdktf.stringToTerraform(struct!.forceUpdateTag),
     name: cdktf.stringToTerraform(struct!.name),
     protected_settings: cdktf.stringToTerraform(struct!.protectedSettings),
