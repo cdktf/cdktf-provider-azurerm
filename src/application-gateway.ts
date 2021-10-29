@@ -136,7 +136,7 @@ export interface ApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#ssl_policy ApplicationGateway#ssl_policy}
   */
-  readonly sslPolicy?: ApplicationGatewaySslPolicy[];
+  readonly sslPolicy?: ApplicationGatewaySslPolicy;
   /**
   * ssl_profile block
   * 
@@ -888,6 +888,10 @@ export interface ApplicationGatewayRequestRoutingRule {
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#priority ApplicationGateway#priority}
+  */
+  readonly priority?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#redirect_configuration_name ApplicationGateway#redirect_configuration_name}
   */
   readonly redirectConfigurationName?: string;
@@ -915,6 +919,7 @@ function applicationGatewayRequestRoutingRuleToTerraform(struct?: ApplicationGat
     backend_http_settings_name: cdktf.stringToTerraform(struct!.backendHttpSettingsName),
     http_listener_name: cdktf.stringToTerraform(struct!.httpListenerName),
     name: cdktf.stringToTerraform(struct!.name),
+    priority: cdktf.numberToTerraform(struct!.priority),
     redirect_configuration_name: cdktf.stringToTerraform(struct!.redirectConfigurationName),
     rewrite_rule_set_name: cdktf.stringToTerraform(struct!.rewriteRuleSetName),
     rule_type: cdktf.stringToTerraform(struct!.ruleType),
@@ -1291,7 +1296,7 @@ export interface ApplicationGatewaySslPolicy {
   readonly policyType?: string;
 }
 
-function applicationGatewaySslPolicyToTerraform(struct?: ApplicationGatewaySslPolicy): any {
+function applicationGatewaySslPolicyToTerraform(struct?: ApplicationGatewaySslPolicyOutputReference | ApplicationGatewaySslPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1305,6 +1310,96 @@ function applicationGatewaySslPolicyToTerraform(struct?: ApplicationGatewaySslPo
   }
 }
 
+export class ApplicationGatewaySslPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cipher_suites - computed: false, optional: true, required: false
+  private _cipherSuites?: string[] | undefined; 
+  public get cipherSuites() {
+    return this.getListAttribute('cipher_suites');
+  }
+  public set cipherSuites(value: string[] | undefined) {
+    this._cipherSuites = value;
+  }
+  public resetCipherSuites() {
+    this._cipherSuites = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cipherSuitesInput() {
+    return this._cipherSuites
+  }
+
+  // disabled_protocols - computed: false, optional: true, required: false
+  private _disabledProtocols?: string[] | undefined; 
+  public get disabledProtocols() {
+    return this.getListAttribute('disabled_protocols');
+  }
+  public set disabledProtocols(value: string[] | undefined) {
+    this._disabledProtocols = value;
+  }
+  public resetDisabledProtocols() {
+    this._disabledProtocols = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledProtocolsInput() {
+    return this._disabledProtocols
+  }
+
+  // min_protocol_version - computed: false, optional: true, required: false
+  private _minProtocolVersion?: string | undefined; 
+  public get minProtocolVersion() {
+    return this.getStringAttribute('min_protocol_version');
+  }
+  public set minProtocolVersion(value: string | undefined) {
+    this._minProtocolVersion = value;
+  }
+  public resetMinProtocolVersion() {
+    this._minProtocolVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minProtocolVersionInput() {
+    return this._minProtocolVersion
+  }
+
+  // policy_name - computed: false, optional: true, required: false
+  private _policyName?: string | undefined; 
+  public get policyName() {
+    return this.getStringAttribute('policy_name');
+  }
+  public set policyName(value: string | undefined) {
+    this._policyName = value;
+  }
+  public resetPolicyName() {
+    this._policyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyNameInput() {
+    return this._policyName
+  }
+
+  // policy_type - computed: false, optional: true, required: false
+  private _policyType?: string | undefined; 
+  public get policyType() {
+    return this.getStringAttribute('policy_type');
+  }
+  public set policyType(value: string | undefined) {
+    this._policyType = value;
+  }
+  public resetPolicyType() {
+    this._policyType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyTypeInput() {
+    return this._policyType
+  }
+}
 export interface ApplicationGatewaySslProfileSslPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#cipher_suites ApplicationGateway#cipher_suites}
@@ -1328,7 +1423,7 @@ export interface ApplicationGatewaySslProfileSslPolicy {
   readonly policyType?: string;
 }
 
-function applicationGatewaySslProfileSslPolicyToTerraform(struct?: ApplicationGatewaySslProfileSslPolicy): any {
+function applicationGatewaySslProfileSslPolicyToTerraform(struct?: ApplicationGatewaySslProfileSslPolicyOutputReference | ApplicationGatewaySslProfileSslPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1342,6 +1437,96 @@ function applicationGatewaySslProfileSslPolicyToTerraform(struct?: ApplicationGa
   }
 }
 
+export class ApplicationGatewaySslProfileSslPolicyOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cipher_suites - computed: false, optional: true, required: false
+  private _cipherSuites?: string[] | undefined; 
+  public get cipherSuites() {
+    return this.getListAttribute('cipher_suites');
+  }
+  public set cipherSuites(value: string[] | undefined) {
+    this._cipherSuites = value;
+  }
+  public resetCipherSuites() {
+    this._cipherSuites = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cipherSuitesInput() {
+    return this._cipherSuites
+  }
+
+  // disabled_protocols - computed: false, optional: true, required: false
+  private _disabledProtocols?: string[] | undefined; 
+  public get disabledProtocols() {
+    return this.getListAttribute('disabled_protocols');
+  }
+  public set disabledProtocols(value: string[] | undefined) {
+    this._disabledProtocols = value;
+  }
+  public resetDisabledProtocols() {
+    this._disabledProtocols = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get disabledProtocolsInput() {
+    return this._disabledProtocols
+  }
+
+  // min_protocol_version - computed: false, optional: true, required: false
+  private _minProtocolVersion?: string | undefined; 
+  public get minProtocolVersion() {
+    return this.getStringAttribute('min_protocol_version');
+  }
+  public set minProtocolVersion(value: string | undefined) {
+    this._minProtocolVersion = value;
+  }
+  public resetMinProtocolVersion() {
+    this._minProtocolVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minProtocolVersionInput() {
+    return this._minProtocolVersion
+  }
+
+  // policy_name - computed: false, optional: true, required: false
+  private _policyName?: string | undefined; 
+  public get policyName() {
+    return this.getStringAttribute('policy_name');
+  }
+  public set policyName(value: string | undefined) {
+    this._policyName = value;
+  }
+  public resetPolicyName() {
+    this._policyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyNameInput() {
+    return this._policyName
+  }
+
+  // policy_type - computed: false, optional: true, required: false
+  private _policyType?: string | undefined; 
+  public get policyType() {
+    return this.getStringAttribute('policy_type');
+  }
+  public set policyType(value: string | undefined) {
+    this._policyType = value;
+  }
+  public resetPolicyType() {
+    this._policyType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyTypeInput() {
+    return this._policyType
+  }
+}
 export interface ApplicationGatewaySslProfile {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
@@ -1360,7 +1545,7 @@ export interface ApplicationGatewaySslProfile {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#ssl_policy ApplicationGateway#ssl_policy}
   */
-  readonly sslPolicy?: ApplicationGatewaySslProfileSslPolicy[];
+  readonly sslPolicy?: ApplicationGatewaySslProfileSslPolicy;
 }
 
 function applicationGatewaySslProfileToTerraform(struct?: ApplicationGatewaySslProfile): any {
@@ -1372,7 +1557,7 @@ function applicationGatewaySslProfileToTerraform(struct?: ApplicationGatewaySslP
     name: cdktf.stringToTerraform(struct!.name),
     trusted_client_certificate_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.trustedClientCertificateNames),
     verify_client_cert_issuer_dn: cdktf.booleanToTerraform(struct!.verifyClientCertIssuerDn),
-    ssl_policy: cdktf.listMapper(applicationGatewaySslProfileSslPolicyToTerraform)(struct!.sslPolicy),
+    ssl_policy: applicationGatewaySslProfileSslPolicyToTerraform(struct!.sslPolicy),
   }
 }
 
@@ -2301,12 +2486,12 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   }
 
   // ssl_policy - computed: false, optional: true, required: false
-  private _sslPolicy?: ApplicationGatewaySslPolicy[] | undefined; 
+  private _sslPolicy?: ApplicationGatewaySslPolicy | undefined; 
+  private __sslPolicyOutput = new ApplicationGatewaySslPolicyOutputReference(this as any, "ssl_policy", true);
   public get sslPolicy() {
-    // Getting the computed value is not yet implemented
-    return this.interpolationForAttribute('ssl_policy') as any;
+    return this.__sslPolicyOutput;
   }
-  public set sslPolicy(value: ApplicationGatewaySslPolicy[] | undefined) {
+  public putSslPolicy(value: ApplicationGatewaySslPolicy | undefined) {
     this._sslPolicy = value;
   }
   public resetSslPolicy() {
@@ -2448,7 +2633,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
       rewrite_rule_set: cdktf.listMapper(applicationGatewayRewriteRuleSetToTerraform)(this._rewriteRuleSet),
       sku: applicationGatewaySkuToTerraform(this._sku),
       ssl_certificate: cdktf.listMapper(applicationGatewaySslCertificateToTerraform)(this._sslCertificate),
-      ssl_policy: cdktf.listMapper(applicationGatewaySslPolicyToTerraform)(this._sslPolicy),
+      ssl_policy: applicationGatewaySslPolicyToTerraform(this._sslPolicy),
       ssl_profile: cdktf.listMapper(applicationGatewaySslProfileToTerraform)(this._sslProfile),
       timeouts: applicationGatewayTimeoutsToTerraform(this._timeouts),
       trusted_client_certificate: cdktf.listMapper(applicationGatewayTrustedClientCertificateToTerraform)(this._trustedClientCertificate),

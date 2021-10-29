@@ -533,6 +533,10 @@ export interface AzurermProviderFeaturesVirtualMachineScaleSet {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#roll_instances_when_required AzurermProvider#roll_instances_when_required}
   */
   readonly rollInstancesWhenRequired: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#scale_to_zero_before_deletion AzurermProvider#scale_to_zero_before_deletion}
+  */
+  readonly scaleToZeroBeforeDeletion?: boolean | cdktf.IResolvable;
 }
 
 function azurermProviderFeaturesVirtualMachineScaleSetToTerraform(struct?: AzurermProviderFeaturesVirtualMachineScaleSetOutputReference | AzurermProviderFeaturesVirtualMachineScaleSet): any {
@@ -543,6 +547,7 @@ function azurermProviderFeaturesVirtualMachineScaleSetToTerraform(struct?: Azure
   return {
     force_delete: cdktf.booleanToTerraform(struct!.forceDelete),
     roll_instances_when_required: cdktf.booleanToTerraform(struct!.rollInstancesWhenRequired),
+    scale_to_zero_before_deletion: cdktf.booleanToTerraform(struct!.scaleToZeroBeforeDeletion),
   }
 }
 
@@ -583,6 +588,22 @@ export class AzurermProviderFeaturesVirtualMachineScaleSetOutputReference extend
   // Temporarily expose input value. Use with caution.
   public get rollInstancesWhenRequiredInput() {
     return this._rollInstancesWhenRequired
+  }
+
+  // scale_to_zero_before_deletion - computed: false, optional: true, required: false
+  private _scaleToZeroBeforeDeletion?: boolean | cdktf.IResolvable | undefined; 
+  public get scaleToZeroBeforeDeletion() {
+    return this._scaleToZeroBeforeDeletion;
+  }
+  public set scaleToZeroBeforeDeletion(value: boolean | cdktf.IResolvable | undefined| undefined) {
+    this._scaleToZeroBeforeDeletion = value;
+  }
+  public resetScaleToZeroBeforeDeletion() {
+    this._scaleToZeroBeforeDeletion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scaleToZeroBeforeDeletionInput() {
+    return this._scaleToZeroBeforeDeletion
   }
 }
 export interface AzurermProviderFeatures {

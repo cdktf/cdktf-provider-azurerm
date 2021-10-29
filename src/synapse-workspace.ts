@@ -12,9 +12,17 @@ export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly aadAdmin?: SynapseWorkspaceAadAdmin[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#compute_subnet_id SynapseWorkspace#compute_subnet_id}
+  */
+  readonly computeSubnetId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#data_exfiltration_protection_enabled SynapseWorkspace#data_exfiltration_protection_enabled}
   */
   readonly dataExfiltrationProtectionEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#linking_allowed_for_aad_tenant_ids SynapseWorkspace#linking_allowed_for_aad_tenant_ids}
+  */
+  readonly linkingAllowedForAadTenantIds?: string[];
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#location SynapseWorkspace#location}
   */
@@ -31,6 +39,14 @@ export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#name SynapseWorkspace#name}
   */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#public_network_access_enabled SynapseWorkspace#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#purview_id SynapseWorkspace#purview_id}
+  */
+  readonly purviewId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#resource_group_name SynapseWorkspace#resource_group_name}
   */
@@ -134,6 +150,10 @@ export interface SynapseWorkspaceAzureDevopsRepo {
   */
   readonly branchName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#last_commit_id SynapseWorkspace#last_commit_id}
+  */
+  readonly lastCommitId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#project_name SynapseWorkspace#project_name}
   */
   readonly projectName: string;
@@ -159,6 +179,7 @@ function synapseWorkspaceAzureDevopsRepoToTerraform(struct?: SynapseWorkspaceAzu
   return {
     account_name: cdktf.stringToTerraform(struct!.accountName),
     branch_name: cdktf.stringToTerraform(struct!.branchName),
+    last_commit_id: cdktf.stringToTerraform(struct!.lastCommitId),
     project_name: cdktf.stringToTerraform(struct!.projectName),
     repository_name: cdktf.stringToTerraform(struct!.repositoryName),
     root_folder: cdktf.stringToTerraform(struct!.rootFolder),
@@ -200,6 +221,22 @@ export class SynapseWorkspaceAzureDevopsRepoOutputReference extends cdktf.Comple
   // Temporarily expose input value. Use with caution.
   public get branchNameInput() {
     return this._branchName
+  }
+
+  // last_commit_id - computed: false, optional: true, required: false
+  private _lastCommitId?: string | undefined; 
+  public get lastCommitId() {
+    return this.getStringAttribute('last_commit_id');
+  }
+  public set lastCommitId(value: string | undefined) {
+    this._lastCommitId = value;
+  }
+  public resetLastCommitId() {
+    this._lastCommitId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lastCommitIdInput() {
+    return this._lastCommitId
   }
 
   // project_name - computed: false, optional: false, required: true
@@ -332,6 +369,10 @@ export interface SynapseWorkspaceGithubRepo {
   */
   readonly gitUrl?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#last_commit_id SynapseWorkspace#last_commit_id}
+  */
+  readonly lastCommitId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#repository_name SynapseWorkspace#repository_name}
   */
   readonly repositoryName: string;
@@ -350,6 +391,7 @@ function synapseWorkspaceGithubRepoToTerraform(struct?: SynapseWorkspaceGithubRe
     account_name: cdktf.stringToTerraform(struct!.accountName),
     branch_name: cdktf.stringToTerraform(struct!.branchName),
     git_url: cdktf.stringToTerraform(struct!.gitUrl),
+    last_commit_id: cdktf.stringToTerraform(struct!.lastCommitId),
     repository_name: cdktf.stringToTerraform(struct!.repositoryName),
     root_folder: cdktf.stringToTerraform(struct!.rootFolder),
   }
@@ -405,6 +447,22 @@ export class SynapseWorkspaceGithubRepoOutputReference extends cdktf.ComplexObje
   // Temporarily expose input value. Use with caution.
   public get gitUrlInput() {
     return this._gitUrl
+  }
+
+  // last_commit_id - computed: false, optional: true, required: false
+  private _lastCommitId?: string | undefined; 
+  public get lastCommitId() {
+    return this.getStringAttribute('last_commit_id');
+  }
+  public set lastCommitId(value: string | undefined) {
+    this._lastCommitId = value;
+  }
+  public resetLastCommitId() {
+    this._lastCommitId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lastCommitIdInput() {
+    return this._lastCommitId
   }
 
   // repository_name - computed: false, optional: false, required: true
@@ -573,11 +631,15 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._aadAdmin = config.aadAdmin;
+    this._computeSubnetId = config.computeSubnetId;
     this._dataExfiltrationProtectionEnabled = config.dataExfiltrationProtectionEnabled;
+    this._linkingAllowedForAadTenantIds = config.linkingAllowedForAadTenantIds;
     this._location = config.location;
     this._managedResourceGroupName = config.managedResourceGroupName;
     this._managedVirtualNetworkEnabled = config.managedVirtualNetworkEnabled;
     this._name = config.name;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
+    this._purviewId = config.purviewId;
     this._resourceGroupName = config.resourceGroupName;
     this._sqlAdministratorLogin = config.sqlAdministratorLogin;
     this._sqlAdministratorLoginPassword = config.sqlAdministratorLoginPassword;
@@ -611,6 +673,22 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
     return this._aadAdmin
   }
 
+  // compute_subnet_id - computed: false, optional: true, required: false
+  private _computeSubnetId?: string | undefined; 
+  public get computeSubnetId() {
+    return this.getStringAttribute('compute_subnet_id');
+  }
+  public set computeSubnetId(value: string | undefined) {
+    this._computeSubnetId = value;
+  }
+  public resetComputeSubnetId() {
+    this._computeSubnetId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get computeSubnetIdInput() {
+    return this._computeSubnetId
+  }
+
   // connectivity_endpoints - computed: true, optional: false, required: false
   public connectivityEndpoints(key: string): string {
     return new cdktf.StringMap(this, 'connectivity_endpoints').lookup(key);
@@ -640,6 +718,22 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
   // identity - computed: true, optional: false, required: false
   public identity(index: string) {
     return new SynapseWorkspaceIdentity(this, 'identity', index);
+  }
+
+  // linking_allowed_for_aad_tenant_ids - computed: false, optional: true, required: false
+  private _linkingAllowedForAadTenantIds?: string[] | undefined; 
+  public get linkingAllowedForAadTenantIds() {
+    return this.getListAttribute('linking_allowed_for_aad_tenant_ids');
+  }
+  public set linkingAllowedForAadTenantIds(value: string[] | undefined) {
+    this._linkingAllowedForAadTenantIds = value;
+  }
+  public resetLinkingAllowedForAadTenantIds() {
+    this._linkingAllowedForAadTenantIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get linkingAllowedForAadTenantIdsInput() {
+    return this._linkingAllowedForAadTenantIds
   }
 
   // location - computed: false, optional: false, required: true
@@ -698,6 +792,38 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled') as any;
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled
+  }
+
+  // purview_id - computed: false, optional: true, required: false
+  private _purviewId?: string | undefined; 
+  public get purviewId() {
+    return this.getStringAttribute('purview_id');
+  }
+  public set purviewId(value: string | undefined) {
+    this._purviewId = value;
+  }
+  public resetPurviewId() {
+    this._purviewId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get purviewIdInput() {
+    return this._purviewId
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -860,11 +986,15 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       aad_admin: cdktf.listMapper(synapseWorkspaceAadAdminToTerraform)(this._aadAdmin),
+      compute_subnet_id: cdktf.stringToTerraform(this._computeSubnetId),
       data_exfiltration_protection_enabled: cdktf.booleanToTerraform(this._dataExfiltrationProtectionEnabled),
+      linking_allowed_for_aad_tenant_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._linkingAllowedForAadTenantIds),
       location: cdktf.stringToTerraform(this._location),
       managed_resource_group_name: cdktf.stringToTerraform(this._managedResourceGroupName),
       managed_virtual_network_enabled: cdktf.booleanToTerraform(this._managedVirtualNetworkEnabled),
       name: cdktf.stringToTerraform(this._name),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
+      purview_id: cdktf.stringToTerraform(this._purviewId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sql_administrator_login: cdktf.stringToTerraform(this._sqlAdministratorLogin),
       sql_administrator_login_password: cdktf.stringToTerraform(this._sqlAdministratorLoginPassword),

@@ -20,6 +20,10 @@ export interface VpnGatewayConfig extends cdktf.TerraformMetaArguments {
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#routing_preference VpnGateway#routing_preference}
+  */
+  readonly routingPreference?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway.html#scale_unit VpnGateway#scale_unit}
   */
   readonly scaleUnit?: number;
@@ -372,6 +376,7 @@ export class VpnGateway extends cdktf.TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._routingPreference = config.routingPreference;
     this._scaleUnit = config.scaleUnit;
     this._tags = config.tags;
     this._virtualHubId = config.virtualHubId;
@@ -425,6 +430,22 @@ export class VpnGateway extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName
+  }
+
+  // routing_preference - computed: true, optional: true, required: false
+  private _routingPreference?: string | undefined; 
+  public get routingPreference() {
+    return this.getStringAttribute('routing_preference');
+  }
+  public set routingPreference(value: string | undefined) {
+    this._routingPreference = value;
+  }
+  public resetRoutingPreference() {
+    this._routingPreference = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get routingPreferenceInput() {
+    return this._routingPreference
   }
 
   // scale_unit - computed: false, optional: true, required: false
@@ -516,6 +537,7 @@ export class VpnGateway extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      routing_preference: cdktf.stringToTerraform(this._routingPreference),
       scale_unit: cdktf.numberToTerraform(this._scaleUnit),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       virtual_hub_id: cdktf.stringToTerraform(this._virtualHubId),

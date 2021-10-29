@@ -24,6 +24,10 @@ export interface ServicebusNamespaceNetworkRuleSetConfig extends cdktf.Terraform
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#trusted_services_allowed ServicebusNamespaceNetworkRuleSet#trusted_services_allowed}
+  */
+  readonly trustedServicesAllowed?: boolean | cdktf.IResolvable;
+  /**
   * network_rules block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#network_rules ServicebusNamespaceNetworkRuleSet#network_rules}
@@ -201,6 +205,7 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
     this._ipRules = config.ipRules;
     this._namespaceName = config.namespaceName;
     this._resourceGroupName = config.resourceGroupName;
+    this._trustedServicesAllowed = config.trustedServicesAllowed;
     this._networkRules = config.networkRules;
     this._timeouts = config.timeouts;
   }
@@ -272,6 +277,22 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
     return this._resourceGroupName
   }
 
+  // trusted_services_allowed - computed: false, optional: true, required: false
+  private _trustedServicesAllowed?: boolean | cdktf.IResolvable | undefined; 
+  public get trustedServicesAllowed() {
+    return this.getBooleanAttribute('trusted_services_allowed') as any;
+  }
+  public set trustedServicesAllowed(value: boolean | cdktf.IResolvable | undefined) {
+    this._trustedServicesAllowed = value;
+  }
+  public resetTrustedServicesAllowed() {
+    this._trustedServicesAllowed = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustedServicesAllowedInput() {
+    return this._trustedServicesAllowed
+  }
+
   // network_rules - computed: false, optional: true, required: false
   private _networkRules?: ServicebusNamespaceNetworkRuleSetNetworkRules[] | undefined; 
   public get networkRules() {
@@ -316,6 +337,7 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
       ip_rules: cdktf.listMapper(cdktf.stringToTerraform)(this._ipRules),
       namespace_name: cdktf.stringToTerraform(this._namespaceName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      trusted_services_allowed: cdktf.booleanToTerraform(this._trustedServicesAllowed),
       network_rules: cdktf.listMapper(servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform)(this._networkRules),
       timeouts: servicebusNamespaceNetworkRuleSetTimeoutsToTerraform(this._timeouts),
     };

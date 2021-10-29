@@ -40,11 +40,81 @@ export interface SpringCloudJavaDeploymentConfig extends cdktf.TerraformMetaArgu
   */
   readonly springCloudAppId: string;
   /**
+  * quota block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html#quota SpringCloudJavaDeployment#quota}
+  */
+  readonly quota?: SpringCloudJavaDeploymentQuota;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html#timeouts SpringCloudJavaDeployment#timeouts}
   */
   readonly timeouts?: SpringCloudJavaDeploymentTimeouts;
+}
+export interface SpringCloudJavaDeploymentQuota {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html#cpu SpringCloudJavaDeployment#cpu}
+  */
+  readonly cpu?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_java_deployment.html#memory SpringCloudJavaDeployment#memory}
+  */
+  readonly memory?: string;
+}
+
+function springCloudJavaDeploymentQuotaToTerraform(struct?: SpringCloudJavaDeploymentQuotaOutputReference | SpringCloudJavaDeploymentQuota): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    cpu: cdktf.stringToTerraform(struct!.cpu),
+    memory: cdktf.stringToTerraform(struct!.memory),
+  }
+}
+
+export class SpringCloudJavaDeploymentQuotaOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // cpu - computed: true, optional: true, required: false
+  private _cpu?: string | undefined; 
+  public get cpu() {
+    return this.getStringAttribute('cpu');
+  }
+  public set cpu(value: string | undefined) {
+    this._cpu = value;
+  }
+  public resetCpu() {
+    this._cpu = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cpuInput() {
+    return this._cpu
+  }
+
+  // memory - computed: true, optional: true, required: false
+  private _memory?: string | undefined; 
+  public get memory() {
+    return this.getStringAttribute('memory');
+  }
+  public set memory(value: string | undefined) {
+    this._memory = value;
+  }
+  public resetMemory() {
+    this._memory = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get memoryInput() {
+    return this._memory
+  }
 }
 export interface SpringCloudJavaDeploymentTimeouts {
   /**
@@ -193,6 +263,7 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
     this._name = config.name;
     this._runtimeVersion = config.runtimeVersion;
     this._springCloudAppId = config.springCloudAppId;
+    this._quota = config.quota;
     this._timeouts = config.timeouts;
   }
 
@@ -200,7 +271,7 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // cpu - computed: false, optional: true, required: false
+  // cpu - computed: true, optional: true, required: false
   private _cpu?: number | undefined; 
   public get cpu() {
     return this.getNumberAttribute('cpu');
@@ -270,7 +341,7 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
     return this._jvmOptions
   }
 
-  // memory_in_gb - computed: false, optional: true, required: false
+  // memory_in_gb - computed: true, optional: true, required: false
   private _memoryInGb?: number | undefined; 
   public get memoryInGb() {
     return this.getNumberAttribute('memory_in_gb');
@@ -328,6 +399,23 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
     return this._springCloudAppId
   }
 
+  // quota - computed: false, optional: true, required: false
+  private _quota?: SpringCloudJavaDeploymentQuota | undefined; 
+  private __quotaOutput = new SpringCloudJavaDeploymentQuotaOutputReference(this as any, "quota", true);
+  public get quota() {
+    return this.__quotaOutput;
+  }
+  public putQuota(value: SpringCloudJavaDeploymentQuota | undefined) {
+    this._quota = value;
+  }
+  public resetQuota() {
+    this._quota = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get quotaInput() {
+    return this._quota
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts?: SpringCloudJavaDeploymentTimeouts | undefined; 
   private __timeoutsOutput = new SpringCloudJavaDeploymentTimeoutsOutputReference(this as any, "timeouts", true);
@@ -359,6 +447,7 @@ export class SpringCloudJavaDeployment extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       runtime_version: cdktf.stringToTerraform(this._runtimeVersion),
       spring_cloud_app_id: cdktf.stringToTerraform(this._springCloudAppId),
+      quota: springCloudJavaDeploymentQuotaToTerraform(this._quota),
       timeouts: springCloudJavaDeploymentTimeoutsToTerraform(this._timeouts),
     };
   }
