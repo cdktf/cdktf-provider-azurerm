@@ -52,6 +52,12 @@ export interface FirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   */
   readonly identity?: FirewallPolicyIdentity;
   /**
+  * insights block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#insights FirewallPolicy#insights}
+  */
+  readonly insights?: FirewallPolicyInsights;
+  /**
   * intrusion_detection block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#intrusion_detection FirewallPolicy#intrusion_detection}
@@ -220,6 +226,131 @@ export class FirewallPolicyIdentityOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get userAssignedIdentityIdsInput() {
     return this._userAssignedIdentityIds
+  }
+}
+export interface FirewallPolicyInsightsLogAnalyticsWorkspace {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#firewall_location FirewallPolicy#firewall_location}
+  */
+  readonly firewallLocation: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#id FirewallPolicy#id}
+  */
+  readonly id: string;
+}
+
+function firewallPolicyInsightsLogAnalyticsWorkspaceToTerraform(struct?: FirewallPolicyInsightsLogAnalyticsWorkspace): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    firewall_location: cdktf.stringToTerraform(struct!.firewallLocation),
+    id: cdktf.stringToTerraform(struct!.id),
+  }
+}
+
+export interface FirewallPolicyInsights {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#default_log_analytics_workspace_id FirewallPolicy#default_log_analytics_workspace_id}
+  */
+  readonly defaultLogAnalyticsWorkspaceId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#enabled FirewallPolicy#enabled}
+  */
+  readonly enabled: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#retention_in_days FirewallPolicy#retention_in_days}
+  */
+  readonly retentionInDays?: number;
+  /**
+  * log_analytics_workspace block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy.html#log_analytics_workspace FirewallPolicy#log_analytics_workspace}
+  */
+  readonly logAnalyticsWorkspace?: FirewallPolicyInsightsLogAnalyticsWorkspace[];
+}
+
+function firewallPolicyInsightsToTerraform(struct?: FirewallPolicyInsightsOutputReference | FirewallPolicyInsights): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    default_log_analytics_workspace_id: cdktf.stringToTerraform(struct!.defaultLogAnalyticsWorkspaceId),
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    retention_in_days: cdktf.numberToTerraform(struct!.retentionInDays),
+    log_analytics_workspace: cdktf.listMapper(firewallPolicyInsightsLogAnalyticsWorkspaceToTerraform)(struct!.logAnalyticsWorkspace),
+  }
+}
+
+export class FirewallPolicyInsightsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // default_log_analytics_workspace_id - computed: false, optional: false, required: true
+  private _defaultLogAnalyticsWorkspaceId?: string; 
+  public get defaultLogAnalyticsWorkspaceId() {
+    return this.getStringAttribute('default_log_analytics_workspace_id');
+  }
+  public set defaultLogAnalyticsWorkspaceId(value: string) {
+    this._defaultLogAnalyticsWorkspaceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultLogAnalyticsWorkspaceIdInput() {
+    return this._defaultLogAnalyticsWorkspaceId
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled') as any;
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled
+  }
+
+  // retention_in_days - computed: false, optional: true, required: false
+  private _retentionInDays?: number | undefined; 
+  public get retentionInDays() {
+    return this.getNumberAttribute('retention_in_days');
+  }
+  public set retentionInDays(value: number | undefined) {
+    this._retentionInDays = value;
+  }
+  public resetRetentionInDays() {
+    this._retentionInDays = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get retentionInDaysInput() {
+    return this._retentionInDays
+  }
+
+  // log_analytics_workspace - computed: false, optional: true, required: false
+  private _logAnalyticsWorkspace?: FirewallPolicyInsightsLogAnalyticsWorkspace[] | undefined; 
+  public get logAnalyticsWorkspace() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('log_analytics_workspace') as any;
+  }
+  public set logAnalyticsWorkspace(value: FirewallPolicyInsightsLogAnalyticsWorkspace[] | undefined) {
+    this._logAnalyticsWorkspace = value;
+  }
+  public resetLogAnalyticsWorkspace() {
+    this._logAnalyticsWorkspace = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logAnalyticsWorkspaceInput() {
+    return this._logAnalyticsWorkspace
   }
 }
 export interface FirewallPolicyIntrusionDetectionSignatureOverrides {
@@ -658,6 +789,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
     this._threatIntelligenceMode = config.threatIntelligenceMode;
     this._dns = config.dns;
     this._identity = config.identity;
+    this._insights = config.insights;
     this._intrusionDetection = config.intrusionDetection;
     this._threatIntelligenceAllowlist = config.threatIntelligenceAllowlist;
     this._timeouts = config.timeouts;
@@ -842,6 +974,23 @@ export class FirewallPolicy extends cdktf.TerraformResource {
     return this._identity
   }
 
+  // insights - computed: false, optional: true, required: false
+  private _insights?: FirewallPolicyInsights | undefined; 
+  private __insightsOutput = new FirewallPolicyInsightsOutputReference(this as any, "insights", true);
+  public get insights() {
+    return this.__insightsOutput;
+  }
+  public putInsights(value: FirewallPolicyInsights | undefined) {
+    this._insights = value;
+  }
+  public resetInsights() {
+    this._insights = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get insightsInput() {
+    return this._insights
+  }
+
   // intrusion_detection - computed: false, optional: true, required: false
   private _intrusionDetection?: FirewallPolicyIntrusionDetection | undefined; 
   private __intrusionDetectionOutput = new FirewallPolicyIntrusionDetectionOutputReference(this as any, "intrusion_detection", true);
@@ -926,6 +1075,7 @@ export class FirewallPolicy extends cdktf.TerraformResource {
       threat_intelligence_mode: cdktf.stringToTerraform(this._threatIntelligenceMode),
       dns: firewallPolicyDnsToTerraform(this._dns),
       identity: firewallPolicyIdentityToTerraform(this._identity),
+      insights: firewallPolicyInsightsToTerraform(this._insights),
       intrusion_detection: firewallPolicyIntrusionDetectionToTerraform(this._intrusionDetection),
       threat_intelligence_allowlist: firewallPolicyThreatIntelligenceAllowlistToTerraform(this._threatIntelligenceAllowlist),
       timeouts: firewallPolicyTimeoutsToTerraform(this._timeouts),

@@ -20,6 +20,10 @@ export interface SqlManagedInstanceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly collation?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance.html#dns_zone_partner_id SqlManagedInstance#dns_zone_partner_id}
+  */
+  readonly dnsZonePartnerId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance.html#license_type SqlManagedInstance#license_type}
   */
   readonly licenseType: string;
@@ -220,6 +224,7 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
     this._administratorLogin = config.administratorLogin;
     this._administratorLoginPassword = config.administratorLoginPassword;
     this._collation = config.collation;
+    this._dnsZonePartnerId = config.dnsZonePartnerId;
     this._licenseType = config.licenseType;
     this._location = config.location;
     this._minimumTlsVersion = config.minimumTlsVersion;
@@ -280,6 +285,22 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get collationInput() {
     return this._collation
+  }
+
+  // dns_zone_partner_id - computed: false, optional: true, required: false
+  private _dnsZonePartnerId?: string | undefined; 
+  public get dnsZonePartnerId() {
+    return this.getStringAttribute('dns_zone_partner_id');
+  }
+  public set dnsZonePartnerId(value: string | undefined) {
+    this._dnsZonePartnerId = value;
+  }
+  public resetDnsZonePartnerId() {
+    this._dnsZonePartnerId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsZonePartnerIdInput() {
+    return this._dnsZonePartnerId
   }
 
   // fqdn - computed: true, optional: false, required: false
@@ -503,6 +524,7 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
       administrator_login: cdktf.stringToTerraform(this._administratorLogin),
       administrator_login_password: cdktf.stringToTerraform(this._administratorLoginPassword),
       collation: cdktf.stringToTerraform(this._collation),
+      dns_zone_partner_id: cdktf.stringToTerraform(this._dnsZonePartnerId),
       license_type: cdktf.stringToTerraform(this._licenseType),
       location: cdktf.stringToTerraform(this._location),
       minimum_tls_version: cdktf.stringToTerraform(this._minimumTlsVersion),

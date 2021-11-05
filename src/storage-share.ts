@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface StorageShareConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html#enabled_protocol StorageShare#enabled_protocol}
+  */
+  readonly enabledProtocol?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_share.html#metadata StorageShare#metadata}
   */
   readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
@@ -226,6 +230,7 @@ export class StorageShare extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._enabledProtocol = config.enabledProtocol;
     this._metadata = config.metadata;
     this._name = config.name;
     this._quota = config.quota;
@@ -237,6 +242,22 @@ export class StorageShare extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // enabled_protocol - computed: false, optional: true, required: false
+  private _enabledProtocol?: string | undefined; 
+  public get enabledProtocol() {
+    return this.getStringAttribute('enabled_protocol');
+  }
+  public set enabledProtocol(value: string | undefined) {
+    this._enabledProtocol = value;
+  }
+  public resetEnabledProtocol() {
+    this._enabledProtocol = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledProtocolInput() {
+    return this._enabledProtocol
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {
@@ -352,6 +373,7 @@ export class StorageShare extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      enabled_protocol: cdktf.stringToTerraform(this._enabledProtocol),
       metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       quota: cdktf.numberToTerraform(this._quota),

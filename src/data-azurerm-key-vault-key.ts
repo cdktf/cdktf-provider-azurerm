@@ -107,6 +107,11 @@ export class DataAzurermKeyVaultKey extends cdktf.TerraformDataSource {
   // ATTRIBUTES
   // ==========
 
+  // curve - computed: true, optional: false, required: false
+  public get curve() {
+    return this.getStringAttribute('curve');
+  }
+
   // e - computed: true, optional: false, required: false
   public get e() {
     return this.getStringAttribute('e');
@@ -163,6 +168,16 @@ export class DataAzurermKeyVaultKey extends cdktf.TerraformDataSource {
     return this._name
   }
 
+  // public_key_openssh - computed: true, optional: false, required: false
+  public get publicKeyOpenssh() {
+    return this.getStringAttribute('public_key_openssh');
+  }
+
+  // public_key_pem - computed: true, optional: false, required: false
+  public get publicKeyPem() {
+    return this.getStringAttribute('public_key_pem');
+  }
+
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new cdktf.StringMap(this, 'tags').lookup(key);
@@ -176,6 +191,16 @@ export class DataAzurermKeyVaultKey extends cdktf.TerraformDataSource {
   // versionless_id - computed: true, optional: false, required: false
   public get versionlessId() {
     return this.getStringAttribute('versionless_id');
+  }
+
+  // x - computed: true, optional: false, required: false
+  public get x() {
+    return this.getStringAttribute('x');
+  }
+
+  // y - computed: true, optional: false, required: false
+  public get y() {
+    return this.getStringAttribute('y');
   }
 
   // timeouts - computed: false, optional: true, required: false

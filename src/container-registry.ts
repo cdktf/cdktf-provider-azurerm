@@ -684,7 +684,7 @@ export class ContainerRegistry extends cdktf.TerraformResource {
     return this._sku
   }
 
-  // storage_account_id - computed: false, optional: true, required: false
+  // storage_account_id - computed: true, optional: true, required: false
   private _storageAccountId?: string | undefined; 
   public get storageAccountId() {
     return this.getStringAttribute('storage_account_id');

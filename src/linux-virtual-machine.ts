@@ -72,6 +72,10 @@ export interface LinuxVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   */
   readonly networkInterfaceIds: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine.html#patch_mode LinuxVirtualMachine#patch_mode}
+  */
+  readonly patchMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine.html#platform_fault_domain LinuxVirtualMachine#platform_fault_domain}
   */
   readonly platformFaultDomain?: number;
@@ -907,6 +911,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
     this._maxBidPrice = config.maxBidPrice;
     this._name = config.name;
     this._networkInterfaceIds = config.networkInterfaceIds;
+    this._patchMode = config.patchMode;
     this._platformFaultDomain = config.platformFaultDomain;
     this._priority = config.priority;
     this._provisionVmAgent = config.provisionVmAgent;
@@ -1179,6 +1184,22 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get networkInterfaceIdsInput() {
     return this._networkInterfaceIds
+  }
+
+  // patch_mode - computed: false, optional: true, required: false
+  private _patchMode?: string | undefined; 
+  public get patchMode() {
+    return this.getStringAttribute('patch_mode');
+  }
+  public set patchMode(value: string | undefined) {
+    this._patchMode = value;
+  }
+  public resetPatchMode() {
+    this._patchMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get patchModeInput() {
+    return this._patchMode
   }
 
   // platform_fault_domain - computed: false, optional: true, required: false
@@ -1533,6 +1554,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
       max_bid_price: cdktf.numberToTerraform(this._maxBidPrice),
       name: cdktf.stringToTerraform(this._name),
       network_interface_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._networkInterfaceIds),
+      patch_mode: cdktf.stringToTerraform(this._patchMode),
       platform_fault_domain: cdktf.numberToTerraform(this._platformFaultDomain),
       priority: cdktf.stringToTerraform(this._priority),
       provision_vm_agent: cdktf.booleanToTerraform(this._provisionVmAgent),
