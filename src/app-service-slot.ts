@@ -32,6 +32,10 @@ export interface AppServiceSlotConfig extends cdktf.TerraformMetaArguments {
   */
   readonly httpsOnly?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#key_vault_reference_identity_id AppServiceSlot#key_vault_reference_identity_id}
+  */
+  readonly keyVaultReferenceIdentityId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot.html#location AppServiceSlot#location}
   */
   readonly location: string;
@@ -2373,6 +2377,7 @@ export class AppServiceSlot extends cdktf.TerraformResource {
     this._clientAffinityEnabled = config.clientAffinityEnabled;
     this._enabled = config.enabled;
     this._httpsOnly = config.httpsOnly;
+    this._keyVaultReferenceIdentityId = config.keyVaultReferenceIdentityId;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -2488,6 +2493,22 @@ export class AppServiceSlot extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // key_vault_reference_identity_id - computed: true, optional: true, required: false
+  private _keyVaultReferenceIdentityId?: string | undefined; 
+  public get keyVaultReferenceIdentityId() {
+    return this.getStringAttribute('key_vault_reference_identity_id');
+  }
+  public set keyVaultReferenceIdentityId(value: string | undefined) {
+    this._keyVaultReferenceIdentityId = value;
+  }
+  public resetKeyVaultReferenceIdentityId() {
+    this._keyVaultReferenceIdentityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultReferenceIdentityIdInput() {
+    return this._keyVaultReferenceIdentityId
   }
 
   // location - computed: false, optional: false, required: true
@@ -2665,6 +2686,7 @@ export class AppServiceSlot extends cdktf.TerraformResource {
       client_affinity_enabled: cdktf.booleanToTerraform(this._clientAffinityEnabled),
       enabled: cdktf.booleanToTerraform(this._enabled),
       https_only: cdktf.booleanToTerraform(this._httpsOnly),
+      key_vault_reference_identity_id: cdktf.stringToTerraform(this._keyVaultReferenceIdentityId),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

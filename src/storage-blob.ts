@@ -12,6 +12,10 @@ export interface StorageBlobConfig extends cdktf.TerraformMetaArguments {
   */
   readonly accessTier?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#cache_control StorageBlob#cache_control}
+  */
+  readonly cacheControl?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_blob.html#content_md5 StorageBlob#content_md5}
   */
   readonly contentMd5?: string;
@@ -206,6 +210,7 @@ export class StorageBlob extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._accessTier = config.accessTier;
+    this._cacheControl = config.cacheControl;
     this._contentMd5 = config.contentMd5;
     this._contentType = config.contentType;
     this._metadata = config.metadata;
@@ -239,6 +244,22 @@ export class StorageBlob extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get accessTierInput() {
     return this._accessTier
+  }
+
+  // cache_control - computed: false, optional: true, required: false
+  private _cacheControl?: string | undefined; 
+  public get cacheControl() {
+    return this.getStringAttribute('cache_control');
+  }
+  public set cacheControl(value: string | undefined) {
+    this._cacheControl = value;
+  }
+  public resetCacheControl() {
+    this._cacheControl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cacheControlInput() {
+    return this._cacheControl
   }
 
   // content_md5 - computed: false, optional: true, required: false
@@ -456,6 +477,7 @@ export class StorageBlob extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       access_tier: cdktf.stringToTerraform(this._accessTier),
+      cache_control: cdktf.stringToTerraform(this._cacheControl),
       content_md5: cdktf.stringToTerraform(this._contentMd5),
       content_type: cdktf.stringToTerraform(this._contentType),
       metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),

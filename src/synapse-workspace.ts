@@ -52,6 +52,10 @@ export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#sql_aad_admin SynapseWorkspace#sql_aad_admin}
+  */
+  readonly sqlAadAdmin?: SynapseWorkspaceSqlAadAdmin[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#sql_administrator_login SynapseWorkspace#sql_administrator_login}
   */
   readonly sqlAdministratorLogin: string;
@@ -140,6 +144,33 @@ export class SynapseWorkspaceIdentity extends cdktf.ComplexComputedList {
     return this.getStringAttribute('type');
   }
 }
+export interface SynapseWorkspaceSqlAadAdmin {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#login SynapseWorkspace#login}
+  */
+  readonly login?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#object_id SynapseWorkspace#object_id}
+  */
+  readonly objectId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#tenant_id SynapseWorkspace#tenant_id}
+  */
+  readonly tenantId?: string;
+}
+
+function synapseWorkspaceSqlAadAdminToTerraform(struct?: SynapseWorkspaceSqlAadAdmin): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    login: cdktf.stringToTerraform(struct!.login),
+    object_id: cdktf.stringToTerraform(struct!.objectId),
+    tenant_id: cdktf.stringToTerraform(struct!.tenantId),
+  }
+}
+
 export interface SynapseWorkspaceAzureDevopsRepo {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#account_name SynapseWorkspace#account_name}
@@ -641,6 +672,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._purviewId = config.purviewId;
     this._resourceGroupName = config.resourceGroupName;
+    this._sqlAadAdmin = config.sqlAadAdmin;
     this._sqlAdministratorLogin = config.sqlAdministratorLogin;
     this._sqlAdministratorLoginPassword = config.sqlAdministratorLoginPassword;
     this._sqlIdentityControlEnabled = config.sqlIdentityControlEnabled;
@@ -839,6 +871,23 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
     return this._resourceGroupName
   }
 
+  // sql_aad_admin - computed: true, optional: true, required: false
+  private _sqlAadAdmin?: SynapseWorkspaceSqlAadAdmin[] | undefined; 
+  public get sqlAadAdmin() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('sql_aad_admin') as any;
+  }
+  public set sqlAadAdmin(value: SynapseWorkspaceSqlAadAdmin[] | undefined) {
+    this._sqlAadAdmin = value;
+  }
+  public resetSqlAadAdmin() {
+    this._sqlAadAdmin = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sqlAadAdminInput() {
+    return this._sqlAadAdmin
+  }
+
   // sql_administrator_login - computed: false, optional: false, required: true
   private _sqlAdministratorLogin?: string; 
   public get sqlAdministratorLogin() {
@@ -996,6 +1045,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       purview_id: cdktf.stringToTerraform(this._purviewId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sql_aad_admin: cdktf.listMapper(synapseWorkspaceSqlAadAdminToTerraform)(this._sqlAadAdmin),
       sql_administrator_login: cdktf.stringToTerraform(this._sqlAdministratorLogin),
       sql_administrator_login_password: cdktf.stringToTerraform(this._sqlAdministratorLoginPassword),
       sql_identity_control_enabled: cdktf.booleanToTerraform(this._sqlIdentityControlEnabled),

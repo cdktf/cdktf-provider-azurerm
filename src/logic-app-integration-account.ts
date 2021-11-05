@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface LogicAppIntegrationAccountConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account.html#integration_service_environment_id LogicAppIntegrationAccount#integration_service_environment_id}
+  */
+  readonly integrationServiceEnvironmentId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account.html#location LogicAppIntegrationAccount#location}
   */
   readonly location: string;
@@ -173,6 +177,7 @@ export class LogicAppIntegrationAccount extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._integrationServiceEnvironmentId = config.integrationServiceEnvironmentId;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -188,6 +193,22 @@ export class LogicAppIntegrationAccount extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // integration_service_environment_id - computed: false, optional: true, required: false
+  private _integrationServiceEnvironmentId?: string | undefined; 
+  public get integrationServiceEnvironmentId() {
+    return this.getStringAttribute('integration_service_environment_id');
+  }
+  public set integrationServiceEnvironmentId(value: string | undefined) {
+    this._integrationServiceEnvironmentId = value;
+  }
+  public resetIntegrationServiceEnvironmentId() {
+    this._integrationServiceEnvironmentId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get integrationServiceEnvironmentIdInput() {
+    return this._integrationServiceEnvironmentId
   }
 
   // location - computed: false, optional: false, required: true
@@ -282,6 +303,7 @@ export class LogicAppIntegrationAccount extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      integration_service_environment_id: cdktf.stringToTerraform(this._integrationServiceEnvironmentId),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

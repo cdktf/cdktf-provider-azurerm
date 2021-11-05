@@ -26,7 +26,7 @@ export interface PurviewAccountConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html#sku_name PurviewAccount#sku_name}
   */
-  readonly skuName: string;
+  readonly skuName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html#tags PurviewAccount#tags}
   */
@@ -297,13 +297,16 @@ export class PurviewAccount extends cdktf.TerraformResource {
     return this.getStringAttribute('scan_endpoint');
   }
 
-  // sku_name - computed: false, optional: false, required: true
-  private _skuName?: string; 
+  // sku_name - computed: false, optional: true, required: false
+  private _skuName?: string | undefined; 
   public get skuName() {
     return this.getStringAttribute('sku_name');
   }
-  public set skuName(value: string) {
+  public set skuName(value: string | undefined) {
     this._skuName = value;
+  }
+  public resetSkuName() {
+    this._skuName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get skuNameInput() {

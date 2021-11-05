@@ -336,6 +336,16 @@ export class KeyVaultKey extends cdktf.TerraformResource {
     return this._notBeforeDate
   }
 
+  // public_key_openssh - computed: true, optional: false, required: false
+  public get publicKeyOpenssh() {
+    return this.getStringAttribute('public_key_openssh');
+  }
+
+  // public_key_pem - computed: true, optional: false, required: false
+  public get publicKeyPem() {
+    return this.getStringAttribute('public_key_pem');
+  }
+
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
   public get tags() {

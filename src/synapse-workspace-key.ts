@@ -14,7 +14,11 @@ export interface SynapseWorkspaceKeyConfig extends cdktf.TerraformMetaArguments 
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_key.html#cusomter_managed_key_name SynapseWorkspaceKey#cusomter_managed_key_name}
   */
-  readonly cusomterManagedKeyName: string;
+  readonly cusomterManagedKeyName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_key.html#customer_managed_key_name SynapseWorkspaceKey#customer_managed_key_name}
+  */
+  readonly customerManagedKeyName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_key.html#customer_managed_key_versionless_id SynapseWorkspaceKey#customer_managed_key_versionless_id}
   */
@@ -171,6 +175,7 @@ export class SynapseWorkspaceKey extends cdktf.TerraformResource {
     });
     this._active = config.active;
     this._cusomterManagedKeyName = config.cusomterManagedKeyName;
+    this._customerManagedKeyName = config.customerManagedKeyName;
     this._customerManagedKeyVersionlessId = config.customerManagedKeyVersionlessId;
     this._synapseWorkspaceId = config.synapseWorkspaceId;
     this._timeouts = config.timeouts;
@@ -193,17 +198,36 @@ export class SynapseWorkspaceKey extends cdktf.TerraformResource {
     return this._active
   }
 
-  // cusomter_managed_key_name - computed: false, optional: false, required: true
-  private _cusomterManagedKeyName?: string; 
+  // cusomter_managed_key_name - computed: true, optional: true, required: false
+  private _cusomterManagedKeyName?: string | undefined; 
   public get cusomterManagedKeyName() {
     return this.getStringAttribute('cusomter_managed_key_name');
   }
-  public set cusomterManagedKeyName(value: string) {
+  public set cusomterManagedKeyName(value: string | undefined) {
     this._cusomterManagedKeyName = value;
+  }
+  public resetCusomterManagedKeyName() {
+    this._cusomterManagedKeyName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cusomterManagedKeyNameInput() {
     return this._cusomterManagedKeyName
+  }
+
+  // customer_managed_key_name - computed: true, optional: true, required: false
+  private _customerManagedKeyName?: string | undefined; 
+  public get customerManagedKeyName() {
+    return this.getStringAttribute('customer_managed_key_name');
+  }
+  public set customerManagedKeyName(value: string | undefined) {
+    this._customerManagedKeyName = value;
+  }
+  public resetCustomerManagedKeyName() {
+    this._customerManagedKeyName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerManagedKeyNameInput() {
+    return this._customerManagedKeyName
   }
 
   // customer_managed_key_versionless_id - computed: false, optional: true, required: false
@@ -265,6 +289,7 @@ export class SynapseWorkspaceKey extends cdktf.TerraformResource {
     return {
       active: cdktf.booleanToTerraform(this._active),
       cusomter_managed_key_name: cdktf.stringToTerraform(this._cusomterManagedKeyName),
+      customer_managed_key_name: cdktf.stringToTerraform(this._customerManagedKeyName),
       customer_managed_key_versionless_id: cdktf.stringToTerraform(this._customerManagedKeyVersionlessId),
       synapse_workspace_id: cdktf.stringToTerraform(this._synapseWorkspaceId),
       timeouts: synapseWorkspaceKeyTimeoutsToTerraform(this._timeouts),

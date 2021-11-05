@@ -197,7 +197,11 @@ export interface FirewallPolicyRuleCollectionGroupNatRuleCollectionRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy_rule_collection_group.html#translated_address FirewallPolicyRuleCollectionGroup#translated_address}
   */
-  readonly translatedAddress: string;
+  readonly translatedAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy_rule_collection_group.html#translated_fqdn FirewallPolicyRuleCollectionGroup#translated_fqdn}
+  */
+  readonly translatedFqdn?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_policy_rule_collection_group.html#translated_port FirewallPolicyRuleCollectionGroup#translated_port}
   */
@@ -217,6 +221,7 @@ function firewallPolicyRuleCollectionGroupNatRuleCollectionRuleToTerraform(struc
     source_addresses: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceAddresses),
     source_ip_groups: cdktf.listMapper(cdktf.stringToTerraform)(struct!.sourceIpGroups),
     translated_address: cdktf.stringToTerraform(struct!.translatedAddress),
+    translated_fqdn: cdktf.stringToTerraform(struct!.translatedFqdn),
     translated_port: cdktf.numberToTerraform(struct!.translatedPort),
   }
 }

@@ -40,6 +40,10 @@ export interface FunctionAppConfig extends cdktf.TerraformMetaArguments {
   */
   readonly httpsOnly?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#key_vault_reference_identity_id FunctionApp#key_vault_reference_identity_id}
+  */
+  readonly keyVaultReferenceIdentityId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/function_app.html#location FunctionApp#location}
   */
   readonly location: string;
@@ -1879,6 +1883,7 @@ export class FunctionApp extends cdktf.TerraformResource {
     this._enableBuiltinLogging = config.enableBuiltinLogging;
     this._enabled = config.enabled;
     this._httpsOnly = config.httpsOnly;
+    this._keyVaultReferenceIdentityId = config.keyVaultReferenceIdentityId;
     this._location = config.location;
     this._name = config.name;
     this._osType = config.osType;
@@ -2039,6 +2044,22 @@ export class FunctionApp extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // key_vault_reference_identity_id - computed: true, optional: true, required: false
+  private _keyVaultReferenceIdentityId?: string | undefined; 
+  public get keyVaultReferenceIdentityId() {
+    return this.getStringAttribute('key_vault_reference_identity_id');
+  }
+  public set keyVaultReferenceIdentityId(value: string | undefined) {
+    this._keyVaultReferenceIdentityId = value;
+  }
+  public resetKeyVaultReferenceIdentityId() {
+    this._keyVaultReferenceIdentityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultReferenceIdentityIdInput() {
+    return this._keyVaultReferenceIdentityId
   }
 
   // kind - computed: true, optional: false, required: false
@@ -2313,6 +2334,7 @@ export class FunctionApp extends cdktf.TerraformResource {
       enable_builtin_logging: cdktf.booleanToTerraform(this._enableBuiltinLogging),
       enabled: cdktf.booleanToTerraform(this._enabled),
       https_only: cdktf.booleanToTerraform(this._httpsOnly),
+      key_vault_reference_identity_id: cdktf.stringToTerraform(this._keyVaultReferenceIdentityId),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       os_type: cdktf.stringToTerraform(this._osType),

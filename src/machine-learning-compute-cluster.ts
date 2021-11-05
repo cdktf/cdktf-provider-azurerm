@@ -12,6 +12,10 @@ export interface MachineLearningComputeClusterConfig extends cdktf.TerraformMeta
   */
   readonly description?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#local_auth_enabled MachineLearningComputeCluster#local_auth_enabled}
+  */
+  readonly localAuthEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_compute_cluster.html#location MachineLearningComputeCluster#location}
   */
   readonly location: string;
@@ -406,6 +410,7 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._description = config.description;
+    this._localAuthEnabled = config.localAuthEnabled;
     this._location = config.location;
     this._machineLearningWorkspaceId = config.machineLearningWorkspaceId;
     this._name = config.name;
@@ -443,6 +448,22 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // local_auth_enabled - computed: false, optional: true, required: false
+  private _localAuthEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get localAuthEnabled() {
+    return this.getBooleanAttribute('local_auth_enabled') as any;
+  }
+  public set localAuthEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._localAuthEnabled = value;
+  }
+  public resetLocalAuthEnabled() {
+    this._localAuthEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localAuthEnabledInput() {
+    return this._localAuthEnabled
   }
 
   // location - computed: false, optional: false, required: true
@@ -631,6 +652,7 @@ export class MachineLearningComputeCluster extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       description: cdktf.stringToTerraform(this._description),
+      local_auth_enabled: cdktf.booleanToTerraform(this._localAuthEnabled),
       location: cdktf.stringToTerraform(this._location),
       machine_learning_workspace_id: cdktf.stringToTerraform(this._machineLearningWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
