@@ -20,9 +20,17 @@ export interface ManagedDiskConfig extends cdktf.TerraformMetaArguments {
   */
   readonly diskEncryptionSetId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#disk_iops_read_only ManagedDisk#disk_iops_read_only}
+  */
+  readonly diskIopsReadOnly?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#disk_iops_read_write ManagedDisk#disk_iops_read_write}
   */
   readonly diskIopsReadWrite?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#disk_mbps_read_only ManagedDisk#disk_mbps_read_only}
+  */
+  readonly diskMbpsReadOnly?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#disk_mbps_read_write ManagedDisk#disk_mbps_read_write}
   */
@@ -454,7 +462,9 @@ export class ManagedDisk extends cdktf.TerraformResource {
     this._createOption = config.createOption;
     this._diskAccessId = config.diskAccessId;
     this._diskEncryptionSetId = config.diskEncryptionSetId;
+    this._diskIopsReadOnly = config.diskIopsReadOnly;
     this._diskIopsReadWrite = config.diskIopsReadWrite;
+    this._diskMbpsReadOnly = config.diskMbpsReadOnly;
     this._diskMbpsReadWrite = config.diskMbpsReadWrite;
     this._diskSizeGb = config.diskSizeGb;
     this._imageReferenceId = config.imageReferenceId;
@@ -526,6 +536,22 @@ export class ManagedDisk extends cdktf.TerraformResource {
     return this._diskEncryptionSetId
   }
 
+  // disk_iops_read_only - computed: true, optional: true, required: false
+  private _diskIopsReadOnly?: number | undefined; 
+  public get diskIopsReadOnly() {
+    return this.getNumberAttribute('disk_iops_read_only');
+  }
+  public set diskIopsReadOnly(value: number | undefined) {
+    this._diskIopsReadOnly = value;
+  }
+  public resetDiskIopsReadOnly() {
+    this._diskIopsReadOnly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskIopsReadOnlyInput() {
+    return this._diskIopsReadOnly
+  }
+
   // disk_iops_read_write - computed: true, optional: true, required: false
   private _diskIopsReadWrite?: number | undefined; 
   public get diskIopsReadWrite() {
@@ -540,6 +566,22 @@ export class ManagedDisk extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get diskIopsReadWriteInput() {
     return this._diskIopsReadWrite
+  }
+
+  // disk_mbps_read_only - computed: true, optional: true, required: false
+  private _diskMbpsReadOnly?: number | undefined; 
+  public get diskMbpsReadOnly() {
+    return this.getNumberAttribute('disk_mbps_read_only');
+  }
+  public set diskMbpsReadOnly(value: number | undefined) {
+    this._diskMbpsReadOnly = value;
+  }
+  public resetDiskMbpsReadOnly() {
+    this._diskMbpsReadOnly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get diskMbpsReadOnlyInput() {
+    return this._diskMbpsReadOnly
   }
 
   // disk_mbps_read_write - computed: true, optional: true, required: false
@@ -867,7 +909,9 @@ export class ManagedDisk extends cdktf.TerraformResource {
       create_option: cdktf.stringToTerraform(this._createOption),
       disk_access_id: cdktf.stringToTerraform(this._diskAccessId),
       disk_encryption_set_id: cdktf.stringToTerraform(this._diskEncryptionSetId),
+      disk_iops_read_only: cdktf.numberToTerraform(this._diskIopsReadOnly),
       disk_iops_read_write: cdktf.numberToTerraform(this._diskIopsReadWrite),
+      disk_mbps_read_only: cdktf.numberToTerraform(this._diskMbpsReadOnly),
       disk_mbps_read_write: cdktf.numberToTerraform(this._diskMbpsReadWrite),
       disk_size_gb: cdktf.numberToTerraform(this._diskSizeGb),
       image_reference_id: cdktf.stringToTerraform(this._imageReferenceId),

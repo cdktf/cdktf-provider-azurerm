@@ -12,6 +12,14 @@ export interface BackupProtectedVmConfig extends cdktf.TerraformMetaArguments {
   */
   readonly backupPolicyId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_vm.html#exclude_disk_luns BackupProtectedVm#exclude_disk_luns}
+  */
+  readonly excludeDiskLuns?: number[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_vm.html#include_disk_luns BackupProtectedVm#include_disk_luns}
+  */
+  readonly includeDiskLuns?: number[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_vm.html#recovery_vault_name BackupProtectedVm#recovery_vault_name}
   */
   readonly recoveryVaultName: string;
@@ -174,6 +182,8 @@ export class BackupProtectedVm extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._backupPolicyId = config.backupPolicyId;
+    this._excludeDiskLuns = config.excludeDiskLuns;
+    this._includeDiskLuns = config.includeDiskLuns;
     this._recoveryVaultName = config.recoveryVaultName;
     this._resourceGroupName = config.resourceGroupName;
     this._sourceVmId = config.sourceVmId;
@@ -198,9 +208,43 @@ export class BackupProtectedVm extends cdktf.TerraformResource {
     return this._backupPolicyId
   }
 
+  // exclude_disk_luns - computed: false, optional: true, required: false
+  private _excludeDiskLuns?: number[] | undefined; 
+  public get excludeDiskLuns() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('exclude_disk_luns') as any;
+  }
+  public set excludeDiskLuns(value: number[] | undefined) {
+    this._excludeDiskLuns = value;
+  }
+  public resetExcludeDiskLuns() {
+    this._excludeDiskLuns = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludeDiskLunsInput() {
+    return this._excludeDiskLuns
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // include_disk_luns - computed: false, optional: true, required: false
+  private _includeDiskLuns?: number[] | undefined; 
+  public get includeDiskLuns() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('include_disk_luns') as any;
+  }
+  public set includeDiskLuns(value: number[] | undefined) {
+    this._includeDiskLuns = value;
+  }
+  public resetIncludeDiskLuns() {
+    this._includeDiskLuns = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get includeDiskLunsInput() {
+    return this._includeDiskLuns
   }
 
   // recovery_vault_name - computed: false, optional: false, required: true
@@ -283,6 +327,8 @@ export class BackupProtectedVm extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       backup_policy_id: cdktf.stringToTerraform(this._backupPolicyId),
+      exclude_disk_luns: cdktf.listMapper(cdktf.numberToTerraform)(this._excludeDiskLuns),
+      include_disk_luns: cdktf.listMapper(cdktf.numberToTerraform)(this._includeDiskLuns),
       recovery_vault_name: cdktf.stringToTerraform(this._recoveryVaultName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       source_vm_id: cdktf.stringToTerraform(this._sourceVmId),
