@@ -1,0 +1,203 @@
+// https://www.terraform.io/docs/providers/azurerm/d/batch_application.html
+// generated from terraform resource schema
+
+import { Construct } from 'constructs';
+import * as cdktf from 'cdktf';
+
+// Configuration
+
+export interface DataAzurermBatchApplicationConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application.html#account_name DataAzurermBatchApplication#account_name}
+  */
+  readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application.html#name DataAzurermBatchApplication#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application.html#resource_group_name DataAzurermBatchApplication#resource_group_name}
+  */
+  readonly resourceGroupName: string;
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application.html#timeouts DataAzurermBatchApplication#timeouts}
+  */
+  readonly timeouts?: DataAzurermBatchApplicationTimeouts;
+}
+export interface DataAzurermBatchApplicationTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application.html#read DataAzurermBatchApplication#read}
+  */
+  readonly read?: string;
+}
+
+function dataAzurermBatchApplicationTimeoutsToTerraform(struct?: DataAzurermBatchApplicationTimeoutsOutputReference | DataAzurermBatchApplicationTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+export class DataAzurermBatchApplicationTimeoutsOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string | undefined; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string | undefined) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read
+  }
+}
+
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application.html azurerm_batch_application}
+*/
+export class DataAzurermBatchApplication extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_batch_application";
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application.html azurerm_batch_application} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermBatchApplicationConfig
+  */
+  public constructor(scope: Construct, id: string, config: DataAzurermBatchApplicationConfig) {
+    super(scope, id, {
+      terraformResourceType: 'azurerm_batch_application',
+      terraformGeneratorMetadata: {
+        providerName: 'azurerm'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle
+    });
+    this._accountName = config.accountName;
+    this._name = config.name;
+    this._resourceGroupName = config.resourceGroupName;
+    this._timeouts = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // account_name - computed: false, optional: false, required: true
+  private _accountName?: string; 
+  public get accountName() {
+    return this.getStringAttribute('account_name');
+  }
+  public set accountName(value: string) {
+    this._accountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountNameInput() {
+    return this._accountName
+  }
+
+  // allow_updates - computed: true, optional: false, required: false
+  public get allowUpdates() {
+    return this.getBooleanAttribute('allow_updates') as any;
+  }
+
+  // default_version - computed: true, optional: false, required: false
+  public get defaultVersion() {
+    return this.getStringAttribute('default_version');
+  }
+
+  // display_name - computed: true, optional: false, required: false
+  public get displayName() {
+    return this.getStringAttribute('display_name');
+  }
+
+  // id - computed: true, optional: true, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name
+  }
+
+  // resource_group_name - computed: false, optional: false, required: true
+  private _resourceGroupName?: string; 
+  public get resourceGroupName() {
+    return this.getStringAttribute('resource_group_name');
+  }
+  public set resourceGroupName(value: string) {
+    this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts?: DataAzurermBatchApplicationTimeouts | undefined; 
+  private __timeoutsOutput = new DataAzurermBatchApplicationTimeoutsOutputReference(this as any, "timeouts", true);
+  public get timeouts() {
+    return this.__timeoutsOutput;
+  }
+  public putTimeouts(value: DataAzurermBatchApplicationTimeouts | undefined) {
+    this._timeouts = value;
+  }
+  public resetTimeouts() {
+    this._timeouts = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      account_name: cdktf.stringToTerraform(this._accountName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermBatchApplicationTimeoutsToTerraform(this._timeouts),
+    };
+  }
+}

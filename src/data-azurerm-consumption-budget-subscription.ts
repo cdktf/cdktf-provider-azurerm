@@ -155,6 +155,11 @@ export class DataAzurermConsumptionBudgetSubscriptionNotification extends cdktf.
   public get threshold() {
     return this.getNumberAttribute('threshold');
   }
+
+  // threshold_type - computed: true, optional: false, required: false
+  public get thresholdType() {
+    return this.getStringAttribute('threshold_type');
+  }
 }
 export class DataAzurermConsumptionBudgetSubscriptionTimePeriod extends cdktf.ComplexComputedList {
 

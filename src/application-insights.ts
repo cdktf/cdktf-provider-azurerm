@@ -24,6 +24,14 @@ export interface ApplicationInsightsConfig extends cdktf.TerraformMetaArguments 
   */
   readonly disableIpMasking?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#internet_ingestion_enabled ApplicationInsights#internet_ingestion_enabled}
+  */
+  readonly internetIngestionEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#internet_query_enabled ApplicationInsights#internet_query_enabled}
+  */
+  readonly internetQueryEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#local_authentication_disabled ApplicationInsights#local_authentication_disabled}
   */
   readonly localAuthenticationDisabled?: boolean | cdktf.IResolvable;
@@ -205,6 +213,8 @@ export class ApplicationInsights extends cdktf.TerraformResource {
     this._dailyDataCapInGb = config.dailyDataCapInGb;
     this._dailyDataCapNotificationsDisabled = config.dailyDataCapNotificationsDisabled;
     this._disableIpMasking = config.disableIpMasking;
+    this._internetIngestionEnabled = config.internetIngestionEnabled;
+    this._internetQueryEnabled = config.internetQueryEnabled;
     this._localAuthenticationDisabled = config.localAuthenticationDisabled;
     this._location = config.location;
     this._name = config.name;
@@ -299,6 +309,38 @@ export class ApplicationInsights extends cdktf.TerraformResource {
   // instrumentation_key - computed: true, optional: false, required: false
   public get instrumentationKey() {
     return this.getStringAttribute('instrumentation_key');
+  }
+
+  // internet_ingestion_enabled - computed: false, optional: true, required: false
+  private _internetIngestionEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get internetIngestionEnabled() {
+    return this.getBooleanAttribute('internet_ingestion_enabled') as any;
+  }
+  public set internetIngestionEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._internetIngestionEnabled = value;
+  }
+  public resetInternetIngestionEnabled() {
+    this._internetIngestionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get internetIngestionEnabledInput() {
+    return this._internetIngestionEnabled
+  }
+
+  // internet_query_enabled - computed: false, optional: true, required: false
+  private _internetQueryEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get internetQueryEnabled() {
+    return this.getBooleanAttribute('internet_query_enabled') as any;
+  }
+  public set internetQueryEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._internetQueryEnabled = value;
+  }
+  public resetInternetQueryEnabled() {
+    this._internetQueryEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get internetQueryEnabledInput() {
+    return this._internetQueryEnabled
   }
 
   // local_authentication_disabled - computed: false, optional: true, required: false
@@ -448,6 +490,8 @@ export class ApplicationInsights extends cdktf.TerraformResource {
       daily_data_cap_in_gb: cdktf.numberToTerraform(this._dailyDataCapInGb),
       daily_data_cap_notifications_disabled: cdktf.booleanToTerraform(this._dailyDataCapNotificationsDisabled),
       disable_ip_masking: cdktf.booleanToTerraform(this._disableIpMasking),
+      internet_ingestion_enabled: cdktf.booleanToTerraform(this._internetIngestionEnabled),
+      internet_query_enabled: cdktf.booleanToTerraform(this._internetQueryEnabled),
       local_authentication_disabled: cdktf.booleanToTerraform(this._localAuthenticationDisabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
