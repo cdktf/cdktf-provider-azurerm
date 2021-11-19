@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface VirtualDesktopApplicationGroupConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application_group.html#default_desktop_display_name VirtualDesktopApplicationGroup#default_desktop_display_name}
+  */
+  readonly defaultDesktopDisplayName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application_group.html#description VirtualDesktopApplicationGroup#description}
   */
   readonly description?: string;
@@ -185,6 +189,7 @@ export class VirtualDesktopApplicationGroup extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._defaultDesktopDisplayName = config.defaultDesktopDisplayName;
     this._description = config.description;
     this._friendlyName = config.friendlyName;
     this._hostPoolId = config.hostPoolId;
@@ -199,6 +204,22 @@ export class VirtualDesktopApplicationGroup extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // default_desktop_display_name - computed: false, optional: true, required: false
+  private _defaultDesktopDisplayName?: string | undefined; 
+  public get defaultDesktopDisplayName() {
+    return this.getStringAttribute('default_desktop_display_name');
+  }
+  public set defaultDesktopDisplayName(value: string | undefined) {
+    this._defaultDesktopDisplayName = value;
+  }
+  public resetDefaultDesktopDisplayName() {
+    this._defaultDesktopDisplayName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultDesktopDisplayNameInput() {
+    return this._defaultDesktopDisplayName
+  }
 
   // description - computed: false, optional: true, required: false
   private _description?: string | undefined; 
@@ -342,6 +363,7 @@ export class VirtualDesktopApplicationGroup extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      default_desktop_display_name: cdktf.stringToTerraform(this._defaultDesktopDisplayName),
       description: cdktf.stringToTerraform(this._description),
       friendly_name: cdktf.stringToTerraform(this._friendlyName),
       host_pool_id: cdktf.stringToTerraform(this._hostPoolId),

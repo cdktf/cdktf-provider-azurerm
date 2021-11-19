@@ -12,6 +12,10 @@ export interface PurviewAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly location: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html#managed_resource_group_name PurviewAccount#managed_resource_group_name}
+  */
+  readonly managedResourceGroupName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html#name PurviewAccount#name}
   */
   readonly name: string;
@@ -195,6 +199,7 @@ export class PurviewAccount extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._location = config.location;
+    this._managedResourceGroupName = config.managedResourceGroupName;
     this._name = config.name;
     this._publicNetworkEnabled = config.publicNetworkEnabled;
     this._resourceGroupName = config.resourceGroupName;
@@ -248,6 +253,22 @@ export class PurviewAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location
+  }
+
+  // managed_resource_group_name - computed: true, optional: true, required: false
+  private _managedResourceGroupName?: string | undefined; 
+  public get managedResourceGroupName() {
+    return this.getStringAttribute('managed_resource_group_name');
+  }
+  public set managedResourceGroupName(value: string | undefined) {
+    this._managedResourceGroupName = value;
+  }
+  public resetManagedResourceGroupName() {
+    this._managedResourceGroupName = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedResourceGroupNameInput() {
+    return this._managedResourceGroupName
   }
 
   // name - computed: false, optional: false, required: true
@@ -354,6 +375,7 @@ export class PurviewAccount extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       location: cdktf.stringToTerraform(this._location),
+      managed_resource_group_name: cdktf.stringToTerraform(this._managedResourceGroupName),
       name: cdktf.stringToTerraform(this._name),
       public_network_enabled: cdktf.booleanToTerraform(this._publicNetworkEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

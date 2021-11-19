@@ -12,6 +12,10 @@ export interface DiskEncryptionSetConfig extends cdktf.TerraformMetaArguments {
   */
   readonly autoKeyRotationEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html#encryption_type DiskEncryptionSet#encryption_type}
+  */
+  readonly encryptionType?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_encryption_set.html#key_vault_key_id DiskEncryptionSet#key_vault_key_id}
   */
   readonly keyVaultKeyId: string;
@@ -224,6 +228,7 @@ export class DiskEncryptionSet extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._autoKeyRotationEnabled = config.autoKeyRotationEnabled;
+    this._encryptionType = config.encryptionType;
     this._keyVaultKeyId = config.keyVaultKeyId;
     this._location = config.location;
     this._name = config.name;
@@ -251,6 +256,22 @@ export class DiskEncryptionSet extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get autoKeyRotationEnabledInput() {
     return this._autoKeyRotationEnabled
+  }
+
+  // encryption_type - computed: false, optional: true, required: false
+  private _encryptionType?: string | undefined; 
+  public get encryptionType() {
+    return this.getStringAttribute('encryption_type');
+  }
+  public set encryptionType(value: string | undefined) {
+    this._encryptionType = value;
+  }
+  public resetEncryptionType() {
+    this._encryptionType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionTypeInput() {
+    return this._encryptionType
   }
 
   // id - computed: true, optional: true, required: false
@@ -365,6 +386,7 @@ export class DiskEncryptionSet extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       auto_key_rotation_enabled: cdktf.booleanToTerraform(this._autoKeyRotationEnabled),
+      encryption_type: cdktf.stringToTerraform(this._encryptionType),
       key_vault_key_id: cdktf.stringToTerraform(this._keyVaultKeyId),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),

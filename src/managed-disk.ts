@@ -64,6 +64,10 @@ export interface ManagedDiskConfig extends cdktf.TerraformMetaArguments {
   */
   readonly networkAccessPolicy?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#on_demand_bursting_enabled ManagedDisk#on_demand_bursting_enabled}
+  */
+  readonly onDemandBurstingEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#os_type ManagedDisk#os_type}
   */
   readonly osType?: string;
@@ -473,6 +477,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
     this._maxShares = config.maxShares;
     this._name = config.name;
     this._networkAccessPolicy = config.networkAccessPolicy;
+    this._onDemandBurstingEnabled = config.onDemandBurstingEnabled;
     this._osType = config.osType;
     this._resourceGroupName = config.resourceGroupName;
     this._sourceResourceId = config.sourceResourceId;
@@ -711,6 +716,22 @@ export class ManagedDisk extends cdktf.TerraformResource {
     return this._networkAccessPolicy
   }
 
+  // on_demand_bursting_enabled - computed: false, optional: true, required: false
+  private _onDemandBurstingEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get onDemandBurstingEnabled() {
+    return this.getBooleanAttribute('on_demand_bursting_enabled') as any;
+  }
+  public set onDemandBurstingEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._onDemandBurstingEnabled = value;
+  }
+  public resetOnDemandBurstingEnabled() {
+    this._onDemandBurstingEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get onDemandBurstingEnabledInput() {
+    return this._onDemandBurstingEnabled
+  }
+
   // os_type - computed: false, optional: true, required: false
   private _osType?: string | undefined; 
   public get osType() {
@@ -920,6 +941,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
       max_shares: cdktf.numberToTerraform(this._maxShares),
       name: cdktf.stringToTerraform(this._name),
       network_access_policy: cdktf.stringToTerraform(this._networkAccessPolicy),
+      on_demand_bursting_enabled: cdktf.booleanToTerraform(this._onDemandBurstingEnabled),
       os_type: cdktf.stringToTerraform(this._osType),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       source_resource_id: cdktf.stringToTerraform(this._sourceResourceId),

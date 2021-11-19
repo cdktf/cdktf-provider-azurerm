@@ -96,6 +96,10 @@ export interface WindowsVirtualMachineConfig extends cdktf.TerraformMetaArgument
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#secure_boot_enabled WindowsVirtualMachine#secure_boot_enabled}
+  */
+  readonly secureBootEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#size WindowsVirtualMachine#size}
   */
   readonly size: string;
@@ -115,6 +119,10 @@ export interface WindowsVirtualMachineConfig extends cdktf.TerraformMetaArgument
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#virtual_machine_scale_set_id WindowsVirtualMachine#virtual_machine_scale_set_id}
   */
   readonly virtualMachineScaleSetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#vtpm_enabled WindowsVirtualMachine#vtpm_enabled}
+  */
+  readonly vtpmEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine.html#zone WindowsVirtualMachine#zone}
   */
@@ -954,11 +962,13 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
     this._provisionVmAgent = config.provisionVmAgent;
     this._proximityPlacementGroupId = config.proximityPlacementGroupId;
     this._resourceGroupName = config.resourceGroupName;
+    this._secureBootEnabled = config.secureBootEnabled;
     this._size = config.size;
     this._sourceImageId = config.sourceImageId;
     this._tags = config.tags;
     this._timezone = config.timezone;
     this._virtualMachineScaleSetId = config.virtualMachineScaleSetId;
+    this._vtpmEnabled = config.vtpmEnabled;
     this._zone = config.zone;
     this._additionalCapabilities = config.additionalCapabilities;
     this._additionalUnattendContent = config.additionalUnattendContent;
@@ -1335,6 +1345,22 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
     return this._resourceGroupName
   }
 
+  // secure_boot_enabled - computed: false, optional: true, required: false
+  private _secureBootEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get secureBootEnabled() {
+    return this.getBooleanAttribute('secure_boot_enabled') as any;
+  }
+  public set secureBootEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._secureBootEnabled = value;
+  }
+  public resetSecureBootEnabled() {
+    this._secureBootEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secureBootEnabledInput() {
+    return this._secureBootEnabled
+  }
+
   // size - computed: false, optional: false, required: true
   private _size?: string; 
   public get size() {
@@ -1416,6 +1442,22 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get virtualMachineScaleSetIdInput() {
     return this._virtualMachineScaleSetId
+  }
+
+  // vtpm_enabled - computed: false, optional: true, required: false
+  private _vtpmEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get vtpmEnabled() {
+    return this.getBooleanAttribute('vtpm_enabled') as any;
+  }
+  public set vtpmEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._vtpmEnabled = value;
+  }
+  public resetVtpmEnabled() {
+    this._vtpmEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vtpmEnabledInput() {
+    return this._vtpmEnabled
   }
 
   // zone - computed: true, optional: true, required: false
@@ -1629,11 +1671,13 @@ export class WindowsVirtualMachine extends cdktf.TerraformResource {
       provision_vm_agent: cdktf.booleanToTerraform(this._provisionVmAgent),
       proximity_placement_group_id: cdktf.stringToTerraform(this._proximityPlacementGroupId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      secure_boot_enabled: cdktf.booleanToTerraform(this._secureBootEnabled),
       size: cdktf.stringToTerraform(this._size),
       source_image_id: cdktf.stringToTerraform(this._sourceImageId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       timezone: cdktf.stringToTerraform(this._timezone),
       virtual_machine_scale_set_id: cdktf.stringToTerraform(this._virtualMachineScaleSetId),
+      vtpm_enabled: cdktf.booleanToTerraform(this._vtpmEnabled),
       zone: cdktf.stringToTerraform(this._zone),
       additional_capabilities: windowsVirtualMachineAdditionalCapabilitiesToTerraform(this._additionalCapabilities),
       additional_unattend_content: cdktf.listMapper(windowsVirtualMachineAdditionalUnattendContentToTerraform)(this._additionalUnattendContent),

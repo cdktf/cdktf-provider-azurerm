@@ -12,12 +12,40 @@ export interface ResourceProviderRegistrationConfig extends cdktf.TerraformMetaA
   */
   readonly name: string;
   /**
+  * feature block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#feature ResourceProviderRegistration#feature}
+  */
+  readonly feature?: ResourceProviderRegistrationFeature[];
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#timeouts ResourceProviderRegistration#timeouts}
   */
   readonly timeouts?: ResourceProviderRegistrationTimeouts;
 }
+export interface ResourceProviderRegistrationFeature {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#name ResourceProviderRegistration#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#registered ResourceProviderRegistration#registered}
+  */
+  readonly registered: boolean | cdktf.IResolvable;
+}
+
+function resourceProviderRegistrationFeatureToTerraform(struct?: ResourceProviderRegistrationFeature): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    registered: cdktf.booleanToTerraform(struct!.registered),
+  }
+}
+
 export interface ResourceProviderRegistrationTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#create ResourceProviderRegistration#create}
@@ -31,6 +59,10 @@ export interface ResourceProviderRegistrationTimeouts {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#read ResourceProviderRegistration#read}
   */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#update ResourceProviderRegistration#update}
+  */
+  readonly update?: string;
 }
 
 function resourceProviderRegistrationTimeoutsToTerraform(struct?: ResourceProviderRegistrationTimeoutsOutputReference | ResourceProviderRegistrationTimeouts): any {
@@ -42,6 +74,7 @@ function resourceProviderRegistrationTimeoutsToTerraform(struct?: ResourceProvid
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
   }
 }
 
@@ -102,6 +135,22 @@ export class ResourceProviderRegistrationTimeoutsOutputReference extends cdktf.C
   public get readInput() {
     return this._read
   }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
+  }
 }
 
 /**
@@ -137,6 +186,7 @@ export class ResourceProviderRegistration extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._name = config.name;
+    this._feature = config.feature;
     this._timeouts = config.timeouts;
   }
 
@@ -160,6 +210,23 @@ export class ResourceProviderRegistration extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // feature - computed: false, optional: true, required: false
+  private _feature?: ResourceProviderRegistrationFeature[] | undefined; 
+  public get feature() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('feature') as any;
+  }
+  public set feature(value: ResourceProviderRegistrationFeature[] | undefined) {
+    this._feature = value;
+  }
+  public resetFeature() {
+    this._feature = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get featureInput() {
+    return this._feature
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -186,6 +253,7 @@ export class ResourceProviderRegistration extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       name: cdktf.stringToTerraform(this._name),
+      feature: cdktf.listMapper(resourceProviderRegistrationFeatureToTerraform)(this._feature),
       timeouts: resourceProviderRegistrationTimeoutsToTerraform(this._timeouts),
     };
   }

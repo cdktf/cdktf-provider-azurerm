@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface SqlActiveDirectoryAdministratorConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_active_directory_administrator.html#azuread_authentication_only SqlActiveDirectoryAdministrator#azuread_authentication_only}
+  */
+  readonly azureadAuthenticationOnly?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_active_directory_administrator.html#login SqlActiveDirectoryAdministrator#login}
   */
   readonly login: string;
@@ -173,6 +177,7 @@ export class SqlActiveDirectoryAdministrator extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._azureadAuthenticationOnly = config.azureadAuthenticationOnly;
     this._login = config.login;
     this._objectId = config.objectId;
     this._resourceGroupName = config.resourceGroupName;
@@ -184,6 +189,22 @@ export class SqlActiveDirectoryAdministrator extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // azuread_authentication_only - computed: true, optional: true, required: false
+  private _azureadAuthenticationOnly?: boolean | cdktf.IResolvable | undefined; 
+  public get azureadAuthenticationOnly() {
+    return this.getBooleanAttribute('azuread_authentication_only') as any;
+  }
+  public set azureadAuthenticationOnly(value: boolean | cdktf.IResolvable | undefined) {
+    this._azureadAuthenticationOnly = value;
+  }
+  public resetAzureadAuthenticationOnly() {
+    this._azureadAuthenticationOnly = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureadAuthenticationOnlyInput() {
+    return this._azureadAuthenticationOnly
+  }
 
   // id - computed: true, optional: true, required: false
   public get id() {
@@ -278,6 +299,7 @@ export class SqlActiveDirectoryAdministrator extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      azuread_authentication_only: cdktf.booleanToTerraform(this._azureadAuthenticationOnly),
       login: cdktf.stringToTerraform(this._login),
       object_id: cdktf.stringToTerraform(this._objectId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

@@ -12,6 +12,10 @@ export interface StreamAnalyticsOutputServicebusTopicConfig extends cdktf.Terraf
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_topic.html#property_columns StreamAnalyticsOutputServicebusTopic#property_columns}
+  */
+  readonly propertyColumns?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_servicebus_topic.html#resource_group_name StreamAnalyticsOutputServicebusTopic#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -291,6 +295,7 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
       lifecycle: config.lifecycle
     });
     this._name = config.name;
+    this._propertyColumns = config.propertyColumns;
     this._resourceGroupName = config.resourceGroupName;
     this._servicebusNamespace = config.servicebusNamespace;
     this._sharedAccessPolicyKey = config.sharedAccessPolicyKey;
@@ -321,6 +326,22 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // property_columns - computed: false, optional: true, required: false
+  private _propertyColumns?: string[] | undefined; 
+  public get propertyColumns() {
+    return this.getListAttribute('property_columns');
+  }
+  public set propertyColumns(value: string[] | undefined) {
+    this._propertyColumns = value;
+  }
+  public resetPropertyColumns() {
+    this._propertyColumns = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get propertyColumnsInput() {
+    return this._propertyColumns
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -439,6 +460,7 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       name: cdktf.stringToTerraform(this._name),
+      property_columns: cdktf.listMapper(cdktf.stringToTerraform)(this._propertyColumns),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       servicebus_namespace: cdktf.stringToTerraform(this._servicebusNamespace),
       shared_access_policy_key: cdktf.stringToTerraform(this._sharedAccessPolicyKey),

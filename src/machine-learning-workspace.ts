@@ -64,6 +64,12 @@ export interface MachineLearningWorkspaceConfig extends cdktf.TerraformMetaArgum
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * encryption block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#encryption MachineLearningWorkspace#encryption}
+  */
+  readonly encryption?: MachineLearningWorkspaceEncryption;
+  /**
   * identity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#identity MachineLearningWorkspace#identity}
@@ -75,6 +81,64 @@ export interface MachineLearningWorkspaceConfig extends cdktf.TerraformMetaArgum
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#timeouts MachineLearningWorkspace#timeouts}
   */
   readonly timeouts?: MachineLearningWorkspaceTimeouts;
+}
+export interface MachineLearningWorkspaceEncryption {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#key_id MachineLearningWorkspace#key_id}
+  */
+  readonly keyId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_workspace.html#key_vault_id MachineLearningWorkspace#key_vault_id}
+  */
+  readonly keyVaultId: string;
+}
+
+function machineLearningWorkspaceEncryptionToTerraform(struct?: MachineLearningWorkspaceEncryptionOutputReference | MachineLearningWorkspaceEncryption): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key_id: cdktf.stringToTerraform(struct!.keyId),
+    key_vault_id: cdktf.stringToTerraform(struct!.keyVaultId),
+  }
+}
+
+export class MachineLearningWorkspaceEncryptionOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // key_id - computed: false, optional: false, required: true
+  private _keyId?: string; 
+  public get keyId() {
+    return this.getStringAttribute('key_id');
+  }
+  public set keyId(value: string) {
+    this._keyId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyIdInput() {
+    return this._keyId
+  }
+
+  // key_vault_id - computed: false, optional: false, required: true
+  private _keyVaultId?: string; 
+  public get keyVaultId() {
+    return this.getStringAttribute('key_vault_id');
+  }
+  public set keyVaultId(value: string) {
+    this._keyVaultId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultIdInput() {
+    return this._keyVaultId
+  }
 }
 export interface MachineLearningWorkspaceIdentity {
   /**
@@ -269,6 +333,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
     this._skuName = config.skuName;
     this._storageAccountId = config.storageAccountId;
     this._tags = config.tags;
+    this._encryption = config.encryption;
     this._identity = config.identity;
     this._timeouts = config.timeouts;
   }
@@ -494,6 +559,23 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
     return this._tags
   }
 
+  // encryption - computed: false, optional: true, required: false
+  private _encryption?: MachineLearningWorkspaceEncryption | undefined; 
+  private __encryptionOutput = new MachineLearningWorkspaceEncryptionOutputReference(this as any, "encryption", true);
+  public get encryption() {
+    return this.__encryptionOutput;
+  }
+  public putEncryption(value: MachineLearningWorkspaceEncryption | undefined) {
+    this._encryption = value;
+  }
+  public resetEncryption() {
+    this._encryption = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionInput() {
+    return this._encryption
+  }
+
   // identity - computed: false, optional: false, required: true
   private _identity?: MachineLearningWorkspaceIdentity; 
   private __identityOutput = new MachineLearningWorkspaceIdentityOutputReference(this as any, "identity", true);
@@ -545,6 +627,7 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
       sku_name: cdktf.stringToTerraform(this._skuName),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      encryption: machineLearningWorkspaceEncryptionToTerraform(this._encryption),
       identity: machineLearningWorkspaceIdentityToTerraform(this._identity),
       timeouts: machineLearningWorkspaceTimeoutsToTerraform(this._timeouts),
     };

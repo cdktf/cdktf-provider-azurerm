@@ -30,7 +30,7 @@ export interface KeyVaultCertificateConfig extends cdktf.TerraformMetaArguments 
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#certificate_policy KeyVaultCertificate#certificate_policy}
   */
-  readonly certificatePolicy: KeyVaultCertificateCertificatePolicy;
+  readonly certificatePolicy?: KeyVaultCertificateCertificatePolicy;
   /**
   * timeouts block
   * 
@@ -811,6 +811,10 @@ export interface KeyVaultCertificateTimeouts {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#read KeyVaultCertificate#read}
   */
   readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_certificate.html#update KeyVaultCertificate#update}
+  */
+  readonly update?: string;
 }
 
 function keyVaultCertificateTimeoutsToTerraform(struct?: KeyVaultCertificateTimeoutsOutputReference | KeyVaultCertificateTimeouts): any {
@@ -822,6 +826,7 @@ function keyVaultCertificateTimeoutsToTerraform(struct?: KeyVaultCertificateTime
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
   }
 }
 
@@ -881,6 +886,22 @@ export class KeyVaultCertificateTimeoutsOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get readInput() {
     return this._read
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string | undefined; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string | undefined) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update
   }
 }
 
@@ -1023,14 +1044,17 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
     return this._certificate
   }
 
-  // certificate_policy - computed: false, optional: false, required: true
-  private _certificatePolicy?: KeyVaultCertificateCertificatePolicy; 
+  // certificate_policy - computed: false, optional: true, required: false
+  private _certificatePolicy?: KeyVaultCertificateCertificatePolicy | undefined; 
   private __certificatePolicyOutput = new KeyVaultCertificateCertificatePolicyOutputReference(this as any, "certificate_policy", true);
   public get certificatePolicy() {
     return this.__certificatePolicyOutput;
   }
-  public putCertificatePolicy(value: KeyVaultCertificateCertificatePolicy) {
+  public putCertificatePolicy(value: KeyVaultCertificateCertificatePolicy | undefined) {
     this._certificatePolicy = value;
+  }
+  public resetCertificatePolicy() {
+    this._certificatePolicy = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get certificatePolicyInput() {

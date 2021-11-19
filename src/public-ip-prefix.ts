@@ -12,6 +12,10 @@ export interface PublicIpPrefixConfig extends cdktf.TerraformMetaArguments {
   */
   readonly availabilityZone?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip_prefix.html#ip_version PublicIpPrefix#ip_version}
+  */
+  readonly ipVersion?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/public_ip_prefix.html#location PublicIpPrefix#location}
   */
   readonly location: string;
@@ -186,6 +190,7 @@ export class PublicIpPrefix extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._availabilityZone = config.availabilityZone;
+    this._ipVersion = config.ipVersion;
     this._location = config.location;
     this._name = config.name;
     this._prefixLength = config.prefixLength;
@@ -224,6 +229,22 @@ export class PublicIpPrefix extends cdktf.TerraformResource {
   // ip_prefix - computed: true, optional: false, required: false
   public get ipPrefix() {
     return this.getStringAttribute('ip_prefix');
+  }
+
+  // ip_version - computed: false, optional: true, required: false
+  private _ipVersion?: string | undefined; 
+  public get ipVersion() {
+    return this.getStringAttribute('ip_version');
+  }
+  public set ipVersion(value: string | undefined) {
+    this._ipVersion = value;
+  }
+  public resetIpVersion() {
+    this._ipVersion = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipVersionInput() {
+    return this._ipVersion
   }
 
   // location - computed: false, optional: false, required: true
@@ -354,6 +375,7 @@ export class PublicIpPrefix extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       availability_zone: cdktf.stringToTerraform(this._availabilityZone),
+      ip_version: cdktf.stringToTerraform(this._ipVersion),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       prefix_length: cdktf.numberToTerraform(this._prefixLength),
