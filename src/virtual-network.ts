@@ -20,6 +20,10 @@ export interface VirtualNetworkConfig extends cdktf.TerraformMetaArguments {
   */
   readonly dnsServers?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#flow_timeout_in_minutes VirtualNetwork#flow_timeout_in_minutes}
+  */
+  readonly flowTimeoutInMinutes?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html#location VirtualNetwork#location}
   */
   readonly location: string;
@@ -287,6 +291,7 @@ export class VirtualNetwork extends cdktf.TerraformResource {
     this._addressSpace = config.addressSpace;
     this._bgpCommunity = config.bgpCommunity;
     this._dnsServers = config.dnsServers;
+    this._flowTimeoutInMinutes = config.flowTimeoutInMinutes;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -344,6 +349,22 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get dnsServersInput() {
     return this._dnsServers
+  }
+
+  // flow_timeout_in_minutes - computed: false, optional: true, required: false
+  private _flowTimeoutInMinutes?: number | undefined; 
+  public get flowTimeoutInMinutes() {
+    return this.getNumberAttribute('flow_timeout_in_minutes');
+  }
+  public set flowTimeoutInMinutes(value: number | undefined) {
+    this._flowTimeoutInMinutes = value;
+  }
+  public resetFlowTimeoutInMinutes() {
+    this._flowTimeoutInMinutes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get flowTimeoutInMinutesInput() {
+    return this._flowTimeoutInMinutes
   }
 
   // guid - computed: true, optional: false, required: false
@@ -488,6 +509,7 @@ export class VirtualNetwork extends cdktf.TerraformResource {
       address_space: cdktf.listMapper(cdktf.stringToTerraform)(this._addressSpace),
       bgp_community: cdktf.stringToTerraform(this._bgpCommunity),
       dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(this._dnsServers),
+      flow_timeout_in_minutes: cdktf.numberToTerraform(this._flowTimeoutInMinutes),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

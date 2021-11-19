@@ -96,6 +96,10 @@ export interface WindowsVirtualMachineScaleSetConfig extends cdktf.TerraformMeta
   */
   readonly scaleInPolicy?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#secure_boot_enabled WindowsVirtualMachineScaleSet#secure_boot_enabled}
+  */
+  readonly secureBootEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#single_placement_group WindowsVirtualMachineScaleSet#single_placement_group}
   */
   readonly singlePlacementGroup?: boolean | cdktf.IResolvable;
@@ -119,6 +123,10 @@ export interface WindowsVirtualMachineScaleSetConfig extends cdktf.TerraformMeta
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#upgrade_mode WindowsVirtualMachineScaleSet#upgrade_mode}
   */
   readonly upgradeMode?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#vtpm_enabled WindowsVirtualMachineScaleSet#vtpm_enabled}
+  */
+  readonly vtpmEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/windows_virtual_machine_scale_set.html#zone_balance WindowsVirtualMachineScaleSet#zone_balance}
   */
@@ -1545,12 +1553,14 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
     this._proximityPlacementGroupId = config.proximityPlacementGroupId;
     this._resourceGroupName = config.resourceGroupName;
     this._scaleInPolicy = config.scaleInPolicy;
+    this._secureBootEnabled = config.secureBootEnabled;
     this._singlePlacementGroup = config.singlePlacementGroup;
     this._sku = config.sku;
     this._sourceImageId = config.sourceImageId;
     this._tags = config.tags;
     this._timezone = config.timezone;
     this._upgradeMode = config.upgradeMode;
+    this._vtpmEnabled = config.vtpmEnabled;
     this._zoneBalance = config.zoneBalance;
     this._zones = config.zones;
     this._additionalCapabilities = config.additionalCapabilities;
@@ -1915,6 +1925,22 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
     return this._scaleInPolicy
   }
 
+  // secure_boot_enabled - computed: false, optional: true, required: false
+  private _secureBootEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get secureBootEnabled() {
+    return this.getBooleanAttribute('secure_boot_enabled') as any;
+  }
+  public set secureBootEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._secureBootEnabled = value;
+  }
+  public resetSecureBootEnabled() {
+    this._secureBootEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secureBootEnabledInput() {
+    return this._secureBootEnabled
+  }
+
   // single_placement_group - computed: false, optional: true, required: false
   private _singlePlacementGroup?: boolean | cdktf.IResolvable | undefined; 
   public get singlePlacementGroup() {
@@ -2012,6 +2038,22 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get upgradeModeInput() {
     return this._upgradeMode
+  }
+
+  // vtpm_enabled - computed: false, optional: true, required: false
+  private _vtpmEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get vtpmEnabled() {
+    return this.getBooleanAttribute('vtpm_enabled') as any;
+  }
+  public set vtpmEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._vtpmEnabled = value;
+  }
+  public resetVtpmEnabled() {
+    this._vtpmEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get vtpmEnabledInput() {
+    return this._vtpmEnabled
   }
 
   // zone_balance - computed: false, optional: true, required: false
@@ -2357,12 +2399,14 @@ export class WindowsVirtualMachineScaleSet extends cdktf.TerraformResource {
       proximity_placement_group_id: cdktf.stringToTerraform(this._proximityPlacementGroupId),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       scale_in_policy: cdktf.stringToTerraform(this._scaleInPolicy),
+      secure_boot_enabled: cdktf.booleanToTerraform(this._secureBootEnabled),
       single_placement_group: cdktf.booleanToTerraform(this._singlePlacementGroup),
       sku: cdktf.stringToTerraform(this._sku),
       source_image_id: cdktf.stringToTerraform(this._sourceImageId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       timezone: cdktf.stringToTerraform(this._timezone),
       upgrade_mode: cdktf.stringToTerraform(this._upgradeMode),
+      vtpm_enabled: cdktf.booleanToTerraform(this._vtpmEnabled),
       zone_balance: cdktf.booleanToTerraform(this._zoneBalance),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       additional_capabilities: windowsVirtualMachineScaleSetAdditionalCapabilitiesToTerraform(this._additionalCapabilities),

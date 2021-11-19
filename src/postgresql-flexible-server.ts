@@ -135,7 +135,7 @@ export class PostgresqlFlexibleServerHighAvailabilityOutputReference extends cdk
     return this._mode
   }
 
-  // standby_availability_zone - computed: true, optional: true, required: false
+  // standby_availability_zone - computed: false, optional: true, required: false
   private _standbyAvailabilityZone?: string | undefined; 
   public get standbyAvailabilityZone() {
     return this.getStringAttribute('standby_availability_zone');
@@ -652,7 +652,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
     return this._version
   }
 
-  // zone - computed: true, optional: true, required: false
+  // zone - computed: false, optional: true, required: false
   private _zone?: string | undefined; 
   public get zone() {
     return this.getStringAttribute('zone');

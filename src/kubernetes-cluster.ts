@@ -3327,6 +3327,70 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
     return this._outboundPortsAllocated
   }
 }
+export interface KubernetesClusterNetworkProfileNatGatewayProfile {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#idle_timeout_in_minutes KubernetesCluster#idle_timeout_in_minutes}
+  */
+  readonly idleTimeoutInMinutes?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#managed_outbound_ip_count KubernetesCluster#managed_outbound_ip_count}
+  */
+  readonly managedOutboundIpCount?: number;
+}
+
+function kubernetesClusterNetworkProfileNatGatewayProfileToTerraform(struct?: KubernetesClusterNetworkProfileNatGatewayProfileOutputReference | KubernetesClusterNetworkProfileNatGatewayProfile): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    idle_timeout_in_minutes: cdktf.numberToTerraform(struct!.idleTimeoutInMinutes),
+    managed_outbound_ip_count: cdktf.numberToTerraform(struct!.managedOutboundIpCount),
+  }
+}
+
+export class KubernetesClusterNetworkProfileNatGatewayProfileOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // idle_timeout_in_minutes - computed: false, optional: true, required: false
+  private _idleTimeoutInMinutes?: number | undefined; 
+  public get idleTimeoutInMinutes() {
+    return this.getNumberAttribute('idle_timeout_in_minutes');
+  }
+  public set idleTimeoutInMinutes(value: number | undefined) {
+    this._idleTimeoutInMinutes = value;
+  }
+  public resetIdleTimeoutInMinutes() {
+    this._idleTimeoutInMinutes = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get idleTimeoutInMinutesInput() {
+    return this._idleTimeoutInMinutes
+  }
+
+  // managed_outbound_ip_count - computed: true, optional: true, required: false
+  private _managedOutboundIpCount?: number | undefined; 
+  public get managedOutboundIpCount() {
+    return this.getNumberAttribute('managed_outbound_ip_count');
+  }
+  public set managedOutboundIpCount(value: number | undefined) {
+    this._managedOutboundIpCount = value;
+  }
+  public resetManagedOutboundIpCount() {
+    this._managedOutboundIpCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get managedOutboundIpCountInput() {
+    return this._managedOutboundIpCount
+  }
+}
 export interface KubernetesClusterNetworkProfile {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#dns_service_ip KubernetesCluster#dns_service_ip}
@@ -3370,6 +3434,12 @@ export interface KubernetesClusterNetworkProfile {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#load_balancer_profile KubernetesCluster#load_balancer_profile}
   */
   readonly loadBalancerProfile?: KubernetesClusterNetworkProfileLoadBalancerProfile;
+  /**
+  * nat_gateway_profile block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#nat_gateway_profile KubernetesCluster#nat_gateway_profile}
+  */
+  readonly natGatewayProfile?: KubernetesClusterNetworkProfileNatGatewayProfile;
 }
 
 function kubernetesClusterNetworkProfileToTerraform(struct?: KubernetesClusterNetworkProfileOutputReference | KubernetesClusterNetworkProfile): any {
@@ -3388,6 +3458,7 @@ function kubernetesClusterNetworkProfileToTerraform(struct?: KubernetesClusterNe
     pod_cidr: cdktf.stringToTerraform(struct!.podCidr),
     service_cidr: cdktf.stringToTerraform(struct!.serviceCidr),
     load_balancer_profile: kubernetesClusterNetworkProfileLoadBalancerProfileToTerraform(struct!.loadBalancerProfile),
+    nat_gateway_profile: kubernetesClusterNetworkProfileNatGatewayProfileToTerraform(struct!.natGatewayProfile),
   }
 }
 
@@ -3557,6 +3628,23 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   // Temporarily expose input value. Use with caution.
   public get loadBalancerProfileInput() {
     return this._loadBalancerProfile
+  }
+
+  // nat_gateway_profile - computed: false, optional: true, required: false
+  private _natGatewayProfile?: KubernetesClusterNetworkProfileNatGatewayProfile | undefined; 
+  private __natGatewayProfileOutput = new KubernetesClusterNetworkProfileNatGatewayProfileOutputReference(this as any, "nat_gateway_profile", true);
+  public get natGatewayProfile() {
+    return this.__natGatewayProfileOutput;
+  }
+  public putNatGatewayProfile(value: KubernetesClusterNetworkProfileNatGatewayProfile | undefined) {
+    this._natGatewayProfile = value;
+  }
+  public resetNatGatewayProfile() {
+    this._natGatewayProfile = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get natGatewayProfileInput() {
+    return this._natGatewayProfile
   }
 }
 export interface KubernetesClusterRoleBasedAccessControlAzureActiveDirectory {

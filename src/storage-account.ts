@@ -56,6 +56,10 @@ export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly nfsv3Enabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#queue_encryption_key_type StorageAccount#queue_encryption_key_type}
+  */
+  readonly queueEncryptionKeyType?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#resource_group_name StorageAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -63,6 +67,10 @@ export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#shared_access_key_enabled StorageAccount#shared_access_key_enabled}
   */
   readonly sharedAccessKeyEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#table_encryption_key_type StorageAccount#table_encryption_key_type}
+  */
+  readonly tableEncryptionKeyType?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#tags StorageAccount#tags}
   */
@@ -1944,8 +1952,10 @@ export class StorageAccount extends cdktf.TerraformResource {
     this._minTlsVersion = config.minTlsVersion;
     this._name = config.name;
     this._nfsv3Enabled = config.nfsv3Enabled;
+    this._queueEncryptionKeyType = config.queueEncryptionKeyType;
     this._resourceGroupName = config.resourceGroupName;
     this._sharedAccessKeyEnabled = config.sharedAccessKeyEnabled;
+    this._tableEncryptionKeyType = config.tableEncryptionKeyType;
     this._tags = config.tags;
     this._azureFilesAuthentication = config.azureFilesAuthentication;
     this._blobProperties = config.blobProperties;
@@ -2228,6 +2238,22 @@ export class StorageAccount extends cdktf.TerraformResource {
     return this.getStringAttribute('primary_web_host');
   }
 
+  // queue_encryption_key_type - computed: false, optional: true, required: false
+  private _queueEncryptionKeyType?: string | undefined; 
+  public get queueEncryptionKeyType() {
+    return this.getStringAttribute('queue_encryption_key_type');
+  }
+  public set queueEncryptionKeyType(value: string | undefined) {
+    this._queueEncryptionKeyType = value;
+  }
+  public resetQueueEncryptionKeyType() {
+    this._queueEncryptionKeyType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queueEncryptionKeyTypeInput() {
+    return this._queueEncryptionKeyType
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
@@ -2335,6 +2361,22 @@ export class StorageAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get sharedAccessKeyEnabledInput() {
     return this._sharedAccessKeyEnabled
+  }
+
+  // table_encryption_key_type - computed: false, optional: true, required: false
+  private _tableEncryptionKeyType?: string | undefined; 
+  public get tableEncryptionKeyType() {
+    return this.getStringAttribute('table_encryption_key_type');
+  }
+  public set tableEncryptionKeyType(value: string | undefined) {
+    this._tableEncryptionKeyType = value;
+  }
+  public resetTableEncryptionKeyType() {
+    this._tableEncryptionKeyType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tableEncryptionKeyTypeInput() {
+    return this._tableEncryptionKeyType
   }
 
   // tags - computed: false, optional: true, required: false
@@ -2542,8 +2584,10 @@ export class StorageAccount extends cdktf.TerraformResource {
       min_tls_version: cdktf.stringToTerraform(this._minTlsVersion),
       name: cdktf.stringToTerraform(this._name),
       nfsv3_enabled: cdktf.booleanToTerraform(this._nfsv3Enabled),
+      queue_encryption_key_type: cdktf.stringToTerraform(this._queueEncryptionKeyType),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       shared_access_key_enabled: cdktf.booleanToTerraform(this._sharedAccessKeyEnabled),
+      table_encryption_key_type: cdktf.stringToTerraform(this._tableEncryptionKeyType),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       azure_files_authentication: storageAccountAzureFilesAuthenticationToTerraform(this._azureFilesAuthentication),
       blob_properties: storageAccountBlobPropertiesToTerraform(this._blobProperties),

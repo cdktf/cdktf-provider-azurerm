@@ -278,6 +278,11 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
     return this.getStringAttribute('primary_web_host');
   }
 
+  // queue_encryption_key_type - computed: true, optional: false, required: false
+  public get queueEncryptionKeyType() {
+    return this.getStringAttribute('queue_encryption_key_type');
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
@@ -369,6 +374,11 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
   // secondary_web_host - computed: true, optional: false, required: false
   public get secondaryWebHost() {
     return this.getStringAttribute('secondary_web_host');
+  }
+
+  // table_encryption_key_type - computed: true, optional: false, required: false
+  public get tableEncryptionKeyType() {
+    return this.getStringAttribute('table_encryption_key_type');
   }
 
   // tags - computed: true, optional: false, required: false

@@ -12,6 +12,14 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   */
   readonly adminEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#anonymous_pull_enabled ContainerRegistry#anonymous_pull_enabled}
+  */
+  readonly anonymousPullEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#data_endpoint_enabled ContainerRegistry#data_endpoint_enabled}
+  */
+  readonly dataEndpointEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#encryption ContainerRegistry#encryption}
   */
   readonly encryption?: ContainerRegistryEncryption[];
@@ -31,6 +39,10 @@ export interface ContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#name ContainerRegistry#name}
   */
   readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#network_rule_bypass_option ContainerRegistry#network_rule_bypass_option}
+  */
+  readonly networkRuleBypassOption?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry.html#network_rule_set ContainerRegistry#network_rule_set}
   */
@@ -454,11 +466,14 @@ export class ContainerRegistry extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._adminEnabled = config.adminEnabled;
+    this._anonymousPullEnabled = config.anonymousPullEnabled;
+    this._dataEndpointEnabled = config.dataEndpointEnabled;
     this._encryption = config.encryption;
     this._georeplicationLocations = config.georeplicationLocations;
     this._georeplications = config.georeplications;
     this._location = config.location;
     this._name = config.name;
+    this._networkRuleBypassOption = config.networkRuleBypassOption;
     this._networkRuleSet = config.networkRuleSet;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._quarantinePolicyEnabled = config.quarantinePolicyEnabled;
@@ -501,6 +516,38 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   // admin_username - computed: true, optional: false, required: false
   public get adminUsername() {
     return this.getStringAttribute('admin_username');
+  }
+
+  // anonymous_pull_enabled - computed: false, optional: true, required: false
+  private _anonymousPullEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get anonymousPullEnabled() {
+    return this.getBooleanAttribute('anonymous_pull_enabled') as any;
+  }
+  public set anonymousPullEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._anonymousPullEnabled = value;
+  }
+  public resetAnonymousPullEnabled() {
+    this._anonymousPullEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get anonymousPullEnabledInput() {
+    return this._anonymousPullEnabled
+  }
+
+  // data_endpoint_enabled - computed: false, optional: true, required: false
+  private _dataEndpointEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get dataEndpointEnabled() {
+    return this.getBooleanAttribute('data_endpoint_enabled') as any;
+  }
+  public set dataEndpointEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._dataEndpointEnabled = value;
+  }
+  public resetDataEndpointEnabled() {
+    this._dataEndpointEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataEndpointEnabledInput() {
+    return this._dataEndpointEnabled
   }
 
   // encryption - computed: true, optional: true, required: false
@@ -587,6 +634,22 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name
+  }
+
+  // network_rule_bypass_option - computed: false, optional: true, required: false
+  private _networkRuleBypassOption?: string | undefined; 
+  public get networkRuleBypassOption() {
+    return this.getStringAttribute('network_rule_bypass_option');
+  }
+  public set networkRuleBypassOption(value: string | undefined) {
+    this._networkRuleBypassOption = value;
+  }
+  public resetNetworkRuleBypassOption() {
+    this._networkRuleBypassOption = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkRuleBypassOptionInput() {
+    return this._networkRuleBypassOption
   }
 
   // network_rule_set - computed: true, optional: true, required: false
@@ -791,11 +854,14 @@ export class ContainerRegistry extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       admin_enabled: cdktf.booleanToTerraform(this._adminEnabled),
+      anonymous_pull_enabled: cdktf.booleanToTerraform(this._anonymousPullEnabled),
+      data_endpoint_enabled: cdktf.booleanToTerraform(this._dataEndpointEnabled),
       encryption: cdktf.listMapper(containerRegistryEncryptionToTerraform)(this._encryption),
       georeplication_locations: cdktf.listMapper(cdktf.stringToTerraform)(this._georeplicationLocations),
       georeplications: cdktf.listMapper(containerRegistryGeoreplicationsToTerraform)(this._georeplications),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      network_rule_bypass_option: cdktf.stringToTerraform(this._networkRuleBypassOption),
       network_rule_set: cdktf.listMapper(containerRegistryNetworkRuleSetToTerraform)(this._networkRuleSet),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       quarantine_policy_enabled: cdktf.booleanToTerraform(this._quarantinePolicyEnabled),

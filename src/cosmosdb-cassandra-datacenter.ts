@@ -8,6 +8,10 @@ import * as cdktf from 'cdktf';
 
 export interface CosmosdbCassandraDatacenterConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter.html#availability_zones_enabled CosmosdbCassandraDatacenter#availability_zones_enabled}
+  */
+  readonly availabilityZonesEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter.html#cassandra_cluster_id CosmosdbCassandraDatacenter#cassandra_cluster_id}
   */
   readonly cassandraClusterId: string;
@@ -181,6 +185,7 @@ export class CosmosdbCassandraDatacenter extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._availabilityZonesEnabled = config.availabilityZonesEnabled;
     this._cassandraClusterId = config.cassandraClusterId;
     this._delegatedManagementSubnetId = config.delegatedManagementSubnetId;
     this._diskCount = config.diskCount;
@@ -194,6 +199,22 @@ export class CosmosdbCassandraDatacenter extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // availability_zones_enabled - computed: false, optional: true, required: false
+  private _availabilityZonesEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get availabilityZonesEnabled() {
+    return this.getBooleanAttribute('availability_zones_enabled') as any;
+  }
+  public set availabilityZonesEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._availabilityZonesEnabled = value;
+  }
+  public resetAvailabilityZonesEnabled() {
+    this._availabilityZonesEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get availabilityZonesEnabledInput() {
+    return this._availabilityZonesEnabled
+  }
 
   // cassandra_cluster_id - computed: false, optional: false, required: true
   private _cassandraClusterId?: string; 
@@ -323,6 +344,7 @@ export class CosmosdbCassandraDatacenter extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      availability_zones_enabled: cdktf.booleanToTerraform(this._availabilityZonesEnabled),
       cassandra_cluster_id: cdktf.stringToTerraform(this._cassandraClusterId),
       delegated_management_subnet_id: cdktf.stringToTerraform(this._delegatedManagementSubnetId),
       disk_count: cdktf.numberToTerraform(this._diskCount),
