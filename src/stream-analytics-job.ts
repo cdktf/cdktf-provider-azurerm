@@ -44,6 +44,10 @@ export interface StreamAnalyticsJobConfig extends cdktf.TerraformMetaArguments {
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#stream_analytics_cluster_id StreamAnalyticsJob#stream_analytics_cluster_id}
+  */
+  readonly streamAnalyticsClusterId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_job.html#streaming_units StreamAnalyticsJob#streaming_units}
   */
   readonly streamingUnits: number;
@@ -256,6 +260,7 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
     this._name = config.name;
     this._outputErrorPolicy = config.outputErrorPolicy;
     this._resourceGroupName = config.resourceGroupName;
+    this._streamAnalyticsClusterId = config.streamAnalyticsClusterId;
     this._streamingUnits = config.streamingUnits;
     this._tags = config.tags;
     this._transformationQuery = config.transformationQuery;
@@ -412,6 +417,22 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
     return this._resourceGroupName
   }
 
+  // stream_analytics_cluster_id - computed: false, optional: true, required: false
+  private _streamAnalyticsClusterId?: string | undefined; 
+  public get streamAnalyticsClusterId() {
+    return this.getStringAttribute('stream_analytics_cluster_id');
+  }
+  public set streamAnalyticsClusterId(value: string | undefined) {
+    this._streamAnalyticsClusterId = value;
+  }
+  public resetStreamAnalyticsClusterId() {
+    this._streamAnalyticsClusterId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get streamAnalyticsClusterIdInput() {
+    return this._streamAnalyticsClusterId
+  }
+
   // streaming_units - computed: false, optional: false, required: true
   private _streamingUnits?: number; 
   public get streamingUnits() {
@@ -504,6 +525,7 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       output_error_policy: cdktf.stringToTerraform(this._outputErrorPolicy),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      stream_analytics_cluster_id: cdktf.stringToTerraform(this._streamAnalyticsClusterId),
       streaming_units: cdktf.numberToTerraform(this._streamingUnits),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       transformation_query: cdktf.stringToTerraform(this._transformationQuery),

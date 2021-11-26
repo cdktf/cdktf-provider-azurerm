@@ -1089,6 +1089,10 @@ export interface EventgridSystemTopicEventSubscriptionDeadLetterIdentity {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#type EventgridSystemTopicEventSubscription#type}
   */
   readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#user_assigned_identity EventgridSystemTopicEventSubscription#user_assigned_identity}
+  */
+  readonly userAssignedIdentity?: string;
 }
 
 function eventgridSystemTopicEventSubscriptionDeadLetterIdentityToTerraform(struct?: EventgridSystemTopicEventSubscriptionDeadLetterIdentityOutputReference | EventgridSystemTopicEventSubscriptionDeadLetterIdentity): any {
@@ -1098,6 +1102,7 @@ function eventgridSystemTopicEventSubscriptionDeadLetterIdentityToTerraform(stru
   }
   return {
     type: cdktf.stringToTerraform(struct!.type),
+    user_assigned_identity: cdktf.stringToTerraform(struct!.userAssignedIdentity),
   }
 }
 
@@ -1123,12 +1128,32 @@ export class EventgridSystemTopicEventSubscriptionDeadLetterIdentityOutputRefere
   public get typeInput() {
     return this._type
   }
+
+  // user_assigned_identity - computed: false, optional: true, required: false
+  private _userAssignedIdentity?: string | undefined; 
+  public get userAssignedIdentity() {
+    return this.getStringAttribute('user_assigned_identity');
+  }
+  public set userAssignedIdentity(value: string | undefined) {
+    this._userAssignedIdentity = value;
+  }
+  public resetUserAssignedIdentity() {
+    this._userAssignedIdentity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userAssignedIdentityInput() {
+    return this._userAssignedIdentity
+  }
 }
 export interface EventgridSystemTopicEventSubscriptionDeliveryIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#type EventgridSystemTopicEventSubscription#type}
   */
   readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#user_assigned_identity EventgridSystemTopicEventSubscription#user_assigned_identity}
+  */
+  readonly userAssignedIdentity?: string;
 }
 
 function eventgridSystemTopicEventSubscriptionDeliveryIdentityToTerraform(struct?: EventgridSystemTopicEventSubscriptionDeliveryIdentityOutputReference | EventgridSystemTopicEventSubscriptionDeliveryIdentity): any {
@@ -1138,6 +1163,7 @@ function eventgridSystemTopicEventSubscriptionDeliveryIdentityToTerraform(struct
   }
   return {
     type: cdktf.stringToTerraform(struct!.type),
+    user_assigned_identity: cdktf.stringToTerraform(struct!.userAssignedIdentity),
   }
 }
 
@@ -1162,6 +1188,22 @@ export class EventgridSystemTopicEventSubscriptionDeliveryIdentityOutputReferenc
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
     return this._type
+  }
+
+  // user_assigned_identity - computed: false, optional: true, required: false
+  private _userAssignedIdentity?: string | undefined; 
+  public get userAssignedIdentity() {
+    return this.getStringAttribute('user_assigned_identity');
+  }
+  public set userAssignedIdentity(value: string | undefined) {
+    this._userAssignedIdentity = value;
+  }
+  public resetUserAssignedIdentity() {
+    this._userAssignedIdentity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userAssignedIdentityInput() {
+    return this._userAssignedIdentity
   }
 }
 export interface EventgridSystemTopicEventSubscriptionRetryPolicy {
@@ -1282,6 +1324,10 @@ export class EventgridSystemTopicEventSubscriptionStorageBlobDeadLetterDestinati
 }
 export interface EventgridSystemTopicEventSubscriptionStorageQueueEndpoint {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#queue_message_time_to_live_in_seconds EventgridSystemTopicEventSubscription#queue_message_time_to_live_in_seconds}
+  */
+  readonly queueMessageTimeToLiveInSeconds?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic_event_subscription.html#queue_name EventgridSystemTopicEventSubscription#queue_name}
   */
   readonly queueName: string;
@@ -1297,6 +1343,7 @@ function eventgridSystemTopicEventSubscriptionStorageQueueEndpointToTerraform(st
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    queue_message_time_to_live_in_seconds: cdktf.numberToTerraform(struct!.queueMessageTimeToLiveInSeconds),
     queue_name: cdktf.stringToTerraform(struct!.queueName),
     storage_account_id: cdktf.stringToTerraform(struct!.storageAccountId),
   }
@@ -1310,6 +1357,22 @@ export class EventgridSystemTopicEventSubscriptionStorageQueueEndpointOutputRefe
   */
   public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // queue_message_time_to_live_in_seconds - computed: false, optional: true, required: false
+  private _queueMessageTimeToLiveInSeconds?: number | undefined; 
+  public get queueMessageTimeToLiveInSeconds() {
+    return this.getNumberAttribute('queue_message_time_to_live_in_seconds');
+  }
+  public set queueMessageTimeToLiveInSeconds(value: number | undefined) {
+    this._queueMessageTimeToLiveInSeconds = value;
+  }
+  public resetQueueMessageTimeToLiveInSeconds() {
+    this._queueMessageTimeToLiveInSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queueMessageTimeToLiveInSecondsInput() {
+    return this._queueMessageTimeToLiveInSeconds
   }
 
   // queue_name - computed: false, optional: false, required: true

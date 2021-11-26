@@ -16,6 +16,10 @@ export interface SentinelAutomationRuleConfig extends cdktf.TerraformMetaArgumen
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#expiration SentinelAutomationRule#expiration}
+  */
+  readonly expiration?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#log_analytics_workspace_id SentinelAutomationRule#log_analytics_workspace_id}
   */
   readonly logAnalyticsWorkspaceId: string;
@@ -294,6 +298,7 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
     });
     this._displayName = config.displayName;
     this._enabled = config.enabled;
+    this._expiration = config.expiration;
     this._logAnalyticsWorkspaceId = config.logAnalyticsWorkspaceId;
     this._name = config.name;
     this._order = config.order;
@@ -334,6 +339,22 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
     return this._enabled
+  }
+
+  // expiration - computed: false, optional: true, required: false
+  private _expiration?: string | undefined; 
+  public get expiration() {
+    return this.getStringAttribute('expiration');
+  }
+  public set expiration(value: string | undefined) {
+    this._expiration = value;
+  }
+  public resetExpiration() {
+    this._expiration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get expirationInput() {
+    return this._expiration
   }
 
   // id - computed: true, optional: true, required: false
@@ -456,6 +477,7 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
     return {
       display_name: cdktf.stringToTerraform(this._displayName),
       enabled: cdktf.booleanToTerraform(this._enabled),
+      expiration: cdktf.stringToTerraform(this._expiration),
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
       order: cdktf.numberToTerraform(this._order),

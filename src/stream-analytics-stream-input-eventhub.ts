@@ -10,7 +10,7 @@ export interface StreamAnalyticsStreamInputEventhubConfig extends cdktf.Terrafor
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub.html#eventhub_consumer_group_name StreamAnalyticsStreamInputEventhub#eventhub_consumer_group_name}
   */
-  readonly eventhubConsumerGroupName: string;
+  readonly eventhubConsumerGroupName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_eventhub.html#eventhub_name StreamAnalyticsStreamInputEventhub#eventhub_name}
   */
@@ -289,13 +289,16 @@ export class StreamAnalyticsStreamInputEventhub extends cdktf.TerraformResource 
   // ATTRIBUTES
   // ==========
 
-  // eventhub_consumer_group_name - computed: false, optional: false, required: true
-  private _eventhubConsumerGroupName?: string; 
+  // eventhub_consumer_group_name - computed: false, optional: true, required: false
+  private _eventhubConsumerGroupName?: string | undefined; 
   public get eventhubConsumerGroupName() {
     return this.getStringAttribute('eventhub_consumer_group_name');
   }
-  public set eventhubConsumerGroupName(value: string) {
+  public set eventhubConsumerGroupName(value: string | undefined) {
     this._eventhubConsumerGroupName = value;
+  }
+  public resetEventhubConsumerGroupName() {
+    this._eventhubConsumerGroupName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get eventhubConsumerGroupNameInput() {
