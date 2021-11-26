@@ -72,6 +72,10 @@ export interface ManagedDiskConfig extends cdktf.TerraformMetaArguments {
   */
   readonly osType?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#public_network_access_enabled ManagedDisk#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#resource_group_name ManagedDisk#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -479,6 +483,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
     this._networkAccessPolicy = config.networkAccessPolicy;
     this._onDemandBurstingEnabled = config.onDemandBurstingEnabled;
     this._osType = config.osType;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._sourceResourceId = config.sourceResourceId;
     this._sourceUri = config.sourceUri;
@@ -748,6 +753,22 @@ export class ManagedDisk extends cdktf.TerraformResource {
     return this._osType
   }
 
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable | undefined; 
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled') as any;
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable | undefined) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
@@ -943,6 +964,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
       network_access_policy: cdktf.stringToTerraform(this._networkAccessPolicy),
       on_demand_bursting_enabled: cdktf.booleanToTerraform(this._onDemandBurstingEnabled),
       os_type: cdktf.stringToTerraform(this._osType),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       source_resource_id: cdktf.stringToTerraform(this._sourceResourceId),
       source_uri: cdktf.stringToTerraform(this._sourceUri),

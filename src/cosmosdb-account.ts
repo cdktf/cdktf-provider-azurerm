@@ -16,6 +16,10 @@ export interface CosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly analyticalStorageEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#default_identity_type CosmosdbAccount#default_identity_type}
+  */
+  readonly defaultIdentityType?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#enable_automatic_failover CosmosdbAccount#enable_automatic_failover}
   */
   readonly enableAutomaticFailover?: boolean | cdktf.IResolvable;
@@ -84,6 +88,12 @@ export interface CosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * analytical_storage block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#analytical_storage CosmosdbAccount#analytical_storage}
+  */
+  readonly analyticalStorage?: CosmosdbAccountAnalyticalStorage;
+  /**
   * backup block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#backup CosmosdbAccount#backup}
@@ -95,6 +105,12 @@ export interface CosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#capabilities CosmosdbAccount#capabilities}
   */
   readonly capabilities?: CosmosdbAccountCapabilities[];
+  /**
+  * capacity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#capacity CosmosdbAccount#capacity}
+  */
+  readonly capacity?: CosmosdbAccountCapacity;
   /**
   * consistency_policy block
   * 
@@ -132,6 +148,46 @@ export interface CosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly virtualNetworkRule?: CosmosdbAccountVirtualNetworkRule[];
 }
+export interface CosmosdbAccountAnalyticalStorage {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#schema_type CosmosdbAccount#schema_type}
+  */
+  readonly schemaType: string;
+}
+
+function cosmosdbAccountAnalyticalStorageToTerraform(struct?: CosmosdbAccountAnalyticalStorageOutputReference | CosmosdbAccountAnalyticalStorage): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    schema_type: cdktf.stringToTerraform(struct!.schemaType),
+  }
+}
+
+export class CosmosdbAccountAnalyticalStorageOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // schema_type - computed: false, optional: false, required: true
+  private _schemaType?: string; 
+  public get schemaType() {
+    return this.getStringAttribute('schema_type');
+  }
+  public set schemaType(value: string) {
+    this._schemaType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get schemaTypeInput() {
+    return this._schemaType
+  }
+}
 export interface CosmosdbAccountBackup {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#interval_in_minutes CosmosdbAccount#interval_in_minutes}
@@ -141,6 +197,10 @@ export interface CosmosdbAccountBackup {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#retention_in_hours CosmosdbAccount#retention_in_hours}
   */
   readonly retentionInHours?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#storage_redundancy CosmosdbAccount#storage_redundancy}
+  */
+  readonly storageRedundancy?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#type CosmosdbAccount#type}
   */
@@ -155,6 +215,7 @@ function cosmosdbAccountBackupToTerraform(struct?: CosmosdbAccountBackupOutputRe
   return {
     interval_in_minutes: cdktf.numberToTerraform(struct!.intervalInMinutes),
     retention_in_hours: cdktf.numberToTerraform(struct!.retentionInHours),
+    storage_redundancy: cdktf.stringToTerraform(struct!.storageRedundancy),
     type: cdktf.stringToTerraform(struct!.type),
   }
 }
@@ -201,6 +262,22 @@ export class CosmosdbAccountBackupOutputReference extends cdktf.ComplexObject {
     return this._retentionInHours
   }
 
+  // storage_redundancy - computed: true, optional: true, required: false
+  private _storageRedundancy?: string | undefined; 
+  public get storageRedundancy() {
+    return this.getStringAttribute('storage_redundancy');
+  }
+  public set storageRedundancy(value: string | undefined) {
+    this._storageRedundancy = value;
+  }
+  public resetStorageRedundancy() {
+    this._storageRedundancy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageRedundancyInput() {
+    return this._storageRedundancy
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -231,6 +308,46 @@ function cosmosdbAccountCapabilitiesToTerraform(struct?: CosmosdbAccountCapabili
   }
 }
 
+export interface CosmosdbAccountCapacity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#total_throughput_limit CosmosdbAccount#total_throughput_limit}
+  */
+  readonly totalThroughputLimit: number;
+}
+
+function cosmosdbAccountCapacityToTerraform(struct?: CosmosdbAccountCapacityOutputReference | CosmosdbAccountCapacity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    total_throughput_limit: cdktf.numberToTerraform(struct!.totalThroughputLimit),
+  }
+}
+
+export class CosmosdbAccountCapacityOutputReference extends cdktf.ComplexObject {
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // total_throughput_limit - computed: false, optional: false, required: true
+  private _totalThroughputLimit?: number; 
+  public get totalThroughputLimit() {
+    return this.getNumberAttribute('total_throughput_limit');
+  }
+  public set totalThroughputLimit(value: number) {
+    this._totalThroughputLimit = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get totalThroughputLimitInput() {
+    return this._totalThroughputLimit
+  }
+}
 export interface CosmosdbAccountConsistencyPolicy {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#consistency_level CosmosdbAccount#consistency_level}
@@ -660,6 +777,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
     });
     this._accessKeyMetadataWritesEnabled = config.accessKeyMetadataWritesEnabled;
     this._analyticalStorageEnabled = config.analyticalStorageEnabled;
+    this._defaultIdentityType = config.defaultIdentityType;
     this._enableAutomaticFailover = config.enableAutomaticFailover;
     this._enableFreeTier = config.enableFreeTier;
     this._enableMultipleWriteLocations = config.enableMultipleWriteLocations;
@@ -677,8 +795,10 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
+    this._analyticalStorage = config.analyticalStorage;
     this._backup = config.backup;
     this._capabilities = config.capabilities;
+    this._capacity = config.capacity;
     this._consistencyPolicy = config.consistencyPolicy;
     this._corsRule = config.corsRule;
     this._geoLocation = config.geoLocation;
@@ -726,6 +846,22 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   // connection_strings - computed: true, optional: false, required: false
   public get connectionStrings() {
     return this.getListAttribute('connection_strings');
+  }
+
+  // default_identity_type - computed: false, optional: true, required: false
+  private _defaultIdentityType?: string | undefined; 
+  public get defaultIdentityType() {
+    return this.getStringAttribute('default_identity_type');
+  }
+  public set defaultIdentityType(value: string | undefined) {
+    this._defaultIdentityType = value;
+  }
+  public resetDefaultIdentityType() {
+    this._defaultIdentityType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultIdentityTypeInput() {
+    return this._defaultIdentityType
   }
 
   // enable_automatic_failover - computed: false, optional: true, required: false
@@ -1049,6 +1185,23 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
     return this.getListAttribute('write_endpoints');
   }
 
+  // analytical_storage - computed: false, optional: true, required: false
+  private _analyticalStorage?: CosmosdbAccountAnalyticalStorage | undefined; 
+  private __analyticalStorageOutput = new CosmosdbAccountAnalyticalStorageOutputReference(this as any, "analytical_storage", true);
+  public get analyticalStorage() {
+    return this.__analyticalStorageOutput;
+  }
+  public putAnalyticalStorage(value: CosmosdbAccountAnalyticalStorage | undefined) {
+    this._analyticalStorage = value;
+  }
+  public resetAnalyticalStorage() {
+    this._analyticalStorage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get analyticalStorageInput() {
+    return this._analyticalStorage
+  }
+
   // backup - computed: false, optional: true, required: false
   private _backup?: CosmosdbAccountBackup | undefined; 
   private __backupOutput = new CosmosdbAccountBackupOutputReference(this as any, "backup", true);
@@ -1081,6 +1234,23 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get capabilitiesInput() {
     return this._capabilities
+  }
+
+  // capacity - computed: false, optional: true, required: false
+  private _capacity?: CosmosdbAccountCapacity | undefined; 
+  private __capacityOutput = new CosmosdbAccountCapacityOutputReference(this as any, "capacity", true);
+  public get capacity() {
+    return this.__capacityOutput;
+  }
+  public putCapacity(value: CosmosdbAccountCapacity | undefined) {
+    this._capacity = value;
+  }
+  public resetCapacity() {
+    this._capacity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get capacityInput() {
+    return this._capacity
   }
 
   // consistency_policy - computed: false, optional: false, required: true
@@ -1187,6 +1357,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
     return {
       access_key_metadata_writes_enabled: cdktf.booleanToTerraform(this._accessKeyMetadataWritesEnabled),
       analytical_storage_enabled: cdktf.booleanToTerraform(this._analyticalStorageEnabled),
+      default_identity_type: cdktf.stringToTerraform(this._defaultIdentityType),
       enable_automatic_failover: cdktf.booleanToTerraform(this._enableAutomaticFailover),
       enable_free_tier: cdktf.booleanToTerraform(this._enableFreeTier),
       enable_multiple_write_locations: cdktf.booleanToTerraform(this._enableMultipleWriteLocations),
@@ -1204,8 +1375,10 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      analytical_storage: cosmosdbAccountAnalyticalStorageToTerraform(this._analyticalStorage),
       backup: cosmosdbAccountBackupToTerraform(this._backup),
       capabilities: cdktf.listMapper(cosmosdbAccountCapabilitiesToTerraform)(this._capabilities),
+      capacity: cosmosdbAccountCapacityToTerraform(this._capacity),
       consistency_policy: cosmosdbAccountConsistencyPolicyToTerraform(this._consistencyPolicy),
       cors_rule: cosmosdbAccountCorsRuleToTerraform(this._corsRule),
       geo_location: cdktf.listMapper(cosmosdbAccountGeoLocationToTerraform)(this._geoLocation),

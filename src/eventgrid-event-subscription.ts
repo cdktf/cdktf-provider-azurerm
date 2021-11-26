@@ -1107,6 +1107,10 @@ export interface EventgridEventSubscriptionDeadLetterIdentity {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#type EventgridEventSubscription#type}
   */
   readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#user_assigned_identity EventgridEventSubscription#user_assigned_identity}
+  */
+  readonly userAssignedIdentity?: string;
 }
 
 function eventgridEventSubscriptionDeadLetterIdentityToTerraform(struct?: EventgridEventSubscriptionDeadLetterIdentityOutputReference | EventgridEventSubscriptionDeadLetterIdentity): any {
@@ -1116,6 +1120,7 @@ function eventgridEventSubscriptionDeadLetterIdentityToTerraform(struct?: Eventg
   }
   return {
     type: cdktf.stringToTerraform(struct!.type),
+    user_assigned_identity: cdktf.stringToTerraform(struct!.userAssignedIdentity),
   }
 }
 
@@ -1141,12 +1146,32 @@ export class EventgridEventSubscriptionDeadLetterIdentityOutputReference extends
   public get typeInput() {
     return this._type
   }
+
+  // user_assigned_identity - computed: false, optional: true, required: false
+  private _userAssignedIdentity?: string | undefined; 
+  public get userAssignedIdentity() {
+    return this.getStringAttribute('user_assigned_identity');
+  }
+  public set userAssignedIdentity(value: string | undefined) {
+    this._userAssignedIdentity = value;
+  }
+  public resetUserAssignedIdentity() {
+    this._userAssignedIdentity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userAssignedIdentityInput() {
+    return this._userAssignedIdentity
+  }
 }
 export interface EventgridEventSubscriptionDeliveryIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#type EventgridEventSubscription#type}
   */
   readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#user_assigned_identity EventgridEventSubscription#user_assigned_identity}
+  */
+  readonly userAssignedIdentity?: string;
 }
 
 function eventgridEventSubscriptionDeliveryIdentityToTerraform(struct?: EventgridEventSubscriptionDeliveryIdentityOutputReference | EventgridEventSubscriptionDeliveryIdentity): any {
@@ -1156,6 +1181,7 @@ function eventgridEventSubscriptionDeliveryIdentityToTerraform(struct?: Eventgri
   }
   return {
     type: cdktf.stringToTerraform(struct!.type),
+    user_assigned_identity: cdktf.stringToTerraform(struct!.userAssignedIdentity),
   }
 }
 
@@ -1180,6 +1206,22 @@ export class EventgridEventSubscriptionDeliveryIdentityOutputReference extends c
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
     return this._type
+  }
+
+  // user_assigned_identity - computed: false, optional: true, required: false
+  private _userAssignedIdentity?: string | undefined; 
+  public get userAssignedIdentity() {
+    return this.getStringAttribute('user_assigned_identity');
+  }
+  public set userAssignedIdentity(value: string | undefined) {
+    this._userAssignedIdentity = value;
+  }
+  public resetUserAssignedIdentity() {
+    this._userAssignedIdentity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userAssignedIdentityInput() {
+    return this._userAssignedIdentity
   }
 }
 export interface EventgridEventSubscriptionDeliveryProperty {
@@ -1423,6 +1465,10 @@ export class EventgridEventSubscriptionStorageBlobDeadLetterDestinationOutputRef
 }
 export interface EventgridEventSubscriptionStorageQueueEndpoint {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#queue_message_time_to_live_in_seconds EventgridEventSubscription#queue_message_time_to_live_in_seconds}
+  */
+  readonly queueMessageTimeToLiveInSeconds?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#queue_name EventgridEventSubscription#queue_name}
   */
   readonly queueName: string;
@@ -1438,6 +1484,7 @@ function eventgridEventSubscriptionStorageQueueEndpointToTerraform(struct?: Even
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    queue_message_time_to_live_in_seconds: cdktf.numberToTerraform(struct!.queueMessageTimeToLiveInSeconds),
     queue_name: cdktf.stringToTerraform(struct!.queueName),
     storage_account_id: cdktf.stringToTerraform(struct!.storageAccountId),
   }
@@ -1451,6 +1498,22 @@ export class EventgridEventSubscriptionStorageQueueEndpointOutputReference exten
   */
   public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
     super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  // queue_message_time_to_live_in_seconds - computed: false, optional: true, required: false
+  private _queueMessageTimeToLiveInSeconds?: number | undefined; 
+  public get queueMessageTimeToLiveInSeconds() {
+    return this.getNumberAttribute('queue_message_time_to_live_in_seconds');
+  }
+  public set queueMessageTimeToLiveInSeconds(value: number | undefined) {
+    this._queueMessageTimeToLiveInSeconds = value;
+  }
+  public resetQueueMessageTimeToLiveInSeconds() {
+    this._queueMessageTimeToLiveInSeconds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queueMessageTimeToLiveInSecondsInput() {
+    return this._queueMessageTimeToLiveInSeconds
   }
 
   // queue_name - computed: false, optional: false, required: true

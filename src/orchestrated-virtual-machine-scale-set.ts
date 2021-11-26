@@ -16,6 +16,10 @@ export interface OrchestratedVirtualMachineScaleSetConfig extends cdktf.Terrafor
   */
   readonly evictionPolicy?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#extensions_time_budget OrchestratedVirtualMachineScaleSet#extensions_time_budget}
+  */
+  readonly extensionsTimeBudget?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#instances OrchestratedVirtualMachineScaleSet#instances}
   */
   readonly instances?: number;
@@ -89,6 +93,12 @@ export interface OrchestratedVirtualMachineScaleSetConfig extends cdktf.Terrafor
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#data_disk OrchestratedVirtualMachineScaleSet#data_disk}
   */
   readonly dataDisk?: OrchestratedVirtualMachineScaleSetDataDisk[];
+  /**
+  * extension block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#extension OrchestratedVirtualMachineScaleSet#extension}
+  */
+  readonly extension?: OrchestratedVirtualMachineScaleSetExtension[];
   /**
   * identity block
   * 
@@ -296,6 +306,63 @@ function orchestratedVirtualMachineScaleSetDataDiskToTerraform(struct?: Orchestr
     lun: cdktf.numberToTerraform(struct!.lun),
     storage_account_type: cdktf.stringToTerraform(struct!.storageAccountType),
     write_accelerator_enabled: cdktf.booleanToTerraform(struct!.writeAcceleratorEnabled),
+  }
+}
+
+export interface OrchestratedVirtualMachineScaleSetExtension {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#auto_upgrade_minor_version_enabled OrchestratedVirtualMachineScaleSet#auto_upgrade_minor_version_enabled}
+  */
+  readonly autoUpgradeMinorVersionEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#extensions_to_provision_after_vm_creation OrchestratedVirtualMachineScaleSet#extensions_to_provision_after_vm_creation}
+  */
+  readonly extensionsToProvisionAfterVmCreation?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#force_extension_execution_on_change OrchestratedVirtualMachineScaleSet#force_extension_execution_on_change}
+  */
+  readonly forceExtensionExecutionOnChange?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#name OrchestratedVirtualMachineScaleSet#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#protected_settings OrchestratedVirtualMachineScaleSet#protected_settings}
+  */
+  readonly protectedSettings?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#publisher OrchestratedVirtualMachineScaleSet#publisher}
+  */
+  readonly publisher: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#settings OrchestratedVirtualMachineScaleSet#settings}
+  */
+  readonly settings?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#type OrchestratedVirtualMachineScaleSet#type}
+  */
+  readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/orchestrated_virtual_machine_scale_set.html#type_handler_version OrchestratedVirtualMachineScaleSet#type_handler_version}
+  */
+  readonly typeHandlerVersion: string;
+}
+
+function orchestratedVirtualMachineScaleSetExtensionToTerraform(struct?: OrchestratedVirtualMachineScaleSetExtension): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    auto_upgrade_minor_version_enabled: cdktf.booleanToTerraform(struct!.autoUpgradeMinorVersionEnabled),
+    extensions_to_provision_after_vm_creation: cdktf.listMapper(cdktf.stringToTerraform)(struct!.extensionsToProvisionAfterVmCreation),
+    force_extension_execution_on_change: cdktf.stringToTerraform(struct!.forceExtensionExecutionOnChange),
+    name: cdktf.stringToTerraform(struct!.name),
+    protected_settings: cdktf.stringToTerraform(struct!.protectedSettings),
+    publisher: cdktf.stringToTerraform(struct!.publisher),
+    settings: cdktf.stringToTerraform(struct!.settings),
+    type: cdktf.stringToTerraform(struct!.type),
+    type_handler_version: cdktf.stringToTerraform(struct!.typeHandlerVersion),
   }
 }
 
@@ -1662,6 +1729,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
     });
     this._encryptionAtHostEnabled = config.encryptionAtHostEnabled;
     this._evictionPolicy = config.evictionPolicy;
+    this._extensionsTimeBudget = config.extensionsTimeBudget;
     this._instances = config.instances;
     this._licenseType = config.licenseType;
     this._location = config.location;
@@ -1679,6 +1747,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
     this._automaticInstanceRepair = config.automaticInstanceRepair;
     this._bootDiagnostics = config.bootDiagnostics;
     this._dataDisk = config.dataDisk;
+    this._extension = config.extension;
     this._identity = config.identity;
     this._networkInterface = config.networkInterface;
     this._osDisk = config.osDisk;
@@ -1723,6 +1792,22 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
   // Temporarily expose input value. Use with caution.
   public get evictionPolicyInput() {
     return this._evictionPolicy
+  }
+
+  // extensions_time_budget - computed: false, optional: true, required: false
+  private _extensionsTimeBudget?: string | undefined; 
+  public get extensionsTimeBudget() {
+    return this.getStringAttribute('extensions_time_budget');
+  }
+  public set extensionsTimeBudget(value: string | undefined) {
+    this._extensionsTimeBudget = value;
+  }
+  public resetExtensionsTimeBudget() {
+    this._extensionsTimeBudget = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extensionsTimeBudgetInput() {
+    return this._extensionsTimeBudget
   }
 
   // id - computed: true, optional: true, required: false
@@ -1999,6 +2084,23 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
     return this._dataDisk
   }
 
+  // extension - computed: false, optional: true, required: false
+  private _extension?: OrchestratedVirtualMachineScaleSetExtension[] | undefined; 
+  public get extension() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('extension') as any;
+  }
+  public set extension(value: OrchestratedVirtualMachineScaleSetExtension[] | undefined) {
+    this._extension = value;
+  }
+  public resetExtension() {
+    this._extension = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extensionInput() {
+    return this._extension
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity?: OrchestratedVirtualMachineScaleSetIdentity | undefined; 
   private __identityOutput = new OrchestratedVirtualMachineScaleSetIdentityOutputReference(this as any, "identity", true);
@@ -2143,6 +2245,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
     return {
       encryption_at_host_enabled: cdktf.booleanToTerraform(this._encryptionAtHostEnabled),
       eviction_policy: cdktf.stringToTerraform(this._evictionPolicy),
+      extensions_time_budget: cdktf.stringToTerraform(this._extensionsTimeBudget),
       instances: cdktf.numberToTerraform(this._instances),
       license_type: cdktf.stringToTerraform(this._licenseType),
       location: cdktf.stringToTerraform(this._location),
@@ -2160,6 +2263,7 @@ export class OrchestratedVirtualMachineScaleSet extends cdktf.TerraformResource 
       automatic_instance_repair: orchestratedVirtualMachineScaleSetAutomaticInstanceRepairToTerraform(this._automaticInstanceRepair),
       boot_diagnostics: orchestratedVirtualMachineScaleSetBootDiagnosticsToTerraform(this._bootDiagnostics),
       data_disk: cdktf.listMapper(orchestratedVirtualMachineScaleSetDataDiskToTerraform)(this._dataDisk),
+      extension: cdktf.listMapper(orchestratedVirtualMachineScaleSetExtensionToTerraform)(this._extension),
       identity: orchestratedVirtualMachineScaleSetIdentityToTerraform(this._identity),
       network_interface: cdktf.listMapper(orchestratedVirtualMachineScaleSetNetworkInterfaceToTerraform)(this._networkInterface),
       os_disk: orchestratedVirtualMachineScaleSetOsDiskToTerraform(this._osDisk),
