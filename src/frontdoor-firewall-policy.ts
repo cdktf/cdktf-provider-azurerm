@@ -85,7 +85,7 @@ export interface FrontdoorFirewallPolicyCustomRuleMatchCondition {
   readonly transforms?: string[];
 }
 
-function frontdoorFirewallPolicyCustomRuleMatchConditionToTerraform(struct?: FrontdoorFirewallPolicyCustomRuleMatchCondition): any {
+export function frontdoorFirewallPolicyCustomRuleMatchConditionToTerraform(struct?: FrontdoorFirewallPolicyCustomRuleMatchCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -137,7 +137,7 @@ export interface FrontdoorFirewallPolicyCustomRule {
   readonly matchCondition?: FrontdoorFirewallPolicyCustomRuleMatchCondition[];
 }
 
-function frontdoorFirewallPolicyCustomRuleToTerraform(struct?: FrontdoorFirewallPolicyCustomRule): any {
+export function frontdoorFirewallPolicyCustomRuleToTerraform(struct?: FrontdoorFirewallPolicyCustomRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -169,7 +169,7 @@ export interface FrontdoorFirewallPolicyManagedRuleExclusion {
   readonly selector: string;
 }
 
-function frontdoorFirewallPolicyManagedRuleExclusionToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleExclusion): any {
+export function frontdoorFirewallPolicyManagedRuleExclusionToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleExclusion): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -196,7 +196,7 @@ export interface FrontdoorFirewallPolicyManagedRuleOverrideExclusion {
   readonly selector: string;
 }
 
-function frontdoorFirewallPolicyManagedRuleOverrideExclusionToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverrideExclusion): any {
+export function frontdoorFirewallPolicyManagedRuleOverrideExclusionToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverrideExclusion): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -223,7 +223,7 @@ export interface FrontdoorFirewallPolicyManagedRuleOverrideRuleExclusion {
   readonly selector: string;
 }
 
-function frontdoorFirewallPolicyManagedRuleOverrideRuleExclusionToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverrideRuleExclusion): any {
+export function frontdoorFirewallPolicyManagedRuleOverrideRuleExclusionToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverrideRuleExclusion): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -256,7 +256,7 @@ export interface FrontdoorFirewallPolicyManagedRuleOverrideRule {
   readonly exclusion?: FrontdoorFirewallPolicyManagedRuleOverrideRuleExclusion[];
 }
 
-function frontdoorFirewallPolicyManagedRuleOverrideRuleToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverrideRule): any {
+export function frontdoorFirewallPolicyManagedRuleOverrideRuleToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverrideRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -288,7 +288,7 @@ export interface FrontdoorFirewallPolicyManagedRuleOverride {
   readonly rule?: FrontdoorFirewallPolicyManagedRuleOverrideRule[];
 }
 
-function frontdoorFirewallPolicyManagedRuleOverrideToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverride): any {
+export function frontdoorFirewallPolicyManagedRuleOverrideToTerraform(struct?: FrontdoorFirewallPolicyManagedRuleOverride): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -323,7 +323,7 @@ export interface FrontdoorFirewallPolicyManagedRule {
   readonly override?: FrontdoorFirewallPolicyManagedRuleOverride[];
 }
 
-function frontdoorFirewallPolicyManagedRuleToTerraform(struct?: FrontdoorFirewallPolicyManagedRule): any {
+export function frontdoorFirewallPolicyManagedRuleToTerraform(struct?: FrontdoorFirewallPolicyManagedRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -355,7 +355,7 @@ export interface FrontdoorFirewallPolicyTimeouts {
   readonly update?: string;
 }
 
-function frontdoorFirewallPolicyTimeoutsToTerraform(struct?: FrontdoorFirewallPolicyTimeoutsOutputReference | FrontdoorFirewallPolicyTimeouts): any {
+export function frontdoorFirewallPolicyTimeoutsToTerraform(struct?: FrontdoorFirewallPolicyTimeoutsOutputReference | FrontdoorFirewallPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -378,12 +378,49 @@ export class FrontdoorFirewallPolicyTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): FrontdoorFirewallPolicyTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FrontdoorFirewallPolicyTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -391,15 +428,15 @@ export class FrontdoorFirewallPolicyTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -407,15 +444,15 @@ export class FrontdoorFirewallPolicyTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -423,15 +460,15 @@ export class FrontdoorFirewallPolicyTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -439,7 +476,7 @@ export class FrontdoorFirewallPolicyTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -485,7 +522,7 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._customRule = config.customRule;
     this._managedRule = config.managedRule;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -493,11 +530,11 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   // ==========
 
   // custom_block_response_body - computed: false, optional: true, required: false
-  private _customBlockResponseBody?: string | undefined; 
+  private _customBlockResponseBody?: string; 
   public get customBlockResponseBody() {
     return this.getStringAttribute('custom_block_response_body');
   }
-  public set customBlockResponseBody(value: string | undefined) {
+  public set customBlockResponseBody(value: string) {
     this._customBlockResponseBody = value;
   }
   public resetCustomBlockResponseBody() {
@@ -505,15 +542,15 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get customBlockResponseBodyInput() {
-    return this._customBlockResponseBody
+    return this._customBlockResponseBody;
   }
 
   // custom_block_response_status_code - computed: false, optional: true, required: false
-  private _customBlockResponseStatusCode?: number | undefined; 
+  private _customBlockResponseStatusCode?: number; 
   public get customBlockResponseStatusCode() {
     return this.getNumberAttribute('custom_block_response_status_code');
   }
-  public set customBlockResponseStatusCode(value: number | undefined) {
+  public set customBlockResponseStatusCode(value: number) {
     this._customBlockResponseStatusCode = value;
   }
   public resetCustomBlockResponseStatusCode() {
@@ -521,15 +558,15 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get customBlockResponseStatusCodeInput() {
-    return this._customBlockResponseStatusCode
+    return this._customBlockResponseStatusCode;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -537,7 +574,7 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // frontend_endpoint_ids - computed: true, optional: false, required: false
@@ -556,11 +593,11 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   }
 
   // mode - computed: false, optional: true, required: false
-  private _mode?: string | undefined; 
+  private _mode?: string; 
   public get mode() {
     return this.getStringAttribute('mode');
   }
-  public set mode(value: string | undefined) {
+  public set mode(value: string) {
     this._mode = value;
   }
   public resetMode() {
@@ -568,7 +605,7 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get modeInput() {
-    return this._mode
+    return this._mode;
   }
 
   // name - computed: false, optional: false, required: true
@@ -581,15 +618,15 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // redirect_url - computed: false, optional: true, required: false
-  private _redirectUrl?: string | undefined; 
+  private _redirectUrl?: string; 
   public get redirectUrl() {
     return this.getStringAttribute('redirect_url');
   }
-  public set redirectUrl(value: string | undefined) {
+  public set redirectUrl(value: string) {
     this._redirectUrl = value;
   }
   public resetRedirectUrl() {
@@ -597,7 +634,7 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get redirectUrlInput() {
-    return this._redirectUrl
+    return this._redirectUrl;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -610,16 +647,16 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -627,16 +664,16 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // custom_rule - computed: false, optional: true, required: false
-  private _customRule?: FrontdoorFirewallPolicyCustomRule[] | undefined; 
+  private _customRule?: FrontdoorFirewallPolicyCustomRule[]; 
   public get customRule() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('custom_rule') as any;
   }
-  public set customRule(value: FrontdoorFirewallPolicyCustomRule[] | undefined) {
+  public set customRule(value: FrontdoorFirewallPolicyCustomRule[]) {
     this._customRule = value;
   }
   public resetCustomRule() {
@@ -644,16 +681,16 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get customRuleInput() {
-    return this._customRule
+    return this._customRule;
   }
 
   // managed_rule - computed: false, optional: true, required: false
-  private _managedRule?: FrontdoorFirewallPolicyManagedRule[] | undefined; 
+  private _managedRule?: FrontdoorFirewallPolicyManagedRule[]; 
   public get managedRule() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('managed_rule') as any;
   }
-  public set managedRule(value: FrontdoorFirewallPolicyManagedRule[] | undefined) {
+  public set managedRule(value: FrontdoorFirewallPolicyManagedRule[]) {
     this._managedRule = value;
   }
   public resetManagedRule() {
@@ -661,24 +698,23 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get managedRuleInput() {
-    return this._managedRule
+    return this._managedRule;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: FrontdoorFirewallPolicyTimeouts | undefined; 
-  private __timeoutsOutput = new FrontdoorFirewallPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new FrontdoorFirewallPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: FrontdoorFirewallPolicyTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: FrontdoorFirewallPolicyTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -697,7 +733,7 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       custom_rule: cdktf.listMapper(frontdoorFirewallPolicyCustomRuleToTerraform)(this._customRule),
       managed_rule: cdktf.listMapper(frontdoorFirewallPolicyManagedRuleToTerraform)(this._managedRule),
-      timeouts: frontdoorFirewallPolicyTimeoutsToTerraform(this._timeouts),
+      timeouts: frontdoorFirewallPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

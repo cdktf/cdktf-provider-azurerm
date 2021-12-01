@@ -90,7 +90,7 @@ export interface SpringCloudServiceConfigServerGitSettingHttpBasicAuth {
   readonly username: string;
 }
 
-function springCloudServiceConfigServerGitSettingHttpBasicAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReference | SpringCloudServiceConfigServerGitSettingHttpBasicAuth): any {
+export function springCloudServiceConfigServerGitSettingHttpBasicAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReference | SpringCloudServiceConfigServerGitSettingHttpBasicAuth): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -111,6 +111,31 @@ export class SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReferenc
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SpringCloudServiceConfigServerGitSettingHttpBasicAuth | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._password) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._username) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpringCloudServiceConfigServerGitSettingHttpBasicAuth | undefined) {
+    if (value === undefined) {
+      this._password = undefined;
+      this._username = undefined;
+    }
+    else {
+      this._password = value.password;
+      this._username = value.username;
+    }
+  }
+
   // password - computed: false, optional: false, required: true
   private _password?: string; 
   public get password() {
@@ -121,7 +146,7 @@ export class SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // username - computed: false, optional: false, required: true
@@ -134,7 +159,7 @@ export class SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
-    return this._username
+    return this._username;
   }
 }
 export interface SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth {
@@ -148,7 +173,7 @@ export interface SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth
   readonly username: string;
 }
 
-function springCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutputReference | SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth): any {
+export function springCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutputReference | SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -169,6 +194,31 @@ export class SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._password) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._username) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth | undefined) {
+    if (value === undefined) {
+      this._password = undefined;
+      this._username = undefined;
+    }
+    else {
+      this._password = value.password;
+      this._username = value.username;
+    }
+  }
+
   // password - computed: false, optional: false, required: true
   private _password?: string; 
   public get password() {
@@ -179,7 +229,7 @@ export class SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutp
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // username - computed: false, optional: false, required: true
@@ -192,7 +242,7 @@ export class SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutp
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
-    return this._username
+    return this._username;
   }
 }
 export interface SpringCloudServiceConfigServerGitSettingRepositorySshAuth {
@@ -214,7 +264,7 @@ export interface SpringCloudServiceConfigServerGitSettingRepositorySshAuth {
   readonly strictHostKeyCheckingEnabled?: boolean | cdktf.IResolvable;
 }
 
-function springCloudServiceConfigServerGitSettingRepositorySshAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputReference | SpringCloudServiceConfigServerGitSettingRepositorySshAuth): any {
+export function springCloudServiceConfigServerGitSettingRepositorySshAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputReference | SpringCloudServiceConfigServerGitSettingRepositorySshAuth): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -237,12 +287,49 @@ export class SpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputRefe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SpringCloudServiceConfigServerGitSettingRepositorySshAuth | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hostKey) {
+      hasAnyValues = true;
+      internalValueResult.hostKey = this._hostKey;
+    }
+    if (this._hostKeyAlgorithm) {
+      hasAnyValues = true;
+      internalValueResult.hostKeyAlgorithm = this._hostKeyAlgorithm;
+    }
+    if (this._privateKey) {
+      hasAnyValues = true;
+      internalValueResult.privateKey = this._privateKey;
+    }
+    if (this._strictHostKeyCheckingEnabled) {
+      hasAnyValues = true;
+      internalValueResult.strictHostKeyCheckingEnabled = this._strictHostKeyCheckingEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpringCloudServiceConfigServerGitSettingRepositorySshAuth | undefined) {
+    if (value === undefined) {
+      this._hostKey = undefined;
+      this._hostKeyAlgorithm = undefined;
+      this._privateKey = undefined;
+      this._strictHostKeyCheckingEnabled = undefined;
+    }
+    else {
+      this._hostKey = value.hostKey;
+      this._hostKeyAlgorithm = value.hostKeyAlgorithm;
+      this._privateKey = value.privateKey;
+      this._strictHostKeyCheckingEnabled = value.strictHostKeyCheckingEnabled;
+    }
+  }
+
   // host_key - computed: false, optional: true, required: false
-  private _hostKey?: string | undefined; 
+  private _hostKey?: string; 
   public get hostKey() {
     return this.getStringAttribute('host_key');
   }
-  public set hostKey(value: string | undefined) {
+  public set hostKey(value: string) {
     this._hostKey = value;
   }
   public resetHostKey() {
@@ -250,15 +337,15 @@ export class SpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get hostKeyInput() {
-    return this._hostKey
+    return this._hostKey;
   }
 
   // host_key_algorithm - computed: false, optional: true, required: false
-  private _hostKeyAlgorithm?: string | undefined; 
+  private _hostKeyAlgorithm?: string; 
   public get hostKeyAlgorithm() {
     return this.getStringAttribute('host_key_algorithm');
   }
-  public set hostKeyAlgorithm(value: string | undefined) {
+  public set hostKeyAlgorithm(value: string) {
     this._hostKeyAlgorithm = value;
   }
   public resetHostKeyAlgorithm() {
@@ -266,7 +353,7 @@ export class SpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get hostKeyAlgorithmInput() {
-    return this._hostKeyAlgorithm
+    return this._hostKeyAlgorithm;
   }
 
   // private_key - computed: false, optional: false, required: true
@@ -279,15 +366,15 @@ export class SpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get privateKeyInput() {
-    return this._privateKey
+    return this._privateKey;
   }
 
   // strict_host_key_checking_enabled - computed: false, optional: true, required: false
-  private _strictHostKeyCheckingEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _strictHostKeyCheckingEnabled?: boolean | cdktf.IResolvable; 
   public get strictHostKeyCheckingEnabled() {
     return this.getBooleanAttribute('strict_host_key_checking_enabled') as any;
   }
-  public set strictHostKeyCheckingEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set strictHostKeyCheckingEnabled(value: boolean | cdktf.IResolvable) {
     this._strictHostKeyCheckingEnabled = value;
   }
   public resetStrictHostKeyCheckingEnabled() {
@@ -295,7 +382,7 @@ export class SpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get strictHostKeyCheckingEnabledInput() {
-    return this._strictHostKeyCheckingEnabled
+    return this._strictHostKeyCheckingEnabled;
   }
 }
 export interface SpringCloudServiceConfigServerGitSettingRepository {
@@ -333,7 +420,7 @@ export interface SpringCloudServiceConfigServerGitSettingRepository {
   readonly sshAuth?: SpringCloudServiceConfigServerGitSettingRepositorySshAuth;
 }
 
-function springCloudServiceConfigServerGitSettingRepositoryToTerraform(struct?: SpringCloudServiceConfigServerGitSettingRepository): any {
+export function springCloudServiceConfigServerGitSettingRepositoryToTerraform(struct?: SpringCloudServiceConfigServerGitSettingRepository): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -368,7 +455,7 @@ export interface SpringCloudServiceConfigServerGitSettingSshAuth {
   readonly strictHostKeyCheckingEnabled?: boolean | cdktf.IResolvable;
 }
 
-function springCloudServiceConfigServerGitSettingSshAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingSshAuthOutputReference | SpringCloudServiceConfigServerGitSettingSshAuth): any {
+export function springCloudServiceConfigServerGitSettingSshAuthToTerraform(struct?: SpringCloudServiceConfigServerGitSettingSshAuthOutputReference | SpringCloudServiceConfigServerGitSettingSshAuth): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -391,12 +478,49 @@ export class SpringCloudServiceConfigServerGitSettingSshAuthOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SpringCloudServiceConfigServerGitSettingSshAuth | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hostKey) {
+      hasAnyValues = true;
+      internalValueResult.hostKey = this._hostKey;
+    }
+    if (this._hostKeyAlgorithm) {
+      hasAnyValues = true;
+      internalValueResult.hostKeyAlgorithm = this._hostKeyAlgorithm;
+    }
+    if (this._privateKey) {
+      hasAnyValues = true;
+      internalValueResult.privateKey = this._privateKey;
+    }
+    if (this._strictHostKeyCheckingEnabled) {
+      hasAnyValues = true;
+      internalValueResult.strictHostKeyCheckingEnabled = this._strictHostKeyCheckingEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpringCloudServiceConfigServerGitSettingSshAuth | undefined) {
+    if (value === undefined) {
+      this._hostKey = undefined;
+      this._hostKeyAlgorithm = undefined;
+      this._privateKey = undefined;
+      this._strictHostKeyCheckingEnabled = undefined;
+    }
+    else {
+      this._hostKey = value.hostKey;
+      this._hostKeyAlgorithm = value.hostKeyAlgorithm;
+      this._privateKey = value.privateKey;
+      this._strictHostKeyCheckingEnabled = value.strictHostKeyCheckingEnabled;
+    }
+  }
+
   // host_key - computed: false, optional: true, required: false
-  private _hostKey?: string | undefined; 
+  private _hostKey?: string; 
   public get hostKey() {
     return this.getStringAttribute('host_key');
   }
-  public set hostKey(value: string | undefined) {
+  public set hostKey(value: string) {
     this._hostKey = value;
   }
   public resetHostKey() {
@@ -404,15 +528,15 @@ export class SpringCloudServiceConfigServerGitSettingSshAuthOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get hostKeyInput() {
-    return this._hostKey
+    return this._hostKey;
   }
 
   // host_key_algorithm - computed: false, optional: true, required: false
-  private _hostKeyAlgorithm?: string | undefined; 
+  private _hostKeyAlgorithm?: string; 
   public get hostKeyAlgorithm() {
     return this.getStringAttribute('host_key_algorithm');
   }
-  public set hostKeyAlgorithm(value: string | undefined) {
+  public set hostKeyAlgorithm(value: string) {
     this._hostKeyAlgorithm = value;
   }
   public resetHostKeyAlgorithm() {
@@ -420,7 +544,7 @@ export class SpringCloudServiceConfigServerGitSettingSshAuthOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get hostKeyAlgorithmInput() {
-    return this._hostKeyAlgorithm
+    return this._hostKeyAlgorithm;
   }
 
   // private_key - computed: false, optional: false, required: true
@@ -433,15 +557,15 @@ export class SpringCloudServiceConfigServerGitSettingSshAuthOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get privateKeyInput() {
-    return this._privateKey
+    return this._privateKey;
   }
 
   // strict_host_key_checking_enabled - computed: false, optional: true, required: false
-  private _strictHostKeyCheckingEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _strictHostKeyCheckingEnabled?: boolean | cdktf.IResolvable; 
   public get strictHostKeyCheckingEnabled() {
     return this.getBooleanAttribute('strict_host_key_checking_enabled') as any;
   }
-  public set strictHostKeyCheckingEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set strictHostKeyCheckingEnabled(value: boolean | cdktf.IResolvable) {
     this._strictHostKeyCheckingEnabled = value;
   }
   public resetStrictHostKeyCheckingEnabled() {
@@ -449,7 +573,7 @@ export class SpringCloudServiceConfigServerGitSettingSshAuthOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get strictHostKeyCheckingEnabledInput() {
-    return this._strictHostKeyCheckingEnabled
+    return this._strictHostKeyCheckingEnabled;
   }
 }
 export interface SpringCloudServiceConfigServerGitSetting {
@@ -485,7 +609,7 @@ export interface SpringCloudServiceConfigServerGitSetting {
   readonly sshAuth?: SpringCloudServiceConfigServerGitSettingSshAuth;
 }
 
-function springCloudServiceConfigServerGitSettingToTerraform(struct?: SpringCloudServiceConfigServerGitSettingOutputReference | SpringCloudServiceConfigServerGitSetting): any {
+export function springCloudServiceConfigServerGitSettingToTerraform(struct?: SpringCloudServiceConfigServerGitSettingOutputReference | SpringCloudServiceConfigServerGitSetting): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -510,12 +634,61 @@ export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SpringCloudServiceConfigServerGitSetting | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._label) {
+      hasAnyValues = true;
+      internalValueResult.label = this._label;
+    }
+    if (this._searchPaths) {
+      hasAnyValues = true;
+      internalValueResult.searchPaths = this._searchPaths;
+    }
+    if (this._uri) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    if (this._httpBasicAuth) {
+      hasAnyValues = true;
+      internalValueResult.httpBasicAuth = this._httpBasicAuth?.internalValue;
+    }
+    if (this._repository) {
+      hasAnyValues = true;
+      internalValueResult.repository = this._repository;
+    }
+    if (this._sshAuth) {
+      hasAnyValues = true;
+      internalValueResult.sshAuth = this._sshAuth?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpringCloudServiceConfigServerGitSetting | undefined) {
+    if (value === undefined) {
+      this._label = undefined;
+      this._searchPaths = undefined;
+      this._uri = undefined;
+      this._httpBasicAuth.internalValue = undefined;
+      this._repository = undefined;
+      this._sshAuth.internalValue = undefined;
+    }
+    else {
+      this._label = value.label;
+      this._searchPaths = value.searchPaths;
+      this._uri = value.uri;
+      this._httpBasicAuth.internalValue = value.httpBasicAuth;
+      this._repository = value.repository;
+      this._sshAuth.internalValue = value.sshAuth;
+    }
+  }
+
   // label - computed: false, optional: true, required: false
-  private _label?: string | undefined; 
+  private _label?: string; 
   public get label() {
     return this.getStringAttribute('label');
   }
-  public set label(value: string | undefined) {
+  public set label(value: string) {
     this._label = value;
   }
   public resetLabel() {
@@ -523,15 +696,15 @@ export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get labelInput() {
-    return this._label
+    return this._label;
   }
 
   // search_paths - computed: false, optional: true, required: false
-  private _searchPaths?: string[] | undefined; 
+  private _searchPaths?: string[]; 
   public get searchPaths() {
     return this.getListAttribute('search_paths');
   }
-  public set searchPaths(value: string[] | undefined) {
+  public set searchPaths(value: string[]) {
     this._searchPaths = value;
   }
   public resetSearchPaths() {
@@ -539,7 +712,7 @@ export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get searchPathsInput() {
-    return this._searchPaths
+    return this._searchPaths;
   }
 
   // uri - computed: false, optional: false, required: true
@@ -552,33 +725,32 @@ export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get uriInput() {
-    return this._uri
+    return this._uri;
   }
 
   // http_basic_auth - computed: false, optional: true, required: false
-  private _httpBasicAuth?: SpringCloudServiceConfigServerGitSettingHttpBasicAuth | undefined; 
-  private __httpBasicAuthOutput = new SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReference(this as any, "http_basic_auth", true);
+  private _httpBasicAuth = new SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReference(this as any, "http_basic_auth", true);
   public get httpBasicAuth() {
-    return this.__httpBasicAuthOutput;
+    return this._httpBasicAuth;
   }
-  public putHttpBasicAuth(value: SpringCloudServiceConfigServerGitSettingHttpBasicAuth | undefined) {
-    this._httpBasicAuth = value;
+  public putHttpBasicAuth(value: SpringCloudServiceConfigServerGitSettingHttpBasicAuth) {
+    this._httpBasicAuth.internalValue = value;
   }
   public resetHttpBasicAuth() {
-    this._httpBasicAuth = undefined;
+    this._httpBasicAuth.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get httpBasicAuthInput() {
-    return this._httpBasicAuth
+    return this._httpBasicAuth.internalValue;
   }
 
   // repository - computed: false, optional: true, required: false
-  private _repository?: SpringCloudServiceConfigServerGitSettingRepository[] | undefined; 
+  private _repository?: SpringCloudServiceConfigServerGitSettingRepository[]; 
   public get repository() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('repository') as any;
   }
-  public set repository(value: SpringCloudServiceConfigServerGitSettingRepository[] | undefined) {
+  public set repository(value: SpringCloudServiceConfigServerGitSettingRepository[]) {
     this._repository = value;
   }
   public resetRepository() {
@@ -586,24 +758,23 @@ export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get repositoryInput() {
-    return this._repository
+    return this._repository;
   }
 
   // ssh_auth - computed: false, optional: true, required: false
-  private _sshAuth?: SpringCloudServiceConfigServerGitSettingSshAuth | undefined; 
-  private __sshAuthOutput = new SpringCloudServiceConfigServerGitSettingSshAuthOutputReference(this as any, "ssh_auth", true);
+  private _sshAuth = new SpringCloudServiceConfigServerGitSettingSshAuthOutputReference(this as any, "ssh_auth", true);
   public get sshAuth() {
-    return this.__sshAuthOutput;
+    return this._sshAuth;
   }
-  public putSshAuth(value: SpringCloudServiceConfigServerGitSettingSshAuth | undefined) {
-    this._sshAuth = value;
+  public putSshAuth(value: SpringCloudServiceConfigServerGitSettingSshAuth) {
+    this._sshAuth.internalValue = value;
   }
   public resetSshAuth() {
-    this._sshAuth = undefined;
+    this._sshAuth.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sshAuthInput() {
-    return this._sshAuth
+    return this._sshAuth.internalValue;
   }
 }
 export interface SpringCloudServiceNetwork {
@@ -629,7 +800,7 @@ export interface SpringCloudServiceNetwork {
   readonly serviceRuntimeSubnetId: string;
 }
 
-function springCloudServiceNetworkToTerraform(struct?: SpringCloudServiceNetworkOutputReference | SpringCloudServiceNetwork): any {
+export function springCloudServiceNetworkToTerraform(struct?: SpringCloudServiceNetworkOutputReference | SpringCloudServiceNetwork): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -653,12 +824,55 @@ export class SpringCloudServiceNetworkOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SpringCloudServiceNetwork | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._appNetworkResourceGroup) {
+      hasAnyValues = true;
+      internalValueResult.appNetworkResourceGroup = this._appNetworkResourceGroup;
+    }
+    if (this._appSubnetId) {
+      hasAnyValues = true;
+      internalValueResult.appSubnetId = this._appSubnetId;
+    }
+    if (this._cidrRanges) {
+      hasAnyValues = true;
+      internalValueResult.cidrRanges = this._cidrRanges;
+    }
+    if (this._serviceRuntimeNetworkResourceGroup) {
+      hasAnyValues = true;
+      internalValueResult.serviceRuntimeNetworkResourceGroup = this._serviceRuntimeNetworkResourceGroup;
+    }
+    if (this._serviceRuntimeSubnetId) {
+      hasAnyValues = true;
+      internalValueResult.serviceRuntimeSubnetId = this._serviceRuntimeSubnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpringCloudServiceNetwork | undefined) {
+    if (value === undefined) {
+      this._appNetworkResourceGroup = undefined;
+      this._appSubnetId = undefined;
+      this._cidrRanges = undefined;
+      this._serviceRuntimeNetworkResourceGroup = undefined;
+      this._serviceRuntimeSubnetId = undefined;
+    }
+    else {
+      this._appNetworkResourceGroup = value.appNetworkResourceGroup;
+      this._appSubnetId = value.appSubnetId;
+      this._cidrRanges = value.cidrRanges;
+      this._serviceRuntimeNetworkResourceGroup = value.serviceRuntimeNetworkResourceGroup;
+      this._serviceRuntimeSubnetId = value.serviceRuntimeSubnetId;
+    }
+  }
+
   // app_network_resource_group - computed: true, optional: true, required: false
-  private _appNetworkResourceGroup?: string | undefined; 
+  private _appNetworkResourceGroup?: string; 
   public get appNetworkResourceGroup() {
     return this.getStringAttribute('app_network_resource_group');
   }
-  public set appNetworkResourceGroup(value: string | undefined) {
+  public set appNetworkResourceGroup(value: string) {
     this._appNetworkResourceGroup = value;
   }
   public resetAppNetworkResourceGroup() {
@@ -666,7 +880,7 @@ export class SpringCloudServiceNetworkOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get appNetworkResourceGroupInput() {
-    return this._appNetworkResourceGroup
+    return this._appNetworkResourceGroup;
   }
 
   // app_subnet_id - computed: false, optional: false, required: true
@@ -679,7 +893,7 @@ export class SpringCloudServiceNetworkOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get appSubnetIdInput() {
-    return this._appSubnetId
+    return this._appSubnetId;
   }
 
   // cidr_ranges - computed: false, optional: false, required: true
@@ -692,15 +906,15 @@ export class SpringCloudServiceNetworkOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get cidrRangesInput() {
-    return this._cidrRanges
+    return this._cidrRanges;
   }
 
   // service_runtime_network_resource_group - computed: true, optional: true, required: false
-  private _serviceRuntimeNetworkResourceGroup?: string | undefined; 
+  private _serviceRuntimeNetworkResourceGroup?: string; 
   public get serviceRuntimeNetworkResourceGroup() {
     return this.getStringAttribute('service_runtime_network_resource_group');
   }
-  public set serviceRuntimeNetworkResourceGroup(value: string | undefined) {
+  public set serviceRuntimeNetworkResourceGroup(value: string) {
     this._serviceRuntimeNetworkResourceGroup = value;
   }
   public resetServiceRuntimeNetworkResourceGroup() {
@@ -708,7 +922,7 @@ export class SpringCloudServiceNetworkOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get serviceRuntimeNetworkResourceGroupInput() {
-    return this._serviceRuntimeNetworkResourceGroup
+    return this._serviceRuntimeNetworkResourceGroup;
   }
 
   // service_runtime_subnet_id - computed: false, optional: false, required: true
@@ -721,7 +935,7 @@ export class SpringCloudServiceNetworkOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get serviceRuntimeSubnetIdInput() {
-    return this._serviceRuntimeSubnetId
+    return this._serviceRuntimeSubnetId;
   }
 }
 export interface SpringCloudServiceTimeouts {
@@ -743,7 +957,7 @@ export interface SpringCloudServiceTimeouts {
   readonly update?: string;
 }
 
-function springCloudServiceTimeoutsToTerraform(struct?: SpringCloudServiceTimeoutsOutputReference | SpringCloudServiceTimeouts): any {
+export function springCloudServiceTimeoutsToTerraform(struct?: SpringCloudServiceTimeoutsOutputReference | SpringCloudServiceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -766,12 +980,49 @@ export class SpringCloudServiceTimeoutsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SpringCloudServiceTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpringCloudServiceTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -779,15 +1030,15 @@ export class SpringCloudServiceTimeoutsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -795,15 +1046,15 @@ export class SpringCloudServiceTimeoutsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -811,15 +1062,15 @@ export class SpringCloudServiceTimeoutsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -827,7 +1078,7 @@ export class SpringCloudServiceTimeoutsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface SpringCloudServiceTrace {
@@ -845,7 +1096,7 @@ export interface SpringCloudServiceTrace {
   readonly sampleRate?: number;
 }
 
-function springCloudServiceTraceToTerraform(struct?: SpringCloudServiceTraceOutputReference | SpringCloudServiceTrace): any {
+export function springCloudServiceTraceToTerraform(struct?: SpringCloudServiceTraceOutputReference | SpringCloudServiceTrace): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -867,12 +1118,43 @@ export class SpringCloudServiceTraceOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SpringCloudServiceTrace | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._connectionString) {
+      hasAnyValues = true;
+      internalValueResult.connectionString = this._connectionString;
+    }
+    if (this._instrumentationKey) {
+      hasAnyValues = true;
+      internalValueResult.instrumentationKey = this._instrumentationKey;
+    }
+    if (this._sampleRate) {
+      hasAnyValues = true;
+      internalValueResult.sampleRate = this._sampleRate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpringCloudServiceTrace | undefined) {
+    if (value === undefined) {
+      this._connectionString = undefined;
+      this._instrumentationKey = undefined;
+      this._sampleRate = undefined;
+    }
+    else {
+      this._connectionString = value.connectionString;
+      this._instrumentationKey = value.instrumentationKey;
+      this._sampleRate = value.sampleRate;
+    }
+  }
+
   // connection_string - computed: false, optional: true, required: false
-  private _connectionString?: string | undefined; 
+  private _connectionString?: string; 
   public get connectionString() {
     return this.getStringAttribute('connection_string');
   }
-  public set connectionString(value: string | undefined) {
+  public set connectionString(value: string) {
     this._connectionString = value;
   }
   public resetConnectionString() {
@@ -880,15 +1162,15 @@ export class SpringCloudServiceTraceOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get connectionStringInput() {
-    return this._connectionString
+    return this._connectionString;
   }
 
   // instrumentation_key - computed: false, optional: true, required: false
-  private _instrumentationKey?: string | undefined; 
+  private _instrumentationKey?: string; 
   public get instrumentationKey() {
     return this.getStringAttribute('instrumentation_key');
   }
-  public set instrumentationKey(value: string | undefined) {
+  public set instrumentationKey(value: string) {
     this._instrumentationKey = value;
   }
   public resetInstrumentationKey() {
@@ -896,15 +1178,15 @@ export class SpringCloudServiceTraceOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get instrumentationKeyInput() {
-    return this._instrumentationKey
+    return this._instrumentationKey;
   }
 
   // sample_rate - computed: false, optional: true, required: false
-  private _sampleRate?: number | undefined; 
+  private _sampleRate?: number; 
   public get sampleRate() {
     return this.getNumberAttribute('sample_rate');
   }
-  public set sampleRate(value: number | undefined) {
+  public set sampleRate(value: number) {
     this._sampleRate = value;
   }
   public resetSampleRate() {
@@ -912,7 +1194,7 @@ export class SpringCloudServiceTraceOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get sampleRateInput() {
-    return this._sampleRate
+    return this._sampleRate;
   }
 }
 
@@ -953,10 +1235,10 @@ export class SpringCloudService extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
     this._tags = config.tags;
-    this._configServerGitSetting = config.configServerGitSetting;
-    this._network = config.network;
-    this._timeouts = config.timeouts;
-    this._trace = config.trace;
+    this._configServerGitSetting.internalValue = config.configServerGitSetting;
+    this._network.internalValue = config.network;
+    this._timeouts.internalValue = config.timeouts;
+    this._trace.internalValue = config.trace;
   }
 
   // ==========
@@ -978,7 +1260,7 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -991,7 +1273,7 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // outbound_public_ip_addresses - computed: true, optional: false, required: false
@@ -1014,15 +1296,15 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // sku_name - computed: false, optional: true, required: false
-  private _skuName?: string | undefined; 
+  private _skuName?: string; 
   public get skuName() {
     return this.getStringAttribute('sku_name');
   }
-  public set skuName(value: string | undefined) {
+  public set skuName(value: string) {
     this._skuName = value;
   }
   public resetSkuName() {
@@ -1030,16 +1312,16 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuNameInput() {
-    return this._skuName
+    return this._skuName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -1047,75 +1329,71 @@ export class SpringCloudService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // config_server_git_setting - computed: false, optional: true, required: false
-  private _configServerGitSetting?: SpringCloudServiceConfigServerGitSetting | undefined; 
-  private __configServerGitSettingOutput = new SpringCloudServiceConfigServerGitSettingOutputReference(this as any, "config_server_git_setting", true);
+  private _configServerGitSetting = new SpringCloudServiceConfigServerGitSettingOutputReference(this as any, "config_server_git_setting", true);
   public get configServerGitSetting() {
-    return this.__configServerGitSettingOutput;
+    return this._configServerGitSetting;
   }
-  public putConfigServerGitSetting(value: SpringCloudServiceConfigServerGitSetting | undefined) {
-    this._configServerGitSetting = value;
+  public putConfigServerGitSetting(value: SpringCloudServiceConfigServerGitSetting) {
+    this._configServerGitSetting.internalValue = value;
   }
   public resetConfigServerGitSetting() {
-    this._configServerGitSetting = undefined;
+    this._configServerGitSetting.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get configServerGitSettingInput() {
-    return this._configServerGitSetting
+    return this._configServerGitSetting.internalValue;
   }
 
   // network - computed: false, optional: true, required: false
-  private _network?: SpringCloudServiceNetwork | undefined; 
-  private __networkOutput = new SpringCloudServiceNetworkOutputReference(this as any, "network", true);
+  private _network = new SpringCloudServiceNetworkOutputReference(this as any, "network", true);
   public get network() {
-    return this.__networkOutput;
+    return this._network;
   }
-  public putNetwork(value: SpringCloudServiceNetwork | undefined) {
-    this._network = value;
+  public putNetwork(value: SpringCloudServiceNetwork) {
+    this._network.internalValue = value;
   }
   public resetNetwork() {
-    this._network = undefined;
+    this._network.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get networkInput() {
-    return this._network
+    return this._network.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SpringCloudServiceTimeouts | undefined; 
-  private __timeoutsOutput = new SpringCloudServiceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SpringCloudServiceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SpringCloudServiceTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SpringCloudServiceTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // trace - computed: false, optional: true, required: false
-  private _trace?: SpringCloudServiceTrace | undefined; 
-  private __traceOutput = new SpringCloudServiceTraceOutputReference(this as any, "trace", true);
+  private _trace = new SpringCloudServiceTraceOutputReference(this as any, "trace", true);
   public get trace() {
-    return this.__traceOutput;
+    return this._trace;
   }
-  public putTrace(value: SpringCloudServiceTrace | undefined) {
-    this._trace = value;
+  public putTrace(value: SpringCloudServiceTrace) {
+    this._trace.internalValue = value;
   }
   public resetTrace() {
-    this._trace = undefined;
+    this._trace.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get traceInput() {
-    return this._trace
+    return this._trace.internalValue;
   }
 
   // =========
@@ -1129,10 +1407,10 @@ export class SpringCloudService extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      config_server_git_setting: springCloudServiceConfigServerGitSettingToTerraform(this._configServerGitSetting),
-      network: springCloudServiceNetworkToTerraform(this._network),
-      timeouts: springCloudServiceTimeoutsToTerraform(this._timeouts),
-      trace: springCloudServiceTraceToTerraform(this._trace),
+      config_server_git_setting: springCloudServiceConfigServerGitSettingToTerraform(this._configServerGitSetting.internalValue),
+      network: springCloudServiceNetworkToTerraform(this._network.internalValue),
+      timeouts: springCloudServiceTimeoutsToTerraform(this._timeouts.internalValue),
+      trace: springCloudServiceTraceToTerraform(this._trace.internalValue),
     };
   }
 }

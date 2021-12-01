@@ -61,7 +61,7 @@ export interface MonitorActionRuleActionGroupConditionAlertContext {
   readonly values: string[];
 }
 
-function monitorActionRuleActionGroupConditionAlertContextToTerraform(struct?: MonitorActionRuleActionGroupConditionAlertContextOutputReference | MonitorActionRuleActionGroupConditionAlertContext): any {
+export function monitorActionRuleActionGroupConditionAlertContextToTerraform(struct?: MonitorActionRuleActionGroupConditionAlertContextOutputReference | MonitorActionRuleActionGroupConditionAlertContext): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -82,6 +82,31 @@ export class MonitorActionRuleActionGroupConditionAlertContextOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitorActionRuleActionGroupConditionAlertContext | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._operator) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._values) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionRuleActionGroupConditionAlertContext | undefined) {
+    if (value === undefined) {
+      this._operator = undefined;
+      this._values = undefined;
+    }
+    else {
+      this._operator = value.operator;
+      this._values = value.values;
+    }
+  }
+
   // operator - computed: false, optional: false, required: true
   private _operator?: string; 
   public get operator() {
@@ -92,7 +117,7 @@ export class MonitorActionRuleActionGroupConditionAlertContextOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get operatorInput() {
-    return this._operator
+    return this._operator;
   }
 
   // values - computed: false, optional: false, required: true
@@ -105,7 +130,7 @@ export class MonitorActionRuleActionGroupConditionAlertContextOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
-    return this._values
+    return this._values;
   }
 }
 export interface MonitorActionRuleActionGroupConditionAlertRuleId {
@@ -119,7 +144,7 @@ export interface MonitorActionRuleActionGroupConditionAlertRuleId {
   readonly values: string[];
 }
 
-function monitorActionRuleActionGroupConditionAlertRuleIdToTerraform(struct?: MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference | MonitorActionRuleActionGroupConditionAlertRuleId): any {
+export function monitorActionRuleActionGroupConditionAlertRuleIdToTerraform(struct?: MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference | MonitorActionRuleActionGroupConditionAlertRuleId): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -140,6 +165,31 @@ export class MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitorActionRuleActionGroupConditionAlertRuleId | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._operator) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._values) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionRuleActionGroupConditionAlertRuleId | undefined) {
+    if (value === undefined) {
+      this._operator = undefined;
+      this._values = undefined;
+    }
+    else {
+      this._operator = value.operator;
+      this._values = value.values;
+    }
+  }
+
   // operator - computed: false, optional: false, required: true
   private _operator?: string; 
   public get operator() {
@@ -150,7 +200,7 @@ export class MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get operatorInput() {
-    return this._operator
+    return this._operator;
   }
 
   // values - computed: false, optional: false, required: true
@@ -163,7 +213,7 @@ export class MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
-    return this._values
+    return this._values;
   }
 }
 export interface MonitorActionRuleActionGroupConditionDescription {
@@ -177,7 +227,7 @@ export interface MonitorActionRuleActionGroupConditionDescription {
   readonly values: string[];
 }
 
-function monitorActionRuleActionGroupConditionDescriptionToTerraform(struct?: MonitorActionRuleActionGroupConditionDescriptionOutputReference | MonitorActionRuleActionGroupConditionDescription): any {
+export function monitorActionRuleActionGroupConditionDescriptionToTerraform(struct?: MonitorActionRuleActionGroupConditionDescriptionOutputReference | MonitorActionRuleActionGroupConditionDescription): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -198,6 +248,31 @@ export class MonitorActionRuleActionGroupConditionDescriptionOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitorActionRuleActionGroupConditionDescription | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._operator) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._values) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionRuleActionGroupConditionDescription | undefined) {
+    if (value === undefined) {
+      this._operator = undefined;
+      this._values = undefined;
+    }
+    else {
+      this._operator = value.operator;
+      this._values = value.values;
+    }
+  }
+
   // operator - computed: false, optional: false, required: true
   private _operator?: string; 
   public get operator() {
@@ -208,7 +283,7 @@ export class MonitorActionRuleActionGroupConditionDescriptionOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get operatorInput() {
-    return this._operator
+    return this._operator;
   }
 
   // values - computed: false, optional: false, required: true
@@ -221,7 +296,7 @@ export class MonitorActionRuleActionGroupConditionDescriptionOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
-    return this._values
+    return this._values;
   }
 }
 export interface MonitorActionRuleActionGroupConditionMonitor {
@@ -235,7 +310,7 @@ export interface MonitorActionRuleActionGroupConditionMonitor {
   readonly values: string[];
 }
 
-function monitorActionRuleActionGroupConditionMonitorToTerraform(struct?: MonitorActionRuleActionGroupConditionMonitorOutputReference | MonitorActionRuleActionGroupConditionMonitor): any {
+export function monitorActionRuleActionGroupConditionMonitorToTerraform(struct?: MonitorActionRuleActionGroupConditionMonitorOutputReference | MonitorActionRuleActionGroupConditionMonitor): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -256,6 +331,31 @@ export class MonitorActionRuleActionGroupConditionMonitorOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitorActionRuleActionGroupConditionMonitor | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._operator) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._values) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionRuleActionGroupConditionMonitor | undefined) {
+    if (value === undefined) {
+      this._operator = undefined;
+      this._values = undefined;
+    }
+    else {
+      this._operator = value.operator;
+      this._values = value.values;
+    }
+  }
+
   // operator - computed: false, optional: false, required: true
   private _operator?: string; 
   public get operator() {
@@ -266,7 +366,7 @@ export class MonitorActionRuleActionGroupConditionMonitorOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get operatorInput() {
-    return this._operator
+    return this._operator;
   }
 
   // values - computed: false, optional: false, required: true
@@ -279,7 +379,7 @@ export class MonitorActionRuleActionGroupConditionMonitorOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
-    return this._values
+    return this._values;
   }
 }
 export interface MonitorActionRuleActionGroupConditionMonitorService {
@@ -293,7 +393,7 @@ export interface MonitorActionRuleActionGroupConditionMonitorService {
   readonly values: string[];
 }
 
-function monitorActionRuleActionGroupConditionMonitorServiceToTerraform(struct?: MonitorActionRuleActionGroupConditionMonitorServiceOutputReference | MonitorActionRuleActionGroupConditionMonitorService): any {
+export function monitorActionRuleActionGroupConditionMonitorServiceToTerraform(struct?: MonitorActionRuleActionGroupConditionMonitorServiceOutputReference | MonitorActionRuleActionGroupConditionMonitorService): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -314,6 +414,31 @@ export class MonitorActionRuleActionGroupConditionMonitorServiceOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitorActionRuleActionGroupConditionMonitorService | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._operator) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._values) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionRuleActionGroupConditionMonitorService | undefined) {
+    if (value === undefined) {
+      this._operator = undefined;
+      this._values = undefined;
+    }
+    else {
+      this._operator = value.operator;
+      this._values = value.values;
+    }
+  }
+
   // operator - computed: false, optional: false, required: true
   private _operator?: string; 
   public get operator() {
@@ -324,7 +449,7 @@ export class MonitorActionRuleActionGroupConditionMonitorServiceOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get operatorInput() {
-    return this._operator
+    return this._operator;
   }
 
   // values - computed: false, optional: false, required: true
@@ -337,7 +462,7 @@ export class MonitorActionRuleActionGroupConditionMonitorServiceOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
-    return this._values
+    return this._values;
   }
 }
 export interface MonitorActionRuleActionGroupConditionSeverity {
@@ -351,7 +476,7 @@ export interface MonitorActionRuleActionGroupConditionSeverity {
   readonly values: string[];
 }
 
-function monitorActionRuleActionGroupConditionSeverityToTerraform(struct?: MonitorActionRuleActionGroupConditionSeverityOutputReference | MonitorActionRuleActionGroupConditionSeverity): any {
+export function monitorActionRuleActionGroupConditionSeverityToTerraform(struct?: MonitorActionRuleActionGroupConditionSeverityOutputReference | MonitorActionRuleActionGroupConditionSeverity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -372,6 +497,31 @@ export class MonitorActionRuleActionGroupConditionSeverityOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitorActionRuleActionGroupConditionSeverity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._operator) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._values) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionRuleActionGroupConditionSeverity | undefined) {
+    if (value === undefined) {
+      this._operator = undefined;
+      this._values = undefined;
+    }
+    else {
+      this._operator = value.operator;
+      this._values = value.values;
+    }
+  }
+
   // operator - computed: false, optional: false, required: true
   private _operator?: string; 
   public get operator() {
@@ -382,7 +532,7 @@ export class MonitorActionRuleActionGroupConditionSeverityOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get operatorInput() {
-    return this._operator
+    return this._operator;
   }
 
   // values - computed: false, optional: false, required: true
@@ -395,7 +545,7 @@ export class MonitorActionRuleActionGroupConditionSeverityOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
-    return this._values
+    return this._values;
   }
 }
 export interface MonitorActionRuleActionGroupConditionTargetResourceType {
@@ -409,7 +559,7 @@ export interface MonitorActionRuleActionGroupConditionTargetResourceType {
   readonly values: string[];
 }
 
-function monitorActionRuleActionGroupConditionTargetResourceTypeToTerraform(struct?: MonitorActionRuleActionGroupConditionTargetResourceTypeOutputReference | MonitorActionRuleActionGroupConditionTargetResourceType): any {
+export function monitorActionRuleActionGroupConditionTargetResourceTypeToTerraform(struct?: MonitorActionRuleActionGroupConditionTargetResourceTypeOutputReference | MonitorActionRuleActionGroupConditionTargetResourceType): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -430,6 +580,31 @@ export class MonitorActionRuleActionGroupConditionTargetResourceTypeOutputRefere
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitorActionRuleActionGroupConditionTargetResourceType | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._operator) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._values) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionRuleActionGroupConditionTargetResourceType | undefined) {
+    if (value === undefined) {
+      this._operator = undefined;
+      this._values = undefined;
+    }
+    else {
+      this._operator = value.operator;
+      this._values = value.values;
+    }
+  }
+
   // operator - computed: false, optional: false, required: true
   private _operator?: string; 
   public get operator() {
@@ -440,7 +615,7 @@ export class MonitorActionRuleActionGroupConditionTargetResourceTypeOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get operatorInput() {
-    return this._operator
+    return this._operator;
   }
 
   // values - computed: false, optional: false, required: true
@@ -453,7 +628,7 @@ export class MonitorActionRuleActionGroupConditionTargetResourceTypeOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
-    return this._values
+    return this._values;
   }
 }
 export interface MonitorActionRuleActionGroupCondition {
@@ -501,7 +676,7 @@ export interface MonitorActionRuleActionGroupCondition {
   readonly targetResourceType?: MonitorActionRuleActionGroupConditionTargetResourceType;
 }
 
-function monitorActionRuleActionGroupConditionToTerraform(struct?: MonitorActionRuleActionGroupConditionOutputReference | MonitorActionRuleActionGroupCondition): any {
+export function monitorActionRuleActionGroupConditionToTerraform(struct?: MonitorActionRuleActionGroupConditionOutputReference | MonitorActionRuleActionGroupCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -527,123 +702,171 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // alert_context - computed: false, optional: true, required: false
-  private _alertContext?: MonitorActionRuleActionGroupConditionAlertContext | undefined; 
-  private __alertContextOutput = new MonitorActionRuleActionGroupConditionAlertContextOutputReference(this as any, "alert_context", true);
-  public get alertContext() {
-    return this.__alertContextOutput;
+  public get internalValue(): MonitorActionRuleActionGroupCondition | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._alertContext) {
+      hasAnyValues = true;
+      internalValueResult.alertContext = this._alertContext?.internalValue;
+    }
+    if (this._alertRuleId) {
+      hasAnyValues = true;
+      internalValueResult.alertRuleId = this._alertRuleId?.internalValue;
+    }
+    if (this._description) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description?.internalValue;
+    }
+    if (this._monitor) {
+      hasAnyValues = true;
+      internalValueResult.monitor = this._monitor?.internalValue;
+    }
+    if (this._monitorService) {
+      hasAnyValues = true;
+      internalValueResult.monitorService = this._monitorService?.internalValue;
+    }
+    if (this._severity) {
+      hasAnyValues = true;
+      internalValueResult.severity = this._severity?.internalValue;
+    }
+    if (this._targetResourceType) {
+      hasAnyValues = true;
+      internalValueResult.targetResourceType = this._targetResourceType?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putAlertContext(value: MonitorActionRuleActionGroupConditionAlertContext | undefined) {
-    this._alertContext = value;
+
+  public set internalValue(value: MonitorActionRuleActionGroupCondition | undefined) {
+    if (value === undefined) {
+      this._alertContext.internalValue = undefined;
+      this._alertRuleId.internalValue = undefined;
+      this._description.internalValue = undefined;
+      this._monitor.internalValue = undefined;
+      this._monitorService.internalValue = undefined;
+      this._severity.internalValue = undefined;
+      this._targetResourceType.internalValue = undefined;
+    }
+    else {
+      this._alertContext.internalValue = value.alertContext;
+      this._alertRuleId.internalValue = value.alertRuleId;
+      this._description.internalValue = value.description;
+      this._monitor.internalValue = value.monitor;
+      this._monitorService.internalValue = value.monitorService;
+      this._severity.internalValue = value.severity;
+      this._targetResourceType.internalValue = value.targetResourceType;
+    }
+  }
+
+  // alert_context - computed: false, optional: true, required: false
+  private _alertContext = new MonitorActionRuleActionGroupConditionAlertContextOutputReference(this as any, "alert_context", true);
+  public get alertContext() {
+    return this._alertContext;
+  }
+  public putAlertContext(value: MonitorActionRuleActionGroupConditionAlertContext) {
+    this._alertContext.internalValue = value;
   }
   public resetAlertContext() {
-    this._alertContext = undefined;
+    this._alertContext.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get alertContextInput() {
-    return this._alertContext
+    return this._alertContext.internalValue;
   }
 
   // alert_rule_id - computed: false, optional: true, required: false
-  private _alertRuleId?: MonitorActionRuleActionGroupConditionAlertRuleId | undefined; 
-  private __alertRuleIdOutput = new MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference(this as any, "alert_rule_id", true);
+  private _alertRuleId = new MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference(this as any, "alert_rule_id", true);
   public get alertRuleId() {
-    return this.__alertRuleIdOutput;
+    return this._alertRuleId;
   }
-  public putAlertRuleId(value: MonitorActionRuleActionGroupConditionAlertRuleId | undefined) {
-    this._alertRuleId = value;
+  public putAlertRuleId(value: MonitorActionRuleActionGroupConditionAlertRuleId) {
+    this._alertRuleId.internalValue = value;
   }
   public resetAlertRuleId() {
-    this._alertRuleId = undefined;
+    this._alertRuleId.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get alertRuleIdInput() {
-    return this._alertRuleId
+    return this._alertRuleId.internalValue;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: MonitorActionRuleActionGroupConditionDescription | undefined; 
-  private __descriptionOutput = new MonitorActionRuleActionGroupConditionDescriptionOutputReference(this as any, "description", true);
+  private _description = new MonitorActionRuleActionGroupConditionDescriptionOutputReference(this as any, "description", true);
   public get description() {
-    return this.__descriptionOutput;
+    return this._description;
   }
-  public putDescription(value: MonitorActionRuleActionGroupConditionDescription | undefined) {
-    this._description = value;
+  public putDescription(value: MonitorActionRuleActionGroupConditionDescription) {
+    this._description.internalValue = value;
   }
   public resetDescription() {
-    this._description = undefined;
+    this._description.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description.internalValue;
   }
 
   // monitor - computed: false, optional: true, required: false
-  private _monitor?: MonitorActionRuleActionGroupConditionMonitor | undefined; 
-  private __monitorOutput = new MonitorActionRuleActionGroupConditionMonitorOutputReference(this as any, "monitor", true);
+  private _monitor = new MonitorActionRuleActionGroupConditionMonitorOutputReference(this as any, "monitor", true);
   public get monitor() {
-    return this.__monitorOutput;
+    return this._monitor;
   }
-  public putMonitor(value: MonitorActionRuleActionGroupConditionMonitor | undefined) {
-    this._monitor = value;
+  public putMonitor(value: MonitorActionRuleActionGroupConditionMonitor) {
+    this._monitor.internalValue = value;
   }
   public resetMonitor() {
-    this._monitor = undefined;
+    this._monitor.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get monitorInput() {
-    return this._monitor
+    return this._monitor.internalValue;
   }
 
   // monitor_service - computed: false, optional: true, required: false
-  private _monitorService?: MonitorActionRuleActionGroupConditionMonitorService | undefined; 
-  private __monitorServiceOutput = new MonitorActionRuleActionGroupConditionMonitorServiceOutputReference(this as any, "monitor_service", true);
+  private _monitorService = new MonitorActionRuleActionGroupConditionMonitorServiceOutputReference(this as any, "monitor_service", true);
   public get monitorService() {
-    return this.__monitorServiceOutput;
+    return this._monitorService;
   }
-  public putMonitorService(value: MonitorActionRuleActionGroupConditionMonitorService | undefined) {
-    this._monitorService = value;
+  public putMonitorService(value: MonitorActionRuleActionGroupConditionMonitorService) {
+    this._monitorService.internalValue = value;
   }
   public resetMonitorService() {
-    this._monitorService = undefined;
+    this._monitorService.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get monitorServiceInput() {
-    return this._monitorService
+    return this._monitorService.internalValue;
   }
 
   // severity - computed: false, optional: true, required: false
-  private _severity?: MonitorActionRuleActionGroupConditionSeverity | undefined; 
-  private __severityOutput = new MonitorActionRuleActionGroupConditionSeverityOutputReference(this as any, "severity", true);
+  private _severity = new MonitorActionRuleActionGroupConditionSeverityOutputReference(this as any, "severity", true);
   public get severity() {
-    return this.__severityOutput;
+    return this._severity;
   }
-  public putSeverity(value: MonitorActionRuleActionGroupConditionSeverity | undefined) {
-    this._severity = value;
+  public putSeverity(value: MonitorActionRuleActionGroupConditionSeverity) {
+    this._severity.internalValue = value;
   }
   public resetSeverity() {
-    this._severity = undefined;
+    this._severity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get severityInput() {
-    return this._severity
+    return this._severity.internalValue;
   }
 
   // target_resource_type - computed: false, optional: true, required: false
-  private _targetResourceType?: MonitorActionRuleActionGroupConditionTargetResourceType | undefined; 
-  private __targetResourceTypeOutput = new MonitorActionRuleActionGroupConditionTargetResourceTypeOutputReference(this as any, "target_resource_type", true);
+  private _targetResourceType = new MonitorActionRuleActionGroupConditionTargetResourceTypeOutputReference(this as any, "target_resource_type", true);
   public get targetResourceType() {
-    return this.__targetResourceTypeOutput;
+    return this._targetResourceType;
   }
-  public putTargetResourceType(value: MonitorActionRuleActionGroupConditionTargetResourceType | undefined) {
-    this._targetResourceType = value;
+  public putTargetResourceType(value: MonitorActionRuleActionGroupConditionTargetResourceType) {
+    this._targetResourceType.internalValue = value;
   }
   public resetTargetResourceType() {
-    this._targetResourceType = undefined;
+    this._targetResourceType.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get targetResourceTypeInput() {
-    return this._targetResourceType
+    return this._targetResourceType.internalValue;
   }
 }
 export interface MonitorActionRuleActionGroupScope {
@@ -657,7 +880,7 @@ export interface MonitorActionRuleActionGroupScope {
   readonly type: string;
 }
 
-function monitorActionRuleActionGroupScopeToTerraform(struct?: MonitorActionRuleActionGroupScopeOutputReference | MonitorActionRuleActionGroupScope): any {
+export function monitorActionRuleActionGroupScopeToTerraform(struct?: MonitorActionRuleActionGroupScopeOutputReference | MonitorActionRuleActionGroupScope): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -678,6 +901,31 @@ export class MonitorActionRuleActionGroupScopeOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitorActionRuleActionGroupScope | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._resourceIds) {
+      hasAnyValues = true;
+      internalValueResult.resourceIds = this._resourceIds;
+    }
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionRuleActionGroupScope | undefined) {
+    if (value === undefined) {
+      this._resourceIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this._resourceIds = value.resourceIds;
+      this._type = value.type;
+    }
+  }
+
   // resource_ids - computed: false, optional: false, required: true
   private _resourceIds?: string[]; 
   public get resourceIds() {
@@ -688,7 +936,7 @@ export class MonitorActionRuleActionGroupScopeOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get resourceIdsInput() {
-    return this._resourceIds
+    return this._resourceIds;
   }
 
   // type - computed: false, optional: false, required: true
@@ -701,7 +949,7 @@ export class MonitorActionRuleActionGroupScopeOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface MonitorActionRuleActionGroupTimeouts {
@@ -723,7 +971,7 @@ export interface MonitorActionRuleActionGroupTimeouts {
   readonly update?: string;
 }
 
-function monitorActionRuleActionGroupTimeoutsToTerraform(struct?: MonitorActionRuleActionGroupTimeoutsOutputReference | MonitorActionRuleActionGroupTimeouts): any {
+export function monitorActionRuleActionGroupTimeoutsToTerraform(struct?: MonitorActionRuleActionGroupTimeoutsOutputReference | MonitorActionRuleActionGroupTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -746,12 +994,49 @@ export class MonitorActionRuleActionGroupTimeoutsOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitorActionRuleActionGroupTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActionRuleActionGroupTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -759,15 +1044,15 @@ export class MonitorActionRuleActionGroupTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -775,15 +1060,15 @@ export class MonitorActionRuleActionGroupTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -791,15 +1076,15 @@ export class MonitorActionRuleActionGroupTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -807,7 +1092,7 @@ export class MonitorActionRuleActionGroupTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -849,9 +1134,9 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._condition = config.condition;
-    this._scope = config.scope;
-    this._timeouts = config.timeouts;
+    this._condition.internalValue = config.condition;
+    this._scope.internalValue = config.scope;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -868,15 +1153,15 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get actionGroupIdInput() {
-    return this._actionGroupId
+    return this._actionGroupId;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -884,15 +1169,15 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -900,7 +1185,7 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -918,7 +1203,7 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -931,16 +1216,16 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -948,58 +1233,55 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition?: MonitorActionRuleActionGroupCondition | undefined; 
-  private __conditionOutput = new MonitorActionRuleActionGroupConditionOutputReference(this as any, "condition", true);
+  private _condition = new MonitorActionRuleActionGroupConditionOutputReference(this as any, "condition", true);
   public get condition() {
-    return this.__conditionOutput;
+    return this._condition;
   }
-  public putCondition(value: MonitorActionRuleActionGroupCondition | undefined) {
-    this._condition = value;
+  public putCondition(value: MonitorActionRuleActionGroupCondition) {
+    this._condition.internalValue = value;
   }
   public resetCondition() {
-    this._condition = undefined;
+    this._condition.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get conditionInput() {
-    return this._condition
+    return this._condition.internalValue;
   }
 
   // scope - computed: false, optional: true, required: false
-  private _scope?: MonitorActionRuleActionGroupScope | undefined; 
-  private __scopeOutput = new MonitorActionRuleActionGroupScopeOutputReference(this as any, "scope", true);
+  private _scope = new MonitorActionRuleActionGroupScopeOutputReference(this as any, "scope", true);
   public get scope() {
-    return this.__scopeOutput;
+    return this._scope;
   }
-  public putScope(value: MonitorActionRuleActionGroupScope | undefined) {
-    this._scope = value;
+  public putScope(value: MonitorActionRuleActionGroupScope) {
+    this._scope.internalValue = value;
   }
   public resetScope() {
-    this._scope = undefined;
+    this._scope.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get scopeInput() {
-    return this._scope
+    return this._scope.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MonitorActionRuleActionGroupTimeouts | undefined; 
-  private __timeoutsOutput = new MonitorActionRuleActionGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitorActionRuleActionGroupTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MonitorActionRuleActionGroupTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MonitorActionRuleActionGroupTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -1014,9 +1296,9 @@ export class MonitorActionRuleActionGroup extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      condition: monitorActionRuleActionGroupConditionToTerraform(this._condition),
-      scope: monitorActionRuleActionGroupScopeToTerraform(this._scope),
-      timeouts: monitorActionRuleActionGroupTimeoutsToTerraform(this._timeouts),
+      condition: monitorActionRuleActionGroupConditionToTerraform(this._condition.internalValue),
+      scope: monitorActionRuleActionGroupScopeToTerraform(this._scope.internalValue),
+      timeouts: monitorActionRuleActionGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

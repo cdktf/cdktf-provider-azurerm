@@ -73,7 +73,7 @@ export interface DataFactoryIntegrationRuntimeAzureTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryIntegrationRuntimeAzureTimeoutsToTerraform(struct?: DataFactoryIntegrationRuntimeAzureTimeoutsOutputReference | DataFactoryIntegrationRuntimeAzureTimeouts): any {
+export function dataFactoryIntegrationRuntimeAzureTimeoutsToTerraform(struct?: DataFactoryIntegrationRuntimeAzureTimeoutsOutputReference | DataFactoryIntegrationRuntimeAzureTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -96,12 +96,49 @@ export class DataFactoryIntegrationRuntimeAzureTimeoutsOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryIntegrationRuntimeAzureTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryIntegrationRuntimeAzureTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -109,15 +146,15 @@ export class DataFactoryIntegrationRuntimeAzureTimeoutsOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -125,15 +162,15 @@ export class DataFactoryIntegrationRuntimeAzureTimeoutsOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -141,15 +178,15 @@ export class DataFactoryIntegrationRuntimeAzureTimeoutsOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -157,7 +194,7 @@ export class DataFactoryIntegrationRuntimeAzureTimeoutsOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -203,7 +240,7 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
     this._resourceGroupName = config.resourceGroupName;
     this._timeToLiveMin = config.timeToLiveMin;
     this._virtualNetworkEnabled = config.virtualNetworkEnabled;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -211,11 +248,11 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
   // ==========
 
   // cleanup_enabled - computed: true, optional: true, required: false
-  private _cleanupEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _cleanupEnabled?: boolean | cdktf.IResolvable; 
   public get cleanupEnabled() {
     return this.getBooleanAttribute('cleanup_enabled') as any;
   }
-  public set cleanupEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set cleanupEnabled(value: boolean | cdktf.IResolvable) {
     this._cleanupEnabled = value;
   }
   public resetCleanupEnabled() {
@@ -223,15 +260,15 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get cleanupEnabledInput() {
-    return this._cleanupEnabled
+    return this._cleanupEnabled;
   }
 
   // compute_type - computed: false, optional: true, required: false
-  private _computeType?: string | undefined; 
+  private _computeType?: string; 
   public get computeType() {
     return this.getStringAttribute('compute_type');
   }
-  public set computeType(value: string | undefined) {
+  public set computeType(value: string) {
     this._computeType = value;
   }
   public resetComputeType() {
@@ -239,15 +276,15 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get computeTypeInput() {
-    return this._computeType
+    return this._computeType;
   }
 
   // core_count - computed: false, optional: true, required: false
-  private _coreCount?: number | undefined; 
+  private _coreCount?: number; 
   public get coreCount() {
     return this.getNumberAttribute('core_count');
   }
-  public set coreCount(value: number | undefined) {
+  public set coreCount(value: number) {
     this._coreCount = value;
   }
   public resetCoreCount() {
@@ -255,7 +292,7 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get coreCountInput() {
-    return this._coreCount
+    return this._coreCount;
   }
 
   // data_factory_name - computed: false, optional: false, required: true
@@ -268,15 +305,15 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryNameInput() {
-    return this._dataFactoryName
+    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -284,7 +321,7 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -302,7 +339,7 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -315,7 +352,7 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -328,15 +365,15 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // time_to_live_min - computed: false, optional: true, required: false
-  private _timeToLiveMin?: number | undefined; 
+  private _timeToLiveMin?: number; 
   public get timeToLiveMin() {
     return this.getNumberAttribute('time_to_live_min');
   }
-  public set timeToLiveMin(value: number | undefined) {
+  public set timeToLiveMin(value: number) {
     this._timeToLiveMin = value;
   }
   public resetTimeToLiveMin() {
@@ -344,15 +381,15 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get timeToLiveMinInput() {
-    return this._timeToLiveMin
+    return this._timeToLiveMin;
   }
 
   // virtual_network_enabled - computed: false, optional: true, required: false
-  private _virtualNetworkEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _virtualNetworkEnabled?: boolean | cdktf.IResolvable; 
   public get virtualNetworkEnabled() {
     return this.getBooleanAttribute('virtual_network_enabled') as any;
   }
-  public set virtualNetworkEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set virtualNetworkEnabled(value: boolean | cdktf.IResolvable) {
     this._virtualNetworkEnabled = value;
   }
   public resetVirtualNetworkEnabled() {
@@ -360,24 +397,23 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get virtualNetworkEnabledInput() {
-    return this._virtualNetworkEnabled
+    return this._virtualNetworkEnabled;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryIntegrationRuntimeAzureTimeouts | undefined; 
-  private __timeoutsOutput = new DataFactoryIntegrationRuntimeAzureTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryIntegrationRuntimeAzureTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataFactoryIntegrationRuntimeAzureTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataFactoryIntegrationRuntimeAzureTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -396,7 +432,7 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       time_to_live_min: cdktf.numberToTerraform(this._timeToLiveMin),
       virtual_network_enabled: cdktf.booleanToTerraform(this._virtualNetworkEnabled),
-      timeouts: dataFactoryIntegrationRuntimeAzureTimeoutsToTerraform(this._timeouts),
+      timeouts: dataFactoryIntegrationRuntimeAzureTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

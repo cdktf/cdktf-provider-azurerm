@@ -65,7 +65,7 @@ export interface TrafficManagerProfileDnsConfig {
   readonly ttl: number;
 }
 
-function trafficManagerProfileDnsConfigToTerraform(struct?: TrafficManagerProfileDnsConfigOutputReference | TrafficManagerProfileDnsConfig): any {
+export function trafficManagerProfileDnsConfigToTerraform(struct?: TrafficManagerProfileDnsConfigOutputReference | TrafficManagerProfileDnsConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -86,6 +86,31 @@ export class TrafficManagerProfileDnsConfigOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): TrafficManagerProfileDnsConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._relativeName) {
+      hasAnyValues = true;
+      internalValueResult.relativeName = this._relativeName;
+    }
+    if (this._ttl) {
+      hasAnyValues = true;
+      internalValueResult.ttl = this._ttl;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TrafficManagerProfileDnsConfig | undefined) {
+    if (value === undefined) {
+      this._relativeName = undefined;
+      this._ttl = undefined;
+    }
+    else {
+      this._relativeName = value.relativeName;
+      this._ttl = value.ttl;
+    }
+  }
+
   // relative_name - computed: false, optional: false, required: true
   private _relativeName?: string; 
   public get relativeName() {
@@ -96,7 +121,7 @@ export class TrafficManagerProfileDnsConfigOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get relativeNameInput() {
-    return this._relativeName
+    return this._relativeName;
   }
 
   // ttl - computed: false, optional: false, required: true
@@ -109,7 +134,7 @@ export class TrafficManagerProfileDnsConfigOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get ttlInput() {
-    return this._ttl
+    return this._ttl;
   }
 }
 export interface TrafficManagerProfileMonitorConfigCustomHeader {
@@ -123,7 +148,7 @@ export interface TrafficManagerProfileMonitorConfigCustomHeader {
   readonly value: string;
 }
 
-function trafficManagerProfileMonitorConfigCustomHeaderToTerraform(struct?: TrafficManagerProfileMonitorConfigCustomHeader): any {
+export function trafficManagerProfileMonitorConfigCustomHeaderToTerraform(struct?: TrafficManagerProfileMonitorConfigCustomHeader): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -171,7 +196,7 @@ export interface TrafficManagerProfileMonitorConfig {
   readonly customHeader?: TrafficManagerProfileMonitorConfigCustomHeader[];
 }
 
-function trafficManagerProfileMonitorConfigToTerraform(struct?: TrafficManagerProfileMonitorConfigOutputReference | TrafficManagerProfileMonitorConfig): any {
+export function trafficManagerProfileMonitorConfigToTerraform(struct?: TrafficManagerProfileMonitorConfigOutputReference | TrafficManagerProfileMonitorConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -198,12 +223,73 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): TrafficManagerProfileMonitorConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._expectedStatusCodeRanges) {
+      hasAnyValues = true;
+      internalValueResult.expectedStatusCodeRanges = this._expectedStatusCodeRanges;
+    }
+    if (this._intervalInSeconds) {
+      hasAnyValues = true;
+      internalValueResult.intervalInSeconds = this._intervalInSeconds;
+    }
+    if (this._path) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._port) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._protocol) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    if (this._timeoutInSeconds) {
+      hasAnyValues = true;
+      internalValueResult.timeoutInSeconds = this._timeoutInSeconds;
+    }
+    if (this._toleratedNumberOfFailures) {
+      hasAnyValues = true;
+      internalValueResult.toleratedNumberOfFailures = this._toleratedNumberOfFailures;
+    }
+    if (this._customHeader) {
+      hasAnyValues = true;
+      internalValueResult.customHeader = this._customHeader;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TrafficManagerProfileMonitorConfig | undefined) {
+    if (value === undefined) {
+      this._expectedStatusCodeRanges = undefined;
+      this._intervalInSeconds = undefined;
+      this._path = undefined;
+      this._port = undefined;
+      this._protocol = undefined;
+      this._timeoutInSeconds = undefined;
+      this._toleratedNumberOfFailures = undefined;
+      this._customHeader = undefined;
+    }
+    else {
+      this._expectedStatusCodeRanges = value.expectedStatusCodeRanges;
+      this._intervalInSeconds = value.intervalInSeconds;
+      this._path = value.path;
+      this._port = value.port;
+      this._protocol = value.protocol;
+      this._timeoutInSeconds = value.timeoutInSeconds;
+      this._toleratedNumberOfFailures = value.toleratedNumberOfFailures;
+      this._customHeader = value.customHeader;
+    }
+  }
+
   // expected_status_code_ranges - computed: false, optional: true, required: false
-  private _expectedStatusCodeRanges?: string[] | undefined; 
+  private _expectedStatusCodeRanges?: string[]; 
   public get expectedStatusCodeRanges() {
     return this.getListAttribute('expected_status_code_ranges');
   }
-  public set expectedStatusCodeRanges(value: string[] | undefined) {
+  public set expectedStatusCodeRanges(value: string[]) {
     this._expectedStatusCodeRanges = value;
   }
   public resetExpectedStatusCodeRanges() {
@@ -211,15 +297,15 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get expectedStatusCodeRangesInput() {
-    return this._expectedStatusCodeRanges
+    return this._expectedStatusCodeRanges;
   }
 
   // interval_in_seconds - computed: false, optional: true, required: false
-  private _intervalInSeconds?: number | undefined; 
+  private _intervalInSeconds?: number; 
   public get intervalInSeconds() {
     return this.getNumberAttribute('interval_in_seconds');
   }
-  public set intervalInSeconds(value: number | undefined) {
+  public set intervalInSeconds(value: number) {
     this._intervalInSeconds = value;
   }
   public resetIntervalInSeconds() {
@@ -227,15 +313,15 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get intervalInSecondsInput() {
-    return this._intervalInSeconds
+    return this._intervalInSeconds;
   }
 
   // path - computed: false, optional: true, required: false
-  private _path?: string | undefined; 
+  private _path?: string; 
   public get path() {
     return this.getStringAttribute('path');
   }
-  public set path(value: string | undefined) {
+  public set path(value: string) {
     this._path = value;
   }
   public resetPath() {
@@ -243,7 +329,7 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
-    return this._path
+    return this._path;
   }
 
   // port - computed: false, optional: false, required: true
@@ -256,7 +342,7 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get portInput() {
-    return this._port
+    return this._port;
   }
 
   // protocol - computed: false, optional: false, required: true
@@ -269,15 +355,15 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get protocolInput() {
-    return this._protocol
+    return this._protocol;
   }
 
   // timeout_in_seconds - computed: false, optional: true, required: false
-  private _timeoutInSeconds?: number | undefined; 
+  private _timeoutInSeconds?: number; 
   public get timeoutInSeconds() {
     return this.getNumberAttribute('timeout_in_seconds');
   }
-  public set timeoutInSeconds(value: number | undefined) {
+  public set timeoutInSeconds(value: number) {
     this._timeoutInSeconds = value;
   }
   public resetTimeoutInSeconds() {
@@ -285,15 +371,15 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutInSecondsInput() {
-    return this._timeoutInSeconds
+    return this._timeoutInSeconds;
   }
 
   // tolerated_number_of_failures - computed: false, optional: true, required: false
-  private _toleratedNumberOfFailures?: number | undefined; 
+  private _toleratedNumberOfFailures?: number; 
   public get toleratedNumberOfFailures() {
     return this.getNumberAttribute('tolerated_number_of_failures');
   }
-  public set toleratedNumberOfFailures(value: number | undefined) {
+  public set toleratedNumberOfFailures(value: number) {
     this._toleratedNumberOfFailures = value;
   }
   public resetToleratedNumberOfFailures() {
@@ -301,16 +387,16 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get toleratedNumberOfFailuresInput() {
-    return this._toleratedNumberOfFailures
+    return this._toleratedNumberOfFailures;
   }
 
   // custom_header - computed: false, optional: true, required: false
-  private _customHeader?: TrafficManagerProfileMonitorConfigCustomHeader[] | undefined; 
+  private _customHeader?: TrafficManagerProfileMonitorConfigCustomHeader[]; 
   public get customHeader() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('custom_header') as any;
   }
-  public set customHeader(value: TrafficManagerProfileMonitorConfigCustomHeader[] | undefined) {
+  public set customHeader(value: TrafficManagerProfileMonitorConfigCustomHeader[]) {
     this._customHeader = value;
   }
   public resetCustomHeader() {
@@ -318,7 +404,7 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get customHeaderInput() {
-    return this._customHeader
+    return this._customHeader;
   }
 }
 export interface TrafficManagerProfileTimeouts {
@@ -340,7 +426,7 @@ export interface TrafficManagerProfileTimeouts {
   readonly update?: string;
 }
 
-function trafficManagerProfileTimeoutsToTerraform(struct?: TrafficManagerProfileTimeoutsOutputReference | TrafficManagerProfileTimeouts): any {
+export function trafficManagerProfileTimeoutsToTerraform(struct?: TrafficManagerProfileTimeoutsOutputReference | TrafficManagerProfileTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -363,12 +449,49 @@ export class TrafficManagerProfileTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): TrafficManagerProfileTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TrafficManagerProfileTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -376,15 +499,15 @@ export class TrafficManagerProfileTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -392,15 +515,15 @@ export class TrafficManagerProfileTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -408,15 +531,15 @@ export class TrafficManagerProfileTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -424,7 +547,7 @@ export class TrafficManagerProfileTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -467,9 +590,9 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._trafficRoutingMethod = config.trafficRoutingMethod;
     this._trafficViewEnabled = config.trafficViewEnabled;
-    this._dnsConfig = config.dnsConfig;
-    this._monitorConfig = config.monitorConfig;
-    this._timeouts = config.timeouts;
+    this._dnsConfig.internalValue = config.dnsConfig;
+    this._monitorConfig.internalValue = config.monitorConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -487,11 +610,11 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
 
   // max_return - computed: false, optional: true, required: false
-  private _maxReturn?: number | undefined; 
+  private _maxReturn?: number; 
   public get maxReturn() {
     return this.getNumberAttribute('max_return');
   }
-  public set maxReturn(value: number | undefined) {
+  public set maxReturn(value: number) {
     this._maxReturn = value;
   }
   public resetMaxReturn() {
@@ -499,7 +622,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get maxReturnInput() {
-    return this._maxReturn
+    return this._maxReturn;
   }
 
   // name - computed: false, optional: false, required: true
@@ -512,15 +635,15 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // profile_status - computed: true, optional: true, required: false
-  private _profileStatus?: string | undefined; 
+  private _profileStatus?: string; 
   public get profileStatus() {
     return this.getStringAttribute('profile_status');
   }
-  public set profileStatus(value: string | undefined) {
+  public set profileStatus(value: string) {
     this._profileStatus = value;
   }
   public resetProfileStatus() {
@@ -528,7 +651,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get profileStatusInput() {
-    return this._profileStatus
+    return this._profileStatus;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -541,16 +664,16 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -558,7 +681,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // traffic_routing_method - computed: false, optional: false, required: true
@@ -571,15 +694,15 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get trafficRoutingMethodInput() {
-    return this._trafficRoutingMethod
+    return this._trafficRoutingMethod;
   }
 
   // traffic_view_enabled - computed: false, optional: true, required: false
-  private _trafficViewEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _trafficViewEnabled?: boolean | cdktf.IResolvable; 
   public get trafficViewEnabled() {
     return this.getBooleanAttribute('traffic_view_enabled') as any;
   }
-  public set trafficViewEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set trafficViewEnabled(value: boolean | cdktf.IResolvable) {
     this._trafficViewEnabled = value;
   }
   public resetTrafficViewEnabled() {
@@ -587,52 +710,49 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get trafficViewEnabledInput() {
-    return this._trafficViewEnabled
+    return this._trafficViewEnabled;
   }
 
   // dns_config - computed: false, optional: false, required: true
-  private _dnsConfig?: TrafficManagerProfileDnsConfig; 
-  private __dnsConfigOutput = new TrafficManagerProfileDnsConfigOutputReference(this as any, "dns_config", true);
+  private _dnsConfig = new TrafficManagerProfileDnsConfigOutputReference(this as any, "dns_config", true);
   public get dnsConfig() {
-    return this.__dnsConfigOutput;
+    return this._dnsConfig;
   }
   public putDnsConfig(value: TrafficManagerProfileDnsConfig) {
-    this._dnsConfig = value;
+    this._dnsConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get dnsConfigInput() {
-    return this._dnsConfig
+    return this._dnsConfig.internalValue;
   }
 
   // monitor_config - computed: false, optional: false, required: true
-  private _monitorConfig?: TrafficManagerProfileMonitorConfig; 
-  private __monitorConfigOutput = new TrafficManagerProfileMonitorConfigOutputReference(this as any, "monitor_config", true);
+  private _monitorConfig = new TrafficManagerProfileMonitorConfigOutputReference(this as any, "monitor_config", true);
   public get monitorConfig() {
-    return this.__monitorConfigOutput;
+    return this._monitorConfig;
   }
   public putMonitorConfig(value: TrafficManagerProfileMonitorConfig) {
-    this._monitorConfig = value;
+    this._monitorConfig.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get monitorConfigInput() {
-    return this._monitorConfig
+    return this._monitorConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: TrafficManagerProfileTimeouts | undefined; 
-  private __timeoutsOutput = new TrafficManagerProfileTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new TrafficManagerProfileTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: TrafficManagerProfileTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: TrafficManagerProfileTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -648,9 +768,9 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       traffic_routing_method: cdktf.stringToTerraform(this._trafficRoutingMethod),
       traffic_view_enabled: cdktf.booleanToTerraform(this._trafficViewEnabled),
-      dns_config: trafficManagerProfileDnsConfigToTerraform(this._dnsConfig),
-      monitor_config: trafficManagerProfileMonitorConfigToTerraform(this._monitorConfig),
-      timeouts: trafficManagerProfileTimeoutsToTerraform(this._timeouts),
+      dns_config: trafficManagerProfileDnsConfigToTerraform(this._dnsConfig.internalValue),
+      monitor_config: trafficManagerProfileMonitorConfigToTerraform(this._monitorConfig.internalValue),
+      timeouts: trafficManagerProfileTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -33,7 +33,7 @@ export interface DataAzurermEventgridTopicTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermEventgridTopicTimeoutsToTerraform(struct?: DataAzurermEventgridTopicTimeoutsOutputReference | DataAzurermEventgridTopicTimeouts): any {
+export function dataAzurermEventgridTopicTimeoutsToTerraform(struct?: DataAzurermEventgridTopicTimeoutsOutputReference | DataAzurermEventgridTopicTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -53,12 +53,31 @@ export class DataAzurermEventgridTopicTimeoutsOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermEventgridTopicTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermEventgridTopicTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -66,7 +85,7 @@ export class DataAzurermEventgridTopicTimeoutsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -105,7 +124,7 @@ export class DataAzurermEventgridTopic extends cdktf.TerraformDataSource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -137,7 +156,7 @@ export class DataAzurermEventgridTopic extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // primary_access_key - computed: true, optional: false, required: false
@@ -155,7 +174,7 @@ export class DataAzurermEventgridTopic extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // secondary_access_key - computed: true, optional: false, required: false
@@ -164,12 +183,12 @@ export class DataAzurermEventgridTopic extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -177,24 +196,23 @@ export class DataAzurermEventgridTopic extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermEventgridTopicTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermEventgridTopicTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermEventgridTopicTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermEventgridTopicTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermEventgridTopicTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -206,7 +224,7 @@ export class DataAzurermEventgridTopic extends cdktf.TerraformDataSource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      timeouts: dataAzurermEventgridTopicTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermEventgridTopicTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

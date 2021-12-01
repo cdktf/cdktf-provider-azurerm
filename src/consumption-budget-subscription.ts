@@ -67,7 +67,7 @@ export interface ConsumptionBudgetSubscriptionFilterDimension {
   readonly values: string[];
 }
 
-function consumptionBudgetSubscriptionFilterDimensionToTerraform(struct?: ConsumptionBudgetSubscriptionFilterDimension): any {
+export function consumptionBudgetSubscriptionFilterDimensionToTerraform(struct?: ConsumptionBudgetSubscriptionFilterDimension): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -94,7 +94,7 @@ export interface ConsumptionBudgetSubscriptionFilterNotDimension {
   readonly values: string[];
 }
 
-function consumptionBudgetSubscriptionFilterNotDimensionToTerraform(struct?: ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference | ConsumptionBudgetSubscriptionFilterNotDimension): any {
+export function consumptionBudgetSubscriptionFilterNotDimensionToTerraform(struct?: ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference | ConsumptionBudgetSubscriptionFilterNotDimension): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -116,6 +116,37 @@ export class ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ConsumptionBudgetSubscriptionFilterNotDimension | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._operator) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._values) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ConsumptionBudgetSubscriptionFilterNotDimension | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._operator = undefined;
+      this._values = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._operator = value.operator;
+      this._values = value.values;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -126,15 +157,15 @@ export class ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // operator - computed: false, optional: true, required: false
-  private _operator?: string | undefined; 
+  private _operator?: string; 
   public get operator() {
     return this.getStringAttribute('operator');
   }
-  public set operator(value: string | undefined) {
+  public set operator(value: string) {
     this._operator = value;
   }
   public resetOperator() {
@@ -142,7 +173,7 @@ export class ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get operatorInput() {
-    return this._operator
+    return this._operator;
   }
 
   // values - computed: false, optional: false, required: true
@@ -155,7 +186,7 @@ export class ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
-    return this._values
+    return this._values;
   }
 }
 export interface ConsumptionBudgetSubscriptionFilterNotTag {
@@ -173,7 +204,7 @@ export interface ConsumptionBudgetSubscriptionFilterNotTag {
   readonly values: string[];
 }
 
-function consumptionBudgetSubscriptionFilterNotTagToTerraform(struct?: ConsumptionBudgetSubscriptionFilterNotTagOutputReference | ConsumptionBudgetSubscriptionFilterNotTag): any {
+export function consumptionBudgetSubscriptionFilterNotTagToTerraform(struct?: ConsumptionBudgetSubscriptionFilterNotTagOutputReference | ConsumptionBudgetSubscriptionFilterNotTag): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -195,6 +226,37 @@ export class ConsumptionBudgetSubscriptionFilterNotTagOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ConsumptionBudgetSubscriptionFilterNotTag | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._operator) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._values) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ConsumptionBudgetSubscriptionFilterNotTag | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._operator = undefined;
+      this._values = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._operator = value.operator;
+      this._values = value.values;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -205,15 +267,15 @@ export class ConsumptionBudgetSubscriptionFilterNotTagOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // operator - computed: false, optional: true, required: false
-  private _operator?: string | undefined; 
+  private _operator?: string; 
   public get operator() {
     return this.getStringAttribute('operator');
   }
-  public set operator(value: string | undefined) {
+  public set operator(value: string) {
     this._operator = value;
   }
   public resetOperator() {
@@ -221,7 +283,7 @@ export class ConsumptionBudgetSubscriptionFilterNotTagOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get operatorInput() {
-    return this._operator
+    return this._operator;
   }
 
   // values - computed: false, optional: false, required: true
@@ -234,7 +296,7 @@ export class ConsumptionBudgetSubscriptionFilterNotTagOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
-    return this._values
+    return this._values;
   }
 }
 export interface ConsumptionBudgetSubscriptionFilterNot {
@@ -252,7 +314,7 @@ export interface ConsumptionBudgetSubscriptionFilterNot {
   readonly tag?: ConsumptionBudgetSubscriptionFilterNotTag;
 }
 
-function consumptionBudgetSubscriptionFilterNotToTerraform(struct?: ConsumptionBudgetSubscriptionFilterNotOutputReference | ConsumptionBudgetSubscriptionFilterNot): any {
+export function consumptionBudgetSubscriptionFilterNotToTerraform(struct?: ConsumptionBudgetSubscriptionFilterNotOutputReference | ConsumptionBudgetSubscriptionFilterNot): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -273,38 +335,61 @@ export class ConsumptionBudgetSubscriptionFilterNotOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // dimension - computed: false, optional: true, required: false
-  private _dimension?: ConsumptionBudgetSubscriptionFilterNotDimension | undefined; 
-  private __dimensionOutput = new ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference(this as any, "dimension", true);
-  public get dimension() {
-    return this.__dimensionOutput;
+  public get internalValue(): ConsumptionBudgetSubscriptionFilterNot | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._dimension) {
+      hasAnyValues = true;
+      internalValueResult.dimension = this._dimension?.internalValue;
+    }
+    if (this._tag) {
+      hasAnyValues = true;
+      internalValueResult.tag = this._tag?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putDimension(value: ConsumptionBudgetSubscriptionFilterNotDimension | undefined) {
-    this._dimension = value;
+
+  public set internalValue(value: ConsumptionBudgetSubscriptionFilterNot | undefined) {
+    if (value === undefined) {
+      this._dimension.internalValue = undefined;
+      this._tag.internalValue = undefined;
+    }
+    else {
+      this._dimension.internalValue = value.dimension;
+      this._tag.internalValue = value.tag;
+    }
+  }
+
+  // dimension - computed: false, optional: true, required: false
+  private _dimension = new ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference(this as any, "dimension", true);
+  public get dimension() {
+    return this._dimension;
+  }
+  public putDimension(value: ConsumptionBudgetSubscriptionFilterNotDimension) {
+    this._dimension.internalValue = value;
   }
   public resetDimension() {
-    this._dimension = undefined;
+    this._dimension.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dimensionInput() {
-    return this._dimension
+    return this._dimension.internalValue;
   }
 
   // tag - computed: false, optional: true, required: false
-  private _tag?: ConsumptionBudgetSubscriptionFilterNotTag | undefined; 
-  private __tagOutput = new ConsumptionBudgetSubscriptionFilterNotTagOutputReference(this as any, "tag", true);
+  private _tag = new ConsumptionBudgetSubscriptionFilterNotTagOutputReference(this as any, "tag", true);
   public get tag() {
-    return this.__tagOutput;
+    return this._tag;
   }
-  public putTag(value: ConsumptionBudgetSubscriptionFilterNotTag | undefined) {
-    this._tag = value;
+  public putTag(value: ConsumptionBudgetSubscriptionFilterNotTag) {
+    this._tag.internalValue = value;
   }
   public resetTag() {
-    this._tag = undefined;
+    this._tag.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get tagInput() {
-    return this._tag
+    return this._tag.internalValue;
   }
 }
 export interface ConsumptionBudgetSubscriptionFilterTag {
@@ -322,7 +407,7 @@ export interface ConsumptionBudgetSubscriptionFilterTag {
   readonly values: string[];
 }
 
-function consumptionBudgetSubscriptionFilterTagToTerraform(struct?: ConsumptionBudgetSubscriptionFilterTag): any {
+export function consumptionBudgetSubscriptionFilterTagToTerraform(struct?: ConsumptionBudgetSubscriptionFilterTag): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -355,7 +440,7 @@ export interface ConsumptionBudgetSubscriptionFilter {
   readonly tag?: ConsumptionBudgetSubscriptionFilterTag[];
 }
 
-function consumptionBudgetSubscriptionFilterToTerraform(struct?: ConsumptionBudgetSubscriptionFilterOutputReference | ConsumptionBudgetSubscriptionFilter): any {
+export function consumptionBudgetSubscriptionFilterToTerraform(struct?: ConsumptionBudgetSubscriptionFilterOutputReference | ConsumptionBudgetSubscriptionFilter): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -377,13 +462,44 @@ export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ConsumptionBudgetSubscriptionFilter | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._dimension) {
+      hasAnyValues = true;
+      internalValueResult.dimension = this._dimension;
+    }
+    if (this._not) {
+      hasAnyValues = true;
+      internalValueResult.not = this._not?.internalValue;
+    }
+    if (this._tag) {
+      hasAnyValues = true;
+      internalValueResult.tag = this._tag;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ConsumptionBudgetSubscriptionFilter | undefined) {
+    if (value === undefined) {
+      this._dimension = undefined;
+      this._not.internalValue = undefined;
+      this._tag = undefined;
+    }
+    else {
+      this._dimension = value.dimension;
+      this._not.internalValue = value.not;
+      this._tag = value.tag;
+    }
+  }
+
   // dimension - computed: false, optional: true, required: false
-  private _dimension?: ConsumptionBudgetSubscriptionFilterDimension[] | undefined; 
+  private _dimension?: ConsumptionBudgetSubscriptionFilterDimension[]; 
   public get dimension() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('dimension') as any;
   }
-  public set dimension(value: ConsumptionBudgetSubscriptionFilterDimension[] | undefined) {
+  public set dimension(value: ConsumptionBudgetSubscriptionFilterDimension[]) {
     this._dimension = value;
   }
   public resetDimension() {
@@ -391,33 +507,32 @@ export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get dimensionInput() {
-    return this._dimension
+    return this._dimension;
   }
 
   // not - computed: false, optional: true, required: false
-  private _not?: ConsumptionBudgetSubscriptionFilterNot | undefined; 
-  private __notOutput = new ConsumptionBudgetSubscriptionFilterNotOutputReference(this as any, "not", true);
+  private _not = new ConsumptionBudgetSubscriptionFilterNotOutputReference(this as any, "not", true);
   public get not() {
-    return this.__notOutput;
+    return this._not;
   }
-  public putNot(value: ConsumptionBudgetSubscriptionFilterNot | undefined) {
-    this._not = value;
+  public putNot(value: ConsumptionBudgetSubscriptionFilterNot) {
+    this._not.internalValue = value;
   }
   public resetNot() {
-    this._not = undefined;
+    this._not.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get notInput() {
-    return this._not
+    return this._not.internalValue;
   }
 
   // tag - computed: false, optional: true, required: false
-  private _tag?: ConsumptionBudgetSubscriptionFilterTag[] | undefined; 
+  private _tag?: ConsumptionBudgetSubscriptionFilterTag[]; 
   public get tag() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tag') as any;
   }
-  public set tag(value: ConsumptionBudgetSubscriptionFilterTag[] | undefined) {
+  public set tag(value: ConsumptionBudgetSubscriptionFilterTag[]) {
     this._tag = value;
   }
   public resetTag() {
@@ -425,7 +540,7 @@ export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get tagInput() {
-    return this._tag
+    return this._tag;
   }
 }
 export interface ConsumptionBudgetSubscriptionNotification {
@@ -459,7 +574,7 @@ export interface ConsumptionBudgetSubscriptionNotification {
   readonly thresholdType?: string;
 }
 
-function consumptionBudgetSubscriptionNotificationToTerraform(struct?: ConsumptionBudgetSubscriptionNotification): any {
+export function consumptionBudgetSubscriptionNotificationToTerraform(struct?: ConsumptionBudgetSubscriptionNotification): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -486,7 +601,7 @@ export interface ConsumptionBudgetSubscriptionTimePeriod {
   readonly startDate: string;
 }
 
-function consumptionBudgetSubscriptionTimePeriodToTerraform(struct?: ConsumptionBudgetSubscriptionTimePeriodOutputReference | ConsumptionBudgetSubscriptionTimePeriod): any {
+export function consumptionBudgetSubscriptionTimePeriodToTerraform(struct?: ConsumptionBudgetSubscriptionTimePeriodOutputReference | ConsumptionBudgetSubscriptionTimePeriod): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -507,12 +622,37 @@ export class ConsumptionBudgetSubscriptionTimePeriodOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ConsumptionBudgetSubscriptionTimePeriod | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._endDate) {
+      hasAnyValues = true;
+      internalValueResult.endDate = this._endDate;
+    }
+    if (this._startDate) {
+      hasAnyValues = true;
+      internalValueResult.startDate = this._startDate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ConsumptionBudgetSubscriptionTimePeriod | undefined) {
+    if (value === undefined) {
+      this._endDate = undefined;
+      this._startDate = undefined;
+    }
+    else {
+      this._endDate = value.endDate;
+      this._startDate = value.startDate;
+    }
+  }
+
   // end_date - computed: true, optional: true, required: false
-  private _endDate?: string | undefined; 
+  private _endDate?: string; 
   public get endDate() {
     return this.getStringAttribute('end_date');
   }
-  public set endDate(value: string | undefined) {
+  public set endDate(value: string) {
     this._endDate = value;
   }
   public resetEndDate() {
@@ -520,7 +660,7 @@ export class ConsumptionBudgetSubscriptionTimePeriodOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get endDateInput() {
-    return this._endDate
+    return this._endDate;
   }
 
   // start_date - computed: false, optional: false, required: true
@@ -533,7 +673,7 @@ export class ConsumptionBudgetSubscriptionTimePeriodOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get startDateInput() {
-    return this._startDate
+    return this._startDate;
   }
 }
 export interface ConsumptionBudgetSubscriptionTimeouts {
@@ -555,7 +695,7 @@ export interface ConsumptionBudgetSubscriptionTimeouts {
   readonly update?: string;
 }
 
-function consumptionBudgetSubscriptionTimeoutsToTerraform(struct?: ConsumptionBudgetSubscriptionTimeoutsOutputReference | ConsumptionBudgetSubscriptionTimeouts): any {
+export function consumptionBudgetSubscriptionTimeoutsToTerraform(struct?: ConsumptionBudgetSubscriptionTimeoutsOutputReference | ConsumptionBudgetSubscriptionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -578,12 +718,49 @@ export class ConsumptionBudgetSubscriptionTimeoutsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ConsumptionBudgetSubscriptionTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ConsumptionBudgetSubscriptionTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -591,15 +768,15 @@ export class ConsumptionBudgetSubscriptionTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -607,15 +784,15 @@ export class ConsumptionBudgetSubscriptionTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -623,15 +800,15 @@ export class ConsumptionBudgetSubscriptionTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -639,7 +816,7 @@ export class ConsumptionBudgetSubscriptionTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -680,10 +857,10 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
     this._name = config.name;
     this._subscriptionId = config.subscriptionId;
     this._timeGrain = config.timeGrain;
-    this._filter = config.filter;
+    this._filter.internalValue = config.filter;
     this._notification = config.notification;
-    this._timePeriod = config.timePeriod;
-    this._timeouts = config.timeouts;
+    this._timePeriod.internalValue = config.timePeriod;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -700,15 +877,15 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get amountInput() {
-    return this._amount
+    return this._amount;
   }
 
   // etag - computed: true, optional: true, required: false
-  private _etag?: string | undefined; 
+  private _etag?: string; 
   public get etag() {
     return this.getStringAttribute('etag');
   }
-  public set etag(value: string | undefined) {
+  public set etag(value: string) {
     this._etag = value;
   }
   public resetEtag() {
@@ -716,7 +893,7 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get etagInput() {
-    return this._etag
+    return this._etag;
   }
 
   // id - computed: true, optional: true, required: false
@@ -734,7 +911,7 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // subscription_id - computed: false, optional: false, required: true
@@ -747,15 +924,15 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get subscriptionIdInput() {
-    return this._subscriptionId
+    return this._subscriptionId;
   }
 
   // time_grain - computed: false, optional: true, required: false
-  private _timeGrain?: string | undefined; 
+  private _timeGrain?: string; 
   public get timeGrain() {
     return this.getStringAttribute('time_grain');
   }
-  public set timeGrain(value: string | undefined) {
+  public set timeGrain(value: string) {
     this._timeGrain = value;
   }
   public resetTimeGrain() {
@@ -763,24 +940,23 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get timeGrainInput() {
-    return this._timeGrain
+    return this._timeGrain;
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter?: ConsumptionBudgetSubscriptionFilter | undefined; 
-  private __filterOutput = new ConsumptionBudgetSubscriptionFilterOutputReference(this as any, "filter", true);
+  private _filter = new ConsumptionBudgetSubscriptionFilterOutputReference(this as any, "filter", true);
   public get filter() {
-    return this.__filterOutput;
+    return this._filter;
   }
-  public putFilter(value: ConsumptionBudgetSubscriptionFilter | undefined) {
-    this._filter = value;
+  public putFilter(value: ConsumptionBudgetSubscriptionFilter) {
+    this._filter.internalValue = value;
   }
   public resetFilter() {
-    this._filter = undefined;
+    this._filter.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get filterInput() {
-    return this._filter
+    return this._filter.internalValue;
   }
 
   // notification - computed: false, optional: false, required: true
@@ -794,38 +970,36 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get notificationInput() {
-    return this._notification
+    return this._notification;
   }
 
   // time_period - computed: false, optional: false, required: true
-  private _timePeriod?: ConsumptionBudgetSubscriptionTimePeriod; 
-  private __timePeriodOutput = new ConsumptionBudgetSubscriptionTimePeriodOutputReference(this as any, "time_period", true);
+  private _timePeriod = new ConsumptionBudgetSubscriptionTimePeriodOutputReference(this as any, "time_period", true);
   public get timePeriod() {
-    return this.__timePeriodOutput;
+    return this._timePeriod;
   }
   public putTimePeriod(value: ConsumptionBudgetSubscriptionTimePeriod) {
-    this._timePeriod = value;
+    this._timePeriod.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get timePeriodInput() {
-    return this._timePeriod
+    return this._timePeriod.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ConsumptionBudgetSubscriptionTimeouts | undefined; 
-  private __timeoutsOutput = new ConsumptionBudgetSubscriptionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ConsumptionBudgetSubscriptionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ConsumptionBudgetSubscriptionTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ConsumptionBudgetSubscriptionTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -839,10 +1013,10 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       subscription_id: cdktf.stringToTerraform(this._subscriptionId),
       time_grain: cdktf.stringToTerraform(this._timeGrain),
-      filter: consumptionBudgetSubscriptionFilterToTerraform(this._filter),
+      filter: consumptionBudgetSubscriptionFilterToTerraform(this._filter.internalValue),
       notification: cdktf.listMapper(consumptionBudgetSubscriptionNotificationToTerraform)(this._notification),
-      time_period: consumptionBudgetSubscriptionTimePeriodToTerraform(this._timePeriod),
-      timeouts: consumptionBudgetSubscriptionTimeoutsToTerraform(this._timeouts),
+      time_period: consumptionBudgetSubscriptionTimePeriodToTerraform(this._timePeriod.internalValue),
+      timeouts: consumptionBudgetSubscriptionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

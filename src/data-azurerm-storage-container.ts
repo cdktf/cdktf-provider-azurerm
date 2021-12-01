@@ -33,7 +33,7 @@ export interface DataAzurermStorageContainerTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermStorageContainerTimeoutsToTerraform(struct?: DataAzurermStorageContainerTimeoutsOutputReference | DataAzurermStorageContainerTimeouts): any {
+export function dataAzurermStorageContainerTimeoutsToTerraform(struct?: DataAzurermStorageContainerTimeoutsOutputReference | DataAzurermStorageContainerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -53,12 +53,31 @@ export class DataAzurermStorageContainerTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermStorageContainerTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermStorageContainerTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -66,7 +85,7 @@ export class DataAzurermStorageContainerTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -105,7 +124,7 @@ export class DataAzurermStorageContainer extends cdktf.TerraformDataSource {
     this._metadata = config.metadata;
     this._name = config.name;
     this._storageAccountName = config.storageAccountName;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -133,12 +152,12 @@ export class DataAzurermStorageContainer extends cdktf.TerraformDataSource {
   }
 
   // metadata - computed: true, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
   public get metadata() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -146,7 +165,7 @@ export class DataAzurermStorageContainer extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get metadataInput() {
-    return this._metadata
+    return this._metadata;
   }
 
   // name - computed: false, optional: false, required: true
@@ -159,7 +178,7 @@ export class DataAzurermStorageContainer extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_manager_id - computed: true, optional: false, required: false
@@ -177,24 +196,23 @@ export class DataAzurermStorageContainer extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountNameInput() {
-    return this._storageAccountName
+    return this._storageAccountName;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermStorageContainerTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermStorageContainerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermStorageContainerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermStorageContainerTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermStorageContainerTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -206,7 +224,7 @@ export class DataAzurermStorageContainer extends cdktf.TerraformDataSource {
       metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
-      timeouts: dataAzurermStorageContainerTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermStorageContainerTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

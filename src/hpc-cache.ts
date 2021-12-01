@@ -119,7 +119,7 @@ export interface HpcCacheDefaultAccessPolicyAccessRule {
   readonly suidEnabled?: boolean | cdktf.IResolvable;
 }
 
-function hpcCacheDefaultAccessPolicyAccessRuleToTerraform(struct?: HpcCacheDefaultAccessPolicyAccessRule): any {
+export function hpcCacheDefaultAccessPolicyAccessRuleToTerraform(struct?: HpcCacheDefaultAccessPolicyAccessRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -145,7 +145,7 @@ export interface HpcCacheDefaultAccessPolicy {
   readonly accessRule: HpcCacheDefaultAccessPolicyAccessRule[];
 }
 
-function hpcCacheDefaultAccessPolicyToTerraform(struct?: HpcCacheDefaultAccessPolicyOutputReference | HpcCacheDefaultAccessPolicy): any {
+export function hpcCacheDefaultAccessPolicyToTerraform(struct?: HpcCacheDefaultAccessPolicyOutputReference | HpcCacheDefaultAccessPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -165,6 +165,25 @@ export class HpcCacheDefaultAccessPolicyOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HpcCacheDefaultAccessPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._accessRule) {
+      hasAnyValues = true;
+      internalValueResult.accessRule = this._accessRule;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HpcCacheDefaultAccessPolicy | undefined) {
+    if (value === undefined) {
+      this._accessRule = undefined;
+    }
+    else {
+      this._accessRule = value.accessRule;
+    }
+  }
+
   // access_rule - computed: false, optional: false, required: true
   private _accessRule?: HpcCacheDefaultAccessPolicyAccessRule[]; 
   public get accessRule() {
@@ -176,7 +195,7 @@ export class HpcCacheDefaultAccessPolicyOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get accessRuleInput() {
-    return this._accessRule
+    return this._accessRule;
   }
 }
 export interface HpcCacheDirectoryActiveDirectory {
@@ -210,7 +229,7 @@ export interface HpcCacheDirectoryActiveDirectory {
   readonly username: string;
 }
 
-function hpcCacheDirectoryActiveDirectoryToTerraform(struct?: HpcCacheDirectoryActiveDirectoryOutputReference | HpcCacheDirectoryActiveDirectory): any {
+export function hpcCacheDirectoryActiveDirectoryToTerraform(struct?: HpcCacheDirectoryActiveDirectoryOutputReference | HpcCacheDirectoryActiveDirectory): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -236,6 +255,61 @@ export class HpcCacheDirectoryActiveDirectoryOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HpcCacheDirectoryActiveDirectory | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._cacheNetbiosName) {
+      hasAnyValues = true;
+      internalValueResult.cacheNetbiosName = this._cacheNetbiosName;
+    }
+    if (this._dnsPrimaryIp) {
+      hasAnyValues = true;
+      internalValueResult.dnsPrimaryIp = this._dnsPrimaryIp;
+    }
+    if (this._dnsSecondaryIp) {
+      hasAnyValues = true;
+      internalValueResult.dnsSecondaryIp = this._dnsSecondaryIp;
+    }
+    if (this._domainName) {
+      hasAnyValues = true;
+      internalValueResult.domainName = this._domainName;
+    }
+    if (this._domainNetbiosName) {
+      hasAnyValues = true;
+      internalValueResult.domainNetbiosName = this._domainNetbiosName;
+    }
+    if (this._password) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._username) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HpcCacheDirectoryActiveDirectory | undefined) {
+    if (value === undefined) {
+      this._cacheNetbiosName = undefined;
+      this._dnsPrimaryIp = undefined;
+      this._dnsSecondaryIp = undefined;
+      this._domainName = undefined;
+      this._domainNetbiosName = undefined;
+      this._password = undefined;
+      this._username = undefined;
+    }
+    else {
+      this._cacheNetbiosName = value.cacheNetbiosName;
+      this._dnsPrimaryIp = value.dnsPrimaryIp;
+      this._dnsSecondaryIp = value.dnsSecondaryIp;
+      this._domainName = value.domainName;
+      this._domainNetbiosName = value.domainNetbiosName;
+      this._password = value.password;
+      this._username = value.username;
+    }
+  }
+
   // cache_netbios_name - computed: false, optional: false, required: true
   private _cacheNetbiosName?: string; 
   public get cacheNetbiosName() {
@@ -246,7 +320,7 @@ export class HpcCacheDirectoryActiveDirectoryOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get cacheNetbiosNameInput() {
-    return this._cacheNetbiosName
+    return this._cacheNetbiosName;
   }
 
   // dns_primary_ip - computed: false, optional: false, required: true
@@ -259,15 +333,15 @@ export class HpcCacheDirectoryActiveDirectoryOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get dnsPrimaryIpInput() {
-    return this._dnsPrimaryIp
+    return this._dnsPrimaryIp;
   }
 
   // dns_secondary_ip - computed: false, optional: true, required: false
-  private _dnsSecondaryIp?: string | undefined; 
+  private _dnsSecondaryIp?: string; 
   public get dnsSecondaryIp() {
     return this.getStringAttribute('dns_secondary_ip');
   }
-  public set dnsSecondaryIp(value: string | undefined) {
+  public set dnsSecondaryIp(value: string) {
     this._dnsSecondaryIp = value;
   }
   public resetDnsSecondaryIp() {
@@ -275,7 +349,7 @@ export class HpcCacheDirectoryActiveDirectoryOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get dnsSecondaryIpInput() {
-    return this._dnsSecondaryIp
+    return this._dnsSecondaryIp;
   }
 
   // domain_name - computed: false, optional: false, required: true
@@ -288,7 +362,7 @@ export class HpcCacheDirectoryActiveDirectoryOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get domainNameInput() {
-    return this._domainName
+    return this._domainName;
   }
 
   // domain_netbios_name - computed: false, optional: false, required: true
@@ -301,7 +375,7 @@ export class HpcCacheDirectoryActiveDirectoryOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get domainNetbiosNameInput() {
-    return this._domainNetbiosName
+    return this._domainNetbiosName;
   }
 
   // password - computed: false, optional: false, required: true
@@ -314,7 +388,7 @@ export class HpcCacheDirectoryActiveDirectoryOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // username - computed: false, optional: false, required: true
@@ -327,7 +401,7 @@ export class HpcCacheDirectoryActiveDirectoryOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
-    return this._username
+    return this._username;
   }
 }
 export interface HpcCacheDirectoryFlatFile {
@@ -341,7 +415,7 @@ export interface HpcCacheDirectoryFlatFile {
   readonly passwordFileUri: string;
 }
 
-function hpcCacheDirectoryFlatFileToTerraform(struct?: HpcCacheDirectoryFlatFileOutputReference | HpcCacheDirectoryFlatFile): any {
+export function hpcCacheDirectoryFlatFileToTerraform(struct?: HpcCacheDirectoryFlatFileOutputReference | HpcCacheDirectoryFlatFile): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -362,6 +436,31 @@ export class HpcCacheDirectoryFlatFileOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HpcCacheDirectoryFlatFile | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._groupFileUri) {
+      hasAnyValues = true;
+      internalValueResult.groupFileUri = this._groupFileUri;
+    }
+    if (this._passwordFileUri) {
+      hasAnyValues = true;
+      internalValueResult.passwordFileUri = this._passwordFileUri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HpcCacheDirectoryFlatFile | undefined) {
+    if (value === undefined) {
+      this._groupFileUri = undefined;
+      this._passwordFileUri = undefined;
+    }
+    else {
+      this._groupFileUri = value.groupFileUri;
+      this._passwordFileUri = value.passwordFileUri;
+    }
+  }
+
   // group_file_uri - computed: false, optional: false, required: true
   private _groupFileUri?: string; 
   public get groupFileUri() {
@@ -372,7 +471,7 @@ export class HpcCacheDirectoryFlatFileOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get groupFileUriInput() {
-    return this._groupFileUri
+    return this._groupFileUri;
   }
 
   // password_file_uri - computed: false, optional: false, required: true
@@ -385,7 +484,7 @@ export class HpcCacheDirectoryFlatFileOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get passwordFileUriInput() {
-    return this._passwordFileUri
+    return this._passwordFileUri;
   }
 }
 export interface HpcCacheDirectoryLdapBind {
@@ -399,7 +498,7 @@ export interface HpcCacheDirectoryLdapBind {
   readonly password: string;
 }
 
-function hpcCacheDirectoryLdapBindToTerraform(struct?: HpcCacheDirectoryLdapBindOutputReference | HpcCacheDirectoryLdapBind): any {
+export function hpcCacheDirectoryLdapBindToTerraform(struct?: HpcCacheDirectoryLdapBindOutputReference | HpcCacheDirectoryLdapBind): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -420,6 +519,31 @@ export class HpcCacheDirectoryLdapBindOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HpcCacheDirectoryLdapBind | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._dn) {
+      hasAnyValues = true;
+      internalValueResult.dn = this._dn;
+    }
+    if (this._password) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HpcCacheDirectoryLdapBind | undefined) {
+    if (value === undefined) {
+      this._dn = undefined;
+      this._password = undefined;
+    }
+    else {
+      this._dn = value.dn;
+      this._password = value.password;
+    }
+  }
+
   // dn - computed: false, optional: false, required: true
   private _dn?: string; 
   public get dn() {
@@ -430,7 +554,7 @@ export class HpcCacheDirectoryLdapBindOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get dnInput() {
-    return this._dn
+    return this._dn;
   }
 
   // password - computed: false, optional: false, required: true
@@ -443,7 +567,7 @@ export class HpcCacheDirectoryLdapBindOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 }
 export interface HpcCacheDirectoryLdap {
@@ -475,7 +599,7 @@ export interface HpcCacheDirectoryLdap {
   readonly bind?: HpcCacheDirectoryLdapBind;
 }
 
-function hpcCacheDirectoryLdapToTerraform(struct?: HpcCacheDirectoryLdapOutputReference | HpcCacheDirectoryLdap): any {
+export function hpcCacheDirectoryLdapToTerraform(struct?: HpcCacheDirectoryLdapOutputReference | HpcCacheDirectoryLdap): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -500,6 +624,55 @@ export class HpcCacheDirectoryLdapOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HpcCacheDirectoryLdap | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._baseDn) {
+      hasAnyValues = true;
+      internalValueResult.baseDn = this._baseDn;
+    }
+    if (this._certificateValidationUri) {
+      hasAnyValues = true;
+      internalValueResult.certificateValidationUri = this._certificateValidationUri;
+    }
+    if (this._downloadCertificateAutomatically) {
+      hasAnyValues = true;
+      internalValueResult.downloadCertificateAutomatically = this._downloadCertificateAutomatically;
+    }
+    if (this._encrypted) {
+      hasAnyValues = true;
+      internalValueResult.encrypted = this._encrypted;
+    }
+    if (this._server) {
+      hasAnyValues = true;
+      internalValueResult.server = this._server;
+    }
+    if (this._bind) {
+      hasAnyValues = true;
+      internalValueResult.bind = this._bind?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HpcCacheDirectoryLdap | undefined) {
+    if (value === undefined) {
+      this._baseDn = undefined;
+      this._certificateValidationUri = undefined;
+      this._downloadCertificateAutomatically = undefined;
+      this._encrypted = undefined;
+      this._server = undefined;
+      this._bind.internalValue = undefined;
+    }
+    else {
+      this._baseDn = value.baseDn;
+      this._certificateValidationUri = value.certificateValidationUri;
+      this._downloadCertificateAutomatically = value.downloadCertificateAutomatically;
+      this._encrypted = value.encrypted;
+      this._server = value.server;
+      this._bind.internalValue = value.bind;
+    }
+  }
+
   // base_dn - computed: false, optional: false, required: true
   private _baseDn?: string; 
   public get baseDn() {
@@ -510,15 +683,15 @@ export class HpcCacheDirectoryLdapOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get baseDnInput() {
-    return this._baseDn
+    return this._baseDn;
   }
 
   // certificate_validation_uri - computed: false, optional: true, required: false
-  private _certificateValidationUri?: string | undefined; 
+  private _certificateValidationUri?: string; 
   public get certificateValidationUri() {
     return this.getStringAttribute('certificate_validation_uri');
   }
-  public set certificateValidationUri(value: string | undefined) {
+  public set certificateValidationUri(value: string) {
     this._certificateValidationUri = value;
   }
   public resetCertificateValidationUri() {
@@ -526,15 +699,15 @@ export class HpcCacheDirectoryLdapOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get certificateValidationUriInput() {
-    return this._certificateValidationUri
+    return this._certificateValidationUri;
   }
 
   // download_certificate_automatically - computed: false, optional: true, required: false
-  private _downloadCertificateAutomatically?: boolean | cdktf.IResolvable | undefined; 
+  private _downloadCertificateAutomatically?: boolean | cdktf.IResolvable; 
   public get downloadCertificateAutomatically() {
     return this.getBooleanAttribute('download_certificate_automatically') as any;
   }
-  public set downloadCertificateAutomatically(value: boolean | cdktf.IResolvable | undefined) {
+  public set downloadCertificateAutomatically(value: boolean | cdktf.IResolvable) {
     this._downloadCertificateAutomatically = value;
   }
   public resetDownloadCertificateAutomatically() {
@@ -542,15 +715,15 @@ export class HpcCacheDirectoryLdapOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get downloadCertificateAutomaticallyInput() {
-    return this._downloadCertificateAutomatically
+    return this._downloadCertificateAutomatically;
   }
 
   // encrypted - computed: false, optional: true, required: false
-  private _encrypted?: boolean | cdktf.IResolvable | undefined; 
+  private _encrypted?: boolean | cdktf.IResolvable; 
   public get encrypted() {
     return this.getBooleanAttribute('encrypted') as any;
   }
-  public set encrypted(value: boolean | cdktf.IResolvable | undefined) {
+  public set encrypted(value: boolean | cdktf.IResolvable) {
     this._encrypted = value;
   }
   public resetEncrypted() {
@@ -558,7 +731,7 @@ export class HpcCacheDirectoryLdapOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get encryptedInput() {
-    return this._encrypted
+    return this._encrypted;
   }
 
   // server - computed: false, optional: false, required: true
@@ -571,24 +744,23 @@ export class HpcCacheDirectoryLdapOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get serverInput() {
-    return this._server
+    return this._server;
   }
 
   // bind - computed: false, optional: true, required: false
-  private _bind?: HpcCacheDirectoryLdapBind | undefined; 
-  private __bindOutput = new HpcCacheDirectoryLdapBindOutputReference(this as any, "bind", true);
+  private _bind = new HpcCacheDirectoryLdapBindOutputReference(this as any, "bind", true);
   public get bind() {
-    return this.__bindOutput;
+    return this._bind;
   }
-  public putBind(value: HpcCacheDirectoryLdapBind | undefined) {
-    this._bind = value;
+  public putBind(value: HpcCacheDirectoryLdapBind) {
+    this._bind.internalValue = value;
   }
   public resetBind() {
-    this._bind = undefined;
+    this._bind.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get bindInput() {
-    return this._bind
+    return this._bind.internalValue;
   }
 }
 export interface HpcCacheDns {
@@ -602,7 +774,7 @@ export interface HpcCacheDns {
   readonly servers: string[];
 }
 
-function hpcCacheDnsToTerraform(struct?: HpcCacheDnsOutputReference | HpcCacheDns): any {
+export function hpcCacheDnsToTerraform(struct?: HpcCacheDnsOutputReference | HpcCacheDns): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -623,12 +795,37 @@ export class HpcCacheDnsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HpcCacheDns | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._searchDomain) {
+      hasAnyValues = true;
+      internalValueResult.searchDomain = this._searchDomain;
+    }
+    if (this._servers) {
+      hasAnyValues = true;
+      internalValueResult.servers = this._servers;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HpcCacheDns | undefined) {
+    if (value === undefined) {
+      this._searchDomain = undefined;
+      this._servers = undefined;
+    }
+    else {
+      this._searchDomain = value.searchDomain;
+      this._servers = value.servers;
+    }
+  }
+
   // search_domain - computed: false, optional: true, required: false
-  private _searchDomain?: string | undefined; 
+  private _searchDomain?: string; 
   public get searchDomain() {
     return this.getStringAttribute('search_domain');
   }
-  public set searchDomain(value: string | undefined) {
+  public set searchDomain(value: string) {
     this._searchDomain = value;
   }
   public resetSearchDomain() {
@@ -636,7 +833,7 @@ export class HpcCacheDnsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get searchDomainInput() {
-    return this._searchDomain
+    return this._searchDomain;
   }
 
   // servers - computed: false, optional: false, required: true
@@ -649,7 +846,7 @@ export class HpcCacheDnsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get serversInput() {
-    return this._servers
+    return this._servers;
   }
 }
 export interface HpcCacheTimeouts {
@@ -671,7 +868,7 @@ export interface HpcCacheTimeouts {
   readonly update?: string;
 }
 
-function hpcCacheTimeoutsToTerraform(struct?: HpcCacheTimeoutsOutputReference | HpcCacheTimeouts): any {
+export function hpcCacheTimeoutsToTerraform(struct?: HpcCacheTimeoutsOutputReference | HpcCacheTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -694,12 +891,49 @@ export class HpcCacheTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HpcCacheTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HpcCacheTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -707,15 +941,15 @@ export class HpcCacheTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -723,15 +957,15 @@ export class HpcCacheTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -739,15 +973,15 @@ export class HpcCacheTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -755,7 +989,7 @@ export class HpcCacheTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -801,12 +1035,12 @@ export class HpcCache extends cdktf.TerraformResource {
     this._skuName = config.skuName;
     this._subnetId = config.subnetId;
     this._tags = config.tags;
-    this._defaultAccessPolicy = config.defaultAccessPolicy;
-    this._directoryActiveDirectory = config.directoryActiveDirectory;
-    this._directoryFlatFile = config.directoryFlatFile;
-    this._directoryLdap = config.directoryLdap;
-    this._dns = config.dns;
-    this._timeouts = config.timeouts;
+    this._defaultAccessPolicy.internalValue = config.defaultAccessPolicy;
+    this._directoryActiveDirectory.internalValue = config.directoryActiveDirectory;
+    this._directoryFlatFile.internalValue = config.directoryFlatFile;
+    this._directoryLdap.internalValue = config.directoryLdap;
+    this._dns.internalValue = config.dns;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -823,7 +1057,7 @@ export class HpcCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get cacheSizeInGbInput() {
-    return this._cacheSizeInGb
+    return this._cacheSizeInGb;
   }
 
   // id - computed: true, optional: true, required: false
@@ -841,7 +1075,7 @@ export class HpcCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // mount_addresses - computed: true, optional: false, required: false
@@ -850,11 +1084,11 @@ export class HpcCache extends cdktf.TerraformResource {
   }
 
   // mtu - computed: false, optional: true, required: false
-  private _mtu?: number | undefined; 
+  private _mtu?: number; 
   public get mtu() {
     return this.getNumberAttribute('mtu');
   }
-  public set mtu(value: number | undefined) {
+  public set mtu(value: number) {
     this._mtu = value;
   }
   public resetMtu() {
@@ -862,7 +1096,7 @@ export class HpcCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get mtuInput() {
-    return this._mtu
+    return this._mtu;
   }
 
   // name - computed: false, optional: false, required: true
@@ -875,15 +1109,15 @@ export class HpcCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // ntp_server - computed: false, optional: true, required: false
-  private _ntpServer?: string | undefined; 
+  private _ntpServer?: string; 
   public get ntpServer() {
     return this.getStringAttribute('ntp_server');
   }
-  public set ntpServer(value: string | undefined) {
+  public set ntpServer(value: string) {
     this._ntpServer = value;
   }
   public resetNtpServer() {
@@ -891,7 +1125,7 @@ export class HpcCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ntpServerInput() {
-    return this._ntpServer
+    return this._ntpServer;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -904,15 +1138,15 @@ export class HpcCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // root_squash_enabled - computed: true, optional: true, required: false
-  private _rootSquashEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _rootSquashEnabled?: boolean | cdktf.IResolvable; 
   public get rootSquashEnabled() {
     return this.getBooleanAttribute('root_squash_enabled') as any;
   }
-  public set rootSquashEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set rootSquashEnabled(value: boolean | cdktf.IResolvable) {
     this._rootSquashEnabled = value;
   }
   public resetRootSquashEnabled() {
@@ -920,7 +1154,7 @@ export class HpcCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get rootSquashEnabledInput() {
-    return this._rootSquashEnabled
+    return this._rootSquashEnabled;
   }
 
   // sku_name - computed: false, optional: false, required: true
@@ -933,7 +1167,7 @@ export class HpcCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuNameInput() {
-    return this._skuName
+    return this._skuName;
   }
 
   // subnet_id - computed: false, optional: false, required: true
@@ -946,16 +1180,16 @@ export class HpcCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get subnetIdInput() {
-    return this._subnetId
+    return this._subnetId;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -963,109 +1197,103 @@ export class HpcCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // default_access_policy - computed: false, optional: true, required: false
-  private _defaultAccessPolicy?: HpcCacheDefaultAccessPolicy | undefined; 
-  private __defaultAccessPolicyOutput = new HpcCacheDefaultAccessPolicyOutputReference(this as any, "default_access_policy", true);
+  private _defaultAccessPolicy = new HpcCacheDefaultAccessPolicyOutputReference(this as any, "default_access_policy", true);
   public get defaultAccessPolicy() {
-    return this.__defaultAccessPolicyOutput;
+    return this._defaultAccessPolicy;
   }
-  public putDefaultAccessPolicy(value: HpcCacheDefaultAccessPolicy | undefined) {
-    this._defaultAccessPolicy = value;
+  public putDefaultAccessPolicy(value: HpcCacheDefaultAccessPolicy) {
+    this._defaultAccessPolicy.internalValue = value;
   }
   public resetDefaultAccessPolicy() {
-    this._defaultAccessPolicy = undefined;
+    this._defaultAccessPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get defaultAccessPolicyInput() {
-    return this._defaultAccessPolicy
+    return this._defaultAccessPolicy.internalValue;
   }
 
   // directory_active_directory - computed: false, optional: true, required: false
-  private _directoryActiveDirectory?: HpcCacheDirectoryActiveDirectory | undefined; 
-  private __directoryActiveDirectoryOutput = new HpcCacheDirectoryActiveDirectoryOutputReference(this as any, "directory_active_directory", true);
+  private _directoryActiveDirectory = new HpcCacheDirectoryActiveDirectoryOutputReference(this as any, "directory_active_directory", true);
   public get directoryActiveDirectory() {
-    return this.__directoryActiveDirectoryOutput;
+    return this._directoryActiveDirectory;
   }
-  public putDirectoryActiveDirectory(value: HpcCacheDirectoryActiveDirectory | undefined) {
-    this._directoryActiveDirectory = value;
+  public putDirectoryActiveDirectory(value: HpcCacheDirectoryActiveDirectory) {
+    this._directoryActiveDirectory.internalValue = value;
   }
   public resetDirectoryActiveDirectory() {
-    this._directoryActiveDirectory = undefined;
+    this._directoryActiveDirectory.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get directoryActiveDirectoryInput() {
-    return this._directoryActiveDirectory
+    return this._directoryActiveDirectory.internalValue;
   }
 
   // directory_flat_file - computed: false, optional: true, required: false
-  private _directoryFlatFile?: HpcCacheDirectoryFlatFile | undefined; 
-  private __directoryFlatFileOutput = new HpcCacheDirectoryFlatFileOutputReference(this as any, "directory_flat_file", true);
+  private _directoryFlatFile = new HpcCacheDirectoryFlatFileOutputReference(this as any, "directory_flat_file", true);
   public get directoryFlatFile() {
-    return this.__directoryFlatFileOutput;
+    return this._directoryFlatFile;
   }
-  public putDirectoryFlatFile(value: HpcCacheDirectoryFlatFile | undefined) {
-    this._directoryFlatFile = value;
+  public putDirectoryFlatFile(value: HpcCacheDirectoryFlatFile) {
+    this._directoryFlatFile.internalValue = value;
   }
   public resetDirectoryFlatFile() {
-    this._directoryFlatFile = undefined;
+    this._directoryFlatFile.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get directoryFlatFileInput() {
-    return this._directoryFlatFile
+    return this._directoryFlatFile.internalValue;
   }
 
   // directory_ldap - computed: false, optional: true, required: false
-  private _directoryLdap?: HpcCacheDirectoryLdap | undefined; 
-  private __directoryLdapOutput = new HpcCacheDirectoryLdapOutputReference(this as any, "directory_ldap", true);
+  private _directoryLdap = new HpcCacheDirectoryLdapOutputReference(this as any, "directory_ldap", true);
   public get directoryLdap() {
-    return this.__directoryLdapOutput;
+    return this._directoryLdap;
   }
-  public putDirectoryLdap(value: HpcCacheDirectoryLdap | undefined) {
-    this._directoryLdap = value;
+  public putDirectoryLdap(value: HpcCacheDirectoryLdap) {
+    this._directoryLdap.internalValue = value;
   }
   public resetDirectoryLdap() {
-    this._directoryLdap = undefined;
+    this._directoryLdap.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get directoryLdapInput() {
-    return this._directoryLdap
+    return this._directoryLdap.internalValue;
   }
 
   // dns - computed: false, optional: true, required: false
-  private _dns?: HpcCacheDns | undefined; 
-  private __dnsOutput = new HpcCacheDnsOutputReference(this as any, "dns", true);
+  private _dns = new HpcCacheDnsOutputReference(this as any, "dns", true);
   public get dns() {
-    return this.__dnsOutput;
+    return this._dns;
   }
-  public putDns(value: HpcCacheDns | undefined) {
-    this._dns = value;
+  public putDns(value: HpcCacheDns) {
+    this._dns.internalValue = value;
   }
   public resetDns() {
-    this._dns = undefined;
+    this._dns.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dnsInput() {
-    return this._dns
+    return this._dns.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: HpcCacheTimeouts | undefined; 
-  private __timeoutsOutput = new HpcCacheTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new HpcCacheTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: HpcCacheTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: HpcCacheTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -1084,12 +1312,12 @@ export class HpcCache extends cdktf.TerraformResource {
       sku_name: cdktf.stringToTerraform(this._skuName),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      default_access_policy: hpcCacheDefaultAccessPolicyToTerraform(this._defaultAccessPolicy),
-      directory_active_directory: hpcCacheDirectoryActiveDirectoryToTerraform(this._directoryActiveDirectory),
-      directory_flat_file: hpcCacheDirectoryFlatFileToTerraform(this._directoryFlatFile),
-      directory_ldap: hpcCacheDirectoryLdapToTerraform(this._directoryLdap),
-      dns: hpcCacheDnsToTerraform(this._dns),
-      timeouts: hpcCacheTimeoutsToTerraform(this._timeouts),
+      default_access_policy: hpcCacheDefaultAccessPolicyToTerraform(this._defaultAccessPolicy.internalValue),
+      directory_active_directory: hpcCacheDirectoryActiveDirectoryToTerraform(this._directoryActiveDirectory.internalValue),
+      directory_flat_file: hpcCacheDirectoryFlatFileToTerraform(this._directoryFlatFile.internalValue),
+      directory_ldap: hpcCacheDirectoryLdapToTerraform(this._directoryLdap.internalValue),
+      dns: hpcCacheDnsToTerraform(this._dns.internalValue),
+      timeouts: hpcCacheTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

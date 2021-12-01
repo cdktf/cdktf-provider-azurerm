@@ -87,7 +87,7 @@ export interface DataAzurermSentinelAlertRuleTemplateTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermSentinelAlertRuleTemplateTimeoutsToTerraform(struct?: DataAzurermSentinelAlertRuleTemplateTimeoutsOutputReference | DataAzurermSentinelAlertRuleTemplateTimeouts): any {
+export function dataAzurermSentinelAlertRuleTemplateTimeoutsToTerraform(struct?: DataAzurermSentinelAlertRuleTemplateTimeoutsOutputReference | DataAzurermSentinelAlertRuleTemplateTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -107,12 +107,31 @@ export class DataAzurermSentinelAlertRuleTemplateTimeoutsOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermSentinelAlertRuleTemplateTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSentinelAlertRuleTemplateTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -120,7 +139,7 @@ export class DataAzurermSentinelAlertRuleTemplateTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -159,7 +178,7 @@ export class DataAzurermSentinelAlertRuleTemplate extends cdktf.TerraformDataSou
     this._displayName = config.displayName;
     this._logAnalyticsWorkspaceId = config.logAnalyticsWorkspaceId;
     this._name = config.name;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -167,11 +186,11 @@ export class DataAzurermSentinelAlertRuleTemplate extends cdktf.TerraformDataSou
   // ==========
 
   // display_name - computed: true, optional: true, required: false
-  private _displayName?: string | undefined; 
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -179,7 +198,7 @@ export class DataAzurermSentinelAlertRuleTemplate extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -197,15 +216,15 @@ export class DataAzurermSentinelAlertRuleTemplate extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get logAnalyticsWorkspaceIdInput() {
-    return this._logAnalyticsWorkspaceId
+    return this._logAnalyticsWorkspaceId;
   }
 
   // name - computed: true, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -213,7 +232,7 @@ export class DataAzurermSentinelAlertRuleTemplate extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // scheduled_template - computed: true, optional: false, required: false
@@ -227,20 +246,19 @@ export class DataAzurermSentinelAlertRuleTemplate extends cdktf.TerraformDataSou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermSentinelAlertRuleTemplateTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermSentinelAlertRuleTemplateTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermSentinelAlertRuleTemplateTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermSentinelAlertRuleTemplateTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermSentinelAlertRuleTemplateTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -252,7 +270,7 @@ export class DataAzurermSentinelAlertRuleTemplate extends cdktf.TerraformDataSou
       display_name: cdktf.stringToTerraform(this._displayName),
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
-      timeouts: dataAzurermSentinelAlertRuleTemplateTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermSentinelAlertRuleTemplateTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

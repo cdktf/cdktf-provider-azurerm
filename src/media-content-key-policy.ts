@@ -47,7 +47,7 @@ export interface MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRe
   readonly storageDurationSeconds?: number;
 }
 
-function mediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfigurationToTerraform(struct?: MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfigurationOutputReference | MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfiguration): any {
+export function mediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfigurationToTerraform(struct?: MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfigurationOutputReference | MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -68,12 +68,37 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRental
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfiguration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._playbackDurationSeconds) {
+      hasAnyValues = true;
+      internalValueResult.playbackDurationSeconds = this._playbackDurationSeconds;
+    }
+    if (this._storageDurationSeconds) {
+      hasAnyValues = true;
+      internalValueResult.storageDurationSeconds = this._storageDurationSeconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfiguration | undefined) {
+    if (value === undefined) {
+      this._playbackDurationSeconds = undefined;
+      this._storageDurationSeconds = undefined;
+    }
+    else {
+      this._playbackDurationSeconds = value.playbackDurationSeconds;
+      this._storageDurationSeconds = value.storageDurationSeconds;
+    }
+  }
+
   // playback_duration_seconds - computed: false, optional: true, required: false
-  private _playbackDurationSeconds?: number | undefined; 
+  private _playbackDurationSeconds?: number; 
   public get playbackDurationSeconds() {
     return this.getNumberAttribute('playback_duration_seconds');
   }
-  public set playbackDurationSeconds(value: number | undefined) {
+  public set playbackDurationSeconds(value: number) {
     this._playbackDurationSeconds = value;
   }
   public resetPlaybackDurationSeconds() {
@@ -81,15 +106,15 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRental
   }
   // Temporarily expose input value. Use with caution.
   public get playbackDurationSecondsInput() {
-    return this._playbackDurationSeconds
+    return this._playbackDurationSeconds;
   }
 
   // storage_duration_seconds - computed: false, optional: true, required: false
-  private _storageDurationSeconds?: number | undefined; 
+  private _storageDurationSeconds?: number; 
   public get storageDurationSeconds() {
     return this.getNumberAttribute('storage_duration_seconds');
   }
-  public set storageDurationSeconds(value: number | undefined) {
+  public set storageDurationSeconds(value: number) {
     this._storageDurationSeconds = value;
   }
   public resetStorageDurationSeconds() {
@@ -97,7 +122,7 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRental
   }
   // Temporarily expose input value. Use with caution.
   public get storageDurationSecondsInput() {
-    return this._storageDurationSeconds
+    return this._storageDurationSeconds;
   }
 }
 export interface MediaContentKeyPolicyPolicyOptionFairplayConfiguration {
@@ -129,7 +154,7 @@ export interface MediaContentKeyPolicyPolicyOptionFairplayConfiguration {
   readonly offlineRentalConfiguration?: MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfiguration;
 }
 
-function mediaContentKeyPolicyPolicyOptionFairplayConfigurationToTerraform(struct?: MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReference | MediaContentKeyPolicyPolicyOptionFairplayConfiguration): any {
+export function mediaContentKeyPolicyPolicyOptionFairplayConfigurationToTerraform(struct?: MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReference | MediaContentKeyPolicyPolicyOptionFairplayConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -154,12 +179,61 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReferen
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaContentKeyPolicyPolicyOptionFairplayConfiguration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._ask) {
+      hasAnyValues = true;
+      internalValueResult.ask = this._ask;
+    }
+    if (this._pfx) {
+      hasAnyValues = true;
+      internalValueResult.pfx = this._pfx;
+    }
+    if (this._pfxPassword) {
+      hasAnyValues = true;
+      internalValueResult.pfxPassword = this._pfxPassword;
+    }
+    if (this._rentalAndLeaseKeyType) {
+      hasAnyValues = true;
+      internalValueResult.rentalAndLeaseKeyType = this._rentalAndLeaseKeyType;
+    }
+    if (this._rentalDurationSeconds) {
+      hasAnyValues = true;
+      internalValueResult.rentalDurationSeconds = this._rentalDurationSeconds;
+    }
+    if (this._offlineRentalConfiguration) {
+      hasAnyValues = true;
+      internalValueResult.offlineRentalConfiguration = this._offlineRentalConfiguration?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaContentKeyPolicyPolicyOptionFairplayConfiguration | undefined) {
+    if (value === undefined) {
+      this._ask = undefined;
+      this._pfx = undefined;
+      this._pfxPassword = undefined;
+      this._rentalAndLeaseKeyType = undefined;
+      this._rentalDurationSeconds = undefined;
+      this._offlineRentalConfiguration.internalValue = undefined;
+    }
+    else {
+      this._ask = value.ask;
+      this._pfx = value.pfx;
+      this._pfxPassword = value.pfxPassword;
+      this._rentalAndLeaseKeyType = value.rentalAndLeaseKeyType;
+      this._rentalDurationSeconds = value.rentalDurationSeconds;
+      this._offlineRentalConfiguration.internalValue = value.offlineRentalConfiguration;
+    }
+  }
+
   // ask - computed: false, optional: true, required: false
-  private _ask?: string | undefined; 
+  private _ask?: string; 
   public get ask() {
     return this.getStringAttribute('ask');
   }
-  public set ask(value: string | undefined) {
+  public set ask(value: string) {
     this._ask = value;
   }
   public resetAsk() {
@@ -167,15 +241,15 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get askInput() {
-    return this._ask
+    return this._ask;
   }
 
   // pfx - computed: false, optional: true, required: false
-  private _pfx?: string | undefined; 
+  private _pfx?: string; 
   public get pfx() {
     return this.getStringAttribute('pfx');
   }
-  public set pfx(value: string | undefined) {
+  public set pfx(value: string) {
     this._pfx = value;
   }
   public resetPfx() {
@@ -183,15 +257,15 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get pfxInput() {
-    return this._pfx
+    return this._pfx;
   }
 
   // pfx_password - computed: false, optional: true, required: false
-  private _pfxPassword?: string | undefined; 
+  private _pfxPassword?: string; 
   public get pfxPassword() {
     return this.getStringAttribute('pfx_password');
   }
-  public set pfxPassword(value: string | undefined) {
+  public set pfxPassword(value: string) {
     this._pfxPassword = value;
   }
   public resetPfxPassword() {
@@ -199,15 +273,15 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get pfxPasswordInput() {
-    return this._pfxPassword
+    return this._pfxPassword;
   }
 
   // rental_and_lease_key_type - computed: false, optional: true, required: false
-  private _rentalAndLeaseKeyType?: string | undefined; 
+  private _rentalAndLeaseKeyType?: string; 
   public get rentalAndLeaseKeyType() {
     return this.getStringAttribute('rental_and_lease_key_type');
   }
-  public set rentalAndLeaseKeyType(value: string | undefined) {
+  public set rentalAndLeaseKeyType(value: string) {
     this._rentalAndLeaseKeyType = value;
   }
   public resetRentalAndLeaseKeyType() {
@@ -215,15 +289,15 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get rentalAndLeaseKeyTypeInput() {
-    return this._rentalAndLeaseKeyType
+    return this._rentalAndLeaseKeyType;
   }
 
   // rental_duration_seconds - computed: false, optional: true, required: false
-  private _rentalDurationSeconds?: number | undefined; 
+  private _rentalDurationSeconds?: number; 
   public get rentalDurationSeconds() {
     return this.getNumberAttribute('rental_duration_seconds');
   }
-  public set rentalDurationSeconds(value: number | undefined) {
+  public set rentalDurationSeconds(value: number) {
     this._rentalDurationSeconds = value;
   }
   public resetRentalDurationSeconds() {
@@ -231,24 +305,23 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get rentalDurationSecondsInput() {
-    return this._rentalDurationSeconds
+    return this._rentalDurationSeconds;
   }
 
   // offline_rental_configuration - computed: false, optional: true, required: false
-  private _offlineRentalConfiguration?: MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfiguration | undefined; 
-  private __offlineRentalConfigurationOutput = new MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfigurationOutputReference(this as any, "offline_rental_configuration", true);
+  private _offlineRentalConfiguration = new MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfigurationOutputReference(this as any, "offline_rental_configuration", true);
   public get offlineRentalConfiguration() {
-    return this.__offlineRentalConfigurationOutput;
+    return this._offlineRentalConfiguration;
   }
-  public putOfflineRentalConfiguration(value: MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfiguration | undefined) {
-    this._offlineRentalConfiguration = value;
+  public putOfflineRentalConfiguration(value: MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfiguration) {
+    this._offlineRentalConfiguration.internalValue = value;
   }
   public resetOfflineRentalConfiguration() {
-    this._offlineRentalConfiguration = undefined;
+    this._offlineRentalConfiguration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get offlineRentalConfigurationInput() {
-    return this._offlineRentalConfiguration
+    return this._offlineRentalConfiguration.internalValue;
   }
 }
 export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight {
@@ -298,7 +371,7 @@ export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseP
   readonly uncompressedDigitalVideoOpl?: number;
 }
 
-function mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightToTerraform(struct?: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightOutputReference | MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight): any {
+export function mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightToTerraform(struct?: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightOutputReference | MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -328,12 +401,91 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._agcAndColorStripeRestriction) {
+      hasAnyValues = true;
+      internalValueResult.agcAndColorStripeRestriction = this._agcAndColorStripeRestriction;
+    }
+    if (this._allowPassingVideoContentToUnknownOutput) {
+      hasAnyValues = true;
+      internalValueResult.allowPassingVideoContentToUnknownOutput = this._allowPassingVideoContentToUnknownOutput;
+    }
+    if (this._analogVideoOpl) {
+      hasAnyValues = true;
+      internalValueResult.analogVideoOpl = this._analogVideoOpl;
+    }
+    if (this._compressedDigitalAudioOpl) {
+      hasAnyValues = true;
+      internalValueResult.compressedDigitalAudioOpl = this._compressedDigitalAudioOpl;
+    }
+    if (this._digitalVideoOnlyContentRestriction) {
+      hasAnyValues = true;
+      internalValueResult.digitalVideoOnlyContentRestriction = this._digitalVideoOnlyContentRestriction;
+    }
+    if (this._firstPlayExpiration) {
+      hasAnyValues = true;
+      internalValueResult.firstPlayExpiration = this._firstPlayExpiration;
+    }
+    if (this._imageConstraintForAnalogComponentVideoRestriction) {
+      hasAnyValues = true;
+      internalValueResult.imageConstraintForAnalogComponentVideoRestriction = this._imageConstraintForAnalogComponentVideoRestriction;
+    }
+    if (this._imageConstraintForAnalogComputerMonitorRestriction) {
+      hasAnyValues = true;
+      internalValueResult.imageConstraintForAnalogComputerMonitorRestriction = this._imageConstraintForAnalogComputerMonitorRestriction;
+    }
+    if (this._scmsRestriction) {
+      hasAnyValues = true;
+      internalValueResult.scmsRestriction = this._scmsRestriction;
+    }
+    if (this._uncompressedDigitalAudioOpl) {
+      hasAnyValues = true;
+      internalValueResult.uncompressedDigitalAudioOpl = this._uncompressedDigitalAudioOpl;
+    }
+    if (this._uncompressedDigitalVideoOpl) {
+      hasAnyValues = true;
+      internalValueResult.uncompressedDigitalVideoOpl = this._uncompressedDigitalVideoOpl;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight | undefined) {
+    if (value === undefined) {
+      this._agcAndColorStripeRestriction = undefined;
+      this._allowPassingVideoContentToUnknownOutput = undefined;
+      this._analogVideoOpl = undefined;
+      this._compressedDigitalAudioOpl = undefined;
+      this._digitalVideoOnlyContentRestriction = undefined;
+      this._firstPlayExpiration = undefined;
+      this._imageConstraintForAnalogComponentVideoRestriction = undefined;
+      this._imageConstraintForAnalogComputerMonitorRestriction = undefined;
+      this._scmsRestriction = undefined;
+      this._uncompressedDigitalAudioOpl = undefined;
+      this._uncompressedDigitalVideoOpl = undefined;
+    }
+    else {
+      this._agcAndColorStripeRestriction = value.agcAndColorStripeRestriction;
+      this._allowPassingVideoContentToUnknownOutput = value.allowPassingVideoContentToUnknownOutput;
+      this._analogVideoOpl = value.analogVideoOpl;
+      this._compressedDigitalAudioOpl = value.compressedDigitalAudioOpl;
+      this._digitalVideoOnlyContentRestriction = value.digitalVideoOnlyContentRestriction;
+      this._firstPlayExpiration = value.firstPlayExpiration;
+      this._imageConstraintForAnalogComponentVideoRestriction = value.imageConstraintForAnalogComponentVideoRestriction;
+      this._imageConstraintForAnalogComputerMonitorRestriction = value.imageConstraintForAnalogComputerMonitorRestriction;
+      this._scmsRestriction = value.scmsRestriction;
+      this._uncompressedDigitalAudioOpl = value.uncompressedDigitalAudioOpl;
+      this._uncompressedDigitalVideoOpl = value.uncompressedDigitalVideoOpl;
+    }
+  }
+
   // agc_and_color_stripe_restriction - computed: false, optional: true, required: false
-  private _agcAndColorStripeRestriction?: number | undefined; 
+  private _agcAndColorStripeRestriction?: number; 
   public get agcAndColorStripeRestriction() {
     return this.getNumberAttribute('agc_and_color_stripe_restriction');
   }
-  public set agcAndColorStripeRestriction(value: number | undefined) {
+  public set agcAndColorStripeRestriction(value: number) {
     this._agcAndColorStripeRestriction = value;
   }
   public resetAgcAndColorStripeRestriction() {
@@ -341,15 +493,15 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
   }
   // Temporarily expose input value. Use with caution.
   public get agcAndColorStripeRestrictionInput() {
-    return this._agcAndColorStripeRestriction
+    return this._agcAndColorStripeRestriction;
   }
 
   // allow_passing_video_content_to_unknown_output - computed: false, optional: true, required: false
-  private _allowPassingVideoContentToUnknownOutput?: string | undefined; 
+  private _allowPassingVideoContentToUnknownOutput?: string; 
   public get allowPassingVideoContentToUnknownOutput() {
     return this.getStringAttribute('allow_passing_video_content_to_unknown_output');
   }
-  public set allowPassingVideoContentToUnknownOutput(value: string | undefined) {
+  public set allowPassingVideoContentToUnknownOutput(value: string) {
     this._allowPassingVideoContentToUnknownOutput = value;
   }
   public resetAllowPassingVideoContentToUnknownOutput() {
@@ -357,15 +509,15 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
   }
   // Temporarily expose input value. Use with caution.
   public get allowPassingVideoContentToUnknownOutputInput() {
-    return this._allowPassingVideoContentToUnknownOutput
+    return this._allowPassingVideoContentToUnknownOutput;
   }
 
   // analog_video_opl - computed: false, optional: true, required: false
-  private _analogVideoOpl?: number | undefined; 
+  private _analogVideoOpl?: number; 
   public get analogVideoOpl() {
     return this.getNumberAttribute('analog_video_opl');
   }
-  public set analogVideoOpl(value: number | undefined) {
+  public set analogVideoOpl(value: number) {
     this._analogVideoOpl = value;
   }
   public resetAnalogVideoOpl() {
@@ -373,15 +525,15 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
   }
   // Temporarily expose input value. Use with caution.
   public get analogVideoOplInput() {
-    return this._analogVideoOpl
+    return this._analogVideoOpl;
   }
 
   // compressed_digital_audio_opl - computed: false, optional: true, required: false
-  private _compressedDigitalAudioOpl?: number | undefined; 
+  private _compressedDigitalAudioOpl?: number; 
   public get compressedDigitalAudioOpl() {
     return this.getNumberAttribute('compressed_digital_audio_opl');
   }
-  public set compressedDigitalAudioOpl(value: number | undefined) {
+  public set compressedDigitalAudioOpl(value: number) {
     this._compressedDigitalAudioOpl = value;
   }
   public resetCompressedDigitalAudioOpl() {
@@ -389,15 +541,15 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
   }
   // Temporarily expose input value. Use with caution.
   public get compressedDigitalAudioOplInput() {
-    return this._compressedDigitalAudioOpl
+    return this._compressedDigitalAudioOpl;
   }
 
   // digital_video_only_content_restriction - computed: false, optional: true, required: false
-  private _digitalVideoOnlyContentRestriction?: boolean | cdktf.IResolvable | undefined; 
+  private _digitalVideoOnlyContentRestriction?: boolean | cdktf.IResolvable; 
   public get digitalVideoOnlyContentRestriction() {
     return this.getBooleanAttribute('digital_video_only_content_restriction') as any;
   }
-  public set digitalVideoOnlyContentRestriction(value: boolean | cdktf.IResolvable | undefined) {
+  public set digitalVideoOnlyContentRestriction(value: boolean | cdktf.IResolvable) {
     this._digitalVideoOnlyContentRestriction = value;
   }
   public resetDigitalVideoOnlyContentRestriction() {
@@ -405,15 +557,15 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
   }
   // Temporarily expose input value. Use with caution.
   public get digitalVideoOnlyContentRestrictionInput() {
-    return this._digitalVideoOnlyContentRestriction
+    return this._digitalVideoOnlyContentRestriction;
   }
 
   // first_play_expiration - computed: false, optional: true, required: false
-  private _firstPlayExpiration?: string | undefined; 
+  private _firstPlayExpiration?: string; 
   public get firstPlayExpiration() {
     return this.getStringAttribute('first_play_expiration');
   }
-  public set firstPlayExpiration(value: string | undefined) {
+  public set firstPlayExpiration(value: string) {
     this._firstPlayExpiration = value;
   }
   public resetFirstPlayExpiration() {
@@ -421,15 +573,15 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
   }
   // Temporarily expose input value. Use with caution.
   public get firstPlayExpirationInput() {
-    return this._firstPlayExpiration
+    return this._firstPlayExpiration;
   }
 
   // image_constraint_for_analog_component_video_restriction - computed: false, optional: true, required: false
-  private _imageConstraintForAnalogComponentVideoRestriction?: boolean | cdktf.IResolvable | undefined; 
+  private _imageConstraintForAnalogComponentVideoRestriction?: boolean | cdktf.IResolvable; 
   public get imageConstraintForAnalogComponentVideoRestriction() {
     return this.getBooleanAttribute('image_constraint_for_analog_component_video_restriction') as any;
   }
-  public set imageConstraintForAnalogComponentVideoRestriction(value: boolean | cdktf.IResolvable | undefined) {
+  public set imageConstraintForAnalogComponentVideoRestriction(value: boolean | cdktf.IResolvable) {
     this._imageConstraintForAnalogComponentVideoRestriction = value;
   }
   public resetImageConstraintForAnalogComponentVideoRestriction() {
@@ -437,15 +589,15 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
   }
   // Temporarily expose input value. Use with caution.
   public get imageConstraintForAnalogComponentVideoRestrictionInput() {
-    return this._imageConstraintForAnalogComponentVideoRestriction
+    return this._imageConstraintForAnalogComponentVideoRestriction;
   }
 
   // image_constraint_for_analog_computer_monitor_restriction - computed: false, optional: true, required: false
-  private _imageConstraintForAnalogComputerMonitorRestriction?: boolean | cdktf.IResolvable | undefined; 
+  private _imageConstraintForAnalogComputerMonitorRestriction?: boolean | cdktf.IResolvable; 
   public get imageConstraintForAnalogComputerMonitorRestriction() {
     return this.getBooleanAttribute('image_constraint_for_analog_computer_monitor_restriction') as any;
   }
-  public set imageConstraintForAnalogComputerMonitorRestriction(value: boolean | cdktf.IResolvable | undefined) {
+  public set imageConstraintForAnalogComputerMonitorRestriction(value: boolean | cdktf.IResolvable) {
     this._imageConstraintForAnalogComputerMonitorRestriction = value;
   }
   public resetImageConstraintForAnalogComputerMonitorRestriction() {
@@ -453,15 +605,15 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
   }
   // Temporarily expose input value. Use with caution.
   public get imageConstraintForAnalogComputerMonitorRestrictionInput() {
-    return this._imageConstraintForAnalogComputerMonitorRestriction
+    return this._imageConstraintForAnalogComputerMonitorRestriction;
   }
 
   // scms_restriction - computed: false, optional: true, required: false
-  private _scmsRestriction?: number | undefined; 
+  private _scmsRestriction?: number; 
   public get scmsRestriction() {
     return this.getNumberAttribute('scms_restriction');
   }
-  public set scmsRestriction(value: number | undefined) {
+  public set scmsRestriction(value: number) {
     this._scmsRestriction = value;
   }
   public resetScmsRestriction() {
@@ -469,15 +621,15 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
   }
   // Temporarily expose input value. Use with caution.
   public get scmsRestrictionInput() {
-    return this._scmsRestriction
+    return this._scmsRestriction;
   }
 
   // uncompressed_digital_audio_opl - computed: false, optional: true, required: false
-  private _uncompressedDigitalAudioOpl?: number | undefined; 
+  private _uncompressedDigitalAudioOpl?: number; 
   public get uncompressedDigitalAudioOpl() {
     return this.getNumberAttribute('uncompressed_digital_audio_opl');
   }
-  public set uncompressedDigitalAudioOpl(value: number | undefined) {
+  public set uncompressedDigitalAudioOpl(value: number) {
     this._uncompressedDigitalAudioOpl = value;
   }
   public resetUncompressedDigitalAudioOpl() {
@@ -485,15 +637,15 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
   }
   // Temporarily expose input value. Use with caution.
   public get uncompressedDigitalAudioOplInput() {
-    return this._uncompressedDigitalAudioOpl
+    return this._uncompressedDigitalAudioOpl;
   }
 
   // uncompressed_digital_video_opl - computed: false, optional: true, required: false
-  private _uncompressedDigitalVideoOpl?: number | undefined; 
+  private _uncompressedDigitalVideoOpl?: number; 
   public get uncompressedDigitalVideoOpl() {
     return this.getNumberAttribute('uncompressed_digital_video_opl');
   }
-  public set uncompressedDigitalVideoOpl(value: number | undefined) {
+  public set uncompressedDigitalVideoOpl(value: number) {
     this._uncompressedDigitalVideoOpl = value;
   }
   public resetUncompressedDigitalVideoOpl() {
@@ -501,7 +653,7 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
   }
   // Temporarily expose input value. Use with caution.
   public get uncompressedDigitalVideoOplInput() {
-    return this._uncompressedDigitalVideoOpl
+    return this._uncompressedDigitalVideoOpl;
   }
 }
 export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense {
@@ -553,7 +705,7 @@ export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense 
   readonly playRight?: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight;
 }
 
-function mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseToTerraform(struct?: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense): any {
+export function mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseToTerraform(struct?: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -584,7 +736,7 @@ export interface MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim 
   readonly value?: string;
 }
 
-function mediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimToTerraform(struct?: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim): any {
+export function mediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimToTerraform(struct?: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -636,7 +788,7 @@ export interface MediaContentKeyPolicyPolicyOptionTokenRestriction {
   readonly requiredClaim?: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim[];
 }
 
-function mediaContentKeyPolicyPolicyOptionTokenRestrictionToTerraform(struct?: MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference | MediaContentKeyPolicyPolicyOptionTokenRestriction): any {
+export function mediaContentKeyPolicyPolicyOptionTokenRestrictionToTerraform(struct?: MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference | MediaContentKeyPolicyPolicyOptionTokenRestriction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -664,12 +816,79 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaContentKeyPolicyPolicyOptionTokenRestriction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._audience) {
+      hasAnyValues = true;
+      internalValueResult.audience = this._audience;
+    }
+    if (this._issuer) {
+      hasAnyValues = true;
+      internalValueResult.issuer = this._issuer;
+    }
+    if (this._openIdConnectDiscoveryDocument) {
+      hasAnyValues = true;
+      internalValueResult.openIdConnectDiscoveryDocument = this._openIdConnectDiscoveryDocument;
+    }
+    if (this._primaryRsaTokenKeyExponent) {
+      hasAnyValues = true;
+      internalValueResult.primaryRsaTokenKeyExponent = this._primaryRsaTokenKeyExponent;
+    }
+    if (this._primaryRsaTokenKeyModulus) {
+      hasAnyValues = true;
+      internalValueResult.primaryRsaTokenKeyModulus = this._primaryRsaTokenKeyModulus;
+    }
+    if (this._primarySymmetricTokenKey) {
+      hasAnyValues = true;
+      internalValueResult.primarySymmetricTokenKey = this._primarySymmetricTokenKey;
+    }
+    if (this._primaryX509TokenKeyRaw) {
+      hasAnyValues = true;
+      internalValueResult.primaryX509TokenKeyRaw = this._primaryX509TokenKeyRaw;
+    }
+    if (this._tokenType) {
+      hasAnyValues = true;
+      internalValueResult.tokenType = this._tokenType;
+    }
+    if (this._requiredClaim) {
+      hasAnyValues = true;
+      internalValueResult.requiredClaim = this._requiredClaim;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaContentKeyPolicyPolicyOptionTokenRestriction | undefined) {
+    if (value === undefined) {
+      this._audience = undefined;
+      this._issuer = undefined;
+      this._openIdConnectDiscoveryDocument = undefined;
+      this._primaryRsaTokenKeyExponent = undefined;
+      this._primaryRsaTokenKeyModulus = undefined;
+      this._primarySymmetricTokenKey = undefined;
+      this._primaryX509TokenKeyRaw = undefined;
+      this._tokenType = undefined;
+      this._requiredClaim = undefined;
+    }
+    else {
+      this._audience = value.audience;
+      this._issuer = value.issuer;
+      this._openIdConnectDiscoveryDocument = value.openIdConnectDiscoveryDocument;
+      this._primaryRsaTokenKeyExponent = value.primaryRsaTokenKeyExponent;
+      this._primaryRsaTokenKeyModulus = value.primaryRsaTokenKeyModulus;
+      this._primarySymmetricTokenKey = value.primarySymmetricTokenKey;
+      this._primaryX509TokenKeyRaw = value.primaryX509TokenKeyRaw;
+      this._tokenType = value.tokenType;
+      this._requiredClaim = value.requiredClaim;
+    }
+  }
+
   // audience - computed: false, optional: true, required: false
-  private _audience?: string | undefined; 
+  private _audience?: string; 
   public get audience() {
     return this.getStringAttribute('audience');
   }
-  public set audience(value: string | undefined) {
+  public set audience(value: string) {
     this._audience = value;
   }
   public resetAudience() {
@@ -677,15 +896,15 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get audienceInput() {
-    return this._audience
+    return this._audience;
   }
 
   // issuer - computed: false, optional: true, required: false
-  private _issuer?: string | undefined; 
+  private _issuer?: string; 
   public get issuer() {
     return this.getStringAttribute('issuer');
   }
-  public set issuer(value: string | undefined) {
+  public set issuer(value: string) {
     this._issuer = value;
   }
   public resetIssuer() {
@@ -693,15 +912,15 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get issuerInput() {
-    return this._issuer
+    return this._issuer;
   }
 
   // open_id_connect_discovery_document - computed: false, optional: true, required: false
-  private _openIdConnectDiscoveryDocument?: string | undefined; 
+  private _openIdConnectDiscoveryDocument?: string; 
   public get openIdConnectDiscoveryDocument() {
     return this.getStringAttribute('open_id_connect_discovery_document');
   }
-  public set openIdConnectDiscoveryDocument(value: string | undefined) {
+  public set openIdConnectDiscoveryDocument(value: string) {
     this._openIdConnectDiscoveryDocument = value;
   }
   public resetOpenIdConnectDiscoveryDocument() {
@@ -709,15 +928,15 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get openIdConnectDiscoveryDocumentInput() {
-    return this._openIdConnectDiscoveryDocument
+    return this._openIdConnectDiscoveryDocument;
   }
 
   // primary_rsa_token_key_exponent - computed: false, optional: true, required: false
-  private _primaryRsaTokenKeyExponent?: string | undefined; 
+  private _primaryRsaTokenKeyExponent?: string; 
   public get primaryRsaTokenKeyExponent() {
     return this.getStringAttribute('primary_rsa_token_key_exponent');
   }
-  public set primaryRsaTokenKeyExponent(value: string | undefined) {
+  public set primaryRsaTokenKeyExponent(value: string) {
     this._primaryRsaTokenKeyExponent = value;
   }
   public resetPrimaryRsaTokenKeyExponent() {
@@ -725,15 +944,15 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get primaryRsaTokenKeyExponentInput() {
-    return this._primaryRsaTokenKeyExponent
+    return this._primaryRsaTokenKeyExponent;
   }
 
   // primary_rsa_token_key_modulus - computed: false, optional: true, required: false
-  private _primaryRsaTokenKeyModulus?: string | undefined; 
+  private _primaryRsaTokenKeyModulus?: string; 
   public get primaryRsaTokenKeyModulus() {
     return this.getStringAttribute('primary_rsa_token_key_modulus');
   }
-  public set primaryRsaTokenKeyModulus(value: string | undefined) {
+  public set primaryRsaTokenKeyModulus(value: string) {
     this._primaryRsaTokenKeyModulus = value;
   }
   public resetPrimaryRsaTokenKeyModulus() {
@@ -741,15 +960,15 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get primaryRsaTokenKeyModulusInput() {
-    return this._primaryRsaTokenKeyModulus
+    return this._primaryRsaTokenKeyModulus;
   }
 
   // primary_symmetric_token_key - computed: false, optional: true, required: false
-  private _primarySymmetricTokenKey?: string | undefined; 
+  private _primarySymmetricTokenKey?: string; 
   public get primarySymmetricTokenKey() {
     return this.getStringAttribute('primary_symmetric_token_key');
   }
-  public set primarySymmetricTokenKey(value: string | undefined) {
+  public set primarySymmetricTokenKey(value: string) {
     this._primarySymmetricTokenKey = value;
   }
   public resetPrimarySymmetricTokenKey() {
@@ -757,15 +976,15 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get primarySymmetricTokenKeyInput() {
-    return this._primarySymmetricTokenKey
+    return this._primarySymmetricTokenKey;
   }
 
   // primary_x509_token_key_raw - computed: false, optional: true, required: false
-  private _primaryX509TokenKeyRaw?: string | undefined; 
+  private _primaryX509TokenKeyRaw?: string; 
   public get primaryX509TokenKeyRaw() {
     return this.getStringAttribute('primary_x509_token_key_raw');
   }
-  public set primaryX509TokenKeyRaw(value: string | undefined) {
+  public set primaryX509TokenKeyRaw(value: string) {
     this._primaryX509TokenKeyRaw = value;
   }
   public resetPrimaryX509TokenKeyRaw() {
@@ -773,15 +992,15 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get primaryX509TokenKeyRawInput() {
-    return this._primaryX509TokenKeyRaw
+    return this._primaryX509TokenKeyRaw;
   }
 
   // token_type - computed: false, optional: true, required: false
-  private _tokenType?: string | undefined; 
+  private _tokenType?: string; 
   public get tokenType() {
     return this.getStringAttribute('token_type');
   }
-  public set tokenType(value: string | undefined) {
+  public set tokenType(value: string) {
     this._tokenType = value;
   }
   public resetTokenType() {
@@ -789,16 +1008,16 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get tokenTypeInput() {
-    return this._tokenType
+    return this._tokenType;
   }
 
   // required_claim - computed: false, optional: true, required: false
-  private _requiredClaim?: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim[] | undefined; 
+  private _requiredClaim?: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim[]; 
   public get requiredClaim() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('required_claim') as any;
   }
-  public set requiredClaim(value: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim[] | undefined) {
+  public set requiredClaim(value: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim[]) {
     this._requiredClaim = value;
   }
   public resetRequiredClaim() {
@@ -806,7 +1025,7 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get requiredClaimInput() {
-    return this._requiredClaim
+    return this._requiredClaim;
   }
 }
 export interface MediaContentKeyPolicyPolicyOption {
@@ -846,7 +1065,7 @@ export interface MediaContentKeyPolicyPolicyOption {
   readonly tokenRestriction?: MediaContentKeyPolicyPolicyOptionTokenRestriction;
 }
 
-function mediaContentKeyPolicyPolicyOptionToTerraform(struct?: MediaContentKeyPolicyPolicyOption): any {
+export function mediaContentKeyPolicyPolicyOptionToTerraform(struct?: MediaContentKeyPolicyPolicyOption): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -881,7 +1100,7 @@ export interface MediaContentKeyPolicyTimeouts {
   readonly update?: string;
 }
 
-function mediaContentKeyPolicyTimeoutsToTerraform(struct?: MediaContentKeyPolicyTimeoutsOutputReference | MediaContentKeyPolicyTimeouts): any {
+export function mediaContentKeyPolicyTimeoutsToTerraform(struct?: MediaContentKeyPolicyTimeoutsOutputReference | MediaContentKeyPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -904,12 +1123,49 @@ export class MediaContentKeyPolicyTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaContentKeyPolicyTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaContentKeyPolicyTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -917,15 +1173,15 @@ export class MediaContentKeyPolicyTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -933,15 +1189,15 @@ export class MediaContentKeyPolicyTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -949,15 +1205,15 @@ export class MediaContentKeyPolicyTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -965,7 +1221,7 @@ export class MediaContentKeyPolicyTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -1006,7 +1262,7 @@ export class MediaContentKeyPolicy extends cdktf.TerraformResource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._policyOption = config.policyOption;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -1014,11 +1270,11 @@ export class MediaContentKeyPolicy extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -1026,7 +1282,7 @@ export class MediaContentKeyPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1044,7 +1300,7 @@ export class MediaContentKeyPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get mediaServicesAccountNameInput() {
-    return this._mediaServicesAccountName
+    return this._mediaServicesAccountName;
   }
 
   // name - computed: false, optional: false, required: true
@@ -1057,7 +1313,7 @@ export class MediaContentKeyPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -1070,7 +1326,7 @@ export class MediaContentKeyPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // policy_option - computed: false, optional: false, required: true
@@ -1084,24 +1340,23 @@ export class MediaContentKeyPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get policyOptionInput() {
-    return this._policyOption
+    return this._policyOption;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MediaContentKeyPolicyTimeouts | undefined; 
-  private __timeoutsOutput = new MediaContentKeyPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MediaContentKeyPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MediaContentKeyPolicyTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MediaContentKeyPolicyTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -1115,7 +1370,7 @@ export class MediaContentKeyPolicy extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       policy_option: cdktf.listMapper(mediaContentKeyPolicyPolicyOptionToTerraform)(this._policyOption),
-      timeouts: mediaContentKeyPolicyTimeoutsToTerraform(this._timeouts),
+      timeouts: mediaContentKeyPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

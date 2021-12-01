@@ -93,7 +93,7 @@ export interface PublicIpTimeouts {
   readonly update?: string;
 }
 
-function publicIpTimeoutsToTerraform(struct?: PublicIpTimeoutsOutputReference | PublicIpTimeouts): any {
+export function publicIpTimeoutsToTerraform(struct?: PublicIpTimeoutsOutputReference | PublicIpTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -116,12 +116,49 @@ export class PublicIpTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PublicIpTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PublicIpTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -129,15 +166,15 @@ export class PublicIpTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -145,15 +182,15 @@ export class PublicIpTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -161,15 +198,15 @@ export class PublicIpTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -177,7 +214,7 @@ export class PublicIpTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -228,7 +265,7 @@ export class PublicIp extends cdktf.TerraformResource {
     this._skuTier = config.skuTier;
     this._tags = config.tags;
     this._zones = config.zones;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -245,15 +282,15 @@ export class PublicIp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get allocationMethodInput() {
-    return this._allocationMethod
+    return this._allocationMethod;
   }
 
   // availability_zone - computed: true, optional: true, required: false
-  private _availabilityZone?: string | undefined; 
+  private _availabilityZone?: string; 
   public get availabilityZone() {
     return this.getStringAttribute('availability_zone');
   }
-  public set availabilityZone(value: string | undefined) {
+  public set availabilityZone(value: string) {
     this._availabilityZone = value;
   }
   public resetAvailabilityZone() {
@@ -261,15 +298,15 @@ export class PublicIp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get availabilityZoneInput() {
-    return this._availabilityZone
+    return this._availabilityZone;
   }
 
   // domain_name_label - computed: false, optional: true, required: false
-  private _domainNameLabel?: string | undefined; 
+  private _domainNameLabel?: string; 
   public get domainNameLabel() {
     return this.getStringAttribute('domain_name_label');
   }
-  public set domainNameLabel(value: string | undefined) {
+  public set domainNameLabel(value: string) {
     this._domainNameLabel = value;
   }
   public resetDomainNameLabel() {
@@ -277,7 +314,7 @@ export class PublicIp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get domainNameLabelInput() {
-    return this._domainNameLabel
+    return this._domainNameLabel;
   }
 
   // fqdn - computed: true, optional: false, required: false
@@ -291,11 +328,11 @@ export class PublicIp extends cdktf.TerraformResource {
   }
 
   // idle_timeout_in_minutes - computed: false, optional: true, required: false
-  private _idleTimeoutInMinutes?: number | undefined; 
+  private _idleTimeoutInMinutes?: number; 
   public get idleTimeoutInMinutes() {
     return this.getNumberAttribute('idle_timeout_in_minutes');
   }
-  public set idleTimeoutInMinutes(value: number | undefined) {
+  public set idleTimeoutInMinutes(value: number) {
     this._idleTimeoutInMinutes = value;
   }
   public resetIdleTimeoutInMinutes() {
@@ -303,7 +340,7 @@ export class PublicIp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get idleTimeoutInMinutesInput() {
-    return this._idleTimeoutInMinutes
+    return this._idleTimeoutInMinutes;
   }
 
   // ip_address - computed: true, optional: false, required: false
@@ -312,12 +349,12 @@ export class PublicIp extends cdktf.TerraformResource {
   }
 
   // ip_tags - computed: false, optional: true, required: false
-  private _ipTags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _ipTags?: { [key: string]: string } | cdktf.IResolvable; 
   public get ipTags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ip_tags') as any;
   }
-  public set ipTags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set ipTags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._ipTags = value;
   }
   public resetIpTags() {
@@ -325,15 +362,15 @@ export class PublicIp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipTagsInput() {
-    return this._ipTags
+    return this._ipTags;
   }
 
   // ip_version - computed: false, optional: true, required: false
-  private _ipVersion?: string | undefined; 
+  private _ipVersion?: string; 
   public get ipVersion() {
     return this.getStringAttribute('ip_version');
   }
-  public set ipVersion(value: string | undefined) {
+  public set ipVersion(value: string) {
     this._ipVersion = value;
   }
   public resetIpVersion() {
@@ -341,7 +378,7 @@ export class PublicIp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipVersionInput() {
-    return this._ipVersion
+    return this._ipVersion;
   }
 
   // location - computed: false, optional: false, required: true
@@ -354,7 +391,7 @@ export class PublicIp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -367,15 +404,15 @@ export class PublicIp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // public_ip_prefix_id - computed: false, optional: true, required: false
-  private _publicIpPrefixId?: string | undefined; 
+  private _publicIpPrefixId?: string; 
   public get publicIpPrefixId() {
     return this.getStringAttribute('public_ip_prefix_id');
   }
-  public set publicIpPrefixId(value: string | undefined) {
+  public set publicIpPrefixId(value: string) {
     this._publicIpPrefixId = value;
   }
   public resetPublicIpPrefixId() {
@@ -383,7 +420,7 @@ export class PublicIp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get publicIpPrefixIdInput() {
-    return this._publicIpPrefixId
+    return this._publicIpPrefixId;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -396,15 +433,15 @@ export class PublicIp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // reverse_fqdn - computed: false, optional: true, required: false
-  private _reverseFqdn?: string | undefined; 
+  private _reverseFqdn?: string; 
   public get reverseFqdn() {
     return this.getStringAttribute('reverse_fqdn');
   }
-  public set reverseFqdn(value: string | undefined) {
+  public set reverseFqdn(value: string) {
     this._reverseFqdn = value;
   }
   public resetReverseFqdn() {
@@ -412,15 +449,15 @@ export class PublicIp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get reverseFqdnInput() {
-    return this._reverseFqdn
+    return this._reverseFqdn;
   }
 
   // sku - computed: false, optional: true, required: false
-  private _sku?: string | undefined; 
+  private _sku?: string; 
   public get sku() {
     return this.getStringAttribute('sku');
   }
-  public set sku(value: string | undefined) {
+  public set sku(value: string) {
     this._sku = value;
   }
   public resetSku() {
@@ -428,15 +465,15 @@ export class PublicIp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuInput() {
-    return this._sku
+    return this._sku;
   }
 
   // sku_tier - computed: false, optional: true, required: false
-  private _skuTier?: string | undefined; 
+  private _skuTier?: string; 
   public get skuTier() {
     return this.getStringAttribute('sku_tier');
   }
-  public set skuTier(value: string | undefined) {
+  public set skuTier(value: string) {
     this._skuTier = value;
   }
   public resetSkuTier() {
@@ -444,16 +481,16 @@ export class PublicIp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuTierInput() {
-    return this._skuTier
+    return this._skuTier;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -461,15 +498,15 @@ export class PublicIp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // zones - computed: true, optional: true, required: false
-  private _zones?: string[] | undefined; 
+  private _zones?: string[]; 
   public get zones() {
     return this.getListAttribute('zones');
   }
-  public set zones(value: string[] | undefined) {
+  public set zones(value: string[]) {
     this._zones = value;
   }
   public resetZones() {
@@ -477,24 +514,23 @@ export class PublicIp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get zonesInput() {
-    return this._zones
+    return this._zones;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: PublicIpTimeouts | undefined; 
-  private __timeoutsOutput = new PublicIpTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new PublicIpTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: PublicIpTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: PublicIpTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -518,7 +554,7 @@ export class PublicIp extends cdktf.TerraformResource {
       sku_tier: cdktf.stringToTerraform(this._skuTier),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
-      timeouts: publicIpTimeoutsToTerraform(this._timeouts),
+      timeouts: publicIpTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -77,7 +77,7 @@ export interface CosmosdbGremlinGraphAutoscaleSettings {
   readonly maxThroughput?: number;
 }
 
-function cosmosdbGremlinGraphAutoscaleSettingsToTerraform(struct?: CosmosdbGremlinGraphAutoscaleSettingsOutputReference | CosmosdbGremlinGraphAutoscaleSettings): any {
+export function cosmosdbGremlinGraphAutoscaleSettingsToTerraform(struct?: CosmosdbGremlinGraphAutoscaleSettingsOutputReference | CosmosdbGremlinGraphAutoscaleSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -97,12 +97,31 @@ export class CosmosdbGremlinGraphAutoscaleSettingsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbGremlinGraphAutoscaleSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maxThroughput) {
+      hasAnyValues = true;
+      internalValueResult.maxThroughput = this._maxThroughput;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbGremlinGraphAutoscaleSettings | undefined) {
+    if (value === undefined) {
+      this._maxThroughput = undefined;
+    }
+    else {
+      this._maxThroughput = value.maxThroughput;
+    }
+  }
+
   // max_throughput - computed: true, optional: true, required: false
-  private _maxThroughput?: number | undefined; 
+  private _maxThroughput?: number; 
   public get maxThroughput() {
     return this.getNumberAttribute('max_throughput');
   }
-  public set maxThroughput(value: number | undefined) {
+  public set maxThroughput(value: number) {
     this._maxThroughput = value;
   }
   public resetMaxThroughput() {
@@ -110,7 +129,7 @@ export class CosmosdbGremlinGraphAutoscaleSettingsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get maxThroughputInput() {
-    return this._maxThroughput
+    return this._maxThroughput;
   }
 }
 export interface CosmosdbGremlinGraphConflictResolutionPolicy {
@@ -128,7 +147,7 @@ export interface CosmosdbGremlinGraphConflictResolutionPolicy {
   readonly mode: string;
 }
 
-function cosmosdbGremlinGraphConflictResolutionPolicyToTerraform(struct?: CosmosdbGremlinGraphConflictResolutionPolicyOutputReference | CosmosdbGremlinGraphConflictResolutionPolicy): any {
+export function cosmosdbGremlinGraphConflictResolutionPolicyToTerraform(struct?: CosmosdbGremlinGraphConflictResolutionPolicyOutputReference | CosmosdbGremlinGraphConflictResolutionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -150,12 +169,43 @@ export class CosmosdbGremlinGraphConflictResolutionPolicyOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbGremlinGraphConflictResolutionPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._conflictResolutionPath) {
+      hasAnyValues = true;
+      internalValueResult.conflictResolutionPath = this._conflictResolutionPath;
+    }
+    if (this._conflictResolutionProcedure) {
+      hasAnyValues = true;
+      internalValueResult.conflictResolutionProcedure = this._conflictResolutionProcedure;
+    }
+    if (this._mode) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbGremlinGraphConflictResolutionPolicy | undefined) {
+    if (value === undefined) {
+      this._conflictResolutionPath = undefined;
+      this._conflictResolutionProcedure = undefined;
+      this._mode = undefined;
+    }
+    else {
+      this._conflictResolutionPath = value.conflictResolutionPath;
+      this._conflictResolutionProcedure = value.conflictResolutionProcedure;
+      this._mode = value.mode;
+    }
+  }
+
   // conflict_resolution_path - computed: false, optional: true, required: false
-  private _conflictResolutionPath?: string | undefined; 
+  private _conflictResolutionPath?: string; 
   public get conflictResolutionPath() {
     return this.getStringAttribute('conflict_resolution_path');
   }
-  public set conflictResolutionPath(value: string | undefined) {
+  public set conflictResolutionPath(value: string) {
     this._conflictResolutionPath = value;
   }
   public resetConflictResolutionPath() {
@@ -163,15 +213,15 @@ export class CosmosdbGremlinGraphConflictResolutionPolicyOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get conflictResolutionPathInput() {
-    return this._conflictResolutionPath
+    return this._conflictResolutionPath;
   }
 
   // conflict_resolution_procedure - computed: false, optional: true, required: false
-  private _conflictResolutionProcedure?: string | undefined; 
+  private _conflictResolutionProcedure?: string; 
   public get conflictResolutionProcedure() {
     return this.getStringAttribute('conflict_resolution_procedure');
   }
-  public set conflictResolutionProcedure(value: string | undefined) {
+  public set conflictResolutionProcedure(value: string) {
     this._conflictResolutionProcedure = value;
   }
   public resetConflictResolutionProcedure() {
@@ -179,7 +229,7 @@ export class CosmosdbGremlinGraphConflictResolutionPolicyOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get conflictResolutionProcedureInput() {
-    return this._conflictResolutionProcedure
+    return this._conflictResolutionProcedure;
   }
 
   // mode - computed: false, optional: false, required: true
@@ -192,7 +242,7 @@ export class CosmosdbGremlinGraphConflictResolutionPolicyOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get modeInput() {
-    return this._mode
+    return this._mode;
   }
 }
 export interface CosmosdbGremlinGraphIndexPolicyCompositeIndexIndex {
@@ -206,7 +256,7 @@ export interface CosmosdbGremlinGraphIndexPolicyCompositeIndexIndex {
   readonly path: string;
 }
 
-function cosmosdbGremlinGraphIndexPolicyCompositeIndexIndexToTerraform(struct?: CosmosdbGremlinGraphIndexPolicyCompositeIndexIndex): any {
+export function cosmosdbGremlinGraphIndexPolicyCompositeIndexIndexToTerraform(struct?: CosmosdbGremlinGraphIndexPolicyCompositeIndexIndex): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -226,7 +276,7 @@ export interface CosmosdbGremlinGraphIndexPolicyCompositeIndex {
   readonly index: CosmosdbGremlinGraphIndexPolicyCompositeIndexIndex[];
 }
 
-function cosmosdbGremlinGraphIndexPolicyCompositeIndexToTerraform(struct?: CosmosdbGremlinGraphIndexPolicyCompositeIndex): any {
+export function cosmosdbGremlinGraphIndexPolicyCompositeIndexToTerraform(struct?: CosmosdbGremlinGraphIndexPolicyCompositeIndex): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -243,7 +293,7 @@ export interface CosmosdbGremlinGraphIndexPolicySpatialIndex {
   readonly path: string;
 }
 
-function cosmosdbGremlinGraphIndexPolicySpatialIndexToTerraform(struct?: CosmosdbGremlinGraphIndexPolicySpatialIndex): any {
+export function cosmosdbGremlinGraphIndexPolicySpatialIndexToTerraform(struct?: CosmosdbGremlinGraphIndexPolicySpatialIndex): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -284,7 +334,7 @@ export interface CosmosdbGremlinGraphIndexPolicy {
   readonly spatialIndex?: CosmosdbGremlinGraphIndexPolicySpatialIndex[];
 }
 
-function cosmosdbGremlinGraphIndexPolicyToTerraform(struct?: CosmosdbGremlinGraphIndexPolicyOutputReference | CosmosdbGremlinGraphIndexPolicy): any {
+export function cosmosdbGremlinGraphIndexPolicyToTerraform(struct?: CosmosdbGremlinGraphIndexPolicyOutputReference | CosmosdbGremlinGraphIndexPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -309,12 +359,61 @@ export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbGremlinGraphIndexPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._automatic) {
+      hasAnyValues = true;
+      internalValueResult.automatic = this._automatic;
+    }
+    if (this._excludedPaths) {
+      hasAnyValues = true;
+      internalValueResult.excludedPaths = this._excludedPaths;
+    }
+    if (this._includedPaths) {
+      hasAnyValues = true;
+      internalValueResult.includedPaths = this._includedPaths;
+    }
+    if (this._indexingMode) {
+      hasAnyValues = true;
+      internalValueResult.indexingMode = this._indexingMode;
+    }
+    if (this._compositeIndex) {
+      hasAnyValues = true;
+      internalValueResult.compositeIndex = this._compositeIndex;
+    }
+    if (this._spatialIndex) {
+      hasAnyValues = true;
+      internalValueResult.spatialIndex = this._spatialIndex;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbGremlinGraphIndexPolicy | undefined) {
+    if (value === undefined) {
+      this._automatic = undefined;
+      this._excludedPaths = undefined;
+      this._includedPaths = undefined;
+      this._indexingMode = undefined;
+      this._compositeIndex = undefined;
+      this._spatialIndex = undefined;
+    }
+    else {
+      this._automatic = value.automatic;
+      this._excludedPaths = value.excludedPaths;
+      this._includedPaths = value.includedPaths;
+      this._indexingMode = value.indexingMode;
+      this._compositeIndex = value.compositeIndex;
+      this._spatialIndex = value.spatialIndex;
+    }
+  }
+
   // automatic - computed: false, optional: true, required: false
-  private _automatic?: boolean | cdktf.IResolvable | undefined; 
+  private _automatic?: boolean | cdktf.IResolvable; 
   public get automatic() {
     return this.getBooleanAttribute('automatic') as any;
   }
-  public set automatic(value: boolean | cdktf.IResolvable | undefined) {
+  public set automatic(value: boolean | cdktf.IResolvable) {
     this._automatic = value;
   }
   public resetAutomatic() {
@@ -322,15 +421,15 @@ export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get automaticInput() {
-    return this._automatic
+    return this._automatic;
   }
 
   // excluded_paths - computed: true, optional: true, required: false
-  private _excludedPaths?: string[] | undefined; 
+  private _excludedPaths?: string[]; 
   public get excludedPaths() {
     return this.getListAttribute('excluded_paths');
   }
-  public set excludedPaths(value: string[] | undefined) {
+  public set excludedPaths(value: string[]) {
     this._excludedPaths = value;
   }
   public resetExcludedPaths() {
@@ -338,15 +437,15 @@ export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get excludedPathsInput() {
-    return this._excludedPaths
+    return this._excludedPaths;
   }
 
   // included_paths - computed: true, optional: true, required: false
-  private _includedPaths?: string[] | undefined; 
+  private _includedPaths?: string[]; 
   public get includedPaths() {
     return this.getListAttribute('included_paths');
   }
-  public set includedPaths(value: string[] | undefined) {
+  public set includedPaths(value: string[]) {
     this._includedPaths = value;
   }
   public resetIncludedPaths() {
@@ -354,7 +453,7 @@ export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get includedPathsInput() {
-    return this._includedPaths
+    return this._includedPaths;
   }
 
   // indexing_mode - computed: false, optional: false, required: true
@@ -367,16 +466,16 @@ export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get indexingModeInput() {
-    return this._indexingMode
+    return this._indexingMode;
   }
 
   // composite_index - computed: false, optional: true, required: false
-  private _compositeIndex?: CosmosdbGremlinGraphIndexPolicyCompositeIndex[] | undefined; 
+  private _compositeIndex?: CosmosdbGremlinGraphIndexPolicyCompositeIndex[]; 
   public get compositeIndex() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('composite_index') as any;
   }
-  public set compositeIndex(value: CosmosdbGremlinGraphIndexPolicyCompositeIndex[] | undefined) {
+  public set compositeIndex(value: CosmosdbGremlinGraphIndexPolicyCompositeIndex[]) {
     this._compositeIndex = value;
   }
   public resetCompositeIndex() {
@@ -384,16 +483,16 @@ export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get compositeIndexInput() {
-    return this._compositeIndex
+    return this._compositeIndex;
   }
 
   // spatial_index - computed: false, optional: true, required: false
-  private _spatialIndex?: CosmosdbGremlinGraphIndexPolicySpatialIndex[] | undefined; 
+  private _spatialIndex?: CosmosdbGremlinGraphIndexPolicySpatialIndex[]; 
   public get spatialIndex() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('spatial_index') as any;
   }
-  public set spatialIndex(value: CosmosdbGremlinGraphIndexPolicySpatialIndex[] | undefined) {
+  public set spatialIndex(value: CosmosdbGremlinGraphIndexPolicySpatialIndex[]) {
     this._spatialIndex = value;
   }
   public resetSpatialIndex() {
@@ -401,7 +500,7 @@ export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get spatialIndexInput() {
-    return this._spatialIndex
+    return this._spatialIndex;
   }
 }
 export interface CosmosdbGremlinGraphTimeouts {
@@ -423,7 +522,7 @@ export interface CosmosdbGremlinGraphTimeouts {
   readonly update?: string;
 }
 
-function cosmosdbGremlinGraphTimeoutsToTerraform(struct?: CosmosdbGremlinGraphTimeoutsOutputReference | CosmosdbGremlinGraphTimeouts): any {
+export function cosmosdbGremlinGraphTimeoutsToTerraform(struct?: CosmosdbGremlinGraphTimeoutsOutputReference | CosmosdbGremlinGraphTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -446,12 +545,49 @@ export class CosmosdbGremlinGraphTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbGremlinGraphTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbGremlinGraphTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -459,15 +595,15 @@ export class CosmosdbGremlinGraphTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -475,15 +611,15 @@ export class CosmosdbGremlinGraphTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -491,15 +627,15 @@ export class CosmosdbGremlinGraphTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -507,7 +643,7 @@ export class CosmosdbGremlinGraphTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface CosmosdbGremlinGraphUniqueKey {
@@ -517,7 +653,7 @@ export interface CosmosdbGremlinGraphUniqueKey {
   readonly paths: string[];
 }
 
-function cosmosdbGremlinGraphUniqueKeyToTerraform(struct?: CosmosdbGremlinGraphUniqueKey): any {
+export function cosmosdbGremlinGraphUniqueKeyToTerraform(struct?: CosmosdbGremlinGraphUniqueKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -568,10 +704,10 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
     this._partitionKeyVersion = config.partitionKeyVersion;
     this._resourceGroupName = config.resourceGroupName;
     this._throughput = config.throughput;
-    this._autoscaleSettings = config.autoscaleSettings;
-    this._conflictResolutionPolicy = config.conflictResolutionPolicy;
-    this._indexPolicy = config.indexPolicy;
-    this._timeouts = config.timeouts;
+    this._autoscaleSettings.internalValue = config.autoscaleSettings;
+    this._conflictResolutionPolicy.internalValue = config.conflictResolutionPolicy;
+    this._indexPolicy.internalValue = config.indexPolicy;
+    this._timeouts.internalValue = config.timeouts;
     this._uniqueKey = config.uniqueKey;
   }
 
@@ -589,7 +725,7 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get accountNameInput() {
-    return this._accountName
+    return this._accountName;
   }
 
   // database_name - computed: false, optional: false, required: true
@@ -602,15 +738,15 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get databaseNameInput() {
-    return this._databaseName
+    return this._databaseName;
   }
 
   // default_ttl - computed: true, optional: true, required: false
-  private _defaultTtl?: number | undefined; 
+  private _defaultTtl?: number; 
   public get defaultTtl() {
     return this.getNumberAttribute('default_ttl');
   }
-  public set defaultTtl(value: number | undefined) {
+  public set defaultTtl(value: number) {
     this._defaultTtl = value;
   }
   public resetDefaultTtl() {
@@ -618,7 +754,7 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get defaultTtlInput() {
-    return this._defaultTtl
+    return this._defaultTtl;
   }
 
   // id - computed: true, optional: true, required: false
@@ -636,7 +772,7 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // partition_key_path - computed: false, optional: false, required: true
@@ -649,15 +785,15 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get partitionKeyPathInput() {
-    return this._partitionKeyPath
+    return this._partitionKeyPath;
   }
 
   // partition_key_version - computed: false, optional: true, required: false
-  private _partitionKeyVersion?: number | undefined; 
+  private _partitionKeyVersion?: number; 
   public get partitionKeyVersion() {
     return this.getNumberAttribute('partition_key_version');
   }
-  public set partitionKeyVersion(value: number | undefined) {
+  public set partitionKeyVersion(value: number) {
     this._partitionKeyVersion = value;
   }
   public resetPartitionKeyVersion() {
@@ -665,7 +801,7 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get partitionKeyVersionInput() {
-    return this._partitionKeyVersion
+    return this._partitionKeyVersion;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -678,15 +814,15 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // throughput - computed: true, optional: true, required: false
-  private _throughput?: number | undefined; 
+  private _throughput?: number; 
   public get throughput() {
     return this.getNumberAttribute('throughput');
   }
-  public set throughput(value: number | undefined) {
+  public set throughput(value: number) {
     this._throughput = value;
   }
   public resetThroughput() {
@@ -694,84 +830,80 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get throughputInput() {
-    return this._throughput
+    return this._throughput;
   }
 
   // autoscale_settings - computed: false, optional: true, required: false
-  private _autoscaleSettings?: CosmosdbGremlinGraphAutoscaleSettings | undefined; 
-  private __autoscaleSettingsOutput = new CosmosdbGremlinGraphAutoscaleSettingsOutputReference(this as any, "autoscale_settings", true);
+  private _autoscaleSettings = new CosmosdbGremlinGraphAutoscaleSettingsOutputReference(this as any, "autoscale_settings", true);
   public get autoscaleSettings() {
-    return this.__autoscaleSettingsOutput;
+    return this._autoscaleSettings;
   }
-  public putAutoscaleSettings(value: CosmosdbGremlinGraphAutoscaleSettings | undefined) {
-    this._autoscaleSettings = value;
+  public putAutoscaleSettings(value: CosmosdbGremlinGraphAutoscaleSettings) {
+    this._autoscaleSettings.internalValue = value;
   }
   public resetAutoscaleSettings() {
-    this._autoscaleSettings = undefined;
+    this._autoscaleSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get autoscaleSettingsInput() {
-    return this._autoscaleSettings
+    return this._autoscaleSettings.internalValue;
   }
 
   // conflict_resolution_policy - computed: false, optional: true, required: false
-  private _conflictResolutionPolicy?: CosmosdbGremlinGraphConflictResolutionPolicy | undefined; 
-  private __conflictResolutionPolicyOutput = new CosmosdbGremlinGraphConflictResolutionPolicyOutputReference(this as any, "conflict_resolution_policy", true);
+  private _conflictResolutionPolicy = new CosmosdbGremlinGraphConflictResolutionPolicyOutputReference(this as any, "conflict_resolution_policy", true);
   public get conflictResolutionPolicy() {
-    return this.__conflictResolutionPolicyOutput;
+    return this._conflictResolutionPolicy;
   }
-  public putConflictResolutionPolicy(value: CosmosdbGremlinGraphConflictResolutionPolicy | undefined) {
-    this._conflictResolutionPolicy = value;
+  public putConflictResolutionPolicy(value: CosmosdbGremlinGraphConflictResolutionPolicy) {
+    this._conflictResolutionPolicy.internalValue = value;
   }
   public resetConflictResolutionPolicy() {
-    this._conflictResolutionPolicy = undefined;
+    this._conflictResolutionPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get conflictResolutionPolicyInput() {
-    return this._conflictResolutionPolicy
+    return this._conflictResolutionPolicy.internalValue;
   }
 
   // index_policy - computed: false, optional: true, required: false
-  private _indexPolicy?: CosmosdbGremlinGraphIndexPolicy | undefined; 
-  private __indexPolicyOutput = new CosmosdbGremlinGraphIndexPolicyOutputReference(this as any, "index_policy", true);
+  private _indexPolicy = new CosmosdbGremlinGraphIndexPolicyOutputReference(this as any, "index_policy", true);
   public get indexPolicy() {
-    return this.__indexPolicyOutput;
+    return this._indexPolicy;
   }
-  public putIndexPolicy(value: CosmosdbGremlinGraphIndexPolicy | undefined) {
-    this._indexPolicy = value;
+  public putIndexPolicy(value: CosmosdbGremlinGraphIndexPolicy) {
+    this._indexPolicy.internalValue = value;
   }
   public resetIndexPolicy() {
-    this._indexPolicy = undefined;
+    this._indexPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get indexPolicyInput() {
-    return this._indexPolicy
+    return this._indexPolicy.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: CosmosdbGremlinGraphTimeouts | undefined; 
-  private __timeoutsOutput = new CosmosdbGremlinGraphTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CosmosdbGremlinGraphTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: CosmosdbGremlinGraphTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: CosmosdbGremlinGraphTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // unique_key - computed: false, optional: true, required: false
-  private _uniqueKey?: CosmosdbGremlinGraphUniqueKey[] | undefined; 
+  private _uniqueKey?: CosmosdbGremlinGraphUniqueKey[]; 
   public get uniqueKey() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('unique_key') as any;
   }
-  public set uniqueKey(value: CosmosdbGremlinGraphUniqueKey[] | undefined) {
+  public set uniqueKey(value: CosmosdbGremlinGraphUniqueKey[]) {
     this._uniqueKey = value;
   }
   public resetUniqueKey() {
@@ -779,7 +911,7 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get uniqueKeyInput() {
-    return this._uniqueKey
+    return this._uniqueKey;
   }
 
   // =========
@@ -796,10 +928,10 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
       partition_key_version: cdktf.numberToTerraform(this._partitionKeyVersion),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       throughput: cdktf.numberToTerraform(this._throughput),
-      autoscale_settings: cosmosdbGremlinGraphAutoscaleSettingsToTerraform(this._autoscaleSettings),
-      conflict_resolution_policy: cosmosdbGremlinGraphConflictResolutionPolicyToTerraform(this._conflictResolutionPolicy),
-      index_policy: cosmosdbGremlinGraphIndexPolicyToTerraform(this._indexPolicy),
-      timeouts: cosmosdbGremlinGraphTimeoutsToTerraform(this._timeouts),
+      autoscale_settings: cosmosdbGremlinGraphAutoscaleSettingsToTerraform(this._autoscaleSettings.internalValue),
+      conflict_resolution_policy: cosmosdbGremlinGraphConflictResolutionPolicyToTerraform(this._conflictResolutionPolicy.internalValue),
+      index_policy: cosmosdbGremlinGraphIndexPolicyToTerraform(this._indexPolicy.internalValue),
+      timeouts: cosmosdbGremlinGraphTimeoutsToTerraform(this._timeouts.internalValue),
       unique_key: cdktf.listMapper(cosmosdbGremlinGraphUniqueKeyToTerraform)(this._uniqueKey),
     };
   }

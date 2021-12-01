@@ -33,7 +33,7 @@ export interface DataAzurermBlueprintPublishedVersionTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermBlueprintPublishedVersionTimeoutsToTerraform(struct?: DataAzurermBlueprintPublishedVersionTimeoutsOutputReference | DataAzurermBlueprintPublishedVersionTimeouts): any {
+export function dataAzurermBlueprintPublishedVersionTimeoutsToTerraform(struct?: DataAzurermBlueprintPublishedVersionTimeoutsOutputReference | DataAzurermBlueprintPublishedVersionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -53,12 +53,31 @@ export class DataAzurermBlueprintPublishedVersionTimeoutsOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermBlueprintPublishedVersionTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBlueprintPublishedVersionTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -66,7 +85,7 @@ export class DataAzurermBlueprintPublishedVersionTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -105,7 +124,7 @@ export class DataAzurermBlueprintPublishedVersion extends cdktf.TerraformDataSou
     this._blueprintName = config.blueprintName;
     this._scopeId = config.scopeId;
     this._version = config.version;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -122,7 +141,7 @@ export class DataAzurermBlueprintPublishedVersion extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get blueprintNameInput() {
-    return this._blueprintName
+    return this._blueprintName;
   }
 
   // description - computed: true, optional: false, required: false
@@ -155,7 +174,7 @@ export class DataAzurermBlueprintPublishedVersion extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get scopeIdInput() {
-    return this._scopeId
+    return this._scopeId;
   }
 
   // target_scope - computed: true, optional: false, required: false
@@ -183,24 +202,23 @@ export class DataAzurermBlueprintPublishedVersion extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermBlueprintPublishedVersionTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermBlueprintPublishedVersionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermBlueprintPublishedVersionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermBlueprintPublishedVersionTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermBlueprintPublishedVersionTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -212,7 +230,7 @@ export class DataAzurermBlueprintPublishedVersion extends cdktf.TerraformDataSou
       blueprint_name: cdktf.stringToTerraform(this._blueprintName),
       scope_id: cdktf.stringToTerraform(this._scopeId),
       version: cdktf.stringToTerraform(this._version),
-      timeouts: dataAzurermBlueprintPublishedVersionTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermBlueprintPublishedVersionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

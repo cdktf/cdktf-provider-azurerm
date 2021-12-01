@@ -87,7 +87,7 @@ export interface NetworkInterfaceIpConfiguration {
   readonly subnetId?: string;
 }
 
-function networkInterfaceIpConfigurationToTerraform(struct?: NetworkInterfaceIpConfiguration): any {
+export function networkInterfaceIpConfigurationToTerraform(struct?: NetworkInterfaceIpConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -123,7 +123,7 @@ export interface NetworkInterfaceTimeouts {
   readonly update?: string;
 }
 
-function networkInterfaceTimeoutsToTerraform(struct?: NetworkInterfaceTimeoutsOutputReference | NetworkInterfaceTimeouts): any {
+export function networkInterfaceTimeoutsToTerraform(struct?: NetworkInterfaceTimeoutsOutputReference | NetworkInterfaceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -146,12 +146,49 @@ export class NetworkInterfaceTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkInterfaceTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkInterfaceTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -159,15 +196,15 @@ export class NetworkInterfaceTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -175,15 +212,15 @@ export class NetworkInterfaceTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -191,15 +228,15 @@ export class NetworkInterfaceTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -207,7 +244,7 @@ export class NetworkInterfaceTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -252,7 +289,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._ipConfiguration = config.ipConfiguration;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -265,11 +302,11 @@ export class NetworkInterface extends cdktf.TerraformResource {
   }
 
   // dns_servers - computed: true, optional: true, required: false
-  private _dnsServers?: string[] | undefined; 
+  private _dnsServers?: string[]; 
   public get dnsServers() {
     return this.getListAttribute('dns_servers');
   }
-  public set dnsServers(value: string[] | undefined) {
+  public set dnsServers(value: string[]) {
     this._dnsServers = value;
   }
   public resetDnsServers() {
@@ -277,15 +314,15 @@ export class NetworkInterface extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dnsServersInput() {
-    return this._dnsServers
+    return this._dnsServers;
   }
 
   // enable_accelerated_networking - computed: false, optional: true, required: false
-  private _enableAcceleratedNetworking?: boolean | cdktf.IResolvable | undefined; 
+  private _enableAcceleratedNetworking?: boolean | cdktf.IResolvable; 
   public get enableAcceleratedNetworking() {
     return this.getBooleanAttribute('enable_accelerated_networking') as any;
   }
-  public set enableAcceleratedNetworking(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableAcceleratedNetworking(value: boolean | cdktf.IResolvable) {
     this._enableAcceleratedNetworking = value;
   }
   public resetEnableAcceleratedNetworking() {
@@ -293,15 +330,15 @@ export class NetworkInterface extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableAcceleratedNetworkingInput() {
-    return this._enableAcceleratedNetworking
+    return this._enableAcceleratedNetworking;
   }
 
   // enable_ip_forwarding - computed: false, optional: true, required: false
-  private _enableIpForwarding?: boolean | cdktf.IResolvable | undefined; 
+  private _enableIpForwarding?: boolean | cdktf.IResolvable; 
   public get enableIpForwarding() {
     return this.getBooleanAttribute('enable_ip_forwarding') as any;
   }
-  public set enableIpForwarding(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableIpForwarding(value: boolean | cdktf.IResolvable) {
     this._enableIpForwarding = value;
   }
   public resetEnableIpForwarding() {
@@ -309,7 +346,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableIpForwardingInput() {
-    return this._enableIpForwarding
+    return this._enableIpForwarding;
   }
 
   // id - computed: true, optional: true, required: false
@@ -318,11 +355,11 @@ export class NetworkInterface extends cdktf.TerraformResource {
   }
 
   // internal_dns_name_label - computed: true, optional: true, required: false
-  private _internalDnsNameLabel?: string | undefined; 
+  private _internalDnsNameLabel?: string; 
   public get internalDnsNameLabel() {
     return this.getStringAttribute('internal_dns_name_label');
   }
-  public set internalDnsNameLabel(value: string | undefined) {
+  public set internalDnsNameLabel(value: string) {
     this._internalDnsNameLabel = value;
   }
   public resetInternalDnsNameLabel() {
@@ -330,7 +367,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get internalDnsNameLabelInput() {
-    return this._internalDnsNameLabel
+    return this._internalDnsNameLabel;
   }
 
   // internal_domain_name_suffix - computed: true, optional: false, required: false
@@ -348,7 +385,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // mac_address - computed: true, optional: false, required: false
@@ -366,7 +403,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // private_ip_address - computed: true, optional: false, required: false
@@ -389,16 +426,16 @@ export class NetworkInterface extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -406,7 +443,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // virtual_machine_id - computed: true, optional: false, required: false
@@ -425,24 +462,23 @@ export class NetworkInterface extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipConfigurationInput() {
-    return this._ipConfiguration
+    return this._ipConfiguration;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: NetworkInterfaceTimeouts | undefined; 
-  private __timeoutsOutput = new NetworkInterfaceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NetworkInterfaceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: NetworkInterfaceTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: NetworkInterfaceTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -460,7 +496,7 @@ export class NetworkInterface extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       ip_configuration: cdktf.listMapper(networkInterfaceIpConfigurationToTerraform)(this._ipConfiguration),
-      timeouts: networkInterfaceTimeoutsToTerraform(this._timeouts),
+      timeouts: networkInterfaceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

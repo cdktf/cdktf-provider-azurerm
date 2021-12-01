@@ -95,7 +95,7 @@ export interface ContainerGroupExposedPort {
   readonly protocol?: string;
 }
 
-function containerGroupExposedPortToTerraform(struct?: ContainerGroupExposedPort): any {
+export function containerGroupExposedPortToTerraform(struct?: ContainerGroupExposedPort): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -117,7 +117,7 @@ export interface ContainerGroupContainerGpu {
   readonly sku?: string;
 }
 
-function containerGroupContainerGpuToTerraform(struct?: ContainerGroupContainerGpuOutputReference | ContainerGroupContainerGpu): any {
+export function containerGroupContainerGpuToTerraform(struct?: ContainerGroupContainerGpuOutputReference | ContainerGroupContainerGpu): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -138,12 +138,37 @@ export class ContainerGroupContainerGpuOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ContainerGroupContainerGpu | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._count) {
+      hasAnyValues = true;
+      internalValueResult.count = this._count;
+    }
+    if (this._sku) {
+      hasAnyValues = true;
+      internalValueResult.sku = this._sku;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupContainerGpu | undefined) {
+    if (value === undefined) {
+      this._count = undefined;
+      this._sku = undefined;
+    }
+    else {
+      this._count = value.count;
+      this._sku = value.sku;
+    }
+  }
+
   // count - computed: false, optional: true, required: false
-  private _count?: number | undefined; 
+  private _count?: number; 
   public get count() {
     return this.getNumberAttribute('count');
   }
-  public set count(value: number | undefined) {
+  public set count(value: number) {
     this._count = value;
   }
   public resetCount() {
@@ -151,15 +176,15 @@ export class ContainerGroupContainerGpuOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get countInput() {
-    return this._count
+    return this._count;
   }
 
   // sku - computed: false, optional: true, required: false
-  private _sku?: string | undefined; 
+  private _sku?: string; 
   public get sku() {
     return this.getStringAttribute('sku');
   }
-  public set sku(value: string | undefined) {
+  public set sku(value: string) {
     this._sku = value;
   }
   public resetSku() {
@@ -167,7 +192,7 @@ export class ContainerGroupContainerGpuOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get skuInput() {
-    return this._sku
+    return this._sku;
   }
 }
 export interface ContainerGroupContainerLivenessProbeHttpGet {
@@ -185,7 +210,7 @@ export interface ContainerGroupContainerLivenessProbeHttpGet {
   readonly scheme?: string;
 }
 
-function containerGroupContainerLivenessProbeHttpGetToTerraform(struct?: ContainerGroupContainerLivenessProbeHttpGet): any {
+export function containerGroupContainerLivenessProbeHttpGetToTerraform(struct?: ContainerGroupContainerLivenessProbeHttpGet): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -230,7 +255,7 @@ export interface ContainerGroupContainerLivenessProbe {
   readonly httpGet?: ContainerGroupContainerLivenessProbeHttpGet[];
 }
 
-function containerGroupContainerLivenessProbeToTerraform(struct?: ContainerGroupContainerLivenessProbeOutputReference | ContainerGroupContainerLivenessProbe): any {
+export function containerGroupContainerLivenessProbeToTerraform(struct?: ContainerGroupContainerLivenessProbeOutputReference | ContainerGroupContainerLivenessProbe): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -256,12 +281,67 @@ export class ContainerGroupContainerLivenessProbeOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ContainerGroupContainerLivenessProbe | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._exec) {
+      hasAnyValues = true;
+      internalValueResult.exec = this._exec;
+    }
+    if (this._failureThreshold) {
+      hasAnyValues = true;
+      internalValueResult.failureThreshold = this._failureThreshold;
+    }
+    if (this._initialDelaySeconds) {
+      hasAnyValues = true;
+      internalValueResult.initialDelaySeconds = this._initialDelaySeconds;
+    }
+    if (this._periodSeconds) {
+      hasAnyValues = true;
+      internalValueResult.periodSeconds = this._periodSeconds;
+    }
+    if (this._successThreshold) {
+      hasAnyValues = true;
+      internalValueResult.successThreshold = this._successThreshold;
+    }
+    if (this._timeoutSeconds) {
+      hasAnyValues = true;
+      internalValueResult.timeoutSeconds = this._timeoutSeconds;
+    }
+    if (this._httpGet) {
+      hasAnyValues = true;
+      internalValueResult.httpGet = this._httpGet;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupContainerLivenessProbe | undefined) {
+    if (value === undefined) {
+      this._exec = undefined;
+      this._failureThreshold = undefined;
+      this._initialDelaySeconds = undefined;
+      this._periodSeconds = undefined;
+      this._successThreshold = undefined;
+      this._timeoutSeconds = undefined;
+      this._httpGet = undefined;
+    }
+    else {
+      this._exec = value.exec;
+      this._failureThreshold = value.failureThreshold;
+      this._initialDelaySeconds = value.initialDelaySeconds;
+      this._periodSeconds = value.periodSeconds;
+      this._successThreshold = value.successThreshold;
+      this._timeoutSeconds = value.timeoutSeconds;
+      this._httpGet = value.httpGet;
+    }
+  }
+
   // exec - computed: false, optional: true, required: false
-  private _exec?: string[] | undefined; 
+  private _exec?: string[]; 
   public get exec() {
     return this.getListAttribute('exec');
   }
-  public set exec(value: string[] | undefined) {
+  public set exec(value: string[]) {
     this._exec = value;
   }
   public resetExec() {
@@ -269,15 +349,15 @@ export class ContainerGroupContainerLivenessProbeOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get execInput() {
-    return this._exec
+    return this._exec;
   }
 
   // failure_threshold - computed: false, optional: true, required: false
-  private _failureThreshold?: number | undefined; 
+  private _failureThreshold?: number; 
   public get failureThreshold() {
     return this.getNumberAttribute('failure_threshold');
   }
-  public set failureThreshold(value: number | undefined) {
+  public set failureThreshold(value: number) {
     this._failureThreshold = value;
   }
   public resetFailureThreshold() {
@@ -285,15 +365,15 @@ export class ContainerGroupContainerLivenessProbeOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get failureThresholdInput() {
-    return this._failureThreshold
+    return this._failureThreshold;
   }
 
   // initial_delay_seconds - computed: false, optional: true, required: false
-  private _initialDelaySeconds?: number | undefined; 
+  private _initialDelaySeconds?: number; 
   public get initialDelaySeconds() {
     return this.getNumberAttribute('initial_delay_seconds');
   }
-  public set initialDelaySeconds(value: number | undefined) {
+  public set initialDelaySeconds(value: number) {
     this._initialDelaySeconds = value;
   }
   public resetInitialDelaySeconds() {
@@ -301,15 +381,15 @@ export class ContainerGroupContainerLivenessProbeOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get initialDelaySecondsInput() {
-    return this._initialDelaySeconds
+    return this._initialDelaySeconds;
   }
 
   // period_seconds - computed: false, optional: true, required: false
-  private _periodSeconds?: number | undefined; 
+  private _periodSeconds?: number; 
   public get periodSeconds() {
     return this.getNumberAttribute('period_seconds');
   }
-  public set periodSeconds(value: number | undefined) {
+  public set periodSeconds(value: number) {
     this._periodSeconds = value;
   }
   public resetPeriodSeconds() {
@@ -317,15 +397,15 @@ export class ContainerGroupContainerLivenessProbeOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get periodSecondsInput() {
-    return this._periodSeconds
+    return this._periodSeconds;
   }
 
   // success_threshold - computed: false, optional: true, required: false
-  private _successThreshold?: number | undefined; 
+  private _successThreshold?: number; 
   public get successThreshold() {
     return this.getNumberAttribute('success_threshold');
   }
-  public set successThreshold(value: number | undefined) {
+  public set successThreshold(value: number) {
     this._successThreshold = value;
   }
   public resetSuccessThreshold() {
@@ -333,15 +413,15 @@ export class ContainerGroupContainerLivenessProbeOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get successThresholdInput() {
-    return this._successThreshold
+    return this._successThreshold;
   }
 
   // timeout_seconds - computed: false, optional: true, required: false
-  private _timeoutSeconds?: number | undefined; 
+  private _timeoutSeconds?: number; 
   public get timeoutSeconds() {
     return this.getNumberAttribute('timeout_seconds');
   }
-  public set timeoutSeconds(value: number | undefined) {
+  public set timeoutSeconds(value: number) {
     this._timeoutSeconds = value;
   }
   public resetTimeoutSeconds() {
@@ -349,16 +429,16 @@ export class ContainerGroupContainerLivenessProbeOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutSecondsInput() {
-    return this._timeoutSeconds
+    return this._timeoutSeconds;
   }
 
   // http_get - computed: false, optional: true, required: false
-  private _httpGet?: ContainerGroupContainerLivenessProbeHttpGet[] | undefined; 
+  private _httpGet?: ContainerGroupContainerLivenessProbeHttpGet[]; 
   public get httpGet() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('http_get') as any;
   }
-  public set httpGet(value: ContainerGroupContainerLivenessProbeHttpGet[] | undefined) {
+  public set httpGet(value: ContainerGroupContainerLivenessProbeHttpGet[]) {
     this._httpGet = value;
   }
   public resetHttpGet() {
@@ -366,7 +446,7 @@ export class ContainerGroupContainerLivenessProbeOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get httpGetInput() {
-    return this._httpGet
+    return this._httpGet;
   }
 }
 export interface ContainerGroupContainerPorts {
@@ -380,7 +460,7 @@ export interface ContainerGroupContainerPorts {
   readonly protocol?: string;
 }
 
-function containerGroupContainerPortsToTerraform(struct?: ContainerGroupContainerPorts): any {
+export function containerGroupContainerPortsToTerraform(struct?: ContainerGroupContainerPorts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -406,7 +486,7 @@ export interface ContainerGroupContainerReadinessProbeHttpGet {
   readonly scheme?: string;
 }
 
-function containerGroupContainerReadinessProbeHttpGetToTerraform(struct?: ContainerGroupContainerReadinessProbeHttpGet): any {
+export function containerGroupContainerReadinessProbeHttpGetToTerraform(struct?: ContainerGroupContainerReadinessProbeHttpGet): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -451,7 +531,7 @@ export interface ContainerGroupContainerReadinessProbe {
   readonly httpGet?: ContainerGroupContainerReadinessProbeHttpGet[];
 }
 
-function containerGroupContainerReadinessProbeToTerraform(struct?: ContainerGroupContainerReadinessProbeOutputReference | ContainerGroupContainerReadinessProbe): any {
+export function containerGroupContainerReadinessProbeToTerraform(struct?: ContainerGroupContainerReadinessProbeOutputReference | ContainerGroupContainerReadinessProbe): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -477,12 +557,67 @@ export class ContainerGroupContainerReadinessProbeOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ContainerGroupContainerReadinessProbe | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._exec) {
+      hasAnyValues = true;
+      internalValueResult.exec = this._exec;
+    }
+    if (this._failureThreshold) {
+      hasAnyValues = true;
+      internalValueResult.failureThreshold = this._failureThreshold;
+    }
+    if (this._initialDelaySeconds) {
+      hasAnyValues = true;
+      internalValueResult.initialDelaySeconds = this._initialDelaySeconds;
+    }
+    if (this._periodSeconds) {
+      hasAnyValues = true;
+      internalValueResult.periodSeconds = this._periodSeconds;
+    }
+    if (this._successThreshold) {
+      hasAnyValues = true;
+      internalValueResult.successThreshold = this._successThreshold;
+    }
+    if (this._timeoutSeconds) {
+      hasAnyValues = true;
+      internalValueResult.timeoutSeconds = this._timeoutSeconds;
+    }
+    if (this._httpGet) {
+      hasAnyValues = true;
+      internalValueResult.httpGet = this._httpGet;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupContainerReadinessProbe | undefined) {
+    if (value === undefined) {
+      this._exec = undefined;
+      this._failureThreshold = undefined;
+      this._initialDelaySeconds = undefined;
+      this._periodSeconds = undefined;
+      this._successThreshold = undefined;
+      this._timeoutSeconds = undefined;
+      this._httpGet = undefined;
+    }
+    else {
+      this._exec = value.exec;
+      this._failureThreshold = value.failureThreshold;
+      this._initialDelaySeconds = value.initialDelaySeconds;
+      this._periodSeconds = value.periodSeconds;
+      this._successThreshold = value.successThreshold;
+      this._timeoutSeconds = value.timeoutSeconds;
+      this._httpGet = value.httpGet;
+    }
+  }
+
   // exec - computed: false, optional: true, required: false
-  private _exec?: string[] | undefined; 
+  private _exec?: string[]; 
   public get exec() {
     return this.getListAttribute('exec');
   }
-  public set exec(value: string[] | undefined) {
+  public set exec(value: string[]) {
     this._exec = value;
   }
   public resetExec() {
@@ -490,15 +625,15 @@ export class ContainerGroupContainerReadinessProbeOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get execInput() {
-    return this._exec
+    return this._exec;
   }
 
   // failure_threshold - computed: false, optional: true, required: false
-  private _failureThreshold?: number | undefined; 
+  private _failureThreshold?: number; 
   public get failureThreshold() {
     return this.getNumberAttribute('failure_threshold');
   }
-  public set failureThreshold(value: number | undefined) {
+  public set failureThreshold(value: number) {
     this._failureThreshold = value;
   }
   public resetFailureThreshold() {
@@ -506,15 +641,15 @@ export class ContainerGroupContainerReadinessProbeOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get failureThresholdInput() {
-    return this._failureThreshold
+    return this._failureThreshold;
   }
 
   // initial_delay_seconds - computed: false, optional: true, required: false
-  private _initialDelaySeconds?: number | undefined; 
+  private _initialDelaySeconds?: number; 
   public get initialDelaySeconds() {
     return this.getNumberAttribute('initial_delay_seconds');
   }
-  public set initialDelaySeconds(value: number | undefined) {
+  public set initialDelaySeconds(value: number) {
     this._initialDelaySeconds = value;
   }
   public resetInitialDelaySeconds() {
@@ -522,15 +657,15 @@ export class ContainerGroupContainerReadinessProbeOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get initialDelaySecondsInput() {
-    return this._initialDelaySeconds
+    return this._initialDelaySeconds;
   }
 
   // period_seconds - computed: false, optional: true, required: false
-  private _periodSeconds?: number | undefined; 
+  private _periodSeconds?: number; 
   public get periodSeconds() {
     return this.getNumberAttribute('period_seconds');
   }
-  public set periodSeconds(value: number | undefined) {
+  public set periodSeconds(value: number) {
     this._periodSeconds = value;
   }
   public resetPeriodSeconds() {
@@ -538,15 +673,15 @@ export class ContainerGroupContainerReadinessProbeOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get periodSecondsInput() {
-    return this._periodSeconds
+    return this._periodSeconds;
   }
 
   // success_threshold - computed: false, optional: true, required: false
-  private _successThreshold?: number | undefined; 
+  private _successThreshold?: number; 
   public get successThreshold() {
     return this.getNumberAttribute('success_threshold');
   }
-  public set successThreshold(value: number | undefined) {
+  public set successThreshold(value: number) {
     this._successThreshold = value;
   }
   public resetSuccessThreshold() {
@@ -554,15 +689,15 @@ export class ContainerGroupContainerReadinessProbeOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get successThresholdInput() {
-    return this._successThreshold
+    return this._successThreshold;
   }
 
   // timeout_seconds - computed: false, optional: true, required: false
-  private _timeoutSeconds?: number | undefined; 
+  private _timeoutSeconds?: number; 
   public get timeoutSeconds() {
     return this.getNumberAttribute('timeout_seconds');
   }
-  public set timeoutSeconds(value: number | undefined) {
+  public set timeoutSeconds(value: number) {
     this._timeoutSeconds = value;
   }
   public resetTimeoutSeconds() {
@@ -570,16 +705,16 @@ export class ContainerGroupContainerReadinessProbeOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutSecondsInput() {
-    return this._timeoutSeconds
+    return this._timeoutSeconds;
   }
 
   // http_get - computed: false, optional: true, required: false
-  private _httpGet?: ContainerGroupContainerReadinessProbeHttpGet[] | undefined; 
+  private _httpGet?: ContainerGroupContainerReadinessProbeHttpGet[]; 
   public get httpGet() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('http_get') as any;
   }
-  public set httpGet(value: ContainerGroupContainerReadinessProbeHttpGet[] | undefined) {
+  public set httpGet(value: ContainerGroupContainerReadinessProbeHttpGet[]) {
     this._httpGet = value;
   }
   public resetHttpGet() {
@@ -587,7 +722,7 @@ export class ContainerGroupContainerReadinessProbeOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get httpGetInput() {
-    return this._httpGet
+    return this._httpGet;
   }
 }
 export interface ContainerGroupContainerVolumeGitRepo {
@@ -605,7 +740,7 @@ export interface ContainerGroupContainerVolumeGitRepo {
   readonly url: string;
 }
 
-function containerGroupContainerVolumeGitRepoToTerraform(struct?: ContainerGroupContainerVolumeGitRepoOutputReference | ContainerGroupContainerVolumeGitRepo): any {
+export function containerGroupContainerVolumeGitRepoToTerraform(struct?: ContainerGroupContainerVolumeGitRepoOutputReference | ContainerGroupContainerVolumeGitRepo): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -627,12 +762,43 @@ export class ContainerGroupContainerVolumeGitRepoOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ContainerGroupContainerVolumeGitRepo | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._directory) {
+      hasAnyValues = true;
+      internalValueResult.directory = this._directory;
+    }
+    if (this._revision) {
+      hasAnyValues = true;
+      internalValueResult.revision = this._revision;
+    }
+    if (this._url) {
+      hasAnyValues = true;
+      internalValueResult.url = this._url;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupContainerVolumeGitRepo | undefined) {
+    if (value === undefined) {
+      this._directory = undefined;
+      this._revision = undefined;
+      this._url = undefined;
+    }
+    else {
+      this._directory = value.directory;
+      this._revision = value.revision;
+      this._url = value.url;
+    }
+  }
+
   // directory - computed: false, optional: true, required: false
-  private _directory?: string | undefined; 
+  private _directory?: string; 
   public get directory() {
     return this.getStringAttribute('directory');
   }
-  public set directory(value: string | undefined) {
+  public set directory(value: string) {
     this._directory = value;
   }
   public resetDirectory() {
@@ -640,15 +806,15 @@ export class ContainerGroupContainerVolumeGitRepoOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get directoryInput() {
-    return this._directory
+    return this._directory;
   }
 
   // revision - computed: false, optional: true, required: false
-  private _revision?: string | undefined; 
+  private _revision?: string; 
   public get revision() {
     return this.getStringAttribute('revision');
   }
-  public set revision(value: string | undefined) {
+  public set revision(value: string) {
     this._revision = value;
   }
   public resetRevision() {
@@ -656,7 +822,7 @@ export class ContainerGroupContainerVolumeGitRepoOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get revisionInput() {
-    return this._revision
+    return this._revision;
   }
 
   // url - computed: false, optional: false, required: true
@@ -669,7 +835,7 @@ export class ContainerGroupContainerVolumeGitRepoOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get urlInput() {
-    return this._url
+    return this._url;
   }
 }
 export interface ContainerGroupContainerVolume {
@@ -713,7 +879,7 @@ export interface ContainerGroupContainerVolume {
   readonly gitRepo?: ContainerGroupContainerVolumeGitRepo;
 }
 
-function containerGroupContainerVolumeToTerraform(struct?: ContainerGroupContainerVolume): any {
+export function containerGroupContainerVolumeToTerraform(struct?: ContainerGroupContainerVolume): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -792,7 +958,7 @@ export interface ContainerGroupContainer {
   readonly volume?: ContainerGroupContainerVolume[];
 }
 
-function containerGroupContainerToTerraform(struct?: ContainerGroupContainer): any {
+export function containerGroupContainerToTerraform(struct?: ContainerGroupContainer): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -832,7 +998,7 @@ export interface ContainerGroupDiagnosticsLogAnalytics {
   readonly workspaceKey: string;
 }
 
-function containerGroupDiagnosticsLogAnalyticsToTerraform(struct?: ContainerGroupDiagnosticsLogAnalyticsOutputReference | ContainerGroupDiagnosticsLogAnalytics): any {
+export function containerGroupDiagnosticsLogAnalyticsToTerraform(struct?: ContainerGroupDiagnosticsLogAnalyticsOutputReference | ContainerGroupDiagnosticsLogAnalytics): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -855,12 +1021,49 @@ export class ContainerGroupDiagnosticsLogAnalyticsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ContainerGroupDiagnosticsLogAnalytics | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._logType) {
+      hasAnyValues = true;
+      internalValueResult.logType = this._logType;
+    }
+    if (this._metadata) {
+      hasAnyValues = true;
+      internalValueResult.metadata = this._metadata;
+    }
+    if (this._workspaceId) {
+      hasAnyValues = true;
+      internalValueResult.workspaceId = this._workspaceId;
+    }
+    if (this._workspaceKey) {
+      hasAnyValues = true;
+      internalValueResult.workspaceKey = this._workspaceKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupDiagnosticsLogAnalytics | undefined) {
+    if (value === undefined) {
+      this._logType = undefined;
+      this._metadata = undefined;
+      this._workspaceId = undefined;
+      this._workspaceKey = undefined;
+    }
+    else {
+      this._logType = value.logType;
+      this._metadata = value.metadata;
+      this._workspaceId = value.workspaceId;
+      this._workspaceKey = value.workspaceKey;
+    }
+  }
+
   // log_type - computed: false, optional: true, required: false
-  private _logType?: string | undefined; 
+  private _logType?: string; 
   public get logType() {
     return this.getStringAttribute('log_type');
   }
-  public set logType(value: string | undefined) {
+  public set logType(value: string) {
     this._logType = value;
   }
   public resetLogType() {
@@ -868,16 +1071,16 @@ export class ContainerGroupDiagnosticsLogAnalyticsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get logTypeInput() {
-    return this._logType
+    return this._logType;
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
   public get metadata() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -885,7 +1088,7 @@ export class ContainerGroupDiagnosticsLogAnalyticsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get metadataInput() {
-    return this._metadata
+    return this._metadata;
   }
 
   // workspace_id - computed: false, optional: false, required: true
@@ -898,7 +1101,7 @@ export class ContainerGroupDiagnosticsLogAnalyticsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get workspaceIdInput() {
-    return this._workspaceId
+    return this._workspaceId;
   }
 
   // workspace_key - computed: false, optional: false, required: true
@@ -911,7 +1114,7 @@ export class ContainerGroupDiagnosticsLogAnalyticsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get workspaceKeyInput() {
-    return this._workspaceKey
+    return this._workspaceKey;
   }
 }
 export interface ContainerGroupDiagnostics {
@@ -923,7 +1126,7 @@ export interface ContainerGroupDiagnostics {
   readonly logAnalytics: ContainerGroupDiagnosticsLogAnalytics;
 }
 
-function containerGroupDiagnosticsToTerraform(struct?: ContainerGroupDiagnosticsOutputReference | ContainerGroupDiagnostics): any {
+export function containerGroupDiagnosticsToTerraform(struct?: ContainerGroupDiagnosticsOutputReference | ContainerGroupDiagnostics): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -943,18 +1146,36 @@ export class ContainerGroupDiagnosticsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ContainerGroupDiagnostics | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._logAnalytics) {
+      hasAnyValues = true;
+      internalValueResult.logAnalytics = this._logAnalytics?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupDiagnostics | undefined) {
+    if (value === undefined) {
+      this._logAnalytics.internalValue = undefined;
+    }
+    else {
+      this._logAnalytics.internalValue = value.logAnalytics;
+    }
+  }
+
   // log_analytics - computed: false, optional: false, required: true
-  private _logAnalytics?: ContainerGroupDiagnosticsLogAnalytics; 
-  private __logAnalyticsOutput = new ContainerGroupDiagnosticsLogAnalyticsOutputReference(this as any, "log_analytics", true);
+  private _logAnalytics = new ContainerGroupDiagnosticsLogAnalyticsOutputReference(this as any, "log_analytics", true);
   public get logAnalytics() {
-    return this.__logAnalyticsOutput;
+    return this._logAnalytics;
   }
   public putLogAnalytics(value: ContainerGroupDiagnosticsLogAnalytics) {
-    this._logAnalytics = value;
+    this._logAnalytics.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get logAnalyticsInput() {
-    return this._logAnalytics
+    return this._logAnalytics.internalValue;
   }
 }
 export interface ContainerGroupDnsConfig {
@@ -972,7 +1193,7 @@ export interface ContainerGroupDnsConfig {
   readonly searchDomains: string[];
 }
 
-function containerGroupDnsConfigToTerraform(struct?: ContainerGroupDnsConfigOutputReference | ContainerGroupDnsConfig): any {
+export function containerGroupDnsConfigToTerraform(struct?: ContainerGroupDnsConfigOutputReference | ContainerGroupDnsConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -994,6 +1215,37 @@ export class ContainerGroupDnsConfigOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ContainerGroupDnsConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._nameservers) {
+      hasAnyValues = true;
+      internalValueResult.nameservers = this._nameservers;
+    }
+    if (this._options) {
+      hasAnyValues = true;
+      internalValueResult.options = this._options;
+    }
+    if (this._searchDomains) {
+      hasAnyValues = true;
+      internalValueResult.searchDomains = this._searchDomains;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupDnsConfig | undefined) {
+    if (value === undefined) {
+      this._nameservers = undefined;
+      this._options = undefined;
+      this._searchDomains = undefined;
+    }
+    else {
+      this._nameservers = value.nameservers;
+      this._options = value.options;
+      this._searchDomains = value.searchDomains;
+    }
+  }
+
   // nameservers - computed: false, optional: false, required: true
   private _nameservers?: string[]; 
   public get nameservers() {
@@ -1004,7 +1256,7 @@ export class ContainerGroupDnsConfigOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get nameserversInput() {
-    return this._nameservers
+    return this._nameservers;
   }
 
   // options - computed: false, optional: false, required: true
@@ -1017,7 +1269,7 @@ export class ContainerGroupDnsConfigOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get optionsInput() {
-    return this._options
+    return this._options;
   }
 
   // search_domains - computed: false, optional: false, required: true
@@ -1030,7 +1282,7 @@ export class ContainerGroupDnsConfigOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get searchDomainsInput() {
-    return this._searchDomains
+    return this._searchDomains;
   }
 }
 export interface ContainerGroupIdentity {
@@ -1044,7 +1296,7 @@ export interface ContainerGroupIdentity {
   readonly type: string;
 }
 
-function containerGroupIdentityToTerraform(struct?: ContainerGroupIdentityOutputReference | ContainerGroupIdentity): any {
+export function containerGroupIdentityToTerraform(struct?: ContainerGroupIdentityOutputReference | ContainerGroupIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1065,12 +1317,37 @@ export class ContainerGroupIdentityOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ContainerGroupIdentity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._identityIds) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupIdentity | undefined) {
+    if (value === undefined) {
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
   // identity_ids - computed: false, optional: true, required: false
-  private _identityIds?: string[] | undefined; 
+  private _identityIds?: string[]; 
   public get identityIds() {
     return this.getListAttribute('identity_ids');
   }
-  public set identityIds(value: string[] | undefined) {
+  public set identityIds(value: string[]) {
     this._identityIds = value;
   }
   public resetIdentityIds() {
@@ -1078,7 +1355,7 @@ export class ContainerGroupIdentityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
-    return this._identityIds
+    return this._identityIds;
   }
 
   // type - computed: false, optional: false, required: true
@@ -1091,7 +1368,7 @@ export class ContainerGroupIdentityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface ContainerGroupImageRegistryCredential {
@@ -1109,7 +1386,7 @@ export interface ContainerGroupImageRegistryCredential {
   readonly username: string;
 }
 
-function containerGroupImageRegistryCredentialToTerraform(struct?: ContainerGroupImageRegistryCredential): any {
+export function containerGroupImageRegistryCredentialToTerraform(struct?: ContainerGroupImageRegistryCredential): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1140,7 +1417,7 @@ export interface ContainerGroupTimeouts {
   readonly update?: string;
 }
 
-function containerGroupTimeoutsToTerraform(struct?: ContainerGroupTimeoutsOutputReference | ContainerGroupTimeouts): any {
+export function containerGroupTimeoutsToTerraform(struct?: ContainerGroupTimeoutsOutputReference | ContainerGroupTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1163,12 +1440,49 @@ export class ContainerGroupTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ContainerGroupTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerGroupTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -1176,15 +1490,15 @@ export class ContainerGroupTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -1192,15 +1506,15 @@ export class ContainerGroupTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -1208,15 +1522,15 @@ export class ContainerGroupTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -1224,7 +1538,7 @@ export class ContainerGroupTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -1271,11 +1585,11 @@ export class ContainerGroup extends cdktf.TerraformResource {
     this._restartPolicy = config.restartPolicy;
     this._tags = config.tags;
     this._container = config.container;
-    this._diagnostics = config.diagnostics;
-    this._dnsConfig = config.dnsConfig;
-    this._identity = config.identity;
+    this._diagnostics.internalValue = config.diagnostics;
+    this._dnsConfig.internalValue = config.dnsConfig;
+    this._identity.internalValue = config.identity;
     this._imageRegistryCredential = config.imageRegistryCredential;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -1283,11 +1597,11 @@ export class ContainerGroup extends cdktf.TerraformResource {
   // ==========
 
   // dns_name_label - computed: false, optional: true, required: false
-  private _dnsNameLabel?: string | undefined; 
+  private _dnsNameLabel?: string; 
   public get dnsNameLabel() {
     return this.getStringAttribute('dns_name_label');
   }
-  public set dnsNameLabel(value: string | undefined) {
+  public set dnsNameLabel(value: string) {
     this._dnsNameLabel = value;
   }
   public resetDnsNameLabel() {
@@ -1295,16 +1609,16 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dnsNameLabelInput() {
-    return this._dnsNameLabel
+    return this._dnsNameLabel;
   }
 
   // exposed_port - computed: true, optional: true, required: false
-  private _exposedPort?: ContainerGroupExposedPort[] | undefined; 
+  private _exposedPort?: ContainerGroupExposedPort[]; 
   public get exposedPort() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('exposed_port') as any;
   }
-  public set exposedPort(value: ContainerGroupExposedPort[] | undefined) {
+  public set exposedPort(value: ContainerGroupExposedPort[]) {
     this._exposedPort = value;
   }
   public resetExposedPort() {
@@ -1312,7 +1626,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get exposedPortInput() {
-    return this._exposedPort
+    return this._exposedPort;
   }
 
   // fqdn - computed: true, optional: false, required: false
@@ -1331,11 +1645,11 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
 
   // ip_address_type - computed: false, optional: true, required: false
-  private _ipAddressType?: string | undefined; 
+  private _ipAddressType?: string; 
   public get ipAddressType() {
     return this.getStringAttribute('ip_address_type');
   }
-  public set ipAddressType(value: string | undefined) {
+  public set ipAddressType(value: string) {
     this._ipAddressType = value;
   }
   public resetIpAddressType() {
@@ -1343,7 +1657,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipAddressTypeInput() {
-    return this._ipAddressType
+    return this._ipAddressType;
   }
 
   // location - computed: false, optional: false, required: true
@@ -1356,7 +1670,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -1369,15 +1683,15 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network_profile_id - computed: false, optional: true, required: false
-  private _networkProfileId?: string | undefined; 
+  private _networkProfileId?: string; 
   public get networkProfileId() {
     return this.getStringAttribute('network_profile_id');
   }
-  public set networkProfileId(value: string | undefined) {
+  public set networkProfileId(value: string) {
     this._networkProfileId = value;
   }
   public resetNetworkProfileId() {
@@ -1385,7 +1699,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkProfileIdInput() {
-    return this._networkProfileId
+    return this._networkProfileId;
   }
 
   // os_type - computed: false, optional: false, required: true
@@ -1398,7 +1712,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get osTypeInput() {
-    return this._osType
+    return this._osType;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -1411,15 +1725,15 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // restart_policy - computed: false, optional: true, required: false
-  private _restartPolicy?: string | undefined; 
+  private _restartPolicy?: string; 
   public get restartPolicy() {
     return this.getStringAttribute('restart_policy');
   }
-  public set restartPolicy(value: string | undefined) {
+  public set restartPolicy(value: string) {
     this._restartPolicy = value;
   }
   public resetRestartPolicy() {
@@ -1427,16 +1741,16 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get restartPolicyInput() {
-    return this._restartPolicy
+    return this._restartPolicy;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -1444,7 +1758,7 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // container - computed: false, optional: false, required: true
@@ -1458,67 +1772,64 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get containerInput() {
-    return this._container
+    return this._container;
   }
 
   // diagnostics - computed: false, optional: true, required: false
-  private _diagnostics?: ContainerGroupDiagnostics | undefined; 
-  private __diagnosticsOutput = new ContainerGroupDiagnosticsOutputReference(this as any, "diagnostics", true);
+  private _diagnostics = new ContainerGroupDiagnosticsOutputReference(this as any, "diagnostics", true);
   public get diagnostics() {
-    return this.__diagnosticsOutput;
+    return this._diagnostics;
   }
-  public putDiagnostics(value: ContainerGroupDiagnostics | undefined) {
-    this._diagnostics = value;
+  public putDiagnostics(value: ContainerGroupDiagnostics) {
+    this._diagnostics.internalValue = value;
   }
   public resetDiagnostics() {
-    this._diagnostics = undefined;
+    this._diagnostics.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get diagnosticsInput() {
-    return this._diagnostics
+    return this._diagnostics.internalValue;
   }
 
   // dns_config - computed: false, optional: true, required: false
-  private _dnsConfig?: ContainerGroupDnsConfig | undefined; 
-  private __dnsConfigOutput = new ContainerGroupDnsConfigOutputReference(this as any, "dns_config", true);
+  private _dnsConfig = new ContainerGroupDnsConfigOutputReference(this as any, "dns_config", true);
   public get dnsConfig() {
-    return this.__dnsConfigOutput;
+    return this._dnsConfig;
   }
-  public putDnsConfig(value: ContainerGroupDnsConfig | undefined) {
-    this._dnsConfig = value;
+  public putDnsConfig(value: ContainerGroupDnsConfig) {
+    this._dnsConfig.internalValue = value;
   }
   public resetDnsConfig() {
-    this._dnsConfig = undefined;
+    this._dnsConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dnsConfigInput() {
-    return this._dnsConfig
+    return this._dnsConfig.internalValue;
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: ContainerGroupIdentity | undefined; 
-  private __identityOutput = new ContainerGroupIdentityOutputReference(this as any, "identity", true);
+  private _identity = new ContainerGroupIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.__identityOutput;
+    return this._identity;
   }
-  public putIdentity(value: ContainerGroupIdentity | undefined) {
-    this._identity = value;
+  public putIdentity(value: ContainerGroupIdentity) {
+    this._identity.internalValue = value;
   }
   public resetIdentity() {
-    this._identity = undefined;
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
-    return this._identity
+    return this._identity.internalValue;
   }
 
   // image_registry_credential - computed: false, optional: true, required: false
-  private _imageRegistryCredential?: ContainerGroupImageRegistryCredential[] | undefined; 
+  private _imageRegistryCredential?: ContainerGroupImageRegistryCredential[]; 
   public get imageRegistryCredential() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('image_registry_credential') as any;
   }
-  public set imageRegistryCredential(value: ContainerGroupImageRegistryCredential[] | undefined) {
+  public set imageRegistryCredential(value: ContainerGroupImageRegistryCredential[]) {
     this._imageRegistryCredential = value;
   }
   public resetImageRegistryCredential() {
@@ -1526,24 +1837,23 @@ export class ContainerGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get imageRegistryCredentialInput() {
-    return this._imageRegistryCredential
+    return this._imageRegistryCredential;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ContainerGroupTimeouts | undefined; 
-  private __timeoutsOutput = new ContainerGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ContainerGroupTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ContainerGroupTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ContainerGroupTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -1563,11 +1873,11 @@ export class ContainerGroup extends cdktf.TerraformResource {
       restart_policy: cdktf.stringToTerraform(this._restartPolicy),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       container: cdktf.listMapper(containerGroupContainerToTerraform)(this._container),
-      diagnostics: containerGroupDiagnosticsToTerraform(this._diagnostics),
-      dns_config: containerGroupDnsConfigToTerraform(this._dnsConfig),
-      identity: containerGroupIdentityToTerraform(this._identity),
+      diagnostics: containerGroupDiagnosticsToTerraform(this._diagnostics.internalValue),
+      dns_config: containerGroupDnsConfigToTerraform(this._dnsConfig.internalValue),
+      identity: containerGroupIdentityToTerraform(this._identity.internalValue),
       image_registry_credential: cdktf.listMapper(containerGroupImageRegistryCredentialToTerraform)(this._imageRegistryCredential),
-      timeouts: containerGroupTimeoutsToTerraform(this._timeouts),
+      timeouts: containerGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

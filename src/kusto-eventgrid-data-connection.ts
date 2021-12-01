@@ -85,7 +85,7 @@ export interface KustoEventgridDataConnectionTimeouts {
   readonly update?: string;
 }
 
-function kustoEventgridDataConnectionTimeoutsToTerraform(struct?: KustoEventgridDataConnectionTimeoutsOutputReference | KustoEventgridDataConnectionTimeouts): any {
+export function kustoEventgridDataConnectionTimeoutsToTerraform(struct?: KustoEventgridDataConnectionTimeoutsOutputReference | KustoEventgridDataConnectionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -108,12 +108,49 @@ export class KustoEventgridDataConnectionTimeoutsOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KustoEventgridDataConnectionTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KustoEventgridDataConnectionTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -121,15 +158,15 @@ export class KustoEventgridDataConnectionTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -137,15 +174,15 @@ export class KustoEventgridDataConnectionTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -153,15 +190,15 @@ export class KustoEventgridDataConnectionTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -169,7 +206,7 @@ export class KustoEventgridDataConnectionTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -218,7 +255,7 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
     this._skipFirstRecord = config.skipFirstRecord;
     this._storageAccountId = config.storageAccountId;
     this._tableName = config.tableName;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -226,11 +263,11 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   // ==========
 
   // blob_storage_event_type - computed: false, optional: true, required: false
-  private _blobStorageEventType?: string | undefined; 
+  private _blobStorageEventType?: string; 
   public get blobStorageEventType() {
     return this.getStringAttribute('blob_storage_event_type');
   }
-  public set blobStorageEventType(value: string | undefined) {
+  public set blobStorageEventType(value: string) {
     this._blobStorageEventType = value;
   }
   public resetBlobStorageEventType() {
@@ -238,7 +275,7 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get blobStorageEventTypeInput() {
-    return this._blobStorageEventType
+    return this._blobStorageEventType;
   }
 
   // cluster_name - computed: false, optional: false, required: true
@@ -251,15 +288,15 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get clusterNameInput() {
-    return this._clusterName
+    return this._clusterName;
   }
 
   // data_format - computed: false, optional: true, required: false
-  private _dataFormat?: string | undefined; 
+  private _dataFormat?: string; 
   public get dataFormat() {
     return this.getStringAttribute('data_format');
   }
-  public set dataFormat(value: string | undefined) {
+  public set dataFormat(value: string) {
     this._dataFormat = value;
   }
   public resetDataFormat() {
@@ -267,7 +304,7 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dataFormatInput() {
-    return this._dataFormat
+    return this._dataFormat;
   }
 
   // database_name - computed: false, optional: false, required: true
@@ -280,7 +317,7 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get databaseNameInput() {
-    return this._databaseName
+    return this._databaseName;
   }
 
   // eventhub_consumer_group_name - computed: false, optional: false, required: true
@@ -293,7 +330,7 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get eventhubConsumerGroupNameInput() {
-    return this._eventhubConsumerGroupName
+    return this._eventhubConsumerGroupName;
   }
 
   // eventhub_id - computed: false, optional: false, required: true
@@ -306,7 +343,7 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get eventhubIdInput() {
-    return this._eventhubId
+    return this._eventhubId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -324,15 +361,15 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // mapping_rule_name - computed: false, optional: true, required: false
-  private _mappingRuleName?: string | undefined; 
+  private _mappingRuleName?: string; 
   public get mappingRuleName() {
     return this.getStringAttribute('mapping_rule_name');
   }
-  public set mappingRuleName(value: string | undefined) {
+  public set mappingRuleName(value: string) {
     this._mappingRuleName = value;
   }
   public resetMappingRuleName() {
@@ -340,7 +377,7 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get mappingRuleNameInput() {
-    return this._mappingRuleName
+    return this._mappingRuleName;
   }
 
   // name - computed: false, optional: false, required: true
@@ -353,7 +390,7 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -366,15 +403,15 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // skip_first_record - computed: false, optional: true, required: false
-  private _skipFirstRecord?: boolean | cdktf.IResolvable | undefined; 
+  private _skipFirstRecord?: boolean | cdktf.IResolvable; 
   public get skipFirstRecord() {
     return this.getBooleanAttribute('skip_first_record') as any;
   }
-  public set skipFirstRecord(value: boolean | cdktf.IResolvable | undefined) {
+  public set skipFirstRecord(value: boolean | cdktf.IResolvable) {
     this._skipFirstRecord = value;
   }
   public resetSkipFirstRecord() {
@@ -382,7 +419,7 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skipFirstRecordInput() {
-    return this._skipFirstRecord
+    return this._skipFirstRecord;
   }
 
   // storage_account_id - computed: false, optional: false, required: true
@@ -395,15 +432,15 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountIdInput() {
-    return this._storageAccountId
+    return this._storageAccountId;
   }
 
   // table_name - computed: false, optional: true, required: false
-  private _tableName?: string | undefined; 
+  private _tableName?: string; 
   public get tableName() {
     return this.getStringAttribute('table_name');
   }
-  public set tableName(value: string | undefined) {
+  public set tableName(value: string) {
     this._tableName = value;
   }
   public resetTableName() {
@@ -411,24 +448,23 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tableNameInput() {
-    return this._tableName
+    return this._tableName;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: KustoEventgridDataConnectionTimeouts | undefined; 
-  private __timeoutsOutput = new KustoEventgridDataConnectionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new KustoEventgridDataConnectionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: KustoEventgridDataConnectionTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: KustoEventgridDataConnectionTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -450,7 +486,7 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
       skip_first_record: cdktf.booleanToTerraform(this._skipFirstRecord),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       table_name: cdktf.stringToTerraform(this._tableName),
-      timeouts: kustoEventgridDataConnectionTimeoutsToTerraform(this._timeouts),
+      timeouts: kustoEventgridDataConnectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

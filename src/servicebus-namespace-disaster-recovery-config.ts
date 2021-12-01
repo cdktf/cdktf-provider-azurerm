@@ -45,7 +45,7 @@ export interface ServicebusNamespaceDisasterRecoveryConfigTimeouts {
   readonly update?: string;
 }
 
-function servicebusNamespaceDisasterRecoveryConfigTimeoutsToTerraform(struct?: ServicebusNamespaceDisasterRecoveryConfigTimeoutsOutputReference | ServicebusNamespaceDisasterRecoveryConfigTimeouts): any {
+export function servicebusNamespaceDisasterRecoveryConfigTimeoutsToTerraform(struct?: ServicebusNamespaceDisasterRecoveryConfigTimeoutsOutputReference | ServicebusNamespaceDisasterRecoveryConfigTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -68,12 +68,49 @@ export class ServicebusNamespaceDisasterRecoveryConfigTimeoutsOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ServicebusNamespaceDisasterRecoveryConfigTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServicebusNamespaceDisasterRecoveryConfigTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -81,15 +118,15 @@ export class ServicebusNamespaceDisasterRecoveryConfigTimeoutsOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -97,15 +134,15 @@ export class ServicebusNamespaceDisasterRecoveryConfigTimeoutsOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -113,15 +150,15 @@ export class ServicebusNamespaceDisasterRecoveryConfigTimeoutsOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -129,7 +166,7 @@ export class ServicebusNamespaceDisasterRecoveryConfigTimeoutsOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -168,7 +205,7 @@ export class ServicebusNamespaceDisasterRecoveryConfig extends cdktf.TerraformRe
     this._name = config.name;
     this._partnerNamespaceId = config.partnerNamespaceId;
     this._primaryNamespaceId = config.primaryNamespaceId;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -200,7 +237,7 @@ export class ServicebusNamespaceDisasterRecoveryConfig extends cdktf.TerraformRe
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // partner_namespace_id - computed: false, optional: false, required: true
@@ -213,7 +250,7 @@ export class ServicebusNamespaceDisasterRecoveryConfig extends cdktf.TerraformRe
   }
   // Temporarily expose input value. Use with caution.
   public get partnerNamespaceIdInput() {
-    return this._partnerNamespaceId
+    return this._partnerNamespaceId;
   }
 
   // primary_connection_string_alias - computed: true, optional: false, required: false
@@ -231,7 +268,7 @@ export class ServicebusNamespaceDisasterRecoveryConfig extends cdktf.TerraformRe
   }
   // Temporarily expose input value. Use with caution.
   public get primaryNamespaceIdInput() {
-    return this._primaryNamespaceId
+    return this._primaryNamespaceId;
   }
 
   // secondary_connection_string_alias - computed: true, optional: false, required: false
@@ -240,20 +277,19 @@ export class ServicebusNamespaceDisasterRecoveryConfig extends cdktf.TerraformRe
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ServicebusNamespaceDisasterRecoveryConfigTimeouts | undefined; 
-  private __timeoutsOutput = new ServicebusNamespaceDisasterRecoveryConfigTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ServicebusNamespaceDisasterRecoveryConfigTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ServicebusNamespaceDisasterRecoveryConfigTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ServicebusNamespaceDisasterRecoveryConfigTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -265,7 +301,7 @@ export class ServicebusNamespaceDisasterRecoveryConfig extends cdktf.TerraformRe
       name: cdktf.stringToTerraform(this._name),
       partner_namespace_id: cdktf.stringToTerraform(this._partnerNamespaceId),
       primary_namespace_id: cdktf.stringToTerraform(this._primaryNamespaceId),
-      timeouts: servicebusNamespaceDisasterRecoveryConfigTimeoutsToTerraform(this._timeouts),
+      timeouts: servicebusNamespaceDisasterRecoveryConfigTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

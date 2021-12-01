@@ -53,7 +53,7 @@ export interface SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts {
   readonly update?: string;
 }
 
-function sentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsToTerraform(struct?: SentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsOutputReference | SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts): any {
+export function sentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsToTerraform(struct?: SentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsOutputReference | SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -76,12 +76,49 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsOutputReferen
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -89,15 +126,15 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -105,15 +142,15 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -121,15 +158,15 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -137,7 +174,7 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -178,7 +215,7 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
     this._logAnalyticsWorkspaceId = config.logAnalyticsWorkspaceId;
     this._name = config.name;
     this._tenantId = config.tenantId;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -186,11 +223,11 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
   // ==========
 
   // alerts_enabled - computed: false, optional: true, required: false
-  private _alertsEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _alertsEnabled?: boolean | cdktf.IResolvable; 
   public get alertsEnabled() {
     return this.getBooleanAttribute('alerts_enabled') as any;
   }
-  public set alertsEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set alertsEnabled(value: boolean | cdktf.IResolvable) {
     this._alertsEnabled = value;
   }
   public resetAlertsEnabled() {
@@ -198,15 +235,15 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
   }
   // Temporarily expose input value. Use with caution.
   public get alertsEnabledInput() {
-    return this._alertsEnabled
+    return this._alertsEnabled;
   }
 
   // discovery_logs_enabled - computed: false, optional: true, required: false
-  private _discoveryLogsEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _discoveryLogsEnabled?: boolean | cdktf.IResolvable; 
   public get discoveryLogsEnabled() {
     return this.getBooleanAttribute('discovery_logs_enabled') as any;
   }
-  public set discoveryLogsEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set discoveryLogsEnabled(value: boolean | cdktf.IResolvable) {
     this._discoveryLogsEnabled = value;
   }
   public resetDiscoveryLogsEnabled() {
@@ -214,7 +251,7 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
   }
   // Temporarily expose input value. Use with caution.
   public get discoveryLogsEnabledInput() {
-    return this._discoveryLogsEnabled
+    return this._discoveryLogsEnabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -232,7 +269,7 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
   }
   // Temporarily expose input value. Use with caution.
   public get logAnalyticsWorkspaceIdInput() {
-    return this._logAnalyticsWorkspaceId
+    return this._logAnalyticsWorkspaceId;
   }
 
   // name - computed: false, optional: false, required: true
@@ -245,15 +282,15 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // tenant_id - computed: true, optional: true, required: false
-  private _tenantId?: string | undefined; 
+  private _tenantId?: string; 
   public get tenantId() {
     return this.getStringAttribute('tenant_id');
   }
-  public set tenantId(value: string | undefined) {
+  public set tenantId(value: string) {
     this._tenantId = value;
   }
   public resetTenantId() {
@@ -261,24 +298,23 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
   }
   // Temporarily expose input value. Use with caution.
   public get tenantIdInput() {
-    return this._tenantId
+    return this._tenantId;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts | undefined; 
-  private __timeoutsOutput = new SentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SentinelDataConnectorMicrosoftCloudAppSecurityTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -292,7 +328,7 @@ export class SentinelDataConnectorMicrosoftCloudAppSecurity extends cdktf.Terraf
       log_analytics_workspace_id: cdktf.stringToTerraform(this._logAnalyticsWorkspaceId),
       name: cdktf.stringToTerraform(this._name),
       tenant_id: cdktf.stringToTerraform(this._tenantId),
-      timeouts: sentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsToTerraform(this._timeouts),
+      timeouts: sentinelDataConnectorMicrosoftCloudAppSecurityTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

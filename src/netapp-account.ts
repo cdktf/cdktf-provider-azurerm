@@ -63,7 +63,7 @@ export interface NetappAccountActiveDirectory {
   readonly username: string;
 }
 
-function netappAccountActiveDirectoryToTerraform(struct?: NetappAccountActiveDirectoryOutputReference | NetappAccountActiveDirectory): any {
+export function netappAccountActiveDirectoryToTerraform(struct?: NetappAccountActiveDirectoryOutputReference | NetappAccountActiveDirectory): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -88,6 +88,55 @@ export class NetappAccountActiveDirectoryOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetappAccountActiveDirectory | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._dnsServers) {
+      hasAnyValues = true;
+      internalValueResult.dnsServers = this._dnsServers;
+    }
+    if (this._domain) {
+      hasAnyValues = true;
+      internalValueResult.domain = this._domain;
+    }
+    if (this._organizationalUnit) {
+      hasAnyValues = true;
+      internalValueResult.organizationalUnit = this._organizationalUnit;
+    }
+    if (this._password) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._smbServerName) {
+      hasAnyValues = true;
+      internalValueResult.smbServerName = this._smbServerName;
+    }
+    if (this._username) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetappAccountActiveDirectory | undefined) {
+    if (value === undefined) {
+      this._dnsServers = undefined;
+      this._domain = undefined;
+      this._organizationalUnit = undefined;
+      this._password = undefined;
+      this._smbServerName = undefined;
+      this._username = undefined;
+    }
+    else {
+      this._dnsServers = value.dnsServers;
+      this._domain = value.domain;
+      this._organizationalUnit = value.organizationalUnit;
+      this._password = value.password;
+      this._smbServerName = value.smbServerName;
+      this._username = value.username;
+    }
+  }
+
   // dns_servers - computed: false, optional: false, required: true
   private _dnsServers?: string[]; 
   public get dnsServers() {
@@ -98,7 +147,7 @@ export class NetappAccountActiveDirectoryOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get dnsServersInput() {
-    return this._dnsServers
+    return this._dnsServers;
   }
 
   // domain - computed: false, optional: false, required: true
@@ -111,15 +160,15 @@ export class NetappAccountActiveDirectoryOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get domainInput() {
-    return this._domain
+    return this._domain;
   }
 
   // organizational_unit - computed: false, optional: true, required: false
-  private _organizationalUnit?: string | undefined; 
+  private _organizationalUnit?: string; 
   public get organizationalUnit() {
     return this.getStringAttribute('organizational_unit');
   }
-  public set organizationalUnit(value: string | undefined) {
+  public set organizationalUnit(value: string) {
     this._organizationalUnit = value;
   }
   public resetOrganizationalUnit() {
@@ -127,7 +176,7 @@ export class NetappAccountActiveDirectoryOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get organizationalUnitInput() {
-    return this._organizationalUnit
+    return this._organizationalUnit;
   }
 
   // password - computed: false, optional: false, required: true
@@ -140,7 +189,7 @@ export class NetappAccountActiveDirectoryOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // smb_server_name - computed: false, optional: false, required: true
@@ -153,7 +202,7 @@ export class NetappAccountActiveDirectoryOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get smbServerNameInput() {
-    return this._smbServerName
+    return this._smbServerName;
   }
 
   // username - computed: false, optional: false, required: true
@@ -166,7 +215,7 @@ export class NetappAccountActiveDirectoryOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
-    return this._username
+    return this._username;
   }
 }
 export interface NetappAccountTimeouts {
@@ -188,7 +237,7 @@ export interface NetappAccountTimeouts {
   readonly update?: string;
 }
 
-function netappAccountTimeoutsToTerraform(struct?: NetappAccountTimeoutsOutputReference | NetappAccountTimeouts): any {
+export function netappAccountTimeoutsToTerraform(struct?: NetappAccountTimeoutsOutputReference | NetappAccountTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -211,12 +260,49 @@ export class NetappAccountTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetappAccountTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetappAccountTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -224,15 +310,15 @@ export class NetappAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -240,15 +326,15 @@ export class NetappAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -256,15 +342,15 @@ export class NetappAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -272,7 +358,7 @@ export class NetappAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -312,8 +398,8 @@ export class NetappAccount extends cdktf.TerraformResource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._activeDirectory = config.activeDirectory;
-    this._timeouts = config.timeouts;
+    this._activeDirectory.internalValue = config.activeDirectory;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -335,7 +421,7 @@ export class NetappAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -348,7 +434,7 @@ export class NetappAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -361,16 +447,16 @@ export class NetappAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -378,41 +464,39 @@ export class NetappAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // active_directory - computed: false, optional: true, required: false
-  private _activeDirectory?: NetappAccountActiveDirectory | undefined; 
-  private __activeDirectoryOutput = new NetappAccountActiveDirectoryOutputReference(this as any, "active_directory", true);
+  private _activeDirectory = new NetappAccountActiveDirectoryOutputReference(this as any, "active_directory", true);
   public get activeDirectory() {
-    return this.__activeDirectoryOutput;
+    return this._activeDirectory;
   }
-  public putActiveDirectory(value: NetappAccountActiveDirectory | undefined) {
-    this._activeDirectory = value;
+  public putActiveDirectory(value: NetappAccountActiveDirectory) {
+    this._activeDirectory.internalValue = value;
   }
   public resetActiveDirectory() {
-    this._activeDirectory = undefined;
+    this._activeDirectory.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get activeDirectoryInput() {
-    return this._activeDirectory
+    return this._activeDirectory.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: NetappAccountTimeouts | undefined; 
-  private __timeoutsOutput = new NetappAccountTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NetappAccountTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: NetappAccountTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: NetappAccountTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -425,8 +509,8 @@ export class NetappAccount extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      active_directory: netappAccountActiveDirectoryToTerraform(this._activeDirectory),
-      timeouts: netappAccountTimeoutsToTerraform(this._timeouts),
+      active_directory: netappAccountActiveDirectoryToTerraform(this._activeDirectory.internalValue),
+      timeouts: netappAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

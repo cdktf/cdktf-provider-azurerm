@@ -111,7 +111,7 @@ export interface MysqlFlexibleServerHighAvailability {
   readonly standbyAvailabilityZone?: string;
 }
 
-function mysqlFlexibleServerHighAvailabilityToTerraform(struct?: MysqlFlexibleServerHighAvailabilityOutputReference | MysqlFlexibleServerHighAvailability): any {
+export function mysqlFlexibleServerHighAvailabilityToTerraform(struct?: MysqlFlexibleServerHighAvailabilityOutputReference | MysqlFlexibleServerHighAvailability): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -132,6 +132,31 @@ export class MysqlFlexibleServerHighAvailabilityOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MysqlFlexibleServerHighAvailability | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._mode) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    if (this._standbyAvailabilityZone) {
+      hasAnyValues = true;
+      internalValueResult.standbyAvailabilityZone = this._standbyAvailabilityZone;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MysqlFlexibleServerHighAvailability | undefined) {
+    if (value === undefined) {
+      this._mode = undefined;
+      this._standbyAvailabilityZone = undefined;
+    }
+    else {
+      this._mode = value.mode;
+      this._standbyAvailabilityZone = value.standbyAvailabilityZone;
+    }
+  }
+
   // mode - computed: false, optional: false, required: true
   private _mode?: string; 
   public get mode() {
@@ -142,15 +167,15 @@ export class MysqlFlexibleServerHighAvailabilityOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get modeInput() {
-    return this._mode
+    return this._mode;
   }
 
   // standby_availability_zone - computed: true, optional: true, required: false
-  private _standbyAvailabilityZone?: string | undefined; 
+  private _standbyAvailabilityZone?: string; 
   public get standbyAvailabilityZone() {
     return this.getStringAttribute('standby_availability_zone');
   }
-  public set standbyAvailabilityZone(value: string | undefined) {
+  public set standbyAvailabilityZone(value: string) {
     this._standbyAvailabilityZone = value;
   }
   public resetStandbyAvailabilityZone() {
@@ -158,7 +183,7 @@ export class MysqlFlexibleServerHighAvailabilityOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get standbyAvailabilityZoneInput() {
-    return this._standbyAvailabilityZone
+    return this._standbyAvailabilityZone;
   }
 }
 export interface MysqlFlexibleServerMaintenanceWindow {
@@ -176,7 +201,7 @@ export interface MysqlFlexibleServerMaintenanceWindow {
   readonly startMinute?: number;
 }
 
-function mysqlFlexibleServerMaintenanceWindowToTerraform(struct?: MysqlFlexibleServerMaintenanceWindowOutputReference | MysqlFlexibleServerMaintenanceWindow): any {
+export function mysqlFlexibleServerMaintenanceWindowToTerraform(struct?: MysqlFlexibleServerMaintenanceWindowOutputReference | MysqlFlexibleServerMaintenanceWindow): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -198,12 +223,43 @@ export class MysqlFlexibleServerMaintenanceWindowOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MysqlFlexibleServerMaintenanceWindow | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._dayOfWeek) {
+      hasAnyValues = true;
+      internalValueResult.dayOfWeek = this._dayOfWeek;
+    }
+    if (this._startHour) {
+      hasAnyValues = true;
+      internalValueResult.startHour = this._startHour;
+    }
+    if (this._startMinute) {
+      hasAnyValues = true;
+      internalValueResult.startMinute = this._startMinute;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MysqlFlexibleServerMaintenanceWindow | undefined) {
+    if (value === undefined) {
+      this._dayOfWeek = undefined;
+      this._startHour = undefined;
+      this._startMinute = undefined;
+    }
+    else {
+      this._dayOfWeek = value.dayOfWeek;
+      this._startHour = value.startHour;
+      this._startMinute = value.startMinute;
+    }
+  }
+
   // day_of_week - computed: false, optional: true, required: false
-  private _dayOfWeek?: number | undefined; 
+  private _dayOfWeek?: number; 
   public get dayOfWeek() {
     return this.getNumberAttribute('day_of_week');
   }
-  public set dayOfWeek(value: number | undefined) {
+  public set dayOfWeek(value: number) {
     this._dayOfWeek = value;
   }
   public resetDayOfWeek() {
@@ -211,15 +267,15 @@ export class MysqlFlexibleServerMaintenanceWindowOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get dayOfWeekInput() {
-    return this._dayOfWeek
+    return this._dayOfWeek;
   }
 
   // start_hour - computed: false, optional: true, required: false
-  private _startHour?: number | undefined; 
+  private _startHour?: number; 
   public get startHour() {
     return this.getNumberAttribute('start_hour');
   }
-  public set startHour(value: number | undefined) {
+  public set startHour(value: number) {
     this._startHour = value;
   }
   public resetStartHour() {
@@ -227,15 +283,15 @@ export class MysqlFlexibleServerMaintenanceWindowOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get startHourInput() {
-    return this._startHour
+    return this._startHour;
   }
 
   // start_minute - computed: false, optional: true, required: false
-  private _startMinute?: number | undefined; 
+  private _startMinute?: number; 
   public get startMinute() {
     return this.getNumberAttribute('start_minute');
   }
-  public set startMinute(value: number | undefined) {
+  public set startMinute(value: number) {
     this._startMinute = value;
   }
   public resetStartMinute() {
@@ -243,7 +299,7 @@ export class MysqlFlexibleServerMaintenanceWindowOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get startMinuteInput() {
-    return this._startMinute
+    return this._startMinute;
   }
 }
 export interface MysqlFlexibleServerStorage {
@@ -261,7 +317,7 @@ export interface MysqlFlexibleServerStorage {
   readonly sizeGb?: number;
 }
 
-function mysqlFlexibleServerStorageToTerraform(struct?: MysqlFlexibleServerStorageOutputReference | MysqlFlexibleServerStorage): any {
+export function mysqlFlexibleServerStorageToTerraform(struct?: MysqlFlexibleServerStorageOutputReference | MysqlFlexibleServerStorage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -283,12 +339,43 @@ export class MysqlFlexibleServerStorageOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MysqlFlexibleServerStorage | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._autoGrowEnabled) {
+      hasAnyValues = true;
+      internalValueResult.autoGrowEnabled = this._autoGrowEnabled;
+    }
+    if (this._iops) {
+      hasAnyValues = true;
+      internalValueResult.iops = this._iops;
+    }
+    if (this._sizeGb) {
+      hasAnyValues = true;
+      internalValueResult.sizeGb = this._sizeGb;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MysqlFlexibleServerStorage | undefined) {
+    if (value === undefined) {
+      this._autoGrowEnabled = undefined;
+      this._iops = undefined;
+      this._sizeGb = undefined;
+    }
+    else {
+      this._autoGrowEnabled = value.autoGrowEnabled;
+      this._iops = value.iops;
+      this._sizeGb = value.sizeGb;
+    }
+  }
+
   // auto_grow_enabled - computed: false, optional: true, required: false
-  private _autoGrowEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _autoGrowEnabled?: boolean | cdktf.IResolvable; 
   public get autoGrowEnabled() {
     return this.getBooleanAttribute('auto_grow_enabled') as any;
   }
-  public set autoGrowEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set autoGrowEnabled(value: boolean | cdktf.IResolvable) {
     this._autoGrowEnabled = value;
   }
   public resetAutoGrowEnabled() {
@@ -296,15 +383,15 @@ export class MysqlFlexibleServerStorageOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get autoGrowEnabledInput() {
-    return this._autoGrowEnabled
+    return this._autoGrowEnabled;
   }
 
   // iops - computed: true, optional: true, required: false
-  private _iops?: number | undefined; 
+  private _iops?: number; 
   public get iops() {
     return this.getNumberAttribute('iops');
   }
-  public set iops(value: number | undefined) {
+  public set iops(value: number) {
     this._iops = value;
   }
   public resetIops() {
@@ -312,15 +399,15 @@ export class MysqlFlexibleServerStorageOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get iopsInput() {
-    return this._iops
+    return this._iops;
   }
 
   // size_gb - computed: true, optional: true, required: false
-  private _sizeGb?: number | undefined; 
+  private _sizeGb?: number; 
   public get sizeGb() {
     return this.getNumberAttribute('size_gb');
   }
-  public set sizeGb(value: number | undefined) {
+  public set sizeGb(value: number) {
     this._sizeGb = value;
   }
   public resetSizeGb() {
@@ -328,7 +415,7 @@ export class MysqlFlexibleServerStorageOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get sizeGbInput() {
-    return this._sizeGb
+    return this._sizeGb;
   }
 }
 export interface MysqlFlexibleServerTimeouts {
@@ -350,7 +437,7 @@ export interface MysqlFlexibleServerTimeouts {
   readonly update?: string;
 }
 
-function mysqlFlexibleServerTimeoutsToTerraform(struct?: MysqlFlexibleServerTimeoutsOutputReference | MysqlFlexibleServerTimeouts): any {
+export function mysqlFlexibleServerTimeoutsToTerraform(struct?: MysqlFlexibleServerTimeoutsOutputReference | MysqlFlexibleServerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -373,12 +460,49 @@ export class MysqlFlexibleServerTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MysqlFlexibleServerTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MysqlFlexibleServerTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -386,15 +510,15 @@ export class MysqlFlexibleServerTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -402,15 +526,15 @@ export class MysqlFlexibleServerTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -418,15 +542,15 @@ export class MysqlFlexibleServerTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -434,7 +558,7 @@ export class MysqlFlexibleServerTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -487,10 +611,10 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._version = config.version;
     this._zone = config.zone;
-    this._highAvailability = config.highAvailability;
-    this._maintenanceWindow = config.maintenanceWindow;
-    this._storage = config.storage;
-    this._timeouts = config.timeouts;
+    this._highAvailability.internalValue = config.highAvailability;
+    this._maintenanceWindow.internalValue = config.maintenanceWindow;
+    this._storage.internalValue = config.storage;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -498,11 +622,11 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   // ==========
 
   // administrator_login - computed: true, optional: true, required: false
-  private _administratorLogin?: string | undefined; 
+  private _administratorLogin?: string; 
   public get administratorLogin() {
     return this.getStringAttribute('administrator_login');
   }
-  public set administratorLogin(value: string | undefined) {
+  public set administratorLogin(value: string) {
     this._administratorLogin = value;
   }
   public resetAdministratorLogin() {
@@ -510,15 +634,15 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get administratorLoginInput() {
-    return this._administratorLogin
+    return this._administratorLogin;
   }
 
   // administrator_password - computed: false, optional: true, required: false
-  private _administratorPassword?: string | undefined; 
+  private _administratorPassword?: string; 
   public get administratorPassword() {
     return this.getStringAttribute('administrator_password');
   }
-  public set administratorPassword(value: string | undefined) {
+  public set administratorPassword(value: string) {
     this._administratorPassword = value;
   }
   public resetAdministratorPassword() {
@@ -526,15 +650,15 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get administratorPasswordInput() {
-    return this._administratorPassword
+    return this._administratorPassword;
   }
 
   // backup_retention_days - computed: false, optional: true, required: false
-  private _backupRetentionDays?: number | undefined; 
+  private _backupRetentionDays?: number; 
   public get backupRetentionDays() {
     return this.getNumberAttribute('backup_retention_days');
   }
-  public set backupRetentionDays(value: number | undefined) {
+  public set backupRetentionDays(value: number) {
     this._backupRetentionDays = value;
   }
   public resetBackupRetentionDays() {
@@ -542,15 +666,15 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get backupRetentionDaysInput() {
-    return this._backupRetentionDays
+    return this._backupRetentionDays;
   }
 
   // create_mode - computed: false, optional: true, required: false
-  private _createMode?: string | undefined; 
+  private _createMode?: string; 
   public get createMode() {
     return this.getStringAttribute('create_mode');
   }
-  public set createMode(value: string | undefined) {
+  public set createMode(value: string) {
     this._createMode = value;
   }
   public resetCreateMode() {
@@ -558,15 +682,15 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get createModeInput() {
-    return this._createMode
+    return this._createMode;
   }
 
   // delegated_subnet_id - computed: false, optional: true, required: false
-  private _delegatedSubnetId?: string | undefined; 
+  private _delegatedSubnetId?: string; 
   public get delegatedSubnetId() {
     return this.getStringAttribute('delegated_subnet_id');
   }
-  public set delegatedSubnetId(value: string | undefined) {
+  public set delegatedSubnetId(value: string) {
     this._delegatedSubnetId = value;
   }
   public resetDelegatedSubnetId() {
@@ -574,7 +698,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get delegatedSubnetIdInput() {
-    return this._delegatedSubnetId
+    return this._delegatedSubnetId;
   }
 
   // fqdn - computed: true, optional: false, required: false
@@ -583,11 +707,11 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // geo_redundant_backup_enabled - computed: false, optional: true, required: false
-  private _geoRedundantBackupEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _geoRedundantBackupEnabled?: boolean | cdktf.IResolvable; 
   public get geoRedundantBackupEnabled() {
     return this.getBooleanAttribute('geo_redundant_backup_enabled') as any;
   }
-  public set geoRedundantBackupEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set geoRedundantBackupEnabled(value: boolean | cdktf.IResolvable) {
     this._geoRedundantBackupEnabled = value;
   }
   public resetGeoRedundantBackupEnabled() {
@@ -595,7 +719,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get geoRedundantBackupEnabledInput() {
-    return this._geoRedundantBackupEnabled
+    return this._geoRedundantBackupEnabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -613,7 +737,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -626,15 +750,15 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // point_in_time_restore_time_in_utc - computed: false, optional: true, required: false
-  private _pointInTimeRestoreTimeInUtc?: string | undefined; 
+  private _pointInTimeRestoreTimeInUtc?: string; 
   public get pointInTimeRestoreTimeInUtc() {
     return this.getStringAttribute('point_in_time_restore_time_in_utc');
   }
-  public set pointInTimeRestoreTimeInUtc(value: string | undefined) {
+  public set pointInTimeRestoreTimeInUtc(value: string) {
     this._pointInTimeRestoreTimeInUtc = value;
   }
   public resetPointInTimeRestoreTimeInUtc() {
@@ -642,15 +766,15 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get pointInTimeRestoreTimeInUtcInput() {
-    return this._pointInTimeRestoreTimeInUtc
+    return this._pointInTimeRestoreTimeInUtc;
   }
 
   // private_dns_zone_id - computed: false, optional: true, required: false
-  private _privateDnsZoneId?: string | undefined; 
+  private _privateDnsZoneId?: string; 
   public get privateDnsZoneId() {
     return this.getStringAttribute('private_dns_zone_id');
   }
-  public set privateDnsZoneId(value: string | undefined) {
+  public set privateDnsZoneId(value: string) {
     this._privateDnsZoneId = value;
   }
   public resetPrivateDnsZoneId() {
@@ -658,7 +782,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get privateDnsZoneIdInput() {
-    return this._privateDnsZoneId
+    return this._privateDnsZoneId;
   }
 
   // public_network_access_enabled - computed: true, optional: false, required: false
@@ -672,11 +796,11 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
 
   // replication_role - computed: true, optional: true, required: false
-  private _replicationRole?: string | undefined; 
+  private _replicationRole?: string; 
   public get replicationRole() {
     return this.getStringAttribute('replication_role');
   }
-  public set replicationRole(value: string | undefined) {
+  public set replicationRole(value: string) {
     this._replicationRole = value;
   }
   public resetReplicationRole() {
@@ -684,7 +808,7 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get replicationRoleInput() {
-    return this._replicationRole
+    return this._replicationRole;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -697,15 +821,15 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // sku_name - computed: true, optional: true, required: false
-  private _skuName?: string | undefined; 
+  private _skuName?: string; 
   public get skuName() {
     return this.getStringAttribute('sku_name');
   }
-  public set skuName(value: string | undefined) {
+  public set skuName(value: string) {
     this._skuName = value;
   }
   public resetSkuName() {
@@ -713,15 +837,15 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuNameInput() {
-    return this._skuName
+    return this._skuName;
   }
 
   // source_server_id - computed: false, optional: true, required: false
-  private _sourceServerId?: string | undefined; 
+  private _sourceServerId?: string; 
   public get sourceServerId() {
     return this.getStringAttribute('source_server_id');
   }
-  public set sourceServerId(value: string | undefined) {
+  public set sourceServerId(value: string) {
     this._sourceServerId = value;
   }
   public resetSourceServerId() {
@@ -729,16 +853,16 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sourceServerIdInput() {
-    return this._sourceServerId
+    return this._sourceServerId;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -746,15 +870,15 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // version - computed: true, optional: true, required: false
-  private _version?: string | undefined; 
+  private _version?: string; 
   public get version() {
     return this.getStringAttribute('version');
   }
-  public set version(value: string | undefined) {
+  public set version(value: string) {
     this._version = value;
   }
   public resetVersion() {
@@ -762,15 +886,15 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 
   // zone - computed: true, optional: true, required: false
-  private _zone?: string | undefined; 
+  private _zone?: string; 
   public get zone() {
     return this.getStringAttribute('zone');
   }
-  public set zone(value: string | undefined) {
+  public set zone(value: string) {
     this._zone = value;
   }
   public resetZone() {
@@ -778,75 +902,71 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get zoneInput() {
-    return this._zone
+    return this._zone;
   }
 
   // high_availability - computed: false, optional: true, required: false
-  private _highAvailability?: MysqlFlexibleServerHighAvailability | undefined; 
-  private __highAvailabilityOutput = new MysqlFlexibleServerHighAvailabilityOutputReference(this as any, "high_availability", true);
+  private _highAvailability = new MysqlFlexibleServerHighAvailabilityOutputReference(this as any, "high_availability", true);
   public get highAvailability() {
-    return this.__highAvailabilityOutput;
+    return this._highAvailability;
   }
-  public putHighAvailability(value: MysqlFlexibleServerHighAvailability | undefined) {
-    this._highAvailability = value;
+  public putHighAvailability(value: MysqlFlexibleServerHighAvailability) {
+    this._highAvailability.internalValue = value;
   }
   public resetHighAvailability() {
-    this._highAvailability = undefined;
+    this._highAvailability.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get highAvailabilityInput() {
-    return this._highAvailability
+    return this._highAvailability.internalValue;
   }
 
   // maintenance_window - computed: false, optional: true, required: false
-  private _maintenanceWindow?: MysqlFlexibleServerMaintenanceWindow | undefined; 
-  private __maintenanceWindowOutput = new MysqlFlexibleServerMaintenanceWindowOutputReference(this as any, "maintenance_window", true);
+  private _maintenanceWindow = new MysqlFlexibleServerMaintenanceWindowOutputReference(this as any, "maintenance_window", true);
   public get maintenanceWindow() {
-    return this.__maintenanceWindowOutput;
+    return this._maintenanceWindow;
   }
-  public putMaintenanceWindow(value: MysqlFlexibleServerMaintenanceWindow | undefined) {
-    this._maintenanceWindow = value;
+  public putMaintenanceWindow(value: MysqlFlexibleServerMaintenanceWindow) {
+    this._maintenanceWindow.internalValue = value;
   }
   public resetMaintenanceWindow() {
-    this._maintenanceWindow = undefined;
+    this._maintenanceWindow.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get maintenanceWindowInput() {
-    return this._maintenanceWindow
+    return this._maintenanceWindow.internalValue;
   }
 
   // storage - computed: false, optional: true, required: false
-  private _storage?: MysqlFlexibleServerStorage | undefined; 
-  private __storageOutput = new MysqlFlexibleServerStorageOutputReference(this as any, "storage", true);
+  private _storage = new MysqlFlexibleServerStorageOutputReference(this as any, "storage", true);
   public get storage() {
-    return this.__storageOutput;
+    return this._storage;
   }
-  public putStorage(value: MysqlFlexibleServerStorage | undefined) {
-    this._storage = value;
+  public putStorage(value: MysqlFlexibleServerStorage) {
+    this._storage.internalValue = value;
   }
   public resetStorage() {
-    this._storage = undefined;
+    this._storage.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get storageInput() {
-    return this._storage
+    return this._storage.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MysqlFlexibleServerTimeouts | undefined; 
-  private __timeoutsOutput = new MysqlFlexibleServerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MysqlFlexibleServerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MysqlFlexibleServerTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MysqlFlexibleServerTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -872,10 +992,10 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
       zone: cdktf.stringToTerraform(this._zone),
-      high_availability: mysqlFlexibleServerHighAvailabilityToTerraform(this._highAvailability),
-      maintenance_window: mysqlFlexibleServerMaintenanceWindowToTerraform(this._maintenanceWindow),
-      storage: mysqlFlexibleServerStorageToTerraform(this._storage),
-      timeouts: mysqlFlexibleServerTimeoutsToTerraform(this._timeouts),
+      high_availability: mysqlFlexibleServerHighAvailabilityToTerraform(this._highAvailability.internalValue),
+      maintenance_window: mysqlFlexibleServerMaintenanceWindowToTerraform(this._maintenanceWindow.internalValue),
+      storage: mysqlFlexibleServerStorageToTerraform(this._storage.internalValue),
+      timeouts: mysqlFlexibleServerTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -33,7 +33,7 @@ export interface DataAzurermKubernetesServiceVersionsTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermKubernetesServiceVersionsTimeoutsToTerraform(struct?: DataAzurermKubernetesServiceVersionsTimeoutsOutputReference | DataAzurermKubernetesServiceVersionsTimeouts): any {
+export function dataAzurermKubernetesServiceVersionsTimeoutsToTerraform(struct?: DataAzurermKubernetesServiceVersionsTimeoutsOutputReference | DataAzurermKubernetesServiceVersionsTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -53,12 +53,31 @@ export class DataAzurermKubernetesServiceVersionsTimeoutsOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermKubernetesServiceVersionsTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKubernetesServiceVersionsTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -66,7 +85,7 @@ export class DataAzurermKubernetesServiceVersionsTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -105,7 +124,7 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
     this._includePreview = config.includePreview;
     this._location = config.location;
     this._versionPrefix = config.versionPrefix;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -118,11 +137,11 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
   }
 
   // include_preview - computed: false, optional: true, required: false
-  private _includePreview?: boolean | cdktf.IResolvable | undefined; 
+  private _includePreview?: boolean | cdktf.IResolvable; 
   public get includePreview() {
     return this.getBooleanAttribute('include_preview') as any;
   }
-  public set includePreview(value: boolean | cdktf.IResolvable | undefined) {
+  public set includePreview(value: boolean | cdktf.IResolvable) {
     this._includePreview = value;
   }
   public resetIncludePreview() {
@@ -130,7 +149,7 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get includePreviewInput() {
-    return this._includePreview
+    return this._includePreview;
   }
 
   // latest_version - computed: true, optional: false, required: false
@@ -148,15 +167,15 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // version_prefix - computed: false, optional: true, required: false
-  private _versionPrefix?: string | undefined; 
+  private _versionPrefix?: string; 
   public get versionPrefix() {
     return this.getStringAttribute('version_prefix');
   }
-  public set versionPrefix(value: string | undefined) {
+  public set versionPrefix(value: string) {
     this._versionPrefix = value;
   }
   public resetVersionPrefix() {
@@ -164,7 +183,7 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get versionPrefixInput() {
-    return this._versionPrefix
+    return this._versionPrefix;
   }
 
   // versions - computed: true, optional: false, required: false
@@ -173,20 +192,19 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermKubernetesServiceVersionsTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermKubernetesServiceVersionsTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermKubernetesServiceVersionsTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermKubernetesServiceVersionsTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermKubernetesServiceVersionsTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -198,7 +216,7 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
       include_preview: cdktf.booleanToTerraform(this._includePreview),
       location: cdktf.stringToTerraform(this._location),
       version_prefix: cdktf.stringToTerraform(this._versionPrefix),
-      timeouts: dataAzurermKubernetesServiceVersionsTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermKubernetesServiceVersionsTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

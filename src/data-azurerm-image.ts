@@ -96,7 +96,7 @@ export interface DataAzurermImageTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermImageTimeoutsToTerraform(struct?: DataAzurermImageTimeoutsOutputReference | DataAzurermImageTimeouts): any {
+export function dataAzurermImageTimeoutsToTerraform(struct?: DataAzurermImageTimeoutsOutputReference | DataAzurermImageTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -116,12 +116,31 @@ export class DataAzurermImageTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermImageTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermImageTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -129,7 +148,7 @@ export class DataAzurermImageTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -169,7 +188,7 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
     this._nameRegex = config.nameRegex;
     this._resourceGroupName = config.resourceGroupName;
     this._sortDescending = config.sortDescending;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -192,11 +211,11 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
   }
 
   // name - computed: false, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -204,15 +223,15 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // name_regex - computed: false, optional: true, required: false
-  private _nameRegex?: string | undefined; 
+  private _nameRegex?: string; 
   public get nameRegex() {
     return this.getStringAttribute('name_regex');
   }
-  public set nameRegex(value: string | undefined) {
+  public set nameRegex(value: string) {
     this._nameRegex = value;
   }
   public resetNameRegex() {
@@ -220,7 +239,7 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameRegexInput() {
-    return this._nameRegex
+    return this._nameRegex;
   }
 
   // os_disk - computed: true, optional: false, required: false
@@ -238,15 +257,15 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // sort_descending - computed: false, optional: true, required: false
-  private _sortDescending?: boolean | cdktf.IResolvable | undefined; 
+  private _sortDescending?: boolean | cdktf.IResolvable; 
   public get sortDescending() {
     return this.getBooleanAttribute('sort_descending') as any;
   }
-  public set sortDescending(value: boolean | cdktf.IResolvable | undefined) {
+  public set sortDescending(value: boolean | cdktf.IResolvable) {
     this._sortDescending = value;
   }
   public resetSortDescending() {
@@ -254,7 +273,7 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get sortDescendingInput() {
-    return this._sortDescending
+    return this._sortDescending;
   }
 
   // tags - computed: true, optional: false, required: false
@@ -268,20 +287,19 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermImageTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermImageTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermImageTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermImageTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermImageTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -294,7 +312,7 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
       name_regex: cdktf.stringToTerraform(this._nameRegex),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sort_descending: cdktf.booleanToTerraform(this._sortDescending),
-      timeouts: dataAzurermImageTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermImageTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

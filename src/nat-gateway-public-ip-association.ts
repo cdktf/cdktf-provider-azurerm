@@ -37,7 +37,7 @@ export interface NatGatewayPublicIpAssociationTimeouts {
   readonly read?: string;
 }
 
-function natGatewayPublicIpAssociationTimeoutsToTerraform(struct?: NatGatewayPublicIpAssociationTimeoutsOutputReference | NatGatewayPublicIpAssociationTimeouts): any {
+export function natGatewayPublicIpAssociationTimeoutsToTerraform(struct?: NatGatewayPublicIpAssociationTimeoutsOutputReference | NatGatewayPublicIpAssociationTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -59,12 +59,43 @@ export class NatGatewayPublicIpAssociationTimeoutsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NatGatewayPublicIpAssociationTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NatGatewayPublicIpAssociationTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -72,15 +103,15 @@ export class NatGatewayPublicIpAssociationTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -88,15 +119,15 @@ export class NatGatewayPublicIpAssociationTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -104,7 +135,7 @@ export class NatGatewayPublicIpAssociationTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -142,7 +173,7 @@ export class NatGatewayPublicIpAssociation extends cdktf.TerraformResource {
     });
     this._natGatewayId = config.natGatewayId;
     this._publicIpAddressId = config.publicIpAddressId;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -164,7 +195,7 @@ export class NatGatewayPublicIpAssociation extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get natGatewayIdInput() {
-    return this._natGatewayId
+    return this._natGatewayId;
   }
 
   // public_ip_address_id - computed: false, optional: false, required: true
@@ -177,24 +208,23 @@ export class NatGatewayPublicIpAssociation extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get publicIpAddressIdInput() {
-    return this._publicIpAddressId
+    return this._publicIpAddressId;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: NatGatewayPublicIpAssociationTimeouts | undefined; 
-  private __timeoutsOutput = new NatGatewayPublicIpAssociationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NatGatewayPublicIpAssociationTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: NatGatewayPublicIpAssociationTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: NatGatewayPublicIpAssociationTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -205,7 +235,7 @@ export class NatGatewayPublicIpAssociation extends cdktf.TerraformResource {
     return {
       nat_gateway_id: cdktf.stringToTerraform(this._natGatewayId),
       public_ip_address_id: cdktf.stringToTerraform(this._publicIpAddressId),
-      timeouts: natGatewayPublicIpAssociationTimeoutsToTerraform(this._timeouts),
+      timeouts: natGatewayPublicIpAssociationTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

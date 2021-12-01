@@ -51,7 +51,7 @@ export interface FrontdoorRulesEngineRuleActionRequestHeader {
   readonly value?: string;
 }
 
-function frontdoorRulesEngineRuleActionRequestHeaderToTerraform(struct?: FrontdoorRulesEngineRuleActionRequestHeader): any {
+export function frontdoorRulesEngineRuleActionRequestHeaderToTerraform(struct?: FrontdoorRulesEngineRuleActionRequestHeader): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -78,7 +78,7 @@ export interface FrontdoorRulesEngineRuleActionResponseHeader {
   readonly value?: string;
 }
 
-function frontdoorRulesEngineRuleActionResponseHeaderToTerraform(struct?: FrontdoorRulesEngineRuleActionResponseHeader): any {
+export function frontdoorRulesEngineRuleActionResponseHeaderToTerraform(struct?: FrontdoorRulesEngineRuleActionResponseHeader): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -105,7 +105,7 @@ export interface FrontdoorRulesEngineRuleAction {
   readonly responseHeader?: FrontdoorRulesEngineRuleActionResponseHeader[];
 }
 
-function frontdoorRulesEngineRuleActionToTerraform(struct?: FrontdoorRulesEngineRuleActionOutputReference | FrontdoorRulesEngineRuleAction): any {
+export function frontdoorRulesEngineRuleActionToTerraform(struct?: FrontdoorRulesEngineRuleActionOutputReference | FrontdoorRulesEngineRuleAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -126,13 +126,38 @@ export class FrontdoorRulesEngineRuleActionOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): FrontdoorRulesEngineRuleAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._requestHeader) {
+      hasAnyValues = true;
+      internalValueResult.requestHeader = this._requestHeader;
+    }
+    if (this._responseHeader) {
+      hasAnyValues = true;
+      internalValueResult.responseHeader = this._responseHeader;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FrontdoorRulesEngineRuleAction | undefined) {
+    if (value === undefined) {
+      this._requestHeader = undefined;
+      this._responseHeader = undefined;
+    }
+    else {
+      this._requestHeader = value.requestHeader;
+      this._responseHeader = value.responseHeader;
+    }
+  }
+
   // request_header - computed: false, optional: true, required: false
-  private _requestHeader?: FrontdoorRulesEngineRuleActionRequestHeader[] | undefined; 
+  private _requestHeader?: FrontdoorRulesEngineRuleActionRequestHeader[]; 
   public get requestHeader() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('request_header') as any;
   }
-  public set requestHeader(value: FrontdoorRulesEngineRuleActionRequestHeader[] | undefined) {
+  public set requestHeader(value: FrontdoorRulesEngineRuleActionRequestHeader[]) {
     this._requestHeader = value;
   }
   public resetRequestHeader() {
@@ -140,16 +165,16 @@ export class FrontdoorRulesEngineRuleActionOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeaderInput() {
-    return this._requestHeader
+    return this._requestHeader;
   }
 
   // response_header - computed: false, optional: true, required: false
-  private _responseHeader?: FrontdoorRulesEngineRuleActionResponseHeader[] | undefined; 
+  private _responseHeader?: FrontdoorRulesEngineRuleActionResponseHeader[]; 
   public get responseHeader() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('response_header') as any;
   }
-  public set responseHeader(value: FrontdoorRulesEngineRuleActionResponseHeader[] | undefined) {
+  public set responseHeader(value: FrontdoorRulesEngineRuleActionResponseHeader[]) {
     this._responseHeader = value;
   }
   public resetResponseHeader() {
@@ -157,7 +182,7 @@ export class FrontdoorRulesEngineRuleActionOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get responseHeaderInput() {
-    return this._responseHeader
+    return this._responseHeader;
   }
 }
 export interface FrontdoorRulesEngineRuleMatchCondition {
@@ -187,7 +212,7 @@ export interface FrontdoorRulesEngineRuleMatchCondition {
   readonly variable?: string;
 }
 
-function frontdoorRulesEngineRuleMatchConditionToTerraform(struct?: FrontdoorRulesEngineRuleMatchCondition): any {
+export function frontdoorRulesEngineRuleMatchConditionToTerraform(struct?: FrontdoorRulesEngineRuleMatchCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -225,7 +250,7 @@ export interface FrontdoorRulesEngineRule {
   readonly matchCondition?: FrontdoorRulesEngineRuleMatchCondition[];
 }
 
-function frontdoorRulesEngineRuleToTerraform(struct?: FrontdoorRulesEngineRule): any {
+export function frontdoorRulesEngineRuleToTerraform(struct?: FrontdoorRulesEngineRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -257,7 +282,7 @@ export interface FrontdoorRulesEngineTimeouts {
   readonly update?: string;
 }
 
-function frontdoorRulesEngineTimeoutsToTerraform(struct?: FrontdoorRulesEngineTimeoutsOutputReference | FrontdoorRulesEngineTimeouts): any {
+export function frontdoorRulesEngineTimeoutsToTerraform(struct?: FrontdoorRulesEngineTimeoutsOutputReference | FrontdoorRulesEngineTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -280,12 +305,49 @@ export class FrontdoorRulesEngineTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): FrontdoorRulesEngineTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FrontdoorRulesEngineTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -293,15 +355,15 @@ export class FrontdoorRulesEngineTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -309,15 +371,15 @@ export class FrontdoorRulesEngineTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -325,15 +387,15 @@ export class FrontdoorRulesEngineTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -341,7 +403,7 @@ export class FrontdoorRulesEngineTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -382,7 +444,7 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._rule = config.rule;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -390,11 +452,11 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
   // ==========
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -402,7 +464,7 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // frontdoor_name - computed: false, optional: false, required: true
@@ -415,7 +477,7 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get frontdoorNameInput() {
-    return this._frontdoorName
+    return this._frontdoorName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -438,7 +500,7 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -451,16 +513,16 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule?: FrontdoorRulesEngineRule[] | undefined; 
+  private _rule?: FrontdoorRulesEngineRule[]; 
   public get rule() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('rule') as any;
   }
-  public set rule(value: FrontdoorRulesEngineRule[] | undefined) {
+  public set rule(value: FrontdoorRulesEngineRule[]) {
     this._rule = value;
   }
   public resetRule() {
@@ -468,24 +530,23 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ruleInput() {
-    return this._rule
+    return this._rule;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: FrontdoorRulesEngineTimeouts | undefined; 
-  private __timeoutsOutput = new FrontdoorRulesEngineTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new FrontdoorRulesEngineTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: FrontdoorRulesEngineTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: FrontdoorRulesEngineTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -499,7 +560,7 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       rule: cdktf.listMapper(frontdoorRulesEngineRuleToTerraform)(this._rule),
-      timeouts: frontdoorRulesEngineTimeoutsToTerraform(this._timeouts),
+      timeouts: frontdoorRulesEngineTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -227,7 +227,7 @@ export interface KubernetesClusterAddonProfileAciConnectorLinux {
   readonly subnetName?: string;
 }
 
-function kubernetesClusterAddonProfileAciConnectorLinuxToTerraform(struct?: KubernetesClusterAddonProfileAciConnectorLinuxOutputReference | KubernetesClusterAddonProfileAciConnectorLinux): any {
+export function kubernetesClusterAddonProfileAciConnectorLinuxToTerraform(struct?: KubernetesClusterAddonProfileAciConnectorLinuxOutputReference | KubernetesClusterAddonProfileAciConnectorLinux): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -248,6 +248,31 @@ export class KubernetesClusterAddonProfileAciConnectorLinuxOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterAddonProfileAciConnectorLinux | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._subnetName) {
+      hasAnyValues = true;
+      internalValueResult.subnetName = this._subnetName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterAddonProfileAciConnectorLinux | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+      this._subnetName = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+      this._subnetName = value.subnetName;
+    }
+  }
+
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
@@ -258,15 +283,15 @@ export class KubernetesClusterAddonProfileAciConnectorLinuxOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // subnet_name - computed: false, optional: true, required: false
-  private _subnetName?: string | undefined; 
+  private _subnetName?: string; 
   public get subnetName() {
     return this.getStringAttribute('subnet_name');
   }
-  public set subnetName(value: string | undefined) {
+  public set subnetName(value: string) {
     this._subnetName = value;
   }
   public resetSubnetName() {
@@ -274,7 +299,7 @@ export class KubernetesClusterAddonProfileAciConnectorLinuxOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get subnetNameInput() {
-    return this._subnetName
+    return this._subnetName;
   }
 }
 export interface KubernetesClusterAddonProfileAzurePolicy {
@@ -284,7 +309,7 @@ export interface KubernetesClusterAddonProfileAzurePolicy {
   readonly enabled: boolean | cdktf.IResolvable;
 }
 
-function kubernetesClusterAddonProfileAzurePolicyToTerraform(struct?: KubernetesClusterAddonProfileAzurePolicyOutputReference | KubernetesClusterAddonProfileAzurePolicy): any {
+export function kubernetesClusterAddonProfileAzurePolicyToTerraform(struct?: KubernetesClusterAddonProfileAzurePolicyOutputReference | KubernetesClusterAddonProfileAzurePolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -304,6 +329,25 @@ export class KubernetesClusterAddonProfileAzurePolicyOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterAddonProfileAzurePolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterAddonProfileAzurePolicy | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+    }
+  }
+
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
@@ -314,7 +358,7 @@ export class KubernetesClusterAddonProfileAzurePolicyOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 }
 export interface KubernetesClusterAddonProfileHttpApplicationRouting {
@@ -324,7 +368,7 @@ export interface KubernetesClusterAddonProfileHttpApplicationRouting {
   readonly enabled: boolean | cdktf.IResolvable;
 }
 
-function kubernetesClusterAddonProfileHttpApplicationRoutingToTerraform(struct?: KubernetesClusterAddonProfileHttpApplicationRoutingOutputReference | KubernetesClusterAddonProfileHttpApplicationRouting): any {
+export function kubernetesClusterAddonProfileHttpApplicationRoutingToTerraform(struct?: KubernetesClusterAddonProfileHttpApplicationRoutingOutputReference | KubernetesClusterAddonProfileHttpApplicationRouting): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -344,6 +388,25 @@ export class KubernetesClusterAddonProfileHttpApplicationRoutingOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterAddonProfileHttpApplicationRouting | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterAddonProfileHttpApplicationRouting | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+    }
+  }
+
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
@@ -354,7 +417,7 @@ export class KubernetesClusterAddonProfileHttpApplicationRoutingOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 }
 export interface KubernetesClusterAddonProfileIngressApplicationGateway {
@@ -380,7 +443,7 @@ export interface KubernetesClusterAddonProfileIngressApplicationGateway {
   readonly subnetId?: string;
 }
 
-function kubernetesClusterAddonProfileIngressApplicationGatewayToTerraform(struct?: KubernetesClusterAddonProfileIngressApplicationGatewayOutputReference | KubernetesClusterAddonProfileIngressApplicationGateway): any {
+export function kubernetesClusterAddonProfileIngressApplicationGatewayToTerraform(struct?: KubernetesClusterAddonProfileIngressApplicationGatewayOutputReference | KubernetesClusterAddonProfileIngressApplicationGateway): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -404,6 +467,49 @@ export class KubernetesClusterAddonProfileIngressApplicationGatewayOutputReferen
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterAddonProfileIngressApplicationGateway | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._gatewayId) {
+      hasAnyValues = true;
+      internalValueResult.gatewayId = this._gatewayId;
+    }
+    if (this._gatewayName) {
+      hasAnyValues = true;
+      internalValueResult.gatewayName = this._gatewayName;
+    }
+    if (this._subnetCidr) {
+      hasAnyValues = true;
+      internalValueResult.subnetCidr = this._subnetCidr;
+    }
+    if (this._subnetId) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterAddonProfileIngressApplicationGateway | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+      this._gatewayId = undefined;
+      this._gatewayName = undefined;
+      this._subnetCidr = undefined;
+      this._subnetId = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+      this._gatewayId = value.gatewayId;
+      this._gatewayName = value.gatewayName;
+      this._subnetCidr = value.subnetCidr;
+      this._subnetId = value.subnetId;
+    }
+  }
+
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
@@ -414,15 +520,15 @@ export class KubernetesClusterAddonProfileIngressApplicationGatewayOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // gateway_id - computed: false, optional: true, required: false
-  private _gatewayId?: string | undefined; 
+  private _gatewayId?: string; 
   public get gatewayId() {
     return this.getStringAttribute('gateway_id');
   }
-  public set gatewayId(value: string | undefined) {
+  public set gatewayId(value: string) {
     this._gatewayId = value;
   }
   public resetGatewayId() {
@@ -430,15 +536,15 @@ export class KubernetesClusterAddonProfileIngressApplicationGatewayOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get gatewayIdInput() {
-    return this._gatewayId
+    return this._gatewayId;
   }
 
   // gateway_name - computed: false, optional: true, required: false
-  private _gatewayName?: string | undefined; 
+  private _gatewayName?: string; 
   public get gatewayName() {
     return this.getStringAttribute('gateway_name');
   }
-  public set gatewayName(value: string | undefined) {
+  public set gatewayName(value: string) {
     this._gatewayName = value;
   }
   public resetGatewayName() {
@@ -446,15 +552,15 @@ export class KubernetesClusterAddonProfileIngressApplicationGatewayOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get gatewayNameInput() {
-    return this._gatewayName
+    return this._gatewayName;
   }
 
   // subnet_cidr - computed: false, optional: true, required: false
-  private _subnetCidr?: string | undefined; 
+  private _subnetCidr?: string; 
   public get subnetCidr() {
     return this.getStringAttribute('subnet_cidr');
   }
-  public set subnetCidr(value: string | undefined) {
+  public set subnetCidr(value: string) {
     this._subnetCidr = value;
   }
   public resetSubnetCidr() {
@@ -462,15 +568,15 @@ export class KubernetesClusterAddonProfileIngressApplicationGatewayOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get subnetCidrInput() {
-    return this._subnetCidr
+    return this._subnetCidr;
   }
 
   // subnet_id - computed: false, optional: true, required: false
-  private _subnetId?: string | undefined; 
+  private _subnetId?: string; 
   public get subnetId() {
     return this.getStringAttribute('subnet_id');
   }
-  public set subnetId(value: string | undefined) {
+  public set subnetId(value: string) {
     this._subnetId = value;
   }
   public resetSubnetId() {
@@ -478,7 +584,7 @@ export class KubernetesClusterAddonProfileIngressApplicationGatewayOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get subnetIdInput() {
-    return this._subnetId
+    return this._subnetId;
   }
 }
 export interface KubernetesClusterAddonProfileKubeDashboard {
@@ -488,7 +594,7 @@ export interface KubernetesClusterAddonProfileKubeDashboard {
   readonly enabled: boolean | cdktf.IResolvable;
 }
 
-function kubernetesClusterAddonProfileKubeDashboardToTerraform(struct?: KubernetesClusterAddonProfileKubeDashboardOutputReference | KubernetesClusterAddonProfileKubeDashboard): any {
+export function kubernetesClusterAddonProfileKubeDashboardToTerraform(struct?: KubernetesClusterAddonProfileKubeDashboardOutputReference | KubernetesClusterAddonProfileKubeDashboard): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -508,6 +614,25 @@ export class KubernetesClusterAddonProfileKubeDashboardOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterAddonProfileKubeDashboard | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterAddonProfileKubeDashboard | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+    }
+  }
+
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
@@ -518,7 +643,7 @@ export class KubernetesClusterAddonProfileKubeDashboardOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 }
 export interface KubernetesClusterAddonProfileOmsAgent {
@@ -532,7 +657,7 @@ export interface KubernetesClusterAddonProfileOmsAgent {
   readonly logAnalyticsWorkspaceId?: string;
 }
 
-function kubernetesClusterAddonProfileOmsAgentToTerraform(struct?: KubernetesClusterAddonProfileOmsAgentOutputReference | KubernetesClusterAddonProfileOmsAgent): any {
+export function kubernetesClusterAddonProfileOmsAgentToTerraform(struct?: KubernetesClusterAddonProfileOmsAgentOutputReference | KubernetesClusterAddonProfileOmsAgent): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -553,6 +678,31 @@ export class KubernetesClusterAddonProfileOmsAgentOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterAddonProfileOmsAgent | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._logAnalyticsWorkspaceId) {
+      hasAnyValues = true;
+      internalValueResult.logAnalyticsWorkspaceId = this._logAnalyticsWorkspaceId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterAddonProfileOmsAgent | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+      this._logAnalyticsWorkspaceId = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+      this._logAnalyticsWorkspaceId = value.logAnalyticsWorkspaceId;
+    }
+  }
+
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
@@ -563,15 +713,15 @@ export class KubernetesClusterAddonProfileOmsAgentOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // log_analytics_workspace_id - computed: false, optional: true, required: false
-  private _logAnalyticsWorkspaceId?: string | undefined; 
+  private _logAnalyticsWorkspaceId?: string; 
   public get logAnalyticsWorkspaceId() {
     return this.getStringAttribute('log_analytics_workspace_id');
   }
-  public set logAnalyticsWorkspaceId(value: string | undefined) {
+  public set logAnalyticsWorkspaceId(value: string) {
     this._logAnalyticsWorkspaceId = value;
   }
   public resetLogAnalyticsWorkspaceId() {
@@ -579,7 +729,7 @@ export class KubernetesClusterAddonProfileOmsAgentOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get logAnalyticsWorkspaceIdInput() {
-    return this._logAnalyticsWorkspaceId
+    return this._logAnalyticsWorkspaceId;
   }
 }
 export interface KubernetesClusterAddonProfileOpenServiceMesh {
@@ -589,7 +739,7 @@ export interface KubernetesClusterAddonProfileOpenServiceMesh {
   readonly enabled: boolean | cdktf.IResolvable;
 }
 
-function kubernetesClusterAddonProfileOpenServiceMeshToTerraform(struct?: KubernetesClusterAddonProfileOpenServiceMeshOutputReference | KubernetesClusterAddonProfileOpenServiceMesh): any {
+export function kubernetesClusterAddonProfileOpenServiceMeshToTerraform(struct?: KubernetesClusterAddonProfileOpenServiceMeshOutputReference | KubernetesClusterAddonProfileOpenServiceMesh): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -609,6 +759,25 @@ export class KubernetesClusterAddonProfileOpenServiceMeshOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterAddonProfileOpenServiceMesh | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterAddonProfileOpenServiceMesh | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+    }
+  }
+
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
@@ -619,7 +788,7 @@ export class KubernetesClusterAddonProfileOpenServiceMeshOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 }
 export interface KubernetesClusterAddonProfile {
@@ -667,7 +836,7 @@ export interface KubernetesClusterAddonProfile {
   readonly openServiceMesh?: KubernetesClusterAddonProfileOpenServiceMesh;
 }
 
-function kubernetesClusterAddonProfileToTerraform(struct?: KubernetesClusterAddonProfileOutputReference | KubernetesClusterAddonProfile): any {
+export function kubernetesClusterAddonProfileToTerraform(struct?: KubernetesClusterAddonProfileOutputReference | KubernetesClusterAddonProfile): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -693,123 +862,171 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // aci_connector_linux - computed: false, optional: true, required: false
-  private _aciConnectorLinux?: KubernetesClusterAddonProfileAciConnectorLinux | undefined; 
-  private __aciConnectorLinuxOutput = new KubernetesClusterAddonProfileAciConnectorLinuxOutputReference(this as any, "aci_connector_linux", true);
-  public get aciConnectorLinux() {
-    return this.__aciConnectorLinuxOutput;
+  public get internalValue(): KubernetesClusterAddonProfile | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._aciConnectorLinux) {
+      hasAnyValues = true;
+      internalValueResult.aciConnectorLinux = this._aciConnectorLinux?.internalValue;
+    }
+    if (this._azurePolicy) {
+      hasAnyValues = true;
+      internalValueResult.azurePolicy = this._azurePolicy?.internalValue;
+    }
+    if (this._httpApplicationRouting) {
+      hasAnyValues = true;
+      internalValueResult.httpApplicationRouting = this._httpApplicationRouting?.internalValue;
+    }
+    if (this._ingressApplicationGateway) {
+      hasAnyValues = true;
+      internalValueResult.ingressApplicationGateway = this._ingressApplicationGateway?.internalValue;
+    }
+    if (this._kubeDashboard) {
+      hasAnyValues = true;
+      internalValueResult.kubeDashboard = this._kubeDashboard?.internalValue;
+    }
+    if (this._omsAgent) {
+      hasAnyValues = true;
+      internalValueResult.omsAgent = this._omsAgent?.internalValue;
+    }
+    if (this._openServiceMesh) {
+      hasAnyValues = true;
+      internalValueResult.openServiceMesh = this._openServiceMesh?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putAciConnectorLinux(value: KubernetesClusterAddonProfileAciConnectorLinux | undefined) {
-    this._aciConnectorLinux = value;
+
+  public set internalValue(value: KubernetesClusterAddonProfile | undefined) {
+    if (value === undefined) {
+      this._aciConnectorLinux.internalValue = undefined;
+      this._azurePolicy.internalValue = undefined;
+      this._httpApplicationRouting.internalValue = undefined;
+      this._ingressApplicationGateway.internalValue = undefined;
+      this._kubeDashboard.internalValue = undefined;
+      this._omsAgent.internalValue = undefined;
+      this._openServiceMesh.internalValue = undefined;
+    }
+    else {
+      this._aciConnectorLinux.internalValue = value.aciConnectorLinux;
+      this._azurePolicy.internalValue = value.azurePolicy;
+      this._httpApplicationRouting.internalValue = value.httpApplicationRouting;
+      this._ingressApplicationGateway.internalValue = value.ingressApplicationGateway;
+      this._kubeDashboard.internalValue = value.kubeDashboard;
+      this._omsAgent.internalValue = value.omsAgent;
+      this._openServiceMesh.internalValue = value.openServiceMesh;
+    }
+  }
+
+  // aci_connector_linux - computed: false, optional: true, required: false
+  private _aciConnectorLinux = new KubernetesClusterAddonProfileAciConnectorLinuxOutputReference(this as any, "aci_connector_linux", true);
+  public get aciConnectorLinux() {
+    return this._aciConnectorLinux;
+  }
+  public putAciConnectorLinux(value: KubernetesClusterAddonProfileAciConnectorLinux) {
+    this._aciConnectorLinux.internalValue = value;
   }
   public resetAciConnectorLinux() {
-    this._aciConnectorLinux = undefined;
+    this._aciConnectorLinux.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get aciConnectorLinuxInput() {
-    return this._aciConnectorLinux
+    return this._aciConnectorLinux.internalValue;
   }
 
   // azure_policy - computed: false, optional: true, required: false
-  private _azurePolicy?: KubernetesClusterAddonProfileAzurePolicy | undefined; 
-  private __azurePolicyOutput = new KubernetesClusterAddonProfileAzurePolicyOutputReference(this as any, "azure_policy", true);
+  private _azurePolicy = new KubernetesClusterAddonProfileAzurePolicyOutputReference(this as any, "azure_policy", true);
   public get azurePolicy() {
-    return this.__azurePolicyOutput;
+    return this._azurePolicy;
   }
-  public putAzurePolicy(value: KubernetesClusterAddonProfileAzurePolicy | undefined) {
-    this._azurePolicy = value;
+  public putAzurePolicy(value: KubernetesClusterAddonProfileAzurePolicy) {
+    this._azurePolicy.internalValue = value;
   }
   public resetAzurePolicy() {
-    this._azurePolicy = undefined;
+    this._azurePolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get azurePolicyInput() {
-    return this._azurePolicy
+    return this._azurePolicy.internalValue;
   }
 
   // http_application_routing - computed: false, optional: true, required: false
-  private _httpApplicationRouting?: KubernetesClusterAddonProfileHttpApplicationRouting | undefined; 
-  private __httpApplicationRoutingOutput = new KubernetesClusterAddonProfileHttpApplicationRoutingOutputReference(this as any, "http_application_routing", true);
+  private _httpApplicationRouting = new KubernetesClusterAddonProfileHttpApplicationRoutingOutputReference(this as any, "http_application_routing", true);
   public get httpApplicationRouting() {
-    return this.__httpApplicationRoutingOutput;
+    return this._httpApplicationRouting;
   }
-  public putHttpApplicationRouting(value: KubernetesClusterAddonProfileHttpApplicationRouting | undefined) {
-    this._httpApplicationRouting = value;
+  public putHttpApplicationRouting(value: KubernetesClusterAddonProfileHttpApplicationRouting) {
+    this._httpApplicationRouting.internalValue = value;
   }
   public resetHttpApplicationRouting() {
-    this._httpApplicationRouting = undefined;
+    this._httpApplicationRouting.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get httpApplicationRoutingInput() {
-    return this._httpApplicationRouting
+    return this._httpApplicationRouting.internalValue;
   }
 
   // ingress_application_gateway - computed: false, optional: true, required: false
-  private _ingressApplicationGateway?: KubernetesClusterAddonProfileIngressApplicationGateway | undefined; 
-  private __ingressApplicationGatewayOutput = new KubernetesClusterAddonProfileIngressApplicationGatewayOutputReference(this as any, "ingress_application_gateway", true);
+  private _ingressApplicationGateway = new KubernetesClusterAddonProfileIngressApplicationGatewayOutputReference(this as any, "ingress_application_gateway", true);
   public get ingressApplicationGateway() {
-    return this.__ingressApplicationGatewayOutput;
+    return this._ingressApplicationGateway;
   }
-  public putIngressApplicationGateway(value: KubernetesClusterAddonProfileIngressApplicationGateway | undefined) {
-    this._ingressApplicationGateway = value;
+  public putIngressApplicationGateway(value: KubernetesClusterAddonProfileIngressApplicationGateway) {
+    this._ingressApplicationGateway.internalValue = value;
   }
   public resetIngressApplicationGateway() {
-    this._ingressApplicationGateway = undefined;
+    this._ingressApplicationGateway.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ingressApplicationGatewayInput() {
-    return this._ingressApplicationGateway
+    return this._ingressApplicationGateway.internalValue;
   }
 
   // kube_dashboard - computed: false, optional: true, required: false
-  private _kubeDashboard?: KubernetesClusterAddonProfileKubeDashboard | undefined; 
-  private __kubeDashboardOutput = new KubernetesClusterAddonProfileKubeDashboardOutputReference(this as any, "kube_dashboard", true);
+  private _kubeDashboard = new KubernetesClusterAddonProfileKubeDashboardOutputReference(this as any, "kube_dashboard", true);
   public get kubeDashboard() {
-    return this.__kubeDashboardOutput;
+    return this._kubeDashboard;
   }
-  public putKubeDashboard(value: KubernetesClusterAddonProfileKubeDashboard | undefined) {
-    this._kubeDashboard = value;
+  public putKubeDashboard(value: KubernetesClusterAddonProfileKubeDashboard) {
+    this._kubeDashboard.internalValue = value;
   }
   public resetKubeDashboard() {
-    this._kubeDashboard = undefined;
+    this._kubeDashboard.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get kubeDashboardInput() {
-    return this._kubeDashboard
+    return this._kubeDashboard.internalValue;
   }
 
   // oms_agent - computed: false, optional: true, required: false
-  private _omsAgent?: KubernetesClusterAddonProfileOmsAgent | undefined; 
-  private __omsAgentOutput = new KubernetesClusterAddonProfileOmsAgentOutputReference(this as any, "oms_agent", true);
+  private _omsAgent = new KubernetesClusterAddonProfileOmsAgentOutputReference(this as any, "oms_agent", true);
   public get omsAgent() {
-    return this.__omsAgentOutput;
+    return this._omsAgent;
   }
-  public putOmsAgent(value: KubernetesClusterAddonProfileOmsAgent | undefined) {
-    this._omsAgent = value;
+  public putOmsAgent(value: KubernetesClusterAddonProfileOmsAgent) {
+    this._omsAgent.internalValue = value;
   }
   public resetOmsAgent() {
-    this._omsAgent = undefined;
+    this._omsAgent.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get omsAgentInput() {
-    return this._omsAgent
+    return this._omsAgent.internalValue;
   }
 
   // open_service_mesh - computed: false, optional: true, required: false
-  private _openServiceMesh?: KubernetesClusterAddonProfileOpenServiceMesh | undefined; 
-  private __openServiceMeshOutput = new KubernetesClusterAddonProfileOpenServiceMeshOutputReference(this as any, "open_service_mesh", true);
+  private _openServiceMesh = new KubernetesClusterAddonProfileOpenServiceMeshOutputReference(this as any, "open_service_mesh", true);
   public get openServiceMesh() {
-    return this.__openServiceMeshOutput;
+    return this._openServiceMesh;
   }
-  public putOpenServiceMesh(value: KubernetesClusterAddonProfileOpenServiceMesh | undefined) {
-    this._openServiceMesh = value;
+  public putOpenServiceMesh(value: KubernetesClusterAddonProfileOpenServiceMesh) {
+    this._openServiceMesh.internalValue = value;
   }
   public resetOpenServiceMesh() {
-    this._openServiceMesh = undefined;
+    this._openServiceMesh.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get openServiceMeshInput() {
-    return this._openServiceMesh
+    return this._openServiceMesh.internalValue;
   }
 }
 export interface KubernetesClusterAutoScalerProfile {
@@ -883,7 +1100,7 @@ export interface KubernetesClusterAutoScalerProfile {
   readonly skipNodesWithSystemPods?: boolean | cdktf.IResolvable;
 }
 
-function kubernetesClusterAutoScalerProfileToTerraform(struct?: KubernetesClusterAutoScalerProfileOutputReference | KubernetesClusterAutoScalerProfile): any {
+export function kubernetesClusterAutoScalerProfileToTerraform(struct?: KubernetesClusterAutoScalerProfileOutputReference | KubernetesClusterAutoScalerProfile): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -919,12 +1136,127 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterAutoScalerProfile | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._balanceSimilarNodeGroups) {
+      hasAnyValues = true;
+      internalValueResult.balanceSimilarNodeGroups = this._balanceSimilarNodeGroups;
+    }
+    if (this._emptyBulkDeleteMax) {
+      hasAnyValues = true;
+      internalValueResult.emptyBulkDeleteMax = this._emptyBulkDeleteMax;
+    }
+    if (this._expander) {
+      hasAnyValues = true;
+      internalValueResult.expander = this._expander;
+    }
+    if (this._maxGracefulTerminationSec) {
+      hasAnyValues = true;
+      internalValueResult.maxGracefulTerminationSec = this._maxGracefulTerminationSec;
+    }
+    if (this._maxNodeProvisioningTime) {
+      hasAnyValues = true;
+      internalValueResult.maxNodeProvisioningTime = this._maxNodeProvisioningTime;
+    }
+    if (this._maxUnreadyNodes) {
+      hasAnyValues = true;
+      internalValueResult.maxUnreadyNodes = this._maxUnreadyNodes;
+    }
+    if (this._maxUnreadyPercentage) {
+      hasAnyValues = true;
+      internalValueResult.maxUnreadyPercentage = this._maxUnreadyPercentage;
+    }
+    if (this._newPodScaleUpDelay) {
+      hasAnyValues = true;
+      internalValueResult.newPodScaleUpDelay = this._newPodScaleUpDelay;
+    }
+    if (this._scaleDownDelayAfterAdd) {
+      hasAnyValues = true;
+      internalValueResult.scaleDownDelayAfterAdd = this._scaleDownDelayAfterAdd;
+    }
+    if (this._scaleDownDelayAfterDelete) {
+      hasAnyValues = true;
+      internalValueResult.scaleDownDelayAfterDelete = this._scaleDownDelayAfterDelete;
+    }
+    if (this._scaleDownDelayAfterFailure) {
+      hasAnyValues = true;
+      internalValueResult.scaleDownDelayAfterFailure = this._scaleDownDelayAfterFailure;
+    }
+    if (this._scaleDownUnneeded) {
+      hasAnyValues = true;
+      internalValueResult.scaleDownUnneeded = this._scaleDownUnneeded;
+    }
+    if (this._scaleDownUnready) {
+      hasAnyValues = true;
+      internalValueResult.scaleDownUnready = this._scaleDownUnready;
+    }
+    if (this._scaleDownUtilizationThreshold) {
+      hasAnyValues = true;
+      internalValueResult.scaleDownUtilizationThreshold = this._scaleDownUtilizationThreshold;
+    }
+    if (this._scanInterval) {
+      hasAnyValues = true;
+      internalValueResult.scanInterval = this._scanInterval;
+    }
+    if (this._skipNodesWithLocalStorage) {
+      hasAnyValues = true;
+      internalValueResult.skipNodesWithLocalStorage = this._skipNodesWithLocalStorage;
+    }
+    if (this._skipNodesWithSystemPods) {
+      hasAnyValues = true;
+      internalValueResult.skipNodesWithSystemPods = this._skipNodesWithSystemPods;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterAutoScalerProfile | undefined) {
+    if (value === undefined) {
+      this._balanceSimilarNodeGroups = undefined;
+      this._emptyBulkDeleteMax = undefined;
+      this._expander = undefined;
+      this._maxGracefulTerminationSec = undefined;
+      this._maxNodeProvisioningTime = undefined;
+      this._maxUnreadyNodes = undefined;
+      this._maxUnreadyPercentage = undefined;
+      this._newPodScaleUpDelay = undefined;
+      this._scaleDownDelayAfterAdd = undefined;
+      this._scaleDownDelayAfterDelete = undefined;
+      this._scaleDownDelayAfterFailure = undefined;
+      this._scaleDownUnneeded = undefined;
+      this._scaleDownUnready = undefined;
+      this._scaleDownUtilizationThreshold = undefined;
+      this._scanInterval = undefined;
+      this._skipNodesWithLocalStorage = undefined;
+      this._skipNodesWithSystemPods = undefined;
+    }
+    else {
+      this._balanceSimilarNodeGroups = value.balanceSimilarNodeGroups;
+      this._emptyBulkDeleteMax = value.emptyBulkDeleteMax;
+      this._expander = value.expander;
+      this._maxGracefulTerminationSec = value.maxGracefulTerminationSec;
+      this._maxNodeProvisioningTime = value.maxNodeProvisioningTime;
+      this._maxUnreadyNodes = value.maxUnreadyNodes;
+      this._maxUnreadyPercentage = value.maxUnreadyPercentage;
+      this._newPodScaleUpDelay = value.newPodScaleUpDelay;
+      this._scaleDownDelayAfterAdd = value.scaleDownDelayAfterAdd;
+      this._scaleDownDelayAfterDelete = value.scaleDownDelayAfterDelete;
+      this._scaleDownDelayAfterFailure = value.scaleDownDelayAfterFailure;
+      this._scaleDownUnneeded = value.scaleDownUnneeded;
+      this._scaleDownUnready = value.scaleDownUnready;
+      this._scaleDownUtilizationThreshold = value.scaleDownUtilizationThreshold;
+      this._scanInterval = value.scanInterval;
+      this._skipNodesWithLocalStorage = value.skipNodesWithLocalStorage;
+      this._skipNodesWithSystemPods = value.skipNodesWithSystemPods;
+    }
+  }
+
   // balance_similar_node_groups - computed: false, optional: true, required: false
-  private _balanceSimilarNodeGroups?: boolean | cdktf.IResolvable | undefined; 
+  private _balanceSimilarNodeGroups?: boolean | cdktf.IResolvable; 
   public get balanceSimilarNodeGroups() {
     return this.getBooleanAttribute('balance_similar_node_groups') as any;
   }
-  public set balanceSimilarNodeGroups(value: boolean | cdktf.IResolvable | undefined) {
+  public set balanceSimilarNodeGroups(value: boolean | cdktf.IResolvable) {
     this._balanceSimilarNodeGroups = value;
   }
   public resetBalanceSimilarNodeGroups() {
@@ -932,15 +1264,15 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get balanceSimilarNodeGroupsInput() {
-    return this._balanceSimilarNodeGroups
+    return this._balanceSimilarNodeGroups;
   }
 
   // empty_bulk_delete_max - computed: true, optional: true, required: false
-  private _emptyBulkDeleteMax?: string | undefined; 
+  private _emptyBulkDeleteMax?: string; 
   public get emptyBulkDeleteMax() {
     return this.getStringAttribute('empty_bulk_delete_max');
   }
-  public set emptyBulkDeleteMax(value: string | undefined) {
+  public set emptyBulkDeleteMax(value: string) {
     this._emptyBulkDeleteMax = value;
   }
   public resetEmptyBulkDeleteMax() {
@@ -948,15 +1280,15 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get emptyBulkDeleteMaxInput() {
-    return this._emptyBulkDeleteMax
+    return this._emptyBulkDeleteMax;
   }
 
   // expander - computed: true, optional: true, required: false
-  private _expander?: string | undefined; 
+  private _expander?: string; 
   public get expander() {
     return this.getStringAttribute('expander');
   }
-  public set expander(value: string | undefined) {
+  public set expander(value: string) {
     this._expander = value;
   }
   public resetExpander() {
@@ -964,15 +1296,15 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get expanderInput() {
-    return this._expander
+    return this._expander;
   }
 
   // max_graceful_termination_sec - computed: true, optional: true, required: false
-  private _maxGracefulTerminationSec?: string | undefined; 
+  private _maxGracefulTerminationSec?: string; 
   public get maxGracefulTerminationSec() {
     return this.getStringAttribute('max_graceful_termination_sec');
   }
-  public set maxGracefulTerminationSec(value: string | undefined) {
+  public set maxGracefulTerminationSec(value: string) {
     this._maxGracefulTerminationSec = value;
   }
   public resetMaxGracefulTerminationSec() {
@@ -980,15 +1312,15 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get maxGracefulTerminationSecInput() {
-    return this._maxGracefulTerminationSec
+    return this._maxGracefulTerminationSec;
   }
 
   // max_node_provisioning_time - computed: false, optional: true, required: false
-  private _maxNodeProvisioningTime?: string | undefined; 
+  private _maxNodeProvisioningTime?: string; 
   public get maxNodeProvisioningTime() {
     return this.getStringAttribute('max_node_provisioning_time');
   }
-  public set maxNodeProvisioningTime(value: string | undefined) {
+  public set maxNodeProvisioningTime(value: string) {
     this._maxNodeProvisioningTime = value;
   }
   public resetMaxNodeProvisioningTime() {
@@ -996,15 +1328,15 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get maxNodeProvisioningTimeInput() {
-    return this._maxNodeProvisioningTime
+    return this._maxNodeProvisioningTime;
   }
 
   // max_unready_nodes - computed: false, optional: true, required: false
-  private _maxUnreadyNodes?: number | undefined; 
+  private _maxUnreadyNodes?: number; 
   public get maxUnreadyNodes() {
     return this.getNumberAttribute('max_unready_nodes');
   }
-  public set maxUnreadyNodes(value: number | undefined) {
+  public set maxUnreadyNodes(value: number) {
     this._maxUnreadyNodes = value;
   }
   public resetMaxUnreadyNodes() {
@@ -1012,15 +1344,15 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get maxUnreadyNodesInput() {
-    return this._maxUnreadyNodes
+    return this._maxUnreadyNodes;
   }
 
   // max_unready_percentage - computed: false, optional: true, required: false
-  private _maxUnreadyPercentage?: number | undefined; 
+  private _maxUnreadyPercentage?: number; 
   public get maxUnreadyPercentage() {
     return this.getNumberAttribute('max_unready_percentage');
   }
-  public set maxUnreadyPercentage(value: number | undefined) {
+  public set maxUnreadyPercentage(value: number) {
     this._maxUnreadyPercentage = value;
   }
   public resetMaxUnreadyPercentage() {
@@ -1028,15 +1360,15 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get maxUnreadyPercentageInput() {
-    return this._maxUnreadyPercentage
+    return this._maxUnreadyPercentage;
   }
 
   // new_pod_scale_up_delay - computed: true, optional: true, required: false
-  private _newPodScaleUpDelay?: string | undefined; 
+  private _newPodScaleUpDelay?: string; 
   public get newPodScaleUpDelay() {
     return this.getStringAttribute('new_pod_scale_up_delay');
   }
-  public set newPodScaleUpDelay(value: string | undefined) {
+  public set newPodScaleUpDelay(value: string) {
     this._newPodScaleUpDelay = value;
   }
   public resetNewPodScaleUpDelay() {
@@ -1044,15 +1376,15 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get newPodScaleUpDelayInput() {
-    return this._newPodScaleUpDelay
+    return this._newPodScaleUpDelay;
   }
 
   // scale_down_delay_after_add - computed: true, optional: true, required: false
-  private _scaleDownDelayAfterAdd?: string | undefined; 
+  private _scaleDownDelayAfterAdd?: string; 
   public get scaleDownDelayAfterAdd() {
     return this.getStringAttribute('scale_down_delay_after_add');
   }
-  public set scaleDownDelayAfterAdd(value: string | undefined) {
+  public set scaleDownDelayAfterAdd(value: string) {
     this._scaleDownDelayAfterAdd = value;
   }
   public resetScaleDownDelayAfterAdd() {
@@ -1060,15 +1392,15 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get scaleDownDelayAfterAddInput() {
-    return this._scaleDownDelayAfterAdd
+    return this._scaleDownDelayAfterAdd;
   }
 
   // scale_down_delay_after_delete - computed: true, optional: true, required: false
-  private _scaleDownDelayAfterDelete?: string | undefined; 
+  private _scaleDownDelayAfterDelete?: string; 
   public get scaleDownDelayAfterDelete() {
     return this.getStringAttribute('scale_down_delay_after_delete');
   }
-  public set scaleDownDelayAfterDelete(value: string | undefined) {
+  public set scaleDownDelayAfterDelete(value: string) {
     this._scaleDownDelayAfterDelete = value;
   }
   public resetScaleDownDelayAfterDelete() {
@@ -1076,15 +1408,15 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get scaleDownDelayAfterDeleteInput() {
-    return this._scaleDownDelayAfterDelete
+    return this._scaleDownDelayAfterDelete;
   }
 
   // scale_down_delay_after_failure - computed: true, optional: true, required: false
-  private _scaleDownDelayAfterFailure?: string | undefined; 
+  private _scaleDownDelayAfterFailure?: string; 
   public get scaleDownDelayAfterFailure() {
     return this.getStringAttribute('scale_down_delay_after_failure');
   }
-  public set scaleDownDelayAfterFailure(value: string | undefined) {
+  public set scaleDownDelayAfterFailure(value: string) {
     this._scaleDownDelayAfterFailure = value;
   }
   public resetScaleDownDelayAfterFailure() {
@@ -1092,15 +1424,15 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get scaleDownDelayAfterFailureInput() {
-    return this._scaleDownDelayAfterFailure
+    return this._scaleDownDelayAfterFailure;
   }
 
   // scale_down_unneeded - computed: true, optional: true, required: false
-  private _scaleDownUnneeded?: string | undefined; 
+  private _scaleDownUnneeded?: string; 
   public get scaleDownUnneeded() {
     return this.getStringAttribute('scale_down_unneeded');
   }
-  public set scaleDownUnneeded(value: string | undefined) {
+  public set scaleDownUnneeded(value: string) {
     this._scaleDownUnneeded = value;
   }
   public resetScaleDownUnneeded() {
@@ -1108,15 +1440,15 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get scaleDownUnneededInput() {
-    return this._scaleDownUnneeded
+    return this._scaleDownUnneeded;
   }
 
   // scale_down_unready - computed: true, optional: true, required: false
-  private _scaleDownUnready?: string | undefined; 
+  private _scaleDownUnready?: string; 
   public get scaleDownUnready() {
     return this.getStringAttribute('scale_down_unready');
   }
-  public set scaleDownUnready(value: string | undefined) {
+  public set scaleDownUnready(value: string) {
     this._scaleDownUnready = value;
   }
   public resetScaleDownUnready() {
@@ -1124,15 +1456,15 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get scaleDownUnreadyInput() {
-    return this._scaleDownUnready
+    return this._scaleDownUnready;
   }
 
   // scale_down_utilization_threshold - computed: true, optional: true, required: false
-  private _scaleDownUtilizationThreshold?: string | undefined; 
+  private _scaleDownUtilizationThreshold?: string; 
   public get scaleDownUtilizationThreshold() {
     return this.getStringAttribute('scale_down_utilization_threshold');
   }
-  public set scaleDownUtilizationThreshold(value: string | undefined) {
+  public set scaleDownUtilizationThreshold(value: string) {
     this._scaleDownUtilizationThreshold = value;
   }
   public resetScaleDownUtilizationThreshold() {
@@ -1140,15 +1472,15 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get scaleDownUtilizationThresholdInput() {
-    return this._scaleDownUtilizationThreshold
+    return this._scaleDownUtilizationThreshold;
   }
 
   // scan_interval - computed: true, optional: true, required: false
-  private _scanInterval?: string | undefined; 
+  private _scanInterval?: string; 
   public get scanInterval() {
     return this.getStringAttribute('scan_interval');
   }
-  public set scanInterval(value: string | undefined) {
+  public set scanInterval(value: string) {
     this._scanInterval = value;
   }
   public resetScanInterval() {
@@ -1156,15 +1488,15 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get scanIntervalInput() {
-    return this._scanInterval
+    return this._scanInterval;
   }
 
   // skip_nodes_with_local_storage - computed: false, optional: true, required: false
-  private _skipNodesWithLocalStorage?: boolean | cdktf.IResolvable | undefined; 
+  private _skipNodesWithLocalStorage?: boolean | cdktf.IResolvable; 
   public get skipNodesWithLocalStorage() {
     return this.getBooleanAttribute('skip_nodes_with_local_storage') as any;
   }
-  public set skipNodesWithLocalStorage(value: boolean | cdktf.IResolvable | undefined) {
+  public set skipNodesWithLocalStorage(value: boolean | cdktf.IResolvable) {
     this._skipNodesWithLocalStorage = value;
   }
   public resetSkipNodesWithLocalStorage() {
@@ -1172,15 +1504,15 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get skipNodesWithLocalStorageInput() {
-    return this._skipNodesWithLocalStorage
+    return this._skipNodesWithLocalStorage;
   }
 
   // skip_nodes_with_system_pods - computed: false, optional: true, required: false
-  private _skipNodesWithSystemPods?: boolean | cdktf.IResolvable | undefined; 
+  private _skipNodesWithSystemPods?: boolean | cdktf.IResolvable; 
   public get skipNodesWithSystemPods() {
     return this.getBooleanAttribute('skip_nodes_with_system_pods') as any;
   }
-  public set skipNodesWithSystemPods(value: boolean | cdktf.IResolvable | undefined) {
+  public set skipNodesWithSystemPods(value: boolean | cdktf.IResolvable) {
     this._skipNodesWithSystemPods = value;
   }
   public resetSkipNodesWithSystemPods() {
@@ -1188,7 +1520,7 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get skipNodesWithSystemPodsInput() {
-    return this._skipNodesWithSystemPods
+    return this._skipNodesWithSystemPods;
   }
 }
 export interface KubernetesClusterDefaultNodePoolKubeletConfig {
@@ -1234,7 +1566,7 @@ export interface KubernetesClusterDefaultNodePoolKubeletConfig {
   readonly topologyManagerPolicy?: string;
 }
 
-function kubernetesClusterDefaultNodePoolKubeletConfigToTerraform(struct?: KubernetesClusterDefaultNodePoolKubeletConfigOutputReference | KubernetesClusterDefaultNodePoolKubeletConfig): any {
+export function kubernetesClusterDefaultNodePoolKubeletConfigToTerraform(struct?: KubernetesClusterDefaultNodePoolKubeletConfigOutputReference | KubernetesClusterDefaultNodePoolKubeletConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1263,12 +1595,85 @@ export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterDefaultNodePoolKubeletConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowedUnsafeSysctls) {
+      hasAnyValues = true;
+      internalValueResult.allowedUnsafeSysctls = this._allowedUnsafeSysctls;
+    }
+    if (this._containerLogMaxLine) {
+      hasAnyValues = true;
+      internalValueResult.containerLogMaxLine = this._containerLogMaxLine;
+    }
+    if (this._containerLogMaxSizeMb) {
+      hasAnyValues = true;
+      internalValueResult.containerLogMaxSizeMb = this._containerLogMaxSizeMb;
+    }
+    if (this._cpuCfsQuotaEnabled) {
+      hasAnyValues = true;
+      internalValueResult.cpuCfsQuotaEnabled = this._cpuCfsQuotaEnabled;
+    }
+    if (this._cpuCfsQuotaPeriod) {
+      hasAnyValues = true;
+      internalValueResult.cpuCfsQuotaPeriod = this._cpuCfsQuotaPeriod;
+    }
+    if (this._cpuManagerPolicy) {
+      hasAnyValues = true;
+      internalValueResult.cpuManagerPolicy = this._cpuManagerPolicy;
+    }
+    if (this._imageGcHighThreshold) {
+      hasAnyValues = true;
+      internalValueResult.imageGcHighThreshold = this._imageGcHighThreshold;
+    }
+    if (this._imageGcLowThreshold) {
+      hasAnyValues = true;
+      internalValueResult.imageGcLowThreshold = this._imageGcLowThreshold;
+    }
+    if (this._podMaxPid) {
+      hasAnyValues = true;
+      internalValueResult.podMaxPid = this._podMaxPid;
+    }
+    if (this._topologyManagerPolicy) {
+      hasAnyValues = true;
+      internalValueResult.topologyManagerPolicy = this._topologyManagerPolicy;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterDefaultNodePoolKubeletConfig | undefined) {
+    if (value === undefined) {
+      this._allowedUnsafeSysctls = undefined;
+      this._containerLogMaxLine = undefined;
+      this._containerLogMaxSizeMb = undefined;
+      this._cpuCfsQuotaEnabled = undefined;
+      this._cpuCfsQuotaPeriod = undefined;
+      this._cpuManagerPolicy = undefined;
+      this._imageGcHighThreshold = undefined;
+      this._imageGcLowThreshold = undefined;
+      this._podMaxPid = undefined;
+      this._topologyManagerPolicy = undefined;
+    }
+    else {
+      this._allowedUnsafeSysctls = value.allowedUnsafeSysctls;
+      this._containerLogMaxLine = value.containerLogMaxLine;
+      this._containerLogMaxSizeMb = value.containerLogMaxSizeMb;
+      this._cpuCfsQuotaEnabled = value.cpuCfsQuotaEnabled;
+      this._cpuCfsQuotaPeriod = value.cpuCfsQuotaPeriod;
+      this._cpuManagerPolicy = value.cpuManagerPolicy;
+      this._imageGcHighThreshold = value.imageGcHighThreshold;
+      this._imageGcLowThreshold = value.imageGcLowThreshold;
+      this._podMaxPid = value.podMaxPid;
+      this._topologyManagerPolicy = value.topologyManagerPolicy;
+    }
+  }
+
   // allowed_unsafe_sysctls - computed: false, optional: true, required: false
-  private _allowedUnsafeSysctls?: string[] | undefined; 
+  private _allowedUnsafeSysctls?: string[]; 
   public get allowedUnsafeSysctls() {
     return this.getListAttribute('allowed_unsafe_sysctls');
   }
-  public set allowedUnsafeSysctls(value: string[] | undefined) {
+  public set allowedUnsafeSysctls(value: string[]) {
     this._allowedUnsafeSysctls = value;
   }
   public resetAllowedUnsafeSysctls() {
@@ -1276,15 +1681,15 @@ export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get allowedUnsafeSysctlsInput() {
-    return this._allowedUnsafeSysctls
+    return this._allowedUnsafeSysctls;
   }
 
   // container_log_max_line - computed: false, optional: true, required: false
-  private _containerLogMaxLine?: number | undefined; 
+  private _containerLogMaxLine?: number; 
   public get containerLogMaxLine() {
     return this.getNumberAttribute('container_log_max_line');
   }
-  public set containerLogMaxLine(value: number | undefined) {
+  public set containerLogMaxLine(value: number) {
     this._containerLogMaxLine = value;
   }
   public resetContainerLogMaxLine() {
@@ -1292,15 +1697,15 @@ export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get containerLogMaxLineInput() {
-    return this._containerLogMaxLine
+    return this._containerLogMaxLine;
   }
 
   // container_log_max_size_mb - computed: false, optional: true, required: false
-  private _containerLogMaxSizeMb?: number | undefined; 
+  private _containerLogMaxSizeMb?: number; 
   public get containerLogMaxSizeMb() {
     return this.getNumberAttribute('container_log_max_size_mb');
   }
-  public set containerLogMaxSizeMb(value: number | undefined) {
+  public set containerLogMaxSizeMb(value: number) {
     this._containerLogMaxSizeMb = value;
   }
   public resetContainerLogMaxSizeMb() {
@@ -1308,15 +1713,15 @@ export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get containerLogMaxSizeMbInput() {
-    return this._containerLogMaxSizeMb
+    return this._containerLogMaxSizeMb;
   }
 
   // cpu_cfs_quota_enabled - computed: false, optional: true, required: false
-  private _cpuCfsQuotaEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _cpuCfsQuotaEnabled?: boolean | cdktf.IResolvable; 
   public get cpuCfsQuotaEnabled() {
     return this.getBooleanAttribute('cpu_cfs_quota_enabled') as any;
   }
-  public set cpuCfsQuotaEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set cpuCfsQuotaEnabled(value: boolean | cdktf.IResolvable) {
     this._cpuCfsQuotaEnabled = value;
   }
   public resetCpuCfsQuotaEnabled() {
@@ -1324,15 +1729,15 @@ export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get cpuCfsQuotaEnabledInput() {
-    return this._cpuCfsQuotaEnabled
+    return this._cpuCfsQuotaEnabled;
   }
 
   // cpu_cfs_quota_period - computed: false, optional: true, required: false
-  private _cpuCfsQuotaPeriod?: string | undefined; 
+  private _cpuCfsQuotaPeriod?: string; 
   public get cpuCfsQuotaPeriod() {
     return this.getStringAttribute('cpu_cfs_quota_period');
   }
-  public set cpuCfsQuotaPeriod(value: string | undefined) {
+  public set cpuCfsQuotaPeriod(value: string) {
     this._cpuCfsQuotaPeriod = value;
   }
   public resetCpuCfsQuotaPeriod() {
@@ -1340,15 +1745,15 @@ export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get cpuCfsQuotaPeriodInput() {
-    return this._cpuCfsQuotaPeriod
+    return this._cpuCfsQuotaPeriod;
   }
 
   // cpu_manager_policy - computed: false, optional: true, required: false
-  private _cpuManagerPolicy?: string | undefined; 
+  private _cpuManagerPolicy?: string; 
   public get cpuManagerPolicy() {
     return this.getStringAttribute('cpu_manager_policy');
   }
-  public set cpuManagerPolicy(value: string | undefined) {
+  public set cpuManagerPolicy(value: string) {
     this._cpuManagerPolicy = value;
   }
   public resetCpuManagerPolicy() {
@@ -1356,15 +1761,15 @@ export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get cpuManagerPolicyInput() {
-    return this._cpuManagerPolicy
+    return this._cpuManagerPolicy;
   }
 
   // image_gc_high_threshold - computed: false, optional: true, required: false
-  private _imageGcHighThreshold?: number | undefined; 
+  private _imageGcHighThreshold?: number; 
   public get imageGcHighThreshold() {
     return this.getNumberAttribute('image_gc_high_threshold');
   }
-  public set imageGcHighThreshold(value: number | undefined) {
+  public set imageGcHighThreshold(value: number) {
     this._imageGcHighThreshold = value;
   }
   public resetImageGcHighThreshold() {
@@ -1372,15 +1777,15 @@ export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get imageGcHighThresholdInput() {
-    return this._imageGcHighThreshold
+    return this._imageGcHighThreshold;
   }
 
   // image_gc_low_threshold - computed: false, optional: true, required: false
-  private _imageGcLowThreshold?: number | undefined; 
+  private _imageGcLowThreshold?: number; 
   public get imageGcLowThreshold() {
     return this.getNumberAttribute('image_gc_low_threshold');
   }
-  public set imageGcLowThreshold(value: number | undefined) {
+  public set imageGcLowThreshold(value: number) {
     this._imageGcLowThreshold = value;
   }
   public resetImageGcLowThreshold() {
@@ -1388,15 +1793,15 @@ export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get imageGcLowThresholdInput() {
-    return this._imageGcLowThreshold
+    return this._imageGcLowThreshold;
   }
 
   // pod_max_pid - computed: false, optional: true, required: false
-  private _podMaxPid?: number | undefined; 
+  private _podMaxPid?: number; 
   public get podMaxPid() {
     return this.getNumberAttribute('pod_max_pid');
   }
-  public set podMaxPid(value: number | undefined) {
+  public set podMaxPid(value: number) {
     this._podMaxPid = value;
   }
   public resetPodMaxPid() {
@@ -1404,15 +1809,15 @@ export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get podMaxPidInput() {
-    return this._podMaxPid
+    return this._podMaxPid;
   }
 
   // topology_manager_policy - computed: false, optional: true, required: false
-  private _topologyManagerPolicy?: string | undefined; 
+  private _topologyManagerPolicy?: string; 
   public get topologyManagerPolicy() {
     return this.getStringAttribute('topology_manager_policy');
   }
-  public set topologyManagerPolicy(value: string | undefined) {
+  public set topologyManagerPolicy(value: string) {
     this._topologyManagerPolicy = value;
   }
   public resetTopologyManagerPolicy() {
@@ -1420,7 +1825,7 @@ export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get topologyManagerPolicyInput() {
-    return this._topologyManagerPolicy
+    return this._topologyManagerPolicy;
   }
 }
 export interface KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig {
@@ -1542,7 +1947,7 @@ export interface KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig {
   readonly vmVfsCachePressure?: number;
 }
 
-function kubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigToTerraform(struct?: KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference | KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig): any {
+export function kubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigToTerraform(struct?: KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference | KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1590,12 +1995,199 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._fsAioMaxNr) {
+      hasAnyValues = true;
+      internalValueResult.fsAioMaxNr = this._fsAioMaxNr;
+    }
+    if (this._fsFileMax) {
+      hasAnyValues = true;
+      internalValueResult.fsFileMax = this._fsFileMax;
+    }
+    if (this._fsInotifyMaxUserWatches) {
+      hasAnyValues = true;
+      internalValueResult.fsInotifyMaxUserWatches = this._fsInotifyMaxUserWatches;
+    }
+    if (this._fsNrOpen) {
+      hasAnyValues = true;
+      internalValueResult.fsNrOpen = this._fsNrOpen;
+    }
+    if (this._kernelThreadsMax) {
+      hasAnyValues = true;
+      internalValueResult.kernelThreadsMax = this._kernelThreadsMax;
+    }
+    if (this._netCoreNetdevMaxBacklog) {
+      hasAnyValues = true;
+      internalValueResult.netCoreNetdevMaxBacklog = this._netCoreNetdevMaxBacklog;
+    }
+    if (this._netCoreOptmemMax) {
+      hasAnyValues = true;
+      internalValueResult.netCoreOptmemMax = this._netCoreOptmemMax;
+    }
+    if (this._netCoreRmemDefault) {
+      hasAnyValues = true;
+      internalValueResult.netCoreRmemDefault = this._netCoreRmemDefault;
+    }
+    if (this._netCoreRmemMax) {
+      hasAnyValues = true;
+      internalValueResult.netCoreRmemMax = this._netCoreRmemMax;
+    }
+    if (this._netCoreSomaxconn) {
+      hasAnyValues = true;
+      internalValueResult.netCoreSomaxconn = this._netCoreSomaxconn;
+    }
+    if (this._netCoreWmemDefault) {
+      hasAnyValues = true;
+      internalValueResult.netCoreWmemDefault = this._netCoreWmemDefault;
+    }
+    if (this._netCoreWmemMax) {
+      hasAnyValues = true;
+      internalValueResult.netCoreWmemMax = this._netCoreWmemMax;
+    }
+    if (this._netIpv4IpLocalPortRangeMax) {
+      hasAnyValues = true;
+      internalValueResult.netIpv4IpLocalPortRangeMax = this._netIpv4IpLocalPortRangeMax;
+    }
+    if (this._netIpv4IpLocalPortRangeMin) {
+      hasAnyValues = true;
+      internalValueResult.netIpv4IpLocalPortRangeMin = this._netIpv4IpLocalPortRangeMin;
+    }
+    if (this._netIpv4NeighDefaultGcThresh1) {
+      hasAnyValues = true;
+      internalValueResult.netIpv4NeighDefaultGcThresh1 = this._netIpv4NeighDefaultGcThresh1;
+    }
+    if (this._netIpv4NeighDefaultGcThresh2) {
+      hasAnyValues = true;
+      internalValueResult.netIpv4NeighDefaultGcThresh2 = this._netIpv4NeighDefaultGcThresh2;
+    }
+    if (this._netIpv4NeighDefaultGcThresh3) {
+      hasAnyValues = true;
+      internalValueResult.netIpv4NeighDefaultGcThresh3 = this._netIpv4NeighDefaultGcThresh3;
+    }
+    if (this._netIpv4TcpFinTimeout) {
+      hasAnyValues = true;
+      internalValueResult.netIpv4TcpFinTimeout = this._netIpv4TcpFinTimeout;
+    }
+    if (this._netIpv4TcpKeepaliveIntvl) {
+      hasAnyValues = true;
+      internalValueResult.netIpv4TcpKeepaliveIntvl = this._netIpv4TcpKeepaliveIntvl;
+    }
+    if (this._netIpv4TcpKeepaliveProbes) {
+      hasAnyValues = true;
+      internalValueResult.netIpv4TcpKeepaliveProbes = this._netIpv4TcpKeepaliveProbes;
+    }
+    if (this._netIpv4TcpKeepaliveTime) {
+      hasAnyValues = true;
+      internalValueResult.netIpv4TcpKeepaliveTime = this._netIpv4TcpKeepaliveTime;
+    }
+    if (this._netIpv4TcpMaxSynBacklog) {
+      hasAnyValues = true;
+      internalValueResult.netIpv4TcpMaxSynBacklog = this._netIpv4TcpMaxSynBacklog;
+    }
+    if (this._netIpv4TcpMaxTwBuckets) {
+      hasAnyValues = true;
+      internalValueResult.netIpv4TcpMaxTwBuckets = this._netIpv4TcpMaxTwBuckets;
+    }
+    if (this._netIpv4TcpTwReuse) {
+      hasAnyValues = true;
+      internalValueResult.netIpv4TcpTwReuse = this._netIpv4TcpTwReuse;
+    }
+    if (this._netNetfilterNfConntrackBuckets) {
+      hasAnyValues = true;
+      internalValueResult.netNetfilterNfConntrackBuckets = this._netNetfilterNfConntrackBuckets;
+    }
+    if (this._netNetfilterNfConntrackMax) {
+      hasAnyValues = true;
+      internalValueResult.netNetfilterNfConntrackMax = this._netNetfilterNfConntrackMax;
+    }
+    if (this._vmMaxMapCount) {
+      hasAnyValues = true;
+      internalValueResult.vmMaxMapCount = this._vmMaxMapCount;
+    }
+    if (this._vmSwappiness) {
+      hasAnyValues = true;
+      internalValueResult.vmSwappiness = this._vmSwappiness;
+    }
+    if (this._vmVfsCachePressure) {
+      hasAnyValues = true;
+      internalValueResult.vmVfsCachePressure = this._vmVfsCachePressure;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig | undefined) {
+    if (value === undefined) {
+      this._fsAioMaxNr = undefined;
+      this._fsFileMax = undefined;
+      this._fsInotifyMaxUserWatches = undefined;
+      this._fsNrOpen = undefined;
+      this._kernelThreadsMax = undefined;
+      this._netCoreNetdevMaxBacklog = undefined;
+      this._netCoreOptmemMax = undefined;
+      this._netCoreRmemDefault = undefined;
+      this._netCoreRmemMax = undefined;
+      this._netCoreSomaxconn = undefined;
+      this._netCoreWmemDefault = undefined;
+      this._netCoreWmemMax = undefined;
+      this._netIpv4IpLocalPortRangeMax = undefined;
+      this._netIpv4IpLocalPortRangeMin = undefined;
+      this._netIpv4NeighDefaultGcThresh1 = undefined;
+      this._netIpv4NeighDefaultGcThresh2 = undefined;
+      this._netIpv4NeighDefaultGcThresh3 = undefined;
+      this._netIpv4TcpFinTimeout = undefined;
+      this._netIpv4TcpKeepaliveIntvl = undefined;
+      this._netIpv4TcpKeepaliveProbes = undefined;
+      this._netIpv4TcpKeepaliveTime = undefined;
+      this._netIpv4TcpMaxSynBacklog = undefined;
+      this._netIpv4TcpMaxTwBuckets = undefined;
+      this._netIpv4TcpTwReuse = undefined;
+      this._netNetfilterNfConntrackBuckets = undefined;
+      this._netNetfilterNfConntrackMax = undefined;
+      this._vmMaxMapCount = undefined;
+      this._vmSwappiness = undefined;
+      this._vmVfsCachePressure = undefined;
+    }
+    else {
+      this._fsAioMaxNr = value.fsAioMaxNr;
+      this._fsFileMax = value.fsFileMax;
+      this._fsInotifyMaxUserWatches = value.fsInotifyMaxUserWatches;
+      this._fsNrOpen = value.fsNrOpen;
+      this._kernelThreadsMax = value.kernelThreadsMax;
+      this._netCoreNetdevMaxBacklog = value.netCoreNetdevMaxBacklog;
+      this._netCoreOptmemMax = value.netCoreOptmemMax;
+      this._netCoreRmemDefault = value.netCoreRmemDefault;
+      this._netCoreRmemMax = value.netCoreRmemMax;
+      this._netCoreSomaxconn = value.netCoreSomaxconn;
+      this._netCoreWmemDefault = value.netCoreWmemDefault;
+      this._netCoreWmemMax = value.netCoreWmemMax;
+      this._netIpv4IpLocalPortRangeMax = value.netIpv4IpLocalPortRangeMax;
+      this._netIpv4IpLocalPortRangeMin = value.netIpv4IpLocalPortRangeMin;
+      this._netIpv4NeighDefaultGcThresh1 = value.netIpv4NeighDefaultGcThresh1;
+      this._netIpv4NeighDefaultGcThresh2 = value.netIpv4NeighDefaultGcThresh2;
+      this._netIpv4NeighDefaultGcThresh3 = value.netIpv4NeighDefaultGcThresh3;
+      this._netIpv4TcpFinTimeout = value.netIpv4TcpFinTimeout;
+      this._netIpv4TcpKeepaliveIntvl = value.netIpv4TcpKeepaliveIntvl;
+      this._netIpv4TcpKeepaliveProbes = value.netIpv4TcpKeepaliveProbes;
+      this._netIpv4TcpKeepaliveTime = value.netIpv4TcpKeepaliveTime;
+      this._netIpv4TcpMaxSynBacklog = value.netIpv4TcpMaxSynBacklog;
+      this._netIpv4TcpMaxTwBuckets = value.netIpv4TcpMaxTwBuckets;
+      this._netIpv4TcpTwReuse = value.netIpv4TcpTwReuse;
+      this._netNetfilterNfConntrackBuckets = value.netNetfilterNfConntrackBuckets;
+      this._netNetfilterNfConntrackMax = value.netNetfilterNfConntrackMax;
+      this._vmMaxMapCount = value.vmMaxMapCount;
+      this._vmSwappiness = value.vmSwappiness;
+      this._vmVfsCachePressure = value.vmVfsCachePressure;
+    }
+  }
+
   // fs_aio_max_nr - computed: false, optional: true, required: false
-  private _fsAioMaxNr?: number | undefined; 
+  private _fsAioMaxNr?: number; 
   public get fsAioMaxNr() {
     return this.getNumberAttribute('fs_aio_max_nr');
   }
-  public set fsAioMaxNr(value: number | undefined) {
+  public set fsAioMaxNr(value: number) {
     this._fsAioMaxNr = value;
   }
   public resetFsAioMaxNr() {
@@ -1603,15 +2195,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get fsAioMaxNrInput() {
-    return this._fsAioMaxNr
+    return this._fsAioMaxNr;
   }
 
   // fs_file_max - computed: false, optional: true, required: false
-  private _fsFileMax?: number | undefined; 
+  private _fsFileMax?: number; 
   public get fsFileMax() {
     return this.getNumberAttribute('fs_file_max');
   }
-  public set fsFileMax(value: number | undefined) {
+  public set fsFileMax(value: number) {
     this._fsFileMax = value;
   }
   public resetFsFileMax() {
@@ -1619,15 +2211,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get fsFileMaxInput() {
-    return this._fsFileMax
+    return this._fsFileMax;
   }
 
   // fs_inotify_max_user_watches - computed: false, optional: true, required: false
-  private _fsInotifyMaxUserWatches?: number | undefined; 
+  private _fsInotifyMaxUserWatches?: number; 
   public get fsInotifyMaxUserWatches() {
     return this.getNumberAttribute('fs_inotify_max_user_watches');
   }
-  public set fsInotifyMaxUserWatches(value: number | undefined) {
+  public set fsInotifyMaxUserWatches(value: number) {
     this._fsInotifyMaxUserWatches = value;
   }
   public resetFsInotifyMaxUserWatches() {
@@ -1635,15 +2227,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get fsInotifyMaxUserWatchesInput() {
-    return this._fsInotifyMaxUserWatches
+    return this._fsInotifyMaxUserWatches;
   }
 
   // fs_nr_open - computed: false, optional: true, required: false
-  private _fsNrOpen?: number | undefined; 
+  private _fsNrOpen?: number; 
   public get fsNrOpen() {
     return this.getNumberAttribute('fs_nr_open');
   }
-  public set fsNrOpen(value: number | undefined) {
+  public set fsNrOpen(value: number) {
     this._fsNrOpen = value;
   }
   public resetFsNrOpen() {
@@ -1651,15 +2243,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get fsNrOpenInput() {
-    return this._fsNrOpen
+    return this._fsNrOpen;
   }
 
   // kernel_threads_max - computed: false, optional: true, required: false
-  private _kernelThreadsMax?: number | undefined; 
+  private _kernelThreadsMax?: number; 
   public get kernelThreadsMax() {
     return this.getNumberAttribute('kernel_threads_max');
   }
-  public set kernelThreadsMax(value: number | undefined) {
+  public set kernelThreadsMax(value: number) {
     this._kernelThreadsMax = value;
   }
   public resetKernelThreadsMax() {
@@ -1667,15 +2259,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get kernelThreadsMaxInput() {
-    return this._kernelThreadsMax
+    return this._kernelThreadsMax;
   }
 
   // net_core_netdev_max_backlog - computed: false, optional: true, required: false
-  private _netCoreNetdevMaxBacklog?: number | undefined; 
+  private _netCoreNetdevMaxBacklog?: number; 
   public get netCoreNetdevMaxBacklog() {
     return this.getNumberAttribute('net_core_netdev_max_backlog');
   }
-  public set netCoreNetdevMaxBacklog(value: number | undefined) {
+  public set netCoreNetdevMaxBacklog(value: number) {
     this._netCoreNetdevMaxBacklog = value;
   }
   public resetNetCoreNetdevMaxBacklog() {
@@ -1683,15 +2275,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netCoreNetdevMaxBacklogInput() {
-    return this._netCoreNetdevMaxBacklog
+    return this._netCoreNetdevMaxBacklog;
   }
 
   // net_core_optmem_max - computed: false, optional: true, required: false
-  private _netCoreOptmemMax?: number | undefined; 
+  private _netCoreOptmemMax?: number; 
   public get netCoreOptmemMax() {
     return this.getNumberAttribute('net_core_optmem_max');
   }
-  public set netCoreOptmemMax(value: number | undefined) {
+  public set netCoreOptmemMax(value: number) {
     this._netCoreOptmemMax = value;
   }
   public resetNetCoreOptmemMax() {
@@ -1699,15 +2291,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netCoreOptmemMaxInput() {
-    return this._netCoreOptmemMax
+    return this._netCoreOptmemMax;
   }
 
   // net_core_rmem_default - computed: false, optional: true, required: false
-  private _netCoreRmemDefault?: number | undefined; 
+  private _netCoreRmemDefault?: number; 
   public get netCoreRmemDefault() {
     return this.getNumberAttribute('net_core_rmem_default');
   }
-  public set netCoreRmemDefault(value: number | undefined) {
+  public set netCoreRmemDefault(value: number) {
     this._netCoreRmemDefault = value;
   }
   public resetNetCoreRmemDefault() {
@@ -1715,15 +2307,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netCoreRmemDefaultInput() {
-    return this._netCoreRmemDefault
+    return this._netCoreRmemDefault;
   }
 
   // net_core_rmem_max - computed: false, optional: true, required: false
-  private _netCoreRmemMax?: number | undefined; 
+  private _netCoreRmemMax?: number; 
   public get netCoreRmemMax() {
     return this.getNumberAttribute('net_core_rmem_max');
   }
-  public set netCoreRmemMax(value: number | undefined) {
+  public set netCoreRmemMax(value: number) {
     this._netCoreRmemMax = value;
   }
   public resetNetCoreRmemMax() {
@@ -1731,15 +2323,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netCoreRmemMaxInput() {
-    return this._netCoreRmemMax
+    return this._netCoreRmemMax;
   }
 
   // net_core_somaxconn - computed: false, optional: true, required: false
-  private _netCoreSomaxconn?: number | undefined; 
+  private _netCoreSomaxconn?: number; 
   public get netCoreSomaxconn() {
     return this.getNumberAttribute('net_core_somaxconn');
   }
-  public set netCoreSomaxconn(value: number | undefined) {
+  public set netCoreSomaxconn(value: number) {
     this._netCoreSomaxconn = value;
   }
   public resetNetCoreSomaxconn() {
@@ -1747,15 +2339,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netCoreSomaxconnInput() {
-    return this._netCoreSomaxconn
+    return this._netCoreSomaxconn;
   }
 
   // net_core_wmem_default - computed: false, optional: true, required: false
-  private _netCoreWmemDefault?: number | undefined; 
+  private _netCoreWmemDefault?: number; 
   public get netCoreWmemDefault() {
     return this.getNumberAttribute('net_core_wmem_default');
   }
-  public set netCoreWmemDefault(value: number | undefined) {
+  public set netCoreWmemDefault(value: number) {
     this._netCoreWmemDefault = value;
   }
   public resetNetCoreWmemDefault() {
@@ -1763,15 +2355,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netCoreWmemDefaultInput() {
-    return this._netCoreWmemDefault
+    return this._netCoreWmemDefault;
   }
 
   // net_core_wmem_max - computed: false, optional: true, required: false
-  private _netCoreWmemMax?: number | undefined; 
+  private _netCoreWmemMax?: number; 
   public get netCoreWmemMax() {
     return this.getNumberAttribute('net_core_wmem_max');
   }
-  public set netCoreWmemMax(value: number | undefined) {
+  public set netCoreWmemMax(value: number) {
     this._netCoreWmemMax = value;
   }
   public resetNetCoreWmemMax() {
@@ -1779,15 +2371,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netCoreWmemMaxInput() {
-    return this._netCoreWmemMax
+    return this._netCoreWmemMax;
   }
 
   // net_ipv4_ip_local_port_range_max - computed: false, optional: true, required: false
-  private _netIpv4IpLocalPortRangeMax?: number | undefined; 
+  private _netIpv4IpLocalPortRangeMax?: number; 
   public get netIpv4IpLocalPortRangeMax() {
     return this.getNumberAttribute('net_ipv4_ip_local_port_range_max');
   }
-  public set netIpv4IpLocalPortRangeMax(value: number | undefined) {
+  public set netIpv4IpLocalPortRangeMax(value: number) {
     this._netIpv4IpLocalPortRangeMax = value;
   }
   public resetNetIpv4IpLocalPortRangeMax() {
@@ -1795,15 +2387,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netIpv4IpLocalPortRangeMaxInput() {
-    return this._netIpv4IpLocalPortRangeMax
+    return this._netIpv4IpLocalPortRangeMax;
   }
 
   // net_ipv4_ip_local_port_range_min - computed: false, optional: true, required: false
-  private _netIpv4IpLocalPortRangeMin?: number | undefined; 
+  private _netIpv4IpLocalPortRangeMin?: number; 
   public get netIpv4IpLocalPortRangeMin() {
     return this.getNumberAttribute('net_ipv4_ip_local_port_range_min');
   }
-  public set netIpv4IpLocalPortRangeMin(value: number | undefined) {
+  public set netIpv4IpLocalPortRangeMin(value: number) {
     this._netIpv4IpLocalPortRangeMin = value;
   }
   public resetNetIpv4IpLocalPortRangeMin() {
@@ -1811,15 +2403,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netIpv4IpLocalPortRangeMinInput() {
-    return this._netIpv4IpLocalPortRangeMin
+    return this._netIpv4IpLocalPortRangeMin;
   }
 
   // net_ipv4_neigh_default_gc_thresh1 - computed: false, optional: true, required: false
-  private _netIpv4NeighDefaultGcThresh1?: number | undefined; 
+  private _netIpv4NeighDefaultGcThresh1?: number; 
   public get netIpv4NeighDefaultGcThresh1() {
     return this.getNumberAttribute('net_ipv4_neigh_default_gc_thresh1');
   }
-  public set netIpv4NeighDefaultGcThresh1(value: number | undefined) {
+  public set netIpv4NeighDefaultGcThresh1(value: number) {
     this._netIpv4NeighDefaultGcThresh1 = value;
   }
   public resetNetIpv4NeighDefaultGcThresh1() {
@@ -1827,15 +2419,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netIpv4NeighDefaultGcThresh1Input() {
-    return this._netIpv4NeighDefaultGcThresh1
+    return this._netIpv4NeighDefaultGcThresh1;
   }
 
   // net_ipv4_neigh_default_gc_thresh2 - computed: false, optional: true, required: false
-  private _netIpv4NeighDefaultGcThresh2?: number | undefined; 
+  private _netIpv4NeighDefaultGcThresh2?: number; 
   public get netIpv4NeighDefaultGcThresh2() {
     return this.getNumberAttribute('net_ipv4_neigh_default_gc_thresh2');
   }
-  public set netIpv4NeighDefaultGcThresh2(value: number | undefined) {
+  public set netIpv4NeighDefaultGcThresh2(value: number) {
     this._netIpv4NeighDefaultGcThresh2 = value;
   }
   public resetNetIpv4NeighDefaultGcThresh2() {
@@ -1843,15 +2435,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netIpv4NeighDefaultGcThresh2Input() {
-    return this._netIpv4NeighDefaultGcThresh2
+    return this._netIpv4NeighDefaultGcThresh2;
   }
 
   // net_ipv4_neigh_default_gc_thresh3 - computed: false, optional: true, required: false
-  private _netIpv4NeighDefaultGcThresh3?: number | undefined; 
+  private _netIpv4NeighDefaultGcThresh3?: number; 
   public get netIpv4NeighDefaultGcThresh3() {
     return this.getNumberAttribute('net_ipv4_neigh_default_gc_thresh3');
   }
-  public set netIpv4NeighDefaultGcThresh3(value: number | undefined) {
+  public set netIpv4NeighDefaultGcThresh3(value: number) {
     this._netIpv4NeighDefaultGcThresh3 = value;
   }
   public resetNetIpv4NeighDefaultGcThresh3() {
@@ -1859,15 +2451,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netIpv4NeighDefaultGcThresh3Input() {
-    return this._netIpv4NeighDefaultGcThresh3
+    return this._netIpv4NeighDefaultGcThresh3;
   }
 
   // net_ipv4_tcp_fin_timeout - computed: false, optional: true, required: false
-  private _netIpv4TcpFinTimeout?: number | undefined; 
+  private _netIpv4TcpFinTimeout?: number; 
   public get netIpv4TcpFinTimeout() {
     return this.getNumberAttribute('net_ipv4_tcp_fin_timeout');
   }
-  public set netIpv4TcpFinTimeout(value: number | undefined) {
+  public set netIpv4TcpFinTimeout(value: number) {
     this._netIpv4TcpFinTimeout = value;
   }
   public resetNetIpv4TcpFinTimeout() {
@@ -1875,15 +2467,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netIpv4TcpFinTimeoutInput() {
-    return this._netIpv4TcpFinTimeout
+    return this._netIpv4TcpFinTimeout;
   }
 
   // net_ipv4_tcp_keepalive_intvl - computed: false, optional: true, required: false
-  private _netIpv4TcpKeepaliveIntvl?: number | undefined; 
+  private _netIpv4TcpKeepaliveIntvl?: number; 
   public get netIpv4TcpKeepaliveIntvl() {
     return this.getNumberAttribute('net_ipv4_tcp_keepalive_intvl');
   }
-  public set netIpv4TcpKeepaliveIntvl(value: number | undefined) {
+  public set netIpv4TcpKeepaliveIntvl(value: number) {
     this._netIpv4TcpKeepaliveIntvl = value;
   }
   public resetNetIpv4TcpKeepaliveIntvl() {
@@ -1891,15 +2483,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netIpv4TcpKeepaliveIntvlInput() {
-    return this._netIpv4TcpKeepaliveIntvl
+    return this._netIpv4TcpKeepaliveIntvl;
   }
 
   // net_ipv4_tcp_keepalive_probes - computed: false, optional: true, required: false
-  private _netIpv4TcpKeepaliveProbes?: number | undefined; 
+  private _netIpv4TcpKeepaliveProbes?: number; 
   public get netIpv4TcpKeepaliveProbes() {
     return this.getNumberAttribute('net_ipv4_tcp_keepalive_probes');
   }
-  public set netIpv4TcpKeepaliveProbes(value: number | undefined) {
+  public set netIpv4TcpKeepaliveProbes(value: number) {
     this._netIpv4TcpKeepaliveProbes = value;
   }
   public resetNetIpv4TcpKeepaliveProbes() {
@@ -1907,15 +2499,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netIpv4TcpKeepaliveProbesInput() {
-    return this._netIpv4TcpKeepaliveProbes
+    return this._netIpv4TcpKeepaliveProbes;
   }
 
   // net_ipv4_tcp_keepalive_time - computed: false, optional: true, required: false
-  private _netIpv4TcpKeepaliveTime?: number | undefined; 
+  private _netIpv4TcpKeepaliveTime?: number; 
   public get netIpv4TcpKeepaliveTime() {
     return this.getNumberAttribute('net_ipv4_tcp_keepalive_time');
   }
-  public set netIpv4TcpKeepaliveTime(value: number | undefined) {
+  public set netIpv4TcpKeepaliveTime(value: number) {
     this._netIpv4TcpKeepaliveTime = value;
   }
   public resetNetIpv4TcpKeepaliveTime() {
@@ -1923,15 +2515,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netIpv4TcpKeepaliveTimeInput() {
-    return this._netIpv4TcpKeepaliveTime
+    return this._netIpv4TcpKeepaliveTime;
   }
 
   // net_ipv4_tcp_max_syn_backlog - computed: false, optional: true, required: false
-  private _netIpv4TcpMaxSynBacklog?: number | undefined; 
+  private _netIpv4TcpMaxSynBacklog?: number; 
   public get netIpv4TcpMaxSynBacklog() {
     return this.getNumberAttribute('net_ipv4_tcp_max_syn_backlog');
   }
-  public set netIpv4TcpMaxSynBacklog(value: number | undefined) {
+  public set netIpv4TcpMaxSynBacklog(value: number) {
     this._netIpv4TcpMaxSynBacklog = value;
   }
   public resetNetIpv4TcpMaxSynBacklog() {
@@ -1939,15 +2531,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netIpv4TcpMaxSynBacklogInput() {
-    return this._netIpv4TcpMaxSynBacklog
+    return this._netIpv4TcpMaxSynBacklog;
   }
 
   // net_ipv4_tcp_max_tw_buckets - computed: false, optional: true, required: false
-  private _netIpv4TcpMaxTwBuckets?: number | undefined; 
+  private _netIpv4TcpMaxTwBuckets?: number; 
   public get netIpv4TcpMaxTwBuckets() {
     return this.getNumberAttribute('net_ipv4_tcp_max_tw_buckets');
   }
-  public set netIpv4TcpMaxTwBuckets(value: number | undefined) {
+  public set netIpv4TcpMaxTwBuckets(value: number) {
     this._netIpv4TcpMaxTwBuckets = value;
   }
   public resetNetIpv4TcpMaxTwBuckets() {
@@ -1955,15 +2547,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netIpv4TcpMaxTwBucketsInput() {
-    return this._netIpv4TcpMaxTwBuckets
+    return this._netIpv4TcpMaxTwBuckets;
   }
 
   // net_ipv4_tcp_tw_reuse - computed: false, optional: true, required: false
-  private _netIpv4TcpTwReuse?: boolean | cdktf.IResolvable | undefined; 
+  private _netIpv4TcpTwReuse?: boolean | cdktf.IResolvable; 
   public get netIpv4TcpTwReuse() {
     return this.getBooleanAttribute('net_ipv4_tcp_tw_reuse') as any;
   }
-  public set netIpv4TcpTwReuse(value: boolean | cdktf.IResolvable | undefined) {
+  public set netIpv4TcpTwReuse(value: boolean | cdktf.IResolvable) {
     this._netIpv4TcpTwReuse = value;
   }
   public resetNetIpv4TcpTwReuse() {
@@ -1971,15 +2563,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netIpv4TcpTwReuseInput() {
-    return this._netIpv4TcpTwReuse
+    return this._netIpv4TcpTwReuse;
   }
 
   // net_netfilter_nf_conntrack_buckets - computed: false, optional: true, required: false
-  private _netNetfilterNfConntrackBuckets?: number | undefined; 
+  private _netNetfilterNfConntrackBuckets?: number; 
   public get netNetfilterNfConntrackBuckets() {
     return this.getNumberAttribute('net_netfilter_nf_conntrack_buckets');
   }
-  public set netNetfilterNfConntrackBuckets(value: number | undefined) {
+  public set netNetfilterNfConntrackBuckets(value: number) {
     this._netNetfilterNfConntrackBuckets = value;
   }
   public resetNetNetfilterNfConntrackBuckets() {
@@ -1987,15 +2579,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netNetfilterNfConntrackBucketsInput() {
-    return this._netNetfilterNfConntrackBuckets
+    return this._netNetfilterNfConntrackBuckets;
   }
 
   // net_netfilter_nf_conntrack_max - computed: false, optional: true, required: false
-  private _netNetfilterNfConntrackMax?: number | undefined; 
+  private _netNetfilterNfConntrackMax?: number; 
   public get netNetfilterNfConntrackMax() {
     return this.getNumberAttribute('net_netfilter_nf_conntrack_max');
   }
-  public set netNetfilterNfConntrackMax(value: number | undefined) {
+  public set netNetfilterNfConntrackMax(value: number) {
     this._netNetfilterNfConntrackMax = value;
   }
   public resetNetNetfilterNfConntrackMax() {
@@ -2003,15 +2595,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get netNetfilterNfConntrackMaxInput() {
-    return this._netNetfilterNfConntrackMax
+    return this._netNetfilterNfConntrackMax;
   }
 
   // vm_max_map_count - computed: false, optional: true, required: false
-  private _vmMaxMapCount?: number | undefined; 
+  private _vmMaxMapCount?: number; 
   public get vmMaxMapCount() {
     return this.getNumberAttribute('vm_max_map_count');
   }
-  public set vmMaxMapCount(value: number | undefined) {
+  public set vmMaxMapCount(value: number) {
     this._vmMaxMapCount = value;
   }
   public resetVmMaxMapCount() {
@@ -2019,15 +2611,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get vmMaxMapCountInput() {
-    return this._vmMaxMapCount
+    return this._vmMaxMapCount;
   }
 
   // vm_swappiness - computed: false, optional: true, required: false
-  private _vmSwappiness?: number | undefined; 
+  private _vmSwappiness?: number; 
   public get vmSwappiness() {
     return this.getNumberAttribute('vm_swappiness');
   }
-  public set vmSwappiness(value: number | undefined) {
+  public set vmSwappiness(value: number) {
     this._vmSwappiness = value;
   }
   public resetVmSwappiness() {
@@ -2035,15 +2627,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get vmSwappinessInput() {
-    return this._vmSwappiness
+    return this._vmSwappiness;
   }
 
   // vm_vfs_cache_pressure - computed: false, optional: true, required: false
-  private _vmVfsCachePressure?: number | undefined; 
+  private _vmVfsCachePressure?: number; 
   public get vmVfsCachePressure() {
     return this.getNumberAttribute('vm_vfs_cache_pressure');
   }
-  public set vmVfsCachePressure(value: number | undefined) {
+  public set vmVfsCachePressure(value: number) {
     this._vmVfsCachePressure = value;
   }
   public resetVmVfsCachePressure() {
@@ -2051,7 +2643,7 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get vmVfsCachePressureInput() {
-    return this._vmVfsCachePressure
+    return this._vmVfsCachePressure;
   }
 }
 export interface KubernetesClusterDefaultNodePoolLinuxOsConfig {
@@ -2075,7 +2667,7 @@ export interface KubernetesClusterDefaultNodePoolLinuxOsConfig {
   readonly sysctlConfig?: KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig;
 }
 
-function kubernetesClusterDefaultNodePoolLinuxOsConfigToTerraform(struct?: KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference | KubernetesClusterDefaultNodePoolLinuxOsConfig): any {
+export function kubernetesClusterDefaultNodePoolLinuxOsConfigToTerraform(struct?: KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference | KubernetesClusterDefaultNodePoolLinuxOsConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2098,12 +2690,49 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterDefaultNodePoolLinuxOsConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._swapFileSizeMb) {
+      hasAnyValues = true;
+      internalValueResult.swapFileSizeMb = this._swapFileSizeMb;
+    }
+    if (this._transparentHugePageDefrag) {
+      hasAnyValues = true;
+      internalValueResult.transparentHugePageDefrag = this._transparentHugePageDefrag;
+    }
+    if (this._transparentHugePageEnabled) {
+      hasAnyValues = true;
+      internalValueResult.transparentHugePageEnabled = this._transparentHugePageEnabled;
+    }
+    if (this._sysctlConfig) {
+      hasAnyValues = true;
+      internalValueResult.sysctlConfig = this._sysctlConfig?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterDefaultNodePoolLinuxOsConfig | undefined) {
+    if (value === undefined) {
+      this._swapFileSizeMb = undefined;
+      this._transparentHugePageDefrag = undefined;
+      this._transparentHugePageEnabled = undefined;
+      this._sysctlConfig.internalValue = undefined;
+    }
+    else {
+      this._swapFileSizeMb = value.swapFileSizeMb;
+      this._transparentHugePageDefrag = value.transparentHugePageDefrag;
+      this._transparentHugePageEnabled = value.transparentHugePageEnabled;
+      this._sysctlConfig.internalValue = value.sysctlConfig;
+    }
+  }
+
   // swap_file_size_mb - computed: false, optional: true, required: false
-  private _swapFileSizeMb?: number | undefined; 
+  private _swapFileSizeMb?: number; 
   public get swapFileSizeMb() {
     return this.getNumberAttribute('swap_file_size_mb');
   }
-  public set swapFileSizeMb(value: number | undefined) {
+  public set swapFileSizeMb(value: number) {
     this._swapFileSizeMb = value;
   }
   public resetSwapFileSizeMb() {
@@ -2111,15 +2740,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get swapFileSizeMbInput() {
-    return this._swapFileSizeMb
+    return this._swapFileSizeMb;
   }
 
   // transparent_huge_page_defrag - computed: false, optional: true, required: false
-  private _transparentHugePageDefrag?: string | undefined; 
+  private _transparentHugePageDefrag?: string; 
   public get transparentHugePageDefrag() {
     return this.getStringAttribute('transparent_huge_page_defrag');
   }
-  public set transparentHugePageDefrag(value: string | undefined) {
+  public set transparentHugePageDefrag(value: string) {
     this._transparentHugePageDefrag = value;
   }
   public resetTransparentHugePageDefrag() {
@@ -2127,15 +2756,15 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get transparentHugePageDefragInput() {
-    return this._transparentHugePageDefrag
+    return this._transparentHugePageDefrag;
   }
 
   // transparent_huge_page_enabled - computed: false, optional: true, required: false
-  private _transparentHugePageEnabled?: string | undefined; 
+  private _transparentHugePageEnabled?: string; 
   public get transparentHugePageEnabled() {
     return this.getStringAttribute('transparent_huge_page_enabled');
   }
-  public set transparentHugePageEnabled(value: string | undefined) {
+  public set transparentHugePageEnabled(value: string) {
     this._transparentHugePageEnabled = value;
   }
   public resetTransparentHugePageEnabled() {
@@ -2143,24 +2772,23 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get transparentHugePageEnabledInput() {
-    return this._transparentHugePageEnabled
+    return this._transparentHugePageEnabled;
   }
 
   // sysctl_config - computed: false, optional: true, required: false
-  private _sysctlConfig?: KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig | undefined; 
-  private __sysctlConfigOutput = new KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference(this as any, "sysctl_config", true);
+  private _sysctlConfig = new KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference(this as any, "sysctl_config", true);
   public get sysctlConfig() {
-    return this.__sysctlConfigOutput;
+    return this._sysctlConfig;
   }
-  public putSysctlConfig(value: KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig | undefined) {
-    this._sysctlConfig = value;
+  public putSysctlConfig(value: KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig) {
+    this._sysctlConfig.internalValue = value;
   }
   public resetSysctlConfig() {
-    this._sysctlConfig = undefined;
+    this._sysctlConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sysctlConfigInput() {
-    return this._sysctlConfig
+    return this._sysctlConfig.internalValue;
   }
 }
 export interface KubernetesClusterDefaultNodePoolUpgradeSettings {
@@ -2170,7 +2798,7 @@ export interface KubernetesClusterDefaultNodePoolUpgradeSettings {
   readonly maxSurge: string;
 }
 
-function kubernetesClusterDefaultNodePoolUpgradeSettingsToTerraform(struct?: KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference | KubernetesClusterDefaultNodePoolUpgradeSettings): any {
+export function kubernetesClusterDefaultNodePoolUpgradeSettingsToTerraform(struct?: KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference | KubernetesClusterDefaultNodePoolUpgradeSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2190,6 +2818,25 @@ export class KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterDefaultNodePoolUpgradeSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maxSurge) {
+      hasAnyValues = true;
+      internalValueResult.maxSurge = this._maxSurge;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterDefaultNodePoolUpgradeSettings | undefined) {
+    if (value === undefined) {
+      this._maxSurge = undefined;
+    }
+    else {
+      this._maxSurge = value.maxSurge;
+    }
+  }
+
   // max_surge - computed: false, optional: false, required: true
   private _maxSurge?: string; 
   public get maxSurge() {
@@ -2200,7 +2847,7 @@ export class KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get maxSurgeInput() {
-    return this._maxSurge
+    return this._maxSurge;
   }
 }
 export interface KubernetesClusterDefaultNodePool {
@@ -2328,7 +2975,7 @@ export interface KubernetesClusterDefaultNodePool {
   readonly upgradeSettings?: KubernetesClusterDefaultNodePoolUpgradeSettings;
 }
 
-function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesClusterDefaultNodePoolOutputReference | KubernetesClusterDefaultNodePool): any {
+export function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesClusterDefaultNodePoolOutputReference | KubernetesClusterDefaultNodePool): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2376,12 +3023,199 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterDefaultNodePool | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._availabilityZones) {
+      hasAnyValues = true;
+      internalValueResult.availabilityZones = this._availabilityZones;
+    }
+    if (this._enableAutoScaling) {
+      hasAnyValues = true;
+      internalValueResult.enableAutoScaling = this._enableAutoScaling;
+    }
+    if (this._enableHostEncryption) {
+      hasAnyValues = true;
+      internalValueResult.enableHostEncryption = this._enableHostEncryption;
+    }
+    if (this._enableNodePublicIp) {
+      hasAnyValues = true;
+      internalValueResult.enableNodePublicIp = this._enableNodePublicIp;
+    }
+    if (this._fipsEnabled) {
+      hasAnyValues = true;
+      internalValueResult.fipsEnabled = this._fipsEnabled;
+    }
+    if (this._kubeletDiskType) {
+      hasAnyValues = true;
+      internalValueResult.kubeletDiskType = this._kubeletDiskType;
+    }
+    if (this._maxCount) {
+      hasAnyValues = true;
+      internalValueResult.maxCount = this._maxCount;
+    }
+    if (this._maxPods) {
+      hasAnyValues = true;
+      internalValueResult.maxPods = this._maxPods;
+    }
+    if (this._minCount) {
+      hasAnyValues = true;
+      internalValueResult.minCount = this._minCount;
+    }
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._nodeCount) {
+      hasAnyValues = true;
+      internalValueResult.nodeCount = this._nodeCount;
+    }
+    if (this._nodeLabels) {
+      hasAnyValues = true;
+      internalValueResult.nodeLabels = this._nodeLabels;
+    }
+    if (this._nodePublicIpPrefixId) {
+      hasAnyValues = true;
+      internalValueResult.nodePublicIpPrefixId = this._nodePublicIpPrefixId;
+    }
+    if (this._nodeTaints) {
+      hasAnyValues = true;
+      internalValueResult.nodeTaints = this._nodeTaints;
+    }
+    if (this._onlyCriticalAddonsEnabled) {
+      hasAnyValues = true;
+      internalValueResult.onlyCriticalAddonsEnabled = this._onlyCriticalAddonsEnabled;
+    }
+    if (this._orchestratorVersion) {
+      hasAnyValues = true;
+      internalValueResult.orchestratorVersion = this._orchestratorVersion;
+    }
+    if (this._osDiskSizeGb) {
+      hasAnyValues = true;
+      internalValueResult.osDiskSizeGb = this._osDiskSizeGb;
+    }
+    if (this._osDiskType) {
+      hasAnyValues = true;
+      internalValueResult.osDiskType = this._osDiskType;
+    }
+    if (this._osSku) {
+      hasAnyValues = true;
+      internalValueResult.osSku = this._osSku;
+    }
+    if (this._podSubnetId) {
+      hasAnyValues = true;
+      internalValueResult.podSubnetId = this._podSubnetId;
+    }
+    if (this._proximityPlacementGroupId) {
+      hasAnyValues = true;
+      internalValueResult.proximityPlacementGroupId = this._proximityPlacementGroupId;
+    }
+    if (this._tags) {
+      hasAnyValues = true;
+      internalValueResult.tags = this._tags;
+    }
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._ultraSsdEnabled) {
+      hasAnyValues = true;
+      internalValueResult.ultraSsdEnabled = this._ultraSsdEnabled;
+    }
+    if (this._vmSize) {
+      hasAnyValues = true;
+      internalValueResult.vmSize = this._vmSize;
+    }
+    if (this._vnetSubnetId) {
+      hasAnyValues = true;
+      internalValueResult.vnetSubnetId = this._vnetSubnetId;
+    }
+    if (this._kubeletConfig) {
+      hasAnyValues = true;
+      internalValueResult.kubeletConfig = this._kubeletConfig?.internalValue;
+    }
+    if (this._linuxOsConfig) {
+      hasAnyValues = true;
+      internalValueResult.linuxOsConfig = this._linuxOsConfig?.internalValue;
+    }
+    if (this._upgradeSettings) {
+      hasAnyValues = true;
+      internalValueResult.upgradeSettings = this._upgradeSettings?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterDefaultNodePool | undefined) {
+    if (value === undefined) {
+      this._availabilityZones = undefined;
+      this._enableAutoScaling = undefined;
+      this._enableHostEncryption = undefined;
+      this._enableNodePublicIp = undefined;
+      this._fipsEnabled = undefined;
+      this._kubeletDiskType = undefined;
+      this._maxCount = undefined;
+      this._maxPods = undefined;
+      this._minCount = undefined;
+      this._name = undefined;
+      this._nodeCount = undefined;
+      this._nodeLabels = undefined;
+      this._nodePublicIpPrefixId = undefined;
+      this._nodeTaints = undefined;
+      this._onlyCriticalAddonsEnabled = undefined;
+      this._orchestratorVersion = undefined;
+      this._osDiskSizeGb = undefined;
+      this._osDiskType = undefined;
+      this._osSku = undefined;
+      this._podSubnetId = undefined;
+      this._proximityPlacementGroupId = undefined;
+      this._tags = undefined;
+      this._type = undefined;
+      this._ultraSsdEnabled = undefined;
+      this._vmSize = undefined;
+      this._vnetSubnetId = undefined;
+      this._kubeletConfig.internalValue = undefined;
+      this._linuxOsConfig.internalValue = undefined;
+      this._upgradeSettings.internalValue = undefined;
+    }
+    else {
+      this._availabilityZones = value.availabilityZones;
+      this._enableAutoScaling = value.enableAutoScaling;
+      this._enableHostEncryption = value.enableHostEncryption;
+      this._enableNodePublicIp = value.enableNodePublicIp;
+      this._fipsEnabled = value.fipsEnabled;
+      this._kubeletDiskType = value.kubeletDiskType;
+      this._maxCount = value.maxCount;
+      this._maxPods = value.maxPods;
+      this._minCount = value.minCount;
+      this._name = value.name;
+      this._nodeCount = value.nodeCount;
+      this._nodeLabels = value.nodeLabels;
+      this._nodePublicIpPrefixId = value.nodePublicIpPrefixId;
+      this._nodeTaints = value.nodeTaints;
+      this._onlyCriticalAddonsEnabled = value.onlyCriticalAddonsEnabled;
+      this._orchestratorVersion = value.orchestratorVersion;
+      this._osDiskSizeGb = value.osDiskSizeGb;
+      this._osDiskType = value.osDiskType;
+      this._osSku = value.osSku;
+      this._podSubnetId = value.podSubnetId;
+      this._proximityPlacementGroupId = value.proximityPlacementGroupId;
+      this._tags = value.tags;
+      this._type = value.type;
+      this._ultraSsdEnabled = value.ultraSsdEnabled;
+      this._vmSize = value.vmSize;
+      this._vnetSubnetId = value.vnetSubnetId;
+      this._kubeletConfig.internalValue = value.kubeletConfig;
+      this._linuxOsConfig.internalValue = value.linuxOsConfig;
+      this._upgradeSettings.internalValue = value.upgradeSettings;
+    }
+  }
+
   // availability_zones - computed: false, optional: true, required: false
-  private _availabilityZones?: string[] | undefined; 
+  private _availabilityZones?: string[]; 
   public get availabilityZones() {
     return this.getListAttribute('availability_zones');
   }
-  public set availabilityZones(value: string[] | undefined) {
+  public set availabilityZones(value: string[]) {
     this._availabilityZones = value;
   }
   public resetAvailabilityZones() {
@@ -2389,15 +3223,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get availabilityZonesInput() {
-    return this._availabilityZones
+    return this._availabilityZones;
   }
 
   // enable_auto_scaling - computed: false, optional: true, required: false
-  private _enableAutoScaling?: boolean | cdktf.IResolvable | undefined; 
+  private _enableAutoScaling?: boolean | cdktf.IResolvable; 
   public get enableAutoScaling() {
     return this.getBooleanAttribute('enable_auto_scaling') as any;
   }
-  public set enableAutoScaling(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableAutoScaling(value: boolean | cdktf.IResolvable) {
     this._enableAutoScaling = value;
   }
   public resetEnableAutoScaling() {
@@ -2405,15 +3239,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get enableAutoScalingInput() {
-    return this._enableAutoScaling
+    return this._enableAutoScaling;
   }
 
   // enable_host_encryption - computed: false, optional: true, required: false
-  private _enableHostEncryption?: boolean | cdktf.IResolvable | undefined; 
+  private _enableHostEncryption?: boolean | cdktf.IResolvable; 
   public get enableHostEncryption() {
     return this.getBooleanAttribute('enable_host_encryption') as any;
   }
-  public set enableHostEncryption(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableHostEncryption(value: boolean | cdktf.IResolvable) {
     this._enableHostEncryption = value;
   }
   public resetEnableHostEncryption() {
@@ -2421,15 +3255,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get enableHostEncryptionInput() {
-    return this._enableHostEncryption
+    return this._enableHostEncryption;
   }
 
   // enable_node_public_ip - computed: false, optional: true, required: false
-  private _enableNodePublicIp?: boolean | cdktf.IResolvable | undefined; 
+  private _enableNodePublicIp?: boolean | cdktf.IResolvable; 
   public get enableNodePublicIp() {
     return this.getBooleanAttribute('enable_node_public_ip') as any;
   }
-  public set enableNodePublicIp(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableNodePublicIp(value: boolean | cdktf.IResolvable) {
     this._enableNodePublicIp = value;
   }
   public resetEnableNodePublicIp() {
@@ -2437,15 +3271,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get enableNodePublicIpInput() {
-    return this._enableNodePublicIp
+    return this._enableNodePublicIp;
   }
 
   // fips_enabled - computed: false, optional: true, required: false
-  private _fipsEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _fipsEnabled?: boolean | cdktf.IResolvable; 
   public get fipsEnabled() {
     return this.getBooleanAttribute('fips_enabled') as any;
   }
-  public set fipsEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set fipsEnabled(value: boolean | cdktf.IResolvable) {
     this._fipsEnabled = value;
   }
   public resetFipsEnabled() {
@@ -2453,15 +3287,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get fipsEnabledInput() {
-    return this._fipsEnabled
+    return this._fipsEnabled;
   }
 
   // kubelet_disk_type - computed: true, optional: true, required: false
-  private _kubeletDiskType?: string | undefined; 
+  private _kubeletDiskType?: string; 
   public get kubeletDiskType() {
     return this.getStringAttribute('kubelet_disk_type');
   }
-  public set kubeletDiskType(value: string | undefined) {
+  public set kubeletDiskType(value: string) {
     this._kubeletDiskType = value;
   }
   public resetKubeletDiskType() {
@@ -2469,15 +3303,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get kubeletDiskTypeInput() {
-    return this._kubeletDiskType
+    return this._kubeletDiskType;
   }
 
   // max_count - computed: false, optional: true, required: false
-  private _maxCount?: number | undefined; 
+  private _maxCount?: number; 
   public get maxCount() {
     return this.getNumberAttribute('max_count');
   }
-  public set maxCount(value: number | undefined) {
+  public set maxCount(value: number) {
     this._maxCount = value;
   }
   public resetMaxCount() {
@@ -2485,15 +3319,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get maxCountInput() {
-    return this._maxCount
+    return this._maxCount;
   }
 
   // max_pods - computed: true, optional: true, required: false
-  private _maxPods?: number | undefined; 
+  private _maxPods?: number; 
   public get maxPods() {
     return this.getNumberAttribute('max_pods');
   }
-  public set maxPods(value: number | undefined) {
+  public set maxPods(value: number) {
     this._maxPods = value;
   }
   public resetMaxPods() {
@@ -2501,15 +3335,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get maxPodsInput() {
-    return this._maxPods
+    return this._maxPods;
   }
 
   // min_count - computed: false, optional: true, required: false
-  private _minCount?: number | undefined; 
+  private _minCount?: number; 
   public get minCount() {
     return this.getNumberAttribute('min_count');
   }
-  public set minCount(value: number | undefined) {
+  public set minCount(value: number) {
     this._minCount = value;
   }
   public resetMinCount() {
@@ -2517,7 +3351,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get minCountInput() {
-    return this._minCount
+    return this._minCount;
   }
 
   // name - computed: false, optional: false, required: true
@@ -2530,15 +3364,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // node_count - computed: true, optional: true, required: false
-  private _nodeCount?: number | undefined; 
+  private _nodeCount?: number; 
   public get nodeCount() {
     return this.getNumberAttribute('node_count');
   }
-  public set nodeCount(value: number | undefined) {
+  public set nodeCount(value: number) {
     this._nodeCount = value;
   }
   public resetNodeCount() {
@@ -2546,16 +3380,16 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get nodeCountInput() {
-    return this._nodeCount
+    return this._nodeCount;
   }
 
   // node_labels - computed: true, optional: true, required: false
-  private _nodeLabels?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _nodeLabels?: { [key: string]: string } | cdktf.IResolvable; 
   public get nodeLabels() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('node_labels') as any;
   }
-  public set nodeLabels(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set nodeLabels(value: { [key: string]: string } | cdktf.IResolvable) {
     this._nodeLabels = value;
   }
   public resetNodeLabels() {
@@ -2563,15 +3397,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get nodeLabelsInput() {
-    return this._nodeLabels
+    return this._nodeLabels;
   }
 
   // node_public_ip_prefix_id - computed: false, optional: true, required: false
-  private _nodePublicIpPrefixId?: string | undefined; 
+  private _nodePublicIpPrefixId?: string; 
   public get nodePublicIpPrefixId() {
     return this.getStringAttribute('node_public_ip_prefix_id');
   }
-  public set nodePublicIpPrefixId(value: string | undefined) {
+  public set nodePublicIpPrefixId(value: string) {
     this._nodePublicIpPrefixId = value;
   }
   public resetNodePublicIpPrefixId() {
@@ -2579,15 +3413,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get nodePublicIpPrefixIdInput() {
-    return this._nodePublicIpPrefixId
+    return this._nodePublicIpPrefixId;
   }
 
   // node_taints - computed: false, optional: true, required: false
-  private _nodeTaints?: string[] | undefined; 
+  private _nodeTaints?: string[]; 
   public get nodeTaints() {
     return this.getListAttribute('node_taints');
   }
-  public set nodeTaints(value: string[] | undefined) {
+  public set nodeTaints(value: string[]) {
     this._nodeTaints = value;
   }
   public resetNodeTaints() {
@@ -2595,15 +3429,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get nodeTaintsInput() {
-    return this._nodeTaints
+    return this._nodeTaints;
   }
 
   // only_critical_addons_enabled - computed: false, optional: true, required: false
-  private _onlyCriticalAddonsEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _onlyCriticalAddonsEnabled?: boolean | cdktf.IResolvable; 
   public get onlyCriticalAddonsEnabled() {
     return this.getBooleanAttribute('only_critical_addons_enabled') as any;
   }
-  public set onlyCriticalAddonsEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set onlyCriticalAddonsEnabled(value: boolean | cdktf.IResolvable) {
     this._onlyCriticalAddonsEnabled = value;
   }
   public resetOnlyCriticalAddonsEnabled() {
@@ -2611,15 +3445,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get onlyCriticalAddonsEnabledInput() {
-    return this._onlyCriticalAddonsEnabled
+    return this._onlyCriticalAddonsEnabled;
   }
 
   // orchestrator_version - computed: true, optional: true, required: false
-  private _orchestratorVersion?: string | undefined; 
+  private _orchestratorVersion?: string; 
   public get orchestratorVersion() {
     return this.getStringAttribute('orchestrator_version');
   }
-  public set orchestratorVersion(value: string | undefined) {
+  public set orchestratorVersion(value: string) {
     this._orchestratorVersion = value;
   }
   public resetOrchestratorVersion() {
@@ -2627,15 +3461,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get orchestratorVersionInput() {
-    return this._orchestratorVersion
+    return this._orchestratorVersion;
   }
 
   // os_disk_size_gb - computed: true, optional: true, required: false
-  private _osDiskSizeGb?: number | undefined; 
+  private _osDiskSizeGb?: number; 
   public get osDiskSizeGb() {
     return this.getNumberAttribute('os_disk_size_gb');
   }
-  public set osDiskSizeGb(value: number | undefined) {
+  public set osDiskSizeGb(value: number) {
     this._osDiskSizeGb = value;
   }
   public resetOsDiskSizeGb() {
@@ -2643,15 +3477,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get osDiskSizeGbInput() {
-    return this._osDiskSizeGb
+    return this._osDiskSizeGb;
   }
 
   // os_disk_type - computed: false, optional: true, required: false
-  private _osDiskType?: string | undefined; 
+  private _osDiskType?: string; 
   public get osDiskType() {
     return this.getStringAttribute('os_disk_type');
   }
-  public set osDiskType(value: string | undefined) {
+  public set osDiskType(value: string) {
     this._osDiskType = value;
   }
   public resetOsDiskType() {
@@ -2659,15 +3493,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get osDiskTypeInput() {
-    return this._osDiskType
+    return this._osDiskType;
   }
 
   // os_sku - computed: true, optional: true, required: false
-  private _osSku?: string | undefined; 
+  private _osSku?: string; 
   public get osSku() {
     return this.getStringAttribute('os_sku');
   }
-  public set osSku(value: string | undefined) {
+  public set osSku(value: string) {
     this._osSku = value;
   }
   public resetOsSku() {
@@ -2675,15 +3509,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get osSkuInput() {
-    return this._osSku
+    return this._osSku;
   }
 
   // pod_subnet_id - computed: false, optional: true, required: false
-  private _podSubnetId?: string | undefined; 
+  private _podSubnetId?: string; 
   public get podSubnetId() {
     return this.getStringAttribute('pod_subnet_id');
   }
-  public set podSubnetId(value: string | undefined) {
+  public set podSubnetId(value: string) {
     this._podSubnetId = value;
   }
   public resetPodSubnetId() {
@@ -2691,15 +3525,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get podSubnetIdInput() {
-    return this._podSubnetId
+    return this._podSubnetId;
   }
 
   // proximity_placement_group_id - computed: false, optional: true, required: false
-  private _proximityPlacementGroupId?: string | undefined; 
+  private _proximityPlacementGroupId?: string; 
   public get proximityPlacementGroupId() {
     return this.getStringAttribute('proximity_placement_group_id');
   }
-  public set proximityPlacementGroupId(value: string | undefined) {
+  public set proximityPlacementGroupId(value: string) {
     this._proximityPlacementGroupId = value;
   }
   public resetProximityPlacementGroupId() {
@@ -2707,16 +3541,16 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get proximityPlacementGroupIdInput() {
-    return this._proximityPlacementGroupId
+    return this._proximityPlacementGroupId;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -2724,15 +3558,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // type - computed: false, optional: true, required: false
-  private _type?: string | undefined; 
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string | undefined) {
+  public set type(value: string) {
     this._type = value;
   }
   public resetType() {
@@ -2740,15 +3574,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 
   // ultra_ssd_enabled - computed: false, optional: true, required: false
-  private _ultraSsdEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _ultraSsdEnabled?: boolean | cdktf.IResolvable; 
   public get ultraSsdEnabled() {
     return this.getBooleanAttribute('ultra_ssd_enabled') as any;
   }
-  public set ultraSsdEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set ultraSsdEnabled(value: boolean | cdktf.IResolvable) {
     this._ultraSsdEnabled = value;
   }
   public resetUltraSsdEnabled() {
@@ -2756,7 +3590,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get ultraSsdEnabledInput() {
-    return this._ultraSsdEnabled
+    return this._ultraSsdEnabled;
   }
 
   // vm_size - computed: false, optional: false, required: true
@@ -2769,15 +3603,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get vmSizeInput() {
-    return this._vmSize
+    return this._vmSize;
   }
 
   // vnet_subnet_id - computed: false, optional: true, required: false
-  private _vnetSubnetId?: string | undefined; 
+  private _vnetSubnetId?: string; 
   public get vnetSubnetId() {
     return this.getStringAttribute('vnet_subnet_id');
   }
-  public set vnetSubnetId(value: string | undefined) {
+  public set vnetSubnetId(value: string) {
     this._vnetSubnetId = value;
   }
   public resetVnetSubnetId() {
@@ -2785,58 +3619,55 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get vnetSubnetIdInput() {
-    return this._vnetSubnetId
+    return this._vnetSubnetId;
   }
 
   // kubelet_config - computed: false, optional: true, required: false
-  private _kubeletConfig?: KubernetesClusterDefaultNodePoolKubeletConfig | undefined; 
-  private __kubeletConfigOutput = new KubernetesClusterDefaultNodePoolKubeletConfigOutputReference(this as any, "kubelet_config", true);
+  private _kubeletConfig = new KubernetesClusterDefaultNodePoolKubeletConfigOutputReference(this as any, "kubelet_config", true);
   public get kubeletConfig() {
-    return this.__kubeletConfigOutput;
+    return this._kubeletConfig;
   }
-  public putKubeletConfig(value: KubernetesClusterDefaultNodePoolKubeletConfig | undefined) {
-    this._kubeletConfig = value;
+  public putKubeletConfig(value: KubernetesClusterDefaultNodePoolKubeletConfig) {
+    this._kubeletConfig.internalValue = value;
   }
   public resetKubeletConfig() {
-    this._kubeletConfig = undefined;
+    this._kubeletConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get kubeletConfigInput() {
-    return this._kubeletConfig
+    return this._kubeletConfig.internalValue;
   }
 
   // linux_os_config - computed: false, optional: true, required: false
-  private _linuxOsConfig?: KubernetesClusterDefaultNodePoolLinuxOsConfig | undefined; 
-  private __linuxOsConfigOutput = new KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference(this as any, "linux_os_config", true);
+  private _linuxOsConfig = new KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference(this as any, "linux_os_config", true);
   public get linuxOsConfig() {
-    return this.__linuxOsConfigOutput;
+    return this._linuxOsConfig;
   }
-  public putLinuxOsConfig(value: KubernetesClusterDefaultNodePoolLinuxOsConfig | undefined) {
-    this._linuxOsConfig = value;
+  public putLinuxOsConfig(value: KubernetesClusterDefaultNodePoolLinuxOsConfig) {
+    this._linuxOsConfig.internalValue = value;
   }
   public resetLinuxOsConfig() {
-    this._linuxOsConfig = undefined;
+    this._linuxOsConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get linuxOsConfigInput() {
-    return this._linuxOsConfig
+    return this._linuxOsConfig.internalValue;
   }
 
   // upgrade_settings - computed: false, optional: true, required: false
-  private _upgradeSettings?: KubernetesClusterDefaultNodePoolUpgradeSettings | undefined; 
-  private __upgradeSettingsOutput = new KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference(this as any, "upgrade_settings", true);
+  private _upgradeSettings = new KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference(this as any, "upgrade_settings", true);
   public get upgradeSettings() {
-    return this.__upgradeSettingsOutput;
+    return this._upgradeSettings;
   }
-  public putUpgradeSettings(value: KubernetesClusterDefaultNodePoolUpgradeSettings | undefined) {
-    this._upgradeSettings = value;
+  public putUpgradeSettings(value: KubernetesClusterDefaultNodePoolUpgradeSettings) {
+    this._upgradeSettings.internalValue = value;
   }
   public resetUpgradeSettings() {
-    this._upgradeSettings = undefined;
+    this._upgradeSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get upgradeSettingsInput() {
-    return this._upgradeSettings
+    return this._upgradeSettings.internalValue;
   }
 }
 export interface KubernetesClusterIdentity {
@@ -2850,7 +3681,7 @@ export interface KubernetesClusterIdentity {
   readonly userAssignedIdentityId?: string;
 }
 
-function kubernetesClusterIdentityToTerraform(struct?: KubernetesClusterIdentityOutputReference | KubernetesClusterIdentity): any {
+export function kubernetesClusterIdentityToTerraform(struct?: KubernetesClusterIdentityOutputReference | KubernetesClusterIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2871,6 +3702,31 @@ export class KubernetesClusterIdentityOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterIdentity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._userAssignedIdentityId) {
+      hasAnyValues = true;
+      internalValueResult.userAssignedIdentityId = this._userAssignedIdentityId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterIdentity | undefined) {
+    if (value === undefined) {
+      this._type = undefined;
+      this._userAssignedIdentityId = undefined;
+    }
+    else {
+      this._type = value.type;
+      this._userAssignedIdentityId = value.userAssignedIdentityId;
+    }
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -2881,15 +3737,15 @@ export class KubernetesClusterIdentityOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 
   // user_assigned_identity_id - computed: false, optional: true, required: false
-  private _userAssignedIdentityId?: string | undefined; 
+  private _userAssignedIdentityId?: string; 
   public get userAssignedIdentityId() {
     return this.getStringAttribute('user_assigned_identity_id');
   }
-  public set userAssignedIdentityId(value: string | undefined) {
+  public set userAssignedIdentityId(value: string) {
     this._userAssignedIdentityId = value;
   }
   public resetUserAssignedIdentityId() {
@@ -2897,7 +3753,7 @@ export class KubernetesClusterIdentityOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get userAssignedIdentityIdInput() {
-    return this._userAssignedIdentityId
+    return this._userAssignedIdentityId;
   }
 }
 export interface KubernetesClusterKubeletIdentity {
@@ -2915,7 +3771,7 @@ export interface KubernetesClusterKubeletIdentity {
   readonly userAssignedIdentityId?: string;
 }
 
-function kubernetesClusterKubeletIdentityToTerraform(struct?: KubernetesClusterKubeletIdentityOutputReference | KubernetesClusterKubeletIdentity): any {
+export function kubernetesClusterKubeletIdentityToTerraform(struct?: KubernetesClusterKubeletIdentityOutputReference | KubernetesClusterKubeletIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2937,12 +3793,43 @@ export class KubernetesClusterKubeletIdentityOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterKubeletIdentity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._clientId) {
+      hasAnyValues = true;
+      internalValueResult.clientId = this._clientId;
+    }
+    if (this._objectId) {
+      hasAnyValues = true;
+      internalValueResult.objectId = this._objectId;
+    }
+    if (this._userAssignedIdentityId) {
+      hasAnyValues = true;
+      internalValueResult.userAssignedIdentityId = this._userAssignedIdentityId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterKubeletIdentity | undefined) {
+    if (value === undefined) {
+      this._clientId = undefined;
+      this._objectId = undefined;
+      this._userAssignedIdentityId = undefined;
+    }
+    else {
+      this._clientId = value.clientId;
+      this._objectId = value.objectId;
+      this._userAssignedIdentityId = value.userAssignedIdentityId;
+    }
+  }
+
   // client_id - computed: true, optional: true, required: false
-  private _clientId?: string | undefined; 
+  private _clientId?: string; 
   public get clientId() {
     return this.getStringAttribute('client_id');
   }
-  public set clientId(value: string | undefined) {
+  public set clientId(value: string) {
     this._clientId = value;
   }
   public resetClientId() {
@@ -2950,15 +3837,15 @@ export class KubernetesClusterKubeletIdentityOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get clientIdInput() {
-    return this._clientId
+    return this._clientId;
   }
 
   // object_id - computed: true, optional: true, required: false
-  private _objectId?: string | undefined; 
+  private _objectId?: string; 
   public get objectId() {
     return this.getStringAttribute('object_id');
   }
-  public set objectId(value: string | undefined) {
+  public set objectId(value: string) {
     this._objectId = value;
   }
   public resetObjectId() {
@@ -2966,15 +3853,15 @@ export class KubernetesClusterKubeletIdentityOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get objectIdInput() {
-    return this._objectId
+    return this._objectId;
   }
 
   // user_assigned_identity_id - computed: true, optional: true, required: false
-  private _userAssignedIdentityId?: string | undefined; 
+  private _userAssignedIdentityId?: string; 
   public get userAssignedIdentityId() {
     return this.getStringAttribute('user_assigned_identity_id');
   }
-  public set userAssignedIdentityId(value: string | undefined) {
+  public set userAssignedIdentityId(value: string) {
     this._userAssignedIdentityId = value;
   }
   public resetUserAssignedIdentityId() {
@@ -2982,7 +3869,7 @@ export class KubernetesClusterKubeletIdentityOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get userAssignedIdentityIdInput() {
-    return this._userAssignedIdentityId
+    return this._userAssignedIdentityId;
   }
 }
 export interface KubernetesClusterLinuxProfileSshKey {
@@ -2992,7 +3879,7 @@ export interface KubernetesClusterLinuxProfileSshKey {
   readonly keyData: string;
 }
 
-function kubernetesClusterLinuxProfileSshKeyToTerraform(struct?: KubernetesClusterLinuxProfileSshKeyOutputReference | KubernetesClusterLinuxProfileSshKey): any {
+export function kubernetesClusterLinuxProfileSshKeyToTerraform(struct?: KubernetesClusterLinuxProfileSshKeyOutputReference | KubernetesClusterLinuxProfileSshKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3012,6 +3899,25 @@ export class KubernetesClusterLinuxProfileSshKeyOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterLinuxProfileSshKey | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._keyData) {
+      hasAnyValues = true;
+      internalValueResult.keyData = this._keyData;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterLinuxProfileSshKey | undefined) {
+    if (value === undefined) {
+      this._keyData = undefined;
+    }
+    else {
+      this._keyData = value.keyData;
+    }
+  }
+
   // key_data - computed: false, optional: false, required: true
   private _keyData?: string; 
   public get keyData() {
@@ -3022,7 +3928,7 @@ export class KubernetesClusterLinuxProfileSshKeyOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get keyDataInput() {
-    return this._keyData
+    return this._keyData;
   }
 }
 export interface KubernetesClusterLinuxProfile {
@@ -3038,7 +3944,7 @@ export interface KubernetesClusterLinuxProfile {
   readonly sshKey: KubernetesClusterLinuxProfileSshKey;
 }
 
-function kubernetesClusterLinuxProfileToTerraform(struct?: KubernetesClusterLinuxProfileOutputReference | KubernetesClusterLinuxProfile): any {
+export function kubernetesClusterLinuxProfileToTerraform(struct?: KubernetesClusterLinuxProfileOutputReference | KubernetesClusterLinuxProfile): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3059,6 +3965,31 @@ export class KubernetesClusterLinuxProfileOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterLinuxProfile | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._adminUsername) {
+      hasAnyValues = true;
+      internalValueResult.adminUsername = this._adminUsername;
+    }
+    if (this._sshKey) {
+      hasAnyValues = true;
+      internalValueResult.sshKey = this._sshKey?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterLinuxProfile | undefined) {
+    if (value === undefined) {
+      this._adminUsername = undefined;
+      this._sshKey.internalValue = undefined;
+    }
+    else {
+      this._adminUsername = value.adminUsername;
+      this._sshKey.internalValue = value.sshKey;
+    }
+  }
+
   // admin_username - computed: false, optional: false, required: true
   private _adminUsername?: string; 
   public get adminUsername() {
@@ -3069,21 +4000,20 @@ export class KubernetesClusterLinuxProfileOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get adminUsernameInput() {
-    return this._adminUsername
+    return this._adminUsername;
   }
 
   // ssh_key - computed: false, optional: false, required: true
-  private _sshKey?: KubernetesClusterLinuxProfileSshKey; 
-  private __sshKeyOutput = new KubernetesClusterLinuxProfileSshKeyOutputReference(this as any, "ssh_key", true);
+  private _sshKey = new KubernetesClusterLinuxProfileSshKeyOutputReference(this as any, "ssh_key", true);
   public get sshKey() {
-    return this.__sshKeyOutput;
+    return this._sshKey;
   }
   public putSshKey(value: KubernetesClusterLinuxProfileSshKey) {
-    this._sshKey = value;
+    this._sshKey.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get sshKeyInput() {
-    return this._sshKey
+    return this._sshKey.internalValue;
   }
 }
 export interface KubernetesClusterMaintenanceWindowAllowed {
@@ -3097,7 +4027,7 @@ export interface KubernetesClusterMaintenanceWindowAllowed {
   readonly hours: number[];
 }
 
-function kubernetesClusterMaintenanceWindowAllowedToTerraform(struct?: KubernetesClusterMaintenanceWindowAllowed): any {
+export function kubernetesClusterMaintenanceWindowAllowedToTerraform(struct?: KubernetesClusterMaintenanceWindowAllowed): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3119,7 +4049,7 @@ export interface KubernetesClusterMaintenanceWindowNotAllowed {
   readonly start: string;
 }
 
-function kubernetesClusterMaintenanceWindowNotAllowedToTerraform(struct?: KubernetesClusterMaintenanceWindowNotAllowed): any {
+export function kubernetesClusterMaintenanceWindowNotAllowedToTerraform(struct?: KubernetesClusterMaintenanceWindowNotAllowed): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3145,7 +4075,7 @@ export interface KubernetesClusterMaintenanceWindow {
   readonly notAllowed?: KubernetesClusterMaintenanceWindowNotAllowed[];
 }
 
-function kubernetesClusterMaintenanceWindowToTerraform(struct?: KubernetesClusterMaintenanceWindowOutputReference | KubernetesClusterMaintenanceWindow): any {
+export function kubernetesClusterMaintenanceWindowToTerraform(struct?: KubernetesClusterMaintenanceWindowOutputReference | KubernetesClusterMaintenanceWindow): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3166,13 +4096,38 @@ export class KubernetesClusterMaintenanceWindowOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterMaintenanceWindow | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowed) {
+      hasAnyValues = true;
+      internalValueResult.allowed = this._allowed;
+    }
+    if (this._notAllowed) {
+      hasAnyValues = true;
+      internalValueResult.notAllowed = this._notAllowed;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterMaintenanceWindow | undefined) {
+    if (value === undefined) {
+      this._allowed = undefined;
+      this._notAllowed = undefined;
+    }
+    else {
+      this._allowed = value.allowed;
+      this._notAllowed = value.notAllowed;
+    }
+  }
+
   // allowed - computed: false, optional: true, required: false
-  private _allowed?: KubernetesClusterMaintenanceWindowAllowed[] | undefined; 
+  private _allowed?: KubernetesClusterMaintenanceWindowAllowed[]; 
   public get allowed() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('allowed') as any;
   }
-  public set allowed(value: KubernetesClusterMaintenanceWindowAllowed[] | undefined) {
+  public set allowed(value: KubernetesClusterMaintenanceWindowAllowed[]) {
     this._allowed = value;
   }
   public resetAllowed() {
@@ -3180,16 +4135,16 @@ export class KubernetesClusterMaintenanceWindowOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get allowedInput() {
-    return this._allowed
+    return this._allowed;
   }
 
   // not_allowed - computed: false, optional: true, required: false
-  private _notAllowed?: KubernetesClusterMaintenanceWindowNotAllowed[] | undefined; 
+  private _notAllowed?: KubernetesClusterMaintenanceWindowNotAllowed[]; 
   public get notAllowed() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('not_allowed') as any;
   }
-  public set notAllowed(value: KubernetesClusterMaintenanceWindowNotAllowed[] | undefined) {
+  public set notAllowed(value: KubernetesClusterMaintenanceWindowNotAllowed[]) {
     this._notAllowed = value;
   }
   public resetNotAllowed() {
@@ -3197,7 +4152,7 @@ export class KubernetesClusterMaintenanceWindowOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get notAllowedInput() {
-    return this._notAllowed
+    return this._notAllowed;
   }
 }
 export interface KubernetesClusterNetworkProfileLoadBalancerProfile {
@@ -3223,7 +4178,7 @@ export interface KubernetesClusterNetworkProfileLoadBalancerProfile {
   readonly outboundPortsAllocated?: number;
 }
 
-function kubernetesClusterNetworkProfileLoadBalancerProfileToTerraform(struct?: KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference | KubernetesClusterNetworkProfileLoadBalancerProfile): any {
+export function kubernetesClusterNetworkProfileLoadBalancerProfileToTerraform(struct?: KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference | KubernetesClusterNetworkProfileLoadBalancerProfile): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3247,12 +4202,55 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterNetworkProfileLoadBalancerProfile | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._idleTimeoutInMinutes) {
+      hasAnyValues = true;
+      internalValueResult.idleTimeoutInMinutes = this._idleTimeoutInMinutes;
+    }
+    if (this._managedOutboundIpCount) {
+      hasAnyValues = true;
+      internalValueResult.managedOutboundIpCount = this._managedOutboundIpCount;
+    }
+    if (this._outboundIpAddressIds) {
+      hasAnyValues = true;
+      internalValueResult.outboundIpAddressIds = this._outboundIpAddressIds;
+    }
+    if (this._outboundIpPrefixIds) {
+      hasAnyValues = true;
+      internalValueResult.outboundIpPrefixIds = this._outboundIpPrefixIds;
+    }
+    if (this._outboundPortsAllocated) {
+      hasAnyValues = true;
+      internalValueResult.outboundPortsAllocated = this._outboundPortsAllocated;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterNetworkProfileLoadBalancerProfile | undefined) {
+    if (value === undefined) {
+      this._idleTimeoutInMinutes = undefined;
+      this._managedOutboundIpCount = undefined;
+      this._outboundIpAddressIds = undefined;
+      this._outboundIpPrefixIds = undefined;
+      this._outboundPortsAllocated = undefined;
+    }
+    else {
+      this._idleTimeoutInMinutes = value.idleTimeoutInMinutes;
+      this._managedOutboundIpCount = value.managedOutboundIpCount;
+      this._outboundIpAddressIds = value.outboundIpAddressIds;
+      this._outboundIpPrefixIds = value.outboundIpPrefixIds;
+      this._outboundPortsAllocated = value.outboundPortsAllocated;
+    }
+  }
+
   // idle_timeout_in_minutes - computed: false, optional: true, required: false
-  private _idleTimeoutInMinutes?: number | undefined; 
+  private _idleTimeoutInMinutes?: number; 
   public get idleTimeoutInMinutes() {
     return this.getNumberAttribute('idle_timeout_in_minutes');
   }
-  public set idleTimeoutInMinutes(value: number | undefined) {
+  public set idleTimeoutInMinutes(value: number) {
     this._idleTimeoutInMinutes = value;
   }
   public resetIdleTimeoutInMinutes() {
@@ -3260,15 +4258,15 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get idleTimeoutInMinutesInput() {
-    return this._idleTimeoutInMinutes
+    return this._idleTimeoutInMinutes;
   }
 
   // managed_outbound_ip_count - computed: true, optional: true, required: false
-  private _managedOutboundIpCount?: number | undefined; 
+  private _managedOutboundIpCount?: number; 
   public get managedOutboundIpCount() {
     return this.getNumberAttribute('managed_outbound_ip_count');
   }
-  public set managedOutboundIpCount(value: number | undefined) {
+  public set managedOutboundIpCount(value: number) {
     this._managedOutboundIpCount = value;
   }
   public resetManagedOutboundIpCount() {
@@ -3276,15 +4274,15 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get managedOutboundIpCountInput() {
-    return this._managedOutboundIpCount
+    return this._managedOutboundIpCount;
   }
 
   // outbound_ip_address_ids - computed: true, optional: true, required: false
-  private _outboundIpAddressIds?: string[] | undefined; 
+  private _outboundIpAddressIds?: string[]; 
   public get outboundIpAddressIds() {
     return this.getListAttribute('outbound_ip_address_ids');
   }
-  public set outboundIpAddressIds(value: string[] | undefined) {
+  public set outboundIpAddressIds(value: string[]) {
     this._outboundIpAddressIds = value;
   }
   public resetOutboundIpAddressIds() {
@@ -3292,15 +4290,15 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get outboundIpAddressIdsInput() {
-    return this._outboundIpAddressIds
+    return this._outboundIpAddressIds;
   }
 
   // outbound_ip_prefix_ids - computed: true, optional: true, required: false
-  private _outboundIpPrefixIds?: string[] | undefined; 
+  private _outboundIpPrefixIds?: string[]; 
   public get outboundIpPrefixIds() {
     return this.getListAttribute('outbound_ip_prefix_ids');
   }
-  public set outboundIpPrefixIds(value: string[] | undefined) {
+  public set outboundIpPrefixIds(value: string[]) {
     this._outboundIpPrefixIds = value;
   }
   public resetOutboundIpPrefixIds() {
@@ -3308,15 +4306,15 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get outboundIpPrefixIdsInput() {
-    return this._outboundIpPrefixIds
+    return this._outboundIpPrefixIds;
   }
 
   // outbound_ports_allocated - computed: false, optional: true, required: false
-  private _outboundPortsAllocated?: number | undefined; 
+  private _outboundPortsAllocated?: number; 
   public get outboundPortsAllocated() {
     return this.getNumberAttribute('outbound_ports_allocated');
   }
-  public set outboundPortsAllocated(value: number | undefined) {
+  public set outboundPortsAllocated(value: number) {
     this._outboundPortsAllocated = value;
   }
   public resetOutboundPortsAllocated() {
@@ -3324,7 +4322,7 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get outboundPortsAllocatedInput() {
-    return this._outboundPortsAllocated
+    return this._outboundPortsAllocated;
   }
 }
 export interface KubernetesClusterNetworkProfileNatGatewayProfile {
@@ -3338,7 +4336,7 @@ export interface KubernetesClusterNetworkProfileNatGatewayProfile {
   readonly managedOutboundIpCount?: number;
 }
 
-function kubernetesClusterNetworkProfileNatGatewayProfileToTerraform(struct?: KubernetesClusterNetworkProfileNatGatewayProfileOutputReference | KubernetesClusterNetworkProfileNatGatewayProfile): any {
+export function kubernetesClusterNetworkProfileNatGatewayProfileToTerraform(struct?: KubernetesClusterNetworkProfileNatGatewayProfileOutputReference | KubernetesClusterNetworkProfileNatGatewayProfile): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3359,12 +4357,37 @@ export class KubernetesClusterNetworkProfileNatGatewayProfileOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterNetworkProfileNatGatewayProfile | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._idleTimeoutInMinutes) {
+      hasAnyValues = true;
+      internalValueResult.idleTimeoutInMinutes = this._idleTimeoutInMinutes;
+    }
+    if (this._managedOutboundIpCount) {
+      hasAnyValues = true;
+      internalValueResult.managedOutboundIpCount = this._managedOutboundIpCount;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterNetworkProfileNatGatewayProfile | undefined) {
+    if (value === undefined) {
+      this._idleTimeoutInMinutes = undefined;
+      this._managedOutboundIpCount = undefined;
+    }
+    else {
+      this._idleTimeoutInMinutes = value.idleTimeoutInMinutes;
+      this._managedOutboundIpCount = value.managedOutboundIpCount;
+    }
+  }
+
   // idle_timeout_in_minutes - computed: false, optional: true, required: false
-  private _idleTimeoutInMinutes?: number | undefined; 
+  private _idleTimeoutInMinutes?: number; 
   public get idleTimeoutInMinutes() {
     return this.getNumberAttribute('idle_timeout_in_minutes');
   }
-  public set idleTimeoutInMinutes(value: number | undefined) {
+  public set idleTimeoutInMinutes(value: number) {
     this._idleTimeoutInMinutes = value;
   }
   public resetIdleTimeoutInMinutes() {
@@ -3372,15 +4395,15 @@ export class KubernetesClusterNetworkProfileNatGatewayProfileOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get idleTimeoutInMinutesInput() {
-    return this._idleTimeoutInMinutes
+    return this._idleTimeoutInMinutes;
   }
 
   // managed_outbound_ip_count - computed: true, optional: true, required: false
-  private _managedOutboundIpCount?: number | undefined; 
+  private _managedOutboundIpCount?: number; 
   public get managedOutboundIpCount() {
     return this.getNumberAttribute('managed_outbound_ip_count');
   }
-  public set managedOutboundIpCount(value: number | undefined) {
+  public set managedOutboundIpCount(value: number) {
     this._managedOutboundIpCount = value;
   }
   public resetManagedOutboundIpCount() {
@@ -3388,7 +4411,7 @@ export class KubernetesClusterNetworkProfileNatGatewayProfileOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get managedOutboundIpCountInput() {
-    return this._managedOutboundIpCount
+    return this._managedOutboundIpCount;
   }
 }
 export interface KubernetesClusterNetworkProfile {
@@ -3442,7 +4465,7 @@ export interface KubernetesClusterNetworkProfile {
   readonly natGatewayProfile?: KubernetesClusterNetworkProfileNatGatewayProfile;
 }
 
-function kubernetesClusterNetworkProfileToTerraform(struct?: KubernetesClusterNetworkProfileOutputReference | KubernetesClusterNetworkProfile): any {
+export function kubernetesClusterNetworkProfileToTerraform(struct?: KubernetesClusterNetworkProfileOutputReference | KubernetesClusterNetworkProfile): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3472,12 +4495,91 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterNetworkProfile | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._dnsServiceIp) {
+      hasAnyValues = true;
+      internalValueResult.dnsServiceIp = this._dnsServiceIp;
+    }
+    if (this._dockerBridgeCidr) {
+      hasAnyValues = true;
+      internalValueResult.dockerBridgeCidr = this._dockerBridgeCidr;
+    }
+    if (this._loadBalancerSku) {
+      hasAnyValues = true;
+      internalValueResult.loadBalancerSku = this._loadBalancerSku;
+    }
+    if (this._networkMode) {
+      hasAnyValues = true;
+      internalValueResult.networkMode = this._networkMode;
+    }
+    if (this._networkPlugin) {
+      hasAnyValues = true;
+      internalValueResult.networkPlugin = this._networkPlugin;
+    }
+    if (this._networkPolicy) {
+      hasAnyValues = true;
+      internalValueResult.networkPolicy = this._networkPolicy;
+    }
+    if (this._outboundType) {
+      hasAnyValues = true;
+      internalValueResult.outboundType = this._outboundType;
+    }
+    if (this._podCidr) {
+      hasAnyValues = true;
+      internalValueResult.podCidr = this._podCidr;
+    }
+    if (this._serviceCidr) {
+      hasAnyValues = true;
+      internalValueResult.serviceCidr = this._serviceCidr;
+    }
+    if (this._loadBalancerProfile) {
+      hasAnyValues = true;
+      internalValueResult.loadBalancerProfile = this._loadBalancerProfile?.internalValue;
+    }
+    if (this._natGatewayProfile) {
+      hasAnyValues = true;
+      internalValueResult.natGatewayProfile = this._natGatewayProfile?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterNetworkProfile | undefined) {
+    if (value === undefined) {
+      this._dnsServiceIp = undefined;
+      this._dockerBridgeCidr = undefined;
+      this._loadBalancerSku = undefined;
+      this._networkMode = undefined;
+      this._networkPlugin = undefined;
+      this._networkPolicy = undefined;
+      this._outboundType = undefined;
+      this._podCidr = undefined;
+      this._serviceCidr = undefined;
+      this._loadBalancerProfile.internalValue = undefined;
+      this._natGatewayProfile.internalValue = undefined;
+    }
+    else {
+      this._dnsServiceIp = value.dnsServiceIp;
+      this._dockerBridgeCidr = value.dockerBridgeCidr;
+      this._loadBalancerSku = value.loadBalancerSku;
+      this._networkMode = value.networkMode;
+      this._networkPlugin = value.networkPlugin;
+      this._networkPolicy = value.networkPolicy;
+      this._outboundType = value.outboundType;
+      this._podCidr = value.podCidr;
+      this._serviceCidr = value.serviceCidr;
+      this._loadBalancerProfile.internalValue = value.loadBalancerProfile;
+      this._natGatewayProfile.internalValue = value.natGatewayProfile;
+    }
+  }
+
   // dns_service_ip - computed: true, optional: true, required: false
-  private _dnsServiceIp?: string | undefined; 
+  private _dnsServiceIp?: string; 
   public get dnsServiceIp() {
     return this.getStringAttribute('dns_service_ip');
   }
-  public set dnsServiceIp(value: string | undefined) {
+  public set dnsServiceIp(value: string) {
     this._dnsServiceIp = value;
   }
   public resetDnsServiceIp() {
@@ -3485,15 +4587,15 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get dnsServiceIpInput() {
-    return this._dnsServiceIp
+    return this._dnsServiceIp;
   }
 
   // docker_bridge_cidr - computed: true, optional: true, required: false
-  private _dockerBridgeCidr?: string | undefined; 
+  private _dockerBridgeCidr?: string; 
   public get dockerBridgeCidr() {
     return this.getStringAttribute('docker_bridge_cidr');
   }
-  public set dockerBridgeCidr(value: string | undefined) {
+  public set dockerBridgeCidr(value: string) {
     this._dockerBridgeCidr = value;
   }
   public resetDockerBridgeCidr() {
@@ -3501,15 +4603,15 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get dockerBridgeCidrInput() {
-    return this._dockerBridgeCidr
+    return this._dockerBridgeCidr;
   }
 
   // load_balancer_sku - computed: false, optional: true, required: false
-  private _loadBalancerSku?: string | undefined; 
+  private _loadBalancerSku?: string; 
   public get loadBalancerSku() {
     return this.getStringAttribute('load_balancer_sku');
   }
-  public set loadBalancerSku(value: string | undefined) {
+  public set loadBalancerSku(value: string) {
     this._loadBalancerSku = value;
   }
   public resetLoadBalancerSku() {
@@ -3517,15 +4619,15 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get loadBalancerSkuInput() {
-    return this._loadBalancerSku
+    return this._loadBalancerSku;
   }
 
   // network_mode - computed: true, optional: true, required: false
-  private _networkMode?: string | undefined; 
+  private _networkMode?: string; 
   public get networkMode() {
     return this.getStringAttribute('network_mode');
   }
-  public set networkMode(value: string | undefined) {
+  public set networkMode(value: string) {
     this._networkMode = value;
   }
   public resetNetworkMode() {
@@ -3533,7 +4635,7 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get networkModeInput() {
-    return this._networkMode
+    return this._networkMode;
   }
 
   // network_plugin - computed: false, optional: false, required: true
@@ -3546,15 +4648,15 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get networkPluginInput() {
-    return this._networkPlugin
+    return this._networkPlugin;
   }
 
   // network_policy - computed: true, optional: true, required: false
-  private _networkPolicy?: string | undefined; 
+  private _networkPolicy?: string; 
   public get networkPolicy() {
     return this.getStringAttribute('network_policy');
   }
-  public set networkPolicy(value: string | undefined) {
+  public set networkPolicy(value: string) {
     this._networkPolicy = value;
   }
   public resetNetworkPolicy() {
@@ -3562,15 +4664,15 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get networkPolicyInput() {
-    return this._networkPolicy
+    return this._networkPolicy;
   }
 
   // outbound_type - computed: false, optional: true, required: false
-  private _outboundType?: string | undefined; 
+  private _outboundType?: string; 
   public get outboundType() {
     return this.getStringAttribute('outbound_type');
   }
-  public set outboundType(value: string | undefined) {
+  public set outboundType(value: string) {
     this._outboundType = value;
   }
   public resetOutboundType() {
@@ -3578,15 +4680,15 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get outboundTypeInput() {
-    return this._outboundType
+    return this._outboundType;
   }
 
   // pod_cidr - computed: true, optional: true, required: false
-  private _podCidr?: string | undefined; 
+  private _podCidr?: string; 
   public get podCidr() {
     return this.getStringAttribute('pod_cidr');
   }
-  public set podCidr(value: string | undefined) {
+  public set podCidr(value: string) {
     this._podCidr = value;
   }
   public resetPodCidr() {
@@ -3594,15 +4696,15 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get podCidrInput() {
-    return this._podCidr
+    return this._podCidr;
   }
 
   // service_cidr - computed: true, optional: true, required: false
-  private _serviceCidr?: string | undefined; 
+  private _serviceCidr?: string; 
   public get serviceCidr() {
     return this.getStringAttribute('service_cidr');
   }
-  public set serviceCidr(value: string | undefined) {
+  public set serviceCidr(value: string) {
     this._serviceCidr = value;
   }
   public resetServiceCidr() {
@@ -3610,41 +4712,39 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get serviceCidrInput() {
-    return this._serviceCidr
+    return this._serviceCidr;
   }
 
   // load_balancer_profile - computed: false, optional: true, required: false
-  private _loadBalancerProfile?: KubernetesClusterNetworkProfileLoadBalancerProfile | undefined; 
-  private __loadBalancerProfileOutput = new KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference(this as any, "load_balancer_profile", true);
+  private _loadBalancerProfile = new KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference(this as any, "load_balancer_profile", true);
   public get loadBalancerProfile() {
-    return this.__loadBalancerProfileOutput;
+    return this._loadBalancerProfile;
   }
-  public putLoadBalancerProfile(value: KubernetesClusterNetworkProfileLoadBalancerProfile | undefined) {
-    this._loadBalancerProfile = value;
+  public putLoadBalancerProfile(value: KubernetesClusterNetworkProfileLoadBalancerProfile) {
+    this._loadBalancerProfile.internalValue = value;
   }
   public resetLoadBalancerProfile() {
-    this._loadBalancerProfile = undefined;
+    this._loadBalancerProfile.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get loadBalancerProfileInput() {
-    return this._loadBalancerProfile
+    return this._loadBalancerProfile.internalValue;
   }
 
   // nat_gateway_profile - computed: false, optional: true, required: false
-  private _natGatewayProfile?: KubernetesClusterNetworkProfileNatGatewayProfile | undefined; 
-  private __natGatewayProfileOutput = new KubernetesClusterNetworkProfileNatGatewayProfileOutputReference(this as any, "nat_gateway_profile", true);
+  private _natGatewayProfile = new KubernetesClusterNetworkProfileNatGatewayProfileOutputReference(this as any, "nat_gateway_profile", true);
   public get natGatewayProfile() {
-    return this.__natGatewayProfileOutput;
+    return this._natGatewayProfile;
   }
-  public putNatGatewayProfile(value: KubernetesClusterNetworkProfileNatGatewayProfile | undefined) {
-    this._natGatewayProfile = value;
+  public putNatGatewayProfile(value: KubernetesClusterNetworkProfileNatGatewayProfile) {
+    this._natGatewayProfile.internalValue = value;
   }
   public resetNatGatewayProfile() {
-    this._natGatewayProfile = undefined;
+    this._natGatewayProfile.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get natGatewayProfileInput() {
-    return this._natGatewayProfile
+    return this._natGatewayProfile.internalValue;
   }
 }
 export interface KubernetesClusterRoleBasedAccessControlAzureActiveDirectory {
@@ -3678,7 +4778,7 @@ export interface KubernetesClusterRoleBasedAccessControlAzureActiveDirectory {
   readonly tenantId?: string;
 }
 
-function kubernetesClusterRoleBasedAccessControlAzureActiveDirectoryToTerraform(struct?: KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputReference | KubernetesClusterRoleBasedAccessControlAzureActiveDirectory): any {
+export function kubernetesClusterRoleBasedAccessControlAzureActiveDirectoryToTerraform(struct?: KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputReference | KubernetesClusterRoleBasedAccessControlAzureActiveDirectory): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3704,12 +4804,67 @@ export class KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputRe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterRoleBasedAccessControlAzureActiveDirectory | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._adminGroupObjectIds) {
+      hasAnyValues = true;
+      internalValueResult.adminGroupObjectIds = this._adminGroupObjectIds;
+    }
+    if (this._azureRbacEnabled) {
+      hasAnyValues = true;
+      internalValueResult.azureRbacEnabled = this._azureRbacEnabled;
+    }
+    if (this._clientAppId) {
+      hasAnyValues = true;
+      internalValueResult.clientAppId = this._clientAppId;
+    }
+    if (this._managed) {
+      hasAnyValues = true;
+      internalValueResult.managed = this._managed;
+    }
+    if (this._serverAppId) {
+      hasAnyValues = true;
+      internalValueResult.serverAppId = this._serverAppId;
+    }
+    if (this._serverAppSecret) {
+      hasAnyValues = true;
+      internalValueResult.serverAppSecret = this._serverAppSecret;
+    }
+    if (this._tenantId) {
+      hasAnyValues = true;
+      internalValueResult.tenantId = this._tenantId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterRoleBasedAccessControlAzureActiveDirectory | undefined) {
+    if (value === undefined) {
+      this._adminGroupObjectIds = undefined;
+      this._azureRbacEnabled = undefined;
+      this._clientAppId = undefined;
+      this._managed = undefined;
+      this._serverAppId = undefined;
+      this._serverAppSecret = undefined;
+      this._tenantId = undefined;
+    }
+    else {
+      this._adminGroupObjectIds = value.adminGroupObjectIds;
+      this._azureRbacEnabled = value.azureRbacEnabled;
+      this._clientAppId = value.clientAppId;
+      this._managed = value.managed;
+      this._serverAppId = value.serverAppId;
+      this._serverAppSecret = value.serverAppSecret;
+      this._tenantId = value.tenantId;
+    }
+  }
+
   // admin_group_object_ids - computed: false, optional: true, required: false
-  private _adminGroupObjectIds?: string[] | undefined; 
+  private _adminGroupObjectIds?: string[]; 
   public get adminGroupObjectIds() {
     return this.getListAttribute('admin_group_object_ids');
   }
-  public set adminGroupObjectIds(value: string[] | undefined) {
+  public set adminGroupObjectIds(value: string[]) {
     this._adminGroupObjectIds = value;
   }
   public resetAdminGroupObjectIds() {
@@ -3717,15 +4872,15 @@ export class KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputRe
   }
   // Temporarily expose input value. Use with caution.
   public get adminGroupObjectIdsInput() {
-    return this._adminGroupObjectIds
+    return this._adminGroupObjectIds;
   }
 
   // azure_rbac_enabled - computed: false, optional: true, required: false
-  private _azureRbacEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _azureRbacEnabled?: boolean | cdktf.IResolvable; 
   public get azureRbacEnabled() {
     return this.getBooleanAttribute('azure_rbac_enabled') as any;
   }
-  public set azureRbacEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set azureRbacEnabled(value: boolean | cdktf.IResolvable) {
     this._azureRbacEnabled = value;
   }
   public resetAzureRbacEnabled() {
@@ -3733,15 +4888,15 @@ export class KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputRe
   }
   // Temporarily expose input value. Use with caution.
   public get azureRbacEnabledInput() {
-    return this._azureRbacEnabled
+    return this._azureRbacEnabled;
   }
 
   // client_app_id - computed: false, optional: true, required: false
-  private _clientAppId?: string | undefined; 
+  private _clientAppId?: string; 
   public get clientAppId() {
     return this.getStringAttribute('client_app_id');
   }
-  public set clientAppId(value: string | undefined) {
+  public set clientAppId(value: string) {
     this._clientAppId = value;
   }
   public resetClientAppId() {
@@ -3749,15 +4904,15 @@ export class KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputRe
   }
   // Temporarily expose input value. Use with caution.
   public get clientAppIdInput() {
-    return this._clientAppId
+    return this._clientAppId;
   }
 
   // managed - computed: false, optional: true, required: false
-  private _managed?: boolean | cdktf.IResolvable | undefined; 
+  private _managed?: boolean | cdktf.IResolvable; 
   public get managed() {
     return this.getBooleanAttribute('managed') as any;
   }
-  public set managed(value: boolean | cdktf.IResolvable | undefined) {
+  public set managed(value: boolean | cdktf.IResolvable) {
     this._managed = value;
   }
   public resetManaged() {
@@ -3765,15 +4920,15 @@ export class KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputRe
   }
   // Temporarily expose input value. Use with caution.
   public get managedInput() {
-    return this._managed
+    return this._managed;
   }
 
   // server_app_id - computed: false, optional: true, required: false
-  private _serverAppId?: string | undefined; 
+  private _serverAppId?: string; 
   public get serverAppId() {
     return this.getStringAttribute('server_app_id');
   }
-  public set serverAppId(value: string | undefined) {
+  public set serverAppId(value: string) {
     this._serverAppId = value;
   }
   public resetServerAppId() {
@@ -3781,15 +4936,15 @@ export class KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputRe
   }
   // Temporarily expose input value. Use with caution.
   public get serverAppIdInput() {
-    return this._serverAppId
+    return this._serverAppId;
   }
 
   // server_app_secret - computed: false, optional: true, required: false
-  private _serverAppSecret?: string | undefined; 
+  private _serverAppSecret?: string; 
   public get serverAppSecret() {
     return this.getStringAttribute('server_app_secret');
   }
-  public set serverAppSecret(value: string | undefined) {
+  public set serverAppSecret(value: string) {
     this._serverAppSecret = value;
   }
   public resetServerAppSecret() {
@@ -3797,15 +4952,15 @@ export class KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputRe
   }
   // Temporarily expose input value. Use with caution.
   public get serverAppSecretInput() {
-    return this._serverAppSecret
+    return this._serverAppSecret;
   }
 
   // tenant_id - computed: true, optional: true, required: false
-  private _tenantId?: string | undefined; 
+  private _tenantId?: string; 
   public get tenantId() {
     return this.getStringAttribute('tenant_id');
   }
-  public set tenantId(value: string | undefined) {
+  public set tenantId(value: string) {
     this._tenantId = value;
   }
   public resetTenantId() {
@@ -3813,7 +4968,7 @@ export class KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputRe
   }
   // Temporarily expose input value. Use with caution.
   public get tenantIdInput() {
-    return this._tenantId
+    return this._tenantId;
   }
 }
 export interface KubernetesClusterRoleBasedAccessControl {
@@ -3829,7 +4984,7 @@ export interface KubernetesClusterRoleBasedAccessControl {
   readonly azureActiveDirectory?: KubernetesClusterRoleBasedAccessControlAzureActiveDirectory;
 }
 
-function kubernetesClusterRoleBasedAccessControlToTerraform(struct?: KubernetesClusterRoleBasedAccessControlOutputReference | KubernetesClusterRoleBasedAccessControl): any {
+export function kubernetesClusterRoleBasedAccessControlToTerraform(struct?: KubernetesClusterRoleBasedAccessControlOutputReference | KubernetesClusterRoleBasedAccessControl): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3850,6 +5005,31 @@ export class KubernetesClusterRoleBasedAccessControlOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterRoleBasedAccessControl | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._azureActiveDirectory) {
+      hasAnyValues = true;
+      internalValueResult.azureActiveDirectory = this._azureActiveDirectory?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterRoleBasedAccessControl | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+      this._azureActiveDirectory.internalValue = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+      this._azureActiveDirectory.internalValue = value.azureActiveDirectory;
+    }
+  }
+
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
@@ -3860,24 +5040,23 @@ export class KubernetesClusterRoleBasedAccessControlOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // azure_active_directory - computed: false, optional: true, required: false
-  private _azureActiveDirectory?: KubernetesClusterRoleBasedAccessControlAzureActiveDirectory | undefined; 
-  private __azureActiveDirectoryOutput = new KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputReference(this as any, "azure_active_directory", true);
+  private _azureActiveDirectory = new KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputReference(this as any, "azure_active_directory", true);
   public get azureActiveDirectory() {
-    return this.__azureActiveDirectoryOutput;
+    return this._azureActiveDirectory;
   }
-  public putAzureActiveDirectory(value: KubernetesClusterRoleBasedAccessControlAzureActiveDirectory | undefined) {
-    this._azureActiveDirectory = value;
+  public putAzureActiveDirectory(value: KubernetesClusterRoleBasedAccessControlAzureActiveDirectory) {
+    this._azureActiveDirectory.internalValue = value;
   }
   public resetAzureActiveDirectory() {
-    this._azureActiveDirectory = undefined;
+    this._azureActiveDirectory.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get azureActiveDirectoryInput() {
-    return this._azureActiveDirectory
+    return this._azureActiveDirectory.internalValue;
   }
 }
 export interface KubernetesClusterServicePrincipal {
@@ -3891,7 +5070,7 @@ export interface KubernetesClusterServicePrincipal {
   readonly clientSecret: string;
 }
 
-function kubernetesClusterServicePrincipalToTerraform(struct?: KubernetesClusterServicePrincipalOutputReference | KubernetesClusterServicePrincipal): any {
+export function kubernetesClusterServicePrincipalToTerraform(struct?: KubernetesClusterServicePrincipalOutputReference | KubernetesClusterServicePrincipal): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3912,6 +5091,31 @@ export class KubernetesClusterServicePrincipalOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterServicePrincipal | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._clientId) {
+      hasAnyValues = true;
+      internalValueResult.clientId = this._clientId;
+    }
+    if (this._clientSecret) {
+      hasAnyValues = true;
+      internalValueResult.clientSecret = this._clientSecret;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterServicePrincipal | undefined) {
+    if (value === undefined) {
+      this._clientId = undefined;
+      this._clientSecret = undefined;
+    }
+    else {
+      this._clientId = value.clientId;
+      this._clientSecret = value.clientSecret;
+    }
+  }
+
   // client_id - computed: false, optional: false, required: true
   private _clientId?: string; 
   public get clientId() {
@@ -3922,7 +5126,7 @@ export class KubernetesClusterServicePrincipalOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get clientIdInput() {
-    return this._clientId
+    return this._clientId;
   }
 
   // client_secret - computed: false, optional: false, required: true
@@ -3935,7 +5139,7 @@ export class KubernetesClusterServicePrincipalOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get clientSecretInput() {
-    return this._clientSecret
+    return this._clientSecret;
   }
 }
 export interface KubernetesClusterTimeouts {
@@ -3957,7 +5161,7 @@ export interface KubernetesClusterTimeouts {
   readonly update?: string;
 }
 
-function kubernetesClusterTimeoutsToTerraform(struct?: KubernetesClusterTimeoutsOutputReference | KubernetesClusterTimeouts): any {
+export function kubernetesClusterTimeoutsToTerraform(struct?: KubernetesClusterTimeoutsOutputReference | KubernetesClusterTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -3980,12 +5184,49 @@ export class KubernetesClusterTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -3993,15 +5234,15 @@ export class KubernetesClusterTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -4009,15 +5250,15 @@ export class KubernetesClusterTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -4025,15 +5266,15 @@ export class KubernetesClusterTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -4041,7 +5282,7 @@ export class KubernetesClusterTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface KubernetesClusterWindowsProfile {
@@ -4059,7 +5300,7 @@ export interface KubernetesClusterWindowsProfile {
   readonly license?: string;
 }
 
-function kubernetesClusterWindowsProfileToTerraform(struct?: KubernetesClusterWindowsProfileOutputReference | KubernetesClusterWindowsProfile): any {
+export function kubernetesClusterWindowsProfileToTerraform(struct?: KubernetesClusterWindowsProfileOutputReference | KubernetesClusterWindowsProfile): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -4081,12 +5322,43 @@ export class KubernetesClusterWindowsProfileOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KubernetesClusterWindowsProfile | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._adminPassword) {
+      hasAnyValues = true;
+      internalValueResult.adminPassword = this._adminPassword;
+    }
+    if (this._adminUsername) {
+      hasAnyValues = true;
+      internalValueResult.adminUsername = this._adminUsername;
+    }
+    if (this._license) {
+      hasAnyValues = true;
+      internalValueResult.license = this._license;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterWindowsProfile | undefined) {
+    if (value === undefined) {
+      this._adminPassword = undefined;
+      this._adminUsername = undefined;
+      this._license = undefined;
+    }
+    else {
+      this._adminPassword = value.adminPassword;
+      this._adminUsername = value.adminUsername;
+      this._license = value.license;
+    }
+  }
+
   // admin_password - computed: false, optional: true, required: false
-  private _adminPassword?: string | undefined; 
+  private _adminPassword?: string; 
   public get adminPassword() {
     return this.getStringAttribute('admin_password');
   }
-  public set adminPassword(value: string | undefined) {
+  public set adminPassword(value: string) {
     this._adminPassword = value;
   }
   public resetAdminPassword() {
@@ -4094,7 +5366,7 @@ export class KubernetesClusterWindowsProfileOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get adminPasswordInput() {
-    return this._adminPassword
+    return this._adminPassword;
   }
 
   // admin_username - computed: false, optional: false, required: true
@@ -4107,15 +5379,15 @@ export class KubernetesClusterWindowsProfileOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get adminUsernameInput() {
-    return this._adminUsername
+    return this._adminUsername;
   }
 
   // license - computed: false, optional: true, required: false
-  private _license?: string | undefined; 
+  private _license?: string; 
   public get license() {
     return this.getStringAttribute('license');
   }
-  public set license(value: string | undefined) {
+  public set license(value: string) {
     this._license = value;
   }
   public resetLicense() {
@@ -4123,7 +5395,7 @@ export class KubernetesClusterWindowsProfileOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get licenseInput() {
-    return this._license
+    return this._license;
   }
 }
 
@@ -4177,18 +5449,18 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._skuTier = config.skuTier;
     this._tags = config.tags;
-    this._addonProfile = config.addonProfile;
-    this._autoScalerProfile = config.autoScalerProfile;
-    this._defaultNodePool = config.defaultNodePool;
-    this._identity = config.identity;
-    this._kubeletIdentity = config.kubeletIdentity;
-    this._linuxProfile = config.linuxProfile;
-    this._maintenanceWindow = config.maintenanceWindow;
-    this._networkProfile = config.networkProfile;
-    this._roleBasedAccessControl = config.roleBasedAccessControl;
-    this._servicePrincipal = config.servicePrincipal;
-    this._timeouts = config.timeouts;
-    this._windowsProfile = config.windowsProfile;
+    this._addonProfile.internalValue = config.addonProfile;
+    this._autoScalerProfile.internalValue = config.autoScalerProfile;
+    this._defaultNodePool.internalValue = config.defaultNodePool;
+    this._identity.internalValue = config.identity;
+    this._kubeletIdentity.internalValue = config.kubeletIdentity;
+    this._linuxProfile.internalValue = config.linuxProfile;
+    this._maintenanceWindow.internalValue = config.maintenanceWindow;
+    this._networkProfile.internalValue = config.networkProfile;
+    this._roleBasedAccessControl.internalValue = config.roleBasedAccessControl;
+    this._servicePrincipal.internalValue = config.servicePrincipal;
+    this._timeouts.internalValue = config.timeouts;
+    this._windowsProfile.internalValue = config.windowsProfile;
   }
 
   // ==========
@@ -4196,11 +5468,11 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   // ==========
 
   // api_server_authorized_ip_ranges - computed: false, optional: true, required: false
-  private _apiServerAuthorizedIpRanges?: string[] | undefined; 
+  private _apiServerAuthorizedIpRanges?: string[]; 
   public get apiServerAuthorizedIpRanges() {
     return this.getListAttribute('api_server_authorized_ip_ranges');
   }
-  public set apiServerAuthorizedIpRanges(value: string[] | undefined) {
+  public set apiServerAuthorizedIpRanges(value: string[]) {
     this._apiServerAuthorizedIpRanges = value;
   }
   public resetApiServerAuthorizedIpRanges() {
@@ -4208,15 +5480,15 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get apiServerAuthorizedIpRangesInput() {
-    return this._apiServerAuthorizedIpRanges
+    return this._apiServerAuthorizedIpRanges;
   }
 
   // automatic_channel_upgrade - computed: false, optional: true, required: false
-  private _automaticChannelUpgrade?: string | undefined; 
+  private _automaticChannelUpgrade?: string; 
   public get automaticChannelUpgrade() {
     return this.getStringAttribute('automatic_channel_upgrade');
   }
-  public set automaticChannelUpgrade(value: string | undefined) {
+  public set automaticChannelUpgrade(value: string) {
     this._automaticChannelUpgrade = value;
   }
   public resetAutomaticChannelUpgrade() {
@@ -4224,15 +5496,15 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get automaticChannelUpgradeInput() {
-    return this._automaticChannelUpgrade
+    return this._automaticChannelUpgrade;
   }
 
   // disk_encryption_set_id - computed: false, optional: true, required: false
-  private _diskEncryptionSetId?: string | undefined; 
+  private _diskEncryptionSetId?: string; 
   public get diskEncryptionSetId() {
     return this.getStringAttribute('disk_encryption_set_id');
   }
-  public set diskEncryptionSetId(value: string | undefined) {
+  public set diskEncryptionSetId(value: string) {
     this._diskEncryptionSetId = value;
   }
   public resetDiskEncryptionSetId() {
@@ -4240,15 +5512,15 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get diskEncryptionSetIdInput() {
-    return this._diskEncryptionSetId
+    return this._diskEncryptionSetId;
   }
 
   // dns_prefix - computed: false, optional: true, required: false
-  private _dnsPrefix?: string | undefined; 
+  private _dnsPrefix?: string; 
   public get dnsPrefix() {
     return this.getStringAttribute('dns_prefix');
   }
-  public set dnsPrefix(value: string | undefined) {
+  public set dnsPrefix(value: string) {
     this._dnsPrefix = value;
   }
   public resetDnsPrefix() {
@@ -4256,15 +5528,15 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dnsPrefixInput() {
-    return this._dnsPrefix
+    return this._dnsPrefix;
   }
 
   // dns_prefix_private_cluster - computed: false, optional: true, required: false
-  private _dnsPrefixPrivateCluster?: string | undefined; 
+  private _dnsPrefixPrivateCluster?: string; 
   public get dnsPrefixPrivateCluster() {
     return this.getStringAttribute('dns_prefix_private_cluster');
   }
-  public set dnsPrefixPrivateCluster(value: string | undefined) {
+  public set dnsPrefixPrivateCluster(value: string) {
     this._dnsPrefixPrivateCluster = value;
   }
   public resetDnsPrefixPrivateCluster() {
@@ -4272,15 +5544,15 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dnsPrefixPrivateClusterInput() {
-    return this._dnsPrefixPrivateCluster
+    return this._dnsPrefixPrivateCluster;
   }
 
   // enable_pod_security_policy - computed: false, optional: true, required: false
-  private _enablePodSecurityPolicy?: boolean | cdktf.IResolvable | undefined; 
+  private _enablePodSecurityPolicy?: boolean | cdktf.IResolvable; 
   public get enablePodSecurityPolicy() {
     return this.getBooleanAttribute('enable_pod_security_policy') as any;
   }
-  public set enablePodSecurityPolicy(value: boolean | cdktf.IResolvable | undefined) {
+  public set enablePodSecurityPolicy(value: boolean | cdktf.IResolvable) {
     this._enablePodSecurityPolicy = value;
   }
   public resetEnablePodSecurityPolicy() {
@@ -4288,7 +5560,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enablePodSecurityPolicyInput() {
-    return this._enablePodSecurityPolicy
+    return this._enablePodSecurityPolicy;
   }
 
   // fqdn - computed: true, optional: false, required: false
@@ -4322,11 +5594,11 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // kubernetes_version - computed: true, optional: true, required: false
-  private _kubernetesVersion?: string | undefined; 
+  private _kubernetesVersion?: string; 
   public get kubernetesVersion() {
     return this.getStringAttribute('kubernetes_version');
   }
-  public set kubernetesVersion(value: string | undefined) {
+  public set kubernetesVersion(value: string) {
     this._kubernetesVersion = value;
   }
   public resetKubernetesVersion() {
@@ -4334,15 +5606,15 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get kubernetesVersionInput() {
-    return this._kubernetesVersion
+    return this._kubernetesVersion;
   }
 
   // local_account_disabled - computed: false, optional: true, required: false
-  private _localAccountDisabled?: boolean | cdktf.IResolvable | undefined; 
+  private _localAccountDisabled?: boolean | cdktf.IResolvable; 
   public get localAccountDisabled() {
     return this.getBooleanAttribute('local_account_disabled') as any;
   }
-  public set localAccountDisabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set localAccountDisabled(value: boolean | cdktf.IResolvable) {
     this._localAccountDisabled = value;
   }
   public resetLocalAccountDisabled() {
@@ -4350,7 +5622,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get localAccountDisabledInput() {
-    return this._localAccountDisabled
+    return this._localAccountDisabled;
   }
 
   // location - computed: false, optional: false, required: true
@@ -4363,7 +5635,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -4376,15 +5648,15 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // node_resource_group - computed: true, optional: true, required: false
-  private _nodeResourceGroup?: string | undefined; 
+  private _nodeResourceGroup?: string; 
   public get nodeResourceGroup() {
     return this.getStringAttribute('node_resource_group');
   }
-  public set nodeResourceGroup(value: string | undefined) {
+  public set nodeResourceGroup(value: string) {
     this._nodeResourceGroup = value;
   }
   public resetNodeResourceGroup() {
@@ -4392,7 +5664,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nodeResourceGroupInput() {
-    return this._nodeResourceGroup
+    return this._nodeResourceGroup;
   }
 
   // portal_fqdn - computed: true, optional: false, required: false
@@ -4401,11 +5673,11 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // private_cluster_enabled - computed: true, optional: true, required: false
-  private _privateClusterEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _privateClusterEnabled?: boolean | cdktf.IResolvable; 
   public get privateClusterEnabled() {
     return this.getBooleanAttribute('private_cluster_enabled') as any;
   }
-  public set privateClusterEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set privateClusterEnabled(value: boolean | cdktf.IResolvable) {
     this._privateClusterEnabled = value;
   }
   public resetPrivateClusterEnabled() {
@@ -4413,15 +5685,15 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get privateClusterEnabledInput() {
-    return this._privateClusterEnabled
+    return this._privateClusterEnabled;
   }
 
   // private_cluster_public_fqdn_enabled - computed: false, optional: true, required: false
-  private _privateClusterPublicFqdnEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _privateClusterPublicFqdnEnabled?: boolean | cdktf.IResolvable; 
   public get privateClusterPublicFqdnEnabled() {
     return this.getBooleanAttribute('private_cluster_public_fqdn_enabled') as any;
   }
-  public set privateClusterPublicFqdnEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set privateClusterPublicFqdnEnabled(value: boolean | cdktf.IResolvable) {
     this._privateClusterPublicFqdnEnabled = value;
   }
   public resetPrivateClusterPublicFqdnEnabled() {
@@ -4429,15 +5701,15 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get privateClusterPublicFqdnEnabledInput() {
-    return this._privateClusterPublicFqdnEnabled
+    return this._privateClusterPublicFqdnEnabled;
   }
 
   // private_dns_zone_id - computed: true, optional: true, required: false
-  private _privateDnsZoneId?: string | undefined; 
+  private _privateDnsZoneId?: string; 
   public get privateDnsZoneId() {
     return this.getStringAttribute('private_dns_zone_id');
   }
-  public set privateDnsZoneId(value: string | undefined) {
+  public set privateDnsZoneId(value: string) {
     this._privateDnsZoneId = value;
   }
   public resetPrivateDnsZoneId() {
@@ -4445,7 +5717,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get privateDnsZoneIdInput() {
-    return this._privateDnsZoneId
+    return this._privateDnsZoneId;
   }
 
   // private_fqdn - computed: true, optional: false, required: false
@@ -4454,11 +5726,11 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
 
   // private_link_enabled - computed: true, optional: true, required: false
-  private _privateLinkEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _privateLinkEnabled?: boolean | cdktf.IResolvable; 
   public get privateLinkEnabled() {
     return this.getBooleanAttribute('private_link_enabled') as any;
   }
-  public set privateLinkEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set privateLinkEnabled(value: boolean | cdktf.IResolvable) {
     this._privateLinkEnabled = value;
   }
   public resetPrivateLinkEnabled() {
@@ -4466,7 +5738,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get privateLinkEnabledInput() {
-    return this._privateLinkEnabled
+    return this._privateLinkEnabled;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -4479,15 +5751,15 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // sku_tier - computed: false, optional: true, required: false
-  private _skuTier?: string | undefined; 
+  private _skuTier?: string; 
   public get skuTier() {
     return this.getStringAttribute('sku_tier');
   }
-  public set skuTier(value: string | undefined) {
+  public set skuTier(value: string) {
     this._skuTier = value;
   }
   public resetSkuTier() {
@@ -4495,16 +5767,16 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuTierInput() {
-    return this._skuTier
+    return this._skuTier;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -4512,208 +5784,196 @@ export class KubernetesCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // addon_profile - computed: false, optional: true, required: false
-  private _addonProfile?: KubernetesClusterAddonProfile | undefined; 
-  private __addonProfileOutput = new KubernetesClusterAddonProfileOutputReference(this as any, "addon_profile", true);
+  private _addonProfile = new KubernetesClusterAddonProfileOutputReference(this as any, "addon_profile", true);
   public get addonProfile() {
-    return this.__addonProfileOutput;
+    return this._addonProfile;
   }
-  public putAddonProfile(value: KubernetesClusterAddonProfile | undefined) {
-    this._addonProfile = value;
+  public putAddonProfile(value: KubernetesClusterAddonProfile) {
+    this._addonProfile.internalValue = value;
   }
   public resetAddonProfile() {
-    this._addonProfile = undefined;
+    this._addonProfile.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get addonProfileInput() {
-    return this._addonProfile
+    return this._addonProfile.internalValue;
   }
 
   // auto_scaler_profile - computed: false, optional: true, required: false
-  private _autoScalerProfile?: KubernetesClusterAutoScalerProfile | undefined; 
-  private __autoScalerProfileOutput = new KubernetesClusterAutoScalerProfileOutputReference(this as any, "auto_scaler_profile", true);
+  private _autoScalerProfile = new KubernetesClusterAutoScalerProfileOutputReference(this as any, "auto_scaler_profile", true);
   public get autoScalerProfile() {
-    return this.__autoScalerProfileOutput;
+    return this._autoScalerProfile;
   }
-  public putAutoScalerProfile(value: KubernetesClusterAutoScalerProfile | undefined) {
-    this._autoScalerProfile = value;
+  public putAutoScalerProfile(value: KubernetesClusterAutoScalerProfile) {
+    this._autoScalerProfile.internalValue = value;
   }
   public resetAutoScalerProfile() {
-    this._autoScalerProfile = undefined;
+    this._autoScalerProfile.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get autoScalerProfileInput() {
-    return this._autoScalerProfile
+    return this._autoScalerProfile.internalValue;
   }
 
   // default_node_pool - computed: false, optional: false, required: true
-  private _defaultNodePool?: KubernetesClusterDefaultNodePool; 
-  private __defaultNodePoolOutput = new KubernetesClusterDefaultNodePoolOutputReference(this as any, "default_node_pool", true);
+  private _defaultNodePool = new KubernetesClusterDefaultNodePoolOutputReference(this as any, "default_node_pool", true);
   public get defaultNodePool() {
-    return this.__defaultNodePoolOutput;
+    return this._defaultNodePool;
   }
   public putDefaultNodePool(value: KubernetesClusterDefaultNodePool) {
-    this._defaultNodePool = value;
+    this._defaultNodePool.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get defaultNodePoolInput() {
-    return this._defaultNodePool
+    return this._defaultNodePool.internalValue;
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: KubernetesClusterIdentity | undefined; 
-  private __identityOutput = new KubernetesClusterIdentityOutputReference(this as any, "identity", true);
+  private _identity = new KubernetesClusterIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.__identityOutput;
+    return this._identity;
   }
-  public putIdentity(value: KubernetesClusterIdentity | undefined) {
-    this._identity = value;
+  public putIdentity(value: KubernetesClusterIdentity) {
+    this._identity.internalValue = value;
   }
   public resetIdentity() {
-    this._identity = undefined;
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
-    return this._identity
+    return this._identity.internalValue;
   }
 
   // kubelet_identity - computed: false, optional: true, required: false
-  private _kubeletIdentity?: KubernetesClusterKubeletIdentity | undefined; 
-  private __kubeletIdentityOutput = new KubernetesClusterKubeletIdentityOutputReference(this as any, "kubelet_identity", true);
+  private _kubeletIdentity = new KubernetesClusterKubeletIdentityOutputReference(this as any, "kubelet_identity", true);
   public get kubeletIdentity() {
-    return this.__kubeletIdentityOutput;
+    return this._kubeletIdentity;
   }
-  public putKubeletIdentity(value: KubernetesClusterKubeletIdentity | undefined) {
-    this._kubeletIdentity = value;
+  public putKubeletIdentity(value: KubernetesClusterKubeletIdentity) {
+    this._kubeletIdentity.internalValue = value;
   }
   public resetKubeletIdentity() {
-    this._kubeletIdentity = undefined;
+    this._kubeletIdentity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get kubeletIdentityInput() {
-    return this._kubeletIdentity
+    return this._kubeletIdentity.internalValue;
   }
 
   // linux_profile - computed: false, optional: true, required: false
-  private _linuxProfile?: KubernetesClusterLinuxProfile | undefined; 
-  private __linuxProfileOutput = new KubernetesClusterLinuxProfileOutputReference(this as any, "linux_profile", true);
+  private _linuxProfile = new KubernetesClusterLinuxProfileOutputReference(this as any, "linux_profile", true);
   public get linuxProfile() {
-    return this.__linuxProfileOutput;
+    return this._linuxProfile;
   }
-  public putLinuxProfile(value: KubernetesClusterLinuxProfile | undefined) {
-    this._linuxProfile = value;
+  public putLinuxProfile(value: KubernetesClusterLinuxProfile) {
+    this._linuxProfile.internalValue = value;
   }
   public resetLinuxProfile() {
-    this._linuxProfile = undefined;
+    this._linuxProfile.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get linuxProfileInput() {
-    return this._linuxProfile
+    return this._linuxProfile.internalValue;
   }
 
   // maintenance_window - computed: false, optional: true, required: false
-  private _maintenanceWindow?: KubernetesClusterMaintenanceWindow | undefined; 
-  private __maintenanceWindowOutput = new KubernetesClusterMaintenanceWindowOutputReference(this as any, "maintenance_window", true);
+  private _maintenanceWindow = new KubernetesClusterMaintenanceWindowOutputReference(this as any, "maintenance_window", true);
   public get maintenanceWindow() {
-    return this.__maintenanceWindowOutput;
+    return this._maintenanceWindow;
   }
-  public putMaintenanceWindow(value: KubernetesClusterMaintenanceWindow | undefined) {
-    this._maintenanceWindow = value;
+  public putMaintenanceWindow(value: KubernetesClusterMaintenanceWindow) {
+    this._maintenanceWindow.internalValue = value;
   }
   public resetMaintenanceWindow() {
-    this._maintenanceWindow = undefined;
+    this._maintenanceWindow.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get maintenanceWindowInput() {
-    return this._maintenanceWindow
+    return this._maintenanceWindow.internalValue;
   }
 
   // network_profile - computed: false, optional: true, required: false
-  private _networkProfile?: KubernetesClusterNetworkProfile | undefined; 
-  private __networkProfileOutput = new KubernetesClusterNetworkProfileOutputReference(this as any, "network_profile", true);
+  private _networkProfile = new KubernetesClusterNetworkProfileOutputReference(this as any, "network_profile", true);
   public get networkProfile() {
-    return this.__networkProfileOutput;
+    return this._networkProfile;
   }
-  public putNetworkProfile(value: KubernetesClusterNetworkProfile | undefined) {
-    this._networkProfile = value;
+  public putNetworkProfile(value: KubernetesClusterNetworkProfile) {
+    this._networkProfile.internalValue = value;
   }
   public resetNetworkProfile() {
-    this._networkProfile = undefined;
+    this._networkProfile.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get networkProfileInput() {
-    return this._networkProfile
+    return this._networkProfile.internalValue;
   }
 
   // role_based_access_control - computed: false, optional: true, required: false
-  private _roleBasedAccessControl?: KubernetesClusterRoleBasedAccessControl | undefined; 
-  private __roleBasedAccessControlOutput = new KubernetesClusterRoleBasedAccessControlOutputReference(this as any, "role_based_access_control", true);
+  private _roleBasedAccessControl = new KubernetesClusterRoleBasedAccessControlOutputReference(this as any, "role_based_access_control", true);
   public get roleBasedAccessControl() {
-    return this.__roleBasedAccessControlOutput;
+    return this._roleBasedAccessControl;
   }
-  public putRoleBasedAccessControl(value: KubernetesClusterRoleBasedAccessControl | undefined) {
-    this._roleBasedAccessControl = value;
+  public putRoleBasedAccessControl(value: KubernetesClusterRoleBasedAccessControl) {
+    this._roleBasedAccessControl.internalValue = value;
   }
   public resetRoleBasedAccessControl() {
-    this._roleBasedAccessControl = undefined;
+    this._roleBasedAccessControl.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get roleBasedAccessControlInput() {
-    return this._roleBasedAccessControl
+    return this._roleBasedAccessControl.internalValue;
   }
 
   // service_principal - computed: false, optional: true, required: false
-  private _servicePrincipal?: KubernetesClusterServicePrincipal | undefined; 
-  private __servicePrincipalOutput = new KubernetesClusterServicePrincipalOutputReference(this as any, "service_principal", true);
+  private _servicePrincipal = new KubernetesClusterServicePrincipalOutputReference(this as any, "service_principal", true);
   public get servicePrincipal() {
-    return this.__servicePrincipalOutput;
+    return this._servicePrincipal;
   }
-  public putServicePrincipal(value: KubernetesClusterServicePrincipal | undefined) {
-    this._servicePrincipal = value;
+  public putServicePrincipal(value: KubernetesClusterServicePrincipal) {
+    this._servicePrincipal.internalValue = value;
   }
   public resetServicePrincipal() {
-    this._servicePrincipal = undefined;
+    this._servicePrincipal.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get servicePrincipalInput() {
-    return this._servicePrincipal
+    return this._servicePrincipal.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: KubernetesClusterTimeouts | undefined; 
-  private __timeoutsOutput = new KubernetesClusterTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new KubernetesClusterTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: KubernetesClusterTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: KubernetesClusterTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // windows_profile - computed: false, optional: true, required: false
-  private _windowsProfile?: KubernetesClusterWindowsProfile | undefined; 
-  private __windowsProfileOutput = new KubernetesClusterWindowsProfileOutputReference(this as any, "windows_profile", true);
+  private _windowsProfile = new KubernetesClusterWindowsProfileOutputReference(this as any, "windows_profile", true);
   public get windowsProfile() {
-    return this.__windowsProfileOutput;
+    return this._windowsProfile;
   }
-  public putWindowsProfile(value: KubernetesClusterWindowsProfile | undefined) {
-    this._windowsProfile = value;
+  public putWindowsProfile(value: KubernetesClusterWindowsProfile) {
+    this._windowsProfile.internalValue = value;
   }
   public resetWindowsProfile() {
-    this._windowsProfile = undefined;
+    this._windowsProfile.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get windowsProfileInput() {
-    return this._windowsProfile
+    return this._windowsProfile.internalValue;
   }
 
   // =========
@@ -4740,18 +6000,18 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_tier: cdktf.stringToTerraform(this._skuTier),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      addon_profile: kubernetesClusterAddonProfileToTerraform(this._addonProfile),
-      auto_scaler_profile: kubernetesClusterAutoScalerProfileToTerraform(this._autoScalerProfile),
-      default_node_pool: kubernetesClusterDefaultNodePoolToTerraform(this._defaultNodePool),
-      identity: kubernetesClusterIdentityToTerraform(this._identity),
-      kubelet_identity: kubernetesClusterKubeletIdentityToTerraform(this._kubeletIdentity),
-      linux_profile: kubernetesClusterLinuxProfileToTerraform(this._linuxProfile),
-      maintenance_window: kubernetesClusterMaintenanceWindowToTerraform(this._maintenanceWindow),
-      network_profile: kubernetesClusterNetworkProfileToTerraform(this._networkProfile),
-      role_based_access_control: kubernetesClusterRoleBasedAccessControlToTerraform(this._roleBasedAccessControl),
-      service_principal: kubernetesClusterServicePrincipalToTerraform(this._servicePrincipal),
-      timeouts: kubernetesClusterTimeoutsToTerraform(this._timeouts),
-      windows_profile: kubernetesClusterWindowsProfileToTerraform(this._windowsProfile),
+      addon_profile: kubernetesClusterAddonProfileToTerraform(this._addonProfile.internalValue),
+      auto_scaler_profile: kubernetesClusterAutoScalerProfileToTerraform(this._autoScalerProfile.internalValue),
+      default_node_pool: kubernetesClusterDefaultNodePoolToTerraform(this._defaultNodePool.internalValue),
+      identity: kubernetesClusterIdentityToTerraform(this._identity.internalValue),
+      kubelet_identity: kubernetesClusterKubeletIdentityToTerraform(this._kubeletIdentity.internalValue),
+      linux_profile: kubernetesClusterLinuxProfileToTerraform(this._linuxProfile.internalValue),
+      maintenance_window: kubernetesClusterMaintenanceWindowToTerraform(this._maintenanceWindow.internalValue),
+      network_profile: kubernetesClusterNetworkProfileToTerraform(this._networkProfile.internalValue),
+      role_based_access_control: kubernetesClusterRoleBasedAccessControlToTerraform(this._roleBasedAccessControl.internalValue),
+      service_principal: kubernetesClusterServicePrincipalToTerraform(this._servicePrincipal.internalValue),
+      timeouts: kubernetesClusterTimeoutsToTerraform(this._timeouts.internalValue),
+      windows_profile: kubernetesClusterWindowsProfileToTerraform(this._windowsProfile.internalValue),
     };
   }
 }

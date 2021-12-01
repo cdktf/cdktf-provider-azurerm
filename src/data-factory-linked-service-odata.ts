@@ -67,7 +67,7 @@ export interface DataFactoryLinkedServiceOdataBasicAuthentication {
   readonly username: string;
 }
 
-function dataFactoryLinkedServiceOdataBasicAuthenticationToTerraform(struct?: DataFactoryLinkedServiceOdataBasicAuthenticationOutputReference | DataFactoryLinkedServiceOdataBasicAuthentication): any {
+export function dataFactoryLinkedServiceOdataBasicAuthenticationToTerraform(struct?: DataFactoryLinkedServiceOdataBasicAuthenticationOutputReference | DataFactoryLinkedServiceOdataBasicAuthentication): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -88,6 +88,31 @@ export class DataFactoryLinkedServiceOdataBasicAuthenticationOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryLinkedServiceOdataBasicAuthentication | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._password) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._username) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryLinkedServiceOdataBasicAuthentication | undefined) {
+    if (value === undefined) {
+      this._password = undefined;
+      this._username = undefined;
+    }
+    else {
+      this._password = value.password;
+      this._username = value.username;
+    }
+  }
+
   // password - computed: false, optional: false, required: true
   private _password?: string; 
   public get password() {
@@ -98,7 +123,7 @@ export class DataFactoryLinkedServiceOdataBasicAuthenticationOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // username - computed: false, optional: false, required: true
@@ -111,7 +136,7 @@ export class DataFactoryLinkedServiceOdataBasicAuthenticationOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
-    return this._username
+    return this._username;
   }
 }
 export interface DataFactoryLinkedServiceOdataTimeouts {
@@ -133,7 +158,7 @@ export interface DataFactoryLinkedServiceOdataTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryLinkedServiceOdataTimeoutsToTerraform(struct?: DataFactoryLinkedServiceOdataTimeoutsOutputReference | DataFactoryLinkedServiceOdataTimeouts): any {
+export function dataFactoryLinkedServiceOdataTimeoutsToTerraform(struct?: DataFactoryLinkedServiceOdataTimeoutsOutputReference | DataFactoryLinkedServiceOdataTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -156,12 +181,49 @@ export class DataFactoryLinkedServiceOdataTimeoutsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryLinkedServiceOdataTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryLinkedServiceOdataTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -169,15 +231,15 @@ export class DataFactoryLinkedServiceOdataTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -185,15 +247,15 @@ export class DataFactoryLinkedServiceOdataTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -201,15 +263,15 @@ export class DataFactoryLinkedServiceOdataTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -217,7 +279,7 @@ export class DataFactoryLinkedServiceOdataTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -262,8 +324,8 @@ export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
     this._parameters = config.parameters;
     this._resourceGroupName = config.resourceGroupName;
     this._url = config.url;
-    this._basicAuthentication = config.basicAuthentication;
-    this._timeouts = config.timeouts;
+    this._basicAuthentication.internalValue = config.basicAuthentication;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -271,12 +333,12 @@ export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable; 
   public get additionalProperties() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -284,15 +346,15 @@ export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get additionalPropertiesInput() {
-    return this._additionalProperties
+    return this._additionalProperties;
   }
 
   // annotations - computed: false, optional: true, required: false
-  private _annotations?: string[] | undefined; 
+  private _annotations?: string[]; 
   public get annotations() {
     return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] | undefined) {
+  public set annotations(value: string[]) {
     this._annotations = value;
   }
   public resetAnnotations() {
@@ -300,7 +362,7 @@ export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get annotationsInput() {
-    return this._annotations
+    return this._annotations;
   }
 
   // data_factory_name - computed: false, optional: false, required: true
@@ -313,15 +375,15 @@ export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryNameInput() {
-    return this._dataFactoryName
+    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -329,7 +391,7 @@ export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -338,11 +400,11 @@ export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
   }
 
   // integration_runtime_name - computed: false, optional: true, required: false
-  private _integrationRuntimeName?: string | undefined; 
+  private _integrationRuntimeName?: string; 
   public get integrationRuntimeName() {
     return this.getStringAttribute('integration_runtime_name');
   }
-  public set integrationRuntimeName(value: string | undefined) {
+  public set integrationRuntimeName(value: string) {
     this._integrationRuntimeName = value;
   }
   public resetIntegrationRuntimeName() {
@@ -350,7 +412,7 @@ export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get integrationRuntimeNameInput() {
-    return this._integrationRuntimeName
+    return this._integrationRuntimeName;
   }
 
   // name - computed: false, optional: false, required: true
@@ -363,16 +425,16 @@ export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -380,7 +442,7 @@ export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -393,7 +455,7 @@ export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // url - computed: false, optional: false, required: true
@@ -406,41 +468,39 @@ export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get urlInput() {
-    return this._url
+    return this._url;
   }
 
   // basic_authentication - computed: false, optional: true, required: false
-  private _basicAuthentication?: DataFactoryLinkedServiceOdataBasicAuthentication | undefined; 
-  private __basicAuthenticationOutput = new DataFactoryLinkedServiceOdataBasicAuthenticationOutputReference(this as any, "basic_authentication", true);
+  private _basicAuthentication = new DataFactoryLinkedServiceOdataBasicAuthenticationOutputReference(this as any, "basic_authentication", true);
   public get basicAuthentication() {
-    return this.__basicAuthenticationOutput;
+    return this._basicAuthentication;
   }
-  public putBasicAuthentication(value: DataFactoryLinkedServiceOdataBasicAuthentication | undefined) {
-    this._basicAuthentication = value;
+  public putBasicAuthentication(value: DataFactoryLinkedServiceOdataBasicAuthentication) {
+    this._basicAuthentication.internalValue = value;
   }
   public resetBasicAuthentication() {
-    this._basicAuthentication = undefined;
+    this._basicAuthentication.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get basicAuthenticationInput() {
-    return this._basicAuthentication
+    return this._basicAuthentication.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryLinkedServiceOdataTimeouts | undefined; 
-  private __timeoutsOutput = new DataFactoryLinkedServiceOdataTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryLinkedServiceOdataTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataFactoryLinkedServiceOdataTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataFactoryLinkedServiceOdataTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -458,8 +518,8 @@ export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
       parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       url: cdktf.stringToTerraform(this._url),
-      basic_authentication: dataFactoryLinkedServiceOdataBasicAuthenticationToTerraform(this._basicAuthentication),
-      timeouts: dataFactoryLinkedServiceOdataTimeoutsToTerraform(this._timeouts),
+      basic_authentication: dataFactoryLinkedServiceOdataBasicAuthenticationToTerraform(this._basicAuthentication.internalValue),
+      timeouts: dataFactoryLinkedServiceOdataTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

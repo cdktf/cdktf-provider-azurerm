@@ -180,7 +180,7 @@ export interface DataAzurermConsumptionBudgetSubscriptionTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermConsumptionBudgetSubscriptionTimeoutsToTerraform(struct?: DataAzurermConsumptionBudgetSubscriptionTimeoutsOutputReference | DataAzurermConsumptionBudgetSubscriptionTimeouts): any {
+export function dataAzurermConsumptionBudgetSubscriptionTimeoutsToTerraform(struct?: DataAzurermConsumptionBudgetSubscriptionTimeoutsOutputReference | DataAzurermConsumptionBudgetSubscriptionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -200,12 +200,31 @@ export class DataAzurermConsumptionBudgetSubscriptionTimeoutsOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermConsumptionBudgetSubscriptionTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermConsumptionBudgetSubscriptionTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -213,7 +232,7 @@ export class DataAzurermConsumptionBudgetSubscriptionTimeoutsOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -251,7 +270,7 @@ export class DataAzurermConsumptionBudgetSubscription extends cdktf.TerraformDat
     });
     this._name = config.name;
     this._subscriptionId = config.subscriptionId;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -283,7 +302,7 @@ export class DataAzurermConsumptionBudgetSubscription extends cdktf.TerraformDat
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // notification - computed: true, optional: false, required: false
@@ -301,7 +320,7 @@ export class DataAzurermConsumptionBudgetSubscription extends cdktf.TerraformDat
   }
   // Temporarily expose input value. Use with caution.
   public get subscriptionIdInput() {
-    return this._subscriptionId
+    return this._subscriptionId;
   }
 
   // time_grain - computed: true, optional: false, required: false
@@ -315,20 +334,19 @@ export class DataAzurermConsumptionBudgetSubscription extends cdktf.TerraformDat
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermConsumptionBudgetSubscriptionTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermConsumptionBudgetSubscriptionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermConsumptionBudgetSubscriptionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermConsumptionBudgetSubscriptionTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermConsumptionBudgetSubscriptionTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -339,7 +357,7 @@ export class DataAzurermConsumptionBudgetSubscription extends cdktf.TerraformDat
     return {
       name: cdktf.stringToTerraform(this._name),
       subscription_id: cdktf.stringToTerraform(this._subscriptionId),
-      timeouts: dataAzurermConsumptionBudgetSubscriptionTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermConsumptionBudgetSubscriptionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

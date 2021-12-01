@@ -65,7 +65,7 @@ export interface MediaAssetFilterPresentationTimeRange {
   readonly unitTimescaleInMiliseconds?: number;
 }
 
-function mediaAssetFilterPresentationTimeRangeToTerraform(struct?: MediaAssetFilterPresentationTimeRangeOutputReference | MediaAssetFilterPresentationTimeRange): any {
+export function mediaAssetFilterPresentationTimeRangeToTerraform(struct?: MediaAssetFilterPresentationTimeRangeOutputReference | MediaAssetFilterPresentationTimeRange): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -90,12 +90,61 @@ export class MediaAssetFilterPresentationTimeRangeOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaAssetFilterPresentationTimeRange | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._endInUnits) {
+      hasAnyValues = true;
+      internalValueResult.endInUnits = this._endInUnits;
+    }
+    if (this._forceEnd) {
+      hasAnyValues = true;
+      internalValueResult.forceEnd = this._forceEnd;
+    }
+    if (this._liveBackoffInUnits) {
+      hasAnyValues = true;
+      internalValueResult.liveBackoffInUnits = this._liveBackoffInUnits;
+    }
+    if (this._presentationWindowInUnits) {
+      hasAnyValues = true;
+      internalValueResult.presentationWindowInUnits = this._presentationWindowInUnits;
+    }
+    if (this._startInUnits) {
+      hasAnyValues = true;
+      internalValueResult.startInUnits = this._startInUnits;
+    }
+    if (this._unitTimescaleInMiliseconds) {
+      hasAnyValues = true;
+      internalValueResult.unitTimescaleInMiliseconds = this._unitTimescaleInMiliseconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaAssetFilterPresentationTimeRange | undefined) {
+    if (value === undefined) {
+      this._endInUnits = undefined;
+      this._forceEnd = undefined;
+      this._liveBackoffInUnits = undefined;
+      this._presentationWindowInUnits = undefined;
+      this._startInUnits = undefined;
+      this._unitTimescaleInMiliseconds = undefined;
+    }
+    else {
+      this._endInUnits = value.endInUnits;
+      this._forceEnd = value.forceEnd;
+      this._liveBackoffInUnits = value.liveBackoffInUnits;
+      this._presentationWindowInUnits = value.presentationWindowInUnits;
+      this._startInUnits = value.startInUnits;
+      this._unitTimescaleInMiliseconds = value.unitTimescaleInMiliseconds;
+    }
+  }
+
   // end_in_units - computed: false, optional: true, required: false
-  private _endInUnits?: number | undefined; 
+  private _endInUnits?: number; 
   public get endInUnits() {
     return this.getNumberAttribute('end_in_units');
   }
-  public set endInUnits(value: number | undefined) {
+  public set endInUnits(value: number) {
     this._endInUnits = value;
   }
   public resetEndInUnits() {
@@ -103,15 +152,15 @@ export class MediaAssetFilterPresentationTimeRangeOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get endInUnitsInput() {
-    return this._endInUnits
+    return this._endInUnits;
   }
 
   // force_end - computed: false, optional: true, required: false
-  private _forceEnd?: boolean | cdktf.IResolvable | undefined; 
+  private _forceEnd?: boolean | cdktf.IResolvable; 
   public get forceEnd() {
     return this.getBooleanAttribute('force_end') as any;
   }
-  public set forceEnd(value: boolean | cdktf.IResolvable | undefined) {
+  public set forceEnd(value: boolean | cdktf.IResolvable) {
     this._forceEnd = value;
   }
   public resetForceEnd() {
@@ -119,15 +168,15 @@ export class MediaAssetFilterPresentationTimeRangeOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get forceEndInput() {
-    return this._forceEnd
+    return this._forceEnd;
   }
 
   // live_backoff_in_units - computed: false, optional: true, required: false
-  private _liveBackoffInUnits?: number | undefined; 
+  private _liveBackoffInUnits?: number; 
   public get liveBackoffInUnits() {
     return this.getNumberAttribute('live_backoff_in_units');
   }
-  public set liveBackoffInUnits(value: number | undefined) {
+  public set liveBackoffInUnits(value: number) {
     this._liveBackoffInUnits = value;
   }
   public resetLiveBackoffInUnits() {
@@ -135,15 +184,15 @@ export class MediaAssetFilterPresentationTimeRangeOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get liveBackoffInUnitsInput() {
-    return this._liveBackoffInUnits
+    return this._liveBackoffInUnits;
   }
 
   // presentation_window_in_units - computed: false, optional: true, required: false
-  private _presentationWindowInUnits?: number | undefined; 
+  private _presentationWindowInUnits?: number; 
   public get presentationWindowInUnits() {
     return this.getNumberAttribute('presentation_window_in_units');
   }
-  public set presentationWindowInUnits(value: number | undefined) {
+  public set presentationWindowInUnits(value: number) {
     this._presentationWindowInUnits = value;
   }
   public resetPresentationWindowInUnits() {
@@ -151,15 +200,15 @@ export class MediaAssetFilterPresentationTimeRangeOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get presentationWindowInUnitsInput() {
-    return this._presentationWindowInUnits
+    return this._presentationWindowInUnits;
   }
 
   // start_in_units - computed: false, optional: true, required: false
-  private _startInUnits?: number | undefined; 
+  private _startInUnits?: number; 
   public get startInUnits() {
     return this.getNumberAttribute('start_in_units');
   }
-  public set startInUnits(value: number | undefined) {
+  public set startInUnits(value: number) {
     this._startInUnits = value;
   }
   public resetStartInUnits() {
@@ -167,15 +216,15 @@ export class MediaAssetFilterPresentationTimeRangeOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get startInUnitsInput() {
-    return this._startInUnits
+    return this._startInUnits;
   }
 
   // unit_timescale_in_miliseconds - computed: false, optional: true, required: false
-  private _unitTimescaleInMiliseconds?: number | undefined; 
+  private _unitTimescaleInMiliseconds?: number; 
   public get unitTimescaleInMiliseconds() {
     return this.getNumberAttribute('unit_timescale_in_miliseconds');
   }
-  public set unitTimescaleInMiliseconds(value: number | undefined) {
+  public set unitTimescaleInMiliseconds(value: number) {
     this._unitTimescaleInMiliseconds = value;
   }
   public resetUnitTimescaleInMiliseconds() {
@@ -183,7 +232,7 @@ export class MediaAssetFilterPresentationTimeRangeOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get unitTimescaleInMilisecondsInput() {
-    return this._unitTimescaleInMiliseconds
+    return this._unitTimescaleInMiliseconds;
   }
 }
 export interface MediaAssetFilterTimeouts {
@@ -205,7 +254,7 @@ export interface MediaAssetFilterTimeouts {
   readonly update?: string;
 }
 
-function mediaAssetFilterTimeoutsToTerraform(struct?: MediaAssetFilterTimeoutsOutputReference | MediaAssetFilterTimeouts): any {
+export function mediaAssetFilterTimeoutsToTerraform(struct?: MediaAssetFilterTimeoutsOutputReference | MediaAssetFilterTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -228,12 +277,49 @@ export class MediaAssetFilterTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaAssetFilterTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaAssetFilterTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -241,15 +327,15 @@ export class MediaAssetFilterTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -257,15 +343,15 @@ export class MediaAssetFilterTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -273,15 +359,15 @@ export class MediaAssetFilterTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -289,7 +375,7 @@ export class MediaAssetFilterTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface MediaAssetFilterTrackSelectionCondition {
@@ -307,7 +393,7 @@ export interface MediaAssetFilterTrackSelectionCondition {
   readonly value?: string;
 }
 
-function mediaAssetFilterTrackSelectionConditionToTerraform(struct?: MediaAssetFilterTrackSelectionCondition): any {
+export function mediaAssetFilterTrackSelectionConditionToTerraform(struct?: MediaAssetFilterTrackSelectionCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -328,7 +414,7 @@ export interface MediaAssetFilterTrackSelection {
   readonly condition: MediaAssetFilterTrackSelectionCondition[];
 }
 
-function mediaAssetFilterTrackSelectionToTerraform(struct?: MediaAssetFilterTrackSelection): any {
+export function mediaAssetFilterTrackSelectionToTerraform(struct?: MediaAssetFilterTrackSelection): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -374,8 +460,8 @@ export class MediaAssetFilter extends cdktf.TerraformResource {
     this._assetId = config.assetId;
     this._firstQualityBitrate = config.firstQualityBitrate;
     this._name = config.name;
-    this._presentationTimeRange = config.presentationTimeRange;
-    this._timeouts = config.timeouts;
+    this._presentationTimeRange.internalValue = config.presentationTimeRange;
+    this._timeouts.internalValue = config.timeouts;
     this._trackSelection = config.trackSelection;
   }
 
@@ -393,15 +479,15 @@ export class MediaAssetFilter extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get assetIdInput() {
-    return this._assetId
+    return this._assetId;
   }
 
   // first_quality_bitrate - computed: false, optional: true, required: false
-  private _firstQualityBitrate?: number | undefined; 
+  private _firstQualityBitrate?: number; 
   public get firstQualityBitrate() {
     return this.getNumberAttribute('first_quality_bitrate');
   }
-  public set firstQualityBitrate(value: number | undefined) {
+  public set firstQualityBitrate(value: number) {
     this._firstQualityBitrate = value;
   }
   public resetFirstQualityBitrate() {
@@ -409,7 +495,7 @@ export class MediaAssetFilter extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get firstQualityBitrateInput() {
-    return this._firstQualityBitrate
+    return this._firstQualityBitrate;
   }
 
   // id - computed: true, optional: true, required: false
@@ -427,50 +513,48 @@ export class MediaAssetFilter extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // presentation_time_range - computed: false, optional: true, required: false
-  private _presentationTimeRange?: MediaAssetFilterPresentationTimeRange | undefined; 
-  private __presentationTimeRangeOutput = new MediaAssetFilterPresentationTimeRangeOutputReference(this as any, "presentation_time_range", true);
+  private _presentationTimeRange = new MediaAssetFilterPresentationTimeRangeOutputReference(this as any, "presentation_time_range", true);
   public get presentationTimeRange() {
-    return this.__presentationTimeRangeOutput;
+    return this._presentationTimeRange;
   }
-  public putPresentationTimeRange(value: MediaAssetFilterPresentationTimeRange | undefined) {
-    this._presentationTimeRange = value;
+  public putPresentationTimeRange(value: MediaAssetFilterPresentationTimeRange) {
+    this._presentationTimeRange.internalValue = value;
   }
   public resetPresentationTimeRange() {
-    this._presentationTimeRange = undefined;
+    this._presentationTimeRange.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get presentationTimeRangeInput() {
-    return this._presentationTimeRange
+    return this._presentationTimeRange.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MediaAssetFilterTimeouts | undefined; 
-  private __timeoutsOutput = new MediaAssetFilterTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MediaAssetFilterTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MediaAssetFilterTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MediaAssetFilterTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // track_selection - computed: false, optional: true, required: false
-  private _trackSelection?: MediaAssetFilterTrackSelection[] | undefined; 
+  private _trackSelection?: MediaAssetFilterTrackSelection[]; 
   public get trackSelection() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('track_selection') as any;
   }
-  public set trackSelection(value: MediaAssetFilterTrackSelection[] | undefined) {
+  public set trackSelection(value: MediaAssetFilterTrackSelection[]) {
     this._trackSelection = value;
   }
   public resetTrackSelection() {
@@ -478,7 +562,7 @@ export class MediaAssetFilter extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get trackSelectionInput() {
-    return this._trackSelection
+    return this._trackSelection;
   }
 
   // =========
@@ -490,8 +574,8 @@ export class MediaAssetFilter extends cdktf.TerraformResource {
       asset_id: cdktf.stringToTerraform(this._assetId),
       first_quality_bitrate: cdktf.numberToTerraform(this._firstQualityBitrate),
       name: cdktf.stringToTerraform(this._name),
-      presentation_time_range: mediaAssetFilterPresentationTimeRangeToTerraform(this._presentationTimeRange),
-      timeouts: mediaAssetFilterTimeoutsToTerraform(this._timeouts),
+      presentation_time_range: mediaAssetFilterPresentationTimeRangeToTerraform(this._presentationTimeRange.internalValue),
+      timeouts: mediaAssetFilterTimeoutsToTerraform(this._timeouts.internalValue),
       track_selection: cdktf.listMapper(mediaAssetFilterTrackSelectionToTerraform)(this._trackSelection),
     };
   }

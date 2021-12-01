@@ -113,7 +113,7 @@ export interface RedisCachePatchSchedule {
   readonly startHourUtc?: number;
 }
 
-function redisCachePatchScheduleToTerraform(struct?: RedisCachePatchSchedule): any {
+export function redisCachePatchScheduleToTerraform(struct?: RedisCachePatchSchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -180,7 +180,7 @@ export interface RedisCacheRedisConfiguration {
   readonly rdbStorageConnectionString?: string;
 }
 
-function redisCacheRedisConfigurationToTerraform(struct?: RedisCacheRedisConfigurationOutputReference | RedisCacheRedisConfiguration): any {
+export function redisCacheRedisConfigurationToTerraform(struct?: RedisCacheRedisConfigurationOutputReference | RedisCacheRedisConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -212,12 +212,103 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): RedisCacheRedisConfiguration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._aofBackupEnabled) {
+      hasAnyValues = true;
+      internalValueResult.aofBackupEnabled = this._aofBackupEnabled;
+    }
+    if (this._aofStorageConnectionString0) {
+      hasAnyValues = true;
+      internalValueResult.aofStorageConnectionString0 = this._aofStorageConnectionString0;
+    }
+    if (this._aofStorageConnectionString1) {
+      hasAnyValues = true;
+      internalValueResult.aofStorageConnectionString1 = this._aofStorageConnectionString1;
+    }
+    if (this._enableAuthentication) {
+      hasAnyValues = true;
+      internalValueResult.enableAuthentication = this._enableAuthentication;
+    }
+    if (this._maxfragmentationmemoryReserved) {
+      hasAnyValues = true;
+      internalValueResult.maxfragmentationmemoryReserved = this._maxfragmentationmemoryReserved;
+    }
+    if (this._maxmemoryDelta) {
+      hasAnyValues = true;
+      internalValueResult.maxmemoryDelta = this._maxmemoryDelta;
+    }
+    if (this._maxmemoryPolicy) {
+      hasAnyValues = true;
+      internalValueResult.maxmemoryPolicy = this._maxmemoryPolicy;
+    }
+    if (this._maxmemoryReserved) {
+      hasAnyValues = true;
+      internalValueResult.maxmemoryReserved = this._maxmemoryReserved;
+    }
+    if (this._notifyKeyspaceEvents) {
+      hasAnyValues = true;
+      internalValueResult.notifyKeyspaceEvents = this._notifyKeyspaceEvents;
+    }
+    if (this._rdbBackupEnabled) {
+      hasAnyValues = true;
+      internalValueResult.rdbBackupEnabled = this._rdbBackupEnabled;
+    }
+    if (this._rdbBackupFrequency) {
+      hasAnyValues = true;
+      internalValueResult.rdbBackupFrequency = this._rdbBackupFrequency;
+    }
+    if (this._rdbBackupMaxSnapshotCount) {
+      hasAnyValues = true;
+      internalValueResult.rdbBackupMaxSnapshotCount = this._rdbBackupMaxSnapshotCount;
+    }
+    if (this._rdbStorageConnectionString) {
+      hasAnyValues = true;
+      internalValueResult.rdbStorageConnectionString = this._rdbStorageConnectionString;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RedisCacheRedisConfiguration | undefined) {
+    if (value === undefined) {
+      this._aofBackupEnabled = undefined;
+      this._aofStorageConnectionString0 = undefined;
+      this._aofStorageConnectionString1 = undefined;
+      this._enableAuthentication = undefined;
+      this._maxfragmentationmemoryReserved = undefined;
+      this._maxmemoryDelta = undefined;
+      this._maxmemoryPolicy = undefined;
+      this._maxmemoryReserved = undefined;
+      this._notifyKeyspaceEvents = undefined;
+      this._rdbBackupEnabled = undefined;
+      this._rdbBackupFrequency = undefined;
+      this._rdbBackupMaxSnapshotCount = undefined;
+      this._rdbStorageConnectionString = undefined;
+    }
+    else {
+      this._aofBackupEnabled = value.aofBackupEnabled;
+      this._aofStorageConnectionString0 = value.aofStorageConnectionString0;
+      this._aofStorageConnectionString1 = value.aofStorageConnectionString1;
+      this._enableAuthentication = value.enableAuthentication;
+      this._maxfragmentationmemoryReserved = value.maxfragmentationmemoryReserved;
+      this._maxmemoryDelta = value.maxmemoryDelta;
+      this._maxmemoryPolicy = value.maxmemoryPolicy;
+      this._maxmemoryReserved = value.maxmemoryReserved;
+      this._notifyKeyspaceEvents = value.notifyKeyspaceEvents;
+      this._rdbBackupEnabled = value.rdbBackupEnabled;
+      this._rdbBackupFrequency = value.rdbBackupFrequency;
+      this._rdbBackupMaxSnapshotCount = value.rdbBackupMaxSnapshotCount;
+      this._rdbStorageConnectionString = value.rdbStorageConnectionString;
+    }
+  }
+
   // aof_backup_enabled - computed: false, optional: true, required: false
-  private _aofBackupEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _aofBackupEnabled?: boolean | cdktf.IResolvable; 
   public get aofBackupEnabled() {
     return this.getBooleanAttribute('aof_backup_enabled') as any;
   }
-  public set aofBackupEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set aofBackupEnabled(value: boolean | cdktf.IResolvable) {
     this._aofBackupEnabled = value;
   }
   public resetAofBackupEnabled() {
@@ -225,15 +316,15 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get aofBackupEnabledInput() {
-    return this._aofBackupEnabled
+    return this._aofBackupEnabled;
   }
 
   // aof_storage_connection_string_0 - computed: false, optional: true, required: false
-  private _aofStorageConnectionString0?: string | undefined; 
+  private _aofStorageConnectionString0?: string; 
   public get aofStorageConnectionString0() {
     return this.getStringAttribute('aof_storage_connection_string_0');
   }
-  public set aofStorageConnectionString0(value: string | undefined) {
+  public set aofStorageConnectionString0(value: string) {
     this._aofStorageConnectionString0 = value;
   }
   public resetAofStorageConnectionString0() {
@@ -241,15 +332,15 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get aofStorageConnectionString0Input() {
-    return this._aofStorageConnectionString0
+    return this._aofStorageConnectionString0;
   }
 
   // aof_storage_connection_string_1 - computed: false, optional: true, required: false
-  private _aofStorageConnectionString1?: string | undefined; 
+  private _aofStorageConnectionString1?: string; 
   public get aofStorageConnectionString1() {
     return this.getStringAttribute('aof_storage_connection_string_1');
   }
-  public set aofStorageConnectionString1(value: string | undefined) {
+  public set aofStorageConnectionString1(value: string) {
     this._aofStorageConnectionString1 = value;
   }
   public resetAofStorageConnectionString1() {
@@ -257,15 +348,15 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get aofStorageConnectionString1Input() {
-    return this._aofStorageConnectionString1
+    return this._aofStorageConnectionString1;
   }
 
   // enable_authentication - computed: false, optional: true, required: false
-  private _enableAuthentication?: boolean | cdktf.IResolvable | undefined; 
+  private _enableAuthentication?: boolean | cdktf.IResolvable; 
   public get enableAuthentication() {
     return this.getBooleanAttribute('enable_authentication') as any;
   }
-  public set enableAuthentication(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableAuthentication(value: boolean | cdktf.IResolvable) {
     this._enableAuthentication = value;
   }
   public resetEnableAuthentication() {
@@ -273,15 +364,15 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get enableAuthenticationInput() {
-    return this._enableAuthentication
+    return this._enableAuthentication;
   }
 
   // maxfragmentationmemory_reserved - computed: true, optional: true, required: false
-  private _maxfragmentationmemoryReserved?: number | undefined; 
+  private _maxfragmentationmemoryReserved?: number; 
   public get maxfragmentationmemoryReserved() {
     return this.getNumberAttribute('maxfragmentationmemory_reserved');
   }
-  public set maxfragmentationmemoryReserved(value: number | undefined) {
+  public set maxfragmentationmemoryReserved(value: number) {
     this._maxfragmentationmemoryReserved = value;
   }
   public resetMaxfragmentationmemoryReserved() {
@@ -289,15 +380,15 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get maxfragmentationmemoryReservedInput() {
-    return this._maxfragmentationmemoryReserved
+    return this._maxfragmentationmemoryReserved;
   }
 
   // maxmemory_delta - computed: true, optional: true, required: false
-  private _maxmemoryDelta?: number | undefined; 
+  private _maxmemoryDelta?: number; 
   public get maxmemoryDelta() {
     return this.getNumberAttribute('maxmemory_delta');
   }
-  public set maxmemoryDelta(value: number | undefined) {
+  public set maxmemoryDelta(value: number) {
     this._maxmemoryDelta = value;
   }
   public resetMaxmemoryDelta() {
@@ -305,15 +396,15 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get maxmemoryDeltaInput() {
-    return this._maxmemoryDelta
+    return this._maxmemoryDelta;
   }
 
   // maxmemory_policy - computed: false, optional: true, required: false
-  private _maxmemoryPolicy?: string | undefined; 
+  private _maxmemoryPolicy?: string; 
   public get maxmemoryPolicy() {
     return this.getStringAttribute('maxmemory_policy');
   }
-  public set maxmemoryPolicy(value: string | undefined) {
+  public set maxmemoryPolicy(value: string) {
     this._maxmemoryPolicy = value;
   }
   public resetMaxmemoryPolicy() {
@@ -321,15 +412,15 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get maxmemoryPolicyInput() {
-    return this._maxmemoryPolicy
+    return this._maxmemoryPolicy;
   }
 
   // maxmemory_reserved - computed: true, optional: true, required: false
-  private _maxmemoryReserved?: number | undefined; 
+  private _maxmemoryReserved?: number; 
   public get maxmemoryReserved() {
     return this.getNumberAttribute('maxmemory_reserved');
   }
-  public set maxmemoryReserved(value: number | undefined) {
+  public set maxmemoryReserved(value: number) {
     this._maxmemoryReserved = value;
   }
   public resetMaxmemoryReserved() {
@@ -337,15 +428,15 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get maxmemoryReservedInput() {
-    return this._maxmemoryReserved
+    return this._maxmemoryReserved;
   }
 
   // notify_keyspace_events - computed: false, optional: true, required: false
-  private _notifyKeyspaceEvents?: string | undefined; 
+  private _notifyKeyspaceEvents?: string; 
   public get notifyKeyspaceEvents() {
     return this.getStringAttribute('notify_keyspace_events');
   }
-  public set notifyKeyspaceEvents(value: string | undefined) {
+  public set notifyKeyspaceEvents(value: string) {
     this._notifyKeyspaceEvents = value;
   }
   public resetNotifyKeyspaceEvents() {
@@ -353,15 +444,15 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get notifyKeyspaceEventsInput() {
-    return this._notifyKeyspaceEvents
+    return this._notifyKeyspaceEvents;
   }
 
   // rdb_backup_enabled - computed: false, optional: true, required: false
-  private _rdbBackupEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _rdbBackupEnabled?: boolean | cdktf.IResolvable; 
   public get rdbBackupEnabled() {
     return this.getBooleanAttribute('rdb_backup_enabled') as any;
   }
-  public set rdbBackupEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set rdbBackupEnabled(value: boolean | cdktf.IResolvable) {
     this._rdbBackupEnabled = value;
   }
   public resetRdbBackupEnabled() {
@@ -369,15 +460,15 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get rdbBackupEnabledInput() {
-    return this._rdbBackupEnabled
+    return this._rdbBackupEnabled;
   }
 
   // rdb_backup_frequency - computed: false, optional: true, required: false
-  private _rdbBackupFrequency?: number | undefined; 
+  private _rdbBackupFrequency?: number; 
   public get rdbBackupFrequency() {
     return this.getNumberAttribute('rdb_backup_frequency');
   }
-  public set rdbBackupFrequency(value: number | undefined) {
+  public set rdbBackupFrequency(value: number) {
     this._rdbBackupFrequency = value;
   }
   public resetRdbBackupFrequency() {
@@ -385,15 +476,15 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get rdbBackupFrequencyInput() {
-    return this._rdbBackupFrequency
+    return this._rdbBackupFrequency;
   }
 
   // rdb_backup_max_snapshot_count - computed: false, optional: true, required: false
-  private _rdbBackupMaxSnapshotCount?: number | undefined; 
+  private _rdbBackupMaxSnapshotCount?: number; 
   public get rdbBackupMaxSnapshotCount() {
     return this.getNumberAttribute('rdb_backup_max_snapshot_count');
   }
-  public set rdbBackupMaxSnapshotCount(value: number | undefined) {
+  public set rdbBackupMaxSnapshotCount(value: number) {
     this._rdbBackupMaxSnapshotCount = value;
   }
   public resetRdbBackupMaxSnapshotCount() {
@@ -401,15 +492,15 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get rdbBackupMaxSnapshotCountInput() {
-    return this._rdbBackupMaxSnapshotCount
+    return this._rdbBackupMaxSnapshotCount;
   }
 
   // rdb_storage_connection_string - computed: false, optional: true, required: false
-  private _rdbStorageConnectionString?: string | undefined; 
+  private _rdbStorageConnectionString?: string; 
   public get rdbStorageConnectionString() {
     return this.getStringAttribute('rdb_storage_connection_string');
   }
-  public set rdbStorageConnectionString(value: string | undefined) {
+  public set rdbStorageConnectionString(value: string) {
     this._rdbStorageConnectionString = value;
   }
   public resetRdbStorageConnectionString() {
@@ -417,7 +508,7 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get rdbStorageConnectionStringInput() {
-    return this._rdbStorageConnectionString
+    return this._rdbStorageConnectionString;
   }
 }
 export interface RedisCacheTimeouts {
@@ -439,7 +530,7 @@ export interface RedisCacheTimeouts {
   readonly update?: string;
 }
 
-function redisCacheTimeoutsToTerraform(struct?: RedisCacheTimeoutsOutputReference | RedisCacheTimeouts): any {
+export function redisCacheTimeoutsToTerraform(struct?: RedisCacheTimeoutsOutputReference | RedisCacheTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -462,12 +553,49 @@ export class RedisCacheTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): RedisCacheTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RedisCacheTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -475,15 +603,15 @@ export class RedisCacheTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -491,15 +619,15 @@ export class RedisCacheTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -507,15 +635,15 @@ export class RedisCacheTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -523,7 +651,7 @@ export class RedisCacheTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -578,8 +706,8 @@ export class RedisCache extends cdktf.TerraformResource {
     this._tenantSettings = config.tenantSettings;
     this._zones = config.zones;
     this._patchSchedule = config.patchSchedule;
-    this._redisConfiguration = config.redisConfiguration;
-    this._timeouts = config.timeouts;
+    this._redisConfiguration.internalValue = config.redisConfiguration;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -596,15 +724,15 @@ export class RedisCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get capacityInput() {
-    return this._capacity
+    return this._capacity;
   }
 
   // enable_non_ssl_port - computed: false, optional: true, required: false
-  private _enableNonSslPort?: boolean | cdktf.IResolvable | undefined; 
+  private _enableNonSslPort?: boolean | cdktf.IResolvable; 
   public get enableNonSslPort() {
     return this.getBooleanAttribute('enable_non_ssl_port') as any;
   }
-  public set enableNonSslPort(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableNonSslPort(value: boolean | cdktf.IResolvable) {
     this._enableNonSslPort = value;
   }
   public resetEnableNonSslPort() {
@@ -612,7 +740,7 @@ export class RedisCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableNonSslPortInput() {
-    return this._enableNonSslPort
+    return this._enableNonSslPort;
   }
 
   // family - computed: false, optional: false, required: true
@@ -625,7 +753,7 @@ export class RedisCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get familyInput() {
-    return this._family
+    return this._family;
   }
 
   // hostname - computed: true, optional: false, required: false
@@ -648,15 +776,15 @@ export class RedisCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // minimum_tls_version - computed: false, optional: true, required: false
-  private _minimumTlsVersion?: string | undefined; 
+  private _minimumTlsVersion?: string; 
   public get minimumTlsVersion() {
     return this.getStringAttribute('minimum_tls_version');
   }
-  public set minimumTlsVersion(value: string | undefined) {
+  public set minimumTlsVersion(value: string) {
     this._minimumTlsVersion = value;
   }
   public resetMinimumTlsVersion() {
@@ -664,7 +792,7 @@ export class RedisCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get minimumTlsVersionInput() {
-    return this._minimumTlsVersion
+    return this._minimumTlsVersion;
   }
 
   // name - computed: false, optional: false, required: true
@@ -677,7 +805,7 @@ export class RedisCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // port - computed: true, optional: false, required: false
@@ -696,11 +824,11 @@ export class RedisCache extends cdktf.TerraformResource {
   }
 
   // private_static_ip_address - computed: true, optional: true, required: false
-  private _privateStaticIpAddress?: string | undefined; 
+  private _privateStaticIpAddress?: string; 
   public get privateStaticIpAddress() {
     return this.getStringAttribute('private_static_ip_address');
   }
-  public set privateStaticIpAddress(value: string | undefined) {
+  public set privateStaticIpAddress(value: string) {
     this._privateStaticIpAddress = value;
   }
   public resetPrivateStaticIpAddress() {
@@ -708,15 +836,15 @@ export class RedisCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get privateStaticIpAddressInput() {
-    return this._privateStaticIpAddress
+    return this._privateStaticIpAddress;
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled') as any;
   }
-  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -724,15 +852,15 @@ export class RedisCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get publicNetworkAccessEnabledInput() {
-    return this._publicNetworkAccessEnabled
+    return this._publicNetworkAccessEnabled;
   }
 
   // redis_version - computed: true, optional: true, required: false
-  private _redisVersion?: string | undefined; 
+  private _redisVersion?: string; 
   public get redisVersion() {
     return this.getStringAttribute('redis_version');
   }
-  public set redisVersion(value: string | undefined) {
+  public set redisVersion(value: string) {
     this._redisVersion = value;
   }
   public resetRedisVersion() {
@@ -740,15 +868,15 @@ export class RedisCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get redisVersionInput() {
-    return this._redisVersion
+    return this._redisVersion;
   }
 
   // replicas_per_master - computed: true, optional: true, required: false
-  private _replicasPerMaster?: number | undefined; 
+  private _replicasPerMaster?: number; 
   public get replicasPerMaster() {
     return this.getNumberAttribute('replicas_per_master');
   }
-  public set replicasPerMaster(value: number | undefined) {
+  public set replicasPerMaster(value: number) {
     this._replicasPerMaster = value;
   }
   public resetReplicasPerMaster() {
@@ -756,15 +884,15 @@ export class RedisCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get replicasPerMasterInput() {
-    return this._replicasPerMaster
+    return this._replicasPerMaster;
   }
 
   // replicas_per_primary - computed: true, optional: true, required: false
-  private _replicasPerPrimary?: number | undefined; 
+  private _replicasPerPrimary?: number; 
   public get replicasPerPrimary() {
     return this.getNumberAttribute('replicas_per_primary');
   }
-  public set replicasPerPrimary(value: number | undefined) {
+  public set replicasPerPrimary(value: number) {
     this._replicasPerPrimary = value;
   }
   public resetReplicasPerPrimary() {
@@ -772,7 +900,7 @@ export class RedisCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get replicasPerPrimaryInput() {
-    return this._replicasPerPrimary
+    return this._replicasPerPrimary;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -785,7 +913,7 @@ export class RedisCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // secondary_access_key - computed: true, optional: false, required: false
@@ -799,11 +927,11 @@ export class RedisCache extends cdktf.TerraformResource {
   }
 
   // shard_count - computed: false, optional: true, required: false
-  private _shardCount?: number | undefined; 
+  private _shardCount?: number; 
   public get shardCount() {
     return this.getNumberAttribute('shard_count');
   }
-  public set shardCount(value: number | undefined) {
+  public set shardCount(value: number) {
     this._shardCount = value;
   }
   public resetShardCount() {
@@ -811,7 +939,7 @@ export class RedisCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get shardCountInput() {
-    return this._shardCount
+    return this._shardCount;
   }
 
   // sku_name - computed: false, optional: false, required: true
@@ -824,7 +952,7 @@ export class RedisCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuNameInput() {
-    return this._skuName
+    return this._skuName;
   }
 
   // ssl_port - computed: true, optional: false, required: false
@@ -833,11 +961,11 @@ export class RedisCache extends cdktf.TerraformResource {
   }
 
   // subnet_id - computed: false, optional: true, required: false
-  private _subnetId?: string | undefined; 
+  private _subnetId?: string; 
   public get subnetId() {
     return this.getStringAttribute('subnet_id');
   }
-  public set subnetId(value: string | undefined) {
+  public set subnetId(value: string) {
     this._subnetId = value;
   }
   public resetSubnetId() {
@@ -845,16 +973,16 @@ export class RedisCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get subnetIdInput() {
-    return this._subnetId
+    return this._subnetId;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -862,16 +990,16 @@ export class RedisCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // tenant_settings - computed: false, optional: true, required: false
-  private _tenantSettings?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tenantSettings?: { [key: string]: string } | cdktf.IResolvable; 
   public get tenantSettings() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tenant_settings') as any;
   }
-  public set tenantSettings(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tenantSettings(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tenantSettings = value;
   }
   public resetTenantSettings() {
@@ -879,15 +1007,15 @@ export class RedisCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tenantSettingsInput() {
-    return this._tenantSettings
+    return this._tenantSettings;
   }
 
   // zones - computed: false, optional: true, required: false
-  private _zones?: string[] | undefined; 
+  private _zones?: string[]; 
   public get zones() {
     return this.getListAttribute('zones');
   }
-  public set zones(value: string[] | undefined) {
+  public set zones(value: string[]) {
     this._zones = value;
   }
   public resetZones() {
@@ -895,16 +1023,16 @@ export class RedisCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get zonesInput() {
-    return this._zones
+    return this._zones;
   }
 
   // patch_schedule - computed: false, optional: true, required: false
-  private _patchSchedule?: RedisCachePatchSchedule[] | undefined; 
+  private _patchSchedule?: RedisCachePatchSchedule[]; 
   public get patchSchedule() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('patch_schedule') as any;
   }
-  public set patchSchedule(value: RedisCachePatchSchedule[] | undefined) {
+  public set patchSchedule(value: RedisCachePatchSchedule[]) {
     this._patchSchedule = value;
   }
   public resetPatchSchedule() {
@@ -912,41 +1040,39 @@ export class RedisCache extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get patchScheduleInput() {
-    return this._patchSchedule
+    return this._patchSchedule;
   }
 
   // redis_configuration - computed: false, optional: true, required: false
-  private _redisConfiguration?: RedisCacheRedisConfiguration | undefined; 
-  private __redisConfigurationOutput = new RedisCacheRedisConfigurationOutputReference(this as any, "redis_configuration", true);
+  private _redisConfiguration = new RedisCacheRedisConfigurationOutputReference(this as any, "redis_configuration", true);
   public get redisConfiguration() {
-    return this.__redisConfigurationOutput;
+    return this._redisConfiguration;
   }
-  public putRedisConfiguration(value: RedisCacheRedisConfiguration | undefined) {
-    this._redisConfiguration = value;
+  public putRedisConfiguration(value: RedisCacheRedisConfiguration) {
+    this._redisConfiguration.internalValue = value;
   }
   public resetRedisConfiguration() {
-    this._redisConfiguration = undefined;
+    this._redisConfiguration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get redisConfigurationInput() {
-    return this._redisConfiguration
+    return this._redisConfiguration.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: RedisCacheTimeouts | undefined; 
-  private __timeoutsOutput = new RedisCacheTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new RedisCacheTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: RedisCacheTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: RedisCacheTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -974,8 +1100,8 @@ export class RedisCache extends cdktf.TerraformResource {
       tenant_settings: cdktf.hashMapper(cdktf.anyToTerraform)(this._tenantSettings),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       patch_schedule: cdktf.listMapper(redisCachePatchScheduleToTerraform)(this._patchSchedule),
-      redis_configuration: redisCacheRedisConfigurationToTerraform(this._redisConfiguration),
-      timeouts: redisCacheTimeoutsToTerraform(this._timeouts),
+      redis_configuration: redisCacheRedisConfigurationToTerraform(this._redisConfiguration.internalValue),
+      timeouts: redisCacheTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

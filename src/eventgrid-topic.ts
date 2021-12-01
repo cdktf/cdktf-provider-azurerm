@@ -71,7 +71,7 @@ export interface EventgridTopicInboundIpRule {
   readonly ipMask?: string;
 }
 
-function eventgridTopicInboundIpRuleToTerraform(struct?: EventgridTopicInboundIpRule): any {
+export function eventgridTopicInboundIpRuleToTerraform(struct?: EventgridTopicInboundIpRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -93,7 +93,7 @@ export interface EventgridTopicIdentity {
   readonly type: string;
 }
 
-function eventgridTopicIdentityToTerraform(struct?: EventgridTopicIdentityOutputReference | EventgridTopicIdentity): any {
+export function eventgridTopicIdentityToTerraform(struct?: EventgridTopicIdentityOutputReference | EventgridTopicIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -114,12 +114,37 @@ export class EventgridTopicIdentityOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): EventgridTopicIdentity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._identityIds) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridTopicIdentity | undefined) {
+    if (value === undefined) {
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
   // identity_ids - computed: false, optional: true, required: false
-  private _identityIds?: string[] | undefined; 
+  private _identityIds?: string[]; 
   public get identityIds() {
     return this.getListAttribute('identity_ids');
   }
-  public set identityIds(value: string[] | undefined) {
+  public set identityIds(value: string[]) {
     this._identityIds = value;
   }
   public resetIdentityIds() {
@@ -127,7 +152,7 @@ export class EventgridTopicIdentityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
-    return this._identityIds
+    return this._identityIds;
   }
 
   // type - computed: false, optional: false, required: true
@@ -140,7 +165,7 @@ export class EventgridTopicIdentityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface EventgridTopicInputMappingDefaultValues {
@@ -158,7 +183,7 @@ export interface EventgridTopicInputMappingDefaultValues {
   readonly subject?: string;
 }
 
-function eventgridTopicInputMappingDefaultValuesToTerraform(struct?: EventgridTopicInputMappingDefaultValuesOutputReference | EventgridTopicInputMappingDefaultValues): any {
+export function eventgridTopicInputMappingDefaultValuesToTerraform(struct?: EventgridTopicInputMappingDefaultValuesOutputReference | EventgridTopicInputMappingDefaultValues): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -180,12 +205,43 @@ export class EventgridTopicInputMappingDefaultValuesOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): EventgridTopicInputMappingDefaultValues | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._dataVersion) {
+      hasAnyValues = true;
+      internalValueResult.dataVersion = this._dataVersion;
+    }
+    if (this._eventType) {
+      hasAnyValues = true;
+      internalValueResult.eventType = this._eventType;
+    }
+    if (this._subject) {
+      hasAnyValues = true;
+      internalValueResult.subject = this._subject;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridTopicInputMappingDefaultValues | undefined) {
+    if (value === undefined) {
+      this._dataVersion = undefined;
+      this._eventType = undefined;
+      this._subject = undefined;
+    }
+    else {
+      this._dataVersion = value.dataVersion;
+      this._eventType = value.eventType;
+      this._subject = value.subject;
+    }
+  }
+
   // data_version - computed: false, optional: true, required: false
-  private _dataVersion?: string | undefined; 
+  private _dataVersion?: string; 
   public get dataVersion() {
     return this.getStringAttribute('data_version');
   }
-  public set dataVersion(value: string | undefined) {
+  public set dataVersion(value: string) {
     this._dataVersion = value;
   }
   public resetDataVersion() {
@@ -193,15 +249,15 @@ export class EventgridTopicInputMappingDefaultValuesOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get dataVersionInput() {
-    return this._dataVersion
+    return this._dataVersion;
   }
 
   // event_type - computed: false, optional: true, required: false
-  private _eventType?: string | undefined; 
+  private _eventType?: string; 
   public get eventType() {
     return this.getStringAttribute('event_type');
   }
-  public set eventType(value: string | undefined) {
+  public set eventType(value: string) {
     this._eventType = value;
   }
   public resetEventType() {
@@ -209,15 +265,15 @@ export class EventgridTopicInputMappingDefaultValuesOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get eventTypeInput() {
-    return this._eventType
+    return this._eventType;
   }
 
   // subject - computed: false, optional: true, required: false
-  private _subject?: string | undefined; 
+  private _subject?: string; 
   public get subject() {
     return this.getStringAttribute('subject');
   }
-  public set subject(value: string | undefined) {
+  public set subject(value: string) {
     this._subject = value;
   }
   public resetSubject() {
@@ -225,7 +281,7 @@ export class EventgridTopicInputMappingDefaultValuesOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get subjectInput() {
-    return this._subject
+    return this._subject;
   }
 }
 export interface EventgridTopicInputMappingFields {
@@ -255,7 +311,7 @@ export interface EventgridTopicInputMappingFields {
   readonly topic?: string;
 }
 
-function eventgridTopicInputMappingFieldsToTerraform(struct?: EventgridTopicInputMappingFieldsOutputReference | EventgridTopicInputMappingFields): any {
+export function eventgridTopicInputMappingFieldsToTerraform(struct?: EventgridTopicInputMappingFieldsOutputReference | EventgridTopicInputMappingFields): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -280,12 +336,61 @@ export class EventgridTopicInputMappingFieldsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): EventgridTopicInputMappingFields | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._dataVersion) {
+      hasAnyValues = true;
+      internalValueResult.dataVersion = this._dataVersion;
+    }
+    if (this._eventTime) {
+      hasAnyValues = true;
+      internalValueResult.eventTime = this._eventTime;
+    }
+    if (this._eventType) {
+      hasAnyValues = true;
+      internalValueResult.eventType = this._eventType;
+    }
+    if (this._id) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    if (this._subject) {
+      hasAnyValues = true;
+      internalValueResult.subject = this._subject;
+    }
+    if (this._topic) {
+      hasAnyValues = true;
+      internalValueResult.topic = this._topic;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridTopicInputMappingFields | undefined) {
+    if (value === undefined) {
+      this._dataVersion = undefined;
+      this._eventTime = undefined;
+      this._eventType = undefined;
+      this._id = undefined;
+      this._subject = undefined;
+      this._topic = undefined;
+    }
+    else {
+      this._dataVersion = value.dataVersion;
+      this._eventTime = value.eventTime;
+      this._eventType = value.eventType;
+      this._id = value.id;
+      this._subject = value.subject;
+      this._topic = value.topic;
+    }
+  }
+
   // data_version - computed: false, optional: true, required: false
-  private _dataVersion?: string | undefined; 
+  private _dataVersion?: string; 
   public get dataVersion() {
     return this.getStringAttribute('data_version');
   }
-  public set dataVersion(value: string | undefined) {
+  public set dataVersion(value: string) {
     this._dataVersion = value;
   }
   public resetDataVersion() {
@@ -293,15 +398,15 @@ export class EventgridTopicInputMappingFieldsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get dataVersionInput() {
-    return this._dataVersion
+    return this._dataVersion;
   }
 
   // event_time - computed: false, optional: true, required: false
-  private _eventTime?: string | undefined; 
+  private _eventTime?: string; 
   public get eventTime() {
     return this.getStringAttribute('event_time');
   }
-  public set eventTime(value: string | undefined) {
+  public set eventTime(value: string) {
     this._eventTime = value;
   }
   public resetEventTime() {
@@ -309,15 +414,15 @@ export class EventgridTopicInputMappingFieldsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get eventTimeInput() {
-    return this._eventTime
+    return this._eventTime;
   }
 
   // event_type - computed: false, optional: true, required: false
-  private _eventType?: string | undefined; 
+  private _eventType?: string; 
   public get eventType() {
     return this.getStringAttribute('event_type');
   }
-  public set eventType(value: string | undefined) {
+  public set eventType(value: string) {
     this._eventType = value;
   }
   public resetEventType() {
@@ -325,15 +430,15 @@ export class EventgridTopicInputMappingFieldsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get eventTypeInput() {
-    return this._eventType
+    return this._eventType;
   }
 
   // id - computed: false, optional: true, required: false
-  private _id?: string | undefined; 
+  private _id?: string; 
   public get id() {
     return this.getStringAttribute('id');
   }
-  public set id(value: string | undefined) {
+  public set id(value: string) {
     this._id = value;
   }
   public resetId() {
@@ -341,15 +446,15 @@ export class EventgridTopicInputMappingFieldsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get idInput() {
-    return this._id
+    return this._id;
   }
 
   // subject - computed: false, optional: true, required: false
-  private _subject?: string | undefined; 
+  private _subject?: string; 
   public get subject() {
     return this.getStringAttribute('subject');
   }
-  public set subject(value: string | undefined) {
+  public set subject(value: string) {
     this._subject = value;
   }
   public resetSubject() {
@@ -357,15 +462,15 @@ export class EventgridTopicInputMappingFieldsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get subjectInput() {
-    return this._subject
+    return this._subject;
   }
 
   // topic - computed: false, optional: true, required: false
-  private _topic?: string | undefined; 
+  private _topic?: string; 
   public get topic() {
     return this.getStringAttribute('topic');
   }
-  public set topic(value: string | undefined) {
+  public set topic(value: string) {
     this._topic = value;
   }
   public resetTopic() {
@@ -373,7 +478,7 @@ export class EventgridTopicInputMappingFieldsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get topicInput() {
-    return this._topic
+    return this._topic;
   }
 }
 export interface EventgridTopicTimeouts {
@@ -395,7 +500,7 @@ export interface EventgridTopicTimeouts {
   readonly update?: string;
 }
 
-function eventgridTopicTimeoutsToTerraform(struct?: EventgridTopicTimeoutsOutputReference | EventgridTopicTimeouts): any {
+export function eventgridTopicTimeoutsToTerraform(struct?: EventgridTopicTimeoutsOutputReference | EventgridTopicTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -418,12 +523,49 @@ export class EventgridTopicTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): EventgridTopicTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventgridTopicTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -431,15 +573,15 @@ export class EventgridTopicTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -447,15 +589,15 @@ export class EventgridTopicTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -463,15 +605,15 @@ export class EventgridTopicTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -479,7 +621,7 @@ export class EventgridTopicTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -522,10 +664,10 @@ export class EventgridTopic extends cdktf.TerraformResource {
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._identity = config.identity;
-    this._inputMappingDefaultValues = config.inputMappingDefaultValues;
-    this._inputMappingFields = config.inputMappingFields;
-    this._timeouts = config.timeouts;
+    this._identity.internalValue = config.identity;
+    this._inputMappingDefaultValues.internalValue = config.inputMappingDefaultValues;
+    this._inputMappingFields.internalValue = config.inputMappingFields;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -543,12 +685,12 @@ export class EventgridTopic extends cdktf.TerraformResource {
   }
 
   // inbound_ip_rule - computed: false, optional: true, required: false
-  private _inboundIpRule?: EventgridTopicInboundIpRule[] | undefined; 
+  private _inboundIpRule?: EventgridTopicInboundIpRule[]; 
   public get inboundIpRule() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('inbound_ip_rule') as any;
   }
-  public set inboundIpRule(value: EventgridTopicInboundIpRule[] | undefined) {
+  public set inboundIpRule(value: EventgridTopicInboundIpRule[]) {
     this._inboundIpRule = value;
   }
   public resetInboundIpRule() {
@@ -556,15 +698,15 @@ export class EventgridTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get inboundIpRuleInput() {
-    return this._inboundIpRule
+    return this._inboundIpRule;
   }
 
   // input_schema - computed: false, optional: true, required: false
-  private _inputSchema?: string | undefined; 
+  private _inputSchema?: string; 
   public get inputSchema() {
     return this.getStringAttribute('input_schema');
   }
-  public set inputSchema(value: string | undefined) {
+  public set inputSchema(value: string) {
     this._inputSchema = value;
   }
   public resetInputSchema() {
@@ -572,7 +714,7 @@ export class EventgridTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get inputSchemaInput() {
-    return this._inputSchema
+    return this._inputSchema;
   }
 
   // location - computed: false, optional: false, required: true
@@ -585,7 +727,7 @@ export class EventgridTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -598,7 +740,7 @@ export class EventgridTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // primary_access_key - computed: true, optional: false, required: false
@@ -607,11 +749,11 @@ export class EventgridTopic extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled') as any;
   }
-  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -619,7 +761,7 @@ export class EventgridTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get publicNetworkAccessEnabledInput() {
-    return this._publicNetworkAccessEnabled
+    return this._publicNetworkAccessEnabled;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -632,7 +774,7 @@ export class EventgridTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // secondary_access_key - computed: true, optional: false, required: false
@@ -641,12 +783,12 @@ export class EventgridTopic extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -654,75 +796,71 @@ export class EventgridTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: EventgridTopicIdentity | undefined; 
-  private __identityOutput = new EventgridTopicIdentityOutputReference(this as any, "identity", true);
+  private _identity = new EventgridTopicIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.__identityOutput;
+    return this._identity;
   }
-  public putIdentity(value: EventgridTopicIdentity | undefined) {
-    this._identity = value;
+  public putIdentity(value: EventgridTopicIdentity) {
+    this._identity.internalValue = value;
   }
   public resetIdentity() {
-    this._identity = undefined;
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
-    return this._identity
+    return this._identity.internalValue;
   }
 
   // input_mapping_default_values - computed: false, optional: true, required: false
-  private _inputMappingDefaultValues?: EventgridTopicInputMappingDefaultValues | undefined; 
-  private __inputMappingDefaultValuesOutput = new EventgridTopicInputMappingDefaultValuesOutputReference(this as any, "input_mapping_default_values", true);
+  private _inputMappingDefaultValues = new EventgridTopicInputMappingDefaultValuesOutputReference(this as any, "input_mapping_default_values", true);
   public get inputMappingDefaultValues() {
-    return this.__inputMappingDefaultValuesOutput;
+    return this._inputMappingDefaultValues;
   }
-  public putInputMappingDefaultValues(value: EventgridTopicInputMappingDefaultValues | undefined) {
-    this._inputMappingDefaultValues = value;
+  public putInputMappingDefaultValues(value: EventgridTopicInputMappingDefaultValues) {
+    this._inputMappingDefaultValues.internalValue = value;
   }
   public resetInputMappingDefaultValues() {
-    this._inputMappingDefaultValues = undefined;
+    this._inputMappingDefaultValues.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get inputMappingDefaultValuesInput() {
-    return this._inputMappingDefaultValues
+    return this._inputMappingDefaultValues.internalValue;
   }
 
   // input_mapping_fields - computed: false, optional: true, required: false
-  private _inputMappingFields?: EventgridTopicInputMappingFields | undefined; 
-  private __inputMappingFieldsOutput = new EventgridTopicInputMappingFieldsOutputReference(this as any, "input_mapping_fields", true);
+  private _inputMappingFields = new EventgridTopicInputMappingFieldsOutputReference(this as any, "input_mapping_fields", true);
   public get inputMappingFields() {
-    return this.__inputMappingFieldsOutput;
+    return this._inputMappingFields;
   }
-  public putInputMappingFields(value: EventgridTopicInputMappingFields | undefined) {
-    this._inputMappingFields = value;
+  public putInputMappingFields(value: EventgridTopicInputMappingFields) {
+    this._inputMappingFields.internalValue = value;
   }
   public resetInputMappingFields() {
-    this._inputMappingFields = undefined;
+    this._inputMappingFields.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get inputMappingFieldsInput() {
-    return this._inputMappingFields
+    return this._inputMappingFields.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: EventgridTopicTimeouts | undefined; 
-  private __timeoutsOutput = new EventgridTopicTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new EventgridTopicTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: EventgridTopicTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: EventgridTopicTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -738,10 +876,10 @@ export class EventgridTopic extends cdktf.TerraformResource {
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      identity: eventgridTopicIdentityToTerraform(this._identity),
-      input_mapping_default_values: eventgridTopicInputMappingDefaultValuesToTerraform(this._inputMappingDefaultValues),
-      input_mapping_fields: eventgridTopicInputMappingFieldsToTerraform(this._inputMappingFields),
-      timeouts: eventgridTopicTimeoutsToTerraform(this._timeouts),
+      identity: eventgridTopicIdentityToTerraform(this._identity.internalValue),
+      input_mapping_default_values: eventgridTopicInputMappingDefaultValuesToTerraform(this._inputMappingDefaultValues.internalValue),
+      input_mapping_fields: eventgridTopicInputMappingFieldsToTerraform(this._inputMappingFields.internalValue),
+      timeouts: eventgridTopicTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -73,7 +73,7 @@ export interface DataFactoryLinkedServiceSqlServerKeyVaultConnectionString {
   readonly secretName: string;
 }
 
-function dataFactoryLinkedServiceSqlServerKeyVaultConnectionStringToTerraform(struct?: DataFactoryLinkedServiceSqlServerKeyVaultConnectionStringOutputReference | DataFactoryLinkedServiceSqlServerKeyVaultConnectionString): any {
+export function dataFactoryLinkedServiceSqlServerKeyVaultConnectionStringToTerraform(struct?: DataFactoryLinkedServiceSqlServerKeyVaultConnectionStringOutputReference | DataFactoryLinkedServiceSqlServerKeyVaultConnectionString): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -94,6 +94,31 @@ export class DataFactoryLinkedServiceSqlServerKeyVaultConnectionStringOutputRefe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryLinkedServiceSqlServerKeyVaultConnectionString | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._linkedServiceName) {
+      hasAnyValues = true;
+      internalValueResult.linkedServiceName = this._linkedServiceName;
+    }
+    if (this._secretName) {
+      hasAnyValues = true;
+      internalValueResult.secretName = this._secretName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryLinkedServiceSqlServerKeyVaultConnectionString | undefined) {
+    if (value === undefined) {
+      this._linkedServiceName = undefined;
+      this._secretName = undefined;
+    }
+    else {
+      this._linkedServiceName = value.linkedServiceName;
+      this._secretName = value.secretName;
+    }
+  }
+
   // linked_service_name - computed: false, optional: false, required: true
   private _linkedServiceName?: string; 
   public get linkedServiceName() {
@@ -104,7 +129,7 @@ export class DataFactoryLinkedServiceSqlServerKeyVaultConnectionStringOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get linkedServiceNameInput() {
-    return this._linkedServiceName
+    return this._linkedServiceName;
   }
 
   // secret_name - computed: false, optional: false, required: true
@@ -117,7 +142,7 @@ export class DataFactoryLinkedServiceSqlServerKeyVaultConnectionStringOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get secretNameInput() {
-    return this._secretName
+    return this._secretName;
   }
 }
 export interface DataFactoryLinkedServiceSqlServerKeyVaultPassword {
@@ -131,7 +156,7 @@ export interface DataFactoryLinkedServiceSqlServerKeyVaultPassword {
   readonly secretName: string;
 }
 
-function dataFactoryLinkedServiceSqlServerKeyVaultPasswordToTerraform(struct?: DataFactoryLinkedServiceSqlServerKeyVaultPasswordOutputReference | DataFactoryLinkedServiceSqlServerKeyVaultPassword): any {
+export function dataFactoryLinkedServiceSqlServerKeyVaultPasswordToTerraform(struct?: DataFactoryLinkedServiceSqlServerKeyVaultPasswordOutputReference | DataFactoryLinkedServiceSqlServerKeyVaultPassword): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -152,6 +177,31 @@ export class DataFactoryLinkedServiceSqlServerKeyVaultPasswordOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryLinkedServiceSqlServerKeyVaultPassword | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._linkedServiceName) {
+      hasAnyValues = true;
+      internalValueResult.linkedServiceName = this._linkedServiceName;
+    }
+    if (this._secretName) {
+      hasAnyValues = true;
+      internalValueResult.secretName = this._secretName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryLinkedServiceSqlServerKeyVaultPassword | undefined) {
+    if (value === undefined) {
+      this._linkedServiceName = undefined;
+      this._secretName = undefined;
+    }
+    else {
+      this._linkedServiceName = value.linkedServiceName;
+      this._secretName = value.secretName;
+    }
+  }
+
   // linked_service_name - computed: false, optional: false, required: true
   private _linkedServiceName?: string; 
   public get linkedServiceName() {
@@ -162,7 +212,7 @@ export class DataFactoryLinkedServiceSqlServerKeyVaultPasswordOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get linkedServiceNameInput() {
-    return this._linkedServiceName
+    return this._linkedServiceName;
   }
 
   // secret_name - computed: false, optional: false, required: true
@@ -175,7 +225,7 @@ export class DataFactoryLinkedServiceSqlServerKeyVaultPasswordOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get secretNameInput() {
-    return this._secretName
+    return this._secretName;
   }
 }
 export interface DataFactoryLinkedServiceSqlServerTimeouts {
@@ -197,7 +247,7 @@ export interface DataFactoryLinkedServiceSqlServerTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryLinkedServiceSqlServerTimeoutsToTerraform(struct?: DataFactoryLinkedServiceSqlServerTimeoutsOutputReference | DataFactoryLinkedServiceSqlServerTimeouts): any {
+export function dataFactoryLinkedServiceSqlServerTimeoutsToTerraform(struct?: DataFactoryLinkedServiceSqlServerTimeoutsOutputReference | DataFactoryLinkedServiceSqlServerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -220,12 +270,49 @@ export class DataFactoryLinkedServiceSqlServerTimeoutsOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryLinkedServiceSqlServerTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryLinkedServiceSqlServerTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -233,15 +320,15 @@ export class DataFactoryLinkedServiceSqlServerTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -249,15 +336,15 @@ export class DataFactoryLinkedServiceSqlServerTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -265,15 +352,15 @@ export class DataFactoryLinkedServiceSqlServerTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -281,7 +368,7 @@ export class DataFactoryLinkedServiceSqlServerTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -326,9 +413,9 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
     this._name = config.name;
     this._parameters = config.parameters;
     this._resourceGroupName = config.resourceGroupName;
-    this._keyVaultConnectionString = config.keyVaultConnectionString;
-    this._keyVaultPassword = config.keyVaultPassword;
-    this._timeouts = config.timeouts;
+    this._keyVaultConnectionString.internalValue = config.keyVaultConnectionString;
+    this._keyVaultPassword.internalValue = config.keyVaultPassword;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -336,12 +423,12 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable; 
   public get additionalProperties() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -349,15 +436,15 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get additionalPropertiesInput() {
-    return this._additionalProperties
+    return this._additionalProperties;
   }
 
   // annotations - computed: false, optional: true, required: false
-  private _annotations?: string[] | undefined; 
+  private _annotations?: string[]; 
   public get annotations() {
     return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] | undefined) {
+  public set annotations(value: string[]) {
     this._annotations = value;
   }
   public resetAnnotations() {
@@ -365,15 +452,15 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get annotationsInput() {
-    return this._annotations
+    return this._annotations;
   }
 
   // connection_string - computed: false, optional: true, required: false
-  private _connectionString?: string | undefined; 
+  private _connectionString?: string; 
   public get connectionString() {
     return this.getStringAttribute('connection_string');
   }
-  public set connectionString(value: string | undefined) {
+  public set connectionString(value: string) {
     this._connectionString = value;
   }
   public resetConnectionString() {
@@ -381,7 +468,7 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get connectionStringInput() {
-    return this._connectionString
+    return this._connectionString;
   }
 
   // data_factory_name - computed: false, optional: false, required: true
@@ -394,15 +481,15 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryNameInput() {
-    return this._dataFactoryName
+    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -410,7 +497,7 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -419,11 +506,11 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
   }
 
   // integration_runtime_name - computed: false, optional: true, required: false
-  private _integrationRuntimeName?: string | undefined; 
+  private _integrationRuntimeName?: string; 
   public get integrationRuntimeName() {
     return this.getStringAttribute('integration_runtime_name');
   }
-  public set integrationRuntimeName(value: string | undefined) {
+  public set integrationRuntimeName(value: string) {
     this._integrationRuntimeName = value;
   }
   public resetIntegrationRuntimeName() {
@@ -431,7 +518,7 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get integrationRuntimeNameInput() {
-    return this._integrationRuntimeName
+    return this._integrationRuntimeName;
   }
 
   // name - computed: false, optional: false, required: true
@@ -444,16 +531,16 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -461,7 +548,7 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -474,58 +561,55 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // key_vault_connection_string - computed: false, optional: true, required: false
-  private _keyVaultConnectionString?: DataFactoryLinkedServiceSqlServerKeyVaultConnectionString | undefined; 
-  private __keyVaultConnectionStringOutput = new DataFactoryLinkedServiceSqlServerKeyVaultConnectionStringOutputReference(this as any, "key_vault_connection_string", true);
+  private _keyVaultConnectionString = new DataFactoryLinkedServiceSqlServerKeyVaultConnectionStringOutputReference(this as any, "key_vault_connection_string", true);
   public get keyVaultConnectionString() {
-    return this.__keyVaultConnectionStringOutput;
+    return this._keyVaultConnectionString;
   }
-  public putKeyVaultConnectionString(value: DataFactoryLinkedServiceSqlServerKeyVaultConnectionString | undefined) {
-    this._keyVaultConnectionString = value;
+  public putKeyVaultConnectionString(value: DataFactoryLinkedServiceSqlServerKeyVaultConnectionString) {
+    this._keyVaultConnectionString.internalValue = value;
   }
   public resetKeyVaultConnectionString() {
-    this._keyVaultConnectionString = undefined;
+    this._keyVaultConnectionString.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get keyVaultConnectionStringInput() {
-    return this._keyVaultConnectionString
+    return this._keyVaultConnectionString.internalValue;
   }
 
   // key_vault_password - computed: false, optional: true, required: false
-  private _keyVaultPassword?: DataFactoryLinkedServiceSqlServerKeyVaultPassword | undefined; 
-  private __keyVaultPasswordOutput = new DataFactoryLinkedServiceSqlServerKeyVaultPasswordOutputReference(this as any, "key_vault_password", true);
+  private _keyVaultPassword = new DataFactoryLinkedServiceSqlServerKeyVaultPasswordOutputReference(this as any, "key_vault_password", true);
   public get keyVaultPassword() {
-    return this.__keyVaultPasswordOutput;
+    return this._keyVaultPassword;
   }
-  public putKeyVaultPassword(value: DataFactoryLinkedServiceSqlServerKeyVaultPassword | undefined) {
-    this._keyVaultPassword = value;
+  public putKeyVaultPassword(value: DataFactoryLinkedServiceSqlServerKeyVaultPassword) {
+    this._keyVaultPassword.internalValue = value;
   }
   public resetKeyVaultPassword() {
-    this._keyVaultPassword = undefined;
+    this._keyVaultPassword.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get keyVaultPasswordInput() {
-    return this._keyVaultPassword
+    return this._keyVaultPassword.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryLinkedServiceSqlServerTimeouts | undefined; 
-  private __timeoutsOutput = new DataFactoryLinkedServiceSqlServerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryLinkedServiceSqlServerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataFactoryLinkedServiceSqlServerTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataFactoryLinkedServiceSqlServerTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -543,9 +627,9 @@ export class DataFactoryLinkedServiceSqlServer extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      key_vault_connection_string: dataFactoryLinkedServiceSqlServerKeyVaultConnectionStringToTerraform(this._keyVaultConnectionString),
-      key_vault_password: dataFactoryLinkedServiceSqlServerKeyVaultPasswordToTerraform(this._keyVaultPassword),
-      timeouts: dataFactoryLinkedServiceSqlServerTimeoutsToTerraform(this._timeouts),
+      key_vault_connection_string: dataFactoryLinkedServiceSqlServerKeyVaultConnectionStringToTerraform(this._keyVaultConnectionString.internalValue),
+      key_vault_password: dataFactoryLinkedServiceSqlServerKeyVaultPasswordToTerraform(this._keyVaultPassword.internalValue),
+      timeouts: dataFactoryLinkedServiceSqlServerTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

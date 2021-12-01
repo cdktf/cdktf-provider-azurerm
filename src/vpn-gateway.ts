@@ -55,7 +55,7 @@ export interface VpnGatewayBgpSettingsInstance0BgpPeeringAddress {
   readonly customIps: string[];
 }
 
-function vpnGatewayBgpSettingsInstance0BgpPeeringAddressToTerraform(struct?: VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference | VpnGatewayBgpSettingsInstance0BgpPeeringAddress): any {
+export function vpnGatewayBgpSettingsInstance0BgpPeeringAddressToTerraform(struct?: VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference | VpnGatewayBgpSettingsInstance0BgpPeeringAddress): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -75,6 +75,25 @@ export class VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): VpnGatewayBgpSettingsInstance0BgpPeeringAddress | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._customIps) {
+      hasAnyValues = true;
+      internalValueResult.customIps = this._customIps;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpnGatewayBgpSettingsInstance0BgpPeeringAddress | undefined) {
+    if (value === undefined) {
+      this._customIps = undefined;
+    }
+    else {
+      this._customIps = value.customIps;
+    }
+  }
+
   // custom_ips - computed: false, optional: false, required: true
   private _customIps?: string[]; 
   public get customIps() {
@@ -85,7 +104,7 @@ export class VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get customIpsInput() {
-    return this._customIps
+    return this._customIps;
   }
 }
 export interface VpnGatewayBgpSettingsInstance1BgpPeeringAddress {
@@ -95,7 +114,7 @@ export interface VpnGatewayBgpSettingsInstance1BgpPeeringAddress {
   readonly customIps: string[];
 }
 
-function vpnGatewayBgpSettingsInstance1BgpPeeringAddressToTerraform(struct?: VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference | VpnGatewayBgpSettingsInstance1BgpPeeringAddress): any {
+export function vpnGatewayBgpSettingsInstance1BgpPeeringAddressToTerraform(struct?: VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference | VpnGatewayBgpSettingsInstance1BgpPeeringAddress): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -115,6 +134,25 @@ export class VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): VpnGatewayBgpSettingsInstance1BgpPeeringAddress | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._customIps) {
+      hasAnyValues = true;
+      internalValueResult.customIps = this._customIps;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpnGatewayBgpSettingsInstance1BgpPeeringAddress | undefined) {
+    if (value === undefined) {
+      this._customIps = undefined;
+    }
+    else {
+      this._customIps = value.customIps;
+    }
+  }
+
   // custom_ips - computed: false, optional: false, required: true
   private _customIps?: string[]; 
   public get customIps() {
@@ -125,7 +163,7 @@ export class VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get customIpsInput() {
-    return this._customIps
+    return this._customIps;
   }
 }
 export interface VpnGatewayBgpSettings {
@@ -151,7 +189,7 @@ export interface VpnGatewayBgpSettings {
   readonly instance1BgpPeeringAddress?: VpnGatewayBgpSettingsInstance1BgpPeeringAddress;
 }
 
-function vpnGatewayBgpSettingsToTerraform(struct?: VpnGatewayBgpSettingsOutputReference | VpnGatewayBgpSettings): any {
+export function vpnGatewayBgpSettingsToTerraform(struct?: VpnGatewayBgpSettingsOutputReference | VpnGatewayBgpSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -174,6 +212,43 @@ export class VpnGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): VpnGatewayBgpSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._asn) {
+      hasAnyValues = true;
+      internalValueResult.asn = this._asn;
+    }
+    if (this._peerWeight) {
+      hasAnyValues = true;
+      internalValueResult.peerWeight = this._peerWeight;
+    }
+    if (this._instance0BgpPeeringAddress) {
+      hasAnyValues = true;
+      internalValueResult.instance0BgpPeeringAddress = this._instance0BgpPeeringAddress?.internalValue;
+    }
+    if (this._instance1BgpPeeringAddress) {
+      hasAnyValues = true;
+      internalValueResult.instance1BgpPeeringAddress = this._instance1BgpPeeringAddress?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpnGatewayBgpSettings | undefined) {
+    if (value === undefined) {
+      this._asn = undefined;
+      this._peerWeight = undefined;
+      this._instance0BgpPeeringAddress.internalValue = undefined;
+      this._instance1BgpPeeringAddress.internalValue = undefined;
+    }
+    else {
+      this._asn = value.asn;
+      this._peerWeight = value.peerWeight;
+      this._instance0BgpPeeringAddress.internalValue = value.instance0BgpPeeringAddress;
+      this._instance1BgpPeeringAddress.internalValue = value.instance1BgpPeeringAddress;
+    }
+  }
+
   // asn - computed: false, optional: false, required: true
   private _asn?: number; 
   public get asn() {
@@ -184,7 +259,7 @@ export class VpnGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get asnInput() {
-    return this._asn
+    return this._asn;
   }
 
   // peer_weight - computed: false, optional: false, required: true
@@ -197,41 +272,39 @@ export class VpnGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get peerWeightInput() {
-    return this._peerWeight
+    return this._peerWeight;
   }
 
   // instance_0_bgp_peering_address - computed: false, optional: true, required: false
-  private _instance0BgpPeeringAddress?: VpnGatewayBgpSettingsInstance0BgpPeeringAddress | undefined; 
-  private __instance0BgpPeeringAddressOutput = new VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference(this as any, "instance_0_bgp_peering_address", true);
+  private _instance0BgpPeeringAddress = new VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference(this as any, "instance_0_bgp_peering_address", true);
   public get instance0BgpPeeringAddress() {
-    return this.__instance0BgpPeeringAddressOutput;
+    return this._instance0BgpPeeringAddress;
   }
-  public putInstance0BgpPeeringAddress(value: VpnGatewayBgpSettingsInstance0BgpPeeringAddress | undefined) {
-    this._instance0BgpPeeringAddress = value;
+  public putInstance0BgpPeeringAddress(value: VpnGatewayBgpSettingsInstance0BgpPeeringAddress) {
+    this._instance0BgpPeeringAddress.internalValue = value;
   }
   public resetInstance0BgpPeeringAddress() {
-    this._instance0BgpPeeringAddress = undefined;
+    this._instance0BgpPeeringAddress.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get instance0BgpPeeringAddressInput() {
-    return this._instance0BgpPeeringAddress
+    return this._instance0BgpPeeringAddress.internalValue;
   }
 
   // instance_1_bgp_peering_address - computed: false, optional: true, required: false
-  private _instance1BgpPeeringAddress?: VpnGatewayBgpSettingsInstance1BgpPeeringAddress | undefined; 
-  private __instance1BgpPeeringAddressOutput = new VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference(this as any, "instance_1_bgp_peering_address", true);
+  private _instance1BgpPeeringAddress = new VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference(this as any, "instance_1_bgp_peering_address", true);
   public get instance1BgpPeeringAddress() {
-    return this.__instance1BgpPeeringAddressOutput;
+    return this._instance1BgpPeeringAddress;
   }
-  public putInstance1BgpPeeringAddress(value: VpnGatewayBgpSettingsInstance1BgpPeeringAddress | undefined) {
-    this._instance1BgpPeeringAddress = value;
+  public putInstance1BgpPeeringAddress(value: VpnGatewayBgpSettingsInstance1BgpPeeringAddress) {
+    this._instance1BgpPeeringAddress.internalValue = value;
   }
   public resetInstance1BgpPeeringAddress() {
-    this._instance1BgpPeeringAddress = undefined;
+    this._instance1BgpPeeringAddress.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get instance1BgpPeeringAddressInput() {
-    return this._instance1BgpPeeringAddress
+    return this._instance1BgpPeeringAddress.internalValue;
   }
 }
 export interface VpnGatewayTimeouts {
@@ -253,7 +326,7 @@ export interface VpnGatewayTimeouts {
   readonly update?: string;
 }
 
-function vpnGatewayTimeoutsToTerraform(struct?: VpnGatewayTimeoutsOutputReference | VpnGatewayTimeouts): any {
+export function vpnGatewayTimeoutsToTerraform(struct?: VpnGatewayTimeoutsOutputReference | VpnGatewayTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -276,12 +349,49 @@ export class VpnGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): VpnGatewayTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VpnGatewayTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -289,15 +399,15 @@ export class VpnGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -305,15 +415,15 @@ export class VpnGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -321,15 +431,15 @@ export class VpnGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -337,7 +447,7 @@ export class VpnGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -380,8 +490,8 @@ export class VpnGateway extends cdktf.TerraformResource {
     this._scaleUnit = config.scaleUnit;
     this._tags = config.tags;
     this._virtualHubId = config.virtualHubId;
-    this._bgpSettings = config.bgpSettings;
-    this._timeouts = config.timeouts;
+    this._bgpSettings.internalValue = config.bgpSettings;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -403,7 +513,7 @@ export class VpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -416,7 +526,7 @@ export class VpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -429,15 +539,15 @@ export class VpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // routing_preference - computed: true, optional: true, required: false
-  private _routingPreference?: string | undefined; 
+  private _routingPreference?: string; 
   public get routingPreference() {
     return this.getStringAttribute('routing_preference');
   }
-  public set routingPreference(value: string | undefined) {
+  public set routingPreference(value: string) {
     this._routingPreference = value;
   }
   public resetRoutingPreference() {
@@ -445,15 +555,15 @@ export class VpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get routingPreferenceInput() {
-    return this._routingPreference
+    return this._routingPreference;
   }
 
   // scale_unit - computed: false, optional: true, required: false
-  private _scaleUnit?: number | undefined; 
+  private _scaleUnit?: number; 
   public get scaleUnit() {
     return this.getNumberAttribute('scale_unit');
   }
-  public set scaleUnit(value: number | undefined) {
+  public set scaleUnit(value: number) {
     this._scaleUnit = value;
   }
   public resetScaleUnit() {
@@ -461,16 +571,16 @@ export class VpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get scaleUnitInput() {
-    return this._scaleUnit
+    return this._scaleUnit;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -478,7 +588,7 @@ export class VpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // virtual_hub_id - computed: false, optional: false, required: true
@@ -491,41 +601,39 @@ export class VpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get virtualHubIdInput() {
-    return this._virtualHubId
+    return this._virtualHubId;
   }
 
   // bgp_settings - computed: false, optional: true, required: false
-  private _bgpSettings?: VpnGatewayBgpSettings | undefined; 
-  private __bgpSettingsOutput = new VpnGatewayBgpSettingsOutputReference(this as any, "bgp_settings", true);
+  private _bgpSettings = new VpnGatewayBgpSettingsOutputReference(this as any, "bgp_settings", true);
   public get bgpSettings() {
-    return this.__bgpSettingsOutput;
+    return this._bgpSettings;
   }
-  public putBgpSettings(value: VpnGatewayBgpSettings | undefined) {
-    this._bgpSettings = value;
+  public putBgpSettings(value: VpnGatewayBgpSettings) {
+    this._bgpSettings.internalValue = value;
   }
   public resetBgpSettings() {
-    this._bgpSettings = undefined;
+    this._bgpSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get bgpSettingsInput() {
-    return this._bgpSettings
+    return this._bgpSettings.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VpnGatewayTimeouts | undefined; 
-  private __timeoutsOutput = new VpnGatewayTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VpnGatewayTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: VpnGatewayTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: VpnGatewayTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -541,8 +649,8 @@ export class VpnGateway extends cdktf.TerraformResource {
       scale_unit: cdktf.numberToTerraform(this._scaleUnit),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       virtual_hub_id: cdktf.stringToTerraform(this._virtualHubId),
-      bgp_settings: vpnGatewayBgpSettingsToTerraform(this._bgpSettings),
-      timeouts: vpnGatewayTimeoutsToTerraform(this._timeouts),
+      bgp_settings: vpnGatewayBgpSettingsToTerraform(this._bgpSettings.internalValue),
+      timeouts: vpnGatewayTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

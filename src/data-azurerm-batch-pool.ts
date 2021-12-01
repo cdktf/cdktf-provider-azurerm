@@ -206,7 +206,7 @@ export interface DataAzurermBatchPoolCertificate {
   readonly visibility?: string[];
 }
 
-function dataAzurermBatchPoolCertificateToTerraform(struct?: DataAzurermBatchPoolCertificate): any {
+export function dataAzurermBatchPoolCertificateToTerraform(struct?: DataAzurermBatchPoolCertificate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -238,7 +238,7 @@ export interface DataAzurermBatchPoolStartTask {
   readonly waitForSuccess?: boolean | cdktf.IResolvable;
 }
 
-function dataAzurermBatchPoolStartTaskToTerraform(struct?: DataAzurermBatchPoolStartTaskOutputReference | DataAzurermBatchPoolStartTask): any {
+export function dataAzurermBatchPoolStartTaskToTerraform(struct?: DataAzurermBatchPoolStartTaskOutputReference | DataAzurermBatchPoolStartTask): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -261,6 +261,43 @@ export class DataAzurermBatchPoolStartTaskOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermBatchPoolStartTask | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._commandLine) {
+      hasAnyValues = true;
+      internalValueResult.commandLine = this._commandLine;
+    }
+    if (this._environment) {
+      hasAnyValues = true;
+      internalValueResult.environment = this._environment;
+    }
+    if (this._maxTaskRetryCount) {
+      hasAnyValues = true;
+      internalValueResult.maxTaskRetryCount = this._maxTaskRetryCount;
+    }
+    if (this._waitForSuccess) {
+      hasAnyValues = true;
+      internalValueResult.waitForSuccess = this._waitForSuccess;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolStartTask | undefined) {
+    if (value === undefined) {
+      this._commandLine = undefined;
+      this._environment = undefined;
+      this._maxTaskRetryCount = undefined;
+      this._waitForSuccess = undefined;
+    }
+    else {
+      this._commandLine = value.commandLine;
+      this._environment = value.environment;
+      this._maxTaskRetryCount = value.maxTaskRetryCount;
+      this._waitForSuccess = value.waitForSuccess;
+    }
+  }
+
   // command_line - computed: false, optional: false, required: true
   private _commandLine?: string; 
   public get commandLine() {
@@ -271,16 +308,16 @@ export class DataAzurermBatchPoolStartTaskOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get commandLineInput() {
-    return this._commandLine
+    return this._commandLine;
   }
 
   // environment - computed: false, optional: true, required: false
-  private _environment?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _environment?: { [key: string]: string } | cdktf.IResolvable; 
   public get environment() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('environment') as any;
   }
-  public set environment(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set environment(value: { [key: string]: string } | cdktf.IResolvable) {
     this._environment = value;
   }
   public resetEnvironment() {
@@ -288,15 +325,15 @@ export class DataAzurermBatchPoolStartTaskOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get environmentInput() {
-    return this._environment
+    return this._environment;
   }
 
   // max_task_retry_count - computed: false, optional: true, required: false
-  private _maxTaskRetryCount?: number | undefined; 
+  private _maxTaskRetryCount?: number; 
   public get maxTaskRetryCount() {
     return this.getNumberAttribute('max_task_retry_count');
   }
-  public set maxTaskRetryCount(value: number | undefined) {
+  public set maxTaskRetryCount(value: number) {
     this._maxTaskRetryCount = value;
   }
   public resetMaxTaskRetryCount() {
@@ -304,15 +341,15 @@ export class DataAzurermBatchPoolStartTaskOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get maxTaskRetryCountInput() {
-    return this._maxTaskRetryCount
+    return this._maxTaskRetryCount;
   }
 
   // wait_for_success - computed: false, optional: true, required: false
-  private _waitForSuccess?: boolean | cdktf.IResolvable | undefined; 
+  private _waitForSuccess?: boolean | cdktf.IResolvable; 
   public get waitForSuccess() {
     return this.getBooleanAttribute('wait_for_success') as any;
   }
-  public set waitForSuccess(value: boolean | cdktf.IResolvable | undefined) {
+  public set waitForSuccess(value: boolean | cdktf.IResolvable) {
     this._waitForSuccess = value;
   }
   public resetWaitForSuccess() {
@@ -320,7 +357,7 @@ export class DataAzurermBatchPoolStartTaskOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get waitForSuccessInput() {
-    return this._waitForSuccess
+    return this._waitForSuccess;
   }
 }
 export interface DataAzurermBatchPoolTimeouts {
@@ -330,7 +367,7 @@ export interface DataAzurermBatchPoolTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermBatchPoolTimeoutsToTerraform(struct?: DataAzurermBatchPoolTimeoutsOutputReference | DataAzurermBatchPoolTimeouts): any {
+export function dataAzurermBatchPoolTimeoutsToTerraform(struct?: DataAzurermBatchPoolTimeoutsOutputReference | DataAzurermBatchPoolTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -350,12 +387,31 @@ export class DataAzurermBatchPoolTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermBatchPoolTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermBatchPoolTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -363,7 +419,7 @@ export class DataAzurermBatchPoolTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -403,8 +459,8 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._certificate = config.certificate;
-    this._startTask = config.startTask;
-    this._timeouts = config.timeouts;
+    this._startTask.internalValue = config.startTask;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -421,7 +477,7 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get accountNameInput() {
-    return this._accountName
+    return this._accountName;
   }
 
   // auto_scale - computed: true, optional: false, required: false
@@ -469,7 +525,7 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network_configuration - computed: true, optional: false, required: false
@@ -492,7 +548,7 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // storage_image_reference - computed: true, optional: false, required: false
@@ -506,12 +562,12 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
   }
 
   // certificate - computed: false, optional: true, required: false
-  private _certificate?: DataAzurermBatchPoolCertificate[] | undefined; 
+  private _certificate?: DataAzurermBatchPoolCertificate[]; 
   public get certificate() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('certificate') as any;
   }
-  public set certificate(value: DataAzurermBatchPoolCertificate[] | undefined) {
+  public set certificate(value: DataAzurermBatchPoolCertificate[]) {
     this._certificate = value;
   }
   public resetCertificate() {
@@ -519,41 +575,39 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get certificateInput() {
-    return this._certificate
+    return this._certificate;
   }
 
   // start_task - computed: false, optional: true, required: false
-  private _startTask?: DataAzurermBatchPoolStartTask | undefined; 
-  private __startTaskOutput = new DataAzurermBatchPoolStartTaskOutputReference(this as any, "start_task", true);
+  private _startTask = new DataAzurermBatchPoolStartTaskOutputReference(this as any, "start_task", true);
   public get startTask() {
-    return this.__startTaskOutput;
+    return this._startTask;
   }
-  public putStartTask(value: DataAzurermBatchPoolStartTask | undefined) {
-    this._startTask = value;
+  public putStartTask(value: DataAzurermBatchPoolStartTask) {
+    this._startTask.internalValue = value;
   }
   public resetStartTask() {
-    this._startTask = undefined;
+    this._startTask.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get startTaskInput() {
-    return this._startTask
+    return this._startTask.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermBatchPoolTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermBatchPoolTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermBatchPoolTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermBatchPoolTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermBatchPoolTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -566,8 +620,8 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       certificate: cdktf.listMapper(dataAzurermBatchPoolCertificateToTerraform)(this._certificate),
-      start_task: dataAzurermBatchPoolStartTaskToTerraform(this._startTask),
-      timeouts: dataAzurermBatchPoolTimeoutsToTerraform(this._timeouts),
+      start_task: dataAzurermBatchPoolStartTaskToTerraform(this._startTask.internalValue),
+      timeouts: dataAzurermBatchPoolTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

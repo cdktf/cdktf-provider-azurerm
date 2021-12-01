@@ -65,7 +65,7 @@ export interface LbProbeTimeouts {
   readonly update?: string;
 }
 
-function lbProbeTimeoutsToTerraform(struct?: LbProbeTimeoutsOutputReference | LbProbeTimeouts): any {
+export function lbProbeTimeoutsToTerraform(struct?: LbProbeTimeoutsOutputReference | LbProbeTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -88,12 +88,49 @@ export class LbProbeTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LbProbeTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LbProbeTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -101,15 +138,15 @@ export class LbProbeTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -117,15 +154,15 @@ export class LbProbeTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -133,15 +170,15 @@ export class LbProbeTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -149,7 +186,7 @@ export class LbProbeTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -193,7 +230,7 @@ export class LbProbe extends cdktf.TerraformResource {
     this._protocol = config.protocol;
     this._requestPath = config.requestPath;
     this._resourceGroupName = config.resourceGroupName;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -206,11 +243,11 @@ export class LbProbe extends cdktf.TerraformResource {
   }
 
   // interval_in_seconds - computed: false, optional: true, required: false
-  private _intervalInSeconds?: number | undefined; 
+  private _intervalInSeconds?: number; 
   public get intervalInSeconds() {
     return this.getNumberAttribute('interval_in_seconds');
   }
-  public set intervalInSeconds(value: number | undefined) {
+  public set intervalInSeconds(value: number) {
     this._intervalInSeconds = value;
   }
   public resetIntervalInSeconds() {
@@ -218,7 +255,7 @@ export class LbProbe extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get intervalInSecondsInput() {
-    return this._intervalInSeconds
+    return this._intervalInSeconds;
   }
 
   // load_balancer_rules - computed: true, optional: false, required: false
@@ -236,7 +273,7 @@ export class LbProbe extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get loadbalancerIdInput() {
-    return this._loadbalancerId
+    return this._loadbalancerId;
   }
 
   // name - computed: false, optional: false, required: true
@@ -249,15 +286,15 @@ export class LbProbe extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // number_of_probes - computed: false, optional: true, required: false
-  private _numberOfProbes?: number | undefined; 
+  private _numberOfProbes?: number; 
   public get numberOfProbes() {
     return this.getNumberAttribute('number_of_probes');
   }
-  public set numberOfProbes(value: number | undefined) {
+  public set numberOfProbes(value: number) {
     this._numberOfProbes = value;
   }
   public resetNumberOfProbes() {
@@ -265,7 +302,7 @@ export class LbProbe extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get numberOfProbesInput() {
-    return this._numberOfProbes
+    return this._numberOfProbes;
   }
 
   // port - computed: false, optional: false, required: true
@@ -278,15 +315,15 @@ export class LbProbe extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get portInput() {
-    return this._port
+    return this._port;
   }
 
   // protocol - computed: true, optional: true, required: false
-  private _protocol?: string | undefined; 
+  private _protocol?: string; 
   public get protocol() {
     return this.getStringAttribute('protocol');
   }
-  public set protocol(value: string | undefined) {
+  public set protocol(value: string) {
     this._protocol = value;
   }
   public resetProtocol() {
@@ -294,15 +331,15 @@ export class LbProbe extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get protocolInput() {
-    return this._protocol
+    return this._protocol;
   }
 
   // request_path - computed: false, optional: true, required: false
-  private _requestPath?: string | undefined; 
+  private _requestPath?: string; 
   public get requestPath() {
     return this.getStringAttribute('request_path');
   }
-  public set requestPath(value: string | undefined) {
+  public set requestPath(value: string) {
     this._requestPath = value;
   }
   public resetRequestPath() {
@@ -310,7 +347,7 @@ export class LbProbe extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get requestPathInput() {
-    return this._requestPath
+    return this._requestPath;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -323,24 +360,23 @@ export class LbProbe extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LbProbeTimeouts | undefined; 
-  private __timeoutsOutput = new LbProbeTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LbProbeTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: LbProbeTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: LbProbeTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -357,7 +393,7 @@ export class LbProbe extends cdktf.TerraformResource {
       protocol: cdktf.stringToTerraform(this._protocol),
       request_path: cdktf.stringToTerraform(this._requestPath),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      timeouts: lbProbeTimeoutsToTerraform(this._timeouts),
+      timeouts: lbProbeTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

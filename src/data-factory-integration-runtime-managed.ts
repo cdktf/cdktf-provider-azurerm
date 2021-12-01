@@ -91,7 +91,7 @@ export interface DataFactoryIntegrationRuntimeManagedCatalogInfo {
   readonly serverEndpoint: string;
 }
 
-function dataFactoryIntegrationRuntimeManagedCatalogInfoToTerraform(struct?: DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference | DataFactoryIntegrationRuntimeManagedCatalogInfo): any {
+export function dataFactoryIntegrationRuntimeManagedCatalogInfoToTerraform(struct?: DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference | DataFactoryIntegrationRuntimeManagedCatalogInfo): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -114,12 +114,49 @@ export class DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryIntegrationRuntimeManagedCatalogInfo | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._administratorLogin) {
+      hasAnyValues = true;
+      internalValueResult.administratorLogin = this._administratorLogin;
+    }
+    if (this._administratorPassword) {
+      hasAnyValues = true;
+      internalValueResult.administratorPassword = this._administratorPassword;
+    }
+    if (this._pricingTier) {
+      hasAnyValues = true;
+      internalValueResult.pricingTier = this._pricingTier;
+    }
+    if (this._serverEndpoint) {
+      hasAnyValues = true;
+      internalValueResult.serverEndpoint = this._serverEndpoint;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryIntegrationRuntimeManagedCatalogInfo | undefined) {
+    if (value === undefined) {
+      this._administratorLogin = undefined;
+      this._administratorPassword = undefined;
+      this._pricingTier = undefined;
+      this._serverEndpoint = undefined;
+    }
+    else {
+      this._administratorLogin = value.administratorLogin;
+      this._administratorPassword = value.administratorPassword;
+      this._pricingTier = value.pricingTier;
+      this._serverEndpoint = value.serverEndpoint;
+    }
+  }
+
   // administrator_login - computed: false, optional: true, required: false
-  private _administratorLogin?: string | undefined; 
+  private _administratorLogin?: string; 
   public get administratorLogin() {
     return this.getStringAttribute('administrator_login');
   }
-  public set administratorLogin(value: string | undefined) {
+  public set administratorLogin(value: string) {
     this._administratorLogin = value;
   }
   public resetAdministratorLogin() {
@@ -127,15 +164,15 @@ export class DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get administratorLoginInput() {
-    return this._administratorLogin
+    return this._administratorLogin;
   }
 
   // administrator_password - computed: false, optional: true, required: false
-  private _administratorPassword?: string | undefined; 
+  private _administratorPassword?: string; 
   public get administratorPassword() {
     return this.getStringAttribute('administrator_password');
   }
-  public set administratorPassword(value: string | undefined) {
+  public set administratorPassword(value: string) {
     this._administratorPassword = value;
   }
   public resetAdministratorPassword() {
@@ -143,15 +180,15 @@ export class DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get administratorPasswordInput() {
-    return this._administratorPassword
+    return this._administratorPassword;
   }
 
   // pricing_tier - computed: false, optional: true, required: false
-  private _pricingTier?: string | undefined; 
+  private _pricingTier?: string; 
   public get pricingTier() {
     return this.getStringAttribute('pricing_tier');
   }
-  public set pricingTier(value: string | undefined) {
+  public set pricingTier(value: string) {
     this._pricingTier = value;
   }
   public resetPricingTier() {
@@ -159,7 +196,7 @@ export class DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get pricingTierInput() {
-    return this._pricingTier
+    return this._pricingTier;
   }
 
   // server_endpoint - computed: false, optional: false, required: true
@@ -172,7 +209,7 @@ export class DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get serverEndpointInput() {
-    return this._serverEndpoint
+    return this._serverEndpoint;
   }
 }
 export interface DataFactoryIntegrationRuntimeManagedCustomSetupScript {
@@ -186,7 +223,7 @@ export interface DataFactoryIntegrationRuntimeManagedCustomSetupScript {
   readonly sasToken: string;
 }
 
-function dataFactoryIntegrationRuntimeManagedCustomSetupScriptToTerraform(struct?: DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReference | DataFactoryIntegrationRuntimeManagedCustomSetupScript): any {
+export function dataFactoryIntegrationRuntimeManagedCustomSetupScriptToTerraform(struct?: DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReference | DataFactoryIntegrationRuntimeManagedCustomSetupScript): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -207,6 +244,31 @@ export class DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReferenc
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryIntegrationRuntimeManagedCustomSetupScript | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._blobContainerUri) {
+      hasAnyValues = true;
+      internalValueResult.blobContainerUri = this._blobContainerUri;
+    }
+    if (this._sasToken) {
+      hasAnyValues = true;
+      internalValueResult.sasToken = this._sasToken;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryIntegrationRuntimeManagedCustomSetupScript | undefined) {
+    if (value === undefined) {
+      this._blobContainerUri = undefined;
+      this._sasToken = undefined;
+    }
+    else {
+      this._blobContainerUri = value.blobContainerUri;
+      this._sasToken = value.sasToken;
+    }
+  }
+
   // blob_container_uri - computed: false, optional: false, required: true
   private _blobContainerUri?: string; 
   public get blobContainerUri() {
@@ -217,7 +279,7 @@ export class DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get blobContainerUriInput() {
-    return this._blobContainerUri
+    return this._blobContainerUri;
   }
 
   // sas_token - computed: false, optional: false, required: true
@@ -230,7 +292,7 @@ export class DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get sasTokenInput() {
-    return this._sasToken
+    return this._sasToken;
   }
 }
 export interface DataFactoryIntegrationRuntimeManagedTimeouts {
@@ -252,7 +314,7 @@ export interface DataFactoryIntegrationRuntimeManagedTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryIntegrationRuntimeManagedTimeoutsToTerraform(struct?: DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference | DataFactoryIntegrationRuntimeManagedTimeouts): any {
+export function dataFactoryIntegrationRuntimeManagedTimeoutsToTerraform(struct?: DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference | DataFactoryIntegrationRuntimeManagedTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -275,12 +337,49 @@ export class DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryIntegrationRuntimeManagedTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryIntegrationRuntimeManagedTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -288,15 +387,15 @@ export class DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -304,15 +403,15 @@ export class DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -320,15 +419,15 @@ export class DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -336,7 +435,7 @@ export class DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface DataFactoryIntegrationRuntimeManagedVnetIntegration {
@@ -350,7 +449,7 @@ export interface DataFactoryIntegrationRuntimeManagedVnetIntegration {
   readonly vnetId: string;
 }
 
-function dataFactoryIntegrationRuntimeManagedVnetIntegrationToTerraform(struct?: DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference | DataFactoryIntegrationRuntimeManagedVnetIntegration): any {
+export function dataFactoryIntegrationRuntimeManagedVnetIntegrationToTerraform(struct?: DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference | DataFactoryIntegrationRuntimeManagedVnetIntegration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -371,6 +470,31 @@ export class DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryIntegrationRuntimeManagedVnetIntegration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._subnetName) {
+      hasAnyValues = true;
+      internalValueResult.subnetName = this._subnetName;
+    }
+    if (this._vnetId) {
+      hasAnyValues = true;
+      internalValueResult.vnetId = this._vnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryIntegrationRuntimeManagedVnetIntegration | undefined) {
+    if (value === undefined) {
+      this._subnetName = undefined;
+      this._vnetId = undefined;
+    }
+    else {
+      this._subnetName = value.subnetName;
+      this._vnetId = value.vnetId;
+    }
+  }
+
   // subnet_name - computed: false, optional: false, required: true
   private _subnetName?: string; 
   public get subnetName() {
@@ -381,7 +505,7 @@ export class DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get subnetNameInput() {
-    return this._subnetName
+    return this._subnetName;
   }
 
   // vnet_id - computed: false, optional: false, required: true
@@ -394,7 +518,7 @@ export class DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get vnetIdInput() {
-    return this._vnetId
+    return this._vnetId;
   }
 }
 
@@ -440,10 +564,10 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
     this._nodeSize = config.nodeSize;
     this._numberOfNodes = config.numberOfNodes;
     this._resourceGroupName = config.resourceGroupName;
-    this._catalogInfo = config.catalogInfo;
-    this._customSetupScript = config.customSetupScript;
-    this._timeouts = config.timeouts;
-    this._vnetIntegration = config.vnetIntegration;
+    this._catalogInfo.internalValue = config.catalogInfo;
+    this._customSetupScript.internalValue = config.customSetupScript;
+    this._timeouts.internalValue = config.timeouts;
+    this._vnetIntegration.internalValue = config.vnetIntegration;
   }
 
   // ==========
@@ -460,15 +584,15 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryNameInput() {
-    return this._dataFactoryName
+    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -476,15 +600,15 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // edition - computed: false, optional: true, required: false
-  private _edition?: string | undefined; 
+  private _edition?: string; 
   public get edition() {
     return this.getStringAttribute('edition');
   }
-  public set edition(value: string | undefined) {
+  public set edition(value: string) {
     this._edition = value;
   }
   public resetEdition() {
@@ -492,7 +616,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get editionInput() {
-    return this._edition
+    return this._edition;
   }
 
   // id - computed: true, optional: true, required: false
@@ -501,11 +625,11 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
 
   // license_type - computed: false, optional: true, required: false
-  private _licenseType?: string | undefined; 
+  private _licenseType?: string; 
   public get licenseType() {
     return this.getStringAttribute('license_type');
   }
-  public set licenseType(value: string | undefined) {
+  public set licenseType(value: string) {
     this._licenseType = value;
   }
   public resetLicenseType() {
@@ -513,7 +637,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get licenseTypeInput() {
-    return this._licenseType
+    return this._licenseType;
   }
 
   // location - computed: false, optional: false, required: true
@@ -526,15 +650,15 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // max_parallel_executions_per_node - computed: false, optional: true, required: false
-  private _maxParallelExecutionsPerNode?: number | undefined; 
+  private _maxParallelExecutionsPerNode?: number; 
   public get maxParallelExecutionsPerNode() {
     return this.getNumberAttribute('max_parallel_executions_per_node');
   }
-  public set maxParallelExecutionsPerNode(value: number | undefined) {
+  public set maxParallelExecutionsPerNode(value: number) {
     this._maxParallelExecutionsPerNode = value;
   }
   public resetMaxParallelExecutionsPerNode() {
@@ -542,7 +666,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get maxParallelExecutionsPerNodeInput() {
-    return this._maxParallelExecutionsPerNode
+    return this._maxParallelExecutionsPerNode;
   }
 
   // name - computed: false, optional: false, required: true
@@ -555,7 +679,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // node_size - computed: false, optional: false, required: true
@@ -568,15 +692,15 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get nodeSizeInput() {
-    return this._nodeSize
+    return this._nodeSize;
   }
 
   // number_of_nodes - computed: false, optional: true, required: false
-  private _numberOfNodes?: number | undefined; 
+  private _numberOfNodes?: number; 
   public get numberOfNodes() {
     return this.getNumberAttribute('number_of_nodes');
   }
-  public set numberOfNodes(value: number | undefined) {
+  public set numberOfNodes(value: number) {
     this._numberOfNodes = value;
   }
   public resetNumberOfNodes() {
@@ -584,7 +708,7 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get numberOfNodesInput() {
-    return this._numberOfNodes
+    return this._numberOfNodes;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -597,75 +721,71 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // catalog_info - computed: false, optional: true, required: false
-  private _catalogInfo?: DataFactoryIntegrationRuntimeManagedCatalogInfo | undefined; 
-  private __catalogInfoOutput = new DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference(this as any, "catalog_info", true);
+  private _catalogInfo = new DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference(this as any, "catalog_info", true);
   public get catalogInfo() {
-    return this.__catalogInfoOutput;
+    return this._catalogInfo;
   }
-  public putCatalogInfo(value: DataFactoryIntegrationRuntimeManagedCatalogInfo | undefined) {
-    this._catalogInfo = value;
+  public putCatalogInfo(value: DataFactoryIntegrationRuntimeManagedCatalogInfo) {
+    this._catalogInfo.internalValue = value;
   }
   public resetCatalogInfo() {
-    this._catalogInfo = undefined;
+    this._catalogInfo.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get catalogInfoInput() {
-    return this._catalogInfo
+    return this._catalogInfo.internalValue;
   }
 
   // custom_setup_script - computed: false, optional: true, required: false
-  private _customSetupScript?: DataFactoryIntegrationRuntimeManagedCustomSetupScript | undefined; 
-  private __customSetupScriptOutput = new DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReference(this as any, "custom_setup_script", true);
+  private _customSetupScript = new DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReference(this as any, "custom_setup_script", true);
   public get customSetupScript() {
-    return this.__customSetupScriptOutput;
+    return this._customSetupScript;
   }
-  public putCustomSetupScript(value: DataFactoryIntegrationRuntimeManagedCustomSetupScript | undefined) {
-    this._customSetupScript = value;
+  public putCustomSetupScript(value: DataFactoryIntegrationRuntimeManagedCustomSetupScript) {
+    this._customSetupScript.internalValue = value;
   }
   public resetCustomSetupScript() {
-    this._customSetupScript = undefined;
+    this._customSetupScript.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get customSetupScriptInput() {
-    return this._customSetupScript
+    return this._customSetupScript.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryIntegrationRuntimeManagedTimeouts | undefined; 
-  private __timeoutsOutput = new DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataFactoryIntegrationRuntimeManagedTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataFactoryIntegrationRuntimeManagedTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // vnet_integration - computed: false, optional: true, required: false
-  private _vnetIntegration?: DataFactoryIntegrationRuntimeManagedVnetIntegration | undefined; 
-  private __vnetIntegrationOutput = new DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference(this as any, "vnet_integration", true);
+  private _vnetIntegration = new DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference(this as any, "vnet_integration", true);
   public get vnetIntegration() {
-    return this.__vnetIntegrationOutput;
+    return this._vnetIntegration;
   }
-  public putVnetIntegration(value: DataFactoryIntegrationRuntimeManagedVnetIntegration | undefined) {
-    this._vnetIntegration = value;
+  public putVnetIntegration(value: DataFactoryIntegrationRuntimeManagedVnetIntegration) {
+    this._vnetIntegration.internalValue = value;
   }
   public resetVnetIntegration() {
-    this._vnetIntegration = undefined;
+    this._vnetIntegration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get vnetIntegrationInput() {
-    return this._vnetIntegration
+    return this._vnetIntegration.internalValue;
   }
 
   // =========
@@ -684,10 +804,10 @@ export class DataFactoryIntegrationRuntimeManaged extends cdktf.TerraformResourc
       node_size: cdktf.stringToTerraform(this._nodeSize),
       number_of_nodes: cdktf.numberToTerraform(this._numberOfNodes),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      catalog_info: dataFactoryIntegrationRuntimeManagedCatalogInfoToTerraform(this._catalogInfo),
-      custom_setup_script: dataFactoryIntegrationRuntimeManagedCustomSetupScriptToTerraform(this._customSetupScript),
-      timeouts: dataFactoryIntegrationRuntimeManagedTimeoutsToTerraform(this._timeouts),
-      vnet_integration: dataFactoryIntegrationRuntimeManagedVnetIntegrationToTerraform(this._vnetIntegration),
+      catalog_info: dataFactoryIntegrationRuntimeManagedCatalogInfoToTerraform(this._catalogInfo.internalValue),
+      custom_setup_script: dataFactoryIntegrationRuntimeManagedCustomSetupScriptToTerraform(this._customSetupScript.internalValue),
+      timeouts: dataFactoryIntegrationRuntimeManagedTimeoutsToTerraform(this._timeouts.internalValue),
+      vnet_integration: dataFactoryIntegrationRuntimeManagedVnetIntegrationToTerraform(this._vnetIntegration.internalValue),
     };
   }
 }

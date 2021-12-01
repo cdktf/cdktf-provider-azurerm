@@ -36,7 +36,7 @@ export interface DataAzurermNotificationHubNamespaceTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermNotificationHubNamespaceTimeoutsToTerraform(struct?: DataAzurermNotificationHubNamespaceTimeoutsOutputReference | DataAzurermNotificationHubNamespaceTimeouts): any {
+export function dataAzurermNotificationHubNamespaceTimeoutsToTerraform(struct?: DataAzurermNotificationHubNamespaceTimeoutsOutputReference | DataAzurermNotificationHubNamespaceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -56,12 +56,31 @@ export class DataAzurermNotificationHubNamespaceTimeoutsOutputReference extends 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermNotificationHubNamespaceTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermNotificationHubNamespaceTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -69,7 +88,7 @@ export class DataAzurermNotificationHubNamespaceTimeoutsOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -107,7 +126,7 @@ export class DataAzurermNotificationHubNamespace extends cdktf.TerraformDataSour
     });
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -139,7 +158,7 @@ export class DataAzurermNotificationHubNamespace extends cdktf.TerraformDataSour
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // namespace_type - computed: true, optional: false, required: false
@@ -157,7 +176,7 @@ export class DataAzurermNotificationHubNamespace extends cdktf.TerraformDataSour
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // servicebus_endpoint - computed: true, optional: false, required: false
@@ -176,20 +195,19 @@ export class DataAzurermNotificationHubNamespace extends cdktf.TerraformDataSour
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermNotificationHubNamespaceTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermNotificationHubNamespaceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermNotificationHubNamespaceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermNotificationHubNamespaceTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermNotificationHubNamespaceTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -200,7 +218,7 @@ export class DataAzurermNotificationHubNamespace extends cdktf.TerraformDataSour
     return {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      timeouts: dataAzurermNotificationHubNamespaceTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermNotificationHubNamespaceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

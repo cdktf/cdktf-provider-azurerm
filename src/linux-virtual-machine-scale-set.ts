@@ -223,7 +223,7 @@ export interface LinuxVirtualMachineScaleSetAdditionalCapabilities {
   readonly ultraSsdEnabled?: boolean | cdktf.IResolvable;
 }
 
-function linuxVirtualMachineScaleSetAdditionalCapabilitiesToTerraform(struct?: LinuxVirtualMachineScaleSetAdditionalCapabilitiesOutputReference | LinuxVirtualMachineScaleSetAdditionalCapabilities): any {
+export function linuxVirtualMachineScaleSetAdditionalCapabilitiesToTerraform(struct?: LinuxVirtualMachineScaleSetAdditionalCapabilitiesOutputReference | LinuxVirtualMachineScaleSetAdditionalCapabilities): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -243,12 +243,31 @@ export class LinuxVirtualMachineScaleSetAdditionalCapabilitiesOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LinuxVirtualMachineScaleSetAdditionalCapabilities | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._ultraSsdEnabled) {
+      hasAnyValues = true;
+      internalValueResult.ultraSsdEnabled = this._ultraSsdEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineScaleSetAdditionalCapabilities | undefined) {
+    if (value === undefined) {
+      this._ultraSsdEnabled = undefined;
+    }
+    else {
+      this._ultraSsdEnabled = value.ultraSsdEnabled;
+    }
+  }
+
   // ultra_ssd_enabled - computed: false, optional: true, required: false
-  private _ultraSsdEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _ultraSsdEnabled?: boolean | cdktf.IResolvable; 
   public get ultraSsdEnabled() {
     return this.getBooleanAttribute('ultra_ssd_enabled') as any;
   }
-  public set ultraSsdEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set ultraSsdEnabled(value: boolean | cdktf.IResolvable) {
     this._ultraSsdEnabled = value;
   }
   public resetUltraSsdEnabled() {
@@ -256,7 +275,7 @@ export class LinuxVirtualMachineScaleSetAdditionalCapabilitiesOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get ultraSsdEnabledInput() {
-    return this._ultraSsdEnabled
+    return this._ultraSsdEnabled;
   }
 }
 export interface LinuxVirtualMachineScaleSetAdminSshKey {
@@ -270,7 +289,7 @@ export interface LinuxVirtualMachineScaleSetAdminSshKey {
   readonly username: string;
 }
 
-function linuxVirtualMachineScaleSetAdminSshKeyToTerraform(struct?: LinuxVirtualMachineScaleSetAdminSshKey): any {
+export function linuxVirtualMachineScaleSetAdminSshKeyToTerraform(struct?: LinuxVirtualMachineScaleSetAdminSshKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -292,7 +311,7 @@ export interface LinuxVirtualMachineScaleSetAutomaticInstanceRepair {
   readonly gracePeriod?: string;
 }
 
-function linuxVirtualMachineScaleSetAutomaticInstanceRepairToTerraform(struct?: LinuxVirtualMachineScaleSetAutomaticInstanceRepairOutputReference | LinuxVirtualMachineScaleSetAutomaticInstanceRepair): any {
+export function linuxVirtualMachineScaleSetAutomaticInstanceRepairToTerraform(struct?: LinuxVirtualMachineScaleSetAutomaticInstanceRepairOutputReference | LinuxVirtualMachineScaleSetAutomaticInstanceRepair): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -313,6 +332,31 @@ export class LinuxVirtualMachineScaleSetAutomaticInstanceRepairOutputReference e
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LinuxVirtualMachineScaleSetAutomaticInstanceRepair | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._gracePeriod) {
+      hasAnyValues = true;
+      internalValueResult.gracePeriod = this._gracePeriod;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineScaleSetAutomaticInstanceRepair | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+      this._gracePeriod = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+      this._gracePeriod = value.gracePeriod;
+    }
+  }
+
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
@@ -323,15 +367,15 @@ export class LinuxVirtualMachineScaleSetAutomaticInstanceRepairOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // grace_period - computed: false, optional: true, required: false
-  private _gracePeriod?: string | undefined; 
+  private _gracePeriod?: string; 
   public get gracePeriod() {
     return this.getStringAttribute('grace_period');
   }
-  public set gracePeriod(value: string | undefined) {
+  public set gracePeriod(value: string) {
     this._gracePeriod = value;
   }
   public resetGracePeriod() {
@@ -339,7 +383,7 @@ export class LinuxVirtualMachineScaleSetAutomaticInstanceRepairOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get gracePeriodInput() {
-    return this._gracePeriod
+    return this._gracePeriod;
   }
 }
 export interface LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy {
@@ -353,7 +397,7 @@ export interface LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy {
   readonly enableAutomaticOsUpgrade: boolean | cdktf.IResolvable;
 }
 
-function linuxVirtualMachineScaleSetAutomaticOsUpgradePolicyToTerraform(struct?: LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference | LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy): any {
+export function linuxVirtualMachineScaleSetAutomaticOsUpgradePolicyToTerraform(struct?: LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference | LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -374,6 +418,31 @@ export class LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._disableAutomaticRollback) {
+      hasAnyValues = true;
+      internalValueResult.disableAutomaticRollback = this._disableAutomaticRollback;
+    }
+    if (this._enableAutomaticOsUpgrade) {
+      hasAnyValues = true;
+      internalValueResult.enableAutomaticOsUpgrade = this._enableAutomaticOsUpgrade;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy | undefined) {
+    if (value === undefined) {
+      this._disableAutomaticRollback = undefined;
+      this._enableAutomaticOsUpgrade = undefined;
+    }
+    else {
+      this._disableAutomaticRollback = value.disableAutomaticRollback;
+      this._enableAutomaticOsUpgrade = value.enableAutomaticOsUpgrade;
+    }
+  }
+
   // disable_automatic_rollback - computed: false, optional: false, required: true
   private _disableAutomaticRollback?: boolean | cdktf.IResolvable; 
   public get disableAutomaticRollback() {
@@ -384,7 +453,7 @@ export class LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get disableAutomaticRollbackInput() {
-    return this._disableAutomaticRollback
+    return this._disableAutomaticRollback;
   }
 
   // enable_automatic_os_upgrade - computed: false, optional: false, required: true
@@ -397,7 +466,7 @@ export class LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get enableAutomaticOsUpgradeInput() {
-    return this._enableAutomaticOsUpgrade
+    return this._enableAutomaticOsUpgrade;
   }
 }
 export interface LinuxVirtualMachineScaleSetBootDiagnostics {
@@ -407,7 +476,7 @@ export interface LinuxVirtualMachineScaleSetBootDiagnostics {
   readonly storageAccountUri?: string;
 }
 
-function linuxVirtualMachineScaleSetBootDiagnosticsToTerraform(struct?: LinuxVirtualMachineScaleSetBootDiagnosticsOutputReference | LinuxVirtualMachineScaleSetBootDiagnostics): any {
+export function linuxVirtualMachineScaleSetBootDiagnosticsToTerraform(struct?: LinuxVirtualMachineScaleSetBootDiagnosticsOutputReference | LinuxVirtualMachineScaleSetBootDiagnostics): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -427,12 +496,31 @@ export class LinuxVirtualMachineScaleSetBootDiagnosticsOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LinuxVirtualMachineScaleSetBootDiagnostics | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._storageAccountUri) {
+      hasAnyValues = true;
+      internalValueResult.storageAccountUri = this._storageAccountUri;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineScaleSetBootDiagnostics | undefined) {
+    if (value === undefined) {
+      this._storageAccountUri = undefined;
+    }
+    else {
+      this._storageAccountUri = value.storageAccountUri;
+    }
+  }
+
   // storage_account_uri - computed: false, optional: true, required: false
-  private _storageAccountUri?: string | undefined; 
+  private _storageAccountUri?: string; 
   public get storageAccountUri() {
     return this.getStringAttribute('storage_account_uri');
   }
-  public set storageAccountUri(value: string | undefined) {
+  public set storageAccountUri(value: string) {
     this._storageAccountUri = value;
   }
   public resetStorageAccountUri() {
@@ -440,7 +528,7 @@ export class LinuxVirtualMachineScaleSetBootDiagnosticsOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountUriInput() {
-    return this._storageAccountUri
+    return this._storageAccountUri;
   }
 }
 export interface LinuxVirtualMachineScaleSetDataDisk {
@@ -482,7 +570,7 @@ export interface LinuxVirtualMachineScaleSetDataDisk {
   readonly writeAcceleratorEnabled?: boolean | cdktf.IResolvable;
 }
 
-function linuxVirtualMachineScaleSetDataDiskToTerraform(struct?: LinuxVirtualMachineScaleSetDataDisk): any {
+export function linuxVirtualMachineScaleSetDataDiskToTerraform(struct?: LinuxVirtualMachineScaleSetDataDisk): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -543,7 +631,7 @@ export interface LinuxVirtualMachineScaleSetExtension {
   readonly typeHandlerVersion: string;
 }
 
-function linuxVirtualMachineScaleSetExtensionToTerraform(struct?: LinuxVirtualMachineScaleSetExtension): any {
+export function linuxVirtualMachineScaleSetExtensionToTerraform(struct?: LinuxVirtualMachineScaleSetExtension): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -573,7 +661,7 @@ export interface LinuxVirtualMachineScaleSetIdentity {
   readonly type: string;
 }
 
-function linuxVirtualMachineScaleSetIdentityToTerraform(struct?: LinuxVirtualMachineScaleSetIdentityOutputReference | LinuxVirtualMachineScaleSetIdentity): any {
+export function linuxVirtualMachineScaleSetIdentityToTerraform(struct?: LinuxVirtualMachineScaleSetIdentityOutputReference | LinuxVirtualMachineScaleSetIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -594,12 +682,37 @@ export class LinuxVirtualMachineScaleSetIdentityOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LinuxVirtualMachineScaleSetIdentity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._identityIds) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineScaleSetIdentity | undefined) {
+    if (value === undefined) {
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
   // identity_ids - computed: false, optional: true, required: false
-  private _identityIds?: string[] | undefined; 
+  private _identityIds?: string[]; 
   public get identityIds() {
     return this.getListAttribute('identity_ids');
   }
-  public set identityIds(value: string[] | undefined) {
+  public set identityIds(value: string[]) {
     this._identityIds = value;
   }
   public resetIdentityIds() {
@@ -607,7 +720,7 @@ export class LinuxVirtualMachineScaleSetIdentityOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
-    return this._identityIds
+    return this._identityIds;
   }
 
   // type - computed: false, optional: false, required: true
@@ -620,7 +733,7 @@ export class LinuxVirtualMachineScaleSetIdentityOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag {
@@ -634,7 +747,7 @@ export interface LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPubli
   readonly type: string;
 }
 
-function linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag): any {
+export function linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -670,7 +783,7 @@ export interface LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPubli
   readonly ipTag?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag[];
 }
 
-function linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress): any {
+export function linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -725,7 +838,7 @@ export interface LinuxVirtualMachineScaleSetNetworkInterfaceIpConfiguration {
   readonly publicIpAddress?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress[];
 }
 
-function linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfiguration): any {
+export function linuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -776,7 +889,7 @@ export interface LinuxVirtualMachineScaleSetNetworkInterface {
   readonly ipConfiguration: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfiguration[];
 }
 
-function linuxVirtualMachineScaleSetNetworkInterfaceToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterface): any {
+export function linuxVirtualMachineScaleSetNetworkInterfaceToTerraform(struct?: LinuxVirtualMachineScaleSetNetworkInterface): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -799,7 +912,7 @@ export interface LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings {
   readonly option: string;
 }
 
-function linuxVirtualMachineScaleSetOsDiskDiffDiskSettingsToTerraform(struct?: LinuxVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference | LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings): any {
+export function linuxVirtualMachineScaleSetOsDiskDiffDiskSettingsToTerraform(struct?: LinuxVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference | LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -819,6 +932,25 @@ export class LinuxVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._option) {
+      hasAnyValues = true;
+      internalValueResult.option = this._option;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings | undefined) {
+    if (value === undefined) {
+      this._option = undefined;
+    }
+    else {
+      this._option = value.option;
+    }
+  }
+
   // option - computed: false, optional: false, required: true
   private _option?: string; 
   public get option() {
@@ -829,7 +961,7 @@ export class LinuxVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get optionInput() {
-    return this._option
+    return this._option;
   }
 }
 export interface LinuxVirtualMachineScaleSetOsDisk {
@@ -861,7 +993,7 @@ export interface LinuxVirtualMachineScaleSetOsDisk {
   readonly diffDiskSettings?: LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings;
 }
 
-function linuxVirtualMachineScaleSetOsDiskToTerraform(struct?: LinuxVirtualMachineScaleSetOsDiskOutputReference | LinuxVirtualMachineScaleSetOsDisk): any {
+export function linuxVirtualMachineScaleSetOsDiskToTerraform(struct?: LinuxVirtualMachineScaleSetOsDiskOutputReference | LinuxVirtualMachineScaleSetOsDisk): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -886,6 +1018,55 @@ export class LinuxVirtualMachineScaleSetOsDiskOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LinuxVirtualMachineScaleSetOsDisk | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._caching) {
+      hasAnyValues = true;
+      internalValueResult.caching = this._caching;
+    }
+    if (this._diskEncryptionSetId) {
+      hasAnyValues = true;
+      internalValueResult.diskEncryptionSetId = this._diskEncryptionSetId;
+    }
+    if (this._diskSizeGb) {
+      hasAnyValues = true;
+      internalValueResult.diskSizeGb = this._diskSizeGb;
+    }
+    if (this._storageAccountType) {
+      hasAnyValues = true;
+      internalValueResult.storageAccountType = this._storageAccountType;
+    }
+    if (this._writeAcceleratorEnabled) {
+      hasAnyValues = true;
+      internalValueResult.writeAcceleratorEnabled = this._writeAcceleratorEnabled;
+    }
+    if (this._diffDiskSettings) {
+      hasAnyValues = true;
+      internalValueResult.diffDiskSettings = this._diffDiskSettings?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineScaleSetOsDisk | undefined) {
+    if (value === undefined) {
+      this._caching = undefined;
+      this._diskEncryptionSetId = undefined;
+      this._diskSizeGb = undefined;
+      this._storageAccountType = undefined;
+      this._writeAcceleratorEnabled = undefined;
+      this._diffDiskSettings.internalValue = undefined;
+    }
+    else {
+      this._caching = value.caching;
+      this._diskEncryptionSetId = value.diskEncryptionSetId;
+      this._diskSizeGb = value.diskSizeGb;
+      this._storageAccountType = value.storageAccountType;
+      this._writeAcceleratorEnabled = value.writeAcceleratorEnabled;
+      this._diffDiskSettings.internalValue = value.diffDiskSettings;
+    }
+  }
+
   // caching - computed: false, optional: false, required: true
   private _caching?: string; 
   public get caching() {
@@ -896,15 +1077,15 @@ export class LinuxVirtualMachineScaleSetOsDiskOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get cachingInput() {
-    return this._caching
+    return this._caching;
   }
 
   // disk_encryption_set_id - computed: false, optional: true, required: false
-  private _diskEncryptionSetId?: string | undefined; 
+  private _diskEncryptionSetId?: string; 
   public get diskEncryptionSetId() {
     return this.getStringAttribute('disk_encryption_set_id');
   }
-  public set diskEncryptionSetId(value: string | undefined) {
+  public set diskEncryptionSetId(value: string) {
     this._diskEncryptionSetId = value;
   }
   public resetDiskEncryptionSetId() {
@@ -912,15 +1093,15 @@ export class LinuxVirtualMachineScaleSetOsDiskOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get diskEncryptionSetIdInput() {
-    return this._diskEncryptionSetId
+    return this._diskEncryptionSetId;
   }
 
   // disk_size_gb - computed: true, optional: true, required: false
-  private _diskSizeGb?: number | undefined; 
+  private _diskSizeGb?: number; 
   public get diskSizeGb() {
     return this.getNumberAttribute('disk_size_gb');
   }
-  public set diskSizeGb(value: number | undefined) {
+  public set diskSizeGb(value: number) {
     this._diskSizeGb = value;
   }
   public resetDiskSizeGb() {
@@ -928,7 +1109,7 @@ export class LinuxVirtualMachineScaleSetOsDiskOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get diskSizeGbInput() {
-    return this._diskSizeGb
+    return this._diskSizeGb;
   }
 
   // storage_account_type - computed: false, optional: false, required: true
@@ -941,15 +1122,15 @@ export class LinuxVirtualMachineScaleSetOsDiskOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountTypeInput() {
-    return this._storageAccountType
+    return this._storageAccountType;
   }
 
   // write_accelerator_enabled - computed: false, optional: true, required: false
-  private _writeAcceleratorEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _writeAcceleratorEnabled?: boolean | cdktf.IResolvable; 
   public get writeAcceleratorEnabled() {
     return this.getBooleanAttribute('write_accelerator_enabled') as any;
   }
-  public set writeAcceleratorEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set writeAcceleratorEnabled(value: boolean | cdktf.IResolvable) {
     this._writeAcceleratorEnabled = value;
   }
   public resetWriteAcceleratorEnabled() {
@@ -957,24 +1138,23 @@ export class LinuxVirtualMachineScaleSetOsDiskOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get writeAcceleratorEnabledInput() {
-    return this._writeAcceleratorEnabled
+    return this._writeAcceleratorEnabled;
   }
 
   // diff_disk_settings - computed: false, optional: true, required: false
-  private _diffDiskSettings?: LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings | undefined; 
-  private __diffDiskSettingsOutput = new LinuxVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference(this as any, "diff_disk_settings", true);
+  private _diffDiskSettings = new LinuxVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference(this as any, "diff_disk_settings", true);
   public get diffDiskSettings() {
-    return this.__diffDiskSettingsOutput;
+    return this._diffDiskSettings;
   }
-  public putDiffDiskSettings(value: LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings | undefined) {
-    this._diffDiskSettings = value;
+  public putDiffDiskSettings(value: LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings) {
+    this._diffDiskSettings.internalValue = value;
   }
   public resetDiffDiskSettings() {
-    this._diffDiskSettings = undefined;
+    this._diffDiskSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get diffDiskSettingsInput() {
-    return this._diffDiskSettings
+    return this._diffDiskSettings.internalValue;
   }
 }
 export interface LinuxVirtualMachineScaleSetPlan {
@@ -992,7 +1172,7 @@ export interface LinuxVirtualMachineScaleSetPlan {
   readonly publisher: string;
 }
 
-function linuxVirtualMachineScaleSetPlanToTerraform(struct?: LinuxVirtualMachineScaleSetPlanOutputReference | LinuxVirtualMachineScaleSetPlan): any {
+export function linuxVirtualMachineScaleSetPlanToTerraform(struct?: LinuxVirtualMachineScaleSetPlanOutputReference | LinuxVirtualMachineScaleSetPlan): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1014,6 +1194,37 @@ export class LinuxVirtualMachineScaleSetPlanOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LinuxVirtualMachineScaleSetPlan | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._product) {
+      hasAnyValues = true;
+      internalValueResult.product = this._product;
+    }
+    if (this._publisher) {
+      hasAnyValues = true;
+      internalValueResult.publisher = this._publisher;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineScaleSetPlan | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._product = undefined;
+      this._publisher = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._product = value.product;
+      this._publisher = value.publisher;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -1024,7 +1235,7 @@ export class LinuxVirtualMachineScaleSetPlanOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // product - computed: false, optional: false, required: true
@@ -1037,7 +1248,7 @@ export class LinuxVirtualMachineScaleSetPlanOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get productInput() {
-    return this._product
+    return this._product;
   }
 
   // publisher - computed: false, optional: false, required: true
@@ -1050,7 +1261,7 @@ export class LinuxVirtualMachineScaleSetPlanOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get publisherInput() {
-    return this._publisher
+    return this._publisher;
   }
 }
 export interface LinuxVirtualMachineScaleSetRollingUpgradePolicy {
@@ -1072,7 +1283,7 @@ export interface LinuxVirtualMachineScaleSetRollingUpgradePolicy {
   readonly pauseTimeBetweenBatches: string;
 }
 
-function linuxVirtualMachineScaleSetRollingUpgradePolicyToTerraform(struct?: LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference | LinuxVirtualMachineScaleSetRollingUpgradePolicy): any {
+export function linuxVirtualMachineScaleSetRollingUpgradePolicyToTerraform(struct?: LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference | LinuxVirtualMachineScaleSetRollingUpgradePolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1095,6 +1306,43 @@ export class LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LinuxVirtualMachineScaleSetRollingUpgradePolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maxBatchInstancePercent) {
+      hasAnyValues = true;
+      internalValueResult.maxBatchInstancePercent = this._maxBatchInstancePercent;
+    }
+    if (this._maxUnhealthyInstancePercent) {
+      hasAnyValues = true;
+      internalValueResult.maxUnhealthyInstancePercent = this._maxUnhealthyInstancePercent;
+    }
+    if (this._maxUnhealthyUpgradedInstancePercent) {
+      hasAnyValues = true;
+      internalValueResult.maxUnhealthyUpgradedInstancePercent = this._maxUnhealthyUpgradedInstancePercent;
+    }
+    if (this._pauseTimeBetweenBatches) {
+      hasAnyValues = true;
+      internalValueResult.pauseTimeBetweenBatches = this._pauseTimeBetweenBatches;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineScaleSetRollingUpgradePolicy | undefined) {
+    if (value === undefined) {
+      this._maxBatchInstancePercent = undefined;
+      this._maxUnhealthyInstancePercent = undefined;
+      this._maxUnhealthyUpgradedInstancePercent = undefined;
+      this._pauseTimeBetweenBatches = undefined;
+    }
+    else {
+      this._maxBatchInstancePercent = value.maxBatchInstancePercent;
+      this._maxUnhealthyInstancePercent = value.maxUnhealthyInstancePercent;
+      this._maxUnhealthyUpgradedInstancePercent = value.maxUnhealthyUpgradedInstancePercent;
+      this._pauseTimeBetweenBatches = value.pauseTimeBetweenBatches;
+    }
+  }
+
   // max_batch_instance_percent - computed: false, optional: false, required: true
   private _maxBatchInstancePercent?: number; 
   public get maxBatchInstancePercent() {
@@ -1105,7 +1353,7 @@ export class LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get maxBatchInstancePercentInput() {
-    return this._maxBatchInstancePercent
+    return this._maxBatchInstancePercent;
   }
 
   // max_unhealthy_instance_percent - computed: false, optional: false, required: true
@@ -1118,7 +1366,7 @@ export class LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get maxUnhealthyInstancePercentInput() {
-    return this._maxUnhealthyInstancePercent
+    return this._maxUnhealthyInstancePercent;
   }
 
   // max_unhealthy_upgraded_instance_percent - computed: false, optional: false, required: true
@@ -1131,7 +1379,7 @@ export class LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get maxUnhealthyUpgradedInstancePercentInput() {
-    return this._maxUnhealthyUpgradedInstancePercent
+    return this._maxUnhealthyUpgradedInstancePercent;
   }
 
   // pause_time_between_batches - computed: false, optional: false, required: true
@@ -1144,7 +1392,7 @@ export class LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get pauseTimeBetweenBatchesInput() {
-    return this._pauseTimeBetweenBatches
+    return this._pauseTimeBetweenBatches;
   }
 }
 export interface LinuxVirtualMachineScaleSetSecretCertificate {
@@ -1154,7 +1402,7 @@ export interface LinuxVirtualMachineScaleSetSecretCertificate {
   readonly url: string;
 }
 
-function linuxVirtualMachineScaleSetSecretCertificateToTerraform(struct?: LinuxVirtualMachineScaleSetSecretCertificate): any {
+export function linuxVirtualMachineScaleSetSecretCertificateToTerraform(struct?: LinuxVirtualMachineScaleSetSecretCertificate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1177,7 +1425,7 @@ export interface LinuxVirtualMachineScaleSetSecret {
   readonly certificate: LinuxVirtualMachineScaleSetSecretCertificate[];
 }
 
-function linuxVirtualMachineScaleSetSecretToTerraform(struct?: LinuxVirtualMachineScaleSetSecret): any {
+export function linuxVirtualMachineScaleSetSecretToTerraform(struct?: LinuxVirtualMachineScaleSetSecret): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1207,7 +1455,7 @@ export interface LinuxVirtualMachineScaleSetSourceImageReference {
   readonly version: string;
 }
 
-function linuxVirtualMachineScaleSetSourceImageReferenceToTerraform(struct?: LinuxVirtualMachineScaleSetSourceImageReferenceOutputReference | LinuxVirtualMachineScaleSetSourceImageReference): any {
+export function linuxVirtualMachineScaleSetSourceImageReferenceToTerraform(struct?: LinuxVirtualMachineScaleSetSourceImageReferenceOutputReference | LinuxVirtualMachineScaleSetSourceImageReference): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1230,6 +1478,43 @@ export class LinuxVirtualMachineScaleSetSourceImageReferenceOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LinuxVirtualMachineScaleSetSourceImageReference | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._offer) {
+      hasAnyValues = true;
+      internalValueResult.offer = this._offer;
+    }
+    if (this._publisher) {
+      hasAnyValues = true;
+      internalValueResult.publisher = this._publisher;
+    }
+    if (this._sku) {
+      hasAnyValues = true;
+      internalValueResult.sku = this._sku;
+    }
+    if (this._version) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineScaleSetSourceImageReference | undefined) {
+    if (value === undefined) {
+      this._offer = undefined;
+      this._publisher = undefined;
+      this._sku = undefined;
+      this._version = undefined;
+    }
+    else {
+      this._offer = value.offer;
+      this._publisher = value.publisher;
+      this._sku = value.sku;
+      this._version = value.version;
+    }
+  }
+
   // offer - computed: false, optional: false, required: true
   private _offer?: string; 
   public get offer() {
@@ -1240,7 +1525,7 @@ export class LinuxVirtualMachineScaleSetSourceImageReferenceOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get offerInput() {
-    return this._offer
+    return this._offer;
   }
 
   // publisher - computed: false, optional: false, required: true
@@ -1253,7 +1538,7 @@ export class LinuxVirtualMachineScaleSetSourceImageReferenceOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get publisherInput() {
-    return this._publisher
+    return this._publisher;
   }
 
   // sku - computed: false, optional: false, required: true
@@ -1266,7 +1551,7 @@ export class LinuxVirtualMachineScaleSetSourceImageReferenceOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get skuInput() {
-    return this._sku
+    return this._sku;
   }
 
   // version - computed: false, optional: false, required: true
@@ -1279,7 +1564,7 @@ export class LinuxVirtualMachineScaleSetSourceImageReferenceOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 }
 export interface LinuxVirtualMachineScaleSetTerminateNotification {
@@ -1293,7 +1578,7 @@ export interface LinuxVirtualMachineScaleSetTerminateNotification {
   readonly timeout?: string;
 }
 
-function linuxVirtualMachineScaleSetTerminateNotificationToTerraform(struct?: LinuxVirtualMachineScaleSetTerminateNotificationOutputReference | LinuxVirtualMachineScaleSetTerminateNotification): any {
+export function linuxVirtualMachineScaleSetTerminateNotificationToTerraform(struct?: LinuxVirtualMachineScaleSetTerminateNotificationOutputReference | LinuxVirtualMachineScaleSetTerminateNotification): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1314,6 +1599,31 @@ export class LinuxVirtualMachineScaleSetTerminateNotificationOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LinuxVirtualMachineScaleSetTerminateNotification | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._timeout) {
+      hasAnyValues = true;
+      internalValueResult.timeout = this._timeout;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineScaleSetTerminateNotification | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+      this._timeout = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+      this._timeout = value.timeout;
+    }
+  }
+
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
@@ -1324,15 +1634,15 @@ export class LinuxVirtualMachineScaleSetTerminateNotificationOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // timeout - computed: false, optional: true, required: false
-  private _timeout?: string | undefined; 
+  private _timeout?: string; 
   public get timeout() {
     return this.getStringAttribute('timeout');
   }
-  public set timeout(value: string | undefined) {
+  public set timeout(value: string) {
     this._timeout = value;
   }
   public resetTimeout() {
@@ -1340,7 +1650,7 @@ export class LinuxVirtualMachineScaleSetTerminateNotificationOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutInput() {
-    return this._timeout
+    return this._timeout;
   }
 }
 export interface LinuxVirtualMachineScaleSetTimeouts {
@@ -1362,7 +1672,7 @@ export interface LinuxVirtualMachineScaleSetTimeouts {
   readonly update?: string;
 }
 
-function linuxVirtualMachineScaleSetTimeoutsToTerraform(struct?: LinuxVirtualMachineScaleSetTimeoutsOutputReference | LinuxVirtualMachineScaleSetTimeouts): any {
+export function linuxVirtualMachineScaleSetTimeoutsToTerraform(struct?: LinuxVirtualMachineScaleSetTimeoutsOutputReference | LinuxVirtualMachineScaleSetTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1385,12 +1695,49 @@ export class LinuxVirtualMachineScaleSetTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LinuxVirtualMachineScaleSetTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LinuxVirtualMachineScaleSetTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -1398,15 +1745,15 @@ export class LinuxVirtualMachineScaleSetTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -1414,15 +1761,15 @@ export class LinuxVirtualMachineScaleSetTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -1430,15 +1777,15 @@ export class LinuxVirtualMachineScaleSetTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -1446,7 +1793,7 @@ export class LinuxVirtualMachineScaleSetTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -1510,22 +1857,22 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
     this._upgradeMode = config.upgradeMode;
     this._zoneBalance = config.zoneBalance;
     this._zones = config.zones;
-    this._additionalCapabilities = config.additionalCapabilities;
+    this._additionalCapabilities.internalValue = config.additionalCapabilities;
     this._adminSshKey = config.adminSshKey;
-    this._automaticInstanceRepair = config.automaticInstanceRepair;
-    this._automaticOsUpgradePolicy = config.automaticOsUpgradePolicy;
-    this._bootDiagnostics = config.bootDiagnostics;
+    this._automaticInstanceRepair.internalValue = config.automaticInstanceRepair;
+    this._automaticOsUpgradePolicy.internalValue = config.automaticOsUpgradePolicy;
+    this._bootDiagnostics.internalValue = config.bootDiagnostics;
     this._dataDisk = config.dataDisk;
     this._extension = config.extension;
-    this._identity = config.identity;
+    this._identity.internalValue = config.identity;
     this._networkInterface = config.networkInterface;
-    this._osDisk = config.osDisk;
-    this._plan = config.plan;
-    this._rollingUpgradePolicy = config.rollingUpgradePolicy;
+    this._osDisk.internalValue = config.osDisk;
+    this._plan.internalValue = config.plan;
+    this._rollingUpgradePolicy.internalValue = config.rollingUpgradePolicy;
     this._secret = config.secret;
-    this._sourceImageReference = config.sourceImageReference;
-    this._terminateNotification = config.terminateNotification;
-    this._timeouts = config.timeouts;
+    this._sourceImageReference.internalValue = config.sourceImageReference;
+    this._terminateNotification.internalValue = config.terminateNotification;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -1533,11 +1880,11 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   // ==========
 
   // admin_password - computed: false, optional: true, required: false
-  private _adminPassword?: string | undefined; 
+  private _adminPassword?: string; 
   public get adminPassword() {
     return this.getStringAttribute('admin_password');
   }
-  public set adminPassword(value: string | undefined) {
+  public set adminPassword(value: string) {
     this._adminPassword = value;
   }
   public resetAdminPassword() {
@@ -1545,7 +1892,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get adminPasswordInput() {
-    return this._adminPassword
+    return this._adminPassword;
   }
 
   // admin_username - computed: false, optional: false, required: true
@@ -1558,15 +1905,15 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get adminUsernameInput() {
-    return this._adminUsername
+    return this._adminUsername;
   }
 
   // computer_name_prefix - computed: true, optional: true, required: false
-  private _computerNamePrefix?: string | undefined; 
+  private _computerNamePrefix?: string; 
   public get computerNamePrefix() {
     return this.getStringAttribute('computer_name_prefix');
   }
-  public set computerNamePrefix(value: string | undefined) {
+  public set computerNamePrefix(value: string) {
     this._computerNamePrefix = value;
   }
   public resetComputerNamePrefix() {
@@ -1574,15 +1921,15 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get computerNamePrefixInput() {
-    return this._computerNamePrefix
+    return this._computerNamePrefix;
   }
 
   // custom_data - computed: false, optional: true, required: false
-  private _customData?: string | undefined; 
+  private _customData?: string; 
   public get customData() {
     return this.getStringAttribute('custom_data');
   }
-  public set customData(value: string | undefined) {
+  public set customData(value: string) {
     this._customData = value;
   }
   public resetCustomData() {
@@ -1590,15 +1937,15 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get customDataInput() {
-    return this._customData
+    return this._customData;
   }
 
   // disable_password_authentication - computed: false, optional: true, required: false
-  private _disablePasswordAuthentication?: boolean | cdktf.IResolvable | undefined; 
+  private _disablePasswordAuthentication?: boolean | cdktf.IResolvable; 
   public get disablePasswordAuthentication() {
     return this.getBooleanAttribute('disable_password_authentication') as any;
   }
-  public set disablePasswordAuthentication(value: boolean | cdktf.IResolvable | undefined) {
+  public set disablePasswordAuthentication(value: boolean | cdktf.IResolvable) {
     this._disablePasswordAuthentication = value;
   }
   public resetDisablePasswordAuthentication() {
@@ -1606,15 +1953,15 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get disablePasswordAuthenticationInput() {
-    return this._disablePasswordAuthentication
+    return this._disablePasswordAuthentication;
   }
 
   // do_not_run_extensions_on_overprovisioned_machines - computed: false, optional: true, required: false
-  private _doNotRunExtensionsOnOverprovisionedMachines?: boolean | cdktf.IResolvable | undefined; 
+  private _doNotRunExtensionsOnOverprovisionedMachines?: boolean | cdktf.IResolvable; 
   public get doNotRunExtensionsOnOverprovisionedMachines() {
     return this.getBooleanAttribute('do_not_run_extensions_on_overprovisioned_machines') as any;
   }
-  public set doNotRunExtensionsOnOverprovisionedMachines(value: boolean | cdktf.IResolvable | undefined) {
+  public set doNotRunExtensionsOnOverprovisionedMachines(value: boolean | cdktf.IResolvable) {
     this._doNotRunExtensionsOnOverprovisionedMachines = value;
   }
   public resetDoNotRunExtensionsOnOverprovisionedMachines() {
@@ -1622,15 +1969,15 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get doNotRunExtensionsOnOverprovisionedMachinesInput() {
-    return this._doNotRunExtensionsOnOverprovisionedMachines
+    return this._doNotRunExtensionsOnOverprovisionedMachines;
   }
 
   // encryption_at_host_enabled - computed: false, optional: true, required: false
-  private _encryptionAtHostEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _encryptionAtHostEnabled?: boolean | cdktf.IResolvable; 
   public get encryptionAtHostEnabled() {
     return this.getBooleanAttribute('encryption_at_host_enabled') as any;
   }
-  public set encryptionAtHostEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set encryptionAtHostEnabled(value: boolean | cdktf.IResolvable) {
     this._encryptionAtHostEnabled = value;
   }
   public resetEncryptionAtHostEnabled() {
@@ -1638,15 +1985,15 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get encryptionAtHostEnabledInput() {
-    return this._encryptionAtHostEnabled
+    return this._encryptionAtHostEnabled;
   }
 
   // eviction_policy - computed: false, optional: true, required: false
-  private _evictionPolicy?: string | undefined; 
+  private _evictionPolicy?: string; 
   public get evictionPolicy() {
     return this.getStringAttribute('eviction_policy');
   }
-  public set evictionPolicy(value: string | undefined) {
+  public set evictionPolicy(value: string) {
     this._evictionPolicy = value;
   }
   public resetEvictionPolicy() {
@@ -1654,15 +2001,15 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get evictionPolicyInput() {
-    return this._evictionPolicy
+    return this._evictionPolicy;
   }
 
   // extensions_time_budget - computed: false, optional: true, required: false
-  private _extensionsTimeBudget?: string | undefined; 
+  private _extensionsTimeBudget?: string; 
   public get extensionsTimeBudget() {
     return this.getStringAttribute('extensions_time_budget');
   }
-  public set extensionsTimeBudget(value: string | undefined) {
+  public set extensionsTimeBudget(value: string) {
     this._extensionsTimeBudget = value;
   }
   public resetExtensionsTimeBudget() {
@@ -1670,15 +2017,15 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get extensionsTimeBudgetInput() {
-    return this._extensionsTimeBudget
+    return this._extensionsTimeBudget;
   }
 
   // health_probe_id - computed: false, optional: true, required: false
-  private _healthProbeId?: string | undefined; 
+  private _healthProbeId?: string; 
   public get healthProbeId() {
     return this.getStringAttribute('health_probe_id');
   }
-  public set healthProbeId(value: string | undefined) {
+  public set healthProbeId(value: string) {
     this._healthProbeId = value;
   }
   public resetHealthProbeId() {
@@ -1686,7 +2033,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get healthProbeIdInput() {
-    return this._healthProbeId
+    return this._healthProbeId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1704,7 +2051,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get instancesInput() {
-    return this._instances
+    return this._instances;
   }
 
   // location - computed: false, optional: false, required: true
@@ -1717,15 +2064,15 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // max_bid_price - computed: false, optional: true, required: false
-  private _maxBidPrice?: number | undefined; 
+  private _maxBidPrice?: number; 
   public get maxBidPrice() {
     return this.getNumberAttribute('max_bid_price');
   }
-  public set maxBidPrice(value: number | undefined) {
+  public set maxBidPrice(value: number) {
     this._maxBidPrice = value;
   }
   public resetMaxBidPrice() {
@@ -1733,7 +2080,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get maxBidPriceInput() {
-    return this._maxBidPrice
+    return this._maxBidPrice;
   }
 
   // name - computed: false, optional: false, required: true
@@ -1746,15 +2093,15 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // overprovision - computed: false, optional: true, required: false
-  private _overprovision?: boolean | cdktf.IResolvable | undefined; 
+  private _overprovision?: boolean | cdktf.IResolvable; 
   public get overprovision() {
     return this.getBooleanAttribute('overprovision') as any;
   }
-  public set overprovision(value: boolean | cdktf.IResolvable | undefined) {
+  public set overprovision(value: boolean | cdktf.IResolvable) {
     this._overprovision = value;
   }
   public resetOverprovision() {
@@ -1762,15 +2109,15 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get overprovisionInput() {
-    return this._overprovision
+    return this._overprovision;
   }
 
   // platform_fault_domain_count - computed: true, optional: true, required: false
-  private _platformFaultDomainCount?: number | undefined; 
+  private _platformFaultDomainCount?: number; 
   public get platformFaultDomainCount() {
     return this.getNumberAttribute('platform_fault_domain_count');
   }
-  public set platformFaultDomainCount(value: number | undefined) {
+  public set platformFaultDomainCount(value: number) {
     this._platformFaultDomainCount = value;
   }
   public resetPlatformFaultDomainCount() {
@@ -1778,15 +2125,15 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get platformFaultDomainCountInput() {
-    return this._platformFaultDomainCount
+    return this._platformFaultDomainCount;
   }
 
   // priority - computed: false, optional: true, required: false
-  private _priority?: string | undefined; 
+  private _priority?: string; 
   public get priority() {
     return this.getStringAttribute('priority');
   }
-  public set priority(value: string | undefined) {
+  public set priority(value: string) {
     this._priority = value;
   }
   public resetPriority() {
@@ -1794,15 +2141,15 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get priorityInput() {
-    return this._priority
+    return this._priority;
   }
 
   // provision_vm_agent - computed: false, optional: true, required: false
-  private _provisionVmAgent?: boolean | cdktf.IResolvable | undefined; 
+  private _provisionVmAgent?: boolean | cdktf.IResolvable; 
   public get provisionVmAgent() {
     return this.getBooleanAttribute('provision_vm_agent') as any;
   }
-  public set provisionVmAgent(value: boolean | cdktf.IResolvable | undefined) {
+  public set provisionVmAgent(value: boolean | cdktf.IResolvable) {
     this._provisionVmAgent = value;
   }
   public resetProvisionVmAgent() {
@@ -1810,15 +2157,15 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get provisionVmAgentInput() {
-    return this._provisionVmAgent
+    return this._provisionVmAgent;
   }
 
   // proximity_placement_group_id - computed: false, optional: true, required: false
-  private _proximityPlacementGroupId?: string | undefined; 
+  private _proximityPlacementGroupId?: string; 
   public get proximityPlacementGroupId() {
     return this.getStringAttribute('proximity_placement_group_id');
   }
-  public set proximityPlacementGroupId(value: string | undefined) {
+  public set proximityPlacementGroupId(value: string) {
     this._proximityPlacementGroupId = value;
   }
   public resetProximityPlacementGroupId() {
@@ -1826,7 +2173,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get proximityPlacementGroupIdInput() {
-    return this._proximityPlacementGroupId
+    return this._proximityPlacementGroupId;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -1839,15 +2186,15 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // scale_in_policy - computed: false, optional: true, required: false
-  private _scaleInPolicy?: string | undefined; 
+  private _scaleInPolicy?: string; 
   public get scaleInPolicy() {
     return this.getStringAttribute('scale_in_policy');
   }
-  public set scaleInPolicy(value: string | undefined) {
+  public set scaleInPolicy(value: string) {
     this._scaleInPolicy = value;
   }
   public resetScaleInPolicy() {
@@ -1855,15 +2202,15 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get scaleInPolicyInput() {
-    return this._scaleInPolicy
+    return this._scaleInPolicy;
   }
 
   // single_placement_group - computed: false, optional: true, required: false
-  private _singlePlacementGroup?: boolean | cdktf.IResolvable | undefined; 
+  private _singlePlacementGroup?: boolean | cdktf.IResolvable; 
   public get singlePlacementGroup() {
     return this.getBooleanAttribute('single_placement_group') as any;
   }
-  public set singlePlacementGroup(value: boolean | cdktf.IResolvable | undefined) {
+  public set singlePlacementGroup(value: boolean | cdktf.IResolvable) {
     this._singlePlacementGroup = value;
   }
   public resetSinglePlacementGroup() {
@@ -1871,7 +2218,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get singlePlacementGroupInput() {
-    return this._singlePlacementGroup
+    return this._singlePlacementGroup;
   }
 
   // sku - computed: false, optional: false, required: true
@@ -1884,15 +2231,15 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuInput() {
-    return this._sku
+    return this._sku;
   }
 
   // source_image_id - computed: false, optional: true, required: false
-  private _sourceImageId?: string | undefined; 
+  private _sourceImageId?: string; 
   public get sourceImageId() {
     return this.getStringAttribute('source_image_id');
   }
-  public set sourceImageId(value: string | undefined) {
+  public set sourceImageId(value: string) {
     this._sourceImageId = value;
   }
   public resetSourceImageId() {
@@ -1900,16 +2247,16 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sourceImageIdInput() {
-    return this._sourceImageId
+    return this._sourceImageId;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -1917,7 +2264,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // unique_id - computed: true, optional: false, required: false
@@ -1926,11 +2273,11 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
 
   // upgrade_mode - computed: false, optional: true, required: false
-  private _upgradeMode?: string | undefined; 
+  private _upgradeMode?: string; 
   public get upgradeMode() {
     return this.getStringAttribute('upgrade_mode');
   }
-  public set upgradeMode(value: string | undefined) {
+  public set upgradeMode(value: string) {
     this._upgradeMode = value;
   }
   public resetUpgradeMode() {
@@ -1938,15 +2285,15 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get upgradeModeInput() {
-    return this._upgradeMode
+    return this._upgradeMode;
   }
 
   // zone_balance - computed: false, optional: true, required: false
-  private _zoneBalance?: boolean | cdktf.IResolvable | undefined; 
+  private _zoneBalance?: boolean | cdktf.IResolvable; 
   public get zoneBalance() {
     return this.getBooleanAttribute('zone_balance') as any;
   }
-  public set zoneBalance(value: boolean | cdktf.IResolvable | undefined) {
+  public set zoneBalance(value: boolean | cdktf.IResolvable) {
     this._zoneBalance = value;
   }
   public resetZoneBalance() {
@@ -1954,15 +2301,15 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get zoneBalanceInput() {
-    return this._zoneBalance
+    return this._zoneBalance;
   }
 
   // zones - computed: false, optional: true, required: false
-  private _zones?: string[] | undefined; 
+  private _zones?: string[]; 
   public get zones() {
     return this.getListAttribute('zones');
   }
-  public set zones(value: string[] | undefined) {
+  public set zones(value: string[]) {
     this._zones = value;
   }
   public resetZones() {
@@ -1970,33 +2317,32 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get zonesInput() {
-    return this._zones
+    return this._zones;
   }
 
   // additional_capabilities - computed: false, optional: true, required: false
-  private _additionalCapabilities?: LinuxVirtualMachineScaleSetAdditionalCapabilities | undefined; 
-  private __additionalCapabilitiesOutput = new LinuxVirtualMachineScaleSetAdditionalCapabilitiesOutputReference(this as any, "additional_capabilities", true);
+  private _additionalCapabilities = new LinuxVirtualMachineScaleSetAdditionalCapabilitiesOutputReference(this as any, "additional_capabilities", true);
   public get additionalCapabilities() {
-    return this.__additionalCapabilitiesOutput;
+    return this._additionalCapabilities;
   }
-  public putAdditionalCapabilities(value: LinuxVirtualMachineScaleSetAdditionalCapabilities | undefined) {
-    this._additionalCapabilities = value;
+  public putAdditionalCapabilities(value: LinuxVirtualMachineScaleSetAdditionalCapabilities) {
+    this._additionalCapabilities.internalValue = value;
   }
   public resetAdditionalCapabilities() {
-    this._additionalCapabilities = undefined;
+    this._additionalCapabilities.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get additionalCapabilitiesInput() {
-    return this._additionalCapabilities
+    return this._additionalCapabilities.internalValue;
   }
 
   // admin_ssh_key - computed: false, optional: true, required: false
-  private _adminSshKey?: LinuxVirtualMachineScaleSetAdminSshKey[] | undefined; 
+  private _adminSshKey?: LinuxVirtualMachineScaleSetAdminSshKey[]; 
   public get adminSshKey() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('admin_ssh_key') as any;
   }
-  public set adminSshKey(value: LinuxVirtualMachineScaleSetAdminSshKey[] | undefined) {
+  public set adminSshKey(value: LinuxVirtualMachineScaleSetAdminSshKey[]) {
     this._adminSshKey = value;
   }
   public resetAdminSshKey() {
@@ -2004,67 +2350,64 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get adminSshKeyInput() {
-    return this._adminSshKey
+    return this._adminSshKey;
   }
 
   // automatic_instance_repair - computed: false, optional: true, required: false
-  private _automaticInstanceRepair?: LinuxVirtualMachineScaleSetAutomaticInstanceRepair | undefined; 
-  private __automaticInstanceRepairOutput = new LinuxVirtualMachineScaleSetAutomaticInstanceRepairOutputReference(this as any, "automatic_instance_repair", true);
+  private _automaticInstanceRepair = new LinuxVirtualMachineScaleSetAutomaticInstanceRepairOutputReference(this as any, "automatic_instance_repair", true);
   public get automaticInstanceRepair() {
-    return this.__automaticInstanceRepairOutput;
+    return this._automaticInstanceRepair;
   }
-  public putAutomaticInstanceRepair(value: LinuxVirtualMachineScaleSetAutomaticInstanceRepair | undefined) {
-    this._automaticInstanceRepair = value;
+  public putAutomaticInstanceRepair(value: LinuxVirtualMachineScaleSetAutomaticInstanceRepair) {
+    this._automaticInstanceRepair.internalValue = value;
   }
   public resetAutomaticInstanceRepair() {
-    this._automaticInstanceRepair = undefined;
+    this._automaticInstanceRepair.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get automaticInstanceRepairInput() {
-    return this._automaticInstanceRepair
+    return this._automaticInstanceRepair.internalValue;
   }
 
   // automatic_os_upgrade_policy - computed: false, optional: true, required: false
-  private _automaticOsUpgradePolicy?: LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy | undefined; 
-  private __automaticOsUpgradePolicyOutput = new LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference(this as any, "automatic_os_upgrade_policy", true);
+  private _automaticOsUpgradePolicy = new LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference(this as any, "automatic_os_upgrade_policy", true);
   public get automaticOsUpgradePolicy() {
-    return this.__automaticOsUpgradePolicyOutput;
+    return this._automaticOsUpgradePolicy;
   }
-  public putAutomaticOsUpgradePolicy(value: LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy | undefined) {
-    this._automaticOsUpgradePolicy = value;
+  public putAutomaticOsUpgradePolicy(value: LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy) {
+    this._automaticOsUpgradePolicy.internalValue = value;
   }
   public resetAutomaticOsUpgradePolicy() {
-    this._automaticOsUpgradePolicy = undefined;
+    this._automaticOsUpgradePolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get automaticOsUpgradePolicyInput() {
-    return this._automaticOsUpgradePolicy
+    return this._automaticOsUpgradePolicy.internalValue;
   }
 
   // boot_diagnostics - computed: false, optional: true, required: false
-  private _bootDiagnostics?: LinuxVirtualMachineScaleSetBootDiagnostics | undefined; 
-  private __bootDiagnosticsOutput = new LinuxVirtualMachineScaleSetBootDiagnosticsOutputReference(this as any, "boot_diagnostics", true);
+  private _bootDiagnostics = new LinuxVirtualMachineScaleSetBootDiagnosticsOutputReference(this as any, "boot_diagnostics", true);
   public get bootDiagnostics() {
-    return this.__bootDiagnosticsOutput;
+    return this._bootDiagnostics;
   }
-  public putBootDiagnostics(value: LinuxVirtualMachineScaleSetBootDiagnostics | undefined) {
-    this._bootDiagnostics = value;
+  public putBootDiagnostics(value: LinuxVirtualMachineScaleSetBootDiagnostics) {
+    this._bootDiagnostics.internalValue = value;
   }
   public resetBootDiagnostics() {
-    this._bootDiagnostics = undefined;
+    this._bootDiagnostics.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get bootDiagnosticsInput() {
-    return this._bootDiagnostics
+    return this._bootDiagnostics.internalValue;
   }
 
   // data_disk - computed: false, optional: true, required: false
-  private _dataDisk?: LinuxVirtualMachineScaleSetDataDisk[] | undefined; 
+  private _dataDisk?: LinuxVirtualMachineScaleSetDataDisk[]; 
   public get dataDisk() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('data_disk') as any;
   }
-  public set dataDisk(value: LinuxVirtualMachineScaleSetDataDisk[] | undefined) {
+  public set dataDisk(value: LinuxVirtualMachineScaleSetDataDisk[]) {
     this._dataDisk = value;
   }
   public resetDataDisk() {
@@ -2072,16 +2415,16 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dataDiskInput() {
-    return this._dataDisk
+    return this._dataDisk;
   }
 
   // extension - computed: false, optional: true, required: false
-  private _extension?: LinuxVirtualMachineScaleSetExtension[] | undefined; 
+  private _extension?: LinuxVirtualMachineScaleSetExtension[]; 
   public get extension() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('extension') as any;
   }
-  public set extension(value: LinuxVirtualMachineScaleSetExtension[] | undefined) {
+  public set extension(value: LinuxVirtualMachineScaleSetExtension[]) {
     this._extension = value;
   }
   public resetExtension() {
@@ -2089,24 +2432,23 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get extensionInput() {
-    return this._extension
+    return this._extension;
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: LinuxVirtualMachineScaleSetIdentity | undefined; 
-  private __identityOutput = new LinuxVirtualMachineScaleSetIdentityOutputReference(this as any, "identity", true);
+  private _identity = new LinuxVirtualMachineScaleSetIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.__identityOutput;
+    return this._identity;
   }
-  public putIdentity(value: LinuxVirtualMachineScaleSetIdentity | undefined) {
-    this._identity = value;
+  public putIdentity(value: LinuxVirtualMachineScaleSetIdentity) {
+    this._identity.internalValue = value;
   }
   public resetIdentity() {
-    this._identity = undefined;
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
-    return this._identity
+    return this._identity.internalValue;
   }
 
   // network_interface - computed: false, optional: false, required: true
@@ -2120,64 +2462,61 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkInterfaceInput() {
-    return this._networkInterface
+    return this._networkInterface;
   }
 
   // os_disk - computed: false, optional: false, required: true
-  private _osDisk?: LinuxVirtualMachineScaleSetOsDisk; 
-  private __osDiskOutput = new LinuxVirtualMachineScaleSetOsDiskOutputReference(this as any, "os_disk", true);
+  private _osDisk = new LinuxVirtualMachineScaleSetOsDiskOutputReference(this as any, "os_disk", true);
   public get osDisk() {
-    return this.__osDiskOutput;
+    return this._osDisk;
   }
   public putOsDisk(value: LinuxVirtualMachineScaleSetOsDisk) {
-    this._osDisk = value;
+    this._osDisk.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get osDiskInput() {
-    return this._osDisk
+    return this._osDisk.internalValue;
   }
 
   // plan - computed: false, optional: true, required: false
-  private _plan?: LinuxVirtualMachineScaleSetPlan | undefined; 
-  private __planOutput = new LinuxVirtualMachineScaleSetPlanOutputReference(this as any, "plan", true);
+  private _plan = new LinuxVirtualMachineScaleSetPlanOutputReference(this as any, "plan", true);
   public get plan() {
-    return this.__planOutput;
+    return this._plan;
   }
-  public putPlan(value: LinuxVirtualMachineScaleSetPlan | undefined) {
-    this._plan = value;
+  public putPlan(value: LinuxVirtualMachineScaleSetPlan) {
+    this._plan.internalValue = value;
   }
   public resetPlan() {
-    this._plan = undefined;
+    this._plan.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get planInput() {
-    return this._plan
+    return this._plan.internalValue;
   }
 
   // rolling_upgrade_policy - computed: false, optional: true, required: false
-  private _rollingUpgradePolicy?: LinuxVirtualMachineScaleSetRollingUpgradePolicy | undefined; 
-  private __rollingUpgradePolicyOutput = new LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference(this as any, "rolling_upgrade_policy", true);
+  private _rollingUpgradePolicy = new LinuxVirtualMachineScaleSetRollingUpgradePolicyOutputReference(this as any, "rolling_upgrade_policy", true);
   public get rollingUpgradePolicy() {
-    return this.__rollingUpgradePolicyOutput;
+    return this._rollingUpgradePolicy;
   }
-  public putRollingUpgradePolicy(value: LinuxVirtualMachineScaleSetRollingUpgradePolicy | undefined) {
-    this._rollingUpgradePolicy = value;
+  public putRollingUpgradePolicy(value: LinuxVirtualMachineScaleSetRollingUpgradePolicy) {
+    this._rollingUpgradePolicy.internalValue = value;
   }
   public resetRollingUpgradePolicy() {
-    this._rollingUpgradePolicy = undefined;
+    this._rollingUpgradePolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get rollingUpgradePolicyInput() {
-    return this._rollingUpgradePolicy
+    return this._rollingUpgradePolicy.internalValue;
   }
 
   // secret - computed: false, optional: true, required: false
-  private _secret?: LinuxVirtualMachineScaleSetSecret[] | undefined; 
+  private _secret?: LinuxVirtualMachineScaleSetSecret[]; 
   public get secret() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('secret') as any;
   }
-  public set secret(value: LinuxVirtualMachineScaleSetSecret[] | undefined) {
+  public set secret(value: LinuxVirtualMachineScaleSetSecret[]) {
     this._secret = value;
   }
   public resetSecret() {
@@ -2185,58 +2524,55 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get secretInput() {
-    return this._secret
+    return this._secret;
   }
 
   // source_image_reference - computed: false, optional: true, required: false
-  private _sourceImageReference?: LinuxVirtualMachineScaleSetSourceImageReference | undefined; 
-  private __sourceImageReferenceOutput = new LinuxVirtualMachineScaleSetSourceImageReferenceOutputReference(this as any, "source_image_reference", true);
+  private _sourceImageReference = new LinuxVirtualMachineScaleSetSourceImageReferenceOutputReference(this as any, "source_image_reference", true);
   public get sourceImageReference() {
-    return this.__sourceImageReferenceOutput;
+    return this._sourceImageReference;
   }
-  public putSourceImageReference(value: LinuxVirtualMachineScaleSetSourceImageReference | undefined) {
-    this._sourceImageReference = value;
+  public putSourceImageReference(value: LinuxVirtualMachineScaleSetSourceImageReference) {
+    this._sourceImageReference.internalValue = value;
   }
   public resetSourceImageReference() {
-    this._sourceImageReference = undefined;
+    this._sourceImageReference.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sourceImageReferenceInput() {
-    return this._sourceImageReference
+    return this._sourceImageReference.internalValue;
   }
 
   // terminate_notification - computed: false, optional: true, required: false
-  private _terminateNotification?: LinuxVirtualMachineScaleSetTerminateNotification | undefined; 
-  private __terminateNotificationOutput = new LinuxVirtualMachineScaleSetTerminateNotificationOutputReference(this as any, "terminate_notification", true);
+  private _terminateNotification = new LinuxVirtualMachineScaleSetTerminateNotificationOutputReference(this as any, "terminate_notification", true);
   public get terminateNotification() {
-    return this.__terminateNotificationOutput;
+    return this._terminateNotification;
   }
-  public putTerminateNotification(value: LinuxVirtualMachineScaleSetTerminateNotification | undefined) {
-    this._terminateNotification = value;
+  public putTerminateNotification(value: LinuxVirtualMachineScaleSetTerminateNotification) {
+    this._terminateNotification.internalValue = value;
   }
   public resetTerminateNotification() {
-    this._terminateNotification = undefined;
+    this._terminateNotification.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get terminateNotificationInput() {
-    return this._terminateNotification
+    return this._terminateNotification.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LinuxVirtualMachineScaleSetTimeouts | undefined; 
-  private __timeoutsOutput = new LinuxVirtualMachineScaleSetTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LinuxVirtualMachineScaleSetTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: LinuxVirtualMachineScaleSetTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: LinuxVirtualMachineScaleSetTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -2273,22 +2609,22 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
       upgrade_mode: cdktf.stringToTerraform(this._upgradeMode),
       zone_balance: cdktf.booleanToTerraform(this._zoneBalance),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
-      additional_capabilities: linuxVirtualMachineScaleSetAdditionalCapabilitiesToTerraform(this._additionalCapabilities),
+      additional_capabilities: linuxVirtualMachineScaleSetAdditionalCapabilitiesToTerraform(this._additionalCapabilities.internalValue),
       admin_ssh_key: cdktf.listMapper(linuxVirtualMachineScaleSetAdminSshKeyToTerraform)(this._adminSshKey),
-      automatic_instance_repair: linuxVirtualMachineScaleSetAutomaticInstanceRepairToTerraform(this._automaticInstanceRepair),
-      automatic_os_upgrade_policy: linuxVirtualMachineScaleSetAutomaticOsUpgradePolicyToTerraform(this._automaticOsUpgradePolicy),
-      boot_diagnostics: linuxVirtualMachineScaleSetBootDiagnosticsToTerraform(this._bootDiagnostics),
+      automatic_instance_repair: linuxVirtualMachineScaleSetAutomaticInstanceRepairToTerraform(this._automaticInstanceRepair.internalValue),
+      automatic_os_upgrade_policy: linuxVirtualMachineScaleSetAutomaticOsUpgradePolicyToTerraform(this._automaticOsUpgradePolicy.internalValue),
+      boot_diagnostics: linuxVirtualMachineScaleSetBootDiagnosticsToTerraform(this._bootDiagnostics.internalValue),
       data_disk: cdktf.listMapper(linuxVirtualMachineScaleSetDataDiskToTerraform)(this._dataDisk),
       extension: cdktf.listMapper(linuxVirtualMachineScaleSetExtensionToTerraform)(this._extension),
-      identity: linuxVirtualMachineScaleSetIdentityToTerraform(this._identity),
+      identity: linuxVirtualMachineScaleSetIdentityToTerraform(this._identity.internalValue),
       network_interface: cdktf.listMapper(linuxVirtualMachineScaleSetNetworkInterfaceToTerraform)(this._networkInterface),
-      os_disk: linuxVirtualMachineScaleSetOsDiskToTerraform(this._osDisk),
-      plan: linuxVirtualMachineScaleSetPlanToTerraform(this._plan),
-      rolling_upgrade_policy: linuxVirtualMachineScaleSetRollingUpgradePolicyToTerraform(this._rollingUpgradePolicy),
+      os_disk: linuxVirtualMachineScaleSetOsDiskToTerraform(this._osDisk.internalValue),
+      plan: linuxVirtualMachineScaleSetPlanToTerraform(this._plan.internalValue),
+      rolling_upgrade_policy: linuxVirtualMachineScaleSetRollingUpgradePolicyToTerraform(this._rollingUpgradePolicy.internalValue),
       secret: cdktf.listMapper(linuxVirtualMachineScaleSetSecretToTerraform)(this._secret),
-      source_image_reference: linuxVirtualMachineScaleSetSourceImageReferenceToTerraform(this._sourceImageReference),
-      terminate_notification: linuxVirtualMachineScaleSetTerminateNotificationToTerraform(this._terminateNotification),
-      timeouts: linuxVirtualMachineScaleSetTimeoutsToTerraform(this._timeouts),
+      source_image_reference: linuxVirtualMachineScaleSetSourceImageReferenceToTerraform(this._sourceImageReference.internalValue),
+      terminate_notification: linuxVirtualMachineScaleSetTerminateNotificationToTerraform(this._terminateNotification.internalValue),
+      timeouts: linuxVirtualMachineScaleSetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

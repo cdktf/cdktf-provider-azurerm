@@ -77,7 +77,7 @@ export interface DataAzurermSubscriptionsTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermSubscriptionsTimeoutsToTerraform(struct?: DataAzurermSubscriptionsTimeoutsOutputReference | DataAzurermSubscriptionsTimeouts): any {
+export function dataAzurermSubscriptionsTimeoutsToTerraform(struct?: DataAzurermSubscriptionsTimeoutsOutputReference | DataAzurermSubscriptionsTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -97,12 +97,31 @@ export class DataAzurermSubscriptionsTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermSubscriptionsTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermSubscriptionsTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -110,7 +129,7 @@ export class DataAzurermSubscriptionsTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -148,7 +167,7 @@ export class DataAzurermSubscriptions extends cdktf.TerraformDataSource {
     });
     this._displayNameContains = config.displayNameContains;
     this._displayNamePrefix = config.displayNamePrefix;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -156,11 +175,11 @@ export class DataAzurermSubscriptions extends cdktf.TerraformDataSource {
   // ==========
 
   // display_name_contains - computed: false, optional: true, required: false
-  private _displayNameContains?: string | undefined; 
+  private _displayNameContains?: string; 
   public get displayNameContains() {
     return this.getStringAttribute('display_name_contains');
   }
-  public set displayNameContains(value: string | undefined) {
+  public set displayNameContains(value: string) {
     this._displayNameContains = value;
   }
   public resetDisplayNameContains() {
@@ -168,15 +187,15 @@ export class DataAzurermSubscriptions extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameContainsInput() {
-    return this._displayNameContains
+    return this._displayNameContains;
   }
 
   // display_name_prefix - computed: false, optional: true, required: false
-  private _displayNamePrefix?: string | undefined; 
+  private _displayNamePrefix?: string; 
   public get displayNamePrefix() {
     return this.getStringAttribute('display_name_prefix');
   }
-  public set displayNamePrefix(value: string | undefined) {
+  public set displayNamePrefix(value: string) {
     this._displayNamePrefix = value;
   }
   public resetDisplayNamePrefix() {
@@ -184,7 +203,7 @@ export class DataAzurermSubscriptions extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNamePrefixInput() {
-    return this._displayNamePrefix
+    return this._displayNamePrefix;
   }
 
   // id - computed: true, optional: true, required: false
@@ -198,20 +217,19 @@ export class DataAzurermSubscriptions extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermSubscriptionsTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermSubscriptionsTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermSubscriptionsTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermSubscriptionsTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermSubscriptionsTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -222,7 +240,7 @@ export class DataAzurermSubscriptions extends cdktf.TerraformDataSource {
     return {
       display_name_contains: cdktf.stringToTerraform(this._displayNameContains),
       display_name_prefix: cdktf.stringToTerraform(this._displayNamePrefix),
-      timeouts: dataAzurermSubscriptionsTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermSubscriptionsTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

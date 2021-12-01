@@ -45,7 +45,7 @@ export interface VirtualHubBgpConnectionTimeouts {
   readonly read?: string;
 }
 
-function virtualHubBgpConnectionTimeoutsToTerraform(struct?: VirtualHubBgpConnectionTimeoutsOutputReference | VirtualHubBgpConnectionTimeouts): any {
+export function virtualHubBgpConnectionTimeoutsToTerraform(struct?: VirtualHubBgpConnectionTimeoutsOutputReference | VirtualHubBgpConnectionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -67,12 +67,43 @@ export class VirtualHubBgpConnectionTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): VirtualHubBgpConnectionTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualHubBgpConnectionTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -80,15 +111,15 @@ export class VirtualHubBgpConnectionTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -96,15 +127,15 @@ export class VirtualHubBgpConnectionTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -112,7 +143,7 @@ export class VirtualHubBgpConnectionTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -152,7 +183,7 @@ export class VirtualHubBgpConnection extends cdktf.TerraformResource {
     this._peerAsn = config.peerAsn;
     this._peerIp = config.peerIp;
     this._virtualHubId = config.virtualHubId;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -174,7 +205,7 @@ export class VirtualHubBgpConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // peer_asn - computed: false, optional: false, required: true
@@ -187,7 +218,7 @@ export class VirtualHubBgpConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get peerAsnInput() {
-    return this._peerAsn
+    return this._peerAsn;
   }
 
   // peer_ip - computed: false, optional: false, required: true
@@ -200,7 +231,7 @@ export class VirtualHubBgpConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get peerIpInput() {
-    return this._peerIp
+    return this._peerIp;
   }
 
   // virtual_hub_id - computed: false, optional: false, required: true
@@ -213,24 +244,23 @@ export class VirtualHubBgpConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get virtualHubIdInput() {
-    return this._virtualHubId
+    return this._virtualHubId;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VirtualHubBgpConnectionTimeouts | undefined; 
-  private __timeoutsOutput = new VirtualHubBgpConnectionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VirtualHubBgpConnectionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: VirtualHubBgpConnectionTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: VirtualHubBgpConnectionTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -243,7 +273,7 @@ export class VirtualHubBgpConnection extends cdktf.TerraformResource {
       peer_asn: cdktf.numberToTerraform(this._peerAsn),
       peer_ip: cdktf.stringToTerraform(this._peerIp),
       virtual_hub_id: cdktf.stringToTerraform(this._virtualHubId),
-      timeouts: virtualHubBgpConnectionTimeoutsToTerraform(this._timeouts),
+      timeouts: virtualHubBgpConnectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

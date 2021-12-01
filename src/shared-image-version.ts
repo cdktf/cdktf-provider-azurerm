@@ -71,7 +71,7 @@ export interface SharedImageVersionTargetRegion {
   readonly storageAccountType?: string;
 }
 
-function sharedImageVersionTargetRegionToTerraform(struct?: SharedImageVersionTargetRegion): any {
+export function sharedImageVersionTargetRegionToTerraform(struct?: SharedImageVersionTargetRegion): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -102,7 +102,7 @@ export interface SharedImageVersionTimeouts {
   readonly update?: string;
 }
 
-function sharedImageVersionTimeoutsToTerraform(struct?: SharedImageVersionTimeoutsOutputReference | SharedImageVersionTimeouts): any {
+export function sharedImageVersionTimeoutsToTerraform(struct?: SharedImageVersionTimeoutsOutputReference | SharedImageVersionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -125,12 +125,49 @@ export class SharedImageVersionTimeoutsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SharedImageVersionTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SharedImageVersionTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -138,15 +175,15 @@ export class SharedImageVersionTimeoutsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -154,15 +191,15 @@ export class SharedImageVersionTimeoutsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -170,15 +207,15 @@ export class SharedImageVersionTimeoutsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -186,7 +223,7 @@ export class SharedImageVersionTimeoutsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -232,7 +269,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._targetRegion = config.targetRegion;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -240,11 +277,11 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   // ==========
 
   // exclude_from_latest - computed: false, optional: true, required: false
-  private _excludeFromLatest?: boolean | cdktf.IResolvable | undefined; 
+  private _excludeFromLatest?: boolean | cdktf.IResolvable; 
   public get excludeFromLatest() {
     return this.getBooleanAttribute('exclude_from_latest') as any;
   }
-  public set excludeFromLatest(value: boolean | cdktf.IResolvable | undefined) {
+  public set excludeFromLatest(value: boolean | cdktf.IResolvable) {
     this._excludeFromLatest = value;
   }
   public resetExcludeFromLatest() {
@@ -252,7 +289,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get excludeFromLatestInput() {
-    return this._excludeFromLatest
+    return this._excludeFromLatest;
   }
 
   // gallery_name - computed: false, optional: false, required: true
@@ -265,7 +302,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get galleryNameInput() {
-    return this._galleryName
+    return this._galleryName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -283,7 +320,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get imageNameInput() {
-    return this._imageName
+    return this._imageName;
   }
 
   // location - computed: false, optional: false, required: true
@@ -296,15 +333,15 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // managed_image_id - computed: false, optional: true, required: false
-  private _managedImageId?: string | undefined; 
+  private _managedImageId?: string; 
   public get managedImageId() {
     return this.getStringAttribute('managed_image_id');
   }
-  public set managedImageId(value: string | undefined) {
+  public set managedImageId(value: string) {
     this._managedImageId = value;
   }
   public resetManagedImageId() {
@@ -312,7 +349,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get managedImageIdInput() {
-    return this._managedImageId
+    return this._managedImageId;
   }
 
   // name - computed: false, optional: false, required: true
@@ -325,15 +362,15 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // os_disk_snapshot_id - computed: false, optional: true, required: false
-  private _osDiskSnapshotId?: string | undefined; 
+  private _osDiskSnapshotId?: string; 
   public get osDiskSnapshotId() {
     return this.getStringAttribute('os_disk_snapshot_id');
   }
-  public set osDiskSnapshotId(value: string | undefined) {
+  public set osDiskSnapshotId(value: string) {
     this._osDiskSnapshotId = value;
   }
   public resetOsDiskSnapshotId() {
@@ -341,7 +378,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get osDiskSnapshotIdInput() {
-    return this._osDiskSnapshotId
+    return this._osDiskSnapshotId;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -354,16 +391,16 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -371,7 +408,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // target_region - computed: false, optional: false, required: true
@@ -385,24 +422,23 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get targetRegionInput() {
-    return this._targetRegion
+    return this._targetRegion;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SharedImageVersionTimeouts | undefined; 
-  private __timeoutsOutput = new SharedImageVersionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SharedImageVersionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SharedImageVersionTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SharedImageVersionTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -421,7 +457,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       target_region: cdktf.listMapper(sharedImageVersionTargetRegionToTerraform)(this._targetRegion),
-      timeouts: sharedImageVersionTimeoutsToTerraform(this._timeouts),
+      timeouts: sharedImageVersionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

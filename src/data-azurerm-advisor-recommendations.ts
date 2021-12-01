@@ -76,7 +76,7 @@ export interface DataAzurermAdvisorRecommendationsTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermAdvisorRecommendationsTimeoutsToTerraform(struct?: DataAzurermAdvisorRecommendationsTimeoutsOutputReference | DataAzurermAdvisorRecommendationsTimeouts): any {
+export function dataAzurermAdvisorRecommendationsTimeoutsToTerraform(struct?: DataAzurermAdvisorRecommendationsTimeoutsOutputReference | DataAzurermAdvisorRecommendationsTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -96,12 +96,31 @@ export class DataAzurermAdvisorRecommendationsTimeoutsOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermAdvisorRecommendationsTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermAdvisorRecommendationsTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -109,7 +128,7 @@ export class DataAzurermAdvisorRecommendationsTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -147,7 +166,7 @@ export class DataAzurermAdvisorRecommendations extends cdktf.TerraformDataSource
     });
     this._filterByCategory = config.filterByCategory;
     this._filterByResourceGroups = config.filterByResourceGroups;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -155,11 +174,11 @@ export class DataAzurermAdvisorRecommendations extends cdktf.TerraformDataSource
   // ==========
 
   // filter_by_category - computed: false, optional: true, required: false
-  private _filterByCategory?: string[] | undefined; 
+  private _filterByCategory?: string[]; 
   public get filterByCategory() {
     return this.getListAttribute('filter_by_category');
   }
-  public set filterByCategory(value: string[] | undefined) {
+  public set filterByCategory(value: string[]) {
     this._filterByCategory = value;
   }
   public resetFilterByCategory() {
@@ -167,15 +186,15 @@ export class DataAzurermAdvisorRecommendations extends cdktf.TerraformDataSource
   }
   // Temporarily expose input value. Use with caution.
   public get filterByCategoryInput() {
-    return this._filterByCategory
+    return this._filterByCategory;
   }
 
   // filter_by_resource_groups - computed: false, optional: true, required: false
-  private _filterByResourceGroups?: string[] | undefined; 
+  private _filterByResourceGroups?: string[]; 
   public get filterByResourceGroups() {
     return this.getListAttribute('filter_by_resource_groups');
   }
-  public set filterByResourceGroups(value: string[] | undefined) {
+  public set filterByResourceGroups(value: string[]) {
     this._filterByResourceGroups = value;
   }
   public resetFilterByResourceGroups() {
@@ -183,7 +202,7 @@ export class DataAzurermAdvisorRecommendations extends cdktf.TerraformDataSource
   }
   // Temporarily expose input value. Use with caution.
   public get filterByResourceGroupsInput() {
-    return this._filterByResourceGroups
+    return this._filterByResourceGroups;
   }
 
   // id - computed: true, optional: true, required: false
@@ -197,20 +216,19 @@ export class DataAzurermAdvisorRecommendations extends cdktf.TerraformDataSource
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermAdvisorRecommendationsTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermAdvisorRecommendationsTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermAdvisorRecommendationsTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermAdvisorRecommendationsTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermAdvisorRecommendationsTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -221,7 +239,7 @@ export class DataAzurermAdvisorRecommendations extends cdktf.TerraformDataSource
     return {
       filter_by_category: cdktf.listMapper(cdktf.stringToTerraform)(this._filterByCategory),
       filter_by_resource_groups: cdktf.listMapper(cdktf.stringToTerraform)(this._filterByResourceGroups),
-      timeouts: dataAzurermAdvisorRecommendationsTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermAdvisorRecommendationsTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -61,7 +61,7 @@ export interface MonitorActivityLogAlertAction {
   readonly webhookProperties?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function monitorActivityLogAlertActionToTerraform(struct?: MonitorActivityLogAlertAction): any {
+export function monitorActivityLogAlertActionToTerraform(struct?: MonitorActivityLogAlertAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -87,7 +87,7 @@ export interface MonitorActivityLogAlertCriteriaServiceHealth {
   readonly services?: string[];
 }
 
-function monitorActivityLogAlertCriteriaServiceHealthToTerraform(struct?: MonitorActivityLogAlertCriteriaServiceHealth): any {
+export function monitorActivityLogAlertCriteriaServiceHealthToTerraform(struct?: MonitorActivityLogAlertCriteriaServiceHealth): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -160,7 +160,7 @@ export interface MonitorActivityLogAlertCriteria {
   readonly serviceHealth?: MonitorActivityLogAlertCriteriaServiceHealth[];
 }
 
-function monitorActivityLogAlertCriteriaToTerraform(struct?: MonitorActivityLogAlertCriteriaOutputReference | MonitorActivityLogAlertCriteria): any {
+export function monitorActivityLogAlertCriteriaToTerraform(struct?: MonitorActivityLogAlertCriteriaOutputReference | MonitorActivityLogAlertCriteria): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -193,12 +193,109 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitorActivityLogAlertCriteria | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._caller) {
+      hasAnyValues = true;
+      internalValueResult.caller = this._caller;
+    }
+    if (this._category) {
+      hasAnyValues = true;
+      internalValueResult.category = this._category;
+    }
+    if (this._level) {
+      hasAnyValues = true;
+      internalValueResult.level = this._level;
+    }
+    if (this._operationName) {
+      hasAnyValues = true;
+      internalValueResult.operationName = this._operationName;
+    }
+    if (this._recommendationCategory) {
+      hasAnyValues = true;
+      internalValueResult.recommendationCategory = this._recommendationCategory;
+    }
+    if (this._recommendationImpact) {
+      hasAnyValues = true;
+      internalValueResult.recommendationImpact = this._recommendationImpact;
+    }
+    if (this._recommendationType) {
+      hasAnyValues = true;
+      internalValueResult.recommendationType = this._recommendationType;
+    }
+    if (this._resourceGroup) {
+      hasAnyValues = true;
+      internalValueResult.resourceGroup = this._resourceGroup;
+    }
+    if (this._resourceId) {
+      hasAnyValues = true;
+      internalValueResult.resourceId = this._resourceId;
+    }
+    if (this._resourceProvider) {
+      hasAnyValues = true;
+      internalValueResult.resourceProvider = this._resourceProvider;
+    }
+    if (this._resourceType) {
+      hasAnyValues = true;
+      internalValueResult.resourceType = this._resourceType;
+    }
+    if (this._status) {
+      hasAnyValues = true;
+      internalValueResult.status = this._status;
+    }
+    if (this._subStatus) {
+      hasAnyValues = true;
+      internalValueResult.subStatus = this._subStatus;
+    }
+    if (this._serviceHealth) {
+      hasAnyValues = true;
+      internalValueResult.serviceHealth = this._serviceHealth;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActivityLogAlertCriteria | undefined) {
+    if (value === undefined) {
+      this._caller = undefined;
+      this._category = undefined;
+      this._level = undefined;
+      this._operationName = undefined;
+      this._recommendationCategory = undefined;
+      this._recommendationImpact = undefined;
+      this._recommendationType = undefined;
+      this._resourceGroup = undefined;
+      this._resourceId = undefined;
+      this._resourceProvider = undefined;
+      this._resourceType = undefined;
+      this._status = undefined;
+      this._subStatus = undefined;
+      this._serviceHealth = undefined;
+    }
+    else {
+      this._caller = value.caller;
+      this._category = value.category;
+      this._level = value.level;
+      this._operationName = value.operationName;
+      this._recommendationCategory = value.recommendationCategory;
+      this._recommendationImpact = value.recommendationImpact;
+      this._recommendationType = value.recommendationType;
+      this._resourceGroup = value.resourceGroup;
+      this._resourceId = value.resourceId;
+      this._resourceProvider = value.resourceProvider;
+      this._resourceType = value.resourceType;
+      this._status = value.status;
+      this._subStatus = value.subStatus;
+      this._serviceHealth = value.serviceHealth;
+    }
+  }
+
   // caller - computed: false, optional: true, required: false
-  private _caller?: string | undefined; 
+  private _caller?: string; 
   public get caller() {
     return this.getStringAttribute('caller');
   }
-  public set caller(value: string | undefined) {
+  public set caller(value: string) {
     this._caller = value;
   }
   public resetCaller() {
@@ -206,7 +303,7 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get callerInput() {
-    return this._caller
+    return this._caller;
   }
 
   // category - computed: false, optional: false, required: true
@@ -219,15 +316,15 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get categoryInput() {
-    return this._category
+    return this._category;
   }
 
   // level - computed: false, optional: true, required: false
-  private _level?: string | undefined; 
+  private _level?: string; 
   public get level() {
     return this.getStringAttribute('level');
   }
-  public set level(value: string | undefined) {
+  public set level(value: string) {
     this._level = value;
   }
   public resetLevel() {
@@ -235,15 +332,15 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get levelInput() {
-    return this._level
+    return this._level;
   }
 
   // operation_name - computed: false, optional: true, required: false
-  private _operationName?: string | undefined; 
+  private _operationName?: string; 
   public get operationName() {
     return this.getStringAttribute('operation_name');
   }
-  public set operationName(value: string | undefined) {
+  public set operationName(value: string) {
     this._operationName = value;
   }
   public resetOperationName() {
@@ -251,15 +348,15 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get operationNameInput() {
-    return this._operationName
+    return this._operationName;
   }
 
   // recommendation_category - computed: false, optional: true, required: false
-  private _recommendationCategory?: string | undefined; 
+  private _recommendationCategory?: string; 
   public get recommendationCategory() {
     return this.getStringAttribute('recommendation_category');
   }
-  public set recommendationCategory(value: string | undefined) {
+  public set recommendationCategory(value: string) {
     this._recommendationCategory = value;
   }
   public resetRecommendationCategory() {
@@ -267,15 +364,15 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get recommendationCategoryInput() {
-    return this._recommendationCategory
+    return this._recommendationCategory;
   }
 
   // recommendation_impact - computed: false, optional: true, required: false
-  private _recommendationImpact?: string | undefined; 
+  private _recommendationImpact?: string; 
   public get recommendationImpact() {
     return this.getStringAttribute('recommendation_impact');
   }
-  public set recommendationImpact(value: string | undefined) {
+  public set recommendationImpact(value: string) {
     this._recommendationImpact = value;
   }
   public resetRecommendationImpact() {
@@ -283,15 +380,15 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get recommendationImpactInput() {
-    return this._recommendationImpact
+    return this._recommendationImpact;
   }
 
   // recommendation_type - computed: false, optional: true, required: false
-  private _recommendationType?: string | undefined; 
+  private _recommendationType?: string; 
   public get recommendationType() {
     return this.getStringAttribute('recommendation_type');
   }
-  public set recommendationType(value: string | undefined) {
+  public set recommendationType(value: string) {
     this._recommendationType = value;
   }
   public resetRecommendationType() {
@@ -299,15 +396,15 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get recommendationTypeInput() {
-    return this._recommendationType
+    return this._recommendationType;
   }
 
   // resource_group - computed: false, optional: true, required: false
-  private _resourceGroup?: string | undefined; 
+  private _resourceGroup?: string; 
   public get resourceGroup() {
     return this.getStringAttribute('resource_group');
   }
-  public set resourceGroup(value: string | undefined) {
+  public set resourceGroup(value: string) {
     this._resourceGroup = value;
   }
   public resetResourceGroup() {
@@ -315,15 +412,15 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupInput() {
-    return this._resourceGroup
+    return this._resourceGroup;
   }
 
   // resource_id - computed: false, optional: true, required: false
-  private _resourceId?: string | undefined; 
+  private _resourceId?: string; 
   public get resourceId() {
     return this.getStringAttribute('resource_id');
   }
-  public set resourceId(value: string | undefined) {
+  public set resourceId(value: string) {
     this._resourceId = value;
   }
   public resetResourceId() {
@@ -331,15 +428,15 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get resourceIdInput() {
-    return this._resourceId
+    return this._resourceId;
   }
 
   // resource_provider - computed: false, optional: true, required: false
-  private _resourceProvider?: string | undefined; 
+  private _resourceProvider?: string; 
   public get resourceProvider() {
     return this.getStringAttribute('resource_provider');
   }
-  public set resourceProvider(value: string | undefined) {
+  public set resourceProvider(value: string) {
     this._resourceProvider = value;
   }
   public resetResourceProvider() {
@@ -347,15 +444,15 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get resourceProviderInput() {
-    return this._resourceProvider
+    return this._resourceProvider;
   }
 
   // resource_type - computed: false, optional: true, required: false
-  private _resourceType?: string | undefined; 
+  private _resourceType?: string; 
   public get resourceType() {
     return this.getStringAttribute('resource_type');
   }
-  public set resourceType(value: string | undefined) {
+  public set resourceType(value: string) {
     this._resourceType = value;
   }
   public resetResourceType() {
@@ -363,15 +460,15 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get resourceTypeInput() {
-    return this._resourceType
+    return this._resourceType;
   }
 
   // status - computed: false, optional: true, required: false
-  private _status?: string | undefined; 
+  private _status?: string; 
   public get status() {
     return this.getStringAttribute('status');
   }
-  public set status(value: string | undefined) {
+  public set status(value: string) {
     this._status = value;
   }
   public resetStatus() {
@@ -379,15 +476,15 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get statusInput() {
-    return this._status
+    return this._status;
   }
 
   // sub_status - computed: false, optional: true, required: false
-  private _subStatus?: string | undefined; 
+  private _subStatus?: string; 
   public get subStatus() {
     return this.getStringAttribute('sub_status');
   }
-  public set subStatus(value: string | undefined) {
+  public set subStatus(value: string) {
     this._subStatus = value;
   }
   public resetSubStatus() {
@@ -395,16 +492,16 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get subStatusInput() {
-    return this._subStatus
+    return this._subStatus;
   }
 
   // service_health - computed: false, optional: true, required: false
-  private _serviceHealth?: MonitorActivityLogAlertCriteriaServiceHealth[] | undefined; 
+  private _serviceHealth?: MonitorActivityLogAlertCriteriaServiceHealth[]; 
   public get serviceHealth() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('service_health') as any;
   }
-  public set serviceHealth(value: MonitorActivityLogAlertCriteriaServiceHealth[] | undefined) {
+  public set serviceHealth(value: MonitorActivityLogAlertCriteriaServiceHealth[]) {
     this._serviceHealth = value;
   }
   public resetServiceHealth() {
@@ -412,7 +509,7 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get serviceHealthInput() {
-    return this._serviceHealth
+    return this._serviceHealth;
   }
 }
 export interface MonitorActivityLogAlertTimeouts {
@@ -434,7 +531,7 @@ export interface MonitorActivityLogAlertTimeouts {
   readonly update?: string;
 }
 
-function monitorActivityLogAlertTimeoutsToTerraform(struct?: MonitorActivityLogAlertTimeoutsOutputReference | MonitorActivityLogAlertTimeouts): any {
+export function monitorActivityLogAlertTimeoutsToTerraform(struct?: MonitorActivityLogAlertTimeoutsOutputReference | MonitorActivityLogAlertTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -457,12 +554,49 @@ export class MonitorActivityLogAlertTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitorActivityLogAlertTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorActivityLogAlertTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -470,15 +604,15 @@ export class MonitorActivityLogAlertTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -486,15 +620,15 @@ export class MonitorActivityLogAlertTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -502,15 +636,15 @@ export class MonitorActivityLogAlertTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -518,7 +652,7 @@ export class MonitorActivityLogAlertTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -561,8 +695,8 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
     this._scopes = config.scopes;
     this._tags = config.tags;
     this._action = config.action;
-    this._criteria = config.criteria;
-    this._timeouts = config.timeouts;
+    this._criteria.internalValue = config.criteria;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -570,11 +704,11 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -582,15 +716,15 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -598,7 +732,7 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -616,7 +750,7 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -629,7 +763,7 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // scopes - computed: false, optional: false, required: true
@@ -642,16 +776,16 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get scopesInput() {
-    return this._scopes
+    return this._scopes;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -659,16 +793,16 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // action - computed: false, optional: true, required: false
-  private _action?: MonitorActivityLogAlertAction[] | undefined; 
+  private _action?: MonitorActivityLogAlertAction[]; 
   public get action() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('action') as any;
   }
-  public set action(value: MonitorActivityLogAlertAction[] | undefined) {
+  public set action(value: MonitorActivityLogAlertAction[]) {
     this._action = value;
   }
   public resetAction() {
@@ -676,38 +810,36 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get actionInput() {
-    return this._action
+    return this._action;
   }
 
   // criteria - computed: false, optional: false, required: true
-  private _criteria?: MonitorActivityLogAlertCriteria; 
-  private __criteriaOutput = new MonitorActivityLogAlertCriteriaOutputReference(this as any, "criteria", true);
+  private _criteria = new MonitorActivityLogAlertCriteriaOutputReference(this as any, "criteria", true);
   public get criteria() {
-    return this.__criteriaOutput;
+    return this._criteria;
   }
   public putCriteria(value: MonitorActivityLogAlertCriteria) {
-    this._criteria = value;
+    this._criteria.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get criteriaInput() {
-    return this._criteria
+    return this._criteria.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MonitorActivityLogAlertTimeouts | undefined; 
-  private __timeoutsOutput = new MonitorActivityLogAlertTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitorActivityLogAlertTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MonitorActivityLogAlertTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MonitorActivityLogAlertTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -723,8 +855,8 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
       scopes: cdktf.listMapper(cdktf.stringToTerraform)(this._scopes),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       action: cdktf.listMapper(monitorActivityLogAlertActionToTerraform)(this._action),
-      criteria: monitorActivityLogAlertCriteriaToTerraform(this._criteria),
-      timeouts: monitorActivityLogAlertTimeoutsToTerraform(this._timeouts),
+      criteria: monitorActivityLogAlertCriteriaToTerraform(this._criteria.internalValue),
+      timeouts: monitorActivityLogAlertTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

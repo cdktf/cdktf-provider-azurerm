@@ -89,7 +89,7 @@ export interface ServicebusTopicTimeouts {
   readonly update?: string;
 }
 
-function servicebusTopicTimeoutsToTerraform(struct?: ServicebusTopicTimeoutsOutputReference | ServicebusTopicTimeouts): any {
+export function servicebusTopicTimeoutsToTerraform(struct?: ServicebusTopicTimeoutsOutputReference | ServicebusTopicTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -112,12 +112,49 @@ export class ServicebusTopicTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ServicebusTopicTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServicebusTopicTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -125,15 +162,15 @@ export class ServicebusTopicTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -141,15 +178,15 @@ export class ServicebusTopicTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -157,15 +194,15 @@ export class ServicebusTopicTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -173,7 +210,7 @@ export class ServicebusTopicTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -223,7 +260,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._status = config.status;
     this._supportOrdering = config.supportOrdering;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -231,11 +268,11 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   // ==========
 
   // auto_delete_on_idle - computed: true, optional: true, required: false
-  private _autoDeleteOnIdle?: string | undefined; 
+  private _autoDeleteOnIdle?: string; 
   public get autoDeleteOnIdle() {
     return this.getStringAttribute('auto_delete_on_idle');
   }
-  public set autoDeleteOnIdle(value: string | undefined) {
+  public set autoDeleteOnIdle(value: string) {
     this._autoDeleteOnIdle = value;
   }
   public resetAutoDeleteOnIdle() {
@@ -243,15 +280,15 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get autoDeleteOnIdleInput() {
-    return this._autoDeleteOnIdle
+    return this._autoDeleteOnIdle;
   }
 
   // default_message_ttl - computed: true, optional: true, required: false
-  private _defaultMessageTtl?: string | undefined; 
+  private _defaultMessageTtl?: string; 
   public get defaultMessageTtl() {
     return this.getStringAttribute('default_message_ttl');
   }
-  public set defaultMessageTtl(value: string | undefined) {
+  public set defaultMessageTtl(value: string) {
     this._defaultMessageTtl = value;
   }
   public resetDefaultMessageTtl() {
@@ -259,15 +296,15 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get defaultMessageTtlInput() {
-    return this._defaultMessageTtl
+    return this._defaultMessageTtl;
   }
 
   // duplicate_detection_history_time_window - computed: true, optional: true, required: false
-  private _duplicateDetectionHistoryTimeWindow?: string | undefined; 
+  private _duplicateDetectionHistoryTimeWindow?: string; 
   public get duplicateDetectionHistoryTimeWindow() {
     return this.getStringAttribute('duplicate_detection_history_time_window');
   }
-  public set duplicateDetectionHistoryTimeWindow(value: string | undefined) {
+  public set duplicateDetectionHistoryTimeWindow(value: string) {
     this._duplicateDetectionHistoryTimeWindow = value;
   }
   public resetDuplicateDetectionHistoryTimeWindow() {
@@ -275,15 +312,15 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get duplicateDetectionHistoryTimeWindowInput() {
-    return this._duplicateDetectionHistoryTimeWindow
+    return this._duplicateDetectionHistoryTimeWindow;
   }
 
   // enable_batched_operations - computed: false, optional: true, required: false
-  private _enableBatchedOperations?: boolean | cdktf.IResolvable | undefined; 
+  private _enableBatchedOperations?: boolean | cdktf.IResolvable; 
   public get enableBatchedOperations() {
     return this.getBooleanAttribute('enable_batched_operations') as any;
   }
-  public set enableBatchedOperations(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableBatchedOperations(value: boolean | cdktf.IResolvable) {
     this._enableBatchedOperations = value;
   }
   public resetEnableBatchedOperations() {
@@ -291,15 +328,15 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableBatchedOperationsInput() {
-    return this._enableBatchedOperations
+    return this._enableBatchedOperations;
   }
 
   // enable_express - computed: false, optional: true, required: false
-  private _enableExpress?: boolean | cdktf.IResolvable | undefined; 
+  private _enableExpress?: boolean | cdktf.IResolvable; 
   public get enableExpress() {
     return this.getBooleanAttribute('enable_express') as any;
   }
-  public set enableExpress(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableExpress(value: boolean | cdktf.IResolvable) {
     this._enableExpress = value;
   }
   public resetEnableExpress() {
@@ -307,15 +344,15 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableExpressInput() {
-    return this._enableExpress
+    return this._enableExpress;
   }
 
   // enable_partitioning - computed: false, optional: true, required: false
-  private _enablePartitioning?: boolean | cdktf.IResolvable | undefined; 
+  private _enablePartitioning?: boolean | cdktf.IResolvable; 
   public get enablePartitioning() {
     return this.getBooleanAttribute('enable_partitioning') as any;
   }
-  public set enablePartitioning(value: boolean | cdktf.IResolvable | undefined) {
+  public set enablePartitioning(value: boolean | cdktf.IResolvable) {
     this._enablePartitioning = value;
   }
   public resetEnablePartitioning() {
@@ -323,7 +360,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enablePartitioningInput() {
-    return this._enablePartitioning
+    return this._enablePartitioning;
   }
 
   // id - computed: true, optional: true, required: false
@@ -332,11 +369,11 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
 
   // max_message_size_in_kilobytes - computed: true, optional: true, required: false
-  private _maxMessageSizeInKilobytes?: number | undefined; 
+  private _maxMessageSizeInKilobytes?: number; 
   public get maxMessageSizeInKilobytes() {
     return this.getNumberAttribute('max_message_size_in_kilobytes');
   }
-  public set maxMessageSizeInKilobytes(value: number | undefined) {
+  public set maxMessageSizeInKilobytes(value: number) {
     this._maxMessageSizeInKilobytes = value;
   }
   public resetMaxMessageSizeInKilobytes() {
@@ -344,15 +381,15 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get maxMessageSizeInKilobytesInput() {
-    return this._maxMessageSizeInKilobytes
+    return this._maxMessageSizeInKilobytes;
   }
 
   // max_size_in_megabytes - computed: true, optional: true, required: false
-  private _maxSizeInMegabytes?: number | undefined; 
+  private _maxSizeInMegabytes?: number; 
   public get maxSizeInMegabytes() {
     return this.getNumberAttribute('max_size_in_megabytes');
   }
-  public set maxSizeInMegabytes(value: number | undefined) {
+  public set maxSizeInMegabytes(value: number) {
     this._maxSizeInMegabytes = value;
   }
   public resetMaxSizeInMegabytes() {
@@ -360,7 +397,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get maxSizeInMegabytesInput() {
-    return this._maxSizeInMegabytes
+    return this._maxSizeInMegabytes;
   }
 
   // name - computed: false, optional: false, required: true
@@ -373,7 +410,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // namespace_name - computed: false, optional: false, required: true
@@ -386,15 +423,15 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceNameInput() {
-    return this._namespaceName
+    return this._namespaceName;
   }
 
   // requires_duplicate_detection - computed: false, optional: true, required: false
-  private _requiresDuplicateDetection?: boolean | cdktf.IResolvable | undefined; 
+  private _requiresDuplicateDetection?: boolean | cdktf.IResolvable; 
   public get requiresDuplicateDetection() {
     return this.getBooleanAttribute('requires_duplicate_detection') as any;
   }
-  public set requiresDuplicateDetection(value: boolean | cdktf.IResolvable | undefined) {
+  public set requiresDuplicateDetection(value: boolean | cdktf.IResolvable) {
     this._requiresDuplicateDetection = value;
   }
   public resetRequiresDuplicateDetection() {
@@ -402,7 +439,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get requiresDuplicateDetectionInput() {
-    return this._requiresDuplicateDetection
+    return this._requiresDuplicateDetection;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -415,15 +452,15 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // status - computed: false, optional: true, required: false
-  private _status?: string | undefined; 
+  private _status?: string; 
   public get status() {
     return this.getStringAttribute('status');
   }
-  public set status(value: string | undefined) {
+  public set status(value: string) {
     this._status = value;
   }
   public resetStatus() {
@@ -431,15 +468,15 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get statusInput() {
-    return this._status
+    return this._status;
   }
 
   // support_ordering - computed: false, optional: true, required: false
-  private _supportOrdering?: boolean | cdktf.IResolvable | undefined; 
+  private _supportOrdering?: boolean | cdktf.IResolvable; 
   public get supportOrdering() {
     return this.getBooleanAttribute('support_ordering') as any;
   }
-  public set supportOrdering(value: boolean | cdktf.IResolvable | undefined) {
+  public set supportOrdering(value: boolean | cdktf.IResolvable) {
     this._supportOrdering = value;
   }
   public resetSupportOrdering() {
@@ -447,24 +484,23 @@ export class ServicebusTopic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get supportOrderingInput() {
-    return this._supportOrdering
+    return this._supportOrdering;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ServicebusTopicTimeouts | undefined; 
-  private __timeoutsOutput = new ServicebusTopicTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ServicebusTopicTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ServicebusTopicTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ServicebusTopicTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -487,7 +523,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       status: cdktf.stringToTerraform(this._status),
       support_ordering: cdktf.booleanToTerraform(this._supportOrdering),
-      timeouts: servicebusTopicTimeoutsToTerraform(this._timeouts),
+      timeouts: servicebusTopicTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

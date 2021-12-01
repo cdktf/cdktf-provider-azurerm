@@ -81,7 +81,7 @@ export interface CosmosdbSqlContainerAutoscaleSettings {
   readonly maxThroughput?: number;
 }
 
-function cosmosdbSqlContainerAutoscaleSettingsToTerraform(struct?: CosmosdbSqlContainerAutoscaleSettingsOutputReference | CosmosdbSqlContainerAutoscaleSettings): any {
+export function cosmosdbSqlContainerAutoscaleSettingsToTerraform(struct?: CosmosdbSqlContainerAutoscaleSettingsOutputReference | CosmosdbSqlContainerAutoscaleSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -101,12 +101,31 @@ export class CosmosdbSqlContainerAutoscaleSettingsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbSqlContainerAutoscaleSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maxThroughput) {
+      hasAnyValues = true;
+      internalValueResult.maxThroughput = this._maxThroughput;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbSqlContainerAutoscaleSettings | undefined) {
+    if (value === undefined) {
+      this._maxThroughput = undefined;
+    }
+    else {
+      this._maxThroughput = value.maxThroughput;
+    }
+  }
+
   // max_throughput - computed: true, optional: true, required: false
-  private _maxThroughput?: number | undefined; 
+  private _maxThroughput?: number; 
   public get maxThroughput() {
     return this.getNumberAttribute('max_throughput');
   }
-  public set maxThroughput(value: number | undefined) {
+  public set maxThroughput(value: number) {
     this._maxThroughput = value;
   }
   public resetMaxThroughput() {
@@ -114,7 +133,7 @@ export class CosmosdbSqlContainerAutoscaleSettingsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get maxThroughputInput() {
-    return this._maxThroughput
+    return this._maxThroughput;
   }
 }
 export interface CosmosdbSqlContainerConflictResolutionPolicy {
@@ -132,7 +151,7 @@ export interface CosmosdbSqlContainerConflictResolutionPolicy {
   readonly mode: string;
 }
 
-function cosmosdbSqlContainerConflictResolutionPolicyToTerraform(struct?: CosmosdbSqlContainerConflictResolutionPolicyOutputReference | CosmosdbSqlContainerConflictResolutionPolicy): any {
+export function cosmosdbSqlContainerConflictResolutionPolicyToTerraform(struct?: CosmosdbSqlContainerConflictResolutionPolicyOutputReference | CosmosdbSqlContainerConflictResolutionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -154,12 +173,43 @@ export class CosmosdbSqlContainerConflictResolutionPolicyOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbSqlContainerConflictResolutionPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._conflictResolutionPath) {
+      hasAnyValues = true;
+      internalValueResult.conflictResolutionPath = this._conflictResolutionPath;
+    }
+    if (this._conflictResolutionProcedure) {
+      hasAnyValues = true;
+      internalValueResult.conflictResolutionProcedure = this._conflictResolutionProcedure;
+    }
+    if (this._mode) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbSqlContainerConflictResolutionPolicy | undefined) {
+    if (value === undefined) {
+      this._conflictResolutionPath = undefined;
+      this._conflictResolutionProcedure = undefined;
+      this._mode = undefined;
+    }
+    else {
+      this._conflictResolutionPath = value.conflictResolutionPath;
+      this._conflictResolutionProcedure = value.conflictResolutionProcedure;
+      this._mode = value.mode;
+    }
+  }
+
   // conflict_resolution_path - computed: false, optional: true, required: false
-  private _conflictResolutionPath?: string | undefined; 
+  private _conflictResolutionPath?: string; 
   public get conflictResolutionPath() {
     return this.getStringAttribute('conflict_resolution_path');
   }
-  public set conflictResolutionPath(value: string | undefined) {
+  public set conflictResolutionPath(value: string) {
     this._conflictResolutionPath = value;
   }
   public resetConflictResolutionPath() {
@@ -167,15 +217,15 @@ export class CosmosdbSqlContainerConflictResolutionPolicyOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get conflictResolutionPathInput() {
-    return this._conflictResolutionPath
+    return this._conflictResolutionPath;
   }
 
   // conflict_resolution_procedure - computed: false, optional: true, required: false
-  private _conflictResolutionProcedure?: string | undefined; 
+  private _conflictResolutionProcedure?: string; 
   public get conflictResolutionProcedure() {
     return this.getStringAttribute('conflict_resolution_procedure');
   }
-  public set conflictResolutionProcedure(value: string | undefined) {
+  public set conflictResolutionProcedure(value: string) {
     this._conflictResolutionProcedure = value;
   }
   public resetConflictResolutionProcedure() {
@@ -183,7 +233,7 @@ export class CosmosdbSqlContainerConflictResolutionPolicyOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get conflictResolutionProcedureInput() {
-    return this._conflictResolutionProcedure
+    return this._conflictResolutionProcedure;
   }
 
   // mode - computed: false, optional: false, required: true
@@ -196,7 +246,7 @@ export class CosmosdbSqlContainerConflictResolutionPolicyOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get modeInput() {
-    return this._mode
+    return this._mode;
   }
 }
 export interface CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex {
@@ -210,7 +260,7 @@ export interface CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex {
   readonly path: string;
 }
 
-function cosmosdbSqlContainerIndexingPolicyCompositeIndexIndexToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex): any {
+export function cosmosdbSqlContainerIndexingPolicyCompositeIndexIndexToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -230,7 +280,7 @@ export interface CosmosdbSqlContainerIndexingPolicyCompositeIndex {
   readonly index: CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex[];
 }
 
-function cosmosdbSqlContainerIndexingPolicyCompositeIndexToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyCompositeIndex): any {
+export function cosmosdbSqlContainerIndexingPolicyCompositeIndexToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyCompositeIndex): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -247,7 +297,7 @@ export interface CosmosdbSqlContainerIndexingPolicyExcludedPath {
   readonly path: string;
 }
 
-function cosmosdbSqlContainerIndexingPolicyExcludedPathToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyExcludedPath): any {
+export function cosmosdbSqlContainerIndexingPolicyExcludedPathToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyExcludedPath): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -264,7 +314,7 @@ export interface CosmosdbSqlContainerIndexingPolicyIncludedPath {
   readonly path: string;
 }
 
-function cosmosdbSqlContainerIndexingPolicyIncludedPathToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyIncludedPath): any {
+export function cosmosdbSqlContainerIndexingPolicyIncludedPathToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyIncludedPath): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -281,7 +331,7 @@ export interface CosmosdbSqlContainerIndexingPolicySpatialIndex {
   readonly path: string;
 }
 
-function cosmosdbSqlContainerIndexingPolicySpatialIndexToTerraform(struct?: CosmosdbSqlContainerIndexingPolicySpatialIndex): any {
+export function cosmosdbSqlContainerIndexingPolicySpatialIndexToTerraform(struct?: CosmosdbSqlContainerIndexingPolicySpatialIndex): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -322,7 +372,7 @@ export interface CosmosdbSqlContainerIndexingPolicy {
   readonly spatialIndex?: CosmosdbSqlContainerIndexingPolicySpatialIndex[];
 }
 
-function cosmosdbSqlContainerIndexingPolicyToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyOutputReference | CosmosdbSqlContainerIndexingPolicy): any {
+export function cosmosdbSqlContainerIndexingPolicyToTerraform(struct?: CosmosdbSqlContainerIndexingPolicyOutputReference | CosmosdbSqlContainerIndexingPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -346,12 +396,55 @@ export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbSqlContainerIndexingPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._indexingMode) {
+      hasAnyValues = true;
+      internalValueResult.indexingMode = this._indexingMode;
+    }
+    if (this._compositeIndex) {
+      hasAnyValues = true;
+      internalValueResult.compositeIndex = this._compositeIndex;
+    }
+    if (this._excludedPath) {
+      hasAnyValues = true;
+      internalValueResult.excludedPath = this._excludedPath;
+    }
+    if (this._includedPath) {
+      hasAnyValues = true;
+      internalValueResult.includedPath = this._includedPath;
+    }
+    if (this._spatialIndex) {
+      hasAnyValues = true;
+      internalValueResult.spatialIndex = this._spatialIndex;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbSqlContainerIndexingPolicy | undefined) {
+    if (value === undefined) {
+      this._indexingMode = undefined;
+      this._compositeIndex = undefined;
+      this._excludedPath = undefined;
+      this._includedPath = undefined;
+      this._spatialIndex = undefined;
+    }
+    else {
+      this._indexingMode = value.indexingMode;
+      this._compositeIndex = value.compositeIndex;
+      this._excludedPath = value.excludedPath;
+      this._includedPath = value.includedPath;
+      this._spatialIndex = value.spatialIndex;
+    }
+  }
+
   // indexing_mode - computed: false, optional: true, required: false
-  private _indexingMode?: string | undefined; 
+  private _indexingMode?: string; 
   public get indexingMode() {
     return this.getStringAttribute('indexing_mode');
   }
-  public set indexingMode(value: string | undefined) {
+  public set indexingMode(value: string) {
     this._indexingMode = value;
   }
   public resetIndexingMode() {
@@ -359,16 +452,16 @@ export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get indexingModeInput() {
-    return this._indexingMode
+    return this._indexingMode;
   }
 
   // composite_index - computed: false, optional: true, required: false
-  private _compositeIndex?: CosmosdbSqlContainerIndexingPolicyCompositeIndex[] | undefined; 
+  private _compositeIndex?: CosmosdbSqlContainerIndexingPolicyCompositeIndex[]; 
   public get compositeIndex() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('composite_index') as any;
   }
-  public set compositeIndex(value: CosmosdbSqlContainerIndexingPolicyCompositeIndex[] | undefined) {
+  public set compositeIndex(value: CosmosdbSqlContainerIndexingPolicyCompositeIndex[]) {
     this._compositeIndex = value;
   }
   public resetCompositeIndex() {
@@ -376,16 +469,16 @@ export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get compositeIndexInput() {
-    return this._compositeIndex
+    return this._compositeIndex;
   }
 
   // excluded_path - computed: false, optional: true, required: false
-  private _excludedPath?: CosmosdbSqlContainerIndexingPolicyExcludedPath[] | undefined; 
+  private _excludedPath?: CosmosdbSqlContainerIndexingPolicyExcludedPath[]; 
   public get excludedPath() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('excluded_path') as any;
   }
-  public set excludedPath(value: CosmosdbSqlContainerIndexingPolicyExcludedPath[] | undefined) {
+  public set excludedPath(value: CosmosdbSqlContainerIndexingPolicyExcludedPath[]) {
     this._excludedPath = value;
   }
   public resetExcludedPath() {
@@ -393,16 +486,16 @@ export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get excludedPathInput() {
-    return this._excludedPath
+    return this._excludedPath;
   }
 
   // included_path - computed: false, optional: true, required: false
-  private _includedPath?: CosmosdbSqlContainerIndexingPolicyIncludedPath[] | undefined; 
+  private _includedPath?: CosmosdbSqlContainerIndexingPolicyIncludedPath[]; 
   public get includedPath() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('included_path') as any;
   }
-  public set includedPath(value: CosmosdbSqlContainerIndexingPolicyIncludedPath[] | undefined) {
+  public set includedPath(value: CosmosdbSqlContainerIndexingPolicyIncludedPath[]) {
     this._includedPath = value;
   }
   public resetIncludedPath() {
@@ -410,16 +503,16 @@ export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get includedPathInput() {
-    return this._includedPath
+    return this._includedPath;
   }
 
   // spatial_index - computed: false, optional: true, required: false
-  private _spatialIndex?: CosmosdbSqlContainerIndexingPolicySpatialIndex[] | undefined; 
+  private _spatialIndex?: CosmosdbSqlContainerIndexingPolicySpatialIndex[]; 
   public get spatialIndex() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('spatial_index') as any;
   }
-  public set spatialIndex(value: CosmosdbSqlContainerIndexingPolicySpatialIndex[] | undefined) {
+  public set spatialIndex(value: CosmosdbSqlContainerIndexingPolicySpatialIndex[]) {
     this._spatialIndex = value;
   }
   public resetSpatialIndex() {
@@ -427,7 +520,7 @@ export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get spatialIndexInput() {
-    return this._spatialIndex
+    return this._spatialIndex;
   }
 }
 export interface CosmosdbSqlContainerTimeouts {
@@ -449,7 +542,7 @@ export interface CosmosdbSqlContainerTimeouts {
   readonly update?: string;
 }
 
-function cosmosdbSqlContainerTimeoutsToTerraform(struct?: CosmosdbSqlContainerTimeoutsOutputReference | CosmosdbSqlContainerTimeouts): any {
+export function cosmosdbSqlContainerTimeoutsToTerraform(struct?: CosmosdbSqlContainerTimeoutsOutputReference | CosmosdbSqlContainerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -472,12 +565,49 @@ export class CosmosdbSqlContainerTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbSqlContainerTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbSqlContainerTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -485,15 +615,15 @@ export class CosmosdbSqlContainerTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -501,15 +631,15 @@ export class CosmosdbSqlContainerTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -517,15 +647,15 @@ export class CosmosdbSqlContainerTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -533,7 +663,7 @@ export class CosmosdbSqlContainerTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface CosmosdbSqlContainerUniqueKey {
@@ -543,7 +673,7 @@ export interface CosmosdbSqlContainerUniqueKey {
   readonly paths: string[];
 }
 
-function cosmosdbSqlContainerUniqueKeyToTerraform(struct?: CosmosdbSqlContainerUniqueKey): any {
+export function cosmosdbSqlContainerUniqueKeyToTerraform(struct?: CosmosdbSqlContainerUniqueKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -595,10 +725,10 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
     this._partitionKeyVersion = config.partitionKeyVersion;
     this._resourceGroupName = config.resourceGroupName;
     this._throughput = config.throughput;
-    this._autoscaleSettings = config.autoscaleSettings;
-    this._conflictResolutionPolicy = config.conflictResolutionPolicy;
-    this._indexingPolicy = config.indexingPolicy;
-    this._timeouts = config.timeouts;
+    this._autoscaleSettings.internalValue = config.autoscaleSettings;
+    this._conflictResolutionPolicy.internalValue = config.conflictResolutionPolicy;
+    this._indexingPolicy.internalValue = config.indexingPolicy;
+    this._timeouts.internalValue = config.timeouts;
     this._uniqueKey = config.uniqueKey;
   }
 
@@ -616,15 +746,15 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get accountNameInput() {
-    return this._accountName
+    return this._accountName;
   }
 
   // analytical_storage_ttl - computed: false, optional: true, required: false
-  private _analyticalStorageTtl?: number | undefined; 
+  private _analyticalStorageTtl?: number; 
   public get analyticalStorageTtl() {
     return this.getNumberAttribute('analytical_storage_ttl');
   }
-  public set analyticalStorageTtl(value: number | undefined) {
+  public set analyticalStorageTtl(value: number) {
     this._analyticalStorageTtl = value;
   }
   public resetAnalyticalStorageTtl() {
@@ -632,7 +762,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get analyticalStorageTtlInput() {
-    return this._analyticalStorageTtl
+    return this._analyticalStorageTtl;
   }
 
   // database_name - computed: false, optional: false, required: true
@@ -645,15 +775,15 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get databaseNameInput() {
-    return this._databaseName
+    return this._databaseName;
   }
 
   // default_ttl - computed: true, optional: true, required: false
-  private _defaultTtl?: number | undefined; 
+  private _defaultTtl?: number; 
   public get defaultTtl() {
     return this.getNumberAttribute('default_ttl');
   }
-  public set defaultTtl(value: number | undefined) {
+  public set defaultTtl(value: number) {
     this._defaultTtl = value;
   }
   public resetDefaultTtl() {
@@ -661,7 +791,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get defaultTtlInput() {
-    return this._defaultTtl
+    return this._defaultTtl;
   }
 
   // id - computed: true, optional: true, required: false
@@ -679,7 +809,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // partition_key_path - computed: false, optional: false, required: true
@@ -692,15 +822,15 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get partitionKeyPathInput() {
-    return this._partitionKeyPath
+    return this._partitionKeyPath;
   }
 
   // partition_key_version - computed: false, optional: true, required: false
-  private _partitionKeyVersion?: number | undefined; 
+  private _partitionKeyVersion?: number; 
   public get partitionKeyVersion() {
     return this.getNumberAttribute('partition_key_version');
   }
-  public set partitionKeyVersion(value: number | undefined) {
+  public set partitionKeyVersion(value: number) {
     this._partitionKeyVersion = value;
   }
   public resetPartitionKeyVersion() {
@@ -708,7 +838,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get partitionKeyVersionInput() {
-    return this._partitionKeyVersion
+    return this._partitionKeyVersion;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -721,15 +851,15 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // throughput - computed: true, optional: true, required: false
-  private _throughput?: number | undefined; 
+  private _throughput?: number; 
   public get throughput() {
     return this.getNumberAttribute('throughput');
   }
-  public set throughput(value: number | undefined) {
+  public set throughput(value: number) {
     this._throughput = value;
   }
   public resetThroughput() {
@@ -737,84 +867,80 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get throughputInput() {
-    return this._throughput
+    return this._throughput;
   }
 
   // autoscale_settings - computed: false, optional: true, required: false
-  private _autoscaleSettings?: CosmosdbSqlContainerAutoscaleSettings | undefined; 
-  private __autoscaleSettingsOutput = new CosmosdbSqlContainerAutoscaleSettingsOutputReference(this as any, "autoscale_settings", true);
+  private _autoscaleSettings = new CosmosdbSqlContainerAutoscaleSettingsOutputReference(this as any, "autoscale_settings", true);
   public get autoscaleSettings() {
-    return this.__autoscaleSettingsOutput;
+    return this._autoscaleSettings;
   }
-  public putAutoscaleSettings(value: CosmosdbSqlContainerAutoscaleSettings | undefined) {
-    this._autoscaleSettings = value;
+  public putAutoscaleSettings(value: CosmosdbSqlContainerAutoscaleSettings) {
+    this._autoscaleSettings.internalValue = value;
   }
   public resetAutoscaleSettings() {
-    this._autoscaleSettings = undefined;
+    this._autoscaleSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get autoscaleSettingsInput() {
-    return this._autoscaleSettings
+    return this._autoscaleSettings.internalValue;
   }
 
   // conflict_resolution_policy - computed: false, optional: true, required: false
-  private _conflictResolutionPolicy?: CosmosdbSqlContainerConflictResolutionPolicy | undefined; 
-  private __conflictResolutionPolicyOutput = new CosmosdbSqlContainerConflictResolutionPolicyOutputReference(this as any, "conflict_resolution_policy", true);
+  private _conflictResolutionPolicy = new CosmosdbSqlContainerConflictResolutionPolicyOutputReference(this as any, "conflict_resolution_policy", true);
   public get conflictResolutionPolicy() {
-    return this.__conflictResolutionPolicyOutput;
+    return this._conflictResolutionPolicy;
   }
-  public putConflictResolutionPolicy(value: CosmosdbSqlContainerConflictResolutionPolicy | undefined) {
-    this._conflictResolutionPolicy = value;
+  public putConflictResolutionPolicy(value: CosmosdbSqlContainerConflictResolutionPolicy) {
+    this._conflictResolutionPolicy.internalValue = value;
   }
   public resetConflictResolutionPolicy() {
-    this._conflictResolutionPolicy = undefined;
+    this._conflictResolutionPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get conflictResolutionPolicyInput() {
-    return this._conflictResolutionPolicy
+    return this._conflictResolutionPolicy.internalValue;
   }
 
   // indexing_policy - computed: false, optional: true, required: false
-  private _indexingPolicy?: CosmosdbSqlContainerIndexingPolicy | undefined; 
-  private __indexingPolicyOutput = new CosmosdbSqlContainerIndexingPolicyOutputReference(this as any, "indexing_policy", true);
+  private _indexingPolicy = new CosmosdbSqlContainerIndexingPolicyOutputReference(this as any, "indexing_policy", true);
   public get indexingPolicy() {
-    return this.__indexingPolicyOutput;
+    return this._indexingPolicy;
   }
-  public putIndexingPolicy(value: CosmosdbSqlContainerIndexingPolicy | undefined) {
-    this._indexingPolicy = value;
+  public putIndexingPolicy(value: CosmosdbSqlContainerIndexingPolicy) {
+    this._indexingPolicy.internalValue = value;
   }
   public resetIndexingPolicy() {
-    this._indexingPolicy = undefined;
+    this._indexingPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get indexingPolicyInput() {
-    return this._indexingPolicy
+    return this._indexingPolicy.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: CosmosdbSqlContainerTimeouts | undefined; 
-  private __timeoutsOutput = new CosmosdbSqlContainerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CosmosdbSqlContainerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: CosmosdbSqlContainerTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: CosmosdbSqlContainerTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // unique_key - computed: false, optional: true, required: false
-  private _uniqueKey?: CosmosdbSqlContainerUniqueKey[] | undefined; 
+  private _uniqueKey?: CosmosdbSqlContainerUniqueKey[]; 
   public get uniqueKey() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('unique_key') as any;
   }
-  public set uniqueKey(value: CosmosdbSqlContainerUniqueKey[] | undefined) {
+  public set uniqueKey(value: CosmosdbSqlContainerUniqueKey[]) {
     this._uniqueKey = value;
   }
   public resetUniqueKey() {
@@ -822,7 +948,7 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get uniqueKeyInput() {
-    return this._uniqueKey
+    return this._uniqueKey;
   }
 
   // =========
@@ -840,10 +966,10 @@ export class CosmosdbSqlContainer extends cdktf.TerraformResource {
       partition_key_version: cdktf.numberToTerraform(this._partitionKeyVersion),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       throughput: cdktf.numberToTerraform(this._throughput),
-      autoscale_settings: cosmosdbSqlContainerAutoscaleSettingsToTerraform(this._autoscaleSettings),
-      conflict_resolution_policy: cosmosdbSqlContainerConflictResolutionPolicyToTerraform(this._conflictResolutionPolicy),
-      indexing_policy: cosmosdbSqlContainerIndexingPolicyToTerraform(this._indexingPolicy),
-      timeouts: cosmosdbSqlContainerTimeoutsToTerraform(this._timeouts),
+      autoscale_settings: cosmosdbSqlContainerAutoscaleSettingsToTerraform(this._autoscaleSettings.internalValue),
+      conflict_resolution_policy: cosmosdbSqlContainerConflictResolutionPolicyToTerraform(this._conflictResolutionPolicy.internalValue),
+      indexing_policy: cosmosdbSqlContainerIndexingPolicyToTerraform(this._indexingPolicy.internalValue),
+      timeouts: cosmosdbSqlContainerTimeoutsToTerraform(this._timeouts.internalValue),
       unique_key: cdktf.listMapper(cosmosdbSqlContainerUniqueKeyToTerraform)(this._uniqueKey),
     };
   }

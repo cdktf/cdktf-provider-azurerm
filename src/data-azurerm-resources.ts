@@ -65,7 +65,7 @@ export interface DataAzurermResourcesTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermResourcesTimeoutsToTerraform(struct?: DataAzurermResourcesTimeoutsOutputReference | DataAzurermResourcesTimeouts): any {
+export function dataAzurermResourcesTimeoutsToTerraform(struct?: DataAzurermResourcesTimeoutsOutputReference | DataAzurermResourcesTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -85,12 +85,31 @@ export class DataAzurermResourcesTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermResourcesTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermResourcesTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -98,7 +117,7 @@ export class DataAzurermResourcesTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -138,7 +157,7 @@ export class DataAzurermResources extends cdktf.TerraformDataSource {
     this._requiredTags = config.requiredTags;
     this._resourceGroupName = config.resourceGroupName;
     this._type = config.type;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -151,11 +170,11 @@ export class DataAzurermResources extends cdktf.TerraformDataSource {
   }
 
   // name - computed: true, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -163,16 +182,16 @@ export class DataAzurermResources extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // required_tags - computed: false, optional: true, required: false
-  private _requiredTags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _requiredTags?: { [key: string]: string } | cdktf.IResolvable; 
   public get requiredTags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('required_tags') as any;
   }
-  public set requiredTags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set requiredTags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._requiredTags = value;
   }
   public resetRequiredTags() {
@@ -180,15 +199,15 @@ export class DataAzurermResources extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get requiredTagsInput() {
-    return this._requiredTags
+    return this._requiredTags;
   }
 
   // resource_group_name - computed: true, optional: true, required: false
-  private _resourceGroupName?: string | undefined; 
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
-  public set resourceGroupName(value: string | undefined) {
+  public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
   public resetResourceGroupName() {
@@ -196,7 +215,7 @@ export class DataAzurermResources extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // resources - computed: true, optional: false, required: false
@@ -205,11 +224,11 @@ export class DataAzurermResources extends cdktf.TerraformDataSource {
   }
 
   // type - computed: true, optional: true, required: false
-  private _type?: string | undefined; 
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string | undefined) {
+  public set type(value: string) {
     this._type = value;
   }
   public resetType() {
@@ -217,24 +236,23 @@ export class DataAzurermResources extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermResourcesTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermResourcesTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermResourcesTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermResourcesTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermResourcesTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -247,7 +265,7 @@ export class DataAzurermResources extends cdktf.TerraformDataSource {
       required_tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._requiredTags),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       type: cdktf.stringToTerraform(this._type),
-      timeouts: dataAzurermResourcesTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermResourcesTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

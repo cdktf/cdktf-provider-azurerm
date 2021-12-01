@@ -63,7 +63,7 @@ export interface LocalNetworkGatewayBgpSettings {
   readonly peerWeight?: number;
 }
 
-function localNetworkGatewayBgpSettingsToTerraform(struct?: LocalNetworkGatewayBgpSettingsOutputReference | LocalNetworkGatewayBgpSettings): any {
+export function localNetworkGatewayBgpSettingsToTerraform(struct?: LocalNetworkGatewayBgpSettingsOutputReference | LocalNetworkGatewayBgpSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -85,6 +85,37 @@ export class LocalNetworkGatewayBgpSettingsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LocalNetworkGatewayBgpSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._asn) {
+      hasAnyValues = true;
+      internalValueResult.asn = this._asn;
+    }
+    if (this._bgpPeeringAddress) {
+      hasAnyValues = true;
+      internalValueResult.bgpPeeringAddress = this._bgpPeeringAddress;
+    }
+    if (this._peerWeight) {
+      hasAnyValues = true;
+      internalValueResult.peerWeight = this._peerWeight;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LocalNetworkGatewayBgpSettings | undefined) {
+    if (value === undefined) {
+      this._asn = undefined;
+      this._bgpPeeringAddress = undefined;
+      this._peerWeight = undefined;
+    }
+    else {
+      this._asn = value.asn;
+      this._bgpPeeringAddress = value.bgpPeeringAddress;
+      this._peerWeight = value.peerWeight;
+    }
+  }
+
   // asn - computed: false, optional: false, required: true
   private _asn?: number; 
   public get asn() {
@@ -95,7 +126,7 @@ export class LocalNetworkGatewayBgpSettingsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get asnInput() {
-    return this._asn
+    return this._asn;
   }
 
   // bgp_peering_address - computed: false, optional: false, required: true
@@ -108,15 +139,15 @@ export class LocalNetworkGatewayBgpSettingsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get bgpPeeringAddressInput() {
-    return this._bgpPeeringAddress
+    return this._bgpPeeringAddress;
   }
 
   // peer_weight - computed: true, optional: true, required: false
-  private _peerWeight?: number | undefined; 
+  private _peerWeight?: number; 
   public get peerWeight() {
     return this.getNumberAttribute('peer_weight');
   }
-  public set peerWeight(value: number | undefined) {
+  public set peerWeight(value: number) {
     this._peerWeight = value;
   }
   public resetPeerWeight() {
@@ -124,7 +155,7 @@ export class LocalNetworkGatewayBgpSettingsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get peerWeightInput() {
-    return this._peerWeight
+    return this._peerWeight;
   }
 }
 export interface LocalNetworkGatewayTimeouts {
@@ -146,7 +177,7 @@ export interface LocalNetworkGatewayTimeouts {
   readonly update?: string;
 }
 
-function localNetworkGatewayTimeoutsToTerraform(struct?: LocalNetworkGatewayTimeoutsOutputReference | LocalNetworkGatewayTimeouts): any {
+export function localNetworkGatewayTimeoutsToTerraform(struct?: LocalNetworkGatewayTimeoutsOutputReference | LocalNetworkGatewayTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -169,12 +200,49 @@ export class LocalNetworkGatewayTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LocalNetworkGatewayTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LocalNetworkGatewayTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -182,15 +250,15 @@ export class LocalNetworkGatewayTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -198,15 +266,15 @@ export class LocalNetworkGatewayTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -214,15 +282,15 @@ export class LocalNetworkGatewayTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -230,7 +298,7 @@ export class LocalNetworkGatewayTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -273,8 +341,8 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._bgpSettings = config.bgpSettings;
-    this._timeouts = config.timeouts;
+    this._bgpSettings.internalValue = config.bgpSettings;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -282,11 +350,11 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
   // ==========
 
   // address_space - computed: false, optional: true, required: false
-  private _addressSpace?: string[] | undefined; 
+  private _addressSpace?: string[]; 
   public get addressSpace() {
     return this.getListAttribute('address_space');
   }
-  public set addressSpace(value: string[] | undefined) {
+  public set addressSpace(value: string[]) {
     this._addressSpace = value;
   }
   public resetAddressSpace() {
@@ -294,15 +362,15 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get addressSpaceInput() {
-    return this._addressSpace
+    return this._addressSpace;
   }
 
   // gateway_address - computed: false, optional: true, required: false
-  private _gatewayAddress?: string | undefined; 
+  private _gatewayAddress?: string; 
   public get gatewayAddress() {
     return this.getStringAttribute('gateway_address');
   }
-  public set gatewayAddress(value: string | undefined) {
+  public set gatewayAddress(value: string) {
     this._gatewayAddress = value;
   }
   public resetGatewayAddress() {
@@ -310,15 +378,15 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get gatewayAddressInput() {
-    return this._gatewayAddress
+    return this._gatewayAddress;
   }
 
   // gateway_fqdn - computed: false, optional: true, required: false
-  private _gatewayFqdn?: string | undefined; 
+  private _gatewayFqdn?: string; 
   public get gatewayFqdn() {
     return this.getStringAttribute('gateway_fqdn');
   }
-  public set gatewayFqdn(value: string | undefined) {
+  public set gatewayFqdn(value: string) {
     this._gatewayFqdn = value;
   }
   public resetGatewayFqdn() {
@@ -326,7 +394,7 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get gatewayFqdnInput() {
-    return this._gatewayFqdn
+    return this._gatewayFqdn;
   }
 
   // id - computed: true, optional: true, required: false
@@ -344,7 +412,7 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -357,7 +425,7 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -370,16 +438,16 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -387,41 +455,39 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // bgp_settings - computed: false, optional: true, required: false
-  private _bgpSettings?: LocalNetworkGatewayBgpSettings | undefined; 
-  private __bgpSettingsOutput = new LocalNetworkGatewayBgpSettingsOutputReference(this as any, "bgp_settings", true);
+  private _bgpSettings = new LocalNetworkGatewayBgpSettingsOutputReference(this as any, "bgp_settings", true);
   public get bgpSettings() {
-    return this.__bgpSettingsOutput;
+    return this._bgpSettings;
   }
-  public putBgpSettings(value: LocalNetworkGatewayBgpSettings | undefined) {
-    this._bgpSettings = value;
+  public putBgpSettings(value: LocalNetworkGatewayBgpSettings) {
+    this._bgpSettings.internalValue = value;
   }
   public resetBgpSettings() {
-    this._bgpSettings = undefined;
+    this._bgpSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get bgpSettingsInput() {
-    return this._bgpSettings
+    return this._bgpSettings.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LocalNetworkGatewayTimeouts | undefined; 
-  private __timeoutsOutput = new LocalNetworkGatewayTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LocalNetworkGatewayTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: LocalNetworkGatewayTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: LocalNetworkGatewayTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -437,8 +503,8 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      bgp_settings: localNetworkGatewayBgpSettingsToTerraform(this._bgpSettings),
-      timeouts: localNetworkGatewayTimeoutsToTerraform(this._timeouts),
+      bgp_settings: localNetworkGatewayBgpSettingsToTerraform(this._bgpSettings.internalValue),
+      timeouts: localNetworkGatewayTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

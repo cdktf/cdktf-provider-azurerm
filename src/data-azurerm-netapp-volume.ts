@@ -68,7 +68,7 @@ export interface DataAzurermNetappVolumeTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermNetappVolumeTimeoutsToTerraform(struct?: DataAzurermNetappVolumeTimeoutsOutputReference | DataAzurermNetappVolumeTimeouts): any {
+export function dataAzurermNetappVolumeTimeoutsToTerraform(struct?: DataAzurermNetappVolumeTimeoutsOutputReference | DataAzurermNetappVolumeTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -88,12 +88,31 @@ export class DataAzurermNetappVolumeTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermNetappVolumeTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermNetappVolumeTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -101,7 +120,7 @@ export class DataAzurermNetappVolumeTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -142,7 +161,7 @@ export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
     this._poolName = config.poolName;
     this._resourceGroupName = config.resourceGroupName;
     this._securityStyle = config.securityStyle;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -159,7 +178,7 @@ export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get accountNameInput() {
-    return this._accountName
+    return this._accountName;
   }
 
   // data_protection_replication - computed: true, optional: false, required: false
@@ -192,7 +211,7 @@ export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // pool_name - computed: false, optional: false, required: true
@@ -205,7 +224,7 @@ export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get poolNameInput() {
-    return this._poolName
+    return this._poolName;
   }
 
   // protocols - computed: true, optional: false, required: false
@@ -223,15 +242,15 @@ export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // security_style - computed: false, optional: true, required: false
-  private _securityStyle?: string | undefined; 
+  private _securityStyle?: string; 
   public get securityStyle() {
     return this.getStringAttribute('security_style');
   }
-  public set securityStyle(value: string | undefined) {
+  public set securityStyle(value: string) {
     this._securityStyle = value;
   }
   public resetSecurityStyle() {
@@ -239,7 +258,7 @@ export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get securityStyleInput() {
-    return this._securityStyle
+    return this._securityStyle;
   }
 
   // service_level - computed: true, optional: false, required: false
@@ -263,20 +282,19 @@ export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermNetappVolumeTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermNetappVolumeTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermNetappVolumeTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermNetappVolumeTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermNetappVolumeTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -290,7 +308,7 @@ export class DataAzurermNetappVolume extends cdktf.TerraformDataSource {
       pool_name: cdktf.stringToTerraform(this._poolName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       security_style: cdktf.stringToTerraform(this._securityStyle),
-      timeouts: dataAzurermNetappVolumeTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermNetappVolumeTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

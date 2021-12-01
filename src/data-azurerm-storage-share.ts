@@ -35,7 +35,7 @@ export interface DataAzurermStorageShareConfig extends cdktf.TerraformMetaArgume
 export interface DataAzurermStorageShareAcl {
 }
 
-function dataAzurermStorageShareAclToTerraform(struct?: DataAzurermStorageShareAcl): any {
+export function dataAzurermStorageShareAclToTerraform(struct?: DataAzurermStorageShareAcl): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -51,7 +51,7 @@ export interface DataAzurermStorageShareTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermStorageShareTimeoutsToTerraform(struct?: DataAzurermStorageShareTimeoutsOutputReference | DataAzurermStorageShareTimeouts): any {
+export function dataAzurermStorageShareTimeoutsToTerraform(struct?: DataAzurermStorageShareTimeoutsOutputReference | DataAzurermStorageShareTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -71,12 +71,31 @@ export class DataAzurermStorageShareTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermStorageShareTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermStorageShareTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -84,7 +103,7 @@ export class DataAzurermStorageShareTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -124,7 +143,7 @@ export class DataAzurermStorageShare extends cdktf.TerraformDataSource {
     this._name = config.name;
     this._storageAccountName = config.storageAccountName;
     this._acl = config.acl;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -137,12 +156,12 @@ export class DataAzurermStorageShare extends cdktf.TerraformDataSource {
   }
 
   // metadata - computed: true, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
   public get metadata() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -150,7 +169,7 @@ export class DataAzurermStorageShare extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get metadataInput() {
-    return this._metadata
+    return this._metadata;
   }
 
   // name - computed: false, optional: false, required: true
@@ -163,7 +182,7 @@ export class DataAzurermStorageShare extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // quota - computed: true, optional: false, required: false
@@ -186,16 +205,16 @@ export class DataAzurermStorageShare extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountNameInput() {
-    return this._storageAccountName
+    return this._storageAccountName;
   }
 
   // acl - computed: false, optional: true, required: false
-  private _acl?: DataAzurermStorageShareAcl[] | undefined; 
+  private _acl?: DataAzurermStorageShareAcl[]; 
   public get acl() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('acl') as any;
   }
-  public set acl(value: DataAzurermStorageShareAcl[] | undefined) {
+  public set acl(value: DataAzurermStorageShareAcl[]) {
     this._acl = value;
   }
   public resetAcl() {
@@ -203,24 +222,23 @@ export class DataAzurermStorageShare extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get aclInput() {
-    return this._acl
+    return this._acl;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermStorageShareTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermStorageShareTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermStorageShareTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermStorageShareTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermStorageShareTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -233,7 +251,7 @@ export class DataAzurermStorageShare extends cdktf.TerraformDataSource {
       name: cdktf.stringToTerraform(this._name),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
       acl: cdktf.listMapper(dataAzurermStorageShareAclToTerraform)(this._acl),
-      timeouts: dataAzurermStorageShareTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermStorageShareTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

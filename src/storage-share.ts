@@ -55,7 +55,7 @@ export interface StorageShareAclAccessPolicy {
   readonly start?: string;
 }
 
-function storageShareAclAccessPolicyToTerraform(struct?: StorageShareAclAccessPolicy): any {
+export function storageShareAclAccessPolicyToTerraform(struct?: StorageShareAclAccessPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -80,7 +80,7 @@ export interface StorageShareAcl {
   readonly accessPolicy?: StorageShareAclAccessPolicy[];
 }
 
-function storageShareAclToTerraform(struct?: StorageShareAcl): any {
+export function storageShareAclToTerraform(struct?: StorageShareAcl): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -110,7 +110,7 @@ export interface StorageShareTimeouts {
   readonly update?: string;
 }
 
-function storageShareTimeoutsToTerraform(struct?: StorageShareTimeoutsOutputReference | StorageShareTimeouts): any {
+export function storageShareTimeoutsToTerraform(struct?: StorageShareTimeoutsOutputReference | StorageShareTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -133,12 +133,49 @@ export class StorageShareTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageShareTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageShareTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -146,15 +183,15 @@ export class StorageShareTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -162,15 +199,15 @@ export class StorageShareTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -178,15 +215,15 @@ export class StorageShareTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -194,7 +231,7 @@ export class StorageShareTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -236,7 +273,7 @@ export class StorageShare extends cdktf.TerraformResource {
     this._quota = config.quota;
     this._storageAccountName = config.storageAccountName;
     this._acl = config.acl;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -244,11 +281,11 @@ export class StorageShare extends cdktf.TerraformResource {
   // ==========
 
   // enabled_protocol - computed: false, optional: true, required: false
-  private _enabledProtocol?: string | undefined; 
+  private _enabledProtocol?: string; 
   public get enabledProtocol() {
     return this.getStringAttribute('enabled_protocol');
   }
-  public set enabledProtocol(value: string | undefined) {
+  public set enabledProtocol(value: string) {
     this._enabledProtocol = value;
   }
   public resetEnabledProtocol() {
@@ -256,7 +293,7 @@ export class StorageShare extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledProtocolInput() {
-    return this._enabledProtocol
+    return this._enabledProtocol;
   }
 
   // id - computed: true, optional: true, required: false
@@ -265,12 +302,12 @@ export class StorageShare extends cdktf.TerraformResource {
   }
 
   // metadata - computed: true, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
   public get metadata() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -278,7 +315,7 @@ export class StorageShare extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get metadataInput() {
-    return this._metadata
+    return this._metadata;
   }
 
   // name - computed: false, optional: false, required: true
@@ -291,15 +328,15 @@ export class StorageShare extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // quota - computed: false, optional: true, required: false
-  private _quota?: number | undefined; 
+  private _quota?: number; 
   public get quota() {
     return this.getNumberAttribute('quota');
   }
-  public set quota(value: number | undefined) {
+  public set quota(value: number) {
     this._quota = value;
   }
   public resetQuota() {
@@ -307,7 +344,7 @@ export class StorageShare extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get quotaInput() {
-    return this._quota
+    return this._quota;
   }
 
   // resource_manager_id - computed: true, optional: false, required: false
@@ -325,7 +362,7 @@ export class StorageShare extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountNameInput() {
-    return this._storageAccountName
+    return this._storageAccountName;
   }
 
   // url - computed: true, optional: false, required: false
@@ -334,12 +371,12 @@ export class StorageShare extends cdktf.TerraformResource {
   }
 
   // acl - computed: false, optional: true, required: false
-  private _acl?: StorageShareAcl[] | undefined; 
+  private _acl?: StorageShareAcl[]; 
   public get acl() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('acl') as any;
   }
-  public set acl(value: StorageShareAcl[] | undefined) {
+  public set acl(value: StorageShareAcl[]) {
     this._acl = value;
   }
   public resetAcl() {
@@ -347,24 +384,23 @@ export class StorageShare extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get aclInput() {
-    return this._acl
+    return this._acl;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: StorageShareTimeouts | undefined; 
-  private __timeoutsOutput = new StorageShareTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StorageShareTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: StorageShareTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: StorageShareTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -379,7 +415,7 @@ export class StorageShare extends cdktf.TerraformResource {
       quota: cdktf.numberToTerraform(this._quota),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
       acl: cdktf.listMapper(storageShareAclToTerraform)(this._acl),
-      timeouts: storageShareTimeoutsToTerraform(this._timeouts),
+      timeouts: storageShareTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

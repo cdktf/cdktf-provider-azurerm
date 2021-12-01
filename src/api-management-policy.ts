@@ -45,7 +45,7 @@ export interface ApiManagementPolicyTimeouts {
   readonly update?: string;
 }
 
-function apiManagementPolicyTimeoutsToTerraform(struct?: ApiManagementPolicyTimeoutsOutputReference | ApiManagementPolicyTimeouts): any {
+export function apiManagementPolicyTimeoutsToTerraform(struct?: ApiManagementPolicyTimeoutsOutputReference | ApiManagementPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -68,12 +68,49 @@ export class ApiManagementPolicyTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementPolicyTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementPolicyTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -81,15 +118,15 @@ export class ApiManagementPolicyTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -97,15 +134,15 @@ export class ApiManagementPolicyTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -113,15 +150,15 @@ export class ApiManagementPolicyTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -129,7 +166,7 @@ export class ApiManagementPolicyTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -168,7 +205,7 @@ export class ApiManagementPolicyA extends cdktf.TerraformResource {
     this._apiManagementId = config.apiManagementId;
     this._xmlContent = config.xmlContent;
     this._xmlLink = config.xmlLink;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -185,7 +222,7 @@ export class ApiManagementPolicyA extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get apiManagementIdInput() {
-    return this._apiManagementId
+    return this._apiManagementId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -194,11 +231,11 @@ export class ApiManagementPolicyA extends cdktf.TerraformResource {
   }
 
   // xml_content - computed: true, optional: true, required: false
-  private _xmlContent?: string | undefined; 
+  private _xmlContent?: string; 
   public get xmlContent() {
     return this.getStringAttribute('xml_content');
   }
-  public set xmlContent(value: string | undefined) {
+  public set xmlContent(value: string) {
     this._xmlContent = value;
   }
   public resetXmlContent() {
@@ -206,15 +243,15 @@ export class ApiManagementPolicyA extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get xmlContentInput() {
-    return this._xmlContent
+    return this._xmlContent;
   }
 
   // xml_link - computed: false, optional: true, required: false
-  private _xmlLink?: string | undefined; 
+  private _xmlLink?: string; 
   public get xmlLink() {
     return this.getStringAttribute('xml_link');
   }
-  public set xmlLink(value: string | undefined) {
+  public set xmlLink(value: string) {
     this._xmlLink = value;
   }
   public resetXmlLink() {
@@ -222,24 +259,23 @@ export class ApiManagementPolicyA extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get xmlLinkInput() {
-    return this._xmlLink
+    return this._xmlLink;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ApiManagementPolicyTimeouts | undefined; 
-  private __timeoutsOutput = new ApiManagementPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApiManagementPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ApiManagementPolicyTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ApiManagementPolicyTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -251,7 +287,7 @@ export class ApiManagementPolicyA extends cdktf.TerraformResource {
       api_management_id: cdktf.stringToTerraform(this._apiManagementId),
       xml_content: cdktf.stringToTerraform(this._xmlContent),
       xml_link: cdktf.stringToTerraform(this._xmlLink),
-      timeouts: apiManagementPolicyTimeoutsToTerraform(this._timeouts),
+      timeouts: apiManagementPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

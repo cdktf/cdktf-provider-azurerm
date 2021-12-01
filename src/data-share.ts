@@ -55,7 +55,7 @@ export interface DataShareSnapshotSchedule {
   readonly startTime: string;
 }
 
-function dataShareSnapshotScheduleToTerraform(struct?: DataShareSnapshotScheduleOutputReference | DataShareSnapshotSchedule): any {
+export function dataShareSnapshotScheduleToTerraform(struct?: DataShareSnapshotScheduleOutputReference | DataShareSnapshotSchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -77,6 +77,37 @@ export class DataShareSnapshotScheduleOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataShareSnapshotSchedule | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._recurrence) {
+      hasAnyValues = true;
+      internalValueResult.recurrence = this._recurrence;
+    }
+    if (this._startTime) {
+      hasAnyValues = true;
+      internalValueResult.startTime = this._startTime;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataShareSnapshotSchedule | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._recurrence = undefined;
+      this._startTime = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._recurrence = value.recurrence;
+      this._startTime = value.startTime;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -87,7 +118,7 @@ export class DataShareSnapshotScheduleOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // recurrence - computed: false, optional: false, required: true
@@ -100,7 +131,7 @@ export class DataShareSnapshotScheduleOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get recurrenceInput() {
-    return this._recurrence
+    return this._recurrence;
   }
 
   // start_time - computed: false, optional: false, required: true
@@ -113,7 +144,7 @@ export class DataShareSnapshotScheduleOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get startTimeInput() {
-    return this._startTime
+    return this._startTime;
   }
 }
 export interface DataShareTimeouts {
@@ -135,7 +166,7 @@ export interface DataShareTimeouts {
   readonly update?: string;
 }
 
-function dataShareTimeoutsToTerraform(struct?: DataShareTimeoutsOutputReference | DataShareTimeouts): any {
+export function dataShareTimeoutsToTerraform(struct?: DataShareTimeoutsOutputReference | DataShareTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -158,12 +189,49 @@ export class DataShareTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataShareTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataShareTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -171,15 +239,15 @@ export class DataShareTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -187,15 +255,15 @@ export class DataShareTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -203,15 +271,15 @@ export class DataShareTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -219,7 +287,7 @@ export class DataShareTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -260,8 +328,8 @@ export class DataShare extends cdktf.TerraformResource {
     this._kind = config.kind;
     this._name = config.name;
     this._terms = config.terms;
-    this._snapshotSchedule = config.snapshotSchedule;
-    this._timeouts = config.timeouts;
+    this._snapshotSchedule.internalValue = config.snapshotSchedule;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -278,15 +346,15 @@ export class DataShare extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get accountIdInput() {
-    return this._accountId
+    return this._accountId;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -294,7 +362,7 @@ export class DataShare extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -312,7 +380,7 @@ export class DataShare extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get kindInput() {
-    return this._kind
+    return this._kind;
   }
 
   // name - computed: false, optional: false, required: true
@@ -325,15 +393,15 @@ export class DataShare extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // terms - computed: false, optional: true, required: false
-  private _terms?: string | undefined; 
+  private _terms?: string; 
   public get terms() {
     return this.getStringAttribute('terms');
   }
-  public set terms(value: string | undefined) {
+  public set terms(value: string) {
     this._terms = value;
   }
   public resetTerms() {
@@ -341,41 +409,39 @@ export class DataShare extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get termsInput() {
-    return this._terms
+    return this._terms;
   }
 
   // snapshot_schedule - computed: false, optional: true, required: false
-  private _snapshotSchedule?: DataShareSnapshotSchedule | undefined; 
-  private __snapshotScheduleOutput = new DataShareSnapshotScheduleOutputReference(this as any, "snapshot_schedule", true);
+  private _snapshotSchedule = new DataShareSnapshotScheduleOutputReference(this as any, "snapshot_schedule", true);
   public get snapshotSchedule() {
-    return this.__snapshotScheduleOutput;
+    return this._snapshotSchedule;
   }
-  public putSnapshotSchedule(value: DataShareSnapshotSchedule | undefined) {
-    this._snapshotSchedule = value;
+  public putSnapshotSchedule(value: DataShareSnapshotSchedule) {
+    this._snapshotSchedule.internalValue = value;
   }
   public resetSnapshotSchedule() {
-    this._snapshotSchedule = undefined;
+    this._snapshotSchedule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get snapshotScheduleInput() {
-    return this._snapshotSchedule
+    return this._snapshotSchedule.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataShareTimeouts | undefined; 
-  private __timeoutsOutput = new DataShareTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataShareTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataShareTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataShareTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -389,8 +455,8 @@ export class DataShare extends cdktf.TerraformResource {
       kind: cdktf.stringToTerraform(this._kind),
       name: cdktf.stringToTerraform(this._name),
       terms: cdktf.stringToTerraform(this._terms),
-      snapshot_schedule: dataShareSnapshotScheduleToTerraform(this._snapshotSchedule),
-      timeouts: dataShareTimeoutsToTerraform(this._timeouts),
+      snapshot_schedule: dataShareSnapshotScheduleToTerraform(this._snapshotSchedule.internalValue),
+      timeouts: dataShareTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -41,7 +41,7 @@ export interface VirtualNetworkDnsServersTimeouts {
   readonly update?: string;
 }
 
-function virtualNetworkDnsServersTimeoutsToTerraform(struct?: VirtualNetworkDnsServersTimeoutsOutputReference | VirtualNetworkDnsServersTimeouts): any {
+export function virtualNetworkDnsServersTimeoutsToTerraform(struct?: VirtualNetworkDnsServersTimeoutsOutputReference | VirtualNetworkDnsServersTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -64,12 +64,49 @@ export class VirtualNetworkDnsServersTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): VirtualNetworkDnsServersTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualNetworkDnsServersTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -77,15 +114,15 @@ export class VirtualNetworkDnsServersTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -93,15 +130,15 @@ export class VirtualNetworkDnsServersTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -109,15 +146,15 @@ export class VirtualNetworkDnsServersTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -125,7 +162,7 @@ export class VirtualNetworkDnsServersTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -163,7 +200,7 @@ export class VirtualNetworkDnsServers extends cdktf.TerraformResource {
     });
     this._dnsServers = config.dnsServers;
     this._virtualNetworkId = config.virtualNetworkId;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -171,11 +208,11 @@ export class VirtualNetworkDnsServers extends cdktf.TerraformResource {
   // ==========
 
   // dns_servers - computed: false, optional: true, required: false
-  private _dnsServers?: string[] | undefined; 
+  private _dnsServers?: string[]; 
   public get dnsServers() {
     return this.getListAttribute('dns_servers');
   }
-  public set dnsServers(value: string[] | undefined) {
+  public set dnsServers(value: string[]) {
     this._dnsServers = value;
   }
   public resetDnsServers() {
@@ -183,7 +220,7 @@ export class VirtualNetworkDnsServers extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dnsServersInput() {
-    return this._dnsServers
+    return this._dnsServers;
   }
 
   // id - computed: true, optional: true, required: false
@@ -201,24 +238,23 @@ export class VirtualNetworkDnsServers extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get virtualNetworkIdInput() {
-    return this._virtualNetworkId
+    return this._virtualNetworkId;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VirtualNetworkDnsServersTimeouts | undefined; 
-  private __timeoutsOutput = new VirtualNetworkDnsServersTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VirtualNetworkDnsServersTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: VirtualNetworkDnsServersTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: VirtualNetworkDnsServersTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -229,7 +265,7 @@ export class VirtualNetworkDnsServers extends cdktf.TerraformResource {
     return {
       dns_servers: cdktf.listMapper(cdktf.stringToTerraform)(this._dnsServers),
       virtual_network_id: cdktf.stringToTerraform(this._virtualNetworkId),
-      timeouts: virtualNetworkDnsServersTimeoutsToTerraform(this._timeouts),
+      timeouts: virtualNetworkDnsServersTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

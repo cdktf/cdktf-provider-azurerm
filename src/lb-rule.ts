@@ -93,7 +93,7 @@ export interface LbRuleTimeouts {
   readonly update?: string;
 }
 
-function lbRuleTimeoutsToTerraform(struct?: LbRuleTimeoutsOutputReference | LbRuleTimeouts): any {
+export function lbRuleTimeoutsToTerraform(struct?: LbRuleTimeoutsOutputReference | LbRuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -116,12 +116,49 @@ export class LbRuleTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LbRuleTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LbRuleTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -129,15 +166,15 @@ export class LbRuleTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -145,15 +182,15 @@ export class LbRuleTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -161,15 +198,15 @@ export class LbRuleTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -177,7 +214,7 @@ export class LbRuleTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -228,7 +265,7 @@ export class LbRule extends cdktf.TerraformResource {
     this._probeId = config.probeId;
     this._protocol = config.protocol;
     this._resourceGroupName = config.resourceGroupName;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -236,11 +273,11 @@ export class LbRule extends cdktf.TerraformResource {
   // ==========
 
   // backend_address_pool_id - computed: true, optional: true, required: false
-  private _backendAddressPoolId?: string | undefined; 
+  private _backendAddressPoolId?: string; 
   public get backendAddressPoolId() {
     return this.getStringAttribute('backend_address_pool_id');
   }
-  public set backendAddressPoolId(value: string | undefined) {
+  public set backendAddressPoolId(value: string) {
     this._backendAddressPoolId = value;
   }
   public resetBackendAddressPoolId() {
@@ -248,15 +285,15 @@ export class LbRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get backendAddressPoolIdInput() {
-    return this._backendAddressPoolId
+    return this._backendAddressPoolId;
   }
 
   // backend_address_pool_ids - computed: true, optional: true, required: false
-  private _backendAddressPoolIds?: string[] | undefined; 
+  private _backendAddressPoolIds?: string[]; 
   public get backendAddressPoolIds() {
     return this.getListAttribute('backend_address_pool_ids');
   }
-  public set backendAddressPoolIds(value: string[] | undefined) {
+  public set backendAddressPoolIds(value: string[]) {
     this._backendAddressPoolIds = value;
   }
   public resetBackendAddressPoolIds() {
@@ -264,7 +301,7 @@ export class LbRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get backendAddressPoolIdsInput() {
-    return this._backendAddressPoolIds
+    return this._backendAddressPoolIds;
   }
 
   // backend_port - computed: false, optional: false, required: true
@@ -277,15 +314,15 @@ export class LbRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get backendPortInput() {
-    return this._backendPort
+    return this._backendPort;
   }
 
   // disable_outbound_snat - computed: false, optional: true, required: false
-  private _disableOutboundSnat?: boolean | cdktf.IResolvable | undefined; 
+  private _disableOutboundSnat?: boolean | cdktf.IResolvable; 
   public get disableOutboundSnat() {
     return this.getBooleanAttribute('disable_outbound_snat') as any;
   }
-  public set disableOutboundSnat(value: boolean | cdktf.IResolvable | undefined) {
+  public set disableOutboundSnat(value: boolean | cdktf.IResolvable) {
     this._disableOutboundSnat = value;
   }
   public resetDisableOutboundSnat() {
@@ -293,15 +330,15 @@ export class LbRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get disableOutboundSnatInput() {
-    return this._disableOutboundSnat
+    return this._disableOutboundSnat;
   }
 
   // enable_floating_ip - computed: false, optional: true, required: false
-  private _enableFloatingIp?: boolean | cdktf.IResolvable | undefined; 
+  private _enableFloatingIp?: boolean | cdktf.IResolvable; 
   public get enableFloatingIp() {
     return this.getBooleanAttribute('enable_floating_ip') as any;
   }
-  public set enableFloatingIp(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableFloatingIp(value: boolean | cdktf.IResolvable) {
     this._enableFloatingIp = value;
   }
   public resetEnableFloatingIp() {
@@ -309,15 +346,15 @@ export class LbRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableFloatingIpInput() {
-    return this._enableFloatingIp
+    return this._enableFloatingIp;
   }
 
   // enable_tcp_reset - computed: false, optional: true, required: false
-  private _enableTcpReset?: boolean | cdktf.IResolvable | undefined; 
+  private _enableTcpReset?: boolean | cdktf.IResolvable; 
   public get enableTcpReset() {
     return this.getBooleanAttribute('enable_tcp_reset') as any;
   }
-  public set enableTcpReset(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableTcpReset(value: boolean | cdktf.IResolvable) {
     this._enableTcpReset = value;
   }
   public resetEnableTcpReset() {
@@ -325,7 +362,7 @@ export class LbRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableTcpResetInput() {
-    return this._enableTcpReset
+    return this._enableTcpReset;
   }
 
   // frontend_ip_configuration_id - computed: true, optional: false, required: false
@@ -343,7 +380,7 @@ export class LbRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get frontendIpConfigurationNameInput() {
-    return this._frontendIpConfigurationName
+    return this._frontendIpConfigurationName;
   }
 
   // frontend_port - computed: false, optional: false, required: true
@@ -356,7 +393,7 @@ export class LbRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get frontendPortInput() {
-    return this._frontendPort
+    return this._frontendPort;
   }
 
   // id - computed: true, optional: true, required: false
@@ -365,11 +402,11 @@ export class LbRule extends cdktf.TerraformResource {
   }
 
   // idle_timeout_in_minutes - computed: true, optional: true, required: false
-  private _idleTimeoutInMinutes?: number | undefined; 
+  private _idleTimeoutInMinutes?: number; 
   public get idleTimeoutInMinutes() {
     return this.getNumberAttribute('idle_timeout_in_minutes');
   }
-  public set idleTimeoutInMinutes(value: number | undefined) {
+  public set idleTimeoutInMinutes(value: number) {
     this._idleTimeoutInMinutes = value;
   }
   public resetIdleTimeoutInMinutes() {
@@ -377,15 +414,15 @@ export class LbRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get idleTimeoutInMinutesInput() {
-    return this._idleTimeoutInMinutes
+    return this._idleTimeoutInMinutes;
   }
 
   // load_distribution - computed: true, optional: true, required: false
-  private _loadDistribution?: string | undefined; 
+  private _loadDistribution?: string; 
   public get loadDistribution() {
     return this.getStringAttribute('load_distribution');
   }
-  public set loadDistribution(value: string | undefined) {
+  public set loadDistribution(value: string) {
     this._loadDistribution = value;
   }
   public resetLoadDistribution() {
@@ -393,7 +430,7 @@ export class LbRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get loadDistributionInput() {
-    return this._loadDistribution
+    return this._loadDistribution;
   }
 
   // loadbalancer_id - computed: false, optional: false, required: true
@@ -406,7 +443,7 @@ export class LbRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get loadbalancerIdInput() {
-    return this._loadbalancerId
+    return this._loadbalancerId;
   }
 
   // name - computed: false, optional: false, required: true
@@ -419,15 +456,15 @@ export class LbRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // probe_id - computed: true, optional: true, required: false
-  private _probeId?: string | undefined; 
+  private _probeId?: string; 
   public get probeId() {
     return this.getStringAttribute('probe_id');
   }
-  public set probeId(value: string | undefined) {
+  public set probeId(value: string) {
     this._probeId = value;
   }
   public resetProbeId() {
@@ -435,7 +472,7 @@ export class LbRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get probeIdInput() {
-    return this._probeId
+    return this._probeId;
   }
 
   // protocol - computed: false, optional: false, required: true
@@ -448,7 +485,7 @@ export class LbRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get protocolInput() {
-    return this._protocol
+    return this._protocol;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -461,24 +498,23 @@ export class LbRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LbRuleTimeouts | undefined; 
-  private __timeoutsOutput = new LbRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LbRuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: LbRuleTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: LbRuleTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -502,7 +538,7 @@ export class LbRule extends cdktf.TerraformResource {
       probe_id: cdktf.stringToTerraform(this._probeId),
       protocol: cdktf.stringToTerraform(this._protocol),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      timeouts: lbRuleTimeoutsToTerraform(this._timeouts),
+      timeouts: lbRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

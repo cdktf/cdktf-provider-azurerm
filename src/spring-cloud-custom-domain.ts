@@ -49,7 +49,7 @@ export interface SpringCloudCustomDomainTimeouts {
   readonly update?: string;
 }
 
-function springCloudCustomDomainTimeoutsToTerraform(struct?: SpringCloudCustomDomainTimeoutsOutputReference | SpringCloudCustomDomainTimeouts): any {
+export function springCloudCustomDomainTimeoutsToTerraform(struct?: SpringCloudCustomDomainTimeoutsOutputReference | SpringCloudCustomDomainTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -72,12 +72,49 @@ export class SpringCloudCustomDomainTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SpringCloudCustomDomainTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpringCloudCustomDomainTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -85,15 +122,15 @@ export class SpringCloudCustomDomainTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -101,15 +138,15 @@ export class SpringCloudCustomDomainTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -117,15 +154,15 @@ export class SpringCloudCustomDomainTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -133,7 +170,7 @@ export class SpringCloudCustomDomainTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -173,7 +210,7 @@ export class SpringCloudCustomDomain extends cdktf.TerraformResource {
     this._name = config.name;
     this._springCloudAppId = config.springCloudAppId;
     this._thumbprint = config.thumbprint;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -181,11 +218,11 @@ export class SpringCloudCustomDomain extends cdktf.TerraformResource {
   // ==========
 
   // certificate_name - computed: false, optional: true, required: false
-  private _certificateName?: string | undefined; 
+  private _certificateName?: string; 
   public get certificateName() {
     return this.getStringAttribute('certificate_name');
   }
-  public set certificateName(value: string | undefined) {
+  public set certificateName(value: string) {
     this._certificateName = value;
   }
   public resetCertificateName() {
@@ -193,7 +230,7 @@ export class SpringCloudCustomDomain extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get certificateNameInput() {
-    return this._certificateName
+    return this._certificateName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -211,7 +248,7 @@ export class SpringCloudCustomDomain extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // spring_cloud_app_id - computed: false, optional: false, required: true
@@ -224,15 +261,15 @@ export class SpringCloudCustomDomain extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get springCloudAppIdInput() {
-    return this._springCloudAppId
+    return this._springCloudAppId;
   }
 
   // thumbprint - computed: false, optional: true, required: false
-  private _thumbprint?: string | undefined; 
+  private _thumbprint?: string; 
   public get thumbprint() {
     return this.getStringAttribute('thumbprint');
   }
-  public set thumbprint(value: string | undefined) {
+  public set thumbprint(value: string) {
     this._thumbprint = value;
   }
   public resetThumbprint() {
@@ -240,24 +277,23 @@ export class SpringCloudCustomDomain extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get thumbprintInput() {
-    return this._thumbprint
+    return this._thumbprint;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SpringCloudCustomDomainTimeouts | undefined; 
-  private __timeoutsOutput = new SpringCloudCustomDomainTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SpringCloudCustomDomainTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SpringCloudCustomDomainTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SpringCloudCustomDomainTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -270,7 +306,7 @@ export class SpringCloudCustomDomain extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       spring_cloud_app_id: cdktf.stringToTerraform(this._springCloudAppId),
       thumbprint: cdktf.stringToTerraform(this._thumbprint),
-      timeouts: springCloudCustomDomainTimeoutsToTerraform(this._timeouts),
+      timeouts: springCloudCustomDomainTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

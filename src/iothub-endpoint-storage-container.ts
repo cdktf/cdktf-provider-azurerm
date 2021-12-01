@@ -69,7 +69,7 @@ export interface IothubEndpointStorageContainerTimeouts {
   readonly update?: string;
 }
 
-function iothubEndpointStorageContainerTimeoutsToTerraform(struct?: IothubEndpointStorageContainerTimeoutsOutputReference | IothubEndpointStorageContainerTimeouts): any {
+export function iothubEndpointStorageContainerTimeoutsToTerraform(struct?: IothubEndpointStorageContainerTimeoutsOutputReference | IothubEndpointStorageContainerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -92,12 +92,49 @@ export class IothubEndpointStorageContainerTimeoutsOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): IothubEndpointStorageContainerTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IothubEndpointStorageContainerTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -105,15 +142,15 @@ export class IothubEndpointStorageContainerTimeoutsOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -121,15 +158,15 @@ export class IothubEndpointStorageContainerTimeoutsOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -137,15 +174,15 @@ export class IothubEndpointStorageContainerTimeoutsOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -153,7 +190,7 @@ export class IothubEndpointStorageContainerTimeoutsOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -198,7 +235,7 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
     this._maxChunkSizeInBytes = config.maxChunkSizeInBytes;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -206,11 +243,11 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
   // ==========
 
   // batch_frequency_in_seconds - computed: false, optional: true, required: false
-  private _batchFrequencyInSeconds?: number | undefined; 
+  private _batchFrequencyInSeconds?: number; 
   public get batchFrequencyInSeconds() {
     return this.getNumberAttribute('batch_frequency_in_seconds');
   }
-  public set batchFrequencyInSeconds(value: number | undefined) {
+  public set batchFrequencyInSeconds(value: number) {
     this._batchFrequencyInSeconds = value;
   }
   public resetBatchFrequencyInSeconds() {
@@ -218,7 +255,7 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get batchFrequencyInSecondsInput() {
-    return this._batchFrequencyInSeconds
+    return this._batchFrequencyInSeconds;
   }
 
   // connection_string - computed: false, optional: false, required: true
@@ -231,7 +268,7 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get connectionStringInput() {
-    return this._connectionString
+    return this._connectionString;
   }
 
   // container_name - computed: false, optional: false, required: true
@@ -244,15 +281,15 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get containerNameInput() {
-    return this._containerName
+    return this._containerName;
   }
 
   // encoding - computed: false, optional: true, required: false
-  private _encoding?: string | undefined; 
+  private _encoding?: string; 
   public get encoding() {
     return this.getStringAttribute('encoding');
   }
-  public set encoding(value: string | undefined) {
+  public set encoding(value: string) {
     this._encoding = value;
   }
   public resetEncoding() {
@@ -260,15 +297,15 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get encodingInput() {
-    return this._encoding
+    return this._encoding;
   }
 
   // file_name_format - computed: false, optional: true, required: false
-  private _fileNameFormat?: string | undefined; 
+  private _fileNameFormat?: string; 
   public get fileNameFormat() {
     return this.getStringAttribute('file_name_format');
   }
-  public set fileNameFormat(value: string | undefined) {
+  public set fileNameFormat(value: string) {
     this._fileNameFormat = value;
   }
   public resetFileNameFormat() {
@@ -276,7 +313,7 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get fileNameFormatInput() {
-    return this._fileNameFormat
+    return this._fileNameFormat;
   }
 
   // id - computed: true, optional: true, required: false
@@ -294,15 +331,15 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get iothubNameInput() {
-    return this._iothubName
+    return this._iothubName;
   }
 
   // max_chunk_size_in_bytes - computed: false, optional: true, required: false
-  private _maxChunkSizeInBytes?: number | undefined; 
+  private _maxChunkSizeInBytes?: number; 
   public get maxChunkSizeInBytes() {
     return this.getNumberAttribute('max_chunk_size_in_bytes');
   }
-  public set maxChunkSizeInBytes(value: number | undefined) {
+  public set maxChunkSizeInBytes(value: number) {
     this._maxChunkSizeInBytes = value;
   }
   public resetMaxChunkSizeInBytes() {
@@ -310,7 +347,7 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get maxChunkSizeInBytesInput() {
-    return this._maxChunkSizeInBytes
+    return this._maxChunkSizeInBytes;
   }
 
   // name - computed: false, optional: false, required: true
@@ -323,7 +360,7 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -336,24 +373,23 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: IothubEndpointStorageContainerTimeouts | undefined; 
-  private __timeoutsOutput = new IothubEndpointStorageContainerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new IothubEndpointStorageContainerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: IothubEndpointStorageContainerTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: IothubEndpointStorageContainerTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -371,7 +407,7 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
       max_chunk_size_in_bytes: cdktf.numberToTerraform(this._maxChunkSizeInBytes),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      timeouts: iothubEndpointStorageContainerTimeoutsToTerraform(this._timeouts),
+      timeouts: iothubEndpointStorageContainerTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

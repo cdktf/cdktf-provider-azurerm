@@ -59,7 +59,7 @@ export interface IotTimeSeriesInsightsGen2EnvironmentStorage {
   readonly name: string;
 }
 
-function iotTimeSeriesInsightsGen2EnvironmentStorageToTerraform(struct?: IotTimeSeriesInsightsGen2EnvironmentStorageOutputReference | IotTimeSeriesInsightsGen2EnvironmentStorage): any {
+export function iotTimeSeriesInsightsGen2EnvironmentStorageToTerraform(struct?: IotTimeSeriesInsightsGen2EnvironmentStorageOutputReference | IotTimeSeriesInsightsGen2EnvironmentStorage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -80,6 +80,31 @@ export class IotTimeSeriesInsightsGen2EnvironmentStorageOutputReference extends 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): IotTimeSeriesInsightsGen2EnvironmentStorage | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._key) {
+      hasAnyValues = true;
+      internalValueResult.key = this._key;
+    }
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IotTimeSeriesInsightsGen2EnvironmentStorage | undefined) {
+    if (value === undefined) {
+      this._key = undefined;
+      this._name = undefined;
+    }
+    else {
+      this._key = value.key;
+      this._name = value.name;
+    }
+  }
+
   // key - computed: false, optional: false, required: true
   private _key?: string; 
   public get key() {
@@ -90,7 +115,7 @@ export class IotTimeSeriesInsightsGen2EnvironmentStorageOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get keyInput() {
-    return this._key
+    return this._key;
   }
 
   // name - computed: false, optional: false, required: true
@@ -103,7 +128,7 @@ export class IotTimeSeriesInsightsGen2EnvironmentStorageOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 }
 export interface IotTimeSeriesInsightsGen2EnvironmentTimeouts {
@@ -125,7 +150,7 @@ export interface IotTimeSeriesInsightsGen2EnvironmentTimeouts {
   readonly update?: string;
 }
 
-function iotTimeSeriesInsightsGen2EnvironmentTimeoutsToTerraform(struct?: IotTimeSeriesInsightsGen2EnvironmentTimeoutsOutputReference | IotTimeSeriesInsightsGen2EnvironmentTimeouts): any {
+export function iotTimeSeriesInsightsGen2EnvironmentTimeoutsToTerraform(struct?: IotTimeSeriesInsightsGen2EnvironmentTimeoutsOutputReference | IotTimeSeriesInsightsGen2EnvironmentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -148,12 +173,49 @@ export class IotTimeSeriesInsightsGen2EnvironmentTimeoutsOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): IotTimeSeriesInsightsGen2EnvironmentTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IotTimeSeriesInsightsGen2EnvironmentTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -161,15 +223,15 @@ export class IotTimeSeriesInsightsGen2EnvironmentTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -177,15 +239,15 @@ export class IotTimeSeriesInsightsGen2EnvironmentTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -193,15 +255,15 @@ export class IotTimeSeriesInsightsGen2EnvironmentTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -209,7 +271,7 @@ export class IotTimeSeriesInsightsGen2EnvironmentTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -252,8 +314,8 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
     this._skuName = config.skuName;
     this._tags = config.tags;
     this._warmStoreDataRetentionTime = config.warmStoreDataRetentionTime;
-    this._storage = config.storage;
-    this._timeouts = config.timeouts;
+    this._storage.internalValue = config.storage;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -280,7 +342,7 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get idPropertiesInput() {
-    return this._idProperties
+    return this._idProperties;
   }
 
   // location - computed: false, optional: false, required: true
@@ -293,7 +355,7 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -306,7 +368,7 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -319,7 +381,7 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // sku_name - computed: false, optional: false, required: true
@@ -332,16 +394,16 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get skuNameInput() {
-    return this._skuName
+    return this._skuName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -349,15 +411,15 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // warm_store_data_retention_time - computed: false, optional: true, required: false
-  private _warmStoreDataRetentionTime?: string | undefined; 
+  private _warmStoreDataRetentionTime?: string; 
   public get warmStoreDataRetentionTime() {
     return this.getStringAttribute('warm_store_data_retention_time');
   }
-  public set warmStoreDataRetentionTime(value: string | undefined) {
+  public set warmStoreDataRetentionTime(value: string) {
     this._warmStoreDataRetentionTime = value;
   }
   public resetWarmStoreDataRetentionTime() {
@@ -365,38 +427,36 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get warmStoreDataRetentionTimeInput() {
-    return this._warmStoreDataRetentionTime
+    return this._warmStoreDataRetentionTime;
   }
 
   // storage - computed: false, optional: false, required: true
-  private _storage?: IotTimeSeriesInsightsGen2EnvironmentStorage; 
-  private __storageOutput = new IotTimeSeriesInsightsGen2EnvironmentStorageOutputReference(this as any, "storage", true);
+  private _storage = new IotTimeSeriesInsightsGen2EnvironmentStorageOutputReference(this as any, "storage", true);
   public get storage() {
-    return this.__storageOutput;
+    return this._storage;
   }
   public putStorage(value: IotTimeSeriesInsightsGen2EnvironmentStorage) {
-    this._storage = value;
+    this._storage.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get storageInput() {
-    return this._storage
+    return this._storage.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: IotTimeSeriesInsightsGen2EnvironmentTimeouts | undefined; 
-  private __timeoutsOutput = new IotTimeSeriesInsightsGen2EnvironmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new IotTimeSeriesInsightsGen2EnvironmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: IotTimeSeriesInsightsGen2EnvironmentTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: IotTimeSeriesInsightsGen2EnvironmentTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -412,8 +472,8 @@ export class IotTimeSeriesInsightsGen2Environment extends cdktf.TerraformResourc
       sku_name: cdktf.stringToTerraform(this._skuName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       warm_store_data_retention_time: cdktf.stringToTerraform(this._warmStoreDataRetentionTime),
-      storage: iotTimeSeriesInsightsGen2EnvironmentStorageToTerraform(this._storage),
-      timeouts: iotTimeSeriesInsightsGen2EnvironmentTimeoutsToTerraform(this._timeouts),
+      storage: iotTimeSeriesInsightsGen2EnvironmentStorageToTerraform(this._storage.internalValue),
+      timeouts: iotTimeSeriesInsightsGen2EnvironmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

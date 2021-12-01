@@ -73,7 +73,7 @@ export interface LogzMonitorPlan {
   readonly usageType: string;
 }
 
-function logzMonitorPlanToTerraform(struct?: LogzMonitorPlanOutputReference | LogzMonitorPlan): any {
+export function logzMonitorPlanToTerraform(struct?: LogzMonitorPlanOutputReference | LogzMonitorPlan): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -96,6 +96,43 @@ export class LogzMonitorPlanOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogzMonitorPlan | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._billingCycle) {
+      hasAnyValues = true;
+      internalValueResult.billingCycle = this._billingCycle;
+    }
+    if (this._effectiveDate) {
+      hasAnyValues = true;
+      internalValueResult.effectiveDate = this._effectiveDate;
+    }
+    if (this._planId) {
+      hasAnyValues = true;
+      internalValueResult.planId = this._planId;
+    }
+    if (this._usageType) {
+      hasAnyValues = true;
+      internalValueResult.usageType = this._usageType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogzMonitorPlan | undefined) {
+    if (value === undefined) {
+      this._billingCycle = undefined;
+      this._effectiveDate = undefined;
+      this._planId = undefined;
+      this._usageType = undefined;
+    }
+    else {
+      this._billingCycle = value.billingCycle;
+      this._effectiveDate = value.effectiveDate;
+      this._planId = value.planId;
+      this._usageType = value.usageType;
+    }
+  }
+
   // billing_cycle - computed: false, optional: false, required: true
   private _billingCycle?: string; 
   public get billingCycle() {
@@ -106,7 +143,7 @@ export class LogzMonitorPlanOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get billingCycleInput() {
-    return this._billingCycle
+    return this._billingCycle;
   }
 
   // effective_date - computed: false, optional: false, required: true
@@ -119,7 +156,7 @@ export class LogzMonitorPlanOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get effectiveDateInput() {
-    return this._effectiveDate
+    return this._effectiveDate;
   }
 
   // plan_id - computed: false, optional: false, required: true
@@ -132,7 +169,7 @@ export class LogzMonitorPlanOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get planIdInput() {
-    return this._planId
+    return this._planId;
   }
 
   // usage_type - computed: false, optional: false, required: true
@@ -145,7 +182,7 @@ export class LogzMonitorPlanOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get usageTypeInput() {
-    return this._usageType
+    return this._usageType;
   }
 }
 export interface LogzMonitorTimeouts {
@@ -167,7 +204,7 @@ export interface LogzMonitorTimeouts {
   readonly update?: string;
 }
 
-function logzMonitorTimeoutsToTerraform(struct?: LogzMonitorTimeoutsOutputReference | LogzMonitorTimeouts): any {
+export function logzMonitorTimeoutsToTerraform(struct?: LogzMonitorTimeoutsOutputReference | LogzMonitorTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -190,12 +227,49 @@ export class LogzMonitorTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogzMonitorTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogzMonitorTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -203,15 +277,15 @@ export class LogzMonitorTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -219,15 +293,15 @@ export class LogzMonitorTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -235,15 +309,15 @@ export class LogzMonitorTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -251,7 +325,7 @@ export class LogzMonitorTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface LogzMonitorUser {
@@ -273,7 +347,7 @@ export interface LogzMonitorUser {
   readonly phoneNumber: string;
 }
 
-function logzMonitorUserToTerraform(struct?: LogzMonitorUserOutputReference | LogzMonitorUser): any {
+export function logzMonitorUserToTerraform(struct?: LogzMonitorUserOutputReference | LogzMonitorUser): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -296,6 +370,43 @@ export class LogzMonitorUserOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogzMonitorUser | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._email) {
+      hasAnyValues = true;
+      internalValueResult.email = this._email;
+    }
+    if (this._firstName) {
+      hasAnyValues = true;
+      internalValueResult.firstName = this._firstName;
+    }
+    if (this._lastName) {
+      hasAnyValues = true;
+      internalValueResult.lastName = this._lastName;
+    }
+    if (this._phoneNumber) {
+      hasAnyValues = true;
+      internalValueResult.phoneNumber = this._phoneNumber;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogzMonitorUser | undefined) {
+    if (value === undefined) {
+      this._email = undefined;
+      this._firstName = undefined;
+      this._lastName = undefined;
+      this._phoneNumber = undefined;
+    }
+    else {
+      this._email = value.email;
+      this._firstName = value.firstName;
+      this._lastName = value.lastName;
+      this._phoneNumber = value.phoneNumber;
+    }
+  }
+
   // email - computed: false, optional: false, required: true
   private _email?: string; 
   public get email() {
@@ -306,7 +417,7 @@ export class LogzMonitorUserOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get emailInput() {
-    return this._email
+    return this._email;
   }
 
   // first_name - computed: false, optional: false, required: true
@@ -319,7 +430,7 @@ export class LogzMonitorUserOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get firstNameInput() {
-    return this._firstName
+    return this._firstName;
   }
 
   // last_name - computed: false, optional: false, required: true
@@ -332,7 +443,7 @@ export class LogzMonitorUserOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get lastNameInput() {
-    return this._lastName
+    return this._lastName;
   }
 
   // phone_number - computed: false, optional: false, required: true
@@ -345,7 +456,7 @@ export class LogzMonitorUserOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get phoneNumberInput() {
-    return this._phoneNumber
+    return this._phoneNumber;
   }
 }
 
@@ -388,9 +499,9 @@ export class LogzMonitor extends cdktf.TerraformResource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._plan = config.plan;
-    this._timeouts = config.timeouts;
-    this._user = config.user;
+    this._plan.internalValue = config.plan;
+    this._timeouts.internalValue = config.timeouts;
+    this._user.internalValue = config.user;
   }
 
   // ==========
@@ -398,11 +509,11 @@ export class LogzMonitor extends cdktf.TerraformResource {
   // ==========
 
   // company_name - computed: false, optional: true, required: false
-  private _companyName?: string | undefined; 
+  private _companyName?: string; 
   public get companyName() {
     return this.getStringAttribute('company_name');
   }
-  public set companyName(value: string | undefined) {
+  public set companyName(value: string) {
     this._companyName = value;
   }
   public resetCompanyName() {
@@ -410,15 +521,15 @@ export class LogzMonitor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get companyNameInput() {
-    return this._companyName
+    return this._companyName;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -426,15 +537,15 @@ export class LogzMonitor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // enterprise_app_id - computed: false, optional: true, required: false
-  private _enterpriseAppId?: string | undefined; 
+  private _enterpriseAppId?: string; 
   public get enterpriseAppId() {
     return this.getStringAttribute('enterprise_app_id');
   }
-  public set enterpriseAppId(value: string | undefined) {
+  public set enterpriseAppId(value: string) {
     this._enterpriseAppId = value;
   }
   public resetEnterpriseAppId() {
@@ -442,7 +553,7 @@ export class LogzMonitor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enterpriseAppIdInput() {
-    return this._enterpriseAppId
+    return this._enterpriseAppId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -460,7 +571,7 @@ export class LogzMonitor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // logz_organization_id - computed: true, optional: false, required: false
@@ -478,7 +589,7 @@ export class LogzMonitor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -491,7 +602,7 @@ export class LogzMonitor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // single_sign_on_url - computed: true, optional: false, required: false
@@ -500,12 +611,12 @@ export class LogzMonitor extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -513,52 +624,49 @@ export class LogzMonitor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // plan - computed: false, optional: false, required: true
-  private _plan?: LogzMonitorPlan; 
-  private __planOutput = new LogzMonitorPlanOutputReference(this as any, "plan", true);
+  private _plan = new LogzMonitorPlanOutputReference(this as any, "plan", true);
   public get plan() {
-    return this.__planOutput;
+    return this._plan;
   }
   public putPlan(value: LogzMonitorPlan) {
-    this._plan = value;
+    this._plan.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get planInput() {
-    return this._plan
+    return this._plan.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LogzMonitorTimeouts | undefined; 
-  private __timeoutsOutput = new LogzMonitorTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogzMonitorTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: LogzMonitorTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: LogzMonitorTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // user - computed: false, optional: false, required: true
-  private _user?: LogzMonitorUser; 
-  private __userOutput = new LogzMonitorUserOutputReference(this as any, "user", true);
+  private _user = new LogzMonitorUserOutputReference(this as any, "user", true);
   public get user() {
-    return this.__userOutput;
+    return this._user;
   }
   public putUser(value: LogzMonitorUser) {
-    this._user = value;
+    this._user.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get userInput() {
-    return this._user
+    return this._user.internalValue;
   }
 
   // =========
@@ -574,9 +682,9 @@ export class LogzMonitor extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      plan: logzMonitorPlanToTerraform(this._plan),
-      timeouts: logzMonitorTimeoutsToTerraform(this._timeouts),
-      user: logzMonitorUserToTerraform(this._user),
+      plan: logzMonitorPlanToTerraform(this._plan.internalValue),
+      timeouts: logzMonitorTimeoutsToTerraform(this._timeouts.internalValue),
+      user: logzMonitorUserToTerraform(this._user.internalValue),
     };
   }
 }

@@ -105,7 +105,7 @@ export interface CdnEndpointDeliveryRuleCacheExpirationAction {
   readonly duration?: string;
 }
 
-function cdnEndpointDeliveryRuleCacheExpirationActionToTerraform(struct?: CdnEndpointDeliveryRuleCacheExpirationActionOutputReference | CdnEndpointDeliveryRuleCacheExpirationAction): any {
+export function cdnEndpointDeliveryRuleCacheExpirationActionToTerraform(struct?: CdnEndpointDeliveryRuleCacheExpirationActionOutputReference | CdnEndpointDeliveryRuleCacheExpirationAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -126,6 +126,31 @@ export class CdnEndpointDeliveryRuleCacheExpirationActionOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CdnEndpointDeliveryRuleCacheExpirationAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._behavior) {
+      hasAnyValues = true;
+      internalValueResult.behavior = this._behavior;
+    }
+    if (this._duration) {
+      hasAnyValues = true;
+      internalValueResult.duration = this._duration;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRuleCacheExpirationAction | undefined) {
+    if (value === undefined) {
+      this._behavior = undefined;
+      this._duration = undefined;
+    }
+    else {
+      this._behavior = value.behavior;
+      this._duration = value.duration;
+    }
+  }
+
   // behavior - computed: false, optional: false, required: true
   private _behavior?: string; 
   public get behavior() {
@@ -136,15 +161,15 @@ export class CdnEndpointDeliveryRuleCacheExpirationActionOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get behaviorInput() {
-    return this._behavior
+    return this._behavior;
   }
 
   // duration - computed: false, optional: true, required: false
-  private _duration?: string | undefined; 
+  private _duration?: string; 
   public get duration() {
     return this.getStringAttribute('duration');
   }
-  public set duration(value: string | undefined) {
+  public set duration(value: string) {
     this._duration = value;
   }
   public resetDuration() {
@@ -152,7 +177,7 @@ export class CdnEndpointDeliveryRuleCacheExpirationActionOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get durationInput() {
-    return this._duration
+    return this._duration;
   }
 }
 export interface CdnEndpointDeliveryRuleCacheKeyQueryStringAction {
@@ -166,7 +191,7 @@ export interface CdnEndpointDeliveryRuleCacheKeyQueryStringAction {
   readonly parameters?: string;
 }
 
-function cdnEndpointDeliveryRuleCacheKeyQueryStringActionToTerraform(struct?: CdnEndpointDeliveryRuleCacheKeyQueryStringActionOutputReference | CdnEndpointDeliveryRuleCacheKeyQueryStringAction): any {
+export function cdnEndpointDeliveryRuleCacheKeyQueryStringActionToTerraform(struct?: CdnEndpointDeliveryRuleCacheKeyQueryStringActionOutputReference | CdnEndpointDeliveryRuleCacheKeyQueryStringAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -187,6 +212,31 @@ export class CdnEndpointDeliveryRuleCacheKeyQueryStringActionOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CdnEndpointDeliveryRuleCacheKeyQueryStringAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._behavior) {
+      hasAnyValues = true;
+      internalValueResult.behavior = this._behavior;
+    }
+    if (this._parameters) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRuleCacheKeyQueryStringAction | undefined) {
+    if (value === undefined) {
+      this._behavior = undefined;
+      this._parameters = undefined;
+    }
+    else {
+      this._behavior = value.behavior;
+      this._parameters = value.parameters;
+    }
+  }
+
   // behavior - computed: false, optional: false, required: true
   private _behavior?: string; 
   public get behavior() {
@@ -197,15 +247,15 @@ export class CdnEndpointDeliveryRuleCacheKeyQueryStringActionOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get behaviorInput() {
-    return this._behavior
+    return this._behavior;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: string | undefined; 
+  private _parameters?: string; 
   public get parameters() {
     return this.getStringAttribute('parameters');
   }
-  public set parameters(value: string | undefined) {
+  public set parameters(value: string) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -213,7 +263,7 @@ export class CdnEndpointDeliveryRuleCacheKeyQueryStringActionOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 }
 export interface CdnEndpointDeliveryRuleCookiesCondition {
@@ -239,7 +289,7 @@ export interface CdnEndpointDeliveryRuleCookiesCondition {
   readonly transforms?: string[];
 }
 
-function cdnEndpointDeliveryRuleCookiesConditionToTerraform(struct?: CdnEndpointDeliveryRuleCookiesCondition): any {
+export function cdnEndpointDeliveryRuleCookiesConditionToTerraform(struct?: CdnEndpointDeliveryRuleCookiesCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -268,7 +318,7 @@ export interface CdnEndpointDeliveryRuleDeviceCondition {
   readonly operator?: string;
 }
 
-function cdnEndpointDeliveryRuleDeviceConditionToTerraform(struct?: CdnEndpointDeliveryRuleDeviceConditionOutputReference | CdnEndpointDeliveryRuleDeviceCondition): any {
+export function cdnEndpointDeliveryRuleDeviceConditionToTerraform(struct?: CdnEndpointDeliveryRuleDeviceConditionOutputReference | CdnEndpointDeliveryRuleDeviceCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -290,6 +340,37 @@ export class CdnEndpointDeliveryRuleDeviceConditionOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CdnEndpointDeliveryRuleDeviceCondition | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._matchValues) {
+      hasAnyValues = true;
+      internalValueResult.matchValues = this._matchValues;
+    }
+    if (this._negateCondition) {
+      hasAnyValues = true;
+      internalValueResult.negateCondition = this._negateCondition;
+    }
+    if (this._operator) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRuleDeviceCondition | undefined) {
+    if (value === undefined) {
+      this._matchValues = undefined;
+      this._negateCondition = undefined;
+      this._operator = undefined;
+    }
+    else {
+      this._matchValues = value.matchValues;
+      this._negateCondition = value.negateCondition;
+      this._operator = value.operator;
+    }
+  }
+
   // match_values - computed: false, optional: false, required: true
   private _matchValues?: string[]; 
   public get matchValues() {
@@ -300,15 +381,15 @@ export class CdnEndpointDeliveryRuleDeviceConditionOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get matchValuesInput() {
-    return this._matchValues
+    return this._matchValues;
   }
 
   // negate_condition - computed: false, optional: true, required: false
-  private _negateCondition?: boolean | cdktf.IResolvable | undefined; 
+  private _negateCondition?: boolean | cdktf.IResolvable; 
   public get negateCondition() {
     return this.getBooleanAttribute('negate_condition') as any;
   }
-  public set negateCondition(value: boolean | cdktf.IResolvable | undefined) {
+  public set negateCondition(value: boolean | cdktf.IResolvable) {
     this._negateCondition = value;
   }
   public resetNegateCondition() {
@@ -316,15 +397,15 @@ export class CdnEndpointDeliveryRuleDeviceConditionOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get negateConditionInput() {
-    return this._negateCondition
+    return this._negateCondition;
   }
 
   // operator - computed: false, optional: true, required: false
-  private _operator?: string | undefined; 
+  private _operator?: string; 
   public get operator() {
     return this.getStringAttribute('operator');
   }
-  public set operator(value: string | undefined) {
+  public set operator(value: string) {
     this._operator = value;
   }
   public resetOperator() {
@@ -332,7 +413,7 @@ export class CdnEndpointDeliveryRuleDeviceConditionOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get operatorInput() {
-    return this._operator
+    return this._operator;
   }
 }
 export interface CdnEndpointDeliveryRuleHttpVersionCondition {
@@ -350,7 +431,7 @@ export interface CdnEndpointDeliveryRuleHttpVersionCondition {
   readonly operator?: string;
 }
 
-function cdnEndpointDeliveryRuleHttpVersionConditionToTerraform(struct?: CdnEndpointDeliveryRuleHttpVersionCondition): any {
+export function cdnEndpointDeliveryRuleHttpVersionConditionToTerraform(struct?: CdnEndpointDeliveryRuleHttpVersionCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -377,7 +458,7 @@ export interface CdnEndpointDeliveryRuleModifyRequestHeaderAction {
   readonly value?: string;
 }
 
-function cdnEndpointDeliveryRuleModifyRequestHeaderActionToTerraform(struct?: CdnEndpointDeliveryRuleModifyRequestHeaderAction): any {
+export function cdnEndpointDeliveryRuleModifyRequestHeaderActionToTerraform(struct?: CdnEndpointDeliveryRuleModifyRequestHeaderAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -404,7 +485,7 @@ export interface CdnEndpointDeliveryRuleModifyResponseHeaderAction {
   readonly value?: string;
 }
 
-function cdnEndpointDeliveryRuleModifyResponseHeaderActionToTerraform(struct?: CdnEndpointDeliveryRuleModifyResponseHeaderAction): any {
+export function cdnEndpointDeliveryRuleModifyResponseHeaderActionToTerraform(struct?: CdnEndpointDeliveryRuleModifyResponseHeaderAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -439,7 +520,7 @@ export interface CdnEndpointDeliveryRulePostArgCondition {
   readonly transforms?: string[];
 }
 
-function cdnEndpointDeliveryRulePostArgConditionToTerraform(struct?: CdnEndpointDeliveryRulePostArgCondition): any {
+export function cdnEndpointDeliveryRulePostArgConditionToTerraform(struct?: CdnEndpointDeliveryRulePostArgCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -472,7 +553,7 @@ export interface CdnEndpointDeliveryRuleQueryStringCondition {
   readonly transforms?: string[];
 }
 
-function cdnEndpointDeliveryRuleQueryStringConditionToTerraform(struct?: CdnEndpointDeliveryRuleQueryStringCondition): any {
+export function cdnEndpointDeliveryRuleQueryStringConditionToTerraform(struct?: CdnEndpointDeliveryRuleQueryStringCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -500,7 +581,7 @@ export interface CdnEndpointDeliveryRuleRemoteAddressCondition {
   readonly operator: string;
 }
 
-function cdnEndpointDeliveryRuleRemoteAddressConditionToTerraform(struct?: CdnEndpointDeliveryRuleRemoteAddressCondition): any {
+export function cdnEndpointDeliveryRuleRemoteAddressConditionToTerraform(struct?: CdnEndpointDeliveryRuleRemoteAddressCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -531,7 +612,7 @@ export interface CdnEndpointDeliveryRuleRequestBodyCondition {
   readonly transforms?: string[];
 }
 
-function cdnEndpointDeliveryRuleRequestBodyConditionToTerraform(struct?: CdnEndpointDeliveryRuleRequestBodyCondition): any {
+export function cdnEndpointDeliveryRuleRequestBodyConditionToTerraform(struct?: CdnEndpointDeliveryRuleRequestBodyCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -567,7 +648,7 @@ export interface CdnEndpointDeliveryRuleRequestHeaderCondition {
   readonly transforms?: string[];
 }
 
-function cdnEndpointDeliveryRuleRequestHeaderConditionToTerraform(struct?: CdnEndpointDeliveryRuleRequestHeaderCondition): any {
+export function cdnEndpointDeliveryRuleRequestHeaderConditionToTerraform(struct?: CdnEndpointDeliveryRuleRequestHeaderCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -596,7 +677,7 @@ export interface CdnEndpointDeliveryRuleRequestMethodCondition {
   readonly operator?: string;
 }
 
-function cdnEndpointDeliveryRuleRequestMethodConditionToTerraform(struct?: CdnEndpointDeliveryRuleRequestMethodConditionOutputReference | CdnEndpointDeliveryRuleRequestMethodCondition): any {
+export function cdnEndpointDeliveryRuleRequestMethodConditionToTerraform(struct?: CdnEndpointDeliveryRuleRequestMethodConditionOutputReference | CdnEndpointDeliveryRuleRequestMethodCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -618,6 +699,37 @@ export class CdnEndpointDeliveryRuleRequestMethodConditionOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CdnEndpointDeliveryRuleRequestMethodCondition | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._matchValues) {
+      hasAnyValues = true;
+      internalValueResult.matchValues = this._matchValues;
+    }
+    if (this._negateCondition) {
+      hasAnyValues = true;
+      internalValueResult.negateCondition = this._negateCondition;
+    }
+    if (this._operator) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRuleRequestMethodCondition | undefined) {
+    if (value === undefined) {
+      this._matchValues = undefined;
+      this._negateCondition = undefined;
+      this._operator = undefined;
+    }
+    else {
+      this._matchValues = value.matchValues;
+      this._negateCondition = value.negateCondition;
+      this._operator = value.operator;
+    }
+  }
+
   // match_values - computed: false, optional: false, required: true
   private _matchValues?: string[]; 
   public get matchValues() {
@@ -628,15 +740,15 @@ export class CdnEndpointDeliveryRuleRequestMethodConditionOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get matchValuesInput() {
-    return this._matchValues
+    return this._matchValues;
   }
 
   // negate_condition - computed: false, optional: true, required: false
-  private _negateCondition?: boolean | cdktf.IResolvable | undefined; 
+  private _negateCondition?: boolean | cdktf.IResolvable; 
   public get negateCondition() {
     return this.getBooleanAttribute('negate_condition') as any;
   }
-  public set negateCondition(value: boolean | cdktf.IResolvable | undefined) {
+  public set negateCondition(value: boolean | cdktf.IResolvable) {
     this._negateCondition = value;
   }
   public resetNegateCondition() {
@@ -644,15 +756,15 @@ export class CdnEndpointDeliveryRuleRequestMethodConditionOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get negateConditionInput() {
-    return this._negateCondition
+    return this._negateCondition;
   }
 
   // operator - computed: false, optional: true, required: false
-  private _operator?: string | undefined; 
+  private _operator?: string; 
   public get operator() {
     return this.getStringAttribute('operator');
   }
-  public set operator(value: string | undefined) {
+  public set operator(value: string) {
     this._operator = value;
   }
   public resetOperator() {
@@ -660,7 +772,7 @@ export class CdnEndpointDeliveryRuleRequestMethodConditionOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get operatorInput() {
-    return this._operator
+    return this._operator;
   }
 }
 export interface CdnEndpointDeliveryRuleRequestSchemeCondition {
@@ -678,7 +790,7 @@ export interface CdnEndpointDeliveryRuleRequestSchemeCondition {
   readonly operator?: string;
 }
 
-function cdnEndpointDeliveryRuleRequestSchemeConditionToTerraform(struct?: CdnEndpointDeliveryRuleRequestSchemeConditionOutputReference | CdnEndpointDeliveryRuleRequestSchemeCondition): any {
+export function cdnEndpointDeliveryRuleRequestSchemeConditionToTerraform(struct?: CdnEndpointDeliveryRuleRequestSchemeConditionOutputReference | CdnEndpointDeliveryRuleRequestSchemeCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -700,6 +812,37 @@ export class CdnEndpointDeliveryRuleRequestSchemeConditionOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CdnEndpointDeliveryRuleRequestSchemeCondition | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._matchValues) {
+      hasAnyValues = true;
+      internalValueResult.matchValues = this._matchValues;
+    }
+    if (this._negateCondition) {
+      hasAnyValues = true;
+      internalValueResult.negateCondition = this._negateCondition;
+    }
+    if (this._operator) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRuleRequestSchemeCondition | undefined) {
+    if (value === undefined) {
+      this._matchValues = undefined;
+      this._negateCondition = undefined;
+      this._operator = undefined;
+    }
+    else {
+      this._matchValues = value.matchValues;
+      this._negateCondition = value.negateCondition;
+      this._operator = value.operator;
+    }
+  }
+
   // match_values - computed: false, optional: false, required: true
   private _matchValues?: string[]; 
   public get matchValues() {
@@ -710,15 +853,15 @@ export class CdnEndpointDeliveryRuleRequestSchemeConditionOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get matchValuesInput() {
-    return this._matchValues
+    return this._matchValues;
   }
 
   // negate_condition - computed: false, optional: true, required: false
-  private _negateCondition?: boolean | cdktf.IResolvable | undefined; 
+  private _negateCondition?: boolean | cdktf.IResolvable; 
   public get negateCondition() {
     return this.getBooleanAttribute('negate_condition') as any;
   }
-  public set negateCondition(value: boolean | cdktf.IResolvable | undefined) {
+  public set negateCondition(value: boolean | cdktf.IResolvable) {
     this._negateCondition = value;
   }
   public resetNegateCondition() {
@@ -726,15 +869,15 @@ export class CdnEndpointDeliveryRuleRequestSchemeConditionOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get negateConditionInput() {
-    return this._negateCondition
+    return this._negateCondition;
   }
 
   // operator - computed: false, optional: true, required: false
-  private _operator?: string | undefined; 
+  private _operator?: string; 
   public get operator() {
     return this.getStringAttribute('operator');
   }
-  public set operator(value: string | undefined) {
+  public set operator(value: string) {
     this._operator = value;
   }
   public resetOperator() {
@@ -742,7 +885,7 @@ export class CdnEndpointDeliveryRuleRequestSchemeConditionOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get operatorInput() {
-    return this._operator
+    return this._operator;
   }
 }
 export interface CdnEndpointDeliveryRuleRequestUriCondition {
@@ -764,7 +907,7 @@ export interface CdnEndpointDeliveryRuleRequestUriCondition {
   readonly transforms?: string[];
 }
 
-function cdnEndpointDeliveryRuleRequestUriConditionToTerraform(struct?: CdnEndpointDeliveryRuleRequestUriCondition): any {
+export function cdnEndpointDeliveryRuleRequestUriConditionToTerraform(struct?: CdnEndpointDeliveryRuleRequestUriCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -796,7 +939,7 @@ export interface CdnEndpointDeliveryRuleUrlFileExtensionCondition {
   readonly transforms?: string[];
 }
 
-function cdnEndpointDeliveryRuleUrlFileExtensionConditionToTerraform(struct?: CdnEndpointDeliveryRuleUrlFileExtensionCondition): any {
+export function cdnEndpointDeliveryRuleUrlFileExtensionConditionToTerraform(struct?: CdnEndpointDeliveryRuleUrlFileExtensionCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -828,7 +971,7 @@ export interface CdnEndpointDeliveryRuleUrlFileNameCondition {
   readonly transforms?: string[];
 }
 
-function cdnEndpointDeliveryRuleUrlFileNameConditionToTerraform(struct?: CdnEndpointDeliveryRuleUrlFileNameCondition): any {
+export function cdnEndpointDeliveryRuleUrlFileNameConditionToTerraform(struct?: CdnEndpointDeliveryRuleUrlFileNameCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -860,7 +1003,7 @@ export interface CdnEndpointDeliveryRuleUrlPathCondition {
   readonly transforms?: string[];
 }
 
-function cdnEndpointDeliveryRuleUrlPathConditionToTerraform(struct?: CdnEndpointDeliveryRuleUrlPathCondition): any {
+export function cdnEndpointDeliveryRuleUrlPathConditionToTerraform(struct?: CdnEndpointDeliveryRuleUrlPathCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -900,7 +1043,7 @@ export interface CdnEndpointDeliveryRuleUrlRedirectAction {
   readonly redirectType: string;
 }
 
-function cdnEndpointDeliveryRuleUrlRedirectActionToTerraform(struct?: CdnEndpointDeliveryRuleUrlRedirectActionOutputReference | CdnEndpointDeliveryRuleUrlRedirectAction): any {
+export function cdnEndpointDeliveryRuleUrlRedirectActionToTerraform(struct?: CdnEndpointDeliveryRuleUrlRedirectActionOutputReference | CdnEndpointDeliveryRuleUrlRedirectAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -925,12 +1068,61 @@ export class CdnEndpointDeliveryRuleUrlRedirectActionOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CdnEndpointDeliveryRuleUrlRedirectAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._fragment) {
+      hasAnyValues = true;
+      internalValueResult.fragment = this._fragment;
+    }
+    if (this._hostname) {
+      hasAnyValues = true;
+      internalValueResult.hostname = this._hostname;
+    }
+    if (this._path) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._protocol) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    if (this._queryString) {
+      hasAnyValues = true;
+      internalValueResult.queryString = this._queryString;
+    }
+    if (this._redirectType) {
+      hasAnyValues = true;
+      internalValueResult.redirectType = this._redirectType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRuleUrlRedirectAction | undefined) {
+    if (value === undefined) {
+      this._fragment = undefined;
+      this._hostname = undefined;
+      this._path = undefined;
+      this._protocol = undefined;
+      this._queryString = undefined;
+      this._redirectType = undefined;
+    }
+    else {
+      this._fragment = value.fragment;
+      this._hostname = value.hostname;
+      this._path = value.path;
+      this._protocol = value.protocol;
+      this._queryString = value.queryString;
+      this._redirectType = value.redirectType;
+    }
+  }
+
   // fragment - computed: false, optional: true, required: false
-  private _fragment?: string | undefined; 
+  private _fragment?: string; 
   public get fragment() {
     return this.getStringAttribute('fragment');
   }
-  public set fragment(value: string | undefined) {
+  public set fragment(value: string) {
     this._fragment = value;
   }
   public resetFragment() {
@@ -938,15 +1130,15 @@ export class CdnEndpointDeliveryRuleUrlRedirectActionOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get fragmentInput() {
-    return this._fragment
+    return this._fragment;
   }
 
   // hostname - computed: false, optional: true, required: false
-  private _hostname?: string | undefined; 
+  private _hostname?: string; 
   public get hostname() {
     return this.getStringAttribute('hostname');
   }
-  public set hostname(value: string | undefined) {
+  public set hostname(value: string) {
     this._hostname = value;
   }
   public resetHostname() {
@@ -954,15 +1146,15 @@ export class CdnEndpointDeliveryRuleUrlRedirectActionOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get hostnameInput() {
-    return this._hostname
+    return this._hostname;
   }
 
   // path - computed: false, optional: true, required: false
-  private _path?: string | undefined; 
+  private _path?: string; 
   public get path() {
     return this.getStringAttribute('path');
   }
-  public set path(value: string | undefined) {
+  public set path(value: string) {
     this._path = value;
   }
   public resetPath() {
@@ -970,15 +1162,15 @@ export class CdnEndpointDeliveryRuleUrlRedirectActionOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
-    return this._path
+    return this._path;
   }
 
   // protocol - computed: false, optional: true, required: false
-  private _protocol?: string | undefined; 
+  private _protocol?: string; 
   public get protocol() {
     return this.getStringAttribute('protocol');
   }
-  public set protocol(value: string | undefined) {
+  public set protocol(value: string) {
     this._protocol = value;
   }
   public resetProtocol() {
@@ -986,15 +1178,15 @@ export class CdnEndpointDeliveryRuleUrlRedirectActionOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get protocolInput() {
-    return this._protocol
+    return this._protocol;
   }
 
   // query_string - computed: false, optional: true, required: false
-  private _queryString?: string | undefined; 
+  private _queryString?: string; 
   public get queryString() {
     return this.getStringAttribute('query_string');
   }
-  public set queryString(value: string | undefined) {
+  public set queryString(value: string) {
     this._queryString = value;
   }
   public resetQueryString() {
@@ -1002,7 +1194,7 @@ export class CdnEndpointDeliveryRuleUrlRedirectActionOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get queryStringInput() {
-    return this._queryString
+    return this._queryString;
   }
 
   // redirect_type - computed: false, optional: false, required: true
@@ -1015,7 +1207,7 @@ export class CdnEndpointDeliveryRuleUrlRedirectActionOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get redirectTypeInput() {
-    return this._redirectType
+    return this._redirectType;
   }
 }
 export interface CdnEndpointDeliveryRuleUrlRewriteAction {
@@ -1033,7 +1225,7 @@ export interface CdnEndpointDeliveryRuleUrlRewriteAction {
   readonly sourcePattern: string;
 }
 
-function cdnEndpointDeliveryRuleUrlRewriteActionToTerraform(struct?: CdnEndpointDeliveryRuleUrlRewriteActionOutputReference | CdnEndpointDeliveryRuleUrlRewriteAction): any {
+export function cdnEndpointDeliveryRuleUrlRewriteActionToTerraform(struct?: CdnEndpointDeliveryRuleUrlRewriteActionOutputReference | CdnEndpointDeliveryRuleUrlRewriteAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1055,6 +1247,37 @@ export class CdnEndpointDeliveryRuleUrlRewriteActionOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CdnEndpointDeliveryRuleUrlRewriteAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._destination) {
+      hasAnyValues = true;
+      internalValueResult.destination = this._destination;
+    }
+    if (this._preserveUnmatchedPath) {
+      hasAnyValues = true;
+      internalValueResult.preserveUnmatchedPath = this._preserveUnmatchedPath;
+    }
+    if (this._sourcePattern) {
+      hasAnyValues = true;
+      internalValueResult.sourcePattern = this._sourcePattern;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointDeliveryRuleUrlRewriteAction | undefined) {
+    if (value === undefined) {
+      this._destination = undefined;
+      this._preserveUnmatchedPath = undefined;
+      this._sourcePattern = undefined;
+    }
+    else {
+      this._destination = value.destination;
+      this._preserveUnmatchedPath = value.preserveUnmatchedPath;
+      this._sourcePattern = value.sourcePattern;
+    }
+  }
+
   // destination - computed: false, optional: false, required: true
   private _destination?: string; 
   public get destination() {
@@ -1065,15 +1288,15 @@ export class CdnEndpointDeliveryRuleUrlRewriteActionOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get destinationInput() {
-    return this._destination
+    return this._destination;
   }
 
   // preserve_unmatched_path - computed: false, optional: true, required: false
-  private _preserveUnmatchedPath?: boolean | cdktf.IResolvable | undefined; 
+  private _preserveUnmatchedPath?: boolean | cdktf.IResolvable; 
   public get preserveUnmatchedPath() {
     return this.getBooleanAttribute('preserve_unmatched_path') as any;
   }
-  public set preserveUnmatchedPath(value: boolean | cdktf.IResolvable | undefined) {
+  public set preserveUnmatchedPath(value: boolean | cdktf.IResolvable) {
     this._preserveUnmatchedPath = value;
   }
   public resetPreserveUnmatchedPath() {
@@ -1081,7 +1304,7 @@ export class CdnEndpointDeliveryRuleUrlRewriteActionOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get preserveUnmatchedPathInput() {
-    return this._preserveUnmatchedPath
+    return this._preserveUnmatchedPath;
   }
 
   // source_pattern - computed: false, optional: false, required: true
@@ -1094,7 +1317,7 @@ export class CdnEndpointDeliveryRuleUrlRewriteActionOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get sourcePatternInput() {
-    return this._sourcePattern
+    return this._sourcePattern;
   }
 }
 export interface CdnEndpointDeliveryRule {
@@ -1228,7 +1451,7 @@ export interface CdnEndpointDeliveryRule {
   readonly urlRewriteAction?: CdnEndpointDeliveryRuleUrlRewriteAction;
 }
 
-function cdnEndpointDeliveryRuleToTerraform(struct?: CdnEndpointDeliveryRule): any {
+export function cdnEndpointDeliveryRuleToTerraform(struct?: CdnEndpointDeliveryRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1274,7 +1497,7 @@ export interface CdnEndpointGeoFilter {
   readonly relativePath: string;
 }
 
-function cdnEndpointGeoFilterToTerraform(struct?: CdnEndpointGeoFilter): any {
+export function cdnEndpointGeoFilterToTerraform(struct?: CdnEndpointGeoFilter): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1297,7 +1520,7 @@ export interface CdnEndpointGlobalDeliveryRuleCacheExpirationAction {
   readonly duration?: string;
 }
 
-function cdnEndpointGlobalDeliveryRuleCacheExpirationActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference | CdnEndpointGlobalDeliveryRuleCacheExpirationAction): any {
+export function cdnEndpointGlobalDeliveryRuleCacheExpirationActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference | CdnEndpointGlobalDeliveryRuleCacheExpirationAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1318,6 +1541,31 @@ export class CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference e
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CdnEndpointGlobalDeliveryRuleCacheExpirationAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._behavior) {
+      hasAnyValues = true;
+      internalValueResult.behavior = this._behavior;
+    }
+    if (this._duration) {
+      hasAnyValues = true;
+      internalValueResult.duration = this._duration;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointGlobalDeliveryRuleCacheExpirationAction | undefined) {
+    if (value === undefined) {
+      this._behavior = undefined;
+      this._duration = undefined;
+    }
+    else {
+      this._behavior = value.behavior;
+      this._duration = value.duration;
+    }
+  }
+
   // behavior - computed: false, optional: false, required: true
   private _behavior?: string; 
   public get behavior() {
@@ -1328,15 +1576,15 @@ export class CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get behaviorInput() {
-    return this._behavior
+    return this._behavior;
   }
 
   // duration - computed: false, optional: true, required: false
-  private _duration?: string | undefined; 
+  private _duration?: string; 
   public get duration() {
     return this.getStringAttribute('duration');
   }
-  public set duration(value: string | undefined) {
+  public set duration(value: string) {
     this._duration = value;
   }
   public resetDuration() {
@@ -1344,7 +1592,7 @@ export class CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get durationInput() {
-    return this._duration
+    return this._duration;
   }
 }
 export interface CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction {
@@ -1358,7 +1606,7 @@ export interface CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction {
   readonly parameters?: string;
 }
 
-function cdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReference | CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction): any {
+export function cdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReference | CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1379,6 +1627,31 @@ export class CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReferen
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._behavior) {
+      hasAnyValues = true;
+      internalValueResult.behavior = this._behavior;
+    }
+    if (this._parameters) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction | undefined) {
+    if (value === undefined) {
+      this._behavior = undefined;
+      this._parameters = undefined;
+    }
+    else {
+      this._behavior = value.behavior;
+      this._parameters = value.parameters;
+    }
+  }
+
   // behavior - computed: false, optional: false, required: true
   private _behavior?: string; 
   public get behavior() {
@@ -1389,15 +1662,15 @@ export class CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get behaviorInput() {
-    return this._behavior
+    return this._behavior;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: string | undefined; 
+  private _parameters?: string; 
   public get parameters() {
     return this.getStringAttribute('parameters');
   }
-  public set parameters(value: string | undefined) {
+  public set parameters(value: string) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -1405,7 +1678,7 @@ export class CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReferen
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 }
 export interface CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction {
@@ -1423,7 +1696,7 @@ export interface CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction {
   readonly value?: string;
 }
 
-function cdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction): any {
+export function cdnEndpointGlobalDeliveryRuleModifyRequestHeaderActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1450,7 +1723,7 @@ export interface CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction {
   readonly value?: string;
 }
 
-function cdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction): any {
+export function cdnEndpointGlobalDeliveryRuleModifyResponseHeaderActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1489,7 +1762,7 @@ export interface CdnEndpointGlobalDeliveryRuleUrlRedirectAction {
   readonly redirectType: string;
 }
 
-function cdnEndpointGlobalDeliveryRuleUrlRedirectActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference | CdnEndpointGlobalDeliveryRuleUrlRedirectAction): any {
+export function cdnEndpointGlobalDeliveryRuleUrlRedirectActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference | CdnEndpointGlobalDeliveryRuleUrlRedirectAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1514,12 +1787,61 @@ export class CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CdnEndpointGlobalDeliveryRuleUrlRedirectAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._fragment) {
+      hasAnyValues = true;
+      internalValueResult.fragment = this._fragment;
+    }
+    if (this._hostname) {
+      hasAnyValues = true;
+      internalValueResult.hostname = this._hostname;
+    }
+    if (this._path) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._protocol) {
+      hasAnyValues = true;
+      internalValueResult.protocol = this._protocol;
+    }
+    if (this._queryString) {
+      hasAnyValues = true;
+      internalValueResult.queryString = this._queryString;
+    }
+    if (this._redirectType) {
+      hasAnyValues = true;
+      internalValueResult.redirectType = this._redirectType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointGlobalDeliveryRuleUrlRedirectAction | undefined) {
+    if (value === undefined) {
+      this._fragment = undefined;
+      this._hostname = undefined;
+      this._path = undefined;
+      this._protocol = undefined;
+      this._queryString = undefined;
+      this._redirectType = undefined;
+    }
+    else {
+      this._fragment = value.fragment;
+      this._hostname = value.hostname;
+      this._path = value.path;
+      this._protocol = value.protocol;
+      this._queryString = value.queryString;
+      this._redirectType = value.redirectType;
+    }
+  }
+
   // fragment - computed: false, optional: true, required: false
-  private _fragment?: string | undefined; 
+  private _fragment?: string; 
   public get fragment() {
     return this.getStringAttribute('fragment');
   }
-  public set fragment(value: string | undefined) {
+  public set fragment(value: string) {
     this._fragment = value;
   }
   public resetFragment() {
@@ -1527,15 +1849,15 @@ export class CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get fragmentInput() {
-    return this._fragment
+    return this._fragment;
   }
 
   // hostname - computed: false, optional: true, required: false
-  private _hostname?: string | undefined; 
+  private _hostname?: string; 
   public get hostname() {
     return this.getStringAttribute('hostname');
   }
-  public set hostname(value: string | undefined) {
+  public set hostname(value: string) {
     this._hostname = value;
   }
   public resetHostname() {
@@ -1543,15 +1865,15 @@ export class CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get hostnameInput() {
-    return this._hostname
+    return this._hostname;
   }
 
   // path - computed: false, optional: true, required: false
-  private _path?: string | undefined; 
+  private _path?: string; 
   public get path() {
     return this.getStringAttribute('path');
   }
-  public set path(value: string | undefined) {
+  public set path(value: string) {
     this._path = value;
   }
   public resetPath() {
@@ -1559,15 +1881,15 @@ export class CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
-    return this._path
+    return this._path;
   }
 
   // protocol - computed: false, optional: true, required: false
-  private _protocol?: string | undefined; 
+  private _protocol?: string; 
   public get protocol() {
     return this.getStringAttribute('protocol');
   }
-  public set protocol(value: string | undefined) {
+  public set protocol(value: string) {
     this._protocol = value;
   }
   public resetProtocol() {
@@ -1575,15 +1897,15 @@ export class CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get protocolInput() {
-    return this._protocol
+    return this._protocol;
   }
 
   // query_string - computed: false, optional: true, required: false
-  private _queryString?: string | undefined; 
+  private _queryString?: string; 
   public get queryString() {
     return this.getStringAttribute('query_string');
   }
-  public set queryString(value: string | undefined) {
+  public set queryString(value: string) {
     this._queryString = value;
   }
   public resetQueryString() {
@@ -1591,7 +1913,7 @@ export class CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get queryStringInput() {
-    return this._queryString
+    return this._queryString;
   }
 
   // redirect_type - computed: false, optional: false, required: true
@@ -1604,7 +1926,7 @@ export class CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get redirectTypeInput() {
-    return this._redirectType
+    return this._redirectType;
   }
 }
 export interface CdnEndpointGlobalDeliveryRuleUrlRewriteAction {
@@ -1622,7 +1944,7 @@ export interface CdnEndpointGlobalDeliveryRuleUrlRewriteAction {
   readonly sourcePattern: string;
 }
 
-function cdnEndpointGlobalDeliveryRuleUrlRewriteActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference | CdnEndpointGlobalDeliveryRuleUrlRewriteAction): any {
+export function cdnEndpointGlobalDeliveryRuleUrlRewriteActionToTerraform(struct?: CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference | CdnEndpointGlobalDeliveryRuleUrlRewriteAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1644,6 +1966,37 @@ export class CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CdnEndpointGlobalDeliveryRuleUrlRewriteAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._destination) {
+      hasAnyValues = true;
+      internalValueResult.destination = this._destination;
+    }
+    if (this._preserveUnmatchedPath) {
+      hasAnyValues = true;
+      internalValueResult.preserveUnmatchedPath = this._preserveUnmatchedPath;
+    }
+    if (this._sourcePattern) {
+      hasAnyValues = true;
+      internalValueResult.sourcePattern = this._sourcePattern;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointGlobalDeliveryRuleUrlRewriteAction | undefined) {
+    if (value === undefined) {
+      this._destination = undefined;
+      this._preserveUnmatchedPath = undefined;
+      this._sourcePattern = undefined;
+    }
+    else {
+      this._destination = value.destination;
+      this._preserveUnmatchedPath = value.preserveUnmatchedPath;
+      this._sourcePattern = value.sourcePattern;
+    }
+  }
+
   // destination - computed: false, optional: false, required: true
   private _destination?: string; 
   public get destination() {
@@ -1654,15 +2007,15 @@ export class CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get destinationInput() {
-    return this._destination
+    return this._destination;
   }
 
   // preserve_unmatched_path - computed: false, optional: true, required: false
-  private _preserveUnmatchedPath?: boolean | cdktf.IResolvable | undefined; 
+  private _preserveUnmatchedPath?: boolean | cdktf.IResolvable; 
   public get preserveUnmatchedPath() {
     return this.getBooleanAttribute('preserve_unmatched_path') as any;
   }
-  public set preserveUnmatchedPath(value: boolean | cdktf.IResolvable | undefined) {
+  public set preserveUnmatchedPath(value: boolean | cdktf.IResolvable) {
     this._preserveUnmatchedPath = value;
   }
   public resetPreserveUnmatchedPath() {
@@ -1670,7 +2023,7 @@ export class CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get preserveUnmatchedPathInput() {
-    return this._preserveUnmatchedPath
+    return this._preserveUnmatchedPath;
   }
 
   // source_pattern - computed: false, optional: false, required: true
@@ -1683,7 +2036,7 @@ export class CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get sourcePatternInput() {
-    return this._sourcePattern
+    return this._sourcePattern;
   }
 }
 export interface CdnEndpointGlobalDeliveryRule {
@@ -1725,7 +2078,7 @@ export interface CdnEndpointGlobalDeliveryRule {
   readonly urlRewriteAction?: CdnEndpointGlobalDeliveryRuleUrlRewriteAction;
 }
 
-function cdnEndpointGlobalDeliveryRuleToTerraform(struct?: CdnEndpointGlobalDeliveryRuleOutputReference | CdnEndpointGlobalDeliveryRule): any {
+export function cdnEndpointGlobalDeliveryRuleToTerraform(struct?: CdnEndpointGlobalDeliveryRuleOutputReference | CdnEndpointGlobalDeliveryRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1750,47 +2103,94 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // cache_expiration_action - computed: false, optional: true, required: false
-  private _cacheExpirationAction?: CdnEndpointGlobalDeliveryRuleCacheExpirationAction | undefined; 
-  private __cacheExpirationActionOutput = new CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference(this as any, "cache_expiration_action", true);
-  public get cacheExpirationAction() {
-    return this.__cacheExpirationActionOutput;
+  public get internalValue(): CdnEndpointGlobalDeliveryRule | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._cacheExpirationAction) {
+      hasAnyValues = true;
+      internalValueResult.cacheExpirationAction = this._cacheExpirationAction?.internalValue;
+    }
+    if (this._cacheKeyQueryStringAction) {
+      hasAnyValues = true;
+      internalValueResult.cacheKeyQueryStringAction = this._cacheKeyQueryStringAction?.internalValue;
+    }
+    if (this._modifyRequestHeaderAction) {
+      hasAnyValues = true;
+      internalValueResult.modifyRequestHeaderAction = this._modifyRequestHeaderAction;
+    }
+    if (this._modifyResponseHeaderAction) {
+      hasAnyValues = true;
+      internalValueResult.modifyResponseHeaderAction = this._modifyResponseHeaderAction;
+    }
+    if (this._urlRedirectAction) {
+      hasAnyValues = true;
+      internalValueResult.urlRedirectAction = this._urlRedirectAction?.internalValue;
+    }
+    if (this._urlRewriteAction) {
+      hasAnyValues = true;
+      internalValueResult.urlRewriteAction = this._urlRewriteAction?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putCacheExpirationAction(value: CdnEndpointGlobalDeliveryRuleCacheExpirationAction | undefined) {
-    this._cacheExpirationAction = value;
+
+  public set internalValue(value: CdnEndpointGlobalDeliveryRule | undefined) {
+    if (value === undefined) {
+      this._cacheExpirationAction.internalValue = undefined;
+      this._cacheKeyQueryStringAction.internalValue = undefined;
+      this._modifyRequestHeaderAction = undefined;
+      this._modifyResponseHeaderAction = undefined;
+      this._urlRedirectAction.internalValue = undefined;
+      this._urlRewriteAction.internalValue = undefined;
+    }
+    else {
+      this._cacheExpirationAction.internalValue = value.cacheExpirationAction;
+      this._cacheKeyQueryStringAction.internalValue = value.cacheKeyQueryStringAction;
+      this._modifyRequestHeaderAction = value.modifyRequestHeaderAction;
+      this._modifyResponseHeaderAction = value.modifyResponseHeaderAction;
+      this._urlRedirectAction.internalValue = value.urlRedirectAction;
+      this._urlRewriteAction.internalValue = value.urlRewriteAction;
+    }
+  }
+
+  // cache_expiration_action - computed: false, optional: true, required: false
+  private _cacheExpirationAction = new CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference(this as any, "cache_expiration_action", true);
+  public get cacheExpirationAction() {
+    return this._cacheExpirationAction;
+  }
+  public putCacheExpirationAction(value: CdnEndpointGlobalDeliveryRuleCacheExpirationAction) {
+    this._cacheExpirationAction.internalValue = value;
   }
   public resetCacheExpirationAction() {
-    this._cacheExpirationAction = undefined;
+    this._cacheExpirationAction.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cacheExpirationActionInput() {
-    return this._cacheExpirationAction
+    return this._cacheExpirationAction.internalValue;
   }
 
   // cache_key_query_string_action - computed: false, optional: true, required: false
-  private _cacheKeyQueryStringAction?: CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction | undefined; 
-  private __cacheKeyQueryStringActionOutput = new CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReference(this as any, "cache_key_query_string_action", true);
+  private _cacheKeyQueryStringAction = new CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReference(this as any, "cache_key_query_string_action", true);
   public get cacheKeyQueryStringAction() {
-    return this.__cacheKeyQueryStringActionOutput;
+    return this._cacheKeyQueryStringAction;
   }
-  public putCacheKeyQueryStringAction(value: CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction | undefined) {
-    this._cacheKeyQueryStringAction = value;
+  public putCacheKeyQueryStringAction(value: CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction) {
+    this._cacheKeyQueryStringAction.internalValue = value;
   }
   public resetCacheKeyQueryStringAction() {
-    this._cacheKeyQueryStringAction = undefined;
+    this._cacheKeyQueryStringAction.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get cacheKeyQueryStringActionInput() {
-    return this._cacheKeyQueryStringAction
+    return this._cacheKeyQueryStringAction.internalValue;
   }
 
   // modify_request_header_action - computed: false, optional: true, required: false
-  private _modifyRequestHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction[] | undefined; 
+  private _modifyRequestHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction[]; 
   public get modifyRequestHeaderAction() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('modify_request_header_action') as any;
   }
-  public set modifyRequestHeaderAction(value: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction[] | undefined) {
+  public set modifyRequestHeaderAction(value: CdnEndpointGlobalDeliveryRuleModifyRequestHeaderAction[]) {
     this._modifyRequestHeaderAction = value;
   }
   public resetModifyRequestHeaderAction() {
@@ -1798,16 +2198,16 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get modifyRequestHeaderActionInput() {
-    return this._modifyRequestHeaderAction
+    return this._modifyRequestHeaderAction;
   }
 
   // modify_response_header_action - computed: false, optional: true, required: false
-  private _modifyResponseHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction[] | undefined; 
+  private _modifyResponseHeaderAction?: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction[]; 
   public get modifyResponseHeaderAction() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('modify_response_header_action') as any;
   }
-  public set modifyResponseHeaderAction(value: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction[] | undefined) {
+  public set modifyResponseHeaderAction(value: CdnEndpointGlobalDeliveryRuleModifyResponseHeaderAction[]) {
     this._modifyResponseHeaderAction = value;
   }
   public resetModifyResponseHeaderAction() {
@@ -1815,41 +2215,39 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get modifyResponseHeaderActionInput() {
-    return this._modifyResponseHeaderAction
+    return this._modifyResponseHeaderAction;
   }
 
   // url_redirect_action - computed: false, optional: true, required: false
-  private _urlRedirectAction?: CdnEndpointGlobalDeliveryRuleUrlRedirectAction | undefined; 
-  private __urlRedirectActionOutput = new CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference(this as any, "url_redirect_action", true);
+  private _urlRedirectAction = new CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference(this as any, "url_redirect_action", true);
   public get urlRedirectAction() {
-    return this.__urlRedirectActionOutput;
+    return this._urlRedirectAction;
   }
-  public putUrlRedirectAction(value: CdnEndpointGlobalDeliveryRuleUrlRedirectAction | undefined) {
-    this._urlRedirectAction = value;
+  public putUrlRedirectAction(value: CdnEndpointGlobalDeliveryRuleUrlRedirectAction) {
+    this._urlRedirectAction.internalValue = value;
   }
   public resetUrlRedirectAction() {
-    this._urlRedirectAction = undefined;
+    this._urlRedirectAction.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get urlRedirectActionInput() {
-    return this._urlRedirectAction
+    return this._urlRedirectAction.internalValue;
   }
 
   // url_rewrite_action - computed: false, optional: true, required: false
-  private _urlRewriteAction?: CdnEndpointGlobalDeliveryRuleUrlRewriteAction | undefined; 
-  private __urlRewriteActionOutput = new CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference(this as any, "url_rewrite_action", true);
+  private _urlRewriteAction = new CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference(this as any, "url_rewrite_action", true);
   public get urlRewriteAction() {
-    return this.__urlRewriteActionOutput;
+    return this._urlRewriteAction;
   }
-  public putUrlRewriteAction(value: CdnEndpointGlobalDeliveryRuleUrlRewriteAction | undefined) {
-    this._urlRewriteAction = value;
+  public putUrlRewriteAction(value: CdnEndpointGlobalDeliveryRuleUrlRewriteAction) {
+    this._urlRewriteAction.internalValue = value;
   }
   public resetUrlRewriteAction() {
-    this._urlRewriteAction = undefined;
+    this._urlRewriteAction.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get urlRewriteActionInput() {
-    return this._urlRewriteAction
+    return this._urlRewriteAction.internalValue;
   }
 }
 export interface CdnEndpointOrigin {
@@ -1871,7 +2269,7 @@ export interface CdnEndpointOrigin {
   readonly name: string;
 }
 
-function cdnEndpointOriginToTerraform(struct?: CdnEndpointOrigin): any {
+export function cdnEndpointOriginToTerraform(struct?: CdnEndpointOrigin): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1903,7 +2301,7 @@ export interface CdnEndpointTimeouts {
   readonly update?: string;
 }
 
-function cdnEndpointTimeoutsToTerraform(struct?: CdnEndpointTimeoutsOutputReference | CdnEndpointTimeouts): any {
+export function cdnEndpointTimeoutsToTerraform(struct?: CdnEndpointTimeoutsOutputReference | CdnEndpointTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1926,12 +2324,49 @@ export class CdnEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CdnEndpointTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CdnEndpointTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -1939,15 +2374,15 @@ export class CdnEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -1955,15 +2390,15 @@ export class CdnEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -1971,15 +2406,15 @@ export class CdnEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -1987,7 +2422,7 @@ export class CdnEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -2039,9 +2474,9 @@ export class CdnEndpoint extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._deliveryRule = config.deliveryRule;
     this._geoFilter = config.geoFilter;
-    this._globalDeliveryRule = config.globalDeliveryRule;
+    this._globalDeliveryRule.internalValue = config.globalDeliveryRule;
     this._origin = config.origin;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -2049,11 +2484,11 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   // ==========
 
   // content_types_to_compress - computed: true, optional: true, required: false
-  private _contentTypesToCompress?: string[] | undefined; 
+  private _contentTypesToCompress?: string[]; 
   public get contentTypesToCompress() {
     return this.getListAttribute('content_types_to_compress');
   }
-  public set contentTypesToCompress(value: string[] | undefined) {
+  public set contentTypesToCompress(value: string[]) {
     this._contentTypesToCompress = value;
   }
   public resetContentTypesToCompress() {
@@ -2061,7 +2496,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get contentTypesToCompressInput() {
-    return this._contentTypesToCompress
+    return this._contentTypesToCompress;
   }
 
   // host_name - computed: true, optional: false, required: false
@@ -2075,11 +2510,11 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
 
   // is_compression_enabled - computed: false, optional: true, required: false
-  private _isCompressionEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _isCompressionEnabled?: boolean | cdktf.IResolvable; 
   public get isCompressionEnabled() {
     return this.getBooleanAttribute('is_compression_enabled') as any;
   }
-  public set isCompressionEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set isCompressionEnabled(value: boolean | cdktf.IResolvable) {
     this._isCompressionEnabled = value;
   }
   public resetIsCompressionEnabled() {
@@ -2087,15 +2522,15 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get isCompressionEnabledInput() {
-    return this._isCompressionEnabled
+    return this._isCompressionEnabled;
   }
 
   // is_http_allowed - computed: false, optional: true, required: false
-  private _isHttpAllowed?: boolean | cdktf.IResolvable | undefined; 
+  private _isHttpAllowed?: boolean | cdktf.IResolvable; 
   public get isHttpAllowed() {
     return this.getBooleanAttribute('is_http_allowed') as any;
   }
-  public set isHttpAllowed(value: boolean | cdktf.IResolvable | undefined) {
+  public set isHttpAllowed(value: boolean | cdktf.IResolvable) {
     this._isHttpAllowed = value;
   }
   public resetIsHttpAllowed() {
@@ -2103,15 +2538,15 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get isHttpAllowedInput() {
-    return this._isHttpAllowed
+    return this._isHttpAllowed;
   }
 
   // is_https_allowed - computed: false, optional: true, required: false
-  private _isHttpsAllowed?: boolean | cdktf.IResolvable | undefined; 
+  private _isHttpsAllowed?: boolean | cdktf.IResolvable; 
   public get isHttpsAllowed() {
     return this.getBooleanAttribute('is_https_allowed') as any;
   }
-  public set isHttpsAllowed(value: boolean | cdktf.IResolvable | undefined) {
+  public set isHttpsAllowed(value: boolean | cdktf.IResolvable) {
     this._isHttpsAllowed = value;
   }
   public resetIsHttpsAllowed() {
@@ -2119,7 +2554,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get isHttpsAllowedInput() {
-    return this._isHttpsAllowed
+    return this._isHttpsAllowed;
   }
 
   // location - computed: false, optional: false, required: true
@@ -2132,7 +2567,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -2145,15 +2580,15 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // optimization_type - computed: false, optional: true, required: false
-  private _optimizationType?: string | undefined; 
+  private _optimizationType?: string; 
   public get optimizationType() {
     return this.getStringAttribute('optimization_type');
   }
-  public set optimizationType(value: string | undefined) {
+  public set optimizationType(value: string) {
     this._optimizationType = value;
   }
   public resetOptimizationType() {
@@ -2161,15 +2596,15 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get optimizationTypeInput() {
-    return this._optimizationType
+    return this._optimizationType;
   }
 
   // origin_host_header - computed: false, optional: true, required: false
-  private _originHostHeader?: string | undefined; 
+  private _originHostHeader?: string; 
   public get originHostHeader() {
     return this.getStringAttribute('origin_host_header');
   }
-  public set originHostHeader(value: string | undefined) {
+  public set originHostHeader(value: string) {
     this._originHostHeader = value;
   }
   public resetOriginHostHeader() {
@@ -2177,15 +2612,15 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get originHostHeaderInput() {
-    return this._originHostHeader
+    return this._originHostHeader;
   }
 
   // origin_path - computed: true, optional: true, required: false
-  private _originPath?: string | undefined; 
+  private _originPath?: string; 
   public get originPath() {
     return this.getStringAttribute('origin_path');
   }
-  public set originPath(value: string | undefined) {
+  public set originPath(value: string) {
     this._originPath = value;
   }
   public resetOriginPath() {
@@ -2193,15 +2628,15 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get originPathInput() {
-    return this._originPath
+    return this._originPath;
   }
 
   // probe_path - computed: true, optional: true, required: false
-  private _probePath?: string | undefined; 
+  private _probePath?: string; 
   public get probePath() {
     return this.getStringAttribute('probe_path');
   }
-  public set probePath(value: string | undefined) {
+  public set probePath(value: string) {
     this._probePath = value;
   }
   public resetProbePath() {
@@ -2209,7 +2644,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get probePathInput() {
-    return this._probePath
+    return this._probePath;
   }
 
   // profile_name - computed: false, optional: false, required: true
@@ -2222,15 +2657,15 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get profileNameInput() {
-    return this._profileName
+    return this._profileName;
   }
 
   // querystring_caching_behaviour - computed: false, optional: true, required: false
-  private _querystringCachingBehaviour?: string | undefined; 
+  private _querystringCachingBehaviour?: string; 
   public get querystringCachingBehaviour() {
     return this.getStringAttribute('querystring_caching_behaviour');
   }
-  public set querystringCachingBehaviour(value: string | undefined) {
+  public set querystringCachingBehaviour(value: string) {
     this._querystringCachingBehaviour = value;
   }
   public resetQuerystringCachingBehaviour() {
@@ -2238,7 +2673,7 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get querystringCachingBehaviourInput() {
-    return this._querystringCachingBehaviour
+    return this._querystringCachingBehaviour;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -2251,16 +2686,16 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -2268,16 +2703,16 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // delivery_rule - computed: false, optional: true, required: false
-  private _deliveryRule?: CdnEndpointDeliveryRule[] | undefined; 
+  private _deliveryRule?: CdnEndpointDeliveryRule[]; 
   public get deliveryRule() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('delivery_rule') as any;
   }
-  public set deliveryRule(value: CdnEndpointDeliveryRule[] | undefined) {
+  public set deliveryRule(value: CdnEndpointDeliveryRule[]) {
     this._deliveryRule = value;
   }
   public resetDeliveryRule() {
@@ -2285,16 +2720,16 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get deliveryRuleInput() {
-    return this._deliveryRule
+    return this._deliveryRule;
   }
 
   // geo_filter - computed: false, optional: true, required: false
-  private _geoFilter?: CdnEndpointGeoFilter[] | undefined; 
+  private _geoFilter?: CdnEndpointGeoFilter[]; 
   public get geoFilter() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('geo_filter') as any;
   }
-  public set geoFilter(value: CdnEndpointGeoFilter[] | undefined) {
+  public set geoFilter(value: CdnEndpointGeoFilter[]) {
     this._geoFilter = value;
   }
   public resetGeoFilter() {
@@ -2302,24 +2737,23 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get geoFilterInput() {
-    return this._geoFilter
+    return this._geoFilter;
   }
 
   // global_delivery_rule - computed: false, optional: true, required: false
-  private _globalDeliveryRule?: CdnEndpointGlobalDeliveryRule | undefined; 
-  private __globalDeliveryRuleOutput = new CdnEndpointGlobalDeliveryRuleOutputReference(this as any, "global_delivery_rule", true);
+  private _globalDeliveryRule = new CdnEndpointGlobalDeliveryRuleOutputReference(this as any, "global_delivery_rule", true);
   public get globalDeliveryRule() {
-    return this.__globalDeliveryRuleOutput;
+    return this._globalDeliveryRule;
   }
-  public putGlobalDeliveryRule(value: CdnEndpointGlobalDeliveryRule | undefined) {
-    this._globalDeliveryRule = value;
+  public putGlobalDeliveryRule(value: CdnEndpointGlobalDeliveryRule) {
+    this._globalDeliveryRule.internalValue = value;
   }
   public resetGlobalDeliveryRule() {
-    this._globalDeliveryRule = undefined;
+    this._globalDeliveryRule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get globalDeliveryRuleInput() {
-    return this._globalDeliveryRule
+    return this._globalDeliveryRule.internalValue;
   }
 
   // origin - computed: false, optional: false, required: true
@@ -2333,24 +2767,23 @@ export class CdnEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get originInput() {
-    return this._origin
+    return this._origin;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: CdnEndpointTimeouts | undefined; 
-  private __timeoutsOutput = new CdnEndpointTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CdnEndpointTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: CdnEndpointTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: CdnEndpointTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -2375,9 +2808,9 @@ export class CdnEndpoint extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       delivery_rule: cdktf.listMapper(cdnEndpointDeliveryRuleToTerraform)(this._deliveryRule),
       geo_filter: cdktf.listMapper(cdnEndpointGeoFilterToTerraform)(this._geoFilter),
-      global_delivery_rule: cdnEndpointGlobalDeliveryRuleToTerraform(this._globalDeliveryRule),
+      global_delivery_rule: cdnEndpointGlobalDeliveryRuleToTerraform(this._globalDeliveryRule.internalValue),
       origin: cdktf.listMapper(cdnEndpointOriginToTerraform)(this._origin),
-      timeouts: cdnEndpointTimeoutsToTerraform(this._timeouts),
+      timeouts: cdnEndpointTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

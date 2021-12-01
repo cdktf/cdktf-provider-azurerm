@@ -33,7 +33,7 @@ export interface DataAzurermAutomationVariableDatetimeTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermAutomationVariableDatetimeTimeoutsToTerraform(struct?: DataAzurermAutomationVariableDatetimeTimeoutsOutputReference | DataAzurermAutomationVariableDatetimeTimeouts): any {
+export function dataAzurermAutomationVariableDatetimeTimeoutsToTerraform(struct?: DataAzurermAutomationVariableDatetimeTimeoutsOutputReference | DataAzurermAutomationVariableDatetimeTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -53,12 +53,31 @@ export class DataAzurermAutomationVariableDatetimeTimeoutsOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermAutomationVariableDatetimeTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermAutomationVariableDatetimeTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -66,7 +85,7 @@ export class DataAzurermAutomationVariableDatetimeTimeoutsOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -105,7 +124,7 @@ export class DataAzurermAutomationVariableDatetime extends cdktf.TerraformDataSo
     this._automationAccountName = config.automationAccountName;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -122,7 +141,7 @@ export class DataAzurermAutomationVariableDatetime extends cdktf.TerraformDataSo
   }
   // Temporarily expose input value. Use with caution.
   public get automationAccountNameInput() {
-    return this._automationAccountName
+    return this._automationAccountName;
   }
 
   // description - computed: true, optional: false, required: false
@@ -150,7 +169,7 @@ export class DataAzurermAutomationVariableDatetime extends cdktf.TerraformDataSo
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -163,7 +182,7 @@ export class DataAzurermAutomationVariableDatetime extends cdktf.TerraformDataSo
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // value - computed: true, optional: false, required: false
@@ -172,20 +191,19 @@ export class DataAzurermAutomationVariableDatetime extends cdktf.TerraformDataSo
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermAutomationVariableDatetimeTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermAutomationVariableDatetimeTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermAutomationVariableDatetimeTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermAutomationVariableDatetimeTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermAutomationVariableDatetimeTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -197,7 +215,7 @@ export class DataAzurermAutomationVariableDatetime extends cdktf.TerraformDataSo
       automation_account_name: cdktf.stringToTerraform(this._automationAccountName),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      timeouts: dataAzurermAutomationVariableDatetimeTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermAutomationVariableDatetimeTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

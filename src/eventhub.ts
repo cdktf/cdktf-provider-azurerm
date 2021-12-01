@@ -63,7 +63,7 @@ export interface EventhubCaptureDescriptionDestination {
   readonly storageAccountId: string;
 }
 
-function eventhubCaptureDescriptionDestinationToTerraform(struct?: EventhubCaptureDescriptionDestinationOutputReference | EventhubCaptureDescriptionDestination): any {
+export function eventhubCaptureDescriptionDestinationToTerraform(struct?: EventhubCaptureDescriptionDestinationOutputReference | EventhubCaptureDescriptionDestination): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -86,6 +86,43 @@ export class EventhubCaptureDescriptionDestinationOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): EventhubCaptureDescriptionDestination | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._archiveNameFormat) {
+      hasAnyValues = true;
+      internalValueResult.archiveNameFormat = this._archiveNameFormat;
+    }
+    if (this._blobContainerName) {
+      hasAnyValues = true;
+      internalValueResult.blobContainerName = this._blobContainerName;
+    }
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._storageAccountId) {
+      hasAnyValues = true;
+      internalValueResult.storageAccountId = this._storageAccountId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventhubCaptureDescriptionDestination | undefined) {
+    if (value === undefined) {
+      this._archiveNameFormat = undefined;
+      this._blobContainerName = undefined;
+      this._name = undefined;
+      this._storageAccountId = undefined;
+    }
+    else {
+      this._archiveNameFormat = value.archiveNameFormat;
+      this._blobContainerName = value.blobContainerName;
+      this._name = value.name;
+      this._storageAccountId = value.storageAccountId;
+    }
+  }
+
   // archive_name_format - computed: false, optional: false, required: true
   private _archiveNameFormat?: string; 
   public get archiveNameFormat() {
@@ -96,7 +133,7 @@ export class EventhubCaptureDescriptionDestinationOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get archiveNameFormatInput() {
-    return this._archiveNameFormat
+    return this._archiveNameFormat;
   }
 
   // blob_container_name - computed: false, optional: false, required: true
@@ -109,7 +146,7 @@ export class EventhubCaptureDescriptionDestinationOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get blobContainerNameInput() {
-    return this._blobContainerName
+    return this._blobContainerName;
   }
 
   // name - computed: false, optional: false, required: true
@@ -122,7 +159,7 @@ export class EventhubCaptureDescriptionDestinationOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // storage_account_id - computed: false, optional: false, required: true
@@ -135,7 +172,7 @@ export class EventhubCaptureDescriptionDestinationOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountIdInput() {
-    return this._storageAccountId
+    return this._storageAccountId;
   }
 }
 export interface EventhubCaptureDescription {
@@ -167,7 +204,7 @@ export interface EventhubCaptureDescription {
   readonly destination: EventhubCaptureDescriptionDestination;
 }
 
-function eventhubCaptureDescriptionToTerraform(struct?: EventhubCaptureDescriptionOutputReference | EventhubCaptureDescription): any {
+export function eventhubCaptureDescriptionToTerraform(struct?: EventhubCaptureDescriptionOutputReference | EventhubCaptureDescription): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -192,6 +229,55 @@ export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): EventhubCaptureDescription | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._encoding) {
+      hasAnyValues = true;
+      internalValueResult.encoding = this._encoding;
+    }
+    if (this._intervalInSeconds) {
+      hasAnyValues = true;
+      internalValueResult.intervalInSeconds = this._intervalInSeconds;
+    }
+    if (this._sizeLimitInBytes) {
+      hasAnyValues = true;
+      internalValueResult.sizeLimitInBytes = this._sizeLimitInBytes;
+    }
+    if (this._skipEmptyArchives) {
+      hasAnyValues = true;
+      internalValueResult.skipEmptyArchives = this._skipEmptyArchives;
+    }
+    if (this._destination) {
+      hasAnyValues = true;
+      internalValueResult.destination = this._destination?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventhubCaptureDescription | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+      this._encoding = undefined;
+      this._intervalInSeconds = undefined;
+      this._sizeLimitInBytes = undefined;
+      this._skipEmptyArchives = undefined;
+      this._destination.internalValue = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+      this._encoding = value.encoding;
+      this._intervalInSeconds = value.intervalInSeconds;
+      this._sizeLimitInBytes = value.sizeLimitInBytes;
+      this._skipEmptyArchives = value.skipEmptyArchives;
+      this._destination.internalValue = value.destination;
+    }
+  }
+
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
@@ -202,7 +288,7 @@ export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // encoding - computed: false, optional: false, required: true
@@ -215,15 +301,15 @@ export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get encodingInput() {
-    return this._encoding
+    return this._encoding;
   }
 
   // interval_in_seconds - computed: false, optional: true, required: false
-  private _intervalInSeconds?: number | undefined; 
+  private _intervalInSeconds?: number; 
   public get intervalInSeconds() {
     return this.getNumberAttribute('interval_in_seconds');
   }
-  public set intervalInSeconds(value: number | undefined) {
+  public set intervalInSeconds(value: number) {
     this._intervalInSeconds = value;
   }
   public resetIntervalInSeconds() {
@@ -231,15 +317,15 @@ export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get intervalInSecondsInput() {
-    return this._intervalInSeconds
+    return this._intervalInSeconds;
   }
 
   // size_limit_in_bytes - computed: false, optional: true, required: false
-  private _sizeLimitInBytes?: number | undefined; 
+  private _sizeLimitInBytes?: number; 
   public get sizeLimitInBytes() {
     return this.getNumberAttribute('size_limit_in_bytes');
   }
-  public set sizeLimitInBytes(value: number | undefined) {
+  public set sizeLimitInBytes(value: number) {
     this._sizeLimitInBytes = value;
   }
   public resetSizeLimitInBytes() {
@@ -247,15 +333,15 @@ export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get sizeLimitInBytesInput() {
-    return this._sizeLimitInBytes
+    return this._sizeLimitInBytes;
   }
 
   // skip_empty_archives - computed: false, optional: true, required: false
-  private _skipEmptyArchives?: boolean | cdktf.IResolvable | undefined; 
+  private _skipEmptyArchives?: boolean | cdktf.IResolvable; 
   public get skipEmptyArchives() {
     return this.getBooleanAttribute('skip_empty_archives') as any;
   }
-  public set skipEmptyArchives(value: boolean | cdktf.IResolvable | undefined) {
+  public set skipEmptyArchives(value: boolean | cdktf.IResolvable) {
     this._skipEmptyArchives = value;
   }
   public resetSkipEmptyArchives() {
@@ -263,21 +349,20 @@ export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get skipEmptyArchivesInput() {
-    return this._skipEmptyArchives
+    return this._skipEmptyArchives;
   }
 
   // destination - computed: false, optional: false, required: true
-  private _destination?: EventhubCaptureDescriptionDestination; 
-  private __destinationOutput = new EventhubCaptureDescriptionDestinationOutputReference(this as any, "destination", true);
+  private _destination = new EventhubCaptureDescriptionDestinationOutputReference(this as any, "destination", true);
   public get destination() {
-    return this.__destinationOutput;
+    return this._destination;
   }
   public putDestination(value: EventhubCaptureDescriptionDestination) {
-    this._destination = value;
+    this._destination.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get destinationInput() {
-    return this._destination
+    return this._destination.internalValue;
   }
 }
 export interface EventhubTimeouts {
@@ -299,7 +384,7 @@ export interface EventhubTimeouts {
   readonly update?: string;
 }
 
-function eventhubTimeoutsToTerraform(struct?: EventhubTimeoutsOutputReference | EventhubTimeouts): any {
+export function eventhubTimeoutsToTerraform(struct?: EventhubTimeoutsOutputReference | EventhubTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -322,12 +407,49 @@ export class EventhubTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): EventhubTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: EventhubTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -335,15 +457,15 @@ export class EventhubTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -351,15 +473,15 @@ export class EventhubTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -367,15 +489,15 @@ export class EventhubTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -383,7 +505,7 @@ export class EventhubTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -425,8 +547,8 @@ export class Eventhub extends cdktf.TerraformResource {
     this._partitionCount = config.partitionCount;
     this._resourceGroupName = config.resourceGroupName;
     this._status = config.status;
-    this._captureDescription = config.captureDescription;
-    this._timeouts = config.timeouts;
+    this._captureDescription.internalValue = config.captureDescription;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -448,7 +570,7 @@ export class Eventhub extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get messageRetentionInput() {
-    return this._messageRetention
+    return this._messageRetention;
   }
 
   // name - computed: false, optional: false, required: true
@@ -461,7 +583,7 @@ export class Eventhub extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // namespace_name - computed: false, optional: false, required: true
@@ -474,7 +596,7 @@ export class Eventhub extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceNameInput() {
-    return this._namespaceName
+    return this._namespaceName;
   }
 
   // partition_count - computed: false, optional: false, required: true
@@ -487,7 +609,7 @@ export class Eventhub extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get partitionCountInput() {
-    return this._partitionCount
+    return this._partitionCount;
   }
 
   // partition_ids - computed: true, optional: false, required: false
@@ -505,15 +627,15 @@ export class Eventhub extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // status - computed: false, optional: true, required: false
-  private _status?: string | undefined; 
+  private _status?: string; 
   public get status() {
     return this.getStringAttribute('status');
   }
-  public set status(value: string | undefined) {
+  public set status(value: string) {
     this._status = value;
   }
   public resetStatus() {
@@ -521,41 +643,39 @@ export class Eventhub extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get statusInput() {
-    return this._status
+    return this._status;
   }
 
   // capture_description - computed: false, optional: true, required: false
-  private _captureDescription?: EventhubCaptureDescription | undefined; 
-  private __captureDescriptionOutput = new EventhubCaptureDescriptionOutputReference(this as any, "capture_description", true);
+  private _captureDescription = new EventhubCaptureDescriptionOutputReference(this as any, "capture_description", true);
   public get captureDescription() {
-    return this.__captureDescriptionOutput;
+    return this._captureDescription;
   }
-  public putCaptureDescription(value: EventhubCaptureDescription | undefined) {
-    this._captureDescription = value;
+  public putCaptureDescription(value: EventhubCaptureDescription) {
+    this._captureDescription.internalValue = value;
   }
   public resetCaptureDescription() {
-    this._captureDescription = undefined;
+    this._captureDescription.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get captureDescriptionInput() {
-    return this._captureDescription
+    return this._captureDescription.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: EventhubTimeouts | undefined; 
-  private __timeoutsOutput = new EventhubTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new EventhubTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: EventhubTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: EventhubTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -570,8 +690,8 @@ export class Eventhub extends cdktf.TerraformResource {
       partition_count: cdktf.numberToTerraform(this._partitionCount),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       status: cdktf.stringToTerraform(this._status),
-      capture_description: eventhubCaptureDescriptionToTerraform(this._captureDescription),
-      timeouts: eventhubTimeoutsToTerraform(this._timeouts),
+      capture_description: eventhubCaptureDescriptionToTerraform(this._captureDescription.internalValue),
+      timeouts: eventhubTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

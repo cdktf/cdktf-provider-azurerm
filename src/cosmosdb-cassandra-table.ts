@@ -53,7 +53,7 @@ export interface CosmosdbCassandraTableAutoscaleSettings {
   readonly maxThroughput?: number;
 }
 
-function cosmosdbCassandraTableAutoscaleSettingsToTerraform(struct?: CosmosdbCassandraTableAutoscaleSettingsOutputReference | CosmosdbCassandraTableAutoscaleSettings): any {
+export function cosmosdbCassandraTableAutoscaleSettingsToTerraform(struct?: CosmosdbCassandraTableAutoscaleSettingsOutputReference | CosmosdbCassandraTableAutoscaleSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -73,12 +73,31 @@ export class CosmosdbCassandraTableAutoscaleSettingsOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbCassandraTableAutoscaleSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maxThroughput) {
+      hasAnyValues = true;
+      internalValueResult.maxThroughput = this._maxThroughput;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbCassandraTableAutoscaleSettings | undefined) {
+    if (value === undefined) {
+      this._maxThroughput = undefined;
+    }
+    else {
+      this._maxThroughput = value.maxThroughput;
+    }
+  }
+
   // max_throughput - computed: true, optional: true, required: false
-  private _maxThroughput?: number | undefined; 
+  private _maxThroughput?: number; 
   public get maxThroughput() {
     return this.getNumberAttribute('max_throughput');
   }
-  public set maxThroughput(value: number | undefined) {
+  public set maxThroughput(value: number) {
     this._maxThroughput = value;
   }
   public resetMaxThroughput() {
@@ -86,7 +105,7 @@ export class CosmosdbCassandraTableAutoscaleSettingsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get maxThroughputInput() {
-    return this._maxThroughput
+    return this._maxThroughput;
   }
 }
 export interface CosmosdbCassandraTableSchemaClusterKey {
@@ -100,7 +119,7 @@ export interface CosmosdbCassandraTableSchemaClusterKey {
   readonly orderBy: string;
 }
 
-function cosmosdbCassandraTableSchemaClusterKeyToTerraform(struct?: CosmosdbCassandraTableSchemaClusterKey): any {
+export function cosmosdbCassandraTableSchemaClusterKeyToTerraform(struct?: CosmosdbCassandraTableSchemaClusterKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -122,7 +141,7 @@ export interface CosmosdbCassandraTableSchemaColumn {
   readonly type: string;
 }
 
-function cosmosdbCassandraTableSchemaColumnToTerraform(struct?: CosmosdbCassandraTableSchemaColumn): any {
+export function cosmosdbCassandraTableSchemaColumnToTerraform(struct?: CosmosdbCassandraTableSchemaColumn): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -140,7 +159,7 @@ export interface CosmosdbCassandraTableSchemaPartitionKey {
   readonly name: string;
 }
 
-function cosmosdbCassandraTableSchemaPartitionKeyToTerraform(struct?: CosmosdbCassandraTableSchemaPartitionKey): any {
+export function cosmosdbCassandraTableSchemaPartitionKeyToTerraform(struct?: CosmosdbCassandraTableSchemaPartitionKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -171,7 +190,7 @@ export interface CosmosdbCassandraTableSchema {
   readonly partitionKey: CosmosdbCassandraTableSchemaPartitionKey[];
 }
 
-function cosmosdbCassandraTableSchemaToTerraform(struct?: CosmosdbCassandraTableSchemaOutputReference | CosmosdbCassandraTableSchema): any {
+export function cosmosdbCassandraTableSchemaToTerraform(struct?: CosmosdbCassandraTableSchemaOutputReference | CosmosdbCassandraTableSchema): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -193,13 +212,44 @@ export class CosmosdbCassandraTableSchemaOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbCassandraTableSchema | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._clusterKey) {
+      hasAnyValues = true;
+      internalValueResult.clusterKey = this._clusterKey;
+    }
+    if (this._column) {
+      hasAnyValues = true;
+      internalValueResult.column = this._column;
+    }
+    if (this._partitionKey) {
+      hasAnyValues = true;
+      internalValueResult.partitionKey = this._partitionKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbCassandraTableSchema | undefined) {
+    if (value === undefined) {
+      this._clusterKey = undefined;
+      this._column = undefined;
+      this._partitionKey = undefined;
+    }
+    else {
+      this._clusterKey = value.clusterKey;
+      this._column = value.column;
+      this._partitionKey = value.partitionKey;
+    }
+  }
+
   // cluster_key - computed: false, optional: true, required: false
-  private _clusterKey?: CosmosdbCassandraTableSchemaClusterKey[] | undefined; 
+  private _clusterKey?: CosmosdbCassandraTableSchemaClusterKey[]; 
   public get clusterKey() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('cluster_key') as any;
   }
-  public set clusterKey(value: CosmosdbCassandraTableSchemaClusterKey[] | undefined) {
+  public set clusterKey(value: CosmosdbCassandraTableSchemaClusterKey[]) {
     this._clusterKey = value;
   }
   public resetClusterKey() {
@@ -207,7 +257,7 @@ export class CosmosdbCassandraTableSchemaOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get clusterKeyInput() {
-    return this._clusterKey
+    return this._clusterKey;
   }
 
   // column - computed: false, optional: false, required: true
@@ -221,7 +271,7 @@ export class CosmosdbCassandraTableSchemaOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get columnInput() {
-    return this._column
+    return this._column;
   }
 
   // partition_key - computed: false, optional: false, required: true
@@ -235,7 +285,7 @@ export class CosmosdbCassandraTableSchemaOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get partitionKeyInput() {
-    return this._partitionKey
+    return this._partitionKey;
   }
 }
 export interface CosmosdbCassandraTableTimeouts {
@@ -257,7 +307,7 @@ export interface CosmosdbCassandraTableTimeouts {
   readonly update?: string;
 }
 
-function cosmosdbCassandraTableTimeoutsToTerraform(struct?: CosmosdbCassandraTableTimeoutsOutputReference | CosmosdbCassandraTableTimeouts): any {
+export function cosmosdbCassandraTableTimeoutsToTerraform(struct?: CosmosdbCassandraTableTimeoutsOutputReference | CosmosdbCassandraTableTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -280,12 +330,49 @@ export class CosmosdbCassandraTableTimeoutsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbCassandraTableTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbCassandraTableTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -293,15 +380,15 @@ export class CosmosdbCassandraTableTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -309,15 +396,15 @@ export class CosmosdbCassandraTableTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -325,15 +412,15 @@ export class CosmosdbCassandraTableTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -341,7 +428,7 @@ export class CosmosdbCassandraTableTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -382,9 +469,9 @@ export class CosmosdbCassandraTable extends cdktf.TerraformResource {
     this._defaultTtl = config.defaultTtl;
     this._name = config.name;
     this._throughput = config.throughput;
-    this._autoscaleSettings = config.autoscaleSettings;
-    this._schema = config.schema;
-    this._timeouts = config.timeouts;
+    this._autoscaleSettings.internalValue = config.autoscaleSettings;
+    this._schema.internalValue = config.schema;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -392,11 +479,11 @@ export class CosmosdbCassandraTable extends cdktf.TerraformResource {
   // ==========
 
   // analytical_storage_ttl - computed: false, optional: true, required: false
-  private _analyticalStorageTtl?: number | undefined; 
+  private _analyticalStorageTtl?: number; 
   public get analyticalStorageTtl() {
     return this.getNumberAttribute('analytical_storage_ttl');
   }
-  public set analyticalStorageTtl(value: number | undefined) {
+  public set analyticalStorageTtl(value: number) {
     this._analyticalStorageTtl = value;
   }
   public resetAnalyticalStorageTtl() {
@@ -404,7 +491,7 @@ export class CosmosdbCassandraTable extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get analyticalStorageTtlInput() {
-    return this._analyticalStorageTtl
+    return this._analyticalStorageTtl;
   }
 
   // cassandra_keyspace_id - computed: false, optional: false, required: true
@@ -417,15 +504,15 @@ export class CosmosdbCassandraTable extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get cassandraKeyspaceIdInput() {
-    return this._cassandraKeyspaceId
+    return this._cassandraKeyspaceId;
   }
 
   // default_ttl - computed: true, optional: true, required: false
-  private _defaultTtl?: number | undefined; 
+  private _defaultTtl?: number; 
   public get defaultTtl() {
     return this.getNumberAttribute('default_ttl');
   }
-  public set defaultTtl(value: number | undefined) {
+  public set defaultTtl(value: number) {
     this._defaultTtl = value;
   }
   public resetDefaultTtl() {
@@ -433,7 +520,7 @@ export class CosmosdbCassandraTable extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get defaultTtlInput() {
-    return this._defaultTtl
+    return this._defaultTtl;
   }
 
   // id - computed: true, optional: true, required: false
@@ -451,15 +538,15 @@ export class CosmosdbCassandraTable extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // throughput - computed: true, optional: true, required: false
-  private _throughput?: number | undefined; 
+  private _throughput?: number; 
   public get throughput() {
     return this.getNumberAttribute('throughput');
   }
-  public set throughput(value: number | undefined) {
+  public set throughput(value: number) {
     this._throughput = value;
   }
   public resetThroughput() {
@@ -467,55 +554,52 @@ export class CosmosdbCassandraTable extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get throughputInput() {
-    return this._throughput
+    return this._throughput;
   }
 
   // autoscale_settings - computed: false, optional: true, required: false
-  private _autoscaleSettings?: CosmosdbCassandraTableAutoscaleSettings | undefined; 
-  private __autoscaleSettingsOutput = new CosmosdbCassandraTableAutoscaleSettingsOutputReference(this as any, "autoscale_settings", true);
+  private _autoscaleSettings = new CosmosdbCassandraTableAutoscaleSettingsOutputReference(this as any, "autoscale_settings", true);
   public get autoscaleSettings() {
-    return this.__autoscaleSettingsOutput;
+    return this._autoscaleSettings;
   }
-  public putAutoscaleSettings(value: CosmosdbCassandraTableAutoscaleSettings | undefined) {
-    this._autoscaleSettings = value;
+  public putAutoscaleSettings(value: CosmosdbCassandraTableAutoscaleSettings) {
+    this._autoscaleSettings.internalValue = value;
   }
   public resetAutoscaleSettings() {
-    this._autoscaleSettings = undefined;
+    this._autoscaleSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get autoscaleSettingsInput() {
-    return this._autoscaleSettings
+    return this._autoscaleSettings.internalValue;
   }
 
   // schema - computed: false, optional: false, required: true
-  private _schema?: CosmosdbCassandraTableSchema; 
-  private __schemaOutput = new CosmosdbCassandraTableSchemaOutputReference(this as any, "schema", true);
+  private _schema = new CosmosdbCassandraTableSchemaOutputReference(this as any, "schema", true);
   public get schema() {
-    return this.__schemaOutput;
+    return this._schema;
   }
   public putSchema(value: CosmosdbCassandraTableSchema) {
-    this._schema = value;
+    this._schema.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get schemaInput() {
-    return this._schema
+    return this._schema.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: CosmosdbCassandraTableTimeouts | undefined; 
-  private __timeoutsOutput = new CosmosdbCassandraTableTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CosmosdbCassandraTableTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: CosmosdbCassandraTableTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: CosmosdbCassandraTableTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -529,9 +613,9 @@ export class CosmosdbCassandraTable extends cdktf.TerraformResource {
       default_ttl: cdktf.numberToTerraform(this._defaultTtl),
       name: cdktf.stringToTerraform(this._name),
       throughput: cdktf.numberToTerraform(this._throughput),
-      autoscale_settings: cosmosdbCassandraTableAutoscaleSettingsToTerraform(this._autoscaleSettings),
-      schema: cosmosdbCassandraTableSchemaToTerraform(this._schema),
-      timeouts: cosmosdbCassandraTableTimeoutsToTerraform(this._timeouts),
+      autoscale_settings: cosmosdbCassandraTableAutoscaleSettingsToTerraform(this._autoscaleSettings.internalValue),
+      schema: cosmosdbCassandraTableSchemaToTerraform(this._schema.internalValue),
+      timeouts: cosmosdbCassandraTableTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

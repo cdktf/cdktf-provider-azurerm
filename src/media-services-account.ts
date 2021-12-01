@@ -59,7 +59,7 @@ export interface MediaServicesAccountIdentity {
   readonly type?: string;
 }
 
-function mediaServicesAccountIdentityToTerraform(struct?: MediaServicesAccountIdentityOutputReference | MediaServicesAccountIdentity): any {
+export function mediaServicesAccountIdentityToTerraform(struct?: MediaServicesAccountIdentityOutputReference | MediaServicesAccountIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -79,12 +79,31 @@ export class MediaServicesAccountIdentityOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaServicesAccountIdentity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaServicesAccountIdentity | undefined) {
+    if (value === undefined) {
+      this._type = undefined;
+    }
+    else {
+      this._type = value.type;
+    }
+  }
+
   // type - computed: false, optional: true, required: false
-  private _type?: string | undefined; 
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string | undefined) {
+  public set type(value: string) {
     this._type = value;
   }
   public resetType() {
@@ -92,7 +111,7 @@ export class MediaServicesAccountIdentityOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface MediaServicesAccountKeyDeliveryAccessControl {
@@ -106,7 +125,7 @@ export interface MediaServicesAccountKeyDeliveryAccessControl {
   readonly ipAllowList?: string[];
 }
 
-function mediaServicesAccountKeyDeliveryAccessControlToTerraform(struct?: MediaServicesAccountKeyDeliveryAccessControlOutputReference | MediaServicesAccountKeyDeliveryAccessControl): any {
+export function mediaServicesAccountKeyDeliveryAccessControlToTerraform(struct?: MediaServicesAccountKeyDeliveryAccessControlOutputReference | MediaServicesAccountKeyDeliveryAccessControl): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -127,12 +146,37 @@ export class MediaServicesAccountKeyDeliveryAccessControlOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaServicesAccountKeyDeliveryAccessControl | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._defaultAction) {
+      hasAnyValues = true;
+      internalValueResult.defaultAction = this._defaultAction;
+    }
+    if (this._ipAllowList) {
+      hasAnyValues = true;
+      internalValueResult.ipAllowList = this._ipAllowList;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaServicesAccountKeyDeliveryAccessControl | undefined) {
+    if (value === undefined) {
+      this._defaultAction = undefined;
+      this._ipAllowList = undefined;
+    }
+    else {
+      this._defaultAction = value.defaultAction;
+      this._ipAllowList = value.ipAllowList;
+    }
+  }
+
   // default_action - computed: false, optional: true, required: false
-  private _defaultAction?: string | undefined; 
+  private _defaultAction?: string; 
   public get defaultAction() {
     return this.getStringAttribute('default_action');
   }
-  public set defaultAction(value: string | undefined) {
+  public set defaultAction(value: string) {
     this._defaultAction = value;
   }
   public resetDefaultAction() {
@@ -140,15 +184,15 @@ export class MediaServicesAccountKeyDeliveryAccessControlOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get defaultActionInput() {
-    return this._defaultAction
+    return this._defaultAction;
   }
 
   // ip_allow_list - computed: false, optional: true, required: false
-  private _ipAllowList?: string[] | undefined; 
+  private _ipAllowList?: string[]; 
   public get ipAllowList() {
     return this.getListAttribute('ip_allow_list');
   }
-  public set ipAllowList(value: string[] | undefined) {
+  public set ipAllowList(value: string[]) {
     this._ipAllowList = value;
   }
   public resetIpAllowList() {
@@ -156,7 +200,7 @@ export class MediaServicesAccountKeyDeliveryAccessControlOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get ipAllowListInput() {
-    return this._ipAllowList
+    return this._ipAllowList;
   }
 }
 export interface MediaServicesAccountStorageAccount {
@@ -170,7 +214,7 @@ export interface MediaServicesAccountStorageAccount {
   readonly isPrimary?: boolean | cdktf.IResolvable;
 }
 
-function mediaServicesAccountStorageAccountToTerraform(struct?: MediaServicesAccountStorageAccount): any {
+export function mediaServicesAccountStorageAccountToTerraform(struct?: MediaServicesAccountStorageAccount): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -200,7 +244,7 @@ export interface MediaServicesAccountTimeouts {
   readonly update?: string;
 }
 
-function mediaServicesAccountTimeoutsToTerraform(struct?: MediaServicesAccountTimeoutsOutputReference | MediaServicesAccountTimeouts): any {
+export function mediaServicesAccountTimeoutsToTerraform(struct?: MediaServicesAccountTimeoutsOutputReference | MediaServicesAccountTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -223,12 +267,49 @@ export class MediaServicesAccountTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaServicesAccountTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaServicesAccountTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -236,15 +317,15 @@ export class MediaServicesAccountTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -252,15 +333,15 @@ export class MediaServicesAccountTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -268,15 +349,15 @@ export class MediaServicesAccountTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -284,7 +365,7 @@ export class MediaServicesAccountTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -325,10 +406,10 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._storageAuthenticationType = config.storageAuthenticationType;
     this._tags = config.tags;
-    this._identity = config.identity;
-    this._keyDeliveryAccessControl = config.keyDeliveryAccessControl;
+    this._identity.internalValue = config.identity;
+    this._keyDeliveryAccessControl.internalValue = config.keyDeliveryAccessControl;
     this._storageAccount = config.storageAccount;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -350,7 +431,7 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -363,7 +444,7 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -376,15 +457,15 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // storage_authentication_type - computed: true, optional: true, required: false
-  private _storageAuthenticationType?: string | undefined; 
+  private _storageAuthenticationType?: string; 
   public get storageAuthenticationType() {
     return this.getStringAttribute('storage_authentication_type');
   }
-  public set storageAuthenticationType(value: string | undefined) {
+  public set storageAuthenticationType(value: string) {
     this._storageAuthenticationType = value;
   }
   public resetStorageAuthenticationType() {
@@ -392,16 +473,16 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAuthenticationTypeInput() {
-    return this._storageAuthenticationType
+    return this._storageAuthenticationType;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -409,41 +490,39 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: MediaServicesAccountIdentity | undefined; 
-  private __identityOutput = new MediaServicesAccountIdentityOutputReference(this as any, "identity", true);
+  private _identity = new MediaServicesAccountIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.__identityOutput;
+    return this._identity;
   }
-  public putIdentity(value: MediaServicesAccountIdentity | undefined) {
-    this._identity = value;
+  public putIdentity(value: MediaServicesAccountIdentity) {
+    this._identity.internalValue = value;
   }
   public resetIdentity() {
-    this._identity = undefined;
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
-    return this._identity
+    return this._identity.internalValue;
   }
 
   // key_delivery_access_control - computed: false, optional: true, required: false
-  private _keyDeliveryAccessControl?: MediaServicesAccountKeyDeliveryAccessControl | undefined; 
-  private __keyDeliveryAccessControlOutput = new MediaServicesAccountKeyDeliveryAccessControlOutputReference(this as any, "key_delivery_access_control", true);
+  private _keyDeliveryAccessControl = new MediaServicesAccountKeyDeliveryAccessControlOutputReference(this as any, "key_delivery_access_control", true);
   public get keyDeliveryAccessControl() {
-    return this.__keyDeliveryAccessControlOutput;
+    return this._keyDeliveryAccessControl;
   }
-  public putKeyDeliveryAccessControl(value: MediaServicesAccountKeyDeliveryAccessControl | undefined) {
-    this._keyDeliveryAccessControl = value;
+  public putKeyDeliveryAccessControl(value: MediaServicesAccountKeyDeliveryAccessControl) {
+    this._keyDeliveryAccessControl.internalValue = value;
   }
   public resetKeyDeliveryAccessControl() {
-    this._keyDeliveryAccessControl = undefined;
+    this._keyDeliveryAccessControl.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get keyDeliveryAccessControlInput() {
-    return this._keyDeliveryAccessControl
+    return this._keyDeliveryAccessControl.internalValue;
   }
 
   // storage_account - computed: false, optional: false, required: true
@@ -457,24 +536,23 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountInput() {
-    return this._storageAccount
+    return this._storageAccount;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MediaServicesAccountTimeouts | undefined; 
-  private __timeoutsOutput = new MediaServicesAccountTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MediaServicesAccountTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MediaServicesAccountTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MediaServicesAccountTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -488,10 +566,10 @@ export class MediaServicesAccount extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       storage_authentication_type: cdktf.stringToTerraform(this._storageAuthenticationType),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      identity: mediaServicesAccountIdentityToTerraform(this._identity),
-      key_delivery_access_control: mediaServicesAccountKeyDeliveryAccessControlToTerraform(this._keyDeliveryAccessControl),
+      identity: mediaServicesAccountIdentityToTerraform(this._identity.internalValue),
+      key_delivery_access_control: mediaServicesAccountKeyDeliveryAccessControlToTerraform(this._keyDeliveryAccessControl.internalValue),
       storage_account: cdktf.listMapper(mediaServicesAccountStorageAccountToTerraform)(this._storageAccount),
-      timeouts: mediaServicesAccountTimeoutsToTerraform(this._timeouts),
+      timeouts: mediaServicesAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

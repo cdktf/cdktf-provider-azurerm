@@ -63,7 +63,7 @@ export interface BlueprintAssignmentIdentity {
   readonly type: string;
 }
 
-function blueprintAssignmentIdentityToTerraform(struct?: BlueprintAssignmentIdentityOutputReference | BlueprintAssignmentIdentity): any {
+export function blueprintAssignmentIdentityToTerraform(struct?: BlueprintAssignmentIdentityOutputReference | BlueprintAssignmentIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -84,6 +84,31 @@ export class BlueprintAssignmentIdentityOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BlueprintAssignmentIdentity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._identityIds) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BlueprintAssignmentIdentity | undefined) {
+    if (value === undefined) {
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
   // identity_ids - computed: false, optional: false, required: true
   private _identityIds?: string[]; 
   public get identityIds() {
@@ -94,7 +119,7 @@ export class BlueprintAssignmentIdentityOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
-    return this._identityIds
+    return this._identityIds;
   }
 
   // type - computed: false, optional: false, required: true
@@ -107,7 +132,7 @@ export class BlueprintAssignmentIdentityOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface BlueprintAssignmentTimeouts {
@@ -129,7 +154,7 @@ export interface BlueprintAssignmentTimeouts {
   readonly update?: string;
 }
 
-function blueprintAssignmentTimeoutsToTerraform(struct?: BlueprintAssignmentTimeoutsOutputReference | BlueprintAssignmentTimeouts): any {
+export function blueprintAssignmentTimeoutsToTerraform(struct?: BlueprintAssignmentTimeoutsOutputReference | BlueprintAssignmentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -152,12 +177,49 @@ export class BlueprintAssignmentTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BlueprintAssignmentTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BlueprintAssignmentTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -165,15 +227,15 @@ export class BlueprintAssignmentTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -181,15 +243,15 @@ export class BlueprintAssignmentTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -197,15 +259,15 @@ export class BlueprintAssignmentTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -213,7 +275,7 @@ export class BlueprintAssignmentTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -257,8 +319,8 @@ export class BlueprintAssignment extends cdktf.TerraformResource {
     this._resourceGroups = config.resourceGroups;
     this._targetSubscriptionId = config.targetSubscriptionId;
     this._versionId = config.versionId;
-    this._identity = config.identity;
-    this._timeouts = config.timeouts;
+    this._identity.internalValue = config.identity;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -295,15 +357,15 @@ export class BlueprintAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // lock_exclude_principals - computed: false, optional: true, required: false
-  private _lockExcludePrincipals?: string[] | undefined; 
+  private _lockExcludePrincipals?: string[]; 
   public get lockExcludePrincipals() {
     return this.getListAttribute('lock_exclude_principals');
   }
-  public set lockExcludePrincipals(value: string[] | undefined) {
+  public set lockExcludePrincipals(value: string[]) {
     this._lockExcludePrincipals = value;
   }
   public resetLockExcludePrincipals() {
@@ -311,15 +373,15 @@ export class BlueprintAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get lockExcludePrincipalsInput() {
-    return this._lockExcludePrincipals
+    return this._lockExcludePrincipals;
   }
 
   // lock_mode - computed: false, optional: true, required: false
-  private _lockMode?: string | undefined; 
+  private _lockMode?: string; 
   public get lockMode() {
     return this.getStringAttribute('lock_mode');
   }
-  public set lockMode(value: string | undefined) {
+  public set lockMode(value: string) {
     this._lockMode = value;
   }
   public resetLockMode() {
@@ -327,7 +389,7 @@ export class BlueprintAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get lockModeInput() {
-    return this._lockMode
+    return this._lockMode;
   }
 
   // name - computed: false, optional: false, required: true
@@ -340,15 +402,15 @@ export class BlueprintAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // parameter_values - computed: false, optional: true, required: false
-  private _parameterValues?: string | undefined; 
+  private _parameterValues?: string; 
   public get parameterValues() {
     return this.getStringAttribute('parameter_values');
   }
-  public set parameterValues(value: string | undefined) {
+  public set parameterValues(value: string) {
     this._parameterValues = value;
   }
   public resetParameterValues() {
@@ -356,15 +418,15 @@ export class BlueprintAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parameterValuesInput() {
-    return this._parameterValues
+    return this._parameterValues;
   }
 
   // resource_groups - computed: false, optional: true, required: false
-  private _resourceGroups?: string | undefined; 
+  private _resourceGroups?: string; 
   public get resourceGroups() {
     return this.getStringAttribute('resource_groups');
   }
-  public set resourceGroups(value: string | undefined) {
+  public set resourceGroups(value: string) {
     this._resourceGroups = value;
   }
   public resetResourceGroups() {
@@ -372,7 +434,7 @@ export class BlueprintAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupsInput() {
-    return this._resourceGroups
+    return this._resourceGroups;
   }
 
   // target_subscription_id - computed: false, optional: false, required: true
@@ -385,7 +447,7 @@ export class BlueprintAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get targetSubscriptionIdInput() {
-    return this._targetSubscriptionId
+    return this._targetSubscriptionId;
   }
 
   // type - computed: true, optional: false, required: false
@@ -403,41 +465,39 @@ export class BlueprintAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get versionIdInput() {
-    return this._versionId
+    return this._versionId;
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: BlueprintAssignmentIdentity | undefined; 
-  private __identityOutput = new BlueprintAssignmentIdentityOutputReference(this as any, "identity", true);
+  private _identity = new BlueprintAssignmentIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.__identityOutput;
+    return this._identity;
   }
-  public putIdentity(value: BlueprintAssignmentIdentity | undefined) {
-    this._identity = value;
+  public putIdentity(value: BlueprintAssignmentIdentity) {
+    this._identity.internalValue = value;
   }
   public resetIdentity() {
-    this._identity = undefined;
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
-    return this._identity
+    return this._identity.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: BlueprintAssignmentTimeouts | undefined; 
-  private __timeoutsOutput = new BlueprintAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BlueprintAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: BlueprintAssignmentTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: BlueprintAssignmentTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -454,8 +514,8 @@ export class BlueprintAssignment extends cdktf.TerraformResource {
       resource_groups: cdktf.stringToTerraform(this._resourceGroups),
       target_subscription_id: cdktf.stringToTerraform(this._targetSubscriptionId),
       version_id: cdktf.stringToTerraform(this._versionId),
-      identity: blueprintAssignmentIdentityToTerraform(this._identity),
-      timeouts: blueprintAssignmentTimeoutsToTerraform(this._timeouts),
+      identity: blueprintAssignmentIdentityToTerraform(this._identity.internalValue),
+      timeouts: blueprintAssignmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

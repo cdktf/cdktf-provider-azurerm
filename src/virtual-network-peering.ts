@@ -65,7 +65,7 @@ export interface VirtualNetworkPeeringTimeouts {
   readonly update?: string;
 }
 
-function virtualNetworkPeeringTimeoutsToTerraform(struct?: VirtualNetworkPeeringTimeoutsOutputReference | VirtualNetworkPeeringTimeouts): any {
+export function virtualNetworkPeeringTimeoutsToTerraform(struct?: VirtualNetworkPeeringTimeoutsOutputReference | VirtualNetworkPeeringTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -88,12 +88,49 @@ export class VirtualNetworkPeeringTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): VirtualNetworkPeeringTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualNetworkPeeringTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -101,15 +138,15 @@ export class VirtualNetworkPeeringTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -117,15 +154,15 @@ export class VirtualNetworkPeeringTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -133,15 +170,15 @@ export class VirtualNetworkPeeringTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -149,7 +186,7 @@ export class VirtualNetworkPeeringTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -193,7 +230,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._useRemoteGateways = config.useRemoteGateways;
     this._virtualNetworkName = config.virtualNetworkName;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -201,11 +238,11 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   // ==========
 
   // allow_forwarded_traffic - computed: true, optional: true, required: false
-  private _allowForwardedTraffic?: boolean | cdktf.IResolvable | undefined; 
+  private _allowForwardedTraffic?: boolean | cdktf.IResolvable; 
   public get allowForwardedTraffic() {
     return this.getBooleanAttribute('allow_forwarded_traffic') as any;
   }
-  public set allowForwardedTraffic(value: boolean | cdktf.IResolvable | undefined) {
+  public set allowForwardedTraffic(value: boolean | cdktf.IResolvable) {
     this._allowForwardedTraffic = value;
   }
   public resetAllowForwardedTraffic() {
@@ -213,15 +250,15 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get allowForwardedTrafficInput() {
-    return this._allowForwardedTraffic
+    return this._allowForwardedTraffic;
   }
 
   // allow_gateway_transit - computed: true, optional: true, required: false
-  private _allowGatewayTransit?: boolean | cdktf.IResolvable | undefined; 
+  private _allowGatewayTransit?: boolean | cdktf.IResolvable; 
   public get allowGatewayTransit() {
     return this.getBooleanAttribute('allow_gateway_transit') as any;
   }
-  public set allowGatewayTransit(value: boolean | cdktf.IResolvable | undefined) {
+  public set allowGatewayTransit(value: boolean | cdktf.IResolvable) {
     this._allowGatewayTransit = value;
   }
   public resetAllowGatewayTransit() {
@@ -229,15 +266,15 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get allowGatewayTransitInput() {
-    return this._allowGatewayTransit
+    return this._allowGatewayTransit;
   }
 
   // allow_virtual_network_access - computed: false, optional: true, required: false
-  private _allowVirtualNetworkAccess?: boolean | cdktf.IResolvable | undefined; 
+  private _allowVirtualNetworkAccess?: boolean | cdktf.IResolvable; 
   public get allowVirtualNetworkAccess() {
     return this.getBooleanAttribute('allow_virtual_network_access') as any;
   }
-  public set allowVirtualNetworkAccess(value: boolean | cdktf.IResolvable | undefined) {
+  public set allowVirtualNetworkAccess(value: boolean | cdktf.IResolvable) {
     this._allowVirtualNetworkAccess = value;
   }
   public resetAllowVirtualNetworkAccess() {
@@ -245,7 +282,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get allowVirtualNetworkAccessInput() {
-    return this._allowVirtualNetworkAccess
+    return this._allowVirtualNetworkAccess;
   }
 
   // id - computed: true, optional: true, required: false
@@ -263,7 +300,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // remote_virtual_network_id - computed: false, optional: false, required: true
@@ -276,7 +313,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get remoteVirtualNetworkIdInput() {
-    return this._remoteVirtualNetworkId
+    return this._remoteVirtualNetworkId;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -289,15 +326,15 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // use_remote_gateways - computed: true, optional: true, required: false
-  private _useRemoteGateways?: boolean | cdktf.IResolvable | undefined; 
+  private _useRemoteGateways?: boolean | cdktf.IResolvable; 
   public get useRemoteGateways() {
     return this.getBooleanAttribute('use_remote_gateways') as any;
   }
-  public set useRemoteGateways(value: boolean | cdktf.IResolvable | undefined) {
+  public set useRemoteGateways(value: boolean | cdktf.IResolvable) {
     this._useRemoteGateways = value;
   }
   public resetUseRemoteGateways() {
@@ -305,7 +342,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get useRemoteGatewaysInput() {
-    return this._useRemoteGateways
+    return this._useRemoteGateways;
   }
 
   // virtual_network_name - computed: false, optional: false, required: true
@@ -318,24 +355,23 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get virtualNetworkNameInput() {
-    return this._virtualNetworkName
+    return this._virtualNetworkName;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VirtualNetworkPeeringTimeouts | undefined; 
-  private __timeoutsOutput = new VirtualNetworkPeeringTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VirtualNetworkPeeringTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: VirtualNetworkPeeringTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: VirtualNetworkPeeringTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -352,7 +388,7 @@ export class VirtualNetworkPeering extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       use_remote_gateways: cdktf.booleanToTerraform(this._useRemoteGateways),
       virtual_network_name: cdktf.stringToTerraform(this._virtualNetworkName),
-      timeouts: virtualNetworkPeeringTimeoutsToTerraform(this._timeouts),
+      timeouts: virtualNetworkPeeringTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

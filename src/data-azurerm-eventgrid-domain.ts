@@ -45,7 +45,7 @@ export interface DataAzurermEventgridDomainInboundIpRule {
   readonly ipMask?: string;
 }
 
-function dataAzurermEventgridDomainInboundIpRuleToTerraform(struct?: DataAzurermEventgridDomainInboundIpRule): any {
+export function dataAzurermEventgridDomainInboundIpRuleToTerraform(struct?: DataAzurermEventgridDomainInboundIpRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -112,7 +112,7 @@ export interface DataAzurermEventgridDomainTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermEventgridDomainTimeoutsToTerraform(struct?: DataAzurermEventgridDomainTimeoutsOutputReference | DataAzurermEventgridDomainTimeouts): any {
+export function dataAzurermEventgridDomainTimeoutsToTerraform(struct?: DataAzurermEventgridDomainTimeoutsOutputReference | DataAzurermEventgridDomainTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -132,12 +132,31 @@ export class DataAzurermEventgridDomainTimeoutsOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermEventgridDomainTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermEventgridDomainTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -145,7 +164,7 @@ export class DataAzurermEventgridDomainTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -186,7 +205,7 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -204,12 +223,12 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
   }
 
   // inbound_ip_rule - computed: false, optional: true, required: false
-  private _inboundIpRule?: DataAzurermEventgridDomainInboundIpRule[] | undefined; 
+  private _inboundIpRule?: DataAzurermEventgridDomainInboundIpRule[]; 
   public get inboundIpRule() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('inbound_ip_rule') as any;
   }
-  public set inboundIpRule(value: DataAzurermEventgridDomainInboundIpRule[] | undefined) {
+  public set inboundIpRule(value: DataAzurermEventgridDomainInboundIpRule[]) {
     this._inboundIpRule = value;
   }
   public resetInboundIpRule() {
@@ -217,7 +236,7 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get inboundIpRuleInput() {
-    return this._inboundIpRule
+    return this._inboundIpRule;
   }
 
   // input_mapping_default_values - computed: true, optional: false, required: false
@@ -250,7 +269,7 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // primary_access_key - computed: true, optional: false, required: false
@@ -259,11 +278,11 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled') as any;
   }
-  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -271,7 +290,7 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get publicNetworkAccessEnabledInput() {
-    return this._publicNetworkAccessEnabled
+    return this._publicNetworkAccessEnabled;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -284,7 +303,7 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // secondary_access_key - computed: true, optional: false, required: false
@@ -293,12 +312,12 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -306,24 +325,23 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermEventgridDomainTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermEventgridDomainTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermEventgridDomainTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermEventgridDomainTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermEventgridDomainTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -337,7 +355,7 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      timeouts: dataAzurermEventgridDomainTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermEventgridDomainTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

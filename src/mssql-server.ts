@@ -97,7 +97,7 @@ export interface MssqlServerExtendedAuditingPolicy {
   readonly storageEndpoint?: string;
 }
 
-function mssqlServerExtendedAuditingPolicyToTerraform(struct?: MssqlServerExtendedAuditingPolicy): any {
+export function mssqlServerExtendedAuditingPolicyToTerraform(struct?: MssqlServerExtendedAuditingPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -130,7 +130,7 @@ export interface MssqlServerAzureadAdministrator {
   readonly tenantId?: string;
 }
 
-function mssqlServerAzureadAdministratorToTerraform(struct?: MssqlServerAzureadAdministratorOutputReference | MssqlServerAzureadAdministrator): any {
+export function mssqlServerAzureadAdministratorToTerraform(struct?: MssqlServerAzureadAdministratorOutputReference | MssqlServerAzureadAdministrator): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -153,12 +153,49 @@ export class MssqlServerAzureadAdministratorOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MssqlServerAzureadAdministrator | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._azureadAuthenticationOnly) {
+      hasAnyValues = true;
+      internalValueResult.azureadAuthenticationOnly = this._azureadAuthenticationOnly;
+    }
+    if (this._loginUsername) {
+      hasAnyValues = true;
+      internalValueResult.loginUsername = this._loginUsername;
+    }
+    if (this._objectId) {
+      hasAnyValues = true;
+      internalValueResult.objectId = this._objectId;
+    }
+    if (this._tenantId) {
+      hasAnyValues = true;
+      internalValueResult.tenantId = this._tenantId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlServerAzureadAdministrator | undefined) {
+    if (value === undefined) {
+      this._azureadAuthenticationOnly = undefined;
+      this._loginUsername = undefined;
+      this._objectId = undefined;
+      this._tenantId = undefined;
+    }
+    else {
+      this._azureadAuthenticationOnly = value.azureadAuthenticationOnly;
+      this._loginUsername = value.loginUsername;
+      this._objectId = value.objectId;
+      this._tenantId = value.tenantId;
+    }
+  }
+
   // azuread_authentication_only - computed: true, optional: true, required: false
-  private _azureadAuthenticationOnly?: boolean | cdktf.IResolvable | undefined; 
+  private _azureadAuthenticationOnly?: boolean | cdktf.IResolvable; 
   public get azureadAuthenticationOnly() {
     return this.getBooleanAttribute('azuread_authentication_only') as any;
   }
-  public set azureadAuthenticationOnly(value: boolean | cdktf.IResolvable | undefined) {
+  public set azureadAuthenticationOnly(value: boolean | cdktf.IResolvable) {
     this._azureadAuthenticationOnly = value;
   }
   public resetAzureadAuthenticationOnly() {
@@ -166,7 +203,7 @@ export class MssqlServerAzureadAdministratorOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get azureadAuthenticationOnlyInput() {
-    return this._azureadAuthenticationOnly
+    return this._azureadAuthenticationOnly;
   }
 
   // login_username - computed: false, optional: false, required: true
@@ -179,7 +216,7 @@ export class MssqlServerAzureadAdministratorOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get loginUsernameInput() {
-    return this._loginUsername
+    return this._loginUsername;
   }
 
   // object_id - computed: false, optional: false, required: true
@@ -192,15 +229,15 @@ export class MssqlServerAzureadAdministratorOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get objectIdInput() {
-    return this._objectId
+    return this._objectId;
   }
 
   // tenant_id - computed: true, optional: true, required: false
-  private _tenantId?: string | undefined; 
+  private _tenantId?: string; 
   public get tenantId() {
     return this.getStringAttribute('tenant_id');
   }
-  public set tenantId(value: string | undefined) {
+  public set tenantId(value: string) {
     this._tenantId = value;
   }
   public resetTenantId() {
@@ -208,7 +245,7 @@ export class MssqlServerAzureadAdministratorOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get tenantIdInput() {
-    return this._tenantId
+    return this._tenantId;
   }
 }
 export interface MssqlServerIdentity {
@@ -222,7 +259,7 @@ export interface MssqlServerIdentity {
   readonly userAssignedIdentityIds?: string[];
 }
 
-function mssqlServerIdentityToTerraform(struct?: MssqlServerIdentityOutputReference | MssqlServerIdentity): any {
+export function mssqlServerIdentityToTerraform(struct?: MssqlServerIdentityOutputReference | MssqlServerIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -243,6 +280,31 @@ export class MssqlServerIdentityOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MssqlServerIdentity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._userAssignedIdentityIds) {
+      hasAnyValues = true;
+      internalValueResult.userAssignedIdentityIds = this._userAssignedIdentityIds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlServerIdentity | undefined) {
+    if (value === undefined) {
+      this._type = undefined;
+      this._userAssignedIdentityIds = undefined;
+    }
+    else {
+      this._type = value.type;
+      this._userAssignedIdentityIds = value.userAssignedIdentityIds;
+    }
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -253,15 +315,15 @@ export class MssqlServerIdentityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 
   // user_assigned_identity_ids - computed: false, optional: true, required: false
-  private _userAssignedIdentityIds?: string[] | undefined; 
+  private _userAssignedIdentityIds?: string[]; 
   public get userAssignedIdentityIds() {
     return this.getListAttribute('user_assigned_identity_ids');
   }
-  public set userAssignedIdentityIds(value: string[] | undefined) {
+  public set userAssignedIdentityIds(value: string[]) {
     this._userAssignedIdentityIds = value;
   }
   public resetUserAssignedIdentityIds() {
@@ -269,7 +331,7 @@ export class MssqlServerIdentityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get userAssignedIdentityIdsInput() {
-    return this._userAssignedIdentityIds
+    return this._userAssignedIdentityIds;
   }
 }
 export interface MssqlServerTimeouts {
@@ -291,7 +353,7 @@ export interface MssqlServerTimeouts {
   readonly update?: string;
 }
 
-function mssqlServerTimeoutsToTerraform(struct?: MssqlServerTimeoutsOutputReference | MssqlServerTimeouts): any {
+export function mssqlServerTimeoutsToTerraform(struct?: MssqlServerTimeoutsOutputReference | MssqlServerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -314,12 +376,49 @@ export class MssqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MssqlServerTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlServerTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -327,15 +426,15 @@ export class MssqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -343,15 +442,15 @@ export class MssqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -359,15 +458,15 @@ export class MssqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -375,7 +474,7 @@ export class MssqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -423,9 +522,9 @@ export class MssqlServer extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._version = config.version;
-    this._azureadAdministrator = config.azureadAdministrator;
-    this._identity = config.identity;
-    this._timeouts = config.timeouts;
+    this._azureadAdministrator.internalValue = config.azureadAdministrator;
+    this._identity.internalValue = config.identity;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -442,7 +541,7 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get administratorLoginInput() {
-    return this._administratorLogin
+    return this._administratorLogin;
   }
 
   // administrator_login_password - computed: false, optional: false, required: true
@@ -455,15 +554,15 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get administratorLoginPasswordInput() {
-    return this._administratorLoginPassword
+    return this._administratorLoginPassword;
   }
 
   // connection_policy - computed: false, optional: true, required: false
-  private _connectionPolicy?: string | undefined; 
+  private _connectionPolicy?: string; 
   public get connectionPolicy() {
     return this.getStringAttribute('connection_policy');
   }
-  public set connectionPolicy(value: string | undefined) {
+  public set connectionPolicy(value: string) {
     this._connectionPolicy = value;
   }
   public resetConnectionPolicy() {
@@ -471,16 +570,16 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get connectionPolicyInput() {
-    return this._connectionPolicy
+    return this._connectionPolicy;
   }
 
   // extended_auditing_policy - computed: true, optional: true, required: false
-  private _extendedAuditingPolicy?: MssqlServerExtendedAuditingPolicy[] | undefined; 
+  private _extendedAuditingPolicy?: MssqlServerExtendedAuditingPolicy[]; 
   public get extendedAuditingPolicy() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('extended_auditing_policy') as any;
   }
-  public set extendedAuditingPolicy(value: MssqlServerExtendedAuditingPolicy[] | undefined) {
+  public set extendedAuditingPolicy(value: MssqlServerExtendedAuditingPolicy[]) {
     this._extendedAuditingPolicy = value;
   }
   public resetExtendedAuditingPolicy() {
@@ -488,7 +587,7 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get extendedAuditingPolicyInput() {
-    return this._extendedAuditingPolicy
+    return this._extendedAuditingPolicy;
   }
 
   // fully_qualified_domain_name - computed: true, optional: false, required: false
@@ -511,15 +610,15 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // minimum_tls_version - computed: false, optional: true, required: false
-  private _minimumTlsVersion?: string | undefined; 
+  private _minimumTlsVersion?: string; 
   public get minimumTlsVersion() {
     return this.getStringAttribute('minimum_tls_version');
   }
-  public set minimumTlsVersion(value: string | undefined) {
+  public set minimumTlsVersion(value: string) {
     this._minimumTlsVersion = value;
   }
   public resetMinimumTlsVersion() {
@@ -527,7 +626,7 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get minimumTlsVersionInput() {
-    return this._minimumTlsVersion
+    return this._minimumTlsVersion;
   }
 
   // name - computed: false, optional: false, required: true
@@ -540,15 +639,15 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // primary_user_assigned_identity_id - computed: true, optional: true, required: false
-  private _primaryUserAssignedIdentityId?: string | undefined; 
+  private _primaryUserAssignedIdentityId?: string; 
   public get primaryUserAssignedIdentityId() {
     return this.getStringAttribute('primary_user_assigned_identity_id');
   }
-  public set primaryUserAssignedIdentityId(value: string | undefined) {
+  public set primaryUserAssignedIdentityId(value: string) {
     this._primaryUserAssignedIdentityId = value;
   }
   public resetPrimaryUserAssignedIdentityId() {
@@ -556,15 +655,15 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get primaryUserAssignedIdentityIdInput() {
-    return this._primaryUserAssignedIdentityId
+    return this._primaryUserAssignedIdentityId;
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled') as any;
   }
-  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -572,7 +671,7 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get publicNetworkAccessEnabledInput() {
-    return this._publicNetworkAccessEnabled
+    return this._publicNetworkAccessEnabled;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -585,7 +684,7 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // restorable_dropped_database_ids - computed: true, optional: false, required: false
@@ -594,12 +693,12 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -607,7 +706,7 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // version - computed: false, optional: false, required: true
@@ -620,58 +719,55 @@ export class MssqlServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 
   // azuread_administrator - computed: false, optional: true, required: false
-  private _azureadAdministrator?: MssqlServerAzureadAdministrator | undefined; 
-  private __azureadAdministratorOutput = new MssqlServerAzureadAdministratorOutputReference(this as any, "azuread_administrator", true);
+  private _azureadAdministrator = new MssqlServerAzureadAdministratorOutputReference(this as any, "azuread_administrator", true);
   public get azureadAdministrator() {
-    return this.__azureadAdministratorOutput;
+    return this._azureadAdministrator;
   }
-  public putAzureadAdministrator(value: MssqlServerAzureadAdministrator | undefined) {
-    this._azureadAdministrator = value;
+  public putAzureadAdministrator(value: MssqlServerAzureadAdministrator) {
+    this._azureadAdministrator.internalValue = value;
   }
   public resetAzureadAdministrator() {
-    this._azureadAdministrator = undefined;
+    this._azureadAdministrator.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get azureadAdministratorInput() {
-    return this._azureadAdministrator
+    return this._azureadAdministrator.internalValue;
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: MssqlServerIdentity | undefined; 
-  private __identityOutput = new MssqlServerIdentityOutputReference(this as any, "identity", true);
+  private _identity = new MssqlServerIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.__identityOutput;
+    return this._identity;
   }
-  public putIdentity(value: MssqlServerIdentity | undefined) {
-    this._identity = value;
+  public putIdentity(value: MssqlServerIdentity) {
+    this._identity.internalValue = value;
   }
   public resetIdentity() {
-    this._identity = undefined;
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
-    return this._identity
+    return this._identity.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MssqlServerTimeouts | undefined; 
-  private __timeoutsOutput = new MssqlServerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MssqlServerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MssqlServerTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MssqlServerTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -692,9 +788,9 @@ export class MssqlServer extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
-      azuread_administrator: mssqlServerAzureadAdministratorToTerraform(this._azureadAdministrator),
-      identity: mssqlServerIdentityToTerraform(this._identity),
-      timeouts: mssqlServerTimeoutsToTerraform(this._timeouts),
+      azuread_administrator: mssqlServerAzureadAdministratorToTerraform(this._azureadAdministrator.internalValue),
+      identity: mssqlServerIdentityToTerraform(this._identity.internalValue),
+      timeouts: mssqlServerTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

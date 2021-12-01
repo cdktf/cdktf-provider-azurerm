@@ -43,7 +43,7 @@ export interface DataProtectionBackupPolicyDiskRetentionRuleCriteria {
   readonly absoluteCriteria?: string;
 }
 
-function dataProtectionBackupPolicyDiskRetentionRuleCriteriaToTerraform(struct?: DataProtectionBackupPolicyDiskRetentionRuleCriteriaOutputReference | DataProtectionBackupPolicyDiskRetentionRuleCriteria): any {
+export function dataProtectionBackupPolicyDiskRetentionRuleCriteriaToTerraform(struct?: DataProtectionBackupPolicyDiskRetentionRuleCriteriaOutputReference | DataProtectionBackupPolicyDiskRetentionRuleCriteria): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -63,12 +63,31 @@ export class DataProtectionBackupPolicyDiskRetentionRuleCriteriaOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataProtectionBackupPolicyDiskRetentionRuleCriteria | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._absoluteCriteria) {
+      hasAnyValues = true;
+      internalValueResult.absoluteCriteria = this._absoluteCriteria;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataProtectionBackupPolicyDiskRetentionRuleCriteria | undefined) {
+    if (value === undefined) {
+      this._absoluteCriteria = undefined;
+    }
+    else {
+      this._absoluteCriteria = value.absoluteCriteria;
+    }
+  }
+
   // absolute_criteria - computed: false, optional: true, required: false
-  private _absoluteCriteria?: string | undefined; 
+  private _absoluteCriteria?: string; 
   public get absoluteCriteria() {
     return this.getStringAttribute('absolute_criteria');
   }
-  public set absoluteCriteria(value: string | undefined) {
+  public set absoluteCriteria(value: string) {
     this._absoluteCriteria = value;
   }
   public resetAbsoluteCriteria() {
@@ -76,7 +95,7 @@ export class DataProtectionBackupPolicyDiskRetentionRuleCriteriaOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get absoluteCriteriaInput() {
-    return this._absoluteCriteria
+    return this._absoluteCriteria;
   }
 }
 export interface DataProtectionBackupPolicyDiskRetentionRule {
@@ -100,7 +119,7 @@ export interface DataProtectionBackupPolicyDiskRetentionRule {
   readonly criteria: DataProtectionBackupPolicyDiskRetentionRuleCriteria;
 }
 
-function dataProtectionBackupPolicyDiskRetentionRuleToTerraform(struct?: DataProtectionBackupPolicyDiskRetentionRule): any {
+export function dataProtectionBackupPolicyDiskRetentionRuleToTerraform(struct?: DataProtectionBackupPolicyDiskRetentionRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -132,7 +151,7 @@ export interface DataProtectionBackupPolicyDiskTimeouts {
   readonly update?: string;
 }
 
-function dataProtectionBackupPolicyDiskTimeoutsToTerraform(struct?: DataProtectionBackupPolicyDiskTimeoutsOutputReference | DataProtectionBackupPolicyDiskTimeouts): any {
+export function dataProtectionBackupPolicyDiskTimeoutsToTerraform(struct?: DataProtectionBackupPolicyDiskTimeoutsOutputReference | DataProtectionBackupPolicyDiskTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -155,12 +174,49 @@ export class DataProtectionBackupPolicyDiskTimeoutsOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataProtectionBackupPolicyDiskTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataProtectionBackupPolicyDiskTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -168,15 +224,15 @@ export class DataProtectionBackupPolicyDiskTimeoutsOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -184,15 +240,15 @@ export class DataProtectionBackupPolicyDiskTimeoutsOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -200,15 +256,15 @@ export class DataProtectionBackupPolicyDiskTimeoutsOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -216,7 +272,7 @@ export class DataProtectionBackupPolicyDiskTimeoutsOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -257,7 +313,7 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
     this._name = config.name;
     this._vaultId = config.vaultId;
     this._retentionRule = config.retentionRule;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -274,7 +330,7 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get backupRepeatingTimeIntervalsInput() {
-    return this._backupRepeatingTimeIntervals
+    return this._backupRepeatingTimeIntervals;
   }
 
   // default_retention_duration - computed: false, optional: false, required: true
@@ -287,7 +343,7 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get defaultRetentionDurationInput() {
-    return this._defaultRetentionDuration
+    return this._defaultRetentionDuration;
   }
 
   // id - computed: true, optional: true, required: false
@@ -305,7 +361,7 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // vault_id - computed: false, optional: false, required: true
@@ -318,16 +374,16 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get vaultIdInput() {
-    return this._vaultId
+    return this._vaultId;
   }
 
   // retention_rule - computed: false, optional: true, required: false
-  private _retentionRule?: DataProtectionBackupPolicyDiskRetentionRule[] | undefined; 
+  private _retentionRule?: DataProtectionBackupPolicyDiskRetentionRule[]; 
   public get retentionRule() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('retention_rule') as any;
   }
-  public set retentionRule(value: DataProtectionBackupPolicyDiskRetentionRule[] | undefined) {
+  public set retentionRule(value: DataProtectionBackupPolicyDiskRetentionRule[]) {
     this._retentionRule = value;
   }
   public resetRetentionRule() {
@@ -335,24 +391,23 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get retentionRuleInput() {
-    return this._retentionRule
+    return this._retentionRule;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataProtectionBackupPolicyDiskTimeouts | undefined; 
-  private __timeoutsOutput = new DataProtectionBackupPolicyDiskTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataProtectionBackupPolicyDiskTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataProtectionBackupPolicyDiskTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataProtectionBackupPolicyDiskTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -366,7 +421,7 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       vault_id: cdktf.stringToTerraform(this._vaultId),
       retention_rule: cdktf.listMapper(dataProtectionBackupPolicyDiskRetentionRuleToTerraform)(this._retentionRule),
-      timeouts: dataProtectionBackupPolicyDiskTimeoutsToTerraform(this._timeouts),
+      timeouts: dataProtectionBackupPolicyDiskTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

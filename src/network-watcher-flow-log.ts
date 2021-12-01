@@ -69,7 +69,7 @@ export interface NetworkWatcherFlowLogRetentionPolicy {
   readonly enabled: boolean | cdktf.IResolvable;
 }
 
-function networkWatcherFlowLogRetentionPolicyToTerraform(struct?: NetworkWatcherFlowLogRetentionPolicyOutputReference | NetworkWatcherFlowLogRetentionPolicy): any {
+export function networkWatcherFlowLogRetentionPolicyToTerraform(struct?: NetworkWatcherFlowLogRetentionPolicyOutputReference | NetworkWatcherFlowLogRetentionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -90,6 +90,31 @@ export class NetworkWatcherFlowLogRetentionPolicyOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkWatcherFlowLogRetentionPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._days) {
+      hasAnyValues = true;
+      internalValueResult.days = this._days;
+    }
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkWatcherFlowLogRetentionPolicy | undefined) {
+    if (value === undefined) {
+      this._days = undefined;
+      this._enabled = undefined;
+    }
+    else {
+      this._days = value.days;
+      this._enabled = value.enabled;
+    }
+  }
+
   // days - computed: false, optional: false, required: true
   private _days?: number; 
   public get days() {
@@ -100,7 +125,7 @@ export class NetworkWatcherFlowLogRetentionPolicyOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get daysInput() {
-    return this._days
+    return this._days;
   }
 
   // enabled - computed: false, optional: false, required: true
@@ -113,7 +138,7 @@ export class NetworkWatcherFlowLogRetentionPolicyOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 }
 export interface NetworkWatcherFlowLogTimeouts {
@@ -135,7 +160,7 @@ export interface NetworkWatcherFlowLogTimeouts {
   readonly update?: string;
 }
 
-function networkWatcherFlowLogTimeoutsToTerraform(struct?: NetworkWatcherFlowLogTimeoutsOutputReference | NetworkWatcherFlowLogTimeouts): any {
+export function networkWatcherFlowLogTimeoutsToTerraform(struct?: NetworkWatcherFlowLogTimeoutsOutputReference | NetworkWatcherFlowLogTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -158,12 +183,49 @@ export class NetworkWatcherFlowLogTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkWatcherFlowLogTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkWatcherFlowLogTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -171,15 +233,15 @@ export class NetworkWatcherFlowLogTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -187,15 +249,15 @@ export class NetworkWatcherFlowLogTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -203,15 +265,15 @@ export class NetworkWatcherFlowLogTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -219,7 +281,7 @@ export class NetworkWatcherFlowLogTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface NetworkWatcherFlowLogTrafficAnalytics {
@@ -245,7 +307,7 @@ export interface NetworkWatcherFlowLogTrafficAnalytics {
   readonly workspaceResourceId: string;
 }
 
-function networkWatcherFlowLogTrafficAnalyticsToTerraform(struct?: NetworkWatcherFlowLogTrafficAnalyticsOutputReference | NetworkWatcherFlowLogTrafficAnalytics): any {
+export function networkWatcherFlowLogTrafficAnalyticsToTerraform(struct?: NetworkWatcherFlowLogTrafficAnalyticsOutputReference | NetworkWatcherFlowLogTrafficAnalytics): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -269,6 +331,49 @@ export class NetworkWatcherFlowLogTrafficAnalyticsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkWatcherFlowLogTrafficAnalytics | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._intervalInMinutes) {
+      hasAnyValues = true;
+      internalValueResult.intervalInMinutes = this._intervalInMinutes;
+    }
+    if (this._workspaceId) {
+      hasAnyValues = true;
+      internalValueResult.workspaceId = this._workspaceId;
+    }
+    if (this._workspaceRegion) {
+      hasAnyValues = true;
+      internalValueResult.workspaceRegion = this._workspaceRegion;
+    }
+    if (this._workspaceResourceId) {
+      hasAnyValues = true;
+      internalValueResult.workspaceResourceId = this._workspaceResourceId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkWatcherFlowLogTrafficAnalytics | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+      this._intervalInMinutes = undefined;
+      this._workspaceId = undefined;
+      this._workspaceRegion = undefined;
+      this._workspaceResourceId = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+      this._intervalInMinutes = value.intervalInMinutes;
+      this._workspaceId = value.workspaceId;
+      this._workspaceRegion = value.workspaceRegion;
+      this._workspaceResourceId = value.workspaceResourceId;
+    }
+  }
+
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
@@ -279,15 +384,15 @@ export class NetworkWatcherFlowLogTrafficAnalyticsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // interval_in_minutes - computed: false, optional: true, required: false
-  private _intervalInMinutes?: number | undefined; 
+  private _intervalInMinutes?: number; 
   public get intervalInMinutes() {
     return this.getNumberAttribute('interval_in_minutes');
   }
-  public set intervalInMinutes(value: number | undefined) {
+  public set intervalInMinutes(value: number) {
     this._intervalInMinutes = value;
   }
   public resetIntervalInMinutes() {
@@ -295,7 +400,7 @@ export class NetworkWatcherFlowLogTrafficAnalyticsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get intervalInMinutesInput() {
-    return this._intervalInMinutes
+    return this._intervalInMinutes;
   }
 
   // workspace_id - computed: false, optional: false, required: true
@@ -308,7 +413,7 @@ export class NetworkWatcherFlowLogTrafficAnalyticsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get workspaceIdInput() {
-    return this._workspaceId
+    return this._workspaceId;
   }
 
   // workspace_region - computed: false, optional: false, required: true
@@ -321,7 +426,7 @@ export class NetworkWatcherFlowLogTrafficAnalyticsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get workspaceRegionInput() {
-    return this._workspaceRegion
+    return this._workspaceRegion;
   }
 
   // workspace_resource_id - computed: false, optional: false, required: true
@@ -334,7 +439,7 @@ export class NetworkWatcherFlowLogTrafficAnalyticsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get workspaceResourceIdInput() {
-    return this._workspaceResourceId
+    return this._workspaceResourceId;
   }
 }
 
@@ -378,9 +483,9 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
     this._storageAccountId = config.storageAccountId;
     this._tags = config.tags;
     this._version = config.version;
-    this._retentionPolicy = config.retentionPolicy;
-    this._timeouts = config.timeouts;
-    this._trafficAnalytics = config.trafficAnalytics;
+    this._retentionPolicy.internalValue = config.retentionPolicy;
+    this._timeouts.internalValue = config.timeouts;
+    this._trafficAnalytics.internalValue = config.trafficAnalytics;
   }
 
   // ==========
@@ -397,7 +502,7 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -406,11 +511,11 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
 
   // location - computed: true, optional: true, required: false
-  private _location?: string | undefined; 
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
-  public set location(value: string | undefined) {
+  public set location(value: string) {
     this._location = value;
   }
   public resetLocation() {
@@ -418,7 +523,7 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: true, optional: false, required: false
@@ -436,7 +541,7 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkSecurityGroupIdInput() {
-    return this._networkSecurityGroupId
+    return this._networkSecurityGroupId;
   }
 
   // network_watcher_name - computed: false, optional: false, required: true
@@ -449,7 +554,7 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkWatcherNameInput() {
-    return this._networkWatcherName
+    return this._networkWatcherName;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -462,7 +567,7 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // storage_account_id - computed: false, optional: false, required: true
@@ -475,16 +580,16 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountIdInput() {
-    return this._storageAccountId
+    return this._storageAccountId;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -492,15 +597,15 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // version - computed: true, optional: true, required: false
-  private _version?: number | undefined; 
+  private _version?: number; 
   public get version() {
     return this.getNumberAttribute('version');
   }
-  public set version(value: number | undefined) {
+  public set version(value: number) {
     this._version = value;
   }
   public resetVersion() {
@@ -508,55 +613,52 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 
   // retention_policy - computed: false, optional: false, required: true
-  private _retentionPolicy?: NetworkWatcherFlowLogRetentionPolicy; 
-  private __retentionPolicyOutput = new NetworkWatcherFlowLogRetentionPolicyOutputReference(this as any, "retention_policy", true);
+  private _retentionPolicy = new NetworkWatcherFlowLogRetentionPolicyOutputReference(this as any, "retention_policy", true);
   public get retentionPolicy() {
-    return this.__retentionPolicyOutput;
+    return this._retentionPolicy;
   }
   public putRetentionPolicy(value: NetworkWatcherFlowLogRetentionPolicy) {
-    this._retentionPolicy = value;
+    this._retentionPolicy.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get retentionPolicyInput() {
-    return this._retentionPolicy
+    return this._retentionPolicy.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: NetworkWatcherFlowLogTimeouts | undefined; 
-  private __timeoutsOutput = new NetworkWatcherFlowLogTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NetworkWatcherFlowLogTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: NetworkWatcherFlowLogTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: NetworkWatcherFlowLogTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // traffic_analytics - computed: false, optional: true, required: false
-  private _trafficAnalytics?: NetworkWatcherFlowLogTrafficAnalytics | undefined; 
-  private __trafficAnalyticsOutput = new NetworkWatcherFlowLogTrafficAnalyticsOutputReference(this as any, "traffic_analytics", true);
+  private _trafficAnalytics = new NetworkWatcherFlowLogTrafficAnalyticsOutputReference(this as any, "traffic_analytics", true);
   public get trafficAnalytics() {
-    return this.__trafficAnalyticsOutput;
+    return this._trafficAnalytics;
   }
-  public putTrafficAnalytics(value: NetworkWatcherFlowLogTrafficAnalytics | undefined) {
-    this._trafficAnalytics = value;
+  public putTrafficAnalytics(value: NetworkWatcherFlowLogTrafficAnalytics) {
+    this._trafficAnalytics.internalValue = value;
   }
   public resetTrafficAnalytics() {
-    this._trafficAnalytics = undefined;
+    this._trafficAnalytics.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get trafficAnalyticsInput() {
-    return this._trafficAnalytics
+    return this._trafficAnalytics.internalValue;
   }
 
   // =========
@@ -573,9 +675,9 @@ export class NetworkWatcherFlowLog extends cdktf.TerraformResource {
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       version: cdktf.numberToTerraform(this._version),
-      retention_policy: networkWatcherFlowLogRetentionPolicyToTerraform(this._retentionPolicy),
-      timeouts: networkWatcherFlowLogTimeoutsToTerraform(this._timeouts),
-      traffic_analytics: networkWatcherFlowLogTrafficAnalyticsToTerraform(this._trafficAnalytics),
+      retention_policy: networkWatcherFlowLogRetentionPolicyToTerraform(this._retentionPolicy.internalValue),
+      timeouts: networkWatcherFlowLogTimeoutsToTerraform(this._timeouts.internalValue),
+      traffic_analytics: networkWatcherFlowLogTrafficAnalyticsToTerraform(this._trafficAnalytics.internalValue),
     };
   }
 }

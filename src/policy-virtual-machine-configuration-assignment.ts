@@ -43,7 +43,7 @@ export interface PolicyVirtualMachineConfigurationAssignmentConfigurationParamet
   readonly value: string;
 }
 
-function policyVirtualMachineConfigurationAssignmentConfigurationParameterToTerraform(struct?: PolicyVirtualMachineConfigurationAssignmentConfigurationParameter): any {
+export function policyVirtualMachineConfigurationAssignmentConfigurationParameterToTerraform(struct?: PolicyVirtualMachineConfigurationAssignmentConfigurationParameter): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -83,7 +83,7 @@ export interface PolicyVirtualMachineConfigurationAssignmentConfiguration {
   readonly parameter?: PolicyVirtualMachineConfigurationAssignmentConfigurationParameter[];
 }
 
-function policyVirtualMachineConfigurationAssignmentConfigurationToTerraform(struct?: PolicyVirtualMachineConfigurationAssignmentConfigurationOutputReference | PolicyVirtualMachineConfigurationAssignmentConfiguration): any {
+export function policyVirtualMachineConfigurationAssignmentConfigurationToTerraform(struct?: PolicyVirtualMachineConfigurationAssignmentConfigurationOutputReference | PolicyVirtualMachineConfigurationAssignmentConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -108,12 +108,61 @@ export class PolicyVirtualMachineConfigurationAssignmentConfigurationOutputRefer
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PolicyVirtualMachineConfigurationAssignmentConfiguration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._assignmentType) {
+      hasAnyValues = true;
+      internalValueResult.assignmentType = this._assignmentType;
+    }
+    if (this._contentHash) {
+      hasAnyValues = true;
+      internalValueResult.contentHash = this._contentHash;
+    }
+    if (this._contentUri) {
+      hasAnyValues = true;
+      internalValueResult.contentUri = this._contentUri;
+    }
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._version) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    if (this._parameter) {
+      hasAnyValues = true;
+      internalValueResult.parameter = this._parameter;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PolicyVirtualMachineConfigurationAssignmentConfiguration | undefined) {
+    if (value === undefined) {
+      this._assignmentType = undefined;
+      this._contentHash = undefined;
+      this._contentUri = undefined;
+      this._name = undefined;
+      this._version = undefined;
+      this._parameter = undefined;
+    }
+    else {
+      this._assignmentType = value.assignmentType;
+      this._contentHash = value.contentHash;
+      this._contentUri = value.contentUri;
+      this._name = value.name;
+      this._version = value.version;
+      this._parameter = value.parameter;
+    }
+  }
+
   // assignment_type - computed: false, optional: true, required: false
-  private _assignmentType?: string | undefined; 
+  private _assignmentType?: string; 
   public get assignmentType() {
     return this.getStringAttribute('assignment_type');
   }
-  public set assignmentType(value: string | undefined) {
+  public set assignmentType(value: string) {
     this._assignmentType = value;
   }
   public resetAssignmentType() {
@@ -121,15 +170,15 @@ export class PolicyVirtualMachineConfigurationAssignmentConfigurationOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get assignmentTypeInput() {
-    return this._assignmentType
+    return this._assignmentType;
   }
 
   // content_hash - computed: true, optional: true, required: false
-  private _contentHash?: string | undefined; 
+  private _contentHash?: string; 
   public get contentHash() {
     return this.getStringAttribute('content_hash');
   }
-  public set contentHash(value: string | undefined) {
+  public set contentHash(value: string) {
     this._contentHash = value;
   }
   public resetContentHash() {
@@ -137,15 +186,15 @@ export class PolicyVirtualMachineConfigurationAssignmentConfigurationOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get contentHashInput() {
-    return this._contentHash
+    return this._contentHash;
   }
 
   // content_uri - computed: true, optional: true, required: false
-  private _contentUri?: string | undefined; 
+  private _contentUri?: string; 
   public get contentUri() {
     return this.getStringAttribute('content_uri');
   }
-  public set contentUri(value: string | undefined) {
+  public set contentUri(value: string) {
     this._contentUri = value;
   }
   public resetContentUri() {
@@ -153,15 +202,15 @@ export class PolicyVirtualMachineConfigurationAssignmentConfigurationOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get contentUriInput() {
-    return this._contentUri
+    return this._contentUri;
   }
 
   // name - computed: false, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -169,15 +218,15 @@ export class PolicyVirtualMachineConfigurationAssignmentConfigurationOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // version - computed: false, optional: true, required: false
-  private _version?: string | undefined; 
+  private _version?: string; 
   public get version() {
     return this.getStringAttribute('version');
   }
-  public set version(value: string | undefined) {
+  public set version(value: string) {
     this._version = value;
   }
   public resetVersion() {
@@ -185,16 +234,16 @@ export class PolicyVirtualMachineConfigurationAssignmentConfigurationOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 
   // parameter - computed: false, optional: true, required: false
-  private _parameter?: PolicyVirtualMachineConfigurationAssignmentConfigurationParameter[] | undefined; 
+  private _parameter?: PolicyVirtualMachineConfigurationAssignmentConfigurationParameter[]; 
   public get parameter() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameter') as any;
   }
-  public set parameter(value: PolicyVirtualMachineConfigurationAssignmentConfigurationParameter[] | undefined) {
+  public set parameter(value: PolicyVirtualMachineConfigurationAssignmentConfigurationParameter[]) {
     this._parameter = value;
   }
   public resetParameter() {
@@ -202,7 +251,7 @@ export class PolicyVirtualMachineConfigurationAssignmentConfigurationOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get parameterInput() {
-    return this._parameter
+    return this._parameter;
   }
 }
 export interface PolicyVirtualMachineConfigurationAssignmentTimeouts {
@@ -224,7 +273,7 @@ export interface PolicyVirtualMachineConfigurationAssignmentTimeouts {
   readonly update?: string;
 }
 
-function policyVirtualMachineConfigurationAssignmentTimeoutsToTerraform(struct?: PolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference | PolicyVirtualMachineConfigurationAssignmentTimeouts): any {
+export function policyVirtualMachineConfigurationAssignmentTimeoutsToTerraform(struct?: PolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference | PolicyVirtualMachineConfigurationAssignmentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -247,12 +296,49 @@ export class PolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PolicyVirtualMachineConfigurationAssignmentTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PolicyVirtualMachineConfigurationAssignmentTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -260,15 +346,15 @@ export class PolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -276,15 +362,15 @@ export class PolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -292,15 +378,15 @@ export class PolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -308,7 +394,7 @@ export class PolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -347,8 +433,8 @@ export class PolicyVirtualMachineConfigurationAssignment extends cdktf.Terraform
     this._location = config.location;
     this._name = config.name;
     this._virtualMachineId = config.virtualMachineId;
-    this._configuration = config.configuration;
-    this._timeouts = config.timeouts;
+    this._configuration.internalValue = config.configuration;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -370,7 +456,7 @@ export class PolicyVirtualMachineConfigurationAssignment extends cdktf.Terraform
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -383,7 +469,7 @@ export class PolicyVirtualMachineConfigurationAssignment extends cdktf.Terraform
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // virtual_machine_id - computed: false, optional: false, required: true
@@ -396,38 +482,36 @@ export class PolicyVirtualMachineConfigurationAssignment extends cdktf.Terraform
   }
   // Temporarily expose input value. Use with caution.
   public get virtualMachineIdInput() {
-    return this._virtualMachineId
+    return this._virtualMachineId;
   }
 
   // configuration - computed: false, optional: false, required: true
-  private _configuration?: PolicyVirtualMachineConfigurationAssignmentConfiguration; 
-  private __configurationOutput = new PolicyVirtualMachineConfigurationAssignmentConfigurationOutputReference(this as any, "configuration", true);
+  private _configuration = new PolicyVirtualMachineConfigurationAssignmentConfigurationOutputReference(this as any, "configuration", true);
   public get configuration() {
-    return this.__configurationOutput;
+    return this._configuration;
   }
   public putConfiguration(value: PolicyVirtualMachineConfigurationAssignmentConfiguration) {
-    this._configuration = value;
+    this._configuration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get configurationInput() {
-    return this._configuration
+    return this._configuration.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: PolicyVirtualMachineConfigurationAssignmentTimeouts | undefined; 
-  private __timeoutsOutput = new PolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new PolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: PolicyVirtualMachineConfigurationAssignmentTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: PolicyVirtualMachineConfigurationAssignmentTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -439,8 +523,8 @@ export class PolicyVirtualMachineConfigurationAssignment extends cdktf.Terraform
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       virtual_machine_id: cdktf.stringToTerraform(this._virtualMachineId),
-      configuration: policyVirtualMachineConfigurationAssignmentConfigurationToTerraform(this._configuration),
-      timeouts: policyVirtualMachineConfigurationAssignmentTimeoutsToTerraform(this._timeouts),
+      configuration: policyVirtualMachineConfigurationAssignmentConfigurationToTerraform(this._configuration.internalValue),
+      timeouts: policyVirtualMachineConfigurationAssignmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

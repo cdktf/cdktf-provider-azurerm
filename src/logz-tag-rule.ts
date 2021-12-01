@@ -51,7 +51,7 @@ export interface LogzTagRuleTagFilter {
   readonly value?: string;
 }
 
-function logzTagRuleTagFilterToTerraform(struct?: LogzTagRuleTagFilter): any {
+export function logzTagRuleTagFilterToTerraform(struct?: LogzTagRuleTagFilter): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -82,7 +82,7 @@ export interface LogzTagRuleTimeouts {
   readonly update?: string;
 }
 
-function logzTagRuleTimeoutsToTerraform(struct?: LogzTagRuleTimeoutsOutputReference | LogzTagRuleTimeouts): any {
+export function logzTagRuleTimeoutsToTerraform(struct?: LogzTagRuleTimeoutsOutputReference | LogzTagRuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -105,12 +105,49 @@ export class LogzTagRuleTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogzTagRuleTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogzTagRuleTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -118,15 +155,15 @@ export class LogzTagRuleTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -134,15 +171,15 @@ export class LogzTagRuleTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -150,15 +187,15 @@ export class LogzTagRuleTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -166,7 +203,7 @@ export class LogzTagRuleTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -207,7 +244,7 @@ export class LogzTagRule extends cdktf.TerraformResource {
     this._sendActivityLogs = config.sendActivityLogs;
     this._sendSubscriptionLogs = config.sendSubscriptionLogs;
     this._tagFilter = config.tagFilter;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -229,15 +266,15 @@ export class LogzTagRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get logzMonitorIdInput() {
-    return this._logzMonitorId
+    return this._logzMonitorId;
   }
 
   // send_aad_logs - computed: false, optional: true, required: false
-  private _sendAadLogs?: boolean | cdktf.IResolvable | undefined; 
+  private _sendAadLogs?: boolean | cdktf.IResolvable; 
   public get sendAadLogs() {
     return this.getBooleanAttribute('send_aad_logs') as any;
   }
-  public set sendAadLogs(value: boolean | cdktf.IResolvable | undefined) {
+  public set sendAadLogs(value: boolean | cdktf.IResolvable) {
     this._sendAadLogs = value;
   }
   public resetSendAadLogs() {
@@ -245,15 +282,15 @@ export class LogzTagRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sendAadLogsInput() {
-    return this._sendAadLogs
+    return this._sendAadLogs;
   }
 
   // send_activity_logs - computed: false, optional: true, required: false
-  private _sendActivityLogs?: boolean | cdktf.IResolvable | undefined; 
+  private _sendActivityLogs?: boolean | cdktf.IResolvable; 
   public get sendActivityLogs() {
     return this.getBooleanAttribute('send_activity_logs') as any;
   }
-  public set sendActivityLogs(value: boolean | cdktf.IResolvable | undefined) {
+  public set sendActivityLogs(value: boolean | cdktf.IResolvable) {
     this._sendActivityLogs = value;
   }
   public resetSendActivityLogs() {
@@ -261,15 +298,15 @@ export class LogzTagRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sendActivityLogsInput() {
-    return this._sendActivityLogs
+    return this._sendActivityLogs;
   }
 
   // send_subscription_logs - computed: false, optional: true, required: false
-  private _sendSubscriptionLogs?: boolean | cdktf.IResolvable | undefined; 
+  private _sendSubscriptionLogs?: boolean | cdktf.IResolvable; 
   public get sendSubscriptionLogs() {
     return this.getBooleanAttribute('send_subscription_logs') as any;
   }
-  public set sendSubscriptionLogs(value: boolean | cdktf.IResolvable | undefined) {
+  public set sendSubscriptionLogs(value: boolean | cdktf.IResolvable) {
     this._sendSubscriptionLogs = value;
   }
   public resetSendSubscriptionLogs() {
@@ -277,16 +314,16 @@ export class LogzTagRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sendSubscriptionLogsInput() {
-    return this._sendSubscriptionLogs
+    return this._sendSubscriptionLogs;
   }
 
   // tag_filter - computed: false, optional: true, required: false
-  private _tagFilter?: LogzTagRuleTagFilter[] | undefined; 
+  private _tagFilter?: LogzTagRuleTagFilter[]; 
   public get tagFilter() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tag_filter') as any;
   }
-  public set tagFilter(value: LogzTagRuleTagFilter[] | undefined) {
+  public set tagFilter(value: LogzTagRuleTagFilter[]) {
     this._tagFilter = value;
   }
   public resetTagFilter() {
@@ -294,24 +331,23 @@ export class LogzTagRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagFilterInput() {
-    return this._tagFilter
+    return this._tagFilter;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LogzTagRuleTimeouts | undefined; 
-  private __timeoutsOutput = new LogzTagRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogzTagRuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: LogzTagRuleTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: LogzTagRuleTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -325,7 +361,7 @@ export class LogzTagRule extends cdktf.TerraformResource {
       send_activity_logs: cdktf.booleanToTerraform(this._sendActivityLogs),
       send_subscription_logs: cdktf.booleanToTerraform(this._sendSubscriptionLogs),
       tag_filter: cdktf.listMapper(logzTagRuleTagFilterToTerraform)(this._tagFilter),
-      timeouts: logzTagRuleTimeoutsToTerraform(this._timeouts),
+      timeouts: logzTagRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

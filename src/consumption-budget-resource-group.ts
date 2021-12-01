@@ -67,7 +67,7 @@ export interface ConsumptionBudgetResourceGroupFilterDimension {
   readonly values: string[];
 }
 
-function consumptionBudgetResourceGroupFilterDimensionToTerraform(struct?: ConsumptionBudgetResourceGroupFilterDimension): any {
+export function consumptionBudgetResourceGroupFilterDimensionToTerraform(struct?: ConsumptionBudgetResourceGroupFilterDimension): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -94,7 +94,7 @@ export interface ConsumptionBudgetResourceGroupFilterNotDimension {
   readonly values: string[];
 }
 
-function consumptionBudgetResourceGroupFilterNotDimensionToTerraform(struct?: ConsumptionBudgetResourceGroupFilterNotDimensionOutputReference | ConsumptionBudgetResourceGroupFilterNotDimension): any {
+export function consumptionBudgetResourceGroupFilterNotDimensionToTerraform(struct?: ConsumptionBudgetResourceGroupFilterNotDimensionOutputReference | ConsumptionBudgetResourceGroupFilterNotDimension): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -116,6 +116,37 @@ export class ConsumptionBudgetResourceGroupFilterNotDimensionOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ConsumptionBudgetResourceGroupFilterNotDimension | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._operator) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._values) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ConsumptionBudgetResourceGroupFilterNotDimension | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._operator = undefined;
+      this._values = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._operator = value.operator;
+      this._values = value.values;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -126,15 +157,15 @@ export class ConsumptionBudgetResourceGroupFilterNotDimensionOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // operator - computed: false, optional: true, required: false
-  private _operator?: string | undefined; 
+  private _operator?: string; 
   public get operator() {
     return this.getStringAttribute('operator');
   }
-  public set operator(value: string | undefined) {
+  public set operator(value: string) {
     this._operator = value;
   }
   public resetOperator() {
@@ -142,7 +173,7 @@ export class ConsumptionBudgetResourceGroupFilterNotDimensionOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get operatorInput() {
-    return this._operator
+    return this._operator;
   }
 
   // values - computed: false, optional: false, required: true
@@ -155,7 +186,7 @@ export class ConsumptionBudgetResourceGroupFilterNotDimensionOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
-    return this._values
+    return this._values;
   }
 }
 export interface ConsumptionBudgetResourceGroupFilterNotTag {
@@ -173,7 +204,7 @@ export interface ConsumptionBudgetResourceGroupFilterNotTag {
   readonly values: string[];
 }
 
-function consumptionBudgetResourceGroupFilterNotTagToTerraform(struct?: ConsumptionBudgetResourceGroupFilterNotTagOutputReference | ConsumptionBudgetResourceGroupFilterNotTag): any {
+export function consumptionBudgetResourceGroupFilterNotTagToTerraform(struct?: ConsumptionBudgetResourceGroupFilterNotTagOutputReference | ConsumptionBudgetResourceGroupFilterNotTag): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -195,6 +226,37 @@ export class ConsumptionBudgetResourceGroupFilterNotTagOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ConsumptionBudgetResourceGroupFilterNotTag | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._operator) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._values) {
+      hasAnyValues = true;
+      internalValueResult.values = this._values;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ConsumptionBudgetResourceGroupFilterNotTag | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._operator = undefined;
+      this._values = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._operator = value.operator;
+      this._values = value.values;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -205,15 +267,15 @@ export class ConsumptionBudgetResourceGroupFilterNotTagOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // operator - computed: false, optional: true, required: false
-  private _operator?: string | undefined; 
+  private _operator?: string; 
   public get operator() {
     return this.getStringAttribute('operator');
   }
-  public set operator(value: string | undefined) {
+  public set operator(value: string) {
     this._operator = value;
   }
   public resetOperator() {
@@ -221,7 +283,7 @@ export class ConsumptionBudgetResourceGroupFilterNotTagOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get operatorInput() {
-    return this._operator
+    return this._operator;
   }
 
   // values - computed: false, optional: false, required: true
@@ -234,7 +296,7 @@ export class ConsumptionBudgetResourceGroupFilterNotTagOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get valuesInput() {
-    return this._values
+    return this._values;
   }
 }
 export interface ConsumptionBudgetResourceGroupFilterNot {
@@ -252,7 +314,7 @@ export interface ConsumptionBudgetResourceGroupFilterNot {
   readonly tag?: ConsumptionBudgetResourceGroupFilterNotTag;
 }
 
-function consumptionBudgetResourceGroupFilterNotToTerraform(struct?: ConsumptionBudgetResourceGroupFilterNotOutputReference | ConsumptionBudgetResourceGroupFilterNot): any {
+export function consumptionBudgetResourceGroupFilterNotToTerraform(struct?: ConsumptionBudgetResourceGroupFilterNotOutputReference | ConsumptionBudgetResourceGroupFilterNot): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -273,38 +335,61 @@ export class ConsumptionBudgetResourceGroupFilterNotOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // dimension - computed: false, optional: true, required: false
-  private _dimension?: ConsumptionBudgetResourceGroupFilterNotDimension | undefined; 
-  private __dimensionOutput = new ConsumptionBudgetResourceGroupFilterNotDimensionOutputReference(this as any, "dimension", true);
-  public get dimension() {
-    return this.__dimensionOutput;
+  public get internalValue(): ConsumptionBudgetResourceGroupFilterNot | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._dimension) {
+      hasAnyValues = true;
+      internalValueResult.dimension = this._dimension?.internalValue;
+    }
+    if (this._tag) {
+      hasAnyValues = true;
+      internalValueResult.tag = this._tag?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putDimension(value: ConsumptionBudgetResourceGroupFilterNotDimension | undefined) {
-    this._dimension = value;
+
+  public set internalValue(value: ConsumptionBudgetResourceGroupFilterNot | undefined) {
+    if (value === undefined) {
+      this._dimension.internalValue = undefined;
+      this._tag.internalValue = undefined;
+    }
+    else {
+      this._dimension.internalValue = value.dimension;
+      this._tag.internalValue = value.tag;
+    }
+  }
+
+  // dimension - computed: false, optional: true, required: false
+  private _dimension = new ConsumptionBudgetResourceGroupFilterNotDimensionOutputReference(this as any, "dimension", true);
+  public get dimension() {
+    return this._dimension;
+  }
+  public putDimension(value: ConsumptionBudgetResourceGroupFilterNotDimension) {
+    this._dimension.internalValue = value;
   }
   public resetDimension() {
-    this._dimension = undefined;
+    this._dimension.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dimensionInput() {
-    return this._dimension
+    return this._dimension.internalValue;
   }
 
   // tag - computed: false, optional: true, required: false
-  private _tag?: ConsumptionBudgetResourceGroupFilterNotTag | undefined; 
-  private __tagOutput = new ConsumptionBudgetResourceGroupFilterNotTagOutputReference(this as any, "tag", true);
+  private _tag = new ConsumptionBudgetResourceGroupFilterNotTagOutputReference(this as any, "tag", true);
   public get tag() {
-    return this.__tagOutput;
+    return this._tag;
   }
-  public putTag(value: ConsumptionBudgetResourceGroupFilterNotTag | undefined) {
-    this._tag = value;
+  public putTag(value: ConsumptionBudgetResourceGroupFilterNotTag) {
+    this._tag.internalValue = value;
   }
   public resetTag() {
-    this._tag = undefined;
+    this._tag.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get tagInput() {
-    return this._tag
+    return this._tag.internalValue;
   }
 }
 export interface ConsumptionBudgetResourceGroupFilterTag {
@@ -322,7 +407,7 @@ export interface ConsumptionBudgetResourceGroupFilterTag {
   readonly values: string[];
 }
 
-function consumptionBudgetResourceGroupFilterTagToTerraform(struct?: ConsumptionBudgetResourceGroupFilterTag): any {
+export function consumptionBudgetResourceGroupFilterTagToTerraform(struct?: ConsumptionBudgetResourceGroupFilterTag): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -355,7 +440,7 @@ export interface ConsumptionBudgetResourceGroupFilter {
   readonly tag?: ConsumptionBudgetResourceGroupFilterTag[];
 }
 
-function consumptionBudgetResourceGroupFilterToTerraform(struct?: ConsumptionBudgetResourceGroupFilterOutputReference | ConsumptionBudgetResourceGroupFilter): any {
+export function consumptionBudgetResourceGroupFilterToTerraform(struct?: ConsumptionBudgetResourceGroupFilterOutputReference | ConsumptionBudgetResourceGroupFilter): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -377,13 +462,44 @@ export class ConsumptionBudgetResourceGroupFilterOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ConsumptionBudgetResourceGroupFilter | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._dimension) {
+      hasAnyValues = true;
+      internalValueResult.dimension = this._dimension;
+    }
+    if (this._not) {
+      hasAnyValues = true;
+      internalValueResult.not = this._not?.internalValue;
+    }
+    if (this._tag) {
+      hasAnyValues = true;
+      internalValueResult.tag = this._tag;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ConsumptionBudgetResourceGroupFilter | undefined) {
+    if (value === undefined) {
+      this._dimension = undefined;
+      this._not.internalValue = undefined;
+      this._tag = undefined;
+    }
+    else {
+      this._dimension = value.dimension;
+      this._not.internalValue = value.not;
+      this._tag = value.tag;
+    }
+  }
+
   // dimension - computed: false, optional: true, required: false
-  private _dimension?: ConsumptionBudgetResourceGroupFilterDimension[] | undefined; 
+  private _dimension?: ConsumptionBudgetResourceGroupFilterDimension[]; 
   public get dimension() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('dimension') as any;
   }
-  public set dimension(value: ConsumptionBudgetResourceGroupFilterDimension[] | undefined) {
+  public set dimension(value: ConsumptionBudgetResourceGroupFilterDimension[]) {
     this._dimension = value;
   }
   public resetDimension() {
@@ -391,33 +507,32 @@ export class ConsumptionBudgetResourceGroupFilterOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get dimensionInput() {
-    return this._dimension
+    return this._dimension;
   }
 
   // not - computed: false, optional: true, required: false
-  private _not?: ConsumptionBudgetResourceGroupFilterNot | undefined; 
-  private __notOutput = new ConsumptionBudgetResourceGroupFilterNotOutputReference(this as any, "not", true);
+  private _not = new ConsumptionBudgetResourceGroupFilterNotOutputReference(this as any, "not", true);
   public get not() {
-    return this.__notOutput;
+    return this._not;
   }
-  public putNot(value: ConsumptionBudgetResourceGroupFilterNot | undefined) {
-    this._not = value;
+  public putNot(value: ConsumptionBudgetResourceGroupFilterNot) {
+    this._not.internalValue = value;
   }
   public resetNot() {
-    this._not = undefined;
+    this._not.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get notInput() {
-    return this._not
+    return this._not.internalValue;
   }
 
   // tag - computed: false, optional: true, required: false
-  private _tag?: ConsumptionBudgetResourceGroupFilterTag[] | undefined; 
+  private _tag?: ConsumptionBudgetResourceGroupFilterTag[]; 
   public get tag() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tag') as any;
   }
-  public set tag(value: ConsumptionBudgetResourceGroupFilterTag[] | undefined) {
+  public set tag(value: ConsumptionBudgetResourceGroupFilterTag[]) {
     this._tag = value;
   }
   public resetTag() {
@@ -425,7 +540,7 @@ export class ConsumptionBudgetResourceGroupFilterOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get tagInput() {
-    return this._tag
+    return this._tag;
   }
 }
 export interface ConsumptionBudgetResourceGroupNotification {
@@ -459,7 +574,7 @@ export interface ConsumptionBudgetResourceGroupNotification {
   readonly thresholdType?: string;
 }
 
-function consumptionBudgetResourceGroupNotificationToTerraform(struct?: ConsumptionBudgetResourceGroupNotification): any {
+export function consumptionBudgetResourceGroupNotificationToTerraform(struct?: ConsumptionBudgetResourceGroupNotification): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -486,7 +601,7 @@ export interface ConsumptionBudgetResourceGroupTimePeriod {
   readonly startDate: string;
 }
 
-function consumptionBudgetResourceGroupTimePeriodToTerraform(struct?: ConsumptionBudgetResourceGroupTimePeriodOutputReference | ConsumptionBudgetResourceGroupTimePeriod): any {
+export function consumptionBudgetResourceGroupTimePeriodToTerraform(struct?: ConsumptionBudgetResourceGroupTimePeriodOutputReference | ConsumptionBudgetResourceGroupTimePeriod): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -507,12 +622,37 @@ export class ConsumptionBudgetResourceGroupTimePeriodOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ConsumptionBudgetResourceGroupTimePeriod | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._endDate) {
+      hasAnyValues = true;
+      internalValueResult.endDate = this._endDate;
+    }
+    if (this._startDate) {
+      hasAnyValues = true;
+      internalValueResult.startDate = this._startDate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ConsumptionBudgetResourceGroupTimePeriod | undefined) {
+    if (value === undefined) {
+      this._endDate = undefined;
+      this._startDate = undefined;
+    }
+    else {
+      this._endDate = value.endDate;
+      this._startDate = value.startDate;
+    }
+  }
+
   // end_date - computed: true, optional: true, required: false
-  private _endDate?: string | undefined; 
+  private _endDate?: string; 
   public get endDate() {
     return this.getStringAttribute('end_date');
   }
-  public set endDate(value: string | undefined) {
+  public set endDate(value: string) {
     this._endDate = value;
   }
   public resetEndDate() {
@@ -520,7 +660,7 @@ export class ConsumptionBudgetResourceGroupTimePeriodOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get endDateInput() {
-    return this._endDate
+    return this._endDate;
   }
 
   // start_date - computed: false, optional: false, required: true
@@ -533,7 +673,7 @@ export class ConsumptionBudgetResourceGroupTimePeriodOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get startDateInput() {
-    return this._startDate
+    return this._startDate;
   }
 }
 export interface ConsumptionBudgetResourceGroupTimeouts {
@@ -555,7 +695,7 @@ export interface ConsumptionBudgetResourceGroupTimeouts {
   readonly update?: string;
 }
 
-function consumptionBudgetResourceGroupTimeoutsToTerraform(struct?: ConsumptionBudgetResourceGroupTimeoutsOutputReference | ConsumptionBudgetResourceGroupTimeouts): any {
+export function consumptionBudgetResourceGroupTimeoutsToTerraform(struct?: ConsumptionBudgetResourceGroupTimeoutsOutputReference | ConsumptionBudgetResourceGroupTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -578,12 +718,49 @@ export class ConsumptionBudgetResourceGroupTimeoutsOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ConsumptionBudgetResourceGroupTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ConsumptionBudgetResourceGroupTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -591,15 +768,15 @@ export class ConsumptionBudgetResourceGroupTimeoutsOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -607,15 +784,15 @@ export class ConsumptionBudgetResourceGroupTimeoutsOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -623,15 +800,15 @@ export class ConsumptionBudgetResourceGroupTimeoutsOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -639,7 +816,7 @@ export class ConsumptionBudgetResourceGroupTimeoutsOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -680,10 +857,10 @@ export class ConsumptionBudgetResourceGroup extends cdktf.TerraformResource {
     this._name = config.name;
     this._resourceGroupId = config.resourceGroupId;
     this._timeGrain = config.timeGrain;
-    this._filter = config.filter;
+    this._filter.internalValue = config.filter;
     this._notification = config.notification;
-    this._timePeriod = config.timePeriod;
-    this._timeouts = config.timeouts;
+    this._timePeriod.internalValue = config.timePeriod;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -700,15 +877,15 @@ export class ConsumptionBudgetResourceGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get amountInput() {
-    return this._amount
+    return this._amount;
   }
 
   // etag - computed: true, optional: true, required: false
-  private _etag?: string | undefined; 
+  private _etag?: string; 
   public get etag() {
     return this.getStringAttribute('etag');
   }
-  public set etag(value: string | undefined) {
+  public set etag(value: string) {
     this._etag = value;
   }
   public resetEtag() {
@@ -716,7 +893,7 @@ export class ConsumptionBudgetResourceGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get etagInput() {
-    return this._etag
+    return this._etag;
   }
 
   // id - computed: true, optional: true, required: false
@@ -734,7 +911,7 @@ export class ConsumptionBudgetResourceGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_id - computed: false, optional: false, required: true
@@ -747,15 +924,15 @@ export class ConsumptionBudgetResourceGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupIdInput() {
-    return this._resourceGroupId
+    return this._resourceGroupId;
   }
 
   // time_grain - computed: false, optional: true, required: false
-  private _timeGrain?: string | undefined; 
+  private _timeGrain?: string; 
   public get timeGrain() {
     return this.getStringAttribute('time_grain');
   }
-  public set timeGrain(value: string | undefined) {
+  public set timeGrain(value: string) {
     this._timeGrain = value;
   }
   public resetTimeGrain() {
@@ -763,24 +940,23 @@ export class ConsumptionBudgetResourceGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get timeGrainInput() {
-    return this._timeGrain
+    return this._timeGrain;
   }
 
   // filter - computed: false, optional: true, required: false
-  private _filter?: ConsumptionBudgetResourceGroupFilter | undefined; 
-  private __filterOutput = new ConsumptionBudgetResourceGroupFilterOutputReference(this as any, "filter", true);
+  private _filter = new ConsumptionBudgetResourceGroupFilterOutputReference(this as any, "filter", true);
   public get filter() {
-    return this.__filterOutput;
+    return this._filter;
   }
-  public putFilter(value: ConsumptionBudgetResourceGroupFilter | undefined) {
-    this._filter = value;
+  public putFilter(value: ConsumptionBudgetResourceGroupFilter) {
+    this._filter.internalValue = value;
   }
   public resetFilter() {
-    this._filter = undefined;
+    this._filter.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get filterInput() {
-    return this._filter
+    return this._filter.internalValue;
   }
 
   // notification - computed: false, optional: false, required: true
@@ -794,38 +970,36 @@ export class ConsumptionBudgetResourceGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get notificationInput() {
-    return this._notification
+    return this._notification;
   }
 
   // time_period - computed: false, optional: false, required: true
-  private _timePeriod?: ConsumptionBudgetResourceGroupTimePeriod; 
-  private __timePeriodOutput = new ConsumptionBudgetResourceGroupTimePeriodOutputReference(this as any, "time_period", true);
+  private _timePeriod = new ConsumptionBudgetResourceGroupTimePeriodOutputReference(this as any, "time_period", true);
   public get timePeriod() {
-    return this.__timePeriodOutput;
+    return this._timePeriod;
   }
   public putTimePeriod(value: ConsumptionBudgetResourceGroupTimePeriod) {
-    this._timePeriod = value;
+    this._timePeriod.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get timePeriodInput() {
-    return this._timePeriod
+    return this._timePeriod.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ConsumptionBudgetResourceGroupTimeouts | undefined; 
-  private __timeoutsOutput = new ConsumptionBudgetResourceGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ConsumptionBudgetResourceGroupTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ConsumptionBudgetResourceGroupTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ConsumptionBudgetResourceGroupTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -839,10 +1013,10 @@ export class ConsumptionBudgetResourceGroup extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_id: cdktf.stringToTerraform(this._resourceGroupId),
       time_grain: cdktf.stringToTerraform(this._timeGrain),
-      filter: consumptionBudgetResourceGroupFilterToTerraform(this._filter),
+      filter: consumptionBudgetResourceGroupFilterToTerraform(this._filter.internalValue),
       notification: cdktf.listMapper(consumptionBudgetResourceGroupNotificationToTerraform)(this._notification),
-      time_period: consumptionBudgetResourceGroupTimePeriodToTerraform(this._timePeriod),
-      timeouts: consumptionBudgetResourceGroupTimeoutsToTerraform(this._timeouts),
+      time_period: consumptionBudgetResourceGroupTimePeriodToTerraform(this._timePeriod.internalValue),
+      timeouts: consumptionBudgetResourceGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

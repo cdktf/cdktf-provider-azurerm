@@ -47,7 +47,7 @@ export interface MediaTransformOutputAudioAnalyzerPreset {
   readonly audioLanguage?: string;
 }
 
-function mediaTransformOutputAudioAnalyzerPresetToTerraform(struct?: MediaTransformOutputAudioAnalyzerPresetOutputReference | MediaTransformOutputAudioAnalyzerPreset): any {
+export function mediaTransformOutputAudioAnalyzerPresetToTerraform(struct?: MediaTransformOutputAudioAnalyzerPresetOutputReference | MediaTransformOutputAudioAnalyzerPreset): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -68,12 +68,37 @@ export class MediaTransformOutputAudioAnalyzerPresetOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaTransformOutputAudioAnalyzerPreset | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._audioAnalysisMode) {
+      hasAnyValues = true;
+      internalValueResult.audioAnalysisMode = this._audioAnalysisMode;
+    }
+    if (this._audioLanguage) {
+      hasAnyValues = true;
+      internalValueResult.audioLanguage = this._audioLanguage;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaTransformOutputAudioAnalyzerPreset | undefined) {
+    if (value === undefined) {
+      this._audioAnalysisMode = undefined;
+      this._audioLanguage = undefined;
+    }
+    else {
+      this._audioAnalysisMode = value.audioAnalysisMode;
+      this._audioLanguage = value.audioLanguage;
+    }
+  }
+
   // audio_analysis_mode - computed: false, optional: true, required: false
-  private _audioAnalysisMode?: string | undefined; 
+  private _audioAnalysisMode?: string; 
   public get audioAnalysisMode() {
     return this.getStringAttribute('audio_analysis_mode');
   }
-  public set audioAnalysisMode(value: string | undefined) {
+  public set audioAnalysisMode(value: string) {
     this._audioAnalysisMode = value;
   }
   public resetAudioAnalysisMode() {
@@ -81,15 +106,15 @@ export class MediaTransformOutputAudioAnalyzerPresetOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get audioAnalysisModeInput() {
-    return this._audioAnalysisMode
+    return this._audioAnalysisMode;
   }
 
   // audio_language - computed: false, optional: true, required: false
-  private _audioLanguage?: string | undefined; 
+  private _audioLanguage?: string; 
   public get audioLanguage() {
     return this.getStringAttribute('audio_language');
   }
-  public set audioLanguage(value: string | undefined) {
+  public set audioLanguage(value: string) {
     this._audioLanguage = value;
   }
   public resetAudioLanguage() {
@@ -97,7 +122,7 @@ export class MediaTransformOutputAudioAnalyzerPresetOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get audioLanguageInput() {
-    return this._audioLanguage
+    return this._audioLanguage;
   }
 }
 export interface MediaTransformOutputBuiltinPreset {
@@ -107,7 +132,7 @@ export interface MediaTransformOutputBuiltinPreset {
   readonly presetName?: string;
 }
 
-function mediaTransformOutputBuiltinPresetToTerraform(struct?: MediaTransformOutputBuiltinPresetOutputReference | MediaTransformOutputBuiltinPreset): any {
+export function mediaTransformOutputBuiltinPresetToTerraform(struct?: MediaTransformOutputBuiltinPresetOutputReference | MediaTransformOutputBuiltinPreset): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -127,12 +152,31 @@ export class MediaTransformOutputBuiltinPresetOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaTransformOutputBuiltinPreset | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._presetName) {
+      hasAnyValues = true;
+      internalValueResult.presetName = this._presetName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaTransformOutputBuiltinPreset | undefined) {
+    if (value === undefined) {
+      this._presetName = undefined;
+    }
+    else {
+      this._presetName = value.presetName;
+    }
+  }
+
   // preset_name - computed: false, optional: true, required: false
-  private _presetName?: string | undefined; 
+  private _presetName?: string; 
   public get presetName() {
     return this.getStringAttribute('preset_name');
   }
-  public set presetName(value: string | undefined) {
+  public set presetName(value: string) {
     this._presetName = value;
   }
   public resetPresetName() {
@@ -140,7 +184,7 @@ export class MediaTransformOutputBuiltinPresetOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get presetNameInput() {
-    return this._presetName
+    return this._presetName;
   }
 }
 export interface MediaTransformOutputFaceDetectorPreset {
@@ -150,7 +194,7 @@ export interface MediaTransformOutputFaceDetectorPreset {
   readonly analysisResolution?: string;
 }
 
-function mediaTransformOutputFaceDetectorPresetToTerraform(struct?: MediaTransformOutputFaceDetectorPresetOutputReference | MediaTransformOutputFaceDetectorPreset): any {
+export function mediaTransformOutputFaceDetectorPresetToTerraform(struct?: MediaTransformOutputFaceDetectorPresetOutputReference | MediaTransformOutputFaceDetectorPreset): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -170,12 +214,31 @@ export class MediaTransformOutputFaceDetectorPresetOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaTransformOutputFaceDetectorPreset | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._analysisResolution) {
+      hasAnyValues = true;
+      internalValueResult.analysisResolution = this._analysisResolution;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaTransformOutputFaceDetectorPreset | undefined) {
+    if (value === undefined) {
+      this._analysisResolution = undefined;
+    }
+    else {
+      this._analysisResolution = value.analysisResolution;
+    }
+  }
+
   // analysis_resolution - computed: false, optional: true, required: false
-  private _analysisResolution?: string | undefined; 
+  private _analysisResolution?: string; 
   public get analysisResolution() {
     return this.getStringAttribute('analysis_resolution');
   }
-  public set analysisResolution(value: string | undefined) {
+  public set analysisResolution(value: string) {
     this._analysisResolution = value;
   }
   public resetAnalysisResolution() {
@@ -183,7 +246,7 @@ export class MediaTransformOutputFaceDetectorPresetOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get analysisResolutionInput() {
-    return this._analysisResolution
+    return this._analysisResolution;
   }
 }
 export interface MediaTransformOutputVideoAnalyzerPreset {
@@ -201,7 +264,7 @@ export interface MediaTransformOutputVideoAnalyzerPreset {
   readonly insightsType?: string;
 }
 
-function mediaTransformOutputVideoAnalyzerPresetToTerraform(struct?: MediaTransformOutputVideoAnalyzerPresetOutputReference | MediaTransformOutputVideoAnalyzerPreset): any {
+export function mediaTransformOutputVideoAnalyzerPresetToTerraform(struct?: MediaTransformOutputVideoAnalyzerPresetOutputReference | MediaTransformOutputVideoAnalyzerPreset): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -223,12 +286,43 @@ export class MediaTransformOutputVideoAnalyzerPresetOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaTransformOutputVideoAnalyzerPreset | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._audioAnalysisMode) {
+      hasAnyValues = true;
+      internalValueResult.audioAnalysisMode = this._audioAnalysisMode;
+    }
+    if (this._audioLanguage) {
+      hasAnyValues = true;
+      internalValueResult.audioLanguage = this._audioLanguage;
+    }
+    if (this._insightsType) {
+      hasAnyValues = true;
+      internalValueResult.insightsType = this._insightsType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaTransformOutputVideoAnalyzerPreset | undefined) {
+    if (value === undefined) {
+      this._audioAnalysisMode = undefined;
+      this._audioLanguage = undefined;
+      this._insightsType = undefined;
+    }
+    else {
+      this._audioAnalysisMode = value.audioAnalysisMode;
+      this._audioLanguage = value.audioLanguage;
+      this._insightsType = value.insightsType;
+    }
+  }
+
   // audio_analysis_mode - computed: false, optional: true, required: false
-  private _audioAnalysisMode?: string | undefined; 
+  private _audioAnalysisMode?: string; 
   public get audioAnalysisMode() {
     return this.getStringAttribute('audio_analysis_mode');
   }
-  public set audioAnalysisMode(value: string | undefined) {
+  public set audioAnalysisMode(value: string) {
     this._audioAnalysisMode = value;
   }
   public resetAudioAnalysisMode() {
@@ -236,15 +330,15 @@ export class MediaTransformOutputVideoAnalyzerPresetOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get audioAnalysisModeInput() {
-    return this._audioAnalysisMode
+    return this._audioAnalysisMode;
   }
 
   // audio_language - computed: false, optional: true, required: false
-  private _audioLanguage?: string | undefined; 
+  private _audioLanguage?: string; 
   public get audioLanguage() {
     return this.getStringAttribute('audio_language');
   }
-  public set audioLanguage(value: string | undefined) {
+  public set audioLanguage(value: string) {
     this._audioLanguage = value;
   }
   public resetAudioLanguage() {
@@ -252,15 +346,15 @@ export class MediaTransformOutputVideoAnalyzerPresetOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get audioLanguageInput() {
-    return this._audioLanguage
+    return this._audioLanguage;
   }
 
   // insights_type - computed: false, optional: true, required: false
-  private _insightsType?: string | undefined; 
+  private _insightsType?: string; 
   public get insightsType() {
     return this.getStringAttribute('insights_type');
   }
-  public set insightsType(value: string | undefined) {
+  public set insightsType(value: string) {
     this._insightsType = value;
   }
   public resetInsightsType() {
@@ -268,7 +362,7 @@ export class MediaTransformOutputVideoAnalyzerPresetOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get insightsTypeInput() {
-    return this._insightsType
+    return this._insightsType;
   }
 }
 export interface MediaTransformOutput {
@@ -306,7 +400,7 @@ export interface MediaTransformOutput {
   readonly videoAnalyzerPreset?: MediaTransformOutputVideoAnalyzerPreset;
 }
 
-function mediaTransformOutputToTerraform(struct?: MediaTransformOutput): any {
+export function mediaTransformOutputToTerraform(struct?: MediaTransformOutput): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -340,7 +434,7 @@ export interface MediaTransformTimeouts {
   readonly update?: string;
 }
 
-function mediaTransformTimeoutsToTerraform(struct?: MediaTransformTimeoutsOutputReference | MediaTransformTimeouts): any {
+export function mediaTransformTimeoutsToTerraform(struct?: MediaTransformTimeoutsOutputReference | MediaTransformTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -363,12 +457,49 @@ export class MediaTransformTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaTransformTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaTransformTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -376,15 +507,15 @@ export class MediaTransformTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -392,15 +523,15 @@ export class MediaTransformTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -408,15 +539,15 @@ export class MediaTransformTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -424,7 +555,7 @@ export class MediaTransformTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -465,7 +596,7 @@ export class MediaTransform extends cdktf.TerraformResource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._output = config.output;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -473,11 +604,11 @@ export class MediaTransform extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -485,7 +616,7 @@ export class MediaTransform extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -503,7 +634,7 @@ export class MediaTransform extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get mediaServicesAccountNameInput() {
-    return this._mediaServicesAccountName
+    return this._mediaServicesAccountName;
   }
 
   // name - computed: false, optional: false, required: true
@@ -516,7 +647,7 @@ export class MediaTransform extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -529,16 +660,16 @@ export class MediaTransform extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // output - computed: false, optional: true, required: false
-  private _output?: MediaTransformOutput[] | undefined; 
+  private _output?: MediaTransformOutput[]; 
   public get output() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('output') as any;
   }
-  public set output(value: MediaTransformOutput[] | undefined) {
+  public set output(value: MediaTransformOutput[]) {
     this._output = value;
   }
   public resetOutput() {
@@ -546,24 +677,23 @@ export class MediaTransform extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get outputInput() {
-    return this._output
+    return this._output;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MediaTransformTimeouts | undefined; 
-  private __timeoutsOutput = new MediaTransformTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MediaTransformTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MediaTransformTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MediaTransformTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -577,7 +707,7 @@ export class MediaTransform extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       output: cdktf.listMapper(mediaTransformOutputToTerraform)(this._output),
-      timeouts: mediaTransformTimeoutsToTerraform(this._timeouts),
+      timeouts: mediaTransformTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

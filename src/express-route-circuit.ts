@@ -71,7 +71,7 @@ export interface ExpressRouteCircuitSku {
   readonly tier: string;
 }
 
-function expressRouteCircuitSkuToTerraform(struct?: ExpressRouteCircuitSkuOutputReference | ExpressRouteCircuitSku): any {
+export function expressRouteCircuitSkuToTerraform(struct?: ExpressRouteCircuitSkuOutputReference | ExpressRouteCircuitSku): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -92,6 +92,31 @@ export class ExpressRouteCircuitSkuOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ExpressRouteCircuitSku | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._family) {
+      hasAnyValues = true;
+      internalValueResult.family = this._family;
+    }
+    if (this._tier) {
+      hasAnyValues = true;
+      internalValueResult.tier = this._tier;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ExpressRouteCircuitSku | undefined) {
+    if (value === undefined) {
+      this._family = undefined;
+      this._tier = undefined;
+    }
+    else {
+      this._family = value.family;
+      this._tier = value.tier;
+    }
+  }
+
   // family - computed: false, optional: false, required: true
   private _family?: string; 
   public get family() {
@@ -102,7 +127,7 @@ export class ExpressRouteCircuitSkuOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get familyInput() {
-    return this._family
+    return this._family;
   }
 
   // tier - computed: false, optional: false, required: true
@@ -115,7 +140,7 @@ export class ExpressRouteCircuitSkuOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get tierInput() {
-    return this._tier
+    return this._tier;
   }
 }
 export interface ExpressRouteCircuitTimeouts {
@@ -137,7 +162,7 @@ export interface ExpressRouteCircuitTimeouts {
   readonly update?: string;
 }
 
-function expressRouteCircuitTimeoutsToTerraform(struct?: ExpressRouteCircuitTimeoutsOutputReference | ExpressRouteCircuitTimeouts): any {
+export function expressRouteCircuitTimeoutsToTerraform(struct?: ExpressRouteCircuitTimeoutsOutputReference | ExpressRouteCircuitTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -160,12 +185,49 @@ export class ExpressRouteCircuitTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ExpressRouteCircuitTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ExpressRouteCircuitTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -173,15 +235,15 @@ export class ExpressRouteCircuitTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -189,15 +251,15 @@ export class ExpressRouteCircuitTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -205,15 +267,15 @@ export class ExpressRouteCircuitTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -221,7 +283,7 @@ export class ExpressRouteCircuitTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -267,8 +329,8 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._serviceProviderName = config.serviceProviderName;
     this._tags = config.tags;
-    this._sku = config.sku;
-    this._timeouts = config.timeouts;
+    this._sku.internalValue = config.sku;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -276,11 +338,11 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   // ==========
 
   // allow_classic_operations - computed: false, optional: true, required: false
-  private _allowClassicOperations?: boolean | cdktf.IResolvable | undefined; 
+  private _allowClassicOperations?: boolean | cdktf.IResolvable; 
   public get allowClassicOperations() {
     return this.getBooleanAttribute('allow_classic_operations') as any;
   }
-  public set allowClassicOperations(value: boolean | cdktf.IResolvable | undefined) {
+  public set allowClassicOperations(value: boolean | cdktf.IResolvable) {
     this._allowClassicOperations = value;
   }
   public resetAllowClassicOperations() {
@@ -288,15 +350,15 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get allowClassicOperationsInput() {
-    return this._allowClassicOperations
+    return this._allowClassicOperations;
   }
 
   // bandwidth_in_gbps - computed: false, optional: true, required: false
-  private _bandwidthInGbps?: number | undefined; 
+  private _bandwidthInGbps?: number; 
   public get bandwidthInGbps() {
     return this.getNumberAttribute('bandwidth_in_gbps');
   }
-  public set bandwidthInGbps(value: number | undefined) {
+  public set bandwidthInGbps(value: number) {
     this._bandwidthInGbps = value;
   }
   public resetBandwidthInGbps() {
@@ -304,15 +366,15 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get bandwidthInGbpsInput() {
-    return this._bandwidthInGbps
+    return this._bandwidthInGbps;
   }
 
   // bandwidth_in_mbps - computed: false, optional: true, required: false
-  private _bandwidthInMbps?: number | undefined; 
+  private _bandwidthInMbps?: number; 
   public get bandwidthInMbps() {
     return this.getNumberAttribute('bandwidth_in_mbps');
   }
-  public set bandwidthInMbps(value: number | undefined) {
+  public set bandwidthInMbps(value: number) {
     this._bandwidthInMbps = value;
   }
   public resetBandwidthInMbps() {
@@ -320,15 +382,15 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get bandwidthInMbpsInput() {
-    return this._bandwidthInMbps
+    return this._bandwidthInMbps;
   }
 
   // express_route_port_id - computed: false, optional: true, required: false
-  private _expressRoutePortId?: string | undefined; 
+  private _expressRoutePortId?: string; 
   public get expressRoutePortId() {
     return this.getStringAttribute('express_route_port_id');
   }
-  public set expressRoutePortId(value: string | undefined) {
+  public set expressRoutePortId(value: string) {
     this._expressRoutePortId = value;
   }
   public resetExpressRoutePortId() {
@@ -336,7 +398,7 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get expressRoutePortIdInput() {
-    return this._expressRoutePortId
+    return this._expressRoutePortId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -354,7 +416,7 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -367,15 +429,15 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // peering_location - computed: false, optional: true, required: false
-  private _peeringLocation?: string | undefined; 
+  private _peeringLocation?: string; 
   public get peeringLocation() {
     return this.getStringAttribute('peering_location');
   }
-  public set peeringLocation(value: string | undefined) {
+  public set peeringLocation(value: string) {
     this._peeringLocation = value;
   }
   public resetPeeringLocation() {
@@ -383,7 +445,7 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get peeringLocationInput() {
-    return this._peeringLocation
+    return this._peeringLocation;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -396,7 +458,7 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // service_key - computed: true, optional: false, required: false
@@ -405,11 +467,11 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   }
 
   // service_provider_name - computed: false, optional: true, required: false
-  private _serviceProviderName?: string | undefined; 
+  private _serviceProviderName?: string; 
   public get serviceProviderName() {
     return this.getStringAttribute('service_provider_name');
   }
-  public set serviceProviderName(value: string | undefined) {
+  public set serviceProviderName(value: string) {
     this._serviceProviderName = value;
   }
   public resetServiceProviderName() {
@@ -417,7 +479,7 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get serviceProviderNameInput() {
-    return this._serviceProviderName
+    return this._serviceProviderName;
   }
 
   // service_provider_provisioning_state - computed: true, optional: false, required: false
@@ -426,12 +488,12 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -439,38 +501,36 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // sku - computed: false, optional: false, required: true
-  private _sku?: ExpressRouteCircuitSku; 
-  private __skuOutput = new ExpressRouteCircuitSkuOutputReference(this as any, "sku", true);
+  private _sku = new ExpressRouteCircuitSkuOutputReference(this as any, "sku", true);
   public get sku() {
-    return this.__skuOutput;
+    return this._sku;
   }
   public putSku(value: ExpressRouteCircuitSku) {
-    this._sku = value;
+    this._sku.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get skuInput() {
-    return this._sku
+    return this._sku.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ExpressRouteCircuitTimeouts | undefined; 
-  private __timeoutsOutput = new ExpressRouteCircuitTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ExpressRouteCircuitTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ExpressRouteCircuitTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ExpressRouteCircuitTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -489,8 +549,8 @@ export class ExpressRouteCircuit extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_provider_name: cdktf.stringToTerraform(this._serviceProviderName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      sku: expressRouteCircuitSkuToTerraform(this._sku),
-      timeouts: expressRouteCircuitTimeoutsToTerraform(this._timeouts),
+      sku: expressRouteCircuitSkuToTerraform(this._sku.internalValue),
+      timeouts: expressRouteCircuitTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

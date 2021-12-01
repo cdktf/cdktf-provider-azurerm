@@ -61,7 +61,7 @@ export interface SignalrServiceCors {
   readonly allowedOrigins: string[];
 }
 
-function signalrServiceCorsToTerraform(struct?: SignalrServiceCors): any {
+export function signalrServiceCorsToTerraform(struct?: SignalrServiceCors): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -82,7 +82,7 @@ export interface SignalrServiceFeatures {
   readonly value: string;
 }
 
-function signalrServiceFeaturesToTerraform(struct?: SignalrServiceFeatures): any {
+export function signalrServiceFeaturesToTerraform(struct?: SignalrServiceFeatures): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -104,7 +104,7 @@ export interface SignalrServiceSku {
   readonly name: string;
 }
 
-function signalrServiceSkuToTerraform(struct?: SignalrServiceSkuOutputReference | SignalrServiceSku): any {
+export function signalrServiceSkuToTerraform(struct?: SignalrServiceSkuOutputReference | SignalrServiceSku): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -125,6 +125,31 @@ export class SignalrServiceSkuOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SignalrServiceSku | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._capacity) {
+      hasAnyValues = true;
+      internalValueResult.capacity = this._capacity;
+    }
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SignalrServiceSku | undefined) {
+    if (value === undefined) {
+      this._capacity = undefined;
+      this._name = undefined;
+    }
+    else {
+      this._capacity = value.capacity;
+      this._name = value.name;
+    }
+  }
+
   // capacity - computed: false, optional: false, required: true
   private _capacity?: number; 
   public get capacity() {
@@ -135,7 +160,7 @@ export class SignalrServiceSkuOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get capacityInput() {
-    return this._capacity
+    return this._capacity;
   }
 
   // name - computed: false, optional: false, required: true
@@ -148,7 +173,7 @@ export class SignalrServiceSkuOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 }
 export interface SignalrServiceTimeouts {
@@ -170,7 +195,7 @@ export interface SignalrServiceTimeouts {
   readonly update?: string;
 }
 
-function signalrServiceTimeoutsToTerraform(struct?: SignalrServiceTimeoutsOutputReference | SignalrServiceTimeouts): any {
+export function signalrServiceTimeoutsToTerraform(struct?: SignalrServiceTimeoutsOutputReference | SignalrServiceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -193,12 +218,49 @@ export class SignalrServiceTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SignalrServiceTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SignalrServiceTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -206,15 +268,15 @@ export class SignalrServiceTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -222,15 +284,15 @@ export class SignalrServiceTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -238,15 +300,15 @@ export class SignalrServiceTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -254,7 +316,7 @@ export class SignalrServiceTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface SignalrServiceUpstreamEndpoint {
@@ -276,7 +338,7 @@ export interface SignalrServiceUpstreamEndpoint {
   readonly urlTemplate: string;
 }
 
-function signalrServiceUpstreamEndpointToTerraform(struct?: SignalrServiceUpstreamEndpoint): any {
+export function signalrServiceUpstreamEndpointToTerraform(struct?: SignalrServiceUpstreamEndpoint): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -328,8 +390,8 @@ export class SignalrService extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._cors = config.cors;
     this._features = config.features;
-    this._sku = config.sku;
-    this._timeouts = config.timeouts;
+    this._sku.internalValue = config.sku;
+    this._timeouts.internalValue = config.timeouts;
     this._upstreamEndpoint = config.upstreamEndpoint;
   }
 
@@ -362,7 +424,7 @@ export class SignalrService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -375,7 +437,7 @@ export class SignalrService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // primary_access_key - computed: true, optional: false, required: false
@@ -403,7 +465,7 @@ export class SignalrService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // secondary_access_key - computed: true, optional: false, required: false
@@ -422,12 +484,12 @@ export class SignalrService extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -435,16 +497,16 @@ export class SignalrService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // cors - computed: false, optional: true, required: false
-  private _cors?: SignalrServiceCors[] | undefined; 
+  private _cors?: SignalrServiceCors[]; 
   public get cors() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('cors') as any;
   }
-  public set cors(value: SignalrServiceCors[] | undefined) {
+  public set cors(value: SignalrServiceCors[]) {
     this._cors = value;
   }
   public resetCors() {
@@ -452,16 +514,16 @@ export class SignalrService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get corsInput() {
-    return this._cors
+    return this._cors;
   }
 
   // features - computed: false, optional: true, required: false
-  private _features?: SignalrServiceFeatures[] | undefined; 
+  private _features?: SignalrServiceFeatures[]; 
   public get features() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('features') as any;
   }
-  public set features(value: SignalrServiceFeatures[] | undefined) {
+  public set features(value: SignalrServiceFeatures[]) {
     this._features = value;
   }
   public resetFeatures() {
@@ -469,47 +531,45 @@ export class SignalrService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get featuresInput() {
-    return this._features
+    return this._features;
   }
 
   // sku - computed: false, optional: false, required: true
-  private _sku?: SignalrServiceSku; 
-  private __skuOutput = new SignalrServiceSkuOutputReference(this as any, "sku", true);
+  private _sku = new SignalrServiceSkuOutputReference(this as any, "sku", true);
   public get sku() {
-    return this.__skuOutput;
+    return this._sku;
   }
   public putSku(value: SignalrServiceSku) {
-    this._sku = value;
+    this._sku.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get skuInput() {
-    return this._sku
+    return this._sku.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SignalrServiceTimeouts | undefined; 
-  private __timeoutsOutput = new SignalrServiceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SignalrServiceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SignalrServiceTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SignalrServiceTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // upstream_endpoint - computed: false, optional: true, required: false
-  private _upstreamEndpoint?: SignalrServiceUpstreamEndpoint[] | undefined; 
+  private _upstreamEndpoint?: SignalrServiceUpstreamEndpoint[]; 
   public get upstreamEndpoint() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('upstream_endpoint') as any;
   }
-  public set upstreamEndpoint(value: SignalrServiceUpstreamEndpoint[] | undefined) {
+  public set upstreamEndpoint(value: SignalrServiceUpstreamEndpoint[]) {
     this._upstreamEndpoint = value;
   }
   public resetUpstreamEndpoint() {
@@ -517,7 +577,7 @@ export class SignalrService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get upstreamEndpointInput() {
-    return this._upstreamEndpoint
+    return this._upstreamEndpoint;
   }
 
   // =========
@@ -532,8 +592,8 @@ export class SignalrService extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       cors: cdktf.listMapper(signalrServiceCorsToTerraform)(this._cors),
       features: cdktf.listMapper(signalrServiceFeaturesToTerraform)(this._features),
-      sku: signalrServiceSkuToTerraform(this._sku),
-      timeouts: signalrServiceTimeoutsToTerraform(this._timeouts),
+      sku: signalrServiceSkuToTerraform(this._sku.internalValue),
+      timeouts: signalrServiceTimeoutsToTerraform(this._timeouts.internalValue),
       upstream_endpoint: cdktf.listMapper(signalrServiceUpstreamEndpointToTerraform)(this._upstreamEndpoint),
     };
   }

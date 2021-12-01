@@ -69,7 +69,7 @@ export interface KeyVaultKeyTimeouts {
   readonly update?: string;
 }
 
-function keyVaultKeyTimeoutsToTerraform(struct?: KeyVaultKeyTimeoutsOutputReference | KeyVaultKeyTimeouts): any {
+export function keyVaultKeyTimeoutsToTerraform(struct?: KeyVaultKeyTimeoutsOutputReference | KeyVaultKeyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -92,12 +92,49 @@ export class KeyVaultKeyTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): KeyVaultKeyTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KeyVaultKeyTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -105,15 +142,15 @@ export class KeyVaultKeyTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -121,15 +158,15 @@ export class KeyVaultKeyTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -137,15 +174,15 @@ export class KeyVaultKeyTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -153,7 +190,7 @@ export class KeyVaultKeyTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -198,7 +235,7 @@ export class KeyVaultKey extends cdktf.TerraformResource {
     this._name = config.name;
     this._notBeforeDate = config.notBeforeDate;
     this._tags = config.tags;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -206,11 +243,11 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   // ==========
 
   // curve - computed: true, optional: true, required: false
-  private _curve?: string | undefined; 
+  private _curve?: string; 
   public get curve() {
     return this.getStringAttribute('curve');
   }
-  public set curve(value: string | undefined) {
+  public set curve(value: string) {
     this._curve = value;
   }
   public resetCurve() {
@@ -218,7 +255,7 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get curveInput() {
-    return this._curve
+    return this._curve;
   }
 
   // e - computed: true, optional: false, required: false
@@ -227,11 +264,11 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
 
   // expiration_date - computed: false, optional: true, required: false
-  private _expirationDate?: string | undefined; 
+  private _expirationDate?: string; 
   public get expirationDate() {
     return this.getStringAttribute('expiration_date');
   }
-  public set expirationDate(value: string | undefined) {
+  public set expirationDate(value: string) {
     this._expirationDate = value;
   }
   public resetExpirationDate() {
@@ -239,7 +276,7 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get expirationDateInput() {
-    return this._expirationDate
+    return this._expirationDate;
   }
 
   // id - computed: true, optional: true, required: false
@@ -257,15 +294,15 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get keyOptsInput() {
-    return this._keyOpts
+    return this._keyOpts;
   }
 
   // key_size - computed: false, optional: true, required: false
-  private _keySize?: number | undefined; 
+  private _keySize?: number; 
   public get keySize() {
     return this.getNumberAttribute('key_size');
   }
-  public set keySize(value: number | undefined) {
+  public set keySize(value: number) {
     this._keySize = value;
   }
   public resetKeySize() {
@@ -273,7 +310,7 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get keySizeInput() {
-    return this._keySize
+    return this._keySize;
   }
 
   // key_type - computed: false, optional: false, required: true
@@ -286,7 +323,7 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get keyTypeInput() {
-    return this._keyType
+    return this._keyType;
   }
 
   // key_vault_id - computed: false, optional: false, required: true
@@ -299,7 +336,7 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get keyVaultIdInput() {
-    return this._keyVaultId
+    return this._keyVaultId;
   }
 
   // n - computed: true, optional: false, required: false
@@ -317,15 +354,15 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // not_before_date - computed: false, optional: true, required: false
-  private _notBeforeDate?: string | undefined; 
+  private _notBeforeDate?: string; 
   public get notBeforeDate() {
     return this.getStringAttribute('not_before_date');
   }
-  public set notBeforeDate(value: string | undefined) {
+  public set notBeforeDate(value: string) {
     this._notBeforeDate = value;
   }
   public resetNotBeforeDate() {
@@ -333,7 +370,7 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get notBeforeDateInput() {
-    return this._notBeforeDate
+    return this._notBeforeDate;
   }
 
   // public_key_openssh - computed: true, optional: false, required: false
@@ -347,12 +384,12 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -360,7 +397,7 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // version - computed: true, optional: false, required: false
@@ -384,20 +421,19 @@ export class KeyVaultKey extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: KeyVaultKeyTimeouts | undefined; 
-  private __timeoutsOutput = new KeyVaultKeyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new KeyVaultKeyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: KeyVaultKeyTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: KeyVaultKeyTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -415,7 +451,7 @@ export class KeyVaultKey extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       not_before_date: cdktf.stringToTerraform(this._notBeforeDate),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      timeouts: keyVaultKeyTimeoutsToTerraform(this._timeouts),
+      timeouts: keyVaultKeyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

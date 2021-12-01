@@ -55,7 +55,7 @@ export interface DataShareDatasetBlobStorageStorageAccount {
   readonly subscriptionId: string;
 }
 
-function dataShareDatasetBlobStorageStorageAccountToTerraform(struct?: DataShareDatasetBlobStorageStorageAccountOutputReference | DataShareDatasetBlobStorageStorageAccount): any {
+export function dataShareDatasetBlobStorageStorageAccountToTerraform(struct?: DataShareDatasetBlobStorageStorageAccountOutputReference | DataShareDatasetBlobStorageStorageAccount): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -77,6 +77,37 @@ export class DataShareDatasetBlobStorageStorageAccountOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataShareDatasetBlobStorageStorageAccount | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._resourceGroupName) {
+      hasAnyValues = true;
+      internalValueResult.resourceGroupName = this._resourceGroupName;
+    }
+    if (this._subscriptionId) {
+      hasAnyValues = true;
+      internalValueResult.subscriptionId = this._subscriptionId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataShareDatasetBlobStorageStorageAccount | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._resourceGroupName = undefined;
+      this._subscriptionId = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._resourceGroupName = value.resourceGroupName;
+      this._subscriptionId = value.subscriptionId;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -87,7 +118,7 @@ export class DataShareDatasetBlobStorageStorageAccountOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -100,7 +131,7 @@ export class DataShareDatasetBlobStorageStorageAccountOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // subscription_id - computed: false, optional: false, required: true
@@ -113,7 +144,7 @@ export class DataShareDatasetBlobStorageStorageAccountOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get subscriptionIdInput() {
-    return this._subscriptionId
+    return this._subscriptionId;
   }
 }
 export interface DataShareDatasetBlobStorageTimeouts {
@@ -131,7 +162,7 @@ export interface DataShareDatasetBlobStorageTimeouts {
   readonly read?: string;
 }
 
-function dataShareDatasetBlobStorageTimeoutsToTerraform(struct?: DataShareDatasetBlobStorageTimeoutsOutputReference | DataShareDatasetBlobStorageTimeouts): any {
+export function dataShareDatasetBlobStorageTimeoutsToTerraform(struct?: DataShareDatasetBlobStorageTimeoutsOutputReference | DataShareDatasetBlobStorageTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -153,12 +184,43 @@ export class DataShareDatasetBlobStorageTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataShareDatasetBlobStorageTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataShareDatasetBlobStorageTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -166,15 +228,15 @@ export class DataShareDatasetBlobStorageTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -182,15 +244,15 @@ export class DataShareDatasetBlobStorageTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -198,7 +260,7 @@ export class DataShareDatasetBlobStorageTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -239,8 +301,8 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
     this._filePath = config.filePath;
     this._folderPath = config.folderPath;
     this._name = config.name;
-    this._storageAccount = config.storageAccount;
-    this._timeouts = config.timeouts;
+    this._storageAccount.internalValue = config.storageAccount;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -257,7 +319,7 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get containerNameInput() {
-    return this._containerName
+    return this._containerName;
   }
 
   // data_share_id - computed: false, optional: false, required: true
@@ -270,7 +332,7 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dataShareIdInput() {
-    return this._dataShareId
+    return this._dataShareId;
   }
 
   // display_name - computed: true, optional: false, required: false
@@ -279,11 +341,11 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
   }
 
   // file_path - computed: false, optional: true, required: false
-  private _filePath?: string | undefined; 
+  private _filePath?: string; 
   public get filePath() {
     return this.getStringAttribute('file_path');
   }
-  public set filePath(value: string | undefined) {
+  public set filePath(value: string) {
     this._filePath = value;
   }
   public resetFilePath() {
@@ -291,15 +353,15 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get filePathInput() {
-    return this._filePath
+    return this._filePath;
   }
 
   // folder_path - computed: false, optional: true, required: false
-  private _folderPath?: string | undefined; 
+  private _folderPath?: string; 
   public get folderPath() {
     return this.getStringAttribute('folder_path');
   }
-  public set folderPath(value: string | undefined) {
+  public set folderPath(value: string) {
     this._folderPath = value;
   }
   public resetFolderPath() {
@@ -307,7 +369,7 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get folderPathInput() {
-    return this._folderPath
+    return this._folderPath;
   }
 
   // id - computed: true, optional: true, required: false
@@ -325,38 +387,36 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // storage_account - computed: false, optional: false, required: true
-  private _storageAccount?: DataShareDatasetBlobStorageStorageAccount; 
-  private __storageAccountOutput = new DataShareDatasetBlobStorageStorageAccountOutputReference(this as any, "storage_account", true);
+  private _storageAccount = new DataShareDatasetBlobStorageStorageAccountOutputReference(this as any, "storage_account", true);
   public get storageAccount() {
-    return this.__storageAccountOutput;
+    return this._storageAccount;
   }
   public putStorageAccount(value: DataShareDatasetBlobStorageStorageAccount) {
-    this._storageAccount = value;
+    this._storageAccount.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountInput() {
-    return this._storageAccount
+    return this._storageAccount.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataShareDatasetBlobStorageTimeouts | undefined; 
-  private __timeoutsOutput = new DataShareDatasetBlobStorageTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataShareDatasetBlobStorageTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataShareDatasetBlobStorageTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataShareDatasetBlobStorageTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -370,8 +430,8 @@ export class DataShareDatasetBlobStorage extends cdktf.TerraformResource {
       file_path: cdktf.stringToTerraform(this._filePath),
       folder_path: cdktf.stringToTerraform(this._folderPath),
       name: cdktf.stringToTerraform(this._name),
-      storage_account: dataShareDatasetBlobStorageStorageAccountToTerraform(this._storageAccount),
-      timeouts: dataShareDatasetBlobStorageTimeoutsToTerraform(this._timeouts),
+      storage_account: dataShareDatasetBlobStorageStorageAccountToTerraform(this._storageAccount.internalValue),
+      timeouts: dataShareDatasetBlobStorageTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

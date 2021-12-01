@@ -155,7 +155,7 @@ export interface CosmosdbAccountAnalyticalStorage {
   readonly schemaType: string;
 }
 
-function cosmosdbAccountAnalyticalStorageToTerraform(struct?: CosmosdbAccountAnalyticalStorageOutputReference | CosmosdbAccountAnalyticalStorage): any {
+export function cosmosdbAccountAnalyticalStorageToTerraform(struct?: CosmosdbAccountAnalyticalStorageOutputReference | CosmosdbAccountAnalyticalStorage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -175,6 +175,25 @@ export class CosmosdbAccountAnalyticalStorageOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbAccountAnalyticalStorage | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._schemaType) {
+      hasAnyValues = true;
+      internalValueResult.schemaType = this._schemaType;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbAccountAnalyticalStorage | undefined) {
+    if (value === undefined) {
+      this._schemaType = undefined;
+    }
+    else {
+      this._schemaType = value.schemaType;
+    }
+  }
+
   // schema_type - computed: false, optional: false, required: true
   private _schemaType?: string; 
   public get schemaType() {
@@ -185,7 +204,7 @@ export class CosmosdbAccountAnalyticalStorageOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get schemaTypeInput() {
-    return this._schemaType
+    return this._schemaType;
   }
 }
 export interface CosmosdbAccountBackup {
@@ -207,7 +226,7 @@ export interface CosmosdbAccountBackup {
   readonly type: string;
 }
 
-function cosmosdbAccountBackupToTerraform(struct?: CosmosdbAccountBackupOutputReference | CosmosdbAccountBackup): any {
+export function cosmosdbAccountBackupToTerraform(struct?: CosmosdbAccountBackupOutputReference | CosmosdbAccountBackup): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -230,12 +249,49 @@ export class CosmosdbAccountBackupOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbAccountBackup | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._intervalInMinutes) {
+      hasAnyValues = true;
+      internalValueResult.intervalInMinutes = this._intervalInMinutes;
+    }
+    if (this._retentionInHours) {
+      hasAnyValues = true;
+      internalValueResult.retentionInHours = this._retentionInHours;
+    }
+    if (this._storageRedundancy) {
+      hasAnyValues = true;
+      internalValueResult.storageRedundancy = this._storageRedundancy;
+    }
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbAccountBackup | undefined) {
+    if (value === undefined) {
+      this._intervalInMinutes = undefined;
+      this._retentionInHours = undefined;
+      this._storageRedundancy = undefined;
+      this._type = undefined;
+    }
+    else {
+      this._intervalInMinutes = value.intervalInMinutes;
+      this._retentionInHours = value.retentionInHours;
+      this._storageRedundancy = value.storageRedundancy;
+      this._type = value.type;
+    }
+  }
+
   // interval_in_minutes - computed: true, optional: true, required: false
-  private _intervalInMinutes?: number | undefined; 
+  private _intervalInMinutes?: number; 
   public get intervalInMinutes() {
     return this.getNumberAttribute('interval_in_minutes');
   }
-  public set intervalInMinutes(value: number | undefined) {
+  public set intervalInMinutes(value: number) {
     this._intervalInMinutes = value;
   }
   public resetIntervalInMinutes() {
@@ -243,15 +299,15 @@ export class CosmosdbAccountBackupOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get intervalInMinutesInput() {
-    return this._intervalInMinutes
+    return this._intervalInMinutes;
   }
 
   // retention_in_hours - computed: true, optional: true, required: false
-  private _retentionInHours?: number | undefined; 
+  private _retentionInHours?: number; 
   public get retentionInHours() {
     return this.getNumberAttribute('retention_in_hours');
   }
-  public set retentionInHours(value: number | undefined) {
+  public set retentionInHours(value: number) {
     this._retentionInHours = value;
   }
   public resetRetentionInHours() {
@@ -259,15 +315,15 @@ export class CosmosdbAccountBackupOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get retentionInHoursInput() {
-    return this._retentionInHours
+    return this._retentionInHours;
   }
 
   // storage_redundancy - computed: true, optional: true, required: false
-  private _storageRedundancy?: string | undefined; 
+  private _storageRedundancy?: string; 
   public get storageRedundancy() {
     return this.getStringAttribute('storage_redundancy');
   }
-  public set storageRedundancy(value: string | undefined) {
+  public set storageRedundancy(value: string) {
     this._storageRedundancy = value;
   }
   public resetStorageRedundancy() {
@@ -275,7 +331,7 @@ export class CosmosdbAccountBackupOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get storageRedundancyInput() {
-    return this._storageRedundancy
+    return this._storageRedundancy;
   }
 
   // type - computed: false, optional: false, required: true
@@ -288,7 +344,7 @@ export class CosmosdbAccountBackupOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface CosmosdbAccountCapabilities {
@@ -298,7 +354,7 @@ export interface CosmosdbAccountCapabilities {
   readonly name: string;
 }
 
-function cosmosdbAccountCapabilitiesToTerraform(struct?: CosmosdbAccountCapabilities): any {
+export function cosmosdbAccountCapabilitiesToTerraform(struct?: CosmosdbAccountCapabilities): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -315,7 +371,7 @@ export interface CosmosdbAccountCapacity {
   readonly totalThroughputLimit: number;
 }
 
-function cosmosdbAccountCapacityToTerraform(struct?: CosmosdbAccountCapacityOutputReference | CosmosdbAccountCapacity): any {
+export function cosmosdbAccountCapacityToTerraform(struct?: CosmosdbAccountCapacityOutputReference | CosmosdbAccountCapacity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -335,6 +391,25 @@ export class CosmosdbAccountCapacityOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbAccountCapacity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._totalThroughputLimit) {
+      hasAnyValues = true;
+      internalValueResult.totalThroughputLimit = this._totalThroughputLimit;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbAccountCapacity | undefined) {
+    if (value === undefined) {
+      this._totalThroughputLimit = undefined;
+    }
+    else {
+      this._totalThroughputLimit = value.totalThroughputLimit;
+    }
+  }
+
   // total_throughput_limit - computed: false, optional: false, required: true
   private _totalThroughputLimit?: number; 
   public get totalThroughputLimit() {
@@ -345,7 +420,7 @@ export class CosmosdbAccountCapacityOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get totalThroughputLimitInput() {
-    return this._totalThroughputLimit
+    return this._totalThroughputLimit;
   }
 }
 export interface CosmosdbAccountConsistencyPolicy {
@@ -363,7 +438,7 @@ export interface CosmosdbAccountConsistencyPolicy {
   readonly maxStalenessPrefix?: number;
 }
 
-function cosmosdbAccountConsistencyPolicyToTerraform(struct?: CosmosdbAccountConsistencyPolicyOutputReference | CosmosdbAccountConsistencyPolicy): any {
+export function cosmosdbAccountConsistencyPolicyToTerraform(struct?: CosmosdbAccountConsistencyPolicyOutputReference | CosmosdbAccountConsistencyPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -385,6 +460,37 @@ export class CosmosdbAccountConsistencyPolicyOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbAccountConsistencyPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._consistencyLevel) {
+      hasAnyValues = true;
+      internalValueResult.consistencyLevel = this._consistencyLevel;
+    }
+    if (this._maxIntervalInSeconds) {
+      hasAnyValues = true;
+      internalValueResult.maxIntervalInSeconds = this._maxIntervalInSeconds;
+    }
+    if (this._maxStalenessPrefix) {
+      hasAnyValues = true;
+      internalValueResult.maxStalenessPrefix = this._maxStalenessPrefix;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbAccountConsistencyPolicy | undefined) {
+    if (value === undefined) {
+      this._consistencyLevel = undefined;
+      this._maxIntervalInSeconds = undefined;
+      this._maxStalenessPrefix = undefined;
+    }
+    else {
+      this._consistencyLevel = value.consistencyLevel;
+      this._maxIntervalInSeconds = value.maxIntervalInSeconds;
+      this._maxStalenessPrefix = value.maxStalenessPrefix;
+    }
+  }
+
   // consistency_level - computed: false, optional: false, required: true
   private _consistencyLevel?: string; 
   public get consistencyLevel() {
@@ -395,15 +501,15 @@ export class CosmosdbAccountConsistencyPolicyOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get consistencyLevelInput() {
-    return this._consistencyLevel
+    return this._consistencyLevel;
   }
 
   // max_interval_in_seconds - computed: true, optional: true, required: false
-  private _maxIntervalInSeconds?: number | undefined; 
+  private _maxIntervalInSeconds?: number; 
   public get maxIntervalInSeconds() {
     return this.getNumberAttribute('max_interval_in_seconds');
   }
-  public set maxIntervalInSeconds(value: number | undefined) {
+  public set maxIntervalInSeconds(value: number) {
     this._maxIntervalInSeconds = value;
   }
   public resetMaxIntervalInSeconds() {
@@ -411,15 +517,15 @@ export class CosmosdbAccountConsistencyPolicyOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get maxIntervalInSecondsInput() {
-    return this._maxIntervalInSeconds
+    return this._maxIntervalInSeconds;
   }
 
   // max_staleness_prefix - computed: true, optional: true, required: false
-  private _maxStalenessPrefix?: number | undefined; 
+  private _maxStalenessPrefix?: number; 
   public get maxStalenessPrefix() {
     return this.getNumberAttribute('max_staleness_prefix');
   }
-  public set maxStalenessPrefix(value: number | undefined) {
+  public set maxStalenessPrefix(value: number) {
     this._maxStalenessPrefix = value;
   }
   public resetMaxStalenessPrefix() {
@@ -427,7 +533,7 @@ export class CosmosdbAccountConsistencyPolicyOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get maxStalenessPrefixInput() {
-    return this._maxStalenessPrefix
+    return this._maxStalenessPrefix;
   }
 }
 export interface CosmosdbAccountCorsRule {
@@ -453,7 +559,7 @@ export interface CosmosdbAccountCorsRule {
   readonly maxAgeInSeconds: number;
 }
 
-function cosmosdbAccountCorsRuleToTerraform(struct?: CosmosdbAccountCorsRuleOutputReference | CosmosdbAccountCorsRule): any {
+export function cosmosdbAccountCorsRuleToTerraform(struct?: CosmosdbAccountCorsRuleOutputReference | CosmosdbAccountCorsRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -477,6 +583,49 @@ export class CosmosdbAccountCorsRuleOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbAccountCorsRule | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowedHeaders) {
+      hasAnyValues = true;
+      internalValueResult.allowedHeaders = this._allowedHeaders;
+    }
+    if (this._allowedMethods) {
+      hasAnyValues = true;
+      internalValueResult.allowedMethods = this._allowedMethods;
+    }
+    if (this._allowedOrigins) {
+      hasAnyValues = true;
+      internalValueResult.allowedOrigins = this._allowedOrigins;
+    }
+    if (this._exposedHeaders) {
+      hasAnyValues = true;
+      internalValueResult.exposedHeaders = this._exposedHeaders;
+    }
+    if (this._maxAgeInSeconds) {
+      hasAnyValues = true;
+      internalValueResult.maxAgeInSeconds = this._maxAgeInSeconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbAccountCorsRule | undefined) {
+    if (value === undefined) {
+      this._allowedHeaders = undefined;
+      this._allowedMethods = undefined;
+      this._allowedOrigins = undefined;
+      this._exposedHeaders = undefined;
+      this._maxAgeInSeconds = undefined;
+    }
+    else {
+      this._allowedHeaders = value.allowedHeaders;
+      this._allowedMethods = value.allowedMethods;
+      this._allowedOrigins = value.allowedOrigins;
+      this._exposedHeaders = value.exposedHeaders;
+      this._maxAgeInSeconds = value.maxAgeInSeconds;
+    }
+  }
+
   // allowed_headers - computed: false, optional: false, required: true
   private _allowedHeaders?: string[]; 
   public get allowedHeaders() {
@@ -487,7 +636,7 @@ export class CosmosdbAccountCorsRuleOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get allowedHeadersInput() {
-    return this._allowedHeaders
+    return this._allowedHeaders;
   }
 
   // allowed_methods - computed: false, optional: false, required: true
@@ -500,7 +649,7 @@ export class CosmosdbAccountCorsRuleOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get allowedMethodsInput() {
-    return this._allowedMethods
+    return this._allowedMethods;
   }
 
   // allowed_origins - computed: false, optional: false, required: true
@@ -513,7 +662,7 @@ export class CosmosdbAccountCorsRuleOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get allowedOriginsInput() {
-    return this._allowedOrigins
+    return this._allowedOrigins;
   }
 
   // exposed_headers - computed: false, optional: false, required: true
@@ -526,7 +675,7 @@ export class CosmosdbAccountCorsRuleOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get exposedHeadersInput() {
-    return this._exposedHeaders
+    return this._exposedHeaders;
   }
 
   // max_age_in_seconds - computed: false, optional: false, required: true
@@ -539,7 +688,7 @@ export class CosmosdbAccountCorsRuleOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get maxAgeInSecondsInput() {
-    return this._maxAgeInSeconds
+    return this._maxAgeInSeconds;
   }
 }
 export interface CosmosdbAccountGeoLocation {
@@ -561,7 +710,7 @@ export interface CosmosdbAccountGeoLocation {
   readonly zoneRedundant?: boolean | cdktf.IResolvable;
 }
 
-function cosmosdbAccountGeoLocationToTerraform(struct?: CosmosdbAccountGeoLocation): any {
+export function cosmosdbAccountGeoLocationToTerraform(struct?: CosmosdbAccountGeoLocation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -581,7 +730,7 @@ export interface CosmosdbAccountIdentity {
   readonly type: string;
 }
 
-function cosmosdbAccountIdentityToTerraform(struct?: CosmosdbAccountIdentityOutputReference | CosmosdbAccountIdentity): any {
+export function cosmosdbAccountIdentityToTerraform(struct?: CosmosdbAccountIdentityOutputReference | CosmosdbAccountIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -601,6 +750,25 @@ export class CosmosdbAccountIdentityOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbAccountIdentity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbAccountIdentity | undefined) {
+    if (value === undefined) {
+      this._type = undefined;
+    }
+    else {
+      this._type = value.type;
+    }
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -611,7 +779,7 @@ export class CosmosdbAccountIdentityOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface CosmosdbAccountTimeouts {
@@ -633,7 +801,7 @@ export interface CosmosdbAccountTimeouts {
   readonly update?: string;
 }
 
-function cosmosdbAccountTimeoutsToTerraform(struct?: CosmosdbAccountTimeoutsOutputReference | CosmosdbAccountTimeouts): any {
+export function cosmosdbAccountTimeoutsToTerraform(struct?: CosmosdbAccountTimeoutsOutputReference | CosmosdbAccountTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -656,12 +824,49 @@ export class CosmosdbAccountTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbAccountTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbAccountTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -669,15 +874,15 @@ export class CosmosdbAccountTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -685,15 +890,15 @@ export class CosmosdbAccountTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -701,15 +906,15 @@ export class CosmosdbAccountTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -717,7 +922,7 @@ export class CosmosdbAccountTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface CosmosdbAccountVirtualNetworkRule {
@@ -731,7 +936,7 @@ export interface CosmosdbAccountVirtualNetworkRule {
   readonly ignoreMissingVnetServiceEndpoint?: boolean | cdktf.IResolvable;
 }
 
-function cosmosdbAccountVirtualNetworkRuleToTerraform(struct?: CosmosdbAccountVirtualNetworkRule): any {
+export function cosmosdbAccountVirtualNetworkRuleToTerraform(struct?: CosmosdbAccountVirtualNetworkRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -795,15 +1000,15 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._analyticalStorage = config.analyticalStorage;
-    this._backup = config.backup;
+    this._analyticalStorage.internalValue = config.analyticalStorage;
+    this._backup.internalValue = config.backup;
     this._capabilities = config.capabilities;
-    this._capacity = config.capacity;
-    this._consistencyPolicy = config.consistencyPolicy;
-    this._corsRule = config.corsRule;
+    this._capacity.internalValue = config.capacity;
+    this._consistencyPolicy.internalValue = config.consistencyPolicy;
+    this._corsRule.internalValue = config.corsRule;
     this._geoLocation = config.geoLocation;
-    this._identity = config.identity;
-    this._timeouts = config.timeouts;
+    this._identity.internalValue = config.identity;
+    this._timeouts.internalValue = config.timeouts;
     this._virtualNetworkRule = config.virtualNetworkRule;
   }
 
@@ -812,11 +1017,11 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   // ==========
 
   // access_key_metadata_writes_enabled - computed: false, optional: true, required: false
-  private _accessKeyMetadataWritesEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _accessKeyMetadataWritesEnabled?: boolean | cdktf.IResolvable; 
   public get accessKeyMetadataWritesEnabled() {
     return this.getBooleanAttribute('access_key_metadata_writes_enabled') as any;
   }
-  public set accessKeyMetadataWritesEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set accessKeyMetadataWritesEnabled(value: boolean | cdktf.IResolvable) {
     this._accessKeyMetadataWritesEnabled = value;
   }
   public resetAccessKeyMetadataWritesEnabled() {
@@ -824,15 +1029,15 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get accessKeyMetadataWritesEnabledInput() {
-    return this._accessKeyMetadataWritesEnabled
+    return this._accessKeyMetadataWritesEnabled;
   }
 
   // analytical_storage_enabled - computed: false, optional: true, required: false
-  private _analyticalStorageEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _analyticalStorageEnabled?: boolean | cdktf.IResolvable; 
   public get analyticalStorageEnabled() {
     return this.getBooleanAttribute('analytical_storage_enabled') as any;
   }
-  public set analyticalStorageEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set analyticalStorageEnabled(value: boolean | cdktf.IResolvable) {
     this._analyticalStorageEnabled = value;
   }
   public resetAnalyticalStorageEnabled() {
@@ -840,7 +1045,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get analyticalStorageEnabledInput() {
-    return this._analyticalStorageEnabled
+    return this._analyticalStorageEnabled;
   }
 
   // connection_strings - computed: true, optional: false, required: false
@@ -849,11 +1054,11 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // default_identity_type - computed: false, optional: true, required: false
-  private _defaultIdentityType?: string | undefined; 
+  private _defaultIdentityType?: string; 
   public get defaultIdentityType() {
     return this.getStringAttribute('default_identity_type');
   }
-  public set defaultIdentityType(value: string | undefined) {
+  public set defaultIdentityType(value: string) {
     this._defaultIdentityType = value;
   }
   public resetDefaultIdentityType() {
@@ -861,15 +1066,15 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get defaultIdentityTypeInput() {
-    return this._defaultIdentityType
+    return this._defaultIdentityType;
   }
 
   // enable_automatic_failover - computed: false, optional: true, required: false
-  private _enableAutomaticFailover?: boolean | cdktf.IResolvable | undefined; 
+  private _enableAutomaticFailover?: boolean | cdktf.IResolvable; 
   public get enableAutomaticFailover() {
     return this.getBooleanAttribute('enable_automatic_failover') as any;
   }
-  public set enableAutomaticFailover(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableAutomaticFailover(value: boolean | cdktf.IResolvable) {
     this._enableAutomaticFailover = value;
   }
   public resetEnableAutomaticFailover() {
@@ -877,15 +1082,15 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableAutomaticFailoverInput() {
-    return this._enableAutomaticFailover
+    return this._enableAutomaticFailover;
   }
 
   // enable_free_tier - computed: false, optional: true, required: false
-  private _enableFreeTier?: boolean | cdktf.IResolvable | undefined; 
+  private _enableFreeTier?: boolean | cdktf.IResolvable; 
   public get enableFreeTier() {
     return this.getBooleanAttribute('enable_free_tier') as any;
   }
-  public set enableFreeTier(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableFreeTier(value: boolean | cdktf.IResolvable) {
     this._enableFreeTier = value;
   }
   public resetEnableFreeTier() {
@@ -893,15 +1098,15 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableFreeTierInput() {
-    return this._enableFreeTier
+    return this._enableFreeTier;
   }
 
   // enable_multiple_write_locations - computed: false, optional: true, required: false
-  private _enableMultipleWriteLocations?: boolean | cdktf.IResolvable | undefined; 
+  private _enableMultipleWriteLocations?: boolean | cdktf.IResolvable; 
   public get enableMultipleWriteLocations() {
     return this.getBooleanAttribute('enable_multiple_write_locations') as any;
   }
-  public set enableMultipleWriteLocations(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableMultipleWriteLocations(value: boolean | cdktf.IResolvable) {
     this._enableMultipleWriteLocations = value;
   }
   public resetEnableMultipleWriteLocations() {
@@ -909,7 +1114,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableMultipleWriteLocationsInput() {
-    return this._enableMultipleWriteLocations
+    return this._enableMultipleWriteLocations;
   }
 
   // endpoint - computed: true, optional: false, required: false
@@ -923,11 +1128,11 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // ip_range_filter - computed: false, optional: true, required: false
-  private _ipRangeFilter?: string | undefined; 
+  private _ipRangeFilter?: string; 
   public get ipRangeFilter() {
     return this.getStringAttribute('ip_range_filter');
   }
-  public set ipRangeFilter(value: string | undefined) {
+  public set ipRangeFilter(value: string) {
     this._ipRangeFilter = value;
   }
   public resetIpRangeFilter() {
@@ -935,15 +1140,15 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipRangeFilterInput() {
-    return this._ipRangeFilter
+    return this._ipRangeFilter;
   }
 
   // is_virtual_network_filter_enabled - computed: false, optional: true, required: false
-  private _isVirtualNetworkFilterEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _isVirtualNetworkFilterEnabled?: boolean | cdktf.IResolvable; 
   public get isVirtualNetworkFilterEnabled() {
     return this.getBooleanAttribute('is_virtual_network_filter_enabled') as any;
   }
-  public set isVirtualNetworkFilterEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set isVirtualNetworkFilterEnabled(value: boolean | cdktf.IResolvable) {
     this._isVirtualNetworkFilterEnabled = value;
   }
   public resetIsVirtualNetworkFilterEnabled() {
@@ -951,15 +1156,15 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get isVirtualNetworkFilterEnabledInput() {
-    return this._isVirtualNetworkFilterEnabled
+    return this._isVirtualNetworkFilterEnabled;
   }
 
   // key_vault_key_id - computed: false, optional: true, required: false
-  private _keyVaultKeyId?: string | undefined; 
+  private _keyVaultKeyId?: string; 
   public get keyVaultKeyId() {
     return this.getStringAttribute('key_vault_key_id');
   }
-  public set keyVaultKeyId(value: string | undefined) {
+  public set keyVaultKeyId(value: string) {
     this._keyVaultKeyId = value;
   }
   public resetKeyVaultKeyId() {
@@ -967,15 +1172,15 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get keyVaultKeyIdInput() {
-    return this._keyVaultKeyId
+    return this._keyVaultKeyId;
   }
 
   // kind - computed: false, optional: true, required: false
-  private _kind?: string | undefined; 
+  private _kind?: string; 
   public get kind() {
     return this.getStringAttribute('kind');
   }
-  public set kind(value: string | undefined) {
+  public set kind(value: string) {
     this._kind = value;
   }
   public resetKind() {
@@ -983,15 +1188,15 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get kindInput() {
-    return this._kind
+    return this._kind;
   }
 
   // local_authentication_disabled - computed: false, optional: true, required: false
-  private _localAuthenticationDisabled?: boolean | cdktf.IResolvable | undefined; 
+  private _localAuthenticationDisabled?: boolean | cdktf.IResolvable; 
   public get localAuthenticationDisabled() {
     return this.getBooleanAttribute('local_authentication_disabled') as any;
   }
-  public set localAuthenticationDisabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set localAuthenticationDisabled(value: boolean | cdktf.IResolvable) {
     this._localAuthenticationDisabled = value;
   }
   public resetLocalAuthenticationDisabled() {
@@ -999,7 +1204,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get localAuthenticationDisabledInput() {
-    return this._localAuthenticationDisabled
+    return this._localAuthenticationDisabled;
   }
 
   // location - computed: false, optional: false, required: true
@@ -1012,15 +1217,15 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // mongo_server_version - computed: true, optional: true, required: false
-  private _mongoServerVersion?: string | undefined; 
+  private _mongoServerVersion?: string; 
   public get mongoServerVersion() {
     return this.getStringAttribute('mongo_server_version');
   }
-  public set mongoServerVersion(value: string | undefined) {
+  public set mongoServerVersion(value: string) {
     this._mongoServerVersion = value;
   }
   public resetMongoServerVersion() {
@@ -1028,7 +1233,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get mongoServerVersionInput() {
-    return this._mongoServerVersion
+    return this._mongoServerVersion;
   }
 
   // name - computed: false, optional: false, required: true
@@ -1041,15 +1246,15 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network_acl_bypass_for_azure_services - computed: false, optional: true, required: false
-  private _networkAclBypassForAzureServices?: boolean | cdktf.IResolvable | undefined; 
+  private _networkAclBypassForAzureServices?: boolean | cdktf.IResolvable; 
   public get networkAclBypassForAzureServices() {
     return this.getBooleanAttribute('network_acl_bypass_for_azure_services') as any;
   }
-  public set networkAclBypassForAzureServices(value: boolean | cdktf.IResolvable | undefined) {
+  public set networkAclBypassForAzureServices(value: boolean | cdktf.IResolvable) {
     this._networkAclBypassForAzureServices = value;
   }
   public resetNetworkAclBypassForAzureServices() {
@@ -1057,15 +1262,15 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkAclBypassForAzureServicesInput() {
-    return this._networkAclBypassForAzureServices
+    return this._networkAclBypassForAzureServices;
   }
 
   // network_acl_bypass_ids - computed: false, optional: true, required: false
-  private _networkAclBypassIds?: string[] | undefined; 
+  private _networkAclBypassIds?: string[]; 
   public get networkAclBypassIds() {
     return this.getListAttribute('network_acl_bypass_ids');
   }
-  public set networkAclBypassIds(value: string[] | undefined) {
+  public set networkAclBypassIds(value: string[]) {
     this._networkAclBypassIds = value;
   }
   public resetNetworkAclBypassIds() {
@@ -1073,7 +1278,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkAclBypassIdsInput() {
-    return this._networkAclBypassIds
+    return this._networkAclBypassIds;
   }
 
   // offer_type - computed: false, optional: false, required: true
@@ -1086,7 +1291,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get offerTypeInput() {
-    return this._offerType
+    return this._offerType;
   }
 
   // primary_key - computed: true, optional: false, required: false
@@ -1110,11 +1315,11 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled') as any;
   }
-  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -1122,7 +1327,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get publicNetworkAccessEnabledInput() {
-    return this._publicNetworkAccessEnabled
+    return this._publicNetworkAccessEnabled;
   }
 
   // read_endpoints - computed: true, optional: false, required: false
@@ -1140,7 +1345,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // secondary_key - computed: true, optional: false, required: false
@@ -1164,12 +1369,12 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -1177,7 +1382,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // write_endpoints - computed: true, optional: false, required: false
@@ -1186,46 +1391,44 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
 
   // analytical_storage - computed: false, optional: true, required: false
-  private _analyticalStorage?: CosmosdbAccountAnalyticalStorage | undefined; 
-  private __analyticalStorageOutput = new CosmosdbAccountAnalyticalStorageOutputReference(this as any, "analytical_storage", true);
+  private _analyticalStorage = new CosmosdbAccountAnalyticalStorageOutputReference(this as any, "analytical_storage", true);
   public get analyticalStorage() {
-    return this.__analyticalStorageOutput;
+    return this._analyticalStorage;
   }
-  public putAnalyticalStorage(value: CosmosdbAccountAnalyticalStorage | undefined) {
-    this._analyticalStorage = value;
+  public putAnalyticalStorage(value: CosmosdbAccountAnalyticalStorage) {
+    this._analyticalStorage.internalValue = value;
   }
   public resetAnalyticalStorage() {
-    this._analyticalStorage = undefined;
+    this._analyticalStorage.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get analyticalStorageInput() {
-    return this._analyticalStorage
+    return this._analyticalStorage.internalValue;
   }
 
   // backup - computed: false, optional: true, required: false
-  private _backup?: CosmosdbAccountBackup | undefined; 
-  private __backupOutput = new CosmosdbAccountBackupOutputReference(this as any, "backup", true);
+  private _backup = new CosmosdbAccountBackupOutputReference(this as any, "backup", true);
   public get backup() {
-    return this.__backupOutput;
+    return this._backup;
   }
-  public putBackup(value: CosmosdbAccountBackup | undefined) {
-    this._backup = value;
+  public putBackup(value: CosmosdbAccountBackup) {
+    this._backup.internalValue = value;
   }
   public resetBackup() {
-    this._backup = undefined;
+    this._backup.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get backupInput() {
-    return this._backup
+    return this._backup.internalValue;
   }
 
   // capabilities - computed: false, optional: true, required: false
-  private _capabilities?: CosmosdbAccountCapabilities[] | undefined; 
+  private _capabilities?: CosmosdbAccountCapabilities[]; 
   public get capabilities() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('capabilities') as any;
   }
-  public set capabilities(value: CosmosdbAccountCapabilities[] | undefined) {
+  public set capabilities(value: CosmosdbAccountCapabilities[]) {
     this._capabilities = value;
   }
   public resetCapabilities() {
@@ -1233,55 +1436,52 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get capabilitiesInput() {
-    return this._capabilities
+    return this._capabilities;
   }
 
   // capacity - computed: false, optional: true, required: false
-  private _capacity?: CosmosdbAccountCapacity | undefined; 
-  private __capacityOutput = new CosmosdbAccountCapacityOutputReference(this as any, "capacity", true);
+  private _capacity = new CosmosdbAccountCapacityOutputReference(this as any, "capacity", true);
   public get capacity() {
-    return this.__capacityOutput;
+    return this._capacity;
   }
-  public putCapacity(value: CosmosdbAccountCapacity | undefined) {
-    this._capacity = value;
+  public putCapacity(value: CosmosdbAccountCapacity) {
+    this._capacity.internalValue = value;
   }
   public resetCapacity() {
-    this._capacity = undefined;
+    this._capacity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get capacityInput() {
-    return this._capacity
+    return this._capacity.internalValue;
   }
 
   // consistency_policy - computed: false, optional: false, required: true
-  private _consistencyPolicy?: CosmosdbAccountConsistencyPolicy; 
-  private __consistencyPolicyOutput = new CosmosdbAccountConsistencyPolicyOutputReference(this as any, "consistency_policy", true);
+  private _consistencyPolicy = new CosmosdbAccountConsistencyPolicyOutputReference(this as any, "consistency_policy", true);
   public get consistencyPolicy() {
-    return this.__consistencyPolicyOutput;
+    return this._consistencyPolicy;
   }
   public putConsistencyPolicy(value: CosmosdbAccountConsistencyPolicy) {
-    this._consistencyPolicy = value;
+    this._consistencyPolicy.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get consistencyPolicyInput() {
-    return this._consistencyPolicy
+    return this._consistencyPolicy.internalValue;
   }
 
   // cors_rule - computed: false, optional: true, required: false
-  private _corsRule?: CosmosdbAccountCorsRule | undefined; 
-  private __corsRuleOutput = new CosmosdbAccountCorsRuleOutputReference(this as any, "cors_rule", true);
+  private _corsRule = new CosmosdbAccountCorsRuleOutputReference(this as any, "cors_rule", true);
   public get corsRule() {
-    return this.__corsRuleOutput;
+    return this._corsRule;
   }
-  public putCorsRule(value: CosmosdbAccountCorsRule | undefined) {
-    this._corsRule = value;
+  public putCorsRule(value: CosmosdbAccountCorsRule) {
+    this._corsRule.internalValue = value;
   }
   public resetCorsRule() {
-    this._corsRule = undefined;
+    this._corsRule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get corsRuleInput() {
-    return this._corsRule
+    return this._corsRule.internalValue;
   }
 
   // geo_location - computed: false, optional: false, required: true
@@ -1295,50 +1495,48 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get geoLocationInput() {
-    return this._geoLocation
+    return this._geoLocation;
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: CosmosdbAccountIdentity | undefined; 
-  private __identityOutput = new CosmosdbAccountIdentityOutputReference(this as any, "identity", true);
+  private _identity = new CosmosdbAccountIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.__identityOutput;
+    return this._identity;
   }
-  public putIdentity(value: CosmosdbAccountIdentity | undefined) {
-    this._identity = value;
+  public putIdentity(value: CosmosdbAccountIdentity) {
+    this._identity.internalValue = value;
   }
   public resetIdentity() {
-    this._identity = undefined;
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
-    return this._identity
+    return this._identity.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: CosmosdbAccountTimeouts | undefined; 
-  private __timeoutsOutput = new CosmosdbAccountTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CosmosdbAccountTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: CosmosdbAccountTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: CosmosdbAccountTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // virtual_network_rule - computed: false, optional: true, required: false
-  private _virtualNetworkRule?: CosmosdbAccountVirtualNetworkRule[] | undefined; 
+  private _virtualNetworkRule?: CosmosdbAccountVirtualNetworkRule[]; 
   public get virtualNetworkRule() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('virtual_network_rule') as any;
   }
-  public set virtualNetworkRule(value: CosmosdbAccountVirtualNetworkRule[] | undefined) {
+  public set virtualNetworkRule(value: CosmosdbAccountVirtualNetworkRule[]) {
     this._virtualNetworkRule = value;
   }
   public resetVirtualNetworkRule() {
@@ -1346,7 +1544,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get virtualNetworkRuleInput() {
-    return this._virtualNetworkRule
+    return this._virtualNetworkRule;
   }
 
   // =========
@@ -1375,15 +1573,15 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      analytical_storage: cosmosdbAccountAnalyticalStorageToTerraform(this._analyticalStorage),
-      backup: cosmosdbAccountBackupToTerraform(this._backup),
+      analytical_storage: cosmosdbAccountAnalyticalStorageToTerraform(this._analyticalStorage.internalValue),
+      backup: cosmosdbAccountBackupToTerraform(this._backup.internalValue),
       capabilities: cdktf.listMapper(cosmosdbAccountCapabilitiesToTerraform)(this._capabilities),
-      capacity: cosmosdbAccountCapacityToTerraform(this._capacity),
-      consistency_policy: cosmosdbAccountConsistencyPolicyToTerraform(this._consistencyPolicy),
-      cors_rule: cosmosdbAccountCorsRuleToTerraform(this._corsRule),
+      capacity: cosmosdbAccountCapacityToTerraform(this._capacity.internalValue),
+      consistency_policy: cosmosdbAccountConsistencyPolicyToTerraform(this._consistencyPolicy.internalValue),
+      cors_rule: cosmosdbAccountCorsRuleToTerraform(this._corsRule.internalValue),
       geo_location: cdktf.listMapper(cosmosdbAccountGeoLocationToTerraform)(this._geoLocation),
-      identity: cosmosdbAccountIdentityToTerraform(this._identity),
-      timeouts: cosmosdbAccountTimeoutsToTerraform(this._timeouts),
+      identity: cosmosdbAccountIdentityToTerraform(this._identity.internalValue),
+      timeouts: cosmosdbAccountTimeoutsToTerraform(this._timeouts.internalValue),
       virtual_network_rule: cdktf.listMapper(cosmosdbAccountVirtualNetworkRuleToTerraform)(this._virtualNetworkRule),
     };
   }

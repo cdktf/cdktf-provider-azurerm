@@ -75,7 +75,7 @@ export interface MonitorSmartDetectorAlertRuleActionGroup {
   readonly webhookPayload?: string;
 }
 
-function monitorSmartDetectorAlertRuleActionGroupToTerraform(struct?: MonitorSmartDetectorAlertRuleActionGroupOutputReference | MonitorSmartDetectorAlertRuleActionGroup): any {
+export function monitorSmartDetectorAlertRuleActionGroupToTerraform(struct?: MonitorSmartDetectorAlertRuleActionGroupOutputReference | MonitorSmartDetectorAlertRuleActionGroup): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -97,12 +97,43 @@ export class MonitorSmartDetectorAlertRuleActionGroupOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitorSmartDetectorAlertRuleActionGroup | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._emailSubject) {
+      hasAnyValues = true;
+      internalValueResult.emailSubject = this._emailSubject;
+    }
+    if (this._ids) {
+      hasAnyValues = true;
+      internalValueResult.ids = this._ids;
+    }
+    if (this._webhookPayload) {
+      hasAnyValues = true;
+      internalValueResult.webhookPayload = this._webhookPayload;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorSmartDetectorAlertRuleActionGroup | undefined) {
+    if (value === undefined) {
+      this._emailSubject = undefined;
+      this._ids = undefined;
+      this._webhookPayload = undefined;
+    }
+    else {
+      this._emailSubject = value.emailSubject;
+      this._ids = value.ids;
+      this._webhookPayload = value.webhookPayload;
+    }
+  }
+
   // email_subject - computed: false, optional: true, required: false
-  private _emailSubject?: string | undefined; 
+  private _emailSubject?: string; 
   public get emailSubject() {
     return this.getStringAttribute('email_subject');
   }
-  public set emailSubject(value: string | undefined) {
+  public set emailSubject(value: string) {
     this._emailSubject = value;
   }
   public resetEmailSubject() {
@@ -110,7 +141,7 @@ export class MonitorSmartDetectorAlertRuleActionGroupOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get emailSubjectInput() {
-    return this._emailSubject
+    return this._emailSubject;
   }
 
   // ids - computed: false, optional: false, required: true
@@ -123,15 +154,15 @@ export class MonitorSmartDetectorAlertRuleActionGroupOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get idsInput() {
-    return this._ids
+    return this._ids;
   }
 
   // webhook_payload - computed: false, optional: true, required: false
-  private _webhookPayload?: string | undefined; 
+  private _webhookPayload?: string; 
   public get webhookPayload() {
     return this.getStringAttribute('webhook_payload');
   }
-  public set webhookPayload(value: string | undefined) {
+  public set webhookPayload(value: string) {
     this._webhookPayload = value;
   }
   public resetWebhookPayload() {
@@ -139,7 +170,7 @@ export class MonitorSmartDetectorAlertRuleActionGroupOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get webhookPayloadInput() {
-    return this._webhookPayload
+    return this._webhookPayload;
   }
 }
 export interface MonitorSmartDetectorAlertRuleTimeouts {
@@ -161,7 +192,7 @@ export interface MonitorSmartDetectorAlertRuleTimeouts {
   readonly update?: string;
 }
 
-function monitorSmartDetectorAlertRuleTimeoutsToTerraform(struct?: MonitorSmartDetectorAlertRuleTimeoutsOutputReference | MonitorSmartDetectorAlertRuleTimeouts): any {
+export function monitorSmartDetectorAlertRuleTimeoutsToTerraform(struct?: MonitorSmartDetectorAlertRuleTimeoutsOutputReference | MonitorSmartDetectorAlertRuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -184,12 +215,49 @@ export class MonitorSmartDetectorAlertRuleTimeoutsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitorSmartDetectorAlertRuleTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorSmartDetectorAlertRuleTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -197,15 +265,15 @@ export class MonitorSmartDetectorAlertRuleTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -213,15 +281,15 @@ export class MonitorSmartDetectorAlertRuleTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -229,15 +297,15 @@ export class MonitorSmartDetectorAlertRuleTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -245,7 +313,7 @@ export class MonitorSmartDetectorAlertRuleTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -291,8 +359,8 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
     this._severity = config.severity;
     this._tags = config.tags;
     this._throttlingDuration = config.throttlingDuration;
-    this._actionGroup = config.actionGroup;
-    this._timeouts = config.timeouts;
+    this._actionGroup.internalValue = config.actionGroup;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -300,11 +368,11 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -312,7 +380,7 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // detector_type - computed: false, optional: false, required: true
@@ -325,15 +393,15 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get detectorTypeInput() {
-    return this._detectorType
+    return this._detectorType;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -341,7 +409,7 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // frequency - computed: false, optional: false, required: true
@@ -354,7 +422,7 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get frequencyInput() {
-    return this._frequency
+    return this._frequency;
   }
 
   // id - computed: true, optional: true, required: false
@@ -372,7 +440,7 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -385,7 +453,7 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // scope_resource_ids - computed: false, optional: false, required: true
@@ -398,7 +466,7 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get scopeResourceIdsInput() {
-    return this._scopeResourceIds
+    return this._scopeResourceIds;
   }
 
   // severity - computed: false, optional: false, required: true
@@ -411,16 +479,16 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get severityInput() {
-    return this._severity
+    return this._severity;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -428,15 +496,15 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // throttling_duration - computed: false, optional: true, required: false
-  private _throttlingDuration?: string | undefined; 
+  private _throttlingDuration?: string; 
   public get throttlingDuration() {
     return this.getStringAttribute('throttling_duration');
   }
-  public set throttlingDuration(value: string | undefined) {
+  public set throttlingDuration(value: string) {
     this._throttlingDuration = value;
   }
   public resetThrottlingDuration() {
@@ -444,38 +512,36 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get throttlingDurationInput() {
-    return this._throttlingDuration
+    return this._throttlingDuration;
   }
 
   // action_group - computed: false, optional: false, required: true
-  private _actionGroup?: MonitorSmartDetectorAlertRuleActionGroup; 
-  private __actionGroupOutput = new MonitorSmartDetectorAlertRuleActionGroupOutputReference(this as any, "action_group", true);
+  private _actionGroup = new MonitorSmartDetectorAlertRuleActionGroupOutputReference(this as any, "action_group", true);
   public get actionGroup() {
-    return this.__actionGroupOutput;
+    return this._actionGroup;
   }
   public putActionGroup(value: MonitorSmartDetectorAlertRuleActionGroup) {
-    this._actionGroup = value;
+    this._actionGroup.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get actionGroupInput() {
-    return this._actionGroup
+    return this._actionGroup.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MonitorSmartDetectorAlertRuleTimeouts | undefined; 
-  private __timeoutsOutput = new MonitorSmartDetectorAlertRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitorSmartDetectorAlertRuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MonitorSmartDetectorAlertRuleTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MonitorSmartDetectorAlertRuleTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -494,8 +560,8 @@ export class MonitorSmartDetectorAlertRule extends cdktf.TerraformResource {
       severity: cdktf.stringToTerraform(this._severity),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       throttling_duration: cdktf.stringToTerraform(this._throttlingDuration),
-      action_group: monitorSmartDetectorAlertRuleActionGroupToTerraform(this._actionGroup),
-      timeouts: monitorSmartDetectorAlertRuleTimeoutsToTerraform(this._timeouts),
+      action_group: monitorSmartDetectorAlertRuleActionGroupToTerraform(this._actionGroup.internalValue),
+      timeouts: monitorSmartDetectorAlertRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

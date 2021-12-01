@@ -101,7 +101,7 @@ export interface DevTestWindowsVirtualMachineGalleryImageReference {
   readonly version: string;
 }
 
-function devTestWindowsVirtualMachineGalleryImageReferenceToTerraform(struct?: DevTestWindowsVirtualMachineGalleryImageReferenceOutputReference | DevTestWindowsVirtualMachineGalleryImageReference): any {
+export function devTestWindowsVirtualMachineGalleryImageReferenceToTerraform(struct?: DevTestWindowsVirtualMachineGalleryImageReferenceOutputReference | DevTestWindowsVirtualMachineGalleryImageReference): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -124,6 +124,43 @@ export class DevTestWindowsVirtualMachineGalleryImageReferenceOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DevTestWindowsVirtualMachineGalleryImageReference | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._offer) {
+      hasAnyValues = true;
+      internalValueResult.offer = this._offer;
+    }
+    if (this._publisher) {
+      hasAnyValues = true;
+      internalValueResult.publisher = this._publisher;
+    }
+    if (this._sku) {
+      hasAnyValues = true;
+      internalValueResult.sku = this._sku;
+    }
+    if (this._version) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DevTestWindowsVirtualMachineGalleryImageReference | undefined) {
+    if (value === undefined) {
+      this._offer = undefined;
+      this._publisher = undefined;
+      this._sku = undefined;
+      this._version = undefined;
+    }
+    else {
+      this._offer = value.offer;
+      this._publisher = value.publisher;
+      this._sku = value.sku;
+      this._version = value.version;
+    }
+  }
+
   // offer - computed: false, optional: false, required: true
   private _offer?: string; 
   public get offer() {
@@ -134,7 +171,7 @@ export class DevTestWindowsVirtualMachineGalleryImageReferenceOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get offerInput() {
-    return this._offer
+    return this._offer;
   }
 
   // publisher - computed: false, optional: false, required: true
@@ -147,7 +184,7 @@ export class DevTestWindowsVirtualMachineGalleryImageReferenceOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get publisherInput() {
-    return this._publisher
+    return this._publisher;
   }
 
   // sku - computed: false, optional: false, required: true
@@ -160,7 +197,7 @@ export class DevTestWindowsVirtualMachineGalleryImageReferenceOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get skuInput() {
-    return this._sku
+    return this._sku;
   }
 
   // version - computed: false, optional: false, required: true
@@ -173,7 +210,7 @@ export class DevTestWindowsVirtualMachineGalleryImageReferenceOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 }
 export interface DevTestWindowsVirtualMachineInboundNatRule {
@@ -187,7 +224,7 @@ export interface DevTestWindowsVirtualMachineInboundNatRule {
   readonly protocol: string;
 }
 
-function devTestWindowsVirtualMachineInboundNatRuleToTerraform(struct?: DevTestWindowsVirtualMachineInboundNatRule): any {
+export function devTestWindowsVirtualMachineInboundNatRuleToTerraform(struct?: DevTestWindowsVirtualMachineInboundNatRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -217,7 +254,7 @@ export interface DevTestWindowsVirtualMachineTimeouts {
   readonly update?: string;
 }
 
-function devTestWindowsVirtualMachineTimeoutsToTerraform(struct?: DevTestWindowsVirtualMachineTimeoutsOutputReference | DevTestWindowsVirtualMachineTimeouts): any {
+export function devTestWindowsVirtualMachineTimeoutsToTerraform(struct?: DevTestWindowsVirtualMachineTimeoutsOutputReference | DevTestWindowsVirtualMachineTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -240,12 +277,49 @@ export class DevTestWindowsVirtualMachineTimeoutsOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DevTestWindowsVirtualMachineTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DevTestWindowsVirtualMachineTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -253,15 +327,15 @@ export class DevTestWindowsVirtualMachineTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -269,15 +343,15 @@ export class DevTestWindowsVirtualMachineTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -285,15 +359,15 @@ export class DevTestWindowsVirtualMachineTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -301,7 +375,7 @@ export class DevTestWindowsVirtualMachineTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -351,9 +425,9 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
     this._storageType = config.storageType;
     this._tags = config.tags;
     this._username = config.username;
-    this._galleryImageReference = config.galleryImageReference;
+    this._galleryImageReference.internalValue = config.galleryImageReference;
     this._inboundNatRule = config.inboundNatRule;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -361,11 +435,11 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   // ==========
 
   // allow_claim - computed: false, optional: true, required: false
-  private _allowClaim?: boolean | cdktf.IResolvable | undefined; 
+  private _allowClaim?: boolean | cdktf.IResolvable; 
   public get allowClaim() {
     return this.getBooleanAttribute('allow_claim') as any;
   }
-  public set allowClaim(value: boolean | cdktf.IResolvable | undefined) {
+  public set allowClaim(value: boolean | cdktf.IResolvable) {
     this._allowClaim = value;
   }
   public resetAllowClaim() {
@@ -373,15 +447,15 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get allowClaimInput() {
-    return this._allowClaim
+    return this._allowClaim;
   }
 
   // disallow_public_ip_address - computed: false, optional: true, required: false
-  private _disallowPublicIpAddress?: boolean | cdktf.IResolvable | undefined; 
+  private _disallowPublicIpAddress?: boolean | cdktf.IResolvable; 
   public get disallowPublicIpAddress() {
     return this.getBooleanAttribute('disallow_public_ip_address') as any;
   }
-  public set disallowPublicIpAddress(value: boolean | cdktf.IResolvable | undefined) {
+  public set disallowPublicIpAddress(value: boolean | cdktf.IResolvable) {
     this._disallowPublicIpAddress = value;
   }
   public resetDisallowPublicIpAddress() {
@@ -389,7 +463,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get disallowPublicIpAddressInput() {
-    return this._disallowPublicIpAddress
+    return this._disallowPublicIpAddress;
   }
 
   // fqdn - computed: true, optional: false, required: false
@@ -412,7 +486,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labNameInput() {
-    return this._labName
+    return this._labName;
   }
 
   // lab_subnet_name - computed: false, optional: false, required: true
@@ -425,7 +499,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labSubnetNameInput() {
-    return this._labSubnetName
+    return this._labSubnetName;
   }
 
   // lab_virtual_network_id - computed: false, optional: false, required: true
@@ -438,7 +512,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get labVirtualNetworkIdInput() {
-    return this._labVirtualNetworkId
+    return this._labVirtualNetworkId;
   }
 
   // location - computed: false, optional: false, required: true
@@ -451,7 +525,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -464,15 +538,15 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // notes - computed: false, optional: true, required: false
-  private _notes?: string | undefined; 
+  private _notes?: string; 
   public get notes() {
     return this.getStringAttribute('notes');
   }
-  public set notes(value: string | undefined) {
+  public set notes(value: string) {
     this._notes = value;
   }
   public resetNotes() {
@@ -480,7 +554,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get notesInput() {
-    return this._notes
+    return this._notes;
   }
 
   // password - computed: false, optional: false, required: true
@@ -493,7 +567,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -506,7 +580,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // size - computed: false, optional: false, required: true
@@ -519,7 +593,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sizeInput() {
-    return this._size
+    return this._size;
   }
 
   // storage_type - computed: false, optional: false, required: true
@@ -532,16 +606,16 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageTypeInput() {
-    return this._storageType
+    return this._storageType;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -549,7 +623,7 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // unique_identifier - computed: true, optional: false, required: false
@@ -567,30 +641,29 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
-    return this._username
+    return this._username;
   }
 
   // gallery_image_reference - computed: false, optional: false, required: true
-  private _galleryImageReference?: DevTestWindowsVirtualMachineGalleryImageReference; 
-  private __galleryImageReferenceOutput = new DevTestWindowsVirtualMachineGalleryImageReferenceOutputReference(this as any, "gallery_image_reference", true);
+  private _galleryImageReference = new DevTestWindowsVirtualMachineGalleryImageReferenceOutputReference(this as any, "gallery_image_reference", true);
   public get galleryImageReference() {
-    return this.__galleryImageReferenceOutput;
+    return this._galleryImageReference;
   }
   public putGalleryImageReference(value: DevTestWindowsVirtualMachineGalleryImageReference) {
-    this._galleryImageReference = value;
+    this._galleryImageReference.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get galleryImageReferenceInput() {
-    return this._galleryImageReference
+    return this._galleryImageReference.internalValue;
   }
 
   // inbound_nat_rule - computed: false, optional: true, required: false
-  private _inboundNatRule?: DevTestWindowsVirtualMachineInboundNatRule[] | undefined; 
+  private _inboundNatRule?: DevTestWindowsVirtualMachineInboundNatRule[]; 
   public get inboundNatRule() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('inbound_nat_rule') as any;
   }
-  public set inboundNatRule(value: DevTestWindowsVirtualMachineInboundNatRule[] | undefined) {
+  public set inboundNatRule(value: DevTestWindowsVirtualMachineInboundNatRule[]) {
     this._inboundNatRule = value;
   }
   public resetInboundNatRule() {
@@ -598,24 +671,23 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get inboundNatRuleInput() {
-    return this._inboundNatRule
+    return this._inboundNatRule;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DevTestWindowsVirtualMachineTimeouts | undefined; 
-  private __timeoutsOutput = new DevTestWindowsVirtualMachineTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DevTestWindowsVirtualMachineTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DevTestWindowsVirtualMachineTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DevTestWindowsVirtualMachineTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -638,9 +710,9 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
       storage_type: cdktf.stringToTerraform(this._storageType),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       username: cdktf.stringToTerraform(this._username),
-      gallery_image_reference: devTestWindowsVirtualMachineGalleryImageReferenceToTerraform(this._galleryImageReference),
+      gallery_image_reference: devTestWindowsVirtualMachineGalleryImageReferenceToTerraform(this._galleryImageReference.internalValue),
       inbound_nat_rule: cdktf.listMapper(devTestWindowsVirtualMachineInboundNatRuleToTerraform)(this._inboundNatRule),
-      timeouts: devTestWindowsVirtualMachineTimeoutsToTerraform(this._timeouts),
+      timeouts: devTestWindowsVirtualMachineTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

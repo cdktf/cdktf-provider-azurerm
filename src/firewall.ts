@@ -91,7 +91,7 @@ export interface FirewallIpConfiguration {
   readonly subnetId?: string;
 }
 
-function firewallIpConfigurationToTerraform(struct?: FirewallIpConfiguration): any {
+export function firewallIpConfigurationToTerraform(struct?: FirewallIpConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -118,7 +118,7 @@ export interface FirewallManagementIpConfiguration {
   readonly subnetId: string;
 }
 
-function firewallManagementIpConfigurationToTerraform(struct?: FirewallManagementIpConfigurationOutputReference | FirewallManagementIpConfiguration): any {
+export function firewallManagementIpConfigurationToTerraform(struct?: FirewallManagementIpConfigurationOutputReference | FirewallManagementIpConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -140,6 +140,37 @@ export class FirewallManagementIpConfigurationOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): FirewallManagementIpConfiguration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._publicIpAddressId) {
+      hasAnyValues = true;
+      internalValueResult.publicIpAddressId = this._publicIpAddressId;
+    }
+    if (this._subnetId) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FirewallManagementIpConfiguration | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._publicIpAddressId = undefined;
+      this._subnetId = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._publicIpAddressId = value.publicIpAddressId;
+      this._subnetId = value.subnetId;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -150,7 +181,7 @@ export class FirewallManagementIpConfigurationOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // public_ip_address_id - computed: false, optional: false, required: true
@@ -163,7 +194,7 @@ export class FirewallManagementIpConfigurationOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get publicIpAddressIdInput() {
-    return this._publicIpAddressId
+    return this._publicIpAddressId;
   }
 
   // subnet_id - computed: false, optional: false, required: true
@@ -176,7 +207,7 @@ export class FirewallManagementIpConfigurationOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get subnetIdInput() {
-    return this._subnetId
+    return this._subnetId;
   }
 }
 export interface FirewallTimeouts {
@@ -198,7 +229,7 @@ export interface FirewallTimeouts {
   readonly update?: string;
 }
 
-function firewallTimeoutsToTerraform(struct?: FirewallTimeoutsOutputReference | FirewallTimeouts): any {
+export function firewallTimeoutsToTerraform(struct?: FirewallTimeoutsOutputReference | FirewallTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -221,12 +252,49 @@ export class FirewallTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): FirewallTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FirewallTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -234,15 +302,15 @@ export class FirewallTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -250,15 +318,15 @@ export class FirewallTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -266,15 +334,15 @@ export class FirewallTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -282,7 +350,7 @@ export class FirewallTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface FirewallVirtualHub {
@@ -296,7 +364,7 @@ export interface FirewallVirtualHub {
   readonly virtualHubId: string;
 }
 
-function firewallVirtualHubToTerraform(struct?: FirewallVirtualHubOutputReference | FirewallVirtualHub): any {
+export function firewallVirtualHubToTerraform(struct?: FirewallVirtualHubOutputReference | FirewallVirtualHub): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -317,12 +385,37 @@ export class FirewallVirtualHubOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): FirewallVirtualHub | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._publicIpCount) {
+      hasAnyValues = true;
+      internalValueResult.publicIpCount = this._publicIpCount;
+    }
+    if (this._virtualHubId) {
+      hasAnyValues = true;
+      internalValueResult.virtualHubId = this._virtualHubId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: FirewallVirtualHub | undefined) {
+    if (value === undefined) {
+      this._publicIpCount = undefined;
+      this._virtualHubId = undefined;
+    }
+    else {
+      this._publicIpCount = value.publicIpCount;
+      this._virtualHubId = value.virtualHubId;
+    }
+  }
+
   // public_ip_count - computed: false, optional: true, required: false
-  private _publicIpCount?: number | undefined; 
+  private _publicIpCount?: number; 
   public get publicIpCount() {
     return this.getNumberAttribute('public_ip_count');
   }
-  public set publicIpCount(value: number | undefined) {
+  public set publicIpCount(value: number) {
     this._publicIpCount = value;
   }
   public resetPublicIpCount() {
@@ -330,7 +423,7 @@ export class FirewallVirtualHubOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get publicIpCountInput() {
-    return this._publicIpCount
+    return this._publicIpCount;
   }
 
   // virtual_hub_id - computed: false, optional: false, required: true
@@ -343,7 +436,7 @@ export class FirewallVirtualHubOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get virtualHubIdInput() {
-    return this._virtualHubId
+    return this._virtualHubId;
   }
 }
 
@@ -391,9 +484,9 @@ export class Firewall extends cdktf.TerraformResource {
     this._threatIntelMode = config.threatIntelMode;
     this._zones = config.zones;
     this._ipConfiguration = config.ipConfiguration;
-    this._managementIpConfiguration = config.managementIpConfiguration;
-    this._timeouts = config.timeouts;
-    this._virtualHub = config.virtualHub;
+    this._managementIpConfiguration.internalValue = config.managementIpConfiguration;
+    this._timeouts.internalValue = config.timeouts;
+    this._virtualHub.internalValue = config.virtualHub;
   }
 
   // ==========
@@ -401,11 +494,11 @@ export class Firewall extends cdktf.TerraformResource {
   // ==========
 
   // dns_servers - computed: false, optional: true, required: false
-  private _dnsServers?: string[] | undefined; 
+  private _dnsServers?: string[]; 
   public get dnsServers() {
     return this.getListAttribute('dns_servers');
   }
-  public set dnsServers(value: string[] | undefined) {
+  public set dnsServers(value: string[]) {
     this._dnsServers = value;
   }
   public resetDnsServers() {
@@ -413,15 +506,15 @@ export class Firewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dnsServersInput() {
-    return this._dnsServers
+    return this._dnsServers;
   }
 
   // firewall_policy_id - computed: false, optional: true, required: false
-  private _firewallPolicyId?: string | undefined; 
+  private _firewallPolicyId?: string; 
   public get firewallPolicyId() {
     return this.getStringAttribute('firewall_policy_id');
   }
-  public set firewallPolicyId(value: string | undefined) {
+  public set firewallPolicyId(value: string) {
     this._firewallPolicyId = value;
   }
   public resetFirewallPolicyId() {
@@ -429,7 +522,7 @@ export class Firewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get firewallPolicyIdInput() {
-    return this._firewallPolicyId
+    return this._firewallPolicyId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -447,7 +540,7 @@ export class Firewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -460,15 +553,15 @@ export class Firewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // private_ip_ranges - computed: false, optional: true, required: false
-  private _privateIpRanges?: string[] | undefined; 
+  private _privateIpRanges?: string[]; 
   public get privateIpRanges() {
     return this.getListAttribute('private_ip_ranges');
   }
-  public set privateIpRanges(value: string[] | undefined) {
+  public set privateIpRanges(value: string[]) {
     this._privateIpRanges = value;
   }
   public resetPrivateIpRanges() {
@@ -476,7 +569,7 @@ export class Firewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get privateIpRangesInput() {
-    return this._privateIpRanges
+    return this._privateIpRanges;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -489,15 +582,15 @@ export class Firewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // sku_name - computed: true, optional: true, required: false
-  private _skuName?: string | undefined; 
+  private _skuName?: string; 
   public get skuName() {
     return this.getStringAttribute('sku_name');
   }
-  public set skuName(value: string | undefined) {
+  public set skuName(value: string) {
     this._skuName = value;
   }
   public resetSkuName() {
@@ -505,15 +598,15 @@ export class Firewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuNameInput() {
-    return this._skuName
+    return this._skuName;
   }
 
   // sku_tier - computed: true, optional: true, required: false
-  private _skuTier?: string | undefined; 
+  private _skuTier?: string; 
   public get skuTier() {
     return this.getStringAttribute('sku_tier');
   }
-  public set skuTier(value: string | undefined) {
+  public set skuTier(value: string) {
     this._skuTier = value;
   }
   public resetSkuTier() {
@@ -521,16 +614,16 @@ export class Firewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuTierInput() {
-    return this._skuTier
+    return this._skuTier;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -538,15 +631,15 @@ export class Firewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // threat_intel_mode - computed: false, optional: true, required: false
-  private _threatIntelMode?: string | undefined; 
+  private _threatIntelMode?: string; 
   public get threatIntelMode() {
     return this.getStringAttribute('threat_intel_mode');
   }
-  public set threatIntelMode(value: string | undefined) {
+  public set threatIntelMode(value: string) {
     this._threatIntelMode = value;
   }
   public resetThreatIntelMode() {
@@ -554,15 +647,15 @@ export class Firewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get threatIntelModeInput() {
-    return this._threatIntelMode
+    return this._threatIntelMode;
   }
 
   // zones - computed: false, optional: true, required: false
-  private _zones?: string[] | undefined; 
+  private _zones?: string[]; 
   public get zones() {
     return this.getListAttribute('zones');
   }
-  public set zones(value: string[] | undefined) {
+  public set zones(value: string[]) {
     this._zones = value;
   }
   public resetZones() {
@@ -570,16 +663,16 @@ export class Firewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get zonesInput() {
-    return this._zones
+    return this._zones;
   }
 
   // ip_configuration - computed: false, optional: true, required: false
-  private _ipConfiguration?: FirewallIpConfiguration[] | undefined; 
+  private _ipConfiguration?: FirewallIpConfiguration[]; 
   public get ipConfiguration() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ip_configuration') as any;
   }
-  public set ipConfiguration(value: FirewallIpConfiguration[] | undefined) {
+  public set ipConfiguration(value: FirewallIpConfiguration[]) {
     this._ipConfiguration = value;
   }
   public resetIpConfiguration() {
@@ -587,58 +680,55 @@ export class Firewall extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipConfigurationInput() {
-    return this._ipConfiguration
+    return this._ipConfiguration;
   }
 
   // management_ip_configuration - computed: false, optional: true, required: false
-  private _managementIpConfiguration?: FirewallManagementIpConfiguration | undefined; 
-  private __managementIpConfigurationOutput = new FirewallManagementIpConfigurationOutputReference(this as any, "management_ip_configuration", true);
+  private _managementIpConfiguration = new FirewallManagementIpConfigurationOutputReference(this as any, "management_ip_configuration", true);
   public get managementIpConfiguration() {
-    return this.__managementIpConfigurationOutput;
+    return this._managementIpConfiguration;
   }
-  public putManagementIpConfiguration(value: FirewallManagementIpConfiguration | undefined) {
-    this._managementIpConfiguration = value;
+  public putManagementIpConfiguration(value: FirewallManagementIpConfiguration) {
+    this._managementIpConfiguration.internalValue = value;
   }
   public resetManagementIpConfiguration() {
-    this._managementIpConfiguration = undefined;
+    this._managementIpConfiguration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get managementIpConfigurationInput() {
-    return this._managementIpConfiguration
+    return this._managementIpConfiguration.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: FirewallTimeouts | undefined; 
-  private __timeoutsOutput = new FirewallTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new FirewallTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: FirewallTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: FirewallTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // virtual_hub - computed: false, optional: true, required: false
-  private _virtualHub?: FirewallVirtualHub | undefined; 
-  private __virtualHubOutput = new FirewallVirtualHubOutputReference(this as any, "virtual_hub", true);
+  private _virtualHub = new FirewallVirtualHubOutputReference(this as any, "virtual_hub", true);
   public get virtualHub() {
-    return this.__virtualHubOutput;
+    return this._virtualHub;
   }
-  public putVirtualHub(value: FirewallVirtualHub | undefined) {
-    this._virtualHub = value;
+  public putVirtualHub(value: FirewallVirtualHub) {
+    this._virtualHub.internalValue = value;
   }
   public resetVirtualHub() {
-    this._virtualHub = undefined;
+    this._virtualHub.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get virtualHubInput() {
-    return this._virtualHub
+    return this._virtualHub.internalValue;
   }
 
   // =========
@@ -659,9 +749,9 @@ export class Firewall extends cdktf.TerraformResource {
       threat_intel_mode: cdktf.stringToTerraform(this._threatIntelMode),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       ip_configuration: cdktf.listMapper(firewallIpConfigurationToTerraform)(this._ipConfiguration),
-      management_ip_configuration: firewallManagementIpConfigurationToTerraform(this._managementIpConfiguration),
-      timeouts: firewallTimeoutsToTerraform(this._timeouts),
-      virtual_hub: firewallVirtualHubToTerraform(this._virtualHub),
+      management_ip_configuration: firewallManagementIpConfigurationToTerraform(this._managementIpConfiguration.internalValue),
+      timeouts: firewallTimeoutsToTerraform(this._timeouts.internalValue),
+      virtual_hub: firewallVirtualHubToTerraform(this._virtualHub.internalValue),
     };
   }
 }

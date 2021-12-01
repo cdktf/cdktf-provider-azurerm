@@ -136,7 +136,7 @@ export interface DatabricksWorkspaceCustomParameters {
   readonly vnetAddressPrefix?: string;
 }
 
-function databricksWorkspaceCustomParametersToTerraform(struct?: DatabricksWorkspaceCustomParametersOutputReference | DatabricksWorkspaceCustomParameters): any {
+export function databricksWorkspaceCustomParametersToTerraform(struct?: DatabricksWorkspaceCustomParametersOutputReference | DatabricksWorkspaceCustomParameters): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -167,12 +167,97 @@ export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DatabricksWorkspaceCustomParameters | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._machineLearningWorkspaceId) {
+      hasAnyValues = true;
+      internalValueResult.machineLearningWorkspaceId = this._machineLearningWorkspaceId;
+    }
+    if (this._natGatewayName) {
+      hasAnyValues = true;
+      internalValueResult.natGatewayName = this._natGatewayName;
+    }
+    if (this._noPublicIp) {
+      hasAnyValues = true;
+      internalValueResult.noPublicIp = this._noPublicIp;
+    }
+    if (this._privateSubnetName) {
+      hasAnyValues = true;
+      internalValueResult.privateSubnetName = this._privateSubnetName;
+    }
+    if (this._privateSubnetNetworkSecurityGroupAssociationId) {
+      hasAnyValues = true;
+      internalValueResult.privateSubnetNetworkSecurityGroupAssociationId = this._privateSubnetNetworkSecurityGroupAssociationId;
+    }
+    if (this._publicIpName) {
+      hasAnyValues = true;
+      internalValueResult.publicIpName = this._publicIpName;
+    }
+    if (this._publicSubnetName) {
+      hasAnyValues = true;
+      internalValueResult.publicSubnetName = this._publicSubnetName;
+    }
+    if (this._publicSubnetNetworkSecurityGroupAssociationId) {
+      hasAnyValues = true;
+      internalValueResult.publicSubnetNetworkSecurityGroupAssociationId = this._publicSubnetNetworkSecurityGroupAssociationId;
+    }
+    if (this._storageAccountName) {
+      hasAnyValues = true;
+      internalValueResult.storageAccountName = this._storageAccountName;
+    }
+    if (this._storageAccountSkuName) {
+      hasAnyValues = true;
+      internalValueResult.storageAccountSkuName = this._storageAccountSkuName;
+    }
+    if (this._virtualNetworkId) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetworkId = this._virtualNetworkId;
+    }
+    if (this._vnetAddressPrefix) {
+      hasAnyValues = true;
+      internalValueResult.vnetAddressPrefix = this._vnetAddressPrefix;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatabricksWorkspaceCustomParameters | undefined) {
+    if (value === undefined) {
+      this._machineLearningWorkspaceId = undefined;
+      this._natGatewayName = undefined;
+      this._noPublicIp = undefined;
+      this._privateSubnetName = undefined;
+      this._privateSubnetNetworkSecurityGroupAssociationId = undefined;
+      this._publicIpName = undefined;
+      this._publicSubnetName = undefined;
+      this._publicSubnetNetworkSecurityGroupAssociationId = undefined;
+      this._storageAccountName = undefined;
+      this._storageAccountSkuName = undefined;
+      this._virtualNetworkId = undefined;
+      this._vnetAddressPrefix = undefined;
+    }
+    else {
+      this._machineLearningWorkspaceId = value.machineLearningWorkspaceId;
+      this._natGatewayName = value.natGatewayName;
+      this._noPublicIp = value.noPublicIp;
+      this._privateSubnetName = value.privateSubnetName;
+      this._privateSubnetNetworkSecurityGroupAssociationId = value.privateSubnetNetworkSecurityGroupAssociationId;
+      this._publicIpName = value.publicIpName;
+      this._publicSubnetName = value.publicSubnetName;
+      this._publicSubnetNetworkSecurityGroupAssociationId = value.publicSubnetNetworkSecurityGroupAssociationId;
+      this._storageAccountName = value.storageAccountName;
+      this._storageAccountSkuName = value.storageAccountSkuName;
+      this._virtualNetworkId = value.virtualNetworkId;
+      this._vnetAddressPrefix = value.vnetAddressPrefix;
+    }
+  }
+
   // machine_learning_workspace_id - computed: false, optional: true, required: false
-  private _machineLearningWorkspaceId?: string | undefined; 
+  private _machineLearningWorkspaceId?: string; 
   public get machineLearningWorkspaceId() {
     return this.getStringAttribute('machine_learning_workspace_id');
   }
-  public set machineLearningWorkspaceId(value: string | undefined) {
+  public set machineLearningWorkspaceId(value: string) {
     this._machineLearningWorkspaceId = value;
   }
   public resetMachineLearningWorkspaceId() {
@@ -180,15 +265,15 @@ export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get machineLearningWorkspaceIdInput() {
-    return this._machineLearningWorkspaceId
+    return this._machineLearningWorkspaceId;
   }
 
   // nat_gateway_name - computed: true, optional: true, required: false
-  private _natGatewayName?: string | undefined; 
+  private _natGatewayName?: string; 
   public get natGatewayName() {
     return this.getStringAttribute('nat_gateway_name');
   }
-  public set natGatewayName(value: string | undefined) {
+  public set natGatewayName(value: string) {
     this._natGatewayName = value;
   }
   public resetNatGatewayName() {
@@ -196,15 +281,15 @@ export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get natGatewayNameInput() {
-    return this._natGatewayName
+    return this._natGatewayName;
   }
 
   // no_public_ip - computed: true, optional: true, required: false
-  private _noPublicIp?: boolean | cdktf.IResolvable | undefined; 
+  private _noPublicIp?: boolean | cdktf.IResolvable; 
   public get noPublicIp() {
     return this.getBooleanAttribute('no_public_ip') as any;
   }
-  public set noPublicIp(value: boolean | cdktf.IResolvable | undefined) {
+  public set noPublicIp(value: boolean | cdktf.IResolvable) {
     this._noPublicIp = value;
   }
   public resetNoPublicIp() {
@@ -212,15 +297,15 @@ export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get noPublicIpInput() {
-    return this._noPublicIp
+    return this._noPublicIp;
   }
 
   // private_subnet_name - computed: false, optional: true, required: false
-  private _privateSubnetName?: string | undefined; 
+  private _privateSubnetName?: string; 
   public get privateSubnetName() {
     return this.getStringAttribute('private_subnet_name');
   }
-  public set privateSubnetName(value: string | undefined) {
+  public set privateSubnetName(value: string) {
     this._privateSubnetName = value;
   }
   public resetPrivateSubnetName() {
@@ -228,15 +313,15 @@ export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get privateSubnetNameInput() {
-    return this._privateSubnetName
+    return this._privateSubnetName;
   }
 
   // private_subnet_network_security_group_association_id - computed: false, optional: true, required: false
-  private _privateSubnetNetworkSecurityGroupAssociationId?: string | undefined; 
+  private _privateSubnetNetworkSecurityGroupAssociationId?: string; 
   public get privateSubnetNetworkSecurityGroupAssociationId() {
     return this.getStringAttribute('private_subnet_network_security_group_association_id');
   }
-  public set privateSubnetNetworkSecurityGroupAssociationId(value: string | undefined) {
+  public set privateSubnetNetworkSecurityGroupAssociationId(value: string) {
     this._privateSubnetNetworkSecurityGroupAssociationId = value;
   }
   public resetPrivateSubnetNetworkSecurityGroupAssociationId() {
@@ -244,15 +329,15 @@ export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get privateSubnetNetworkSecurityGroupAssociationIdInput() {
-    return this._privateSubnetNetworkSecurityGroupAssociationId
+    return this._privateSubnetNetworkSecurityGroupAssociationId;
   }
 
   // public_ip_name - computed: true, optional: true, required: false
-  private _publicIpName?: string | undefined; 
+  private _publicIpName?: string; 
   public get publicIpName() {
     return this.getStringAttribute('public_ip_name');
   }
-  public set publicIpName(value: string | undefined) {
+  public set publicIpName(value: string) {
     this._publicIpName = value;
   }
   public resetPublicIpName() {
@@ -260,15 +345,15 @@ export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get publicIpNameInput() {
-    return this._publicIpName
+    return this._publicIpName;
   }
 
   // public_subnet_name - computed: false, optional: true, required: false
-  private _publicSubnetName?: string | undefined; 
+  private _publicSubnetName?: string; 
   public get publicSubnetName() {
     return this.getStringAttribute('public_subnet_name');
   }
-  public set publicSubnetName(value: string | undefined) {
+  public set publicSubnetName(value: string) {
     this._publicSubnetName = value;
   }
   public resetPublicSubnetName() {
@@ -276,15 +361,15 @@ export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get publicSubnetNameInput() {
-    return this._publicSubnetName
+    return this._publicSubnetName;
   }
 
   // public_subnet_network_security_group_association_id - computed: false, optional: true, required: false
-  private _publicSubnetNetworkSecurityGroupAssociationId?: string | undefined; 
+  private _publicSubnetNetworkSecurityGroupAssociationId?: string; 
   public get publicSubnetNetworkSecurityGroupAssociationId() {
     return this.getStringAttribute('public_subnet_network_security_group_association_id');
   }
-  public set publicSubnetNetworkSecurityGroupAssociationId(value: string | undefined) {
+  public set publicSubnetNetworkSecurityGroupAssociationId(value: string) {
     this._publicSubnetNetworkSecurityGroupAssociationId = value;
   }
   public resetPublicSubnetNetworkSecurityGroupAssociationId() {
@@ -292,15 +377,15 @@ export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get publicSubnetNetworkSecurityGroupAssociationIdInput() {
-    return this._publicSubnetNetworkSecurityGroupAssociationId
+    return this._publicSubnetNetworkSecurityGroupAssociationId;
   }
 
   // storage_account_name - computed: true, optional: true, required: false
-  private _storageAccountName?: string | undefined; 
+  private _storageAccountName?: string; 
   public get storageAccountName() {
     return this.getStringAttribute('storage_account_name');
   }
-  public set storageAccountName(value: string | undefined) {
+  public set storageAccountName(value: string) {
     this._storageAccountName = value;
   }
   public resetStorageAccountName() {
@@ -308,15 +393,15 @@ export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountNameInput() {
-    return this._storageAccountName
+    return this._storageAccountName;
   }
 
   // storage_account_sku_name - computed: true, optional: true, required: false
-  private _storageAccountSkuName?: string | undefined; 
+  private _storageAccountSkuName?: string; 
   public get storageAccountSkuName() {
     return this.getStringAttribute('storage_account_sku_name');
   }
-  public set storageAccountSkuName(value: string | undefined) {
+  public set storageAccountSkuName(value: string) {
     this._storageAccountSkuName = value;
   }
   public resetStorageAccountSkuName() {
@@ -324,15 +409,15 @@ export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountSkuNameInput() {
-    return this._storageAccountSkuName
+    return this._storageAccountSkuName;
   }
 
   // virtual_network_id - computed: false, optional: true, required: false
-  private _virtualNetworkId?: string | undefined; 
+  private _virtualNetworkId?: string; 
   public get virtualNetworkId() {
     return this.getStringAttribute('virtual_network_id');
   }
-  public set virtualNetworkId(value: string | undefined) {
+  public set virtualNetworkId(value: string) {
     this._virtualNetworkId = value;
   }
   public resetVirtualNetworkId() {
@@ -340,15 +425,15 @@ export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get virtualNetworkIdInput() {
-    return this._virtualNetworkId
+    return this._virtualNetworkId;
   }
 
   // vnet_address_prefix - computed: true, optional: true, required: false
-  private _vnetAddressPrefix?: string | undefined; 
+  private _vnetAddressPrefix?: string; 
   public get vnetAddressPrefix() {
     return this.getStringAttribute('vnet_address_prefix');
   }
-  public set vnetAddressPrefix(value: string | undefined) {
+  public set vnetAddressPrefix(value: string) {
     this._vnetAddressPrefix = value;
   }
   public resetVnetAddressPrefix() {
@@ -356,7 +441,7 @@ export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get vnetAddressPrefixInput() {
-    return this._vnetAddressPrefix
+    return this._vnetAddressPrefix;
   }
 }
 export interface DatabricksWorkspaceTimeouts {
@@ -378,7 +463,7 @@ export interface DatabricksWorkspaceTimeouts {
   readonly update?: string;
 }
 
-function databricksWorkspaceTimeoutsToTerraform(struct?: DatabricksWorkspaceTimeoutsOutputReference | DatabricksWorkspaceTimeouts): any {
+export function databricksWorkspaceTimeoutsToTerraform(struct?: DatabricksWorkspaceTimeoutsOutputReference | DatabricksWorkspaceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -401,12 +486,49 @@ export class DatabricksWorkspaceTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DatabricksWorkspaceTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DatabricksWorkspaceTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -414,15 +536,15 @@ export class DatabricksWorkspaceTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -430,15 +552,15 @@ export class DatabricksWorkspaceTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -446,15 +568,15 @@ export class DatabricksWorkspaceTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -462,7 +584,7 @@ export class DatabricksWorkspaceTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -510,8 +632,8 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._tags = config.tags;
-    this._customParameters = config.customParameters;
-    this._timeouts = config.timeouts;
+    this._customParameters.internalValue = config.customParameters;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -519,11 +641,11 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   // ==========
 
   // customer_managed_key_enabled - computed: false, optional: true, required: false
-  private _customerManagedKeyEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _customerManagedKeyEnabled?: boolean | cdktf.IResolvable; 
   public get customerManagedKeyEnabled() {
     return this.getBooleanAttribute('customer_managed_key_enabled') as any;
   }
-  public set customerManagedKeyEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set customerManagedKeyEnabled(value: boolean | cdktf.IResolvable) {
     this._customerManagedKeyEnabled = value;
   }
   public resetCustomerManagedKeyEnabled() {
@@ -531,7 +653,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get customerManagedKeyEnabledInput() {
-    return this._customerManagedKeyEnabled
+    return this._customerManagedKeyEnabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -540,11 +662,11 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // infrastructure_encryption_enabled - computed: false, optional: true, required: false
-  private _infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable; 
   public get infrastructureEncryptionEnabled() {
     return this.getBooleanAttribute('infrastructure_encryption_enabled') as any;
   }
-  public set infrastructureEncryptionEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set infrastructureEncryptionEnabled(value: boolean | cdktf.IResolvable) {
     this._infrastructureEncryptionEnabled = value;
   }
   public resetInfrastructureEncryptionEnabled() {
@@ -552,15 +674,15 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get infrastructureEncryptionEnabledInput() {
-    return this._infrastructureEncryptionEnabled
+    return this._infrastructureEncryptionEnabled;
   }
 
   // load_balancer_backend_address_pool_id - computed: false, optional: true, required: false
-  private _loadBalancerBackendAddressPoolId?: string | undefined; 
+  private _loadBalancerBackendAddressPoolId?: string; 
   public get loadBalancerBackendAddressPoolId() {
     return this.getStringAttribute('load_balancer_backend_address_pool_id');
   }
-  public set loadBalancerBackendAddressPoolId(value: string | undefined) {
+  public set loadBalancerBackendAddressPoolId(value: string) {
     this._loadBalancerBackendAddressPoolId = value;
   }
   public resetLoadBalancerBackendAddressPoolId() {
@@ -568,7 +690,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get loadBalancerBackendAddressPoolIdInput() {
-    return this._loadBalancerBackendAddressPoolId
+    return this._loadBalancerBackendAddressPoolId;
   }
 
   // location - computed: false, optional: false, required: true
@@ -581,7 +703,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // managed_resource_group_id - computed: true, optional: false, required: false
@@ -590,11 +712,11 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // managed_resource_group_name - computed: true, optional: true, required: false
-  private _managedResourceGroupName?: string | undefined; 
+  private _managedResourceGroupName?: string; 
   public get managedResourceGroupName() {
     return this.getStringAttribute('managed_resource_group_name');
   }
-  public set managedResourceGroupName(value: string | undefined) {
+  public set managedResourceGroupName(value: string) {
     this._managedResourceGroupName = value;
   }
   public resetManagedResourceGroupName() {
@@ -602,15 +724,15 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get managedResourceGroupNameInput() {
-    return this._managedResourceGroupName
+    return this._managedResourceGroupName;
   }
 
   // managed_services_cmk_key_vault_key_id - computed: false, optional: true, required: false
-  private _managedServicesCmkKeyVaultKeyId?: string | undefined; 
+  private _managedServicesCmkKeyVaultKeyId?: string; 
   public get managedServicesCmkKeyVaultKeyId() {
     return this.getStringAttribute('managed_services_cmk_key_vault_key_id');
   }
-  public set managedServicesCmkKeyVaultKeyId(value: string | undefined) {
+  public set managedServicesCmkKeyVaultKeyId(value: string) {
     this._managedServicesCmkKeyVaultKeyId = value;
   }
   public resetManagedServicesCmkKeyVaultKeyId() {
@@ -618,7 +740,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get managedServicesCmkKeyVaultKeyIdInput() {
-    return this._managedServicesCmkKeyVaultKeyId
+    return this._managedServicesCmkKeyVaultKeyId;
   }
 
   // name - computed: false, optional: false, required: true
@@ -631,15 +753,15 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network_security_group_rules_required - computed: true, optional: true, required: false
-  private _networkSecurityGroupRulesRequired?: string | undefined; 
+  private _networkSecurityGroupRulesRequired?: string; 
   public get networkSecurityGroupRulesRequired() {
     return this.getStringAttribute('network_security_group_rules_required');
   }
-  public set networkSecurityGroupRulesRequired(value: string | undefined) {
+  public set networkSecurityGroupRulesRequired(value: string) {
     this._networkSecurityGroupRulesRequired = value;
   }
   public resetNetworkSecurityGroupRulesRequired() {
@@ -647,15 +769,15 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkSecurityGroupRulesRequiredInput() {
-    return this._networkSecurityGroupRulesRequired
+    return this._networkSecurityGroupRulesRequired;
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled') as any;
   }
-  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -663,7 +785,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get publicNetworkAccessEnabledInput() {
-    return this._publicNetworkAccessEnabled
+    return this._publicNetworkAccessEnabled;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -676,7 +798,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // sku - computed: false, optional: false, required: true
@@ -689,7 +811,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuInput() {
-    return this._sku
+    return this._sku;
   }
 
   // storage_account_identity - computed: true, optional: false, required: false
@@ -698,12 +820,12 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -711,7 +833,7 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // workspace_id - computed: true, optional: false, required: false
@@ -725,37 +847,35 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
   }
 
   // custom_parameters - computed: false, optional: true, required: false
-  private _customParameters?: DatabricksWorkspaceCustomParameters | undefined; 
-  private __customParametersOutput = new DatabricksWorkspaceCustomParametersOutputReference(this as any, "custom_parameters", true);
+  private _customParameters = new DatabricksWorkspaceCustomParametersOutputReference(this as any, "custom_parameters", true);
   public get customParameters() {
-    return this.__customParametersOutput;
+    return this._customParameters;
   }
-  public putCustomParameters(value: DatabricksWorkspaceCustomParameters | undefined) {
-    this._customParameters = value;
+  public putCustomParameters(value: DatabricksWorkspaceCustomParameters) {
+    this._customParameters.internalValue = value;
   }
   public resetCustomParameters() {
-    this._customParameters = undefined;
+    this._customParameters.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get customParametersInput() {
-    return this._customParameters
+    return this._customParameters.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DatabricksWorkspaceTimeouts | undefined; 
-  private __timeoutsOutput = new DatabricksWorkspaceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DatabricksWorkspaceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DatabricksWorkspaceTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DatabricksWorkspaceTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -776,8 +896,8 @@ export class DatabricksWorkspace extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      custom_parameters: databricksWorkspaceCustomParametersToTerraform(this._customParameters),
-      timeouts: databricksWorkspaceTimeoutsToTerraform(this._timeouts),
+      custom_parameters: databricksWorkspaceCustomParametersToTerraform(this._customParameters.internalValue),
+      timeouts: databricksWorkspaceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

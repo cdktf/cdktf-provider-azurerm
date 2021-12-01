@@ -57,7 +57,7 @@ export interface LogicAppIntegrationAccountMapTimeouts {
   readonly update?: string;
 }
 
-function logicAppIntegrationAccountMapTimeoutsToTerraform(struct?: LogicAppIntegrationAccountMapTimeoutsOutputReference | LogicAppIntegrationAccountMapTimeouts): any {
+export function logicAppIntegrationAccountMapTimeoutsToTerraform(struct?: LogicAppIntegrationAccountMapTimeoutsOutputReference | LogicAppIntegrationAccountMapTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -80,12 +80,49 @@ export class LogicAppIntegrationAccountMapTimeoutsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogicAppIntegrationAccountMapTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppIntegrationAccountMapTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -93,15 +130,15 @@ export class LogicAppIntegrationAccountMapTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -109,15 +146,15 @@ export class LogicAppIntegrationAccountMapTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -125,15 +162,15 @@ export class LogicAppIntegrationAccountMapTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -141,7 +178,7 @@ export class LogicAppIntegrationAccountMapTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -183,7 +220,7 @@ export class LogicAppIntegrationAccountMap extends cdktf.TerraformResource {
     this._metadata = config.metadata;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -200,7 +237,7 @@ export class LogicAppIntegrationAccountMap extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get contentInput() {
-    return this._content
+    return this._content;
   }
 
   // id - computed: true, optional: true, required: false
@@ -218,7 +255,7 @@ export class LogicAppIntegrationAccountMap extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get integrationAccountNameInput() {
-    return this._integrationAccountName
+    return this._integrationAccountName;
   }
 
   // map_type - computed: false, optional: false, required: true
@@ -231,16 +268,16 @@ export class LogicAppIntegrationAccountMap extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get mapTypeInput() {
-    return this._mapType
+    return this._mapType;
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
   public get metadata() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -248,7 +285,7 @@ export class LogicAppIntegrationAccountMap extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get metadataInput() {
-    return this._metadata
+    return this._metadata;
   }
 
   // name - computed: false, optional: false, required: true
@@ -261,7 +298,7 @@ export class LogicAppIntegrationAccountMap extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -274,24 +311,23 @@ export class LogicAppIntegrationAccountMap extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LogicAppIntegrationAccountMapTimeouts | undefined; 
-  private __timeoutsOutput = new LogicAppIntegrationAccountMapTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogicAppIntegrationAccountMapTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: LogicAppIntegrationAccountMapTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: LogicAppIntegrationAccountMapTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -306,7 +342,7 @@ export class LogicAppIntegrationAccountMap extends cdktf.TerraformResource {
       metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      timeouts: logicAppIntegrationAccountMapTimeoutsToTerraform(this._timeouts),
+      timeouts: logicAppIntegrationAccountMapTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

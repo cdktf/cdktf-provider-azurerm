@@ -61,7 +61,7 @@ export interface RelayHybridConnectionAuthorizationRuleTimeouts {
   readonly update?: string;
 }
 
-function relayHybridConnectionAuthorizationRuleTimeoutsToTerraform(struct?: RelayHybridConnectionAuthorizationRuleTimeoutsOutputReference | RelayHybridConnectionAuthorizationRuleTimeouts): any {
+export function relayHybridConnectionAuthorizationRuleTimeoutsToTerraform(struct?: RelayHybridConnectionAuthorizationRuleTimeoutsOutputReference | RelayHybridConnectionAuthorizationRuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -84,12 +84,49 @@ export class RelayHybridConnectionAuthorizationRuleTimeoutsOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): RelayHybridConnectionAuthorizationRuleTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RelayHybridConnectionAuthorizationRuleTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -97,15 +134,15 @@ export class RelayHybridConnectionAuthorizationRuleTimeoutsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -113,15 +150,15 @@ export class RelayHybridConnectionAuthorizationRuleTimeoutsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -129,15 +166,15 @@ export class RelayHybridConnectionAuthorizationRuleTimeoutsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -145,7 +182,7 @@ export class RelayHybridConnectionAuthorizationRuleTimeoutsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -188,7 +225,7 @@ export class RelayHybridConnectionAuthorizationRule extends cdktf.TerraformResou
     this._namespaceName = config.namespaceName;
     this._resourceGroupName = config.resourceGroupName;
     this._send = config.send;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -205,7 +242,7 @@ export class RelayHybridConnectionAuthorizationRule extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get hybridConnectionNameInput() {
-    return this._hybridConnectionName
+    return this._hybridConnectionName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -214,11 +251,11 @@ export class RelayHybridConnectionAuthorizationRule extends cdktf.TerraformResou
   }
 
   // listen - computed: false, optional: true, required: false
-  private _listen?: boolean | cdktf.IResolvable | undefined; 
+  private _listen?: boolean | cdktf.IResolvable; 
   public get listen() {
     return this.getBooleanAttribute('listen') as any;
   }
-  public set listen(value: boolean | cdktf.IResolvable | undefined) {
+  public set listen(value: boolean | cdktf.IResolvable) {
     this._listen = value;
   }
   public resetListen() {
@@ -226,15 +263,15 @@ export class RelayHybridConnectionAuthorizationRule extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get listenInput() {
-    return this._listen
+    return this._listen;
   }
 
   // manage - computed: false, optional: true, required: false
-  private _manage?: boolean | cdktf.IResolvable | undefined; 
+  private _manage?: boolean | cdktf.IResolvable; 
   public get manage() {
     return this.getBooleanAttribute('manage') as any;
   }
-  public set manage(value: boolean | cdktf.IResolvable | undefined) {
+  public set manage(value: boolean | cdktf.IResolvable) {
     this._manage = value;
   }
   public resetManage() {
@@ -242,7 +279,7 @@ export class RelayHybridConnectionAuthorizationRule extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get manageInput() {
-    return this._manage
+    return this._manage;
   }
 
   // name - computed: false, optional: false, required: true
@@ -255,7 +292,7 @@ export class RelayHybridConnectionAuthorizationRule extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // namespace_name - computed: false, optional: false, required: true
@@ -268,7 +305,7 @@ export class RelayHybridConnectionAuthorizationRule extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceNameInput() {
-    return this._namespaceName
+    return this._namespaceName;
   }
 
   // primary_connection_string - computed: true, optional: false, required: false
@@ -291,7 +328,7 @@ export class RelayHybridConnectionAuthorizationRule extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // secondary_connection_string - computed: true, optional: false, required: false
@@ -305,11 +342,11 @@ export class RelayHybridConnectionAuthorizationRule extends cdktf.TerraformResou
   }
 
   // send - computed: false, optional: true, required: false
-  private _send?: boolean | cdktf.IResolvable | undefined; 
+  private _send?: boolean | cdktf.IResolvable; 
   public get send() {
     return this.getBooleanAttribute('send') as any;
   }
-  public set send(value: boolean | cdktf.IResolvable | undefined) {
+  public set send(value: boolean | cdktf.IResolvable) {
     this._send = value;
   }
   public resetSend() {
@@ -317,24 +354,23 @@ export class RelayHybridConnectionAuthorizationRule extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get sendInput() {
-    return this._send
+    return this._send;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: RelayHybridConnectionAuthorizationRuleTimeouts | undefined; 
-  private __timeoutsOutput = new RelayHybridConnectionAuthorizationRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new RelayHybridConnectionAuthorizationRuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: RelayHybridConnectionAuthorizationRuleTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: RelayHybridConnectionAuthorizationRuleTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -350,7 +386,7 @@ export class RelayHybridConnectionAuthorizationRule extends cdktf.TerraformResou
       namespace_name: cdktf.stringToTerraform(this._namespaceName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       send: cdktf.booleanToTerraform(this._send),
-      timeouts: relayHybridConnectionAuthorizationRuleTimeoutsToTerraform(this._timeouts),
+      timeouts: relayHybridConnectionAuthorizationRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -45,7 +45,7 @@ export interface ActiveDirectoryDomainServiceReplicaSetTimeouts {
   readonly update?: string;
 }
 
-function activeDirectoryDomainServiceReplicaSetTimeoutsToTerraform(struct?: ActiveDirectoryDomainServiceReplicaSetTimeoutsOutputReference | ActiveDirectoryDomainServiceReplicaSetTimeouts): any {
+export function activeDirectoryDomainServiceReplicaSetTimeoutsToTerraform(struct?: ActiveDirectoryDomainServiceReplicaSetTimeoutsOutputReference | ActiveDirectoryDomainServiceReplicaSetTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -68,12 +68,49 @@ export class ActiveDirectoryDomainServiceReplicaSetTimeoutsOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ActiveDirectoryDomainServiceReplicaSetTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ActiveDirectoryDomainServiceReplicaSetTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -81,15 +118,15 @@ export class ActiveDirectoryDomainServiceReplicaSetTimeoutsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -97,15 +134,15 @@ export class ActiveDirectoryDomainServiceReplicaSetTimeoutsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -113,15 +150,15 @@ export class ActiveDirectoryDomainServiceReplicaSetTimeoutsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -129,7 +166,7 @@ export class ActiveDirectoryDomainServiceReplicaSetTimeoutsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -168,7 +205,7 @@ export class ActiveDirectoryDomainServiceReplicaSet extends cdktf.TerraformResou
     this._domainServiceId = config.domainServiceId;
     this._location = config.location;
     this._subnetId = config.subnetId;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -190,7 +227,7 @@ export class ActiveDirectoryDomainServiceReplicaSet extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get domainServiceIdInput() {
-    return this._domainServiceId
+    return this._domainServiceId;
   }
 
   // external_access_ip_address - computed: true, optional: false, required: false
@@ -213,7 +250,7 @@ export class ActiveDirectoryDomainServiceReplicaSet extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // service_status - computed: true, optional: false, required: false
@@ -231,24 +268,23 @@ export class ActiveDirectoryDomainServiceReplicaSet extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get subnetIdInput() {
-    return this._subnetId
+    return this._subnetId;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ActiveDirectoryDomainServiceReplicaSetTimeouts | undefined; 
-  private __timeoutsOutput = new ActiveDirectoryDomainServiceReplicaSetTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ActiveDirectoryDomainServiceReplicaSetTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ActiveDirectoryDomainServiceReplicaSetTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ActiveDirectoryDomainServiceReplicaSetTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -260,7 +296,7 @@ export class ActiveDirectoryDomainServiceReplicaSet extends cdktf.TerraformResou
       domain_service_id: cdktf.stringToTerraform(this._domainServiceId),
       location: cdktf.stringToTerraform(this._location),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
-      timeouts: activeDirectoryDomainServiceReplicaSetTimeoutsToTerraform(this._timeouts),
+      timeouts: activeDirectoryDomainServiceReplicaSetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

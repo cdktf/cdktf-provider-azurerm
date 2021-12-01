@@ -77,7 +77,7 @@ export interface ApiManagementSubscriptionTimeouts {
   readonly update?: string;
 }
 
-function apiManagementSubscriptionTimeoutsToTerraform(struct?: ApiManagementSubscriptionTimeoutsOutputReference | ApiManagementSubscriptionTimeouts): any {
+export function apiManagementSubscriptionTimeoutsToTerraform(struct?: ApiManagementSubscriptionTimeoutsOutputReference | ApiManagementSubscriptionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -100,12 +100,49 @@ export class ApiManagementSubscriptionTimeoutsOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementSubscriptionTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementSubscriptionTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -113,15 +150,15 @@ export class ApiManagementSubscriptionTimeoutsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -129,15 +166,15 @@ export class ApiManagementSubscriptionTimeoutsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -145,15 +182,15 @@ export class ApiManagementSubscriptionTimeoutsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -161,7 +198,7 @@ export class ApiManagementSubscriptionTimeoutsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -208,7 +245,7 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
     this._state = config.state;
     this._subscriptionId = config.subscriptionId;
     this._userId = config.userId;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -216,11 +253,11 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
   // ==========
 
   // allow_tracing - computed: false, optional: true, required: false
-  private _allowTracing?: boolean | cdktf.IResolvable | undefined; 
+  private _allowTracing?: boolean | cdktf.IResolvable; 
   public get allowTracing() {
     return this.getBooleanAttribute('allow_tracing') as any;
   }
-  public set allowTracing(value: boolean | cdktf.IResolvable | undefined) {
+  public set allowTracing(value: boolean | cdktf.IResolvable) {
     this._allowTracing = value;
   }
   public resetAllowTracing() {
@@ -228,15 +265,15 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get allowTracingInput() {
-    return this._allowTracing
+    return this._allowTracing;
   }
 
   // api_id - computed: false, optional: true, required: false
-  private _apiId?: string | undefined; 
+  private _apiId?: string; 
   public get apiId() {
     return this.getStringAttribute('api_id');
   }
-  public set apiId(value: string | undefined) {
+  public set apiId(value: string) {
     this._apiId = value;
   }
   public resetApiId() {
@@ -244,7 +281,7 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get apiIdInput() {
-    return this._apiId
+    return this._apiId;
   }
 
   // api_management_name - computed: false, optional: false, required: true
@@ -257,7 +294,7 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get apiManagementNameInput() {
-    return this._apiManagementName
+    return this._apiManagementName;
   }
 
   // display_name - computed: false, optional: false, required: true
@@ -270,7 +307,7 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -279,11 +316,11 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
   }
 
   // primary_key - computed: true, optional: true, required: false
-  private _primaryKey?: string | undefined; 
+  private _primaryKey?: string; 
   public get primaryKey() {
     return this.getStringAttribute('primary_key');
   }
-  public set primaryKey(value: string | undefined) {
+  public set primaryKey(value: string) {
     this._primaryKey = value;
   }
   public resetPrimaryKey() {
@@ -291,15 +328,15 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get primaryKeyInput() {
-    return this._primaryKey
+    return this._primaryKey;
   }
 
   // product_id - computed: false, optional: true, required: false
-  private _productId?: string | undefined; 
+  private _productId?: string; 
   public get productId() {
     return this.getStringAttribute('product_id');
   }
-  public set productId(value: string | undefined) {
+  public set productId(value: string) {
     this._productId = value;
   }
   public resetProductId() {
@@ -307,7 +344,7 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get productIdInput() {
-    return this._productId
+    return this._productId;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -320,15 +357,15 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // secondary_key - computed: true, optional: true, required: false
-  private _secondaryKey?: string | undefined; 
+  private _secondaryKey?: string; 
   public get secondaryKey() {
     return this.getStringAttribute('secondary_key');
   }
-  public set secondaryKey(value: string | undefined) {
+  public set secondaryKey(value: string) {
     this._secondaryKey = value;
   }
   public resetSecondaryKey() {
@@ -336,15 +373,15 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get secondaryKeyInput() {
-    return this._secondaryKey
+    return this._secondaryKey;
   }
 
   // state - computed: false, optional: true, required: false
-  private _state?: string | undefined; 
+  private _state?: string; 
   public get state() {
     return this.getStringAttribute('state');
   }
-  public set state(value: string | undefined) {
+  public set state(value: string) {
     this._state = value;
   }
   public resetState() {
@@ -352,15 +389,15 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get stateInput() {
-    return this._state
+    return this._state;
   }
 
   // subscription_id - computed: true, optional: true, required: false
-  private _subscriptionId?: string | undefined; 
+  private _subscriptionId?: string; 
   public get subscriptionId() {
     return this.getStringAttribute('subscription_id');
   }
-  public set subscriptionId(value: string | undefined) {
+  public set subscriptionId(value: string) {
     this._subscriptionId = value;
   }
   public resetSubscriptionId() {
@@ -368,15 +405,15 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get subscriptionIdInput() {
-    return this._subscriptionId
+    return this._subscriptionId;
   }
 
   // user_id - computed: false, optional: true, required: false
-  private _userId?: string | undefined; 
+  private _userId?: string; 
   public get userId() {
     return this.getStringAttribute('user_id');
   }
-  public set userId(value: string | undefined) {
+  public set userId(value: string) {
     this._userId = value;
   }
   public resetUserId() {
@@ -384,24 +421,23 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get userIdInput() {
-    return this._userId
+    return this._userId;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ApiManagementSubscriptionTimeouts | undefined; 
-  private __timeoutsOutput = new ApiManagementSubscriptionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApiManagementSubscriptionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ApiManagementSubscriptionTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ApiManagementSubscriptionTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -421,7 +457,7 @@ export class ApiManagementSubscription extends cdktf.TerraformResource {
       state: cdktf.stringToTerraform(this._state),
       subscription_id: cdktf.stringToTerraform(this._subscriptionId),
       user_id: cdktf.stringToTerraform(this._userId),
-      timeouts: apiManagementSubscriptionTimeoutsToTerraform(this._timeouts),
+      timeouts: apiManagementSubscriptionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

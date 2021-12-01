@@ -41,7 +41,7 @@ export interface DataAzurermPlatformImageTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermPlatformImageTimeoutsToTerraform(struct?: DataAzurermPlatformImageTimeoutsOutputReference | DataAzurermPlatformImageTimeouts): any {
+export function dataAzurermPlatformImageTimeoutsToTerraform(struct?: DataAzurermPlatformImageTimeoutsOutputReference | DataAzurermPlatformImageTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -61,12 +61,31 @@ export class DataAzurermPlatformImageTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermPlatformImageTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermPlatformImageTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -74,7 +93,7 @@ export class DataAzurermPlatformImageTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -115,7 +134,7 @@ export class DataAzurermPlatformImage extends cdktf.TerraformDataSource {
     this._publisher = config.publisher;
     this._sku = config.sku;
     this._version = config.version;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -137,7 +156,7 @@ export class DataAzurermPlatformImage extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // offer - computed: false, optional: false, required: true
@@ -150,7 +169,7 @@ export class DataAzurermPlatformImage extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get offerInput() {
-    return this._offer
+    return this._offer;
   }
 
   // publisher - computed: false, optional: false, required: true
@@ -163,7 +182,7 @@ export class DataAzurermPlatformImage extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get publisherInput() {
-    return this._publisher
+    return this._publisher;
   }
 
   // sku - computed: false, optional: false, required: true
@@ -176,15 +195,15 @@ export class DataAzurermPlatformImage extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuInput() {
-    return this._sku
+    return this._sku;
   }
 
   // version - computed: true, optional: true, required: false
-  private _version?: string | undefined; 
+  private _version?: string; 
   public get version() {
     return this.getStringAttribute('version');
   }
-  public set version(value: string | undefined) {
+  public set version(value: string) {
     this._version = value;
   }
   public resetVersion() {
@@ -192,24 +211,23 @@ export class DataAzurermPlatformImage extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermPlatformImageTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermPlatformImageTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermPlatformImageTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermPlatformImageTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermPlatformImageTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -223,7 +241,7 @@ export class DataAzurermPlatformImage extends cdktf.TerraformDataSource {
       publisher: cdktf.stringToTerraform(this._publisher),
       sku: cdktf.stringToTerraform(this._sku),
       version: cdktf.stringToTerraform(this._version),
-      timeouts: dataAzurermPlatformImageTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermPlatformImageTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

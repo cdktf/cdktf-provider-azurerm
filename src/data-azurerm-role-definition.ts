@@ -55,7 +55,7 @@ export interface DataAzurermRoleDefinitionTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermRoleDefinitionTimeoutsToTerraform(struct?: DataAzurermRoleDefinitionTimeoutsOutputReference | DataAzurermRoleDefinitionTimeouts): any {
+export function dataAzurermRoleDefinitionTimeoutsToTerraform(struct?: DataAzurermRoleDefinitionTimeoutsOutputReference | DataAzurermRoleDefinitionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -75,12 +75,31 @@ export class DataAzurermRoleDefinitionTimeoutsOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermRoleDefinitionTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermRoleDefinitionTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -88,7 +107,7 @@ export class DataAzurermRoleDefinitionTimeoutsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -127,7 +146,7 @@ export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
     this._name = config.name;
     this._roleDefinitionId = config.roleDefinitionId;
     this._scope = config.scope;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -150,11 +169,11 @@ export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
   }
 
   // name - computed: true, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -162,7 +181,7 @@ export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // permissions - computed: true, optional: false, required: false
@@ -171,11 +190,11 @@ export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
   }
 
   // role_definition_id - computed: true, optional: true, required: false
-  private _roleDefinitionId?: string | undefined; 
+  private _roleDefinitionId?: string; 
   public get roleDefinitionId() {
     return this.getStringAttribute('role_definition_id');
   }
-  public set roleDefinitionId(value: string | undefined) {
+  public set roleDefinitionId(value: string) {
     this._roleDefinitionId = value;
   }
   public resetRoleDefinitionId() {
@@ -183,15 +202,15 @@ export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get roleDefinitionIdInput() {
-    return this._roleDefinitionId
+    return this._roleDefinitionId;
   }
 
   // scope - computed: false, optional: true, required: false
-  private _scope?: string | undefined; 
+  private _scope?: string; 
   public get scope() {
     return this.getStringAttribute('scope');
   }
-  public set scope(value: string | undefined) {
+  public set scope(value: string) {
     this._scope = value;
   }
   public resetScope() {
@@ -199,7 +218,7 @@ export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get scopeInput() {
-    return this._scope
+    return this._scope;
   }
 
   // type - computed: true, optional: false, required: false
@@ -208,20 +227,19 @@ export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermRoleDefinitionTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermRoleDefinitionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermRoleDefinitionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermRoleDefinitionTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermRoleDefinitionTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -233,7 +251,7 @@ export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
       name: cdktf.stringToTerraform(this._name),
       role_definition_id: cdktf.stringToTerraform(this._roleDefinitionId),
       scope: cdktf.stringToTerraform(this._scope),
-      timeouts: dataAzurermRoleDefinitionTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermRoleDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

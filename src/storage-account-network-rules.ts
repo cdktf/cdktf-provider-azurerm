@@ -59,7 +59,7 @@ export interface StorageAccountNetworkRulesPrivateLinkAccessA {
   readonly endpointTenantId?: string;
 }
 
-function storageAccountNetworkRulesPrivateLinkAccessAToTerraform(struct?: StorageAccountNetworkRulesPrivateLinkAccessA): any {
+export function storageAccountNetworkRulesPrivateLinkAccessAToTerraform(struct?: StorageAccountNetworkRulesPrivateLinkAccessA): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -89,7 +89,7 @@ export interface StorageAccountNetworkRulesTimeouts {
   readonly update?: string;
 }
 
-function storageAccountNetworkRulesTimeoutsToTerraform(struct?: StorageAccountNetworkRulesTimeoutsOutputReference | StorageAccountNetworkRulesTimeouts): any {
+export function storageAccountNetworkRulesTimeoutsToTerraform(struct?: StorageAccountNetworkRulesTimeoutsOutputReference | StorageAccountNetworkRulesTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -112,12 +112,49 @@ export class StorageAccountNetworkRulesTimeoutsOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageAccountNetworkRulesTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountNetworkRulesTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -125,15 +162,15 @@ export class StorageAccountNetworkRulesTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -141,15 +178,15 @@ export class StorageAccountNetworkRulesTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -157,15 +194,15 @@ export class StorageAccountNetworkRulesTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -173,7 +210,7 @@ export class StorageAccountNetworkRulesTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -217,7 +254,7 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
     this._storageAccountName = config.storageAccountName;
     this._virtualNetworkSubnetIds = config.virtualNetworkSubnetIds;
     this._privateLinkAccess = config.privateLinkAccess;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -225,11 +262,11 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   // ==========
 
   // bypass - computed: true, optional: true, required: false
-  private _bypass?: string[] | undefined; 
+  private _bypass?: string[]; 
   public get bypass() {
     return this.getListAttribute('bypass');
   }
-  public set bypass(value: string[] | undefined) {
+  public set bypass(value: string[]) {
     this._bypass = value;
   }
   public resetBypass() {
@@ -237,7 +274,7 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get bypassInput() {
-    return this._bypass
+    return this._bypass;
   }
 
   // default_action - computed: false, optional: false, required: true
@@ -250,7 +287,7 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get defaultActionInput() {
-    return this._defaultAction
+    return this._defaultAction;
   }
 
   // id - computed: true, optional: true, required: false
@@ -259,11 +296,11 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   }
 
   // ip_rules - computed: true, optional: true, required: false
-  private _ipRules?: string[] | undefined; 
+  private _ipRules?: string[]; 
   public get ipRules() {
     return this.getListAttribute('ip_rules');
   }
-  public set ipRules(value: string[] | undefined) {
+  public set ipRules(value: string[]) {
     this._ipRules = value;
   }
   public resetIpRules() {
@@ -271,15 +308,15 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipRulesInput() {
-    return this._ipRules
+    return this._ipRules;
   }
 
   // resource_group_name - computed: true, optional: true, required: false
-  private _resourceGroupName?: string | undefined; 
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
-  public set resourceGroupName(value: string | undefined) {
+  public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
   public resetResourceGroupName() {
@@ -287,15 +324,15 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // storage_account_id - computed: true, optional: true, required: false
-  private _storageAccountId?: string | undefined; 
+  private _storageAccountId?: string; 
   public get storageAccountId() {
     return this.getStringAttribute('storage_account_id');
   }
-  public set storageAccountId(value: string | undefined) {
+  public set storageAccountId(value: string) {
     this._storageAccountId = value;
   }
   public resetStorageAccountId() {
@@ -303,15 +340,15 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountIdInput() {
-    return this._storageAccountId
+    return this._storageAccountId;
   }
 
   // storage_account_name - computed: true, optional: true, required: false
-  private _storageAccountName?: string | undefined; 
+  private _storageAccountName?: string; 
   public get storageAccountName() {
     return this.getStringAttribute('storage_account_name');
   }
-  public set storageAccountName(value: string | undefined) {
+  public set storageAccountName(value: string) {
     this._storageAccountName = value;
   }
   public resetStorageAccountName() {
@@ -319,15 +356,15 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountNameInput() {
-    return this._storageAccountName
+    return this._storageAccountName;
   }
 
   // virtual_network_subnet_ids - computed: true, optional: true, required: false
-  private _virtualNetworkSubnetIds?: string[] | undefined; 
+  private _virtualNetworkSubnetIds?: string[]; 
   public get virtualNetworkSubnetIds() {
     return this.getListAttribute('virtual_network_subnet_ids');
   }
-  public set virtualNetworkSubnetIds(value: string[] | undefined) {
+  public set virtualNetworkSubnetIds(value: string[]) {
     this._virtualNetworkSubnetIds = value;
   }
   public resetVirtualNetworkSubnetIds() {
@@ -335,16 +372,16 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get virtualNetworkSubnetIdsInput() {
-    return this._virtualNetworkSubnetIds
+    return this._virtualNetworkSubnetIds;
   }
 
   // private_link_access - computed: false, optional: true, required: false
-  private _privateLinkAccess?: StorageAccountNetworkRulesPrivateLinkAccessA[] | undefined; 
+  private _privateLinkAccess?: StorageAccountNetworkRulesPrivateLinkAccessA[]; 
   public get privateLinkAccess() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('private_link_access') as any;
   }
-  public set privateLinkAccess(value: StorageAccountNetworkRulesPrivateLinkAccessA[] | undefined) {
+  public set privateLinkAccess(value: StorageAccountNetworkRulesPrivateLinkAccessA[]) {
     this._privateLinkAccess = value;
   }
   public resetPrivateLinkAccess() {
@@ -352,24 +389,23 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get privateLinkAccessInput() {
-    return this._privateLinkAccess
+    return this._privateLinkAccess;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: StorageAccountNetworkRulesTimeouts | undefined; 
-  private __timeoutsOutput = new StorageAccountNetworkRulesTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StorageAccountNetworkRulesTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: StorageAccountNetworkRulesTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: StorageAccountNetworkRulesTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -386,7 +422,7 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
       virtual_network_subnet_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._virtualNetworkSubnetIds),
       private_link_access: cdktf.listMapper(storageAccountNetworkRulesPrivateLinkAccessAToTerraform)(this._privateLinkAccess),
-      timeouts: storageAccountNetworkRulesTimeoutsToTerraform(this._timeouts),
+      timeouts: storageAccountNetworkRulesTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

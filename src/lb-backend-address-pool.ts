@@ -53,7 +53,7 @@ export interface LbBackendAddressPoolBackendAddress {
   readonly virtualNetworkId: string;
 }
 
-function lbBackendAddressPoolBackendAddressToTerraform(struct?: LbBackendAddressPoolBackendAddress): any {
+export function lbBackendAddressPoolBackendAddressToTerraform(struct?: LbBackendAddressPoolBackendAddress): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -84,7 +84,7 @@ export interface LbBackendAddressPoolTimeouts {
   readonly update?: string;
 }
 
-function lbBackendAddressPoolTimeoutsToTerraform(struct?: LbBackendAddressPoolTimeoutsOutputReference | LbBackendAddressPoolTimeouts): any {
+export function lbBackendAddressPoolTimeoutsToTerraform(struct?: LbBackendAddressPoolTimeoutsOutputReference | LbBackendAddressPoolTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -107,12 +107,49 @@ export class LbBackendAddressPoolTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LbBackendAddressPoolTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LbBackendAddressPoolTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -120,15 +157,15 @@ export class LbBackendAddressPoolTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -136,15 +173,15 @@ export class LbBackendAddressPoolTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -152,15 +189,15 @@ export class LbBackendAddressPoolTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -168,7 +205,7 @@ export class LbBackendAddressPoolTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface LbBackendAddressPoolTunnelInterface {
@@ -190,7 +227,7 @@ export interface LbBackendAddressPoolTunnelInterface {
   readonly type: string;
 }
 
-function lbBackendAddressPoolTunnelInterfaceToTerraform(struct?: LbBackendAddressPoolTunnelInterface): any {
+export function lbBackendAddressPoolTunnelInterfaceToTerraform(struct?: LbBackendAddressPoolTunnelInterface): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -240,7 +277,7 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._backendAddress = config.backendAddress;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
     this._tunnelInterface = config.tunnelInterface;
   }
 
@@ -273,7 +310,7 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get loadbalancerIdInput() {
-    return this._loadbalancerId
+    return this._loadbalancerId;
   }
 
   // name - computed: false, optional: false, required: true
@@ -286,7 +323,7 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // outbound_rules - computed: true, optional: false, required: false
@@ -295,11 +332,11 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
   }
 
   // resource_group_name - computed: true, optional: true, required: false
-  private _resourceGroupName?: string | undefined; 
+  private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
-  public set resourceGroupName(value: string | undefined) {
+  public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
   }
   public resetResourceGroupName() {
@@ -307,16 +344,16 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // backend_address - computed: false, optional: true, required: false
-  private _backendAddress?: LbBackendAddressPoolBackendAddress[] | undefined; 
+  private _backendAddress?: LbBackendAddressPoolBackendAddress[]; 
   public get backendAddress() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('backend_address') as any;
   }
-  public set backendAddress(value: LbBackendAddressPoolBackendAddress[] | undefined) {
+  public set backendAddress(value: LbBackendAddressPoolBackendAddress[]) {
     this._backendAddress = value;
   }
   public resetBackendAddress() {
@@ -324,33 +361,32 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get backendAddressInput() {
-    return this._backendAddress
+    return this._backendAddress;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LbBackendAddressPoolTimeouts | undefined; 
-  private __timeoutsOutput = new LbBackendAddressPoolTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LbBackendAddressPoolTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: LbBackendAddressPoolTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: LbBackendAddressPoolTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // tunnel_interface - computed: false, optional: true, required: false
-  private _tunnelInterface?: LbBackendAddressPoolTunnelInterface[] | undefined; 
+  private _tunnelInterface?: LbBackendAddressPoolTunnelInterface[]; 
   public get tunnelInterface() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tunnel_interface') as any;
   }
-  public set tunnelInterface(value: LbBackendAddressPoolTunnelInterface[] | undefined) {
+  public set tunnelInterface(value: LbBackendAddressPoolTunnelInterface[]) {
     this._tunnelInterface = value;
   }
   public resetTunnelInterface() {
@@ -358,7 +394,7 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tunnelInterfaceInput() {
-    return this._tunnelInterface
+    return this._tunnelInterface;
   }
 
   // =========
@@ -371,7 +407,7 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       backend_address: cdktf.listMapper(lbBackendAddressPoolBackendAddressToTerraform)(this._backendAddress),
-      timeouts: lbBackendAddressPoolTimeoutsToTerraform(this._timeouts),
+      timeouts: lbBackendAddressPoolTimeoutsToTerraform(this._timeouts.internalValue),
       tunnel_interface: cdktf.listMapper(lbBackendAddressPoolTunnelInterfaceToTerraform)(this._tunnelInterface),
     };
   }

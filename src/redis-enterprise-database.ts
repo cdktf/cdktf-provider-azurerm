@@ -59,7 +59,7 @@ export interface RedisEnterpriseDatabaseModule {
   readonly name: string;
 }
 
-function redisEnterpriseDatabaseModuleToTerraform(struct?: RedisEnterpriseDatabaseModule): any {
+export function redisEnterpriseDatabaseModuleToTerraform(struct?: RedisEnterpriseDatabaseModule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -85,7 +85,7 @@ export interface RedisEnterpriseDatabaseTimeouts {
   readonly read?: string;
 }
 
-function redisEnterpriseDatabaseTimeoutsToTerraform(struct?: RedisEnterpriseDatabaseTimeoutsOutputReference | RedisEnterpriseDatabaseTimeouts): any {
+export function redisEnterpriseDatabaseTimeoutsToTerraform(struct?: RedisEnterpriseDatabaseTimeoutsOutputReference | RedisEnterpriseDatabaseTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -107,12 +107,43 @@ export class RedisEnterpriseDatabaseTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): RedisEnterpriseDatabaseTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RedisEnterpriseDatabaseTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -120,15 +151,15 @@ export class RedisEnterpriseDatabaseTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -136,15 +167,15 @@ export class RedisEnterpriseDatabaseTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -152,7 +183,7 @@ export class RedisEnterpriseDatabaseTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -196,7 +227,7 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
     this._port = config.port;
     this._resourceGroupName = config.resourceGroupName;
     this._module = config.module;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -204,11 +235,11 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   // ==========
 
   // client_protocol - computed: false, optional: true, required: false
-  private _clientProtocol?: string | undefined; 
+  private _clientProtocol?: string; 
   public get clientProtocol() {
     return this.getStringAttribute('client_protocol');
   }
-  public set clientProtocol(value: string | undefined) {
+  public set clientProtocol(value: string) {
     this._clientProtocol = value;
   }
   public resetClientProtocol() {
@@ -216,7 +247,7 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get clientProtocolInput() {
-    return this._clientProtocol
+    return this._clientProtocol;
   }
 
   // cluster_id - computed: false, optional: false, required: true
@@ -229,15 +260,15 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get clusterIdInput() {
-    return this._clusterId
+    return this._clusterId;
   }
 
   // clustering_policy - computed: false, optional: true, required: false
-  private _clusteringPolicy?: string | undefined; 
+  private _clusteringPolicy?: string; 
   public get clusteringPolicy() {
     return this.getStringAttribute('clustering_policy');
   }
-  public set clusteringPolicy(value: string | undefined) {
+  public set clusteringPolicy(value: string) {
     this._clusteringPolicy = value;
   }
   public resetClusteringPolicy() {
@@ -245,15 +276,15 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get clusteringPolicyInput() {
-    return this._clusteringPolicy
+    return this._clusteringPolicy;
   }
 
   // eviction_policy - computed: false, optional: true, required: false
-  private _evictionPolicy?: string | undefined; 
+  private _evictionPolicy?: string; 
   public get evictionPolicy() {
     return this.getStringAttribute('eviction_policy');
   }
-  public set evictionPolicy(value: string | undefined) {
+  public set evictionPolicy(value: string) {
     this._evictionPolicy = value;
   }
   public resetEvictionPolicy() {
@@ -261,7 +292,7 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get evictionPolicyInput() {
-    return this._evictionPolicy
+    return this._evictionPolicy;
   }
 
   // id - computed: true, optional: true, required: false
@@ -270,11 +301,11 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
 
   // name - computed: false, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -282,15 +313,15 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // port - computed: false, optional: true, required: false
-  private _port?: number | undefined; 
+  private _port?: number; 
   public get port() {
     return this.getNumberAttribute('port');
   }
-  public set port(value: number | undefined) {
+  public set port(value: number) {
     this._port = value;
   }
   public resetPort() {
@@ -298,7 +329,7 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get portInput() {
-    return this._port
+    return this._port;
   }
 
   // primary_access_key - computed: true, optional: false, required: false
@@ -316,7 +347,7 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // secondary_access_key - computed: true, optional: false, required: false
@@ -325,12 +356,12 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
 
   // module - computed: false, optional: true, required: false
-  private _module?: RedisEnterpriseDatabaseModule[] | undefined; 
+  private _module?: RedisEnterpriseDatabaseModule[]; 
   public get module() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('module') as any;
   }
-  public set module(value: RedisEnterpriseDatabaseModule[] | undefined) {
+  public set module(value: RedisEnterpriseDatabaseModule[]) {
     this._module = value;
   }
   public resetModule() {
@@ -338,24 +369,23 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get moduleInput() {
-    return this._module
+    return this._module;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: RedisEnterpriseDatabaseTimeouts | undefined; 
-  private __timeoutsOutput = new RedisEnterpriseDatabaseTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new RedisEnterpriseDatabaseTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: RedisEnterpriseDatabaseTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: RedisEnterpriseDatabaseTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -372,7 +402,7 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
       port: cdktf.numberToTerraform(this._port),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       module: cdktf.listMapper(redisEnterpriseDatabaseModuleToTerraform)(this._module),
-      timeouts: redisEnterpriseDatabaseTimeoutsToTerraform(this._timeouts),
+      timeouts: redisEnterpriseDatabaseTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

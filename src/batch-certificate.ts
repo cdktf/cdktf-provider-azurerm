@@ -61,7 +61,7 @@ export interface BatchCertificateTimeouts {
   readonly update?: string;
 }
 
-function batchCertificateTimeoutsToTerraform(struct?: BatchCertificateTimeoutsOutputReference | BatchCertificateTimeouts): any {
+export function batchCertificateTimeoutsToTerraform(struct?: BatchCertificateTimeoutsOutputReference | BatchCertificateTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -84,12 +84,49 @@ export class BatchCertificateTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BatchCertificateTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchCertificateTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -97,15 +134,15 @@ export class BatchCertificateTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -113,15 +150,15 @@ export class BatchCertificateTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -129,15 +166,15 @@ export class BatchCertificateTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -145,7 +182,7 @@ export class BatchCertificateTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -188,7 +225,7 @@ export class BatchCertificate extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._thumbprint = config.thumbprint;
     this._thumbprintAlgorithm = config.thumbprintAlgorithm;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -205,7 +242,7 @@ export class BatchCertificate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get accountNameInput() {
-    return this._accountName
+    return this._accountName;
   }
 
   // certificate - computed: false, optional: false, required: true
@@ -218,7 +255,7 @@ export class BatchCertificate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get certificateInput() {
-    return this._certificate
+    return this._certificate;
   }
 
   // format - computed: false, optional: false, required: true
@@ -231,7 +268,7 @@ export class BatchCertificate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get formatInput() {
-    return this._format
+    return this._format;
   }
 
   // id - computed: true, optional: true, required: false
@@ -245,11 +282,11 @@ export class BatchCertificate extends cdktf.TerraformResource {
   }
 
   // password - computed: false, optional: true, required: false
-  private _password?: string | undefined; 
+  private _password?: string; 
   public get password() {
     return this.getStringAttribute('password');
   }
-  public set password(value: string | undefined) {
+  public set password(value: string) {
     this._password = value;
   }
   public resetPassword() {
@@ -257,7 +294,7 @@ export class BatchCertificate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // public_data - computed: true, optional: false, required: false
@@ -275,7 +312,7 @@ export class BatchCertificate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // thumbprint - computed: false, optional: false, required: true
@@ -288,7 +325,7 @@ export class BatchCertificate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get thumbprintInput() {
-    return this._thumbprint
+    return this._thumbprint;
   }
 
   // thumbprint_algorithm - computed: false, optional: false, required: true
@@ -301,24 +338,23 @@ export class BatchCertificate extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get thumbprintAlgorithmInput() {
-    return this._thumbprintAlgorithm
+    return this._thumbprintAlgorithm;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: BatchCertificateTimeouts | undefined; 
-  private __timeoutsOutput = new BatchCertificateTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BatchCertificateTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: BatchCertificateTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: BatchCertificateTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -334,7 +370,7 @@ export class BatchCertificate extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       thumbprint: cdktf.stringToTerraform(this._thumbprint),
       thumbprint_algorithm: cdktf.stringToTerraform(this._thumbprintAlgorithm),
-      timeouts: batchCertificateTimeoutsToTerraform(this._timeouts),
+      timeouts: batchCertificateTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }
