@@ -89,7 +89,7 @@ export interface IotSecuritySolutionAdditionalWorkspace {
   readonly workspaceId: string;
 }
 
-function iotSecuritySolutionAdditionalWorkspaceToTerraform(struct?: IotSecuritySolutionAdditionalWorkspace): any {
+export function iotSecuritySolutionAdditionalWorkspaceToTerraform(struct?: IotSecuritySolutionAdditionalWorkspace): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -167,7 +167,7 @@ export interface IotSecuritySolutionRecommendationsEnabled {
   readonly vulnerableTlsCipherSuite?: boolean | cdktf.IResolvable;
 }
 
-function iotSecuritySolutionRecommendationsEnabledToTerraform(struct?: IotSecuritySolutionRecommendationsEnabledOutputReference | IotSecuritySolutionRecommendationsEnabled): any {
+export function iotSecuritySolutionRecommendationsEnabledToTerraform(struct?: IotSecuritySolutionRecommendationsEnabledOutputReference | IotSecuritySolutionRecommendationsEnabled): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -202,12 +202,121 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): IotSecuritySolutionRecommendationsEnabled | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._acrAuthentication) {
+      hasAnyValues = true;
+      internalValueResult.acrAuthentication = this._acrAuthentication;
+    }
+    if (this._agentSendUnutilizedMsg) {
+      hasAnyValues = true;
+      internalValueResult.agentSendUnutilizedMsg = this._agentSendUnutilizedMsg;
+    }
+    if (this._baseline) {
+      hasAnyValues = true;
+      internalValueResult.baseline = this._baseline;
+    }
+    if (this._edgeHubMemOptimize) {
+      hasAnyValues = true;
+      internalValueResult.edgeHubMemOptimize = this._edgeHubMemOptimize;
+    }
+    if (this._edgeLoggingOption) {
+      hasAnyValues = true;
+      internalValueResult.edgeLoggingOption = this._edgeLoggingOption;
+    }
+    if (this._inconsistentModuleSettings) {
+      hasAnyValues = true;
+      internalValueResult.inconsistentModuleSettings = this._inconsistentModuleSettings;
+    }
+    if (this._installAgent) {
+      hasAnyValues = true;
+      internalValueResult.installAgent = this._installAgent;
+    }
+    if (this._ipFilterDenyAll) {
+      hasAnyValues = true;
+      internalValueResult.ipFilterDenyAll = this._ipFilterDenyAll;
+    }
+    if (this._ipFilterPermissiveRule) {
+      hasAnyValues = true;
+      internalValueResult.ipFilterPermissiveRule = this._ipFilterPermissiveRule;
+    }
+    if (this._openPorts) {
+      hasAnyValues = true;
+      internalValueResult.openPorts = this._openPorts;
+    }
+    if (this._permissiveFirewallPolicy) {
+      hasAnyValues = true;
+      internalValueResult.permissiveFirewallPolicy = this._permissiveFirewallPolicy;
+    }
+    if (this._permissiveInputFirewallRules) {
+      hasAnyValues = true;
+      internalValueResult.permissiveInputFirewallRules = this._permissiveInputFirewallRules;
+    }
+    if (this._permissiveOutputFirewallRules) {
+      hasAnyValues = true;
+      internalValueResult.permissiveOutputFirewallRules = this._permissiveOutputFirewallRules;
+    }
+    if (this._privilegedDockerOptions) {
+      hasAnyValues = true;
+      internalValueResult.privilegedDockerOptions = this._privilegedDockerOptions;
+    }
+    if (this._sharedCredentials) {
+      hasAnyValues = true;
+      internalValueResult.sharedCredentials = this._sharedCredentials;
+    }
+    if (this._vulnerableTlsCipherSuite) {
+      hasAnyValues = true;
+      internalValueResult.vulnerableTlsCipherSuite = this._vulnerableTlsCipherSuite;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IotSecuritySolutionRecommendationsEnabled | undefined) {
+    if (value === undefined) {
+      this._acrAuthentication = undefined;
+      this._agentSendUnutilizedMsg = undefined;
+      this._baseline = undefined;
+      this._edgeHubMemOptimize = undefined;
+      this._edgeLoggingOption = undefined;
+      this._inconsistentModuleSettings = undefined;
+      this._installAgent = undefined;
+      this._ipFilterDenyAll = undefined;
+      this._ipFilterPermissiveRule = undefined;
+      this._openPorts = undefined;
+      this._permissiveFirewallPolicy = undefined;
+      this._permissiveInputFirewallRules = undefined;
+      this._permissiveOutputFirewallRules = undefined;
+      this._privilegedDockerOptions = undefined;
+      this._sharedCredentials = undefined;
+      this._vulnerableTlsCipherSuite = undefined;
+    }
+    else {
+      this._acrAuthentication = value.acrAuthentication;
+      this._agentSendUnutilizedMsg = value.agentSendUnutilizedMsg;
+      this._baseline = value.baseline;
+      this._edgeHubMemOptimize = value.edgeHubMemOptimize;
+      this._edgeLoggingOption = value.edgeLoggingOption;
+      this._inconsistentModuleSettings = value.inconsistentModuleSettings;
+      this._installAgent = value.installAgent;
+      this._ipFilterDenyAll = value.ipFilterDenyAll;
+      this._ipFilterPermissiveRule = value.ipFilterPermissiveRule;
+      this._openPorts = value.openPorts;
+      this._permissiveFirewallPolicy = value.permissiveFirewallPolicy;
+      this._permissiveInputFirewallRules = value.permissiveInputFirewallRules;
+      this._permissiveOutputFirewallRules = value.permissiveOutputFirewallRules;
+      this._privilegedDockerOptions = value.privilegedDockerOptions;
+      this._sharedCredentials = value.sharedCredentials;
+      this._vulnerableTlsCipherSuite = value.vulnerableTlsCipherSuite;
+    }
+  }
+
   // acr_authentication - computed: false, optional: true, required: false
-  private _acrAuthentication?: boolean | cdktf.IResolvable | undefined; 
+  private _acrAuthentication?: boolean | cdktf.IResolvable; 
   public get acrAuthentication() {
     return this.getBooleanAttribute('acr_authentication') as any;
   }
-  public set acrAuthentication(value: boolean | cdktf.IResolvable | undefined) {
+  public set acrAuthentication(value: boolean | cdktf.IResolvable) {
     this._acrAuthentication = value;
   }
   public resetAcrAuthentication() {
@@ -215,15 +324,15 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get acrAuthenticationInput() {
-    return this._acrAuthentication
+    return this._acrAuthentication;
   }
 
   // agent_send_unutilized_msg - computed: false, optional: true, required: false
-  private _agentSendUnutilizedMsg?: boolean | cdktf.IResolvable | undefined; 
+  private _agentSendUnutilizedMsg?: boolean | cdktf.IResolvable; 
   public get agentSendUnutilizedMsg() {
     return this.getBooleanAttribute('agent_send_unutilized_msg') as any;
   }
-  public set agentSendUnutilizedMsg(value: boolean | cdktf.IResolvable | undefined) {
+  public set agentSendUnutilizedMsg(value: boolean | cdktf.IResolvable) {
     this._agentSendUnutilizedMsg = value;
   }
   public resetAgentSendUnutilizedMsg() {
@@ -231,15 +340,15 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get agentSendUnutilizedMsgInput() {
-    return this._agentSendUnutilizedMsg
+    return this._agentSendUnutilizedMsg;
   }
 
   // baseline - computed: false, optional: true, required: false
-  private _baseline?: boolean | cdktf.IResolvable | undefined; 
+  private _baseline?: boolean | cdktf.IResolvable; 
   public get baseline() {
     return this.getBooleanAttribute('baseline') as any;
   }
-  public set baseline(value: boolean | cdktf.IResolvable | undefined) {
+  public set baseline(value: boolean | cdktf.IResolvable) {
     this._baseline = value;
   }
   public resetBaseline() {
@@ -247,15 +356,15 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get baselineInput() {
-    return this._baseline
+    return this._baseline;
   }
 
   // edge_hub_mem_optimize - computed: false, optional: true, required: false
-  private _edgeHubMemOptimize?: boolean | cdktf.IResolvable | undefined; 
+  private _edgeHubMemOptimize?: boolean | cdktf.IResolvable; 
   public get edgeHubMemOptimize() {
     return this.getBooleanAttribute('edge_hub_mem_optimize') as any;
   }
-  public set edgeHubMemOptimize(value: boolean | cdktf.IResolvable | undefined) {
+  public set edgeHubMemOptimize(value: boolean | cdktf.IResolvable) {
     this._edgeHubMemOptimize = value;
   }
   public resetEdgeHubMemOptimize() {
@@ -263,15 +372,15 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get edgeHubMemOptimizeInput() {
-    return this._edgeHubMemOptimize
+    return this._edgeHubMemOptimize;
   }
 
   // edge_logging_option - computed: false, optional: true, required: false
-  private _edgeLoggingOption?: boolean | cdktf.IResolvable | undefined; 
+  private _edgeLoggingOption?: boolean | cdktf.IResolvable; 
   public get edgeLoggingOption() {
     return this.getBooleanAttribute('edge_logging_option') as any;
   }
-  public set edgeLoggingOption(value: boolean | cdktf.IResolvable | undefined) {
+  public set edgeLoggingOption(value: boolean | cdktf.IResolvable) {
     this._edgeLoggingOption = value;
   }
   public resetEdgeLoggingOption() {
@@ -279,15 +388,15 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get edgeLoggingOptionInput() {
-    return this._edgeLoggingOption
+    return this._edgeLoggingOption;
   }
 
   // inconsistent_module_settings - computed: false, optional: true, required: false
-  private _inconsistentModuleSettings?: boolean | cdktf.IResolvable | undefined; 
+  private _inconsistentModuleSettings?: boolean | cdktf.IResolvable; 
   public get inconsistentModuleSettings() {
     return this.getBooleanAttribute('inconsistent_module_settings') as any;
   }
-  public set inconsistentModuleSettings(value: boolean | cdktf.IResolvable | undefined) {
+  public set inconsistentModuleSettings(value: boolean | cdktf.IResolvable) {
     this._inconsistentModuleSettings = value;
   }
   public resetInconsistentModuleSettings() {
@@ -295,15 +404,15 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get inconsistentModuleSettingsInput() {
-    return this._inconsistentModuleSettings
+    return this._inconsistentModuleSettings;
   }
 
   // install_agent - computed: false, optional: true, required: false
-  private _installAgent?: boolean | cdktf.IResolvable | undefined; 
+  private _installAgent?: boolean | cdktf.IResolvable; 
   public get installAgent() {
     return this.getBooleanAttribute('install_agent') as any;
   }
-  public set installAgent(value: boolean | cdktf.IResolvable | undefined) {
+  public set installAgent(value: boolean | cdktf.IResolvable) {
     this._installAgent = value;
   }
   public resetInstallAgent() {
@@ -311,15 +420,15 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get installAgentInput() {
-    return this._installAgent
+    return this._installAgent;
   }
 
   // ip_filter_deny_all - computed: false, optional: true, required: false
-  private _ipFilterDenyAll?: boolean | cdktf.IResolvable | undefined; 
+  private _ipFilterDenyAll?: boolean | cdktf.IResolvable; 
   public get ipFilterDenyAll() {
     return this.getBooleanAttribute('ip_filter_deny_all') as any;
   }
-  public set ipFilterDenyAll(value: boolean | cdktf.IResolvable | undefined) {
+  public set ipFilterDenyAll(value: boolean | cdktf.IResolvable) {
     this._ipFilterDenyAll = value;
   }
   public resetIpFilterDenyAll() {
@@ -327,15 +436,15 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get ipFilterDenyAllInput() {
-    return this._ipFilterDenyAll
+    return this._ipFilterDenyAll;
   }
 
   // ip_filter_permissive_rule - computed: false, optional: true, required: false
-  private _ipFilterPermissiveRule?: boolean | cdktf.IResolvable | undefined; 
+  private _ipFilterPermissiveRule?: boolean | cdktf.IResolvable; 
   public get ipFilterPermissiveRule() {
     return this.getBooleanAttribute('ip_filter_permissive_rule') as any;
   }
-  public set ipFilterPermissiveRule(value: boolean | cdktf.IResolvable | undefined) {
+  public set ipFilterPermissiveRule(value: boolean | cdktf.IResolvable) {
     this._ipFilterPermissiveRule = value;
   }
   public resetIpFilterPermissiveRule() {
@@ -343,15 +452,15 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get ipFilterPermissiveRuleInput() {
-    return this._ipFilterPermissiveRule
+    return this._ipFilterPermissiveRule;
   }
 
   // open_ports - computed: false, optional: true, required: false
-  private _openPorts?: boolean | cdktf.IResolvable | undefined; 
+  private _openPorts?: boolean | cdktf.IResolvable; 
   public get openPorts() {
     return this.getBooleanAttribute('open_ports') as any;
   }
-  public set openPorts(value: boolean | cdktf.IResolvable | undefined) {
+  public set openPorts(value: boolean | cdktf.IResolvable) {
     this._openPorts = value;
   }
   public resetOpenPorts() {
@@ -359,15 +468,15 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get openPortsInput() {
-    return this._openPorts
+    return this._openPorts;
   }
 
   // permissive_firewall_policy - computed: false, optional: true, required: false
-  private _permissiveFirewallPolicy?: boolean | cdktf.IResolvable | undefined; 
+  private _permissiveFirewallPolicy?: boolean | cdktf.IResolvable; 
   public get permissiveFirewallPolicy() {
     return this.getBooleanAttribute('permissive_firewall_policy') as any;
   }
-  public set permissiveFirewallPolicy(value: boolean | cdktf.IResolvable | undefined) {
+  public set permissiveFirewallPolicy(value: boolean | cdktf.IResolvable) {
     this._permissiveFirewallPolicy = value;
   }
   public resetPermissiveFirewallPolicy() {
@@ -375,15 +484,15 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get permissiveFirewallPolicyInput() {
-    return this._permissiveFirewallPolicy
+    return this._permissiveFirewallPolicy;
   }
 
   // permissive_input_firewall_rules - computed: false, optional: true, required: false
-  private _permissiveInputFirewallRules?: boolean | cdktf.IResolvable | undefined; 
+  private _permissiveInputFirewallRules?: boolean | cdktf.IResolvable; 
   public get permissiveInputFirewallRules() {
     return this.getBooleanAttribute('permissive_input_firewall_rules') as any;
   }
-  public set permissiveInputFirewallRules(value: boolean | cdktf.IResolvable | undefined) {
+  public set permissiveInputFirewallRules(value: boolean | cdktf.IResolvable) {
     this._permissiveInputFirewallRules = value;
   }
   public resetPermissiveInputFirewallRules() {
@@ -391,15 +500,15 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get permissiveInputFirewallRulesInput() {
-    return this._permissiveInputFirewallRules
+    return this._permissiveInputFirewallRules;
   }
 
   // permissive_output_firewall_rules - computed: false, optional: true, required: false
-  private _permissiveOutputFirewallRules?: boolean | cdktf.IResolvable | undefined; 
+  private _permissiveOutputFirewallRules?: boolean | cdktf.IResolvable; 
   public get permissiveOutputFirewallRules() {
     return this.getBooleanAttribute('permissive_output_firewall_rules') as any;
   }
-  public set permissiveOutputFirewallRules(value: boolean | cdktf.IResolvable | undefined) {
+  public set permissiveOutputFirewallRules(value: boolean | cdktf.IResolvable) {
     this._permissiveOutputFirewallRules = value;
   }
   public resetPermissiveOutputFirewallRules() {
@@ -407,15 +516,15 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get permissiveOutputFirewallRulesInput() {
-    return this._permissiveOutputFirewallRules
+    return this._permissiveOutputFirewallRules;
   }
 
   // privileged_docker_options - computed: false, optional: true, required: false
-  private _privilegedDockerOptions?: boolean | cdktf.IResolvable | undefined; 
+  private _privilegedDockerOptions?: boolean | cdktf.IResolvable; 
   public get privilegedDockerOptions() {
     return this.getBooleanAttribute('privileged_docker_options') as any;
   }
-  public set privilegedDockerOptions(value: boolean | cdktf.IResolvable | undefined) {
+  public set privilegedDockerOptions(value: boolean | cdktf.IResolvable) {
     this._privilegedDockerOptions = value;
   }
   public resetPrivilegedDockerOptions() {
@@ -423,15 +532,15 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get privilegedDockerOptionsInput() {
-    return this._privilegedDockerOptions
+    return this._privilegedDockerOptions;
   }
 
   // shared_credentials - computed: false, optional: true, required: false
-  private _sharedCredentials?: boolean | cdktf.IResolvable | undefined; 
+  private _sharedCredentials?: boolean | cdktf.IResolvable; 
   public get sharedCredentials() {
     return this.getBooleanAttribute('shared_credentials') as any;
   }
-  public set sharedCredentials(value: boolean | cdktf.IResolvable | undefined) {
+  public set sharedCredentials(value: boolean | cdktf.IResolvable) {
     this._sharedCredentials = value;
   }
   public resetSharedCredentials() {
@@ -439,15 +548,15 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get sharedCredentialsInput() {
-    return this._sharedCredentials
+    return this._sharedCredentials;
   }
 
   // vulnerable_tls_cipher_suite - computed: false, optional: true, required: false
-  private _vulnerableTlsCipherSuite?: boolean | cdktf.IResolvable | undefined; 
+  private _vulnerableTlsCipherSuite?: boolean | cdktf.IResolvable; 
   public get vulnerableTlsCipherSuite() {
     return this.getBooleanAttribute('vulnerable_tls_cipher_suite') as any;
   }
-  public set vulnerableTlsCipherSuite(value: boolean | cdktf.IResolvable | undefined) {
+  public set vulnerableTlsCipherSuite(value: boolean | cdktf.IResolvable) {
     this._vulnerableTlsCipherSuite = value;
   }
   public resetVulnerableTlsCipherSuite() {
@@ -455,7 +564,7 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get vulnerableTlsCipherSuiteInput() {
-    return this._vulnerableTlsCipherSuite
+    return this._vulnerableTlsCipherSuite;
   }
 }
 export interface IotSecuritySolutionTimeouts {
@@ -477,7 +586,7 @@ export interface IotSecuritySolutionTimeouts {
   readonly update?: string;
 }
 
-function iotSecuritySolutionTimeoutsToTerraform(struct?: IotSecuritySolutionTimeoutsOutputReference | IotSecuritySolutionTimeouts): any {
+export function iotSecuritySolutionTimeoutsToTerraform(struct?: IotSecuritySolutionTimeoutsOutputReference | IotSecuritySolutionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -500,12 +609,49 @@ export class IotSecuritySolutionTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): IotSecuritySolutionTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IotSecuritySolutionTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -513,15 +659,15 @@ export class IotSecuritySolutionTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -529,15 +675,15 @@ export class IotSecuritySolutionTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -545,15 +691,15 @@ export class IotSecuritySolutionTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -561,7 +707,7 @@ export class IotSecuritySolutionTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -611,8 +757,8 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._additionalWorkspace = config.additionalWorkspace;
-    this._recommendationsEnabled = config.recommendationsEnabled;
-    this._timeouts = config.timeouts;
+    this._recommendationsEnabled.internalValue = config.recommendationsEnabled;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -620,11 +766,11 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   // ==========
 
   // disabled_data_sources - computed: false, optional: true, required: false
-  private _disabledDataSources?: string[] | undefined; 
+  private _disabledDataSources?: string[]; 
   public get disabledDataSources() {
     return this.getListAttribute('disabled_data_sources');
   }
-  public set disabledDataSources(value: string[] | undefined) {
+  public set disabledDataSources(value: string[]) {
     this._disabledDataSources = value;
   }
   public resetDisabledDataSources() {
@@ -632,7 +778,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get disabledDataSourcesInput() {
-    return this._disabledDataSources
+    return this._disabledDataSources;
   }
 
   // display_name - computed: false, optional: false, required: true
@@ -645,15 +791,15 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -661,15 +807,15 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // events_to_export - computed: false, optional: true, required: false
-  private _eventsToExport?: string[] | undefined; 
+  private _eventsToExport?: string[]; 
   public get eventsToExport() {
     return this.getListAttribute('events_to_export');
   }
-  public set eventsToExport(value: string[] | undefined) {
+  public set eventsToExport(value: string[]) {
     this._eventsToExport = value;
   }
   public resetEventsToExport() {
@@ -677,7 +823,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get eventsToExportInput() {
-    return this._eventsToExport
+    return this._eventsToExport;
   }
 
   // id - computed: true, optional: true, required: false
@@ -695,7 +841,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get iothubIdsInput() {
-    return this._iothubIds
+    return this._iothubIds;
   }
 
   // location - computed: false, optional: false, required: true
@@ -708,15 +854,15 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // log_analytics_workspace_id - computed: false, optional: true, required: false
-  private _logAnalyticsWorkspaceId?: string | undefined; 
+  private _logAnalyticsWorkspaceId?: string; 
   public get logAnalyticsWorkspaceId() {
     return this.getStringAttribute('log_analytics_workspace_id');
   }
-  public set logAnalyticsWorkspaceId(value: string | undefined) {
+  public set logAnalyticsWorkspaceId(value: string) {
     this._logAnalyticsWorkspaceId = value;
   }
   public resetLogAnalyticsWorkspaceId() {
@@ -724,15 +870,15 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get logAnalyticsWorkspaceIdInput() {
-    return this._logAnalyticsWorkspaceId
+    return this._logAnalyticsWorkspaceId;
   }
 
   // log_unmasked_ips_enabled - computed: false, optional: true, required: false
-  private _logUnmaskedIpsEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _logUnmaskedIpsEnabled?: boolean | cdktf.IResolvable; 
   public get logUnmaskedIpsEnabled() {
     return this.getBooleanAttribute('log_unmasked_ips_enabled') as any;
   }
-  public set logUnmaskedIpsEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set logUnmaskedIpsEnabled(value: boolean | cdktf.IResolvable) {
     this._logUnmaskedIpsEnabled = value;
   }
   public resetLogUnmaskedIpsEnabled() {
@@ -740,7 +886,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get logUnmaskedIpsEnabledInput() {
-    return this._logUnmaskedIpsEnabled
+    return this._logUnmaskedIpsEnabled;
   }
 
   // name - computed: false, optional: false, required: true
@@ -753,15 +899,15 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // query_for_resources - computed: true, optional: true, required: false
-  private _queryForResources?: string | undefined; 
+  private _queryForResources?: string; 
   public get queryForResources() {
     return this.getStringAttribute('query_for_resources');
   }
-  public set queryForResources(value: string | undefined) {
+  public set queryForResources(value: string) {
     this._queryForResources = value;
   }
   public resetQueryForResources() {
@@ -769,15 +915,15 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get queryForResourcesInput() {
-    return this._queryForResources
+    return this._queryForResources;
   }
 
   // query_subscription_ids - computed: true, optional: true, required: false
-  private _querySubscriptionIds?: string[] | undefined; 
+  private _querySubscriptionIds?: string[]; 
   public get querySubscriptionIds() {
     return this.getListAttribute('query_subscription_ids');
   }
-  public set querySubscriptionIds(value: string[] | undefined) {
+  public set querySubscriptionIds(value: string[]) {
     this._querySubscriptionIds = value;
   }
   public resetQuerySubscriptionIds() {
@@ -785,7 +931,7 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get querySubscriptionIdsInput() {
-    return this._querySubscriptionIds
+    return this._querySubscriptionIds;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -798,16 +944,16 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -815,16 +961,16 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // additional_workspace - computed: false, optional: true, required: false
-  private _additionalWorkspace?: IotSecuritySolutionAdditionalWorkspace[] | undefined; 
+  private _additionalWorkspace?: IotSecuritySolutionAdditionalWorkspace[]; 
   public get additionalWorkspace() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_workspace') as any;
   }
-  public set additionalWorkspace(value: IotSecuritySolutionAdditionalWorkspace[] | undefined) {
+  public set additionalWorkspace(value: IotSecuritySolutionAdditionalWorkspace[]) {
     this._additionalWorkspace = value;
   }
   public resetAdditionalWorkspace() {
@@ -832,41 +978,39 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get additionalWorkspaceInput() {
-    return this._additionalWorkspace
+    return this._additionalWorkspace;
   }
 
   // recommendations_enabled - computed: false, optional: true, required: false
-  private _recommendationsEnabled?: IotSecuritySolutionRecommendationsEnabled | undefined; 
-  private __recommendationsEnabledOutput = new IotSecuritySolutionRecommendationsEnabledOutputReference(this as any, "recommendations_enabled", true);
+  private _recommendationsEnabled = new IotSecuritySolutionRecommendationsEnabledOutputReference(this as any, "recommendations_enabled", true);
   public get recommendationsEnabled() {
-    return this.__recommendationsEnabledOutput;
+    return this._recommendationsEnabled;
   }
-  public putRecommendationsEnabled(value: IotSecuritySolutionRecommendationsEnabled | undefined) {
-    this._recommendationsEnabled = value;
+  public putRecommendationsEnabled(value: IotSecuritySolutionRecommendationsEnabled) {
+    this._recommendationsEnabled.internalValue = value;
   }
   public resetRecommendationsEnabled() {
-    this._recommendationsEnabled = undefined;
+    this._recommendationsEnabled.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get recommendationsEnabledInput() {
-    return this._recommendationsEnabled
+    return this._recommendationsEnabled.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: IotSecuritySolutionTimeouts | undefined; 
-  private __timeoutsOutput = new IotSecuritySolutionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new IotSecuritySolutionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: IotSecuritySolutionTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: IotSecuritySolutionTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -889,8 +1033,8 @@ export class IotSecuritySolution extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       additional_workspace: cdktf.listMapper(iotSecuritySolutionAdditionalWorkspaceToTerraform)(this._additionalWorkspace),
-      recommendations_enabled: iotSecuritySolutionRecommendationsEnabledToTerraform(this._recommendationsEnabled),
-      timeouts: iotSecuritySolutionTimeoutsToTerraform(this._timeouts),
+      recommendations_enabled: iotSecuritySolutionRecommendationsEnabledToTerraform(this._recommendationsEnabled.internalValue),
+      timeouts: iotSecuritySolutionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

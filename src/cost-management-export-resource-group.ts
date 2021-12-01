@@ -65,7 +65,7 @@ export interface CostManagementExportResourceGroupDeliveryInfo {
   readonly storageAccountId: string;
 }
 
-function costManagementExportResourceGroupDeliveryInfoToTerraform(struct?: CostManagementExportResourceGroupDeliveryInfoOutputReference | CostManagementExportResourceGroupDeliveryInfo): any {
+export function costManagementExportResourceGroupDeliveryInfoToTerraform(struct?: CostManagementExportResourceGroupDeliveryInfoOutputReference | CostManagementExportResourceGroupDeliveryInfo): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -87,6 +87,37 @@ export class CostManagementExportResourceGroupDeliveryInfoOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CostManagementExportResourceGroupDeliveryInfo | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._containerName) {
+      hasAnyValues = true;
+      internalValueResult.containerName = this._containerName;
+    }
+    if (this._rootFolderPath) {
+      hasAnyValues = true;
+      internalValueResult.rootFolderPath = this._rootFolderPath;
+    }
+    if (this._storageAccountId) {
+      hasAnyValues = true;
+      internalValueResult.storageAccountId = this._storageAccountId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CostManagementExportResourceGroupDeliveryInfo | undefined) {
+    if (value === undefined) {
+      this._containerName = undefined;
+      this._rootFolderPath = undefined;
+      this._storageAccountId = undefined;
+    }
+    else {
+      this._containerName = value.containerName;
+      this._rootFolderPath = value.rootFolderPath;
+      this._storageAccountId = value.storageAccountId;
+    }
+  }
+
   // container_name - computed: false, optional: false, required: true
   private _containerName?: string; 
   public get containerName() {
@@ -97,7 +128,7 @@ export class CostManagementExportResourceGroupDeliveryInfoOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get containerNameInput() {
-    return this._containerName
+    return this._containerName;
   }
 
   // root_folder_path - computed: false, optional: false, required: true
@@ -110,7 +141,7 @@ export class CostManagementExportResourceGroupDeliveryInfoOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get rootFolderPathInput() {
-    return this._rootFolderPath
+    return this._rootFolderPath;
   }
 
   // storage_account_id - computed: false, optional: false, required: true
@@ -123,7 +154,7 @@ export class CostManagementExportResourceGroupDeliveryInfoOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountIdInput() {
-    return this._storageAccountId
+    return this._storageAccountId;
   }
 }
 export interface CostManagementExportResourceGroupQuery {
@@ -137,7 +168,7 @@ export interface CostManagementExportResourceGroupQuery {
   readonly type: string;
 }
 
-function costManagementExportResourceGroupQueryToTerraform(struct?: CostManagementExportResourceGroupQueryOutputReference | CostManagementExportResourceGroupQuery): any {
+export function costManagementExportResourceGroupQueryToTerraform(struct?: CostManagementExportResourceGroupQueryOutputReference | CostManagementExportResourceGroupQuery): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -158,6 +189,31 @@ export class CostManagementExportResourceGroupQueryOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CostManagementExportResourceGroupQuery | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._timeFrame) {
+      hasAnyValues = true;
+      internalValueResult.timeFrame = this._timeFrame;
+    }
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CostManagementExportResourceGroupQuery | undefined) {
+    if (value === undefined) {
+      this._timeFrame = undefined;
+      this._type = undefined;
+    }
+    else {
+      this._timeFrame = value.timeFrame;
+      this._type = value.type;
+    }
+  }
+
   // time_frame - computed: false, optional: false, required: true
   private _timeFrame?: string; 
   public get timeFrame() {
@@ -168,7 +224,7 @@ export class CostManagementExportResourceGroupQueryOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get timeFrameInput() {
-    return this._timeFrame
+    return this._timeFrame;
   }
 
   // type - computed: false, optional: false, required: true
@@ -181,7 +237,7 @@ export class CostManagementExportResourceGroupQueryOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface CostManagementExportResourceGroupTimeouts {
@@ -203,7 +259,7 @@ export interface CostManagementExportResourceGroupTimeouts {
   readonly update?: string;
 }
 
-function costManagementExportResourceGroupTimeoutsToTerraform(struct?: CostManagementExportResourceGroupTimeoutsOutputReference | CostManagementExportResourceGroupTimeouts): any {
+export function costManagementExportResourceGroupTimeoutsToTerraform(struct?: CostManagementExportResourceGroupTimeoutsOutputReference | CostManagementExportResourceGroupTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -226,12 +282,49 @@ export class CostManagementExportResourceGroupTimeoutsOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CostManagementExportResourceGroupTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CostManagementExportResourceGroupTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -239,15 +332,15 @@ export class CostManagementExportResourceGroupTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -255,15 +348,15 @@ export class CostManagementExportResourceGroupTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -271,15 +364,15 @@ export class CostManagementExportResourceGroupTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -287,7 +380,7 @@ export class CostManagementExportResourceGroupTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -329,9 +422,9 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
     this._recurrencePeriodStart = config.recurrencePeriodStart;
     this._recurrenceType = config.recurrenceType;
     this._resourceGroupId = config.resourceGroupId;
-    this._deliveryInfo = config.deliveryInfo;
-    this._query = config.query;
-    this._timeouts = config.timeouts;
+    this._deliveryInfo.internalValue = config.deliveryInfo;
+    this._query.internalValue = config.query;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -339,11 +432,11 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   // ==========
 
   // active - computed: false, optional: true, required: false
-  private _active?: boolean | cdktf.IResolvable | undefined; 
+  private _active?: boolean | cdktf.IResolvable; 
   public get active() {
     return this.getBooleanAttribute('active') as any;
   }
-  public set active(value: boolean | cdktf.IResolvable | undefined) {
+  public set active(value: boolean | cdktf.IResolvable) {
     this._active = value;
   }
   public resetActive() {
@@ -351,7 +444,7 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get activeInput() {
-    return this._active
+    return this._active;
   }
 
   // id - computed: true, optional: true, required: false
@@ -369,7 +462,7 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // recurrence_period_end - computed: false, optional: false, required: true
@@ -382,7 +475,7 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get recurrencePeriodEndInput() {
-    return this._recurrencePeriodEnd
+    return this._recurrencePeriodEnd;
   }
 
   // recurrence_period_start - computed: false, optional: false, required: true
@@ -395,7 +488,7 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get recurrencePeriodStartInput() {
-    return this._recurrencePeriodStart
+    return this._recurrencePeriodStart;
   }
 
   // recurrence_type - computed: false, optional: false, required: true
@@ -408,7 +501,7 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get recurrenceTypeInput() {
-    return this._recurrenceType
+    return this._recurrenceType;
   }
 
   // resource_group_id - computed: false, optional: false, required: true
@@ -421,52 +514,49 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupIdInput() {
-    return this._resourceGroupId
+    return this._resourceGroupId;
   }
 
   // delivery_info - computed: false, optional: false, required: true
-  private _deliveryInfo?: CostManagementExportResourceGroupDeliveryInfo; 
-  private __deliveryInfoOutput = new CostManagementExportResourceGroupDeliveryInfoOutputReference(this as any, "delivery_info", true);
+  private _deliveryInfo = new CostManagementExportResourceGroupDeliveryInfoOutputReference(this as any, "delivery_info", true);
   public get deliveryInfo() {
-    return this.__deliveryInfoOutput;
+    return this._deliveryInfo;
   }
   public putDeliveryInfo(value: CostManagementExportResourceGroupDeliveryInfo) {
-    this._deliveryInfo = value;
+    this._deliveryInfo.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get deliveryInfoInput() {
-    return this._deliveryInfo
+    return this._deliveryInfo.internalValue;
   }
 
   // query - computed: false, optional: false, required: true
-  private _query?: CostManagementExportResourceGroupQuery; 
-  private __queryOutput = new CostManagementExportResourceGroupQueryOutputReference(this as any, "query", true);
+  private _query = new CostManagementExportResourceGroupQueryOutputReference(this as any, "query", true);
   public get query() {
-    return this.__queryOutput;
+    return this._query;
   }
   public putQuery(value: CostManagementExportResourceGroupQuery) {
-    this._query = value;
+    this._query.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get queryInput() {
-    return this._query
+    return this._query.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: CostManagementExportResourceGroupTimeouts | undefined; 
-  private __timeoutsOutput = new CostManagementExportResourceGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CostManagementExportResourceGroupTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: CostManagementExportResourceGroupTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: CostManagementExportResourceGroupTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -481,9 +571,9 @@ export class CostManagementExportResourceGroup extends cdktf.TerraformResource {
       recurrence_period_start: cdktf.stringToTerraform(this._recurrencePeriodStart),
       recurrence_type: cdktf.stringToTerraform(this._recurrenceType),
       resource_group_id: cdktf.stringToTerraform(this._resourceGroupId),
-      delivery_info: costManagementExportResourceGroupDeliveryInfoToTerraform(this._deliveryInfo),
-      query: costManagementExportResourceGroupQueryToTerraform(this._query),
-      timeouts: costManagementExportResourceGroupTimeoutsToTerraform(this._timeouts),
+      delivery_info: costManagementExportResourceGroupDeliveryInfoToTerraform(this._deliveryInfo.internalValue),
+      query: costManagementExportResourceGroupQueryToTerraform(this._query.internalValue),
+      timeouts: costManagementExportResourceGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -77,7 +77,7 @@ export interface StreamAnalyticsReferenceInputMssqlTimeouts {
   readonly update?: string;
 }
 
-function streamAnalyticsReferenceInputMssqlTimeoutsToTerraform(struct?: StreamAnalyticsReferenceInputMssqlTimeoutsOutputReference | StreamAnalyticsReferenceInputMssqlTimeouts): any {
+export function streamAnalyticsReferenceInputMssqlTimeoutsToTerraform(struct?: StreamAnalyticsReferenceInputMssqlTimeoutsOutputReference | StreamAnalyticsReferenceInputMssqlTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -100,12 +100,49 @@ export class StreamAnalyticsReferenceInputMssqlTimeoutsOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StreamAnalyticsReferenceInputMssqlTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StreamAnalyticsReferenceInputMssqlTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -113,15 +150,15 @@ export class StreamAnalyticsReferenceInputMssqlTimeoutsOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -129,15 +166,15 @@ export class StreamAnalyticsReferenceInputMssqlTimeoutsOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -145,15 +182,15 @@ export class StreamAnalyticsReferenceInputMssqlTimeoutsOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -161,7 +198,7 @@ export class StreamAnalyticsReferenceInputMssqlTimeoutsOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -208,7 +245,7 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
     this._server = config.server;
     this._streamAnalyticsJobName = config.streamAnalyticsJobName;
     this._username = config.username;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -225,15 +262,15 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get databaseInput() {
-    return this._database
+    return this._database;
   }
 
   // delta_snapshot_query - computed: false, optional: true, required: false
-  private _deltaSnapshotQuery?: string | undefined; 
+  private _deltaSnapshotQuery?: string; 
   public get deltaSnapshotQuery() {
     return this.getStringAttribute('delta_snapshot_query');
   }
-  public set deltaSnapshotQuery(value: string | undefined) {
+  public set deltaSnapshotQuery(value: string) {
     this._deltaSnapshotQuery = value;
   }
   public resetDeltaSnapshotQuery() {
@@ -241,7 +278,7 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get deltaSnapshotQueryInput() {
-    return this._deltaSnapshotQuery
+    return this._deltaSnapshotQuery;
   }
 
   // full_snapshot_query - computed: false, optional: false, required: true
@@ -254,7 +291,7 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get fullSnapshotQueryInput() {
-    return this._fullSnapshotQuery
+    return this._fullSnapshotQuery;
   }
 
   // id - computed: true, optional: true, required: false
@@ -272,7 +309,7 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // password - computed: false, optional: false, required: true
@@ -285,15 +322,15 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // refresh_interval_duration - computed: false, optional: true, required: false
-  private _refreshIntervalDuration?: string | undefined; 
+  private _refreshIntervalDuration?: string; 
   public get refreshIntervalDuration() {
     return this.getStringAttribute('refresh_interval_duration');
   }
-  public set refreshIntervalDuration(value: string | undefined) {
+  public set refreshIntervalDuration(value: string) {
     this._refreshIntervalDuration = value;
   }
   public resetRefreshIntervalDuration() {
@@ -301,7 +338,7 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get refreshIntervalDurationInput() {
-    return this._refreshIntervalDuration
+    return this._refreshIntervalDuration;
   }
 
   // refresh_type - computed: false, optional: false, required: true
@@ -314,7 +351,7 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get refreshTypeInput() {
-    return this._refreshType
+    return this._refreshType;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -327,7 +364,7 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // server - computed: false, optional: false, required: true
@@ -340,7 +377,7 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get serverInput() {
-    return this._server
+    return this._server;
   }
 
   // stream_analytics_job_name - computed: false, optional: false, required: true
@@ -353,7 +390,7 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get streamAnalyticsJobNameInput() {
-    return this._streamAnalyticsJobName
+    return this._streamAnalyticsJobName;
   }
 
   // username - computed: false, optional: false, required: true
@@ -366,24 +403,23 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
-    return this._username
+    return this._username;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: StreamAnalyticsReferenceInputMssqlTimeouts | undefined; 
-  private __timeoutsOutput = new StreamAnalyticsReferenceInputMssqlTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StreamAnalyticsReferenceInputMssqlTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: StreamAnalyticsReferenceInputMssqlTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: StreamAnalyticsReferenceInputMssqlTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -403,7 +439,7 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
       server: cdktf.stringToTerraform(this._server),
       stream_analytics_job_name: cdktf.stringToTerraform(this._streamAnalyticsJobName),
       username: cdktf.stringToTerraform(this._username),
-      timeouts: streamAnalyticsReferenceInputMssqlTimeoutsToTerraform(this._timeouts),
+      timeouts: streamAnalyticsReferenceInputMssqlTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -47,7 +47,7 @@ export interface SecurityCenterAssessmentStatus {
   readonly description?: string;
 }
 
-function securityCenterAssessmentStatusToTerraform(struct?: SecurityCenterAssessmentStatusOutputReference | SecurityCenterAssessmentStatus): any {
+export function securityCenterAssessmentStatusToTerraform(struct?: SecurityCenterAssessmentStatusOutputReference | SecurityCenterAssessmentStatus): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -69,12 +69,43 @@ export class SecurityCenterAssessmentStatusOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SecurityCenterAssessmentStatus | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._cause) {
+      hasAnyValues = true;
+      internalValueResult.cause = this._cause;
+    }
+    if (this._code) {
+      hasAnyValues = true;
+      internalValueResult.code = this._code;
+    }
+    if (this._description) {
+      hasAnyValues = true;
+      internalValueResult.description = this._description;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SecurityCenterAssessmentStatus | undefined) {
+    if (value === undefined) {
+      this._cause = undefined;
+      this._code = undefined;
+      this._description = undefined;
+    }
+    else {
+      this._cause = value.cause;
+      this._code = value.code;
+      this._description = value.description;
+    }
+  }
+
   // cause - computed: false, optional: true, required: false
-  private _cause?: string | undefined; 
+  private _cause?: string; 
   public get cause() {
     return this.getStringAttribute('cause');
   }
-  public set cause(value: string | undefined) {
+  public set cause(value: string) {
     this._cause = value;
   }
   public resetCause() {
@@ -82,7 +113,7 @@ export class SecurityCenterAssessmentStatusOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get causeInput() {
-    return this._cause
+    return this._cause;
   }
 
   // code - computed: false, optional: false, required: true
@@ -95,15 +126,15 @@ export class SecurityCenterAssessmentStatusOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get codeInput() {
-    return this._code
+    return this._code;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -111,7 +142,7 @@ export class SecurityCenterAssessmentStatusOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 }
 export interface SecurityCenterAssessmentTimeouts {
@@ -133,7 +164,7 @@ export interface SecurityCenterAssessmentTimeouts {
   readonly update?: string;
 }
 
-function securityCenterAssessmentTimeoutsToTerraform(struct?: SecurityCenterAssessmentTimeoutsOutputReference | SecurityCenterAssessmentTimeouts): any {
+export function securityCenterAssessmentTimeoutsToTerraform(struct?: SecurityCenterAssessmentTimeoutsOutputReference | SecurityCenterAssessmentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -156,12 +187,49 @@ export class SecurityCenterAssessmentTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SecurityCenterAssessmentTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SecurityCenterAssessmentTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -169,15 +237,15 @@ export class SecurityCenterAssessmentTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -185,15 +253,15 @@ export class SecurityCenterAssessmentTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -201,15 +269,15 @@ export class SecurityCenterAssessmentTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -217,7 +285,7 @@ export class SecurityCenterAssessmentTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -256,8 +324,8 @@ export class SecurityCenterAssessment extends cdktf.TerraformResource {
     this._additionalData = config.additionalData;
     this._assessmentPolicyId = config.assessmentPolicyId;
     this._targetResourceId = config.targetResourceId;
-    this._status = config.status;
-    this._timeouts = config.timeouts;
+    this._status.internalValue = config.status;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -265,12 +333,12 @@ export class SecurityCenterAssessment extends cdktf.TerraformResource {
   // ==========
 
   // additional_data - computed: false, optional: true, required: false
-  private _additionalData?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _additionalData?: { [key: string]: string } | cdktf.IResolvable; 
   public get additionalData() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_data') as any;
   }
-  public set additionalData(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set additionalData(value: { [key: string]: string } | cdktf.IResolvable) {
     this._additionalData = value;
   }
   public resetAdditionalData() {
@@ -278,7 +346,7 @@ export class SecurityCenterAssessment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get additionalDataInput() {
-    return this._additionalData
+    return this._additionalData;
   }
 
   // assessment_policy_id - computed: false, optional: false, required: true
@@ -291,7 +359,7 @@ export class SecurityCenterAssessment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get assessmentPolicyIdInput() {
-    return this._assessmentPolicyId
+    return this._assessmentPolicyId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -309,38 +377,36 @@ export class SecurityCenterAssessment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get targetResourceIdInput() {
-    return this._targetResourceId
+    return this._targetResourceId;
   }
 
   // status - computed: false, optional: false, required: true
-  private _status?: SecurityCenterAssessmentStatus; 
-  private __statusOutput = new SecurityCenterAssessmentStatusOutputReference(this as any, "status", true);
+  private _status = new SecurityCenterAssessmentStatusOutputReference(this as any, "status", true);
   public get status() {
-    return this.__statusOutput;
+    return this._status;
   }
   public putStatus(value: SecurityCenterAssessmentStatus) {
-    this._status = value;
+    this._status.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get statusInput() {
-    return this._status
+    return this._status.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SecurityCenterAssessmentTimeouts | undefined; 
-  private __timeoutsOutput = new SecurityCenterAssessmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SecurityCenterAssessmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SecurityCenterAssessmentTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SecurityCenterAssessmentTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -352,8 +418,8 @@ export class SecurityCenterAssessment extends cdktf.TerraformResource {
       additional_data: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalData),
       assessment_policy_id: cdktf.stringToTerraform(this._assessmentPolicyId),
       target_resource_id: cdktf.stringToTerraform(this._targetResourceId),
-      status: securityCenterAssessmentStatusToTerraform(this._status),
-      timeouts: securityCenterAssessmentTimeoutsToTerraform(this._timeouts),
+      status: securityCenterAssessmentStatusToTerraform(this._status.internalValue),
+      timeouts: securityCenterAssessmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

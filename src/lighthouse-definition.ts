@@ -65,7 +65,7 @@ export interface LighthouseDefinitionAuthorization {
   readonly roleDefinitionId: string;
 }
 
-function lighthouseDefinitionAuthorizationToTerraform(struct?: LighthouseDefinitionAuthorization): any {
+export function lighthouseDefinitionAuthorizationToTerraform(struct?: LighthouseDefinitionAuthorization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -97,7 +97,7 @@ export interface LighthouseDefinitionPlan {
   readonly version: string;
 }
 
-function lighthouseDefinitionPlanToTerraform(struct?: LighthouseDefinitionPlanOutputReference | LighthouseDefinitionPlan): any {
+export function lighthouseDefinitionPlanToTerraform(struct?: LighthouseDefinitionPlanOutputReference | LighthouseDefinitionPlan): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -120,6 +120,43 @@ export class LighthouseDefinitionPlanOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LighthouseDefinitionPlan | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._product) {
+      hasAnyValues = true;
+      internalValueResult.product = this._product;
+    }
+    if (this._publisher) {
+      hasAnyValues = true;
+      internalValueResult.publisher = this._publisher;
+    }
+    if (this._version) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LighthouseDefinitionPlan | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._product = undefined;
+      this._publisher = undefined;
+      this._version = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._product = value.product;
+      this._publisher = value.publisher;
+      this._version = value.version;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -130,7 +167,7 @@ export class LighthouseDefinitionPlanOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // product - computed: false, optional: false, required: true
@@ -143,7 +180,7 @@ export class LighthouseDefinitionPlanOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get productInput() {
-    return this._product
+    return this._product;
   }
 
   // publisher - computed: false, optional: false, required: true
@@ -156,7 +193,7 @@ export class LighthouseDefinitionPlanOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get publisherInput() {
-    return this._publisher
+    return this._publisher;
   }
 
   // version - computed: false, optional: false, required: true
@@ -169,7 +206,7 @@ export class LighthouseDefinitionPlanOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 }
 export interface LighthouseDefinitionTimeouts {
@@ -191,7 +228,7 @@ export interface LighthouseDefinitionTimeouts {
   readonly update?: string;
 }
 
-function lighthouseDefinitionTimeoutsToTerraform(struct?: LighthouseDefinitionTimeoutsOutputReference | LighthouseDefinitionTimeouts): any {
+export function lighthouseDefinitionTimeoutsToTerraform(struct?: LighthouseDefinitionTimeoutsOutputReference | LighthouseDefinitionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -214,12 +251,49 @@ export class LighthouseDefinitionTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LighthouseDefinitionTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LighthouseDefinitionTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -227,15 +301,15 @@ export class LighthouseDefinitionTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -243,15 +317,15 @@ export class LighthouseDefinitionTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -259,15 +333,15 @@ export class LighthouseDefinitionTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -275,7 +349,7 @@ export class LighthouseDefinitionTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -317,8 +391,8 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
     this._name = config.name;
     this._scope = config.scope;
     this._authorization = config.authorization;
-    this._plan = config.plan;
-    this._timeouts = config.timeouts;
+    this._plan.internalValue = config.plan;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -326,11 +400,11 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -338,7 +412,7 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -347,11 +421,11 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   }
 
   // lighthouse_definition_id - computed: true, optional: true, required: false
-  private _lighthouseDefinitionId?: string | undefined; 
+  private _lighthouseDefinitionId?: string; 
   public get lighthouseDefinitionId() {
     return this.getStringAttribute('lighthouse_definition_id');
   }
-  public set lighthouseDefinitionId(value: string | undefined) {
+  public set lighthouseDefinitionId(value: string) {
     this._lighthouseDefinitionId = value;
   }
   public resetLighthouseDefinitionId() {
@@ -359,7 +433,7 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get lighthouseDefinitionIdInput() {
-    return this._lighthouseDefinitionId
+    return this._lighthouseDefinitionId;
   }
 
   // managing_tenant_id - computed: false, optional: false, required: true
@@ -372,7 +446,7 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get managingTenantIdInput() {
-    return this._managingTenantId
+    return this._managingTenantId;
   }
 
   // name - computed: false, optional: false, required: true
@@ -385,7 +459,7 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // scope - computed: false, optional: false, required: true
@@ -398,7 +472,7 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get scopeInput() {
-    return this._scope
+    return this._scope;
   }
 
   // authorization - computed: false, optional: false, required: true
@@ -412,41 +486,39 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get authorizationInput() {
-    return this._authorization
+    return this._authorization;
   }
 
   // plan - computed: false, optional: true, required: false
-  private _plan?: LighthouseDefinitionPlan | undefined; 
-  private __planOutput = new LighthouseDefinitionPlanOutputReference(this as any, "plan", true);
+  private _plan = new LighthouseDefinitionPlanOutputReference(this as any, "plan", true);
   public get plan() {
-    return this.__planOutput;
+    return this._plan;
   }
-  public putPlan(value: LighthouseDefinitionPlan | undefined) {
-    this._plan = value;
+  public putPlan(value: LighthouseDefinitionPlan) {
+    this._plan.internalValue = value;
   }
   public resetPlan() {
-    this._plan = undefined;
+    this._plan.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get planInput() {
-    return this._plan
+    return this._plan.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LighthouseDefinitionTimeouts | undefined; 
-  private __timeoutsOutput = new LighthouseDefinitionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LighthouseDefinitionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: LighthouseDefinitionTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: LighthouseDefinitionTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -461,8 +533,8 @@ export class LighthouseDefinition extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       scope: cdktf.stringToTerraform(this._scope),
       authorization: cdktf.listMapper(lighthouseDefinitionAuthorizationToTerraform)(this._authorization),
-      plan: lighthouseDefinitionPlanToTerraform(this._plan),
-      timeouts: lighthouseDefinitionTimeoutsToTerraform(this._timeouts),
+      plan: lighthouseDefinitionPlanToTerraform(this._plan.internalValue),
+      timeouts: lighthouseDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

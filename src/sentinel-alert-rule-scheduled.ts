@@ -93,7 +93,7 @@ export interface SentinelAlertRuleScheduledEventGrouping {
   readonly aggregationMethod: string;
 }
 
-function sentinelAlertRuleScheduledEventGroupingToTerraform(struct?: SentinelAlertRuleScheduledEventGroupingOutputReference | SentinelAlertRuleScheduledEventGrouping): any {
+export function sentinelAlertRuleScheduledEventGroupingToTerraform(struct?: SentinelAlertRuleScheduledEventGroupingOutputReference | SentinelAlertRuleScheduledEventGrouping): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -113,6 +113,25 @@ export class SentinelAlertRuleScheduledEventGroupingOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SentinelAlertRuleScheduledEventGrouping | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._aggregationMethod) {
+      hasAnyValues = true;
+      internalValueResult.aggregationMethod = this._aggregationMethod;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SentinelAlertRuleScheduledEventGrouping | undefined) {
+    if (value === undefined) {
+      this._aggregationMethod = undefined;
+    }
+    else {
+      this._aggregationMethod = value.aggregationMethod;
+    }
+  }
+
   // aggregation_method - computed: false, optional: false, required: true
   private _aggregationMethod?: string; 
   public get aggregationMethod() {
@@ -123,7 +142,7 @@ export class SentinelAlertRuleScheduledEventGroupingOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get aggregationMethodInput() {
-    return this._aggregationMethod
+    return this._aggregationMethod;
   }
 }
 export interface SentinelAlertRuleScheduledIncidentConfigurationGrouping {
@@ -149,7 +168,7 @@ export interface SentinelAlertRuleScheduledIncidentConfigurationGrouping {
   readonly reopenClosedIncidents?: boolean | cdktf.IResolvable;
 }
 
-function sentinelAlertRuleScheduledIncidentConfigurationGroupingToTerraform(struct?: SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputReference | SentinelAlertRuleScheduledIncidentConfigurationGrouping): any {
+export function sentinelAlertRuleScheduledIncidentConfigurationGroupingToTerraform(struct?: SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputReference | SentinelAlertRuleScheduledIncidentConfigurationGrouping): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -173,12 +192,55 @@ export class SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputRefere
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SentinelAlertRuleScheduledIncidentConfigurationGrouping | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._entityMatchingMethod) {
+      hasAnyValues = true;
+      internalValueResult.entityMatchingMethod = this._entityMatchingMethod;
+    }
+    if (this._groupBy) {
+      hasAnyValues = true;
+      internalValueResult.groupBy = this._groupBy;
+    }
+    if (this._lookbackDuration) {
+      hasAnyValues = true;
+      internalValueResult.lookbackDuration = this._lookbackDuration;
+    }
+    if (this._reopenClosedIncidents) {
+      hasAnyValues = true;
+      internalValueResult.reopenClosedIncidents = this._reopenClosedIncidents;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SentinelAlertRuleScheduledIncidentConfigurationGrouping | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+      this._entityMatchingMethod = undefined;
+      this._groupBy = undefined;
+      this._lookbackDuration = undefined;
+      this._reopenClosedIncidents = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+      this._entityMatchingMethod = value.entityMatchingMethod;
+      this._groupBy = value.groupBy;
+      this._lookbackDuration = value.lookbackDuration;
+      this._reopenClosedIncidents = value.reopenClosedIncidents;
+    }
+  }
+
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -186,15 +248,15 @@ export class SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // entity_matching_method - computed: false, optional: true, required: false
-  private _entityMatchingMethod?: string | undefined; 
+  private _entityMatchingMethod?: string; 
   public get entityMatchingMethod() {
     return this.getStringAttribute('entity_matching_method');
   }
-  public set entityMatchingMethod(value: string | undefined) {
+  public set entityMatchingMethod(value: string) {
     this._entityMatchingMethod = value;
   }
   public resetEntityMatchingMethod() {
@@ -202,15 +264,15 @@ export class SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get entityMatchingMethodInput() {
-    return this._entityMatchingMethod
+    return this._entityMatchingMethod;
   }
 
   // group_by - computed: false, optional: true, required: false
-  private _groupBy?: string[] | undefined; 
+  private _groupBy?: string[]; 
   public get groupBy() {
     return this.getListAttribute('group_by');
   }
-  public set groupBy(value: string[] | undefined) {
+  public set groupBy(value: string[]) {
     this._groupBy = value;
   }
   public resetGroupBy() {
@@ -218,15 +280,15 @@ export class SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get groupByInput() {
-    return this._groupBy
+    return this._groupBy;
   }
 
   // lookback_duration - computed: false, optional: true, required: false
-  private _lookbackDuration?: string | undefined; 
+  private _lookbackDuration?: string; 
   public get lookbackDuration() {
     return this.getStringAttribute('lookback_duration');
   }
-  public set lookbackDuration(value: string | undefined) {
+  public set lookbackDuration(value: string) {
     this._lookbackDuration = value;
   }
   public resetLookbackDuration() {
@@ -234,15 +296,15 @@ export class SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get lookbackDurationInput() {
-    return this._lookbackDuration
+    return this._lookbackDuration;
   }
 
   // reopen_closed_incidents - computed: false, optional: true, required: false
-  private _reopenClosedIncidents?: boolean | cdktf.IResolvable | undefined; 
+  private _reopenClosedIncidents?: boolean | cdktf.IResolvable; 
   public get reopenClosedIncidents() {
     return this.getBooleanAttribute('reopen_closed_incidents') as any;
   }
-  public set reopenClosedIncidents(value: boolean | cdktf.IResolvable | undefined) {
+  public set reopenClosedIncidents(value: boolean | cdktf.IResolvable) {
     this._reopenClosedIncidents = value;
   }
   public resetReopenClosedIncidents() {
@@ -250,7 +312,7 @@ export class SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get reopenClosedIncidentsInput() {
-    return this._reopenClosedIncidents
+    return this._reopenClosedIncidents;
   }
 }
 export interface SentinelAlertRuleScheduledIncidentConfiguration {
@@ -266,7 +328,7 @@ export interface SentinelAlertRuleScheduledIncidentConfiguration {
   readonly grouping: SentinelAlertRuleScheduledIncidentConfigurationGrouping;
 }
 
-function sentinelAlertRuleScheduledIncidentConfigurationToTerraform(struct?: SentinelAlertRuleScheduledIncidentConfigurationOutputReference | SentinelAlertRuleScheduledIncidentConfiguration): any {
+export function sentinelAlertRuleScheduledIncidentConfigurationToTerraform(struct?: SentinelAlertRuleScheduledIncidentConfigurationOutputReference | SentinelAlertRuleScheduledIncidentConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -287,6 +349,31 @@ export class SentinelAlertRuleScheduledIncidentConfigurationOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SentinelAlertRuleScheduledIncidentConfiguration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._createIncident) {
+      hasAnyValues = true;
+      internalValueResult.createIncident = this._createIncident;
+    }
+    if (this._grouping) {
+      hasAnyValues = true;
+      internalValueResult.grouping = this._grouping?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SentinelAlertRuleScheduledIncidentConfiguration | undefined) {
+    if (value === undefined) {
+      this._createIncident = undefined;
+      this._grouping.internalValue = undefined;
+    }
+    else {
+      this._createIncident = value.createIncident;
+      this._grouping.internalValue = value.grouping;
+    }
+  }
+
   // create_incident - computed: false, optional: false, required: true
   private _createIncident?: boolean | cdktf.IResolvable; 
   public get createIncident() {
@@ -297,21 +384,20 @@ export class SentinelAlertRuleScheduledIncidentConfigurationOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get createIncidentInput() {
-    return this._createIncident
+    return this._createIncident;
   }
 
   // grouping - computed: false, optional: false, required: true
-  private _grouping?: SentinelAlertRuleScheduledIncidentConfigurationGrouping; 
-  private __groupingOutput = new SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputReference(this as any, "grouping", true);
+  private _grouping = new SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputReference(this as any, "grouping", true);
   public get grouping() {
-    return this.__groupingOutput;
+    return this._grouping;
   }
   public putGrouping(value: SentinelAlertRuleScheduledIncidentConfigurationGrouping) {
-    this._grouping = value;
+    this._grouping.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get groupingInput() {
-    return this._grouping
+    return this._grouping.internalValue;
   }
 }
 export interface SentinelAlertRuleScheduledTimeouts {
@@ -333,7 +419,7 @@ export interface SentinelAlertRuleScheduledTimeouts {
   readonly update?: string;
 }
 
-function sentinelAlertRuleScheduledTimeoutsToTerraform(struct?: SentinelAlertRuleScheduledTimeoutsOutputReference | SentinelAlertRuleScheduledTimeouts): any {
+export function sentinelAlertRuleScheduledTimeoutsToTerraform(struct?: SentinelAlertRuleScheduledTimeoutsOutputReference | SentinelAlertRuleScheduledTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -356,12 +442,49 @@ export class SentinelAlertRuleScheduledTimeoutsOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SentinelAlertRuleScheduledTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SentinelAlertRuleScheduledTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -369,15 +492,15 @@ export class SentinelAlertRuleScheduledTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -385,15 +508,15 @@ export class SentinelAlertRuleScheduledTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -401,15 +524,15 @@ export class SentinelAlertRuleScheduledTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -417,7 +540,7 @@ export class SentinelAlertRuleScheduledTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -468,9 +591,9 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
     this._tactics = config.tactics;
     this._triggerOperator = config.triggerOperator;
     this._triggerThreshold = config.triggerThreshold;
-    this._eventGrouping = config.eventGrouping;
-    this._incidentConfiguration = config.incidentConfiguration;
-    this._timeouts = config.timeouts;
+    this._eventGrouping.internalValue = config.eventGrouping;
+    this._incidentConfiguration.internalValue = config.incidentConfiguration;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -478,11 +601,11 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   // ==========
 
   // alert_rule_template_guid - computed: false, optional: true, required: false
-  private _alertRuleTemplateGuid?: string | undefined; 
+  private _alertRuleTemplateGuid?: string; 
   public get alertRuleTemplateGuid() {
     return this.getStringAttribute('alert_rule_template_guid');
   }
-  public set alertRuleTemplateGuid(value: string | undefined) {
+  public set alertRuleTemplateGuid(value: string) {
     this._alertRuleTemplateGuid = value;
   }
   public resetAlertRuleTemplateGuid() {
@@ -490,15 +613,15 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get alertRuleTemplateGuidInput() {
-    return this._alertRuleTemplateGuid
+    return this._alertRuleTemplateGuid;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -506,7 +629,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // display_name - computed: false, optional: false, required: true
@@ -519,15 +642,15 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -535,7 +658,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -553,7 +676,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get logAnalyticsWorkspaceIdInput() {
-    return this._logAnalyticsWorkspaceId
+    return this._logAnalyticsWorkspaceId;
   }
 
   // name - computed: false, optional: false, required: true
@@ -566,7 +689,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // query - computed: false, optional: false, required: true
@@ -579,15 +702,15 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get queryInput() {
-    return this._query
+    return this._query;
   }
 
   // query_frequency - computed: false, optional: true, required: false
-  private _queryFrequency?: string | undefined; 
+  private _queryFrequency?: string; 
   public get queryFrequency() {
     return this.getStringAttribute('query_frequency');
   }
-  public set queryFrequency(value: string | undefined) {
+  public set queryFrequency(value: string) {
     this._queryFrequency = value;
   }
   public resetQueryFrequency() {
@@ -595,15 +718,15 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get queryFrequencyInput() {
-    return this._queryFrequency
+    return this._queryFrequency;
   }
 
   // query_period - computed: false, optional: true, required: false
-  private _queryPeriod?: string | undefined; 
+  private _queryPeriod?: string; 
   public get queryPeriod() {
     return this.getStringAttribute('query_period');
   }
-  public set queryPeriod(value: string | undefined) {
+  public set queryPeriod(value: string) {
     this._queryPeriod = value;
   }
   public resetQueryPeriod() {
@@ -611,7 +734,7 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get queryPeriodInput() {
-    return this._queryPeriod
+    return this._queryPeriod;
   }
 
   // severity - computed: false, optional: false, required: true
@@ -624,15 +747,15 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get severityInput() {
-    return this._severity
+    return this._severity;
   }
 
   // suppression_duration - computed: false, optional: true, required: false
-  private _suppressionDuration?: string | undefined; 
+  private _suppressionDuration?: string; 
   public get suppressionDuration() {
     return this.getStringAttribute('suppression_duration');
   }
-  public set suppressionDuration(value: string | undefined) {
+  public set suppressionDuration(value: string) {
     this._suppressionDuration = value;
   }
   public resetSuppressionDuration() {
@@ -640,15 +763,15 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get suppressionDurationInput() {
-    return this._suppressionDuration
+    return this._suppressionDuration;
   }
 
   // suppression_enabled - computed: false, optional: true, required: false
-  private _suppressionEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _suppressionEnabled?: boolean | cdktf.IResolvable; 
   public get suppressionEnabled() {
     return this.getBooleanAttribute('suppression_enabled') as any;
   }
-  public set suppressionEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set suppressionEnabled(value: boolean | cdktf.IResolvable) {
     this._suppressionEnabled = value;
   }
   public resetSuppressionEnabled() {
@@ -656,15 +779,15 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get suppressionEnabledInput() {
-    return this._suppressionEnabled
+    return this._suppressionEnabled;
   }
 
   // tactics - computed: false, optional: true, required: false
-  private _tactics?: string[] | undefined; 
+  private _tactics?: string[]; 
   public get tactics() {
     return this.getListAttribute('tactics');
   }
-  public set tactics(value: string[] | undefined) {
+  public set tactics(value: string[]) {
     this._tactics = value;
   }
   public resetTactics() {
@@ -672,15 +795,15 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tacticsInput() {
-    return this._tactics
+    return this._tactics;
   }
 
   // trigger_operator - computed: false, optional: true, required: false
-  private _triggerOperator?: string | undefined; 
+  private _triggerOperator?: string; 
   public get triggerOperator() {
     return this.getStringAttribute('trigger_operator');
   }
-  public set triggerOperator(value: string | undefined) {
+  public set triggerOperator(value: string) {
     this._triggerOperator = value;
   }
   public resetTriggerOperator() {
@@ -688,15 +811,15 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get triggerOperatorInput() {
-    return this._triggerOperator
+    return this._triggerOperator;
   }
 
   // trigger_threshold - computed: false, optional: true, required: false
-  private _triggerThreshold?: number | undefined; 
+  private _triggerThreshold?: number; 
   public get triggerThreshold() {
     return this.getNumberAttribute('trigger_threshold');
   }
-  public set triggerThreshold(value: number | undefined) {
+  public set triggerThreshold(value: number) {
     this._triggerThreshold = value;
   }
   public resetTriggerThreshold() {
@@ -704,58 +827,55 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get triggerThresholdInput() {
-    return this._triggerThreshold
+    return this._triggerThreshold;
   }
 
   // event_grouping - computed: false, optional: true, required: false
-  private _eventGrouping?: SentinelAlertRuleScheduledEventGrouping | undefined; 
-  private __eventGroupingOutput = new SentinelAlertRuleScheduledEventGroupingOutputReference(this as any, "event_grouping", true);
+  private _eventGrouping = new SentinelAlertRuleScheduledEventGroupingOutputReference(this as any, "event_grouping", true);
   public get eventGrouping() {
-    return this.__eventGroupingOutput;
+    return this._eventGrouping;
   }
-  public putEventGrouping(value: SentinelAlertRuleScheduledEventGrouping | undefined) {
-    this._eventGrouping = value;
+  public putEventGrouping(value: SentinelAlertRuleScheduledEventGrouping) {
+    this._eventGrouping.internalValue = value;
   }
   public resetEventGrouping() {
-    this._eventGrouping = undefined;
+    this._eventGrouping.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get eventGroupingInput() {
-    return this._eventGrouping
+    return this._eventGrouping.internalValue;
   }
 
   // incident_configuration - computed: false, optional: true, required: false
-  private _incidentConfiguration?: SentinelAlertRuleScheduledIncidentConfiguration | undefined; 
-  private __incidentConfigurationOutput = new SentinelAlertRuleScheduledIncidentConfigurationOutputReference(this as any, "incident_configuration", true);
+  private _incidentConfiguration = new SentinelAlertRuleScheduledIncidentConfigurationOutputReference(this as any, "incident_configuration", true);
   public get incidentConfiguration() {
-    return this.__incidentConfigurationOutput;
+    return this._incidentConfiguration;
   }
-  public putIncidentConfiguration(value: SentinelAlertRuleScheduledIncidentConfiguration | undefined) {
-    this._incidentConfiguration = value;
+  public putIncidentConfiguration(value: SentinelAlertRuleScheduledIncidentConfiguration) {
+    this._incidentConfiguration.internalValue = value;
   }
   public resetIncidentConfiguration() {
-    this._incidentConfiguration = undefined;
+    this._incidentConfiguration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get incidentConfigurationInput() {
-    return this._incidentConfiguration
+    return this._incidentConfiguration.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SentinelAlertRuleScheduledTimeouts | undefined; 
-  private __timeoutsOutput = new SentinelAlertRuleScheduledTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SentinelAlertRuleScheduledTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SentinelAlertRuleScheduledTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SentinelAlertRuleScheduledTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -779,9 +899,9 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
       tactics: cdktf.listMapper(cdktf.stringToTerraform)(this._tactics),
       trigger_operator: cdktf.stringToTerraform(this._triggerOperator),
       trigger_threshold: cdktf.numberToTerraform(this._triggerThreshold),
-      event_grouping: sentinelAlertRuleScheduledEventGroupingToTerraform(this._eventGrouping),
-      incident_configuration: sentinelAlertRuleScheduledIncidentConfigurationToTerraform(this._incidentConfiguration),
-      timeouts: sentinelAlertRuleScheduledTimeoutsToTerraform(this._timeouts),
+      event_grouping: sentinelAlertRuleScheduledEventGroupingToTerraform(this._eventGrouping.internalValue),
+      incident_configuration: sentinelAlertRuleScheduledIncidentConfigurationToTerraform(this._incidentConfiguration.internalValue),
+      timeouts: sentinelAlertRuleScheduledTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

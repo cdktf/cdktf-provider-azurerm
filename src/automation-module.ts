@@ -43,7 +43,7 @@ export interface AutomationModuleModuleLinkHash {
   readonly value: string;
 }
 
-function automationModuleModuleLinkHashToTerraform(struct?: AutomationModuleModuleLinkHashOutputReference | AutomationModuleModuleLinkHash): any {
+export function automationModuleModuleLinkHashToTerraform(struct?: AutomationModuleModuleLinkHashOutputReference | AutomationModuleModuleLinkHash): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -64,6 +64,31 @@ export class AutomationModuleModuleLinkHashOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AutomationModuleModuleLinkHash | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._algorithm) {
+      hasAnyValues = true;
+      internalValueResult.algorithm = this._algorithm;
+    }
+    if (this._value) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomationModuleModuleLinkHash | undefined) {
+    if (value === undefined) {
+      this._algorithm = undefined;
+      this._value = undefined;
+    }
+    else {
+      this._algorithm = value.algorithm;
+      this._value = value.value;
+    }
+  }
+
   // algorithm - computed: false, optional: false, required: true
   private _algorithm?: string; 
   public get algorithm() {
@@ -74,7 +99,7 @@ export class AutomationModuleModuleLinkHashOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get algorithmInput() {
-    return this._algorithm
+    return this._algorithm;
   }
 
   // value - computed: false, optional: false, required: true
@@ -87,7 +112,7 @@ export class AutomationModuleModuleLinkHashOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get valueInput() {
-    return this._value
+    return this._value;
   }
 }
 export interface AutomationModuleModuleLink {
@@ -103,7 +128,7 @@ export interface AutomationModuleModuleLink {
   readonly hash?: AutomationModuleModuleLinkHash;
 }
 
-function automationModuleModuleLinkToTerraform(struct?: AutomationModuleModuleLinkOutputReference | AutomationModuleModuleLink): any {
+export function automationModuleModuleLinkToTerraform(struct?: AutomationModuleModuleLinkOutputReference | AutomationModuleModuleLink): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -124,6 +149,31 @@ export class AutomationModuleModuleLinkOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AutomationModuleModuleLink | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._uri) {
+      hasAnyValues = true;
+      internalValueResult.uri = this._uri;
+    }
+    if (this._hash) {
+      hasAnyValues = true;
+      internalValueResult.hash = this._hash?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomationModuleModuleLink | undefined) {
+    if (value === undefined) {
+      this._uri = undefined;
+      this._hash.internalValue = undefined;
+    }
+    else {
+      this._uri = value.uri;
+      this._hash.internalValue = value.hash;
+    }
+  }
+
   // uri - computed: false, optional: false, required: true
   private _uri?: string; 
   public get uri() {
@@ -134,24 +184,23 @@ export class AutomationModuleModuleLinkOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get uriInput() {
-    return this._uri
+    return this._uri;
   }
 
   // hash - computed: false, optional: true, required: false
-  private _hash?: AutomationModuleModuleLinkHash | undefined; 
-  private __hashOutput = new AutomationModuleModuleLinkHashOutputReference(this as any, "hash", true);
+  private _hash = new AutomationModuleModuleLinkHashOutputReference(this as any, "hash", true);
   public get hash() {
-    return this.__hashOutput;
+    return this._hash;
   }
-  public putHash(value: AutomationModuleModuleLinkHash | undefined) {
-    this._hash = value;
+  public putHash(value: AutomationModuleModuleLinkHash) {
+    this._hash.internalValue = value;
   }
   public resetHash() {
-    this._hash = undefined;
+    this._hash.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get hashInput() {
-    return this._hash
+    return this._hash.internalValue;
   }
 }
 export interface AutomationModuleTimeouts {
@@ -173,7 +222,7 @@ export interface AutomationModuleTimeouts {
   readonly update?: string;
 }
 
-function automationModuleTimeoutsToTerraform(struct?: AutomationModuleTimeoutsOutputReference | AutomationModuleTimeouts): any {
+export function automationModuleTimeoutsToTerraform(struct?: AutomationModuleTimeoutsOutputReference | AutomationModuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -196,12 +245,49 @@ export class AutomationModuleTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AutomationModuleTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomationModuleTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -209,15 +295,15 @@ export class AutomationModuleTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -225,15 +311,15 @@ export class AutomationModuleTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -241,15 +327,15 @@ export class AutomationModuleTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -257,7 +343,7 @@ export class AutomationModuleTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -296,8 +382,8 @@ export class AutomationModule extends cdktf.TerraformResource {
     this._automationAccountName = config.automationAccountName;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._moduleLink = config.moduleLink;
-    this._timeouts = config.timeouts;
+    this._moduleLink.internalValue = config.moduleLink;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -314,7 +400,7 @@ export class AutomationModule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get automationAccountNameInput() {
-    return this._automationAccountName
+    return this._automationAccountName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -332,7 +418,7 @@ export class AutomationModule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -345,38 +431,36 @@ export class AutomationModule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // module_link - computed: false, optional: false, required: true
-  private _moduleLink?: AutomationModuleModuleLink; 
-  private __moduleLinkOutput = new AutomationModuleModuleLinkOutputReference(this as any, "module_link", true);
+  private _moduleLink = new AutomationModuleModuleLinkOutputReference(this as any, "module_link", true);
   public get moduleLink() {
-    return this.__moduleLinkOutput;
+    return this._moduleLink;
   }
   public putModuleLink(value: AutomationModuleModuleLink) {
-    this._moduleLink = value;
+    this._moduleLink.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get moduleLinkInput() {
-    return this._moduleLink
+    return this._moduleLink.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AutomationModuleTimeouts | undefined; 
-  private __timeoutsOutput = new AutomationModuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AutomationModuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: AutomationModuleTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: AutomationModuleTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -388,8 +472,8 @@ export class AutomationModule extends cdktf.TerraformResource {
       automation_account_name: cdktf.stringToTerraform(this._automationAccountName),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      module_link: automationModuleModuleLinkToTerraform(this._moduleLink),
-      timeouts: automationModuleTimeoutsToTerraform(this._timeouts),
+      module_link: automationModuleModuleLinkToTerraform(this._moduleLink.internalValue),
+      timeouts: automationModuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

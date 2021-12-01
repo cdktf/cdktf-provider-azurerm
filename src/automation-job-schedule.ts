@@ -61,7 +61,7 @@ export interface AutomationJobScheduleTimeouts {
   readonly update?: string;
 }
 
-function automationJobScheduleTimeoutsToTerraform(struct?: AutomationJobScheduleTimeoutsOutputReference | AutomationJobScheduleTimeouts): any {
+export function automationJobScheduleTimeoutsToTerraform(struct?: AutomationJobScheduleTimeoutsOutputReference | AutomationJobScheduleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -84,12 +84,49 @@ export class AutomationJobScheduleTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AutomationJobScheduleTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomationJobScheduleTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -97,15 +134,15 @@ export class AutomationJobScheduleTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -113,15 +150,15 @@ export class AutomationJobScheduleTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -129,15 +166,15 @@ export class AutomationJobScheduleTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -145,7 +182,7 @@ export class AutomationJobScheduleTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -188,7 +225,7 @@ export class AutomationJobSchedule extends cdktf.TerraformResource {
     this._runOn = config.runOn;
     this._runbookName = config.runbookName;
     this._scheduleName = config.scheduleName;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -205,7 +242,7 @@ export class AutomationJobSchedule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get automationAccountNameInput() {
-    return this._automationAccountName
+    return this._automationAccountName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -214,11 +251,11 @@ export class AutomationJobSchedule extends cdktf.TerraformResource {
   }
 
   // job_schedule_id - computed: true, optional: true, required: false
-  private _jobScheduleId?: string | undefined; 
+  private _jobScheduleId?: string; 
   public get jobScheduleId() {
     return this.getStringAttribute('job_schedule_id');
   }
-  public set jobScheduleId(value: string | undefined) {
+  public set jobScheduleId(value: string) {
     this._jobScheduleId = value;
   }
   public resetJobScheduleId() {
@@ -226,16 +263,16 @@ export class AutomationJobSchedule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get jobScheduleIdInput() {
-    return this._jobScheduleId
+    return this._jobScheduleId;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -243,7 +280,7 @@ export class AutomationJobSchedule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -256,15 +293,15 @@ export class AutomationJobSchedule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // run_on - computed: false, optional: true, required: false
-  private _runOn?: string | undefined; 
+  private _runOn?: string; 
   public get runOn() {
     return this.getStringAttribute('run_on');
   }
-  public set runOn(value: string | undefined) {
+  public set runOn(value: string) {
     this._runOn = value;
   }
   public resetRunOn() {
@@ -272,7 +309,7 @@ export class AutomationJobSchedule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get runOnInput() {
-    return this._runOn
+    return this._runOn;
   }
 
   // runbook_name - computed: false, optional: false, required: true
@@ -285,7 +322,7 @@ export class AutomationJobSchedule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get runbookNameInput() {
-    return this._runbookName
+    return this._runbookName;
   }
 
   // schedule_name - computed: false, optional: false, required: true
@@ -298,24 +335,23 @@ export class AutomationJobSchedule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get scheduleNameInput() {
-    return this._scheduleName
+    return this._scheduleName;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AutomationJobScheduleTimeouts | undefined; 
-  private __timeoutsOutput = new AutomationJobScheduleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AutomationJobScheduleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: AutomationJobScheduleTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: AutomationJobScheduleTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -331,7 +367,7 @@ export class AutomationJobSchedule extends cdktf.TerraformResource {
       run_on: cdktf.stringToTerraform(this._runOn),
       runbook_name: cdktf.stringToTerraform(this._runbookName),
       schedule_name: cdktf.stringToTerraform(this._scheduleName),
-      timeouts: automationJobScheduleTimeoutsToTerraform(this._timeouts),
+      timeouts: automationJobScheduleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -163,7 +163,7 @@ export interface StorageAccountAzureFilesAuthenticationActiveDirectory {
   readonly storageSid: string;
 }
 
-function storageAccountAzureFilesAuthenticationActiveDirectoryToTerraform(struct?: StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReference | StorageAccountAzureFilesAuthenticationActiveDirectory): any {
+export function storageAccountAzureFilesAuthenticationActiveDirectoryToTerraform(struct?: StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReference | StorageAccountAzureFilesAuthenticationActiveDirectory): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -188,6 +188,55 @@ export class StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReferenc
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageAccountAzureFilesAuthenticationActiveDirectory | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._domainGuid) {
+      hasAnyValues = true;
+      internalValueResult.domainGuid = this._domainGuid;
+    }
+    if (this._domainName) {
+      hasAnyValues = true;
+      internalValueResult.domainName = this._domainName;
+    }
+    if (this._domainSid) {
+      hasAnyValues = true;
+      internalValueResult.domainSid = this._domainSid;
+    }
+    if (this._forestName) {
+      hasAnyValues = true;
+      internalValueResult.forestName = this._forestName;
+    }
+    if (this._netbiosDomainName) {
+      hasAnyValues = true;
+      internalValueResult.netbiosDomainName = this._netbiosDomainName;
+    }
+    if (this._storageSid) {
+      hasAnyValues = true;
+      internalValueResult.storageSid = this._storageSid;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountAzureFilesAuthenticationActiveDirectory | undefined) {
+    if (value === undefined) {
+      this._domainGuid = undefined;
+      this._domainName = undefined;
+      this._domainSid = undefined;
+      this._forestName = undefined;
+      this._netbiosDomainName = undefined;
+      this._storageSid = undefined;
+    }
+    else {
+      this._domainGuid = value.domainGuid;
+      this._domainName = value.domainName;
+      this._domainSid = value.domainSid;
+      this._forestName = value.forestName;
+      this._netbiosDomainName = value.netbiosDomainName;
+      this._storageSid = value.storageSid;
+    }
+  }
+
   // domain_guid - computed: false, optional: false, required: true
   private _domainGuid?: string; 
   public get domainGuid() {
@@ -198,7 +247,7 @@ export class StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get domainGuidInput() {
-    return this._domainGuid
+    return this._domainGuid;
   }
 
   // domain_name - computed: false, optional: false, required: true
@@ -211,7 +260,7 @@ export class StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get domainNameInput() {
-    return this._domainName
+    return this._domainName;
   }
 
   // domain_sid - computed: false, optional: false, required: true
@@ -224,7 +273,7 @@ export class StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get domainSidInput() {
-    return this._domainSid
+    return this._domainSid;
   }
 
   // forest_name - computed: false, optional: false, required: true
@@ -237,7 +286,7 @@ export class StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get forestNameInput() {
-    return this._forestName
+    return this._forestName;
   }
 
   // netbios_domain_name - computed: false, optional: false, required: true
@@ -250,7 +299,7 @@ export class StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get netbiosDomainNameInput() {
-    return this._netbiosDomainName
+    return this._netbiosDomainName;
   }
 
   // storage_sid - computed: false, optional: false, required: true
@@ -263,7 +312,7 @@ export class StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get storageSidInput() {
-    return this._storageSid
+    return this._storageSid;
   }
 }
 export interface StorageAccountAzureFilesAuthentication {
@@ -279,7 +328,7 @@ export interface StorageAccountAzureFilesAuthentication {
   readonly activeDirectory?: StorageAccountAzureFilesAuthenticationActiveDirectory;
 }
 
-function storageAccountAzureFilesAuthenticationToTerraform(struct?: StorageAccountAzureFilesAuthenticationOutputReference | StorageAccountAzureFilesAuthentication): any {
+export function storageAccountAzureFilesAuthenticationToTerraform(struct?: StorageAccountAzureFilesAuthenticationOutputReference | StorageAccountAzureFilesAuthentication): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -300,6 +349,31 @@ export class StorageAccountAzureFilesAuthenticationOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageAccountAzureFilesAuthentication | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._directoryType) {
+      hasAnyValues = true;
+      internalValueResult.directoryType = this._directoryType;
+    }
+    if (this._activeDirectory) {
+      hasAnyValues = true;
+      internalValueResult.activeDirectory = this._activeDirectory?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountAzureFilesAuthentication | undefined) {
+    if (value === undefined) {
+      this._directoryType = undefined;
+      this._activeDirectory.internalValue = undefined;
+    }
+    else {
+      this._directoryType = value.directoryType;
+      this._activeDirectory.internalValue = value.activeDirectory;
+    }
+  }
+
   // directory_type - computed: false, optional: false, required: true
   private _directoryType?: string; 
   public get directoryType() {
@@ -310,24 +384,23 @@ export class StorageAccountAzureFilesAuthenticationOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get directoryTypeInput() {
-    return this._directoryType
+    return this._directoryType;
   }
 
   // active_directory - computed: false, optional: true, required: false
-  private _activeDirectory?: StorageAccountAzureFilesAuthenticationActiveDirectory | undefined; 
-  private __activeDirectoryOutput = new StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReference(this as any, "active_directory", true);
+  private _activeDirectory = new StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReference(this as any, "active_directory", true);
   public get activeDirectory() {
-    return this.__activeDirectoryOutput;
+    return this._activeDirectory;
   }
-  public putActiveDirectory(value: StorageAccountAzureFilesAuthenticationActiveDirectory | undefined) {
-    this._activeDirectory = value;
+  public putActiveDirectory(value: StorageAccountAzureFilesAuthenticationActiveDirectory) {
+    this._activeDirectory.internalValue = value;
   }
   public resetActiveDirectory() {
-    this._activeDirectory = undefined;
+    this._activeDirectory.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get activeDirectoryInput() {
-    return this._activeDirectory
+    return this._activeDirectory.internalValue;
   }
 }
 export interface StorageAccountBlobPropertiesContainerDeleteRetentionPolicy {
@@ -337,7 +410,7 @@ export interface StorageAccountBlobPropertiesContainerDeleteRetentionPolicy {
   readonly days?: number;
 }
 
-function storageAccountBlobPropertiesContainerDeleteRetentionPolicyToTerraform(struct?: StorageAccountBlobPropertiesContainerDeleteRetentionPolicyOutputReference | StorageAccountBlobPropertiesContainerDeleteRetentionPolicy): any {
+export function storageAccountBlobPropertiesContainerDeleteRetentionPolicyToTerraform(struct?: StorageAccountBlobPropertiesContainerDeleteRetentionPolicyOutputReference | StorageAccountBlobPropertiesContainerDeleteRetentionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -357,12 +430,31 @@ export class StorageAccountBlobPropertiesContainerDeleteRetentionPolicyOutputRef
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageAccountBlobPropertiesContainerDeleteRetentionPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._days) {
+      hasAnyValues = true;
+      internalValueResult.days = this._days;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountBlobPropertiesContainerDeleteRetentionPolicy | undefined) {
+    if (value === undefined) {
+      this._days = undefined;
+    }
+    else {
+      this._days = value.days;
+    }
+  }
+
   // days - computed: false, optional: true, required: false
-  private _days?: number | undefined; 
+  private _days?: number; 
   public get days() {
     return this.getNumberAttribute('days');
   }
-  public set days(value: number | undefined) {
+  public set days(value: number) {
     this._days = value;
   }
   public resetDays() {
@@ -370,7 +462,7 @@ export class StorageAccountBlobPropertiesContainerDeleteRetentionPolicyOutputRef
   }
   // Temporarily expose input value. Use with caution.
   public get daysInput() {
-    return this._days
+    return this._days;
   }
 }
 export interface StorageAccountBlobPropertiesCorsRule {
@@ -396,7 +488,7 @@ export interface StorageAccountBlobPropertiesCorsRule {
   readonly maxAgeInSeconds: number;
 }
 
-function storageAccountBlobPropertiesCorsRuleToTerraform(struct?: StorageAccountBlobPropertiesCorsRule): any {
+export function storageAccountBlobPropertiesCorsRuleToTerraform(struct?: StorageAccountBlobPropertiesCorsRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -417,7 +509,7 @@ export interface StorageAccountBlobPropertiesDeleteRetentionPolicy {
   readonly days?: number;
 }
 
-function storageAccountBlobPropertiesDeleteRetentionPolicyToTerraform(struct?: StorageAccountBlobPropertiesDeleteRetentionPolicyOutputReference | StorageAccountBlobPropertiesDeleteRetentionPolicy): any {
+export function storageAccountBlobPropertiesDeleteRetentionPolicyToTerraform(struct?: StorageAccountBlobPropertiesDeleteRetentionPolicyOutputReference | StorageAccountBlobPropertiesDeleteRetentionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -437,12 +529,31 @@ export class StorageAccountBlobPropertiesDeleteRetentionPolicyOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageAccountBlobPropertiesDeleteRetentionPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._days) {
+      hasAnyValues = true;
+      internalValueResult.days = this._days;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountBlobPropertiesDeleteRetentionPolicy | undefined) {
+    if (value === undefined) {
+      this._days = undefined;
+    }
+    else {
+      this._days = value.days;
+    }
+  }
+
   // days - computed: false, optional: true, required: false
-  private _days?: number | undefined; 
+  private _days?: number; 
   public get days() {
     return this.getNumberAttribute('days');
   }
-  public set days(value: number | undefined) {
+  public set days(value: number) {
     this._days = value;
   }
   public resetDays() {
@@ -450,7 +561,7 @@ export class StorageAccountBlobPropertiesDeleteRetentionPolicyOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get daysInput() {
-    return this._days
+    return this._days;
   }
 }
 export interface StorageAccountBlobProperties {
@@ -490,7 +601,7 @@ export interface StorageAccountBlobProperties {
   readonly deleteRetentionPolicy?: StorageAccountBlobPropertiesDeleteRetentionPolicy;
 }
 
-function storageAccountBlobPropertiesToTerraform(struct?: StorageAccountBlobPropertiesOutputReference | StorageAccountBlobProperties): any {
+export function storageAccountBlobPropertiesToTerraform(struct?: StorageAccountBlobPropertiesOutputReference | StorageAccountBlobProperties): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -516,12 +627,67 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageAccountBlobProperties | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._changeFeedEnabled) {
+      hasAnyValues = true;
+      internalValueResult.changeFeedEnabled = this._changeFeedEnabled;
+    }
+    if (this._defaultServiceVersion) {
+      hasAnyValues = true;
+      internalValueResult.defaultServiceVersion = this._defaultServiceVersion;
+    }
+    if (this._lastAccessTimeEnabled) {
+      hasAnyValues = true;
+      internalValueResult.lastAccessTimeEnabled = this._lastAccessTimeEnabled;
+    }
+    if (this._versioningEnabled) {
+      hasAnyValues = true;
+      internalValueResult.versioningEnabled = this._versioningEnabled;
+    }
+    if (this._containerDeleteRetentionPolicy) {
+      hasAnyValues = true;
+      internalValueResult.containerDeleteRetentionPolicy = this._containerDeleteRetentionPolicy?.internalValue;
+    }
+    if (this._corsRule) {
+      hasAnyValues = true;
+      internalValueResult.corsRule = this._corsRule;
+    }
+    if (this._deleteRetentionPolicy) {
+      hasAnyValues = true;
+      internalValueResult.deleteRetentionPolicy = this._deleteRetentionPolicy?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountBlobProperties | undefined) {
+    if (value === undefined) {
+      this._changeFeedEnabled = undefined;
+      this._defaultServiceVersion = undefined;
+      this._lastAccessTimeEnabled = undefined;
+      this._versioningEnabled = undefined;
+      this._containerDeleteRetentionPolicy.internalValue = undefined;
+      this._corsRule = undefined;
+      this._deleteRetentionPolicy.internalValue = undefined;
+    }
+    else {
+      this._changeFeedEnabled = value.changeFeedEnabled;
+      this._defaultServiceVersion = value.defaultServiceVersion;
+      this._lastAccessTimeEnabled = value.lastAccessTimeEnabled;
+      this._versioningEnabled = value.versioningEnabled;
+      this._containerDeleteRetentionPolicy.internalValue = value.containerDeleteRetentionPolicy;
+      this._corsRule = value.corsRule;
+      this._deleteRetentionPolicy.internalValue = value.deleteRetentionPolicy;
+    }
+  }
+
   // change_feed_enabled - computed: false, optional: true, required: false
-  private _changeFeedEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _changeFeedEnabled?: boolean | cdktf.IResolvable; 
   public get changeFeedEnabled() {
     return this.getBooleanAttribute('change_feed_enabled') as any;
   }
-  public set changeFeedEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set changeFeedEnabled(value: boolean | cdktf.IResolvable) {
     this._changeFeedEnabled = value;
   }
   public resetChangeFeedEnabled() {
@@ -529,15 +695,15 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get changeFeedEnabledInput() {
-    return this._changeFeedEnabled
+    return this._changeFeedEnabled;
   }
 
   // default_service_version - computed: true, optional: true, required: false
-  private _defaultServiceVersion?: string | undefined; 
+  private _defaultServiceVersion?: string; 
   public get defaultServiceVersion() {
     return this.getStringAttribute('default_service_version');
   }
-  public set defaultServiceVersion(value: string | undefined) {
+  public set defaultServiceVersion(value: string) {
     this._defaultServiceVersion = value;
   }
   public resetDefaultServiceVersion() {
@@ -545,15 +711,15 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get defaultServiceVersionInput() {
-    return this._defaultServiceVersion
+    return this._defaultServiceVersion;
   }
 
   // last_access_time_enabled - computed: false, optional: true, required: false
-  private _lastAccessTimeEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _lastAccessTimeEnabled?: boolean | cdktf.IResolvable; 
   public get lastAccessTimeEnabled() {
     return this.getBooleanAttribute('last_access_time_enabled') as any;
   }
-  public set lastAccessTimeEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set lastAccessTimeEnabled(value: boolean | cdktf.IResolvable) {
     this._lastAccessTimeEnabled = value;
   }
   public resetLastAccessTimeEnabled() {
@@ -561,15 +727,15 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get lastAccessTimeEnabledInput() {
-    return this._lastAccessTimeEnabled
+    return this._lastAccessTimeEnabled;
   }
 
   // versioning_enabled - computed: false, optional: true, required: false
-  private _versioningEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _versioningEnabled?: boolean | cdktf.IResolvable; 
   public get versioningEnabled() {
     return this.getBooleanAttribute('versioning_enabled') as any;
   }
-  public set versioningEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set versioningEnabled(value: boolean | cdktf.IResolvable) {
     this._versioningEnabled = value;
   }
   public resetVersioningEnabled() {
@@ -577,33 +743,32 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get versioningEnabledInput() {
-    return this._versioningEnabled
+    return this._versioningEnabled;
   }
 
   // container_delete_retention_policy - computed: false, optional: true, required: false
-  private _containerDeleteRetentionPolicy?: StorageAccountBlobPropertiesContainerDeleteRetentionPolicy | undefined; 
-  private __containerDeleteRetentionPolicyOutput = new StorageAccountBlobPropertiesContainerDeleteRetentionPolicyOutputReference(this as any, "container_delete_retention_policy", true);
+  private _containerDeleteRetentionPolicy = new StorageAccountBlobPropertiesContainerDeleteRetentionPolicyOutputReference(this as any, "container_delete_retention_policy", true);
   public get containerDeleteRetentionPolicy() {
-    return this.__containerDeleteRetentionPolicyOutput;
+    return this._containerDeleteRetentionPolicy;
   }
-  public putContainerDeleteRetentionPolicy(value: StorageAccountBlobPropertiesContainerDeleteRetentionPolicy | undefined) {
-    this._containerDeleteRetentionPolicy = value;
+  public putContainerDeleteRetentionPolicy(value: StorageAccountBlobPropertiesContainerDeleteRetentionPolicy) {
+    this._containerDeleteRetentionPolicy.internalValue = value;
   }
   public resetContainerDeleteRetentionPolicy() {
-    this._containerDeleteRetentionPolicy = undefined;
+    this._containerDeleteRetentionPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get containerDeleteRetentionPolicyInput() {
-    return this._containerDeleteRetentionPolicy
+    return this._containerDeleteRetentionPolicy.internalValue;
   }
 
   // cors_rule - computed: false, optional: true, required: false
-  private _corsRule?: StorageAccountBlobPropertiesCorsRule[] | undefined; 
+  private _corsRule?: StorageAccountBlobPropertiesCorsRule[]; 
   public get corsRule() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('cors_rule') as any;
   }
-  public set corsRule(value: StorageAccountBlobPropertiesCorsRule[] | undefined) {
+  public set corsRule(value: StorageAccountBlobPropertiesCorsRule[]) {
     this._corsRule = value;
   }
   public resetCorsRule() {
@@ -611,24 +776,23 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get corsRuleInput() {
-    return this._corsRule
+    return this._corsRule;
   }
 
   // delete_retention_policy - computed: false, optional: true, required: false
-  private _deleteRetentionPolicy?: StorageAccountBlobPropertiesDeleteRetentionPolicy | undefined; 
-  private __deleteRetentionPolicyOutput = new StorageAccountBlobPropertiesDeleteRetentionPolicyOutputReference(this as any, "delete_retention_policy", true);
+  private _deleteRetentionPolicy = new StorageAccountBlobPropertiesDeleteRetentionPolicyOutputReference(this as any, "delete_retention_policy", true);
   public get deleteRetentionPolicy() {
-    return this.__deleteRetentionPolicyOutput;
+    return this._deleteRetentionPolicy;
   }
-  public putDeleteRetentionPolicy(value: StorageAccountBlobPropertiesDeleteRetentionPolicy | undefined) {
-    this._deleteRetentionPolicy = value;
+  public putDeleteRetentionPolicy(value: StorageAccountBlobPropertiesDeleteRetentionPolicy) {
+    this._deleteRetentionPolicy.internalValue = value;
   }
   public resetDeleteRetentionPolicy() {
-    this._deleteRetentionPolicy = undefined;
+    this._deleteRetentionPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get deleteRetentionPolicyInput() {
-    return this._deleteRetentionPolicy
+    return this._deleteRetentionPolicy.internalValue;
   }
 }
 export interface StorageAccountCustomDomain {
@@ -642,7 +806,7 @@ export interface StorageAccountCustomDomain {
   readonly useSubdomain?: boolean | cdktf.IResolvable;
 }
 
-function storageAccountCustomDomainToTerraform(struct?: StorageAccountCustomDomainOutputReference | StorageAccountCustomDomain): any {
+export function storageAccountCustomDomainToTerraform(struct?: StorageAccountCustomDomainOutputReference | StorageAccountCustomDomain): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -663,6 +827,31 @@ export class StorageAccountCustomDomainOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageAccountCustomDomain | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._useSubdomain) {
+      hasAnyValues = true;
+      internalValueResult.useSubdomain = this._useSubdomain;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountCustomDomain | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._useSubdomain = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._useSubdomain = value.useSubdomain;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -673,15 +862,15 @@ export class StorageAccountCustomDomainOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // use_subdomain - computed: false, optional: true, required: false
-  private _useSubdomain?: boolean | cdktf.IResolvable | undefined; 
+  private _useSubdomain?: boolean | cdktf.IResolvable; 
   public get useSubdomain() {
     return this.getBooleanAttribute('use_subdomain') as any;
   }
-  public set useSubdomain(value: boolean | cdktf.IResolvable | undefined) {
+  public set useSubdomain(value: boolean | cdktf.IResolvable) {
     this._useSubdomain = value;
   }
   public resetUseSubdomain() {
@@ -689,7 +878,7 @@ export class StorageAccountCustomDomainOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get useSubdomainInput() {
-    return this._useSubdomain
+    return this._useSubdomain;
   }
 }
 export interface StorageAccountIdentity {
@@ -703,7 +892,7 @@ export interface StorageAccountIdentity {
   readonly type: string;
 }
 
-function storageAccountIdentityToTerraform(struct?: StorageAccountIdentityOutputReference | StorageAccountIdentity): any {
+export function storageAccountIdentityToTerraform(struct?: StorageAccountIdentityOutputReference | StorageAccountIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -724,12 +913,37 @@ export class StorageAccountIdentityOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageAccountIdentity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._identityIds) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountIdentity | undefined) {
+    if (value === undefined) {
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
   // identity_ids - computed: false, optional: true, required: false
-  private _identityIds?: string[] | undefined; 
+  private _identityIds?: string[]; 
   public get identityIds() {
     return this.getListAttribute('identity_ids');
   }
-  public set identityIds(value: string[] | undefined) {
+  public set identityIds(value: string[]) {
     this._identityIds = value;
   }
   public resetIdentityIds() {
@@ -737,7 +951,7 @@ export class StorageAccountIdentityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
-    return this._identityIds
+    return this._identityIds;
   }
 
   // type - computed: false, optional: false, required: true
@@ -750,7 +964,7 @@ export class StorageAccountIdentityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface StorageAccountNetworkRulesPrivateLinkAccess {
@@ -764,7 +978,7 @@ export interface StorageAccountNetworkRulesPrivateLinkAccess {
   readonly endpointTenantId?: string;
 }
 
-function storageAccountNetworkRulesPrivateLinkAccessToTerraform(struct?: StorageAccountNetworkRulesPrivateLinkAccess): any {
+export function storageAccountNetworkRulesPrivateLinkAccessToTerraform(struct?: StorageAccountNetworkRulesPrivateLinkAccess): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -800,7 +1014,7 @@ export interface StorageAccountNetworkRules {
   readonly privateLinkAccess?: StorageAccountNetworkRulesPrivateLinkAccess[];
 }
 
-function storageAccountNetworkRulesToTerraform(struct?: StorageAccountNetworkRulesOutputReference | StorageAccountNetworkRules): any {
+export function storageAccountNetworkRulesToTerraform(struct?: StorageAccountNetworkRulesOutputReference | StorageAccountNetworkRules): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -824,12 +1038,55 @@ export class StorageAccountNetworkRulesOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageAccountNetworkRules | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._bypass) {
+      hasAnyValues = true;
+      internalValueResult.bypass = this._bypass;
+    }
+    if (this._defaultAction) {
+      hasAnyValues = true;
+      internalValueResult.defaultAction = this._defaultAction;
+    }
+    if (this._ipRules) {
+      hasAnyValues = true;
+      internalValueResult.ipRules = this._ipRules;
+    }
+    if (this._virtualNetworkSubnetIds) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetworkSubnetIds = this._virtualNetworkSubnetIds;
+    }
+    if (this._privateLinkAccess) {
+      hasAnyValues = true;
+      internalValueResult.privateLinkAccess = this._privateLinkAccess;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountNetworkRules | undefined) {
+    if (value === undefined) {
+      this._bypass = undefined;
+      this._defaultAction = undefined;
+      this._ipRules = undefined;
+      this._virtualNetworkSubnetIds = undefined;
+      this._privateLinkAccess = undefined;
+    }
+    else {
+      this._bypass = value.bypass;
+      this._defaultAction = value.defaultAction;
+      this._ipRules = value.ipRules;
+      this._virtualNetworkSubnetIds = value.virtualNetworkSubnetIds;
+      this._privateLinkAccess = value.privateLinkAccess;
+    }
+  }
+
   // bypass - computed: true, optional: true, required: false
-  private _bypass?: string[] | undefined; 
+  private _bypass?: string[]; 
   public get bypass() {
     return this.getListAttribute('bypass');
   }
-  public set bypass(value: string[] | undefined) {
+  public set bypass(value: string[]) {
     this._bypass = value;
   }
   public resetBypass() {
@@ -837,7 +1094,7 @@ export class StorageAccountNetworkRulesOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get bypassInput() {
-    return this._bypass
+    return this._bypass;
   }
 
   // default_action - computed: false, optional: false, required: true
@@ -850,15 +1107,15 @@ export class StorageAccountNetworkRulesOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get defaultActionInput() {
-    return this._defaultAction
+    return this._defaultAction;
   }
 
   // ip_rules - computed: true, optional: true, required: false
-  private _ipRules?: string[] | undefined; 
+  private _ipRules?: string[]; 
   public get ipRules() {
     return this.getListAttribute('ip_rules');
   }
-  public set ipRules(value: string[] | undefined) {
+  public set ipRules(value: string[]) {
     this._ipRules = value;
   }
   public resetIpRules() {
@@ -866,15 +1123,15 @@ export class StorageAccountNetworkRulesOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get ipRulesInput() {
-    return this._ipRules
+    return this._ipRules;
   }
 
   // virtual_network_subnet_ids - computed: true, optional: true, required: false
-  private _virtualNetworkSubnetIds?: string[] | undefined; 
+  private _virtualNetworkSubnetIds?: string[]; 
   public get virtualNetworkSubnetIds() {
     return this.getListAttribute('virtual_network_subnet_ids');
   }
-  public set virtualNetworkSubnetIds(value: string[] | undefined) {
+  public set virtualNetworkSubnetIds(value: string[]) {
     this._virtualNetworkSubnetIds = value;
   }
   public resetVirtualNetworkSubnetIds() {
@@ -882,16 +1139,16 @@ export class StorageAccountNetworkRulesOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get virtualNetworkSubnetIdsInput() {
-    return this._virtualNetworkSubnetIds
+    return this._virtualNetworkSubnetIds;
   }
 
   // private_link_access - computed: false, optional: true, required: false
-  private _privateLinkAccess?: StorageAccountNetworkRulesPrivateLinkAccess[] | undefined; 
+  private _privateLinkAccess?: StorageAccountNetworkRulesPrivateLinkAccess[]; 
   public get privateLinkAccess() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('private_link_access') as any;
   }
-  public set privateLinkAccess(value: StorageAccountNetworkRulesPrivateLinkAccess[] | undefined) {
+  public set privateLinkAccess(value: StorageAccountNetworkRulesPrivateLinkAccess[]) {
     this._privateLinkAccess = value;
   }
   public resetPrivateLinkAccess() {
@@ -899,7 +1156,7 @@ export class StorageAccountNetworkRulesOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get privateLinkAccessInput() {
-    return this._privateLinkAccess
+    return this._privateLinkAccess;
   }
 }
 export interface StorageAccountQueuePropertiesCorsRule {
@@ -925,7 +1182,7 @@ export interface StorageAccountQueuePropertiesCorsRule {
   readonly maxAgeInSeconds: number;
 }
 
-function storageAccountQueuePropertiesCorsRuleToTerraform(struct?: StorageAccountQueuePropertiesCorsRule): any {
+export function storageAccountQueuePropertiesCorsRuleToTerraform(struct?: StorageAccountQueuePropertiesCorsRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -958,7 +1215,7 @@ export interface StorageAccountQueuePropertiesHourMetrics {
   readonly version: string;
 }
 
-function storageAccountQueuePropertiesHourMetricsToTerraform(struct?: StorageAccountQueuePropertiesHourMetricsOutputReference | StorageAccountQueuePropertiesHourMetrics): any {
+export function storageAccountQueuePropertiesHourMetricsToTerraform(struct?: StorageAccountQueuePropertiesHourMetricsOutputReference | StorageAccountQueuePropertiesHourMetrics): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -981,6 +1238,43 @@ export class StorageAccountQueuePropertiesHourMetricsOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageAccountQueuePropertiesHourMetrics | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._includeApis) {
+      hasAnyValues = true;
+      internalValueResult.includeApis = this._includeApis;
+    }
+    if (this._retentionPolicyDays) {
+      hasAnyValues = true;
+      internalValueResult.retentionPolicyDays = this._retentionPolicyDays;
+    }
+    if (this._version) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountQueuePropertiesHourMetrics | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+      this._includeApis = undefined;
+      this._retentionPolicyDays = undefined;
+      this._version = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+      this._includeApis = value.includeApis;
+      this._retentionPolicyDays = value.retentionPolicyDays;
+      this._version = value.version;
+    }
+  }
+
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
@@ -991,15 +1285,15 @@ export class StorageAccountQueuePropertiesHourMetricsOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // include_apis - computed: false, optional: true, required: false
-  private _includeApis?: boolean | cdktf.IResolvable | undefined; 
+  private _includeApis?: boolean | cdktf.IResolvable; 
   public get includeApis() {
     return this.getBooleanAttribute('include_apis') as any;
   }
-  public set includeApis(value: boolean | cdktf.IResolvable | undefined) {
+  public set includeApis(value: boolean | cdktf.IResolvable) {
     this._includeApis = value;
   }
   public resetIncludeApis() {
@@ -1007,15 +1301,15 @@ export class StorageAccountQueuePropertiesHourMetricsOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get includeApisInput() {
-    return this._includeApis
+    return this._includeApis;
   }
 
   // retention_policy_days - computed: false, optional: true, required: false
-  private _retentionPolicyDays?: number | undefined; 
+  private _retentionPolicyDays?: number; 
   public get retentionPolicyDays() {
     return this.getNumberAttribute('retention_policy_days');
   }
-  public set retentionPolicyDays(value: number | undefined) {
+  public set retentionPolicyDays(value: number) {
     this._retentionPolicyDays = value;
   }
   public resetRetentionPolicyDays() {
@@ -1023,7 +1317,7 @@ export class StorageAccountQueuePropertiesHourMetricsOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get retentionPolicyDaysInput() {
-    return this._retentionPolicyDays
+    return this._retentionPolicyDays;
   }
 
   // version - computed: false, optional: false, required: true
@@ -1036,7 +1330,7 @@ export class StorageAccountQueuePropertiesHourMetricsOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 }
 export interface StorageAccountQueuePropertiesLogging {
@@ -1062,7 +1356,7 @@ export interface StorageAccountQueuePropertiesLogging {
   readonly write: boolean | cdktf.IResolvable;
 }
 
-function storageAccountQueuePropertiesLoggingToTerraform(struct?: StorageAccountQueuePropertiesLoggingOutputReference | StorageAccountQueuePropertiesLogging): any {
+export function storageAccountQueuePropertiesLoggingToTerraform(struct?: StorageAccountQueuePropertiesLoggingOutputReference | StorageAccountQueuePropertiesLogging): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1086,6 +1380,49 @@ export class StorageAccountQueuePropertiesLoggingOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageAccountQueuePropertiesLogging | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._retentionPolicyDays) {
+      hasAnyValues = true;
+      internalValueResult.retentionPolicyDays = this._retentionPolicyDays;
+    }
+    if (this._version) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    if (this._write) {
+      hasAnyValues = true;
+      internalValueResult.write = this._write;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountQueuePropertiesLogging | undefined) {
+    if (value === undefined) {
+      this._delete = undefined;
+      this._read = undefined;
+      this._retentionPolicyDays = undefined;
+      this._version = undefined;
+      this._write = undefined;
+    }
+    else {
+      this._delete = value.delete;
+      this._read = value.read;
+      this._retentionPolicyDays = value.retentionPolicyDays;
+      this._version = value.version;
+      this._write = value.write;
+    }
+  }
+
   // delete - computed: false, optional: false, required: true
   private _delete?: boolean | cdktf.IResolvable; 
   public get delete() {
@@ -1096,7 +1433,7 @@ export class StorageAccountQueuePropertiesLoggingOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: false, required: true
@@ -1109,15 +1446,15 @@ export class StorageAccountQueuePropertiesLoggingOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // retention_policy_days - computed: false, optional: true, required: false
-  private _retentionPolicyDays?: number | undefined; 
+  private _retentionPolicyDays?: number; 
   public get retentionPolicyDays() {
     return this.getNumberAttribute('retention_policy_days');
   }
-  public set retentionPolicyDays(value: number | undefined) {
+  public set retentionPolicyDays(value: number) {
     this._retentionPolicyDays = value;
   }
   public resetRetentionPolicyDays() {
@@ -1125,7 +1462,7 @@ export class StorageAccountQueuePropertiesLoggingOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get retentionPolicyDaysInput() {
-    return this._retentionPolicyDays
+    return this._retentionPolicyDays;
   }
 
   // version - computed: false, optional: false, required: true
@@ -1138,7 +1475,7 @@ export class StorageAccountQueuePropertiesLoggingOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 
   // write - computed: false, optional: false, required: true
@@ -1151,7 +1488,7 @@ export class StorageAccountQueuePropertiesLoggingOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get writeInput() {
-    return this._write
+    return this._write;
   }
 }
 export interface StorageAccountQueuePropertiesMinuteMetrics {
@@ -1173,7 +1510,7 @@ export interface StorageAccountQueuePropertiesMinuteMetrics {
   readonly version: string;
 }
 
-function storageAccountQueuePropertiesMinuteMetricsToTerraform(struct?: StorageAccountQueuePropertiesMinuteMetricsOutputReference | StorageAccountQueuePropertiesMinuteMetrics): any {
+export function storageAccountQueuePropertiesMinuteMetricsToTerraform(struct?: StorageAccountQueuePropertiesMinuteMetricsOutputReference | StorageAccountQueuePropertiesMinuteMetrics): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1196,6 +1533,43 @@ export class StorageAccountQueuePropertiesMinuteMetricsOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageAccountQueuePropertiesMinuteMetrics | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._includeApis) {
+      hasAnyValues = true;
+      internalValueResult.includeApis = this._includeApis;
+    }
+    if (this._retentionPolicyDays) {
+      hasAnyValues = true;
+      internalValueResult.retentionPolicyDays = this._retentionPolicyDays;
+    }
+    if (this._version) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountQueuePropertiesMinuteMetrics | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+      this._includeApis = undefined;
+      this._retentionPolicyDays = undefined;
+      this._version = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+      this._includeApis = value.includeApis;
+      this._retentionPolicyDays = value.retentionPolicyDays;
+      this._version = value.version;
+    }
+  }
+
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
@@ -1206,15 +1580,15 @@ export class StorageAccountQueuePropertiesMinuteMetricsOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // include_apis - computed: false, optional: true, required: false
-  private _includeApis?: boolean | cdktf.IResolvable | undefined; 
+  private _includeApis?: boolean | cdktf.IResolvable; 
   public get includeApis() {
     return this.getBooleanAttribute('include_apis') as any;
   }
-  public set includeApis(value: boolean | cdktf.IResolvable | undefined) {
+  public set includeApis(value: boolean | cdktf.IResolvable) {
     this._includeApis = value;
   }
   public resetIncludeApis() {
@@ -1222,15 +1596,15 @@ export class StorageAccountQueuePropertiesMinuteMetricsOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get includeApisInput() {
-    return this._includeApis
+    return this._includeApis;
   }
 
   // retention_policy_days - computed: false, optional: true, required: false
-  private _retentionPolicyDays?: number | undefined; 
+  private _retentionPolicyDays?: number; 
   public get retentionPolicyDays() {
     return this.getNumberAttribute('retention_policy_days');
   }
-  public set retentionPolicyDays(value: number | undefined) {
+  public set retentionPolicyDays(value: number) {
     this._retentionPolicyDays = value;
   }
   public resetRetentionPolicyDays() {
@@ -1238,7 +1612,7 @@ export class StorageAccountQueuePropertiesMinuteMetricsOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get retentionPolicyDaysInput() {
-    return this._retentionPolicyDays
+    return this._retentionPolicyDays;
   }
 
   // version - computed: false, optional: false, required: true
@@ -1251,7 +1625,7 @@ export class StorageAccountQueuePropertiesMinuteMetricsOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 }
 export interface StorageAccountQueueProperties {
@@ -1281,7 +1655,7 @@ export interface StorageAccountQueueProperties {
   readonly minuteMetrics?: StorageAccountQueuePropertiesMinuteMetrics;
 }
 
-function storageAccountQueuePropertiesToTerraform(struct?: StorageAccountQueuePropertiesOutputReference | StorageAccountQueueProperties): any {
+export function storageAccountQueuePropertiesToTerraform(struct?: StorageAccountQueuePropertiesOutputReference | StorageAccountQueueProperties): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1304,13 +1678,50 @@ export class StorageAccountQueuePropertiesOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageAccountQueueProperties | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._corsRule) {
+      hasAnyValues = true;
+      internalValueResult.corsRule = this._corsRule;
+    }
+    if (this._hourMetrics) {
+      hasAnyValues = true;
+      internalValueResult.hourMetrics = this._hourMetrics?.internalValue;
+    }
+    if (this._logging) {
+      hasAnyValues = true;
+      internalValueResult.logging = this._logging?.internalValue;
+    }
+    if (this._minuteMetrics) {
+      hasAnyValues = true;
+      internalValueResult.minuteMetrics = this._minuteMetrics?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountQueueProperties | undefined) {
+    if (value === undefined) {
+      this._corsRule = undefined;
+      this._hourMetrics.internalValue = undefined;
+      this._logging.internalValue = undefined;
+      this._minuteMetrics.internalValue = undefined;
+    }
+    else {
+      this._corsRule = value.corsRule;
+      this._hourMetrics.internalValue = value.hourMetrics;
+      this._logging.internalValue = value.logging;
+      this._minuteMetrics.internalValue = value.minuteMetrics;
+    }
+  }
+
   // cors_rule - computed: false, optional: true, required: false
-  private _corsRule?: StorageAccountQueuePropertiesCorsRule[] | undefined; 
+  private _corsRule?: StorageAccountQueuePropertiesCorsRule[]; 
   public get corsRule() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('cors_rule') as any;
   }
-  public set corsRule(value: StorageAccountQueuePropertiesCorsRule[] | undefined) {
+  public set corsRule(value: StorageAccountQueuePropertiesCorsRule[]) {
     this._corsRule = value;
   }
   public resetCorsRule() {
@@ -1318,58 +1729,55 @@ export class StorageAccountQueuePropertiesOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get corsRuleInput() {
-    return this._corsRule
+    return this._corsRule;
   }
 
   // hour_metrics - computed: false, optional: true, required: false
-  private _hourMetrics?: StorageAccountQueuePropertiesHourMetrics | undefined; 
-  private __hourMetricsOutput = new StorageAccountQueuePropertiesHourMetricsOutputReference(this as any, "hour_metrics", true);
+  private _hourMetrics = new StorageAccountQueuePropertiesHourMetricsOutputReference(this as any, "hour_metrics", true);
   public get hourMetrics() {
-    return this.__hourMetricsOutput;
+    return this._hourMetrics;
   }
-  public putHourMetrics(value: StorageAccountQueuePropertiesHourMetrics | undefined) {
-    this._hourMetrics = value;
+  public putHourMetrics(value: StorageAccountQueuePropertiesHourMetrics) {
+    this._hourMetrics.internalValue = value;
   }
   public resetHourMetrics() {
-    this._hourMetrics = undefined;
+    this._hourMetrics.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get hourMetricsInput() {
-    return this._hourMetrics
+    return this._hourMetrics.internalValue;
   }
 
   // logging - computed: false, optional: true, required: false
-  private _logging?: StorageAccountQueuePropertiesLogging | undefined; 
-  private __loggingOutput = new StorageAccountQueuePropertiesLoggingOutputReference(this as any, "logging", true);
+  private _logging = new StorageAccountQueuePropertiesLoggingOutputReference(this as any, "logging", true);
   public get logging() {
-    return this.__loggingOutput;
+    return this._logging;
   }
-  public putLogging(value: StorageAccountQueuePropertiesLogging | undefined) {
-    this._logging = value;
+  public putLogging(value: StorageAccountQueuePropertiesLogging) {
+    this._logging.internalValue = value;
   }
   public resetLogging() {
-    this._logging = undefined;
+    this._logging.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get loggingInput() {
-    return this._logging
+    return this._logging.internalValue;
   }
 
   // minute_metrics - computed: false, optional: true, required: false
-  private _minuteMetrics?: StorageAccountQueuePropertiesMinuteMetrics | undefined; 
-  private __minuteMetricsOutput = new StorageAccountQueuePropertiesMinuteMetricsOutputReference(this as any, "minute_metrics", true);
+  private _minuteMetrics = new StorageAccountQueuePropertiesMinuteMetricsOutputReference(this as any, "minute_metrics", true);
   public get minuteMetrics() {
-    return this.__minuteMetricsOutput;
+    return this._minuteMetrics;
   }
-  public putMinuteMetrics(value: StorageAccountQueuePropertiesMinuteMetrics | undefined) {
-    this._minuteMetrics = value;
+  public putMinuteMetrics(value: StorageAccountQueuePropertiesMinuteMetrics) {
+    this._minuteMetrics.internalValue = value;
   }
   public resetMinuteMetrics() {
-    this._minuteMetrics = undefined;
+    this._minuteMetrics.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get minuteMetricsInput() {
-    return this._minuteMetrics
+    return this._minuteMetrics.internalValue;
   }
 }
 export interface StorageAccountRouting {
@@ -1387,7 +1795,7 @@ export interface StorageAccountRouting {
   readonly publishMicrosoftEndpoints?: boolean | cdktf.IResolvable;
 }
 
-function storageAccountRoutingToTerraform(struct?: StorageAccountRoutingOutputReference | StorageAccountRouting): any {
+export function storageAccountRoutingToTerraform(struct?: StorageAccountRoutingOutputReference | StorageAccountRouting): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1409,12 +1817,43 @@ export class StorageAccountRoutingOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageAccountRouting | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._choice) {
+      hasAnyValues = true;
+      internalValueResult.choice = this._choice;
+    }
+    if (this._publishInternetEndpoints) {
+      hasAnyValues = true;
+      internalValueResult.publishInternetEndpoints = this._publishInternetEndpoints;
+    }
+    if (this._publishMicrosoftEndpoints) {
+      hasAnyValues = true;
+      internalValueResult.publishMicrosoftEndpoints = this._publishMicrosoftEndpoints;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountRouting | undefined) {
+    if (value === undefined) {
+      this._choice = undefined;
+      this._publishInternetEndpoints = undefined;
+      this._publishMicrosoftEndpoints = undefined;
+    }
+    else {
+      this._choice = value.choice;
+      this._publishInternetEndpoints = value.publishInternetEndpoints;
+      this._publishMicrosoftEndpoints = value.publishMicrosoftEndpoints;
+    }
+  }
+
   // choice - computed: false, optional: true, required: false
-  private _choice?: string | undefined; 
+  private _choice?: string; 
   public get choice() {
     return this.getStringAttribute('choice');
   }
-  public set choice(value: string | undefined) {
+  public set choice(value: string) {
     this._choice = value;
   }
   public resetChoice() {
@@ -1422,15 +1861,15 @@ export class StorageAccountRoutingOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get choiceInput() {
-    return this._choice
+    return this._choice;
   }
 
   // publish_internet_endpoints - computed: false, optional: true, required: false
-  private _publishInternetEndpoints?: boolean | cdktf.IResolvable | undefined; 
+  private _publishInternetEndpoints?: boolean | cdktf.IResolvable; 
   public get publishInternetEndpoints() {
     return this.getBooleanAttribute('publish_internet_endpoints') as any;
   }
-  public set publishInternetEndpoints(value: boolean | cdktf.IResolvable | undefined) {
+  public set publishInternetEndpoints(value: boolean | cdktf.IResolvable) {
     this._publishInternetEndpoints = value;
   }
   public resetPublishInternetEndpoints() {
@@ -1438,15 +1877,15 @@ export class StorageAccountRoutingOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get publishInternetEndpointsInput() {
-    return this._publishInternetEndpoints
+    return this._publishInternetEndpoints;
   }
 
   // publish_microsoft_endpoints - computed: false, optional: true, required: false
-  private _publishMicrosoftEndpoints?: boolean | cdktf.IResolvable | undefined; 
+  private _publishMicrosoftEndpoints?: boolean | cdktf.IResolvable; 
   public get publishMicrosoftEndpoints() {
     return this.getBooleanAttribute('publish_microsoft_endpoints') as any;
   }
-  public set publishMicrosoftEndpoints(value: boolean | cdktf.IResolvable | undefined) {
+  public set publishMicrosoftEndpoints(value: boolean | cdktf.IResolvable) {
     this._publishMicrosoftEndpoints = value;
   }
   public resetPublishMicrosoftEndpoints() {
@@ -1454,7 +1893,7 @@ export class StorageAccountRoutingOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get publishMicrosoftEndpointsInput() {
-    return this._publishMicrosoftEndpoints
+    return this._publishMicrosoftEndpoints;
   }
 }
 export interface StorageAccountSharePropertiesCorsRule {
@@ -1480,7 +1919,7 @@ export interface StorageAccountSharePropertiesCorsRule {
   readonly maxAgeInSeconds: number;
 }
 
-function storageAccountSharePropertiesCorsRuleToTerraform(struct?: StorageAccountSharePropertiesCorsRule): any {
+export function storageAccountSharePropertiesCorsRuleToTerraform(struct?: StorageAccountSharePropertiesCorsRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1501,7 +1940,7 @@ export interface StorageAccountSharePropertiesRetentionPolicy {
   readonly days?: number;
 }
 
-function storageAccountSharePropertiesRetentionPolicyToTerraform(struct?: StorageAccountSharePropertiesRetentionPolicyOutputReference | StorageAccountSharePropertiesRetentionPolicy): any {
+export function storageAccountSharePropertiesRetentionPolicyToTerraform(struct?: StorageAccountSharePropertiesRetentionPolicyOutputReference | StorageAccountSharePropertiesRetentionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1521,12 +1960,31 @@ export class StorageAccountSharePropertiesRetentionPolicyOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageAccountSharePropertiesRetentionPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._days) {
+      hasAnyValues = true;
+      internalValueResult.days = this._days;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountSharePropertiesRetentionPolicy | undefined) {
+    if (value === undefined) {
+      this._days = undefined;
+    }
+    else {
+      this._days = value.days;
+    }
+  }
+
   // days - computed: false, optional: true, required: false
-  private _days?: number | undefined; 
+  private _days?: number; 
   public get days() {
     return this.getNumberAttribute('days');
   }
-  public set days(value: number | undefined) {
+  public set days(value: number) {
     this._days = value;
   }
   public resetDays() {
@@ -1534,7 +1992,7 @@ export class StorageAccountSharePropertiesRetentionPolicyOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get daysInput() {
-    return this._days
+    return this._days;
   }
 }
 export interface StorageAccountSharePropertiesSmb {
@@ -1556,7 +2014,7 @@ export interface StorageAccountSharePropertiesSmb {
   readonly versions?: string[];
 }
 
-function storageAccountSharePropertiesSmbToTerraform(struct?: StorageAccountSharePropertiesSmbOutputReference | StorageAccountSharePropertiesSmb): any {
+export function storageAccountSharePropertiesSmbToTerraform(struct?: StorageAccountSharePropertiesSmbOutputReference | StorageAccountSharePropertiesSmb): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1579,12 +2037,49 @@ export class StorageAccountSharePropertiesSmbOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageAccountSharePropertiesSmb | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._authenticationTypes) {
+      hasAnyValues = true;
+      internalValueResult.authenticationTypes = this._authenticationTypes;
+    }
+    if (this._channelEncryptionType) {
+      hasAnyValues = true;
+      internalValueResult.channelEncryptionType = this._channelEncryptionType;
+    }
+    if (this._kerberosTicketEncryptionType) {
+      hasAnyValues = true;
+      internalValueResult.kerberosTicketEncryptionType = this._kerberosTicketEncryptionType;
+    }
+    if (this._versions) {
+      hasAnyValues = true;
+      internalValueResult.versions = this._versions;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountSharePropertiesSmb | undefined) {
+    if (value === undefined) {
+      this._authenticationTypes = undefined;
+      this._channelEncryptionType = undefined;
+      this._kerberosTicketEncryptionType = undefined;
+      this._versions = undefined;
+    }
+    else {
+      this._authenticationTypes = value.authenticationTypes;
+      this._channelEncryptionType = value.channelEncryptionType;
+      this._kerberosTicketEncryptionType = value.kerberosTicketEncryptionType;
+      this._versions = value.versions;
+    }
+  }
+
   // authentication_types - computed: false, optional: true, required: false
-  private _authenticationTypes?: string[] | undefined; 
+  private _authenticationTypes?: string[]; 
   public get authenticationTypes() {
     return this.getListAttribute('authentication_types');
   }
-  public set authenticationTypes(value: string[] | undefined) {
+  public set authenticationTypes(value: string[]) {
     this._authenticationTypes = value;
   }
   public resetAuthenticationTypes() {
@@ -1592,15 +2087,15 @@ export class StorageAccountSharePropertiesSmbOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get authenticationTypesInput() {
-    return this._authenticationTypes
+    return this._authenticationTypes;
   }
 
   // channel_encryption_type - computed: false, optional: true, required: false
-  private _channelEncryptionType?: string[] | undefined; 
+  private _channelEncryptionType?: string[]; 
   public get channelEncryptionType() {
     return this.getListAttribute('channel_encryption_type');
   }
-  public set channelEncryptionType(value: string[] | undefined) {
+  public set channelEncryptionType(value: string[]) {
     this._channelEncryptionType = value;
   }
   public resetChannelEncryptionType() {
@@ -1608,15 +2103,15 @@ export class StorageAccountSharePropertiesSmbOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get channelEncryptionTypeInput() {
-    return this._channelEncryptionType
+    return this._channelEncryptionType;
   }
 
   // kerberos_ticket_encryption_type - computed: false, optional: true, required: false
-  private _kerberosTicketEncryptionType?: string[] | undefined; 
+  private _kerberosTicketEncryptionType?: string[]; 
   public get kerberosTicketEncryptionType() {
     return this.getListAttribute('kerberos_ticket_encryption_type');
   }
-  public set kerberosTicketEncryptionType(value: string[] | undefined) {
+  public set kerberosTicketEncryptionType(value: string[]) {
     this._kerberosTicketEncryptionType = value;
   }
   public resetKerberosTicketEncryptionType() {
@@ -1624,15 +2119,15 @@ export class StorageAccountSharePropertiesSmbOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get kerberosTicketEncryptionTypeInput() {
-    return this._kerberosTicketEncryptionType
+    return this._kerberosTicketEncryptionType;
   }
 
   // versions - computed: false, optional: true, required: false
-  private _versions?: string[] | undefined; 
+  private _versions?: string[]; 
   public get versions() {
     return this.getListAttribute('versions');
   }
-  public set versions(value: string[] | undefined) {
+  public set versions(value: string[]) {
     this._versions = value;
   }
   public resetVersions() {
@@ -1640,7 +2135,7 @@ export class StorageAccountSharePropertiesSmbOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get versionsInput() {
-    return this._versions
+    return this._versions;
   }
 }
 export interface StorageAccountShareProperties {
@@ -1664,7 +2159,7 @@ export interface StorageAccountShareProperties {
   readonly smb?: StorageAccountSharePropertiesSmb;
 }
 
-function storageAccountSharePropertiesToTerraform(struct?: StorageAccountSharePropertiesOutputReference | StorageAccountShareProperties): any {
+export function storageAccountSharePropertiesToTerraform(struct?: StorageAccountSharePropertiesOutputReference | StorageAccountShareProperties): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1686,13 +2181,44 @@ export class StorageAccountSharePropertiesOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageAccountShareProperties | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._corsRule) {
+      hasAnyValues = true;
+      internalValueResult.corsRule = this._corsRule;
+    }
+    if (this._retentionPolicy) {
+      hasAnyValues = true;
+      internalValueResult.retentionPolicy = this._retentionPolicy?.internalValue;
+    }
+    if (this._smb) {
+      hasAnyValues = true;
+      internalValueResult.smb = this._smb?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountShareProperties | undefined) {
+    if (value === undefined) {
+      this._corsRule = undefined;
+      this._retentionPolicy.internalValue = undefined;
+      this._smb.internalValue = undefined;
+    }
+    else {
+      this._corsRule = value.corsRule;
+      this._retentionPolicy.internalValue = value.retentionPolicy;
+      this._smb.internalValue = value.smb;
+    }
+  }
+
   // cors_rule - computed: false, optional: true, required: false
-  private _corsRule?: StorageAccountSharePropertiesCorsRule[] | undefined; 
+  private _corsRule?: StorageAccountSharePropertiesCorsRule[]; 
   public get corsRule() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('cors_rule') as any;
   }
-  public set corsRule(value: StorageAccountSharePropertiesCorsRule[] | undefined) {
+  public set corsRule(value: StorageAccountSharePropertiesCorsRule[]) {
     this._corsRule = value;
   }
   public resetCorsRule() {
@@ -1700,41 +2226,39 @@ export class StorageAccountSharePropertiesOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get corsRuleInput() {
-    return this._corsRule
+    return this._corsRule;
   }
 
   // retention_policy - computed: false, optional: true, required: false
-  private _retentionPolicy?: StorageAccountSharePropertiesRetentionPolicy | undefined; 
-  private __retentionPolicyOutput = new StorageAccountSharePropertiesRetentionPolicyOutputReference(this as any, "retention_policy", true);
+  private _retentionPolicy = new StorageAccountSharePropertiesRetentionPolicyOutputReference(this as any, "retention_policy", true);
   public get retentionPolicy() {
-    return this.__retentionPolicyOutput;
+    return this._retentionPolicy;
   }
-  public putRetentionPolicy(value: StorageAccountSharePropertiesRetentionPolicy | undefined) {
-    this._retentionPolicy = value;
+  public putRetentionPolicy(value: StorageAccountSharePropertiesRetentionPolicy) {
+    this._retentionPolicy.internalValue = value;
   }
   public resetRetentionPolicy() {
-    this._retentionPolicy = undefined;
+    this._retentionPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get retentionPolicyInput() {
-    return this._retentionPolicy
+    return this._retentionPolicy.internalValue;
   }
 
   // smb - computed: false, optional: true, required: false
-  private _smb?: StorageAccountSharePropertiesSmb | undefined; 
-  private __smbOutput = new StorageAccountSharePropertiesSmbOutputReference(this as any, "smb", true);
+  private _smb = new StorageAccountSharePropertiesSmbOutputReference(this as any, "smb", true);
   public get smb() {
-    return this.__smbOutput;
+    return this._smb;
   }
-  public putSmb(value: StorageAccountSharePropertiesSmb | undefined) {
-    this._smb = value;
+  public putSmb(value: StorageAccountSharePropertiesSmb) {
+    this._smb.internalValue = value;
   }
   public resetSmb() {
-    this._smb = undefined;
+    this._smb.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get smbInput() {
-    return this._smb
+    return this._smb.internalValue;
   }
 }
 export interface StorageAccountStaticWebsite {
@@ -1748,7 +2272,7 @@ export interface StorageAccountStaticWebsite {
   readonly indexDocument?: string;
 }
 
-function storageAccountStaticWebsiteToTerraform(struct?: StorageAccountStaticWebsiteOutputReference | StorageAccountStaticWebsite): any {
+export function storageAccountStaticWebsiteToTerraform(struct?: StorageAccountStaticWebsiteOutputReference | StorageAccountStaticWebsite): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1769,12 +2293,37 @@ export class StorageAccountStaticWebsiteOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageAccountStaticWebsite | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._error404Document) {
+      hasAnyValues = true;
+      internalValueResult.error404Document = this._error404Document;
+    }
+    if (this._indexDocument) {
+      hasAnyValues = true;
+      internalValueResult.indexDocument = this._indexDocument;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountStaticWebsite | undefined) {
+    if (value === undefined) {
+      this._error404Document = undefined;
+      this._indexDocument = undefined;
+    }
+    else {
+      this._error404Document = value.error404Document;
+      this._indexDocument = value.indexDocument;
+    }
+  }
+
   // error_404_document - computed: false, optional: true, required: false
-  private _error404Document?: string | undefined; 
+  private _error404Document?: string; 
   public get error404Document() {
     return this.getStringAttribute('error_404_document');
   }
-  public set error404Document(value: string | undefined) {
+  public set error404Document(value: string) {
     this._error404Document = value;
   }
   public resetError404Document() {
@@ -1782,15 +2331,15 @@ export class StorageAccountStaticWebsiteOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get error404DocumentInput() {
-    return this._error404Document
+    return this._error404Document;
   }
 
   // index_document - computed: false, optional: true, required: false
-  private _indexDocument?: string | undefined; 
+  private _indexDocument?: string; 
   public get indexDocument() {
     return this.getStringAttribute('index_document');
   }
-  public set indexDocument(value: string | undefined) {
+  public set indexDocument(value: string) {
     this._indexDocument = value;
   }
   public resetIndexDocument() {
@@ -1798,7 +2347,7 @@ export class StorageAccountStaticWebsiteOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get indexDocumentInput() {
-    return this._indexDocument
+    return this._indexDocument;
   }
 }
 export interface StorageAccountTimeouts {
@@ -1820,7 +2369,7 @@ export interface StorageAccountTimeouts {
   readonly update?: string;
 }
 
-function storageAccountTimeoutsToTerraform(struct?: StorageAccountTimeoutsOutputReference | StorageAccountTimeouts): any {
+export function storageAccountTimeoutsToTerraform(struct?: StorageAccountTimeoutsOutputReference | StorageAccountTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1843,12 +2392,49 @@ export class StorageAccountTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageAccountTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageAccountTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -1856,15 +2442,15 @@ export class StorageAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -1872,15 +2458,15 @@ export class StorageAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -1888,15 +2474,15 @@ export class StorageAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -1904,7 +2490,7 @@ export class StorageAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -1957,16 +2543,16 @@ export class StorageAccount extends cdktf.TerraformResource {
     this._sharedAccessKeyEnabled = config.sharedAccessKeyEnabled;
     this._tableEncryptionKeyType = config.tableEncryptionKeyType;
     this._tags = config.tags;
-    this._azureFilesAuthentication = config.azureFilesAuthentication;
-    this._blobProperties = config.blobProperties;
-    this._customDomain = config.customDomain;
-    this._identity = config.identity;
-    this._networkRules = config.networkRules;
-    this._queueProperties = config.queueProperties;
-    this._routing = config.routing;
-    this._shareProperties = config.shareProperties;
-    this._staticWebsite = config.staticWebsite;
-    this._timeouts = config.timeouts;
+    this._azureFilesAuthentication.internalValue = config.azureFilesAuthentication;
+    this._blobProperties.internalValue = config.blobProperties;
+    this._customDomain.internalValue = config.customDomain;
+    this._identity.internalValue = config.identity;
+    this._networkRules.internalValue = config.networkRules;
+    this._queueProperties.internalValue = config.queueProperties;
+    this._routing.internalValue = config.routing;
+    this._shareProperties.internalValue = config.shareProperties;
+    this._staticWebsite.internalValue = config.staticWebsite;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -1974,11 +2560,11 @@ export class StorageAccount extends cdktf.TerraformResource {
   // ==========
 
   // access_tier - computed: true, optional: true, required: false
-  private _accessTier?: string | undefined; 
+  private _accessTier?: string; 
   public get accessTier() {
     return this.getStringAttribute('access_tier');
   }
-  public set accessTier(value: string | undefined) {
+  public set accessTier(value: string) {
     this._accessTier = value;
   }
   public resetAccessTier() {
@@ -1986,15 +2572,15 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get accessTierInput() {
-    return this._accessTier
+    return this._accessTier;
   }
 
   // account_kind - computed: false, optional: true, required: false
-  private _accountKind?: string | undefined; 
+  private _accountKind?: string; 
   public get accountKind() {
     return this.getStringAttribute('account_kind');
   }
-  public set accountKind(value: string | undefined) {
+  public set accountKind(value: string) {
     this._accountKind = value;
   }
   public resetAccountKind() {
@@ -2002,7 +2588,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get accountKindInput() {
-    return this._accountKind
+    return this._accountKind;
   }
 
   // account_replication_type - computed: false, optional: false, required: true
@@ -2015,7 +2601,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get accountReplicationTypeInput() {
-    return this._accountReplicationType
+    return this._accountReplicationType;
   }
 
   // account_tier - computed: false, optional: false, required: true
@@ -2028,15 +2614,15 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get accountTierInput() {
-    return this._accountTier
+    return this._accountTier;
   }
 
   // allow_blob_public_access - computed: false, optional: true, required: false
-  private _allowBlobPublicAccess?: boolean | cdktf.IResolvable | undefined; 
+  private _allowBlobPublicAccess?: boolean | cdktf.IResolvable; 
   public get allowBlobPublicAccess() {
     return this.getBooleanAttribute('allow_blob_public_access') as any;
   }
-  public set allowBlobPublicAccess(value: boolean | cdktf.IResolvable | undefined) {
+  public set allowBlobPublicAccess(value: boolean | cdktf.IResolvable) {
     this._allowBlobPublicAccess = value;
   }
   public resetAllowBlobPublicAccess() {
@@ -2044,15 +2630,15 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get allowBlobPublicAccessInput() {
-    return this._allowBlobPublicAccess
+    return this._allowBlobPublicAccess;
   }
 
   // enable_https_traffic_only - computed: false, optional: true, required: false
-  private _enableHttpsTrafficOnly?: boolean | cdktf.IResolvable | undefined; 
+  private _enableHttpsTrafficOnly?: boolean | cdktf.IResolvable; 
   public get enableHttpsTrafficOnly() {
     return this.getBooleanAttribute('enable_https_traffic_only') as any;
   }
-  public set enableHttpsTrafficOnly(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableHttpsTrafficOnly(value: boolean | cdktf.IResolvable) {
     this._enableHttpsTrafficOnly = value;
   }
   public resetEnableHttpsTrafficOnly() {
@@ -2060,7 +2646,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableHttpsTrafficOnlyInput() {
-    return this._enableHttpsTrafficOnly
+    return this._enableHttpsTrafficOnly;
   }
 
   // id - computed: true, optional: true, required: false
@@ -2069,11 +2655,11 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // is_hns_enabled - computed: false, optional: true, required: false
-  private _isHnsEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _isHnsEnabled?: boolean | cdktf.IResolvable; 
   public get isHnsEnabled() {
     return this.getBooleanAttribute('is_hns_enabled') as any;
   }
-  public set isHnsEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set isHnsEnabled(value: boolean | cdktf.IResolvable) {
     this._isHnsEnabled = value;
   }
   public resetIsHnsEnabled() {
@@ -2081,15 +2667,15 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get isHnsEnabledInput() {
-    return this._isHnsEnabled
+    return this._isHnsEnabled;
   }
 
   // large_file_share_enabled - computed: true, optional: true, required: false
-  private _largeFileShareEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _largeFileShareEnabled?: boolean | cdktf.IResolvable; 
   public get largeFileShareEnabled() {
     return this.getBooleanAttribute('large_file_share_enabled') as any;
   }
-  public set largeFileShareEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set largeFileShareEnabled(value: boolean | cdktf.IResolvable) {
     this._largeFileShareEnabled = value;
   }
   public resetLargeFileShareEnabled() {
@@ -2097,7 +2683,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get largeFileShareEnabledInput() {
-    return this._largeFileShareEnabled
+    return this._largeFileShareEnabled;
   }
 
   // location - computed: false, optional: false, required: true
@@ -2110,15 +2696,15 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // min_tls_version - computed: false, optional: true, required: false
-  private _minTlsVersion?: string | undefined; 
+  private _minTlsVersion?: string; 
   public get minTlsVersion() {
     return this.getStringAttribute('min_tls_version');
   }
-  public set minTlsVersion(value: string | undefined) {
+  public set minTlsVersion(value: string) {
     this._minTlsVersion = value;
   }
   public resetMinTlsVersion() {
@@ -2126,7 +2712,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get minTlsVersionInput() {
-    return this._minTlsVersion
+    return this._minTlsVersion;
   }
 
   // name - computed: false, optional: false, required: true
@@ -2139,15 +2725,15 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // nfsv3_enabled - computed: false, optional: true, required: false
-  private _nfsv3Enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _nfsv3Enabled?: boolean | cdktf.IResolvable; 
   public get nfsv3Enabled() {
     return this.getBooleanAttribute('nfsv3_enabled') as any;
   }
-  public set nfsv3Enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set nfsv3Enabled(value: boolean | cdktf.IResolvable) {
     this._nfsv3Enabled = value;
   }
   public resetNfsv3Enabled() {
@@ -2155,7 +2741,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nfsv3EnabledInput() {
-    return this._nfsv3Enabled
+    return this._nfsv3Enabled;
   }
 
   // primary_access_key - computed: true, optional: false, required: false
@@ -2239,11 +2825,11 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // queue_encryption_key_type - computed: false, optional: true, required: false
-  private _queueEncryptionKeyType?: string | undefined; 
+  private _queueEncryptionKeyType?: string; 
   public get queueEncryptionKeyType() {
     return this.getStringAttribute('queue_encryption_key_type');
   }
-  public set queueEncryptionKeyType(value: string | undefined) {
+  public set queueEncryptionKeyType(value: string) {
     this._queueEncryptionKeyType = value;
   }
   public resetQueueEncryptionKeyType() {
@@ -2251,7 +2837,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get queueEncryptionKeyTypeInput() {
-    return this._queueEncryptionKeyType
+    return this._queueEncryptionKeyType;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -2264,7 +2850,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // secondary_access_key - computed: true, optional: false, required: false
@@ -2348,11 +2934,11 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
 
   // shared_access_key_enabled - computed: false, optional: true, required: false
-  private _sharedAccessKeyEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _sharedAccessKeyEnabled?: boolean | cdktf.IResolvable; 
   public get sharedAccessKeyEnabled() {
     return this.getBooleanAttribute('shared_access_key_enabled') as any;
   }
-  public set sharedAccessKeyEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set sharedAccessKeyEnabled(value: boolean | cdktf.IResolvable) {
     this._sharedAccessKeyEnabled = value;
   }
   public resetSharedAccessKeyEnabled() {
@@ -2360,15 +2946,15 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sharedAccessKeyEnabledInput() {
-    return this._sharedAccessKeyEnabled
+    return this._sharedAccessKeyEnabled;
   }
 
   // table_encryption_key_type - computed: false, optional: true, required: false
-  private _tableEncryptionKeyType?: string | undefined; 
+  private _tableEncryptionKeyType?: string; 
   public get tableEncryptionKeyType() {
     return this.getStringAttribute('table_encryption_key_type');
   }
-  public set tableEncryptionKeyType(value: string | undefined) {
+  public set tableEncryptionKeyType(value: string) {
     this._tableEncryptionKeyType = value;
   }
   public resetTableEncryptionKeyType() {
@@ -2376,16 +2962,16 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tableEncryptionKeyTypeInput() {
-    return this._tableEncryptionKeyType
+    return this._tableEncryptionKeyType;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -2393,177 +2979,167 @@ export class StorageAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // azure_files_authentication - computed: false, optional: true, required: false
-  private _azureFilesAuthentication?: StorageAccountAzureFilesAuthentication | undefined; 
-  private __azureFilesAuthenticationOutput = new StorageAccountAzureFilesAuthenticationOutputReference(this as any, "azure_files_authentication", true);
+  private _azureFilesAuthentication = new StorageAccountAzureFilesAuthenticationOutputReference(this as any, "azure_files_authentication", true);
   public get azureFilesAuthentication() {
-    return this.__azureFilesAuthenticationOutput;
+    return this._azureFilesAuthentication;
   }
-  public putAzureFilesAuthentication(value: StorageAccountAzureFilesAuthentication | undefined) {
-    this._azureFilesAuthentication = value;
+  public putAzureFilesAuthentication(value: StorageAccountAzureFilesAuthentication) {
+    this._azureFilesAuthentication.internalValue = value;
   }
   public resetAzureFilesAuthentication() {
-    this._azureFilesAuthentication = undefined;
+    this._azureFilesAuthentication.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get azureFilesAuthenticationInput() {
-    return this._azureFilesAuthentication
+    return this._azureFilesAuthentication.internalValue;
   }
 
   // blob_properties - computed: false, optional: true, required: false
-  private _blobProperties?: StorageAccountBlobProperties | undefined; 
-  private __blobPropertiesOutput = new StorageAccountBlobPropertiesOutputReference(this as any, "blob_properties", true);
+  private _blobProperties = new StorageAccountBlobPropertiesOutputReference(this as any, "blob_properties", true);
   public get blobProperties() {
-    return this.__blobPropertiesOutput;
+    return this._blobProperties;
   }
-  public putBlobProperties(value: StorageAccountBlobProperties | undefined) {
-    this._blobProperties = value;
+  public putBlobProperties(value: StorageAccountBlobProperties) {
+    this._blobProperties.internalValue = value;
   }
   public resetBlobProperties() {
-    this._blobProperties = undefined;
+    this._blobProperties.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get blobPropertiesInput() {
-    return this._blobProperties
+    return this._blobProperties.internalValue;
   }
 
   // custom_domain - computed: false, optional: true, required: false
-  private _customDomain?: StorageAccountCustomDomain | undefined; 
-  private __customDomainOutput = new StorageAccountCustomDomainOutputReference(this as any, "custom_domain", true);
+  private _customDomain = new StorageAccountCustomDomainOutputReference(this as any, "custom_domain", true);
   public get customDomain() {
-    return this.__customDomainOutput;
+    return this._customDomain;
   }
-  public putCustomDomain(value: StorageAccountCustomDomain | undefined) {
-    this._customDomain = value;
+  public putCustomDomain(value: StorageAccountCustomDomain) {
+    this._customDomain.internalValue = value;
   }
   public resetCustomDomain() {
-    this._customDomain = undefined;
+    this._customDomain.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get customDomainInput() {
-    return this._customDomain
+    return this._customDomain.internalValue;
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: StorageAccountIdentity | undefined; 
-  private __identityOutput = new StorageAccountIdentityOutputReference(this as any, "identity", true);
+  private _identity = new StorageAccountIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.__identityOutput;
+    return this._identity;
   }
-  public putIdentity(value: StorageAccountIdentity | undefined) {
-    this._identity = value;
+  public putIdentity(value: StorageAccountIdentity) {
+    this._identity.internalValue = value;
   }
   public resetIdentity() {
-    this._identity = undefined;
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
-    return this._identity
+    return this._identity.internalValue;
   }
 
   // network_rules - computed: false, optional: true, required: false
-  private _networkRules?: StorageAccountNetworkRules | undefined; 
-  private __networkRulesOutput = new StorageAccountNetworkRulesOutputReference(this as any, "network_rules", true);
+  private _networkRules = new StorageAccountNetworkRulesOutputReference(this as any, "network_rules", true);
   public get networkRules() {
-    return this.__networkRulesOutput;
+    return this._networkRules;
   }
-  public putNetworkRules(value: StorageAccountNetworkRules | undefined) {
-    this._networkRules = value;
+  public putNetworkRules(value: StorageAccountNetworkRules) {
+    this._networkRules.internalValue = value;
   }
   public resetNetworkRules() {
-    this._networkRules = undefined;
+    this._networkRules.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get networkRulesInput() {
-    return this._networkRules
+    return this._networkRules.internalValue;
   }
 
   // queue_properties - computed: false, optional: true, required: false
-  private _queueProperties?: StorageAccountQueueProperties | undefined; 
-  private __queuePropertiesOutput = new StorageAccountQueuePropertiesOutputReference(this as any, "queue_properties", true);
+  private _queueProperties = new StorageAccountQueuePropertiesOutputReference(this as any, "queue_properties", true);
   public get queueProperties() {
-    return this.__queuePropertiesOutput;
+    return this._queueProperties;
   }
-  public putQueueProperties(value: StorageAccountQueueProperties | undefined) {
-    this._queueProperties = value;
+  public putQueueProperties(value: StorageAccountQueueProperties) {
+    this._queueProperties.internalValue = value;
   }
   public resetQueueProperties() {
-    this._queueProperties = undefined;
+    this._queueProperties.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get queuePropertiesInput() {
-    return this._queueProperties
+    return this._queueProperties.internalValue;
   }
 
   // routing - computed: false, optional: true, required: false
-  private _routing?: StorageAccountRouting | undefined; 
-  private __routingOutput = new StorageAccountRoutingOutputReference(this as any, "routing", true);
+  private _routing = new StorageAccountRoutingOutputReference(this as any, "routing", true);
   public get routing() {
-    return this.__routingOutput;
+    return this._routing;
   }
-  public putRouting(value: StorageAccountRouting | undefined) {
-    this._routing = value;
+  public putRouting(value: StorageAccountRouting) {
+    this._routing.internalValue = value;
   }
   public resetRouting() {
-    this._routing = undefined;
+    this._routing.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get routingInput() {
-    return this._routing
+    return this._routing.internalValue;
   }
 
   // share_properties - computed: false, optional: true, required: false
-  private _shareProperties?: StorageAccountShareProperties | undefined; 
-  private __sharePropertiesOutput = new StorageAccountSharePropertiesOutputReference(this as any, "share_properties", true);
+  private _shareProperties = new StorageAccountSharePropertiesOutputReference(this as any, "share_properties", true);
   public get shareProperties() {
-    return this.__sharePropertiesOutput;
+    return this._shareProperties;
   }
-  public putShareProperties(value: StorageAccountShareProperties | undefined) {
-    this._shareProperties = value;
+  public putShareProperties(value: StorageAccountShareProperties) {
+    this._shareProperties.internalValue = value;
   }
   public resetShareProperties() {
-    this._shareProperties = undefined;
+    this._shareProperties.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sharePropertiesInput() {
-    return this._shareProperties
+    return this._shareProperties.internalValue;
   }
 
   // static_website - computed: false, optional: true, required: false
-  private _staticWebsite?: StorageAccountStaticWebsite | undefined; 
-  private __staticWebsiteOutput = new StorageAccountStaticWebsiteOutputReference(this as any, "static_website", true);
+  private _staticWebsite = new StorageAccountStaticWebsiteOutputReference(this as any, "static_website", true);
   public get staticWebsite() {
-    return this.__staticWebsiteOutput;
+    return this._staticWebsite;
   }
-  public putStaticWebsite(value: StorageAccountStaticWebsite | undefined) {
-    this._staticWebsite = value;
+  public putStaticWebsite(value: StorageAccountStaticWebsite) {
+    this._staticWebsite.internalValue = value;
   }
   public resetStaticWebsite() {
-    this._staticWebsite = undefined;
+    this._staticWebsite.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get staticWebsiteInput() {
-    return this._staticWebsite
+    return this._staticWebsite.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: StorageAccountTimeouts | undefined; 
-  private __timeoutsOutput = new StorageAccountTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StorageAccountTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: StorageAccountTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: StorageAccountTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -2589,16 +3165,16 @@ export class StorageAccount extends cdktf.TerraformResource {
       shared_access_key_enabled: cdktf.booleanToTerraform(this._sharedAccessKeyEnabled),
       table_encryption_key_type: cdktf.stringToTerraform(this._tableEncryptionKeyType),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      azure_files_authentication: storageAccountAzureFilesAuthenticationToTerraform(this._azureFilesAuthentication),
-      blob_properties: storageAccountBlobPropertiesToTerraform(this._blobProperties),
-      custom_domain: storageAccountCustomDomainToTerraform(this._customDomain),
-      identity: storageAccountIdentityToTerraform(this._identity),
-      network_rules: storageAccountNetworkRulesToTerraform(this._networkRules),
-      queue_properties: storageAccountQueuePropertiesToTerraform(this._queueProperties),
-      routing: storageAccountRoutingToTerraform(this._routing),
-      share_properties: storageAccountSharePropertiesToTerraform(this._shareProperties),
-      static_website: storageAccountStaticWebsiteToTerraform(this._staticWebsite),
-      timeouts: storageAccountTimeoutsToTerraform(this._timeouts),
+      azure_files_authentication: storageAccountAzureFilesAuthenticationToTerraform(this._azureFilesAuthentication.internalValue),
+      blob_properties: storageAccountBlobPropertiesToTerraform(this._blobProperties.internalValue),
+      custom_domain: storageAccountCustomDomainToTerraform(this._customDomain.internalValue),
+      identity: storageAccountIdentityToTerraform(this._identity.internalValue),
+      network_rules: storageAccountNetworkRulesToTerraform(this._networkRules.internalValue),
+      queue_properties: storageAccountQueuePropertiesToTerraform(this._queueProperties.internalValue),
+      routing: storageAccountRoutingToTerraform(this._routing.internalValue),
+      share_properties: storageAccountSharePropertiesToTerraform(this._shareProperties.internalValue),
+      static_website: storageAccountStaticWebsiteToTerraform(this._staticWebsite.internalValue),
+      timeouts: storageAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

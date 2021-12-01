@@ -75,7 +75,7 @@ export interface DataFactoryTriggerBlobEventPipeline {
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataFactoryTriggerBlobEventPipelineToTerraform(struct?: DataFactoryTriggerBlobEventPipeline): any {
+export function dataFactoryTriggerBlobEventPipelineToTerraform(struct?: DataFactoryTriggerBlobEventPipeline): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -105,7 +105,7 @@ export interface DataFactoryTriggerBlobEventTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryTriggerBlobEventTimeoutsToTerraform(struct?: DataFactoryTriggerBlobEventTimeoutsOutputReference | DataFactoryTriggerBlobEventTimeouts): any {
+export function dataFactoryTriggerBlobEventTimeoutsToTerraform(struct?: DataFactoryTriggerBlobEventTimeoutsOutputReference | DataFactoryTriggerBlobEventTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -128,12 +128,49 @@ export class DataFactoryTriggerBlobEventTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryTriggerBlobEventTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryTriggerBlobEventTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -141,15 +178,15 @@ export class DataFactoryTriggerBlobEventTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -157,15 +194,15 @@ export class DataFactoryTriggerBlobEventTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -173,15 +210,15 @@ export class DataFactoryTriggerBlobEventTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -189,7 +226,7 @@ export class DataFactoryTriggerBlobEventTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -237,7 +274,7 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
     this._name = config.name;
     this._storageAccountId = config.storageAccountId;
     this._pipeline = config.pipeline;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -245,11 +282,11 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
   // ==========
 
   // activated - computed: false, optional: true, required: false
-  private _activated?: boolean | cdktf.IResolvable | undefined; 
+  private _activated?: boolean | cdktf.IResolvable; 
   public get activated() {
     return this.getBooleanAttribute('activated') as any;
   }
-  public set activated(value: boolean | cdktf.IResolvable | undefined) {
+  public set activated(value: boolean | cdktf.IResolvable) {
     this._activated = value;
   }
   public resetActivated() {
@@ -257,16 +294,16 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get activatedInput() {
-    return this._activated
+    return this._activated;
   }
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable; 
   public get additionalProperties() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -274,15 +311,15 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get additionalPropertiesInput() {
-    return this._additionalProperties
+    return this._additionalProperties;
   }
 
   // annotations - computed: false, optional: true, required: false
-  private _annotations?: string[] | undefined; 
+  private _annotations?: string[]; 
   public get annotations() {
     return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] | undefined) {
+  public set annotations(value: string[]) {
     this._annotations = value;
   }
   public resetAnnotations() {
@@ -290,15 +327,15 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get annotationsInput() {
-    return this._annotations
+    return this._annotations;
   }
 
   // blob_path_begins_with - computed: false, optional: true, required: false
-  private _blobPathBeginsWith?: string | undefined; 
+  private _blobPathBeginsWith?: string; 
   public get blobPathBeginsWith() {
     return this.getStringAttribute('blob_path_begins_with');
   }
-  public set blobPathBeginsWith(value: string | undefined) {
+  public set blobPathBeginsWith(value: string) {
     this._blobPathBeginsWith = value;
   }
   public resetBlobPathBeginsWith() {
@@ -306,15 +343,15 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get blobPathBeginsWithInput() {
-    return this._blobPathBeginsWith
+    return this._blobPathBeginsWith;
   }
 
   // blob_path_ends_with - computed: false, optional: true, required: false
-  private _blobPathEndsWith?: string | undefined; 
+  private _blobPathEndsWith?: string; 
   public get blobPathEndsWith() {
     return this.getStringAttribute('blob_path_ends_with');
   }
-  public set blobPathEndsWith(value: string | undefined) {
+  public set blobPathEndsWith(value: string) {
     this._blobPathEndsWith = value;
   }
   public resetBlobPathEndsWith() {
@@ -322,7 +359,7 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get blobPathEndsWithInput() {
-    return this._blobPathEndsWith
+    return this._blobPathEndsWith;
   }
 
   // data_factory_id - computed: false, optional: false, required: true
@@ -335,15 +372,15 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryIdInput() {
-    return this._dataFactoryId
+    return this._dataFactoryId;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -351,7 +388,7 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // events - computed: false, optional: false, required: true
@@ -364,7 +401,7 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get eventsInput() {
-    return this._events
+    return this._events;
   }
 
   // id - computed: true, optional: true, required: false
@@ -373,11 +410,11 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
   }
 
   // ignore_empty_blobs - computed: false, optional: true, required: false
-  private _ignoreEmptyBlobs?: boolean | cdktf.IResolvable | undefined; 
+  private _ignoreEmptyBlobs?: boolean | cdktf.IResolvable; 
   public get ignoreEmptyBlobs() {
     return this.getBooleanAttribute('ignore_empty_blobs') as any;
   }
-  public set ignoreEmptyBlobs(value: boolean | cdktf.IResolvable | undefined) {
+  public set ignoreEmptyBlobs(value: boolean | cdktf.IResolvable) {
     this._ignoreEmptyBlobs = value;
   }
   public resetIgnoreEmptyBlobs() {
@@ -385,7 +422,7 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ignoreEmptyBlobsInput() {
-    return this._ignoreEmptyBlobs
+    return this._ignoreEmptyBlobs;
   }
 
   // name - computed: false, optional: false, required: true
@@ -398,7 +435,7 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // storage_account_id - computed: false, optional: false, required: true
@@ -411,7 +448,7 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountIdInput() {
-    return this._storageAccountId
+    return this._storageAccountId;
   }
 
   // pipeline - computed: false, optional: false, required: true
@@ -425,24 +462,23 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get pipelineInput() {
-    return this._pipeline
+    return this._pipeline;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryTriggerBlobEventTimeouts | undefined; 
-  private __timeoutsOutput = new DataFactoryTriggerBlobEventTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryTriggerBlobEventTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataFactoryTriggerBlobEventTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataFactoryTriggerBlobEventTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -463,7 +499,7 @@ export class DataFactoryTriggerBlobEvent extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       pipeline: cdktf.listMapper(dataFactoryTriggerBlobEventPipelineToTerraform)(this._pipeline),
-      timeouts: dataFactoryTriggerBlobEventTimeoutsToTerraform(this._timeouts),
+      timeouts: dataFactoryTriggerBlobEventTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

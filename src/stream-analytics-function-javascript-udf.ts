@@ -49,7 +49,7 @@ export interface StreamAnalyticsFunctionJavascriptUdfInput {
   readonly type: string;
 }
 
-function streamAnalyticsFunctionJavascriptUdfInputToTerraform(struct?: StreamAnalyticsFunctionJavascriptUdfInput): any {
+export function streamAnalyticsFunctionJavascriptUdfInputToTerraform(struct?: StreamAnalyticsFunctionJavascriptUdfInput): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -66,7 +66,7 @@ export interface StreamAnalyticsFunctionJavascriptUdfOutput {
   readonly type: string;
 }
 
-function streamAnalyticsFunctionJavascriptUdfOutputToTerraform(struct?: StreamAnalyticsFunctionJavascriptUdfOutputOutputReference | StreamAnalyticsFunctionJavascriptUdfOutput): any {
+export function streamAnalyticsFunctionJavascriptUdfOutputToTerraform(struct?: StreamAnalyticsFunctionJavascriptUdfOutputOutputReference | StreamAnalyticsFunctionJavascriptUdfOutput): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -86,6 +86,25 @@ export class StreamAnalyticsFunctionJavascriptUdfOutputOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StreamAnalyticsFunctionJavascriptUdfOutput | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StreamAnalyticsFunctionJavascriptUdfOutput | undefined) {
+    if (value === undefined) {
+      this._type = undefined;
+    }
+    else {
+      this._type = value.type;
+    }
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -96,7 +115,7 @@ export class StreamAnalyticsFunctionJavascriptUdfOutputOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface StreamAnalyticsFunctionJavascriptUdfTimeouts {
@@ -118,7 +137,7 @@ export interface StreamAnalyticsFunctionJavascriptUdfTimeouts {
   readonly update?: string;
 }
 
-function streamAnalyticsFunctionJavascriptUdfTimeoutsToTerraform(struct?: StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference | StreamAnalyticsFunctionJavascriptUdfTimeouts): any {
+export function streamAnalyticsFunctionJavascriptUdfTimeoutsToTerraform(struct?: StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference | StreamAnalyticsFunctionJavascriptUdfTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -141,12 +160,49 @@ export class StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StreamAnalyticsFunctionJavascriptUdfTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StreamAnalyticsFunctionJavascriptUdfTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -154,15 +210,15 @@ export class StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -170,15 +226,15 @@ export class StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -186,15 +242,15 @@ export class StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -202,7 +258,7 @@ export class StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -243,8 +299,8 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
     this._script = config.script;
     this._streamAnalyticsJobName = config.streamAnalyticsJobName;
     this._input = config.input;
-    this._output = config.output;
-    this._timeouts = config.timeouts;
+    this._output.internalValue = config.output;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -266,7 +322,7 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -279,7 +335,7 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // script - computed: false, optional: false, required: true
@@ -292,7 +348,7 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get scriptInput() {
-    return this._script
+    return this._script;
   }
 
   // stream_analytics_job_name - computed: false, optional: false, required: true
@@ -305,7 +361,7 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get streamAnalyticsJobNameInput() {
-    return this._streamAnalyticsJobName
+    return this._streamAnalyticsJobName;
   }
 
   // input - computed: false, optional: false, required: true
@@ -319,38 +375,36 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get inputInput() {
-    return this._input
+    return this._input;
   }
 
   // output - computed: false, optional: false, required: true
-  private _output?: StreamAnalyticsFunctionJavascriptUdfOutput; 
-  private __outputOutput = new StreamAnalyticsFunctionJavascriptUdfOutputOutputReference(this as any, "output", true);
+  private _output = new StreamAnalyticsFunctionJavascriptUdfOutputOutputReference(this as any, "output", true);
   public get output() {
-    return this.__outputOutput;
+    return this._output;
   }
   public putOutput(value: StreamAnalyticsFunctionJavascriptUdfOutput) {
-    this._output = value;
+    this._output.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get outputInput() {
-    return this._output
+    return this._output.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: StreamAnalyticsFunctionJavascriptUdfTimeouts | undefined; 
-  private __timeoutsOutput = new StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: StreamAnalyticsFunctionJavascriptUdfTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: StreamAnalyticsFunctionJavascriptUdfTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -364,8 +418,8 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
       script: cdktf.stringToTerraform(this._script),
       stream_analytics_job_name: cdktf.stringToTerraform(this._streamAnalyticsJobName),
       input: cdktf.listMapper(streamAnalyticsFunctionJavascriptUdfInputToTerraform)(this._input),
-      output: streamAnalyticsFunctionJavascriptUdfOutputToTerraform(this._output),
-      timeouts: streamAnalyticsFunctionJavascriptUdfTimeoutsToTerraform(this._timeouts),
+      output: streamAnalyticsFunctionJavascriptUdfOutputToTerraform(this._output.internalValue),
+      timeouts: streamAnalyticsFunctionJavascriptUdfTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -87,7 +87,7 @@ export interface SentinelAutomationRuleActionIncident {
   readonly status?: string;
 }
 
-function sentinelAutomationRuleActionIncidentToTerraform(struct?: SentinelAutomationRuleActionIncident): any {
+export function sentinelAutomationRuleActionIncidentToTerraform(struct?: SentinelAutomationRuleActionIncident): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -118,7 +118,7 @@ export interface SentinelAutomationRuleActionPlaybook {
   readonly tenantId?: string;
 }
 
-function sentinelAutomationRuleActionPlaybookToTerraform(struct?: SentinelAutomationRuleActionPlaybook): any {
+export function sentinelAutomationRuleActionPlaybookToTerraform(struct?: SentinelAutomationRuleActionPlaybook): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -145,7 +145,7 @@ export interface SentinelAutomationRuleCondition {
   readonly values: string[];
 }
 
-function sentinelAutomationRuleConditionToTerraform(struct?: SentinelAutomationRuleCondition): any {
+export function sentinelAutomationRuleConditionToTerraform(struct?: SentinelAutomationRuleCondition): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -176,7 +176,7 @@ export interface SentinelAutomationRuleTimeouts {
   readonly update?: string;
 }
 
-function sentinelAutomationRuleTimeoutsToTerraform(struct?: SentinelAutomationRuleTimeoutsOutputReference | SentinelAutomationRuleTimeouts): any {
+export function sentinelAutomationRuleTimeoutsToTerraform(struct?: SentinelAutomationRuleTimeoutsOutputReference | SentinelAutomationRuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -199,12 +199,49 @@ export class SentinelAutomationRuleTimeoutsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SentinelAutomationRuleTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SentinelAutomationRuleTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -212,15 +249,15 @@ export class SentinelAutomationRuleTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -228,15 +265,15 @@ export class SentinelAutomationRuleTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -244,15 +281,15 @@ export class SentinelAutomationRuleTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -260,7 +297,7 @@ export class SentinelAutomationRuleTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -305,7 +342,7 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
     this._actionIncident = config.actionIncident;
     this._actionPlaybook = config.actionPlaybook;
     this._condition = config.condition;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -322,15 +359,15 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -338,15 +375,15 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // expiration - computed: false, optional: true, required: false
-  private _expiration?: string | undefined; 
+  private _expiration?: string; 
   public get expiration() {
     return this.getStringAttribute('expiration');
   }
-  public set expiration(value: string | undefined) {
+  public set expiration(value: string) {
     this._expiration = value;
   }
   public resetExpiration() {
@@ -354,7 +391,7 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get expirationInput() {
-    return this._expiration
+    return this._expiration;
   }
 
   // id - computed: true, optional: true, required: false
@@ -372,7 +409,7 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get logAnalyticsWorkspaceIdInput() {
-    return this._logAnalyticsWorkspaceId
+    return this._logAnalyticsWorkspaceId;
   }
 
   // name - computed: false, optional: false, required: true
@@ -385,7 +422,7 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // order - computed: false, optional: false, required: true
@@ -398,16 +435,16 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get orderInput() {
-    return this._order
+    return this._order;
   }
 
   // action_incident - computed: false, optional: true, required: false
-  private _actionIncident?: SentinelAutomationRuleActionIncident[] | undefined; 
+  private _actionIncident?: SentinelAutomationRuleActionIncident[]; 
   public get actionIncident() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('action_incident') as any;
   }
-  public set actionIncident(value: SentinelAutomationRuleActionIncident[] | undefined) {
+  public set actionIncident(value: SentinelAutomationRuleActionIncident[]) {
     this._actionIncident = value;
   }
   public resetActionIncident() {
@@ -415,16 +452,16 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get actionIncidentInput() {
-    return this._actionIncident
+    return this._actionIncident;
   }
 
   // action_playbook - computed: false, optional: true, required: false
-  private _actionPlaybook?: SentinelAutomationRuleActionPlaybook[] | undefined; 
+  private _actionPlaybook?: SentinelAutomationRuleActionPlaybook[]; 
   public get actionPlaybook() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('action_playbook') as any;
   }
-  public set actionPlaybook(value: SentinelAutomationRuleActionPlaybook[] | undefined) {
+  public set actionPlaybook(value: SentinelAutomationRuleActionPlaybook[]) {
     this._actionPlaybook = value;
   }
   public resetActionPlaybook() {
@@ -432,16 +469,16 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get actionPlaybookInput() {
-    return this._actionPlaybook
+    return this._actionPlaybook;
   }
 
   // condition - computed: false, optional: true, required: false
-  private _condition?: SentinelAutomationRuleCondition[] | undefined; 
+  private _condition?: SentinelAutomationRuleCondition[]; 
   public get condition() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('condition') as any;
   }
-  public set condition(value: SentinelAutomationRuleCondition[] | undefined) {
+  public set condition(value: SentinelAutomationRuleCondition[]) {
     this._condition = value;
   }
   public resetCondition() {
@@ -449,24 +486,23 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get conditionInput() {
-    return this._condition
+    return this._condition;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SentinelAutomationRuleTimeouts | undefined; 
-  private __timeoutsOutput = new SentinelAutomationRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SentinelAutomationRuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SentinelAutomationRuleTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SentinelAutomationRuleTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -484,7 +520,7 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
       action_incident: cdktf.listMapper(sentinelAutomationRuleActionIncidentToTerraform)(this._actionIncident),
       action_playbook: cdktf.listMapper(sentinelAutomationRuleActionPlaybookToTerraform)(this._actionPlaybook),
       condition: cdktf.listMapper(sentinelAutomationRuleConditionToTerraform)(this._condition),
-      timeouts: sentinelAutomationRuleTimeoutsToTerraform(this._timeouts),
+      timeouts: sentinelAutomationRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

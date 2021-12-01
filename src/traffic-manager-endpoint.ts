@@ -93,7 +93,7 @@ export interface TrafficManagerEndpointCustomHeader {
   readonly value: string;
 }
 
-function trafficManagerEndpointCustomHeaderToTerraform(struct?: TrafficManagerEndpointCustomHeader): any {
+export function trafficManagerEndpointCustomHeaderToTerraform(struct?: TrafficManagerEndpointCustomHeader): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -119,7 +119,7 @@ export interface TrafficManagerEndpointSubnet {
   readonly scope?: number;
 }
 
-function trafficManagerEndpointSubnetToTerraform(struct?: TrafficManagerEndpointSubnet): any {
+export function trafficManagerEndpointSubnetToTerraform(struct?: TrafficManagerEndpointSubnet): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -150,7 +150,7 @@ export interface TrafficManagerEndpointTimeouts {
   readonly update?: string;
 }
 
-function trafficManagerEndpointTimeoutsToTerraform(struct?: TrafficManagerEndpointTimeoutsOutputReference | TrafficManagerEndpointTimeouts): any {
+export function trafficManagerEndpointTimeoutsToTerraform(struct?: TrafficManagerEndpointTimeoutsOutputReference | TrafficManagerEndpointTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -173,12 +173,49 @@ export class TrafficManagerEndpointTimeoutsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): TrafficManagerEndpointTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: TrafficManagerEndpointTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -186,15 +223,15 @@ export class TrafficManagerEndpointTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -202,15 +239,15 @@ export class TrafficManagerEndpointTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -218,15 +255,15 @@ export class TrafficManagerEndpointTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -234,7 +271,7 @@ export class TrafficManagerEndpointTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -286,7 +323,7 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
     this._weight = config.weight;
     this._customHeader = config.customHeader;
     this._subnet = config.subnet;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -294,11 +331,11 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   // ==========
 
   // endpoint_location - computed: true, optional: true, required: false
-  private _endpointLocation?: string | undefined; 
+  private _endpointLocation?: string; 
   public get endpointLocation() {
     return this.getStringAttribute('endpoint_location');
   }
-  public set endpointLocation(value: string | undefined) {
+  public set endpointLocation(value: string) {
     this._endpointLocation = value;
   }
   public resetEndpointLocation() {
@@ -306,7 +343,7 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get endpointLocationInput() {
-    return this._endpointLocation
+    return this._endpointLocation;
   }
 
   // endpoint_monitor_status - computed: true, optional: false, required: false
@@ -315,11 +352,11 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
 
   // endpoint_status - computed: true, optional: true, required: false
-  private _endpointStatus?: string | undefined; 
+  private _endpointStatus?: string; 
   public get endpointStatus() {
     return this.getStringAttribute('endpoint_status');
   }
-  public set endpointStatus(value: string | undefined) {
+  public set endpointStatus(value: string) {
     this._endpointStatus = value;
   }
   public resetEndpointStatus() {
@@ -327,15 +364,15 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get endpointStatusInput() {
-    return this._endpointStatus
+    return this._endpointStatus;
   }
 
   // geo_mappings - computed: false, optional: true, required: false
-  private _geoMappings?: string[] | undefined; 
+  private _geoMappings?: string[]; 
   public get geoMappings() {
     return this.getListAttribute('geo_mappings');
   }
-  public set geoMappings(value: string[] | undefined) {
+  public set geoMappings(value: string[]) {
     this._geoMappings = value;
   }
   public resetGeoMappings() {
@@ -343,7 +380,7 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get geoMappingsInput() {
-    return this._geoMappings
+    return this._geoMappings;
   }
 
   // id - computed: true, optional: true, required: false
@@ -352,11 +389,11 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
 
   // min_child_endpoints - computed: false, optional: true, required: false
-  private _minChildEndpoints?: number | undefined; 
+  private _minChildEndpoints?: number; 
   public get minChildEndpoints() {
     return this.getNumberAttribute('min_child_endpoints');
   }
-  public set minChildEndpoints(value: number | undefined) {
+  public set minChildEndpoints(value: number) {
     this._minChildEndpoints = value;
   }
   public resetMinChildEndpoints() {
@@ -364,15 +401,15 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get minChildEndpointsInput() {
-    return this._minChildEndpoints
+    return this._minChildEndpoints;
   }
 
   // minimum_required_child_endpoints_ipv4 - computed: false, optional: true, required: false
-  private _minimumRequiredChildEndpointsIpv4?: number | undefined; 
+  private _minimumRequiredChildEndpointsIpv4?: number; 
   public get minimumRequiredChildEndpointsIpv4() {
     return this.getNumberAttribute('minimum_required_child_endpoints_ipv4');
   }
-  public set minimumRequiredChildEndpointsIpv4(value: number | undefined) {
+  public set minimumRequiredChildEndpointsIpv4(value: number) {
     this._minimumRequiredChildEndpointsIpv4 = value;
   }
   public resetMinimumRequiredChildEndpointsIpv4() {
@@ -380,15 +417,15 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get minimumRequiredChildEndpointsIpv4Input() {
-    return this._minimumRequiredChildEndpointsIpv4
+    return this._minimumRequiredChildEndpointsIpv4;
   }
 
   // minimum_required_child_endpoints_ipv6 - computed: false, optional: true, required: false
-  private _minimumRequiredChildEndpointsIpv6?: number | undefined; 
+  private _minimumRequiredChildEndpointsIpv6?: number; 
   public get minimumRequiredChildEndpointsIpv6() {
     return this.getNumberAttribute('minimum_required_child_endpoints_ipv6');
   }
-  public set minimumRequiredChildEndpointsIpv6(value: number | undefined) {
+  public set minimumRequiredChildEndpointsIpv6(value: number) {
     this._minimumRequiredChildEndpointsIpv6 = value;
   }
   public resetMinimumRequiredChildEndpointsIpv6() {
@@ -396,7 +433,7 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get minimumRequiredChildEndpointsIpv6Input() {
-    return this._minimumRequiredChildEndpointsIpv6
+    return this._minimumRequiredChildEndpointsIpv6;
   }
 
   // name - computed: false, optional: false, required: true
@@ -409,15 +446,15 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // priority - computed: true, optional: true, required: false
-  private _priority?: number | undefined; 
+  private _priority?: number; 
   public get priority() {
     return this.getNumberAttribute('priority');
   }
-  public set priority(value: number | undefined) {
+  public set priority(value: number) {
     this._priority = value;
   }
   public resetPriority() {
@@ -425,7 +462,7 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get priorityInput() {
-    return this._priority
+    return this._priority;
   }
 
   // profile_name - computed: false, optional: false, required: true
@@ -438,7 +475,7 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get profileNameInput() {
-    return this._profileName
+    return this._profileName;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -451,15 +488,15 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // target - computed: true, optional: true, required: false
-  private _target?: string | undefined; 
+  private _target?: string; 
   public get target() {
     return this.getStringAttribute('target');
   }
-  public set target(value: string | undefined) {
+  public set target(value: string) {
     this._target = value;
   }
   public resetTarget() {
@@ -467,15 +504,15 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get targetInput() {
-    return this._target
+    return this._target;
   }
 
   // target_resource_id - computed: false, optional: true, required: false
-  private _targetResourceId?: string | undefined; 
+  private _targetResourceId?: string; 
   public get targetResourceId() {
     return this.getStringAttribute('target_resource_id');
   }
-  public set targetResourceId(value: string | undefined) {
+  public set targetResourceId(value: string) {
     this._targetResourceId = value;
   }
   public resetTargetResourceId() {
@@ -483,7 +520,7 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get targetResourceIdInput() {
-    return this._targetResourceId
+    return this._targetResourceId;
   }
 
   // type - computed: false, optional: false, required: true
@@ -496,15 +533,15 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 
   // weight - computed: true, optional: true, required: false
-  private _weight?: number | undefined; 
+  private _weight?: number; 
   public get weight() {
     return this.getNumberAttribute('weight');
   }
-  public set weight(value: number | undefined) {
+  public set weight(value: number) {
     this._weight = value;
   }
   public resetWeight() {
@@ -512,16 +549,16 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get weightInput() {
-    return this._weight
+    return this._weight;
   }
 
   // custom_header - computed: false, optional: true, required: false
-  private _customHeader?: TrafficManagerEndpointCustomHeader[] | undefined; 
+  private _customHeader?: TrafficManagerEndpointCustomHeader[]; 
   public get customHeader() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('custom_header') as any;
   }
-  public set customHeader(value: TrafficManagerEndpointCustomHeader[] | undefined) {
+  public set customHeader(value: TrafficManagerEndpointCustomHeader[]) {
     this._customHeader = value;
   }
   public resetCustomHeader() {
@@ -529,16 +566,16 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get customHeaderInput() {
-    return this._customHeader
+    return this._customHeader;
   }
 
   // subnet - computed: false, optional: true, required: false
-  private _subnet?: TrafficManagerEndpointSubnet[] | undefined; 
+  private _subnet?: TrafficManagerEndpointSubnet[]; 
   public get subnet() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('subnet') as any;
   }
-  public set subnet(value: TrafficManagerEndpointSubnet[] | undefined) {
+  public set subnet(value: TrafficManagerEndpointSubnet[]) {
     this._subnet = value;
   }
   public resetSubnet() {
@@ -546,24 +583,23 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get subnetInput() {
-    return this._subnet
+    return this._subnet;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: TrafficManagerEndpointTimeouts | undefined; 
-  private __timeoutsOutput = new TrafficManagerEndpointTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new TrafficManagerEndpointTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: TrafficManagerEndpointTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: TrafficManagerEndpointTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -588,7 +624,7 @@ export class TrafficManagerEndpoint extends cdktf.TerraformResource {
       weight: cdktf.numberToTerraform(this._weight),
       custom_header: cdktf.listMapper(trafficManagerEndpointCustomHeaderToTerraform)(this._customHeader),
       subnet: cdktf.listMapper(trafficManagerEndpointSubnetToTerraform)(this._subnet),
-      timeouts: trafficManagerEndpointTimeoutsToTerraform(this._timeouts),
+      timeouts: trafficManagerEndpointTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

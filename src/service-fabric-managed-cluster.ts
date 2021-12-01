@@ -105,7 +105,7 @@ export interface ServiceFabricManagedClusterAuthenticationActiveDirectory {
   readonly tenantId: string;
 }
 
-function serviceFabricManagedClusterAuthenticationActiveDirectoryToTerraform(struct?: ServiceFabricManagedClusterAuthenticationActiveDirectoryOutputReference | ServiceFabricManagedClusterAuthenticationActiveDirectory): any {
+export function serviceFabricManagedClusterAuthenticationActiveDirectoryToTerraform(struct?: ServiceFabricManagedClusterAuthenticationActiveDirectoryOutputReference | ServiceFabricManagedClusterAuthenticationActiveDirectory): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -127,6 +127,37 @@ export class ServiceFabricManagedClusterAuthenticationActiveDirectoryOutputRefer
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ServiceFabricManagedClusterAuthenticationActiveDirectory | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._clientApplicationId) {
+      hasAnyValues = true;
+      internalValueResult.clientApplicationId = this._clientApplicationId;
+    }
+    if (this._clusterApplicationId) {
+      hasAnyValues = true;
+      internalValueResult.clusterApplicationId = this._clusterApplicationId;
+    }
+    if (this._tenantId) {
+      hasAnyValues = true;
+      internalValueResult.tenantId = this._tenantId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServiceFabricManagedClusterAuthenticationActiveDirectory | undefined) {
+    if (value === undefined) {
+      this._clientApplicationId = undefined;
+      this._clusterApplicationId = undefined;
+      this._tenantId = undefined;
+    }
+    else {
+      this._clientApplicationId = value.clientApplicationId;
+      this._clusterApplicationId = value.clusterApplicationId;
+      this._tenantId = value.tenantId;
+    }
+  }
+
   // client_application_id - computed: false, optional: false, required: true
   private _clientApplicationId?: string; 
   public get clientApplicationId() {
@@ -137,7 +168,7 @@ export class ServiceFabricManagedClusterAuthenticationActiveDirectoryOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get clientApplicationIdInput() {
-    return this._clientApplicationId
+    return this._clientApplicationId;
   }
 
   // cluster_application_id - computed: false, optional: false, required: true
@@ -150,7 +181,7 @@ export class ServiceFabricManagedClusterAuthenticationActiveDirectoryOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get clusterApplicationIdInput() {
-    return this._clusterApplicationId
+    return this._clusterApplicationId;
   }
 
   // tenant_id - computed: false, optional: false, required: true
@@ -163,7 +194,7 @@ export class ServiceFabricManagedClusterAuthenticationActiveDirectoryOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get tenantIdInput() {
-    return this._tenantId
+    return this._tenantId;
   }
 }
 export interface ServiceFabricManagedClusterAuthenticationCertificate {
@@ -181,7 +212,7 @@ export interface ServiceFabricManagedClusterAuthenticationCertificate {
   readonly type: string;
 }
 
-function serviceFabricManagedClusterAuthenticationCertificateToTerraform(struct?: ServiceFabricManagedClusterAuthenticationCertificate): any {
+export function serviceFabricManagedClusterAuthenticationCertificateToTerraform(struct?: ServiceFabricManagedClusterAuthenticationCertificate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -208,7 +239,7 @@ export interface ServiceFabricManagedClusterAuthentication {
   readonly certificate?: ServiceFabricManagedClusterAuthenticationCertificate[];
 }
 
-function serviceFabricManagedClusterAuthenticationToTerraform(struct?: ServiceFabricManagedClusterAuthenticationOutputReference | ServiceFabricManagedClusterAuthentication): any {
+export function serviceFabricManagedClusterAuthenticationToTerraform(struct?: ServiceFabricManagedClusterAuthenticationOutputReference | ServiceFabricManagedClusterAuthentication): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -229,30 +260,54 @@ export class ServiceFabricManagedClusterAuthenticationOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // active_directory - computed: false, optional: true, required: false
-  private _activeDirectory?: ServiceFabricManagedClusterAuthenticationActiveDirectory | undefined; 
-  private __activeDirectoryOutput = new ServiceFabricManagedClusterAuthenticationActiveDirectoryOutputReference(this as any, "active_directory", true);
-  public get activeDirectory() {
-    return this.__activeDirectoryOutput;
+  public get internalValue(): ServiceFabricManagedClusterAuthentication | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._activeDirectory) {
+      hasAnyValues = true;
+      internalValueResult.activeDirectory = this._activeDirectory?.internalValue;
+    }
+    if (this._certificate) {
+      hasAnyValues = true;
+      internalValueResult.certificate = this._certificate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putActiveDirectory(value: ServiceFabricManagedClusterAuthenticationActiveDirectory | undefined) {
-    this._activeDirectory = value;
+
+  public set internalValue(value: ServiceFabricManagedClusterAuthentication | undefined) {
+    if (value === undefined) {
+      this._activeDirectory.internalValue = undefined;
+      this._certificate = undefined;
+    }
+    else {
+      this._activeDirectory.internalValue = value.activeDirectory;
+      this._certificate = value.certificate;
+    }
+  }
+
+  // active_directory - computed: false, optional: true, required: false
+  private _activeDirectory = new ServiceFabricManagedClusterAuthenticationActiveDirectoryOutputReference(this as any, "active_directory", true);
+  public get activeDirectory() {
+    return this._activeDirectory;
+  }
+  public putActiveDirectory(value: ServiceFabricManagedClusterAuthenticationActiveDirectory) {
+    this._activeDirectory.internalValue = value;
   }
   public resetActiveDirectory() {
-    this._activeDirectory = undefined;
+    this._activeDirectory.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get activeDirectoryInput() {
-    return this._activeDirectory
+    return this._activeDirectory.internalValue;
   }
 
   // certificate - computed: false, optional: true, required: false
-  private _certificate?: ServiceFabricManagedClusterAuthenticationCertificate[] | undefined; 
+  private _certificate?: ServiceFabricManagedClusterAuthenticationCertificate[]; 
   public get certificate() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('certificate') as any;
   }
-  public set certificate(value: ServiceFabricManagedClusterAuthenticationCertificate[] | undefined) {
+  public set certificate(value: ServiceFabricManagedClusterAuthenticationCertificate[]) {
     this._certificate = value;
   }
   public resetCertificate() {
@@ -260,7 +315,7 @@ export class ServiceFabricManagedClusterAuthenticationOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get certificateInput() {
-    return this._certificate
+    return this._certificate;
   }
 }
 export interface ServiceFabricManagedClusterCustomFabricSetting {
@@ -278,7 +333,7 @@ export interface ServiceFabricManagedClusterCustomFabricSetting {
   readonly value: string;
 }
 
-function serviceFabricManagedClusterCustomFabricSettingToTerraform(struct?: ServiceFabricManagedClusterCustomFabricSetting): any {
+export function serviceFabricManagedClusterCustomFabricSettingToTerraform(struct?: ServiceFabricManagedClusterCustomFabricSetting): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -313,7 +368,7 @@ export interface ServiceFabricManagedClusterLbRule {
   readonly protocol: string;
 }
 
-function serviceFabricManagedClusterLbRuleToTerraform(struct?: ServiceFabricManagedClusterLbRule): any {
+export function serviceFabricManagedClusterLbRuleToTerraform(struct?: ServiceFabricManagedClusterLbRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -338,7 +393,7 @@ export interface ServiceFabricManagedClusterNodeTypeVmSecretsCertificates {
   readonly url: string;
 }
 
-function serviceFabricManagedClusterNodeTypeVmSecretsCertificatesToTerraform(struct?: ServiceFabricManagedClusterNodeTypeVmSecretsCertificates): any {
+export function serviceFabricManagedClusterNodeTypeVmSecretsCertificatesToTerraform(struct?: ServiceFabricManagedClusterNodeTypeVmSecretsCertificates): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -362,7 +417,7 @@ export interface ServiceFabricManagedClusterNodeTypeVmSecrets {
   readonly certificates: ServiceFabricManagedClusterNodeTypeVmSecretsCertificates[];
 }
 
-function serviceFabricManagedClusterNodeTypeVmSecretsToTerraform(struct?: ServiceFabricManagedClusterNodeTypeVmSecrets): any {
+export function serviceFabricManagedClusterNodeTypeVmSecretsToTerraform(struct?: ServiceFabricManagedClusterNodeTypeVmSecrets): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -446,7 +501,7 @@ export interface ServiceFabricManagedClusterNodeType {
   readonly vmSecrets?: ServiceFabricManagedClusterNodeTypeVmSecrets[];
 }
 
-function serviceFabricManagedClusterNodeTypeToTerraform(struct?: ServiceFabricManagedClusterNodeType): any {
+export function serviceFabricManagedClusterNodeTypeToTerraform(struct?: ServiceFabricManagedClusterNodeType): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -491,7 +546,7 @@ export interface ServiceFabricManagedClusterTimeouts {
   readonly update?: string;
 }
 
-function serviceFabricManagedClusterTimeoutsToTerraform(struct?: ServiceFabricManagedClusterTimeoutsOutputReference | ServiceFabricManagedClusterTimeouts): any {
+export function serviceFabricManagedClusterTimeoutsToTerraform(struct?: ServiceFabricManagedClusterTimeoutsOutputReference | ServiceFabricManagedClusterTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -514,12 +569,49 @@ export class ServiceFabricManagedClusterTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ServiceFabricManagedClusterTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServiceFabricManagedClusterTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -527,15 +619,15 @@ export class ServiceFabricManagedClusterTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -543,15 +635,15 @@ export class ServiceFabricManagedClusterTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -559,15 +651,15 @@ export class ServiceFabricManagedClusterTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -575,7 +667,7 @@ export class ServiceFabricManagedClusterTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -624,11 +716,11 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._upgradeWave = config.upgradeWave;
     this._username = config.username;
-    this._authentication = config.authentication;
+    this._authentication.internalValue = config.authentication;
     this._customFabricSetting = config.customFabricSetting;
     this._lbRule = config.lbRule;
     this._nodeType = config.nodeType;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -636,11 +728,11 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
   // ==========
 
   // backup_service_enabled - computed: false, optional: true, required: false
-  private _backupServiceEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _backupServiceEnabled?: boolean | cdktf.IResolvable; 
   public get backupServiceEnabled() {
     return this.getBooleanAttribute('backup_service_enabled') as any;
   }
-  public set backupServiceEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set backupServiceEnabled(value: boolean | cdktf.IResolvable) {
     this._backupServiceEnabled = value;
   }
   public resetBackupServiceEnabled() {
@@ -648,7 +740,7 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get backupServiceEnabledInput() {
-    return this._backupServiceEnabled
+    return this._backupServiceEnabled;
   }
 
   // client_connection_port - computed: false, optional: false, required: true
@@ -661,15 +753,15 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get clientConnectionPortInput() {
-    return this._clientConnectionPort
+    return this._clientConnectionPort;
   }
 
   // dns_name - computed: true, optional: true, required: false
-  private _dnsName?: string | undefined; 
+  private _dnsName?: string; 
   public get dnsName() {
     return this.getStringAttribute('dns_name');
   }
-  public set dnsName(value: string | undefined) {
+  public set dnsName(value: string) {
     this._dnsName = value;
   }
   public resetDnsName() {
@@ -677,15 +769,15 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dnsNameInput() {
-    return this._dnsName
+    return this._dnsName;
   }
 
   // dns_service_enabled - computed: false, optional: true, required: false
-  private _dnsServiceEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _dnsServiceEnabled?: boolean | cdktf.IResolvable; 
   public get dnsServiceEnabled() {
     return this.getBooleanAttribute('dns_service_enabled') as any;
   }
-  public set dnsServiceEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set dnsServiceEnabled(value: boolean | cdktf.IResolvable) {
     this._dnsServiceEnabled = value;
   }
   public resetDnsServiceEnabled() {
@@ -693,7 +785,7 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dnsServiceEnabledInput() {
-    return this._dnsServiceEnabled
+    return this._dnsServiceEnabled;
   }
 
   // http_gateway_port - computed: false, optional: false, required: true
@@ -706,7 +798,7 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get httpGatewayPortInput() {
-    return this._httpGatewayPort
+    return this._httpGatewayPort;
   }
 
   // id - computed: true, optional: true, required: false
@@ -724,7 +816,7 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -737,15 +829,15 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // password - computed: false, optional: true, required: false
-  private _password?: string | undefined; 
+  private _password?: string; 
   public get password() {
     return this.getStringAttribute('password');
   }
-  public set password(value: string | undefined) {
+  public set password(value: string) {
     this._password = value;
   }
   public resetPassword() {
@@ -753,7 +845,7 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -766,15 +858,15 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // sku - computed: false, optional: true, required: false
-  private _sku?: string | undefined; 
+  private _sku?: string; 
   public get sku() {
     return this.getStringAttribute('sku');
   }
-  public set sku(value: string | undefined) {
+  public set sku(value: string) {
     this._sku = value;
   }
   public resetSku() {
@@ -782,16 +874,16 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuInput() {
-    return this._sku
+    return this._sku;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -799,15 +891,15 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // upgrade_wave - computed: false, optional: true, required: false
-  private _upgradeWave?: string | undefined; 
+  private _upgradeWave?: string; 
   public get upgradeWave() {
     return this.getStringAttribute('upgrade_wave');
   }
-  public set upgradeWave(value: string | undefined) {
+  public set upgradeWave(value: string) {
     this._upgradeWave = value;
   }
   public resetUpgradeWave() {
@@ -815,15 +907,15 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get upgradeWaveInput() {
-    return this._upgradeWave
+    return this._upgradeWave;
   }
 
   // username - computed: false, optional: true, required: false
-  private _username?: string | undefined; 
+  private _username?: string; 
   public get username() {
     return this.getStringAttribute('username');
   }
-  public set username(value: string | undefined) {
+  public set username(value: string) {
     this._username = value;
   }
   public resetUsername() {
@@ -831,33 +923,32 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
-    return this._username
+    return this._username;
   }
 
   // authentication - computed: false, optional: true, required: false
-  private _authentication?: ServiceFabricManagedClusterAuthentication | undefined; 
-  private __authenticationOutput = new ServiceFabricManagedClusterAuthenticationOutputReference(this as any, "authentication", true);
+  private _authentication = new ServiceFabricManagedClusterAuthenticationOutputReference(this as any, "authentication", true);
   public get authentication() {
-    return this.__authenticationOutput;
+    return this._authentication;
   }
-  public putAuthentication(value: ServiceFabricManagedClusterAuthentication | undefined) {
-    this._authentication = value;
+  public putAuthentication(value: ServiceFabricManagedClusterAuthentication) {
+    this._authentication.internalValue = value;
   }
   public resetAuthentication() {
-    this._authentication = undefined;
+    this._authentication.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get authenticationInput() {
-    return this._authentication
+    return this._authentication.internalValue;
   }
 
   // custom_fabric_setting - computed: false, optional: true, required: false
-  private _customFabricSetting?: ServiceFabricManagedClusterCustomFabricSetting[] | undefined; 
+  private _customFabricSetting?: ServiceFabricManagedClusterCustomFabricSetting[]; 
   public get customFabricSetting() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('custom_fabric_setting') as any;
   }
-  public set customFabricSetting(value: ServiceFabricManagedClusterCustomFabricSetting[] | undefined) {
+  public set customFabricSetting(value: ServiceFabricManagedClusterCustomFabricSetting[]) {
     this._customFabricSetting = value;
   }
   public resetCustomFabricSetting() {
@@ -865,7 +956,7 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get customFabricSettingInput() {
-    return this._customFabricSetting
+    return this._customFabricSetting;
   }
 
   // lb_rule - computed: false, optional: false, required: true
@@ -879,16 +970,16 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get lbRuleInput() {
-    return this._lbRule
+    return this._lbRule;
   }
 
   // node_type - computed: false, optional: true, required: false
-  private _nodeType?: ServiceFabricManagedClusterNodeType[] | undefined; 
+  private _nodeType?: ServiceFabricManagedClusterNodeType[]; 
   public get nodeType() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('node_type') as any;
   }
-  public set nodeType(value: ServiceFabricManagedClusterNodeType[] | undefined) {
+  public set nodeType(value: ServiceFabricManagedClusterNodeType[]) {
     this._nodeType = value;
   }
   public resetNodeType() {
@@ -896,24 +987,23 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nodeTypeInput() {
-    return this._nodeType
+    return this._nodeType;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ServiceFabricManagedClusterTimeouts | undefined; 
-  private __timeoutsOutput = new ServiceFabricManagedClusterTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ServiceFabricManagedClusterTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ServiceFabricManagedClusterTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ServiceFabricManagedClusterTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -935,11 +1025,11 @@ export class ServiceFabricManagedCluster extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       upgrade_wave: cdktf.stringToTerraform(this._upgradeWave),
       username: cdktf.stringToTerraform(this._username),
-      authentication: serviceFabricManagedClusterAuthenticationToTerraform(this._authentication),
+      authentication: serviceFabricManagedClusterAuthenticationToTerraform(this._authentication.internalValue),
       custom_fabric_setting: cdktf.listMapper(serviceFabricManagedClusterCustomFabricSettingToTerraform)(this._customFabricSetting),
       lb_rule: cdktf.listMapper(serviceFabricManagedClusterLbRuleToTerraform)(this._lbRule),
       node_type: cdktf.listMapper(serviceFabricManagedClusterNodeTypeToTerraform)(this._nodeType),
-      timeouts: serviceFabricManagedClusterTimeoutsToTerraform(this._timeouts),
+      timeouts: serviceFabricManagedClusterTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

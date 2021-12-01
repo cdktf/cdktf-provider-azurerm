@@ -59,7 +59,7 @@ export interface WebApplicationFirewallPolicyCustomRulesMatchConditionsMatchVari
   readonly variableName: string;
 }
 
-function webApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariablesToTerraform(struct?: WebApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariables): any {
+export function webApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariablesToTerraform(struct?: WebApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariables): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -95,7 +95,7 @@ export interface WebApplicationFirewallPolicyCustomRulesMatchConditions {
   readonly matchVariables: WebApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariables[];
 }
 
-function webApplicationFirewallPolicyCustomRulesMatchConditionsToTerraform(struct?: WebApplicationFirewallPolicyCustomRulesMatchConditions): any {
+export function webApplicationFirewallPolicyCustomRulesMatchConditionsToTerraform(struct?: WebApplicationFirewallPolicyCustomRulesMatchConditions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -134,7 +134,7 @@ export interface WebApplicationFirewallPolicyCustomRules {
   readonly matchConditions: WebApplicationFirewallPolicyCustomRulesMatchConditions[];
 }
 
-function webApplicationFirewallPolicyCustomRulesToTerraform(struct?: WebApplicationFirewallPolicyCustomRules): any {
+export function webApplicationFirewallPolicyCustomRulesToTerraform(struct?: WebApplicationFirewallPolicyCustomRules): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -163,7 +163,7 @@ export interface WebApplicationFirewallPolicyManagedRulesExclusion {
   readonly selectorMatchOperator: string;
 }
 
-function webApplicationFirewallPolicyManagedRulesExclusionToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesExclusion): any {
+export function webApplicationFirewallPolicyManagedRulesExclusionToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesExclusion): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -186,7 +186,7 @@ export interface WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroup
   readonly ruleGroupName: string;
 }
 
-function webApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride): any {
+export function webApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -214,7 +214,7 @@ export interface WebApplicationFirewallPolicyManagedRulesManagedRuleSet {
   readonly ruleGroupOverride?: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride[];
 }
 
-function webApplicationFirewallPolicyManagedRulesManagedRuleSetToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesManagedRuleSet): any {
+export function webApplicationFirewallPolicyManagedRulesManagedRuleSetToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesManagedRuleSet): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -241,7 +241,7 @@ export interface WebApplicationFirewallPolicyManagedRules {
   readonly managedRuleSet: WebApplicationFirewallPolicyManagedRulesManagedRuleSet[];
 }
 
-function webApplicationFirewallPolicyManagedRulesToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesOutputReference | WebApplicationFirewallPolicyManagedRules): any {
+export function webApplicationFirewallPolicyManagedRulesToTerraform(struct?: WebApplicationFirewallPolicyManagedRulesOutputReference | WebApplicationFirewallPolicyManagedRules): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -262,13 +262,38 @@ export class WebApplicationFirewallPolicyManagedRulesOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): WebApplicationFirewallPolicyManagedRules | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._exclusion) {
+      hasAnyValues = true;
+      internalValueResult.exclusion = this._exclusion;
+    }
+    if (this._managedRuleSet) {
+      hasAnyValues = true;
+      internalValueResult.managedRuleSet = this._managedRuleSet;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WebApplicationFirewallPolicyManagedRules | undefined) {
+    if (value === undefined) {
+      this._exclusion = undefined;
+      this._managedRuleSet = undefined;
+    }
+    else {
+      this._exclusion = value.exclusion;
+      this._managedRuleSet = value.managedRuleSet;
+    }
+  }
+
   // exclusion - computed: false, optional: true, required: false
-  private _exclusion?: WebApplicationFirewallPolicyManagedRulesExclusion[] | undefined; 
+  private _exclusion?: WebApplicationFirewallPolicyManagedRulesExclusion[]; 
   public get exclusion() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('exclusion') as any;
   }
-  public set exclusion(value: WebApplicationFirewallPolicyManagedRulesExclusion[] | undefined) {
+  public set exclusion(value: WebApplicationFirewallPolicyManagedRulesExclusion[]) {
     this._exclusion = value;
   }
   public resetExclusion() {
@@ -276,7 +301,7 @@ export class WebApplicationFirewallPolicyManagedRulesOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get exclusionInput() {
-    return this._exclusion
+    return this._exclusion;
   }
 
   // managed_rule_set - computed: false, optional: false, required: true
@@ -290,7 +315,7 @@ export class WebApplicationFirewallPolicyManagedRulesOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get managedRuleSetInput() {
-    return this._managedRuleSet
+    return this._managedRuleSet;
   }
 }
 export interface WebApplicationFirewallPolicyPolicySettings {
@@ -316,7 +341,7 @@ export interface WebApplicationFirewallPolicyPolicySettings {
   readonly requestBodyCheck?: boolean | cdktf.IResolvable;
 }
 
-function webApplicationFirewallPolicyPolicySettingsToTerraform(struct?: WebApplicationFirewallPolicyPolicySettingsOutputReference | WebApplicationFirewallPolicyPolicySettings): any {
+export function webApplicationFirewallPolicyPolicySettingsToTerraform(struct?: WebApplicationFirewallPolicyPolicySettingsOutputReference | WebApplicationFirewallPolicyPolicySettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -340,12 +365,55 @@ export class WebApplicationFirewallPolicyPolicySettingsOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): WebApplicationFirewallPolicyPolicySettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._fileUploadLimitInMb) {
+      hasAnyValues = true;
+      internalValueResult.fileUploadLimitInMb = this._fileUploadLimitInMb;
+    }
+    if (this._maxRequestBodySizeInKb) {
+      hasAnyValues = true;
+      internalValueResult.maxRequestBodySizeInKb = this._maxRequestBodySizeInKb;
+    }
+    if (this._mode) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    if (this._requestBodyCheck) {
+      hasAnyValues = true;
+      internalValueResult.requestBodyCheck = this._requestBodyCheck;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WebApplicationFirewallPolicyPolicySettings | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+      this._fileUploadLimitInMb = undefined;
+      this._maxRequestBodySizeInKb = undefined;
+      this._mode = undefined;
+      this._requestBodyCheck = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+      this._fileUploadLimitInMb = value.fileUploadLimitInMb;
+      this._maxRequestBodySizeInKb = value.maxRequestBodySizeInKb;
+      this._mode = value.mode;
+      this._requestBodyCheck = value.requestBodyCheck;
+    }
+  }
+
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -353,15 +421,15 @@ export class WebApplicationFirewallPolicyPolicySettingsOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // file_upload_limit_in_mb - computed: false, optional: true, required: false
-  private _fileUploadLimitInMb?: number | undefined; 
+  private _fileUploadLimitInMb?: number; 
   public get fileUploadLimitInMb() {
     return this.getNumberAttribute('file_upload_limit_in_mb');
   }
-  public set fileUploadLimitInMb(value: number | undefined) {
+  public set fileUploadLimitInMb(value: number) {
     this._fileUploadLimitInMb = value;
   }
   public resetFileUploadLimitInMb() {
@@ -369,15 +437,15 @@ export class WebApplicationFirewallPolicyPolicySettingsOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get fileUploadLimitInMbInput() {
-    return this._fileUploadLimitInMb
+    return this._fileUploadLimitInMb;
   }
 
   // max_request_body_size_in_kb - computed: false, optional: true, required: false
-  private _maxRequestBodySizeInKb?: number | undefined; 
+  private _maxRequestBodySizeInKb?: number; 
   public get maxRequestBodySizeInKb() {
     return this.getNumberAttribute('max_request_body_size_in_kb');
   }
-  public set maxRequestBodySizeInKb(value: number | undefined) {
+  public set maxRequestBodySizeInKb(value: number) {
     this._maxRequestBodySizeInKb = value;
   }
   public resetMaxRequestBodySizeInKb() {
@@ -385,15 +453,15 @@ export class WebApplicationFirewallPolicyPolicySettingsOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get maxRequestBodySizeInKbInput() {
-    return this._maxRequestBodySizeInKb
+    return this._maxRequestBodySizeInKb;
   }
 
   // mode - computed: false, optional: true, required: false
-  private _mode?: string | undefined; 
+  private _mode?: string; 
   public get mode() {
     return this.getStringAttribute('mode');
   }
-  public set mode(value: string | undefined) {
+  public set mode(value: string) {
     this._mode = value;
   }
   public resetMode() {
@@ -401,15 +469,15 @@ export class WebApplicationFirewallPolicyPolicySettingsOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get modeInput() {
-    return this._mode
+    return this._mode;
   }
 
   // request_body_check - computed: false, optional: true, required: false
-  private _requestBodyCheck?: boolean | cdktf.IResolvable | undefined; 
+  private _requestBodyCheck?: boolean | cdktf.IResolvable; 
   public get requestBodyCheck() {
     return this.getBooleanAttribute('request_body_check') as any;
   }
-  public set requestBodyCheck(value: boolean | cdktf.IResolvable | undefined) {
+  public set requestBodyCheck(value: boolean | cdktf.IResolvable) {
     this._requestBodyCheck = value;
   }
   public resetRequestBodyCheck() {
@@ -417,7 +485,7 @@ export class WebApplicationFirewallPolicyPolicySettingsOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get requestBodyCheckInput() {
-    return this._requestBodyCheck
+    return this._requestBodyCheck;
   }
 }
 export interface WebApplicationFirewallPolicyTimeouts {
@@ -439,7 +507,7 @@ export interface WebApplicationFirewallPolicyTimeouts {
   readonly update?: string;
 }
 
-function webApplicationFirewallPolicyTimeoutsToTerraform(struct?: WebApplicationFirewallPolicyTimeoutsOutputReference | WebApplicationFirewallPolicyTimeouts): any {
+export function webApplicationFirewallPolicyTimeoutsToTerraform(struct?: WebApplicationFirewallPolicyTimeoutsOutputReference | WebApplicationFirewallPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -462,12 +530,49 @@ export class WebApplicationFirewallPolicyTimeoutsOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): WebApplicationFirewallPolicyTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WebApplicationFirewallPolicyTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -475,15 +580,15 @@ export class WebApplicationFirewallPolicyTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -491,15 +596,15 @@ export class WebApplicationFirewallPolicyTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -507,15 +612,15 @@ export class WebApplicationFirewallPolicyTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -523,7 +628,7 @@ export class WebApplicationFirewallPolicyTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -564,9 +669,9 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
     this._customRules = config.customRules;
-    this._managedRules = config.managedRules;
-    this._policySettings = config.policySettings;
-    this._timeouts = config.timeouts;
+    this._managedRules.internalValue = config.managedRules;
+    this._policySettings.internalValue = config.policySettings;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -593,7 +698,7 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -606,7 +711,7 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // path_based_rule_ids - computed: true, optional: false, required: false
@@ -624,16 +729,16 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -641,16 +746,16 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // custom_rules - computed: false, optional: true, required: false
-  private _customRules?: WebApplicationFirewallPolicyCustomRules[] | undefined; 
+  private _customRules?: WebApplicationFirewallPolicyCustomRules[]; 
   public get customRules() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('custom_rules') as any;
   }
-  public set customRules(value: WebApplicationFirewallPolicyCustomRules[] | undefined) {
+  public set customRules(value: WebApplicationFirewallPolicyCustomRules[]) {
     this._customRules = value;
   }
   public resetCustomRules() {
@@ -658,55 +763,52 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get customRulesInput() {
-    return this._customRules
+    return this._customRules;
   }
 
   // managed_rules - computed: false, optional: false, required: true
-  private _managedRules?: WebApplicationFirewallPolicyManagedRules; 
-  private __managedRulesOutput = new WebApplicationFirewallPolicyManagedRulesOutputReference(this as any, "managed_rules", true);
+  private _managedRules = new WebApplicationFirewallPolicyManagedRulesOutputReference(this as any, "managed_rules", true);
   public get managedRules() {
-    return this.__managedRulesOutput;
+    return this._managedRules;
   }
   public putManagedRules(value: WebApplicationFirewallPolicyManagedRules) {
-    this._managedRules = value;
+    this._managedRules.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get managedRulesInput() {
-    return this._managedRules
+    return this._managedRules.internalValue;
   }
 
   // policy_settings - computed: false, optional: true, required: false
-  private _policySettings?: WebApplicationFirewallPolicyPolicySettings | undefined; 
-  private __policySettingsOutput = new WebApplicationFirewallPolicyPolicySettingsOutputReference(this as any, "policy_settings", true);
+  private _policySettings = new WebApplicationFirewallPolicyPolicySettingsOutputReference(this as any, "policy_settings", true);
   public get policySettings() {
-    return this.__policySettingsOutput;
+    return this._policySettings;
   }
-  public putPolicySettings(value: WebApplicationFirewallPolicyPolicySettings | undefined) {
-    this._policySettings = value;
+  public putPolicySettings(value: WebApplicationFirewallPolicyPolicySettings) {
+    this._policySettings.internalValue = value;
   }
   public resetPolicySettings() {
-    this._policySettings = undefined;
+    this._policySettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get policySettingsInput() {
-    return this._policySettings
+    return this._policySettings.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: WebApplicationFirewallPolicyTimeouts | undefined; 
-  private __timeoutsOutput = new WebApplicationFirewallPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new WebApplicationFirewallPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: WebApplicationFirewallPolicyTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: WebApplicationFirewallPolicyTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -720,9 +822,9 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       custom_rules: cdktf.listMapper(webApplicationFirewallPolicyCustomRulesToTerraform)(this._customRules),
-      managed_rules: webApplicationFirewallPolicyManagedRulesToTerraform(this._managedRules),
-      policy_settings: webApplicationFirewallPolicyPolicySettingsToTerraform(this._policySettings),
-      timeouts: webApplicationFirewallPolicyTimeoutsToTerraform(this._timeouts),
+      managed_rules: webApplicationFirewallPolicyManagedRulesToTerraform(this._managedRules.internalValue),
+      policy_settings: webApplicationFirewallPolicyPolicySettingsToTerraform(this._policySettings.internalValue),
+      timeouts: webApplicationFirewallPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

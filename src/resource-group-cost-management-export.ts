@@ -61,7 +61,7 @@ export interface ResourceGroupCostManagementExportExportDataOptions {
   readonly type: string;
 }
 
-function resourceGroupCostManagementExportExportDataOptionsToTerraform(struct?: ResourceGroupCostManagementExportExportDataOptionsOutputReference | ResourceGroupCostManagementExportExportDataOptions): any {
+export function resourceGroupCostManagementExportExportDataOptionsToTerraform(struct?: ResourceGroupCostManagementExportExportDataOptionsOutputReference | ResourceGroupCostManagementExportExportDataOptions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -82,6 +82,31 @@ export class ResourceGroupCostManagementExportExportDataOptionsOutputReference e
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ResourceGroupCostManagementExportExportDataOptions | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._timeFrame) {
+      hasAnyValues = true;
+      internalValueResult.timeFrame = this._timeFrame;
+    }
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ResourceGroupCostManagementExportExportDataOptions | undefined) {
+    if (value === undefined) {
+      this._timeFrame = undefined;
+      this._type = undefined;
+    }
+    else {
+      this._timeFrame = value.timeFrame;
+      this._type = value.type;
+    }
+  }
+
   // time_frame - computed: false, optional: false, required: true
   private _timeFrame?: string; 
   public get timeFrame() {
@@ -92,7 +117,7 @@ export class ResourceGroupCostManagementExportExportDataOptionsOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get timeFrameInput() {
-    return this._timeFrame
+    return this._timeFrame;
   }
 
   // type - computed: false, optional: false, required: true
@@ -105,7 +130,7 @@ export class ResourceGroupCostManagementExportExportDataOptionsOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface ResourceGroupCostManagementExportExportDataStorageLocation {
@@ -119,7 +144,7 @@ export interface ResourceGroupCostManagementExportExportDataStorageLocation {
   readonly rootFolderPath: string;
 }
 
-function resourceGroupCostManagementExportExportDataStorageLocationToTerraform(struct?: ResourceGroupCostManagementExportExportDataStorageLocationOutputReference | ResourceGroupCostManagementExportExportDataStorageLocation): any {
+export function resourceGroupCostManagementExportExportDataStorageLocationToTerraform(struct?: ResourceGroupCostManagementExportExportDataStorageLocationOutputReference | ResourceGroupCostManagementExportExportDataStorageLocation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -140,6 +165,31 @@ export class ResourceGroupCostManagementExportExportDataStorageLocationOutputRef
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ResourceGroupCostManagementExportExportDataStorageLocation | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._containerId) {
+      hasAnyValues = true;
+      internalValueResult.containerId = this._containerId;
+    }
+    if (this._rootFolderPath) {
+      hasAnyValues = true;
+      internalValueResult.rootFolderPath = this._rootFolderPath;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ResourceGroupCostManagementExportExportDataStorageLocation | undefined) {
+    if (value === undefined) {
+      this._containerId = undefined;
+      this._rootFolderPath = undefined;
+    }
+    else {
+      this._containerId = value.containerId;
+      this._rootFolderPath = value.rootFolderPath;
+    }
+  }
+
   // container_id - computed: false, optional: false, required: true
   private _containerId?: string; 
   public get containerId() {
@@ -150,7 +200,7 @@ export class ResourceGroupCostManagementExportExportDataStorageLocationOutputRef
   }
   // Temporarily expose input value. Use with caution.
   public get containerIdInput() {
-    return this._containerId
+    return this._containerId;
   }
 
   // root_folder_path - computed: false, optional: false, required: true
@@ -163,7 +213,7 @@ export class ResourceGroupCostManagementExportExportDataStorageLocationOutputRef
   }
   // Temporarily expose input value. Use with caution.
   public get rootFolderPathInput() {
-    return this._rootFolderPath
+    return this._rootFolderPath;
   }
 }
 export interface ResourceGroupCostManagementExportTimeouts {
@@ -185,7 +235,7 @@ export interface ResourceGroupCostManagementExportTimeouts {
   readonly update?: string;
 }
 
-function resourceGroupCostManagementExportTimeoutsToTerraform(struct?: ResourceGroupCostManagementExportTimeoutsOutputReference | ResourceGroupCostManagementExportTimeouts): any {
+export function resourceGroupCostManagementExportTimeoutsToTerraform(struct?: ResourceGroupCostManagementExportTimeoutsOutputReference | ResourceGroupCostManagementExportTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -208,12 +258,49 @@ export class ResourceGroupCostManagementExportTimeoutsOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ResourceGroupCostManagementExportTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ResourceGroupCostManagementExportTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -221,15 +308,15 @@ export class ResourceGroupCostManagementExportTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -237,15 +324,15 @@ export class ResourceGroupCostManagementExportTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -253,15 +340,15 @@ export class ResourceGroupCostManagementExportTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -269,7 +356,7 @@ export class ResourceGroupCostManagementExportTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -311,9 +398,9 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
     this._recurrencePeriodStartDate = config.recurrencePeriodStartDate;
     this._recurrenceType = config.recurrenceType;
     this._resourceGroupId = config.resourceGroupId;
-    this._exportDataOptions = config.exportDataOptions;
-    this._exportDataStorageLocation = config.exportDataStorageLocation;
-    this._timeouts = config.timeouts;
+    this._exportDataOptions.internalValue = config.exportDataOptions;
+    this._exportDataStorageLocation.internalValue = config.exportDataStorageLocation;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -321,11 +408,11 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
   // ==========
 
   // active - computed: false, optional: true, required: false
-  private _active?: boolean | cdktf.IResolvable | undefined; 
+  private _active?: boolean | cdktf.IResolvable; 
   public get active() {
     return this.getBooleanAttribute('active') as any;
   }
-  public set active(value: boolean | cdktf.IResolvable | undefined) {
+  public set active(value: boolean | cdktf.IResolvable) {
     this._active = value;
   }
   public resetActive() {
@@ -333,7 +420,7 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get activeInput() {
-    return this._active
+    return this._active;
   }
 
   // id - computed: true, optional: true, required: false
@@ -351,7 +438,7 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // recurrence_period_end_date - computed: false, optional: false, required: true
@@ -364,7 +451,7 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get recurrencePeriodEndDateInput() {
-    return this._recurrencePeriodEndDate
+    return this._recurrencePeriodEndDate;
   }
 
   // recurrence_period_start_date - computed: false, optional: false, required: true
@@ -377,7 +464,7 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get recurrencePeriodStartDateInput() {
-    return this._recurrencePeriodStartDate
+    return this._recurrencePeriodStartDate;
   }
 
   // recurrence_type - computed: false, optional: false, required: true
@@ -390,7 +477,7 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get recurrenceTypeInput() {
-    return this._recurrenceType
+    return this._recurrenceType;
   }
 
   // resource_group_id - computed: false, optional: false, required: true
@@ -403,52 +490,49 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupIdInput() {
-    return this._resourceGroupId
+    return this._resourceGroupId;
   }
 
   // export_data_options - computed: false, optional: false, required: true
-  private _exportDataOptions?: ResourceGroupCostManagementExportExportDataOptions; 
-  private __exportDataOptionsOutput = new ResourceGroupCostManagementExportExportDataOptionsOutputReference(this as any, "export_data_options", true);
+  private _exportDataOptions = new ResourceGroupCostManagementExportExportDataOptionsOutputReference(this as any, "export_data_options", true);
   public get exportDataOptions() {
-    return this.__exportDataOptionsOutput;
+    return this._exportDataOptions;
   }
   public putExportDataOptions(value: ResourceGroupCostManagementExportExportDataOptions) {
-    this._exportDataOptions = value;
+    this._exportDataOptions.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get exportDataOptionsInput() {
-    return this._exportDataOptions
+    return this._exportDataOptions.internalValue;
   }
 
   // export_data_storage_location - computed: false, optional: false, required: true
-  private _exportDataStorageLocation?: ResourceGroupCostManagementExportExportDataStorageLocation; 
-  private __exportDataStorageLocationOutput = new ResourceGroupCostManagementExportExportDataStorageLocationOutputReference(this as any, "export_data_storage_location", true);
+  private _exportDataStorageLocation = new ResourceGroupCostManagementExportExportDataStorageLocationOutputReference(this as any, "export_data_storage_location", true);
   public get exportDataStorageLocation() {
-    return this.__exportDataStorageLocationOutput;
+    return this._exportDataStorageLocation;
   }
   public putExportDataStorageLocation(value: ResourceGroupCostManagementExportExportDataStorageLocation) {
-    this._exportDataStorageLocation = value;
+    this._exportDataStorageLocation.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get exportDataStorageLocationInput() {
-    return this._exportDataStorageLocation
+    return this._exportDataStorageLocation.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ResourceGroupCostManagementExportTimeouts | undefined; 
-  private __timeoutsOutput = new ResourceGroupCostManagementExportTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ResourceGroupCostManagementExportTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ResourceGroupCostManagementExportTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ResourceGroupCostManagementExportTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -463,9 +547,9 @@ export class ResourceGroupCostManagementExport extends cdktf.TerraformResource {
       recurrence_period_start_date: cdktf.stringToTerraform(this._recurrencePeriodStartDate),
       recurrence_type: cdktf.stringToTerraform(this._recurrenceType),
       resource_group_id: cdktf.stringToTerraform(this._resourceGroupId),
-      export_data_options: resourceGroupCostManagementExportExportDataOptionsToTerraform(this._exportDataOptions),
-      export_data_storage_location: resourceGroupCostManagementExportExportDataStorageLocationToTerraform(this._exportDataStorageLocation),
-      timeouts: resourceGroupCostManagementExportTimeoutsToTerraform(this._timeouts),
+      export_data_options: resourceGroupCostManagementExportExportDataOptionsToTerraform(this._exportDataOptions.internalValue),
+      export_data_storage_location: resourceGroupCostManagementExportExportDataStorageLocationToTerraform(this._exportDataStorageLocation.internalValue),
+      timeouts: resourceGroupCostManagementExportTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

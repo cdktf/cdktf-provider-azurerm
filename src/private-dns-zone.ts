@@ -63,7 +63,7 @@ export interface PrivateDnsZoneSoaRecord {
   readonly ttl?: number;
 }
 
-function privateDnsZoneSoaRecordToTerraform(struct?: PrivateDnsZoneSoaRecordOutputReference | PrivateDnsZoneSoaRecord): any {
+export function privateDnsZoneSoaRecordToTerraform(struct?: PrivateDnsZoneSoaRecordOutputReference | PrivateDnsZoneSoaRecord): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -89,6 +89,61 @@ export class PrivateDnsZoneSoaRecordOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PrivateDnsZoneSoaRecord | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._email) {
+      hasAnyValues = true;
+      internalValueResult.email = this._email;
+    }
+    if (this._expireTime) {
+      hasAnyValues = true;
+      internalValueResult.expireTime = this._expireTime;
+    }
+    if (this._minimumTtl) {
+      hasAnyValues = true;
+      internalValueResult.minimumTtl = this._minimumTtl;
+    }
+    if (this._refreshTime) {
+      hasAnyValues = true;
+      internalValueResult.refreshTime = this._refreshTime;
+    }
+    if (this._retryTime) {
+      hasAnyValues = true;
+      internalValueResult.retryTime = this._retryTime;
+    }
+    if (this._tags) {
+      hasAnyValues = true;
+      internalValueResult.tags = this._tags;
+    }
+    if (this._ttl) {
+      hasAnyValues = true;
+      internalValueResult.ttl = this._ttl;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivateDnsZoneSoaRecord | undefined) {
+    if (value === undefined) {
+      this._email = undefined;
+      this._expireTime = undefined;
+      this._minimumTtl = undefined;
+      this._refreshTime = undefined;
+      this._retryTime = undefined;
+      this._tags = undefined;
+      this._ttl = undefined;
+    }
+    else {
+      this._email = value.email;
+      this._expireTime = value.expireTime;
+      this._minimumTtl = value.minimumTtl;
+      this._refreshTime = value.refreshTime;
+      this._retryTime = value.retryTime;
+      this._tags = value.tags;
+      this._ttl = value.ttl;
+    }
+  }
+
   // email - computed: false, optional: false, required: true
   private _email?: string; 
   public get email() {
@@ -99,15 +154,15 @@ export class PrivateDnsZoneSoaRecordOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get emailInput() {
-    return this._email
+    return this._email;
   }
 
   // expire_time - computed: false, optional: true, required: false
-  private _expireTime?: number | undefined; 
+  private _expireTime?: number; 
   public get expireTime() {
     return this.getNumberAttribute('expire_time');
   }
-  public set expireTime(value: number | undefined) {
+  public set expireTime(value: number) {
     this._expireTime = value;
   }
   public resetExpireTime() {
@@ -115,15 +170,15 @@ export class PrivateDnsZoneSoaRecordOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get expireTimeInput() {
-    return this._expireTime
+    return this._expireTime;
   }
 
   // minimum_ttl - computed: false, optional: true, required: false
-  private _minimumTtl?: number | undefined; 
+  private _minimumTtl?: number; 
   public get minimumTtl() {
     return this.getNumberAttribute('minimum_ttl');
   }
-  public set minimumTtl(value: number | undefined) {
+  public set minimumTtl(value: number) {
     this._minimumTtl = value;
   }
   public resetMinimumTtl() {
@@ -131,15 +186,15 @@ export class PrivateDnsZoneSoaRecordOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get minimumTtlInput() {
-    return this._minimumTtl
+    return this._minimumTtl;
   }
 
   // refresh_time - computed: false, optional: true, required: false
-  private _refreshTime?: number | undefined; 
+  private _refreshTime?: number; 
   public get refreshTime() {
     return this.getNumberAttribute('refresh_time');
   }
-  public set refreshTime(value: number | undefined) {
+  public set refreshTime(value: number) {
     this._refreshTime = value;
   }
   public resetRefreshTime() {
@@ -147,15 +202,15 @@ export class PrivateDnsZoneSoaRecordOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get refreshTimeInput() {
-    return this._refreshTime
+    return this._refreshTime;
   }
 
   // retry_time - computed: false, optional: true, required: false
-  private _retryTime?: number | undefined; 
+  private _retryTime?: number; 
   public get retryTime() {
     return this.getNumberAttribute('retry_time');
   }
-  public set retryTime(value: number | undefined) {
+  public set retryTime(value: number) {
     this._retryTime = value;
   }
   public resetRetryTime() {
@@ -163,16 +218,16 @@ export class PrivateDnsZoneSoaRecordOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get retryTimeInput() {
-    return this._retryTime
+    return this._retryTime;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -180,15 +235,15 @@ export class PrivateDnsZoneSoaRecordOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // ttl - computed: false, optional: true, required: false
-  private _ttl?: number | undefined; 
+  private _ttl?: number; 
   public get ttl() {
     return this.getNumberAttribute('ttl');
   }
-  public set ttl(value: number | undefined) {
+  public set ttl(value: number) {
     this._ttl = value;
   }
   public resetTtl() {
@@ -196,7 +251,7 @@ export class PrivateDnsZoneSoaRecordOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get ttlInput() {
-    return this._ttl
+    return this._ttl;
   }
 }
 export interface PrivateDnsZoneTimeouts {
@@ -218,7 +273,7 @@ export interface PrivateDnsZoneTimeouts {
   readonly update?: string;
 }
 
-function privateDnsZoneTimeoutsToTerraform(struct?: PrivateDnsZoneTimeoutsOutputReference | PrivateDnsZoneTimeouts): any {
+export function privateDnsZoneTimeoutsToTerraform(struct?: PrivateDnsZoneTimeoutsOutputReference | PrivateDnsZoneTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -241,12 +296,49 @@ export class PrivateDnsZoneTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PrivateDnsZoneTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivateDnsZoneTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -254,15 +346,15 @@ export class PrivateDnsZoneTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -270,15 +362,15 @@ export class PrivateDnsZoneTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -286,15 +378,15 @@ export class PrivateDnsZoneTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -302,7 +394,7 @@ export class PrivateDnsZoneTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -341,8 +433,8 @@ export class PrivateDnsZone extends cdktf.TerraformResource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._soaRecord = config.soaRecord;
-    this._timeouts = config.timeouts;
+    this._soaRecord.internalValue = config.soaRecord;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -379,7 +471,7 @@ export class PrivateDnsZone extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // number_of_record_sets - computed: true, optional: false, required: false
@@ -397,16 +489,16 @@ export class PrivateDnsZone extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -414,41 +506,39 @@ export class PrivateDnsZone extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // soa_record - computed: false, optional: true, required: false
-  private _soaRecord?: PrivateDnsZoneSoaRecord | undefined; 
-  private __soaRecordOutput = new PrivateDnsZoneSoaRecordOutputReference(this as any, "soa_record", true);
+  private _soaRecord = new PrivateDnsZoneSoaRecordOutputReference(this as any, "soa_record", true);
   public get soaRecord() {
-    return this.__soaRecordOutput;
+    return this._soaRecord;
   }
-  public putSoaRecord(value: PrivateDnsZoneSoaRecord | undefined) {
-    this._soaRecord = value;
+  public putSoaRecord(value: PrivateDnsZoneSoaRecord) {
+    this._soaRecord.internalValue = value;
   }
   public resetSoaRecord() {
-    this._soaRecord = undefined;
+    this._soaRecord.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get soaRecordInput() {
-    return this._soaRecord
+    return this._soaRecord.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: PrivateDnsZoneTimeouts | undefined; 
-  private __timeoutsOutput = new PrivateDnsZoneTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new PrivateDnsZoneTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: PrivateDnsZoneTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: PrivateDnsZoneTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -460,8 +550,8 @@ export class PrivateDnsZone extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      soa_record: privateDnsZoneSoaRecordToTerraform(this._soaRecord),
-      timeouts: privateDnsZoneTimeoutsToTerraform(this._timeouts),
+      soa_record: privateDnsZoneSoaRecordToTerraform(this._soaRecord.internalValue),
+      timeouts: privateDnsZoneTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

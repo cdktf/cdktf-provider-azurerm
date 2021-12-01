@@ -141,7 +141,7 @@ export interface ApiManagementPolicy {
   readonly xmlLink?: string;
 }
 
-function apiManagementPolicyToTerraform(struct?: ApiManagementPolicy): any {
+export function apiManagementPolicyToTerraform(struct?: ApiManagementPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -159,7 +159,7 @@ export interface ApiManagementAdditionalLocationVirtualNetworkConfiguration {
   readonly subnetId: string;
 }
 
-function apiManagementAdditionalLocationVirtualNetworkConfigurationToTerraform(struct?: ApiManagementAdditionalLocationVirtualNetworkConfigurationOutputReference | ApiManagementAdditionalLocationVirtualNetworkConfiguration): any {
+export function apiManagementAdditionalLocationVirtualNetworkConfigurationToTerraform(struct?: ApiManagementAdditionalLocationVirtualNetworkConfigurationOutputReference | ApiManagementAdditionalLocationVirtualNetworkConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -179,6 +179,25 @@ export class ApiManagementAdditionalLocationVirtualNetworkConfigurationOutputRef
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementAdditionalLocationVirtualNetworkConfiguration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._subnetId) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementAdditionalLocationVirtualNetworkConfiguration | undefined) {
+    if (value === undefined) {
+      this._subnetId = undefined;
+    }
+    else {
+      this._subnetId = value.subnetId;
+    }
+  }
+
   // subnet_id - computed: false, optional: false, required: true
   private _subnetId?: string; 
   public get subnetId() {
@@ -189,7 +208,7 @@ export class ApiManagementAdditionalLocationVirtualNetworkConfigurationOutputRef
   }
   // Temporarily expose input value. Use with caution.
   public get subnetIdInput() {
-    return this._subnetId
+    return this._subnetId;
   }
 }
 export interface ApiManagementAdditionalLocation {
@@ -205,7 +224,7 @@ export interface ApiManagementAdditionalLocation {
   readonly virtualNetworkConfiguration?: ApiManagementAdditionalLocationVirtualNetworkConfiguration;
 }
 
-function apiManagementAdditionalLocationToTerraform(struct?: ApiManagementAdditionalLocation): any {
+export function apiManagementAdditionalLocationToTerraform(struct?: ApiManagementAdditionalLocation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -231,7 +250,7 @@ export interface ApiManagementCertificate {
   readonly storeName: string;
 }
 
-function apiManagementCertificateToTerraform(struct?: ApiManagementCertificate): any {
+export function apiManagementCertificateToTerraform(struct?: ApiManagementCertificate): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -270,7 +289,7 @@ export interface ApiManagementHostnameConfigurationDeveloperPortal {
   readonly sslKeyvaultIdentityClientId?: string;
 }
 
-function apiManagementHostnameConfigurationDeveloperPortalToTerraform(struct?: ApiManagementHostnameConfigurationDeveloperPortal): any {
+export function apiManagementHostnameConfigurationDeveloperPortalToTerraform(struct?: ApiManagementHostnameConfigurationDeveloperPortal): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -312,7 +331,7 @@ export interface ApiManagementHostnameConfigurationManagement {
   readonly sslKeyvaultIdentityClientId?: string;
 }
 
-function apiManagementHostnameConfigurationManagementToTerraform(struct?: ApiManagementHostnameConfigurationManagement): any {
+export function apiManagementHostnameConfigurationManagementToTerraform(struct?: ApiManagementHostnameConfigurationManagement): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -354,7 +373,7 @@ export interface ApiManagementHostnameConfigurationPortal {
   readonly sslKeyvaultIdentityClientId?: string;
 }
 
-function apiManagementHostnameConfigurationPortalToTerraform(struct?: ApiManagementHostnameConfigurationPortal): any {
+export function apiManagementHostnameConfigurationPortalToTerraform(struct?: ApiManagementHostnameConfigurationPortal): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -400,7 +419,7 @@ export interface ApiManagementHostnameConfigurationProxy {
   readonly sslKeyvaultIdentityClientId?: string;
 }
 
-function apiManagementHostnameConfigurationProxyToTerraform(struct?: ApiManagementHostnameConfigurationProxy): any {
+export function apiManagementHostnameConfigurationProxyToTerraform(struct?: ApiManagementHostnameConfigurationProxy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -443,7 +462,7 @@ export interface ApiManagementHostnameConfigurationScm {
   readonly sslKeyvaultIdentityClientId?: string;
 }
 
-function apiManagementHostnameConfigurationScmToTerraform(struct?: ApiManagementHostnameConfigurationScm): any {
+export function apiManagementHostnameConfigurationScmToTerraform(struct?: ApiManagementHostnameConfigurationScm): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -491,7 +510,7 @@ export interface ApiManagementHostnameConfiguration {
   readonly scm?: ApiManagementHostnameConfigurationScm[];
 }
 
-function apiManagementHostnameConfigurationToTerraform(struct?: ApiManagementHostnameConfigurationOutputReference | ApiManagementHostnameConfiguration): any {
+export function apiManagementHostnameConfigurationToTerraform(struct?: ApiManagementHostnameConfigurationOutputReference | ApiManagementHostnameConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -515,13 +534,56 @@ export class ApiManagementHostnameConfigurationOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementHostnameConfiguration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._developerPortal) {
+      hasAnyValues = true;
+      internalValueResult.developerPortal = this._developerPortal;
+    }
+    if (this._management) {
+      hasAnyValues = true;
+      internalValueResult.management = this._management;
+    }
+    if (this._portal) {
+      hasAnyValues = true;
+      internalValueResult.portal = this._portal;
+    }
+    if (this._proxy) {
+      hasAnyValues = true;
+      internalValueResult.proxy = this._proxy;
+    }
+    if (this._scm) {
+      hasAnyValues = true;
+      internalValueResult.scm = this._scm;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementHostnameConfiguration | undefined) {
+    if (value === undefined) {
+      this._developerPortal = undefined;
+      this._management = undefined;
+      this._portal = undefined;
+      this._proxy = undefined;
+      this._scm = undefined;
+    }
+    else {
+      this._developerPortal = value.developerPortal;
+      this._management = value.management;
+      this._portal = value.portal;
+      this._proxy = value.proxy;
+      this._scm = value.scm;
+    }
+  }
+
   // developer_portal - computed: false, optional: true, required: false
-  private _developerPortal?: ApiManagementHostnameConfigurationDeveloperPortal[] | undefined; 
+  private _developerPortal?: ApiManagementHostnameConfigurationDeveloperPortal[]; 
   public get developerPortal() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('developer_portal') as any;
   }
-  public set developerPortal(value: ApiManagementHostnameConfigurationDeveloperPortal[] | undefined) {
+  public set developerPortal(value: ApiManagementHostnameConfigurationDeveloperPortal[]) {
     this._developerPortal = value;
   }
   public resetDeveloperPortal() {
@@ -529,16 +591,16 @@ export class ApiManagementHostnameConfigurationOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get developerPortalInput() {
-    return this._developerPortal
+    return this._developerPortal;
   }
 
   // management - computed: false, optional: true, required: false
-  private _management?: ApiManagementHostnameConfigurationManagement[] | undefined; 
+  private _management?: ApiManagementHostnameConfigurationManagement[]; 
   public get management() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('management') as any;
   }
-  public set management(value: ApiManagementHostnameConfigurationManagement[] | undefined) {
+  public set management(value: ApiManagementHostnameConfigurationManagement[]) {
     this._management = value;
   }
   public resetManagement() {
@@ -546,16 +608,16 @@ export class ApiManagementHostnameConfigurationOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get managementInput() {
-    return this._management
+    return this._management;
   }
 
   // portal - computed: false, optional: true, required: false
-  private _portal?: ApiManagementHostnameConfigurationPortal[] | undefined; 
+  private _portal?: ApiManagementHostnameConfigurationPortal[]; 
   public get portal() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('portal') as any;
   }
-  public set portal(value: ApiManagementHostnameConfigurationPortal[] | undefined) {
+  public set portal(value: ApiManagementHostnameConfigurationPortal[]) {
     this._portal = value;
   }
   public resetPortal() {
@@ -563,16 +625,16 @@ export class ApiManagementHostnameConfigurationOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get portalInput() {
-    return this._portal
+    return this._portal;
   }
 
   // proxy - computed: false, optional: true, required: false
-  private _proxy?: ApiManagementHostnameConfigurationProxy[] | undefined; 
+  private _proxy?: ApiManagementHostnameConfigurationProxy[]; 
   public get proxy() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('proxy') as any;
   }
-  public set proxy(value: ApiManagementHostnameConfigurationProxy[] | undefined) {
+  public set proxy(value: ApiManagementHostnameConfigurationProxy[]) {
     this._proxy = value;
   }
   public resetProxy() {
@@ -580,16 +642,16 @@ export class ApiManagementHostnameConfigurationOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get proxyInput() {
-    return this._proxy
+    return this._proxy;
   }
 
   // scm - computed: false, optional: true, required: false
-  private _scm?: ApiManagementHostnameConfigurationScm[] | undefined; 
+  private _scm?: ApiManagementHostnameConfigurationScm[]; 
   public get scm() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('scm') as any;
   }
-  public set scm(value: ApiManagementHostnameConfigurationScm[] | undefined) {
+  public set scm(value: ApiManagementHostnameConfigurationScm[]) {
     this._scm = value;
   }
   public resetScm() {
@@ -597,7 +659,7 @@ export class ApiManagementHostnameConfigurationOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get scmInput() {
-    return this._scm
+    return this._scm;
   }
 }
 export interface ApiManagementIdentity {
@@ -611,7 +673,7 @@ export interface ApiManagementIdentity {
   readonly type?: string;
 }
 
-function apiManagementIdentityToTerraform(struct?: ApiManagementIdentityOutputReference | ApiManagementIdentity): any {
+export function apiManagementIdentityToTerraform(struct?: ApiManagementIdentityOutputReference | ApiManagementIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -632,12 +694,37 @@ export class ApiManagementIdentityOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementIdentity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._identityIds) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementIdentity | undefined) {
+    if (value === undefined) {
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
   // identity_ids - computed: false, optional: true, required: false
-  private _identityIds?: string[] | undefined; 
+  private _identityIds?: string[]; 
   public get identityIds() {
     return this.getListAttribute('identity_ids');
   }
-  public set identityIds(value: string[] | undefined) {
+  public set identityIds(value: string[]) {
     this._identityIds = value;
   }
   public resetIdentityIds() {
@@ -645,15 +732,15 @@ export class ApiManagementIdentityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
-    return this._identityIds
+    return this._identityIds;
   }
 
   // type - computed: false, optional: true, required: false
-  private _type?: string | undefined; 
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string | undefined) {
+  public set type(value: string) {
     this._type = value;
   }
   public resetType() {
@@ -661,7 +748,7 @@ export class ApiManagementIdentityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface ApiManagementProtocols {
@@ -671,7 +758,7 @@ export interface ApiManagementProtocols {
   readonly enableHttp2?: boolean | cdktf.IResolvable;
 }
 
-function apiManagementProtocolsToTerraform(struct?: ApiManagementProtocolsOutputReference | ApiManagementProtocols): any {
+export function apiManagementProtocolsToTerraform(struct?: ApiManagementProtocolsOutputReference | ApiManagementProtocols): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -691,12 +778,31 @@ export class ApiManagementProtocolsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementProtocols | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enableHttp2) {
+      hasAnyValues = true;
+      internalValueResult.enableHttp2 = this._enableHttp2;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementProtocols | undefined) {
+    if (value === undefined) {
+      this._enableHttp2 = undefined;
+    }
+    else {
+      this._enableHttp2 = value.enableHttp2;
+    }
+  }
+
   // enable_http2 - computed: false, optional: true, required: false
-  private _enableHttp2?: boolean | cdktf.IResolvable | undefined; 
+  private _enableHttp2?: boolean | cdktf.IResolvable; 
   public get enableHttp2() {
     return this.getBooleanAttribute('enable_http2') as any;
   }
-  public set enableHttp2(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableHttp2(value: boolean | cdktf.IResolvable) {
     this._enableHttp2 = value;
   }
   public resetEnableHttp2() {
@@ -704,7 +810,7 @@ export class ApiManagementProtocolsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get enableHttp2Input() {
-    return this._enableHttp2
+    return this._enableHttp2;
   }
 }
 export interface ApiManagementSecurity {
@@ -778,7 +884,7 @@ export interface ApiManagementSecurity {
   readonly tripleDesCiphersEnabled?: boolean | cdktf.IResolvable;
 }
 
-function apiManagementSecurityToTerraform(struct?: ApiManagementSecurityOutputReference | ApiManagementSecurity): any {
+export function apiManagementSecurityToTerraform(struct?: ApiManagementSecurityOutputReference | ApiManagementSecurity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -814,12 +920,127 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementSecurity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enableBackendSsl30) {
+      hasAnyValues = true;
+      internalValueResult.enableBackendSsl30 = this._enableBackendSsl30;
+    }
+    if (this._enableBackendTls10) {
+      hasAnyValues = true;
+      internalValueResult.enableBackendTls10 = this._enableBackendTls10;
+    }
+    if (this._enableBackendTls11) {
+      hasAnyValues = true;
+      internalValueResult.enableBackendTls11 = this._enableBackendTls11;
+    }
+    if (this._enableFrontendSsl30) {
+      hasAnyValues = true;
+      internalValueResult.enableFrontendSsl30 = this._enableFrontendSsl30;
+    }
+    if (this._enableFrontendTls10) {
+      hasAnyValues = true;
+      internalValueResult.enableFrontendTls10 = this._enableFrontendTls10;
+    }
+    if (this._enableFrontendTls11) {
+      hasAnyValues = true;
+      internalValueResult.enableFrontendTls11 = this._enableFrontendTls11;
+    }
+    if (this._enableTripleDesCiphers) {
+      hasAnyValues = true;
+      internalValueResult.enableTripleDesCiphers = this._enableTripleDesCiphers;
+    }
+    if (this._tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled) {
+      hasAnyValues = true;
+      internalValueResult.tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled = this._tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled;
+    }
+    if (this._tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled) {
+      hasAnyValues = true;
+      internalValueResult.tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled = this._tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled;
+    }
+    if (this._tlsEcdheRsaWithAes128CbcShaCiphersEnabled) {
+      hasAnyValues = true;
+      internalValueResult.tlsEcdheRsaWithAes128CbcShaCiphersEnabled = this._tlsEcdheRsaWithAes128CbcShaCiphersEnabled;
+    }
+    if (this._tlsEcdheRsaWithAes256CbcShaCiphersEnabled) {
+      hasAnyValues = true;
+      internalValueResult.tlsEcdheRsaWithAes256CbcShaCiphersEnabled = this._tlsEcdheRsaWithAes256CbcShaCiphersEnabled;
+    }
+    if (this._tlsRsaWithAes128CbcSha256CiphersEnabled) {
+      hasAnyValues = true;
+      internalValueResult.tlsRsaWithAes128CbcSha256CiphersEnabled = this._tlsRsaWithAes128CbcSha256CiphersEnabled;
+    }
+    if (this._tlsRsaWithAes128CbcShaCiphersEnabled) {
+      hasAnyValues = true;
+      internalValueResult.tlsRsaWithAes128CbcShaCiphersEnabled = this._tlsRsaWithAes128CbcShaCiphersEnabled;
+    }
+    if (this._tlsRsaWithAes128GcmSha256CiphersEnabled) {
+      hasAnyValues = true;
+      internalValueResult.tlsRsaWithAes128GcmSha256CiphersEnabled = this._tlsRsaWithAes128GcmSha256CiphersEnabled;
+    }
+    if (this._tlsRsaWithAes256CbcSha256CiphersEnabled) {
+      hasAnyValues = true;
+      internalValueResult.tlsRsaWithAes256CbcSha256CiphersEnabled = this._tlsRsaWithAes256CbcSha256CiphersEnabled;
+    }
+    if (this._tlsRsaWithAes256CbcShaCiphersEnabled) {
+      hasAnyValues = true;
+      internalValueResult.tlsRsaWithAes256CbcShaCiphersEnabled = this._tlsRsaWithAes256CbcShaCiphersEnabled;
+    }
+    if (this._tripleDesCiphersEnabled) {
+      hasAnyValues = true;
+      internalValueResult.tripleDesCiphersEnabled = this._tripleDesCiphersEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementSecurity | undefined) {
+    if (value === undefined) {
+      this._enableBackendSsl30 = undefined;
+      this._enableBackendTls10 = undefined;
+      this._enableBackendTls11 = undefined;
+      this._enableFrontendSsl30 = undefined;
+      this._enableFrontendTls10 = undefined;
+      this._enableFrontendTls11 = undefined;
+      this._enableTripleDesCiphers = undefined;
+      this._tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled = undefined;
+      this._tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled = undefined;
+      this._tlsEcdheRsaWithAes128CbcShaCiphersEnabled = undefined;
+      this._tlsEcdheRsaWithAes256CbcShaCiphersEnabled = undefined;
+      this._tlsRsaWithAes128CbcSha256CiphersEnabled = undefined;
+      this._tlsRsaWithAes128CbcShaCiphersEnabled = undefined;
+      this._tlsRsaWithAes128GcmSha256CiphersEnabled = undefined;
+      this._tlsRsaWithAes256CbcSha256CiphersEnabled = undefined;
+      this._tlsRsaWithAes256CbcShaCiphersEnabled = undefined;
+      this._tripleDesCiphersEnabled = undefined;
+    }
+    else {
+      this._enableBackendSsl30 = value.enableBackendSsl30;
+      this._enableBackendTls10 = value.enableBackendTls10;
+      this._enableBackendTls11 = value.enableBackendTls11;
+      this._enableFrontendSsl30 = value.enableFrontendSsl30;
+      this._enableFrontendTls10 = value.enableFrontendTls10;
+      this._enableFrontendTls11 = value.enableFrontendTls11;
+      this._enableTripleDesCiphers = value.enableTripleDesCiphers;
+      this._tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled = value.tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled;
+      this._tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled = value.tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled;
+      this._tlsEcdheRsaWithAes128CbcShaCiphersEnabled = value.tlsEcdheRsaWithAes128CbcShaCiphersEnabled;
+      this._tlsEcdheRsaWithAes256CbcShaCiphersEnabled = value.tlsEcdheRsaWithAes256CbcShaCiphersEnabled;
+      this._tlsRsaWithAes128CbcSha256CiphersEnabled = value.tlsRsaWithAes128CbcSha256CiphersEnabled;
+      this._tlsRsaWithAes128CbcShaCiphersEnabled = value.tlsRsaWithAes128CbcShaCiphersEnabled;
+      this._tlsRsaWithAes128GcmSha256CiphersEnabled = value.tlsRsaWithAes128GcmSha256CiphersEnabled;
+      this._tlsRsaWithAes256CbcSha256CiphersEnabled = value.tlsRsaWithAes256CbcSha256CiphersEnabled;
+      this._tlsRsaWithAes256CbcShaCiphersEnabled = value.tlsRsaWithAes256CbcShaCiphersEnabled;
+      this._tripleDesCiphersEnabled = value.tripleDesCiphersEnabled;
+    }
+  }
+
   // enable_backend_ssl30 - computed: false, optional: true, required: false
-  private _enableBackendSsl30?: boolean | cdktf.IResolvable | undefined; 
+  private _enableBackendSsl30?: boolean | cdktf.IResolvable; 
   public get enableBackendSsl30() {
     return this.getBooleanAttribute('enable_backend_ssl30') as any;
   }
-  public set enableBackendSsl30(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableBackendSsl30(value: boolean | cdktf.IResolvable) {
     this._enableBackendSsl30 = value;
   }
   public resetEnableBackendSsl30() {
@@ -827,15 +1048,15 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get enableBackendSsl30Input() {
-    return this._enableBackendSsl30
+    return this._enableBackendSsl30;
   }
 
   // enable_backend_tls10 - computed: false, optional: true, required: false
-  private _enableBackendTls10?: boolean | cdktf.IResolvable | undefined; 
+  private _enableBackendTls10?: boolean | cdktf.IResolvable; 
   public get enableBackendTls10() {
     return this.getBooleanAttribute('enable_backend_tls10') as any;
   }
-  public set enableBackendTls10(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableBackendTls10(value: boolean | cdktf.IResolvable) {
     this._enableBackendTls10 = value;
   }
   public resetEnableBackendTls10() {
@@ -843,15 +1064,15 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get enableBackendTls10Input() {
-    return this._enableBackendTls10
+    return this._enableBackendTls10;
   }
 
   // enable_backend_tls11 - computed: false, optional: true, required: false
-  private _enableBackendTls11?: boolean | cdktf.IResolvable | undefined; 
+  private _enableBackendTls11?: boolean | cdktf.IResolvable; 
   public get enableBackendTls11() {
     return this.getBooleanAttribute('enable_backend_tls11') as any;
   }
-  public set enableBackendTls11(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableBackendTls11(value: boolean | cdktf.IResolvable) {
     this._enableBackendTls11 = value;
   }
   public resetEnableBackendTls11() {
@@ -859,15 +1080,15 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get enableBackendTls11Input() {
-    return this._enableBackendTls11
+    return this._enableBackendTls11;
   }
 
   // enable_frontend_ssl30 - computed: false, optional: true, required: false
-  private _enableFrontendSsl30?: boolean | cdktf.IResolvable | undefined; 
+  private _enableFrontendSsl30?: boolean | cdktf.IResolvable; 
   public get enableFrontendSsl30() {
     return this.getBooleanAttribute('enable_frontend_ssl30') as any;
   }
-  public set enableFrontendSsl30(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableFrontendSsl30(value: boolean | cdktf.IResolvable) {
     this._enableFrontendSsl30 = value;
   }
   public resetEnableFrontendSsl30() {
@@ -875,15 +1096,15 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get enableFrontendSsl30Input() {
-    return this._enableFrontendSsl30
+    return this._enableFrontendSsl30;
   }
 
   // enable_frontend_tls10 - computed: false, optional: true, required: false
-  private _enableFrontendTls10?: boolean | cdktf.IResolvable | undefined; 
+  private _enableFrontendTls10?: boolean | cdktf.IResolvable; 
   public get enableFrontendTls10() {
     return this.getBooleanAttribute('enable_frontend_tls10') as any;
   }
-  public set enableFrontendTls10(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableFrontendTls10(value: boolean | cdktf.IResolvable) {
     this._enableFrontendTls10 = value;
   }
   public resetEnableFrontendTls10() {
@@ -891,15 +1112,15 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get enableFrontendTls10Input() {
-    return this._enableFrontendTls10
+    return this._enableFrontendTls10;
   }
 
   // enable_frontend_tls11 - computed: false, optional: true, required: false
-  private _enableFrontendTls11?: boolean | cdktf.IResolvable | undefined; 
+  private _enableFrontendTls11?: boolean | cdktf.IResolvable; 
   public get enableFrontendTls11() {
     return this.getBooleanAttribute('enable_frontend_tls11') as any;
   }
-  public set enableFrontendTls11(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableFrontendTls11(value: boolean | cdktf.IResolvable) {
     this._enableFrontendTls11 = value;
   }
   public resetEnableFrontendTls11() {
@@ -907,15 +1128,15 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get enableFrontendTls11Input() {
-    return this._enableFrontendTls11
+    return this._enableFrontendTls11;
   }
 
   // enable_triple_des_ciphers - computed: true, optional: true, required: false
-  private _enableTripleDesCiphers?: boolean | cdktf.IResolvable | undefined; 
+  private _enableTripleDesCiphers?: boolean | cdktf.IResolvable; 
   public get enableTripleDesCiphers() {
     return this.getBooleanAttribute('enable_triple_des_ciphers') as any;
   }
-  public set enableTripleDesCiphers(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableTripleDesCiphers(value: boolean | cdktf.IResolvable) {
     this._enableTripleDesCiphers = value;
   }
   public resetEnableTripleDesCiphers() {
@@ -923,15 +1144,15 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get enableTripleDesCiphersInput() {
-    return this._enableTripleDesCiphers
+    return this._enableTripleDesCiphers;
   }
 
   // tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled - computed: false, optional: true, required: false
-  private _tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled?: boolean | cdktf.IResolvable; 
   public get tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled() {
     return this.getBooleanAttribute('tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled') as any;
   }
-  public set tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled(value: boolean | cdktf.IResolvable) {
     this._tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled = value;
   }
   public resetTlsEcdheEcdsaWithAes128CbcShaCiphersEnabled() {
@@ -939,15 +1160,15 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get tlsEcdheEcdsaWithAes128CbcShaCiphersEnabledInput() {
-    return this._tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled
+    return this._tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled;
   }
 
   // tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled - computed: false, optional: true, required: false
-  private _tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled?: boolean | cdktf.IResolvable; 
   public get tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled() {
     return this.getBooleanAttribute('tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled') as any;
   }
-  public set tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled(value: boolean | cdktf.IResolvable) {
     this._tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled = value;
   }
   public resetTlsEcdheEcdsaWithAes256CbcShaCiphersEnabled() {
@@ -955,15 +1176,15 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get tlsEcdheEcdsaWithAes256CbcShaCiphersEnabledInput() {
-    return this._tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled
+    return this._tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled;
   }
 
   // tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled - computed: false, optional: true, required: false
-  private _tlsEcdheRsaWithAes128CbcShaCiphersEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _tlsEcdheRsaWithAes128CbcShaCiphersEnabled?: boolean | cdktf.IResolvable; 
   public get tlsEcdheRsaWithAes128CbcShaCiphersEnabled() {
     return this.getBooleanAttribute('tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled') as any;
   }
-  public set tlsEcdheRsaWithAes128CbcShaCiphersEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set tlsEcdheRsaWithAes128CbcShaCiphersEnabled(value: boolean | cdktf.IResolvable) {
     this._tlsEcdheRsaWithAes128CbcShaCiphersEnabled = value;
   }
   public resetTlsEcdheRsaWithAes128CbcShaCiphersEnabled() {
@@ -971,15 +1192,15 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get tlsEcdheRsaWithAes128CbcShaCiphersEnabledInput() {
-    return this._tlsEcdheRsaWithAes128CbcShaCiphersEnabled
+    return this._tlsEcdheRsaWithAes128CbcShaCiphersEnabled;
   }
 
   // tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled - computed: false, optional: true, required: false
-  private _tlsEcdheRsaWithAes256CbcShaCiphersEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _tlsEcdheRsaWithAes256CbcShaCiphersEnabled?: boolean | cdktf.IResolvable; 
   public get tlsEcdheRsaWithAes256CbcShaCiphersEnabled() {
     return this.getBooleanAttribute('tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled') as any;
   }
-  public set tlsEcdheRsaWithAes256CbcShaCiphersEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set tlsEcdheRsaWithAes256CbcShaCiphersEnabled(value: boolean | cdktf.IResolvable) {
     this._tlsEcdheRsaWithAes256CbcShaCiphersEnabled = value;
   }
   public resetTlsEcdheRsaWithAes256CbcShaCiphersEnabled() {
@@ -987,15 +1208,15 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get tlsEcdheRsaWithAes256CbcShaCiphersEnabledInput() {
-    return this._tlsEcdheRsaWithAes256CbcShaCiphersEnabled
+    return this._tlsEcdheRsaWithAes256CbcShaCiphersEnabled;
   }
 
   // tls_rsa_with_aes128_cbc_sha256_ciphers_enabled - computed: false, optional: true, required: false
-  private _tlsRsaWithAes128CbcSha256CiphersEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _tlsRsaWithAes128CbcSha256CiphersEnabled?: boolean | cdktf.IResolvable; 
   public get tlsRsaWithAes128CbcSha256CiphersEnabled() {
     return this.getBooleanAttribute('tls_rsa_with_aes128_cbc_sha256_ciphers_enabled') as any;
   }
-  public set tlsRsaWithAes128CbcSha256CiphersEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set tlsRsaWithAes128CbcSha256CiphersEnabled(value: boolean | cdktf.IResolvable) {
     this._tlsRsaWithAes128CbcSha256CiphersEnabled = value;
   }
   public resetTlsRsaWithAes128CbcSha256CiphersEnabled() {
@@ -1003,15 +1224,15 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get tlsRsaWithAes128CbcSha256CiphersEnabledInput() {
-    return this._tlsRsaWithAes128CbcSha256CiphersEnabled
+    return this._tlsRsaWithAes128CbcSha256CiphersEnabled;
   }
 
   // tls_rsa_with_aes128_cbc_sha_ciphers_enabled - computed: false, optional: true, required: false
-  private _tlsRsaWithAes128CbcShaCiphersEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _tlsRsaWithAes128CbcShaCiphersEnabled?: boolean | cdktf.IResolvable; 
   public get tlsRsaWithAes128CbcShaCiphersEnabled() {
     return this.getBooleanAttribute('tls_rsa_with_aes128_cbc_sha_ciphers_enabled') as any;
   }
-  public set tlsRsaWithAes128CbcShaCiphersEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set tlsRsaWithAes128CbcShaCiphersEnabled(value: boolean | cdktf.IResolvable) {
     this._tlsRsaWithAes128CbcShaCiphersEnabled = value;
   }
   public resetTlsRsaWithAes128CbcShaCiphersEnabled() {
@@ -1019,15 +1240,15 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get tlsRsaWithAes128CbcShaCiphersEnabledInput() {
-    return this._tlsRsaWithAes128CbcShaCiphersEnabled
+    return this._tlsRsaWithAes128CbcShaCiphersEnabled;
   }
 
   // tls_rsa_with_aes128_gcm_sha256_ciphers_enabled - computed: false, optional: true, required: false
-  private _tlsRsaWithAes128GcmSha256CiphersEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _tlsRsaWithAes128GcmSha256CiphersEnabled?: boolean | cdktf.IResolvable; 
   public get tlsRsaWithAes128GcmSha256CiphersEnabled() {
     return this.getBooleanAttribute('tls_rsa_with_aes128_gcm_sha256_ciphers_enabled') as any;
   }
-  public set tlsRsaWithAes128GcmSha256CiphersEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set tlsRsaWithAes128GcmSha256CiphersEnabled(value: boolean | cdktf.IResolvable) {
     this._tlsRsaWithAes128GcmSha256CiphersEnabled = value;
   }
   public resetTlsRsaWithAes128GcmSha256CiphersEnabled() {
@@ -1035,15 +1256,15 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get tlsRsaWithAes128GcmSha256CiphersEnabledInput() {
-    return this._tlsRsaWithAes128GcmSha256CiphersEnabled
+    return this._tlsRsaWithAes128GcmSha256CiphersEnabled;
   }
 
   // tls_rsa_with_aes256_cbc_sha256_ciphers_enabled - computed: false, optional: true, required: false
-  private _tlsRsaWithAes256CbcSha256CiphersEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _tlsRsaWithAes256CbcSha256CiphersEnabled?: boolean | cdktf.IResolvable; 
   public get tlsRsaWithAes256CbcSha256CiphersEnabled() {
     return this.getBooleanAttribute('tls_rsa_with_aes256_cbc_sha256_ciphers_enabled') as any;
   }
-  public set tlsRsaWithAes256CbcSha256CiphersEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set tlsRsaWithAes256CbcSha256CiphersEnabled(value: boolean | cdktf.IResolvable) {
     this._tlsRsaWithAes256CbcSha256CiphersEnabled = value;
   }
   public resetTlsRsaWithAes256CbcSha256CiphersEnabled() {
@@ -1051,15 +1272,15 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get tlsRsaWithAes256CbcSha256CiphersEnabledInput() {
-    return this._tlsRsaWithAes256CbcSha256CiphersEnabled
+    return this._tlsRsaWithAes256CbcSha256CiphersEnabled;
   }
 
   // tls_rsa_with_aes256_cbc_sha_ciphers_enabled - computed: false, optional: true, required: false
-  private _tlsRsaWithAes256CbcShaCiphersEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _tlsRsaWithAes256CbcShaCiphersEnabled?: boolean | cdktf.IResolvable; 
   public get tlsRsaWithAes256CbcShaCiphersEnabled() {
     return this.getBooleanAttribute('tls_rsa_with_aes256_cbc_sha_ciphers_enabled') as any;
   }
-  public set tlsRsaWithAes256CbcShaCiphersEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set tlsRsaWithAes256CbcShaCiphersEnabled(value: boolean | cdktf.IResolvable) {
     this._tlsRsaWithAes256CbcShaCiphersEnabled = value;
   }
   public resetTlsRsaWithAes256CbcShaCiphersEnabled() {
@@ -1067,15 +1288,15 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get tlsRsaWithAes256CbcShaCiphersEnabledInput() {
-    return this._tlsRsaWithAes256CbcShaCiphersEnabled
+    return this._tlsRsaWithAes256CbcShaCiphersEnabled;
   }
 
   // triple_des_ciphers_enabled - computed: true, optional: true, required: false
-  private _tripleDesCiphersEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _tripleDesCiphersEnabled?: boolean | cdktf.IResolvable; 
   public get tripleDesCiphersEnabled() {
     return this.getBooleanAttribute('triple_des_ciphers_enabled') as any;
   }
-  public set tripleDesCiphersEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set tripleDesCiphersEnabled(value: boolean | cdktf.IResolvable) {
     this._tripleDesCiphersEnabled = value;
   }
   public resetTripleDesCiphersEnabled() {
@@ -1083,7 +1304,7 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get tripleDesCiphersEnabledInput() {
-    return this._tripleDesCiphersEnabled
+    return this._tripleDesCiphersEnabled;
   }
 }
 export interface ApiManagementSignIn {
@@ -1093,7 +1314,7 @@ export interface ApiManagementSignIn {
   readonly enabled: boolean | cdktf.IResolvable;
 }
 
-function apiManagementSignInToTerraform(struct?: ApiManagementSignInOutputReference | ApiManagementSignIn): any {
+export function apiManagementSignInToTerraform(struct?: ApiManagementSignInOutputReference | ApiManagementSignIn): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1113,6 +1334,25 @@ export class ApiManagementSignInOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementSignIn | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementSignIn | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+    }
+  }
+
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
@@ -1123,7 +1363,7 @@ export class ApiManagementSignInOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 }
 export interface ApiManagementSignUpTermsOfService {
@@ -1141,7 +1381,7 @@ export interface ApiManagementSignUpTermsOfService {
   readonly text?: string;
 }
 
-function apiManagementSignUpTermsOfServiceToTerraform(struct?: ApiManagementSignUpTermsOfServiceOutputReference | ApiManagementSignUpTermsOfService): any {
+export function apiManagementSignUpTermsOfServiceToTerraform(struct?: ApiManagementSignUpTermsOfServiceOutputReference | ApiManagementSignUpTermsOfService): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1163,6 +1403,37 @@ export class ApiManagementSignUpTermsOfServiceOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementSignUpTermsOfService | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._consentRequired) {
+      hasAnyValues = true;
+      internalValueResult.consentRequired = this._consentRequired;
+    }
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._text) {
+      hasAnyValues = true;
+      internalValueResult.text = this._text;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementSignUpTermsOfService | undefined) {
+    if (value === undefined) {
+      this._consentRequired = undefined;
+      this._enabled = undefined;
+      this._text = undefined;
+    }
+    else {
+      this._consentRequired = value.consentRequired;
+      this._enabled = value.enabled;
+      this._text = value.text;
+    }
+  }
+
   // consent_required - computed: false, optional: false, required: true
   private _consentRequired?: boolean | cdktf.IResolvable; 
   public get consentRequired() {
@@ -1173,7 +1444,7 @@ export class ApiManagementSignUpTermsOfServiceOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get consentRequiredInput() {
-    return this._consentRequired
+    return this._consentRequired;
   }
 
   // enabled - computed: false, optional: false, required: true
@@ -1186,15 +1457,15 @@ export class ApiManagementSignUpTermsOfServiceOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // text - computed: false, optional: true, required: false
-  private _text?: string | undefined; 
+  private _text?: string; 
   public get text() {
     return this.getStringAttribute('text');
   }
-  public set text(value: string | undefined) {
+  public set text(value: string) {
     this._text = value;
   }
   public resetText() {
@@ -1202,7 +1473,7 @@ export class ApiManagementSignUpTermsOfServiceOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get textInput() {
-    return this._text
+    return this._text;
   }
 }
 export interface ApiManagementSignUp {
@@ -1218,7 +1489,7 @@ export interface ApiManagementSignUp {
   readonly termsOfService: ApiManagementSignUpTermsOfService;
 }
 
-function apiManagementSignUpToTerraform(struct?: ApiManagementSignUpOutputReference | ApiManagementSignUp): any {
+export function apiManagementSignUpToTerraform(struct?: ApiManagementSignUpOutputReference | ApiManagementSignUp): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1239,6 +1510,31 @@ export class ApiManagementSignUpOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementSignUp | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._termsOfService) {
+      hasAnyValues = true;
+      internalValueResult.termsOfService = this._termsOfService?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementSignUp | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+      this._termsOfService.internalValue = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+      this._termsOfService.internalValue = value.termsOfService;
+    }
+  }
+
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
@@ -1249,21 +1545,20 @@ export class ApiManagementSignUpOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // terms_of_service - computed: false, optional: false, required: true
-  private _termsOfService?: ApiManagementSignUpTermsOfService; 
-  private __termsOfServiceOutput = new ApiManagementSignUpTermsOfServiceOutputReference(this as any, "terms_of_service", true);
+  private _termsOfService = new ApiManagementSignUpTermsOfServiceOutputReference(this as any, "terms_of_service", true);
   public get termsOfService() {
-    return this.__termsOfServiceOutput;
+    return this._termsOfService;
   }
   public putTermsOfService(value: ApiManagementSignUpTermsOfService) {
-    this._termsOfService = value;
+    this._termsOfService.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get termsOfServiceInput() {
-    return this._termsOfService
+    return this._termsOfService.internalValue;
   }
 }
 export interface ApiManagementTenantAccess {
@@ -1273,7 +1568,7 @@ export interface ApiManagementTenantAccess {
   readonly enabled: boolean | cdktf.IResolvable;
 }
 
-function apiManagementTenantAccessToTerraform(struct?: ApiManagementTenantAccessOutputReference | ApiManagementTenantAccess): any {
+export function apiManagementTenantAccessToTerraform(struct?: ApiManagementTenantAccessOutputReference | ApiManagementTenantAccess): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1293,6 +1588,25 @@ export class ApiManagementTenantAccessOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementTenantAccess | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementTenantAccess | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+    }
+  }
+
   // enabled - computed: false, optional: false, required: true
   private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
@@ -1303,7 +1617,7 @@ export class ApiManagementTenantAccessOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 }
 export interface ApiManagementTimeouts {
@@ -1325,7 +1639,7 @@ export interface ApiManagementTimeouts {
   readonly update?: string;
 }
 
-function apiManagementTimeoutsToTerraform(struct?: ApiManagementTimeoutsOutputReference | ApiManagementTimeouts): any {
+export function apiManagementTimeoutsToTerraform(struct?: ApiManagementTimeoutsOutputReference | ApiManagementTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1348,12 +1662,49 @@ export class ApiManagementTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -1361,15 +1712,15 @@ export class ApiManagementTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -1377,15 +1728,15 @@ export class ApiManagementTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -1393,15 +1744,15 @@ export class ApiManagementTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -1409,7 +1760,7 @@ export class ApiManagementTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface ApiManagementVirtualNetworkConfiguration {
@@ -1419,7 +1770,7 @@ export interface ApiManagementVirtualNetworkConfiguration {
   readonly subnetId: string;
 }
 
-function apiManagementVirtualNetworkConfigurationToTerraform(struct?: ApiManagementVirtualNetworkConfigurationOutputReference | ApiManagementVirtualNetworkConfiguration): any {
+export function apiManagementVirtualNetworkConfigurationToTerraform(struct?: ApiManagementVirtualNetworkConfigurationOutputReference | ApiManagementVirtualNetworkConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1439,6 +1790,25 @@ export class ApiManagementVirtualNetworkConfigurationOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementVirtualNetworkConfiguration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._subnetId) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementVirtualNetworkConfiguration | undefined) {
+    if (value === undefined) {
+      this._subnetId = undefined;
+    }
+    else {
+      this._subnetId = value.subnetId;
+    }
+  }
+
   // subnet_id - computed: false, optional: false, required: true
   private _subnetId?: string; 
   public get subnetId() {
@@ -1449,7 +1819,7 @@ export class ApiManagementVirtualNetworkConfigurationOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get subnetIdInput() {
-    return this._subnetId
+    return this._subnetId;
   }
 }
 
@@ -1501,15 +1871,15 @@ export class ApiManagement extends cdktf.TerraformResource {
     this._zones = config.zones;
     this._additionalLocation = config.additionalLocation;
     this._certificate = config.certificate;
-    this._hostnameConfiguration = config.hostnameConfiguration;
-    this._identity = config.identity;
-    this._protocols = config.protocols;
-    this._security = config.security;
-    this._signIn = config.signIn;
-    this._signUp = config.signUp;
-    this._tenantAccess = config.tenantAccess;
-    this._timeouts = config.timeouts;
-    this._virtualNetworkConfiguration = config.virtualNetworkConfiguration;
+    this._hostnameConfiguration.internalValue = config.hostnameConfiguration;
+    this._identity.internalValue = config.identity;
+    this._protocols.internalValue = config.protocols;
+    this._security.internalValue = config.security;
+    this._signIn.internalValue = config.signIn;
+    this._signUp.internalValue = config.signUp;
+    this._tenantAccess.internalValue = config.tenantAccess;
+    this._timeouts.internalValue = config.timeouts;
+    this._virtualNetworkConfiguration.internalValue = config.virtualNetworkConfiguration;
   }
 
   // ==========
@@ -1517,11 +1887,11 @@ export class ApiManagement extends cdktf.TerraformResource {
   // ==========
 
   // client_certificate_enabled - computed: false, optional: true, required: false
-  private _clientCertificateEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _clientCertificateEnabled?: boolean | cdktf.IResolvable; 
   public get clientCertificateEnabled() {
     return this.getBooleanAttribute('client_certificate_enabled') as any;
   }
-  public set clientCertificateEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set clientCertificateEnabled(value: boolean | cdktf.IResolvable) {
     this._clientCertificateEnabled = value;
   }
   public resetClientCertificateEnabled() {
@@ -1529,7 +1899,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get clientCertificateEnabledInput() {
-    return this._clientCertificateEnabled
+    return this._clientCertificateEnabled;
   }
 
   // developer_portal_url - computed: true, optional: false, required: false
@@ -1538,11 +1908,11 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
 
   // gateway_disabled - computed: false, optional: true, required: false
-  private _gatewayDisabled?: boolean | cdktf.IResolvable | undefined; 
+  private _gatewayDisabled?: boolean | cdktf.IResolvable; 
   public get gatewayDisabled() {
     return this.getBooleanAttribute('gateway_disabled') as any;
   }
-  public set gatewayDisabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set gatewayDisabled(value: boolean | cdktf.IResolvable) {
     this._gatewayDisabled = value;
   }
   public resetGatewayDisabled() {
@@ -1550,7 +1920,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get gatewayDisabledInput() {
-    return this._gatewayDisabled
+    return this._gatewayDisabled;
   }
 
   // gateway_regional_url - computed: true, optional: false, required: false
@@ -1578,7 +1948,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // management_api_url - computed: true, optional: false, required: false
@@ -1587,11 +1957,11 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
 
   // min_api_version - computed: false, optional: true, required: false
-  private _minApiVersion?: string | undefined; 
+  private _minApiVersion?: string; 
   public get minApiVersion() {
     return this.getStringAttribute('min_api_version');
   }
-  public set minApiVersion(value: string | undefined) {
+  public set minApiVersion(value: string) {
     this._minApiVersion = value;
   }
   public resetMinApiVersion() {
@@ -1599,7 +1969,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get minApiVersionInput() {
-    return this._minApiVersion
+    return this._minApiVersion;
   }
 
   // name - computed: false, optional: false, required: true
@@ -1612,15 +1982,15 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // notification_sender_email - computed: true, optional: true, required: false
-  private _notificationSenderEmail?: string | undefined; 
+  private _notificationSenderEmail?: string; 
   public get notificationSenderEmail() {
     return this.getStringAttribute('notification_sender_email');
   }
-  public set notificationSenderEmail(value: string | undefined) {
+  public set notificationSenderEmail(value: string) {
     this._notificationSenderEmail = value;
   }
   public resetNotificationSenderEmail() {
@@ -1628,16 +1998,16 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get notificationSenderEmailInput() {
-    return this._notificationSenderEmail
+    return this._notificationSenderEmail;
   }
 
   // policy - computed: true, optional: true, required: false
-  private _policy?: ApiManagementPolicy[] | undefined; 
+  private _policy?: ApiManagementPolicy[]; 
   public get policy() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('policy') as any;
   }
-  public set policy(value: ApiManagementPolicy[] | undefined) {
+  public set policy(value: ApiManagementPolicy[]) {
     this._policy = value;
   }
   public resetPolicy() {
@@ -1645,7 +2015,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get policyInput() {
-    return this._policy
+    return this._policy;
   }
 
   // portal_url - computed: true, optional: false, required: false
@@ -1673,7 +2043,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get publisherEmailInput() {
-    return this._publisherEmail
+    return this._publisherEmail;
   }
 
   // publisher_name - computed: false, optional: false, required: true
@@ -1686,7 +2056,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get publisherNameInput() {
-    return this._publisherName
+    return this._publisherName;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -1699,7 +2069,7 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // scm_url - computed: true, optional: false, required: false
@@ -1717,16 +2087,16 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuNameInput() {
-    return this._skuName
+    return this._skuName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -1734,15 +2104,15 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // virtual_network_type - computed: false, optional: true, required: false
-  private _virtualNetworkType?: string | undefined; 
+  private _virtualNetworkType?: string; 
   public get virtualNetworkType() {
     return this.getStringAttribute('virtual_network_type');
   }
-  public set virtualNetworkType(value: string | undefined) {
+  public set virtualNetworkType(value: string) {
     this._virtualNetworkType = value;
   }
   public resetVirtualNetworkType() {
@@ -1750,15 +2120,15 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get virtualNetworkTypeInput() {
-    return this._virtualNetworkType
+    return this._virtualNetworkType;
   }
 
   // zones - computed: false, optional: true, required: false
-  private _zones?: string[] | undefined; 
+  private _zones?: string[]; 
   public get zones() {
     return this.getListAttribute('zones');
   }
-  public set zones(value: string[] | undefined) {
+  public set zones(value: string[]) {
     this._zones = value;
   }
   public resetZones() {
@@ -1766,16 +2136,16 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get zonesInput() {
-    return this._zones
+    return this._zones;
   }
 
   // additional_location - computed: false, optional: true, required: false
-  private _additionalLocation?: ApiManagementAdditionalLocation[] | undefined; 
+  private _additionalLocation?: ApiManagementAdditionalLocation[]; 
   public get additionalLocation() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_location') as any;
   }
-  public set additionalLocation(value: ApiManagementAdditionalLocation[] | undefined) {
+  public set additionalLocation(value: ApiManagementAdditionalLocation[]) {
     this._additionalLocation = value;
   }
   public resetAdditionalLocation() {
@@ -1783,16 +2153,16 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get additionalLocationInput() {
-    return this._additionalLocation
+    return this._additionalLocation;
   }
 
   // certificate - computed: false, optional: true, required: false
-  private _certificate?: ApiManagementCertificate[] | undefined; 
+  private _certificate?: ApiManagementCertificate[]; 
   public get certificate() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('certificate') as any;
   }
-  public set certificate(value: ApiManagementCertificate[] | undefined) {
+  public set certificate(value: ApiManagementCertificate[]) {
     this._certificate = value;
   }
   public resetCertificate() {
@@ -1800,160 +2170,151 @@ export class ApiManagement extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get certificateInput() {
-    return this._certificate
+    return this._certificate;
   }
 
   // hostname_configuration - computed: false, optional: true, required: false
-  private _hostnameConfiguration?: ApiManagementHostnameConfiguration | undefined; 
-  private __hostnameConfigurationOutput = new ApiManagementHostnameConfigurationOutputReference(this as any, "hostname_configuration", true);
+  private _hostnameConfiguration = new ApiManagementHostnameConfigurationOutputReference(this as any, "hostname_configuration", true);
   public get hostnameConfiguration() {
-    return this.__hostnameConfigurationOutput;
+    return this._hostnameConfiguration;
   }
-  public putHostnameConfiguration(value: ApiManagementHostnameConfiguration | undefined) {
-    this._hostnameConfiguration = value;
+  public putHostnameConfiguration(value: ApiManagementHostnameConfiguration) {
+    this._hostnameConfiguration.internalValue = value;
   }
   public resetHostnameConfiguration() {
-    this._hostnameConfiguration = undefined;
+    this._hostnameConfiguration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get hostnameConfigurationInput() {
-    return this._hostnameConfiguration
+    return this._hostnameConfiguration.internalValue;
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: ApiManagementIdentity | undefined; 
-  private __identityOutput = new ApiManagementIdentityOutputReference(this as any, "identity", true);
+  private _identity = new ApiManagementIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.__identityOutput;
+    return this._identity;
   }
-  public putIdentity(value: ApiManagementIdentity | undefined) {
-    this._identity = value;
+  public putIdentity(value: ApiManagementIdentity) {
+    this._identity.internalValue = value;
   }
   public resetIdentity() {
-    this._identity = undefined;
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
-    return this._identity
+    return this._identity.internalValue;
   }
 
   // protocols - computed: false, optional: true, required: false
-  private _protocols?: ApiManagementProtocols | undefined; 
-  private __protocolsOutput = new ApiManagementProtocolsOutputReference(this as any, "protocols", true);
+  private _protocols = new ApiManagementProtocolsOutputReference(this as any, "protocols", true);
   public get protocols() {
-    return this.__protocolsOutput;
+    return this._protocols;
   }
-  public putProtocols(value: ApiManagementProtocols | undefined) {
-    this._protocols = value;
+  public putProtocols(value: ApiManagementProtocols) {
+    this._protocols.internalValue = value;
   }
   public resetProtocols() {
-    this._protocols = undefined;
+    this._protocols.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get protocolsInput() {
-    return this._protocols
+    return this._protocols.internalValue;
   }
 
   // security - computed: false, optional: true, required: false
-  private _security?: ApiManagementSecurity | undefined; 
-  private __securityOutput = new ApiManagementSecurityOutputReference(this as any, "security", true);
+  private _security = new ApiManagementSecurityOutputReference(this as any, "security", true);
   public get security() {
-    return this.__securityOutput;
+    return this._security;
   }
-  public putSecurity(value: ApiManagementSecurity | undefined) {
-    this._security = value;
+  public putSecurity(value: ApiManagementSecurity) {
+    this._security.internalValue = value;
   }
   public resetSecurity() {
-    this._security = undefined;
+    this._security.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get securityInput() {
-    return this._security
+    return this._security.internalValue;
   }
 
   // sign_in - computed: false, optional: true, required: false
-  private _signIn?: ApiManagementSignIn | undefined; 
-  private __signInOutput = new ApiManagementSignInOutputReference(this as any, "sign_in", true);
+  private _signIn = new ApiManagementSignInOutputReference(this as any, "sign_in", true);
   public get signIn() {
-    return this.__signInOutput;
+    return this._signIn;
   }
-  public putSignIn(value: ApiManagementSignIn | undefined) {
-    this._signIn = value;
+  public putSignIn(value: ApiManagementSignIn) {
+    this._signIn.internalValue = value;
   }
   public resetSignIn() {
-    this._signIn = undefined;
+    this._signIn.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get signInInput() {
-    return this._signIn
+    return this._signIn.internalValue;
   }
 
   // sign_up - computed: false, optional: true, required: false
-  private _signUp?: ApiManagementSignUp | undefined; 
-  private __signUpOutput = new ApiManagementSignUpOutputReference(this as any, "sign_up", true);
+  private _signUp = new ApiManagementSignUpOutputReference(this as any, "sign_up", true);
   public get signUp() {
-    return this.__signUpOutput;
+    return this._signUp;
   }
-  public putSignUp(value: ApiManagementSignUp | undefined) {
-    this._signUp = value;
+  public putSignUp(value: ApiManagementSignUp) {
+    this._signUp.internalValue = value;
   }
   public resetSignUp() {
-    this._signUp = undefined;
+    this._signUp.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get signUpInput() {
-    return this._signUp
+    return this._signUp.internalValue;
   }
 
   // tenant_access - computed: false, optional: true, required: false
-  private _tenantAccess?: ApiManagementTenantAccess | undefined; 
-  private __tenantAccessOutput = new ApiManagementTenantAccessOutputReference(this as any, "tenant_access", true);
+  private _tenantAccess = new ApiManagementTenantAccessOutputReference(this as any, "tenant_access", true);
   public get tenantAccess() {
-    return this.__tenantAccessOutput;
+    return this._tenantAccess;
   }
-  public putTenantAccess(value: ApiManagementTenantAccess | undefined) {
-    this._tenantAccess = value;
+  public putTenantAccess(value: ApiManagementTenantAccess) {
+    this._tenantAccess.internalValue = value;
   }
   public resetTenantAccess() {
-    this._tenantAccess = undefined;
+    this._tenantAccess.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get tenantAccessInput() {
-    return this._tenantAccess
+    return this._tenantAccess.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ApiManagementTimeouts | undefined; 
-  private __timeoutsOutput = new ApiManagementTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApiManagementTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ApiManagementTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ApiManagementTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // virtual_network_configuration - computed: false, optional: true, required: false
-  private _virtualNetworkConfiguration?: ApiManagementVirtualNetworkConfiguration | undefined; 
-  private __virtualNetworkConfigurationOutput = new ApiManagementVirtualNetworkConfigurationOutputReference(this as any, "virtual_network_configuration", true);
+  private _virtualNetworkConfiguration = new ApiManagementVirtualNetworkConfigurationOutputReference(this as any, "virtual_network_configuration", true);
   public get virtualNetworkConfiguration() {
-    return this.__virtualNetworkConfigurationOutput;
+    return this._virtualNetworkConfiguration;
   }
-  public putVirtualNetworkConfiguration(value: ApiManagementVirtualNetworkConfiguration | undefined) {
-    this._virtualNetworkConfiguration = value;
+  public putVirtualNetworkConfiguration(value: ApiManagementVirtualNetworkConfiguration) {
+    this._virtualNetworkConfiguration.internalValue = value;
   }
   public resetVirtualNetworkConfiguration() {
-    this._virtualNetworkConfiguration = undefined;
+    this._virtualNetworkConfiguration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get virtualNetworkConfigurationInput() {
-    return this._virtualNetworkConfiguration
+    return this._virtualNetworkConfiguration.internalValue;
   }
 
   // =========
@@ -1978,15 +2339,15 @@ export class ApiManagement extends cdktf.TerraformResource {
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),
       additional_location: cdktf.listMapper(apiManagementAdditionalLocationToTerraform)(this._additionalLocation),
       certificate: cdktf.listMapper(apiManagementCertificateToTerraform)(this._certificate),
-      hostname_configuration: apiManagementHostnameConfigurationToTerraform(this._hostnameConfiguration),
-      identity: apiManagementIdentityToTerraform(this._identity),
-      protocols: apiManagementProtocolsToTerraform(this._protocols),
-      security: apiManagementSecurityToTerraform(this._security),
-      sign_in: apiManagementSignInToTerraform(this._signIn),
-      sign_up: apiManagementSignUpToTerraform(this._signUp),
-      tenant_access: apiManagementTenantAccessToTerraform(this._tenantAccess),
-      timeouts: apiManagementTimeoutsToTerraform(this._timeouts),
-      virtual_network_configuration: apiManagementVirtualNetworkConfigurationToTerraform(this._virtualNetworkConfiguration),
+      hostname_configuration: apiManagementHostnameConfigurationToTerraform(this._hostnameConfiguration.internalValue),
+      identity: apiManagementIdentityToTerraform(this._identity.internalValue),
+      protocols: apiManagementProtocolsToTerraform(this._protocols.internalValue),
+      security: apiManagementSecurityToTerraform(this._security.internalValue),
+      sign_in: apiManagementSignInToTerraform(this._signIn.internalValue),
+      sign_up: apiManagementSignUpToTerraform(this._signUp.internalValue),
+      tenant_access: apiManagementTenantAccessToTerraform(this._tenantAccess.internalValue),
+      timeouts: apiManagementTimeoutsToTerraform(this._timeouts.internalValue),
+      virtual_network_configuration: apiManagementVirtualNetworkConfigurationToTerraform(this._virtualNetworkConfiguration.internalValue),
     };
   }
 }

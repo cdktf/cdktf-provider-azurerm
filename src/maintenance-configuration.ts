@@ -67,7 +67,7 @@ export interface MaintenanceConfigurationTimeouts {
   readonly update?: string;
 }
 
-function maintenanceConfigurationTimeoutsToTerraform(struct?: MaintenanceConfigurationTimeoutsOutputReference | MaintenanceConfigurationTimeouts): any {
+export function maintenanceConfigurationTimeoutsToTerraform(struct?: MaintenanceConfigurationTimeoutsOutputReference | MaintenanceConfigurationTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -90,12 +90,49 @@ export class MaintenanceConfigurationTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MaintenanceConfigurationTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MaintenanceConfigurationTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -103,15 +140,15 @@ export class MaintenanceConfigurationTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -119,15 +156,15 @@ export class MaintenanceConfigurationTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -135,15 +172,15 @@ export class MaintenanceConfigurationTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -151,7 +188,7 @@ export class MaintenanceConfigurationTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface MaintenanceConfigurationWindow {
@@ -177,7 +214,7 @@ export interface MaintenanceConfigurationWindow {
   readonly timeZone: string;
 }
 
-function maintenanceConfigurationWindowToTerraform(struct?: MaintenanceConfigurationWindowOutputReference | MaintenanceConfigurationWindow): any {
+export function maintenanceConfigurationWindowToTerraform(struct?: MaintenanceConfigurationWindowOutputReference | MaintenanceConfigurationWindow): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -201,12 +238,55 @@ export class MaintenanceConfigurationWindowOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MaintenanceConfigurationWindow | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._duration) {
+      hasAnyValues = true;
+      internalValueResult.duration = this._duration;
+    }
+    if (this._expirationDateTime) {
+      hasAnyValues = true;
+      internalValueResult.expirationDateTime = this._expirationDateTime;
+    }
+    if (this._recurEvery) {
+      hasAnyValues = true;
+      internalValueResult.recurEvery = this._recurEvery;
+    }
+    if (this._startDateTime) {
+      hasAnyValues = true;
+      internalValueResult.startDateTime = this._startDateTime;
+    }
+    if (this._timeZone) {
+      hasAnyValues = true;
+      internalValueResult.timeZone = this._timeZone;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MaintenanceConfigurationWindow | undefined) {
+    if (value === undefined) {
+      this._duration = undefined;
+      this._expirationDateTime = undefined;
+      this._recurEvery = undefined;
+      this._startDateTime = undefined;
+      this._timeZone = undefined;
+    }
+    else {
+      this._duration = value.duration;
+      this._expirationDateTime = value.expirationDateTime;
+      this._recurEvery = value.recurEvery;
+      this._startDateTime = value.startDateTime;
+      this._timeZone = value.timeZone;
+    }
+  }
+
   // duration - computed: false, optional: true, required: false
-  private _duration?: string | undefined; 
+  private _duration?: string; 
   public get duration() {
     return this.getStringAttribute('duration');
   }
-  public set duration(value: string | undefined) {
+  public set duration(value: string) {
     this._duration = value;
   }
   public resetDuration() {
@@ -214,15 +294,15 @@ export class MaintenanceConfigurationWindowOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get durationInput() {
-    return this._duration
+    return this._duration;
   }
 
   // expiration_date_time - computed: false, optional: true, required: false
-  private _expirationDateTime?: string | undefined; 
+  private _expirationDateTime?: string; 
   public get expirationDateTime() {
     return this.getStringAttribute('expiration_date_time');
   }
-  public set expirationDateTime(value: string | undefined) {
+  public set expirationDateTime(value: string) {
     this._expirationDateTime = value;
   }
   public resetExpirationDateTime() {
@@ -230,15 +310,15 @@ export class MaintenanceConfigurationWindowOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get expirationDateTimeInput() {
-    return this._expirationDateTime
+    return this._expirationDateTime;
   }
 
   // recur_every - computed: false, optional: true, required: false
-  private _recurEvery?: string | undefined; 
+  private _recurEvery?: string; 
   public get recurEvery() {
     return this.getStringAttribute('recur_every');
   }
-  public set recurEvery(value: string | undefined) {
+  public set recurEvery(value: string) {
     this._recurEvery = value;
   }
   public resetRecurEvery() {
@@ -246,7 +326,7 @@ export class MaintenanceConfigurationWindowOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get recurEveryInput() {
-    return this._recurEvery
+    return this._recurEvery;
   }
 
   // start_date_time - computed: false, optional: false, required: true
@@ -259,7 +339,7 @@ export class MaintenanceConfigurationWindowOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get startDateTimeInput() {
-    return this._startDateTime
+    return this._startDateTime;
   }
 
   // time_zone - computed: false, optional: false, required: true
@@ -272,7 +352,7 @@ export class MaintenanceConfigurationWindowOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get timeZoneInput() {
-    return this._timeZone
+    return this._timeZone;
   }
 }
 
@@ -315,8 +395,8 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
     this._scope = config.scope;
     this._tags = config.tags;
     this._visibility = config.visibility;
-    this._timeouts = config.timeouts;
-    this._window = config.window;
+    this._timeouts.internalValue = config.timeouts;
+    this._window.internalValue = config.window;
   }
 
   // ==========
@@ -338,7 +418,7 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -351,16 +431,16 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // properties - computed: false, optional: true, required: false
-  private _properties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _properties?: { [key: string]: string } | cdktf.IResolvable; 
   public get properties() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('properties') as any;
   }
-  public set properties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set properties(value: { [key: string]: string } | cdktf.IResolvable) {
     this._properties = value;
   }
   public resetProperties() {
@@ -368,7 +448,7 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get propertiesInput() {
-    return this._properties
+    return this._properties;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -381,15 +461,15 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // scope - computed: false, optional: true, required: false
-  private _scope?: string | undefined; 
+  private _scope?: string; 
   public get scope() {
     return this.getStringAttribute('scope');
   }
-  public set scope(value: string | undefined) {
+  public set scope(value: string) {
     this._scope = value;
   }
   public resetScope() {
@@ -397,16 +477,16 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get scopeInput() {
-    return this._scope
+    return this._scope;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -414,15 +494,15 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // visibility - computed: false, optional: true, required: false
-  private _visibility?: string | undefined; 
+  private _visibility?: string; 
   public get visibility() {
     return this.getStringAttribute('visibility');
   }
-  public set visibility(value: string | undefined) {
+  public set visibility(value: string) {
     this._visibility = value;
   }
   public resetVisibility() {
@@ -430,41 +510,39 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get visibilityInput() {
-    return this._visibility
+    return this._visibility;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MaintenanceConfigurationTimeouts | undefined; 
-  private __timeoutsOutput = new MaintenanceConfigurationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MaintenanceConfigurationTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MaintenanceConfigurationTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MaintenanceConfigurationTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // window - computed: false, optional: true, required: false
-  private _window?: MaintenanceConfigurationWindow | undefined; 
-  private __windowOutput = new MaintenanceConfigurationWindowOutputReference(this as any, "window", true);
+  private _window = new MaintenanceConfigurationWindowOutputReference(this as any, "window", true);
   public get window() {
-    return this.__windowOutput;
+    return this._window;
   }
-  public putWindow(value: MaintenanceConfigurationWindow | undefined) {
-    this._window = value;
+  public putWindow(value: MaintenanceConfigurationWindow) {
+    this._window.internalValue = value;
   }
   public resetWindow() {
-    this._window = undefined;
+    this._window.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get windowInput() {
-    return this._window
+    return this._window.internalValue;
   }
 
   // =========
@@ -480,8 +558,8 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
       scope: cdktf.stringToTerraform(this._scope),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       visibility: cdktf.stringToTerraform(this._visibility),
-      timeouts: maintenanceConfigurationTimeoutsToTerraform(this._timeouts),
-      window: maintenanceConfigurationWindowToTerraform(this._window),
+      timeouts: maintenanceConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
+      window: maintenanceConfigurationWindowToTerraform(this._window.internalValue),
     };
   }
 }

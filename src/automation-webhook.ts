@@ -69,7 +69,7 @@ export interface AutomationWebhookTimeouts {
   readonly update?: string;
 }
 
-function automationWebhookTimeoutsToTerraform(struct?: AutomationWebhookTimeoutsOutputReference | AutomationWebhookTimeouts): any {
+export function automationWebhookTimeoutsToTerraform(struct?: AutomationWebhookTimeoutsOutputReference | AutomationWebhookTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -92,12 +92,49 @@ export class AutomationWebhookTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AutomationWebhookTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AutomationWebhookTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -105,15 +142,15 @@ export class AutomationWebhookTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -121,15 +158,15 @@ export class AutomationWebhookTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -137,15 +174,15 @@ export class AutomationWebhookTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -153,7 +190,7 @@ export class AutomationWebhookTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -198,7 +235,7 @@ export class AutomationWebhook extends cdktf.TerraformResource {
     this._runOnWorkerGroup = config.runOnWorkerGroup;
     this._runbookName = config.runbookName;
     this._uri = config.uri;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -215,15 +252,15 @@ export class AutomationWebhook extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get automationAccountNameInput() {
-    return this._automationAccountName
+    return this._automationAccountName;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -231,7 +268,7 @@ export class AutomationWebhook extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // expiry_time - computed: false, optional: false, required: true
@@ -244,7 +281,7 @@ export class AutomationWebhook extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get expiryTimeInput() {
-    return this._expiryTime
+    return this._expiryTime;
   }
 
   // id - computed: true, optional: true, required: false
@@ -262,16 +299,16 @@ export class AutomationWebhook extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -279,7 +316,7 @@ export class AutomationWebhook extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -292,15 +329,15 @@ export class AutomationWebhook extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // run_on_worker_group - computed: false, optional: true, required: false
-  private _runOnWorkerGroup?: string | undefined; 
+  private _runOnWorkerGroup?: string; 
   public get runOnWorkerGroup() {
     return this.getStringAttribute('run_on_worker_group');
   }
-  public set runOnWorkerGroup(value: string | undefined) {
+  public set runOnWorkerGroup(value: string) {
     this._runOnWorkerGroup = value;
   }
   public resetRunOnWorkerGroup() {
@@ -308,7 +345,7 @@ export class AutomationWebhook extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get runOnWorkerGroupInput() {
-    return this._runOnWorkerGroup
+    return this._runOnWorkerGroup;
   }
 
   // runbook_name - computed: false, optional: false, required: true
@@ -321,15 +358,15 @@ export class AutomationWebhook extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get runbookNameInput() {
-    return this._runbookName
+    return this._runbookName;
   }
 
   // uri - computed: true, optional: true, required: false
-  private _uri?: string | undefined; 
+  private _uri?: string; 
   public get uri() {
     return this.getStringAttribute('uri');
   }
-  public set uri(value: string | undefined) {
+  public set uri(value: string) {
     this._uri = value;
   }
   public resetUri() {
@@ -337,24 +374,23 @@ export class AutomationWebhook extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get uriInput() {
-    return this._uri
+    return this._uri;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AutomationWebhookTimeouts | undefined; 
-  private __timeoutsOutput = new AutomationWebhookTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AutomationWebhookTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: AutomationWebhookTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: AutomationWebhookTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -372,7 +408,7 @@ export class AutomationWebhook extends cdktf.TerraformResource {
       run_on_worker_group: cdktf.stringToTerraform(this._runOnWorkerGroup),
       runbook_name: cdktf.stringToTerraform(this._runbookName),
       uri: cdktf.stringToTerraform(this._uri),
-      timeouts: automationWebhookTimeoutsToTerraform(this._timeouts),
+      timeouts: automationWebhookTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -57,7 +57,7 @@ export interface SpringCloudAppIdentity {
   readonly type?: string;
 }
 
-function springCloudAppIdentityToTerraform(struct?: SpringCloudAppIdentityOutputReference | SpringCloudAppIdentity): any {
+export function springCloudAppIdentityToTerraform(struct?: SpringCloudAppIdentityOutputReference | SpringCloudAppIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -77,12 +77,31 @@ export class SpringCloudAppIdentityOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SpringCloudAppIdentity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpringCloudAppIdentity | undefined) {
+    if (value === undefined) {
+      this._type = undefined;
+    }
+    else {
+      this._type = value.type;
+    }
+  }
+
   // type - computed: false, optional: true, required: false
-  private _type?: string | undefined; 
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string | undefined) {
+  public set type(value: string) {
     this._type = value;
   }
   public resetType() {
@@ -90,7 +109,7 @@ export class SpringCloudAppIdentityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface SpringCloudAppPersistentDisk {
@@ -104,7 +123,7 @@ export interface SpringCloudAppPersistentDisk {
   readonly sizeInGb: number;
 }
 
-function springCloudAppPersistentDiskToTerraform(struct?: SpringCloudAppPersistentDiskOutputReference | SpringCloudAppPersistentDisk): any {
+export function springCloudAppPersistentDiskToTerraform(struct?: SpringCloudAppPersistentDiskOutputReference | SpringCloudAppPersistentDisk): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -125,12 +144,37 @@ export class SpringCloudAppPersistentDiskOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SpringCloudAppPersistentDisk | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._mountPath) {
+      hasAnyValues = true;
+      internalValueResult.mountPath = this._mountPath;
+    }
+    if (this._sizeInGb) {
+      hasAnyValues = true;
+      internalValueResult.sizeInGb = this._sizeInGb;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpringCloudAppPersistentDisk | undefined) {
+    if (value === undefined) {
+      this._mountPath = undefined;
+      this._sizeInGb = undefined;
+    }
+    else {
+      this._mountPath = value.mountPath;
+      this._sizeInGb = value.sizeInGb;
+    }
+  }
+
   // mount_path - computed: false, optional: true, required: false
-  private _mountPath?: string | undefined; 
+  private _mountPath?: string; 
   public get mountPath() {
     return this.getStringAttribute('mount_path');
   }
-  public set mountPath(value: string | undefined) {
+  public set mountPath(value: string) {
     this._mountPath = value;
   }
   public resetMountPath() {
@@ -138,7 +182,7 @@ export class SpringCloudAppPersistentDiskOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get mountPathInput() {
-    return this._mountPath
+    return this._mountPath;
   }
 
   // size_in_gb - computed: false, optional: false, required: true
@@ -151,7 +195,7 @@ export class SpringCloudAppPersistentDiskOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get sizeInGbInput() {
-    return this._sizeInGb
+    return this._sizeInGb;
   }
 }
 export interface SpringCloudAppTimeouts {
@@ -173,7 +217,7 @@ export interface SpringCloudAppTimeouts {
   readonly update?: string;
 }
 
-function springCloudAppTimeoutsToTerraform(struct?: SpringCloudAppTimeoutsOutputReference | SpringCloudAppTimeouts): any {
+export function springCloudAppTimeoutsToTerraform(struct?: SpringCloudAppTimeoutsOutputReference | SpringCloudAppTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -196,12 +240,49 @@ export class SpringCloudAppTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SpringCloudAppTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SpringCloudAppTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -209,15 +290,15 @@ export class SpringCloudAppTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -225,15 +306,15 @@ export class SpringCloudAppTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -241,15 +322,15 @@ export class SpringCloudAppTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -257,7 +338,7 @@ export class SpringCloudAppTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -299,9 +380,9 @@ export class SpringCloudApp extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._serviceName = config.serviceName;
     this._tlsEnabled = config.tlsEnabled;
-    this._identity = config.identity;
-    this._persistentDisk = config.persistentDisk;
-    this._timeouts = config.timeouts;
+    this._identity.internalValue = config.identity;
+    this._persistentDisk.internalValue = config.persistentDisk;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -314,11 +395,11 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
 
   // https_only - computed: false, optional: true, required: false
-  private _httpsOnly?: boolean | cdktf.IResolvable | undefined; 
+  private _httpsOnly?: boolean | cdktf.IResolvable; 
   public get httpsOnly() {
     return this.getBooleanAttribute('https_only') as any;
   }
-  public set httpsOnly(value: boolean | cdktf.IResolvable | undefined) {
+  public set httpsOnly(value: boolean | cdktf.IResolvable) {
     this._httpsOnly = value;
   }
   public resetHttpsOnly() {
@@ -326,7 +407,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get httpsOnlyInput() {
-    return this._httpsOnly
+    return this._httpsOnly;
   }
 
   // id - computed: true, optional: true, required: false
@@ -335,11 +416,11 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
 
   // is_public - computed: false, optional: true, required: false
-  private _isPublic?: boolean | cdktf.IResolvable | undefined; 
+  private _isPublic?: boolean | cdktf.IResolvable; 
   public get isPublic() {
     return this.getBooleanAttribute('is_public') as any;
   }
-  public set isPublic(value: boolean | cdktf.IResolvable | undefined) {
+  public set isPublic(value: boolean | cdktf.IResolvable) {
     this._isPublic = value;
   }
   public resetIsPublic() {
@@ -347,7 +428,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get isPublicInput() {
-    return this._isPublic
+    return this._isPublic;
   }
 
   // name - computed: false, optional: false, required: true
@@ -360,7 +441,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -373,7 +454,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // service_name - computed: false, optional: false, required: true
@@ -386,15 +467,15 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get serviceNameInput() {
-    return this._serviceName
+    return this._serviceName;
   }
 
   // tls_enabled - computed: false, optional: true, required: false
-  private _tlsEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _tlsEnabled?: boolean | cdktf.IResolvable; 
   public get tlsEnabled() {
     return this.getBooleanAttribute('tls_enabled') as any;
   }
-  public set tlsEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set tlsEnabled(value: boolean | cdktf.IResolvable) {
     this._tlsEnabled = value;
   }
   public resetTlsEnabled() {
@@ -402,7 +483,7 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tlsEnabledInput() {
-    return this._tlsEnabled
+    return this._tlsEnabled;
   }
 
   // url - computed: true, optional: false, required: false
@@ -411,54 +492,51 @@ export class SpringCloudApp extends cdktf.TerraformResource {
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: SpringCloudAppIdentity | undefined; 
-  private __identityOutput = new SpringCloudAppIdentityOutputReference(this as any, "identity", true);
+  private _identity = new SpringCloudAppIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.__identityOutput;
+    return this._identity;
   }
-  public putIdentity(value: SpringCloudAppIdentity | undefined) {
-    this._identity = value;
+  public putIdentity(value: SpringCloudAppIdentity) {
+    this._identity.internalValue = value;
   }
   public resetIdentity() {
-    this._identity = undefined;
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
-    return this._identity
+    return this._identity.internalValue;
   }
 
   // persistent_disk - computed: false, optional: true, required: false
-  private _persistentDisk?: SpringCloudAppPersistentDisk | undefined; 
-  private __persistentDiskOutput = new SpringCloudAppPersistentDiskOutputReference(this as any, "persistent_disk", true);
+  private _persistentDisk = new SpringCloudAppPersistentDiskOutputReference(this as any, "persistent_disk", true);
   public get persistentDisk() {
-    return this.__persistentDiskOutput;
+    return this._persistentDisk;
   }
-  public putPersistentDisk(value: SpringCloudAppPersistentDisk | undefined) {
-    this._persistentDisk = value;
+  public putPersistentDisk(value: SpringCloudAppPersistentDisk) {
+    this._persistentDisk.internalValue = value;
   }
   public resetPersistentDisk() {
-    this._persistentDisk = undefined;
+    this._persistentDisk.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get persistentDiskInput() {
-    return this._persistentDisk
+    return this._persistentDisk.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SpringCloudAppTimeouts | undefined; 
-  private __timeoutsOutput = new SpringCloudAppTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SpringCloudAppTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SpringCloudAppTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SpringCloudAppTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -473,9 +551,9 @@ export class SpringCloudApp extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_name: cdktf.stringToTerraform(this._serviceName),
       tls_enabled: cdktf.booleanToTerraform(this._tlsEnabled),
-      identity: springCloudAppIdentityToTerraform(this._identity),
-      persistent_disk: springCloudAppPersistentDiskToTerraform(this._persistentDisk),
-      timeouts: springCloudAppTimeoutsToTerraform(this._timeouts),
+      identity: springCloudAppIdentityToTerraform(this._identity.internalValue),
+      persistent_disk: springCloudAppPersistentDiskToTerraform(this._persistentDisk.internalValue),
+      timeouts: springCloudAppTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

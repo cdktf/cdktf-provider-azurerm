@@ -93,7 +93,7 @@ export interface ApiManagementDiagnosticBackendRequestDataMaskingHeaders {
   readonly value: string;
 }
 
-function apiManagementDiagnosticBackendRequestDataMaskingHeadersToTerraform(struct?: ApiManagementDiagnosticBackendRequestDataMaskingHeaders): any {
+export function apiManagementDiagnosticBackendRequestDataMaskingHeadersToTerraform(struct?: ApiManagementDiagnosticBackendRequestDataMaskingHeaders): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -115,7 +115,7 @@ export interface ApiManagementDiagnosticBackendRequestDataMaskingQueryParams {
   readonly value: string;
 }
 
-function apiManagementDiagnosticBackendRequestDataMaskingQueryParamsToTerraform(struct?: ApiManagementDiagnosticBackendRequestDataMaskingQueryParams): any {
+export function apiManagementDiagnosticBackendRequestDataMaskingQueryParamsToTerraform(struct?: ApiManagementDiagnosticBackendRequestDataMaskingQueryParams): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -141,7 +141,7 @@ export interface ApiManagementDiagnosticBackendRequestDataMasking {
   readonly queryParams?: ApiManagementDiagnosticBackendRequestDataMaskingQueryParams[];
 }
 
-function apiManagementDiagnosticBackendRequestDataMaskingToTerraform(struct?: ApiManagementDiagnosticBackendRequestDataMaskingOutputReference | ApiManagementDiagnosticBackendRequestDataMasking): any {
+export function apiManagementDiagnosticBackendRequestDataMaskingToTerraform(struct?: ApiManagementDiagnosticBackendRequestDataMaskingOutputReference | ApiManagementDiagnosticBackendRequestDataMasking): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -162,13 +162,38 @@ export class ApiManagementDiagnosticBackendRequestDataMaskingOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementDiagnosticBackendRequestDataMasking | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._headers) {
+      hasAnyValues = true;
+      internalValueResult.headers = this._headers;
+    }
+    if (this._queryParams) {
+      hasAnyValues = true;
+      internalValueResult.queryParams = this._queryParams;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementDiagnosticBackendRequestDataMasking | undefined) {
+    if (value === undefined) {
+      this._headers = undefined;
+      this._queryParams = undefined;
+    }
+    else {
+      this._headers = value.headers;
+      this._queryParams = value.queryParams;
+    }
+  }
+
   // headers - computed: false, optional: true, required: false
-  private _headers?: ApiManagementDiagnosticBackendRequestDataMaskingHeaders[] | undefined; 
+  private _headers?: ApiManagementDiagnosticBackendRequestDataMaskingHeaders[]; 
   public get headers() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('headers') as any;
   }
-  public set headers(value: ApiManagementDiagnosticBackendRequestDataMaskingHeaders[] | undefined) {
+  public set headers(value: ApiManagementDiagnosticBackendRequestDataMaskingHeaders[]) {
     this._headers = value;
   }
   public resetHeaders() {
@@ -176,16 +201,16 @@ export class ApiManagementDiagnosticBackendRequestDataMaskingOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get headersInput() {
-    return this._headers
+    return this._headers;
   }
 
   // query_params - computed: false, optional: true, required: false
-  private _queryParams?: ApiManagementDiagnosticBackendRequestDataMaskingQueryParams[] | undefined; 
+  private _queryParams?: ApiManagementDiagnosticBackendRequestDataMaskingQueryParams[]; 
   public get queryParams() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('query_params') as any;
   }
-  public set queryParams(value: ApiManagementDiagnosticBackendRequestDataMaskingQueryParams[] | undefined) {
+  public set queryParams(value: ApiManagementDiagnosticBackendRequestDataMaskingQueryParams[]) {
     this._queryParams = value;
   }
   public resetQueryParams() {
@@ -193,7 +218,7 @@ export class ApiManagementDiagnosticBackendRequestDataMaskingOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get queryParamsInput() {
-    return this._queryParams
+    return this._queryParams;
   }
 }
 export interface ApiManagementDiagnosticBackendRequest {
@@ -213,7 +238,7 @@ export interface ApiManagementDiagnosticBackendRequest {
   readonly dataMasking?: ApiManagementDiagnosticBackendRequestDataMasking;
 }
 
-function apiManagementDiagnosticBackendRequestToTerraform(struct?: ApiManagementDiagnosticBackendRequestOutputReference | ApiManagementDiagnosticBackendRequest): any {
+export function apiManagementDiagnosticBackendRequestToTerraform(struct?: ApiManagementDiagnosticBackendRequestOutputReference | ApiManagementDiagnosticBackendRequest): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -235,12 +260,43 @@ export class ApiManagementDiagnosticBackendRequestOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementDiagnosticBackendRequest | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._bodyBytes) {
+      hasAnyValues = true;
+      internalValueResult.bodyBytes = this._bodyBytes;
+    }
+    if (this._headersToLog) {
+      hasAnyValues = true;
+      internalValueResult.headersToLog = this._headersToLog;
+    }
+    if (this._dataMasking) {
+      hasAnyValues = true;
+      internalValueResult.dataMasking = this._dataMasking?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementDiagnosticBackendRequest | undefined) {
+    if (value === undefined) {
+      this._bodyBytes = undefined;
+      this._headersToLog = undefined;
+      this._dataMasking.internalValue = undefined;
+    }
+    else {
+      this._bodyBytes = value.bodyBytes;
+      this._headersToLog = value.headersToLog;
+      this._dataMasking.internalValue = value.dataMasking;
+    }
+  }
+
   // body_bytes - computed: false, optional: true, required: false
-  private _bodyBytes?: number | undefined; 
+  private _bodyBytes?: number; 
   public get bodyBytes() {
     return this.getNumberAttribute('body_bytes');
   }
-  public set bodyBytes(value: number | undefined) {
+  public set bodyBytes(value: number) {
     this._bodyBytes = value;
   }
   public resetBodyBytes() {
@@ -248,15 +304,15 @@ export class ApiManagementDiagnosticBackendRequestOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get bodyBytesInput() {
-    return this._bodyBytes
+    return this._bodyBytes;
   }
 
   // headers_to_log - computed: false, optional: true, required: false
-  private _headersToLog?: string[] | undefined; 
+  private _headersToLog?: string[]; 
   public get headersToLog() {
     return this.getListAttribute('headers_to_log');
   }
-  public set headersToLog(value: string[] | undefined) {
+  public set headersToLog(value: string[]) {
     this._headersToLog = value;
   }
   public resetHeadersToLog() {
@@ -264,24 +320,23 @@ export class ApiManagementDiagnosticBackendRequestOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get headersToLogInput() {
-    return this._headersToLog
+    return this._headersToLog;
   }
 
   // data_masking - computed: false, optional: true, required: false
-  private _dataMasking?: ApiManagementDiagnosticBackendRequestDataMasking | undefined; 
-  private __dataMaskingOutput = new ApiManagementDiagnosticBackendRequestDataMaskingOutputReference(this as any, "data_masking", true);
+  private _dataMasking = new ApiManagementDiagnosticBackendRequestDataMaskingOutputReference(this as any, "data_masking", true);
   public get dataMasking() {
-    return this.__dataMaskingOutput;
+    return this._dataMasking;
   }
-  public putDataMasking(value: ApiManagementDiagnosticBackendRequestDataMasking | undefined) {
-    this._dataMasking = value;
+  public putDataMasking(value: ApiManagementDiagnosticBackendRequestDataMasking) {
+    this._dataMasking.internalValue = value;
   }
   public resetDataMasking() {
-    this._dataMasking = undefined;
+    this._dataMasking.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dataMaskingInput() {
-    return this._dataMasking
+    return this._dataMasking.internalValue;
   }
 }
 export interface ApiManagementDiagnosticBackendResponseDataMaskingHeaders {
@@ -295,7 +350,7 @@ export interface ApiManagementDiagnosticBackendResponseDataMaskingHeaders {
   readonly value: string;
 }
 
-function apiManagementDiagnosticBackendResponseDataMaskingHeadersToTerraform(struct?: ApiManagementDiagnosticBackendResponseDataMaskingHeaders): any {
+export function apiManagementDiagnosticBackendResponseDataMaskingHeadersToTerraform(struct?: ApiManagementDiagnosticBackendResponseDataMaskingHeaders): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -317,7 +372,7 @@ export interface ApiManagementDiagnosticBackendResponseDataMaskingQueryParams {
   readonly value: string;
 }
 
-function apiManagementDiagnosticBackendResponseDataMaskingQueryParamsToTerraform(struct?: ApiManagementDiagnosticBackendResponseDataMaskingQueryParams): any {
+export function apiManagementDiagnosticBackendResponseDataMaskingQueryParamsToTerraform(struct?: ApiManagementDiagnosticBackendResponseDataMaskingQueryParams): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -343,7 +398,7 @@ export interface ApiManagementDiagnosticBackendResponseDataMasking {
   readonly queryParams?: ApiManagementDiagnosticBackendResponseDataMaskingQueryParams[];
 }
 
-function apiManagementDiagnosticBackendResponseDataMaskingToTerraform(struct?: ApiManagementDiagnosticBackendResponseDataMaskingOutputReference | ApiManagementDiagnosticBackendResponseDataMasking): any {
+export function apiManagementDiagnosticBackendResponseDataMaskingToTerraform(struct?: ApiManagementDiagnosticBackendResponseDataMaskingOutputReference | ApiManagementDiagnosticBackendResponseDataMasking): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -364,13 +419,38 @@ export class ApiManagementDiagnosticBackendResponseDataMaskingOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementDiagnosticBackendResponseDataMasking | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._headers) {
+      hasAnyValues = true;
+      internalValueResult.headers = this._headers;
+    }
+    if (this._queryParams) {
+      hasAnyValues = true;
+      internalValueResult.queryParams = this._queryParams;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementDiagnosticBackendResponseDataMasking | undefined) {
+    if (value === undefined) {
+      this._headers = undefined;
+      this._queryParams = undefined;
+    }
+    else {
+      this._headers = value.headers;
+      this._queryParams = value.queryParams;
+    }
+  }
+
   // headers - computed: false, optional: true, required: false
-  private _headers?: ApiManagementDiagnosticBackendResponseDataMaskingHeaders[] | undefined; 
+  private _headers?: ApiManagementDiagnosticBackendResponseDataMaskingHeaders[]; 
   public get headers() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('headers') as any;
   }
-  public set headers(value: ApiManagementDiagnosticBackendResponseDataMaskingHeaders[] | undefined) {
+  public set headers(value: ApiManagementDiagnosticBackendResponseDataMaskingHeaders[]) {
     this._headers = value;
   }
   public resetHeaders() {
@@ -378,16 +458,16 @@ export class ApiManagementDiagnosticBackendResponseDataMaskingOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get headersInput() {
-    return this._headers
+    return this._headers;
   }
 
   // query_params - computed: false, optional: true, required: false
-  private _queryParams?: ApiManagementDiagnosticBackendResponseDataMaskingQueryParams[] | undefined; 
+  private _queryParams?: ApiManagementDiagnosticBackendResponseDataMaskingQueryParams[]; 
   public get queryParams() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('query_params') as any;
   }
-  public set queryParams(value: ApiManagementDiagnosticBackendResponseDataMaskingQueryParams[] | undefined) {
+  public set queryParams(value: ApiManagementDiagnosticBackendResponseDataMaskingQueryParams[]) {
     this._queryParams = value;
   }
   public resetQueryParams() {
@@ -395,7 +475,7 @@ export class ApiManagementDiagnosticBackendResponseDataMaskingOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get queryParamsInput() {
-    return this._queryParams
+    return this._queryParams;
   }
 }
 export interface ApiManagementDiagnosticBackendResponse {
@@ -415,7 +495,7 @@ export interface ApiManagementDiagnosticBackendResponse {
   readonly dataMasking?: ApiManagementDiagnosticBackendResponseDataMasking;
 }
 
-function apiManagementDiagnosticBackendResponseToTerraform(struct?: ApiManagementDiagnosticBackendResponseOutputReference | ApiManagementDiagnosticBackendResponse): any {
+export function apiManagementDiagnosticBackendResponseToTerraform(struct?: ApiManagementDiagnosticBackendResponseOutputReference | ApiManagementDiagnosticBackendResponse): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -437,12 +517,43 @@ export class ApiManagementDiagnosticBackendResponseOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementDiagnosticBackendResponse | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._bodyBytes) {
+      hasAnyValues = true;
+      internalValueResult.bodyBytes = this._bodyBytes;
+    }
+    if (this._headersToLog) {
+      hasAnyValues = true;
+      internalValueResult.headersToLog = this._headersToLog;
+    }
+    if (this._dataMasking) {
+      hasAnyValues = true;
+      internalValueResult.dataMasking = this._dataMasking?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementDiagnosticBackendResponse | undefined) {
+    if (value === undefined) {
+      this._bodyBytes = undefined;
+      this._headersToLog = undefined;
+      this._dataMasking.internalValue = undefined;
+    }
+    else {
+      this._bodyBytes = value.bodyBytes;
+      this._headersToLog = value.headersToLog;
+      this._dataMasking.internalValue = value.dataMasking;
+    }
+  }
+
   // body_bytes - computed: false, optional: true, required: false
-  private _bodyBytes?: number | undefined; 
+  private _bodyBytes?: number; 
   public get bodyBytes() {
     return this.getNumberAttribute('body_bytes');
   }
-  public set bodyBytes(value: number | undefined) {
+  public set bodyBytes(value: number) {
     this._bodyBytes = value;
   }
   public resetBodyBytes() {
@@ -450,15 +561,15 @@ export class ApiManagementDiagnosticBackendResponseOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get bodyBytesInput() {
-    return this._bodyBytes
+    return this._bodyBytes;
   }
 
   // headers_to_log - computed: false, optional: true, required: false
-  private _headersToLog?: string[] | undefined; 
+  private _headersToLog?: string[]; 
   public get headersToLog() {
     return this.getListAttribute('headers_to_log');
   }
-  public set headersToLog(value: string[] | undefined) {
+  public set headersToLog(value: string[]) {
     this._headersToLog = value;
   }
   public resetHeadersToLog() {
@@ -466,24 +577,23 @@ export class ApiManagementDiagnosticBackendResponseOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get headersToLogInput() {
-    return this._headersToLog
+    return this._headersToLog;
   }
 
   // data_masking - computed: false, optional: true, required: false
-  private _dataMasking?: ApiManagementDiagnosticBackendResponseDataMasking | undefined; 
-  private __dataMaskingOutput = new ApiManagementDiagnosticBackendResponseDataMaskingOutputReference(this as any, "data_masking", true);
+  private _dataMasking = new ApiManagementDiagnosticBackendResponseDataMaskingOutputReference(this as any, "data_masking", true);
   public get dataMasking() {
-    return this.__dataMaskingOutput;
+    return this._dataMasking;
   }
-  public putDataMasking(value: ApiManagementDiagnosticBackendResponseDataMasking | undefined) {
-    this._dataMasking = value;
+  public putDataMasking(value: ApiManagementDiagnosticBackendResponseDataMasking) {
+    this._dataMasking.internalValue = value;
   }
   public resetDataMasking() {
-    this._dataMasking = undefined;
+    this._dataMasking.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dataMaskingInput() {
-    return this._dataMasking
+    return this._dataMasking.internalValue;
   }
 }
 export interface ApiManagementDiagnosticFrontendRequestDataMaskingHeaders {
@@ -497,7 +607,7 @@ export interface ApiManagementDiagnosticFrontendRequestDataMaskingHeaders {
   readonly value: string;
 }
 
-function apiManagementDiagnosticFrontendRequestDataMaskingHeadersToTerraform(struct?: ApiManagementDiagnosticFrontendRequestDataMaskingHeaders): any {
+export function apiManagementDiagnosticFrontendRequestDataMaskingHeadersToTerraform(struct?: ApiManagementDiagnosticFrontendRequestDataMaskingHeaders): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -519,7 +629,7 @@ export interface ApiManagementDiagnosticFrontendRequestDataMaskingQueryParams {
   readonly value: string;
 }
 
-function apiManagementDiagnosticFrontendRequestDataMaskingQueryParamsToTerraform(struct?: ApiManagementDiagnosticFrontendRequestDataMaskingQueryParams): any {
+export function apiManagementDiagnosticFrontendRequestDataMaskingQueryParamsToTerraform(struct?: ApiManagementDiagnosticFrontendRequestDataMaskingQueryParams): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -545,7 +655,7 @@ export interface ApiManagementDiagnosticFrontendRequestDataMasking {
   readonly queryParams?: ApiManagementDiagnosticFrontendRequestDataMaskingQueryParams[];
 }
 
-function apiManagementDiagnosticFrontendRequestDataMaskingToTerraform(struct?: ApiManagementDiagnosticFrontendRequestDataMaskingOutputReference | ApiManagementDiagnosticFrontendRequestDataMasking): any {
+export function apiManagementDiagnosticFrontendRequestDataMaskingToTerraform(struct?: ApiManagementDiagnosticFrontendRequestDataMaskingOutputReference | ApiManagementDiagnosticFrontendRequestDataMasking): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -566,13 +676,38 @@ export class ApiManagementDiagnosticFrontendRequestDataMaskingOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementDiagnosticFrontendRequestDataMasking | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._headers) {
+      hasAnyValues = true;
+      internalValueResult.headers = this._headers;
+    }
+    if (this._queryParams) {
+      hasAnyValues = true;
+      internalValueResult.queryParams = this._queryParams;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementDiagnosticFrontendRequestDataMasking | undefined) {
+    if (value === undefined) {
+      this._headers = undefined;
+      this._queryParams = undefined;
+    }
+    else {
+      this._headers = value.headers;
+      this._queryParams = value.queryParams;
+    }
+  }
+
   // headers - computed: false, optional: true, required: false
-  private _headers?: ApiManagementDiagnosticFrontendRequestDataMaskingHeaders[] | undefined; 
+  private _headers?: ApiManagementDiagnosticFrontendRequestDataMaskingHeaders[]; 
   public get headers() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('headers') as any;
   }
-  public set headers(value: ApiManagementDiagnosticFrontendRequestDataMaskingHeaders[] | undefined) {
+  public set headers(value: ApiManagementDiagnosticFrontendRequestDataMaskingHeaders[]) {
     this._headers = value;
   }
   public resetHeaders() {
@@ -580,16 +715,16 @@ export class ApiManagementDiagnosticFrontendRequestDataMaskingOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get headersInput() {
-    return this._headers
+    return this._headers;
   }
 
   // query_params - computed: false, optional: true, required: false
-  private _queryParams?: ApiManagementDiagnosticFrontendRequestDataMaskingQueryParams[] | undefined; 
+  private _queryParams?: ApiManagementDiagnosticFrontendRequestDataMaskingQueryParams[]; 
   public get queryParams() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('query_params') as any;
   }
-  public set queryParams(value: ApiManagementDiagnosticFrontendRequestDataMaskingQueryParams[] | undefined) {
+  public set queryParams(value: ApiManagementDiagnosticFrontendRequestDataMaskingQueryParams[]) {
     this._queryParams = value;
   }
   public resetQueryParams() {
@@ -597,7 +732,7 @@ export class ApiManagementDiagnosticFrontendRequestDataMaskingOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get queryParamsInput() {
-    return this._queryParams
+    return this._queryParams;
   }
 }
 export interface ApiManagementDiagnosticFrontendRequest {
@@ -617,7 +752,7 @@ export interface ApiManagementDiagnosticFrontendRequest {
   readonly dataMasking?: ApiManagementDiagnosticFrontendRequestDataMasking;
 }
 
-function apiManagementDiagnosticFrontendRequestToTerraform(struct?: ApiManagementDiagnosticFrontendRequestOutputReference | ApiManagementDiagnosticFrontendRequest): any {
+export function apiManagementDiagnosticFrontendRequestToTerraform(struct?: ApiManagementDiagnosticFrontendRequestOutputReference | ApiManagementDiagnosticFrontendRequest): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -639,12 +774,43 @@ export class ApiManagementDiagnosticFrontendRequestOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementDiagnosticFrontendRequest | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._bodyBytes) {
+      hasAnyValues = true;
+      internalValueResult.bodyBytes = this._bodyBytes;
+    }
+    if (this._headersToLog) {
+      hasAnyValues = true;
+      internalValueResult.headersToLog = this._headersToLog;
+    }
+    if (this._dataMasking) {
+      hasAnyValues = true;
+      internalValueResult.dataMasking = this._dataMasking?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementDiagnosticFrontendRequest | undefined) {
+    if (value === undefined) {
+      this._bodyBytes = undefined;
+      this._headersToLog = undefined;
+      this._dataMasking.internalValue = undefined;
+    }
+    else {
+      this._bodyBytes = value.bodyBytes;
+      this._headersToLog = value.headersToLog;
+      this._dataMasking.internalValue = value.dataMasking;
+    }
+  }
+
   // body_bytes - computed: false, optional: true, required: false
-  private _bodyBytes?: number | undefined; 
+  private _bodyBytes?: number; 
   public get bodyBytes() {
     return this.getNumberAttribute('body_bytes');
   }
-  public set bodyBytes(value: number | undefined) {
+  public set bodyBytes(value: number) {
     this._bodyBytes = value;
   }
   public resetBodyBytes() {
@@ -652,15 +818,15 @@ export class ApiManagementDiagnosticFrontendRequestOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get bodyBytesInput() {
-    return this._bodyBytes
+    return this._bodyBytes;
   }
 
   // headers_to_log - computed: false, optional: true, required: false
-  private _headersToLog?: string[] | undefined; 
+  private _headersToLog?: string[]; 
   public get headersToLog() {
     return this.getListAttribute('headers_to_log');
   }
-  public set headersToLog(value: string[] | undefined) {
+  public set headersToLog(value: string[]) {
     this._headersToLog = value;
   }
   public resetHeadersToLog() {
@@ -668,24 +834,23 @@ export class ApiManagementDiagnosticFrontendRequestOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get headersToLogInput() {
-    return this._headersToLog
+    return this._headersToLog;
   }
 
   // data_masking - computed: false, optional: true, required: false
-  private _dataMasking?: ApiManagementDiagnosticFrontendRequestDataMasking | undefined; 
-  private __dataMaskingOutput = new ApiManagementDiagnosticFrontendRequestDataMaskingOutputReference(this as any, "data_masking", true);
+  private _dataMasking = new ApiManagementDiagnosticFrontendRequestDataMaskingOutputReference(this as any, "data_masking", true);
   public get dataMasking() {
-    return this.__dataMaskingOutput;
+    return this._dataMasking;
   }
-  public putDataMasking(value: ApiManagementDiagnosticFrontendRequestDataMasking | undefined) {
-    this._dataMasking = value;
+  public putDataMasking(value: ApiManagementDiagnosticFrontendRequestDataMasking) {
+    this._dataMasking.internalValue = value;
   }
   public resetDataMasking() {
-    this._dataMasking = undefined;
+    this._dataMasking.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dataMaskingInput() {
-    return this._dataMasking
+    return this._dataMasking.internalValue;
   }
 }
 export interface ApiManagementDiagnosticFrontendResponseDataMaskingHeaders {
@@ -699,7 +864,7 @@ export interface ApiManagementDiagnosticFrontendResponseDataMaskingHeaders {
   readonly value: string;
 }
 
-function apiManagementDiagnosticFrontendResponseDataMaskingHeadersToTerraform(struct?: ApiManagementDiagnosticFrontendResponseDataMaskingHeaders): any {
+export function apiManagementDiagnosticFrontendResponseDataMaskingHeadersToTerraform(struct?: ApiManagementDiagnosticFrontendResponseDataMaskingHeaders): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -721,7 +886,7 @@ export interface ApiManagementDiagnosticFrontendResponseDataMaskingQueryParams {
   readonly value: string;
 }
 
-function apiManagementDiagnosticFrontendResponseDataMaskingQueryParamsToTerraform(struct?: ApiManagementDiagnosticFrontendResponseDataMaskingQueryParams): any {
+export function apiManagementDiagnosticFrontendResponseDataMaskingQueryParamsToTerraform(struct?: ApiManagementDiagnosticFrontendResponseDataMaskingQueryParams): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -747,7 +912,7 @@ export interface ApiManagementDiagnosticFrontendResponseDataMasking {
   readonly queryParams?: ApiManagementDiagnosticFrontendResponseDataMaskingQueryParams[];
 }
 
-function apiManagementDiagnosticFrontendResponseDataMaskingToTerraform(struct?: ApiManagementDiagnosticFrontendResponseDataMaskingOutputReference | ApiManagementDiagnosticFrontendResponseDataMasking): any {
+export function apiManagementDiagnosticFrontendResponseDataMaskingToTerraform(struct?: ApiManagementDiagnosticFrontendResponseDataMaskingOutputReference | ApiManagementDiagnosticFrontendResponseDataMasking): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -768,13 +933,38 @@ export class ApiManagementDiagnosticFrontendResponseDataMaskingOutputReference e
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementDiagnosticFrontendResponseDataMasking | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._headers) {
+      hasAnyValues = true;
+      internalValueResult.headers = this._headers;
+    }
+    if (this._queryParams) {
+      hasAnyValues = true;
+      internalValueResult.queryParams = this._queryParams;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementDiagnosticFrontendResponseDataMasking | undefined) {
+    if (value === undefined) {
+      this._headers = undefined;
+      this._queryParams = undefined;
+    }
+    else {
+      this._headers = value.headers;
+      this._queryParams = value.queryParams;
+    }
+  }
+
   // headers - computed: false, optional: true, required: false
-  private _headers?: ApiManagementDiagnosticFrontendResponseDataMaskingHeaders[] | undefined; 
+  private _headers?: ApiManagementDiagnosticFrontendResponseDataMaskingHeaders[]; 
   public get headers() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('headers') as any;
   }
-  public set headers(value: ApiManagementDiagnosticFrontendResponseDataMaskingHeaders[] | undefined) {
+  public set headers(value: ApiManagementDiagnosticFrontendResponseDataMaskingHeaders[]) {
     this._headers = value;
   }
   public resetHeaders() {
@@ -782,16 +972,16 @@ export class ApiManagementDiagnosticFrontendResponseDataMaskingOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get headersInput() {
-    return this._headers
+    return this._headers;
   }
 
   // query_params - computed: false, optional: true, required: false
-  private _queryParams?: ApiManagementDiagnosticFrontendResponseDataMaskingQueryParams[] | undefined; 
+  private _queryParams?: ApiManagementDiagnosticFrontendResponseDataMaskingQueryParams[]; 
   public get queryParams() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('query_params') as any;
   }
-  public set queryParams(value: ApiManagementDiagnosticFrontendResponseDataMaskingQueryParams[] | undefined) {
+  public set queryParams(value: ApiManagementDiagnosticFrontendResponseDataMaskingQueryParams[]) {
     this._queryParams = value;
   }
   public resetQueryParams() {
@@ -799,7 +989,7 @@ export class ApiManagementDiagnosticFrontendResponseDataMaskingOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get queryParamsInput() {
-    return this._queryParams
+    return this._queryParams;
   }
 }
 export interface ApiManagementDiagnosticFrontendResponse {
@@ -819,7 +1009,7 @@ export interface ApiManagementDiagnosticFrontendResponse {
   readonly dataMasking?: ApiManagementDiagnosticFrontendResponseDataMasking;
 }
 
-function apiManagementDiagnosticFrontendResponseToTerraform(struct?: ApiManagementDiagnosticFrontendResponseOutputReference | ApiManagementDiagnosticFrontendResponse): any {
+export function apiManagementDiagnosticFrontendResponseToTerraform(struct?: ApiManagementDiagnosticFrontendResponseOutputReference | ApiManagementDiagnosticFrontendResponse): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -841,12 +1031,43 @@ export class ApiManagementDiagnosticFrontendResponseOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementDiagnosticFrontendResponse | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._bodyBytes) {
+      hasAnyValues = true;
+      internalValueResult.bodyBytes = this._bodyBytes;
+    }
+    if (this._headersToLog) {
+      hasAnyValues = true;
+      internalValueResult.headersToLog = this._headersToLog;
+    }
+    if (this._dataMasking) {
+      hasAnyValues = true;
+      internalValueResult.dataMasking = this._dataMasking?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementDiagnosticFrontendResponse | undefined) {
+    if (value === undefined) {
+      this._bodyBytes = undefined;
+      this._headersToLog = undefined;
+      this._dataMasking.internalValue = undefined;
+    }
+    else {
+      this._bodyBytes = value.bodyBytes;
+      this._headersToLog = value.headersToLog;
+      this._dataMasking.internalValue = value.dataMasking;
+    }
+  }
+
   // body_bytes - computed: false, optional: true, required: false
-  private _bodyBytes?: number | undefined; 
+  private _bodyBytes?: number; 
   public get bodyBytes() {
     return this.getNumberAttribute('body_bytes');
   }
-  public set bodyBytes(value: number | undefined) {
+  public set bodyBytes(value: number) {
     this._bodyBytes = value;
   }
   public resetBodyBytes() {
@@ -854,15 +1075,15 @@ export class ApiManagementDiagnosticFrontendResponseOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get bodyBytesInput() {
-    return this._bodyBytes
+    return this._bodyBytes;
   }
 
   // headers_to_log - computed: false, optional: true, required: false
-  private _headersToLog?: string[] | undefined; 
+  private _headersToLog?: string[]; 
   public get headersToLog() {
     return this.getListAttribute('headers_to_log');
   }
-  public set headersToLog(value: string[] | undefined) {
+  public set headersToLog(value: string[]) {
     this._headersToLog = value;
   }
   public resetHeadersToLog() {
@@ -870,24 +1091,23 @@ export class ApiManagementDiagnosticFrontendResponseOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get headersToLogInput() {
-    return this._headersToLog
+    return this._headersToLog;
   }
 
   // data_masking - computed: false, optional: true, required: false
-  private _dataMasking?: ApiManagementDiagnosticFrontendResponseDataMasking | undefined; 
-  private __dataMaskingOutput = new ApiManagementDiagnosticFrontendResponseDataMaskingOutputReference(this as any, "data_masking", true);
+  private _dataMasking = new ApiManagementDiagnosticFrontendResponseDataMaskingOutputReference(this as any, "data_masking", true);
   public get dataMasking() {
-    return this.__dataMaskingOutput;
+    return this._dataMasking;
   }
-  public putDataMasking(value: ApiManagementDiagnosticFrontendResponseDataMasking | undefined) {
-    this._dataMasking = value;
+  public putDataMasking(value: ApiManagementDiagnosticFrontendResponseDataMasking) {
+    this._dataMasking.internalValue = value;
   }
   public resetDataMasking() {
-    this._dataMasking = undefined;
+    this._dataMasking.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dataMaskingInput() {
-    return this._dataMasking
+    return this._dataMasking.internalValue;
   }
 }
 export interface ApiManagementDiagnosticTimeouts {
@@ -909,7 +1129,7 @@ export interface ApiManagementDiagnosticTimeouts {
   readonly update?: string;
 }
 
-function apiManagementDiagnosticTimeoutsToTerraform(struct?: ApiManagementDiagnosticTimeoutsOutputReference | ApiManagementDiagnosticTimeouts): any {
+export function apiManagementDiagnosticTimeoutsToTerraform(struct?: ApiManagementDiagnosticTimeoutsOutputReference | ApiManagementDiagnosticTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -932,12 +1152,49 @@ export class ApiManagementDiagnosticTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementDiagnosticTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementDiagnosticTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -945,15 +1202,15 @@ export class ApiManagementDiagnosticTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -961,15 +1218,15 @@ export class ApiManagementDiagnosticTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -977,15 +1234,15 @@ export class ApiManagementDiagnosticTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -993,7 +1250,7 @@ export class ApiManagementDiagnosticTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -1040,11 +1297,11 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._samplingPercentage = config.samplingPercentage;
     this._verbosity = config.verbosity;
-    this._backendRequest = config.backendRequest;
-    this._backendResponse = config.backendResponse;
-    this._frontendRequest = config.frontendRequest;
-    this._frontendResponse = config.frontendResponse;
-    this._timeouts = config.timeouts;
+    this._backendRequest.internalValue = config.backendRequest;
+    this._backendResponse.internalValue = config.backendResponse;
+    this._frontendRequest.internalValue = config.frontendRequest;
+    this._frontendResponse.internalValue = config.frontendResponse;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -1052,11 +1309,11 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   // ==========
 
   // always_log_errors - computed: true, optional: true, required: false
-  private _alwaysLogErrors?: boolean | cdktf.IResolvable | undefined; 
+  private _alwaysLogErrors?: boolean | cdktf.IResolvable; 
   public get alwaysLogErrors() {
     return this.getBooleanAttribute('always_log_errors') as any;
   }
-  public set alwaysLogErrors(value: boolean | cdktf.IResolvable | undefined) {
+  public set alwaysLogErrors(value: boolean | cdktf.IResolvable) {
     this._alwaysLogErrors = value;
   }
   public resetAlwaysLogErrors() {
@@ -1064,7 +1321,7 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get alwaysLogErrorsInput() {
-    return this._alwaysLogErrors
+    return this._alwaysLogErrors;
   }
 
   // api_management_logger_id - computed: false, optional: false, required: true
@@ -1077,7 +1334,7 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get apiManagementLoggerIdInput() {
-    return this._apiManagementLoggerId
+    return this._apiManagementLoggerId;
   }
 
   // api_management_name - computed: false, optional: false, required: true
@@ -1090,15 +1347,15 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get apiManagementNameInput() {
-    return this._apiManagementName
+    return this._apiManagementName;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -1106,15 +1363,15 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // http_correlation_protocol - computed: true, optional: true, required: false
-  private _httpCorrelationProtocol?: string | undefined; 
+  private _httpCorrelationProtocol?: string; 
   public get httpCorrelationProtocol() {
     return this.getStringAttribute('http_correlation_protocol');
   }
-  public set httpCorrelationProtocol(value: string | undefined) {
+  public set httpCorrelationProtocol(value: string) {
     this._httpCorrelationProtocol = value;
   }
   public resetHttpCorrelationProtocol() {
@@ -1122,7 +1379,7 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get httpCorrelationProtocolInput() {
-    return this._httpCorrelationProtocol
+    return this._httpCorrelationProtocol;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1140,15 +1397,15 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get identifierInput() {
-    return this._identifier
+    return this._identifier;
   }
 
   // log_client_ip - computed: true, optional: true, required: false
-  private _logClientIp?: boolean | cdktf.IResolvable | undefined; 
+  private _logClientIp?: boolean | cdktf.IResolvable; 
   public get logClientIp() {
     return this.getBooleanAttribute('log_client_ip') as any;
   }
-  public set logClientIp(value: boolean | cdktf.IResolvable | undefined) {
+  public set logClientIp(value: boolean | cdktf.IResolvable) {
     this._logClientIp = value;
   }
   public resetLogClientIp() {
@@ -1156,15 +1413,15 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get logClientIpInput() {
-    return this._logClientIp
+    return this._logClientIp;
   }
 
   // operation_name_format - computed: false, optional: true, required: false
-  private _operationNameFormat?: string | undefined; 
+  private _operationNameFormat?: string; 
   public get operationNameFormat() {
     return this.getStringAttribute('operation_name_format');
   }
-  public set operationNameFormat(value: string | undefined) {
+  public set operationNameFormat(value: string) {
     this._operationNameFormat = value;
   }
   public resetOperationNameFormat() {
@@ -1172,7 +1429,7 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get operationNameFormatInput() {
-    return this._operationNameFormat
+    return this._operationNameFormat;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -1185,15 +1442,15 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // sampling_percentage - computed: true, optional: true, required: false
-  private _samplingPercentage?: number | undefined; 
+  private _samplingPercentage?: number; 
   public get samplingPercentage() {
     return this.getNumberAttribute('sampling_percentage');
   }
-  public set samplingPercentage(value: number | undefined) {
+  public set samplingPercentage(value: number) {
     this._samplingPercentage = value;
   }
   public resetSamplingPercentage() {
@@ -1201,15 +1458,15 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get samplingPercentageInput() {
-    return this._samplingPercentage
+    return this._samplingPercentage;
   }
 
   // verbosity - computed: true, optional: true, required: false
-  private _verbosity?: string | undefined; 
+  private _verbosity?: string; 
   public get verbosity() {
     return this.getStringAttribute('verbosity');
   }
-  public set verbosity(value: string | undefined) {
+  public set verbosity(value: string) {
     this._verbosity = value;
   }
   public resetVerbosity() {
@@ -1217,92 +1474,87 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get verbosityInput() {
-    return this._verbosity
+    return this._verbosity;
   }
 
   // backend_request - computed: false, optional: true, required: false
-  private _backendRequest?: ApiManagementDiagnosticBackendRequest | undefined; 
-  private __backendRequestOutput = new ApiManagementDiagnosticBackendRequestOutputReference(this as any, "backend_request", true);
+  private _backendRequest = new ApiManagementDiagnosticBackendRequestOutputReference(this as any, "backend_request", true);
   public get backendRequest() {
-    return this.__backendRequestOutput;
+    return this._backendRequest;
   }
-  public putBackendRequest(value: ApiManagementDiagnosticBackendRequest | undefined) {
-    this._backendRequest = value;
+  public putBackendRequest(value: ApiManagementDiagnosticBackendRequest) {
+    this._backendRequest.internalValue = value;
   }
   public resetBackendRequest() {
-    this._backendRequest = undefined;
+    this._backendRequest.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get backendRequestInput() {
-    return this._backendRequest
+    return this._backendRequest.internalValue;
   }
 
   // backend_response - computed: false, optional: true, required: false
-  private _backendResponse?: ApiManagementDiagnosticBackendResponse | undefined; 
-  private __backendResponseOutput = new ApiManagementDiagnosticBackendResponseOutputReference(this as any, "backend_response", true);
+  private _backendResponse = new ApiManagementDiagnosticBackendResponseOutputReference(this as any, "backend_response", true);
   public get backendResponse() {
-    return this.__backendResponseOutput;
+    return this._backendResponse;
   }
-  public putBackendResponse(value: ApiManagementDiagnosticBackendResponse | undefined) {
-    this._backendResponse = value;
+  public putBackendResponse(value: ApiManagementDiagnosticBackendResponse) {
+    this._backendResponse.internalValue = value;
   }
   public resetBackendResponse() {
-    this._backendResponse = undefined;
+    this._backendResponse.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get backendResponseInput() {
-    return this._backendResponse
+    return this._backendResponse.internalValue;
   }
 
   // frontend_request - computed: false, optional: true, required: false
-  private _frontendRequest?: ApiManagementDiagnosticFrontendRequest | undefined; 
-  private __frontendRequestOutput = new ApiManagementDiagnosticFrontendRequestOutputReference(this as any, "frontend_request", true);
+  private _frontendRequest = new ApiManagementDiagnosticFrontendRequestOutputReference(this as any, "frontend_request", true);
   public get frontendRequest() {
-    return this.__frontendRequestOutput;
+    return this._frontendRequest;
   }
-  public putFrontendRequest(value: ApiManagementDiagnosticFrontendRequest | undefined) {
-    this._frontendRequest = value;
+  public putFrontendRequest(value: ApiManagementDiagnosticFrontendRequest) {
+    this._frontendRequest.internalValue = value;
   }
   public resetFrontendRequest() {
-    this._frontendRequest = undefined;
+    this._frontendRequest.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get frontendRequestInput() {
-    return this._frontendRequest
+    return this._frontendRequest.internalValue;
   }
 
   // frontend_response - computed: false, optional: true, required: false
-  private _frontendResponse?: ApiManagementDiagnosticFrontendResponse | undefined; 
-  private __frontendResponseOutput = new ApiManagementDiagnosticFrontendResponseOutputReference(this as any, "frontend_response", true);
+  private _frontendResponse = new ApiManagementDiagnosticFrontendResponseOutputReference(this as any, "frontend_response", true);
   public get frontendResponse() {
-    return this.__frontendResponseOutput;
+    return this._frontendResponse;
   }
-  public putFrontendResponse(value: ApiManagementDiagnosticFrontendResponse | undefined) {
-    this._frontendResponse = value;
+  public putFrontendResponse(value: ApiManagementDiagnosticFrontendResponse) {
+    this._frontendResponse.internalValue = value;
   }
   public resetFrontendResponse() {
-    this._frontendResponse = undefined;
+    this._frontendResponse.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get frontendResponseInput() {
-    return this._frontendResponse
+    return this._frontendResponse.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ApiManagementDiagnosticTimeouts | undefined; 
-  private __timeoutsOutput = new ApiManagementDiagnosticTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApiManagementDiagnosticTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ApiManagementDiagnosticTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ApiManagementDiagnosticTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -1322,11 +1574,11 @@ export class ApiManagementDiagnostic extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sampling_percentage: cdktf.numberToTerraform(this._samplingPercentage),
       verbosity: cdktf.stringToTerraform(this._verbosity),
-      backend_request: apiManagementDiagnosticBackendRequestToTerraform(this._backendRequest),
-      backend_response: apiManagementDiagnosticBackendResponseToTerraform(this._backendResponse),
-      frontend_request: apiManagementDiagnosticFrontendRequestToTerraform(this._frontendRequest),
-      frontend_response: apiManagementDiagnosticFrontendResponseToTerraform(this._frontendResponse),
-      timeouts: apiManagementDiagnosticTimeoutsToTerraform(this._timeouts),
+      backend_request: apiManagementDiagnosticBackendRequestToTerraform(this._backendRequest.internalValue),
+      backend_response: apiManagementDiagnosticBackendResponseToTerraform(this._backendResponse.internalValue),
+      frontend_request: apiManagementDiagnosticFrontendRequestToTerraform(this._frontendRequest.internalValue),
+      frontend_response: apiManagementDiagnosticFrontendResponseToTerraform(this._frontendResponse.internalValue),
+      timeouts: apiManagementDiagnosticTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

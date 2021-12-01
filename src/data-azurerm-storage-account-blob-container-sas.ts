@@ -91,7 +91,7 @@ export interface DataAzurermStorageAccountBlobContainerSasPermissions {
   readonly write: boolean | cdktf.IResolvable;
 }
 
-function dataAzurermStorageAccountBlobContainerSasPermissionsToTerraform(struct?: DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference | DataAzurermStorageAccountBlobContainerSasPermissions): any {
+export function dataAzurermStorageAccountBlobContainerSasPermissionsToTerraform(struct?: DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference | DataAzurermStorageAccountBlobContainerSasPermissions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -116,6 +116,55 @@ export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermStorageAccountBlobContainerSasPermissions | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._add) {
+      hasAnyValues = true;
+      internalValueResult.add = this._add;
+    }
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._list) {
+      hasAnyValues = true;
+      internalValueResult.list = this._list;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._write) {
+      hasAnyValues = true;
+      internalValueResult.write = this._write;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermStorageAccountBlobContainerSasPermissions | undefined) {
+    if (value === undefined) {
+      this._add = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._list = undefined;
+      this._read = undefined;
+      this._write = undefined;
+    }
+    else {
+      this._add = value.add;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._list = value.list;
+      this._read = value.read;
+      this._write = value.write;
+    }
+  }
+
   // add - computed: false, optional: false, required: true
   private _add?: boolean | cdktf.IResolvable; 
   public get add() {
@@ -126,7 +175,7 @@ export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get addInput() {
-    return this._add
+    return this._add;
   }
 
   // create - computed: false, optional: false, required: true
@@ -139,7 +188,7 @@ export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: false, required: true
@@ -152,7 +201,7 @@ export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // list - computed: false, optional: false, required: true
@@ -165,7 +214,7 @@ export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get listInput() {
-    return this._list
+    return this._list;
   }
 
   // read - computed: false, optional: false, required: true
@@ -178,7 +227,7 @@ export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // write - computed: false, optional: false, required: true
@@ -191,7 +240,7 @@ export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get writeInput() {
-    return this._write
+    return this._write;
   }
 }
 export interface DataAzurermStorageAccountBlobContainerSasTimeouts {
@@ -201,7 +250,7 @@ export interface DataAzurermStorageAccountBlobContainerSasTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermStorageAccountBlobContainerSasTimeoutsToTerraform(struct?: DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference | DataAzurermStorageAccountBlobContainerSasTimeouts): any {
+export function dataAzurermStorageAccountBlobContainerSasTimeoutsToTerraform(struct?: DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference | DataAzurermStorageAccountBlobContainerSasTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -221,12 +270,31 @@ export class DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermStorageAccountBlobContainerSasTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermStorageAccountBlobContainerSasTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -234,7 +302,7 @@ export class DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -281,8 +349,8 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
     this._httpsOnly = config.httpsOnly;
     this._ipAddress = config.ipAddress;
     this._start = config.start;
-    this._permissions = config.permissions;
-    this._timeouts = config.timeouts;
+    this._permissions.internalValue = config.permissions;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -290,11 +358,11 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   // ==========
 
   // cache_control - computed: false, optional: true, required: false
-  private _cacheControl?: string | undefined; 
+  private _cacheControl?: string; 
   public get cacheControl() {
     return this.getStringAttribute('cache_control');
   }
-  public set cacheControl(value: string | undefined) {
+  public set cacheControl(value: string) {
     this._cacheControl = value;
   }
   public resetCacheControl() {
@@ -302,7 +370,7 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
   // Temporarily expose input value. Use with caution.
   public get cacheControlInput() {
-    return this._cacheControl
+    return this._cacheControl;
   }
 
   // connection_string - computed: false, optional: false, required: true
@@ -315,7 +383,7 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
   // Temporarily expose input value. Use with caution.
   public get connectionStringInput() {
-    return this._connectionString
+    return this._connectionString;
   }
 
   // container_name - computed: false, optional: false, required: true
@@ -328,15 +396,15 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
   // Temporarily expose input value. Use with caution.
   public get containerNameInput() {
-    return this._containerName
+    return this._containerName;
   }
 
   // content_disposition - computed: false, optional: true, required: false
-  private _contentDisposition?: string | undefined; 
+  private _contentDisposition?: string; 
   public get contentDisposition() {
     return this.getStringAttribute('content_disposition');
   }
-  public set contentDisposition(value: string | undefined) {
+  public set contentDisposition(value: string) {
     this._contentDisposition = value;
   }
   public resetContentDisposition() {
@@ -344,15 +412,15 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
   // Temporarily expose input value. Use with caution.
   public get contentDispositionInput() {
-    return this._contentDisposition
+    return this._contentDisposition;
   }
 
   // content_encoding - computed: false, optional: true, required: false
-  private _contentEncoding?: string | undefined; 
+  private _contentEncoding?: string; 
   public get contentEncoding() {
     return this.getStringAttribute('content_encoding');
   }
-  public set contentEncoding(value: string | undefined) {
+  public set contentEncoding(value: string) {
     this._contentEncoding = value;
   }
   public resetContentEncoding() {
@@ -360,15 +428,15 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
   // Temporarily expose input value. Use with caution.
   public get contentEncodingInput() {
-    return this._contentEncoding
+    return this._contentEncoding;
   }
 
   // content_language - computed: false, optional: true, required: false
-  private _contentLanguage?: string | undefined; 
+  private _contentLanguage?: string; 
   public get contentLanguage() {
     return this.getStringAttribute('content_language');
   }
-  public set contentLanguage(value: string | undefined) {
+  public set contentLanguage(value: string) {
     this._contentLanguage = value;
   }
   public resetContentLanguage() {
@@ -376,15 +444,15 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
   // Temporarily expose input value. Use with caution.
   public get contentLanguageInput() {
-    return this._contentLanguage
+    return this._contentLanguage;
   }
 
   // content_type - computed: false, optional: true, required: false
-  private _contentType?: string | undefined; 
+  private _contentType?: string; 
   public get contentType() {
     return this.getStringAttribute('content_type');
   }
-  public set contentType(value: string | undefined) {
+  public set contentType(value: string) {
     this._contentType = value;
   }
   public resetContentType() {
@@ -392,7 +460,7 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
   // Temporarily expose input value. Use with caution.
   public get contentTypeInput() {
-    return this._contentType
+    return this._contentType;
   }
 
   // expiry - computed: false, optional: false, required: true
@@ -405,15 +473,15 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
   // Temporarily expose input value. Use with caution.
   public get expiryInput() {
-    return this._expiry
+    return this._expiry;
   }
 
   // https_only - computed: false, optional: true, required: false
-  private _httpsOnly?: boolean | cdktf.IResolvable | undefined; 
+  private _httpsOnly?: boolean | cdktf.IResolvable; 
   public get httpsOnly() {
     return this.getBooleanAttribute('https_only') as any;
   }
-  public set httpsOnly(value: boolean | cdktf.IResolvable | undefined) {
+  public set httpsOnly(value: boolean | cdktf.IResolvable) {
     this._httpsOnly = value;
   }
   public resetHttpsOnly() {
@@ -421,7 +489,7 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
   // Temporarily expose input value. Use with caution.
   public get httpsOnlyInput() {
-    return this._httpsOnly
+    return this._httpsOnly;
   }
 
   // id - computed: true, optional: true, required: false
@@ -430,11 +498,11 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
 
   // ip_address - computed: false, optional: true, required: false
-  private _ipAddress?: string | undefined; 
+  private _ipAddress?: string; 
   public get ipAddress() {
     return this.getStringAttribute('ip_address');
   }
-  public set ipAddress(value: string | undefined) {
+  public set ipAddress(value: string) {
     this._ipAddress = value;
   }
   public resetIpAddress() {
@@ -442,7 +510,7 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
   // Temporarily expose input value. Use with caution.
   public get ipAddressInput() {
-    return this._ipAddress
+    return this._ipAddress;
   }
 
   // sas - computed: true, optional: false, required: false
@@ -460,38 +528,36 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
   }
   // Temporarily expose input value. Use with caution.
   public get startInput() {
-    return this._start
+    return this._start;
   }
 
   // permissions - computed: false, optional: false, required: true
-  private _permissions?: DataAzurermStorageAccountBlobContainerSasPermissions; 
-  private __permissionsOutput = new DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference(this as any, "permissions", true);
+  private _permissions = new DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference(this as any, "permissions", true);
   public get permissions() {
-    return this.__permissionsOutput;
+    return this._permissions;
   }
   public putPermissions(value: DataAzurermStorageAccountBlobContainerSasPermissions) {
-    this._permissions = value;
+    this._permissions.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get permissionsInput() {
-    return this._permissions
+    return this._permissions.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermStorageAccountBlobContainerSasTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermStorageAccountBlobContainerSasTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermStorageAccountBlobContainerSasTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -511,8 +577,8 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
       https_only: cdktf.booleanToTerraform(this._httpsOnly),
       ip_address: cdktf.stringToTerraform(this._ipAddress),
       start: cdktf.stringToTerraform(this._start),
-      permissions: dataAzurermStorageAccountBlobContainerSasPermissionsToTerraform(this._permissions),
-      timeouts: dataAzurermStorageAccountBlobContainerSasTimeoutsToTerraform(this._timeouts),
+      permissions: dataAzurermStorageAccountBlobContainerSasPermissionsToTerraform(this._permissions.internalValue),
+      timeouts: dataAzurermStorageAccountBlobContainerSasTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

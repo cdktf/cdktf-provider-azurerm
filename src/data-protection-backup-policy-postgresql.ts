@@ -63,7 +63,7 @@ export interface DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria {
   readonly weeksOfMonth?: string[];
 }
 
-function dataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaToTerraform(struct?: DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputReference | DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria): any {
+export function dataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaToTerraform(struct?: DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputReference | DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -87,12 +87,55 @@ export class DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputRefe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._absoluteCriteria) {
+      hasAnyValues = true;
+      internalValueResult.absoluteCriteria = this._absoluteCriteria;
+    }
+    if (this._daysOfWeek) {
+      hasAnyValues = true;
+      internalValueResult.daysOfWeek = this._daysOfWeek;
+    }
+    if (this._monthsOfYear) {
+      hasAnyValues = true;
+      internalValueResult.monthsOfYear = this._monthsOfYear;
+    }
+    if (this._scheduledBackupTimes) {
+      hasAnyValues = true;
+      internalValueResult.scheduledBackupTimes = this._scheduledBackupTimes;
+    }
+    if (this._weeksOfMonth) {
+      hasAnyValues = true;
+      internalValueResult.weeksOfMonth = this._weeksOfMonth;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria | undefined) {
+    if (value === undefined) {
+      this._absoluteCriteria = undefined;
+      this._daysOfWeek = undefined;
+      this._monthsOfYear = undefined;
+      this._scheduledBackupTimes = undefined;
+      this._weeksOfMonth = undefined;
+    }
+    else {
+      this._absoluteCriteria = value.absoluteCriteria;
+      this._daysOfWeek = value.daysOfWeek;
+      this._monthsOfYear = value.monthsOfYear;
+      this._scheduledBackupTimes = value.scheduledBackupTimes;
+      this._weeksOfMonth = value.weeksOfMonth;
+    }
+  }
+
   // absolute_criteria - computed: false, optional: true, required: false
-  private _absoluteCriteria?: string | undefined; 
+  private _absoluteCriteria?: string; 
   public get absoluteCriteria() {
     return this.getStringAttribute('absolute_criteria');
   }
-  public set absoluteCriteria(value: string | undefined) {
+  public set absoluteCriteria(value: string) {
     this._absoluteCriteria = value;
   }
   public resetAbsoluteCriteria() {
@@ -100,15 +143,15 @@ export class DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get absoluteCriteriaInput() {
-    return this._absoluteCriteria
+    return this._absoluteCriteria;
   }
 
   // days_of_week - computed: false, optional: true, required: false
-  private _daysOfWeek?: string[] | undefined; 
+  private _daysOfWeek?: string[]; 
   public get daysOfWeek() {
     return this.getListAttribute('days_of_week');
   }
-  public set daysOfWeek(value: string[] | undefined) {
+  public set daysOfWeek(value: string[]) {
     this._daysOfWeek = value;
   }
   public resetDaysOfWeek() {
@@ -116,15 +159,15 @@ export class DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get daysOfWeekInput() {
-    return this._daysOfWeek
+    return this._daysOfWeek;
   }
 
   // months_of_year - computed: false, optional: true, required: false
-  private _monthsOfYear?: string[] | undefined; 
+  private _monthsOfYear?: string[]; 
   public get monthsOfYear() {
     return this.getListAttribute('months_of_year');
   }
-  public set monthsOfYear(value: string[] | undefined) {
+  public set monthsOfYear(value: string[]) {
     this._monthsOfYear = value;
   }
   public resetMonthsOfYear() {
@@ -132,15 +175,15 @@ export class DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get monthsOfYearInput() {
-    return this._monthsOfYear
+    return this._monthsOfYear;
   }
 
   // scheduled_backup_times - computed: false, optional: true, required: false
-  private _scheduledBackupTimes?: string[] | undefined; 
+  private _scheduledBackupTimes?: string[]; 
   public get scheduledBackupTimes() {
     return this.getListAttribute('scheduled_backup_times');
   }
-  public set scheduledBackupTimes(value: string[] | undefined) {
+  public set scheduledBackupTimes(value: string[]) {
     this._scheduledBackupTimes = value;
   }
   public resetScheduledBackupTimes() {
@@ -148,15 +191,15 @@ export class DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get scheduledBackupTimesInput() {
-    return this._scheduledBackupTimes
+    return this._scheduledBackupTimes;
   }
 
   // weeks_of_month - computed: false, optional: true, required: false
-  private _weeksOfMonth?: string[] | undefined; 
+  private _weeksOfMonth?: string[]; 
   public get weeksOfMonth() {
     return this.getListAttribute('weeks_of_month');
   }
-  public set weeksOfMonth(value: string[] | undefined) {
+  public set weeksOfMonth(value: string[]) {
     this._weeksOfMonth = value;
   }
   public resetWeeksOfMonth() {
@@ -164,7 +207,7 @@ export class DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get weeksOfMonthInput() {
-    return this._weeksOfMonth
+    return this._weeksOfMonth;
   }
 }
 export interface DataProtectionBackupPolicyPostgresqlRetentionRule {
@@ -188,7 +231,7 @@ export interface DataProtectionBackupPolicyPostgresqlRetentionRule {
   readonly criteria: DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria;
 }
 
-function dataProtectionBackupPolicyPostgresqlRetentionRuleToTerraform(struct?: DataProtectionBackupPolicyPostgresqlRetentionRule): any {
+export function dataProtectionBackupPolicyPostgresqlRetentionRuleToTerraform(struct?: DataProtectionBackupPolicyPostgresqlRetentionRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -220,7 +263,7 @@ export interface DataProtectionBackupPolicyPostgresqlTimeouts {
   readonly update?: string;
 }
 
-function dataProtectionBackupPolicyPostgresqlTimeoutsToTerraform(struct?: DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference | DataProtectionBackupPolicyPostgresqlTimeouts): any {
+export function dataProtectionBackupPolicyPostgresqlTimeoutsToTerraform(struct?: DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference | DataProtectionBackupPolicyPostgresqlTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -243,12 +286,49 @@ export class DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataProtectionBackupPolicyPostgresqlTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataProtectionBackupPolicyPostgresqlTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -256,15 +336,15 @@ export class DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -272,15 +352,15 @@ export class DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -288,15 +368,15 @@ export class DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -304,7 +384,7 @@ export class DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -346,7 +426,7 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
     this._resourceGroupName = config.resourceGroupName;
     this._vaultName = config.vaultName;
     this._retentionRule = config.retentionRule;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -363,7 +443,7 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get backupRepeatingTimeIntervalsInput() {
-    return this._backupRepeatingTimeIntervals
+    return this._backupRepeatingTimeIntervals;
   }
 
   // default_retention_duration - computed: false, optional: false, required: true
@@ -376,7 +456,7 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get defaultRetentionDurationInput() {
-    return this._defaultRetentionDuration
+    return this._defaultRetentionDuration;
   }
 
   // id - computed: true, optional: true, required: false
@@ -394,7 +474,7 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -407,7 +487,7 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // vault_name - computed: false, optional: false, required: true
@@ -420,16 +500,16 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get vaultNameInput() {
-    return this._vaultName
+    return this._vaultName;
   }
 
   // retention_rule - computed: false, optional: true, required: false
-  private _retentionRule?: DataProtectionBackupPolicyPostgresqlRetentionRule[] | undefined; 
+  private _retentionRule?: DataProtectionBackupPolicyPostgresqlRetentionRule[]; 
   public get retentionRule() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('retention_rule') as any;
   }
-  public set retentionRule(value: DataProtectionBackupPolicyPostgresqlRetentionRule[] | undefined) {
+  public set retentionRule(value: DataProtectionBackupPolicyPostgresqlRetentionRule[]) {
     this._retentionRule = value;
   }
   public resetRetentionRule() {
@@ -437,24 +517,23 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get retentionRuleInput() {
-    return this._retentionRule
+    return this._retentionRule;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataProtectionBackupPolicyPostgresqlTimeouts | undefined; 
-  private __timeoutsOutput = new DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataProtectionBackupPolicyPostgresqlTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataProtectionBackupPolicyPostgresqlTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -469,7 +548,7 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       vault_name: cdktf.stringToTerraform(this._vaultName),
       retention_rule: cdktf.listMapper(dataProtectionBackupPolicyPostgresqlRetentionRuleToTerraform)(this._retentionRule),
-      timeouts: dataProtectionBackupPolicyPostgresqlTimeoutsToTerraform(this._timeouts),
+      timeouts: dataProtectionBackupPolicyPostgresqlTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

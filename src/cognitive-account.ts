@@ -107,7 +107,7 @@ export interface CognitiveAccountIdentity {
   readonly type?: string;
 }
 
-function cognitiveAccountIdentityToTerraform(struct?: CognitiveAccountIdentityOutputReference | CognitiveAccountIdentity): any {
+export function cognitiveAccountIdentityToTerraform(struct?: CognitiveAccountIdentityOutputReference | CognitiveAccountIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -128,12 +128,37 @@ export class CognitiveAccountIdentityOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CognitiveAccountIdentity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._identityIds) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CognitiveAccountIdentity | undefined) {
+    if (value === undefined) {
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
   // identity_ids - computed: false, optional: true, required: false
-  private _identityIds?: string[] | undefined; 
+  private _identityIds?: string[]; 
   public get identityIds() {
     return this.getListAttribute('identity_ids');
   }
-  public set identityIds(value: string[] | undefined) {
+  public set identityIds(value: string[]) {
     this._identityIds = value;
   }
   public resetIdentityIds() {
@@ -141,15 +166,15 @@ export class CognitiveAccountIdentityOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
-    return this._identityIds
+    return this._identityIds;
   }
 
   // type - computed: false, optional: true, required: false
-  private _type?: string | undefined; 
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string | undefined) {
+  public set type(value: string) {
     this._type = value;
   }
   public resetType() {
@@ -157,7 +182,7 @@ export class CognitiveAccountIdentityOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface CognitiveAccountNetworkAclsVirtualNetworkRules {
@@ -171,7 +196,7 @@ export interface CognitiveAccountNetworkAclsVirtualNetworkRules {
   readonly subnetId?: string;
 }
 
-function cognitiveAccountNetworkAclsVirtualNetworkRulesToTerraform(struct?: CognitiveAccountNetworkAclsVirtualNetworkRules): any {
+export function cognitiveAccountNetworkAclsVirtualNetworkRulesToTerraform(struct?: CognitiveAccountNetworkAclsVirtualNetworkRules): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -201,7 +226,7 @@ export interface CognitiveAccountNetworkAcls {
   readonly virtualNetworkSubnetIds?: string[];
 }
 
-function cognitiveAccountNetworkAclsToTerraform(struct?: CognitiveAccountNetworkAclsOutputReference | CognitiveAccountNetworkAcls): any {
+export function cognitiveAccountNetworkAclsToTerraform(struct?: CognitiveAccountNetworkAclsOutputReference | CognitiveAccountNetworkAcls): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -224,6 +249,43 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CognitiveAccountNetworkAcls | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._defaultAction) {
+      hasAnyValues = true;
+      internalValueResult.defaultAction = this._defaultAction;
+    }
+    if (this._ipRules) {
+      hasAnyValues = true;
+      internalValueResult.ipRules = this._ipRules;
+    }
+    if (this._virtualNetworkRules) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetworkRules = this._virtualNetworkRules;
+    }
+    if (this._virtualNetworkSubnetIds) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetworkSubnetIds = this._virtualNetworkSubnetIds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CognitiveAccountNetworkAcls | undefined) {
+    if (value === undefined) {
+      this._defaultAction = undefined;
+      this._ipRules = undefined;
+      this._virtualNetworkRules = undefined;
+      this._virtualNetworkSubnetIds = undefined;
+    }
+    else {
+      this._defaultAction = value.defaultAction;
+      this._ipRules = value.ipRules;
+      this._virtualNetworkRules = value.virtualNetworkRules;
+      this._virtualNetworkSubnetIds = value.virtualNetworkSubnetIds;
+    }
+  }
+
   // default_action - computed: false, optional: false, required: true
   private _defaultAction?: string; 
   public get defaultAction() {
@@ -234,15 +296,15 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get defaultActionInput() {
-    return this._defaultAction
+    return this._defaultAction;
   }
 
   // ip_rules - computed: false, optional: true, required: false
-  private _ipRules?: string[] | undefined; 
+  private _ipRules?: string[]; 
   public get ipRules() {
     return this.getListAttribute('ip_rules');
   }
-  public set ipRules(value: string[] | undefined) {
+  public set ipRules(value: string[]) {
     this._ipRules = value;
   }
   public resetIpRules() {
@@ -250,16 +312,16 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get ipRulesInput() {
-    return this._ipRules
+    return this._ipRules;
   }
 
   // virtual_network_rules - computed: true, optional: true, required: false
-  private _virtualNetworkRules?: CognitiveAccountNetworkAclsVirtualNetworkRules[] | undefined; 
+  private _virtualNetworkRules?: CognitiveAccountNetworkAclsVirtualNetworkRules[]; 
   public get virtualNetworkRules() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('virtual_network_rules') as any;
   }
-  public set virtualNetworkRules(value: CognitiveAccountNetworkAclsVirtualNetworkRules[] | undefined) {
+  public set virtualNetworkRules(value: CognitiveAccountNetworkAclsVirtualNetworkRules[]) {
     this._virtualNetworkRules = value;
   }
   public resetVirtualNetworkRules() {
@@ -267,15 +329,15 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get virtualNetworkRulesInput() {
-    return this._virtualNetworkRules
+    return this._virtualNetworkRules;
   }
 
   // virtual_network_subnet_ids - computed: true, optional: true, required: false
-  private _virtualNetworkSubnetIds?: string[] | undefined; 
+  private _virtualNetworkSubnetIds?: string[]; 
   public get virtualNetworkSubnetIds() {
     return this.getListAttribute('virtual_network_subnet_ids');
   }
-  public set virtualNetworkSubnetIds(value: string[] | undefined) {
+  public set virtualNetworkSubnetIds(value: string[]) {
     this._virtualNetworkSubnetIds = value;
   }
   public resetVirtualNetworkSubnetIds() {
@@ -283,7 +345,7 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get virtualNetworkSubnetIdsInput() {
-    return this._virtualNetworkSubnetIds
+    return this._virtualNetworkSubnetIds;
   }
 }
 export interface CognitiveAccountStorage {
@@ -297,7 +359,7 @@ export interface CognitiveAccountStorage {
   readonly storageAccountId: string;
 }
 
-function cognitiveAccountStorageToTerraform(struct?: CognitiveAccountStorage): any {
+export function cognitiveAccountStorageToTerraform(struct?: CognitiveAccountStorage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -327,7 +389,7 @@ export interface CognitiveAccountTimeouts {
   readonly update?: string;
 }
 
-function cognitiveAccountTimeoutsToTerraform(struct?: CognitiveAccountTimeoutsOutputReference | CognitiveAccountTimeouts): any {
+export function cognitiveAccountTimeoutsToTerraform(struct?: CognitiveAccountTimeoutsOutputReference | CognitiveAccountTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -350,12 +412,49 @@ export class CognitiveAccountTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CognitiveAccountTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CognitiveAccountTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -363,15 +462,15 @@ export class CognitiveAccountTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -379,15 +478,15 @@ export class CognitiveAccountTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -395,15 +494,15 @@ export class CognitiveAccountTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -411,7 +510,7 @@ export class CognitiveAccountTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -463,10 +562,10 @@ export class CognitiveAccount extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
     this._tags = config.tags;
-    this._identity = config.identity;
-    this._networkAcls = config.networkAcls;
+    this._identity.internalValue = config.identity;
+    this._networkAcls.internalValue = config.networkAcls;
     this._storage = config.storage;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -474,11 +573,11 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   // ==========
 
   // custom_subdomain_name - computed: false, optional: true, required: false
-  private _customSubdomainName?: string | undefined; 
+  private _customSubdomainName?: string; 
   public get customSubdomainName() {
     return this.getStringAttribute('custom_subdomain_name');
   }
-  public set customSubdomainName(value: string | undefined) {
+  public set customSubdomainName(value: string) {
     this._customSubdomainName = value;
   }
   public resetCustomSubdomainName() {
@@ -486,7 +585,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get customSubdomainNameInput() {
-    return this._customSubdomainName
+    return this._customSubdomainName;
   }
 
   // endpoint - computed: true, optional: false, required: false
@@ -495,11 +594,11 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
 
   // fqdns - computed: false, optional: true, required: false
-  private _fqdns?: string[] | undefined; 
+  private _fqdns?: string[]; 
   public get fqdns() {
     return this.getListAttribute('fqdns');
   }
-  public set fqdns(value: string[] | undefined) {
+  public set fqdns(value: string[]) {
     this._fqdns = value;
   }
   public resetFqdns() {
@@ -507,7 +606,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get fqdnsInput() {
-    return this._fqdns
+    return this._fqdns;
   }
 
   // id - computed: true, optional: true, required: false
@@ -525,15 +624,15 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get kindInput() {
-    return this._kind
+    return this._kind;
   }
 
   // local_auth_enabled - computed: false, optional: true, required: false
-  private _localAuthEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _localAuthEnabled?: boolean | cdktf.IResolvable; 
   public get localAuthEnabled() {
     return this.getBooleanAttribute('local_auth_enabled') as any;
   }
-  public set localAuthEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set localAuthEnabled(value: boolean | cdktf.IResolvable) {
     this._localAuthEnabled = value;
   }
   public resetLocalAuthEnabled() {
@@ -541,7 +640,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get localAuthEnabledInput() {
-    return this._localAuthEnabled
+    return this._localAuthEnabled;
   }
 
   // location - computed: false, optional: false, required: true
@@ -554,15 +653,15 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // metrics_advisor_aad_client_id - computed: false, optional: true, required: false
-  private _metricsAdvisorAadClientId?: string | undefined; 
+  private _metricsAdvisorAadClientId?: string; 
   public get metricsAdvisorAadClientId() {
     return this.getStringAttribute('metrics_advisor_aad_client_id');
   }
-  public set metricsAdvisorAadClientId(value: string | undefined) {
+  public set metricsAdvisorAadClientId(value: string) {
     this._metricsAdvisorAadClientId = value;
   }
   public resetMetricsAdvisorAadClientId() {
@@ -570,15 +669,15 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get metricsAdvisorAadClientIdInput() {
-    return this._metricsAdvisorAadClientId
+    return this._metricsAdvisorAadClientId;
   }
 
   // metrics_advisor_aad_tenant_id - computed: false, optional: true, required: false
-  private _metricsAdvisorAadTenantId?: string | undefined; 
+  private _metricsAdvisorAadTenantId?: string; 
   public get metricsAdvisorAadTenantId() {
     return this.getStringAttribute('metrics_advisor_aad_tenant_id');
   }
-  public set metricsAdvisorAadTenantId(value: string | undefined) {
+  public set metricsAdvisorAadTenantId(value: string) {
     this._metricsAdvisorAadTenantId = value;
   }
   public resetMetricsAdvisorAadTenantId() {
@@ -586,15 +685,15 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get metricsAdvisorAadTenantIdInput() {
-    return this._metricsAdvisorAadTenantId
+    return this._metricsAdvisorAadTenantId;
   }
 
   // metrics_advisor_super_user_name - computed: false, optional: true, required: false
-  private _metricsAdvisorSuperUserName?: string | undefined; 
+  private _metricsAdvisorSuperUserName?: string; 
   public get metricsAdvisorSuperUserName() {
     return this.getStringAttribute('metrics_advisor_super_user_name');
   }
-  public set metricsAdvisorSuperUserName(value: string | undefined) {
+  public set metricsAdvisorSuperUserName(value: string) {
     this._metricsAdvisorSuperUserName = value;
   }
   public resetMetricsAdvisorSuperUserName() {
@@ -602,15 +701,15 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get metricsAdvisorSuperUserNameInput() {
-    return this._metricsAdvisorSuperUserName
+    return this._metricsAdvisorSuperUserName;
   }
 
   // metrics_advisor_website_name - computed: false, optional: true, required: false
-  private _metricsAdvisorWebsiteName?: string | undefined; 
+  private _metricsAdvisorWebsiteName?: string; 
   public get metricsAdvisorWebsiteName() {
     return this.getStringAttribute('metrics_advisor_website_name');
   }
-  public set metricsAdvisorWebsiteName(value: string | undefined) {
+  public set metricsAdvisorWebsiteName(value: string) {
     this._metricsAdvisorWebsiteName = value;
   }
   public resetMetricsAdvisorWebsiteName() {
@@ -618,7 +717,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get metricsAdvisorWebsiteNameInput() {
-    return this._metricsAdvisorWebsiteName
+    return this._metricsAdvisorWebsiteName;
   }
 
   // name - computed: false, optional: false, required: true
@@ -631,15 +730,15 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // outbound_network_access_restrited - computed: false, optional: true, required: false
-  private _outboundNetworkAccessRestrited?: boolean | cdktf.IResolvable | undefined; 
+  private _outboundNetworkAccessRestrited?: boolean | cdktf.IResolvable; 
   public get outboundNetworkAccessRestrited() {
     return this.getBooleanAttribute('outbound_network_access_restrited') as any;
   }
-  public set outboundNetworkAccessRestrited(value: boolean | cdktf.IResolvable | undefined) {
+  public set outboundNetworkAccessRestrited(value: boolean | cdktf.IResolvable) {
     this._outboundNetworkAccessRestrited = value;
   }
   public resetOutboundNetworkAccessRestrited() {
@@ -647,7 +746,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get outboundNetworkAccessRestritedInput() {
-    return this._outboundNetworkAccessRestrited
+    return this._outboundNetworkAccessRestrited;
   }
 
   // primary_access_key - computed: true, optional: false, required: false
@@ -656,11 +755,11 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled') as any;
   }
-  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -668,15 +767,15 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get publicNetworkAccessEnabledInput() {
-    return this._publicNetworkAccessEnabled
+    return this._publicNetworkAccessEnabled;
   }
 
   // qna_runtime_endpoint - computed: false, optional: true, required: false
-  private _qnaRuntimeEndpoint?: string | undefined; 
+  private _qnaRuntimeEndpoint?: string; 
   public get qnaRuntimeEndpoint() {
     return this.getStringAttribute('qna_runtime_endpoint');
   }
-  public set qnaRuntimeEndpoint(value: string | undefined) {
+  public set qnaRuntimeEndpoint(value: string) {
     this._qnaRuntimeEndpoint = value;
   }
   public resetQnaRuntimeEndpoint() {
@@ -684,7 +783,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get qnaRuntimeEndpointInput() {
-    return this._qnaRuntimeEndpoint
+    return this._qnaRuntimeEndpoint;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -697,7 +796,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // secondary_access_key - computed: true, optional: false, required: false
@@ -715,16 +814,16 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuNameInput() {
-    return this._skuName
+    return this._skuName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -732,50 +831,48 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: CognitiveAccountIdentity | undefined; 
-  private __identityOutput = new CognitiveAccountIdentityOutputReference(this as any, "identity", true);
+  private _identity = new CognitiveAccountIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.__identityOutput;
+    return this._identity;
   }
-  public putIdentity(value: CognitiveAccountIdentity | undefined) {
-    this._identity = value;
+  public putIdentity(value: CognitiveAccountIdentity) {
+    this._identity.internalValue = value;
   }
   public resetIdentity() {
-    this._identity = undefined;
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
-    return this._identity
+    return this._identity.internalValue;
   }
 
   // network_acls - computed: false, optional: true, required: false
-  private _networkAcls?: CognitiveAccountNetworkAcls | undefined; 
-  private __networkAclsOutput = new CognitiveAccountNetworkAclsOutputReference(this as any, "network_acls", true);
+  private _networkAcls = new CognitiveAccountNetworkAclsOutputReference(this as any, "network_acls", true);
   public get networkAcls() {
-    return this.__networkAclsOutput;
+    return this._networkAcls;
   }
-  public putNetworkAcls(value: CognitiveAccountNetworkAcls | undefined) {
-    this._networkAcls = value;
+  public putNetworkAcls(value: CognitiveAccountNetworkAcls) {
+    this._networkAcls.internalValue = value;
   }
   public resetNetworkAcls() {
-    this._networkAcls = undefined;
+    this._networkAcls.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get networkAclsInput() {
-    return this._networkAcls
+    return this._networkAcls.internalValue;
   }
 
   // storage - computed: false, optional: true, required: false
-  private _storage?: CognitiveAccountStorage[] | undefined; 
+  private _storage?: CognitiveAccountStorage[]; 
   public get storage() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('storage') as any;
   }
-  public set storage(value: CognitiveAccountStorage[] | undefined) {
+  public set storage(value: CognitiveAccountStorage[]) {
     this._storage = value;
   }
   public resetStorage() {
@@ -783,24 +880,23 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageInput() {
-    return this._storage
+    return this._storage;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: CognitiveAccountTimeouts | undefined; 
-  private __timeoutsOutput = new CognitiveAccountTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CognitiveAccountTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: CognitiveAccountTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: CognitiveAccountTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -825,10 +921,10 @@ export class CognitiveAccount extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      identity: cognitiveAccountIdentityToTerraform(this._identity),
-      network_acls: cognitiveAccountNetworkAclsToTerraform(this._networkAcls),
+      identity: cognitiveAccountIdentityToTerraform(this._identity.internalValue),
+      network_acls: cognitiveAccountNetworkAclsToTerraform(this._networkAcls.internalValue),
       storage: cdktf.listMapper(cognitiveAccountStorageToTerraform)(this._storage),
-      timeouts: cognitiveAccountTimeoutsToTerraform(this._timeouts),
+      timeouts: cognitiveAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

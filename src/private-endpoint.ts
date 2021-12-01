@@ -131,7 +131,7 @@ export interface PrivateEndpointPrivateDnsZoneGroup {
   readonly privateDnsZoneIds: string[];
 }
 
-function privateEndpointPrivateDnsZoneGroupToTerraform(struct?: PrivateEndpointPrivateDnsZoneGroupOutputReference | PrivateEndpointPrivateDnsZoneGroup): any {
+export function privateEndpointPrivateDnsZoneGroupToTerraform(struct?: PrivateEndpointPrivateDnsZoneGroupOutputReference | PrivateEndpointPrivateDnsZoneGroup): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -152,6 +152,31 @@ export class PrivateEndpointPrivateDnsZoneGroupOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PrivateEndpointPrivateDnsZoneGroup | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._privateDnsZoneIds) {
+      hasAnyValues = true;
+      internalValueResult.privateDnsZoneIds = this._privateDnsZoneIds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivateEndpointPrivateDnsZoneGroup | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._privateDnsZoneIds = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._privateDnsZoneIds = value.privateDnsZoneIds;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -162,7 +187,7 @@ export class PrivateEndpointPrivateDnsZoneGroupOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // private_dns_zone_ids - computed: false, optional: false, required: true
@@ -175,7 +200,7 @@ export class PrivateEndpointPrivateDnsZoneGroupOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get privateDnsZoneIdsInput() {
-    return this._privateDnsZoneIds
+    return this._privateDnsZoneIds;
   }
 }
 export interface PrivateEndpointPrivateServiceConnection {
@@ -205,7 +230,7 @@ export interface PrivateEndpointPrivateServiceConnection {
   readonly subresourceNames?: string[];
 }
 
-function privateEndpointPrivateServiceConnectionToTerraform(struct?: PrivateEndpointPrivateServiceConnectionOutputReference | PrivateEndpointPrivateServiceConnection): any {
+export function privateEndpointPrivateServiceConnectionToTerraform(struct?: PrivateEndpointPrivateServiceConnectionOutputReference | PrivateEndpointPrivateServiceConnection): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -230,6 +255,55 @@ export class PrivateEndpointPrivateServiceConnectionOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PrivateEndpointPrivateServiceConnection | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._isManualConnection) {
+      hasAnyValues = true;
+      internalValueResult.isManualConnection = this._isManualConnection;
+    }
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._privateConnectionResourceAlias) {
+      hasAnyValues = true;
+      internalValueResult.privateConnectionResourceAlias = this._privateConnectionResourceAlias;
+    }
+    if (this._privateConnectionResourceId) {
+      hasAnyValues = true;
+      internalValueResult.privateConnectionResourceId = this._privateConnectionResourceId;
+    }
+    if (this._requestMessage) {
+      hasAnyValues = true;
+      internalValueResult.requestMessage = this._requestMessage;
+    }
+    if (this._subresourceNames) {
+      hasAnyValues = true;
+      internalValueResult.subresourceNames = this._subresourceNames;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivateEndpointPrivateServiceConnection | undefined) {
+    if (value === undefined) {
+      this._isManualConnection = undefined;
+      this._name = undefined;
+      this._privateConnectionResourceAlias = undefined;
+      this._privateConnectionResourceId = undefined;
+      this._requestMessage = undefined;
+      this._subresourceNames = undefined;
+    }
+    else {
+      this._isManualConnection = value.isManualConnection;
+      this._name = value.name;
+      this._privateConnectionResourceAlias = value.privateConnectionResourceAlias;
+      this._privateConnectionResourceId = value.privateConnectionResourceId;
+      this._requestMessage = value.requestMessage;
+      this._subresourceNames = value.subresourceNames;
+    }
+  }
+
   // is_manual_connection - computed: false, optional: false, required: true
   private _isManualConnection?: boolean | cdktf.IResolvable; 
   public get isManualConnection() {
@@ -240,7 +314,7 @@ export class PrivateEndpointPrivateServiceConnectionOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get isManualConnectionInput() {
-    return this._isManualConnection
+    return this._isManualConnection;
   }
 
   // name - computed: false, optional: false, required: true
@@ -253,15 +327,15 @@ export class PrivateEndpointPrivateServiceConnectionOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // private_connection_resource_alias - computed: false, optional: true, required: false
-  private _privateConnectionResourceAlias?: string | undefined; 
+  private _privateConnectionResourceAlias?: string; 
   public get privateConnectionResourceAlias() {
     return this.getStringAttribute('private_connection_resource_alias');
   }
-  public set privateConnectionResourceAlias(value: string | undefined) {
+  public set privateConnectionResourceAlias(value: string) {
     this._privateConnectionResourceAlias = value;
   }
   public resetPrivateConnectionResourceAlias() {
@@ -269,15 +343,15 @@ export class PrivateEndpointPrivateServiceConnectionOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get privateConnectionResourceAliasInput() {
-    return this._privateConnectionResourceAlias
+    return this._privateConnectionResourceAlias;
   }
 
   // private_connection_resource_id - computed: false, optional: true, required: false
-  private _privateConnectionResourceId?: string | undefined; 
+  private _privateConnectionResourceId?: string; 
   public get privateConnectionResourceId() {
     return this.getStringAttribute('private_connection_resource_id');
   }
-  public set privateConnectionResourceId(value: string | undefined) {
+  public set privateConnectionResourceId(value: string) {
     this._privateConnectionResourceId = value;
   }
   public resetPrivateConnectionResourceId() {
@@ -285,15 +359,15 @@ export class PrivateEndpointPrivateServiceConnectionOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get privateConnectionResourceIdInput() {
-    return this._privateConnectionResourceId
+    return this._privateConnectionResourceId;
   }
 
   // request_message - computed: false, optional: true, required: false
-  private _requestMessage?: string | undefined; 
+  private _requestMessage?: string; 
   public get requestMessage() {
     return this.getStringAttribute('request_message');
   }
-  public set requestMessage(value: string | undefined) {
+  public set requestMessage(value: string) {
     this._requestMessage = value;
   }
   public resetRequestMessage() {
@@ -301,15 +375,15 @@ export class PrivateEndpointPrivateServiceConnectionOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get requestMessageInput() {
-    return this._requestMessage
+    return this._requestMessage;
   }
 
   // subresource_names - computed: false, optional: true, required: false
-  private _subresourceNames?: string[] | undefined; 
+  private _subresourceNames?: string[]; 
   public get subresourceNames() {
     return this.getListAttribute('subresource_names');
   }
-  public set subresourceNames(value: string[] | undefined) {
+  public set subresourceNames(value: string[]) {
     this._subresourceNames = value;
   }
   public resetSubresourceNames() {
@@ -317,7 +391,7 @@ export class PrivateEndpointPrivateServiceConnectionOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get subresourceNamesInput() {
-    return this._subresourceNames
+    return this._subresourceNames;
   }
 }
 export interface PrivateEndpointTimeouts {
@@ -339,7 +413,7 @@ export interface PrivateEndpointTimeouts {
   readonly update?: string;
 }
 
-function privateEndpointTimeoutsToTerraform(struct?: PrivateEndpointTimeoutsOutputReference | PrivateEndpointTimeouts): any {
+export function privateEndpointTimeoutsToTerraform(struct?: PrivateEndpointTimeoutsOutputReference | PrivateEndpointTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -362,12 +436,49 @@ export class PrivateEndpointTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PrivateEndpointTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PrivateEndpointTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -375,15 +486,15 @@ export class PrivateEndpointTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -391,15 +502,15 @@ export class PrivateEndpointTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -407,15 +518,15 @@ export class PrivateEndpointTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -423,7 +534,7 @@ export class PrivateEndpointTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -464,9 +575,9 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._subnetId = config.subnetId;
     this._tags = config.tags;
-    this._privateDnsZoneGroup = config.privateDnsZoneGroup;
-    this._privateServiceConnection = config.privateServiceConnection;
-    this._timeouts = config.timeouts;
+    this._privateDnsZoneGroup.internalValue = config.privateDnsZoneGroup;
+    this._privateServiceConnection.internalValue = config.privateServiceConnection;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -493,7 +604,7 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -506,7 +617,7 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network_interface - computed: true, optional: false, required: false
@@ -529,7 +640,7 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // subnet_id - computed: false, optional: false, required: true
@@ -542,16 +653,16 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get subnetIdInput() {
-    return this._subnetId
+    return this._subnetId;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -559,55 +670,52 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // private_dns_zone_group - computed: false, optional: true, required: false
-  private _privateDnsZoneGroup?: PrivateEndpointPrivateDnsZoneGroup | undefined; 
-  private __privateDnsZoneGroupOutput = new PrivateEndpointPrivateDnsZoneGroupOutputReference(this as any, "private_dns_zone_group", true);
+  private _privateDnsZoneGroup = new PrivateEndpointPrivateDnsZoneGroupOutputReference(this as any, "private_dns_zone_group", true);
   public get privateDnsZoneGroup() {
-    return this.__privateDnsZoneGroupOutput;
+    return this._privateDnsZoneGroup;
   }
-  public putPrivateDnsZoneGroup(value: PrivateEndpointPrivateDnsZoneGroup | undefined) {
-    this._privateDnsZoneGroup = value;
+  public putPrivateDnsZoneGroup(value: PrivateEndpointPrivateDnsZoneGroup) {
+    this._privateDnsZoneGroup.internalValue = value;
   }
   public resetPrivateDnsZoneGroup() {
-    this._privateDnsZoneGroup = undefined;
+    this._privateDnsZoneGroup.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get privateDnsZoneGroupInput() {
-    return this._privateDnsZoneGroup
+    return this._privateDnsZoneGroup.internalValue;
   }
 
   // private_service_connection - computed: false, optional: false, required: true
-  private _privateServiceConnection?: PrivateEndpointPrivateServiceConnection; 
-  private __privateServiceConnectionOutput = new PrivateEndpointPrivateServiceConnectionOutputReference(this as any, "private_service_connection", true);
+  private _privateServiceConnection = new PrivateEndpointPrivateServiceConnectionOutputReference(this as any, "private_service_connection", true);
   public get privateServiceConnection() {
-    return this.__privateServiceConnectionOutput;
+    return this._privateServiceConnection;
   }
   public putPrivateServiceConnection(value: PrivateEndpointPrivateServiceConnection) {
-    this._privateServiceConnection = value;
+    this._privateServiceConnection.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get privateServiceConnectionInput() {
-    return this._privateServiceConnection
+    return this._privateServiceConnection.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: PrivateEndpointTimeouts | undefined; 
-  private __timeoutsOutput = new PrivateEndpointTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new PrivateEndpointTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: PrivateEndpointTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: PrivateEndpointTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -621,9 +729,9 @@ export class PrivateEndpoint extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      private_dns_zone_group: privateEndpointPrivateDnsZoneGroupToTerraform(this._privateDnsZoneGroup),
-      private_service_connection: privateEndpointPrivateServiceConnectionToTerraform(this._privateServiceConnection),
-      timeouts: privateEndpointTimeoutsToTerraform(this._timeouts),
+      private_dns_zone_group: privateEndpointPrivateDnsZoneGroupToTerraform(this._privateDnsZoneGroup.internalValue),
+      private_service_connection: privateEndpointPrivateServiceConnectionToTerraform(this._privateServiceConnection.internalValue),
+      timeouts: privateEndpointTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

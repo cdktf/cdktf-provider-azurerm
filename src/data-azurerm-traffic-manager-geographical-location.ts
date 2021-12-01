@@ -25,7 +25,7 @@ export interface DataAzurermTrafficManagerGeographicalLocationTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermTrafficManagerGeographicalLocationTimeoutsToTerraform(struct?: DataAzurermTrafficManagerGeographicalLocationTimeoutsOutputReference | DataAzurermTrafficManagerGeographicalLocationTimeouts): any {
+export function dataAzurermTrafficManagerGeographicalLocationTimeoutsToTerraform(struct?: DataAzurermTrafficManagerGeographicalLocationTimeoutsOutputReference | DataAzurermTrafficManagerGeographicalLocationTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -45,12 +45,31 @@ export class DataAzurermTrafficManagerGeographicalLocationTimeoutsOutputReferenc
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermTrafficManagerGeographicalLocationTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermTrafficManagerGeographicalLocationTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -58,7 +77,7 @@ export class DataAzurermTrafficManagerGeographicalLocationTimeoutsOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -95,7 +114,7 @@ export class DataAzurermTrafficManagerGeographicalLocation extends cdktf.Terrafo
       lifecycle: config.lifecycle
     });
     this._name = config.name;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -117,24 +136,23 @@ export class DataAzurermTrafficManagerGeographicalLocation extends cdktf.Terrafo
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermTrafficManagerGeographicalLocationTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermTrafficManagerGeographicalLocationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermTrafficManagerGeographicalLocationTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermTrafficManagerGeographicalLocationTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermTrafficManagerGeographicalLocationTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -144,7 +162,7 @@ export class DataAzurermTrafficManagerGeographicalLocation extends cdktf.Terrafo
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       name: cdktf.stringToTerraform(this._name),
-      timeouts: dataAzurermTrafficManagerGeographicalLocationTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermTrafficManagerGeographicalLocationTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

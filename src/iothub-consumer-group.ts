@@ -49,7 +49,7 @@ export interface IothubConsumerGroupTimeouts {
   readonly update?: string;
 }
 
-function iothubConsumerGroupTimeoutsToTerraform(struct?: IothubConsumerGroupTimeoutsOutputReference | IothubConsumerGroupTimeouts): any {
+export function iothubConsumerGroupTimeoutsToTerraform(struct?: IothubConsumerGroupTimeoutsOutputReference | IothubConsumerGroupTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -72,12 +72,49 @@ export class IothubConsumerGroupTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): IothubConsumerGroupTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IothubConsumerGroupTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -85,15 +122,15 @@ export class IothubConsumerGroupTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -101,15 +138,15 @@ export class IothubConsumerGroupTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -117,15 +154,15 @@ export class IothubConsumerGroupTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -133,7 +170,7 @@ export class IothubConsumerGroupTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -173,7 +210,7 @@ export class IothubConsumerGroup extends cdktf.TerraformResource {
     this._iothubName = config.iothubName;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -190,7 +227,7 @@ export class IothubConsumerGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get eventhubEndpointNameInput() {
-    return this._eventhubEndpointName
+    return this._eventhubEndpointName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -208,7 +245,7 @@ export class IothubConsumerGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get iothubNameInput() {
-    return this._iothubName
+    return this._iothubName;
   }
 
   // name - computed: false, optional: false, required: true
@@ -221,7 +258,7 @@ export class IothubConsumerGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -234,24 +271,23 @@ export class IothubConsumerGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: IothubConsumerGroupTimeouts | undefined; 
-  private __timeoutsOutput = new IothubConsumerGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new IothubConsumerGroupTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: IothubConsumerGroupTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: IothubConsumerGroupTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -264,7 +300,7 @@ export class IothubConsumerGroup extends cdktf.TerraformResource {
       iothub_name: cdktf.stringToTerraform(this._iothubName),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      timeouts: iothubConsumerGroupTimeoutsToTerraform(this._timeouts),
+      timeouts: iothubConsumerGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

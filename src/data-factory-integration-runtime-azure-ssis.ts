@@ -113,7 +113,7 @@ export interface DataFactoryIntegrationRuntimeAzureSsisCatalogInfo {
   readonly serverEndpoint: string;
 }
 
-function dataFactoryIntegrationRuntimeAzureSsisCatalogInfoToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference | DataFactoryIntegrationRuntimeAzureSsisCatalogInfo): any {
+export function dataFactoryIntegrationRuntimeAzureSsisCatalogInfoToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference | DataFactoryIntegrationRuntimeAzureSsisCatalogInfo): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -137,12 +137,55 @@ export class DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisCatalogInfo | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._administratorLogin) {
+      hasAnyValues = true;
+      internalValueResult.administratorLogin = this._administratorLogin;
+    }
+    if (this._administratorPassword) {
+      hasAnyValues = true;
+      internalValueResult.administratorPassword = this._administratorPassword;
+    }
+    if (this._dualStandbyPairName) {
+      hasAnyValues = true;
+      internalValueResult.dualStandbyPairName = this._dualStandbyPairName;
+    }
+    if (this._pricingTier) {
+      hasAnyValues = true;
+      internalValueResult.pricingTier = this._pricingTier;
+    }
+    if (this._serverEndpoint) {
+      hasAnyValues = true;
+      internalValueResult.serverEndpoint = this._serverEndpoint;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisCatalogInfo | undefined) {
+    if (value === undefined) {
+      this._administratorLogin = undefined;
+      this._administratorPassword = undefined;
+      this._dualStandbyPairName = undefined;
+      this._pricingTier = undefined;
+      this._serverEndpoint = undefined;
+    }
+    else {
+      this._administratorLogin = value.administratorLogin;
+      this._administratorPassword = value.administratorPassword;
+      this._dualStandbyPairName = value.dualStandbyPairName;
+      this._pricingTier = value.pricingTier;
+      this._serverEndpoint = value.serverEndpoint;
+    }
+  }
+
   // administrator_login - computed: false, optional: true, required: false
-  private _administratorLogin?: string | undefined; 
+  private _administratorLogin?: string; 
   public get administratorLogin() {
     return this.getStringAttribute('administrator_login');
   }
-  public set administratorLogin(value: string | undefined) {
+  public set administratorLogin(value: string) {
     this._administratorLogin = value;
   }
   public resetAdministratorLogin() {
@@ -150,15 +193,15 @@ export class DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get administratorLoginInput() {
-    return this._administratorLogin
+    return this._administratorLogin;
   }
 
   // administrator_password - computed: false, optional: true, required: false
-  private _administratorPassword?: string | undefined; 
+  private _administratorPassword?: string; 
   public get administratorPassword() {
     return this.getStringAttribute('administrator_password');
   }
-  public set administratorPassword(value: string | undefined) {
+  public set administratorPassword(value: string) {
     this._administratorPassword = value;
   }
   public resetAdministratorPassword() {
@@ -166,15 +209,15 @@ export class DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get administratorPasswordInput() {
-    return this._administratorPassword
+    return this._administratorPassword;
   }
 
   // dual_standby_pair_name - computed: false, optional: true, required: false
-  private _dualStandbyPairName?: string | undefined; 
+  private _dualStandbyPairName?: string; 
   public get dualStandbyPairName() {
     return this.getStringAttribute('dual_standby_pair_name');
   }
-  public set dualStandbyPairName(value: string | undefined) {
+  public set dualStandbyPairName(value: string) {
     this._dualStandbyPairName = value;
   }
   public resetDualStandbyPairName() {
@@ -182,15 +225,15 @@ export class DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get dualStandbyPairNameInput() {
-    return this._dualStandbyPairName
+    return this._dualStandbyPairName;
   }
 
   // pricing_tier - computed: false, optional: true, required: false
-  private _pricingTier?: string | undefined; 
+  private _pricingTier?: string; 
   public get pricingTier() {
     return this.getStringAttribute('pricing_tier');
   }
-  public set pricingTier(value: string | undefined) {
+  public set pricingTier(value: string) {
     this._pricingTier = value;
   }
   public resetPricingTier() {
@@ -198,7 +241,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get pricingTierInput() {
-    return this._pricingTier
+    return this._pricingTier;
   }
 
   // server_endpoint - computed: false, optional: false, required: true
@@ -211,7 +254,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get serverEndpointInput() {
-    return this._serverEndpoint
+    return this._serverEndpoint;
   }
 }
 export interface DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript {
@@ -225,7 +268,7 @@ export interface DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript {
   readonly sasToken: string;
 }
 
-function dataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptOutputReference | DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript): any {
+export function dataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptOutputReference | DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -246,6 +289,31 @@ export class DataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptOutputRefere
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._blobContainerUri) {
+      hasAnyValues = true;
+      internalValueResult.blobContainerUri = this._blobContainerUri;
+    }
+    if (this._sasToken) {
+      hasAnyValues = true;
+      internalValueResult.sasToken = this._sasToken;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript | undefined) {
+    if (value === undefined) {
+      this._blobContainerUri = undefined;
+      this._sasToken = undefined;
+    }
+    else {
+      this._blobContainerUri = value.blobContainerUri;
+      this._sasToken = value.sasToken;
+    }
+  }
+
   // blob_container_uri - computed: false, optional: false, required: true
   private _blobContainerUri?: string; 
   public get blobContainerUri() {
@@ -256,7 +324,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get blobContainerUriInput() {
-    return this._blobContainerUri
+    return this._blobContainerUri;
   }
 
   // sas_token - computed: false, optional: false, required: true
@@ -269,7 +337,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get sasTokenInput() {
-    return this._sasToken
+    return this._sasToken;
   }
 }
 export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPassword {
@@ -291,7 +359,7 @@ export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommand
   readonly secretVersion?: string;
 }
 
-function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPasswordToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPasswordOutputReference | DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPassword): any {
+export function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPasswordToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPasswordOutputReference | DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPassword): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -314,6 +382,43 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyK
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPassword | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._linkedServiceName) {
+      hasAnyValues = true;
+      internalValueResult.linkedServiceName = this._linkedServiceName;
+    }
+    if (this._parameters) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    if (this._secretName) {
+      hasAnyValues = true;
+      internalValueResult.secretName = this._secretName;
+    }
+    if (this._secretVersion) {
+      hasAnyValues = true;
+      internalValueResult.secretVersion = this._secretVersion;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPassword | undefined) {
+    if (value === undefined) {
+      this._linkedServiceName = undefined;
+      this._parameters = undefined;
+      this._secretName = undefined;
+      this._secretVersion = undefined;
+    }
+    else {
+      this._linkedServiceName = value.linkedServiceName;
+      this._parameters = value.parameters;
+      this._secretName = value.secretName;
+      this._secretVersion = value.secretVersion;
+    }
+  }
+
   // linked_service_name - computed: false, optional: false, required: true
   private _linkedServiceName?: string; 
   public get linkedServiceName() {
@@ -324,16 +429,16 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyK
   }
   // Temporarily expose input value. Use with caution.
   public get linkedServiceNameInput() {
-    return this._linkedServiceName
+    return this._linkedServiceName;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -341,7 +446,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyK
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 
   // secret_name - computed: false, optional: false, required: true
@@ -354,15 +459,15 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyK
   }
   // Temporarily expose input value. Use with caution.
   public get secretNameInput() {
-    return this._secretName
+    return this._secretName;
   }
 
   // secret_version - computed: false, optional: true, required: false
-  private _secretVersion?: string | undefined; 
+  private _secretVersion?: string; 
   public get secretVersion() {
     return this.getStringAttribute('secret_version');
   }
-  public set secretVersion(value: string | undefined) {
+  public set secretVersion(value: string) {
     this._secretVersion = value;
   }
   public resetSecretVersion() {
@@ -370,7 +475,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyK
   }
   // Temporarily expose input value. Use with caution.
   public get secretVersionInput() {
-    return this._secretVersion
+    return this._secretVersion;
   }
 }
 export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKey {
@@ -394,7 +499,7 @@ export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommand
   readonly keyVaultPassword?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPassword;
 }
 
-function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKey): any {
+export function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -426,7 +531,7 @@ export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCompone
   readonly secretVersion?: string;
 }
 
-function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicenseToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicenseOutputReference | DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicense): any {
+export function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicenseToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicenseOutputReference | DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicense): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -449,6 +554,43 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicense | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._linkedServiceName) {
+      hasAnyValues = true;
+      internalValueResult.linkedServiceName = this._linkedServiceName;
+    }
+    if (this._parameters) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    if (this._secretName) {
+      hasAnyValues = true;
+      internalValueResult.secretName = this._secretName;
+    }
+    if (this._secretVersion) {
+      hasAnyValues = true;
+      internalValueResult.secretVersion = this._secretVersion;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicense | undefined) {
+    if (value === undefined) {
+      this._linkedServiceName = undefined;
+      this._parameters = undefined;
+      this._secretName = undefined;
+      this._secretVersion = undefined;
+    }
+    else {
+      this._linkedServiceName = value.linkedServiceName;
+      this._parameters = value.parameters;
+      this._secretName = value.secretName;
+      this._secretVersion = value.secretVersion;
+    }
+  }
+
   // linked_service_name - computed: false, optional: false, required: true
   private _linkedServiceName?: string; 
   public get linkedServiceName() {
@@ -459,16 +601,16 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKe
   }
   // Temporarily expose input value. Use with caution.
   public get linkedServiceNameInput() {
-    return this._linkedServiceName
+    return this._linkedServiceName;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -476,7 +618,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKe
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 
   // secret_name - computed: false, optional: false, required: true
@@ -489,15 +631,15 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKe
   }
   // Temporarily expose input value. Use with caution.
   public get secretNameInput() {
-    return this._secretName
+    return this._secretName;
   }
 
   // secret_version - computed: false, optional: true, required: false
-  private _secretVersion?: string | undefined; 
+  private _secretVersion?: string; 
   public get secretVersion() {
     return this.getStringAttribute('secret_version');
   }
-  public set secretVersion(value: string | undefined) {
+  public set secretVersion(value: string) {
     this._secretVersion = value;
   }
   public resetSecretVersion() {
@@ -505,7 +647,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKe
   }
   // Temporarily expose input value. Use with caution.
   public get secretVersionInput() {
-    return this._secretVersion
+    return this._secretVersion;
   }
 }
 export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent {
@@ -525,7 +667,7 @@ export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCompone
   readonly keyVaultLicense?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicense;
 }
 
-function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent): any {
+export function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -560,7 +702,7 @@ export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup {
   readonly component?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent[];
 }
 
-function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputReference | DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup): any {
+export function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputReference | DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -583,13 +725,50 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputRefer
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._environment) {
+      hasAnyValues = true;
+      internalValueResult.environment = this._environment;
+    }
+    if (this._powershellVersion) {
+      hasAnyValues = true;
+      internalValueResult.powershellVersion = this._powershellVersion;
+    }
+    if (this._commandKey) {
+      hasAnyValues = true;
+      internalValueResult.commandKey = this._commandKey;
+    }
+    if (this._component) {
+      hasAnyValues = true;
+      internalValueResult.component = this._component;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup | undefined) {
+    if (value === undefined) {
+      this._environment = undefined;
+      this._powershellVersion = undefined;
+      this._commandKey = undefined;
+      this._component = undefined;
+    }
+    else {
+      this._environment = value.environment;
+      this._powershellVersion = value.powershellVersion;
+      this._commandKey = value.commandKey;
+      this._component = value.component;
+    }
+  }
+
   // environment - computed: false, optional: true, required: false
-  private _environment?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _environment?: { [key: string]: string } | cdktf.IResolvable; 
   public get environment() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('environment') as any;
   }
-  public set environment(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set environment(value: { [key: string]: string } | cdktf.IResolvable) {
     this._environment = value;
   }
   public resetEnvironment() {
@@ -597,15 +776,15 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get environmentInput() {
-    return this._environment
+    return this._environment;
   }
 
   // powershell_version - computed: false, optional: true, required: false
-  private _powershellVersion?: string | undefined; 
+  private _powershellVersion?: string; 
   public get powershellVersion() {
     return this.getStringAttribute('powershell_version');
   }
-  public set powershellVersion(value: string | undefined) {
+  public set powershellVersion(value: string) {
     this._powershellVersion = value;
   }
   public resetPowershellVersion() {
@@ -613,16 +792,16 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get powershellVersionInput() {
-    return this._powershellVersion
+    return this._powershellVersion;
   }
 
   // command_key - computed: false, optional: true, required: false
-  private _commandKey?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKey[] | undefined; 
+  private _commandKey?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKey[]; 
   public get commandKey() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('command_key') as any;
   }
-  public set commandKey(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKey[] | undefined) {
+  public set commandKey(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKey[]) {
     this._commandKey = value;
   }
   public resetCommandKey() {
@@ -630,16 +809,16 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get commandKeyInput() {
-    return this._commandKey
+    return this._commandKey;
   }
 
   // component - computed: false, optional: true, required: false
-  private _component?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent[] | undefined; 
+  private _component?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent[]; 
   public get component() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('component') as any;
   }
-  public set component(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent[] | undefined) {
+  public set component(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent[]) {
     this._component = value;
   }
   public resetComponent() {
@@ -647,7 +826,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get componentInput() {
-    return this._component
+    return this._component;
   }
 }
 export interface DataFactoryIntegrationRuntimeAzureSsisPackageStore {
@@ -661,7 +840,7 @@ export interface DataFactoryIntegrationRuntimeAzureSsisPackageStore {
   readonly name: string;
 }
 
-function dataFactoryIntegrationRuntimeAzureSsisPackageStoreToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisPackageStore): any {
+export function dataFactoryIntegrationRuntimeAzureSsisPackageStoreToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisPackageStore): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -687,7 +866,7 @@ export interface DataFactoryIntegrationRuntimeAzureSsisProxy {
   readonly stagingStorageLinkedServiceName: string;
 }
 
-function dataFactoryIntegrationRuntimeAzureSsisProxyToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisProxyOutputReference | DataFactoryIntegrationRuntimeAzureSsisProxy): any {
+export function dataFactoryIntegrationRuntimeAzureSsisProxyToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisProxyOutputReference | DataFactoryIntegrationRuntimeAzureSsisProxy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -709,12 +888,43 @@ export class DataFactoryIntegrationRuntimeAzureSsisProxyOutputReference extends 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisProxy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._path) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._selfHostedIntegrationRuntimeName) {
+      hasAnyValues = true;
+      internalValueResult.selfHostedIntegrationRuntimeName = this._selfHostedIntegrationRuntimeName;
+    }
+    if (this._stagingStorageLinkedServiceName) {
+      hasAnyValues = true;
+      internalValueResult.stagingStorageLinkedServiceName = this._stagingStorageLinkedServiceName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisProxy | undefined) {
+    if (value === undefined) {
+      this._path = undefined;
+      this._selfHostedIntegrationRuntimeName = undefined;
+      this._stagingStorageLinkedServiceName = undefined;
+    }
+    else {
+      this._path = value.path;
+      this._selfHostedIntegrationRuntimeName = value.selfHostedIntegrationRuntimeName;
+      this._stagingStorageLinkedServiceName = value.stagingStorageLinkedServiceName;
+    }
+  }
+
   // path - computed: false, optional: true, required: false
-  private _path?: string | undefined; 
+  private _path?: string; 
   public get path() {
     return this.getStringAttribute('path');
   }
-  public set path(value: string | undefined) {
+  public set path(value: string) {
     this._path = value;
   }
   public resetPath() {
@@ -722,7 +932,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisProxyOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
-    return this._path
+    return this._path;
   }
 
   // self_hosted_integration_runtime_name - computed: false, optional: false, required: true
@@ -735,7 +945,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisProxyOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get selfHostedIntegrationRuntimeNameInput() {
-    return this._selfHostedIntegrationRuntimeName
+    return this._selfHostedIntegrationRuntimeName;
   }
 
   // staging_storage_linked_service_name - computed: false, optional: false, required: true
@@ -748,7 +958,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisProxyOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get stagingStorageLinkedServiceNameInput() {
-    return this._stagingStorageLinkedServiceName
+    return this._stagingStorageLinkedServiceName;
   }
 }
 export interface DataFactoryIntegrationRuntimeAzureSsisTimeouts {
@@ -770,7 +980,7 @@ export interface DataFactoryIntegrationRuntimeAzureSsisTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryIntegrationRuntimeAzureSsisTimeoutsToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference | DataFactoryIntegrationRuntimeAzureSsisTimeouts): any {
+export function dataFactoryIntegrationRuntimeAzureSsisTimeoutsToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference | DataFactoryIntegrationRuntimeAzureSsisTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -793,12 +1003,49 @@ export class DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -806,15 +1053,15 @@ export class DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -822,15 +1069,15 @@ export class DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -838,15 +1085,15 @@ export class DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -854,7 +1101,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface DataFactoryIntegrationRuntimeAzureSsisVnetIntegration {
@@ -876,7 +1123,7 @@ export interface DataFactoryIntegrationRuntimeAzureSsisVnetIntegration {
   readonly vnetId?: string;
 }
 
-function dataFactoryIntegrationRuntimeAzureSsisVnetIntegrationToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisVnetIntegrationOutputReference | DataFactoryIntegrationRuntimeAzureSsisVnetIntegration): any {
+export function dataFactoryIntegrationRuntimeAzureSsisVnetIntegrationToTerraform(struct?: DataFactoryIntegrationRuntimeAzureSsisVnetIntegrationOutputReference | DataFactoryIntegrationRuntimeAzureSsisVnetIntegration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -899,12 +1146,49 @@ export class DataFactoryIntegrationRuntimeAzureSsisVnetIntegrationOutputReferenc
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisVnetIntegration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._publicIps) {
+      hasAnyValues = true;
+      internalValueResult.publicIps = this._publicIps;
+    }
+    if (this._subnetId) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    if (this._subnetName) {
+      hasAnyValues = true;
+      internalValueResult.subnetName = this._subnetName;
+    }
+    if (this._vnetId) {
+      hasAnyValues = true;
+      internalValueResult.vnetId = this._vnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisVnetIntegration | undefined) {
+    if (value === undefined) {
+      this._publicIps = undefined;
+      this._subnetId = undefined;
+      this._subnetName = undefined;
+      this._vnetId = undefined;
+    }
+    else {
+      this._publicIps = value.publicIps;
+      this._subnetId = value.subnetId;
+      this._subnetName = value.subnetName;
+      this._vnetId = value.vnetId;
+    }
+  }
+
   // public_ips - computed: false, optional: true, required: false
-  private _publicIps?: string[] | undefined; 
+  private _publicIps?: string[]; 
   public get publicIps() {
     return this.getListAttribute('public_ips');
   }
-  public set publicIps(value: string[] | undefined) {
+  public set publicIps(value: string[]) {
     this._publicIps = value;
   }
   public resetPublicIps() {
@@ -912,15 +1196,15 @@ export class DataFactoryIntegrationRuntimeAzureSsisVnetIntegrationOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get publicIpsInput() {
-    return this._publicIps
+    return this._publicIps;
   }
 
   // subnet_id - computed: false, optional: true, required: false
-  private _subnetId?: string | undefined; 
+  private _subnetId?: string; 
   public get subnetId() {
     return this.getStringAttribute('subnet_id');
   }
-  public set subnetId(value: string | undefined) {
+  public set subnetId(value: string) {
     this._subnetId = value;
   }
   public resetSubnetId() {
@@ -928,15 +1212,15 @@ export class DataFactoryIntegrationRuntimeAzureSsisVnetIntegrationOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get subnetIdInput() {
-    return this._subnetId
+    return this._subnetId;
   }
 
   // subnet_name - computed: false, optional: true, required: false
-  private _subnetName?: string | undefined; 
+  private _subnetName?: string; 
   public get subnetName() {
     return this.getStringAttribute('subnet_name');
   }
-  public set subnetName(value: string | undefined) {
+  public set subnetName(value: string) {
     this._subnetName = value;
   }
   public resetSubnetName() {
@@ -944,15 +1228,15 @@ export class DataFactoryIntegrationRuntimeAzureSsisVnetIntegrationOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get subnetNameInput() {
-    return this._subnetName
+    return this._subnetName;
   }
 
   // vnet_id - computed: false, optional: true, required: false
-  private _vnetId?: string | undefined; 
+  private _vnetId?: string; 
   public get vnetId() {
     return this.getStringAttribute('vnet_id');
   }
-  public set vnetId(value: string | undefined) {
+  public set vnetId(value: string) {
     this._vnetId = value;
   }
   public resetVnetId() {
@@ -960,7 +1244,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisVnetIntegrationOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get vnetIdInput() {
-    return this._vnetId
+    return this._vnetId;
   }
 }
 
@@ -1006,13 +1290,13 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
     this._nodeSize = config.nodeSize;
     this._numberOfNodes = config.numberOfNodes;
     this._resourceGroupName = config.resourceGroupName;
-    this._catalogInfo = config.catalogInfo;
-    this._customSetupScript = config.customSetupScript;
-    this._expressCustomSetup = config.expressCustomSetup;
+    this._catalogInfo.internalValue = config.catalogInfo;
+    this._customSetupScript.internalValue = config.customSetupScript;
+    this._expressCustomSetup.internalValue = config.expressCustomSetup;
     this._packageStore = config.packageStore;
-    this._proxy = config.proxy;
-    this._timeouts = config.timeouts;
-    this._vnetIntegration = config.vnetIntegration;
+    this._proxy.internalValue = config.proxy;
+    this._timeouts.internalValue = config.timeouts;
+    this._vnetIntegration.internalValue = config.vnetIntegration;
   }
 
   // ==========
@@ -1029,15 +1313,15 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryNameInput() {
-    return this._dataFactoryName
+    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -1045,15 +1329,15 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // edition - computed: false, optional: true, required: false
-  private _edition?: string | undefined; 
+  private _edition?: string; 
   public get edition() {
     return this.getStringAttribute('edition');
   }
-  public set edition(value: string | undefined) {
+  public set edition(value: string) {
     this._edition = value;
   }
   public resetEdition() {
@@ -1061,7 +1345,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get editionInput() {
-    return this._edition
+    return this._edition;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1070,11 +1354,11 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
 
   // license_type - computed: false, optional: true, required: false
-  private _licenseType?: string | undefined; 
+  private _licenseType?: string; 
   public get licenseType() {
     return this.getStringAttribute('license_type');
   }
-  public set licenseType(value: string | undefined) {
+  public set licenseType(value: string) {
     this._licenseType = value;
   }
   public resetLicenseType() {
@@ -1082,7 +1366,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get licenseTypeInput() {
-    return this._licenseType
+    return this._licenseType;
   }
 
   // location - computed: false, optional: false, required: true
@@ -1095,15 +1379,15 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // max_parallel_executions_per_node - computed: false, optional: true, required: false
-  private _maxParallelExecutionsPerNode?: number | undefined; 
+  private _maxParallelExecutionsPerNode?: number; 
   public get maxParallelExecutionsPerNode() {
     return this.getNumberAttribute('max_parallel_executions_per_node');
   }
-  public set maxParallelExecutionsPerNode(value: number | undefined) {
+  public set maxParallelExecutionsPerNode(value: number) {
     this._maxParallelExecutionsPerNode = value;
   }
   public resetMaxParallelExecutionsPerNode() {
@@ -1111,7 +1395,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get maxParallelExecutionsPerNodeInput() {
-    return this._maxParallelExecutionsPerNode
+    return this._maxParallelExecutionsPerNode;
   }
 
   // name - computed: false, optional: false, required: true
@@ -1124,7 +1408,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // node_size - computed: false, optional: false, required: true
@@ -1137,15 +1421,15 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get nodeSizeInput() {
-    return this._nodeSize
+    return this._nodeSize;
   }
 
   // number_of_nodes - computed: false, optional: true, required: false
-  private _numberOfNodes?: number | undefined; 
+  private _numberOfNodes?: number; 
   public get numberOfNodes() {
     return this.getNumberAttribute('number_of_nodes');
   }
-  public set numberOfNodes(value: number | undefined) {
+  public set numberOfNodes(value: number) {
     this._numberOfNodes = value;
   }
   public resetNumberOfNodes() {
@@ -1153,7 +1437,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get numberOfNodesInput() {
-    return this._numberOfNodes
+    return this._numberOfNodes;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -1166,67 +1450,64 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // catalog_info - computed: false, optional: true, required: false
-  private _catalogInfo?: DataFactoryIntegrationRuntimeAzureSsisCatalogInfo | undefined; 
-  private __catalogInfoOutput = new DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference(this as any, "catalog_info", true);
+  private _catalogInfo = new DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference(this as any, "catalog_info", true);
   public get catalogInfo() {
-    return this.__catalogInfoOutput;
+    return this._catalogInfo;
   }
-  public putCatalogInfo(value: DataFactoryIntegrationRuntimeAzureSsisCatalogInfo | undefined) {
-    this._catalogInfo = value;
+  public putCatalogInfo(value: DataFactoryIntegrationRuntimeAzureSsisCatalogInfo) {
+    this._catalogInfo.internalValue = value;
   }
   public resetCatalogInfo() {
-    this._catalogInfo = undefined;
+    this._catalogInfo.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get catalogInfoInput() {
-    return this._catalogInfo
+    return this._catalogInfo.internalValue;
   }
 
   // custom_setup_script - computed: false, optional: true, required: false
-  private _customSetupScript?: DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript | undefined; 
-  private __customSetupScriptOutput = new DataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptOutputReference(this as any, "custom_setup_script", true);
+  private _customSetupScript = new DataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptOutputReference(this as any, "custom_setup_script", true);
   public get customSetupScript() {
-    return this.__customSetupScriptOutput;
+    return this._customSetupScript;
   }
-  public putCustomSetupScript(value: DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript | undefined) {
-    this._customSetupScript = value;
+  public putCustomSetupScript(value: DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript) {
+    this._customSetupScript.internalValue = value;
   }
   public resetCustomSetupScript() {
-    this._customSetupScript = undefined;
+    this._customSetupScript.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get customSetupScriptInput() {
-    return this._customSetupScript
+    return this._customSetupScript.internalValue;
   }
 
   // express_custom_setup - computed: false, optional: true, required: false
-  private _expressCustomSetup?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup | undefined; 
-  private __expressCustomSetupOutput = new DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputReference(this as any, "express_custom_setup", true);
+  private _expressCustomSetup = new DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputReference(this as any, "express_custom_setup", true);
   public get expressCustomSetup() {
-    return this.__expressCustomSetupOutput;
+    return this._expressCustomSetup;
   }
-  public putExpressCustomSetup(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup | undefined) {
-    this._expressCustomSetup = value;
+  public putExpressCustomSetup(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup) {
+    this._expressCustomSetup.internalValue = value;
   }
   public resetExpressCustomSetup() {
-    this._expressCustomSetup = undefined;
+    this._expressCustomSetup.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get expressCustomSetupInput() {
-    return this._expressCustomSetup
+    return this._expressCustomSetup.internalValue;
   }
 
   // package_store - computed: false, optional: true, required: false
-  private _packageStore?: DataFactoryIntegrationRuntimeAzureSsisPackageStore[] | undefined; 
+  private _packageStore?: DataFactoryIntegrationRuntimeAzureSsisPackageStore[]; 
   public get packageStore() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('package_store') as any;
   }
-  public set packageStore(value: DataFactoryIntegrationRuntimeAzureSsisPackageStore[] | undefined) {
+  public set packageStore(value: DataFactoryIntegrationRuntimeAzureSsisPackageStore[]) {
     this._packageStore = value;
   }
   public resetPackageStore() {
@@ -1234,58 +1515,55 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get packageStoreInput() {
-    return this._packageStore
+    return this._packageStore;
   }
 
   // proxy - computed: false, optional: true, required: false
-  private _proxy?: DataFactoryIntegrationRuntimeAzureSsisProxy | undefined; 
-  private __proxyOutput = new DataFactoryIntegrationRuntimeAzureSsisProxyOutputReference(this as any, "proxy", true);
+  private _proxy = new DataFactoryIntegrationRuntimeAzureSsisProxyOutputReference(this as any, "proxy", true);
   public get proxy() {
-    return this.__proxyOutput;
+    return this._proxy;
   }
-  public putProxy(value: DataFactoryIntegrationRuntimeAzureSsisProxy | undefined) {
-    this._proxy = value;
+  public putProxy(value: DataFactoryIntegrationRuntimeAzureSsisProxy) {
+    this._proxy.internalValue = value;
   }
   public resetProxy() {
-    this._proxy = undefined;
+    this._proxy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get proxyInput() {
-    return this._proxy
+    return this._proxy.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryIntegrationRuntimeAzureSsisTimeouts | undefined; 
-  private __timeoutsOutput = new DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataFactoryIntegrationRuntimeAzureSsisTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataFactoryIntegrationRuntimeAzureSsisTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // vnet_integration - computed: false, optional: true, required: false
-  private _vnetIntegration?: DataFactoryIntegrationRuntimeAzureSsisVnetIntegration | undefined; 
-  private __vnetIntegrationOutput = new DataFactoryIntegrationRuntimeAzureSsisVnetIntegrationOutputReference(this as any, "vnet_integration", true);
+  private _vnetIntegration = new DataFactoryIntegrationRuntimeAzureSsisVnetIntegrationOutputReference(this as any, "vnet_integration", true);
   public get vnetIntegration() {
-    return this.__vnetIntegrationOutput;
+    return this._vnetIntegration;
   }
-  public putVnetIntegration(value: DataFactoryIntegrationRuntimeAzureSsisVnetIntegration | undefined) {
-    this._vnetIntegration = value;
+  public putVnetIntegration(value: DataFactoryIntegrationRuntimeAzureSsisVnetIntegration) {
+    this._vnetIntegration.internalValue = value;
   }
   public resetVnetIntegration() {
-    this._vnetIntegration = undefined;
+    this._vnetIntegration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get vnetIntegrationInput() {
-    return this._vnetIntegration
+    return this._vnetIntegration.internalValue;
   }
 
   // =========
@@ -1304,13 +1582,13 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
       node_size: cdktf.stringToTerraform(this._nodeSize),
       number_of_nodes: cdktf.numberToTerraform(this._numberOfNodes),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      catalog_info: dataFactoryIntegrationRuntimeAzureSsisCatalogInfoToTerraform(this._catalogInfo),
-      custom_setup_script: dataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptToTerraform(this._customSetupScript),
-      express_custom_setup: dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupToTerraform(this._expressCustomSetup),
+      catalog_info: dataFactoryIntegrationRuntimeAzureSsisCatalogInfoToTerraform(this._catalogInfo.internalValue),
+      custom_setup_script: dataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptToTerraform(this._customSetupScript.internalValue),
+      express_custom_setup: dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupToTerraform(this._expressCustomSetup.internalValue),
       package_store: cdktf.listMapper(dataFactoryIntegrationRuntimeAzureSsisPackageStoreToTerraform)(this._packageStore),
-      proxy: dataFactoryIntegrationRuntimeAzureSsisProxyToTerraform(this._proxy),
-      timeouts: dataFactoryIntegrationRuntimeAzureSsisTimeoutsToTerraform(this._timeouts),
-      vnet_integration: dataFactoryIntegrationRuntimeAzureSsisVnetIntegrationToTerraform(this._vnetIntegration),
+      proxy: dataFactoryIntegrationRuntimeAzureSsisProxyToTerraform(this._proxy.internalValue),
+      timeouts: dataFactoryIntegrationRuntimeAzureSsisTimeoutsToTerraform(this._timeouts.internalValue),
+      vnet_integration: dataFactoryIntegrationRuntimeAzureSsisVnetIntegrationToTerraform(this._vnetIntegration.internalValue),
     };
   }
 }

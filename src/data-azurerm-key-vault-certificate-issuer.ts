@@ -51,7 +51,7 @@ export interface DataAzurermKeyVaultCertificateIssuerTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermKeyVaultCertificateIssuerTimeoutsToTerraform(struct?: DataAzurermKeyVaultCertificateIssuerTimeoutsOutputReference | DataAzurermKeyVaultCertificateIssuerTimeouts): any {
+export function dataAzurermKeyVaultCertificateIssuerTimeoutsToTerraform(struct?: DataAzurermKeyVaultCertificateIssuerTimeoutsOutputReference | DataAzurermKeyVaultCertificateIssuerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -71,12 +71,31 @@ export class DataAzurermKeyVaultCertificateIssuerTimeoutsOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermKeyVaultCertificateIssuerTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermKeyVaultCertificateIssuerTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -84,7 +103,7 @@ export class DataAzurermKeyVaultCertificateIssuerTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -122,7 +141,7 @@ export class DataAzurermKeyVaultCertificateIssuer extends cdktf.TerraformDataSou
     });
     this._keyVaultId = config.keyVaultId;
     this._name = config.name;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -154,7 +173,7 @@ export class DataAzurermKeyVaultCertificateIssuer extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get keyVaultIdInput() {
-    return this._keyVaultId
+    return this._keyVaultId;
   }
 
   // name - computed: false, optional: false, required: true
@@ -167,7 +186,7 @@ export class DataAzurermKeyVaultCertificateIssuer extends cdktf.TerraformDataSou
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // org_id - computed: true, optional: false, required: false
@@ -181,20 +200,19 @@ export class DataAzurermKeyVaultCertificateIssuer extends cdktf.TerraformDataSou
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermKeyVaultCertificateIssuerTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermKeyVaultCertificateIssuerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermKeyVaultCertificateIssuerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermKeyVaultCertificateIssuerTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermKeyVaultCertificateIssuerTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -205,7 +223,7 @@ export class DataAzurermKeyVaultCertificateIssuer extends cdktf.TerraformDataSou
     return {
       key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
       name: cdktf.stringToTerraform(this._name),
-      timeouts: dataAzurermKeyVaultCertificateIssuerTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermKeyVaultCertificateIssuerTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -67,7 +67,7 @@ export interface ResourceGroupPolicyAssignmentIdentity {
   readonly type?: string;
 }
 
-function resourceGroupPolicyAssignmentIdentityToTerraform(struct?: ResourceGroupPolicyAssignmentIdentityOutputReference | ResourceGroupPolicyAssignmentIdentity): any {
+export function resourceGroupPolicyAssignmentIdentityToTerraform(struct?: ResourceGroupPolicyAssignmentIdentityOutputReference | ResourceGroupPolicyAssignmentIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -87,12 +87,31 @@ export class ResourceGroupPolicyAssignmentIdentityOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ResourceGroupPolicyAssignmentIdentity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ResourceGroupPolicyAssignmentIdentity | undefined) {
+    if (value === undefined) {
+      this._type = undefined;
+    }
+    else {
+      this._type = value.type;
+    }
+  }
+
   // type - computed: false, optional: true, required: false
-  private _type?: string | undefined; 
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string | undefined) {
+  public set type(value: string) {
     this._type = value;
   }
   public resetType() {
@@ -100,7 +119,7 @@ export class ResourceGroupPolicyAssignmentIdentityOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface ResourceGroupPolicyAssignmentTimeouts {
@@ -122,7 +141,7 @@ export interface ResourceGroupPolicyAssignmentTimeouts {
   readonly update?: string;
 }
 
-function resourceGroupPolicyAssignmentTimeoutsToTerraform(struct?: ResourceGroupPolicyAssignmentTimeoutsOutputReference | ResourceGroupPolicyAssignmentTimeouts): any {
+export function resourceGroupPolicyAssignmentTimeoutsToTerraform(struct?: ResourceGroupPolicyAssignmentTimeoutsOutputReference | ResourceGroupPolicyAssignmentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -145,12 +164,49 @@ export class ResourceGroupPolicyAssignmentTimeoutsOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ResourceGroupPolicyAssignmentTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ResourceGroupPolicyAssignmentTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -158,15 +214,15 @@ export class ResourceGroupPolicyAssignmentTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -174,15 +230,15 @@ export class ResourceGroupPolicyAssignmentTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -190,15 +246,15 @@ export class ResourceGroupPolicyAssignmentTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -206,7 +262,7 @@ export class ResourceGroupPolicyAssignmentTimeoutsOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -252,8 +308,8 @@ export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
     this._parameters = config.parameters;
     this._policyDefinitionId = config.policyDefinitionId;
     this._resourceGroupId = config.resourceGroupId;
-    this._identity = config.identity;
-    this._timeouts = config.timeouts;
+    this._identity.internalValue = config.identity;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -261,11 +317,11 @@ export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -273,15 +329,15 @@ export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // display_name - computed: false, optional: true, required: false
-  private _displayName?: string | undefined; 
+  private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
-  public set displayName(value: string | undefined) {
+  public set displayName(value: string) {
     this._displayName = value;
   }
   public resetDisplayName() {
@@ -289,15 +345,15 @@ export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // enforce - computed: false, optional: true, required: false
-  private _enforce?: boolean | cdktf.IResolvable | undefined; 
+  private _enforce?: boolean | cdktf.IResolvable; 
   public get enforce() {
     return this.getBooleanAttribute('enforce') as any;
   }
-  public set enforce(value: boolean | cdktf.IResolvable | undefined) {
+  public set enforce(value: boolean | cdktf.IResolvable) {
     this._enforce = value;
   }
   public resetEnforce() {
@@ -305,7 +361,7 @@ export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enforceInput() {
-    return this._enforce
+    return this._enforce;
   }
 
   // id - computed: true, optional: true, required: false
@@ -314,11 +370,11 @@ export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
   }
 
   // location - computed: false, optional: true, required: false
-  private _location?: string | undefined; 
+  private _location?: string; 
   public get location() {
     return this.getStringAttribute('location');
   }
-  public set location(value: string | undefined) {
+  public set location(value: string) {
     this._location = value;
   }
   public resetLocation() {
@@ -326,15 +382,15 @@ export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // metadata - computed: true, optional: true, required: false
-  private _metadata?: string | undefined; 
+  private _metadata?: string; 
   public get metadata() {
     return this.getStringAttribute('metadata');
   }
-  public set metadata(value: string | undefined) {
+  public set metadata(value: string) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -342,7 +398,7 @@ export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get metadataInput() {
-    return this._metadata
+    return this._metadata;
   }
 
   // name - computed: false, optional: false, required: true
@@ -355,15 +411,15 @@ export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // not_scopes - computed: false, optional: true, required: false
-  private _notScopes?: string[] | undefined; 
+  private _notScopes?: string[]; 
   public get notScopes() {
     return this.getListAttribute('not_scopes');
   }
-  public set notScopes(value: string[] | undefined) {
+  public set notScopes(value: string[]) {
     this._notScopes = value;
   }
   public resetNotScopes() {
@@ -371,15 +427,15 @@ export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get notScopesInput() {
-    return this._notScopes
+    return this._notScopes;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: string | undefined; 
+  private _parameters?: string; 
   public get parameters() {
     return this.getStringAttribute('parameters');
   }
-  public set parameters(value: string | undefined) {
+  public set parameters(value: string) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -387,7 +443,7 @@ export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 
   // policy_definition_id - computed: false, optional: false, required: true
@@ -400,7 +456,7 @@ export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get policyDefinitionIdInput() {
-    return this._policyDefinitionId
+    return this._policyDefinitionId;
   }
 
   // resource_group_id - computed: false, optional: false, required: true
@@ -413,41 +469,39 @@ export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupIdInput() {
-    return this._resourceGroupId
+    return this._resourceGroupId;
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: ResourceGroupPolicyAssignmentIdentity | undefined; 
-  private __identityOutput = new ResourceGroupPolicyAssignmentIdentityOutputReference(this as any, "identity", true);
+  private _identity = new ResourceGroupPolicyAssignmentIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.__identityOutput;
+    return this._identity;
   }
-  public putIdentity(value: ResourceGroupPolicyAssignmentIdentity | undefined) {
-    this._identity = value;
+  public putIdentity(value: ResourceGroupPolicyAssignmentIdentity) {
+    this._identity.internalValue = value;
   }
   public resetIdentity() {
-    this._identity = undefined;
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
-    return this._identity
+    return this._identity.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ResourceGroupPolicyAssignmentTimeouts | undefined; 
-  private __timeoutsOutput = new ResourceGroupPolicyAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ResourceGroupPolicyAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ResourceGroupPolicyAssignmentTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ResourceGroupPolicyAssignmentTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -466,8 +520,8 @@ export class ResourceGroupPolicyAssignment extends cdktf.TerraformResource {
       parameters: cdktf.stringToTerraform(this._parameters),
       policy_definition_id: cdktf.stringToTerraform(this._policyDefinitionId),
       resource_group_id: cdktf.stringToTerraform(this._resourceGroupId),
-      identity: resourceGroupPolicyAssignmentIdentityToTerraform(this._identity),
-      timeouts: resourceGroupPolicyAssignmentTimeoutsToTerraform(this._timeouts),
+      identity: resourceGroupPolicyAssignmentIdentityToTerraform(this._identity.internalValue),
+      timeouts: resourceGroupPolicyAssignmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

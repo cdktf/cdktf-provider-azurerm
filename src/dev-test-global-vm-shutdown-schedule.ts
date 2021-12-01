@@ -63,7 +63,7 @@ export interface DevTestGlobalVmShutdownScheduleNotificationSettings {
   readonly webhookUrl?: string;
 }
 
-function devTestGlobalVmShutdownScheduleNotificationSettingsToTerraform(struct?: DevTestGlobalVmShutdownScheduleNotificationSettingsOutputReference | DevTestGlobalVmShutdownScheduleNotificationSettings): any {
+export function devTestGlobalVmShutdownScheduleNotificationSettingsToTerraform(struct?: DevTestGlobalVmShutdownScheduleNotificationSettingsOutputReference | DevTestGlobalVmShutdownScheduleNotificationSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -86,12 +86,49 @@ export class DevTestGlobalVmShutdownScheduleNotificationSettingsOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DevTestGlobalVmShutdownScheduleNotificationSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._email) {
+      hasAnyValues = true;
+      internalValueResult.email = this._email;
+    }
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._timeInMinutes) {
+      hasAnyValues = true;
+      internalValueResult.timeInMinutes = this._timeInMinutes;
+    }
+    if (this._webhookUrl) {
+      hasAnyValues = true;
+      internalValueResult.webhookUrl = this._webhookUrl;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DevTestGlobalVmShutdownScheduleNotificationSettings | undefined) {
+    if (value === undefined) {
+      this._email = undefined;
+      this._enabled = undefined;
+      this._timeInMinutes = undefined;
+      this._webhookUrl = undefined;
+    }
+    else {
+      this._email = value.email;
+      this._enabled = value.enabled;
+      this._timeInMinutes = value.timeInMinutes;
+      this._webhookUrl = value.webhookUrl;
+    }
+  }
+
   // email - computed: false, optional: true, required: false
-  private _email?: string | undefined; 
+  private _email?: string; 
   public get email() {
     return this.getStringAttribute('email');
   }
-  public set email(value: string | undefined) {
+  public set email(value: string) {
     this._email = value;
   }
   public resetEmail() {
@@ -99,7 +136,7 @@ export class DevTestGlobalVmShutdownScheduleNotificationSettingsOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get emailInput() {
-    return this._email
+    return this._email;
   }
 
   // enabled - computed: false, optional: false, required: true
@@ -112,15 +149,15 @@ export class DevTestGlobalVmShutdownScheduleNotificationSettingsOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // time_in_minutes - computed: false, optional: true, required: false
-  private _timeInMinutes?: number | undefined; 
+  private _timeInMinutes?: number; 
   public get timeInMinutes() {
     return this.getNumberAttribute('time_in_minutes');
   }
-  public set timeInMinutes(value: number | undefined) {
+  public set timeInMinutes(value: number) {
     this._timeInMinutes = value;
   }
   public resetTimeInMinutes() {
@@ -128,15 +165,15 @@ export class DevTestGlobalVmShutdownScheduleNotificationSettingsOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get timeInMinutesInput() {
-    return this._timeInMinutes
+    return this._timeInMinutes;
   }
 
   // webhook_url - computed: false, optional: true, required: false
-  private _webhookUrl?: string | undefined; 
+  private _webhookUrl?: string; 
   public get webhookUrl() {
     return this.getStringAttribute('webhook_url');
   }
-  public set webhookUrl(value: string | undefined) {
+  public set webhookUrl(value: string) {
     this._webhookUrl = value;
   }
   public resetWebhookUrl() {
@@ -144,7 +181,7 @@ export class DevTestGlobalVmShutdownScheduleNotificationSettingsOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get webhookUrlInput() {
-    return this._webhookUrl
+    return this._webhookUrl;
   }
 }
 export interface DevTestGlobalVmShutdownScheduleTimeouts {
@@ -166,7 +203,7 @@ export interface DevTestGlobalVmShutdownScheduleTimeouts {
   readonly update?: string;
 }
 
-function devTestGlobalVmShutdownScheduleTimeoutsToTerraform(struct?: DevTestGlobalVmShutdownScheduleTimeoutsOutputReference | DevTestGlobalVmShutdownScheduleTimeouts): any {
+export function devTestGlobalVmShutdownScheduleTimeoutsToTerraform(struct?: DevTestGlobalVmShutdownScheduleTimeoutsOutputReference | DevTestGlobalVmShutdownScheduleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -189,12 +226,49 @@ export class DevTestGlobalVmShutdownScheduleTimeoutsOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DevTestGlobalVmShutdownScheduleTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DevTestGlobalVmShutdownScheduleTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -202,15 +276,15 @@ export class DevTestGlobalVmShutdownScheduleTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -218,15 +292,15 @@ export class DevTestGlobalVmShutdownScheduleTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -234,15 +308,15 @@ export class DevTestGlobalVmShutdownScheduleTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -250,7 +324,7 @@ export class DevTestGlobalVmShutdownScheduleTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -292,8 +366,8 @@ export class DevTestGlobalVmShutdownSchedule extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._timezone = config.timezone;
     this._virtualMachineId = config.virtualMachineId;
-    this._notificationSettings = config.notificationSettings;
-    this._timeouts = config.timeouts;
+    this._notificationSettings.internalValue = config.notificationSettings;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -310,15 +384,15 @@ export class DevTestGlobalVmShutdownSchedule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dailyRecurrenceTimeInput() {
-    return this._dailyRecurrenceTime
+    return this._dailyRecurrenceTime;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -326,7 +400,7 @@ export class DevTestGlobalVmShutdownSchedule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -344,16 +418,16 @@ export class DevTestGlobalVmShutdownSchedule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -361,7 +435,7 @@ export class DevTestGlobalVmShutdownSchedule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // timezone - computed: false, optional: false, required: true
@@ -374,7 +448,7 @@ export class DevTestGlobalVmShutdownSchedule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get timezoneInput() {
-    return this._timezone
+    return this._timezone;
   }
 
   // virtual_machine_id - computed: false, optional: false, required: true
@@ -387,38 +461,36 @@ export class DevTestGlobalVmShutdownSchedule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get virtualMachineIdInput() {
-    return this._virtualMachineId
+    return this._virtualMachineId;
   }
 
   // notification_settings - computed: false, optional: false, required: true
-  private _notificationSettings?: DevTestGlobalVmShutdownScheduleNotificationSettings; 
-  private __notificationSettingsOutput = new DevTestGlobalVmShutdownScheduleNotificationSettingsOutputReference(this as any, "notification_settings", true);
+  private _notificationSettings = new DevTestGlobalVmShutdownScheduleNotificationSettingsOutputReference(this as any, "notification_settings", true);
   public get notificationSettings() {
-    return this.__notificationSettingsOutput;
+    return this._notificationSettings;
   }
   public putNotificationSettings(value: DevTestGlobalVmShutdownScheduleNotificationSettings) {
-    this._notificationSettings = value;
+    this._notificationSettings.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get notificationSettingsInput() {
-    return this._notificationSettings
+    return this._notificationSettings.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DevTestGlobalVmShutdownScheduleTimeouts | undefined; 
-  private __timeoutsOutput = new DevTestGlobalVmShutdownScheduleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DevTestGlobalVmShutdownScheduleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DevTestGlobalVmShutdownScheduleTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DevTestGlobalVmShutdownScheduleTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -433,8 +505,8 @@ export class DevTestGlobalVmShutdownSchedule extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       timezone: cdktf.stringToTerraform(this._timezone),
       virtual_machine_id: cdktf.stringToTerraform(this._virtualMachineId),
-      notification_settings: devTestGlobalVmShutdownScheduleNotificationSettingsToTerraform(this._notificationSettings),
-      timeouts: devTestGlobalVmShutdownScheduleTimeoutsToTerraform(this._timeouts),
+      notification_settings: devTestGlobalVmShutdownScheduleNotificationSettingsToTerraform(this._notificationSettings.internalValue),
+      timeouts: devTestGlobalVmShutdownScheduleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

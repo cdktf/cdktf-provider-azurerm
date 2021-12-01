@@ -115,7 +115,7 @@ export interface AppServiceSlotAuthSettingsActiveDirectory {
   readonly clientSecret?: string;
 }
 
-function appServiceSlotAuthSettingsActiveDirectoryToTerraform(struct?: AppServiceSlotAuthSettingsActiveDirectoryOutputReference | AppServiceSlotAuthSettingsActiveDirectory): any {
+export function appServiceSlotAuthSettingsActiveDirectoryToTerraform(struct?: AppServiceSlotAuthSettingsActiveDirectoryOutputReference | AppServiceSlotAuthSettingsActiveDirectory): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -137,12 +137,43 @@ export class AppServiceSlotAuthSettingsActiveDirectoryOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppServiceSlotAuthSettingsActiveDirectory | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowedAudiences) {
+      hasAnyValues = true;
+      internalValueResult.allowedAudiences = this._allowedAudiences;
+    }
+    if (this._clientId) {
+      hasAnyValues = true;
+      internalValueResult.clientId = this._clientId;
+    }
+    if (this._clientSecret) {
+      hasAnyValues = true;
+      internalValueResult.clientSecret = this._clientSecret;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotAuthSettingsActiveDirectory | undefined) {
+    if (value === undefined) {
+      this._allowedAudiences = undefined;
+      this._clientId = undefined;
+      this._clientSecret = undefined;
+    }
+    else {
+      this._allowedAudiences = value.allowedAudiences;
+      this._clientId = value.clientId;
+      this._clientSecret = value.clientSecret;
+    }
+  }
+
   // allowed_audiences - computed: false, optional: true, required: false
-  private _allowedAudiences?: string[] | undefined; 
+  private _allowedAudiences?: string[]; 
   public get allowedAudiences() {
     return this.getListAttribute('allowed_audiences');
   }
-  public set allowedAudiences(value: string[] | undefined) {
+  public set allowedAudiences(value: string[]) {
     this._allowedAudiences = value;
   }
   public resetAllowedAudiences() {
@@ -150,7 +181,7 @@ export class AppServiceSlotAuthSettingsActiveDirectoryOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get allowedAudiencesInput() {
-    return this._allowedAudiences
+    return this._allowedAudiences;
   }
 
   // client_id - computed: false, optional: false, required: true
@@ -163,15 +194,15 @@ export class AppServiceSlotAuthSettingsActiveDirectoryOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get clientIdInput() {
-    return this._clientId
+    return this._clientId;
   }
 
   // client_secret - computed: false, optional: true, required: false
-  private _clientSecret?: string | undefined; 
+  private _clientSecret?: string; 
   public get clientSecret() {
     return this.getStringAttribute('client_secret');
   }
-  public set clientSecret(value: string | undefined) {
+  public set clientSecret(value: string) {
     this._clientSecret = value;
   }
   public resetClientSecret() {
@@ -179,7 +210,7 @@ export class AppServiceSlotAuthSettingsActiveDirectoryOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get clientSecretInput() {
-    return this._clientSecret
+    return this._clientSecret;
   }
 }
 export interface AppServiceSlotAuthSettingsFacebook {
@@ -197,7 +228,7 @@ export interface AppServiceSlotAuthSettingsFacebook {
   readonly oauthScopes?: string[];
 }
 
-function appServiceSlotAuthSettingsFacebookToTerraform(struct?: AppServiceSlotAuthSettingsFacebookOutputReference | AppServiceSlotAuthSettingsFacebook): any {
+export function appServiceSlotAuthSettingsFacebookToTerraform(struct?: AppServiceSlotAuthSettingsFacebookOutputReference | AppServiceSlotAuthSettingsFacebook): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -219,6 +250,37 @@ export class AppServiceSlotAuthSettingsFacebookOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppServiceSlotAuthSettingsFacebook | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._appId) {
+      hasAnyValues = true;
+      internalValueResult.appId = this._appId;
+    }
+    if (this._appSecret) {
+      hasAnyValues = true;
+      internalValueResult.appSecret = this._appSecret;
+    }
+    if (this._oauthScopes) {
+      hasAnyValues = true;
+      internalValueResult.oauthScopes = this._oauthScopes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotAuthSettingsFacebook | undefined) {
+    if (value === undefined) {
+      this._appId = undefined;
+      this._appSecret = undefined;
+      this._oauthScopes = undefined;
+    }
+    else {
+      this._appId = value.appId;
+      this._appSecret = value.appSecret;
+      this._oauthScopes = value.oauthScopes;
+    }
+  }
+
   // app_id - computed: false, optional: false, required: true
   private _appId?: string; 
   public get appId() {
@@ -229,7 +291,7 @@ export class AppServiceSlotAuthSettingsFacebookOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get appIdInput() {
-    return this._appId
+    return this._appId;
   }
 
   // app_secret - computed: false, optional: false, required: true
@@ -242,15 +304,15 @@ export class AppServiceSlotAuthSettingsFacebookOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get appSecretInput() {
-    return this._appSecret
+    return this._appSecret;
   }
 
   // oauth_scopes - computed: false, optional: true, required: false
-  private _oauthScopes?: string[] | undefined; 
+  private _oauthScopes?: string[]; 
   public get oauthScopes() {
     return this.getListAttribute('oauth_scopes');
   }
-  public set oauthScopes(value: string[] | undefined) {
+  public set oauthScopes(value: string[]) {
     this._oauthScopes = value;
   }
   public resetOauthScopes() {
@@ -258,7 +320,7 @@ export class AppServiceSlotAuthSettingsFacebookOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get oauthScopesInput() {
-    return this._oauthScopes
+    return this._oauthScopes;
   }
 }
 export interface AppServiceSlotAuthSettingsGoogle {
@@ -276,7 +338,7 @@ export interface AppServiceSlotAuthSettingsGoogle {
   readonly oauthScopes?: string[];
 }
 
-function appServiceSlotAuthSettingsGoogleToTerraform(struct?: AppServiceSlotAuthSettingsGoogleOutputReference | AppServiceSlotAuthSettingsGoogle): any {
+export function appServiceSlotAuthSettingsGoogleToTerraform(struct?: AppServiceSlotAuthSettingsGoogleOutputReference | AppServiceSlotAuthSettingsGoogle): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -298,6 +360,37 @@ export class AppServiceSlotAuthSettingsGoogleOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppServiceSlotAuthSettingsGoogle | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._clientId) {
+      hasAnyValues = true;
+      internalValueResult.clientId = this._clientId;
+    }
+    if (this._clientSecret) {
+      hasAnyValues = true;
+      internalValueResult.clientSecret = this._clientSecret;
+    }
+    if (this._oauthScopes) {
+      hasAnyValues = true;
+      internalValueResult.oauthScopes = this._oauthScopes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotAuthSettingsGoogle | undefined) {
+    if (value === undefined) {
+      this._clientId = undefined;
+      this._clientSecret = undefined;
+      this._oauthScopes = undefined;
+    }
+    else {
+      this._clientId = value.clientId;
+      this._clientSecret = value.clientSecret;
+      this._oauthScopes = value.oauthScopes;
+    }
+  }
+
   // client_id - computed: false, optional: false, required: true
   private _clientId?: string; 
   public get clientId() {
@@ -308,7 +401,7 @@ export class AppServiceSlotAuthSettingsGoogleOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get clientIdInput() {
-    return this._clientId
+    return this._clientId;
   }
 
   // client_secret - computed: false, optional: false, required: true
@@ -321,15 +414,15 @@ export class AppServiceSlotAuthSettingsGoogleOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get clientSecretInput() {
-    return this._clientSecret
+    return this._clientSecret;
   }
 
   // oauth_scopes - computed: false, optional: true, required: false
-  private _oauthScopes?: string[] | undefined; 
+  private _oauthScopes?: string[]; 
   public get oauthScopes() {
     return this.getListAttribute('oauth_scopes');
   }
-  public set oauthScopes(value: string[] | undefined) {
+  public set oauthScopes(value: string[]) {
     this._oauthScopes = value;
   }
   public resetOauthScopes() {
@@ -337,7 +430,7 @@ export class AppServiceSlotAuthSettingsGoogleOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get oauthScopesInput() {
-    return this._oauthScopes
+    return this._oauthScopes;
   }
 }
 export interface AppServiceSlotAuthSettingsMicrosoft {
@@ -355,7 +448,7 @@ export interface AppServiceSlotAuthSettingsMicrosoft {
   readonly oauthScopes?: string[];
 }
 
-function appServiceSlotAuthSettingsMicrosoftToTerraform(struct?: AppServiceSlotAuthSettingsMicrosoftOutputReference | AppServiceSlotAuthSettingsMicrosoft): any {
+export function appServiceSlotAuthSettingsMicrosoftToTerraform(struct?: AppServiceSlotAuthSettingsMicrosoftOutputReference | AppServiceSlotAuthSettingsMicrosoft): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -377,6 +470,37 @@ export class AppServiceSlotAuthSettingsMicrosoftOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppServiceSlotAuthSettingsMicrosoft | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._clientId) {
+      hasAnyValues = true;
+      internalValueResult.clientId = this._clientId;
+    }
+    if (this._clientSecret) {
+      hasAnyValues = true;
+      internalValueResult.clientSecret = this._clientSecret;
+    }
+    if (this._oauthScopes) {
+      hasAnyValues = true;
+      internalValueResult.oauthScopes = this._oauthScopes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotAuthSettingsMicrosoft | undefined) {
+    if (value === undefined) {
+      this._clientId = undefined;
+      this._clientSecret = undefined;
+      this._oauthScopes = undefined;
+    }
+    else {
+      this._clientId = value.clientId;
+      this._clientSecret = value.clientSecret;
+      this._oauthScopes = value.oauthScopes;
+    }
+  }
+
   // client_id - computed: false, optional: false, required: true
   private _clientId?: string; 
   public get clientId() {
@@ -387,7 +511,7 @@ export class AppServiceSlotAuthSettingsMicrosoftOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get clientIdInput() {
-    return this._clientId
+    return this._clientId;
   }
 
   // client_secret - computed: false, optional: false, required: true
@@ -400,15 +524,15 @@ export class AppServiceSlotAuthSettingsMicrosoftOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get clientSecretInput() {
-    return this._clientSecret
+    return this._clientSecret;
   }
 
   // oauth_scopes - computed: false, optional: true, required: false
-  private _oauthScopes?: string[] | undefined; 
+  private _oauthScopes?: string[]; 
   public get oauthScopes() {
     return this.getListAttribute('oauth_scopes');
   }
-  public set oauthScopes(value: string[] | undefined) {
+  public set oauthScopes(value: string[]) {
     this._oauthScopes = value;
   }
   public resetOauthScopes() {
@@ -416,7 +540,7 @@ export class AppServiceSlotAuthSettingsMicrosoftOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get oauthScopesInput() {
-    return this._oauthScopes
+    return this._oauthScopes;
   }
 }
 export interface AppServiceSlotAuthSettingsTwitter {
@@ -430,7 +554,7 @@ export interface AppServiceSlotAuthSettingsTwitter {
   readonly consumerSecret: string;
 }
 
-function appServiceSlotAuthSettingsTwitterToTerraform(struct?: AppServiceSlotAuthSettingsTwitterOutputReference | AppServiceSlotAuthSettingsTwitter): any {
+export function appServiceSlotAuthSettingsTwitterToTerraform(struct?: AppServiceSlotAuthSettingsTwitterOutputReference | AppServiceSlotAuthSettingsTwitter): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -451,6 +575,31 @@ export class AppServiceSlotAuthSettingsTwitterOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppServiceSlotAuthSettingsTwitter | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._consumerKey) {
+      hasAnyValues = true;
+      internalValueResult.consumerKey = this._consumerKey;
+    }
+    if (this._consumerSecret) {
+      hasAnyValues = true;
+      internalValueResult.consumerSecret = this._consumerSecret;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotAuthSettingsTwitter | undefined) {
+    if (value === undefined) {
+      this._consumerKey = undefined;
+      this._consumerSecret = undefined;
+    }
+    else {
+      this._consumerKey = value.consumerKey;
+      this._consumerSecret = value.consumerSecret;
+    }
+  }
+
   // consumer_key - computed: false, optional: false, required: true
   private _consumerKey?: string; 
   public get consumerKey() {
@@ -461,7 +610,7 @@ export class AppServiceSlotAuthSettingsTwitterOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get consumerKeyInput() {
-    return this._consumerKey
+    return this._consumerKey;
   }
 
   // consumer_secret - computed: false, optional: false, required: true
@@ -474,7 +623,7 @@ export class AppServiceSlotAuthSettingsTwitterOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get consumerSecretInput() {
-    return this._consumerSecret
+    return this._consumerSecret;
   }
 }
 export interface AppServiceSlotAuthSettings {
@@ -546,7 +695,7 @@ export interface AppServiceSlotAuthSettings {
   readonly twitter?: AppServiceSlotAuthSettingsTwitter;
 }
 
-function appServiceSlotAuthSettingsToTerraform(struct?: AppServiceSlotAuthSettingsOutputReference | AppServiceSlotAuthSettings): any {
+export function appServiceSlotAuthSettingsToTerraform(struct?: AppServiceSlotAuthSettingsOutputReference | AppServiceSlotAuthSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -579,13 +728,110 @@ export class AppServiceSlotAuthSettingsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppServiceSlotAuthSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._additionalLoginParams) {
+      hasAnyValues = true;
+      internalValueResult.additionalLoginParams = this._additionalLoginParams;
+    }
+    if (this._allowedExternalRedirectUrls) {
+      hasAnyValues = true;
+      internalValueResult.allowedExternalRedirectUrls = this._allowedExternalRedirectUrls;
+    }
+    if (this._defaultProvider) {
+      hasAnyValues = true;
+      internalValueResult.defaultProvider = this._defaultProvider;
+    }
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._issuer) {
+      hasAnyValues = true;
+      internalValueResult.issuer = this._issuer;
+    }
+    if (this._runtimeVersion) {
+      hasAnyValues = true;
+      internalValueResult.runtimeVersion = this._runtimeVersion;
+    }
+    if (this._tokenRefreshExtensionHours) {
+      hasAnyValues = true;
+      internalValueResult.tokenRefreshExtensionHours = this._tokenRefreshExtensionHours;
+    }
+    if (this._tokenStoreEnabled) {
+      hasAnyValues = true;
+      internalValueResult.tokenStoreEnabled = this._tokenStoreEnabled;
+    }
+    if (this._unauthenticatedClientAction) {
+      hasAnyValues = true;
+      internalValueResult.unauthenticatedClientAction = this._unauthenticatedClientAction;
+    }
+    if (this._activeDirectory) {
+      hasAnyValues = true;
+      internalValueResult.activeDirectory = this._activeDirectory?.internalValue;
+    }
+    if (this._facebook) {
+      hasAnyValues = true;
+      internalValueResult.facebook = this._facebook?.internalValue;
+    }
+    if (this._google) {
+      hasAnyValues = true;
+      internalValueResult.google = this._google?.internalValue;
+    }
+    if (this._microsoft) {
+      hasAnyValues = true;
+      internalValueResult.microsoft = this._microsoft?.internalValue;
+    }
+    if (this._twitter) {
+      hasAnyValues = true;
+      internalValueResult.twitter = this._twitter?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotAuthSettings | undefined) {
+    if (value === undefined) {
+      this._additionalLoginParams = undefined;
+      this._allowedExternalRedirectUrls = undefined;
+      this._defaultProvider = undefined;
+      this._enabled = undefined;
+      this._issuer = undefined;
+      this._runtimeVersion = undefined;
+      this._tokenRefreshExtensionHours = undefined;
+      this._tokenStoreEnabled = undefined;
+      this._unauthenticatedClientAction = undefined;
+      this._activeDirectory.internalValue = undefined;
+      this._facebook.internalValue = undefined;
+      this._google.internalValue = undefined;
+      this._microsoft.internalValue = undefined;
+      this._twitter.internalValue = undefined;
+    }
+    else {
+      this._additionalLoginParams = value.additionalLoginParams;
+      this._allowedExternalRedirectUrls = value.allowedExternalRedirectUrls;
+      this._defaultProvider = value.defaultProvider;
+      this._enabled = value.enabled;
+      this._issuer = value.issuer;
+      this._runtimeVersion = value.runtimeVersion;
+      this._tokenRefreshExtensionHours = value.tokenRefreshExtensionHours;
+      this._tokenStoreEnabled = value.tokenStoreEnabled;
+      this._unauthenticatedClientAction = value.unauthenticatedClientAction;
+      this._activeDirectory.internalValue = value.activeDirectory;
+      this._facebook.internalValue = value.facebook;
+      this._google.internalValue = value.google;
+      this._microsoft.internalValue = value.microsoft;
+      this._twitter.internalValue = value.twitter;
+    }
+  }
+
   // additional_login_params - computed: false, optional: true, required: false
-  private _additionalLoginParams?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _additionalLoginParams?: { [key: string]: string } | cdktf.IResolvable; 
   public get additionalLoginParams() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_login_params') as any;
   }
-  public set additionalLoginParams(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set additionalLoginParams(value: { [key: string]: string } | cdktf.IResolvable) {
     this._additionalLoginParams = value;
   }
   public resetAdditionalLoginParams() {
@@ -593,15 +839,15 @@ export class AppServiceSlotAuthSettingsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get additionalLoginParamsInput() {
-    return this._additionalLoginParams
+    return this._additionalLoginParams;
   }
 
   // allowed_external_redirect_urls - computed: false, optional: true, required: false
-  private _allowedExternalRedirectUrls?: string[] | undefined; 
+  private _allowedExternalRedirectUrls?: string[]; 
   public get allowedExternalRedirectUrls() {
     return this.getListAttribute('allowed_external_redirect_urls');
   }
-  public set allowedExternalRedirectUrls(value: string[] | undefined) {
+  public set allowedExternalRedirectUrls(value: string[]) {
     this._allowedExternalRedirectUrls = value;
   }
   public resetAllowedExternalRedirectUrls() {
@@ -609,15 +855,15 @@ export class AppServiceSlotAuthSettingsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get allowedExternalRedirectUrlsInput() {
-    return this._allowedExternalRedirectUrls
+    return this._allowedExternalRedirectUrls;
   }
 
   // default_provider - computed: false, optional: true, required: false
-  private _defaultProvider?: string | undefined; 
+  private _defaultProvider?: string; 
   public get defaultProvider() {
     return this.getStringAttribute('default_provider');
   }
-  public set defaultProvider(value: string | undefined) {
+  public set defaultProvider(value: string) {
     this._defaultProvider = value;
   }
   public resetDefaultProvider() {
@@ -625,7 +871,7 @@ export class AppServiceSlotAuthSettingsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get defaultProviderInput() {
-    return this._defaultProvider
+    return this._defaultProvider;
   }
 
   // enabled - computed: false, optional: false, required: true
@@ -638,15 +884,15 @@ export class AppServiceSlotAuthSettingsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // issuer - computed: false, optional: true, required: false
-  private _issuer?: string | undefined; 
+  private _issuer?: string; 
   public get issuer() {
     return this.getStringAttribute('issuer');
   }
-  public set issuer(value: string | undefined) {
+  public set issuer(value: string) {
     this._issuer = value;
   }
   public resetIssuer() {
@@ -654,15 +900,15 @@ export class AppServiceSlotAuthSettingsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get issuerInput() {
-    return this._issuer
+    return this._issuer;
   }
 
   // runtime_version - computed: false, optional: true, required: false
-  private _runtimeVersion?: string | undefined; 
+  private _runtimeVersion?: string; 
   public get runtimeVersion() {
     return this.getStringAttribute('runtime_version');
   }
-  public set runtimeVersion(value: string | undefined) {
+  public set runtimeVersion(value: string) {
     this._runtimeVersion = value;
   }
   public resetRuntimeVersion() {
@@ -670,15 +916,15 @@ export class AppServiceSlotAuthSettingsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get runtimeVersionInput() {
-    return this._runtimeVersion
+    return this._runtimeVersion;
   }
 
   // token_refresh_extension_hours - computed: false, optional: true, required: false
-  private _tokenRefreshExtensionHours?: number | undefined; 
+  private _tokenRefreshExtensionHours?: number; 
   public get tokenRefreshExtensionHours() {
     return this.getNumberAttribute('token_refresh_extension_hours');
   }
-  public set tokenRefreshExtensionHours(value: number | undefined) {
+  public set tokenRefreshExtensionHours(value: number) {
     this._tokenRefreshExtensionHours = value;
   }
   public resetTokenRefreshExtensionHours() {
@@ -686,15 +932,15 @@ export class AppServiceSlotAuthSettingsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get tokenRefreshExtensionHoursInput() {
-    return this._tokenRefreshExtensionHours
+    return this._tokenRefreshExtensionHours;
   }
 
   // token_store_enabled - computed: false, optional: true, required: false
-  private _tokenStoreEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _tokenStoreEnabled?: boolean | cdktf.IResolvable; 
   public get tokenStoreEnabled() {
     return this.getBooleanAttribute('token_store_enabled') as any;
   }
-  public set tokenStoreEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set tokenStoreEnabled(value: boolean | cdktf.IResolvable) {
     this._tokenStoreEnabled = value;
   }
   public resetTokenStoreEnabled() {
@@ -702,15 +948,15 @@ export class AppServiceSlotAuthSettingsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get tokenStoreEnabledInput() {
-    return this._tokenStoreEnabled
+    return this._tokenStoreEnabled;
   }
 
   // unauthenticated_client_action - computed: false, optional: true, required: false
-  private _unauthenticatedClientAction?: string | undefined; 
+  private _unauthenticatedClientAction?: string; 
   public get unauthenticatedClientAction() {
     return this.getStringAttribute('unauthenticated_client_action');
   }
-  public set unauthenticatedClientAction(value: string | undefined) {
+  public set unauthenticatedClientAction(value: string) {
     this._unauthenticatedClientAction = value;
   }
   public resetUnauthenticatedClientAction() {
@@ -718,92 +964,87 @@ export class AppServiceSlotAuthSettingsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get unauthenticatedClientActionInput() {
-    return this._unauthenticatedClientAction
+    return this._unauthenticatedClientAction;
   }
 
   // active_directory - computed: false, optional: true, required: false
-  private _activeDirectory?: AppServiceSlotAuthSettingsActiveDirectory | undefined; 
-  private __activeDirectoryOutput = new AppServiceSlotAuthSettingsActiveDirectoryOutputReference(this as any, "active_directory", true);
+  private _activeDirectory = new AppServiceSlotAuthSettingsActiveDirectoryOutputReference(this as any, "active_directory", true);
   public get activeDirectory() {
-    return this.__activeDirectoryOutput;
+    return this._activeDirectory;
   }
-  public putActiveDirectory(value: AppServiceSlotAuthSettingsActiveDirectory | undefined) {
-    this._activeDirectory = value;
+  public putActiveDirectory(value: AppServiceSlotAuthSettingsActiveDirectory) {
+    this._activeDirectory.internalValue = value;
   }
   public resetActiveDirectory() {
-    this._activeDirectory = undefined;
+    this._activeDirectory.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get activeDirectoryInput() {
-    return this._activeDirectory
+    return this._activeDirectory.internalValue;
   }
 
   // facebook - computed: false, optional: true, required: false
-  private _facebook?: AppServiceSlotAuthSettingsFacebook | undefined; 
-  private __facebookOutput = new AppServiceSlotAuthSettingsFacebookOutputReference(this as any, "facebook", true);
+  private _facebook = new AppServiceSlotAuthSettingsFacebookOutputReference(this as any, "facebook", true);
   public get facebook() {
-    return this.__facebookOutput;
+    return this._facebook;
   }
-  public putFacebook(value: AppServiceSlotAuthSettingsFacebook | undefined) {
-    this._facebook = value;
+  public putFacebook(value: AppServiceSlotAuthSettingsFacebook) {
+    this._facebook.internalValue = value;
   }
   public resetFacebook() {
-    this._facebook = undefined;
+    this._facebook.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get facebookInput() {
-    return this._facebook
+    return this._facebook.internalValue;
   }
 
   // google - computed: false, optional: true, required: false
-  private _google?: AppServiceSlotAuthSettingsGoogle | undefined; 
-  private __googleOutput = new AppServiceSlotAuthSettingsGoogleOutputReference(this as any, "google", true);
+  private _google = new AppServiceSlotAuthSettingsGoogleOutputReference(this as any, "google", true);
   public get google() {
-    return this.__googleOutput;
+    return this._google;
   }
-  public putGoogle(value: AppServiceSlotAuthSettingsGoogle | undefined) {
-    this._google = value;
+  public putGoogle(value: AppServiceSlotAuthSettingsGoogle) {
+    this._google.internalValue = value;
   }
   public resetGoogle() {
-    this._google = undefined;
+    this._google.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get googleInput() {
-    return this._google
+    return this._google.internalValue;
   }
 
   // microsoft - computed: false, optional: true, required: false
-  private _microsoft?: AppServiceSlotAuthSettingsMicrosoft | undefined; 
-  private __microsoftOutput = new AppServiceSlotAuthSettingsMicrosoftOutputReference(this as any, "microsoft", true);
+  private _microsoft = new AppServiceSlotAuthSettingsMicrosoftOutputReference(this as any, "microsoft", true);
   public get microsoft() {
-    return this.__microsoftOutput;
+    return this._microsoft;
   }
-  public putMicrosoft(value: AppServiceSlotAuthSettingsMicrosoft | undefined) {
-    this._microsoft = value;
+  public putMicrosoft(value: AppServiceSlotAuthSettingsMicrosoft) {
+    this._microsoft.internalValue = value;
   }
   public resetMicrosoft() {
-    this._microsoft = undefined;
+    this._microsoft.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get microsoftInput() {
-    return this._microsoft
+    return this._microsoft.internalValue;
   }
 
   // twitter - computed: false, optional: true, required: false
-  private _twitter?: AppServiceSlotAuthSettingsTwitter | undefined; 
-  private __twitterOutput = new AppServiceSlotAuthSettingsTwitterOutputReference(this as any, "twitter", true);
+  private _twitter = new AppServiceSlotAuthSettingsTwitterOutputReference(this as any, "twitter", true);
   public get twitter() {
-    return this.__twitterOutput;
+    return this._twitter;
   }
-  public putTwitter(value: AppServiceSlotAuthSettingsTwitter | undefined) {
-    this._twitter = value;
+  public putTwitter(value: AppServiceSlotAuthSettingsTwitter) {
+    this._twitter.internalValue = value;
   }
   public resetTwitter() {
-    this._twitter = undefined;
+    this._twitter.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get twitterInput() {
-    return this._twitter
+    return this._twitter.internalValue;
   }
 }
 export interface AppServiceSlotConnectionString {
@@ -821,7 +1062,7 @@ export interface AppServiceSlotConnectionString {
   readonly value: string;
 }
 
-function appServiceSlotConnectionStringToTerraform(struct?: AppServiceSlotConnectionString): any {
+export function appServiceSlotConnectionStringToTerraform(struct?: AppServiceSlotConnectionString): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -844,7 +1085,7 @@ export interface AppServiceSlotIdentity {
   readonly type: string;
 }
 
-function appServiceSlotIdentityToTerraform(struct?: AppServiceSlotIdentityOutputReference | AppServiceSlotIdentity): any {
+export function appServiceSlotIdentityToTerraform(struct?: AppServiceSlotIdentityOutputReference | AppServiceSlotIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -865,12 +1106,37 @@ export class AppServiceSlotIdentityOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppServiceSlotIdentity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._identityIds) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotIdentity | undefined) {
+    if (value === undefined) {
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
   // identity_ids - computed: false, optional: true, required: false
-  private _identityIds?: string[] | undefined; 
+  private _identityIds?: string[]; 
   public get identityIds() {
     return this.getListAttribute('identity_ids');
   }
-  public set identityIds(value: string[] | undefined) {
+  public set identityIds(value: string[]) {
     this._identityIds = value;
   }
   public resetIdentityIds() {
@@ -878,7 +1144,7 @@ export class AppServiceSlotIdentityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
-    return this._identityIds
+    return this._identityIds;
   }
 
   // type - computed: false, optional: false, required: true
@@ -891,7 +1157,7 @@ export class AppServiceSlotIdentityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface AppServiceSlotLogsApplicationLogsAzureBlobStorage {
@@ -909,7 +1175,7 @@ export interface AppServiceSlotLogsApplicationLogsAzureBlobStorage {
   readonly sasUrl: string;
 }
 
-function appServiceSlotLogsApplicationLogsAzureBlobStorageToTerraform(struct?: AppServiceSlotLogsApplicationLogsAzureBlobStorageOutputReference | AppServiceSlotLogsApplicationLogsAzureBlobStorage): any {
+export function appServiceSlotLogsApplicationLogsAzureBlobStorageToTerraform(struct?: AppServiceSlotLogsApplicationLogsAzureBlobStorageOutputReference | AppServiceSlotLogsApplicationLogsAzureBlobStorage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -931,6 +1197,37 @@ export class AppServiceSlotLogsApplicationLogsAzureBlobStorageOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppServiceSlotLogsApplicationLogsAzureBlobStorage | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._level) {
+      hasAnyValues = true;
+      internalValueResult.level = this._level;
+    }
+    if (this._retentionInDays) {
+      hasAnyValues = true;
+      internalValueResult.retentionInDays = this._retentionInDays;
+    }
+    if (this._sasUrl) {
+      hasAnyValues = true;
+      internalValueResult.sasUrl = this._sasUrl;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotLogsApplicationLogsAzureBlobStorage | undefined) {
+    if (value === undefined) {
+      this._level = undefined;
+      this._retentionInDays = undefined;
+      this._sasUrl = undefined;
+    }
+    else {
+      this._level = value.level;
+      this._retentionInDays = value.retentionInDays;
+      this._sasUrl = value.sasUrl;
+    }
+  }
+
   // level - computed: false, optional: false, required: true
   private _level?: string; 
   public get level() {
@@ -941,7 +1238,7 @@ export class AppServiceSlotLogsApplicationLogsAzureBlobStorageOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get levelInput() {
-    return this._level
+    return this._level;
   }
 
   // retention_in_days - computed: false, optional: false, required: true
@@ -954,7 +1251,7 @@ export class AppServiceSlotLogsApplicationLogsAzureBlobStorageOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get retentionInDaysInput() {
-    return this._retentionInDays
+    return this._retentionInDays;
   }
 
   // sas_url - computed: false, optional: false, required: true
@@ -967,7 +1264,7 @@ export class AppServiceSlotLogsApplicationLogsAzureBlobStorageOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get sasUrlInput() {
-    return this._sasUrl
+    return this._sasUrl;
   }
 }
 export interface AppServiceSlotLogsApplicationLogs {
@@ -983,7 +1280,7 @@ export interface AppServiceSlotLogsApplicationLogs {
   readonly azureBlobStorage?: AppServiceSlotLogsApplicationLogsAzureBlobStorage;
 }
 
-function appServiceSlotLogsApplicationLogsToTerraform(struct?: AppServiceSlotLogsApplicationLogsOutputReference | AppServiceSlotLogsApplicationLogs): any {
+export function appServiceSlotLogsApplicationLogsToTerraform(struct?: AppServiceSlotLogsApplicationLogsOutputReference | AppServiceSlotLogsApplicationLogs): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1004,12 +1301,37 @@ export class AppServiceSlotLogsApplicationLogsOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppServiceSlotLogsApplicationLogs | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._fileSystemLevel) {
+      hasAnyValues = true;
+      internalValueResult.fileSystemLevel = this._fileSystemLevel;
+    }
+    if (this._azureBlobStorage) {
+      hasAnyValues = true;
+      internalValueResult.azureBlobStorage = this._azureBlobStorage?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotLogsApplicationLogs | undefined) {
+    if (value === undefined) {
+      this._fileSystemLevel = undefined;
+      this._azureBlobStorage.internalValue = undefined;
+    }
+    else {
+      this._fileSystemLevel = value.fileSystemLevel;
+      this._azureBlobStorage.internalValue = value.azureBlobStorage;
+    }
+  }
+
   // file_system_level - computed: false, optional: true, required: false
-  private _fileSystemLevel?: string | undefined; 
+  private _fileSystemLevel?: string; 
   public get fileSystemLevel() {
     return this.getStringAttribute('file_system_level');
   }
-  public set fileSystemLevel(value: string | undefined) {
+  public set fileSystemLevel(value: string) {
     this._fileSystemLevel = value;
   }
   public resetFileSystemLevel() {
@@ -1017,24 +1339,23 @@ export class AppServiceSlotLogsApplicationLogsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get fileSystemLevelInput() {
-    return this._fileSystemLevel
+    return this._fileSystemLevel;
   }
 
   // azure_blob_storage - computed: false, optional: true, required: false
-  private _azureBlobStorage?: AppServiceSlotLogsApplicationLogsAzureBlobStorage | undefined; 
-  private __azureBlobStorageOutput = new AppServiceSlotLogsApplicationLogsAzureBlobStorageOutputReference(this as any, "azure_blob_storage", true);
+  private _azureBlobStorage = new AppServiceSlotLogsApplicationLogsAzureBlobStorageOutputReference(this as any, "azure_blob_storage", true);
   public get azureBlobStorage() {
-    return this.__azureBlobStorageOutput;
+    return this._azureBlobStorage;
   }
-  public putAzureBlobStorage(value: AppServiceSlotLogsApplicationLogsAzureBlobStorage | undefined) {
-    this._azureBlobStorage = value;
+  public putAzureBlobStorage(value: AppServiceSlotLogsApplicationLogsAzureBlobStorage) {
+    this._azureBlobStorage.internalValue = value;
   }
   public resetAzureBlobStorage() {
-    this._azureBlobStorage = undefined;
+    this._azureBlobStorage.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get azureBlobStorageInput() {
-    return this._azureBlobStorage
+    return this._azureBlobStorage.internalValue;
   }
 }
 export interface AppServiceSlotLogsHttpLogsAzureBlobStorage {
@@ -1048,7 +1369,7 @@ export interface AppServiceSlotLogsHttpLogsAzureBlobStorage {
   readonly sasUrl: string;
 }
 
-function appServiceSlotLogsHttpLogsAzureBlobStorageToTerraform(struct?: AppServiceSlotLogsHttpLogsAzureBlobStorageOutputReference | AppServiceSlotLogsHttpLogsAzureBlobStorage): any {
+export function appServiceSlotLogsHttpLogsAzureBlobStorageToTerraform(struct?: AppServiceSlotLogsHttpLogsAzureBlobStorageOutputReference | AppServiceSlotLogsHttpLogsAzureBlobStorage): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1069,6 +1390,31 @@ export class AppServiceSlotLogsHttpLogsAzureBlobStorageOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppServiceSlotLogsHttpLogsAzureBlobStorage | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._retentionInDays) {
+      hasAnyValues = true;
+      internalValueResult.retentionInDays = this._retentionInDays;
+    }
+    if (this._sasUrl) {
+      hasAnyValues = true;
+      internalValueResult.sasUrl = this._sasUrl;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotLogsHttpLogsAzureBlobStorage | undefined) {
+    if (value === undefined) {
+      this._retentionInDays = undefined;
+      this._sasUrl = undefined;
+    }
+    else {
+      this._retentionInDays = value.retentionInDays;
+      this._sasUrl = value.sasUrl;
+    }
+  }
+
   // retention_in_days - computed: false, optional: false, required: true
   private _retentionInDays?: number; 
   public get retentionInDays() {
@@ -1079,7 +1425,7 @@ export class AppServiceSlotLogsHttpLogsAzureBlobStorageOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get retentionInDaysInput() {
-    return this._retentionInDays
+    return this._retentionInDays;
   }
 
   // sas_url - computed: false, optional: false, required: true
@@ -1092,7 +1438,7 @@ export class AppServiceSlotLogsHttpLogsAzureBlobStorageOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get sasUrlInput() {
-    return this._sasUrl
+    return this._sasUrl;
   }
 }
 export interface AppServiceSlotLogsHttpLogsFileSystem {
@@ -1106,7 +1452,7 @@ export interface AppServiceSlotLogsHttpLogsFileSystem {
   readonly retentionInMb: number;
 }
 
-function appServiceSlotLogsHttpLogsFileSystemToTerraform(struct?: AppServiceSlotLogsHttpLogsFileSystemOutputReference | AppServiceSlotLogsHttpLogsFileSystem): any {
+export function appServiceSlotLogsHttpLogsFileSystemToTerraform(struct?: AppServiceSlotLogsHttpLogsFileSystemOutputReference | AppServiceSlotLogsHttpLogsFileSystem): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1127,6 +1473,31 @@ export class AppServiceSlotLogsHttpLogsFileSystemOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppServiceSlotLogsHttpLogsFileSystem | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._retentionInDays) {
+      hasAnyValues = true;
+      internalValueResult.retentionInDays = this._retentionInDays;
+    }
+    if (this._retentionInMb) {
+      hasAnyValues = true;
+      internalValueResult.retentionInMb = this._retentionInMb;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotLogsHttpLogsFileSystem | undefined) {
+    if (value === undefined) {
+      this._retentionInDays = undefined;
+      this._retentionInMb = undefined;
+    }
+    else {
+      this._retentionInDays = value.retentionInDays;
+      this._retentionInMb = value.retentionInMb;
+    }
+  }
+
   // retention_in_days - computed: false, optional: false, required: true
   private _retentionInDays?: number; 
   public get retentionInDays() {
@@ -1137,7 +1508,7 @@ export class AppServiceSlotLogsHttpLogsFileSystemOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get retentionInDaysInput() {
-    return this._retentionInDays
+    return this._retentionInDays;
   }
 
   // retention_in_mb - computed: false, optional: false, required: true
@@ -1150,7 +1521,7 @@ export class AppServiceSlotLogsHttpLogsFileSystemOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get retentionInMbInput() {
-    return this._retentionInMb
+    return this._retentionInMb;
   }
 }
 export interface AppServiceSlotLogsHttpLogs {
@@ -1168,7 +1539,7 @@ export interface AppServiceSlotLogsHttpLogs {
   readonly fileSystem?: AppServiceSlotLogsHttpLogsFileSystem;
 }
 
-function appServiceSlotLogsHttpLogsToTerraform(struct?: AppServiceSlotLogsHttpLogsOutputReference | AppServiceSlotLogsHttpLogs): any {
+export function appServiceSlotLogsHttpLogsToTerraform(struct?: AppServiceSlotLogsHttpLogsOutputReference | AppServiceSlotLogsHttpLogs): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1189,38 +1560,61 @@ export class AppServiceSlotLogsHttpLogsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // azure_blob_storage - computed: false, optional: true, required: false
-  private _azureBlobStorage?: AppServiceSlotLogsHttpLogsAzureBlobStorage | undefined; 
-  private __azureBlobStorageOutput = new AppServiceSlotLogsHttpLogsAzureBlobStorageOutputReference(this as any, "azure_blob_storage", true);
-  public get azureBlobStorage() {
-    return this.__azureBlobStorageOutput;
+  public get internalValue(): AppServiceSlotLogsHttpLogs | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._azureBlobStorage) {
+      hasAnyValues = true;
+      internalValueResult.azureBlobStorage = this._azureBlobStorage?.internalValue;
+    }
+    if (this._fileSystem) {
+      hasAnyValues = true;
+      internalValueResult.fileSystem = this._fileSystem?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putAzureBlobStorage(value: AppServiceSlotLogsHttpLogsAzureBlobStorage | undefined) {
-    this._azureBlobStorage = value;
+
+  public set internalValue(value: AppServiceSlotLogsHttpLogs | undefined) {
+    if (value === undefined) {
+      this._azureBlobStorage.internalValue = undefined;
+      this._fileSystem.internalValue = undefined;
+    }
+    else {
+      this._azureBlobStorage.internalValue = value.azureBlobStorage;
+      this._fileSystem.internalValue = value.fileSystem;
+    }
+  }
+
+  // azure_blob_storage - computed: false, optional: true, required: false
+  private _azureBlobStorage = new AppServiceSlotLogsHttpLogsAzureBlobStorageOutputReference(this as any, "azure_blob_storage", true);
+  public get azureBlobStorage() {
+    return this._azureBlobStorage;
+  }
+  public putAzureBlobStorage(value: AppServiceSlotLogsHttpLogsAzureBlobStorage) {
+    this._azureBlobStorage.internalValue = value;
   }
   public resetAzureBlobStorage() {
-    this._azureBlobStorage = undefined;
+    this._azureBlobStorage.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get azureBlobStorageInput() {
-    return this._azureBlobStorage
+    return this._azureBlobStorage.internalValue;
   }
 
   // file_system - computed: false, optional: true, required: false
-  private _fileSystem?: AppServiceSlotLogsHttpLogsFileSystem | undefined; 
-  private __fileSystemOutput = new AppServiceSlotLogsHttpLogsFileSystemOutputReference(this as any, "file_system", true);
+  private _fileSystem = new AppServiceSlotLogsHttpLogsFileSystemOutputReference(this as any, "file_system", true);
   public get fileSystem() {
-    return this.__fileSystemOutput;
+    return this._fileSystem;
   }
-  public putFileSystem(value: AppServiceSlotLogsHttpLogsFileSystem | undefined) {
-    this._fileSystem = value;
+  public putFileSystem(value: AppServiceSlotLogsHttpLogsFileSystem) {
+    this._fileSystem.internalValue = value;
   }
   public resetFileSystem() {
-    this._fileSystem = undefined;
+    this._fileSystem.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get fileSystemInput() {
-    return this._fileSystem
+    return this._fileSystem.internalValue;
   }
 }
 export interface AppServiceSlotLogs {
@@ -1246,7 +1640,7 @@ export interface AppServiceSlotLogs {
   readonly httpLogs?: AppServiceSlotLogsHttpLogs;
 }
 
-function appServiceSlotLogsToTerraform(struct?: AppServiceSlotLogsOutputReference | AppServiceSlotLogs): any {
+export function appServiceSlotLogsToTerraform(struct?: AppServiceSlotLogsOutputReference | AppServiceSlotLogs): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1269,12 +1663,49 @@ export class AppServiceSlotLogsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppServiceSlotLogs | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._detailedErrorMessagesEnabled) {
+      hasAnyValues = true;
+      internalValueResult.detailedErrorMessagesEnabled = this._detailedErrorMessagesEnabled;
+    }
+    if (this._failedRequestTracingEnabled) {
+      hasAnyValues = true;
+      internalValueResult.failedRequestTracingEnabled = this._failedRequestTracingEnabled;
+    }
+    if (this._applicationLogs) {
+      hasAnyValues = true;
+      internalValueResult.applicationLogs = this._applicationLogs?.internalValue;
+    }
+    if (this._httpLogs) {
+      hasAnyValues = true;
+      internalValueResult.httpLogs = this._httpLogs?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotLogs | undefined) {
+    if (value === undefined) {
+      this._detailedErrorMessagesEnabled = undefined;
+      this._failedRequestTracingEnabled = undefined;
+      this._applicationLogs.internalValue = undefined;
+      this._httpLogs.internalValue = undefined;
+    }
+    else {
+      this._detailedErrorMessagesEnabled = value.detailedErrorMessagesEnabled;
+      this._failedRequestTracingEnabled = value.failedRequestTracingEnabled;
+      this._applicationLogs.internalValue = value.applicationLogs;
+      this._httpLogs.internalValue = value.httpLogs;
+    }
+  }
+
   // detailed_error_messages_enabled - computed: false, optional: true, required: false
-  private _detailedErrorMessagesEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _detailedErrorMessagesEnabled?: boolean | cdktf.IResolvable; 
   public get detailedErrorMessagesEnabled() {
     return this.getBooleanAttribute('detailed_error_messages_enabled') as any;
   }
-  public set detailedErrorMessagesEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set detailedErrorMessagesEnabled(value: boolean | cdktf.IResolvable) {
     this._detailedErrorMessagesEnabled = value;
   }
   public resetDetailedErrorMessagesEnabled() {
@@ -1282,15 +1713,15 @@ export class AppServiceSlotLogsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get detailedErrorMessagesEnabledInput() {
-    return this._detailedErrorMessagesEnabled
+    return this._detailedErrorMessagesEnabled;
   }
 
   // failed_request_tracing_enabled - computed: false, optional: true, required: false
-  private _failedRequestTracingEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _failedRequestTracingEnabled?: boolean | cdktf.IResolvable; 
   public get failedRequestTracingEnabled() {
     return this.getBooleanAttribute('failed_request_tracing_enabled') as any;
   }
-  public set failedRequestTracingEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set failedRequestTracingEnabled(value: boolean | cdktf.IResolvable) {
     this._failedRequestTracingEnabled = value;
   }
   public resetFailedRequestTracingEnabled() {
@@ -1298,41 +1729,39 @@ export class AppServiceSlotLogsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get failedRequestTracingEnabledInput() {
-    return this._failedRequestTracingEnabled
+    return this._failedRequestTracingEnabled;
   }
 
   // application_logs - computed: false, optional: true, required: false
-  private _applicationLogs?: AppServiceSlotLogsApplicationLogs | undefined; 
-  private __applicationLogsOutput = new AppServiceSlotLogsApplicationLogsOutputReference(this as any, "application_logs", true);
+  private _applicationLogs = new AppServiceSlotLogsApplicationLogsOutputReference(this as any, "application_logs", true);
   public get applicationLogs() {
-    return this.__applicationLogsOutput;
+    return this._applicationLogs;
   }
-  public putApplicationLogs(value: AppServiceSlotLogsApplicationLogs | undefined) {
-    this._applicationLogs = value;
+  public putApplicationLogs(value: AppServiceSlotLogsApplicationLogs) {
+    this._applicationLogs.internalValue = value;
   }
   public resetApplicationLogs() {
-    this._applicationLogs = undefined;
+    this._applicationLogs.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get applicationLogsInput() {
-    return this._applicationLogs
+    return this._applicationLogs.internalValue;
   }
 
   // http_logs - computed: false, optional: true, required: false
-  private _httpLogs?: AppServiceSlotLogsHttpLogs | undefined; 
-  private __httpLogsOutput = new AppServiceSlotLogsHttpLogsOutputReference(this as any, "http_logs", true);
+  private _httpLogs = new AppServiceSlotLogsHttpLogsOutputReference(this as any, "http_logs", true);
   public get httpLogs() {
-    return this.__httpLogsOutput;
+    return this._httpLogs;
   }
-  public putHttpLogs(value: AppServiceSlotLogsHttpLogs | undefined) {
-    this._httpLogs = value;
+  public putHttpLogs(value: AppServiceSlotLogsHttpLogs) {
+    this._httpLogs.internalValue = value;
   }
   public resetHttpLogs() {
-    this._httpLogs = undefined;
+    this._httpLogs.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get httpLogsInput() {
-    return this._httpLogs
+    return this._httpLogs.internalValue;
   }
 }
 export interface AppServiceSlotSiteConfigIpRestrictionHeaders {
@@ -1354,7 +1783,7 @@ export interface AppServiceSlotSiteConfigIpRestrictionHeaders {
   readonly xForwardedHost?: string[];
 }
 
-function appServiceSlotSiteConfigIpRestrictionHeadersToTerraform(struct?: AppServiceSlotSiteConfigIpRestrictionHeaders): any {
+export function appServiceSlotSiteConfigIpRestrictionHeadersToTerraform(struct?: AppServiceSlotSiteConfigIpRestrictionHeaders): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1398,7 +1827,7 @@ export interface AppServiceSlotSiteConfigIpRestriction {
   readonly virtualNetworkSubnetId?: string;
 }
 
-function appServiceSlotSiteConfigIpRestrictionToTerraform(struct?: AppServiceSlotSiteConfigIpRestriction): any {
+export function appServiceSlotSiteConfigIpRestrictionToTerraform(struct?: AppServiceSlotSiteConfigIpRestriction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1433,7 +1862,7 @@ export interface AppServiceSlotSiteConfigScmIpRestrictionHeaders {
   readonly xForwardedHost?: string[];
 }
 
-function appServiceSlotSiteConfigScmIpRestrictionHeadersToTerraform(struct?: AppServiceSlotSiteConfigScmIpRestrictionHeaders): any {
+export function appServiceSlotSiteConfigScmIpRestrictionHeadersToTerraform(struct?: AppServiceSlotSiteConfigScmIpRestrictionHeaders): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1477,7 +1906,7 @@ export interface AppServiceSlotSiteConfigScmIpRestriction {
   readonly virtualNetworkSubnetId?: string;
 }
 
-function appServiceSlotSiteConfigScmIpRestrictionToTerraform(struct?: AppServiceSlotSiteConfigScmIpRestriction): any {
+export function appServiceSlotSiteConfigScmIpRestrictionToTerraform(struct?: AppServiceSlotSiteConfigScmIpRestriction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1504,7 +1933,7 @@ export interface AppServiceSlotSiteConfigCors {
   readonly supportCredentials?: boolean | cdktf.IResolvable;
 }
 
-function appServiceSlotSiteConfigCorsToTerraform(struct?: AppServiceSlotSiteConfigCorsOutputReference | AppServiceSlotSiteConfigCors): any {
+export function appServiceSlotSiteConfigCorsToTerraform(struct?: AppServiceSlotSiteConfigCorsOutputReference | AppServiceSlotSiteConfigCors): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1525,6 +1954,31 @@ export class AppServiceSlotSiteConfigCorsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppServiceSlotSiteConfigCors | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowedOrigins) {
+      hasAnyValues = true;
+      internalValueResult.allowedOrigins = this._allowedOrigins;
+    }
+    if (this._supportCredentials) {
+      hasAnyValues = true;
+      internalValueResult.supportCredentials = this._supportCredentials;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotSiteConfigCors | undefined) {
+    if (value === undefined) {
+      this._allowedOrigins = undefined;
+      this._supportCredentials = undefined;
+    }
+    else {
+      this._allowedOrigins = value.allowedOrigins;
+      this._supportCredentials = value.supportCredentials;
+    }
+  }
+
   // allowed_origins - computed: false, optional: false, required: true
   private _allowedOrigins?: string[]; 
   public get allowedOrigins() {
@@ -1535,15 +1989,15 @@ export class AppServiceSlotSiteConfigCorsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get allowedOriginsInput() {
-    return this._allowedOrigins
+    return this._allowedOrigins;
   }
 
   // support_credentials - computed: false, optional: true, required: false
-  private _supportCredentials?: boolean | cdktf.IResolvable | undefined; 
+  private _supportCredentials?: boolean | cdktf.IResolvable; 
   public get supportCredentials() {
     return this.getBooleanAttribute('support_credentials') as any;
   }
-  public set supportCredentials(value: boolean | cdktf.IResolvable | undefined) {
+  public set supportCredentials(value: boolean | cdktf.IResolvable) {
     this._supportCredentials = value;
   }
   public resetSupportCredentials() {
@@ -1551,7 +2005,7 @@ export class AppServiceSlotSiteConfigCorsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get supportCredentialsInput() {
-    return this._supportCredentials
+    return this._supportCredentials;
   }
 }
 export interface AppServiceSlotSiteConfig {
@@ -1683,7 +2137,7 @@ export interface AppServiceSlotSiteConfig {
   readonly cors?: AppServiceSlotSiteConfigCors;
 }
 
-function appServiceSlotSiteConfigToTerraform(struct?: AppServiceSlotSiteConfigOutputReference | AppServiceSlotSiteConfig): any {
+export function appServiceSlotSiteConfigToTerraform(struct?: AppServiceSlotSiteConfigOutputReference | AppServiceSlotSiteConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1733,12 +2187,211 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppServiceSlotSiteConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._acrUseManagedIdentityCredentials) {
+      hasAnyValues = true;
+      internalValueResult.acrUseManagedIdentityCredentials = this._acrUseManagedIdentityCredentials;
+    }
+    if (this._acrUserManagedIdentityClientId) {
+      hasAnyValues = true;
+      internalValueResult.acrUserManagedIdentityClientId = this._acrUserManagedIdentityClientId;
+    }
+    if (this._alwaysOn) {
+      hasAnyValues = true;
+      internalValueResult.alwaysOn = this._alwaysOn;
+    }
+    if (this._appCommandLine) {
+      hasAnyValues = true;
+      internalValueResult.appCommandLine = this._appCommandLine;
+    }
+    if (this._autoSwapSlotName) {
+      hasAnyValues = true;
+      internalValueResult.autoSwapSlotName = this._autoSwapSlotName;
+    }
+    if (this._defaultDocuments) {
+      hasAnyValues = true;
+      internalValueResult.defaultDocuments = this._defaultDocuments;
+    }
+    if (this._dotnetFrameworkVersion) {
+      hasAnyValues = true;
+      internalValueResult.dotnetFrameworkVersion = this._dotnetFrameworkVersion;
+    }
+    if (this._ftpsState) {
+      hasAnyValues = true;
+      internalValueResult.ftpsState = this._ftpsState;
+    }
+    if (this._healthCheckPath) {
+      hasAnyValues = true;
+      internalValueResult.healthCheckPath = this._healthCheckPath;
+    }
+    if (this._http2Enabled) {
+      hasAnyValues = true;
+      internalValueResult.http2Enabled = this._http2Enabled;
+    }
+    if (this._ipRestriction) {
+      hasAnyValues = true;
+      internalValueResult.ipRestriction = this._ipRestriction;
+    }
+    if (this._javaContainer) {
+      hasAnyValues = true;
+      internalValueResult.javaContainer = this._javaContainer;
+    }
+    if (this._javaContainerVersion) {
+      hasAnyValues = true;
+      internalValueResult.javaContainerVersion = this._javaContainerVersion;
+    }
+    if (this._javaVersion) {
+      hasAnyValues = true;
+      internalValueResult.javaVersion = this._javaVersion;
+    }
+    if (this._linuxFxVersion) {
+      hasAnyValues = true;
+      internalValueResult.linuxFxVersion = this._linuxFxVersion;
+    }
+    if (this._localMysqlEnabled) {
+      hasAnyValues = true;
+      internalValueResult.localMysqlEnabled = this._localMysqlEnabled;
+    }
+    if (this._managedPipelineMode) {
+      hasAnyValues = true;
+      internalValueResult.managedPipelineMode = this._managedPipelineMode;
+    }
+    if (this._minTlsVersion) {
+      hasAnyValues = true;
+      internalValueResult.minTlsVersion = this._minTlsVersion;
+    }
+    if (this._numberOfWorkers) {
+      hasAnyValues = true;
+      internalValueResult.numberOfWorkers = this._numberOfWorkers;
+    }
+    if (this._phpVersion) {
+      hasAnyValues = true;
+      internalValueResult.phpVersion = this._phpVersion;
+    }
+    if (this._pythonVersion) {
+      hasAnyValues = true;
+      internalValueResult.pythonVersion = this._pythonVersion;
+    }
+    if (this._remoteDebuggingEnabled) {
+      hasAnyValues = true;
+      internalValueResult.remoteDebuggingEnabled = this._remoteDebuggingEnabled;
+    }
+    if (this._remoteDebuggingVersion) {
+      hasAnyValues = true;
+      internalValueResult.remoteDebuggingVersion = this._remoteDebuggingVersion;
+    }
+    if (this._scmIpRestriction) {
+      hasAnyValues = true;
+      internalValueResult.scmIpRestriction = this._scmIpRestriction;
+    }
+    if (this._scmType) {
+      hasAnyValues = true;
+      internalValueResult.scmType = this._scmType;
+    }
+    if (this._scmUseMainIpRestriction) {
+      hasAnyValues = true;
+      internalValueResult.scmUseMainIpRestriction = this._scmUseMainIpRestriction;
+    }
+    if (this._use32BitWorkerProcess) {
+      hasAnyValues = true;
+      internalValueResult.use32BitWorkerProcess = this._use32BitWorkerProcess;
+    }
+    if (this._vnetRouteAllEnabled) {
+      hasAnyValues = true;
+      internalValueResult.vnetRouteAllEnabled = this._vnetRouteAllEnabled;
+    }
+    if (this._websocketsEnabled) {
+      hasAnyValues = true;
+      internalValueResult.websocketsEnabled = this._websocketsEnabled;
+    }
+    if (this._windowsFxVersion) {
+      hasAnyValues = true;
+      internalValueResult.windowsFxVersion = this._windowsFxVersion;
+    }
+    if (this._cors) {
+      hasAnyValues = true;
+      internalValueResult.cors = this._cors?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotSiteConfig | undefined) {
+    if (value === undefined) {
+      this._acrUseManagedIdentityCredentials = undefined;
+      this._acrUserManagedIdentityClientId = undefined;
+      this._alwaysOn = undefined;
+      this._appCommandLine = undefined;
+      this._autoSwapSlotName = undefined;
+      this._defaultDocuments = undefined;
+      this._dotnetFrameworkVersion = undefined;
+      this._ftpsState = undefined;
+      this._healthCheckPath = undefined;
+      this._http2Enabled = undefined;
+      this._ipRestriction = undefined;
+      this._javaContainer = undefined;
+      this._javaContainerVersion = undefined;
+      this._javaVersion = undefined;
+      this._linuxFxVersion = undefined;
+      this._localMysqlEnabled = undefined;
+      this._managedPipelineMode = undefined;
+      this._minTlsVersion = undefined;
+      this._numberOfWorkers = undefined;
+      this._phpVersion = undefined;
+      this._pythonVersion = undefined;
+      this._remoteDebuggingEnabled = undefined;
+      this._remoteDebuggingVersion = undefined;
+      this._scmIpRestriction = undefined;
+      this._scmType = undefined;
+      this._scmUseMainIpRestriction = undefined;
+      this._use32BitWorkerProcess = undefined;
+      this._vnetRouteAllEnabled = undefined;
+      this._websocketsEnabled = undefined;
+      this._windowsFxVersion = undefined;
+      this._cors.internalValue = undefined;
+    }
+    else {
+      this._acrUseManagedIdentityCredentials = value.acrUseManagedIdentityCredentials;
+      this._acrUserManagedIdentityClientId = value.acrUserManagedIdentityClientId;
+      this._alwaysOn = value.alwaysOn;
+      this._appCommandLine = value.appCommandLine;
+      this._autoSwapSlotName = value.autoSwapSlotName;
+      this._defaultDocuments = value.defaultDocuments;
+      this._dotnetFrameworkVersion = value.dotnetFrameworkVersion;
+      this._ftpsState = value.ftpsState;
+      this._healthCheckPath = value.healthCheckPath;
+      this._http2Enabled = value.http2Enabled;
+      this._ipRestriction = value.ipRestriction;
+      this._javaContainer = value.javaContainer;
+      this._javaContainerVersion = value.javaContainerVersion;
+      this._javaVersion = value.javaVersion;
+      this._linuxFxVersion = value.linuxFxVersion;
+      this._localMysqlEnabled = value.localMysqlEnabled;
+      this._managedPipelineMode = value.managedPipelineMode;
+      this._minTlsVersion = value.minTlsVersion;
+      this._numberOfWorkers = value.numberOfWorkers;
+      this._phpVersion = value.phpVersion;
+      this._pythonVersion = value.pythonVersion;
+      this._remoteDebuggingEnabled = value.remoteDebuggingEnabled;
+      this._remoteDebuggingVersion = value.remoteDebuggingVersion;
+      this._scmIpRestriction = value.scmIpRestriction;
+      this._scmType = value.scmType;
+      this._scmUseMainIpRestriction = value.scmUseMainIpRestriction;
+      this._use32BitWorkerProcess = value.use32BitWorkerProcess;
+      this._vnetRouteAllEnabled = value.vnetRouteAllEnabled;
+      this._websocketsEnabled = value.websocketsEnabled;
+      this._windowsFxVersion = value.windowsFxVersion;
+      this._cors.internalValue = value.cors;
+    }
+  }
+
   // acr_use_managed_identity_credentials - computed: false, optional: true, required: false
-  private _acrUseManagedIdentityCredentials?: boolean | cdktf.IResolvable | undefined; 
+  private _acrUseManagedIdentityCredentials?: boolean | cdktf.IResolvable; 
   public get acrUseManagedIdentityCredentials() {
     return this.getBooleanAttribute('acr_use_managed_identity_credentials') as any;
   }
-  public set acrUseManagedIdentityCredentials(value: boolean | cdktf.IResolvable | undefined) {
+  public set acrUseManagedIdentityCredentials(value: boolean | cdktf.IResolvable) {
     this._acrUseManagedIdentityCredentials = value;
   }
   public resetAcrUseManagedIdentityCredentials() {
@@ -1746,15 +2399,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get acrUseManagedIdentityCredentialsInput() {
-    return this._acrUseManagedIdentityCredentials
+    return this._acrUseManagedIdentityCredentials;
   }
 
   // acr_user_managed_identity_client_id - computed: false, optional: true, required: false
-  private _acrUserManagedIdentityClientId?: string | undefined; 
+  private _acrUserManagedIdentityClientId?: string; 
   public get acrUserManagedIdentityClientId() {
     return this.getStringAttribute('acr_user_managed_identity_client_id');
   }
-  public set acrUserManagedIdentityClientId(value: string | undefined) {
+  public set acrUserManagedIdentityClientId(value: string) {
     this._acrUserManagedIdentityClientId = value;
   }
   public resetAcrUserManagedIdentityClientId() {
@@ -1762,15 +2415,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get acrUserManagedIdentityClientIdInput() {
-    return this._acrUserManagedIdentityClientId
+    return this._acrUserManagedIdentityClientId;
   }
 
   // always_on - computed: false, optional: true, required: false
-  private _alwaysOn?: boolean | cdktf.IResolvable | undefined; 
+  private _alwaysOn?: boolean | cdktf.IResolvable; 
   public get alwaysOn() {
     return this.getBooleanAttribute('always_on') as any;
   }
-  public set alwaysOn(value: boolean | cdktf.IResolvable | undefined) {
+  public set alwaysOn(value: boolean | cdktf.IResolvable) {
     this._alwaysOn = value;
   }
   public resetAlwaysOn() {
@@ -1778,15 +2431,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get alwaysOnInput() {
-    return this._alwaysOn
+    return this._alwaysOn;
   }
 
   // app_command_line - computed: false, optional: true, required: false
-  private _appCommandLine?: string | undefined; 
+  private _appCommandLine?: string; 
   public get appCommandLine() {
     return this.getStringAttribute('app_command_line');
   }
-  public set appCommandLine(value: string | undefined) {
+  public set appCommandLine(value: string) {
     this._appCommandLine = value;
   }
   public resetAppCommandLine() {
@@ -1794,15 +2447,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get appCommandLineInput() {
-    return this._appCommandLine
+    return this._appCommandLine;
   }
 
   // auto_swap_slot_name - computed: false, optional: true, required: false
-  private _autoSwapSlotName?: string | undefined; 
+  private _autoSwapSlotName?: string; 
   public get autoSwapSlotName() {
     return this.getStringAttribute('auto_swap_slot_name');
   }
-  public set autoSwapSlotName(value: string | undefined) {
+  public set autoSwapSlotName(value: string) {
     this._autoSwapSlotName = value;
   }
   public resetAutoSwapSlotName() {
@@ -1810,15 +2463,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get autoSwapSlotNameInput() {
-    return this._autoSwapSlotName
+    return this._autoSwapSlotName;
   }
 
   // default_documents - computed: false, optional: true, required: false
-  private _defaultDocuments?: string[] | undefined; 
+  private _defaultDocuments?: string[]; 
   public get defaultDocuments() {
     return this.getListAttribute('default_documents');
   }
-  public set defaultDocuments(value: string[] | undefined) {
+  public set defaultDocuments(value: string[]) {
     this._defaultDocuments = value;
   }
   public resetDefaultDocuments() {
@@ -1826,15 +2479,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get defaultDocumentsInput() {
-    return this._defaultDocuments
+    return this._defaultDocuments;
   }
 
   // dotnet_framework_version - computed: false, optional: true, required: false
-  private _dotnetFrameworkVersion?: string | undefined; 
+  private _dotnetFrameworkVersion?: string; 
   public get dotnetFrameworkVersion() {
     return this.getStringAttribute('dotnet_framework_version');
   }
-  public set dotnetFrameworkVersion(value: string | undefined) {
+  public set dotnetFrameworkVersion(value: string) {
     this._dotnetFrameworkVersion = value;
   }
   public resetDotnetFrameworkVersion() {
@@ -1842,15 +2495,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get dotnetFrameworkVersionInput() {
-    return this._dotnetFrameworkVersion
+    return this._dotnetFrameworkVersion;
   }
 
   // ftps_state - computed: true, optional: true, required: false
-  private _ftpsState?: string | undefined; 
+  private _ftpsState?: string; 
   public get ftpsState() {
     return this.getStringAttribute('ftps_state');
   }
-  public set ftpsState(value: string | undefined) {
+  public set ftpsState(value: string) {
     this._ftpsState = value;
   }
   public resetFtpsState() {
@@ -1858,15 +2511,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get ftpsStateInput() {
-    return this._ftpsState
+    return this._ftpsState;
   }
 
   // health_check_path - computed: false, optional: true, required: false
-  private _healthCheckPath?: string | undefined; 
+  private _healthCheckPath?: string; 
   public get healthCheckPath() {
     return this.getStringAttribute('health_check_path');
   }
-  public set healthCheckPath(value: string | undefined) {
+  public set healthCheckPath(value: string) {
     this._healthCheckPath = value;
   }
   public resetHealthCheckPath() {
@@ -1874,15 +2527,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get healthCheckPathInput() {
-    return this._healthCheckPath
+    return this._healthCheckPath;
   }
 
   // http2_enabled - computed: false, optional: true, required: false
-  private _http2Enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _http2Enabled?: boolean | cdktf.IResolvable; 
   public get http2Enabled() {
     return this.getBooleanAttribute('http2_enabled') as any;
   }
-  public set http2Enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set http2Enabled(value: boolean | cdktf.IResolvable) {
     this._http2Enabled = value;
   }
   public resetHttp2Enabled() {
@@ -1890,16 +2543,16 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get http2EnabledInput() {
-    return this._http2Enabled
+    return this._http2Enabled;
   }
 
   // ip_restriction - computed: true, optional: true, required: false
-  private _ipRestriction?: AppServiceSlotSiteConfigIpRestriction[] | undefined; 
+  private _ipRestriction?: AppServiceSlotSiteConfigIpRestriction[]; 
   public get ipRestriction() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ip_restriction') as any;
   }
-  public set ipRestriction(value: AppServiceSlotSiteConfigIpRestriction[] | undefined) {
+  public set ipRestriction(value: AppServiceSlotSiteConfigIpRestriction[]) {
     this._ipRestriction = value;
   }
   public resetIpRestriction() {
@@ -1907,15 +2560,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get ipRestrictionInput() {
-    return this._ipRestriction
+    return this._ipRestriction;
   }
 
   // java_container - computed: false, optional: true, required: false
-  private _javaContainer?: string | undefined; 
+  private _javaContainer?: string; 
   public get javaContainer() {
     return this.getStringAttribute('java_container');
   }
-  public set javaContainer(value: string | undefined) {
+  public set javaContainer(value: string) {
     this._javaContainer = value;
   }
   public resetJavaContainer() {
@@ -1923,15 +2576,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get javaContainerInput() {
-    return this._javaContainer
+    return this._javaContainer;
   }
 
   // java_container_version - computed: false, optional: true, required: false
-  private _javaContainerVersion?: string | undefined; 
+  private _javaContainerVersion?: string; 
   public get javaContainerVersion() {
     return this.getStringAttribute('java_container_version');
   }
-  public set javaContainerVersion(value: string | undefined) {
+  public set javaContainerVersion(value: string) {
     this._javaContainerVersion = value;
   }
   public resetJavaContainerVersion() {
@@ -1939,15 +2592,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get javaContainerVersionInput() {
-    return this._javaContainerVersion
+    return this._javaContainerVersion;
   }
 
   // java_version - computed: false, optional: true, required: false
-  private _javaVersion?: string | undefined; 
+  private _javaVersion?: string; 
   public get javaVersion() {
     return this.getStringAttribute('java_version');
   }
-  public set javaVersion(value: string | undefined) {
+  public set javaVersion(value: string) {
     this._javaVersion = value;
   }
   public resetJavaVersion() {
@@ -1955,15 +2608,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get javaVersionInput() {
-    return this._javaVersion
+    return this._javaVersion;
   }
 
   // linux_fx_version - computed: true, optional: true, required: false
-  private _linuxFxVersion?: string | undefined; 
+  private _linuxFxVersion?: string; 
   public get linuxFxVersion() {
     return this.getStringAttribute('linux_fx_version');
   }
-  public set linuxFxVersion(value: string | undefined) {
+  public set linuxFxVersion(value: string) {
     this._linuxFxVersion = value;
   }
   public resetLinuxFxVersion() {
@@ -1971,15 +2624,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get linuxFxVersionInput() {
-    return this._linuxFxVersion
+    return this._linuxFxVersion;
   }
 
   // local_mysql_enabled - computed: true, optional: true, required: false
-  private _localMysqlEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _localMysqlEnabled?: boolean | cdktf.IResolvable; 
   public get localMysqlEnabled() {
     return this.getBooleanAttribute('local_mysql_enabled') as any;
   }
-  public set localMysqlEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set localMysqlEnabled(value: boolean | cdktf.IResolvable) {
     this._localMysqlEnabled = value;
   }
   public resetLocalMysqlEnabled() {
@@ -1987,15 +2640,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get localMysqlEnabledInput() {
-    return this._localMysqlEnabled
+    return this._localMysqlEnabled;
   }
 
   // managed_pipeline_mode - computed: true, optional: true, required: false
-  private _managedPipelineMode?: string | undefined; 
+  private _managedPipelineMode?: string; 
   public get managedPipelineMode() {
     return this.getStringAttribute('managed_pipeline_mode');
   }
-  public set managedPipelineMode(value: string | undefined) {
+  public set managedPipelineMode(value: string) {
     this._managedPipelineMode = value;
   }
   public resetManagedPipelineMode() {
@@ -2003,15 +2656,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get managedPipelineModeInput() {
-    return this._managedPipelineMode
+    return this._managedPipelineMode;
   }
 
   // min_tls_version - computed: true, optional: true, required: false
-  private _minTlsVersion?: string | undefined; 
+  private _minTlsVersion?: string; 
   public get minTlsVersion() {
     return this.getStringAttribute('min_tls_version');
   }
-  public set minTlsVersion(value: string | undefined) {
+  public set minTlsVersion(value: string) {
     this._minTlsVersion = value;
   }
   public resetMinTlsVersion() {
@@ -2019,15 +2672,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get minTlsVersionInput() {
-    return this._minTlsVersion
+    return this._minTlsVersion;
   }
 
   // number_of_workers - computed: true, optional: true, required: false
-  private _numberOfWorkers?: number | undefined; 
+  private _numberOfWorkers?: number; 
   public get numberOfWorkers() {
     return this.getNumberAttribute('number_of_workers');
   }
-  public set numberOfWorkers(value: number | undefined) {
+  public set numberOfWorkers(value: number) {
     this._numberOfWorkers = value;
   }
   public resetNumberOfWorkers() {
@@ -2035,15 +2688,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get numberOfWorkersInput() {
-    return this._numberOfWorkers
+    return this._numberOfWorkers;
   }
 
   // php_version - computed: false, optional: true, required: false
-  private _phpVersion?: string | undefined; 
+  private _phpVersion?: string; 
   public get phpVersion() {
     return this.getStringAttribute('php_version');
   }
-  public set phpVersion(value: string | undefined) {
+  public set phpVersion(value: string) {
     this._phpVersion = value;
   }
   public resetPhpVersion() {
@@ -2051,15 +2704,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get phpVersionInput() {
-    return this._phpVersion
+    return this._phpVersion;
   }
 
   // python_version - computed: false, optional: true, required: false
-  private _pythonVersion?: string | undefined; 
+  private _pythonVersion?: string; 
   public get pythonVersion() {
     return this.getStringAttribute('python_version');
   }
-  public set pythonVersion(value: string | undefined) {
+  public set pythonVersion(value: string) {
     this._pythonVersion = value;
   }
   public resetPythonVersion() {
@@ -2067,15 +2720,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get pythonVersionInput() {
-    return this._pythonVersion
+    return this._pythonVersion;
   }
 
   // remote_debugging_enabled - computed: false, optional: true, required: false
-  private _remoteDebuggingEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _remoteDebuggingEnabled?: boolean | cdktf.IResolvable; 
   public get remoteDebuggingEnabled() {
     return this.getBooleanAttribute('remote_debugging_enabled') as any;
   }
-  public set remoteDebuggingEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set remoteDebuggingEnabled(value: boolean | cdktf.IResolvable) {
     this._remoteDebuggingEnabled = value;
   }
   public resetRemoteDebuggingEnabled() {
@@ -2083,15 +2736,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get remoteDebuggingEnabledInput() {
-    return this._remoteDebuggingEnabled
+    return this._remoteDebuggingEnabled;
   }
 
   // remote_debugging_version - computed: true, optional: true, required: false
-  private _remoteDebuggingVersion?: string | undefined; 
+  private _remoteDebuggingVersion?: string; 
   public get remoteDebuggingVersion() {
     return this.getStringAttribute('remote_debugging_version');
   }
-  public set remoteDebuggingVersion(value: string | undefined) {
+  public set remoteDebuggingVersion(value: string) {
     this._remoteDebuggingVersion = value;
   }
   public resetRemoteDebuggingVersion() {
@@ -2099,16 +2752,16 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get remoteDebuggingVersionInput() {
-    return this._remoteDebuggingVersion
+    return this._remoteDebuggingVersion;
   }
 
   // scm_ip_restriction - computed: true, optional: true, required: false
-  private _scmIpRestriction?: AppServiceSlotSiteConfigScmIpRestriction[] | undefined; 
+  private _scmIpRestriction?: AppServiceSlotSiteConfigScmIpRestriction[]; 
   public get scmIpRestriction() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('scm_ip_restriction') as any;
   }
-  public set scmIpRestriction(value: AppServiceSlotSiteConfigScmIpRestriction[] | undefined) {
+  public set scmIpRestriction(value: AppServiceSlotSiteConfigScmIpRestriction[]) {
     this._scmIpRestriction = value;
   }
   public resetScmIpRestriction() {
@@ -2116,15 +2769,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get scmIpRestrictionInput() {
-    return this._scmIpRestriction
+    return this._scmIpRestriction;
   }
 
   // scm_type - computed: true, optional: true, required: false
-  private _scmType?: string | undefined; 
+  private _scmType?: string; 
   public get scmType() {
     return this.getStringAttribute('scm_type');
   }
-  public set scmType(value: string | undefined) {
+  public set scmType(value: string) {
     this._scmType = value;
   }
   public resetScmType() {
@@ -2132,15 +2785,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get scmTypeInput() {
-    return this._scmType
+    return this._scmType;
   }
 
   // scm_use_main_ip_restriction - computed: false, optional: true, required: false
-  private _scmUseMainIpRestriction?: boolean | cdktf.IResolvable | undefined; 
+  private _scmUseMainIpRestriction?: boolean | cdktf.IResolvable; 
   public get scmUseMainIpRestriction() {
     return this.getBooleanAttribute('scm_use_main_ip_restriction') as any;
   }
-  public set scmUseMainIpRestriction(value: boolean | cdktf.IResolvable | undefined) {
+  public set scmUseMainIpRestriction(value: boolean | cdktf.IResolvable) {
     this._scmUseMainIpRestriction = value;
   }
   public resetScmUseMainIpRestriction() {
@@ -2148,15 +2801,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get scmUseMainIpRestrictionInput() {
-    return this._scmUseMainIpRestriction
+    return this._scmUseMainIpRestriction;
   }
 
   // use_32_bit_worker_process - computed: false, optional: true, required: false
-  private _use32BitWorkerProcess?: boolean | cdktf.IResolvable | undefined; 
+  private _use32BitWorkerProcess?: boolean | cdktf.IResolvable; 
   public get use32BitWorkerProcess() {
     return this.getBooleanAttribute('use_32_bit_worker_process') as any;
   }
-  public set use32BitWorkerProcess(value: boolean | cdktf.IResolvable | undefined) {
+  public set use32BitWorkerProcess(value: boolean | cdktf.IResolvable) {
     this._use32BitWorkerProcess = value;
   }
   public resetUse32BitWorkerProcess() {
@@ -2164,15 +2817,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get use32BitWorkerProcessInput() {
-    return this._use32BitWorkerProcess
+    return this._use32BitWorkerProcess;
   }
 
   // vnet_route_all_enabled - computed: true, optional: true, required: false
-  private _vnetRouteAllEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _vnetRouteAllEnabled?: boolean | cdktf.IResolvable; 
   public get vnetRouteAllEnabled() {
     return this.getBooleanAttribute('vnet_route_all_enabled') as any;
   }
-  public set vnetRouteAllEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set vnetRouteAllEnabled(value: boolean | cdktf.IResolvable) {
     this._vnetRouteAllEnabled = value;
   }
   public resetVnetRouteAllEnabled() {
@@ -2180,15 +2833,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get vnetRouteAllEnabledInput() {
-    return this._vnetRouteAllEnabled
+    return this._vnetRouteAllEnabled;
   }
 
   // websockets_enabled - computed: true, optional: true, required: false
-  private _websocketsEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _websocketsEnabled?: boolean | cdktf.IResolvable; 
   public get websocketsEnabled() {
     return this.getBooleanAttribute('websockets_enabled') as any;
   }
-  public set websocketsEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set websocketsEnabled(value: boolean | cdktf.IResolvable) {
     this._websocketsEnabled = value;
   }
   public resetWebsocketsEnabled() {
@@ -2196,15 +2849,15 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get websocketsEnabledInput() {
-    return this._websocketsEnabled
+    return this._websocketsEnabled;
   }
 
   // windows_fx_version - computed: true, optional: true, required: false
-  private _windowsFxVersion?: string | undefined; 
+  private _windowsFxVersion?: string; 
   public get windowsFxVersion() {
     return this.getStringAttribute('windows_fx_version');
   }
-  public set windowsFxVersion(value: string | undefined) {
+  public set windowsFxVersion(value: string) {
     this._windowsFxVersion = value;
   }
   public resetWindowsFxVersion() {
@@ -2212,24 +2865,23 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get windowsFxVersionInput() {
-    return this._windowsFxVersion
+    return this._windowsFxVersion;
   }
 
   // cors - computed: false, optional: true, required: false
-  private _cors?: AppServiceSlotSiteConfigCors | undefined; 
-  private __corsOutput = new AppServiceSlotSiteConfigCorsOutputReference(this as any, "cors", true);
+  private _cors = new AppServiceSlotSiteConfigCorsOutputReference(this as any, "cors", true);
   public get cors() {
-    return this.__corsOutput;
+    return this._cors;
   }
-  public putCors(value: AppServiceSlotSiteConfigCors | undefined) {
-    this._cors = value;
+  public putCors(value: AppServiceSlotSiteConfigCors) {
+    this._cors.internalValue = value;
   }
   public resetCors() {
-    this._cors = undefined;
+    this._cors.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get corsInput() {
-    return this._cors
+    return this._cors.internalValue;
   }
 }
 export interface AppServiceSlotTimeouts {
@@ -2251,7 +2903,7 @@ export interface AppServiceSlotTimeouts {
   readonly update?: string;
 }
 
-function appServiceSlotTimeoutsToTerraform(struct?: AppServiceSlotTimeoutsOutputReference | AppServiceSlotTimeouts): any {
+export function appServiceSlotTimeoutsToTerraform(struct?: AppServiceSlotTimeoutsOutputReference | AppServiceSlotTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -2274,12 +2926,49 @@ export class AppServiceSlotTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppServiceSlotTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -2287,15 +2976,15 @@ export class AppServiceSlotTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -2303,15 +2992,15 @@ export class AppServiceSlotTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -2319,15 +3008,15 @@ export class AppServiceSlotTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -2335,7 +3024,7 @@ export class AppServiceSlotTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -2382,12 +3071,12 @@ export class AppServiceSlot extends cdktf.TerraformResource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._authSettings = config.authSettings;
+    this._authSettings.internalValue = config.authSettings;
     this._connectionString = config.connectionString;
-    this._identity = config.identity;
-    this._logs = config.logs;
-    this._siteConfig = config.siteConfig;
-    this._timeouts = config.timeouts;
+    this._identity.internalValue = config.identity;
+    this._logs.internalValue = config.logs;
+    this._siteConfig.internalValue = config.siteConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -2404,7 +3093,7 @@ export class AppServiceSlot extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get appServiceNameInput() {
-    return this._appServiceName
+    return this._appServiceName;
   }
 
   // app_service_plan_id - computed: false, optional: false, required: true
@@ -2417,16 +3106,16 @@ export class AppServiceSlot extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get appServicePlanIdInput() {
-    return this._appServicePlanId
+    return this._appServicePlanId;
   }
 
   // app_settings - computed: true, optional: true, required: false
-  private _appSettings?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _appSettings?: { [key: string]: string } | cdktf.IResolvable; 
   public get appSettings() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('app_settings') as any;
   }
-  public set appSettings(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set appSettings(value: { [key: string]: string } | cdktf.IResolvable) {
     this._appSettings = value;
   }
   public resetAppSettings() {
@@ -2434,15 +3123,15 @@ export class AppServiceSlot extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get appSettingsInput() {
-    return this._appSettings
+    return this._appSettings;
   }
 
   // client_affinity_enabled - computed: true, optional: true, required: false
-  private _clientAffinityEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _clientAffinityEnabled?: boolean | cdktf.IResolvable; 
   public get clientAffinityEnabled() {
     return this.getBooleanAttribute('client_affinity_enabled') as any;
   }
-  public set clientAffinityEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set clientAffinityEnabled(value: boolean | cdktf.IResolvable) {
     this._clientAffinityEnabled = value;
   }
   public resetClientAffinityEnabled() {
@@ -2450,7 +3139,7 @@ export class AppServiceSlot extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get clientAffinityEnabledInput() {
-    return this._clientAffinityEnabled
+    return this._clientAffinityEnabled;
   }
 
   // default_site_hostname - computed: true, optional: false, required: false
@@ -2459,11 +3148,11 @@ export class AppServiceSlot extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -2471,15 +3160,15 @@ export class AppServiceSlot extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // https_only - computed: false, optional: true, required: false
-  private _httpsOnly?: boolean | cdktf.IResolvable | undefined; 
+  private _httpsOnly?: boolean | cdktf.IResolvable; 
   public get httpsOnly() {
     return this.getBooleanAttribute('https_only') as any;
   }
-  public set httpsOnly(value: boolean | cdktf.IResolvable | undefined) {
+  public set httpsOnly(value: boolean | cdktf.IResolvable) {
     this._httpsOnly = value;
   }
   public resetHttpsOnly() {
@@ -2487,7 +3176,7 @@ export class AppServiceSlot extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get httpsOnlyInput() {
-    return this._httpsOnly
+    return this._httpsOnly;
   }
 
   // id - computed: true, optional: true, required: false
@@ -2496,11 +3185,11 @@ export class AppServiceSlot extends cdktf.TerraformResource {
   }
 
   // key_vault_reference_identity_id - computed: true, optional: true, required: false
-  private _keyVaultReferenceIdentityId?: string | undefined; 
+  private _keyVaultReferenceIdentityId?: string; 
   public get keyVaultReferenceIdentityId() {
     return this.getStringAttribute('key_vault_reference_identity_id');
   }
-  public set keyVaultReferenceIdentityId(value: string | undefined) {
+  public set keyVaultReferenceIdentityId(value: string) {
     this._keyVaultReferenceIdentityId = value;
   }
   public resetKeyVaultReferenceIdentityId() {
@@ -2508,7 +3197,7 @@ export class AppServiceSlot extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get keyVaultReferenceIdentityIdInput() {
-    return this._keyVaultReferenceIdentityId
+    return this._keyVaultReferenceIdentityId;
   }
 
   // location - computed: false, optional: false, required: true
@@ -2521,7 +3210,7 @@ export class AppServiceSlot extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -2534,7 +3223,7 @@ export class AppServiceSlot extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -2547,7 +3236,7 @@ export class AppServiceSlot extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // site_credential - computed: true, optional: false, required: false
@@ -2556,12 +3245,12 @@ export class AppServiceSlot extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -2569,33 +3258,32 @@ export class AppServiceSlot extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // auth_settings - computed: false, optional: true, required: false
-  private _authSettings?: AppServiceSlotAuthSettings | undefined; 
-  private __authSettingsOutput = new AppServiceSlotAuthSettingsOutputReference(this as any, "auth_settings", true);
+  private _authSettings = new AppServiceSlotAuthSettingsOutputReference(this as any, "auth_settings", true);
   public get authSettings() {
-    return this.__authSettingsOutput;
+    return this._authSettings;
   }
-  public putAuthSettings(value: AppServiceSlotAuthSettings | undefined) {
-    this._authSettings = value;
+  public putAuthSettings(value: AppServiceSlotAuthSettings) {
+    this._authSettings.internalValue = value;
   }
   public resetAuthSettings() {
-    this._authSettings = undefined;
+    this._authSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get authSettingsInput() {
-    return this._authSettings
+    return this._authSettings.internalValue;
   }
 
   // connection_string - computed: false, optional: true, required: false
-  private _connectionString?: AppServiceSlotConnectionString[] | undefined; 
+  private _connectionString?: AppServiceSlotConnectionString[]; 
   public get connectionString() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('connection_string') as any;
   }
-  public set connectionString(value: AppServiceSlotConnectionString[] | undefined) {
+  public set connectionString(value: AppServiceSlotConnectionString[]) {
     this._connectionString = value;
   }
   public resetConnectionString() {
@@ -2603,75 +3291,71 @@ export class AppServiceSlot extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get connectionStringInput() {
-    return this._connectionString
+    return this._connectionString;
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: AppServiceSlotIdentity | undefined; 
-  private __identityOutput = new AppServiceSlotIdentityOutputReference(this as any, "identity", true);
+  private _identity = new AppServiceSlotIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.__identityOutput;
+    return this._identity;
   }
-  public putIdentity(value: AppServiceSlotIdentity | undefined) {
-    this._identity = value;
+  public putIdentity(value: AppServiceSlotIdentity) {
+    this._identity.internalValue = value;
   }
   public resetIdentity() {
-    this._identity = undefined;
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
-    return this._identity
+    return this._identity.internalValue;
   }
 
   // logs - computed: false, optional: true, required: false
-  private _logs?: AppServiceSlotLogs | undefined; 
-  private __logsOutput = new AppServiceSlotLogsOutputReference(this as any, "logs", true);
+  private _logs = new AppServiceSlotLogsOutputReference(this as any, "logs", true);
   public get logs() {
-    return this.__logsOutput;
+    return this._logs;
   }
-  public putLogs(value: AppServiceSlotLogs | undefined) {
-    this._logs = value;
+  public putLogs(value: AppServiceSlotLogs) {
+    this._logs.internalValue = value;
   }
   public resetLogs() {
-    this._logs = undefined;
+    this._logs.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get logsInput() {
-    return this._logs
+    return this._logs.internalValue;
   }
 
   // site_config - computed: false, optional: true, required: false
-  private _siteConfig?: AppServiceSlotSiteConfig | undefined; 
-  private __siteConfigOutput = new AppServiceSlotSiteConfigOutputReference(this as any, "site_config", true);
+  private _siteConfig = new AppServiceSlotSiteConfigOutputReference(this as any, "site_config", true);
   public get siteConfig() {
-    return this.__siteConfigOutput;
+    return this._siteConfig;
   }
-  public putSiteConfig(value: AppServiceSlotSiteConfig | undefined) {
-    this._siteConfig = value;
+  public putSiteConfig(value: AppServiceSlotSiteConfig) {
+    this._siteConfig.internalValue = value;
   }
   public resetSiteConfig() {
-    this._siteConfig = undefined;
+    this._siteConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get siteConfigInput() {
-    return this._siteConfig
+    return this._siteConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AppServiceSlotTimeouts | undefined; 
-  private __timeoutsOutput = new AppServiceSlotTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppServiceSlotTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: AppServiceSlotTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: AppServiceSlotTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -2691,12 +3375,12 @@ export class AppServiceSlot extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      auth_settings: appServiceSlotAuthSettingsToTerraform(this._authSettings),
+      auth_settings: appServiceSlotAuthSettingsToTerraform(this._authSettings.internalValue),
       connection_string: cdktf.listMapper(appServiceSlotConnectionStringToTerraform)(this._connectionString),
-      identity: appServiceSlotIdentityToTerraform(this._identity),
-      logs: appServiceSlotLogsToTerraform(this._logs),
-      site_config: appServiceSlotSiteConfigToTerraform(this._siteConfig),
-      timeouts: appServiceSlotTimeoutsToTerraform(this._timeouts),
+      identity: appServiceSlotIdentityToTerraform(this._identity.internalValue),
+      logs: appServiceSlotLogsToTerraform(this._logs.internalValue),
+      site_config: appServiceSlotSiteConfigToTerraform(this._siteConfig.internalValue),
+      timeouts: appServiceSlotTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

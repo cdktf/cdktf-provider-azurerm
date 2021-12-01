@@ -63,7 +63,7 @@ export interface SynapseLinkedServiceIntegrationRuntime {
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function synapseLinkedServiceIntegrationRuntimeToTerraform(struct?: SynapseLinkedServiceIntegrationRuntimeOutputReference | SynapseLinkedServiceIntegrationRuntime): any {
+export function synapseLinkedServiceIntegrationRuntimeToTerraform(struct?: SynapseLinkedServiceIntegrationRuntimeOutputReference | SynapseLinkedServiceIntegrationRuntime): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -84,6 +84,31 @@ export class SynapseLinkedServiceIntegrationRuntimeOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SynapseLinkedServiceIntegrationRuntime | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SynapseLinkedServiceIntegrationRuntime | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._parameters = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._parameters = value.parameters;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -94,16 +119,16 @@ export class SynapseLinkedServiceIntegrationRuntimeOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -111,7 +136,7 @@ export class SynapseLinkedServiceIntegrationRuntimeOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 }
 export interface SynapseLinkedServiceTimeouts {
@@ -133,7 +158,7 @@ export interface SynapseLinkedServiceTimeouts {
   readonly update?: string;
 }
 
-function synapseLinkedServiceTimeoutsToTerraform(struct?: SynapseLinkedServiceTimeoutsOutputReference | SynapseLinkedServiceTimeouts): any {
+export function synapseLinkedServiceTimeoutsToTerraform(struct?: SynapseLinkedServiceTimeoutsOutputReference | SynapseLinkedServiceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -156,12 +181,49 @@ export class SynapseLinkedServiceTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SynapseLinkedServiceTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SynapseLinkedServiceTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -169,15 +231,15 @@ export class SynapseLinkedServiceTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -185,15 +247,15 @@ export class SynapseLinkedServiceTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -201,15 +263,15 @@ export class SynapseLinkedServiceTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -217,7 +279,7 @@ export class SynapseLinkedServiceTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -261,8 +323,8 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
     this._synapseWorkspaceId = config.synapseWorkspaceId;
     this._type = config.type;
     this._typePropertiesJson = config.typePropertiesJson;
-    this._integrationRuntime = config.integrationRuntime;
-    this._timeouts = config.timeouts;
+    this._integrationRuntime.internalValue = config.integrationRuntime;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -270,12 +332,12 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable; 
   public get additionalProperties() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -283,15 +345,15 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get additionalPropertiesInput() {
-    return this._additionalProperties
+    return this._additionalProperties;
   }
 
   // annotations - computed: false, optional: true, required: false
-  private _annotations?: string[] | undefined; 
+  private _annotations?: string[]; 
   public get annotations() {
     return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] | undefined) {
+  public set annotations(value: string[]) {
     this._annotations = value;
   }
   public resetAnnotations() {
@@ -299,15 +361,15 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get annotationsInput() {
-    return this._annotations
+    return this._annotations;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -315,7 +377,7 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -333,16 +395,16 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -350,7 +412,7 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 
   // synapse_workspace_id - computed: false, optional: false, required: true
@@ -363,7 +425,7 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get synapseWorkspaceIdInput() {
-    return this._synapseWorkspaceId
+    return this._synapseWorkspaceId;
   }
 
   // type - computed: false, optional: false, required: true
@@ -376,7 +438,7 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 
   // type_properties_json - computed: false, optional: false, required: true
@@ -389,41 +451,39 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get typePropertiesJsonInput() {
-    return this._typePropertiesJson
+    return this._typePropertiesJson;
   }
 
   // integration_runtime - computed: false, optional: true, required: false
-  private _integrationRuntime?: SynapseLinkedServiceIntegrationRuntime | undefined; 
-  private __integrationRuntimeOutput = new SynapseLinkedServiceIntegrationRuntimeOutputReference(this as any, "integration_runtime", true);
+  private _integrationRuntime = new SynapseLinkedServiceIntegrationRuntimeOutputReference(this as any, "integration_runtime", true);
   public get integrationRuntime() {
-    return this.__integrationRuntimeOutput;
+    return this._integrationRuntime;
   }
-  public putIntegrationRuntime(value: SynapseLinkedServiceIntegrationRuntime | undefined) {
-    this._integrationRuntime = value;
+  public putIntegrationRuntime(value: SynapseLinkedServiceIntegrationRuntime) {
+    this._integrationRuntime.internalValue = value;
   }
   public resetIntegrationRuntime() {
-    this._integrationRuntime = undefined;
+    this._integrationRuntime.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get integrationRuntimeInput() {
-    return this._integrationRuntime
+    return this._integrationRuntime.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SynapseLinkedServiceTimeouts | undefined; 
-  private __timeoutsOutput = new SynapseLinkedServiceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SynapseLinkedServiceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SynapseLinkedServiceTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SynapseLinkedServiceTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -440,8 +500,8 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
       synapse_workspace_id: cdktf.stringToTerraform(this._synapseWorkspaceId),
       type: cdktf.stringToTerraform(this._type),
       type_properties_json: cdktf.stringToTerraform(this._typePropertiesJson),
-      integration_runtime: synapseLinkedServiceIntegrationRuntimeToTerraform(this._integrationRuntime),
-      timeouts: synapseLinkedServiceTimeoutsToTerraform(this._timeouts),
+      integration_runtime: synapseLinkedServiceIntegrationRuntimeToTerraform(this._integrationRuntime.internalValue),
+      timeouts: synapseLinkedServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

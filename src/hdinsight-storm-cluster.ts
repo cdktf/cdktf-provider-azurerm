@@ -85,7 +85,7 @@ export interface HdinsightStormClusterComponentVersion {
   readonly storm: string;
 }
 
-function hdinsightStormClusterComponentVersionToTerraform(struct?: HdinsightStormClusterComponentVersionOutputReference | HdinsightStormClusterComponentVersion): any {
+export function hdinsightStormClusterComponentVersionToTerraform(struct?: HdinsightStormClusterComponentVersionOutputReference | HdinsightStormClusterComponentVersion): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -105,6 +105,25 @@ export class HdinsightStormClusterComponentVersionOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HdinsightStormClusterComponentVersion | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._storm) {
+      hasAnyValues = true;
+      internalValueResult.storm = this._storm;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightStormClusterComponentVersion | undefined) {
+    if (value === undefined) {
+      this._storm = undefined;
+    }
+    else {
+      this._storm = value.storm;
+    }
+  }
+
   // storm - computed: false, optional: false, required: true
   private _storm?: string; 
   public get storm() {
@@ -115,7 +134,7 @@ export class HdinsightStormClusterComponentVersionOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get stormInput() {
-    return this._storm
+    return this._storm;
   }
 }
 export interface HdinsightStormClusterGateway {
@@ -133,7 +152,7 @@ export interface HdinsightStormClusterGateway {
   readonly username: string;
 }
 
-function hdinsightStormClusterGatewayToTerraform(struct?: HdinsightStormClusterGatewayOutputReference | HdinsightStormClusterGateway): any {
+export function hdinsightStormClusterGatewayToTerraform(struct?: HdinsightStormClusterGatewayOutputReference | HdinsightStormClusterGateway): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -155,12 +174,43 @@ export class HdinsightStormClusterGatewayOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HdinsightStormClusterGateway | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._password) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._username) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightStormClusterGateway | undefined) {
+    if (value === undefined) {
+      this._enabled = undefined;
+      this._password = undefined;
+      this._username = undefined;
+    }
+    else {
+      this._enabled = value.enabled;
+      this._password = value.password;
+      this._username = value.username;
+    }
+  }
+
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -168,7 +218,7 @@ export class HdinsightStormClusterGatewayOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // password - computed: false, optional: false, required: true
@@ -181,7 +231,7 @@ export class HdinsightStormClusterGatewayOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // username - computed: false, optional: false, required: true
@@ -194,7 +244,7 @@ export class HdinsightStormClusterGatewayOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
-    return this._username
+    return this._username;
   }
 }
 export interface HdinsightStormClusterMetastoresAmbari {
@@ -216,7 +266,7 @@ export interface HdinsightStormClusterMetastoresAmbari {
   readonly username: string;
 }
 
-function hdinsightStormClusterMetastoresAmbariToTerraform(struct?: HdinsightStormClusterMetastoresAmbariOutputReference | HdinsightStormClusterMetastoresAmbari): any {
+export function hdinsightStormClusterMetastoresAmbariToTerraform(struct?: HdinsightStormClusterMetastoresAmbariOutputReference | HdinsightStormClusterMetastoresAmbari): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -239,6 +289,43 @@ export class HdinsightStormClusterMetastoresAmbariOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HdinsightStormClusterMetastoresAmbari | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._databaseName) {
+      hasAnyValues = true;
+      internalValueResult.databaseName = this._databaseName;
+    }
+    if (this._password) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._server) {
+      hasAnyValues = true;
+      internalValueResult.server = this._server;
+    }
+    if (this._username) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightStormClusterMetastoresAmbari | undefined) {
+    if (value === undefined) {
+      this._databaseName = undefined;
+      this._password = undefined;
+      this._server = undefined;
+      this._username = undefined;
+    }
+    else {
+      this._databaseName = value.databaseName;
+      this._password = value.password;
+      this._server = value.server;
+      this._username = value.username;
+    }
+  }
+
   // database_name - computed: false, optional: false, required: true
   private _databaseName?: string; 
   public get databaseName() {
@@ -249,7 +336,7 @@ export class HdinsightStormClusterMetastoresAmbariOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get databaseNameInput() {
-    return this._databaseName
+    return this._databaseName;
   }
 
   // password - computed: false, optional: false, required: true
@@ -262,7 +349,7 @@ export class HdinsightStormClusterMetastoresAmbariOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // server - computed: false, optional: false, required: true
@@ -275,7 +362,7 @@ export class HdinsightStormClusterMetastoresAmbariOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get serverInput() {
-    return this._server
+    return this._server;
   }
 
   // username - computed: false, optional: false, required: true
@@ -288,7 +375,7 @@ export class HdinsightStormClusterMetastoresAmbariOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
-    return this._username
+    return this._username;
   }
 }
 export interface HdinsightStormClusterMetastoresHive {
@@ -310,7 +397,7 @@ export interface HdinsightStormClusterMetastoresHive {
   readonly username: string;
 }
 
-function hdinsightStormClusterMetastoresHiveToTerraform(struct?: HdinsightStormClusterMetastoresHiveOutputReference | HdinsightStormClusterMetastoresHive): any {
+export function hdinsightStormClusterMetastoresHiveToTerraform(struct?: HdinsightStormClusterMetastoresHiveOutputReference | HdinsightStormClusterMetastoresHive): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -333,6 +420,43 @@ export class HdinsightStormClusterMetastoresHiveOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HdinsightStormClusterMetastoresHive | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._databaseName) {
+      hasAnyValues = true;
+      internalValueResult.databaseName = this._databaseName;
+    }
+    if (this._password) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._server) {
+      hasAnyValues = true;
+      internalValueResult.server = this._server;
+    }
+    if (this._username) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightStormClusterMetastoresHive | undefined) {
+    if (value === undefined) {
+      this._databaseName = undefined;
+      this._password = undefined;
+      this._server = undefined;
+      this._username = undefined;
+    }
+    else {
+      this._databaseName = value.databaseName;
+      this._password = value.password;
+      this._server = value.server;
+      this._username = value.username;
+    }
+  }
+
   // database_name - computed: false, optional: false, required: true
   private _databaseName?: string; 
   public get databaseName() {
@@ -343,7 +467,7 @@ export class HdinsightStormClusterMetastoresHiveOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get databaseNameInput() {
-    return this._databaseName
+    return this._databaseName;
   }
 
   // password - computed: false, optional: false, required: true
@@ -356,7 +480,7 @@ export class HdinsightStormClusterMetastoresHiveOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // server - computed: false, optional: false, required: true
@@ -369,7 +493,7 @@ export class HdinsightStormClusterMetastoresHiveOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get serverInput() {
-    return this._server
+    return this._server;
   }
 
   // username - computed: false, optional: false, required: true
@@ -382,7 +506,7 @@ export class HdinsightStormClusterMetastoresHiveOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
-    return this._username
+    return this._username;
   }
 }
 export interface HdinsightStormClusterMetastoresOozie {
@@ -404,7 +528,7 @@ export interface HdinsightStormClusterMetastoresOozie {
   readonly username: string;
 }
 
-function hdinsightStormClusterMetastoresOozieToTerraform(struct?: HdinsightStormClusterMetastoresOozieOutputReference | HdinsightStormClusterMetastoresOozie): any {
+export function hdinsightStormClusterMetastoresOozieToTerraform(struct?: HdinsightStormClusterMetastoresOozieOutputReference | HdinsightStormClusterMetastoresOozie): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -427,6 +551,43 @@ export class HdinsightStormClusterMetastoresOozieOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HdinsightStormClusterMetastoresOozie | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._databaseName) {
+      hasAnyValues = true;
+      internalValueResult.databaseName = this._databaseName;
+    }
+    if (this._password) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._server) {
+      hasAnyValues = true;
+      internalValueResult.server = this._server;
+    }
+    if (this._username) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightStormClusterMetastoresOozie | undefined) {
+    if (value === undefined) {
+      this._databaseName = undefined;
+      this._password = undefined;
+      this._server = undefined;
+      this._username = undefined;
+    }
+    else {
+      this._databaseName = value.databaseName;
+      this._password = value.password;
+      this._server = value.server;
+      this._username = value.username;
+    }
+  }
+
   // database_name - computed: false, optional: false, required: true
   private _databaseName?: string; 
   public get databaseName() {
@@ -437,7 +598,7 @@ export class HdinsightStormClusterMetastoresOozieOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get databaseNameInput() {
-    return this._databaseName
+    return this._databaseName;
   }
 
   // password - computed: false, optional: false, required: true
@@ -450,7 +611,7 @@ export class HdinsightStormClusterMetastoresOozieOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // server - computed: false, optional: false, required: true
@@ -463,7 +624,7 @@ export class HdinsightStormClusterMetastoresOozieOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get serverInput() {
-    return this._server
+    return this._server;
   }
 
   // username - computed: false, optional: false, required: true
@@ -476,7 +637,7 @@ export class HdinsightStormClusterMetastoresOozieOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
-    return this._username
+    return this._username;
   }
 }
 export interface HdinsightStormClusterMetastores {
@@ -500,7 +661,7 @@ export interface HdinsightStormClusterMetastores {
   readonly oozie?: HdinsightStormClusterMetastoresOozie;
 }
 
-function hdinsightStormClusterMetastoresToTerraform(struct?: HdinsightStormClusterMetastoresOutputReference | HdinsightStormClusterMetastores): any {
+export function hdinsightStormClusterMetastoresToTerraform(struct?: HdinsightStormClusterMetastoresOutputReference | HdinsightStormClusterMetastores): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -522,55 +683,83 @@ export class HdinsightStormClusterMetastoresOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // ambari - computed: false, optional: true, required: false
-  private _ambari?: HdinsightStormClusterMetastoresAmbari | undefined; 
-  private __ambariOutput = new HdinsightStormClusterMetastoresAmbariOutputReference(this as any, "ambari", true);
-  public get ambari() {
-    return this.__ambariOutput;
+  public get internalValue(): HdinsightStormClusterMetastores | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._ambari) {
+      hasAnyValues = true;
+      internalValueResult.ambari = this._ambari?.internalValue;
+    }
+    if (this._hive) {
+      hasAnyValues = true;
+      internalValueResult.hive = this._hive?.internalValue;
+    }
+    if (this._oozie) {
+      hasAnyValues = true;
+      internalValueResult.oozie = this._oozie?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putAmbari(value: HdinsightStormClusterMetastoresAmbari | undefined) {
-    this._ambari = value;
+
+  public set internalValue(value: HdinsightStormClusterMetastores | undefined) {
+    if (value === undefined) {
+      this._ambari.internalValue = undefined;
+      this._hive.internalValue = undefined;
+      this._oozie.internalValue = undefined;
+    }
+    else {
+      this._ambari.internalValue = value.ambari;
+      this._hive.internalValue = value.hive;
+      this._oozie.internalValue = value.oozie;
+    }
+  }
+
+  // ambari - computed: false, optional: true, required: false
+  private _ambari = new HdinsightStormClusterMetastoresAmbariOutputReference(this as any, "ambari", true);
+  public get ambari() {
+    return this._ambari;
+  }
+  public putAmbari(value: HdinsightStormClusterMetastoresAmbari) {
+    this._ambari.internalValue = value;
   }
   public resetAmbari() {
-    this._ambari = undefined;
+    this._ambari.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ambariInput() {
-    return this._ambari
+    return this._ambari.internalValue;
   }
 
   // hive - computed: false, optional: true, required: false
-  private _hive?: HdinsightStormClusterMetastoresHive | undefined; 
-  private __hiveOutput = new HdinsightStormClusterMetastoresHiveOutputReference(this as any, "hive", true);
+  private _hive = new HdinsightStormClusterMetastoresHiveOutputReference(this as any, "hive", true);
   public get hive() {
-    return this.__hiveOutput;
+    return this._hive;
   }
-  public putHive(value: HdinsightStormClusterMetastoresHive | undefined) {
-    this._hive = value;
+  public putHive(value: HdinsightStormClusterMetastoresHive) {
+    this._hive.internalValue = value;
   }
   public resetHive() {
-    this._hive = undefined;
+    this._hive.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get hiveInput() {
-    return this._hive
+    return this._hive.internalValue;
   }
 
   // oozie - computed: false, optional: true, required: false
-  private _oozie?: HdinsightStormClusterMetastoresOozie | undefined; 
-  private __oozieOutput = new HdinsightStormClusterMetastoresOozieOutputReference(this as any, "oozie", true);
+  private _oozie = new HdinsightStormClusterMetastoresOozieOutputReference(this as any, "oozie", true);
   public get oozie() {
-    return this.__oozieOutput;
+    return this._oozie;
   }
-  public putOozie(value: HdinsightStormClusterMetastoresOozie | undefined) {
-    this._oozie = value;
+  public putOozie(value: HdinsightStormClusterMetastoresOozie) {
+    this._oozie.internalValue = value;
   }
   public resetOozie() {
-    this._oozie = undefined;
+    this._oozie.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get oozieInput() {
-    return this._oozie
+    return this._oozie.internalValue;
   }
 }
 export interface HdinsightStormClusterMonitor {
@@ -584,7 +773,7 @@ export interface HdinsightStormClusterMonitor {
   readonly primaryKey: string;
 }
 
-function hdinsightStormClusterMonitorToTerraform(struct?: HdinsightStormClusterMonitorOutputReference | HdinsightStormClusterMonitor): any {
+export function hdinsightStormClusterMonitorToTerraform(struct?: HdinsightStormClusterMonitorOutputReference | HdinsightStormClusterMonitor): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -605,6 +794,31 @@ export class HdinsightStormClusterMonitorOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HdinsightStormClusterMonitor | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._logAnalyticsWorkspaceId) {
+      hasAnyValues = true;
+      internalValueResult.logAnalyticsWorkspaceId = this._logAnalyticsWorkspaceId;
+    }
+    if (this._primaryKey) {
+      hasAnyValues = true;
+      internalValueResult.primaryKey = this._primaryKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightStormClusterMonitor | undefined) {
+    if (value === undefined) {
+      this._logAnalyticsWorkspaceId = undefined;
+      this._primaryKey = undefined;
+    }
+    else {
+      this._logAnalyticsWorkspaceId = value.logAnalyticsWorkspaceId;
+      this._primaryKey = value.primaryKey;
+    }
+  }
+
   // log_analytics_workspace_id - computed: false, optional: false, required: true
   private _logAnalyticsWorkspaceId?: string; 
   public get logAnalyticsWorkspaceId() {
@@ -615,7 +829,7 @@ export class HdinsightStormClusterMonitorOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get logAnalyticsWorkspaceIdInput() {
-    return this._logAnalyticsWorkspaceId
+    return this._logAnalyticsWorkspaceId;
   }
 
   // primary_key - computed: false, optional: false, required: true
@@ -628,7 +842,7 @@ export class HdinsightStormClusterMonitorOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get primaryKeyInput() {
-    return this._primaryKey
+    return this._primaryKey;
   }
 }
 export interface HdinsightStormClusterRolesHeadNode {
@@ -658,7 +872,7 @@ export interface HdinsightStormClusterRolesHeadNode {
   readonly vmSize: string;
 }
 
-function hdinsightStormClusterRolesHeadNodeToTerraform(struct?: HdinsightStormClusterRolesHeadNodeOutputReference | HdinsightStormClusterRolesHeadNode): any {
+export function hdinsightStormClusterRolesHeadNodeToTerraform(struct?: HdinsightStormClusterRolesHeadNodeOutputReference | HdinsightStormClusterRolesHeadNode): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -683,12 +897,61 @@ export class HdinsightStormClusterRolesHeadNodeOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HdinsightStormClusterRolesHeadNode | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._password) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._sshKeys) {
+      hasAnyValues = true;
+      internalValueResult.sshKeys = this._sshKeys;
+    }
+    if (this._subnetId) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    if (this._username) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    if (this._virtualNetworkId) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetworkId = this._virtualNetworkId;
+    }
+    if (this._vmSize) {
+      hasAnyValues = true;
+      internalValueResult.vmSize = this._vmSize;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightStormClusterRolesHeadNode | undefined) {
+    if (value === undefined) {
+      this._password = undefined;
+      this._sshKeys = undefined;
+      this._subnetId = undefined;
+      this._username = undefined;
+      this._virtualNetworkId = undefined;
+      this._vmSize = undefined;
+    }
+    else {
+      this._password = value.password;
+      this._sshKeys = value.sshKeys;
+      this._subnetId = value.subnetId;
+      this._username = value.username;
+      this._virtualNetworkId = value.virtualNetworkId;
+      this._vmSize = value.vmSize;
+    }
+  }
+
   // password - computed: false, optional: true, required: false
-  private _password?: string | undefined; 
+  private _password?: string; 
   public get password() {
     return this.getStringAttribute('password');
   }
-  public set password(value: string | undefined) {
+  public set password(value: string) {
     this._password = value;
   }
   public resetPassword() {
@@ -696,15 +959,15 @@ export class HdinsightStormClusterRolesHeadNodeOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // ssh_keys - computed: false, optional: true, required: false
-  private _sshKeys?: string[] | undefined; 
+  private _sshKeys?: string[]; 
   public get sshKeys() {
     return this.getListAttribute('ssh_keys');
   }
-  public set sshKeys(value: string[] | undefined) {
+  public set sshKeys(value: string[]) {
     this._sshKeys = value;
   }
   public resetSshKeys() {
@@ -712,15 +975,15 @@ export class HdinsightStormClusterRolesHeadNodeOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get sshKeysInput() {
-    return this._sshKeys
+    return this._sshKeys;
   }
 
   // subnet_id - computed: false, optional: true, required: false
-  private _subnetId?: string | undefined; 
+  private _subnetId?: string; 
   public get subnetId() {
     return this.getStringAttribute('subnet_id');
   }
-  public set subnetId(value: string | undefined) {
+  public set subnetId(value: string) {
     this._subnetId = value;
   }
   public resetSubnetId() {
@@ -728,7 +991,7 @@ export class HdinsightStormClusterRolesHeadNodeOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get subnetIdInput() {
-    return this._subnetId
+    return this._subnetId;
   }
 
   // username - computed: false, optional: false, required: true
@@ -741,15 +1004,15 @@ export class HdinsightStormClusterRolesHeadNodeOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
-    return this._username
+    return this._username;
   }
 
   // virtual_network_id - computed: false, optional: true, required: false
-  private _virtualNetworkId?: string | undefined; 
+  private _virtualNetworkId?: string; 
   public get virtualNetworkId() {
     return this.getStringAttribute('virtual_network_id');
   }
-  public set virtualNetworkId(value: string | undefined) {
+  public set virtualNetworkId(value: string) {
     this._virtualNetworkId = value;
   }
   public resetVirtualNetworkId() {
@@ -757,7 +1020,7 @@ export class HdinsightStormClusterRolesHeadNodeOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get virtualNetworkIdInput() {
-    return this._virtualNetworkId
+    return this._virtualNetworkId;
   }
 
   // vm_size - computed: false, optional: false, required: true
@@ -770,7 +1033,7 @@ export class HdinsightStormClusterRolesHeadNodeOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get vmSizeInput() {
-    return this._vmSize
+    return this._vmSize;
   }
 }
 export interface HdinsightStormClusterRolesWorkerNode {
@@ -808,7 +1071,7 @@ export interface HdinsightStormClusterRolesWorkerNode {
   readonly vmSize: string;
 }
 
-function hdinsightStormClusterRolesWorkerNodeToTerraform(struct?: HdinsightStormClusterRolesWorkerNodeOutputReference | HdinsightStormClusterRolesWorkerNode): any {
+export function hdinsightStormClusterRolesWorkerNodeToTerraform(struct?: HdinsightStormClusterRolesWorkerNodeOutputReference | HdinsightStormClusterRolesWorkerNode): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -835,12 +1098,73 @@ export class HdinsightStormClusterRolesWorkerNodeOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HdinsightStormClusterRolesWorkerNode | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._minInstanceCount) {
+      hasAnyValues = true;
+      internalValueResult.minInstanceCount = this._minInstanceCount;
+    }
+    if (this._password) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._sshKeys) {
+      hasAnyValues = true;
+      internalValueResult.sshKeys = this._sshKeys;
+    }
+    if (this._subnetId) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    if (this._targetInstanceCount) {
+      hasAnyValues = true;
+      internalValueResult.targetInstanceCount = this._targetInstanceCount;
+    }
+    if (this._username) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    if (this._virtualNetworkId) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetworkId = this._virtualNetworkId;
+    }
+    if (this._vmSize) {
+      hasAnyValues = true;
+      internalValueResult.vmSize = this._vmSize;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightStormClusterRolesWorkerNode | undefined) {
+    if (value === undefined) {
+      this._minInstanceCount = undefined;
+      this._password = undefined;
+      this._sshKeys = undefined;
+      this._subnetId = undefined;
+      this._targetInstanceCount = undefined;
+      this._username = undefined;
+      this._virtualNetworkId = undefined;
+      this._vmSize = undefined;
+    }
+    else {
+      this._minInstanceCount = value.minInstanceCount;
+      this._password = value.password;
+      this._sshKeys = value.sshKeys;
+      this._subnetId = value.subnetId;
+      this._targetInstanceCount = value.targetInstanceCount;
+      this._username = value.username;
+      this._virtualNetworkId = value.virtualNetworkId;
+      this._vmSize = value.vmSize;
+    }
+  }
+
   // min_instance_count - computed: true, optional: true, required: false
-  private _minInstanceCount?: number | undefined; 
+  private _minInstanceCount?: number; 
   public get minInstanceCount() {
     return this.getNumberAttribute('min_instance_count');
   }
-  public set minInstanceCount(value: number | undefined) {
+  public set minInstanceCount(value: number) {
     this._minInstanceCount = value;
   }
   public resetMinInstanceCount() {
@@ -848,15 +1172,15 @@ export class HdinsightStormClusterRolesWorkerNodeOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get minInstanceCountInput() {
-    return this._minInstanceCount
+    return this._minInstanceCount;
   }
 
   // password - computed: false, optional: true, required: false
-  private _password?: string | undefined; 
+  private _password?: string; 
   public get password() {
     return this.getStringAttribute('password');
   }
-  public set password(value: string | undefined) {
+  public set password(value: string) {
     this._password = value;
   }
   public resetPassword() {
@@ -864,15 +1188,15 @@ export class HdinsightStormClusterRolesWorkerNodeOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // ssh_keys - computed: false, optional: true, required: false
-  private _sshKeys?: string[] | undefined; 
+  private _sshKeys?: string[]; 
   public get sshKeys() {
     return this.getListAttribute('ssh_keys');
   }
-  public set sshKeys(value: string[] | undefined) {
+  public set sshKeys(value: string[]) {
     this._sshKeys = value;
   }
   public resetSshKeys() {
@@ -880,15 +1204,15 @@ export class HdinsightStormClusterRolesWorkerNodeOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get sshKeysInput() {
-    return this._sshKeys
+    return this._sshKeys;
   }
 
   // subnet_id - computed: false, optional: true, required: false
-  private _subnetId?: string | undefined; 
+  private _subnetId?: string; 
   public get subnetId() {
     return this.getStringAttribute('subnet_id');
   }
-  public set subnetId(value: string | undefined) {
+  public set subnetId(value: string) {
     this._subnetId = value;
   }
   public resetSubnetId() {
@@ -896,7 +1220,7 @@ export class HdinsightStormClusterRolesWorkerNodeOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get subnetIdInput() {
-    return this._subnetId
+    return this._subnetId;
   }
 
   // target_instance_count - computed: false, optional: false, required: true
@@ -909,7 +1233,7 @@ export class HdinsightStormClusterRolesWorkerNodeOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get targetInstanceCountInput() {
-    return this._targetInstanceCount
+    return this._targetInstanceCount;
   }
 
   // username - computed: false, optional: false, required: true
@@ -922,15 +1246,15 @@ export class HdinsightStormClusterRolesWorkerNodeOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
-    return this._username
+    return this._username;
   }
 
   // virtual_network_id - computed: false, optional: true, required: false
-  private _virtualNetworkId?: string | undefined; 
+  private _virtualNetworkId?: string; 
   public get virtualNetworkId() {
     return this.getStringAttribute('virtual_network_id');
   }
-  public set virtualNetworkId(value: string | undefined) {
+  public set virtualNetworkId(value: string) {
     this._virtualNetworkId = value;
   }
   public resetVirtualNetworkId() {
@@ -938,7 +1262,7 @@ export class HdinsightStormClusterRolesWorkerNodeOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get virtualNetworkIdInput() {
-    return this._virtualNetworkId
+    return this._virtualNetworkId;
   }
 
   // vm_size - computed: false, optional: false, required: true
@@ -951,7 +1275,7 @@ export class HdinsightStormClusterRolesWorkerNodeOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get vmSizeInput() {
-    return this._vmSize
+    return this._vmSize;
   }
 }
 export interface HdinsightStormClusterRolesZookeeperNode {
@@ -981,7 +1305,7 @@ export interface HdinsightStormClusterRolesZookeeperNode {
   readonly vmSize: string;
 }
 
-function hdinsightStormClusterRolesZookeeperNodeToTerraform(struct?: HdinsightStormClusterRolesZookeeperNodeOutputReference | HdinsightStormClusterRolesZookeeperNode): any {
+export function hdinsightStormClusterRolesZookeeperNodeToTerraform(struct?: HdinsightStormClusterRolesZookeeperNodeOutputReference | HdinsightStormClusterRolesZookeeperNode): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1006,12 +1330,61 @@ export class HdinsightStormClusterRolesZookeeperNodeOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HdinsightStormClusterRolesZookeeperNode | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._password) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._sshKeys) {
+      hasAnyValues = true;
+      internalValueResult.sshKeys = this._sshKeys;
+    }
+    if (this._subnetId) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    if (this._username) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    if (this._virtualNetworkId) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetworkId = this._virtualNetworkId;
+    }
+    if (this._vmSize) {
+      hasAnyValues = true;
+      internalValueResult.vmSize = this._vmSize;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightStormClusterRolesZookeeperNode | undefined) {
+    if (value === undefined) {
+      this._password = undefined;
+      this._sshKeys = undefined;
+      this._subnetId = undefined;
+      this._username = undefined;
+      this._virtualNetworkId = undefined;
+      this._vmSize = undefined;
+    }
+    else {
+      this._password = value.password;
+      this._sshKeys = value.sshKeys;
+      this._subnetId = value.subnetId;
+      this._username = value.username;
+      this._virtualNetworkId = value.virtualNetworkId;
+      this._vmSize = value.vmSize;
+    }
+  }
+
   // password - computed: false, optional: true, required: false
-  private _password?: string | undefined; 
+  private _password?: string; 
   public get password() {
     return this.getStringAttribute('password');
   }
-  public set password(value: string | undefined) {
+  public set password(value: string) {
     this._password = value;
   }
   public resetPassword() {
@@ -1019,15 +1392,15 @@ export class HdinsightStormClusterRolesZookeeperNodeOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // ssh_keys - computed: false, optional: true, required: false
-  private _sshKeys?: string[] | undefined; 
+  private _sshKeys?: string[]; 
   public get sshKeys() {
     return this.getListAttribute('ssh_keys');
   }
-  public set sshKeys(value: string[] | undefined) {
+  public set sshKeys(value: string[]) {
     this._sshKeys = value;
   }
   public resetSshKeys() {
@@ -1035,15 +1408,15 @@ export class HdinsightStormClusterRolesZookeeperNodeOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get sshKeysInput() {
-    return this._sshKeys
+    return this._sshKeys;
   }
 
   // subnet_id - computed: false, optional: true, required: false
-  private _subnetId?: string | undefined; 
+  private _subnetId?: string; 
   public get subnetId() {
     return this.getStringAttribute('subnet_id');
   }
-  public set subnetId(value: string | undefined) {
+  public set subnetId(value: string) {
     this._subnetId = value;
   }
   public resetSubnetId() {
@@ -1051,7 +1424,7 @@ export class HdinsightStormClusterRolesZookeeperNodeOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get subnetIdInput() {
-    return this._subnetId
+    return this._subnetId;
   }
 
   // username - computed: false, optional: false, required: true
@@ -1064,15 +1437,15 @@ export class HdinsightStormClusterRolesZookeeperNodeOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
-    return this._username
+    return this._username;
   }
 
   // virtual_network_id - computed: false, optional: true, required: false
-  private _virtualNetworkId?: string | undefined; 
+  private _virtualNetworkId?: string; 
   public get virtualNetworkId() {
     return this.getStringAttribute('virtual_network_id');
   }
-  public set virtualNetworkId(value: string | undefined) {
+  public set virtualNetworkId(value: string) {
     this._virtualNetworkId = value;
   }
   public resetVirtualNetworkId() {
@@ -1080,7 +1453,7 @@ export class HdinsightStormClusterRolesZookeeperNodeOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get virtualNetworkIdInput() {
-    return this._virtualNetworkId
+    return this._virtualNetworkId;
   }
 
   // vm_size - computed: false, optional: false, required: true
@@ -1093,7 +1466,7 @@ export class HdinsightStormClusterRolesZookeeperNodeOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get vmSizeInput() {
-    return this._vmSize
+    return this._vmSize;
   }
 }
 export interface HdinsightStormClusterRoles {
@@ -1117,7 +1490,7 @@ export interface HdinsightStormClusterRoles {
   readonly zookeeperNode: HdinsightStormClusterRolesZookeeperNode;
 }
 
-function hdinsightStormClusterRolesToTerraform(struct?: HdinsightStormClusterRolesOutputReference | HdinsightStormClusterRoles): any {
+export function hdinsightStormClusterRolesToTerraform(struct?: HdinsightStormClusterRolesOutputReference | HdinsightStormClusterRoles): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1139,46 +1512,74 @@ export class HdinsightStormClusterRolesOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HdinsightStormClusterRoles | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._headNode) {
+      hasAnyValues = true;
+      internalValueResult.headNode = this._headNode?.internalValue;
+    }
+    if (this._workerNode) {
+      hasAnyValues = true;
+      internalValueResult.workerNode = this._workerNode?.internalValue;
+    }
+    if (this._zookeeperNode) {
+      hasAnyValues = true;
+      internalValueResult.zookeeperNode = this._zookeeperNode?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightStormClusterRoles | undefined) {
+    if (value === undefined) {
+      this._headNode.internalValue = undefined;
+      this._workerNode.internalValue = undefined;
+      this._zookeeperNode.internalValue = undefined;
+    }
+    else {
+      this._headNode.internalValue = value.headNode;
+      this._workerNode.internalValue = value.workerNode;
+      this._zookeeperNode.internalValue = value.zookeeperNode;
+    }
+  }
+
   // head_node - computed: false, optional: false, required: true
-  private _headNode?: HdinsightStormClusterRolesHeadNode; 
-  private __headNodeOutput = new HdinsightStormClusterRolesHeadNodeOutputReference(this as any, "head_node", true);
+  private _headNode = new HdinsightStormClusterRolesHeadNodeOutputReference(this as any, "head_node", true);
   public get headNode() {
-    return this.__headNodeOutput;
+    return this._headNode;
   }
   public putHeadNode(value: HdinsightStormClusterRolesHeadNode) {
-    this._headNode = value;
+    this._headNode.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get headNodeInput() {
-    return this._headNode
+    return this._headNode.internalValue;
   }
 
   // worker_node - computed: false, optional: false, required: true
-  private _workerNode?: HdinsightStormClusterRolesWorkerNode; 
-  private __workerNodeOutput = new HdinsightStormClusterRolesWorkerNodeOutputReference(this as any, "worker_node", true);
+  private _workerNode = new HdinsightStormClusterRolesWorkerNodeOutputReference(this as any, "worker_node", true);
   public get workerNode() {
-    return this.__workerNodeOutput;
+    return this._workerNode;
   }
   public putWorkerNode(value: HdinsightStormClusterRolesWorkerNode) {
-    this._workerNode = value;
+    this._workerNode.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get workerNodeInput() {
-    return this._workerNode
+    return this._workerNode.internalValue;
   }
 
   // zookeeper_node - computed: false, optional: false, required: true
-  private _zookeeperNode?: HdinsightStormClusterRolesZookeeperNode; 
-  private __zookeeperNodeOutput = new HdinsightStormClusterRolesZookeeperNodeOutputReference(this as any, "zookeeper_node", true);
+  private _zookeeperNode = new HdinsightStormClusterRolesZookeeperNodeOutputReference(this as any, "zookeeper_node", true);
   public get zookeeperNode() {
-    return this.__zookeeperNodeOutput;
+    return this._zookeeperNode;
   }
   public putZookeeperNode(value: HdinsightStormClusterRolesZookeeperNode) {
-    this._zookeeperNode = value;
+    this._zookeeperNode.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get zookeeperNodeInput() {
-    return this._zookeeperNode
+    return this._zookeeperNode.internalValue;
   }
 }
 export interface HdinsightStormClusterStorageAccount {
@@ -1196,7 +1597,7 @@ export interface HdinsightStormClusterStorageAccount {
   readonly storageContainerId: string;
 }
 
-function hdinsightStormClusterStorageAccountToTerraform(struct?: HdinsightStormClusterStorageAccount): any {
+export function hdinsightStormClusterStorageAccountToTerraform(struct?: HdinsightStormClusterStorageAccount): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1227,7 +1628,7 @@ export interface HdinsightStormClusterTimeouts {
   readonly update?: string;
 }
 
-function hdinsightStormClusterTimeoutsToTerraform(struct?: HdinsightStormClusterTimeoutsOutputReference | HdinsightStormClusterTimeouts): any {
+export function hdinsightStormClusterTimeoutsToTerraform(struct?: HdinsightStormClusterTimeoutsOutputReference | HdinsightStormClusterTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -1250,12 +1651,49 @@ export class HdinsightStormClusterTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): HdinsightStormClusterTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightStormClusterTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -1263,15 +1701,15 @@ export class HdinsightStormClusterTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -1279,15 +1717,15 @@ export class HdinsightStormClusterTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -1295,15 +1733,15 @@ export class HdinsightStormClusterTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -1311,7 +1749,7 @@ export class HdinsightStormClusterTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -1354,13 +1792,13 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._tier = config.tier;
     this._tlsMinVersion = config.tlsMinVersion;
-    this._componentVersion = config.componentVersion;
-    this._gateway = config.gateway;
-    this._metastores = config.metastores;
-    this._monitor = config.monitor;
-    this._roles = config.roles;
+    this._componentVersion.internalValue = config.componentVersion;
+    this._gateway.internalValue = config.gateway;
+    this._metastores.internalValue = config.metastores;
+    this._monitor.internalValue = config.monitor;
+    this._roles.internalValue = config.roles;
     this._storageAccount = config.storageAccount;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -1377,7 +1815,7 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get clusterVersionInput() {
-    return this._clusterVersion
+    return this._clusterVersion;
   }
 
   // https_endpoint - computed: true, optional: false, required: false
@@ -1400,7 +1838,7 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -1413,7 +1851,7 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -1426,7 +1864,7 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // ssh_endpoint - computed: true, optional: false, required: false
@@ -1435,12 +1873,12 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -1448,7 +1886,7 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // tier - computed: false, optional: false, required: true
@@ -1461,15 +1899,15 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tierInput() {
-    return this._tier
+    return this._tier;
   }
 
   // tls_min_version - computed: false, optional: true, required: false
-  private _tlsMinVersion?: string | undefined; 
+  private _tlsMinVersion?: string; 
   public get tlsMinVersion() {
     return this.getStringAttribute('tls_min_version');
   }
-  public set tlsMinVersion(value: string | undefined) {
+  public set tlsMinVersion(value: string) {
     this._tlsMinVersion = value;
   }
   public resetTlsMinVersion() {
@@ -1477,92 +1915,87 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tlsMinVersionInput() {
-    return this._tlsMinVersion
+    return this._tlsMinVersion;
   }
 
   // component_version - computed: false, optional: false, required: true
-  private _componentVersion?: HdinsightStormClusterComponentVersion; 
-  private __componentVersionOutput = new HdinsightStormClusterComponentVersionOutputReference(this as any, "component_version", true);
+  private _componentVersion = new HdinsightStormClusterComponentVersionOutputReference(this as any, "component_version", true);
   public get componentVersion() {
-    return this.__componentVersionOutput;
+    return this._componentVersion;
   }
   public putComponentVersion(value: HdinsightStormClusterComponentVersion) {
-    this._componentVersion = value;
+    this._componentVersion.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get componentVersionInput() {
-    return this._componentVersion
+    return this._componentVersion.internalValue;
   }
 
   // gateway - computed: false, optional: false, required: true
-  private _gateway?: HdinsightStormClusterGateway; 
-  private __gatewayOutput = new HdinsightStormClusterGatewayOutputReference(this as any, "gateway", true);
+  private _gateway = new HdinsightStormClusterGatewayOutputReference(this as any, "gateway", true);
   public get gateway() {
-    return this.__gatewayOutput;
+    return this._gateway;
   }
   public putGateway(value: HdinsightStormClusterGateway) {
-    this._gateway = value;
+    this._gateway.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get gatewayInput() {
-    return this._gateway
+    return this._gateway.internalValue;
   }
 
   // metastores - computed: false, optional: true, required: false
-  private _metastores?: HdinsightStormClusterMetastores | undefined; 
-  private __metastoresOutput = new HdinsightStormClusterMetastoresOutputReference(this as any, "metastores", true);
+  private _metastores = new HdinsightStormClusterMetastoresOutputReference(this as any, "metastores", true);
   public get metastores() {
-    return this.__metastoresOutput;
+    return this._metastores;
   }
-  public putMetastores(value: HdinsightStormClusterMetastores | undefined) {
-    this._metastores = value;
+  public putMetastores(value: HdinsightStormClusterMetastores) {
+    this._metastores.internalValue = value;
   }
   public resetMetastores() {
-    this._metastores = undefined;
+    this._metastores.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get metastoresInput() {
-    return this._metastores
+    return this._metastores.internalValue;
   }
 
   // monitor - computed: false, optional: true, required: false
-  private _monitor?: HdinsightStormClusterMonitor | undefined; 
-  private __monitorOutput = new HdinsightStormClusterMonitorOutputReference(this as any, "monitor", true);
+  private _monitor = new HdinsightStormClusterMonitorOutputReference(this as any, "monitor", true);
   public get monitor() {
-    return this.__monitorOutput;
+    return this._monitor;
   }
-  public putMonitor(value: HdinsightStormClusterMonitor | undefined) {
-    this._monitor = value;
+  public putMonitor(value: HdinsightStormClusterMonitor) {
+    this._monitor.internalValue = value;
   }
   public resetMonitor() {
-    this._monitor = undefined;
+    this._monitor.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get monitorInput() {
-    return this._monitor
+    return this._monitor.internalValue;
   }
 
   // roles - computed: false, optional: false, required: true
-  private _roles?: HdinsightStormClusterRoles; 
-  private __rolesOutput = new HdinsightStormClusterRolesOutputReference(this as any, "roles", true);
+  private _roles = new HdinsightStormClusterRolesOutputReference(this as any, "roles", true);
   public get roles() {
-    return this.__rolesOutput;
+    return this._roles;
   }
   public putRoles(value: HdinsightStormClusterRoles) {
-    this._roles = value;
+    this._roles.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get rolesInput() {
-    return this._roles
+    return this._roles.internalValue;
   }
 
   // storage_account - computed: false, optional: true, required: false
-  private _storageAccount?: HdinsightStormClusterStorageAccount[] | undefined; 
+  private _storageAccount?: HdinsightStormClusterStorageAccount[]; 
   public get storageAccount() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('storage_account') as any;
   }
-  public set storageAccount(value: HdinsightStormClusterStorageAccount[] | undefined) {
+  public set storageAccount(value: HdinsightStormClusterStorageAccount[]) {
     this._storageAccount = value;
   }
   public resetStorageAccount() {
@@ -1570,24 +2003,23 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountInput() {
-    return this._storageAccount
+    return this._storageAccount;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: HdinsightStormClusterTimeouts | undefined; 
-  private __timeoutsOutput = new HdinsightStormClusterTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new HdinsightStormClusterTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: HdinsightStormClusterTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: HdinsightStormClusterTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -1603,13 +2035,13 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       tier: cdktf.stringToTerraform(this._tier),
       tls_min_version: cdktf.stringToTerraform(this._tlsMinVersion),
-      component_version: hdinsightStormClusterComponentVersionToTerraform(this._componentVersion),
-      gateway: hdinsightStormClusterGatewayToTerraform(this._gateway),
-      metastores: hdinsightStormClusterMetastoresToTerraform(this._metastores),
-      monitor: hdinsightStormClusterMonitorToTerraform(this._monitor),
-      roles: hdinsightStormClusterRolesToTerraform(this._roles),
+      component_version: hdinsightStormClusterComponentVersionToTerraform(this._componentVersion.internalValue),
+      gateway: hdinsightStormClusterGatewayToTerraform(this._gateway.internalValue),
+      metastores: hdinsightStormClusterMetastoresToTerraform(this._metastores.internalValue),
+      monitor: hdinsightStormClusterMonitorToTerraform(this._monitor.internalValue),
+      roles: hdinsightStormClusterRolesToTerraform(this._roles.internalValue),
       storage_account: cdktf.listMapper(hdinsightStormClusterStorageAccountToTerraform)(this._storageAccount),
-      timeouts: hdinsightStormClusterTimeoutsToTerraform(this._timeouts),
+      timeouts: hdinsightStormClusterTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -63,7 +63,7 @@ export interface PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRout
   readonly labels?: string[];
 }
 
-function pointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTableToTerraform(struct?: PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTableOutputReference | PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTable): any {
+export function pointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTableToTerraform(struct?: PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTableOutputReference | PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTable): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -84,6 +84,31 @@ export class PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTab
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTable | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._ids) {
+      hasAnyValues = true;
+      internalValueResult.ids = this._ids;
+    }
+    if (this._labels) {
+      hasAnyValues = true;
+      internalValueResult.labels = this._labels;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTable | undefined) {
+    if (value === undefined) {
+      this._ids = undefined;
+      this._labels = undefined;
+    }
+    else {
+      this._ids = value.ids;
+      this._labels = value.labels;
+    }
+  }
+
   // ids - computed: false, optional: false, required: true
   private _ids?: string[]; 
   public get ids() {
@@ -94,15 +119,15 @@ export class PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTab
   }
   // Temporarily expose input value. Use with caution.
   public get idsInput() {
-    return this._ids
+    return this._ids;
   }
 
   // labels - computed: false, optional: true, required: false
-  private _labels?: string[] | undefined; 
+  private _labels?: string[]; 
   public get labels() {
     return this.getListAttribute('labels');
   }
-  public set labels(value: string[] | undefined) {
+  public set labels(value: string[]) {
     this._labels = value;
   }
   public resetLabels() {
@@ -110,7 +135,7 @@ export class PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTab
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 }
 export interface PointToSiteVpnGatewayConnectionConfigurationRoute {
@@ -126,7 +151,7 @@ export interface PointToSiteVpnGatewayConnectionConfigurationRoute {
   readonly propagatedRouteTable?: PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTable;
 }
 
-function pointToSiteVpnGatewayConnectionConfigurationRouteToTerraform(struct?: PointToSiteVpnGatewayConnectionConfigurationRouteOutputReference | PointToSiteVpnGatewayConnectionConfigurationRoute): any {
+export function pointToSiteVpnGatewayConnectionConfigurationRouteToTerraform(struct?: PointToSiteVpnGatewayConnectionConfigurationRouteOutputReference | PointToSiteVpnGatewayConnectionConfigurationRoute): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -147,6 +172,31 @@ export class PointToSiteVpnGatewayConnectionConfigurationRouteOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PointToSiteVpnGatewayConnectionConfigurationRoute | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._associatedRouteTableId) {
+      hasAnyValues = true;
+      internalValueResult.associatedRouteTableId = this._associatedRouteTableId;
+    }
+    if (this._propagatedRouteTable) {
+      hasAnyValues = true;
+      internalValueResult.propagatedRouteTable = this._propagatedRouteTable?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PointToSiteVpnGatewayConnectionConfigurationRoute | undefined) {
+    if (value === undefined) {
+      this._associatedRouteTableId = undefined;
+      this._propagatedRouteTable.internalValue = undefined;
+    }
+    else {
+      this._associatedRouteTableId = value.associatedRouteTableId;
+      this._propagatedRouteTable.internalValue = value.propagatedRouteTable;
+    }
+  }
+
   // associated_route_table_id - computed: false, optional: false, required: true
   private _associatedRouteTableId?: string; 
   public get associatedRouteTableId() {
@@ -157,24 +207,23 @@ export class PointToSiteVpnGatewayConnectionConfigurationRouteOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get associatedRouteTableIdInput() {
-    return this._associatedRouteTableId
+    return this._associatedRouteTableId;
   }
 
   // propagated_route_table - computed: false, optional: true, required: false
-  private _propagatedRouteTable?: PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTable | undefined; 
-  private __propagatedRouteTableOutput = new PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTableOutputReference(this as any, "propagated_route_table", true);
+  private _propagatedRouteTable = new PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTableOutputReference(this as any, "propagated_route_table", true);
   public get propagatedRouteTable() {
-    return this.__propagatedRouteTableOutput;
+    return this._propagatedRouteTable;
   }
-  public putPropagatedRouteTable(value: PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTable | undefined) {
-    this._propagatedRouteTable = value;
+  public putPropagatedRouteTable(value: PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTable) {
+    this._propagatedRouteTable.internalValue = value;
   }
   public resetPropagatedRouteTable() {
-    this._propagatedRouteTable = undefined;
+    this._propagatedRouteTable.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get propagatedRouteTableInput() {
-    return this._propagatedRouteTable
+    return this._propagatedRouteTable.internalValue;
   }
 }
 export interface PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool {
@@ -184,7 +233,7 @@ export interface PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoo
   readonly addressPrefixes: string[];
 }
 
-function pointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolToTerraform(struct?: PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolOutputReference | PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool): any {
+export function pointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolToTerraform(struct?: PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolOutputReference | PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -204,6 +253,25 @@ export class PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolOut
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._addressPrefixes) {
+      hasAnyValues = true;
+      internalValueResult.addressPrefixes = this._addressPrefixes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool | undefined) {
+    if (value === undefined) {
+      this._addressPrefixes = undefined;
+    }
+    else {
+      this._addressPrefixes = value.addressPrefixes;
+    }
+  }
+
   // address_prefixes - computed: false, optional: false, required: true
   private _addressPrefixes?: string[]; 
   public get addressPrefixes() {
@@ -214,7 +282,7 @@ export class PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolOut
   }
   // Temporarily expose input value. Use with caution.
   public get addressPrefixesInput() {
-    return this._addressPrefixes
+    return this._addressPrefixes;
   }
 }
 export interface PointToSiteVpnGatewayConnectionConfiguration {
@@ -236,7 +304,7 @@ export interface PointToSiteVpnGatewayConnectionConfiguration {
   readonly vpnClientAddressPool: PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool;
 }
 
-function pointToSiteVpnGatewayConnectionConfigurationToTerraform(struct?: PointToSiteVpnGatewayConnectionConfigurationOutputReference | PointToSiteVpnGatewayConnectionConfiguration): any {
+export function pointToSiteVpnGatewayConnectionConfigurationToTerraform(struct?: PointToSiteVpnGatewayConnectionConfigurationOutputReference | PointToSiteVpnGatewayConnectionConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -258,6 +326,37 @@ export class PointToSiteVpnGatewayConnectionConfigurationOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PointToSiteVpnGatewayConnectionConfiguration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._route) {
+      hasAnyValues = true;
+      internalValueResult.route = this._route?.internalValue;
+    }
+    if (this._vpnClientAddressPool) {
+      hasAnyValues = true;
+      internalValueResult.vpnClientAddressPool = this._vpnClientAddressPool?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PointToSiteVpnGatewayConnectionConfiguration | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._route.internalValue = undefined;
+      this._vpnClientAddressPool.internalValue = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._route.internalValue = value.route;
+      this._vpnClientAddressPool.internalValue = value.vpnClientAddressPool;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -268,38 +367,36 @@ export class PointToSiteVpnGatewayConnectionConfigurationOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // route - computed: false, optional: true, required: false
-  private _route?: PointToSiteVpnGatewayConnectionConfigurationRoute | undefined; 
-  private __routeOutput = new PointToSiteVpnGatewayConnectionConfigurationRouteOutputReference(this as any, "route", true);
+  private _route = new PointToSiteVpnGatewayConnectionConfigurationRouteOutputReference(this as any, "route", true);
   public get route() {
-    return this.__routeOutput;
+    return this._route;
   }
-  public putRoute(value: PointToSiteVpnGatewayConnectionConfigurationRoute | undefined) {
-    this._route = value;
+  public putRoute(value: PointToSiteVpnGatewayConnectionConfigurationRoute) {
+    this._route.internalValue = value;
   }
   public resetRoute() {
-    this._route = undefined;
+    this._route.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get routeInput() {
-    return this._route
+    return this._route.internalValue;
   }
 
   // vpn_client_address_pool - computed: false, optional: false, required: true
-  private _vpnClientAddressPool?: PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool; 
-  private __vpnClientAddressPoolOutput = new PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolOutputReference(this as any, "vpn_client_address_pool", true);
+  private _vpnClientAddressPool = new PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolOutputReference(this as any, "vpn_client_address_pool", true);
   public get vpnClientAddressPool() {
-    return this.__vpnClientAddressPoolOutput;
+    return this._vpnClientAddressPool;
   }
   public putVpnClientAddressPool(value: PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool) {
-    this._vpnClientAddressPool = value;
+    this._vpnClientAddressPool.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get vpnClientAddressPoolInput() {
-    return this._vpnClientAddressPool
+    return this._vpnClientAddressPool.internalValue;
   }
 }
 export interface PointToSiteVpnGatewayTimeouts {
@@ -321,7 +418,7 @@ export interface PointToSiteVpnGatewayTimeouts {
   readonly update?: string;
 }
 
-function pointToSiteVpnGatewayTimeoutsToTerraform(struct?: PointToSiteVpnGatewayTimeoutsOutputReference | PointToSiteVpnGatewayTimeouts): any {
+export function pointToSiteVpnGatewayTimeoutsToTerraform(struct?: PointToSiteVpnGatewayTimeoutsOutputReference | PointToSiteVpnGatewayTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -344,12 +441,49 @@ export class PointToSiteVpnGatewayTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): PointToSiteVpnGatewayTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: PointToSiteVpnGatewayTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -357,15 +491,15 @@ export class PointToSiteVpnGatewayTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -373,15 +507,15 @@ export class PointToSiteVpnGatewayTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -389,15 +523,15 @@ export class PointToSiteVpnGatewayTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -405,7 +539,7 @@ export class PointToSiteVpnGatewayTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -449,8 +583,8 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._virtualHubId = config.virtualHubId;
     this._vpnServerConfigurationId = config.vpnServerConfigurationId;
-    this._connectionConfiguration = config.connectionConfiguration;
-    this._timeouts = config.timeouts;
+    this._connectionConfiguration.internalValue = config.connectionConfiguration;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -458,11 +592,11 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
   // ==========
 
   // dns_servers - computed: false, optional: true, required: false
-  private _dnsServers?: string[] | undefined; 
+  private _dnsServers?: string[]; 
   public get dnsServers() {
     return this.getListAttribute('dns_servers');
   }
-  public set dnsServers(value: string[] | undefined) {
+  public set dnsServers(value: string[]) {
     this._dnsServers = value;
   }
   public resetDnsServers() {
@@ -470,7 +604,7 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dnsServersInput() {
-    return this._dnsServers
+    return this._dnsServers;
   }
 
   // id - computed: true, optional: true, required: false
@@ -488,7 +622,7 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -501,7 +635,7 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -514,7 +648,7 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // scale_unit - computed: false, optional: false, required: true
@@ -527,16 +661,16 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get scaleUnitInput() {
-    return this._scaleUnit
+    return this._scaleUnit;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -544,7 +678,7 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // virtual_hub_id - computed: false, optional: false, required: true
@@ -557,7 +691,7 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get virtualHubIdInput() {
-    return this._virtualHubId
+    return this._virtualHubId;
   }
 
   // vpn_server_configuration_id - computed: false, optional: false, required: true
@@ -570,38 +704,36 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get vpnServerConfigurationIdInput() {
-    return this._vpnServerConfigurationId
+    return this._vpnServerConfigurationId;
   }
 
   // connection_configuration - computed: false, optional: false, required: true
-  private _connectionConfiguration?: PointToSiteVpnGatewayConnectionConfiguration; 
-  private __connectionConfigurationOutput = new PointToSiteVpnGatewayConnectionConfigurationOutputReference(this as any, "connection_configuration", true);
+  private _connectionConfiguration = new PointToSiteVpnGatewayConnectionConfigurationOutputReference(this as any, "connection_configuration", true);
   public get connectionConfiguration() {
-    return this.__connectionConfigurationOutput;
+    return this._connectionConfiguration;
   }
   public putConnectionConfiguration(value: PointToSiteVpnGatewayConnectionConfiguration) {
-    this._connectionConfiguration = value;
+    this._connectionConfiguration.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get connectionConfigurationInput() {
-    return this._connectionConfiguration
+    return this._connectionConfiguration.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: PointToSiteVpnGatewayTimeouts | undefined; 
-  private __timeoutsOutput = new PointToSiteVpnGatewayTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new PointToSiteVpnGatewayTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: PointToSiteVpnGatewayTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: PointToSiteVpnGatewayTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -618,8 +750,8 @@ export class PointToSiteVpnGateway extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       virtual_hub_id: cdktf.stringToTerraform(this._virtualHubId),
       vpn_server_configuration_id: cdktf.stringToTerraform(this._vpnServerConfigurationId),
-      connection_configuration: pointToSiteVpnGatewayConnectionConfigurationToTerraform(this._connectionConfiguration),
-      timeouts: pointToSiteVpnGatewayTimeoutsToTerraform(this._timeouts),
+      connection_configuration: pointToSiteVpnGatewayConnectionConfigurationToTerraform(this._connectionConfiguration.internalValue),
+      timeouts: pointToSiteVpnGatewayTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -51,7 +51,7 @@ export interface LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecu
   readonly weekday: string;
 }
 
-function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthlyToTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly): any {
+export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthlyToTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -87,7 +87,7 @@ export interface LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecu
   readonly monthly?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly[];
 }
 
-function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleToTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleOutputReference | LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceSchedule): any {
+export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleToTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleOutputReference | LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceSchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -111,13 +111,56 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceSchedule | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._hours) {
+      hasAnyValues = true;
+      internalValueResult.hours = this._hours;
+    }
+    if (this._minutes) {
+      hasAnyValues = true;
+      internalValueResult.minutes = this._minutes;
+    }
+    if (this._monthDays) {
+      hasAnyValues = true;
+      internalValueResult.monthDays = this._monthDays;
+    }
+    if (this._weekDays) {
+      hasAnyValues = true;
+      internalValueResult.weekDays = this._weekDays;
+    }
+    if (this._monthly) {
+      hasAnyValues = true;
+      internalValueResult.monthly = this._monthly;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceSchedule | undefined) {
+    if (value === undefined) {
+      this._hours = undefined;
+      this._minutes = undefined;
+      this._monthDays = undefined;
+      this._weekDays = undefined;
+      this._monthly = undefined;
+    }
+    else {
+      this._hours = value.hours;
+      this._minutes = value.minutes;
+      this._monthDays = value.monthDays;
+      this._weekDays = value.weekDays;
+      this._monthly = value.monthly;
+    }
+  }
+
   // hours - computed: false, optional: true, required: false
-  private _hours?: number[] | undefined; 
+  private _hours?: number[]; 
   public get hours() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('hours') as any;
   }
-  public set hours(value: number[] | undefined) {
+  public set hours(value: number[]) {
     this._hours = value;
   }
   public resetHours() {
@@ -125,16 +168,16 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   }
   // Temporarily expose input value. Use with caution.
   public get hoursInput() {
-    return this._hours
+    return this._hours;
   }
 
   // minutes - computed: false, optional: true, required: false
-  private _minutes?: number[] | undefined; 
+  private _minutes?: number[]; 
   public get minutes() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('minutes') as any;
   }
-  public set minutes(value: number[] | undefined) {
+  public set minutes(value: number[]) {
     this._minutes = value;
   }
   public resetMinutes() {
@@ -142,16 +185,16 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   }
   // Temporarily expose input value. Use with caution.
   public get minutesInput() {
-    return this._minutes
+    return this._minutes;
   }
 
   // month_days - computed: false, optional: true, required: false
-  private _monthDays?: number[] | undefined; 
+  private _monthDays?: number[]; 
   public get monthDays() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('month_days') as any;
   }
-  public set monthDays(value: number[] | undefined) {
+  public set monthDays(value: number[]) {
     this._monthDays = value;
   }
   public resetMonthDays() {
@@ -159,15 +202,15 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   }
   // Temporarily expose input value. Use with caution.
   public get monthDaysInput() {
-    return this._monthDays
+    return this._monthDays;
   }
 
   // week_days - computed: false, optional: true, required: false
-  private _weekDays?: string[] | undefined; 
+  private _weekDays?: string[]; 
   public get weekDays() {
     return this.getListAttribute('week_days');
   }
-  public set weekDays(value: string[] | undefined) {
+  public set weekDays(value: string[]) {
     this._weekDays = value;
   }
   public resetWeekDays() {
@@ -175,16 +218,16 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   }
   // Temporarily expose input value. Use with caution.
   public get weekDaysInput() {
-    return this._weekDays
+    return this._weekDays;
   }
 
   // monthly - computed: false, optional: true, required: false
-  private _monthly?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly[] | undefined; 
+  private _monthly?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly[]; 
   public get monthly() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('monthly') as any;
   }
-  public set monthly(value: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly[] | undefined) {
+  public set monthly(value: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly[]) {
     this._monthly = value;
   }
   public resetMonthly() {
@@ -192,7 +235,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   }
   // Temporarily expose input value. Use with caution.
   public get monthlyInput() {
-    return this._monthly
+    return this._monthly;
   }
 }
 export interface LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrence {
@@ -224,7 +267,7 @@ export interface LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecu
   readonly schedule?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceSchedule;
 }
 
-function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceToTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceOutputReference | LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrence): any {
+export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceToTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceOutputReference | LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrence): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -249,12 +292,61 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrence | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._endTime) {
+      hasAnyValues = true;
+      internalValueResult.endTime = this._endTime;
+    }
+    if (this._frequency) {
+      hasAnyValues = true;
+      internalValueResult.frequency = this._frequency;
+    }
+    if (this._interval) {
+      hasAnyValues = true;
+      internalValueResult.interval = this._interval;
+    }
+    if (this._startTime) {
+      hasAnyValues = true;
+      internalValueResult.startTime = this._startTime;
+    }
+    if (this._timeZone) {
+      hasAnyValues = true;
+      internalValueResult.timeZone = this._timeZone;
+    }
+    if (this._schedule) {
+      hasAnyValues = true;
+      internalValueResult.schedule = this._schedule?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrence | undefined) {
+    if (value === undefined) {
+      this._endTime = undefined;
+      this._frequency = undefined;
+      this._interval = undefined;
+      this._startTime = undefined;
+      this._timeZone = undefined;
+      this._schedule.internalValue = undefined;
+    }
+    else {
+      this._endTime = value.endTime;
+      this._frequency = value.frequency;
+      this._interval = value.interval;
+      this._startTime = value.startTime;
+      this._timeZone = value.timeZone;
+      this._schedule.internalValue = value.schedule;
+    }
+  }
+
   // end_time - computed: false, optional: true, required: false
-  private _endTime?: string | undefined; 
+  private _endTime?: string; 
   public get endTime() {
     return this.getStringAttribute('end_time');
   }
-  public set endTime(value: string | undefined) {
+  public set endTime(value: string) {
     this._endTime = value;
   }
   public resetEndTime() {
@@ -262,7 +354,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   }
   // Temporarily expose input value. Use with caution.
   public get endTimeInput() {
-    return this._endTime
+    return this._endTime;
   }
 
   // frequency - computed: false, optional: false, required: true
@@ -275,7 +367,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   }
   // Temporarily expose input value. Use with caution.
   public get frequencyInput() {
-    return this._frequency
+    return this._frequency;
   }
 
   // interval - computed: false, optional: false, required: true
@@ -288,15 +380,15 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   }
   // Temporarily expose input value. Use with caution.
   public get intervalInput() {
-    return this._interval
+    return this._interval;
   }
 
   // start_time - computed: false, optional: true, required: false
-  private _startTime?: string | undefined; 
+  private _startTime?: string; 
   public get startTime() {
     return this.getStringAttribute('start_time');
   }
-  public set startTime(value: string | undefined) {
+  public set startTime(value: string) {
     this._startTime = value;
   }
   public resetStartTime() {
@@ -304,15 +396,15 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   }
   // Temporarily expose input value. Use with caution.
   public get startTimeInput() {
-    return this._startTime
+    return this._startTime;
   }
 
   // time_zone - computed: false, optional: true, required: false
-  private _timeZone?: string | undefined; 
+  private _timeZone?: string; 
   public get timeZone() {
     return this.getStringAttribute('time_zone');
   }
-  public set timeZone(value: string | undefined) {
+  public set timeZone(value: string) {
     this._timeZone = value;
   }
   public resetTimeZone() {
@@ -320,24 +412,23 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   }
   // Temporarily expose input value. Use with caution.
   public get timeZoneInput() {
-    return this._timeZone
+    return this._timeZone;
   }
 
   // schedule - computed: false, optional: true, required: false
-  private _schedule?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceSchedule | undefined; 
-  private __scheduleOutput = new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleOutputReference(this as any, "schedule", true);
+  private _schedule = new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleOutputReference(this as any, "schedule", true);
   public get schedule() {
-    return this.__scheduleOutput;
+    return this._schedule;
   }
-  public putSchedule(value: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceSchedule | undefined) {
-    this._schedule = value;
+  public putSchedule(value: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceSchedule) {
+    this._schedule.internalValue = value;
   }
   public resetSchedule() {
-    this._schedule = undefined;
+    this._schedule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get scheduleInput() {
-    return this._schedule
+    return this._schedule.internalValue;
   }
 }
 export interface LogicAppIntegrationAccountBatchConfigurationReleaseCriteria {
@@ -357,7 +448,7 @@ export interface LogicAppIntegrationAccountBatchConfigurationReleaseCriteria {
   readonly recurrence?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrence;
 }
 
-function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaToTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputReference | LogicAppIntegrationAccountBatchConfigurationReleaseCriteria): any {
+export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaToTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputReference | LogicAppIntegrationAccountBatchConfigurationReleaseCriteria): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -379,12 +470,43 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputRe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogicAppIntegrationAccountBatchConfigurationReleaseCriteria | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._batchSize) {
+      hasAnyValues = true;
+      internalValueResult.batchSize = this._batchSize;
+    }
+    if (this._messageCount) {
+      hasAnyValues = true;
+      internalValueResult.messageCount = this._messageCount;
+    }
+    if (this._recurrence) {
+      hasAnyValues = true;
+      internalValueResult.recurrence = this._recurrence?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppIntegrationAccountBatchConfigurationReleaseCriteria | undefined) {
+    if (value === undefined) {
+      this._batchSize = undefined;
+      this._messageCount = undefined;
+      this._recurrence.internalValue = undefined;
+    }
+    else {
+      this._batchSize = value.batchSize;
+      this._messageCount = value.messageCount;
+      this._recurrence.internalValue = value.recurrence;
+    }
+  }
+
   // batch_size - computed: false, optional: true, required: false
-  private _batchSize?: number | undefined; 
+  private _batchSize?: number; 
   public get batchSize() {
     return this.getNumberAttribute('batch_size');
   }
-  public set batchSize(value: number | undefined) {
+  public set batchSize(value: number) {
     this._batchSize = value;
   }
   public resetBatchSize() {
@@ -392,15 +514,15 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputRe
   }
   // Temporarily expose input value. Use with caution.
   public get batchSizeInput() {
-    return this._batchSize
+    return this._batchSize;
   }
 
   // message_count - computed: false, optional: true, required: false
-  private _messageCount?: number | undefined; 
+  private _messageCount?: number; 
   public get messageCount() {
     return this.getNumberAttribute('message_count');
   }
-  public set messageCount(value: number | undefined) {
+  public set messageCount(value: number) {
     this._messageCount = value;
   }
   public resetMessageCount() {
@@ -408,24 +530,23 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputRe
   }
   // Temporarily expose input value. Use with caution.
   public get messageCountInput() {
-    return this._messageCount
+    return this._messageCount;
   }
 
   // recurrence - computed: false, optional: true, required: false
-  private _recurrence?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrence | undefined; 
-  private __recurrenceOutput = new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceOutputReference(this as any, "recurrence", true);
+  private _recurrence = new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceOutputReference(this as any, "recurrence", true);
   public get recurrence() {
-    return this.__recurrenceOutput;
+    return this._recurrence;
   }
-  public putRecurrence(value: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrence | undefined) {
-    this._recurrence = value;
+  public putRecurrence(value: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrence) {
+    this._recurrence.internalValue = value;
   }
   public resetRecurrence() {
-    this._recurrence = undefined;
+    this._recurrence.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get recurrenceInput() {
-    return this._recurrence
+    return this._recurrence.internalValue;
   }
 }
 export interface LogicAppIntegrationAccountBatchConfigurationTimeouts {
@@ -447,7 +568,7 @@ export interface LogicAppIntegrationAccountBatchConfigurationTimeouts {
   readonly update?: string;
 }
 
-function logicAppIntegrationAccountBatchConfigurationTimeoutsToTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference | LogicAppIntegrationAccountBatchConfigurationTimeouts): any {
+export function logicAppIntegrationAccountBatchConfigurationTimeoutsToTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference | LogicAppIntegrationAccountBatchConfigurationTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -470,12 +591,49 @@ export class LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogicAppIntegrationAccountBatchConfigurationTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppIntegrationAccountBatchConfigurationTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -483,15 +641,15 @@ export class LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -499,15 +657,15 @@ export class LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -515,15 +673,15 @@ export class LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -531,7 +689,7 @@ export class LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -572,8 +730,8 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
     this._metadata = config.metadata;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._releaseCriteria = config.releaseCriteria;
-    this._timeouts = config.timeouts;
+    this._releaseCriteria.internalValue = config.releaseCriteria;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -590,7 +748,7 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
   }
   // Temporarily expose input value. Use with caution.
   public get batchGroupNameInput() {
-    return this._batchGroupName
+    return this._batchGroupName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -608,16 +766,16 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
   }
   // Temporarily expose input value. Use with caution.
   public get integrationAccountNameInput() {
-    return this._integrationAccountName
+    return this._integrationAccountName;
   }
 
   // metadata - computed: false, optional: true, required: false
-  private _metadata?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _metadata?: { [key: string]: string } | cdktf.IResolvable; 
   public get metadata() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('metadata') as any;
   }
-  public set metadata(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set metadata(value: { [key: string]: string } | cdktf.IResolvable) {
     this._metadata = value;
   }
   public resetMetadata() {
@@ -625,7 +783,7 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
   }
   // Temporarily expose input value. Use with caution.
   public get metadataInput() {
-    return this._metadata
+    return this._metadata;
   }
 
   // name - computed: false, optional: false, required: true
@@ -638,7 +796,7 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -651,38 +809,36 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // release_criteria - computed: false, optional: false, required: true
-  private _releaseCriteria?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteria; 
-  private __releaseCriteriaOutput = new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputReference(this as any, "release_criteria", true);
+  private _releaseCriteria = new LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputReference(this as any, "release_criteria", true);
   public get releaseCriteria() {
-    return this.__releaseCriteriaOutput;
+    return this._releaseCriteria;
   }
   public putReleaseCriteria(value: LogicAppIntegrationAccountBatchConfigurationReleaseCriteria) {
-    this._releaseCriteria = value;
+    this._releaseCriteria.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get releaseCriteriaInput() {
-    return this._releaseCriteria
+    return this._releaseCriteria.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LogicAppIntegrationAccountBatchConfigurationTimeouts | undefined; 
-  private __timeoutsOutput = new LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: LogicAppIntegrationAccountBatchConfigurationTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: LogicAppIntegrationAccountBatchConfigurationTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -696,8 +852,8 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
       metadata: cdktf.hashMapper(cdktf.anyToTerraform)(this._metadata),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      release_criteria: logicAppIntegrationAccountBatchConfigurationReleaseCriteriaToTerraform(this._releaseCriteria),
-      timeouts: logicAppIntegrationAccountBatchConfigurationTimeoutsToTerraform(this._timeouts),
+      release_criteria: logicAppIntegrationAccountBatchConfigurationReleaseCriteriaToTerraform(this._releaseCriteria.internalValue),
+      timeouts: logicAppIntegrationAccountBatchConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

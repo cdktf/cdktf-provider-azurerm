@@ -99,7 +99,7 @@ export interface DataFactoryLinkedServiceAzureDatabricksInstancePool {
   readonly minNumberOfWorkers?: number;
 }
 
-function dataFactoryLinkedServiceAzureDatabricksInstancePoolToTerraform(struct?: DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference | DataFactoryLinkedServiceAzureDatabricksInstancePool): any {
+export function dataFactoryLinkedServiceAzureDatabricksInstancePoolToTerraform(struct?: DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference | DataFactoryLinkedServiceAzureDatabricksInstancePool): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -122,6 +122,43 @@ export class DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryLinkedServiceAzureDatabricksInstancePool | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._clusterVersion) {
+      hasAnyValues = true;
+      internalValueResult.clusterVersion = this._clusterVersion;
+    }
+    if (this._instancePoolId) {
+      hasAnyValues = true;
+      internalValueResult.instancePoolId = this._instancePoolId;
+    }
+    if (this._maxNumberOfWorkers) {
+      hasAnyValues = true;
+      internalValueResult.maxNumberOfWorkers = this._maxNumberOfWorkers;
+    }
+    if (this._minNumberOfWorkers) {
+      hasAnyValues = true;
+      internalValueResult.minNumberOfWorkers = this._minNumberOfWorkers;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryLinkedServiceAzureDatabricksInstancePool | undefined) {
+    if (value === undefined) {
+      this._clusterVersion = undefined;
+      this._instancePoolId = undefined;
+      this._maxNumberOfWorkers = undefined;
+      this._minNumberOfWorkers = undefined;
+    }
+    else {
+      this._clusterVersion = value.clusterVersion;
+      this._instancePoolId = value.instancePoolId;
+      this._maxNumberOfWorkers = value.maxNumberOfWorkers;
+      this._minNumberOfWorkers = value.minNumberOfWorkers;
+    }
+  }
+
   // cluster_version - computed: false, optional: false, required: true
   private _clusterVersion?: string; 
   public get clusterVersion() {
@@ -132,7 +169,7 @@ export class DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get clusterVersionInput() {
-    return this._clusterVersion
+    return this._clusterVersion;
   }
 
   // instance_pool_id - computed: false, optional: false, required: true
@@ -145,15 +182,15 @@ export class DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get instancePoolIdInput() {
-    return this._instancePoolId
+    return this._instancePoolId;
   }
 
   // max_number_of_workers - computed: false, optional: true, required: false
-  private _maxNumberOfWorkers?: number | undefined; 
+  private _maxNumberOfWorkers?: number; 
   public get maxNumberOfWorkers() {
     return this.getNumberAttribute('max_number_of_workers');
   }
-  public set maxNumberOfWorkers(value: number | undefined) {
+  public set maxNumberOfWorkers(value: number) {
     this._maxNumberOfWorkers = value;
   }
   public resetMaxNumberOfWorkers() {
@@ -161,15 +198,15 @@ export class DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get maxNumberOfWorkersInput() {
-    return this._maxNumberOfWorkers
+    return this._maxNumberOfWorkers;
   }
 
   // min_number_of_workers - computed: false, optional: true, required: false
-  private _minNumberOfWorkers?: number | undefined; 
+  private _minNumberOfWorkers?: number; 
   public get minNumberOfWorkers() {
     return this.getNumberAttribute('min_number_of_workers');
   }
-  public set minNumberOfWorkers(value: number | undefined) {
+  public set minNumberOfWorkers(value: number) {
     this._minNumberOfWorkers = value;
   }
   public resetMinNumberOfWorkers() {
@@ -177,7 +214,7 @@ export class DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get minNumberOfWorkersInput() {
-    return this._minNumberOfWorkers
+    return this._minNumberOfWorkers;
   }
 }
 export interface DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword {
@@ -191,7 +228,7 @@ export interface DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword {
   readonly secretName: string;
 }
 
-function dataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordToTerraform(struct?: DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputReference | DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword): any {
+export function dataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordToTerraform(struct?: DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputReference | DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -212,6 +249,31 @@ export class DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputRefere
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._linkedServiceName) {
+      hasAnyValues = true;
+      internalValueResult.linkedServiceName = this._linkedServiceName;
+    }
+    if (this._secretName) {
+      hasAnyValues = true;
+      internalValueResult.secretName = this._secretName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword | undefined) {
+    if (value === undefined) {
+      this._linkedServiceName = undefined;
+      this._secretName = undefined;
+    }
+    else {
+      this._linkedServiceName = value.linkedServiceName;
+      this._secretName = value.secretName;
+    }
+  }
+
   // linked_service_name - computed: false, optional: false, required: true
   private _linkedServiceName?: string; 
   public get linkedServiceName() {
@@ -222,7 +284,7 @@ export class DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get linkedServiceNameInput() {
-    return this._linkedServiceName
+    return this._linkedServiceName;
   }
 
   // secret_name - computed: false, optional: false, required: true
@@ -235,7 +297,7 @@ export class DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get secretNameInput() {
-    return this._secretName
+    return this._secretName;
   }
 }
 export interface DataFactoryLinkedServiceAzureDatabricksNewClusterConfig {
@@ -281,7 +343,7 @@ export interface DataFactoryLinkedServiceAzureDatabricksNewClusterConfig {
   readonly sparkEnvironmentVariables?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataFactoryLinkedServiceAzureDatabricksNewClusterConfigToTerraform(struct?: DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputReference | DataFactoryLinkedServiceAzureDatabricksNewClusterConfig): any {
+export function dataFactoryLinkedServiceAzureDatabricksNewClusterConfigToTerraform(struct?: DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputReference | DataFactoryLinkedServiceAzureDatabricksNewClusterConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -310,6 +372,79 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryLinkedServiceAzureDatabricksNewClusterConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._clusterVersion) {
+      hasAnyValues = true;
+      internalValueResult.clusterVersion = this._clusterVersion;
+    }
+    if (this._customTags) {
+      hasAnyValues = true;
+      internalValueResult.customTags = this._customTags;
+    }
+    if (this._driverNodeType) {
+      hasAnyValues = true;
+      internalValueResult.driverNodeType = this._driverNodeType;
+    }
+    if (this._initScripts) {
+      hasAnyValues = true;
+      internalValueResult.initScripts = this._initScripts;
+    }
+    if (this._logDestination) {
+      hasAnyValues = true;
+      internalValueResult.logDestination = this._logDestination;
+    }
+    if (this._maxNumberOfWorkers) {
+      hasAnyValues = true;
+      internalValueResult.maxNumberOfWorkers = this._maxNumberOfWorkers;
+    }
+    if (this._minNumberOfWorkers) {
+      hasAnyValues = true;
+      internalValueResult.minNumberOfWorkers = this._minNumberOfWorkers;
+    }
+    if (this._nodeType) {
+      hasAnyValues = true;
+      internalValueResult.nodeType = this._nodeType;
+    }
+    if (this._sparkConfig) {
+      hasAnyValues = true;
+      internalValueResult.sparkConfig = this._sparkConfig;
+    }
+    if (this._sparkEnvironmentVariables) {
+      hasAnyValues = true;
+      internalValueResult.sparkEnvironmentVariables = this._sparkEnvironmentVariables;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryLinkedServiceAzureDatabricksNewClusterConfig | undefined) {
+    if (value === undefined) {
+      this._clusterVersion = undefined;
+      this._customTags = undefined;
+      this._driverNodeType = undefined;
+      this._initScripts = undefined;
+      this._logDestination = undefined;
+      this._maxNumberOfWorkers = undefined;
+      this._minNumberOfWorkers = undefined;
+      this._nodeType = undefined;
+      this._sparkConfig = undefined;
+      this._sparkEnvironmentVariables = undefined;
+    }
+    else {
+      this._clusterVersion = value.clusterVersion;
+      this._customTags = value.customTags;
+      this._driverNodeType = value.driverNodeType;
+      this._initScripts = value.initScripts;
+      this._logDestination = value.logDestination;
+      this._maxNumberOfWorkers = value.maxNumberOfWorkers;
+      this._minNumberOfWorkers = value.minNumberOfWorkers;
+      this._nodeType = value.nodeType;
+      this._sparkConfig = value.sparkConfig;
+      this._sparkEnvironmentVariables = value.sparkEnvironmentVariables;
+    }
+  }
+
   // cluster_version - computed: false, optional: false, required: true
   private _clusterVersion?: string; 
   public get clusterVersion() {
@@ -320,16 +455,16 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get clusterVersionInput() {
-    return this._clusterVersion
+    return this._clusterVersion;
   }
 
   // custom_tags - computed: false, optional: true, required: false
-  private _customTags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _customTags?: { [key: string]: string } | cdktf.IResolvable; 
   public get customTags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('custom_tags') as any;
   }
-  public set customTags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set customTags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._customTags = value;
   }
   public resetCustomTags() {
@@ -337,15 +472,15 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get customTagsInput() {
-    return this._customTags
+    return this._customTags;
   }
 
   // driver_node_type - computed: false, optional: true, required: false
-  private _driverNodeType?: string | undefined; 
+  private _driverNodeType?: string; 
   public get driverNodeType() {
     return this.getStringAttribute('driver_node_type');
   }
-  public set driverNodeType(value: string | undefined) {
+  public set driverNodeType(value: string) {
     this._driverNodeType = value;
   }
   public resetDriverNodeType() {
@@ -353,15 +488,15 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get driverNodeTypeInput() {
-    return this._driverNodeType
+    return this._driverNodeType;
   }
 
   // init_scripts - computed: false, optional: true, required: false
-  private _initScripts?: string[] | undefined; 
+  private _initScripts?: string[]; 
   public get initScripts() {
     return this.getListAttribute('init_scripts');
   }
-  public set initScripts(value: string[] | undefined) {
+  public set initScripts(value: string[]) {
     this._initScripts = value;
   }
   public resetInitScripts() {
@@ -369,15 +504,15 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get initScriptsInput() {
-    return this._initScripts
+    return this._initScripts;
   }
 
   // log_destination - computed: false, optional: true, required: false
-  private _logDestination?: string | undefined; 
+  private _logDestination?: string; 
   public get logDestination() {
     return this.getStringAttribute('log_destination');
   }
-  public set logDestination(value: string | undefined) {
+  public set logDestination(value: string) {
     this._logDestination = value;
   }
   public resetLogDestination() {
@@ -385,15 +520,15 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get logDestinationInput() {
-    return this._logDestination
+    return this._logDestination;
   }
 
   // max_number_of_workers - computed: false, optional: true, required: false
-  private _maxNumberOfWorkers?: number | undefined; 
+  private _maxNumberOfWorkers?: number; 
   public get maxNumberOfWorkers() {
     return this.getNumberAttribute('max_number_of_workers');
   }
-  public set maxNumberOfWorkers(value: number | undefined) {
+  public set maxNumberOfWorkers(value: number) {
     this._maxNumberOfWorkers = value;
   }
   public resetMaxNumberOfWorkers() {
@@ -401,15 +536,15 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get maxNumberOfWorkersInput() {
-    return this._maxNumberOfWorkers
+    return this._maxNumberOfWorkers;
   }
 
   // min_number_of_workers - computed: false, optional: true, required: false
-  private _minNumberOfWorkers?: number | undefined; 
+  private _minNumberOfWorkers?: number; 
   public get minNumberOfWorkers() {
     return this.getNumberAttribute('min_number_of_workers');
   }
-  public set minNumberOfWorkers(value: number | undefined) {
+  public set minNumberOfWorkers(value: number) {
     this._minNumberOfWorkers = value;
   }
   public resetMinNumberOfWorkers() {
@@ -417,7 +552,7 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get minNumberOfWorkersInput() {
-    return this._minNumberOfWorkers
+    return this._minNumberOfWorkers;
   }
 
   // node_type - computed: false, optional: false, required: true
@@ -430,16 +565,16 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get nodeTypeInput() {
-    return this._nodeType
+    return this._nodeType;
   }
 
   // spark_config - computed: false, optional: true, required: false
-  private _sparkConfig?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _sparkConfig?: { [key: string]: string } | cdktf.IResolvable; 
   public get sparkConfig() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('spark_config') as any;
   }
-  public set sparkConfig(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set sparkConfig(value: { [key: string]: string } | cdktf.IResolvable) {
     this._sparkConfig = value;
   }
   public resetSparkConfig() {
@@ -447,16 +582,16 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get sparkConfigInput() {
-    return this._sparkConfig
+    return this._sparkConfig;
   }
 
   // spark_environment_variables - computed: false, optional: true, required: false
-  private _sparkEnvironmentVariables?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _sparkEnvironmentVariables?: { [key: string]: string } | cdktf.IResolvable; 
   public get sparkEnvironmentVariables() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('spark_environment_variables') as any;
   }
-  public set sparkEnvironmentVariables(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set sparkEnvironmentVariables(value: { [key: string]: string } | cdktf.IResolvable) {
     this._sparkEnvironmentVariables = value;
   }
   public resetSparkEnvironmentVariables() {
@@ -464,7 +599,7 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get sparkEnvironmentVariablesInput() {
-    return this._sparkEnvironmentVariables
+    return this._sparkEnvironmentVariables;
   }
 }
 export interface DataFactoryLinkedServiceAzureDatabricksTimeouts {
@@ -486,7 +621,7 @@ export interface DataFactoryLinkedServiceAzureDatabricksTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryLinkedServiceAzureDatabricksTimeoutsToTerraform(struct?: DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference | DataFactoryLinkedServiceAzureDatabricksTimeouts): any {
+export function dataFactoryLinkedServiceAzureDatabricksTimeoutsToTerraform(struct?: DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference | DataFactoryLinkedServiceAzureDatabricksTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -509,12 +644,49 @@ export class DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryLinkedServiceAzureDatabricksTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryLinkedServiceAzureDatabricksTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -522,15 +694,15 @@ export class DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -538,15 +710,15 @@ export class DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -554,15 +726,15 @@ export class DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -570,7 +742,7 @@ export class DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -618,10 +790,10 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
     this._name = config.name;
     this._parameters = config.parameters;
     this._resourceGroupName = config.resourceGroupName;
-    this._instancePool = config.instancePool;
-    this._keyVaultPassword = config.keyVaultPassword;
-    this._newClusterConfig = config.newClusterConfig;
-    this._timeouts = config.timeouts;
+    this._instancePool.internalValue = config.instancePool;
+    this._keyVaultPassword.internalValue = config.keyVaultPassword;
+    this._newClusterConfig.internalValue = config.newClusterConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -629,11 +801,11 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   // ==========
 
   // access_token - computed: false, optional: true, required: false
-  private _accessToken?: string | undefined; 
+  private _accessToken?: string; 
   public get accessToken() {
     return this.getStringAttribute('access_token');
   }
-  public set accessToken(value: string | undefined) {
+  public set accessToken(value: string) {
     this._accessToken = value;
   }
   public resetAccessToken() {
@@ -641,7 +813,7 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get accessTokenInput() {
-    return this._accessToken
+    return this._accessToken;
   }
 
   // adb_domain - computed: false, optional: false, required: true
@@ -654,16 +826,16 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get adbDomainInput() {
-    return this._adbDomain
+    return this._adbDomain;
   }
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable; 
   public get additionalProperties() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -671,15 +843,15 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get additionalPropertiesInput() {
-    return this._additionalProperties
+    return this._additionalProperties;
   }
 
   // annotations - computed: false, optional: true, required: false
-  private _annotations?: string[] | undefined; 
+  private _annotations?: string[]; 
   public get annotations() {
     return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] | undefined) {
+  public set annotations(value: string[]) {
     this._annotations = value;
   }
   public resetAnnotations() {
@@ -687,7 +859,7 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get annotationsInput() {
-    return this._annotations
+    return this._annotations;
   }
 
   // data_factory_name - computed: false, optional: false, required: true
@@ -700,15 +872,15 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryNameInput() {
-    return this._dataFactoryName
+    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -716,15 +888,15 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // existing_cluster_id - computed: false, optional: true, required: false
-  private _existingClusterId?: string | undefined; 
+  private _existingClusterId?: string; 
   public get existingClusterId() {
     return this.getStringAttribute('existing_cluster_id');
   }
-  public set existingClusterId(value: string | undefined) {
+  public set existingClusterId(value: string) {
     this._existingClusterId = value;
   }
   public resetExistingClusterId() {
@@ -732,7 +904,7 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get existingClusterIdInput() {
-    return this._existingClusterId
+    return this._existingClusterId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -741,11 +913,11 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
 
   // integration_runtime_name - computed: false, optional: true, required: false
-  private _integrationRuntimeName?: string | undefined; 
+  private _integrationRuntimeName?: string; 
   public get integrationRuntimeName() {
     return this.getStringAttribute('integration_runtime_name');
   }
-  public set integrationRuntimeName(value: string | undefined) {
+  public set integrationRuntimeName(value: string) {
     this._integrationRuntimeName = value;
   }
   public resetIntegrationRuntimeName() {
@@ -753,15 +925,15 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get integrationRuntimeNameInput() {
-    return this._integrationRuntimeName
+    return this._integrationRuntimeName;
   }
 
   // msi_work_space_resource_id - computed: false, optional: true, required: false
-  private _msiWorkSpaceResourceId?: string | undefined; 
+  private _msiWorkSpaceResourceId?: string; 
   public get msiWorkSpaceResourceId() {
     return this.getStringAttribute('msi_work_space_resource_id');
   }
-  public set msiWorkSpaceResourceId(value: string | undefined) {
+  public set msiWorkSpaceResourceId(value: string) {
     this._msiWorkSpaceResourceId = value;
   }
   public resetMsiWorkSpaceResourceId() {
@@ -769,7 +941,7 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get msiWorkSpaceResourceIdInput() {
-    return this._msiWorkSpaceResourceId
+    return this._msiWorkSpaceResourceId;
   }
 
   // name - computed: false, optional: false, required: true
@@ -782,16 +954,16 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -799,7 +971,7 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -812,75 +984,71 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // instance_pool - computed: false, optional: true, required: false
-  private _instancePool?: DataFactoryLinkedServiceAzureDatabricksInstancePool | undefined; 
-  private __instancePoolOutput = new DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference(this as any, "instance_pool", true);
+  private _instancePool = new DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference(this as any, "instance_pool", true);
   public get instancePool() {
-    return this.__instancePoolOutput;
+    return this._instancePool;
   }
-  public putInstancePool(value: DataFactoryLinkedServiceAzureDatabricksInstancePool | undefined) {
-    this._instancePool = value;
+  public putInstancePool(value: DataFactoryLinkedServiceAzureDatabricksInstancePool) {
+    this._instancePool.internalValue = value;
   }
   public resetInstancePool() {
-    this._instancePool = undefined;
+    this._instancePool.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get instancePoolInput() {
-    return this._instancePool
+    return this._instancePool.internalValue;
   }
 
   // key_vault_password - computed: false, optional: true, required: false
-  private _keyVaultPassword?: DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword | undefined; 
-  private __keyVaultPasswordOutput = new DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputReference(this as any, "key_vault_password", true);
+  private _keyVaultPassword = new DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputReference(this as any, "key_vault_password", true);
   public get keyVaultPassword() {
-    return this.__keyVaultPasswordOutput;
+    return this._keyVaultPassword;
   }
-  public putKeyVaultPassword(value: DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword | undefined) {
-    this._keyVaultPassword = value;
+  public putKeyVaultPassword(value: DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword) {
+    this._keyVaultPassword.internalValue = value;
   }
   public resetKeyVaultPassword() {
-    this._keyVaultPassword = undefined;
+    this._keyVaultPassword.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get keyVaultPasswordInput() {
-    return this._keyVaultPassword
+    return this._keyVaultPassword.internalValue;
   }
 
   // new_cluster_config - computed: false, optional: true, required: false
-  private _newClusterConfig?: DataFactoryLinkedServiceAzureDatabricksNewClusterConfig | undefined; 
-  private __newClusterConfigOutput = new DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputReference(this as any, "new_cluster_config", true);
+  private _newClusterConfig = new DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputReference(this as any, "new_cluster_config", true);
   public get newClusterConfig() {
-    return this.__newClusterConfigOutput;
+    return this._newClusterConfig;
   }
-  public putNewClusterConfig(value: DataFactoryLinkedServiceAzureDatabricksNewClusterConfig | undefined) {
-    this._newClusterConfig = value;
+  public putNewClusterConfig(value: DataFactoryLinkedServiceAzureDatabricksNewClusterConfig) {
+    this._newClusterConfig.internalValue = value;
   }
   public resetNewClusterConfig() {
-    this._newClusterConfig = undefined;
+    this._newClusterConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get newClusterConfigInput() {
-    return this._newClusterConfig
+    return this._newClusterConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryLinkedServiceAzureDatabricksTimeouts | undefined; 
-  private __timeoutsOutput = new DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataFactoryLinkedServiceAzureDatabricksTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataFactoryLinkedServiceAzureDatabricksTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -901,10 +1069,10 @@ export class DataFactoryLinkedServiceAzureDatabricks extends cdktf.TerraformReso
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      instance_pool: dataFactoryLinkedServiceAzureDatabricksInstancePoolToTerraform(this._instancePool),
-      key_vault_password: dataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordToTerraform(this._keyVaultPassword),
-      new_cluster_config: dataFactoryLinkedServiceAzureDatabricksNewClusterConfigToTerraform(this._newClusterConfig),
-      timeouts: dataFactoryLinkedServiceAzureDatabricksTimeoutsToTerraform(this._timeouts),
+      instance_pool: dataFactoryLinkedServiceAzureDatabricksInstancePoolToTerraform(this._instancePool.internalValue),
+      key_vault_password: dataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordToTerraform(this._keyVaultPassword.internalValue),
+      new_cluster_config: dataFactoryLinkedServiceAzureDatabricksNewClusterConfigToTerraform(this._newClusterConfig.internalValue),
+      timeouts: dataFactoryLinkedServiceAzureDatabricksTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

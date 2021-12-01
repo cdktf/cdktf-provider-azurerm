@@ -39,7 +39,7 @@ export interface StorageManagementPolicyRuleActionsBaseBlob {
   readonly tierToCoolAfterDaysSinceModificationGreaterThan?: number;
 }
 
-function storageManagementPolicyRuleActionsBaseBlobToTerraform(struct?: StorageManagementPolicyRuleActionsBaseBlobOutputReference | StorageManagementPolicyRuleActionsBaseBlob): any {
+export function storageManagementPolicyRuleActionsBaseBlobToTerraform(struct?: StorageManagementPolicyRuleActionsBaseBlobOutputReference | StorageManagementPolicyRuleActionsBaseBlob): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -61,12 +61,43 @@ export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageManagementPolicyRuleActionsBaseBlob | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._deleteAfterDaysSinceModificationGreaterThan) {
+      hasAnyValues = true;
+      internalValueResult.deleteAfterDaysSinceModificationGreaterThan = this._deleteAfterDaysSinceModificationGreaterThan;
+    }
+    if (this._tierToArchiveAfterDaysSinceModificationGreaterThan) {
+      hasAnyValues = true;
+      internalValueResult.tierToArchiveAfterDaysSinceModificationGreaterThan = this._tierToArchiveAfterDaysSinceModificationGreaterThan;
+    }
+    if (this._tierToCoolAfterDaysSinceModificationGreaterThan) {
+      hasAnyValues = true;
+      internalValueResult.tierToCoolAfterDaysSinceModificationGreaterThan = this._tierToCoolAfterDaysSinceModificationGreaterThan;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageManagementPolicyRuleActionsBaseBlob | undefined) {
+    if (value === undefined) {
+      this._deleteAfterDaysSinceModificationGreaterThan = undefined;
+      this._tierToArchiveAfterDaysSinceModificationGreaterThan = undefined;
+      this._tierToCoolAfterDaysSinceModificationGreaterThan = undefined;
+    }
+    else {
+      this._deleteAfterDaysSinceModificationGreaterThan = value.deleteAfterDaysSinceModificationGreaterThan;
+      this._tierToArchiveAfterDaysSinceModificationGreaterThan = value.tierToArchiveAfterDaysSinceModificationGreaterThan;
+      this._tierToCoolAfterDaysSinceModificationGreaterThan = value.tierToCoolAfterDaysSinceModificationGreaterThan;
+    }
+  }
+
   // delete_after_days_since_modification_greater_than - computed: false, optional: true, required: false
-  private _deleteAfterDaysSinceModificationGreaterThan?: number | undefined; 
+  private _deleteAfterDaysSinceModificationGreaterThan?: number; 
   public get deleteAfterDaysSinceModificationGreaterThan() {
     return this.getNumberAttribute('delete_after_days_since_modification_greater_than');
   }
-  public set deleteAfterDaysSinceModificationGreaterThan(value: number | undefined) {
+  public set deleteAfterDaysSinceModificationGreaterThan(value: number) {
     this._deleteAfterDaysSinceModificationGreaterThan = value;
   }
   public resetDeleteAfterDaysSinceModificationGreaterThan() {
@@ -74,15 +105,15 @@ export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get deleteAfterDaysSinceModificationGreaterThanInput() {
-    return this._deleteAfterDaysSinceModificationGreaterThan
+    return this._deleteAfterDaysSinceModificationGreaterThan;
   }
 
   // tier_to_archive_after_days_since_modification_greater_than - computed: false, optional: true, required: false
-  private _tierToArchiveAfterDaysSinceModificationGreaterThan?: number | undefined; 
+  private _tierToArchiveAfterDaysSinceModificationGreaterThan?: number; 
   public get tierToArchiveAfterDaysSinceModificationGreaterThan() {
     return this.getNumberAttribute('tier_to_archive_after_days_since_modification_greater_than');
   }
-  public set tierToArchiveAfterDaysSinceModificationGreaterThan(value: number | undefined) {
+  public set tierToArchiveAfterDaysSinceModificationGreaterThan(value: number) {
     this._tierToArchiveAfterDaysSinceModificationGreaterThan = value;
   }
   public resetTierToArchiveAfterDaysSinceModificationGreaterThan() {
@@ -90,15 +121,15 @@ export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get tierToArchiveAfterDaysSinceModificationGreaterThanInput() {
-    return this._tierToArchiveAfterDaysSinceModificationGreaterThan
+    return this._tierToArchiveAfterDaysSinceModificationGreaterThan;
   }
 
   // tier_to_cool_after_days_since_modification_greater_than - computed: false, optional: true, required: false
-  private _tierToCoolAfterDaysSinceModificationGreaterThan?: number | undefined; 
+  private _tierToCoolAfterDaysSinceModificationGreaterThan?: number; 
   public get tierToCoolAfterDaysSinceModificationGreaterThan() {
     return this.getNumberAttribute('tier_to_cool_after_days_since_modification_greater_than');
   }
-  public set tierToCoolAfterDaysSinceModificationGreaterThan(value: number | undefined) {
+  public set tierToCoolAfterDaysSinceModificationGreaterThan(value: number) {
     this._tierToCoolAfterDaysSinceModificationGreaterThan = value;
   }
   public resetTierToCoolAfterDaysSinceModificationGreaterThan() {
@@ -106,7 +137,7 @@ export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get tierToCoolAfterDaysSinceModificationGreaterThanInput() {
-    return this._tierToCoolAfterDaysSinceModificationGreaterThan
+    return this._tierToCoolAfterDaysSinceModificationGreaterThan;
   }
 }
 export interface StorageManagementPolicyRuleActionsSnapshot {
@@ -124,7 +155,7 @@ export interface StorageManagementPolicyRuleActionsSnapshot {
   readonly deleteAfterDaysSinceCreationGreaterThan?: number;
 }
 
-function storageManagementPolicyRuleActionsSnapshotToTerraform(struct?: StorageManagementPolicyRuleActionsSnapshotOutputReference | StorageManagementPolicyRuleActionsSnapshot): any {
+export function storageManagementPolicyRuleActionsSnapshotToTerraform(struct?: StorageManagementPolicyRuleActionsSnapshotOutputReference | StorageManagementPolicyRuleActionsSnapshot): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -146,12 +177,43 @@ export class StorageManagementPolicyRuleActionsSnapshotOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageManagementPolicyRuleActionsSnapshot | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._changeTierToArchiveAfterDaysSinceCreation) {
+      hasAnyValues = true;
+      internalValueResult.changeTierToArchiveAfterDaysSinceCreation = this._changeTierToArchiveAfterDaysSinceCreation;
+    }
+    if (this._changeTierToCoolAfterDaysSinceCreation) {
+      hasAnyValues = true;
+      internalValueResult.changeTierToCoolAfterDaysSinceCreation = this._changeTierToCoolAfterDaysSinceCreation;
+    }
+    if (this._deleteAfterDaysSinceCreationGreaterThan) {
+      hasAnyValues = true;
+      internalValueResult.deleteAfterDaysSinceCreationGreaterThan = this._deleteAfterDaysSinceCreationGreaterThan;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageManagementPolicyRuleActionsSnapshot | undefined) {
+    if (value === undefined) {
+      this._changeTierToArchiveAfterDaysSinceCreation = undefined;
+      this._changeTierToCoolAfterDaysSinceCreation = undefined;
+      this._deleteAfterDaysSinceCreationGreaterThan = undefined;
+    }
+    else {
+      this._changeTierToArchiveAfterDaysSinceCreation = value.changeTierToArchiveAfterDaysSinceCreation;
+      this._changeTierToCoolAfterDaysSinceCreation = value.changeTierToCoolAfterDaysSinceCreation;
+      this._deleteAfterDaysSinceCreationGreaterThan = value.deleteAfterDaysSinceCreationGreaterThan;
+    }
+  }
+
   // change_tier_to_archive_after_days_since_creation - computed: false, optional: true, required: false
-  private _changeTierToArchiveAfterDaysSinceCreation?: number | undefined; 
+  private _changeTierToArchiveAfterDaysSinceCreation?: number; 
   public get changeTierToArchiveAfterDaysSinceCreation() {
     return this.getNumberAttribute('change_tier_to_archive_after_days_since_creation');
   }
-  public set changeTierToArchiveAfterDaysSinceCreation(value: number | undefined) {
+  public set changeTierToArchiveAfterDaysSinceCreation(value: number) {
     this._changeTierToArchiveAfterDaysSinceCreation = value;
   }
   public resetChangeTierToArchiveAfterDaysSinceCreation() {
@@ -159,15 +221,15 @@ export class StorageManagementPolicyRuleActionsSnapshotOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get changeTierToArchiveAfterDaysSinceCreationInput() {
-    return this._changeTierToArchiveAfterDaysSinceCreation
+    return this._changeTierToArchiveAfterDaysSinceCreation;
   }
 
   // change_tier_to_cool_after_days_since_creation - computed: false, optional: true, required: false
-  private _changeTierToCoolAfterDaysSinceCreation?: number | undefined; 
+  private _changeTierToCoolAfterDaysSinceCreation?: number; 
   public get changeTierToCoolAfterDaysSinceCreation() {
     return this.getNumberAttribute('change_tier_to_cool_after_days_since_creation');
   }
-  public set changeTierToCoolAfterDaysSinceCreation(value: number | undefined) {
+  public set changeTierToCoolAfterDaysSinceCreation(value: number) {
     this._changeTierToCoolAfterDaysSinceCreation = value;
   }
   public resetChangeTierToCoolAfterDaysSinceCreation() {
@@ -175,15 +237,15 @@ export class StorageManagementPolicyRuleActionsSnapshotOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get changeTierToCoolAfterDaysSinceCreationInput() {
-    return this._changeTierToCoolAfterDaysSinceCreation
+    return this._changeTierToCoolAfterDaysSinceCreation;
   }
 
   // delete_after_days_since_creation_greater_than - computed: false, optional: true, required: false
-  private _deleteAfterDaysSinceCreationGreaterThan?: number | undefined; 
+  private _deleteAfterDaysSinceCreationGreaterThan?: number; 
   public get deleteAfterDaysSinceCreationGreaterThan() {
     return this.getNumberAttribute('delete_after_days_since_creation_greater_than');
   }
-  public set deleteAfterDaysSinceCreationGreaterThan(value: number | undefined) {
+  public set deleteAfterDaysSinceCreationGreaterThan(value: number) {
     this._deleteAfterDaysSinceCreationGreaterThan = value;
   }
   public resetDeleteAfterDaysSinceCreationGreaterThan() {
@@ -191,7 +253,7 @@ export class StorageManagementPolicyRuleActionsSnapshotOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get deleteAfterDaysSinceCreationGreaterThanInput() {
-    return this._deleteAfterDaysSinceCreationGreaterThan
+    return this._deleteAfterDaysSinceCreationGreaterThan;
   }
 }
 export interface StorageManagementPolicyRuleActionsVersion {
@@ -209,7 +271,7 @@ export interface StorageManagementPolicyRuleActionsVersion {
   readonly deleteAfterDaysSinceCreation?: number;
 }
 
-function storageManagementPolicyRuleActionsVersionToTerraform(struct?: StorageManagementPolicyRuleActionsVersionOutputReference | StorageManagementPolicyRuleActionsVersion): any {
+export function storageManagementPolicyRuleActionsVersionToTerraform(struct?: StorageManagementPolicyRuleActionsVersionOutputReference | StorageManagementPolicyRuleActionsVersion): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -231,12 +293,43 @@ export class StorageManagementPolicyRuleActionsVersionOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageManagementPolicyRuleActionsVersion | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._changeTierToArchiveAfterDaysSinceCreation) {
+      hasAnyValues = true;
+      internalValueResult.changeTierToArchiveAfterDaysSinceCreation = this._changeTierToArchiveAfterDaysSinceCreation;
+    }
+    if (this._changeTierToCoolAfterDaysSinceCreation) {
+      hasAnyValues = true;
+      internalValueResult.changeTierToCoolAfterDaysSinceCreation = this._changeTierToCoolAfterDaysSinceCreation;
+    }
+    if (this._deleteAfterDaysSinceCreation) {
+      hasAnyValues = true;
+      internalValueResult.deleteAfterDaysSinceCreation = this._deleteAfterDaysSinceCreation;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageManagementPolicyRuleActionsVersion | undefined) {
+    if (value === undefined) {
+      this._changeTierToArchiveAfterDaysSinceCreation = undefined;
+      this._changeTierToCoolAfterDaysSinceCreation = undefined;
+      this._deleteAfterDaysSinceCreation = undefined;
+    }
+    else {
+      this._changeTierToArchiveAfterDaysSinceCreation = value.changeTierToArchiveAfterDaysSinceCreation;
+      this._changeTierToCoolAfterDaysSinceCreation = value.changeTierToCoolAfterDaysSinceCreation;
+      this._deleteAfterDaysSinceCreation = value.deleteAfterDaysSinceCreation;
+    }
+  }
+
   // change_tier_to_archive_after_days_since_creation - computed: false, optional: true, required: false
-  private _changeTierToArchiveAfterDaysSinceCreation?: number | undefined; 
+  private _changeTierToArchiveAfterDaysSinceCreation?: number; 
   public get changeTierToArchiveAfterDaysSinceCreation() {
     return this.getNumberAttribute('change_tier_to_archive_after_days_since_creation');
   }
-  public set changeTierToArchiveAfterDaysSinceCreation(value: number | undefined) {
+  public set changeTierToArchiveAfterDaysSinceCreation(value: number) {
     this._changeTierToArchiveAfterDaysSinceCreation = value;
   }
   public resetChangeTierToArchiveAfterDaysSinceCreation() {
@@ -244,15 +337,15 @@ export class StorageManagementPolicyRuleActionsVersionOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get changeTierToArchiveAfterDaysSinceCreationInput() {
-    return this._changeTierToArchiveAfterDaysSinceCreation
+    return this._changeTierToArchiveAfterDaysSinceCreation;
   }
 
   // change_tier_to_cool_after_days_since_creation - computed: false, optional: true, required: false
-  private _changeTierToCoolAfterDaysSinceCreation?: number | undefined; 
+  private _changeTierToCoolAfterDaysSinceCreation?: number; 
   public get changeTierToCoolAfterDaysSinceCreation() {
     return this.getNumberAttribute('change_tier_to_cool_after_days_since_creation');
   }
-  public set changeTierToCoolAfterDaysSinceCreation(value: number | undefined) {
+  public set changeTierToCoolAfterDaysSinceCreation(value: number) {
     this._changeTierToCoolAfterDaysSinceCreation = value;
   }
   public resetChangeTierToCoolAfterDaysSinceCreation() {
@@ -260,15 +353,15 @@ export class StorageManagementPolicyRuleActionsVersionOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get changeTierToCoolAfterDaysSinceCreationInput() {
-    return this._changeTierToCoolAfterDaysSinceCreation
+    return this._changeTierToCoolAfterDaysSinceCreation;
   }
 
   // delete_after_days_since_creation - computed: false, optional: true, required: false
-  private _deleteAfterDaysSinceCreation?: number | undefined; 
+  private _deleteAfterDaysSinceCreation?: number; 
   public get deleteAfterDaysSinceCreation() {
     return this.getNumberAttribute('delete_after_days_since_creation');
   }
-  public set deleteAfterDaysSinceCreation(value: number | undefined) {
+  public set deleteAfterDaysSinceCreation(value: number) {
     this._deleteAfterDaysSinceCreation = value;
   }
   public resetDeleteAfterDaysSinceCreation() {
@@ -276,7 +369,7 @@ export class StorageManagementPolicyRuleActionsVersionOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get deleteAfterDaysSinceCreationInput() {
-    return this._deleteAfterDaysSinceCreation
+    return this._deleteAfterDaysSinceCreation;
   }
 }
 export interface StorageManagementPolicyRuleActions {
@@ -300,7 +393,7 @@ export interface StorageManagementPolicyRuleActions {
   readonly version?: StorageManagementPolicyRuleActionsVersion;
 }
 
-function storageManagementPolicyRuleActionsToTerraform(struct?: StorageManagementPolicyRuleActionsOutputReference | StorageManagementPolicyRuleActions): any {
+export function storageManagementPolicyRuleActionsToTerraform(struct?: StorageManagementPolicyRuleActionsOutputReference | StorageManagementPolicyRuleActions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -322,55 +415,83 @@ export class StorageManagementPolicyRuleActionsOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // base_blob - computed: false, optional: true, required: false
-  private _baseBlob?: StorageManagementPolicyRuleActionsBaseBlob | undefined; 
-  private __baseBlobOutput = new StorageManagementPolicyRuleActionsBaseBlobOutputReference(this as any, "base_blob", true);
-  public get baseBlob() {
-    return this.__baseBlobOutput;
+  public get internalValue(): StorageManagementPolicyRuleActions | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._baseBlob) {
+      hasAnyValues = true;
+      internalValueResult.baseBlob = this._baseBlob?.internalValue;
+    }
+    if (this._snapshot) {
+      hasAnyValues = true;
+      internalValueResult.snapshot = this._snapshot?.internalValue;
+    }
+    if (this._version) {
+      hasAnyValues = true;
+      internalValueResult.version = this._version?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putBaseBlob(value: StorageManagementPolicyRuleActionsBaseBlob | undefined) {
-    this._baseBlob = value;
+
+  public set internalValue(value: StorageManagementPolicyRuleActions | undefined) {
+    if (value === undefined) {
+      this._baseBlob.internalValue = undefined;
+      this._snapshot.internalValue = undefined;
+      this._version.internalValue = undefined;
+    }
+    else {
+      this._baseBlob.internalValue = value.baseBlob;
+      this._snapshot.internalValue = value.snapshot;
+      this._version.internalValue = value.version;
+    }
+  }
+
+  // base_blob - computed: false, optional: true, required: false
+  private _baseBlob = new StorageManagementPolicyRuleActionsBaseBlobOutputReference(this as any, "base_blob", true);
+  public get baseBlob() {
+    return this._baseBlob;
+  }
+  public putBaseBlob(value: StorageManagementPolicyRuleActionsBaseBlob) {
+    this._baseBlob.internalValue = value;
   }
   public resetBaseBlob() {
-    this._baseBlob = undefined;
+    this._baseBlob.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get baseBlobInput() {
-    return this._baseBlob
+    return this._baseBlob.internalValue;
   }
 
   // snapshot - computed: false, optional: true, required: false
-  private _snapshot?: StorageManagementPolicyRuleActionsSnapshot | undefined; 
-  private __snapshotOutput = new StorageManagementPolicyRuleActionsSnapshotOutputReference(this as any, "snapshot", true);
+  private _snapshot = new StorageManagementPolicyRuleActionsSnapshotOutputReference(this as any, "snapshot", true);
   public get snapshot() {
-    return this.__snapshotOutput;
+    return this._snapshot;
   }
-  public putSnapshot(value: StorageManagementPolicyRuleActionsSnapshot | undefined) {
-    this._snapshot = value;
+  public putSnapshot(value: StorageManagementPolicyRuleActionsSnapshot) {
+    this._snapshot.internalValue = value;
   }
   public resetSnapshot() {
-    this._snapshot = undefined;
+    this._snapshot.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get snapshotInput() {
-    return this._snapshot
+    return this._snapshot.internalValue;
   }
 
   // version - computed: false, optional: true, required: false
-  private _version?: StorageManagementPolicyRuleActionsVersion | undefined; 
-  private __versionOutput = new StorageManagementPolicyRuleActionsVersionOutputReference(this as any, "version", true);
+  private _version = new StorageManagementPolicyRuleActionsVersionOutputReference(this as any, "version", true);
   public get version() {
-    return this.__versionOutput;
+    return this._version;
   }
-  public putVersion(value: StorageManagementPolicyRuleActionsVersion | undefined) {
-    this._version = value;
+  public putVersion(value: StorageManagementPolicyRuleActionsVersion) {
+    this._version.internalValue = value;
   }
   public resetVersion() {
-    this._version = undefined;
+    this._version.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version.internalValue;
   }
 }
 export interface StorageManagementPolicyRuleFiltersMatchBlobIndexTag {
@@ -388,7 +509,7 @@ export interface StorageManagementPolicyRuleFiltersMatchBlobIndexTag {
   readonly value: string;
 }
 
-function storageManagementPolicyRuleFiltersMatchBlobIndexTagToTerraform(struct?: StorageManagementPolicyRuleFiltersMatchBlobIndexTag): any {
+export function storageManagementPolicyRuleFiltersMatchBlobIndexTagToTerraform(struct?: StorageManagementPolicyRuleFiltersMatchBlobIndexTag): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -417,7 +538,7 @@ export interface StorageManagementPolicyRuleFilters {
   readonly matchBlobIndexTag?: StorageManagementPolicyRuleFiltersMatchBlobIndexTag[];
 }
 
-function storageManagementPolicyRuleFiltersToTerraform(struct?: StorageManagementPolicyRuleFiltersOutputReference | StorageManagementPolicyRuleFilters): any {
+export function storageManagementPolicyRuleFiltersToTerraform(struct?: StorageManagementPolicyRuleFiltersOutputReference | StorageManagementPolicyRuleFilters): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -439,12 +560,43 @@ export class StorageManagementPolicyRuleFiltersOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageManagementPolicyRuleFilters | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._blobTypes) {
+      hasAnyValues = true;
+      internalValueResult.blobTypes = this._blobTypes;
+    }
+    if (this._prefixMatch) {
+      hasAnyValues = true;
+      internalValueResult.prefixMatch = this._prefixMatch;
+    }
+    if (this._matchBlobIndexTag) {
+      hasAnyValues = true;
+      internalValueResult.matchBlobIndexTag = this._matchBlobIndexTag;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageManagementPolicyRuleFilters | undefined) {
+    if (value === undefined) {
+      this._blobTypes = undefined;
+      this._prefixMatch = undefined;
+      this._matchBlobIndexTag = undefined;
+    }
+    else {
+      this._blobTypes = value.blobTypes;
+      this._prefixMatch = value.prefixMatch;
+      this._matchBlobIndexTag = value.matchBlobIndexTag;
+    }
+  }
+
   // blob_types - computed: false, optional: true, required: false
-  private _blobTypes?: string[] | undefined; 
+  private _blobTypes?: string[]; 
   public get blobTypes() {
     return this.getListAttribute('blob_types');
   }
-  public set blobTypes(value: string[] | undefined) {
+  public set blobTypes(value: string[]) {
     this._blobTypes = value;
   }
   public resetBlobTypes() {
@@ -452,15 +604,15 @@ export class StorageManagementPolicyRuleFiltersOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get blobTypesInput() {
-    return this._blobTypes
+    return this._blobTypes;
   }
 
   // prefix_match - computed: false, optional: true, required: false
-  private _prefixMatch?: string[] | undefined; 
+  private _prefixMatch?: string[]; 
   public get prefixMatch() {
     return this.getListAttribute('prefix_match');
   }
-  public set prefixMatch(value: string[] | undefined) {
+  public set prefixMatch(value: string[]) {
     this._prefixMatch = value;
   }
   public resetPrefixMatch() {
@@ -468,16 +620,16 @@ export class StorageManagementPolicyRuleFiltersOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get prefixMatchInput() {
-    return this._prefixMatch
+    return this._prefixMatch;
   }
 
   // match_blob_index_tag - computed: false, optional: true, required: false
-  private _matchBlobIndexTag?: StorageManagementPolicyRuleFiltersMatchBlobIndexTag[] | undefined; 
+  private _matchBlobIndexTag?: StorageManagementPolicyRuleFiltersMatchBlobIndexTag[]; 
   public get matchBlobIndexTag() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('match_blob_index_tag') as any;
   }
-  public set matchBlobIndexTag(value: StorageManagementPolicyRuleFiltersMatchBlobIndexTag[] | undefined) {
+  public set matchBlobIndexTag(value: StorageManagementPolicyRuleFiltersMatchBlobIndexTag[]) {
     this._matchBlobIndexTag = value;
   }
   public resetMatchBlobIndexTag() {
@@ -485,7 +637,7 @@ export class StorageManagementPolicyRuleFiltersOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get matchBlobIndexTagInput() {
-    return this._matchBlobIndexTag
+    return this._matchBlobIndexTag;
   }
 }
 export interface StorageManagementPolicyRule {
@@ -511,7 +663,7 @@ export interface StorageManagementPolicyRule {
   readonly filters?: StorageManagementPolicyRuleFilters;
 }
 
-function storageManagementPolicyRuleToTerraform(struct?: StorageManagementPolicyRule): any {
+export function storageManagementPolicyRuleToTerraform(struct?: StorageManagementPolicyRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -543,7 +695,7 @@ export interface StorageManagementPolicyTimeouts {
   readonly update?: string;
 }
 
-function storageManagementPolicyTimeoutsToTerraform(struct?: StorageManagementPolicyTimeoutsOutputReference | StorageManagementPolicyTimeouts): any {
+export function storageManagementPolicyTimeoutsToTerraform(struct?: StorageManagementPolicyTimeoutsOutputReference | StorageManagementPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -566,12 +718,49 @@ export class StorageManagementPolicyTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageManagementPolicyTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageManagementPolicyTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -579,15 +768,15 @@ export class StorageManagementPolicyTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -595,15 +784,15 @@ export class StorageManagementPolicyTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -611,15 +800,15 @@ export class StorageManagementPolicyTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -627,7 +816,7 @@ export class StorageManagementPolicyTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -665,7 +854,7 @@ export class StorageManagementPolicy extends cdktf.TerraformResource {
     });
     this._storageAccountId = config.storageAccountId;
     this._rule = config.rule;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -687,16 +876,16 @@ export class StorageManagementPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountIdInput() {
-    return this._storageAccountId
+    return this._storageAccountId;
   }
 
   // rule - computed: false, optional: true, required: false
-  private _rule?: StorageManagementPolicyRule[] | undefined; 
+  private _rule?: StorageManagementPolicyRule[]; 
   public get rule() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('rule') as any;
   }
-  public set rule(value: StorageManagementPolicyRule[] | undefined) {
+  public set rule(value: StorageManagementPolicyRule[]) {
     this._rule = value;
   }
   public resetRule() {
@@ -704,24 +893,23 @@ export class StorageManagementPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ruleInput() {
-    return this._rule
+    return this._rule;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: StorageManagementPolicyTimeouts | undefined; 
-  private __timeoutsOutput = new StorageManagementPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StorageManagementPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: StorageManagementPolicyTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: StorageManagementPolicyTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -732,7 +920,7 @@ export class StorageManagementPolicy extends cdktf.TerraformResource {
     return {
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       rule: cdktf.listMapper(storageManagementPolicyRuleToTerraform)(this._rule),
-      timeouts: storageManagementPolicyTimeoutsToTerraform(this._timeouts),
+      timeouts: storageManagementPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -45,7 +45,7 @@ export interface SynapseRoleAssignmentTimeouts {
   readonly read?: string;
 }
 
-function synapseRoleAssignmentTimeoutsToTerraform(struct?: SynapseRoleAssignmentTimeoutsOutputReference | SynapseRoleAssignmentTimeouts): any {
+export function synapseRoleAssignmentTimeoutsToTerraform(struct?: SynapseRoleAssignmentTimeoutsOutputReference | SynapseRoleAssignmentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -67,12 +67,43 @@ export class SynapseRoleAssignmentTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SynapseRoleAssignmentTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SynapseRoleAssignmentTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -80,15 +111,15 @@ export class SynapseRoleAssignmentTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -96,15 +127,15 @@ export class SynapseRoleAssignmentTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -112,7 +143,7 @@ export class SynapseRoleAssignmentTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -152,7 +183,7 @@ export class SynapseRoleAssignment extends cdktf.TerraformResource {
     this._roleName = config.roleName;
     this._synapseSparkPoolId = config.synapseSparkPoolId;
     this._synapseWorkspaceId = config.synapseWorkspaceId;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -174,7 +205,7 @@ export class SynapseRoleAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get principalIdInput() {
-    return this._principalId
+    return this._principalId;
   }
 
   // role_name - computed: false, optional: false, required: true
@@ -187,15 +218,15 @@ export class SynapseRoleAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get roleNameInput() {
-    return this._roleName
+    return this._roleName;
   }
 
   // synapse_spark_pool_id - computed: false, optional: true, required: false
-  private _synapseSparkPoolId?: string | undefined; 
+  private _synapseSparkPoolId?: string; 
   public get synapseSparkPoolId() {
     return this.getStringAttribute('synapse_spark_pool_id');
   }
-  public set synapseSparkPoolId(value: string | undefined) {
+  public set synapseSparkPoolId(value: string) {
     this._synapseSparkPoolId = value;
   }
   public resetSynapseSparkPoolId() {
@@ -203,15 +234,15 @@ export class SynapseRoleAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get synapseSparkPoolIdInput() {
-    return this._synapseSparkPoolId
+    return this._synapseSparkPoolId;
   }
 
   // synapse_workspace_id - computed: false, optional: true, required: false
-  private _synapseWorkspaceId?: string | undefined; 
+  private _synapseWorkspaceId?: string; 
   public get synapseWorkspaceId() {
     return this.getStringAttribute('synapse_workspace_id');
   }
-  public set synapseWorkspaceId(value: string | undefined) {
+  public set synapseWorkspaceId(value: string) {
     this._synapseWorkspaceId = value;
   }
   public resetSynapseWorkspaceId() {
@@ -219,24 +250,23 @@ export class SynapseRoleAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get synapseWorkspaceIdInput() {
-    return this._synapseWorkspaceId
+    return this._synapseWorkspaceId;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SynapseRoleAssignmentTimeouts | undefined; 
-  private __timeoutsOutput = new SynapseRoleAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SynapseRoleAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SynapseRoleAssignmentTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SynapseRoleAssignmentTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -249,7 +279,7 @@ export class SynapseRoleAssignment extends cdktf.TerraformResource {
       role_name: cdktf.stringToTerraform(this._roleName),
       synapse_spark_pool_id: cdktf.stringToTerraform(this._synapseSparkPoolId),
       synapse_workspace_id: cdktf.stringToTerraform(this._synapseWorkspaceId),
-      timeouts: synapseRoleAssignmentTimeoutsToTerraform(this._timeouts),
+      timeouts: synapseRoleAssignmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

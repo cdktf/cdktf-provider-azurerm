@@ -59,7 +59,7 @@ export interface MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey {
   readonly policyName?: string;
 }
 
-function mediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputReference | MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey): any {
+export function mediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputReference | MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -80,12 +80,37 @@ export class MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputRefe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._label) {
+      hasAnyValues = true;
+      internalValueResult.label = this._label;
+    }
+    if (this._policyName) {
+      hasAnyValues = true;
+      internalValueResult.policyName = this._policyName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey | undefined) {
+    if (value === undefined) {
+      this._label = undefined;
+      this._policyName = undefined;
+    }
+    else {
+      this._label = value.label;
+      this._policyName = value.policyName;
+    }
+  }
+
   // label - computed: false, optional: true, required: false
-  private _label?: string | undefined; 
+  private _label?: string; 
   public get label() {
     return this.getStringAttribute('label');
   }
-  public set label(value: string | undefined) {
+  public set label(value: string) {
     this._label = value;
   }
   public resetLabel() {
@@ -93,15 +118,15 @@ export class MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get labelInput() {
-    return this._label
+    return this._label;
   }
 
   // policy_name - computed: false, optional: true, required: false
-  private _policyName?: string | undefined; 
+  private _policyName?: string; 
   public get policyName() {
     return this.getStringAttribute('policy_name');
   }
-  public set policyName(value: string | undefined) {
+  public set policyName(value: string) {
     this._policyName = value;
   }
   public resetPolicyName() {
@@ -109,7 +134,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get policyNameInput() {
-    return this._policyName
+    return this._policyName;
   }
 }
 export interface MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay {
@@ -123,7 +148,7 @@ export interface MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay {
   readonly customLicenseAcquisitionUrlTemplate?: string;
 }
 
-function mediaStreamingPolicyCommonEncryptionCbcsDrmFairplayToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference | MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay): any {
+export function mediaStreamingPolicyCommonEncryptionCbcsDrmFairplayToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference | MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -144,12 +169,37 @@ export class MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowPersistentLicense) {
+      hasAnyValues = true;
+      internalValueResult.allowPersistentLicense = this._allowPersistentLicense;
+    }
+    if (this._customLicenseAcquisitionUrlTemplate) {
+      hasAnyValues = true;
+      internalValueResult.customLicenseAcquisitionUrlTemplate = this._customLicenseAcquisitionUrlTemplate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay | undefined) {
+    if (value === undefined) {
+      this._allowPersistentLicense = undefined;
+      this._customLicenseAcquisitionUrlTemplate = undefined;
+    }
+    else {
+      this._allowPersistentLicense = value.allowPersistentLicense;
+      this._customLicenseAcquisitionUrlTemplate = value.customLicenseAcquisitionUrlTemplate;
+    }
+  }
+
   // allow_persistent_license - computed: false, optional: true, required: false
-  private _allowPersistentLicense?: boolean | cdktf.IResolvable | undefined; 
+  private _allowPersistentLicense?: boolean | cdktf.IResolvable; 
   public get allowPersistentLicense() {
     return this.getBooleanAttribute('allow_persistent_license') as any;
   }
-  public set allowPersistentLicense(value: boolean | cdktf.IResolvable | undefined) {
+  public set allowPersistentLicense(value: boolean | cdktf.IResolvable) {
     this._allowPersistentLicense = value;
   }
   public resetAllowPersistentLicense() {
@@ -157,15 +207,15 @@ export class MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get allowPersistentLicenseInput() {
-    return this._allowPersistentLicense
+    return this._allowPersistentLicense;
   }
 
   // custom_license_acquisition_url_template - computed: false, optional: true, required: false
-  private _customLicenseAcquisitionUrlTemplate?: string | undefined; 
+  private _customLicenseAcquisitionUrlTemplate?: string; 
   public get customLicenseAcquisitionUrlTemplate() {
     return this.getStringAttribute('custom_license_acquisition_url_template');
   }
-  public set customLicenseAcquisitionUrlTemplate(value: string | undefined) {
+  public set customLicenseAcquisitionUrlTemplate(value: string) {
     this._customLicenseAcquisitionUrlTemplate = value;
   }
   public resetCustomLicenseAcquisitionUrlTemplate() {
@@ -173,7 +223,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get customLicenseAcquisitionUrlTemplateInput() {
-    return this._customLicenseAcquisitionUrlTemplate
+    return this._customLicenseAcquisitionUrlTemplate;
   }
 }
 export interface MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols {
@@ -195,7 +245,7 @@ export interface MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols {
   readonly smoothStreaming?: boolean | cdktf.IResolvable;
 }
 
-function mediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputReference | MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols): any {
+export function mediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputReference | MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -218,12 +268,49 @@ export class MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputRefer
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._dash) {
+      hasAnyValues = true;
+      internalValueResult.dash = this._dash;
+    }
+    if (this._download) {
+      hasAnyValues = true;
+      internalValueResult.download = this._download;
+    }
+    if (this._hls) {
+      hasAnyValues = true;
+      internalValueResult.hls = this._hls;
+    }
+    if (this._smoothStreaming) {
+      hasAnyValues = true;
+      internalValueResult.smoothStreaming = this._smoothStreaming;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols | undefined) {
+    if (value === undefined) {
+      this._dash = undefined;
+      this._download = undefined;
+      this._hls = undefined;
+      this._smoothStreaming = undefined;
+    }
+    else {
+      this._dash = value.dash;
+      this._download = value.download;
+      this._hls = value.hls;
+      this._smoothStreaming = value.smoothStreaming;
+    }
+  }
+
   // dash - computed: false, optional: true, required: false
-  private _dash?: boolean | cdktf.IResolvable | undefined; 
+  private _dash?: boolean | cdktf.IResolvable; 
   public get dash() {
     return this.getBooleanAttribute('dash') as any;
   }
-  public set dash(value: boolean | cdktf.IResolvable | undefined) {
+  public set dash(value: boolean | cdktf.IResolvable) {
     this._dash = value;
   }
   public resetDash() {
@@ -231,15 +318,15 @@ export class MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get dashInput() {
-    return this._dash
+    return this._dash;
   }
 
   // download - computed: false, optional: true, required: false
-  private _download?: boolean | cdktf.IResolvable | undefined; 
+  private _download?: boolean | cdktf.IResolvable; 
   public get download() {
     return this.getBooleanAttribute('download') as any;
   }
-  public set download(value: boolean | cdktf.IResolvable | undefined) {
+  public set download(value: boolean | cdktf.IResolvable) {
     this._download = value;
   }
   public resetDownload() {
@@ -247,15 +334,15 @@ export class MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get downloadInput() {
-    return this._download
+    return this._download;
   }
 
   // hls - computed: false, optional: true, required: false
-  private _hls?: boolean | cdktf.IResolvable | undefined; 
+  private _hls?: boolean | cdktf.IResolvable; 
   public get hls() {
     return this.getBooleanAttribute('hls') as any;
   }
-  public set hls(value: boolean | cdktf.IResolvable | undefined) {
+  public set hls(value: boolean | cdktf.IResolvable) {
     this._hls = value;
   }
   public resetHls() {
@@ -263,15 +350,15 @@ export class MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get hlsInput() {
-    return this._hls
+    return this._hls;
   }
 
   // smooth_streaming - computed: false, optional: true, required: false
-  private _smoothStreaming?: boolean | cdktf.IResolvable | undefined; 
+  private _smoothStreaming?: boolean | cdktf.IResolvable; 
   public get smoothStreaming() {
     return this.getBooleanAttribute('smooth_streaming') as any;
   }
-  public set smoothStreaming(value: boolean | cdktf.IResolvable | undefined) {
+  public set smoothStreaming(value: boolean | cdktf.IResolvable) {
     this._smoothStreaming = value;
   }
   public resetSmoothStreaming() {
@@ -279,7 +366,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get smoothStreamingInput() {
-    return this._smoothStreaming
+    return this._smoothStreaming;
   }
 }
 export interface MediaStreamingPolicyCommonEncryptionCbcs {
@@ -303,7 +390,7 @@ export interface MediaStreamingPolicyCommonEncryptionCbcs {
   readonly enabledProtocols?: MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols;
 }
 
-function mediaStreamingPolicyCommonEncryptionCbcsToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCbcsOutputReference | MediaStreamingPolicyCommonEncryptionCbcs): any {
+export function mediaStreamingPolicyCommonEncryptionCbcsToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCbcsOutputReference | MediaStreamingPolicyCommonEncryptionCbcs): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -325,55 +412,83 @@ export class MediaStreamingPolicyCommonEncryptionCbcsOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // default_content_key - computed: false, optional: true, required: false
-  private _defaultContentKey?: MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey | undefined; 
-  private __defaultContentKeyOutput = new MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputReference(this as any, "default_content_key", true);
-  public get defaultContentKey() {
-    return this.__defaultContentKeyOutput;
+  public get internalValue(): MediaStreamingPolicyCommonEncryptionCbcs | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._defaultContentKey) {
+      hasAnyValues = true;
+      internalValueResult.defaultContentKey = this._defaultContentKey?.internalValue;
+    }
+    if (this._drmFairplay) {
+      hasAnyValues = true;
+      internalValueResult.drmFairplay = this._drmFairplay?.internalValue;
+    }
+    if (this._enabledProtocols) {
+      hasAnyValues = true;
+      internalValueResult.enabledProtocols = this._enabledProtocols?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putDefaultContentKey(value: MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey | undefined) {
-    this._defaultContentKey = value;
+
+  public set internalValue(value: MediaStreamingPolicyCommonEncryptionCbcs | undefined) {
+    if (value === undefined) {
+      this._defaultContentKey.internalValue = undefined;
+      this._drmFairplay.internalValue = undefined;
+      this._enabledProtocols.internalValue = undefined;
+    }
+    else {
+      this._defaultContentKey.internalValue = value.defaultContentKey;
+      this._drmFairplay.internalValue = value.drmFairplay;
+      this._enabledProtocols.internalValue = value.enabledProtocols;
+    }
+  }
+
+  // default_content_key - computed: false, optional: true, required: false
+  private _defaultContentKey = new MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputReference(this as any, "default_content_key", true);
+  public get defaultContentKey() {
+    return this._defaultContentKey;
+  }
+  public putDefaultContentKey(value: MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey) {
+    this._defaultContentKey.internalValue = value;
   }
   public resetDefaultContentKey() {
-    this._defaultContentKey = undefined;
+    this._defaultContentKey.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get defaultContentKeyInput() {
-    return this._defaultContentKey
+    return this._defaultContentKey.internalValue;
   }
 
   // drm_fairplay - computed: false, optional: true, required: false
-  private _drmFairplay?: MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay | undefined; 
-  private __drmFairplayOutput = new MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference(this as any, "drm_fairplay", true);
+  private _drmFairplay = new MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference(this as any, "drm_fairplay", true);
   public get drmFairplay() {
-    return this.__drmFairplayOutput;
+    return this._drmFairplay;
   }
-  public putDrmFairplay(value: MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay | undefined) {
-    this._drmFairplay = value;
+  public putDrmFairplay(value: MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay) {
+    this._drmFairplay.internalValue = value;
   }
   public resetDrmFairplay() {
-    this._drmFairplay = undefined;
+    this._drmFairplay.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get drmFairplayInput() {
-    return this._drmFairplay
+    return this._drmFairplay.internalValue;
   }
 
   // enabled_protocols - computed: false, optional: true, required: false
-  private _enabledProtocols?: MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols | undefined; 
-  private __enabledProtocolsOutput = new MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputReference(this as any, "enabled_protocols", true);
+  private _enabledProtocols = new MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputReference(this as any, "enabled_protocols", true);
   public get enabledProtocols() {
-    return this.__enabledProtocolsOutput;
+    return this._enabledProtocols;
   }
-  public putEnabledProtocols(value: MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols | undefined) {
-    this._enabledProtocols = value;
+  public putEnabledProtocols(value: MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols) {
+    this._enabledProtocols.internalValue = value;
   }
   public resetEnabledProtocols() {
-    this._enabledProtocols = undefined;
+    this._enabledProtocols.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get enabledProtocolsInput() {
-    return this._enabledProtocols
+    return this._enabledProtocols.internalValue;
   }
 }
 export interface MediaStreamingPolicyCommonEncryptionCencDefaultContentKey {
@@ -387,7 +502,7 @@ export interface MediaStreamingPolicyCommonEncryptionCencDefaultContentKey {
   readonly policyName?: string;
 }
 
-function mediaStreamingPolicyCommonEncryptionCencDefaultContentKeyToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputReference | MediaStreamingPolicyCommonEncryptionCencDefaultContentKey): any {
+export function mediaStreamingPolicyCommonEncryptionCencDefaultContentKeyToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputReference | MediaStreamingPolicyCommonEncryptionCencDefaultContentKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -408,12 +523,37 @@ export class MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputRefe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaStreamingPolicyCommonEncryptionCencDefaultContentKey | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._label) {
+      hasAnyValues = true;
+      internalValueResult.label = this._label;
+    }
+    if (this._policyName) {
+      hasAnyValues = true;
+      internalValueResult.policyName = this._policyName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingPolicyCommonEncryptionCencDefaultContentKey | undefined) {
+    if (value === undefined) {
+      this._label = undefined;
+      this._policyName = undefined;
+    }
+    else {
+      this._label = value.label;
+      this._policyName = value.policyName;
+    }
+  }
+
   // label - computed: false, optional: true, required: false
-  private _label?: string | undefined; 
+  private _label?: string; 
   public get label() {
     return this.getStringAttribute('label');
   }
-  public set label(value: string | undefined) {
+  public set label(value: string) {
     this._label = value;
   }
   public resetLabel() {
@@ -421,15 +561,15 @@ export class MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get labelInput() {
-    return this._label
+    return this._label;
   }
 
   // policy_name - computed: false, optional: true, required: false
-  private _policyName?: string | undefined; 
+  private _policyName?: string; 
   public get policyName() {
     return this.getStringAttribute('policy_name');
   }
-  public set policyName(value: string | undefined) {
+  public set policyName(value: string) {
     this._policyName = value;
   }
   public resetPolicyName() {
@@ -437,7 +577,7 @@ export class MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get policyNameInput() {
-    return this._policyName
+    return this._policyName;
   }
 }
 export interface MediaStreamingPolicyCommonEncryptionCencDrmPlayready {
@@ -451,7 +591,7 @@ export interface MediaStreamingPolicyCommonEncryptionCencDrmPlayready {
   readonly customLicenseAcquisitionUrlTemplate?: string;
 }
 
-function mediaStreamingPolicyCommonEncryptionCencDrmPlayreadyToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference | MediaStreamingPolicyCommonEncryptionCencDrmPlayready): any {
+export function mediaStreamingPolicyCommonEncryptionCencDrmPlayreadyToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference | MediaStreamingPolicyCommonEncryptionCencDrmPlayready): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -472,12 +612,37 @@ export class MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaStreamingPolicyCommonEncryptionCencDrmPlayready | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._customAttributes) {
+      hasAnyValues = true;
+      internalValueResult.customAttributes = this._customAttributes;
+    }
+    if (this._customLicenseAcquisitionUrlTemplate) {
+      hasAnyValues = true;
+      internalValueResult.customLicenseAcquisitionUrlTemplate = this._customLicenseAcquisitionUrlTemplate;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingPolicyCommonEncryptionCencDrmPlayready | undefined) {
+    if (value === undefined) {
+      this._customAttributes = undefined;
+      this._customLicenseAcquisitionUrlTemplate = undefined;
+    }
+    else {
+      this._customAttributes = value.customAttributes;
+      this._customLicenseAcquisitionUrlTemplate = value.customLicenseAcquisitionUrlTemplate;
+    }
+  }
+
   // custom_attributes - computed: false, optional: true, required: false
-  private _customAttributes?: string | undefined; 
+  private _customAttributes?: string; 
   public get customAttributes() {
     return this.getStringAttribute('custom_attributes');
   }
-  public set customAttributes(value: string | undefined) {
+  public set customAttributes(value: string) {
     this._customAttributes = value;
   }
   public resetCustomAttributes() {
@@ -485,15 +650,15 @@ export class MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get customAttributesInput() {
-    return this._customAttributes
+    return this._customAttributes;
   }
 
   // custom_license_acquisition_url_template - computed: false, optional: true, required: false
-  private _customLicenseAcquisitionUrlTemplate?: string | undefined; 
+  private _customLicenseAcquisitionUrlTemplate?: string; 
   public get customLicenseAcquisitionUrlTemplate() {
     return this.getStringAttribute('custom_license_acquisition_url_template');
   }
-  public set customLicenseAcquisitionUrlTemplate(value: string | undefined) {
+  public set customLicenseAcquisitionUrlTemplate(value: string) {
     this._customLicenseAcquisitionUrlTemplate = value;
   }
   public resetCustomLicenseAcquisitionUrlTemplate() {
@@ -501,7 +666,7 @@ export class MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference
   }
   // Temporarily expose input value. Use with caution.
   public get customLicenseAcquisitionUrlTemplateInput() {
-    return this._customLicenseAcquisitionUrlTemplate
+    return this._customLicenseAcquisitionUrlTemplate;
   }
 }
 export interface MediaStreamingPolicyCommonEncryptionCencEnabledProtocols {
@@ -523,7 +688,7 @@ export interface MediaStreamingPolicyCommonEncryptionCencEnabledProtocols {
   readonly smoothStreaming?: boolean | cdktf.IResolvable;
 }
 
-function mediaStreamingPolicyCommonEncryptionCencEnabledProtocolsToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputReference | MediaStreamingPolicyCommonEncryptionCencEnabledProtocols): any {
+export function mediaStreamingPolicyCommonEncryptionCencEnabledProtocolsToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputReference | MediaStreamingPolicyCommonEncryptionCencEnabledProtocols): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -546,12 +711,49 @@ export class MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputRefer
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaStreamingPolicyCommonEncryptionCencEnabledProtocols | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._dash) {
+      hasAnyValues = true;
+      internalValueResult.dash = this._dash;
+    }
+    if (this._download) {
+      hasAnyValues = true;
+      internalValueResult.download = this._download;
+    }
+    if (this._hls) {
+      hasAnyValues = true;
+      internalValueResult.hls = this._hls;
+    }
+    if (this._smoothStreaming) {
+      hasAnyValues = true;
+      internalValueResult.smoothStreaming = this._smoothStreaming;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingPolicyCommonEncryptionCencEnabledProtocols | undefined) {
+    if (value === undefined) {
+      this._dash = undefined;
+      this._download = undefined;
+      this._hls = undefined;
+      this._smoothStreaming = undefined;
+    }
+    else {
+      this._dash = value.dash;
+      this._download = value.download;
+      this._hls = value.hls;
+      this._smoothStreaming = value.smoothStreaming;
+    }
+  }
+
   // dash - computed: false, optional: true, required: false
-  private _dash?: boolean | cdktf.IResolvable | undefined; 
+  private _dash?: boolean | cdktf.IResolvable; 
   public get dash() {
     return this.getBooleanAttribute('dash') as any;
   }
-  public set dash(value: boolean | cdktf.IResolvable | undefined) {
+  public set dash(value: boolean | cdktf.IResolvable) {
     this._dash = value;
   }
   public resetDash() {
@@ -559,15 +761,15 @@ export class MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get dashInput() {
-    return this._dash
+    return this._dash;
   }
 
   // download - computed: false, optional: true, required: false
-  private _download?: boolean | cdktf.IResolvable | undefined; 
+  private _download?: boolean | cdktf.IResolvable; 
   public get download() {
     return this.getBooleanAttribute('download') as any;
   }
-  public set download(value: boolean | cdktf.IResolvable | undefined) {
+  public set download(value: boolean | cdktf.IResolvable) {
     this._download = value;
   }
   public resetDownload() {
@@ -575,15 +777,15 @@ export class MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get downloadInput() {
-    return this._download
+    return this._download;
   }
 
   // hls - computed: false, optional: true, required: false
-  private _hls?: boolean | cdktf.IResolvable | undefined; 
+  private _hls?: boolean | cdktf.IResolvable; 
   public get hls() {
     return this.getBooleanAttribute('hls') as any;
   }
-  public set hls(value: boolean | cdktf.IResolvable | undefined) {
+  public set hls(value: boolean | cdktf.IResolvable) {
     this._hls = value;
   }
   public resetHls() {
@@ -591,15 +793,15 @@ export class MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get hlsInput() {
-    return this._hls
+    return this._hls;
   }
 
   // smooth_streaming - computed: false, optional: true, required: false
-  private _smoothStreaming?: boolean | cdktf.IResolvable | undefined; 
+  private _smoothStreaming?: boolean | cdktf.IResolvable; 
   public get smoothStreaming() {
     return this.getBooleanAttribute('smooth_streaming') as any;
   }
-  public set smoothStreaming(value: boolean | cdktf.IResolvable | undefined) {
+  public set smoothStreaming(value: boolean | cdktf.IResolvable) {
     this._smoothStreaming = value;
   }
   public resetSmoothStreaming() {
@@ -607,7 +809,7 @@ export class MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get smoothStreamingInput() {
-    return this._smoothStreaming
+    return this._smoothStreaming;
   }
 }
 export interface MediaStreamingPolicyCommonEncryptionCenc {
@@ -635,7 +837,7 @@ export interface MediaStreamingPolicyCommonEncryptionCenc {
   readonly enabledProtocols?: MediaStreamingPolicyCommonEncryptionCencEnabledProtocols;
 }
 
-function mediaStreamingPolicyCommonEncryptionCencToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencOutputReference | MediaStreamingPolicyCommonEncryptionCenc): any {
+export function mediaStreamingPolicyCommonEncryptionCencToTerraform(struct?: MediaStreamingPolicyCommonEncryptionCencOutputReference | MediaStreamingPolicyCommonEncryptionCenc): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -658,12 +860,49 @@ export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaStreamingPolicyCommonEncryptionCenc | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._drmWidevineCustomLicenseAcquisitionUrlTemplate) {
+      hasAnyValues = true;
+      internalValueResult.drmWidevineCustomLicenseAcquisitionUrlTemplate = this._drmWidevineCustomLicenseAcquisitionUrlTemplate;
+    }
+    if (this._defaultContentKey) {
+      hasAnyValues = true;
+      internalValueResult.defaultContentKey = this._defaultContentKey?.internalValue;
+    }
+    if (this._drmPlayready) {
+      hasAnyValues = true;
+      internalValueResult.drmPlayready = this._drmPlayready?.internalValue;
+    }
+    if (this._enabledProtocols) {
+      hasAnyValues = true;
+      internalValueResult.enabledProtocols = this._enabledProtocols?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingPolicyCommonEncryptionCenc | undefined) {
+    if (value === undefined) {
+      this._drmWidevineCustomLicenseAcquisitionUrlTemplate = undefined;
+      this._defaultContentKey.internalValue = undefined;
+      this._drmPlayready.internalValue = undefined;
+      this._enabledProtocols.internalValue = undefined;
+    }
+    else {
+      this._drmWidevineCustomLicenseAcquisitionUrlTemplate = value.drmWidevineCustomLicenseAcquisitionUrlTemplate;
+      this._defaultContentKey.internalValue = value.defaultContentKey;
+      this._drmPlayready.internalValue = value.drmPlayready;
+      this._enabledProtocols.internalValue = value.enabledProtocols;
+    }
+  }
+
   // drm_widevine_custom_license_acquisition_url_template - computed: false, optional: true, required: false
-  private _drmWidevineCustomLicenseAcquisitionUrlTemplate?: string | undefined; 
+  private _drmWidevineCustomLicenseAcquisitionUrlTemplate?: string; 
   public get drmWidevineCustomLicenseAcquisitionUrlTemplate() {
     return this.getStringAttribute('drm_widevine_custom_license_acquisition_url_template');
   }
-  public set drmWidevineCustomLicenseAcquisitionUrlTemplate(value: string | undefined) {
+  public set drmWidevineCustomLicenseAcquisitionUrlTemplate(value: string) {
     this._drmWidevineCustomLicenseAcquisitionUrlTemplate = value;
   }
   public resetDrmWidevineCustomLicenseAcquisitionUrlTemplate() {
@@ -671,58 +910,55 @@ export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get drmWidevineCustomLicenseAcquisitionUrlTemplateInput() {
-    return this._drmWidevineCustomLicenseAcquisitionUrlTemplate
+    return this._drmWidevineCustomLicenseAcquisitionUrlTemplate;
   }
 
   // default_content_key - computed: false, optional: true, required: false
-  private _defaultContentKey?: MediaStreamingPolicyCommonEncryptionCencDefaultContentKey | undefined; 
-  private __defaultContentKeyOutput = new MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputReference(this as any, "default_content_key", true);
+  private _defaultContentKey = new MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputReference(this as any, "default_content_key", true);
   public get defaultContentKey() {
-    return this.__defaultContentKeyOutput;
+    return this._defaultContentKey;
   }
-  public putDefaultContentKey(value: MediaStreamingPolicyCommonEncryptionCencDefaultContentKey | undefined) {
-    this._defaultContentKey = value;
+  public putDefaultContentKey(value: MediaStreamingPolicyCommonEncryptionCencDefaultContentKey) {
+    this._defaultContentKey.internalValue = value;
   }
   public resetDefaultContentKey() {
-    this._defaultContentKey = undefined;
+    this._defaultContentKey.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get defaultContentKeyInput() {
-    return this._defaultContentKey
+    return this._defaultContentKey.internalValue;
   }
 
   // drm_playready - computed: false, optional: true, required: false
-  private _drmPlayready?: MediaStreamingPolicyCommonEncryptionCencDrmPlayready | undefined; 
-  private __drmPlayreadyOutput = new MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference(this as any, "drm_playready", true);
+  private _drmPlayready = new MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference(this as any, "drm_playready", true);
   public get drmPlayready() {
-    return this.__drmPlayreadyOutput;
+    return this._drmPlayready;
   }
-  public putDrmPlayready(value: MediaStreamingPolicyCommonEncryptionCencDrmPlayready | undefined) {
-    this._drmPlayready = value;
+  public putDrmPlayready(value: MediaStreamingPolicyCommonEncryptionCencDrmPlayready) {
+    this._drmPlayready.internalValue = value;
   }
   public resetDrmPlayready() {
-    this._drmPlayready = undefined;
+    this._drmPlayready.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get drmPlayreadyInput() {
-    return this._drmPlayready
+    return this._drmPlayready.internalValue;
   }
 
   // enabled_protocols - computed: false, optional: true, required: false
-  private _enabledProtocols?: MediaStreamingPolicyCommonEncryptionCencEnabledProtocols | undefined; 
-  private __enabledProtocolsOutput = new MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputReference(this as any, "enabled_protocols", true);
+  private _enabledProtocols = new MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputReference(this as any, "enabled_protocols", true);
   public get enabledProtocols() {
-    return this.__enabledProtocolsOutput;
+    return this._enabledProtocols;
   }
-  public putEnabledProtocols(value: MediaStreamingPolicyCommonEncryptionCencEnabledProtocols | undefined) {
-    this._enabledProtocols = value;
+  public putEnabledProtocols(value: MediaStreamingPolicyCommonEncryptionCencEnabledProtocols) {
+    this._enabledProtocols.internalValue = value;
   }
   public resetEnabledProtocols() {
-    this._enabledProtocols = undefined;
+    this._enabledProtocols.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get enabledProtocolsInput() {
-    return this._enabledProtocols
+    return this._enabledProtocols.internalValue;
   }
 }
 export interface MediaStreamingPolicyNoEncryptionEnabledProtocols {
@@ -744,7 +980,7 @@ export interface MediaStreamingPolicyNoEncryptionEnabledProtocols {
   readonly smoothStreaming?: boolean | cdktf.IResolvable;
 }
 
-function mediaStreamingPolicyNoEncryptionEnabledProtocolsToTerraform(struct?: MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference | MediaStreamingPolicyNoEncryptionEnabledProtocols): any {
+export function mediaStreamingPolicyNoEncryptionEnabledProtocolsToTerraform(struct?: MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference | MediaStreamingPolicyNoEncryptionEnabledProtocols): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -767,12 +1003,49 @@ export class MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaStreamingPolicyNoEncryptionEnabledProtocols | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._dash) {
+      hasAnyValues = true;
+      internalValueResult.dash = this._dash;
+    }
+    if (this._download) {
+      hasAnyValues = true;
+      internalValueResult.download = this._download;
+    }
+    if (this._hls) {
+      hasAnyValues = true;
+      internalValueResult.hls = this._hls;
+    }
+    if (this._smoothStreaming) {
+      hasAnyValues = true;
+      internalValueResult.smoothStreaming = this._smoothStreaming;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingPolicyNoEncryptionEnabledProtocols | undefined) {
+    if (value === undefined) {
+      this._dash = undefined;
+      this._download = undefined;
+      this._hls = undefined;
+      this._smoothStreaming = undefined;
+    }
+    else {
+      this._dash = value.dash;
+      this._download = value.download;
+      this._hls = value.hls;
+      this._smoothStreaming = value.smoothStreaming;
+    }
+  }
+
   // dash - computed: false, optional: true, required: false
-  private _dash?: boolean | cdktf.IResolvable | undefined; 
+  private _dash?: boolean | cdktf.IResolvable; 
   public get dash() {
     return this.getBooleanAttribute('dash') as any;
   }
-  public set dash(value: boolean | cdktf.IResolvable | undefined) {
+  public set dash(value: boolean | cdktf.IResolvable) {
     this._dash = value;
   }
   public resetDash() {
@@ -780,15 +1053,15 @@ export class MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get dashInput() {
-    return this._dash
+    return this._dash;
   }
 
   // download - computed: false, optional: true, required: false
-  private _download?: boolean | cdktf.IResolvable | undefined; 
+  private _download?: boolean | cdktf.IResolvable; 
   public get download() {
     return this.getBooleanAttribute('download') as any;
   }
-  public set download(value: boolean | cdktf.IResolvable | undefined) {
+  public set download(value: boolean | cdktf.IResolvable) {
     this._download = value;
   }
   public resetDownload() {
@@ -796,15 +1069,15 @@ export class MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get downloadInput() {
-    return this._download
+    return this._download;
   }
 
   // hls - computed: false, optional: true, required: false
-  private _hls?: boolean | cdktf.IResolvable | undefined; 
+  private _hls?: boolean | cdktf.IResolvable; 
   public get hls() {
     return this.getBooleanAttribute('hls') as any;
   }
-  public set hls(value: boolean | cdktf.IResolvable | undefined) {
+  public set hls(value: boolean | cdktf.IResolvable) {
     this._hls = value;
   }
   public resetHls() {
@@ -812,15 +1085,15 @@ export class MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get hlsInput() {
-    return this._hls
+    return this._hls;
   }
 
   // smooth_streaming - computed: false, optional: true, required: false
-  private _smoothStreaming?: boolean | cdktf.IResolvable | undefined; 
+  private _smoothStreaming?: boolean | cdktf.IResolvable; 
   public get smoothStreaming() {
     return this.getBooleanAttribute('smooth_streaming') as any;
   }
-  public set smoothStreaming(value: boolean | cdktf.IResolvable | undefined) {
+  public set smoothStreaming(value: boolean | cdktf.IResolvable) {
     this._smoothStreaming = value;
   }
   public resetSmoothStreaming() {
@@ -828,7 +1101,7 @@ export class MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get smoothStreamingInput() {
-    return this._smoothStreaming
+    return this._smoothStreaming;
   }
 }
 export interface MediaStreamingPolicyTimeouts {
@@ -846,7 +1119,7 @@ export interface MediaStreamingPolicyTimeouts {
   readonly read?: string;
 }
 
-function mediaStreamingPolicyTimeoutsToTerraform(struct?: MediaStreamingPolicyTimeoutsOutputReference | MediaStreamingPolicyTimeouts): any {
+export function mediaStreamingPolicyTimeoutsToTerraform(struct?: MediaStreamingPolicyTimeoutsOutputReference | MediaStreamingPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -868,12 +1141,43 @@ export class MediaStreamingPolicyTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaStreamingPolicyTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingPolicyTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -881,15 +1185,15 @@ export class MediaStreamingPolicyTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -897,15 +1201,15 @@ export class MediaStreamingPolicyTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -913,7 +1217,7 @@ export class MediaStreamingPolicyTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -953,10 +1257,10 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
     this._mediaServicesAccountName = config.mediaServicesAccountName;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._commonEncryptionCbcs = config.commonEncryptionCbcs;
-    this._commonEncryptionCenc = config.commonEncryptionCenc;
-    this._noEncryptionEnabledProtocols = config.noEncryptionEnabledProtocols;
-    this._timeouts = config.timeouts;
+    this._commonEncryptionCbcs.internalValue = config.commonEncryptionCbcs;
+    this._commonEncryptionCenc.internalValue = config.commonEncryptionCenc;
+    this._noEncryptionEnabledProtocols.internalValue = config.noEncryptionEnabledProtocols;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -964,11 +1268,11 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
   // ==========
 
   // default_content_key_policy_name - computed: false, optional: true, required: false
-  private _defaultContentKeyPolicyName?: string | undefined; 
+  private _defaultContentKeyPolicyName?: string; 
   public get defaultContentKeyPolicyName() {
     return this.getStringAttribute('default_content_key_policy_name');
   }
-  public set defaultContentKeyPolicyName(value: string | undefined) {
+  public set defaultContentKeyPolicyName(value: string) {
     this._defaultContentKeyPolicyName = value;
   }
   public resetDefaultContentKeyPolicyName() {
@@ -976,7 +1280,7 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get defaultContentKeyPolicyNameInput() {
-    return this._defaultContentKeyPolicyName
+    return this._defaultContentKeyPolicyName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -994,7 +1298,7 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get mediaServicesAccountNameInput() {
-    return this._mediaServicesAccountName
+    return this._mediaServicesAccountName;
   }
 
   // name - computed: false, optional: false, required: true
@@ -1007,7 +1311,7 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -1020,75 +1324,71 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // common_encryption_cbcs - computed: false, optional: true, required: false
-  private _commonEncryptionCbcs?: MediaStreamingPolicyCommonEncryptionCbcs | undefined; 
-  private __commonEncryptionCbcsOutput = new MediaStreamingPolicyCommonEncryptionCbcsOutputReference(this as any, "common_encryption_cbcs", true);
+  private _commonEncryptionCbcs = new MediaStreamingPolicyCommonEncryptionCbcsOutputReference(this as any, "common_encryption_cbcs", true);
   public get commonEncryptionCbcs() {
-    return this.__commonEncryptionCbcsOutput;
+    return this._commonEncryptionCbcs;
   }
-  public putCommonEncryptionCbcs(value: MediaStreamingPolicyCommonEncryptionCbcs | undefined) {
-    this._commonEncryptionCbcs = value;
+  public putCommonEncryptionCbcs(value: MediaStreamingPolicyCommonEncryptionCbcs) {
+    this._commonEncryptionCbcs.internalValue = value;
   }
   public resetCommonEncryptionCbcs() {
-    this._commonEncryptionCbcs = undefined;
+    this._commonEncryptionCbcs.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get commonEncryptionCbcsInput() {
-    return this._commonEncryptionCbcs
+    return this._commonEncryptionCbcs.internalValue;
   }
 
   // common_encryption_cenc - computed: false, optional: true, required: false
-  private _commonEncryptionCenc?: MediaStreamingPolicyCommonEncryptionCenc | undefined; 
-  private __commonEncryptionCencOutput = new MediaStreamingPolicyCommonEncryptionCencOutputReference(this as any, "common_encryption_cenc", true);
+  private _commonEncryptionCenc = new MediaStreamingPolicyCommonEncryptionCencOutputReference(this as any, "common_encryption_cenc", true);
   public get commonEncryptionCenc() {
-    return this.__commonEncryptionCencOutput;
+    return this._commonEncryptionCenc;
   }
-  public putCommonEncryptionCenc(value: MediaStreamingPolicyCommonEncryptionCenc | undefined) {
-    this._commonEncryptionCenc = value;
+  public putCommonEncryptionCenc(value: MediaStreamingPolicyCommonEncryptionCenc) {
+    this._commonEncryptionCenc.internalValue = value;
   }
   public resetCommonEncryptionCenc() {
-    this._commonEncryptionCenc = undefined;
+    this._commonEncryptionCenc.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get commonEncryptionCencInput() {
-    return this._commonEncryptionCenc
+    return this._commonEncryptionCenc.internalValue;
   }
 
   // no_encryption_enabled_protocols - computed: false, optional: true, required: false
-  private _noEncryptionEnabledProtocols?: MediaStreamingPolicyNoEncryptionEnabledProtocols | undefined; 
-  private __noEncryptionEnabledProtocolsOutput = new MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference(this as any, "no_encryption_enabled_protocols", true);
+  private _noEncryptionEnabledProtocols = new MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference(this as any, "no_encryption_enabled_protocols", true);
   public get noEncryptionEnabledProtocols() {
-    return this.__noEncryptionEnabledProtocolsOutput;
+    return this._noEncryptionEnabledProtocols;
   }
-  public putNoEncryptionEnabledProtocols(value: MediaStreamingPolicyNoEncryptionEnabledProtocols | undefined) {
-    this._noEncryptionEnabledProtocols = value;
+  public putNoEncryptionEnabledProtocols(value: MediaStreamingPolicyNoEncryptionEnabledProtocols) {
+    this._noEncryptionEnabledProtocols.internalValue = value;
   }
   public resetNoEncryptionEnabledProtocols() {
-    this._noEncryptionEnabledProtocols = undefined;
+    this._noEncryptionEnabledProtocols.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get noEncryptionEnabledProtocolsInput() {
-    return this._noEncryptionEnabledProtocols
+    return this._noEncryptionEnabledProtocols.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MediaStreamingPolicyTimeouts | undefined; 
-  private __timeoutsOutput = new MediaStreamingPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MediaStreamingPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MediaStreamingPolicyTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MediaStreamingPolicyTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -1101,10 +1401,10 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
       media_services_account_name: cdktf.stringToTerraform(this._mediaServicesAccountName),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      common_encryption_cbcs: mediaStreamingPolicyCommonEncryptionCbcsToTerraform(this._commonEncryptionCbcs),
-      common_encryption_cenc: mediaStreamingPolicyCommonEncryptionCencToTerraform(this._commonEncryptionCenc),
-      no_encryption_enabled_protocols: mediaStreamingPolicyNoEncryptionEnabledProtocolsToTerraform(this._noEncryptionEnabledProtocols),
-      timeouts: mediaStreamingPolicyTimeoutsToTerraform(this._timeouts),
+      common_encryption_cbcs: mediaStreamingPolicyCommonEncryptionCbcsToTerraform(this._commonEncryptionCbcs.internalValue),
+      common_encryption_cenc: mediaStreamingPolicyCommonEncryptionCencToTerraform(this._commonEncryptionCenc.internalValue),
+      no_encryption_enabled_protocols: mediaStreamingPolicyNoEncryptionEnabledProtocolsToTerraform(this._noEncryptionEnabledProtocols.internalValue),
+      timeouts: mediaStreamingPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

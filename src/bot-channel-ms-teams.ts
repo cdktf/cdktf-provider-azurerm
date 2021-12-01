@@ -53,7 +53,7 @@ export interface BotChannelMsTeamsTimeouts {
   readonly update?: string;
 }
 
-function botChannelMsTeamsTimeoutsToTerraform(struct?: BotChannelMsTeamsTimeoutsOutputReference | BotChannelMsTeamsTimeouts): any {
+export function botChannelMsTeamsTimeoutsToTerraform(struct?: BotChannelMsTeamsTimeoutsOutputReference | BotChannelMsTeamsTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -76,12 +76,49 @@ export class BotChannelMsTeamsTimeoutsOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BotChannelMsTeamsTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BotChannelMsTeamsTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -89,15 +126,15 @@ export class BotChannelMsTeamsTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -105,15 +142,15 @@ export class BotChannelMsTeamsTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -121,15 +158,15 @@ export class BotChannelMsTeamsTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -137,7 +174,7 @@ export class BotChannelMsTeamsTimeoutsOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -178,7 +215,7 @@ export class BotChannelMsTeams extends cdktf.TerraformResource {
     this._enableCalling = config.enableCalling;
     this._location = config.location;
     this._resourceGroupName = config.resourceGroupName;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -195,15 +232,15 @@ export class BotChannelMsTeams extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get botNameInput() {
-    return this._botName
+    return this._botName;
   }
 
   // calling_web_hook - computed: true, optional: true, required: false
-  private _callingWebHook?: string | undefined; 
+  private _callingWebHook?: string; 
   public get callingWebHook() {
     return this.getStringAttribute('calling_web_hook');
   }
-  public set callingWebHook(value: string | undefined) {
+  public set callingWebHook(value: string) {
     this._callingWebHook = value;
   }
   public resetCallingWebHook() {
@@ -211,15 +248,15 @@ export class BotChannelMsTeams extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get callingWebHookInput() {
-    return this._callingWebHook
+    return this._callingWebHook;
   }
 
   // enable_calling - computed: false, optional: true, required: false
-  private _enableCalling?: boolean | cdktf.IResolvable | undefined; 
+  private _enableCalling?: boolean | cdktf.IResolvable; 
   public get enableCalling() {
     return this.getBooleanAttribute('enable_calling') as any;
   }
-  public set enableCalling(value: boolean | cdktf.IResolvable | undefined) {
+  public set enableCalling(value: boolean | cdktf.IResolvable) {
     this._enableCalling = value;
   }
   public resetEnableCalling() {
@@ -227,7 +264,7 @@ export class BotChannelMsTeams extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enableCallingInput() {
-    return this._enableCalling
+    return this._enableCalling;
   }
 
   // id - computed: true, optional: true, required: false
@@ -245,7 +282,7 @@ export class BotChannelMsTeams extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -258,24 +295,23 @@ export class BotChannelMsTeams extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: BotChannelMsTeamsTimeouts | undefined; 
-  private __timeoutsOutput = new BotChannelMsTeamsTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BotChannelMsTeamsTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: BotChannelMsTeamsTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: BotChannelMsTeamsTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -289,7 +325,7 @@ export class BotChannelMsTeams extends cdktf.TerraformResource {
       enable_calling: cdktf.booleanToTerraform(this._enableCalling),
       location: cdktf.stringToTerraform(this._location),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      timeouts: botChannelMsTeamsTimeoutsToTerraform(this._timeouts),
+      timeouts: botChannelMsTeamsTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

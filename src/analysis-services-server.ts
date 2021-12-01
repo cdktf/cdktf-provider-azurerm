@@ -71,7 +71,7 @@ export interface AnalysisServicesServerIpv4FirewallRule {
   readonly rangeStart: string;
 }
 
-function analysisServicesServerIpv4FirewallRuleToTerraform(struct?: AnalysisServicesServerIpv4FirewallRule): any {
+export function analysisServicesServerIpv4FirewallRuleToTerraform(struct?: AnalysisServicesServerIpv4FirewallRule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -102,7 +102,7 @@ export interface AnalysisServicesServerTimeouts {
   readonly update?: string;
 }
 
-function analysisServicesServerTimeoutsToTerraform(struct?: AnalysisServicesServerTimeoutsOutputReference | AnalysisServicesServerTimeouts): any {
+export function analysisServicesServerTimeoutsToTerraform(struct?: AnalysisServicesServerTimeoutsOutputReference | AnalysisServicesServerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -125,12 +125,49 @@ export class AnalysisServicesServerTimeoutsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AnalysisServicesServerTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AnalysisServicesServerTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -138,15 +175,15 @@ export class AnalysisServicesServerTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -154,15 +191,15 @@ export class AnalysisServicesServerTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -170,15 +207,15 @@ export class AnalysisServicesServerTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -186,7 +223,7 @@ export class AnalysisServicesServerTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -232,7 +269,7 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
     this._sku = config.sku;
     this._tags = config.tags;
     this._ipv4FirewallRule = config.ipv4FirewallRule;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -240,11 +277,11 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   // ==========
 
   // admin_users - computed: false, optional: true, required: false
-  private _adminUsers?: string[] | undefined; 
+  private _adminUsers?: string[]; 
   public get adminUsers() {
     return this.getListAttribute('admin_users');
   }
-  public set adminUsers(value: string[] | undefined) {
+  public set adminUsers(value: string[]) {
     this._adminUsers = value;
   }
   public resetAdminUsers() {
@@ -252,15 +289,15 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get adminUsersInput() {
-    return this._adminUsers
+    return this._adminUsers;
   }
 
   // backup_blob_container_uri - computed: false, optional: true, required: false
-  private _backupBlobContainerUri?: string | undefined; 
+  private _backupBlobContainerUri?: string; 
   public get backupBlobContainerUri() {
     return this.getStringAttribute('backup_blob_container_uri');
   }
-  public set backupBlobContainerUri(value: string | undefined) {
+  public set backupBlobContainerUri(value: string) {
     this._backupBlobContainerUri = value;
   }
   public resetBackupBlobContainerUri() {
@@ -268,15 +305,15 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get backupBlobContainerUriInput() {
-    return this._backupBlobContainerUri
+    return this._backupBlobContainerUri;
   }
 
   // enable_power_bi_service - computed: false, optional: true, required: false
-  private _enablePowerBiService?: boolean | cdktf.IResolvable | undefined; 
+  private _enablePowerBiService?: boolean | cdktf.IResolvable; 
   public get enablePowerBiService() {
     return this.getBooleanAttribute('enable_power_bi_service') as any;
   }
-  public set enablePowerBiService(value: boolean | cdktf.IResolvable | undefined) {
+  public set enablePowerBiService(value: boolean | cdktf.IResolvable) {
     this._enablePowerBiService = value;
   }
   public resetEnablePowerBiService() {
@@ -284,7 +321,7 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enablePowerBiServiceInput() {
-    return this._enablePowerBiService
+    return this._enablePowerBiService;
   }
 
   // id - computed: true, optional: true, required: false
@@ -302,7 +339,7 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -315,15 +352,15 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // querypool_connection_mode - computed: true, optional: true, required: false
-  private _querypoolConnectionMode?: string | undefined; 
+  private _querypoolConnectionMode?: string; 
   public get querypoolConnectionMode() {
     return this.getStringAttribute('querypool_connection_mode');
   }
-  public set querypoolConnectionMode(value: string | undefined) {
+  public set querypoolConnectionMode(value: string) {
     this._querypoolConnectionMode = value;
   }
   public resetQuerypoolConnectionMode() {
@@ -331,7 +368,7 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get querypoolConnectionModeInput() {
-    return this._querypoolConnectionMode
+    return this._querypoolConnectionMode;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -344,7 +381,7 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // server_full_name - computed: true, optional: false, required: false
@@ -362,16 +399,16 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuInput() {
-    return this._sku
+    return this._sku;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -379,16 +416,16 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // ipv4_firewall_rule - computed: false, optional: true, required: false
-  private _ipv4FirewallRule?: AnalysisServicesServerIpv4FirewallRule[] | undefined; 
+  private _ipv4FirewallRule?: AnalysisServicesServerIpv4FirewallRule[]; 
   public get ipv4FirewallRule() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ipv4_firewall_rule') as any;
   }
-  public set ipv4FirewallRule(value: AnalysisServicesServerIpv4FirewallRule[] | undefined) {
+  public set ipv4FirewallRule(value: AnalysisServicesServerIpv4FirewallRule[]) {
     this._ipv4FirewallRule = value;
   }
   public resetIpv4FirewallRule() {
@@ -396,24 +433,23 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipv4FirewallRuleInput() {
-    return this._ipv4FirewallRule
+    return this._ipv4FirewallRule;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AnalysisServicesServerTimeouts | undefined; 
-  private __timeoutsOutput = new AnalysisServicesServerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AnalysisServicesServerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: AnalysisServicesServerTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: AnalysisServicesServerTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -432,7 +468,7 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       ipv4_firewall_rule: cdktf.listMapper(analysisServicesServerIpv4FirewallRuleToTerraform)(this._ipv4FirewallRule),
-      timeouts: analysisServicesServerTimeoutsToTerraform(this._timeouts),
+      timeouts: analysisServicesServerTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

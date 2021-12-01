@@ -67,7 +67,7 @@ export interface ApiManagementNamedValueTimeouts {
   readonly update?: string;
 }
 
-function apiManagementNamedValueTimeoutsToTerraform(struct?: ApiManagementNamedValueTimeoutsOutputReference | ApiManagementNamedValueTimeouts): any {
+export function apiManagementNamedValueTimeoutsToTerraform(struct?: ApiManagementNamedValueTimeoutsOutputReference | ApiManagementNamedValueTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -90,12 +90,49 @@ export class ApiManagementNamedValueTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementNamedValueTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementNamedValueTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -103,15 +140,15 @@ export class ApiManagementNamedValueTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -119,15 +156,15 @@ export class ApiManagementNamedValueTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -135,15 +172,15 @@ export class ApiManagementNamedValueTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -151,7 +188,7 @@ export class ApiManagementNamedValueTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface ApiManagementNamedValueValueFromKeyVault {
@@ -165,7 +202,7 @@ export interface ApiManagementNamedValueValueFromKeyVault {
   readonly secretId: string;
 }
 
-function apiManagementNamedValueValueFromKeyVaultToTerraform(struct?: ApiManagementNamedValueValueFromKeyVaultOutputReference | ApiManagementNamedValueValueFromKeyVault): any {
+export function apiManagementNamedValueValueFromKeyVaultToTerraform(struct?: ApiManagementNamedValueValueFromKeyVaultOutputReference | ApiManagementNamedValueValueFromKeyVault): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -186,12 +223,37 @@ export class ApiManagementNamedValueValueFromKeyVaultOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementNamedValueValueFromKeyVault | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._identityClientId) {
+      hasAnyValues = true;
+      internalValueResult.identityClientId = this._identityClientId;
+    }
+    if (this._secretId) {
+      hasAnyValues = true;
+      internalValueResult.secretId = this._secretId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementNamedValueValueFromKeyVault | undefined) {
+    if (value === undefined) {
+      this._identityClientId = undefined;
+      this._secretId = undefined;
+    }
+    else {
+      this._identityClientId = value.identityClientId;
+      this._secretId = value.secretId;
+    }
+  }
+
   // identity_client_id - computed: false, optional: true, required: false
-  private _identityClientId?: string | undefined; 
+  private _identityClientId?: string; 
   public get identityClientId() {
     return this.getStringAttribute('identity_client_id');
   }
-  public set identityClientId(value: string | undefined) {
+  public set identityClientId(value: string) {
     this._identityClientId = value;
   }
   public resetIdentityClientId() {
@@ -199,7 +261,7 @@ export class ApiManagementNamedValueValueFromKeyVaultOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get identityClientIdInput() {
-    return this._identityClientId
+    return this._identityClientId;
   }
 
   // secret_id - computed: false, optional: false, required: true
@@ -212,7 +274,7 @@ export class ApiManagementNamedValueValueFromKeyVaultOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get secretIdInput() {
-    return this._secretId
+    return this._secretId;
   }
 }
 
@@ -255,8 +317,8 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
     this._secret = config.secret;
     this._tags = config.tags;
     this._value = config.value;
-    this._timeouts = config.timeouts;
-    this._valueFromKeyVault = config.valueFromKeyVault;
+    this._timeouts.internalValue = config.timeouts;
+    this._valueFromKeyVault.internalValue = config.valueFromKeyVault;
   }
 
   // ==========
@@ -273,7 +335,7 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get apiManagementNameInput() {
-    return this._apiManagementName
+    return this._apiManagementName;
   }
 
   // display_name - computed: false, optional: false, required: true
@@ -286,7 +348,7 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {
-    return this._displayName
+    return this._displayName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -304,7 +366,7 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -317,15 +379,15 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // secret - computed: false, optional: true, required: false
-  private _secret?: boolean | cdktf.IResolvable | undefined; 
+  private _secret?: boolean | cdktf.IResolvable; 
   public get secret() {
     return this.getBooleanAttribute('secret') as any;
   }
-  public set secret(value: boolean | cdktf.IResolvable | undefined) {
+  public set secret(value: boolean | cdktf.IResolvable) {
     this._secret = value;
   }
   public resetSecret() {
@@ -333,15 +395,15 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get secretInput() {
-    return this._secret
+    return this._secret;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: string[] | undefined; 
+  private _tags?: string[]; 
   public get tags() {
     return this.getListAttribute('tags');
   }
-  public set tags(value: string[] | undefined) {
+  public set tags(value: string[]) {
     this._tags = value;
   }
   public resetTags() {
@@ -349,15 +411,15 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // value - computed: false, optional: true, required: false
-  private _value?: string | undefined; 
+  private _value?: string; 
   public get value() {
     return this.getStringAttribute('value');
   }
-  public set value(value: string | undefined) {
+  public set value(value: string) {
     this._value = value;
   }
   public resetValue() {
@@ -365,41 +427,39 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get valueInput() {
-    return this._value
+    return this._value;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ApiManagementNamedValueTimeouts | undefined; 
-  private __timeoutsOutput = new ApiManagementNamedValueTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApiManagementNamedValueTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ApiManagementNamedValueTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ApiManagementNamedValueTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // value_from_key_vault - computed: false, optional: true, required: false
-  private _valueFromKeyVault?: ApiManagementNamedValueValueFromKeyVault | undefined; 
-  private __valueFromKeyVaultOutput = new ApiManagementNamedValueValueFromKeyVaultOutputReference(this as any, "value_from_key_vault", true);
+  private _valueFromKeyVault = new ApiManagementNamedValueValueFromKeyVaultOutputReference(this as any, "value_from_key_vault", true);
   public get valueFromKeyVault() {
-    return this.__valueFromKeyVaultOutput;
+    return this._valueFromKeyVault;
   }
-  public putValueFromKeyVault(value: ApiManagementNamedValueValueFromKeyVault | undefined) {
-    this._valueFromKeyVault = value;
+  public putValueFromKeyVault(value: ApiManagementNamedValueValueFromKeyVault) {
+    this._valueFromKeyVault.internalValue = value;
   }
   public resetValueFromKeyVault() {
-    this._valueFromKeyVault = undefined;
+    this._valueFromKeyVault.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get valueFromKeyVaultInput() {
-    return this._valueFromKeyVault
+    return this._valueFromKeyVault.internalValue;
   }
 
   // =========
@@ -415,8 +475,8 @@ export class ApiManagementNamedValue extends cdktf.TerraformResource {
       secret: cdktf.booleanToTerraform(this._secret),
       tags: cdktf.listMapper(cdktf.stringToTerraform)(this._tags),
       value: cdktf.stringToTerraform(this._value),
-      timeouts: apiManagementNamedValueTimeoutsToTerraform(this._timeouts),
-      value_from_key_vault: apiManagementNamedValueValueFromKeyVaultToTerraform(this._valueFromKeyVault),
+      timeouts: apiManagementNamedValueTimeoutsToTerraform(this._timeouts.internalValue),
+      value_from_key_vault: apiManagementNamedValueValueFromKeyVaultToTerraform(this._valueFromKeyVault.internalValue),
     };
   }
 }

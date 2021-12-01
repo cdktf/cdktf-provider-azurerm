@@ -45,7 +45,7 @@ export interface AppServiceSlotVirtualNetworkSwiftConnectionTimeouts {
   readonly update?: string;
 }
 
-function appServiceSlotVirtualNetworkSwiftConnectionTimeoutsToTerraform(struct?: AppServiceSlotVirtualNetworkSwiftConnectionTimeoutsOutputReference | AppServiceSlotVirtualNetworkSwiftConnectionTimeouts): any {
+export function appServiceSlotVirtualNetworkSwiftConnectionTimeoutsToTerraform(struct?: AppServiceSlotVirtualNetworkSwiftConnectionTimeoutsOutputReference | AppServiceSlotVirtualNetworkSwiftConnectionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -68,12 +68,49 @@ export class AppServiceSlotVirtualNetworkSwiftConnectionTimeoutsOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppServiceSlotVirtualNetworkSwiftConnectionTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceSlotVirtualNetworkSwiftConnectionTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -81,15 +118,15 @@ export class AppServiceSlotVirtualNetworkSwiftConnectionTimeoutsOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -97,15 +134,15 @@ export class AppServiceSlotVirtualNetworkSwiftConnectionTimeoutsOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -113,15 +150,15 @@ export class AppServiceSlotVirtualNetworkSwiftConnectionTimeoutsOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -129,7 +166,7 @@ export class AppServiceSlotVirtualNetworkSwiftConnectionTimeoutsOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -168,7 +205,7 @@ export class AppServiceSlotVirtualNetworkSwiftConnection extends cdktf.Terraform
     this._appServiceId = config.appServiceId;
     this._slotName = config.slotName;
     this._subnetId = config.subnetId;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -185,7 +222,7 @@ export class AppServiceSlotVirtualNetworkSwiftConnection extends cdktf.Terraform
   }
   // Temporarily expose input value. Use with caution.
   public get appServiceIdInput() {
-    return this._appServiceId
+    return this._appServiceId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -203,7 +240,7 @@ export class AppServiceSlotVirtualNetworkSwiftConnection extends cdktf.Terraform
   }
   // Temporarily expose input value. Use with caution.
   public get slotNameInput() {
-    return this._slotName
+    return this._slotName;
   }
 
   // subnet_id - computed: false, optional: false, required: true
@@ -216,24 +253,23 @@ export class AppServiceSlotVirtualNetworkSwiftConnection extends cdktf.Terraform
   }
   // Temporarily expose input value. Use with caution.
   public get subnetIdInput() {
-    return this._subnetId
+    return this._subnetId;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AppServiceSlotVirtualNetworkSwiftConnectionTimeouts | undefined; 
-  private __timeoutsOutput = new AppServiceSlotVirtualNetworkSwiftConnectionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppServiceSlotVirtualNetworkSwiftConnectionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: AppServiceSlotVirtualNetworkSwiftConnectionTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: AppServiceSlotVirtualNetworkSwiftConnectionTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -245,7 +281,7 @@ export class AppServiceSlotVirtualNetworkSwiftConnection extends cdktf.Terraform
       app_service_id: cdktf.stringToTerraform(this._appServiceId),
       slot_name: cdktf.stringToTerraform(this._slotName),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
-      timeouts: appServiceSlotVirtualNetworkSwiftConnectionTimeoutsToTerraform(this._timeouts),
+      timeouts: appServiceSlotVirtualNetworkSwiftConnectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

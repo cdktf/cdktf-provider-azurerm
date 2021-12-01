@@ -69,7 +69,7 @@ export interface NotificationHubApnsCredential {
   readonly token: string;
 }
 
-function notificationHubApnsCredentialToTerraform(struct?: NotificationHubApnsCredentialOutputReference | NotificationHubApnsCredential): any {
+export function notificationHubApnsCredentialToTerraform(struct?: NotificationHubApnsCredentialOutputReference | NotificationHubApnsCredential): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -93,6 +93,49 @@ export class NotificationHubApnsCredentialOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NotificationHubApnsCredential | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._applicationMode) {
+      hasAnyValues = true;
+      internalValueResult.applicationMode = this._applicationMode;
+    }
+    if (this._bundleId) {
+      hasAnyValues = true;
+      internalValueResult.bundleId = this._bundleId;
+    }
+    if (this._keyId) {
+      hasAnyValues = true;
+      internalValueResult.keyId = this._keyId;
+    }
+    if (this._teamId) {
+      hasAnyValues = true;
+      internalValueResult.teamId = this._teamId;
+    }
+    if (this._token) {
+      hasAnyValues = true;
+      internalValueResult.token = this._token;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NotificationHubApnsCredential | undefined) {
+    if (value === undefined) {
+      this._applicationMode = undefined;
+      this._bundleId = undefined;
+      this._keyId = undefined;
+      this._teamId = undefined;
+      this._token = undefined;
+    }
+    else {
+      this._applicationMode = value.applicationMode;
+      this._bundleId = value.bundleId;
+      this._keyId = value.keyId;
+      this._teamId = value.teamId;
+      this._token = value.token;
+    }
+  }
+
   // application_mode - computed: false, optional: false, required: true
   private _applicationMode?: string; 
   public get applicationMode() {
@@ -103,7 +146,7 @@ export class NotificationHubApnsCredentialOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get applicationModeInput() {
-    return this._applicationMode
+    return this._applicationMode;
   }
 
   // bundle_id - computed: false, optional: false, required: true
@@ -116,7 +159,7 @@ export class NotificationHubApnsCredentialOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get bundleIdInput() {
-    return this._bundleId
+    return this._bundleId;
   }
 
   // key_id - computed: false, optional: false, required: true
@@ -129,7 +172,7 @@ export class NotificationHubApnsCredentialOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get keyIdInput() {
-    return this._keyId
+    return this._keyId;
   }
 
   // team_id - computed: false, optional: false, required: true
@@ -142,7 +185,7 @@ export class NotificationHubApnsCredentialOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get teamIdInput() {
-    return this._teamId
+    return this._teamId;
   }
 
   // token - computed: false, optional: false, required: true
@@ -155,7 +198,7 @@ export class NotificationHubApnsCredentialOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get tokenInput() {
-    return this._token
+    return this._token;
   }
 }
 export interface NotificationHubGcmCredential {
@@ -165,7 +208,7 @@ export interface NotificationHubGcmCredential {
   readonly apiKey: string;
 }
 
-function notificationHubGcmCredentialToTerraform(struct?: NotificationHubGcmCredentialOutputReference | NotificationHubGcmCredential): any {
+export function notificationHubGcmCredentialToTerraform(struct?: NotificationHubGcmCredentialOutputReference | NotificationHubGcmCredential): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -185,6 +228,25 @@ export class NotificationHubGcmCredentialOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NotificationHubGcmCredential | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._apiKey) {
+      hasAnyValues = true;
+      internalValueResult.apiKey = this._apiKey;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NotificationHubGcmCredential | undefined) {
+    if (value === undefined) {
+      this._apiKey = undefined;
+    }
+    else {
+      this._apiKey = value.apiKey;
+    }
+  }
+
   // api_key - computed: false, optional: false, required: true
   private _apiKey?: string; 
   public get apiKey() {
@@ -195,7 +257,7 @@ export class NotificationHubGcmCredentialOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get apiKeyInput() {
-    return this._apiKey
+    return this._apiKey;
   }
 }
 export interface NotificationHubTimeouts {
@@ -217,7 +279,7 @@ export interface NotificationHubTimeouts {
   readonly update?: string;
 }
 
-function notificationHubTimeoutsToTerraform(struct?: NotificationHubTimeoutsOutputReference | NotificationHubTimeouts): any {
+export function notificationHubTimeoutsToTerraform(struct?: NotificationHubTimeoutsOutputReference | NotificationHubTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -240,12 +302,49 @@ export class NotificationHubTimeoutsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NotificationHubTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NotificationHubTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -253,15 +352,15 @@ export class NotificationHubTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -269,15 +368,15 @@ export class NotificationHubTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -285,15 +384,15 @@ export class NotificationHubTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -301,7 +400,7 @@ export class NotificationHubTimeoutsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -342,9 +441,9 @@ export class NotificationHub extends cdktf.TerraformResource {
     this._namespaceName = config.namespaceName;
     this._resourceGroupName = config.resourceGroupName;
     this._tags = config.tags;
-    this._apnsCredential = config.apnsCredential;
-    this._gcmCredential = config.gcmCredential;
-    this._timeouts = config.timeouts;
+    this._apnsCredential.internalValue = config.apnsCredential;
+    this._gcmCredential.internalValue = config.gcmCredential;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -366,7 +465,7 @@ export class NotificationHub extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -379,7 +478,7 @@ export class NotificationHub extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // namespace_name - computed: false, optional: false, required: true
@@ -392,7 +491,7 @@ export class NotificationHub extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceNameInput() {
-    return this._namespaceName
+    return this._namespaceName;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -405,16 +504,16 @@ export class NotificationHub extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -422,58 +521,55 @@ export class NotificationHub extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // apns_credential - computed: false, optional: true, required: false
-  private _apnsCredential?: NotificationHubApnsCredential | undefined; 
-  private __apnsCredentialOutput = new NotificationHubApnsCredentialOutputReference(this as any, "apns_credential", true);
+  private _apnsCredential = new NotificationHubApnsCredentialOutputReference(this as any, "apns_credential", true);
   public get apnsCredential() {
-    return this.__apnsCredentialOutput;
+    return this._apnsCredential;
   }
-  public putApnsCredential(value: NotificationHubApnsCredential | undefined) {
-    this._apnsCredential = value;
+  public putApnsCredential(value: NotificationHubApnsCredential) {
+    this._apnsCredential.internalValue = value;
   }
   public resetApnsCredential() {
-    this._apnsCredential = undefined;
+    this._apnsCredential.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get apnsCredentialInput() {
-    return this._apnsCredential
+    return this._apnsCredential.internalValue;
   }
 
   // gcm_credential - computed: false, optional: true, required: false
-  private _gcmCredential?: NotificationHubGcmCredential | undefined; 
-  private __gcmCredentialOutput = new NotificationHubGcmCredentialOutputReference(this as any, "gcm_credential", true);
+  private _gcmCredential = new NotificationHubGcmCredentialOutputReference(this as any, "gcm_credential", true);
   public get gcmCredential() {
-    return this.__gcmCredentialOutput;
+    return this._gcmCredential;
   }
-  public putGcmCredential(value: NotificationHubGcmCredential | undefined) {
-    this._gcmCredential = value;
+  public putGcmCredential(value: NotificationHubGcmCredential) {
+    this._gcmCredential.internalValue = value;
   }
   public resetGcmCredential() {
-    this._gcmCredential = undefined;
+    this._gcmCredential.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get gcmCredentialInput() {
-    return this._gcmCredential
+    return this._gcmCredential.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: NotificationHubTimeouts | undefined; 
-  private __timeoutsOutput = new NotificationHubTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NotificationHubTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: NotificationHubTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: NotificationHubTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -487,9 +583,9 @@ export class NotificationHub extends cdktf.TerraformResource {
       namespace_name: cdktf.stringToTerraform(this._namespaceName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      apns_credential: notificationHubApnsCredentialToTerraform(this._apnsCredential),
-      gcm_credential: notificationHubGcmCredentialToTerraform(this._gcmCredential),
-      timeouts: notificationHubTimeoutsToTerraform(this._timeouts),
+      apns_credential: notificationHubApnsCredentialToTerraform(this._apnsCredential.internalValue),
+      gcm_credential: notificationHubGcmCredentialToTerraform(this._gcmCredential.internalValue),
+      timeouts: notificationHubTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

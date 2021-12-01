@@ -95,7 +95,7 @@ export interface SqlManagedInstanceIdentity {
   readonly type?: string;
 }
 
-function sqlManagedInstanceIdentityToTerraform(struct?: SqlManagedInstanceIdentityOutputReference | SqlManagedInstanceIdentity): any {
+export function sqlManagedInstanceIdentityToTerraform(struct?: SqlManagedInstanceIdentityOutputReference | SqlManagedInstanceIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -115,12 +115,31 @@ export class SqlManagedInstanceIdentityOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SqlManagedInstanceIdentity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlManagedInstanceIdentity | undefined) {
+    if (value === undefined) {
+      this._type = undefined;
+    }
+    else {
+      this._type = value.type;
+    }
+  }
+
   // type - computed: false, optional: true, required: false
-  private _type?: string | undefined; 
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string | undefined) {
+  public set type(value: string) {
     this._type = value;
   }
   public resetType() {
@@ -128,7 +147,7 @@ export class SqlManagedInstanceIdentityOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface SqlManagedInstanceTimeouts {
@@ -150,7 +169,7 @@ export interface SqlManagedInstanceTimeouts {
   readonly update?: string;
 }
 
-function sqlManagedInstanceTimeoutsToTerraform(struct?: SqlManagedInstanceTimeoutsOutputReference | SqlManagedInstanceTimeouts): any {
+export function sqlManagedInstanceTimeoutsToTerraform(struct?: SqlManagedInstanceTimeoutsOutputReference | SqlManagedInstanceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -173,12 +192,49 @@ export class SqlManagedInstanceTimeoutsOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SqlManagedInstanceTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlManagedInstanceTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -186,15 +242,15 @@ export class SqlManagedInstanceTimeoutsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -202,15 +258,15 @@ export class SqlManagedInstanceTimeoutsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -218,15 +274,15 @@ export class SqlManagedInstanceTimeoutsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -234,7 +290,7 @@ export class SqlManagedInstanceTimeoutsOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -287,8 +343,8 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._timezoneId = config.timezoneId;
     this._vcores = config.vcores;
-    this._identity = config.identity;
-    this._timeouts = config.timeouts;
+    this._identity.internalValue = config.identity;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -305,7 +361,7 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get administratorLoginInput() {
-    return this._administratorLogin
+    return this._administratorLogin;
   }
 
   // administrator_login_password - computed: false, optional: false, required: true
@@ -318,15 +374,15 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get administratorLoginPasswordInput() {
-    return this._administratorLoginPassword
+    return this._administratorLoginPassword;
   }
 
   // collation - computed: false, optional: true, required: false
-  private _collation?: string | undefined; 
+  private _collation?: string; 
   public get collation() {
     return this.getStringAttribute('collation');
   }
-  public set collation(value: string | undefined) {
+  public set collation(value: string) {
     this._collation = value;
   }
   public resetCollation() {
@@ -334,15 +390,15 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get collationInput() {
-    return this._collation
+    return this._collation;
   }
 
   // dns_zone_partner_id - computed: false, optional: true, required: false
-  private _dnsZonePartnerId?: string | undefined; 
+  private _dnsZonePartnerId?: string; 
   public get dnsZonePartnerId() {
     return this.getStringAttribute('dns_zone_partner_id');
   }
-  public set dnsZonePartnerId(value: string | undefined) {
+  public set dnsZonePartnerId(value: string) {
     this._dnsZonePartnerId = value;
   }
   public resetDnsZonePartnerId() {
@@ -350,7 +406,7 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dnsZonePartnerIdInput() {
-    return this._dnsZonePartnerId
+    return this._dnsZonePartnerId;
   }
 
   // fqdn - computed: true, optional: false, required: false
@@ -373,7 +429,7 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get licenseTypeInput() {
-    return this._licenseType
+    return this._licenseType;
   }
 
   // location - computed: false, optional: false, required: true
@@ -386,15 +442,15 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // minimum_tls_version - computed: false, optional: true, required: false
-  private _minimumTlsVersion?: string | undefined; 
+  private _minimumTlsVersion?: string; 
   public get minimumTlsVersion() {
     return this.getStringAttribute('minimum_tls_version');
   }
-  public set minimumTlsVersion(value: string | undefined) {
+  public set minimumTlsVersion(value: string) {
     this._minimumTlsVersion = value;
   }
   public resetMinimumTlsVersion() {
@@ -402,7 +458,7 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get minimumTlsVersionInput() {
-    return this._minimumTlsVersion
+    return this._minimumTlsVersion;
   }
 
   // name - computed: false, optional: false, required: true
@@ -415,15 +471,15 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // proxy_override - computed: false, optional: true, required: false
-  private _proxyOverride?: string | undefined; 
+  private _proxyOverride?: string; 
   public get proxyOverride() {
     return this.getStringAttribute('proxy_override');
   }
-  public set proxyOverride(value: string | undefined) {
+  public set proxyOverride(value: string) {
     this._proxyOverride = value;
   }
   public resetProxyOverride() {
@@ -431,15 +487,15 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get proxyOverrideInput() {
-    return this._proxyOverride
+    return this._proxyOverride;
   }
 
   // public_data_endpoint_enabled - computed: false, optional: true, required: false
-  private _publicDataEndpointEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _publicDataEndpointEnabled?: boolean | cdktf.IResolvable; 
   public get publicDataEndpointEnabled() {
     return this.getBooleanAttribute('public_data_endpoint_enabled') as any;
   }
-  public set publicDataEndpointEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set publicDataEndpointEnabled(value: boolean | cdktf.IResolvable) {
     this._publicDataEndpointEnabled = value;
   }
   public resetPublicDataEndpointEnabled() {
@@ -447,7 +503,7 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get publicDataEndpointEnabledInput() {
-    return this._publicDataEndpointEnabled
+    return this._publicDataEndpointEnabled;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -460,7 +516,7 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // sku_name - computed: false, optional: false, required: true
@@ -473,7 +529,7 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuNameInput() {
-    return this._skuName
+    return this._skuName;
   }
 
   // storage_size_in_gb - computed: false, optional: false, required: true
@@ -486,7 +542,7 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageSizeInGbInput() {
-    return this._storageSizeInGb
+    return this._storageSizeInGb;
   }
 
   // subnet_id - computed: false, optional: false, required: true
@@ -499,16 +555,16 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get subnetIdInput() {
-    return this._subnetId
+    return this._subnetId;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -516,15 +572,15 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // timezone_id - computed: false, optional: true, required: false
-  private _timezoneId?: string | undefined; 
+  private _timezoneId?: string; 
   public get timezoneId() {
     return this.getStringAttribute('timezone_id');
   }
-  public set timezoneId(value: string | undefined) {
+  public set timezoneId(value: string) {
     this._timezoneId = value;
   }
   public resetTimezoneId() {
@@ -532,7 +588,7 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get timezoneIdInput() {
-    return this._timezoneId
+    return this._timezoneId;
   }
 
   // vcores - computed: false, optional: false, required: true
@@ -545,41 +601,39 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get vcoresInput() {
-    return this._vcores
+    return this._vcores;
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: SqlManagedInstanceIdentity | undefined; 
-  private __identityOutput = new SqlManagedInstanceIdentityOutputReference(this as any, "identity", true);
+  private _identity = new SqlManagedInstanceIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.__identityOutput;
+    return this._identity;
   }
-  public putIdentity(value: SqlManagedInstanceIdentity | undefined) {
-    this._identity = value;
+  public putIdentity(value: SqlManagedInstanceIdentity) {
+    this._identity.internalValue = value;
   }
   public resetIdentity() {
-    this._identity = undefined;
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
-    return this._identity
+    return this._identity.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SqlManagedInstanceTimeouts | undefined; 
-  private __timeoutsOutput = new SqlManagedInstanceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SqlManagedInstanceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SqlManagedInstanceTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SqlManagedInstanceTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -605,8 +659,8 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       timezone_id: cdktf.stringToTerraform(this._timezoneId),
       vcores: cdktf.numberToTerraform(this._vcores),
-      identity: sqlManagedInstanceIdentityToTerraform(this._identity),
-      timeouts: sqlManagedInstanceTimeoutsToTerraform(this._timeouts),
+      identity: sqlManagedInstanceIdentityToTerraform(this._identity.internalValue),
+      timeouts: sqlManagedInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

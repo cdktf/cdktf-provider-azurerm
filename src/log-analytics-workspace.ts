@@ -73,7 +73,7 @@ export interface LogAnalyticsWorkspaceTimeouts {
   readonly update?: string;
 }
 
-function logAnalyticsWorkspaceTimeoutsToTerraform(struct?: LogAnalyticsWorkspaceTimeoutsOutputReference | LogAnalyticsWorkspaceTimeouts): any {
+export function logAnalyticsWorkspaceTimeoutsToTerraform(struct?: LogAnalyticsWorkspaceTimeoutsOutputReference | LogAnalyticsWorkspaceTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -96,12 +96,49 @@ export class LogAnalyticsWorkspaceTimeoutsOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogAnalyticsWorkspaceTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogAnalyticsWorkspaceTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -109,15 +146,15 @@ export class LogAnalyticsWorkspaceTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -125,15 +162,15 @@ export class LogAnalyticsWorkspaceTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -141,15 +178,15 @@ export class LogAnalyticsWorkspaceTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -157,7 +194,7 @@ export class LogAnalyticsWorkspaceTimeoutsOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -203,7 +240,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
     this._retentionInDays = config.retentionInDays;
     this._sku = config.sku;
     this._tags = config.tags;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -211,11 +248,11 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   // ==========
 
   // daily_quota_gb - computed: false, optional: true, required: false
-  private _dailyQuotaGb?: number | undefined; 
+  private _dailyQuotaGb?: number; 
   public get dailyQuotaGb() {
     return this.getNumberAttribute('daily_quota_gb');
   }
-  public set dailyQuotaGb(value: number | undefined) {
+  public set dailyQuotaGb(value: number) {
     this._dailyQuotaGb = value;
   }
   public resetDailyQuotaGb() {
@@ -223,7 +260,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dailyQuotaGbInput() {
-    return this._dailyQuotaGb
+    return this._dailyQuotaGb;
   }
 
   // id - computed: true, optional: true, required: false
@@ -232,11 +269,11 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   }
 
   // internet_ingestion_enabled - computed: false, optional: true, required: false
-  private _internetIngestionEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _internetIngestionEnabled?: boolean | cdktf.IResolvable; 
   public get internetIngestionEnabled() {
     return this.getBooleanAttribute('internet_ingestion_enabled') as any;
   }
-  public set internetIngestionEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set internetIngestionEnabled(value: boolean | cdktf.IResolvable) {
     this._internetIngestionEnabled = value;
   }
   public resetInternetIngestionEnabled() {
@@ -244,15 +281,15 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get internetIngestionEnabledInput() {
-    return this._internetIngestionEnabled
+    return this._internetIngestionEnabled;
   }
 
   // internet_query_enabled - computed: false, optional: true, required: false
-  private _internetQueryEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _internetQueryEnabled?: boolean | cdktf.IResolvable; 
   public get internetQueryEnabled() {
     return this.getBooleanAttribute('internet_query_enabled') as any;
   }
-  public set internetQueryEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set internetQueryEnabled(value: boolean | cdktf.IResolvable) {
     this._internetQueryEnabled = value;
   }
   public resetInternetQueryEnabled() {
@@ -260,7 +297,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get internetQueryEnabledInput() {
-    return this._internetQueryEnabled
+    return this._internetQueryEnabled;
   }
 
   // location - computed: false, optional: false, required: true
@@ -273,7 +310,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -286,7 +323,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // portal_url - computed: true, optional: false, required: false
@@ -300,11 +337,11 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   }
 
   // reservation_capcity_in_gb_per_day - computed: false, optional: true, required: false
-  private _reservationCapcityInGbPerDay?: number | undefined; 
+  private _reservationCapcityInGbPerDay?: number; 
   public get reservationCapcityInGbPerDay() {
     return this.getNumberAttribute('reservation_capcity_in_gb_per_day');
   }
-  public set reservationCapcityInGbPerDay(value: number | undefined) {
+  public set reservationCapcityInGbPerDay(value: number) {
     this._reservationCapcityInGbPerDay = value;
   }
   public resetReservationCapcityInGbPerDay() {
@@ -312,7 +349,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get reservationCapcityInGbPerDayInput() {
-    return this._reservationCapcityInGbPerDay
+    return this._reservationCapcityInGbPerDay;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -325,15 +362,15 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // retention_in_days - computed: true, optional: true, required: false
-  private _retentionInDays?: number | undefined; 
+  private _retentionInDays?: number; 
   public get retentionInDays() {
     return this.getNumberAttribute('retention_in_days');
   }
-  public set retentionInDays(value: number | undefined) {
+  public set retentionInDays(value: number) {
     this._retentionInDays = value;
   }
   public resetRetentionInDays() {
@@ -341,7 +378,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get retentionInDaysInput() {
-    return this._retentionInDays
+    return this._retentionInDays;
   }
 
   // secondary_shared_key - computed: true, optional: false, required: false
@@ -350,11 +387,11 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   }
 
   // sku - computed: false, optional: true, required: false
-  private _sku?: string | undefined; 
+  private _sku?: string; 
   public get sku() {
     return this.getStringAttribute('sku');
   }
-  public set sku(value: string | undefined) {
+  public set sku(value: string) {
     this._sku = value;
   }
   public resetSku() {
@@ -362,16 +399,16 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuInput() {
-    return this._sku
+    return this._sku;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -379,7 +416,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // workspace_id - computed: true, optional: false, required: false
@@ -388,20 +425,19 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LogAnalyticsWorkspaceTimeouts | undefined; 
-  private __timeoutsOutput = new LogAnalyticsWorkspaceTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogAnalyticsWorkspaceTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: LogAnalyticsWorkspaceTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: LogAnalyticsWorkspaceTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -420,7 +456,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
       retention_in_days: cdktf.numberToTerraform(this._retentionInDays),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      timeouts: logAnalyticsWorkspaceTimeoutsToTerraform(this._timeouts),
+      timeouts: logAnalyticsWorkspaceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

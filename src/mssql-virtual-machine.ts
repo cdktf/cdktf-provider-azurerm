@@ -89,7 +89,7 @@ export interface MssqlVirtualMachineAutoBackupManualSchedule {
   readonly logBackupFrequencyInMinutes: number;
 }
 
-function mssqlVirtualMachineAutoBackupManualScheduleToTerraform(struct?: MssqlVirtualMachineAutoBackupManualScheduleOutputReference | MssqlVirtualMachineAutoBackupManualSchedule): any {
+export function mssqlVirtualMachineAutoBackupManualScheduleToTerraform(struct?: MssqlVirtualMachineAutoBackupManualScheduleOutputReference | MssqlVirtualMachineAutoBackupManualSchedule): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -112,6 +112,43 @@ export class MssqlVirtualMachineAutoBackupManualScheduleOutputReference extends 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MssqlVirtualMachineAutoBackupManualSchedule | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._fullBackupFrequency) {
+      hasAnyValues = true;
+      internalValueResult.fullBackupFrequency = this._fullBackupFrequency;
+    }
+    if (this._fullBackupStartHour) {
+      hasAnyValues = true;
+      internalValueResult.fullBackupStartHour = this._fullBackupStartHour;
+    }
+    if (this._fullBackupWindowInHours) {
+      hasAnyValues = true;
+      internalValueResult.fullBackupWindowInHours = this._fullBackupWindowInHours;
+    }
+    if (this._logBackupFrequencyInMinutes) {
+      hasAnyValues = true;
+      internalValueResult.logBackupFrequencyInMinutes = this._logBackupFrequencyInMinutes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlVirtualMachineAutoBackupManualSchedule | undefined) {
+    if (value === undefined) {
+      this._fullBackupFrequency = undefined;
+      this._fullBackupStartHour = undefined;
+      this._fullBackupWindowInHours = undefined;
+      this._logBackupFrequencyInMinutes = undefined;
+    }
+    else {
+      this._fullBackupFrequency = value.fullBackupFrequency;
+      this._fullBackupStartHour = value.fullBackupStartHour;
+      this._fullBackupWindowInHours = value.fullBackupWindowInHours;
+      this._logBackupFrequencyInMinutes = value.logBackupFrequencyInMinutes;
+    }
+  }
+
   // full_backup_frequency - computed: false, optional: false, required: true
   private _fullBackupFrequency?: string; 
   public get fullBackupFrequency() {
@@ -122,7 +159,7 @@ export class MssqlVirtualMachineAutoBackupManualScheduleOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get fullBackupFrequencyInput() {
-    return this._fullBackupFrequency
+    return this._fullBackupFrequency;
   }
 
   // full_backup_start_hour - computed: false, optional: false, required: true
@@ -135,7 +172,7 @@ export class MssqlVirtualMachineAutoBackupManualScheduleOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get fullBackupStartHourInput() {
-    return this._fullBackupStartHour
+    return this._fullBackupStartHour;
   }
 
   // full_backup_window_in_hours - computed: false, optional: false, required: true
@@ -148,7 +185,7 @@ export class MssqlVirtualMachineAutoBackupManualScheduleOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get fullBackupWindowInHoursInput() {
-    return this._fullBackupWindowInHours
+    return this._fullBackupWindowInHours;
   }
 
   // log_backup_frequency_in_minutes - computed: false, optional: false, required: true
@@ -161,7 +198,7 @@ export class MssqlVirtualMachineAutoBackupManualScheduleOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get logBackupFrequencyInMinutesInput() {
-    return this._logBackupFrequencyInMinutes
+    return this._logBackupFrequencyInMinutes;
   }
 }
 export interface MssqlVirtualMachineAutoBackup {
@@ -197,7 +234,7 @@ export interface MssqlVirtualMachineAutoBackup {
   readonly manualSchedule?: MssqlVirtualMachineAutoBackupManualSchedule;
 }
 
-function mssqlVirtualMachineAutoBackupToTerraform(struct?: MssqlVirtualMachineAutoBackupOutputReference | MssqlVirtualMachineAutoBackup): any {
+export function mssqlVirtualMachineAutoBackupToTerraform(struct?: MssqlVirtualMachineAutoBackupOutputReference | MssqlVirtualMachineAutoBackup): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -223,12 +260,67 @@ export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MssqlVirtualMachineAutoBackup | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._encryptionEnabled) {
+      hasAnyValues = true;
+      internalValueResult.encryptionEnabled = this._encryptionEnabled;
+    }
+    if (this._encryptionPassword) {
+      hasAnyValues = true;
+      internalValueResult.encryptionPassword = this._encryptionPassword;
+    }
+    if (this._retentionPeriodInDays) {
+      hasAnyValues = true;
+      internalValueResult.retentionPeriodInDays = this._retentionPeriodInDays;
+    }
+    if (this._storageAccountAccessKey) {
+      hasAnyValues = true;
+      internalValueResult.storageAccountAccessKey = this._storageAccountAccessKey;
+    }
+    if (this._storageBlobEndpoint) {
+      hasAnyValues = true;
+      internalValueResult.storageBlobEndpoint = this._storageBlobEndpoint;
+    }
+    if (this._systemDatabasesBackupEnabled) {
+      hasAnyValues = true;
+      internalValueResult.systemDatabasesBackupEnabled = this._systemDatabasesBackupEnabled;
+    }
+    if (this._manualSchedule) {
+      hasAnyValues = true;
+      internalValueResult.manualSchedule = this._manualSchedule?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlVirtualMachineAutoBackup | undefined) {
+    if (value === undefined) {
+      this._encryptionEnabled = undefined;
+      this._encryptionPassword = undefined;
+      this._retentionPeriodInDays = undefined;
+      this._storageAccountAccessKey = undefined;
+      this._storageBlobEndpoint = undefined;
+      this._systemDatabasesBackupEnabled = undefined;
+      this._manualSchedule.internalValue = undefined;
+    }
+    else {
+      this._encryptionEnabled = value.encryptionEnabled;
+      this._encryptionPassword = value.encryptionPassword;
+      this._retentionPeriodInDays = value.retentionPeriodInDays;
+      this._storageAccountAccessKey = value.storageAccountAccessKey;
+      this._storageBlobEndpoint = value.storageBlobEndpoint;
+      this._systemDatabasesBackupEnabled = value.systemDatabasesBackupEnabled;
+      this._manualSchedule.internalValue = value.manualSchedule;
+    }
+  }
+
   // encryption_enabled - computed: false, optional: true, required: false
-  private _encryptionEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _encryptionEnabled?: boolean | cdktf.IResolvable; 
   public get encryptionEnabled() {
     return this.getBooleanAttribute('encryption_enabled') as any;
   }
-  public set encryptionEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set encryptionEnabled(value: boolean | cdktf.IResolvable) {
     this._encryptionEnabled = value;
   }
   public resetEncryptionEnabled() {
@@ -236,15 +328,15 @@ export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get encryptionEnabledInput() {
-    return this._encryptionEnabled
+    return this._encryptionEnabled;
   }
 
   // encryption_password - computed: false, optional: true, required: false
-  private _encryptionPassword?: string | undefined; 
+  private _encryptionPassword?: string; 
   public get encryptionPassword() {
     return this.getStringAttribute('encryption_password');
   }
-  public set encryptionPassword(value: string | undefined) {
+  public set encryptionPassword(value: string) {
     this._encryptionPassword = value;
   }
   public resetEncryptionPassword() {
@@ -252,7 +344,7 @@ export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get encryptionPasswordInput() {
-    return this._encryptionPassword
+    return this._encryptionPassword;
   }
 
   // retention_period_in_days - computed: false, optional: false, required: true
@@ -265,7 +357,7 @@ export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get retentionPeriodInDaysInput() {
-    return this._retentionPeriodInDays
+    return this._retentionPeriodInDays;
   }
 
   // storage_account_access_key - computed: false, optional: false, required: true
@@ -278,7 +370,7 @@ export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountAccessKeyInput() {
-    return this._storageAccountAccessKey
+    return this._storageAccountAccessKey;
   }
 
   // storage_blob_endpoint - computed: false, optional: false, required: true
@@ -291,15 +383,15 @@ export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get storageBlobEndpointInput() {
-    return this._storageBlobEndpoint
+    return this._storageBlobEndpoint;
   }
 
   // system_databases_backup_enabled - computed: false, optional: true, required: false
-  private _systemDatabasesBackupEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _systemDatabasesBackupEnabled?: boolean | cdktf.IResolvable; 
   public get systemDatabasesBackupEnabled() {
     return this.getBooleanAttribute('system_databases_backup_enabled') as any;
   }
-  public set systemDatabasesBackupEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set systemDatabasesBackupEnabled(value: boolean | cdktf.IResolvable) {
     this._systemDatabasesBackupEnabled = value;
   }
   public resetSystemDatabasesBackupEnabled() {
@@ -307,24 +399,23 @@ export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get systemDatabasesBackupEnabledInput() {
-    return this._systemDatabasesBackupEnabled
+    return this._systemDatabasesBackupEnabled;
   }
 
   // manual_schedule - computed: false, optional: true, required: false
-  private _manualSchedule?: MssqlVirtualMachineAutoBackupManualSchedule | undefined; 
-  private __manualScheduleOutput = new MssqlVirtualMachineAutoBackupManualScheduleOutputReference(this as any, "manual_schedule", true);
+  private _manualSchedule = new MssqlVirtualMachineAutoBackupManualScheduleOutputReference(this as any, "manual_schedule", true);
   public get manualSchedule() {
-    return this.__manualScheduleOutput;
+    return this._manualSchedule;
   }
-  public putManualSchedule(value: MssqlVirtualMachineAutoBackupManualSchedule | undefined) {
-    this._manualSchedule = value;
+  public putManualSchedule(value: MssqlVirtualMachineAutoBackupManualSchedule) {
+    this._manualSchedule.internalValue = value;
   }
   public resetManualSchedule() {
-    this._manualSchedule = undefined;
+    this._manualSchedule.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get manualScheduleInput() {
-    return this._manualSchedule
+    return this._manualSchedule.internalValue;
   }
 }
 export interface MssqlVirtualMachineAutoPatching {
@@ -342,7 +433,7 @@ export interface MssqlVirtualMachineAutoPatching {
   readonly maintenanceWindowStartingHour: number;
 }
 
-function mssqlVirtualMachineAutoPatchingToTerraform(struct?: MssqlVirtualMachineAutoPatchingOutputReference | MssqlVirtualMachineAutoPatching): any {
+export function mssqlVirtualMachineAutoPatchingToTerraform(struct?: MssqlVirtualMachineAutoPatchingOutputReference | MssqlVirtualMachineAutoPatching): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -364,6 +455,37 @@ export class MssqlVirtualMachineAutoPatchingOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MssqlVirtualMachineAutoPatching | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._dayOfWeek) {
+      hasAnyValues = true;
+      internalValueResult.dayOfWeek = this._dayOfWeek;
+    }
+    if (this._maintenanceWindowDurationInMinutes) {
+      hasAnyValues = true;
+      internalValueResult.maintenanceWindowDurationInMinutes = this._maintenanceWindowDurationInMinutes;
+    }
+    if (this._maintenanceWindowStartingHour) {
+      hasAnyValues = true;
+      internalValueResult.maintenanceWindowStartingHour = this._maintenanceWindowStartingHour;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlVirtualMachineAutoPatching | undefined) {
+    if (value === undefined) {
+      this._dayOfWeek = undefined;
+      this._maintenanceWindowDurationInMinutes = undefined;
+      this._maintenanceWindowStartingHour = undefined;
+    }
+    else {
+      this._dayOfWeek = value.dayOfWeek;
+      this._maintenanceWindowDurationInMinutes = value.maintenanceWindowDurationInMinutes;
+      this._maintenanceWindowStartingHour = value.maintenanceWindowStartingHour;
+    }
+  }
+
   // day_of_week - computed: false, optional: false, required: true
   private _dayOfWeek?: string; 
   public get dayOfWeek() {
@@ -374,7 +496,7 @@ export class MssqlVirtualMachineAutoPatchingOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get dayOfWeekInput() {
-    return this._dayOfWeek
+    return this._dayOfWeek;
   }
 
   // maintenance_window_duration_in_minutes - computed: false, optional: false, required: true
@@ -387,7 +509,7 @@ export class MssqlVirtualMachineAutoPatchingOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get maintenanceWindowDurationInMinutesInput() {
-    return this._maintenanceWindowDurationInMinutes
+    return this._maintenanceWindowDurationInMinutes;
   }
 
   // maintenance_window_starting_hour - computed: false, optional: false, required: true
@@ -400,7 +522,7 @@ export class MssqlVirtualMachineAutoPatchingOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get maintenanceWindowStartingHourInput() {
-    return this._maintenanceWindowStartingHour
+    return this._maintenanceWindowStartingHour;
   }
 }
 export interface MssqlVirtualMachineKeyVaultCredential {
@@ -422,7 +544,7 @@ export interface MssqlVirtualMachineKeyVaultCredential {
   readonly servicePrincipalSecret: string;
 }
 
-function mssqlVirtualMachineKeyVaultCredentialToTerraform(struct?: MssqlVirtualMachineKeyVaultCredentialOutputReference | MssqlVirtualMachineKeyVaultCredential): any {
+export function mssqlVirtualMachineKeyVaultCredentialToTerraform(struct?: MssqlVirtualMachineKeyVaultCredentialOutputReference | MssqlVirtualMachineKeyVaultCredential): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -445,6 +567,43 @@ export class MssqlVirtualMachineKeyVaultCredentialOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MssqlVirtualMachineKeyVaultCredential | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._keyVaultUrl) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultUrl = this._keyVaultUrl;
+    }
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._servicePrincipalName) {
+      hasAnyValues = true;
+      internalValueResult.servicePrincipalName = this._servicePrincipalName;
+    }
+    if (this._servicePrincipalSecret) {
+      hasAnyValues = true;
+      internalValueResult.servicePrincipalSecret = this._servicePrincipalSecret;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlVirtualMachineKeyVaultCredential | undefined) {
+    if (value === undefined) {
+      this._keyVaultUrl = undefined;
+      this._name = undefined;
+      this._servicePrincipalName = undefined;
+      this._servicePrincipalSecret = undefined;
+    }
+    else {
+      this._keyVaultUrl = value.keyVaultUrl;
+      this._name = value.name;
+      this._servicePrincipalName = value.servicePrincipalName;
+      this._servicePrincipalSecret = value.servicePrincipalSecret;
+    }
+  }
+
   // key_vault_url - computed: false, optional: false, required: true
   private _keyVaultUrl?: string; 
   public get keyVaultUrl() {
@@ -455,7 +614,7 @@ export class MssqlVirtualMachineKeyVaultCredentialOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get keyVaultUrlInput() {
-    return this._keyVaultUrl
+    return this._keyVaultUrl;
   }
 
   // name - computed: false, optional: false, required: true
@@ -468,7 +627,7 @@ export class MssqlVirtualMachineKeyVaultCredentialOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // service_principal_name - computed: false, optional: false, required: true
@@ -481,7 +640,7 @@ export class MssqlVirtualMachineKeyVaultCredentialOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get servicePrincipalNameInput() {
-    return this._servicePrincipalName
+    return this._servicePrincipalName;
   }
 
   // service_principal_secret - computed: false, optional: false, required: true
@@ -494,7 +653,7 @@ export class MssqlVirtualMachineKeyVaultCredentialOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get servicePrincipalSecretInput() {
-    return this._servicePrincipalSecret
+    return this._servicePrincipalSecret;
   }
 }
 export interface MssqlVirtualMachineStorageConfigurationDataSettings {
@@ -508,7 +667,7 @@ export interface MssqlVirtualMachineStorageConfigurationDataSettings {
   readonly luns: number[];
 }
 
-function mssqlVirtualMachineStorageConfigurationDataSettingsToTerraform(struct?: MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference | MssqlVirtualMachineStorageConfigurationDataSettings): any {
+export function mssqlVirtualMachineStorageConfigurationDataSettingsToTerraform(struct?: MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference | MssqlVirtualMachineStorageConfigurationDataSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -529,6 +688,31 @@ export class MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MssqlVirtualMachineStorageConfigurationDataSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._defaultFilePath) {
+      hasAnyValues = true;
+      internalValueResult.defaultFilePath = this._defaultFilePath;
+    }
+    if (this._luns) {
+      hasAnyValues = true;
+      internalValueResult.luns = this._luns;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlVirtualMachineStorageConfigurationDataSettings | undefined) {
+    if (value === undefined) {
+      this._defaultFilePath = undefined;
+      this._luns = undefined;
+    }
+    else {
+      this._defaultFilePath = value.defaultFilePath;
+      this._luns = value.luns;
+    }
+  }
+
   // default_file_path - computed: false, optional: false, required: true
   private _defaultFilePath?: string; 
   public get defaultFilePath() {
@@ -539,7 +723,7 @@ export class MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get defaultFilePathInput() {
-    return this._defaultFilePath
+    return this._defaultFilePath;
   }
 
   // luns - computed: false, optional: false, required: true
@@ -553,7 +737,7 @@ export class MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get lunsInput() {
-    return this._luns
+    return this._luns;
   }
 }
 export interface MssqlVirtualMachineStorageConfigurationLogSettings {
@@ -567,7 +751,7 @@ export interface MssqlVirtualMachineStorageConfigurationLogSettings {
   readonly luns: number[];
 }
 
-function mssqlVirtualMachineStorageConfigurationLogSettingsToTerraform(struct?: MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference | MssqlVirtualMachineStorageConfigurationLogSettings): any {
+export function mssqlVirtualMachineStorageConfigurationLogSettingsToTerraform(struct?: MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference | MssqlVirtualMachineStorageConfigurationLogSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -588,6 +772,31 @@ export class MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference e
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MssqlVirtualMachineStorageConfigurationLogSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._defaultFilePath) {
+      hasAnyValues = true;
+      internalValueResult.defaultFilePath = this._defaultFilePath;
+    }
+    if (this._luns) {
+      hasAnyValues = true;
+      internalValueResult.luns = this._luns;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlVirtualMachineStorageConfigurationLogSettings | undefined) {
+    if (value === undefined) {
+      this._defaultFilePath = undefined;
+      this._luns = undefined;
+    }
+    else {
+      this._defaultFilePath = value.defaultFilePath;
+      this._luns = value.luns;
+    }
+  }
+
   // default_file_path - computed: false, optional: false, required: true
   private _defaultFilePath?: string; 
   public get defaultFilePath() {
@@ -598,7 +807,7 @@ export class MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get defaultFilePathInput() {
-    return this._defaultFilePath
+    return this._defaultFilePath;
   }
 
   // luns - computed: false, optional: false, required: true
@@ -612,7 +821,7 @@ export class MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference e
   }
   // Temporarily expose input value. Use with caution.
   public get lunsInput() {
-    return this._luns
+    return this._luns;
   }
 }
 export interface MssqlVirtualMachineStorageConfigurationTempDbSettings {
@@ -626,7 +835,7 @@ export interface MssqlVirtualMachineStorageConfigurationTempDbSettings {
   readonly luns: number[];
 }
 
-function mssqlVirtualMachineStorageConfigurationTempDbSettingsToTerraform(struct?: MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReference | MssqlVirtualMachineStorageConfigurationTempDbSettings): any {
+export function mssqlVirtualMachineStorageConfigurationTempDbSettingsToTerraform(struct?: MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReference | MssqlVirtualMachineStorageConfigurationTempDbSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -647,6 +856,31 @@ export class MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReferenc
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MssqlVirtualMachineStorageConfigurationTempDbSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._defaultFilePath) {
+      hasAnyValues = true;
+      internalValueResult.defaultFilePath = this._defaultFilePath;
+    }
+    if (this._luns) {
+      hasAnyValues = true;
+      internalValueResult.luns = this._luns;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlVirtualMachineStorageConfigurationTempDbSettings | undefined) {
+    if (value === undefined) {
+      this._defaultFilePath = undefined;
+      this._luns = undefined;
+    }
+    else {
+      this._defaultFilePath = value.defaultFilePath;
+      this._luns = value.luns;
+    }
+  }
+
   // default_file_path - computed: false, optional: false, required: true
   private _defaultFilePath?: string; 
   public get defaultFilePath() {
@@ -657,7 +891,7 @@ export class MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get defaultFilePathInput() {
-    return this._defaultFilePath
+    return this._defaultFilePath;
   }
 
   // luns - computed: false, optional: false, required: true
@@ -671,7 +905,7 @@ export class MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReferenc
   }
   // Temporarily expose input value. Use with caution.
   public get lunsInput() {
-    return this._luns
+    return this._luns;
   }
 }
 export interface MssqlVirtualMachineStorageConfiguration {
@@ -703,7 +937,7 @@ export interface MssqlVirtualMachineStorageConfiguration {
   readonly tempDbSettings?: MssqlVirtualMachineStorageConfigurationTempDbSettings;
 }
 
-function mssqlVirtualMachineStorageConfigurationToTerraform(struct?: MssqlVirtualMachineStorageConfigurationOutputReference | MssqlVirtualMachineStorageConfiguration): any {
+export function mssqlVirtualMachineStorageConfigurationToTerraform(struct?: MssqlVirtualMachineStorageConfigurationOutputReference | MssqlVirtualMachineStorageConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -727,6 +961,49 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MssqlVirtualMachineStorageConfiguration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._diskType) {
+      hasAnyValues = true;
+      internalValueResult.diskType = this._diskType;
+    }
+    if (this._storageWorkloadType) {
+      hasAnyValues = true;
+      internalValueResult.storageWorkloadType = this._storageWorkloadType;
+    }
+    if (this._dataSettings) {
+      hasAnyValues = true;
+      internalValueResult.dataSettings = this._dataSettings?.internalValue;
+    }
+    if (this._logSettings) {
+      hasAnyValues = true;
+      internalValueResult.logSettings = this._logSettings?.internalValue;
+    }
+    if (this._tempDbSettings) {
+      hasAnyValues = true;
+      internalValueResult.tempDbSettings = this._tempDbSettings?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlVirtualMachineStorageConfiguration | undefined) {
+    if (value === undefined) {
+      this._diskType = undefined;
+      this._storageWorkloadType = undefined;
+      this._dataSettings.internalValue = undefined;
+      this._logSettings.internalValue = undefined;
+      this._tempDbSettings.internalValue = undefined;
+    }
+    else {
+      this._diskType = value.diskType;
+      this._storageWorkloadType = value.storageWorkloadType;
+      this._dataSettings.internalValue = value.dataSettings;
+      this._logSettings.internalValue = value.logSettings;
+      this._tempDbSettings.internalValue = value.tempDbSettings;
+    }
+  }
+
   // disk_type - computed: false, optional: false, required: true
   private _diskType?: string; 
   public get diskType() {
@@ -737,7 +1014,7 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get diskTypeInput() {
-    return this._diskType
+    return this._diskType;
   }
 
   // storage_workload_type - computed: false, optional: false, required: true
@@ -750,58 +1027,55 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get storageWorkloadTypeInput() {
-    return this._storageWorkloadType
+    return this._storageWorkloadType;
   }
 
   // data_settings - computed: false, optional: true, required: false
-  private _dataSettings?: MssqlVirtualMachineStorageConfigurationDataSettings | undefined; 
-  private __dataSettingsOutput = new MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference(this as any, "data_settings", true);
+  private _dataSettings = new MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference(this as any, "data_settings", true);
   public get dataSettings() {
-    return this.__dataSettingsOutput;
+    return this._dataSettings;
   }
-  public putDataSettings(value: MssqlVirtualMachineStorageConfigurationDataSettings | undefined) {
-    this._dataSettings = value;
+  public putDataSettings(value: MssqlVirtualMachineStorageConfigurationDataSettings) {
+    this._dataSettings.internalValue = value;
   }
   public resetDataSettings() {
-    this._dataSettings = undefined;
+    this._dataSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dataSettingsInput() {
-    return this._dataSettings
+    return this._dataSettings.internalValue;
   }
 
   // log_settings - computed: false, optional: true, required: false
-  private _logSettings?: MssqlVirtualMachineStorageConfigurationLogSettings | undefined; 
-  private __logSettingsOutput = new MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference(this as any, "log_settings", true);
+  private _logSettings = new MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference(this as any, "log_settings", true);
   public get logSettings() {
-    return this.__logSettingsOutput;
+    return this._logSettings;
   }
-  public putLogSettings(value: MssqlVirtualMachineStorageConfigurationLogSettings | undefined) {
-    this._logSettings = value;
+  public putLogSettings(value: MssqlVirtualMachineStorageConfigurationLogSettings) {
+    this._logSettings.internalValue = value;
   }
   public resetLogSettings() {
-    this._logSettings = undefined;
+    this._logSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get logSettingsInput() {
-    return this._logSettings
+    return this._logSettings.internalValue;
   }
 
   // temp_db_settings - computed: false, optional: true, required: false
-  private _tempDbSettings?: MssqlVirtualMachineStorageConfigurationTempDbSettings | undefined; 
-  private __tempDbSettingsOutput = new MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReference(this as any, "temp_db_settings", true);
+  private _tempDbSettings = new MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReference(this as any, "temp_db_settings", true);
   public get tempDbSettings() {
-    return this.__tempDbSettingsOutput;
+    return this._tempDbSettings;
   }
-  public putTempDbSettings(value: MssqlVirtualMachineStorageConfigurationTempDbSettings | undefined) {
-    this._tempDbSettings = value;
+  public putTempDbSettings(value: MssqlVirtualMachineStorageConfigurationTempDbSettings) {
+    this._tempDbSettings.internalValue = value;
   }
   public resetTempDbSettings() {
-    this._tempDbSettings = undefined;
+    this._tempDbSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get tempDbSettingsInput() {
-    return this._tempDbSettings
+    return this._tempDbSettings.internalValue;
   }
 }
 export interface MssqlVirtualMachineTimeouts {
@@ -823,7 +1097,7 @@ export interface MssqlVirtualMachineTimeouts {
   readonly update?: string;
 }
 
-function mssqlVirtualMachineTimeoutsToTerraform(struct?: MssqlVirtualMachineTimeoutsOutputReference | MssqlVirtualMachineTimeouts): any {
+export function mssqlVirtualMachineTimeoutsToTerraform(struct?: MssqlVirtualMachineTimeoutsOutputReference | MssqlVirtualMachineTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -846,12 +1120,49 @@ export class MssqlVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MssqlVirtualMachineTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MssqlVirtualMachineTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -859,15 +1170,15 @@ export class MssqlVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -875,15 +1186,15 @@ export class MssqlVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -891,15 +1202,15 @@ export class MssqlVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -907,7 +1218,7 @@ export class MssqlVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -951,11 +1262,11 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
     this._sqlLicenseType = config.sqlLicenseType;
     this._tags = config.tags;
     this._virtualMachineId = config.virtualMachineId;
-    this._autoBackup = config.autoBackup;
-    this._autoPatching = config.autoPatching;
-    this._keyVaultCredential = config.keyVaultCredential;
-    this._storageConfiguration = config.storageConfiguration;
-    this._timeouts = config.timeouts;
+    this._autoBackup.internalValue = config.autoBackup;
+    this._autoPatching.internalValue = config.autoPatching;
+    this._keyVaultCredential.internalValue = config.keyVaultCredential;
+    this._storageConfiguration.internalValue = config.storageConfiguration;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -968,11 +1279,11 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
 
   // r_services_enabled - computed: false, optional: true, required: false
-  private _rServicesEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _rServicesEnabled?: boolean | cdktf.IResolvable; 
   public get rServicesEnabled() {
     return this.getBooleanAttribute('r_services_enabled') as any;
   }
-  public set rServicesEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set rServicesEnabled(value: boolean | cdktf.IResolvable) {
     this._rServicesEnabled = value;
   }
   public resetRServicesEnabled() {
@@ -980,15 +1291,15 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get rServicesEnabledInput() {
-    return this._rServicesEnabled
+    return this._rServicesEnabled;
   }
 
   // sql_connectivity_port - computed: false, optional: true, required: false
-  private _sqlConnectivityPort?: number | undefined; 
+  private _sqlConnectivityPort?: number; 
   public get sqlConnectivityPort() {
     return this.getNumberAttribute('sql_connectivity_port');
   }
-  public set sqlConnectivityPort(value: number | undefined) {
+  public set sqlConnectivityPort(value: number) {
     this._sqlConnectivityPort = value;
   }
   public resetSqlConnectivityPort() {
@@ -996,15 +1307,15 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sqlConnectivityPortInput() {
-    return this._sqlConnectivityPort
+    return this._sqlConnectivityPort;
   }
 
   // sql_connectivity_type - computed: false, optional: true, required: false
-  private _sqlConnectivityType?: string | undefined; 
+  private _sqlConnectivityType?: string; 
   public get sqlConnectivityType() {
     return this.getStringAttribute('sql_connectivity_type');
   }
-  public set sqlConnectivityType(value: string | undefined) {
+  public set sqlConnectivityType(value: string) {
     this._sqlConnectivityType = value;
   }
   public resetSqlConnectivityType() {
@@ -1012,15 +1323,15 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sqlConnectivityTypeInput() {
-    return this._sqlConnectivityType
+    return this._sqlConnectivityType;
   }
 
   // sql_connectivity_update_password - computed: false, optional: true, required: false
-  private _sqlConnectivityUpdatePassword?: string | undefined; 
+  private _sqlConnectivityUpdatePassword?: string; 
   public get sqlConnectivityUpdatePassword() {
     return this.getStringAttribute('sql_connectivity_update_password');
   }
-  public set sqlConnectivityUpdatePassword(value: string | undefined) {
+  public set sqlConnectivityUpdatePassword(value: string) {
     this._sqlConnectivityUpdatePassword = value;
   }
   public resetSqlConnectivityUpdatePassword() {
@@ -1028,15 +1339,15 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sqlConnectivityUpdatePasswordInput() {
-    return this._sqlConnectivityUpdatePassword
+    return this._sqlConnectivityUpdatePassword;
   }
 
   // sql_connectivity_update_username - computed: false, optional: true, required: false
-  private _sqlConnectivityUpdateUsername?: string | undefined; 
+  private _sqlConnectivityUpdateUsername?: string; 
   public get sqlConnectivityUpdateUsername() {
     return this.getStringAttribute('sql_connectivity_update_username');
   }
-  public set sqlConnectivityUpdateUsername(value: string | undefined) {
+  public set sqlConnectivityUpdateUsername(value: string) {
     this._sqlConnectivityUpdateUsername = value;
   }
   public resetSqlConnectivityUpdateUsername() {
@@ -1044,7 +1355,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sqlConnectivityUpdateUsernameInput() {
-    return this._sqlConnectivityUpdateUsername
+    return this._sqlConnectivityUpdateUsername;
   }
 
   // sql_license_type - computed: false, optional: false, required: true
@@ -1057,16 +1368,16 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sqlLicenseTypeInput() {
-    return this._sqlLicenseType
+    return this._sqlLicenseType;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -1074,7 +1385,7 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // virtual_machine_id - computed: false, optional: false, required: true
@@ -1087,92 +1398,87 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get virtualMachineIdInput() {
-    return this._virtualMachineId
+    return this._virtualMachineId;
   }
 
   // auto_backup - computed: false, optional: true, required: false
-  private _autoBackup?: MssqlVirtualMachineAutoBackup | undefined; 
-  private __autoBackupOutput = new MssqlVirtualMachineAutoBackupOutputReference(this as any, "auto_backup", true);
+  private _autoBackup = new MssqlVirtualMachineAutoBackupOutputReference(this as any, "auto_backup", true);
   public get autoBackup() {
-    return this.__autoBackupOutput;
+    return this._autoBackup;
   }
-  public putAutoBackup(value: MssqlVirtualMachineAutoBackup | undefined) {
-    this._autoBackup = value;
+  public putAutoBackup(value: MssqlVirtualMachineAutoBackup) {
+    this._autoBackup.internalValue = value;
   }
   public resetAutoBackup() {
-    this._autoBackup = undefined;
+    this._autoBackup.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get autoBackupInput() {
-    return this._autoBackup
+    return this._autoBackup.internalValue;
   }
 
   // auto_patching - computed: false, optional: true, required: false
-  private _autoPatching?: MssqlVirtualMachineAutoPatching | undefined; 
-  private __autoPatchingOutput = new MssqlVirtualMachineAutoPatchingOutputReference(this as any, "auto_patching", true);
+  private _autoPatching = new MssqlVirtualMachineAutoPatchingOutputReference(this as any, "auto_patching", true);
   public get autoPatching() {
-    return this.__autoPatchingOutput;
+    return this._autoPatching;
   }
-  public putAutoPatching(value: MssqlVirtualMachineAutoPatching | undefined) {
-    this._autoPatching = value;
+  public putAutoPatching(value: MssqlVirtualMachineAutoPatching) {
+    this._autoPatching.internalValue = value;
   }
   public resetAutoPatching() {
-    this._autoPatching = undefined;
+    this._autoPatching.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get autoPatchingInput() {
-    return this._autoPatching
+    return this._autoPatching.internalValue;
   }
 
   // key_vault_credential - computed: false, optional: true, required: false
-  private _keyVaultCredential?: MssqlVirtualMachineKeyVaultCredential | undefined; 
-  private __keyVaultCredentialOutput = new MssqlVirtualMachineKeyVaultCredentialOutputReference(this as any, "key_vault_credential", true);
+  private _keyVaultCredential = new MssqlVirtualMachineKeyVaultCredentialOutputReference(this as any, "key_vault_credential", true);
   public get keyVaultCredential() {
-    return this.__keyVaultCredentialOutput;
+    return this._keyVaultCredential;
   }
-  public putKeyVaultCredential(value: MssqlVirtualMachineKeyVaultCredential | undefined) {
-    this._keyVaultCredential = value;
+  public putKeyVaultCredential(value: MssqlVirtualMachineKeyVaultCredential) {
+    this._keyVaultCredential.internalValue = value;
   }
   public resetKeyVaultCredential() {
-    this._keyVaultCredential = undefined;
+    this._keyVaultCredential.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get keyVaultCredentialInput() {
-    return this._keyVaultCredential
+    return this._keyVaultCredential.internalValue;
   }
 
   // storage_configuration - computed: false, optional: true, required: false
-  private _storageConfiguration?: MssqlVirtualMachineStorageConfiguration | undefined; 
-  private __storageConfigurationOutput = new MssqlVirtualMachineStorageConfigurationOutputReference(this as any, "storage_configuration", true);
+  private _storageConfiguration = new MssqlVirtualMachineStorageConfigurationOutputReference(this as any, "storage_configuration", true);
   public get storageConfiguration() {
-    return this.__storageConfigurationOutput;
+    return this._storageConfiguration;
   }
-  public putStorageConfiguration(value: MssqlVirtualMachineStorageConfiguration | undefined) {
-    this._storageConfiguration = value;
+  public putStorageConfiguration(value: MssqlVirtualMachineStorageConfiguration) {
+    this._storageConfiguration.internalValue = value;
   }
   public resetStorageConfiguration() {
-    this._storageConfiguration = undefined;
+    this._storageConfiguration.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get storageConfigurationInput() {
-    return this._storageConfiguration
+    return this._storageConfiguration.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MssqlVirtualMachineTimeouts | undefined; 
-  private __timeoutsOutput = new MssqlVirtualMachineTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MssqlVirtualMachineTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MssqlVirtualMachineTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MssqlVirtualMachineTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -1189,11 +1495,11 @@ export class MssqlVirtualMachine extends cdktf.TerraformResource {
       sql_license_type: cdktf.stringToTerraform(this._sqlLicenseType),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       virtual_machine_id: cdktf.stringToTerraform(this._virtualMachineId),
-      auto_backup: mssqlVirtualMachineAutoBackupToTerraform(this._autoBackup),
-      auto_patching: mssqlVirtualMachineAutoPatchingToTerraform(this._autoPatching),
-      key_vault_credential: mssqlVirtualMachineKeyVaultCredentialToTerraform(this._keyVaultCredential),
-      storage_configuration: mssqlVirtualMachineStorageConfigurationToTerraform(this._storageConfiguration),
-      timeouts: mssqlVirtualMachineTimeoutsToTerraform(this._timeouts),
+      auto_backup: mssqlVirtualMachineAutoBackupToTerraform(this._autoBackup.internalValue),
+      auto_patching: mssqlVirtualMachineAutoPatchingToTerraform(this._autoPatching.internalValue),
+      key_vault_credential: mssqlVirtualMachineKeyVaultCredentialToTerraform(this._keyVaultCredential.internalValue),
+      storage_configuration: mssqlVirtualMachineStorageConfigurationToTerraform(this._storageConfiguration.internalValue),
+      timeouts: mssqlVirtualMachineTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

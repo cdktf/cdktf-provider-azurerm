@@ -51,7 +51,7 @@ export interface MonitorAadDiagnosticSettingLogRetentionPolicy {
   readonly enabled?: boolean | cdktf.IResolvable;
 }
 
-function monitorAadDiagnosticSettingLogRetentionPolicyToTerraform(struct?: MonitorAadDiagnosticSettingLogRetentionPolicyOutputReference | MonitorAadDiagnosticSettingLogRetentionPolicy): any {
+export function monitorAadDiagnosticSettingLogRetentionPolicyToTerraform(struct?: MonitorAadDiagnosticSettingLogRetentionPolicyOutputReference | MonitorAadDiagnosticSettingLogRetentionPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -72,12 +72,37 @@ export class MonitorAadDiagnosticSettingLogRetentionPolicyOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitorAadDiagnosticSettingLogRetentionPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._days) {
+      hasAnyValues = true;
+      internalValueResult.days = this._days;
+    }
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorAadDiagnosticSettingLogRetentionPolicy | undefined) {
+    if (value === undefined) {
+      this._days = undefined;
+      this._enabled = undefined;
+    }
+    else {
+      this._days = value.days;
+      this._enabled = value.enabled;
+    }
+  }
+
   // days - computed: false, optional: true, required: false
-  private _days?: number | undefined; 
+  private _days?: number; 
   public get days() {
     return this.getNumberAttribute('days');
   }
-  public set days(value: number | undefined) {
+  public set days(value: number) {
     this._days = value;
   }
   public resetDays() {
@@ -85,15 +110,15 @@ export class MonitorAadDiagnosticSettingLogRetentionPolicyOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get daysInput() {
-    return this._days
+    return this._days;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -101,7 +126,7 @@ export class MonitorAadDiagnosticSettingLogRetentionPolicyOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 }
 export interface MonitorAadDiagnosticSettingLog {
@@ -121,7 +146,7 @@ export interface MonitorAadDiagnosticSettingLog {
   readonly retentionPolicy: MonitorAadDiagnosticSettingLogRetentionPolicy;
 }
 
-function monitorAadDiagnosticSettingLogToTerraform(struct?: MonitorAadDiagnosticSettingLog): any {
+export function monitorAadDiagnosticSettingLogToTerraform(struct?: MonitorAadDiagnosticSettingLog): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -152,7 +177,7 @@ export interface MonitorAadDiagnosticSettingTimeouts {
   readonly update?: string;
 }
 
-function monitorAadDiagnosticSettingTimeoutsToTerraform(struct?: MonitorAadDiagnosticSettingTimeoutsOutputReference | MonitorAadDiagnosticSettingTimeouts): any {
+export function monitorAadDiagnosticSettingTimeoutsToTerraform(struct?: MonitorAadDiagnosticSettingTimeoutsOutputReference | MonitorAadDiagnosticSettingTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -175,12 +200,49 @@ export class MonitorAadDiagnosticSettingTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitorAadDiagnosticSettingTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorAadDiagnosticSettingTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -188,15 +250,15 @@ export class MonitorAadDiagnosticSettingTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -204,15 +266,15 @@ export class MonitorAadDiagnosticSettingTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -220,15 +282,15 @@ export class MonitorAadDiagnosticSettingTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -236,7 +298,7 @@ export class MonitorAadDiagnosticSettingTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -278,7 +340,7 @@ export class MonitorAadDiagnosticSetting extends cdktf.TerraformResource {
     this._name = config.name;
     this._storageAccountId = config.storageAccountId;
     this._log = config.log;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -286,11 +348,11 @@ export class MonitorAadDiagnosticSetting extends cdktf.TerraformResource {
   // ==========
 
   // eventhub_authorization_rule_id - computed: false, optional: true, required: false
-  private _eventhubAuthorizationRuleId?: string | undefined; 
+  private _eventhubAuthorizationRuleId?: string; 
   public get eventhubAuthorizationRuleId() {
     return this.getStringAttribute('eventhub_authorization_rule_id');
   }
-  public set eventhubAuthorizationRuleId(value: string | undefined) {
+  public set eventhubAuthorizationRuleId(value: string) {
     this._eventhubAuthorizationRuleId = value;
   }
   public resetEventhubAuthorizationRuleId() {
@@ -298,15 +360,15 @@ export class MonitorAadDiagnosticSetting extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get eventhubAuthorizationRuleIdInput() {
-    return this._eventhubAuthorizationRuleId
+    return this._eventhubAuthorizationRuleId;
   }
 
   // eventhub_name - computed: false, optional: true, required: false
-  private _eventhubName?: string | undefined; 
+  private _eventhubName?: string; 
   public get eventhubName() {
     return this.getStringAttribute('eventhub_name');
   }
-  public set eventhubName(value: string | undefined) {
+  public set eventhubName(value: string) {
     this._eventhubName = value;
   }
   public resetEventhubName() {
@@ -314,7 +376,7 @@ export class MonitorAadDiagnosticSetting extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get eventhubNameInput() {
-    return this._eventhubName
+    return this._eventhubName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -323,11 +385,11 @@ export class MonitorAadDiagnosticSetting extends cdktf.TerraformResource {
   }
 
   // log_analytics_workspace_id - computed: false, optional: true, required: false
-  private _logAnalyticsWorkspaceId?: string | undefined; 
+  private _logAnalyticsWorkspaceId?: string; 
   public get logAnalyticsWorkspaceId() {
     return this.getStringAttribute('log_analytics_workspace_id');
   }
-  public set logAnalyticsWorkspaceId(value: string | undefined) {
+  public set logAnalyticsWorkspaceId(value: string) {
     this._logAnalyticsWorkspaceId = value;
   }
   public resetLogAnalyticsWorkspaceId() {
@@ -335,7 +397,7 @@ export class MonitorAadDiagnosticSetting extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get logAnalyticsWorkspaceIdInput() {
-    return this._logAnalyticsWorkspaceId
+    return this._logAnalyticsWorkspaceId;
   }
 
   // name - computed: false, optional: false, required: true
@@ -348,15 +410,15 @@ export class MonitorAadDiagnosticSetting extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // storage_account_id - computed: false, optional: true, required: false
-  private _storageAccountId?: string | undefined; 
+  private _storageAccountId?: string; 
   public get storageAccountId() {
     return this.getStringAttribute('storage_account_id');
   }
-  public set storageAccountId(value: string | undefined) {
+  public set storageAccountId(value: string) {
     this._storageAccountId = value;
   }
   public resetStorageAccountId() {
@@ -364,7 +426,7 @@ export class MonitorAadDiagnosticSetting extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountIdInput() {
-    return this._storageAccountId
+    return this._storageAccountId;
   }
 
   // log - computed: false, optional: false, required: true
@@ -378,24 +440,23 @@ export class MonitorAadDiagnosticSetting extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get logInput() {
-    return this._log
+    return this._log;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MonitorAadDiagnosticSettingTimeouts | undefined; 
-  private __timeoutsOutput = new MonitorAadDiagnosticSettingTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitorAadDiagnosticSettingTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MonitorAadDiagnosticSettingTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MonitorAadDiagnosticSettingTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -410,7 +471,7 @@ export class MonitorAadDiagnosticSetting extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       log: cdktf.listMapper(monitorAadDiagnosticSettingLogToTerraform)(this._log),
-      timeouts: monitorAadDiagnosticSettingTimeoutsToTerraform(this._timeouts),
+      timeouts: monitorAadDiagnosticSettingTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

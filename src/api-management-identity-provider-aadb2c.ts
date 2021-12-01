@@ -77,7 +77,7 @@ export interface ApiManagementIdentityProviderAadb2CTimeouts {
   readonly update?: string;
 }
 
-function apiManagementIdentityProviderAadb2CTimeoutsToTerraform(struct?: ApiManagementIdentityProviderAadb2CTimeoutsOutputReference | ApiManagementIdentityProviderAadb2CTimeouts): any {
+export function apiManagementIdentityProviderAadb2CTimeoutsToTerraform(struct?: ApiManagementIdentityProviderAadb2CTimeoutsOutputReference | ApiManagementIdentityProviderAadb2CTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -100,12 +100,49 @@ export class ApiManagementIdentityProviderAadb2CTimeoutsOutputReference extends 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementIdentityProviderAadb2CTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementIdentityProviderAadb2CTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -113,15 +150,15 @@ export class ApiManagementIdentityProviderAadb2CTimeoutsOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -129,15 +166,15 @@ export class ApiManagementIdentityProviderAadb2CTimeoutsOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -145,15 +182,15 @@ export class ApiManagementIdentityProviderAadb2CTimeoutsOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -161,7 +198,7 @@ export class ApiManagementIdentityProviderAadb2CTimeoutsOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -208,7 +245,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
     this._signinPolicy = config.signinPolicy;
     this._signinTenant = config.signinTenant;
     this._signupPolicy = config.signupPolicy;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -225,7 +262,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
   // Temporarily expose input value. Use with caution.
   public get allowedTenantInput() {
-    return this._allowedTenant
+    return this._allowedTenant;
   }
 
   // api_management_name - computed: false, optional: false, required: true
@@ -238,7 +275,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
   // Temporarily expose input value. Use with caution.
   public get apiManagementNameInput() {
-    return this._apiManagementName
+    return this._apiManagementName;
   }
 
   // authority - computed: false, optional: false, required: true
@@ -251,7 +288,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
   // Temporarily expose input value. Use with caution.
   public get authorityInput() {
-    return this._authority
+    return this._authority;
   }
 
   // client_id - computed: false, optional: false, required: true
@@ -264,7 +301,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
   // Temporarily expose input value. Use with caution.
   public get clientIdInput() {
-    return this._clientId
+    return this._clientId;
   }
 
   // client_secret - computed: false, optional: false, required: true
@@ -277,7 +314,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
   // Temporarily expose input value. Use with caution.
   public get clientSecretInput() {
-    return this._clientSecret
+    return this._clientSecret;
   }
 
   // id - computed: true, optional: true, required: false
@@ -286,11 +323,11 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
 
   // password_reset_policy - computed: false, optional: true, required: false
-  private _passwordResetPolicy?: string | undefined; 
+  private _passwordResetPolicy?: string; 
   public get passwordResetPolicy() {
     return this.getStringAttribute('password_reset_policy');
   }
-  public set passwordResetPolicy(value: string | undefined) {
+  public set passwordResetPolicy(value: string) {
     this._passwordResetPolicy = value;
   }
   public resetPasswordResetPolicy() {
@@ -298,15 +335,15 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
   // Temporarily expose input value. Use with caution.
   public get passwordResetPolicyInput() {
-    return this._passwordResetPolicy
+    return this._passwordResetPolicy;
   }
 
   // profile_editing_policy - computed: false, optional: true, required: false
-  private _profileEditingPolicy?: string | undefined; 
+  private _profileEditingPolicy?: string; 
   public get profileEditingPolicy() {
     return this.getStringAttribute('profile_editing_policy');
   }
-  public set profileEditingPolicy(value: string | undefined) {
+  public set profileEditingPolicy(value: string) {
     this._profileEditingPolicy = value;
   }
   public resetProfileEditingPolicy() {
@@ -314,7 +351,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
   // Temporarily expose input value. Use with caution.
   public get profileEditingPolicyInput() {
-    return this._profileEditingPolicy
+    return this._profileEditingPolicy;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -327,7 +364,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // signin_policy - computed: false, optional: false, required: true
@@ -340,7 +377,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
   // Temporarily expose input value. Use with caution.
   public get signinPolicyInput() {
-    return this._signinPolicy
+    return this._signinPolicy;
   }
 
   // signin_tenant - computed: false, optional: false, required: true
@@ -353,7 +390,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
   // Temporarily expose input value. Use with caution.
   public get signinTenantInput() {
-    return this._signinTenant
+    return this._signinTenant;
   }
 
   // signup_policy - computed: false, optional: false, required: true
@@ -366,24 +403,23 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
   }
   // Temporarily expose input value. Use with caution.
   public get signupPolicyInput() {
-    return this._signupPolicy
+    return this._signupPolicy;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ApiManagementIdentityProviderAadb2CTimeouts | undefined; 
-  private __timeoutsOutput = new ApiManagementIdentityProviderAadb2CTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApiManagementIdentityProviderAadb2CTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ApiManagementIdentityProviderAadb2CTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ApiManagementIdentityProviderAadb2CTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -403,7 +439,7 @@ export class ApiManagementIdentityProviderAadb2C extends cdktf.TerraformResource
       signin_policy: cdktf.stringToTerraform(this._signinPolicy),
       signin_tenant: cdktf.stringToTerraform(this._signinTenant),
       signup_policy: cdktf.stringToTerraform(this._signupPolicy),
-      timeouts: apiManagementIdentityProviderAadb2CTimeoutsToTerraform(this._timeouts),
+      timeouts: apiManagementIdentityProviderAadb2CTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -75,7 +75,7 @@ export interface ApiManagementCustomDomainDeveloperPortal {
   readonly sslKeyvaultIdentityClientId?: string;
 }
 
-function apiManagementCustomDomainDeveloperPortalToTerraform(struct?: ApiManagementCustomDomainDeveloperPortal): any {
+export function apiManagementCustomDomainDeveloperPortalToTerraform(struct?: ApiManagementCustomDomainDeveloperPortal): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -117,7 +117,7 @@ export interface ApiManagementCustomDomainManagement {
   readonly sslKeyvaultIdentityClientId?: string;
 }
 
-function apiManagementCustomDomainManagementToTerraform(struct?: ApiManagementCustomDomainManagement): any {
+export function apiManagementCustomDomainManagementToTerraform(struct?: ApiManagementCustomDomainManagement): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -159,7 +159,7 @@ export interface ApiManagementCustomDomainPortal {
   readonly sslKeyvaultIdentityClientId?: string;
 }
 
-function apiManagementCustomDomainPortalToTerraform(struct?: ApiManagementCustomDomainPortal): any {
+export function apiManagementCustomDomainPortalToTerraform(struct?: ApiManagementCustomDomainPortal): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -205,7 +205,7 @@ export interface ApiManagementCustomDomainProxy {
   readonly sslKeyvaultIdentityClientId?: string;
 }
 
-function apiManagementCustomDomainProxyToTerraform(struct?: ApiManagementCustomDomainProxy): any {
+export function apiManagementCustomDomainProxyToTerraform(struct?: ApiManagementCustomDomainProxy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -248,7 +248,7 @@ export interface ApiManagementCustomDomainScm {
   readonly sslKeyvaultIdentityClientId?: string;
 }
 
-function apiManagementCustomDomainScmToTerraform(struct?: ApiManagementCustomDomainScm): any {
+export function apiManagementCustomDomainScmToTerraform(struct?: ApiManagementCustomDomainScm): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -282,7 +282,7 @@ export interface ApiManagementCustomDomainTimeouts {
   readonly update?: string;
 }
 
-function apiManagementCustomDomainTimeoutsToTerraform(struct?: ApiManagementCustomDomainTimeoutsOutputReference | ApiManagementCustomDomainTimeouts): any {
+export function apiManagementCustomDomainTimeoutsToTerraform(struct?: ApiManagementCustomDomainTimeoutsOutputReference | ApiManagementCustomDomainTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -305,12 +305,49 @@ export class ApiManagementCustomDomainTimeoutsOutputReference extends cdktf.Comp
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementCustomDomainTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementCustomDomainTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -318,15 +355,15 @@ export class ApiManagementCustomDomainTimeoutsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -334,15 +371,15 @@ export class ApiManagementCustomDomainTimeoutsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -350,15 +387,15 @@ export class ApiManagementCustomDomainTimeoutsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -366,7 +403,7 @@ export class ApiManagementCustomDomainTimeoutsOutputReference extends cdktf.Comp
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -408,7 +445,7 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
     this._portal = config.portal;
     this._proxy = config.proxy;
     this._scm = config.scm;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -425,7 +462,7 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get apiManagementIdInput() {
-    return this._apiManagementId
+    return this._apiManagementId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -434,12 +471,12 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
   }
 
   // developer_portal - computed: false, optional: true, required: false
-  private _developerPortal?: ApiManagementCustomDomainDeveloperPortal[] | undefined; 
+  private _developerPortal?: ApiManagementCustomDomainDeveloperPortal[]; 
   public get developerPortal() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('developer_portal') as any;
   }
-  public set developerPortal(value: ApiManagementCustomDomainDeveloperPortal[] | undefined) {
+  public set developerPortal(value: ApiManagementCustomDomainDeveloperPortal[]) {
     this._developerPortal = value;
   }
   public resetDeveloperPortal() {
@@ -447,16 +484,16 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get developerPortalInput() {
-    return this._developerPortal
+    return this._developerPortal;
   }
 
   // management - computed: false, optional: true, required: false
-  private _management?: ApiManagementCustomDomainManagement[] | undefined; 
+  private _management?: ApiManagementCustomDomainManagement[]; 
   public get management() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('management') as any;
   }
-  public set management(value: ApiManagementCustomDomainManagement[] | undefined) {
+  public set management(value: ApiManagementCustomDomainManagement[]) {
     this._management = value;
   }
   public resetManagement() {
@@ -464,16 +501,16 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get managementInput() {
-    return this._management
+    return this._management;
   }
 
   // portal - computed: false, optional: true, required: false
-  private _portal?: ApiManagementCustomDomainPortal[] | undefined; 
+  private _portal?: ApiManagementCustomDomainPortal[]; 
   public get portal() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('portal') as any;
   }
-  public set portal(value: ApiManagementCustomDomainPortal[] | undefined) {
+  public set portal(value: ApiManagementCustomDomainPortal[]) {
     this._portal = value;
   }
   public resetPortal() {
@@ -481,16 +518,16 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get portalInput() {
-    return this._portal
+    return this._portal;
   }
 
   // proxy - computed: false, optional: true, required: false
-  private _proxy?: ApiManagementCustomDomainProxy[] | undefined; 
+  private _proxy?: ApiManagementCustomDomainProxy[]; 
   public get proxy() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('proxy') as any;
   }
-  public set proxy(value: ApiManagementCustomDomainProxy[] | undefined) {
+  public set proxy(value: ApiManagementCustomDomainProxy[]) {
     this._proxy = value;
   }
   public resetProxy() {
@@ -498,16 +535,16 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get proxyInput() {
-    return this._proxy
+    return this._proxy;
   }
 
   // scm - computed: false, optional: true, required: false
-  private _scm?: ApiManagementCustomDomainScm[] | undefined; 
+  private _scm?: ApiManagementCustomDomainScm[]; 
   public get scm() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('scm') as any;
   }
-  public set scm(value: ApiManagementCustomDomainScm[] | undefined) {
+  public set scm(value: ApiManagementCustomDomainScm[]) {
     this._scm = value;
   }
   public resetScm() {
@@ -515,24 +552,23 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get scmInput() {
-    return this._scm
+    return this._scm;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ApiManagementCustomDomainTimeouts | undefined; 
-  private __timeoutsOutput = new ApiManagementCustomDomainTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApiManagementCustomDomainTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ApiManagementCustomDomainTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ApiManagementCustomDomainTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -547,7 +583,7 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
       portal: cdktf.listMapper(apiManagementCustomDomainPortalToTerraform)(this._portal),
       proxy: cdktf.listMapper(apiManagementCustomDomainProxyToTerraform)(this._proxy),
       scm: cdktf.listMapper(apiManagementCustomDomainScmToTerraform)(this._scm),
-      timeouts: apiManagementCustomDomainTimeoutsToTerraform(this._timeouts),
+      timeouts: apiManagementCustomDomainTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

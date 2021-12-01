@@ -80,7 +80,7 @@ export interface AppServiceEnvironmentV3ClusterSetting {
   readonly value: string;
 }
 
-function appServiceEnvironmentV3ClusterSettingToTerraform(struct?: AppServiceEnvironmentV3ClusterSetting): any {
+export function appServiceEnvironmentV3ClusterSettingToTerraform(struct?: AppServiceEnvironmentV3ClusterSetting): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -110,7 +110,7 @@ export interface AppServiceEnvironmentV3Timeouts {
   readonly update?: string;
 }
 
-function appServiceEnvironmentV3TimeoutsToTerraform(struct?: AppServiceEnvironmentV3TimeoutsOutputReference | AppServiceEnvironmentV3Timeouts): any {
+export function appServiceEnvironmentV3TimeoutsToTerraform(struct?: AppServiceEnvironmentV3TimeoutsOutputReference | AppServiceEnvironmentV3Timeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -133,12 +133,49 @@ export class AppServiceEnvironmentV3TimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): AppServiceEnvironmentV3Timeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: AppServiceEnvironmentV3Timeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -146,15 +183,15 @@ export class AppServiceEnvironmentV3TimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -162,15 +199,15 @@ export class AppServiceEnvironmentV3TimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -178,15 +215,15 @@ export class AppServiceEnvironmentV3TimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -194,7 +231,7 @@ export class AppServiceEnvironmentV3TimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -239,7 +276,7 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._zoneRedundant = config.zoneRedundant;
     this._clusterSetting = config.clusterSetting;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -247,11 +284,11 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   // ==========
 
   // allow_new_private_endpoint_connections - computed: false, optional: true, required: false
-  private _allowNewPrivateEndpointConnections?: boolean | cdktf.IResolvable | undefined; 
+  private _allowNewPrivateEndpointConnections?: boolean | cdktf.IResolvable; 
   public get allowNewPrivateEndpointConnections() {
     return this.getBooleanAttribute('allow_new_private_endpoint_connections') as any;
   }
-  public set allowNewPrivateEndpointConnections(value: boolean | cdktf.IResolvable | undefined) {
+  public set allowNewPrivateEndpointConnections(value: boolean | cdktf.IResolvable) {
     this._allowNewPrivateEndpointConnections = value;
   }
   public resetAllowNewPrivateEndpointConnections() {
@@ -259,15 +296,15 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get allowNewPrivateEndpointConnectionsInput() {
-    return this._allowNewPrivateEndpointConnections
+    return this._allowNewPrivateEndpointConnections;
   }
 
   // dedicated_host_count - computed: false, optional: true, required: false
-  private _dedicatedHostCount?: number | undefined; 
+  private _dedicatedHostCount?: number; 
   public get dedicatedHostCount() {
     return this.getNumberAttribute('dedicated_host_count');
   }
-  public set dedicatedHostCount(value: number | undefined) {
+  public set dedicatedHostCount(value: number) {
     this._dedicatedHostCount = value;
   }
   public resetDedicatedHostCount() {
@@ -275,7 +312,7 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dedicatedHostCountInput() {
-    return this._dedicatedHostCount
+    return this._dedicatedHostCount;
   }
 
   // dns_suffix - computed: true, optional: false, required: false
@@ -304,11 +341,11 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
 
   // internal_load_balancing_mode - computed: false, optional: true, required: false
-  private _internalLoadBalancingMode?: string | undefined; 
+  private _internalLoadBalancingMode?: string; 
   public get internalLoadBalancingMode() {
     return this.getStringAttribute('internal_load_balancing_mode');
   }
-  public set internalLoadBalancingMode(value: string | undefined) {
+  public set internalLoadBalancingMode(value: string) {
     this._internalLoadBalancingMode = value;
   }
   public resetInternalLoadBalancingMode() {
@@ -316,7 +353,7 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get internalLoadBalancingModeInput() {
-    return this._internalLoadBalancingMode
+    return this._internalLoadBalancingMode;
   }
 
   // ip_ssl_address_count - computed: true, optional: false, required: false
@@ -344,7 +381,7 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // pricing_tier - computed: true, optional: false, required: false
@@ -362,7 +399,7 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // subnet_id - computed: false, optional: false, required: true
@@ -375,16 +412,16 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get subnetIdInput() {
-    return this._subnetId
+    return this._subnetId;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -392,7 +429,7 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // windows_outbound_ip_addresses - computed: true, optional: false, required: false
@@ -401,11 +438,11 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
 
   // zone_redundant - computed: false, optional: true, required: false
-  private _zoneRedundant?: boolean | cdktf.IResolvable | undefined; 
+  private _zoneRedundant?: boolean | cdktf.IResolvable; 
   public get zoneRedundant() {
     return this.getBooleanAttribute('zone_redundant') as any;
   }
-  public set zoneRedundant(value: boolean | cdktf.IResolvable | undefined) {
+  public set zoneRedundant(value: boolean | cdktf.IResolvable) {
     this._zoneRedundant = value;
   }
   public resetZoneRedundant() {
@@ -413,16 +450,16 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get zoneRedundantInput() {
-    return this._zoneRedundant
+    return this._zoneRedundant;
   }
 
   // cluster_setting - computed: false, optional: true, required: false
-  private _clusterSetting?: AppServiceEnvironmentV3ClusterSetting[] | undefined; 
+  private _clusterSetting?: AppServiceEnvironmentV3ClusterSetting[]; 
   public get clusterSetting() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('cluster_setting') as any;
   }
-  public set clusterSetting(value: AppServiceEnvironmentV3ClusterSetting[] | undefined) {
+  public set clusterSetting(value: AppServiceEnvironmentV3ClusterSetting[]) {
     this._clusterSetting = value;
   }
   public resetClusterSetting() {
@@ -430,24 +467,23 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get clusterSettingInput() {
-    return this._clusterSetting
+    return this._clusterSetting;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: AppServiceEnvironmentV3Timeouts | undefined; 
-  private __timeoutsOutput = new AppServiceEnvironmentV3TimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new AppServiceEnvironmentV3TimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: AppServiceEnvironmentV3Timeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: AppServiceEnvironmentV3Timeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -465,7 +501,7 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
       cluster_setting: cdktf.listMapper(appServiceEnvironmentV3ClusterSettingToTerraform)(this._clusterSetting),
-      timeouts: appServiceEnvironmentV3TimeoutsToTerraform(this._timeouts),
+      timeouts: appServiceEnvironmentV3TimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

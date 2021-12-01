@@ -91,7 +91,7 @@ export interface NetworkConnectionMonitorDestination {
   readonly virtualMachineId?: string;
 }
 
-function networkConnectionMonitorDestinationToTerraform(struct?: NetworkConnectionMonitorDestinationOutputReference | NetworkConnectionMonitorDestination): any {
+export function networkConnectionMonitorDestinationToTerraform(struct?: NetworkConnectionMonitorDestinationOutputReference | NetworkConnectionMonitorDestination): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -113,12 +113,43 @@ export class NetworkConnectionMonitorDestinationOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkConnectionMonitorDestination | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._address) {
+      hasAnyValues = true;
+      internalValueResult.address = this._address;
+    }
+    if (this._port) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._virtualMachineId) {
+      hasAnyValues = true;
+      internalValueResult.virtualMachineId = this._virtualMachineId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkConnectionMonitorDestination | undefined) {
+    if (value === undefined) {
+      this._address = undefined;
+      this._port = undefined;
+      this._virtualMachineId = undefined;
+    }
+    else {
+      this._address = value.address;
+      this._port = value.port;
+      this._virtualMachineId = value.virtualMachineId;
+    }
+  }
+
   // address - computed: true, optional: true, required: false
-  private _address?: string | undefined; 
+  private _address?: string; 
   public get address() {
     return this.getStringAttribute('address');
   }
-  public set address(value: string | undefined) {
+  public set address(value: string) {
     this._address = value;
   }
   public resetAddress() {
@@ -126,15 +157,15 @@ export class NetworkConnectionMonitorDestinationOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get addressInput() {
-    return this._address
+    return this._address;
   }
 
   // port - computed: true, optional: true, required: false
-  private _port?: number | undefined; 
+  private _port?: number; 
   public get port() {
     return this.getNumberAttribute('port');
   }
-  public set port(value: number | undefined) {
+  public set port(value: number) {
     this._port = value;
   }
   public resetPort() {
@@ -142,15 +173,15 @@ export class NetworkConnectionMonitorDestinationOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get portInput() {
-    return this._port
+    return this._port;
   }
 
   // virtual_machine_id - computed: true, optional: true, required: false
-  private _virtualMachineId?: string | undefined; 
+  private _virtualMachineId?: string; 
   public get virtualMachineId() {
     return this.getStringAttribute('virtual_machine_id');
   }
-  public set virtualMachineId(value: string | undefined) {
+  public set virtualMachineId(value: string) {
     this._virtualMachineId = value;
   }
   public resetVirtualMachineId() {
@@ -158,7 +189,7 @@ export class NetworkConnectionMonitorDestinationOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get virtualMachineIdInput() {
-    return this._virtualMachineId
+    return this._virtualMachineId;
   }
 }
 export interface NetworkConnectionMonitorEndpointFilterItem {
@@ -172,7 +203,7 @@ export interface NetworkConnectionMonitorEndpointFilterItem {
   readonly type?: string;
 }
 
-function networkConnectionMonitorEndpointFilterItemToTerraform(struct?: NetworkConnectionMonitorEndpointFilterItem): any {
+export function networkConnectionMonitorEndpointFilterItemToTerraform(struct?: NetworkConnectionMonitorEndpointFilterItem): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -196,7 +227,7 @@ export interface NetworkConnectionMonitorEndpointFilter {
   readonly item?: NetworkConnectionMonitorEndpointFilterItem[];
 }
 
-function networkConnectionMonitorEndpointFilterToTerraform(struct?: NetworkConnectionMonitorEndpointFilterOutputReference | NetworkConnectionMonitorEndpointFilter): any {
+export function networkConnectionMonitorEndpointFilterToTerraform(struct?: NetworkConnectionMonitorEndpointFilterOutputReference | NetworkConnectionMonitorEndpointFilter): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -217,12 +248,37 @@ export class NetworkConnectionMonitorEndpointFilterOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkConnectionMonitorEndpointFilter | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._item) {
+      hasAnyValues = true;
+      internalValueResult.item = this._item;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkConnectionMonitorEndpointFilter | undefined) {
+    if (value === undefined) {
+      this._type = undefined;
+      this._item = undefined;
+    }
+    else {
+      this._type = value.type;
+      this._item = value.item;
+    }
+  }
+
   // type - computed: false, optional: true, required: false
-  private _type?: string | undefined; 
+  private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
-  public set type(value: string | undefined) {
+  public set type(value: string) {
     this._type = value;
   }
   public resetType() {
@@ -230,16 +286,16 @@ export class NetworkConnectionMonitorEndpointFilterOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 
   // item - computed: false, optional: true, required: false
-  private _item?: NetworkConnectionMonitorEndpointFilterItem[] | undefined; 
+  private _item?: NetworkConnectionMonitorEndpointFilterItem[]; 
   public get item() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('item') as any;
   }
-  public set item(value: NetworkConnectionMonitorEndpointFilterItem[] | undefined) {
+  public set item(value: NetworkConnectionMonitorEndpointFilterItem[]) {
     this._item = value;
   }
   public resetItem() {
@@ -247,7 +303,7 @@ export class NetworkConnectionMonitorEndpointFilterOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get itemInput() {
-    return this._item
+    return this._item;
   }
 }
 export interface NetworkConnectionMonitorEndpoint {
@@ -291,7 +347,7 @@ export interface NetworkConnectionMonitorEndpoint {
   readonly filter?: NetworkConnectionMonitorEndpointFilter;
 }
 
-function networkConnectionMonitorEndpointToTerraform(struct?: NetworkConnectionMonitorEndpoint): any {
+export function networkConnectionMonitorEndpointToTerraform(struct?: NetworkConnectionMonitorEndpoint): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -320,7 +376,7 @@ export interface NetworkConnectionMonitorSource {
   readonly virtualMachineId?: string;
 }
 
-function networkConnectionMonitorSourceToTerraform(struct?: NetworkConnectionMonitorSourceOutputReference | NetworkConnectionMonitorSource): any {
+export function networkConnectionMonitorSourceToTerraform(struct?: NetworkConnectionMonitorSourceOutputReference | NetworkConnectionMonitorSource): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -341,12 +397,37 @@ export class NetworkConnectionMonitorSourceOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkConnectionMonitorSource | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._port) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._virtualMachineId) {
+      hasAnyValues = true;
+      internalValueResult.virtualMachineId = this._virtualMachineId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkConnectionMonitorSource | undefined) {
+    if (value === undefined) {
+      this._port = undefined;
+      this._virtualMachineId = undefined;
+    }
+    else {
+      this._port = value.port;
+      this._virtualMachineId = value.virtualMachineId;
+    }
+  }
+
   // port - computed: true, optional: true, required: false
-  private _port?: number | undefined; 
+  private _port?: number; 
   public get port() {
     return this.getNumberAttribute('port');
   }
-  public set port(value: number | undefined) {
+  public set port(value: number) {
     this._port = value;
   }
   public resetPort() {
@@ -354,15 +435,15 @@ export class NetworkConnectionMonitorSourceOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get portInput() {
-    return this._port
+    return this._port;
   }
 
   // virtual_machine_id - computed: true, optional: true, required: false
-  private _virtualMachineId?: string | undefined; 
+  private _virtualMachineId?: string; 
   public get virtualMachineId() {
     return this.getStringAttribute('virtual_machine_id');
   }
-  public set virtualMachineId(value: string | undefined) {
+  public set virtualMachineId(value: string) {
     this._virtualMachineId = value;
   }
   public resetVirtualMachineId() {
@@ -370,7 +451,7 @@ export class NetworkConnectionMonitorSourceOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get virtualMachineIdInput() {
-    return this._virtualMachineId
+    return this._virtualMachineId;
   }
 }
 export interface NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader {
@@ -384,7 +465,7 @@ export interface NetworkConnectionMonitorTestConfigurationHttpConfigurationReque
   readonly value: string;
 }
 
-function networkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderToTerraform(struct?: NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader): any {
+export function networkConnectionMonitorTestConfigurationHttpConfigurationRequestHeaderToTerraform(struct?: NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -424,7 +505,7 @@ export interface NetworkConnectionMonitorTestConfigurationHttpConfiguration {
   readonly requestHeader?: NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader[];
 }
 
-function networkConnectionMonitorTestConfigurationHttpConfigurationToTerraform(struct?: NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputReference | NetworkConnectionMonitorTestConfigurationHttpConfiguration): any {
+export function networkConnectionMonitorTestConfigurationHttpConfigurationToTerraform(struct?: NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputReference | NetworkConnectionMonitorTestConfigurationHttpConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -449,12 +530,61 @@ export class NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputRef
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkConnectionMonitorTestConfigurationHttpConfiguration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._method) {
+      hasAnyValues = true;
+      internalValueResult.method = this._method;
+    }
+    if (this._path) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._port) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._preferHttps) {
+      hasAnyValues = true;
+      internalValueResult.preferHttps = this._preferHttps;
+    }
+    if (this._validStatusCodeRanges) {
+      hasAnyValues = true;
+      internalValueResult.validStatusCodeRanges = this._validStatusCodeRanges;
+    }
+    if (this._requestHeader) {
+      hasAnyValues = true;
+      internalValueResult.requestHeader = this._requestHeader;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkConnectionMonitorTestConfigurationHttpConfiguration | undefined) {
+    if (value === undefined) {
+      this._method = undefined;
+      this._path = undefined;
+      this._port = undefined;
+      this._preferHttps = undefined;
+      this._validStatusCodeRanges = undefined;
+      this._requestHeader = undefined;
+    }
+    else {
+      this._method = value.method;
+      this._path = value.path;
+      this._port = value.port;
+      this._preferHttps = value.preferHttps;
+      this._validStatusCodeRanges = value.validStatusCodeRanges;
+      this._requestHeader = value.requestHeader;
+    }
+  }
+
   // method - computed: false, optional: true, required: false
-  private _method?: string | undefined; 
+  private _method?: string; 
   public get method() {
     return this.getStringAttribute('method');
   }
-  public set method(value: string | undefined) {
+  public set method(value: string) {
     this._method = value;
   }
   public resetMethod() {
@@ -462,15 +592,15 @@ export class NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputRef
   }
   // Temporarily expose input value. Use with caution.
   public get methodInput() {
-    return this._method
+    return this._method;
   }
 
   // path - computed: false, optional: true, required: false
-  private _path?: string | undefined; 
+  private _path?: string; 
   public get path() {
     return this.getStringAttribute('path');
   }
-  public set path(value: string | undefined) {
+  public set path(value: string) {
     this._path = value;
   }
   public resetPath() {
@@ -478,15 +608,15 @@ export class NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputRef
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
-    return this._path
+    return this._path;
   }
 
   // port - computed: false, optional: true, required: false
-  private _port?: number | undefined; 
+  private _port?: number; 
   public get port() {
     return this.getNumberAttribute('port');
   }
-  public set port(value: number | undefined) {
+  public set port(value: number) {
     this._port = value;
   }
   public resetPort() {
@@ -494,15 +624,15 @@ export class NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputRef
   }
   // Temporarily expose input value. Use with caution.
   public get portInput() {
-    return this._port
+    return this._port;
   }
 
   // prefer_https - computed: false, optional: true, required: false
-  private _preferHttps?: boolean | cdktf.IResolvable | undefined; 
+  private _preferHttps?: boolean | cdktf.IResolvable; 
   public get preferHttps() {
     return this.getBooleanAttribute('prefer_https') as any;
   }
-  public set preferHttps(value: boolean | cdktf.IResolvable | undefined) {
+  public set preferHttps(value: boolean | cdktf.IResolvable) {
     this._preferHttps = value;
   }
   public resetPreferHttps() {
@@ -510,15 +640,15 @@ export class NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputRef
   }
   // Temporarily expose input value. Use with caution.
   public get preferHttpsInput() {
-    return this._preferHttps
+    return this._preferHttps;
   }
 
   // valid_status_code_ranges - computed: false, optional: true, required: false
-  private _validStatusCodeRanges?: string[] | undefined; 
+  private _validStatusCodeRanges?: string[]; 
   public get validStatusCodeRanges() {
     return this.getListAttribute('valid_status_code_ranges');
   }
-  public set validStatusCodeRanges(value: string[] | undefined) {
+  public set validStatusCodeRanges(value: string[]) {
     this._validStatusCodeRanges = value;
   }
   public resetValidStatusCodeRanges() {
@@ -526,16 +656,16 @@ export class NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputRef
   }
   // Temporarily expose input value. Use with caution.
   public get validStatusCodeRangesInput() {
-    return this._validStatusCodeRanges
+    return this._validStatusCodeRanges;
   }
 
   // request_header - computed: false, optional: true, required: false
-  private _requestHeader?: NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader[] | undefined; 
+  private _requestHeader?: NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader[]; 
   public get requestHeader() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('request_header') as any;
   }
-  public set requestHeader(value: NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader[] | undefined) {
+  public set requestHeader(value: NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader[]) {
     this._requestHeader = value;
   }
   public resetRequestHeader() {
@@ -543,7 +673,7 @@ export class NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputRef
   }
   // Temporarily expose input value. Use with caution.
   public get requestHeaderInput() {
-    return this._requestHeader
+    return this._requestHeader;
   }
 }
 export interface NetworkConnectionMonitorTestConfigurationIcmpConfiguration {
@@ -553,7 +683,7 @@ export interface NetworkConnectionMonitorTestConfigurationIcmpConfiguration {
   readonly traceRouteEnabled?: boolean | cdktf.IResolvable;
 }
 
-function networkConnectionMonitorTestConfigurationIcmpConfigurationToTerraform(struct?: NetworkConnectionMonitorTestConfigurationIcmpConfigurationOutputReference | NetworkConnectionMonitorTestConfigurationIcmpConfiguration): any {
+export function networkConnectionMonitorTestConfigurationIcmpConfigurationToTerraform(struct?: NetworkConnectionMonitorTestConfigurationIcmpConfigurationOutputReference | NetworkConnectionMonitorTestConfigurationIcmpConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -573,12 +703,31 @@ export class NetworkConnectionMonitorTestConfigurationIcmpConfigurationOutputRef
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkConnectionMonitorTestConfigurationIcmpConfiguration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._traceRouteEnabled) {
+      hasAnyValues = true;
+      internalValueResult.traceRouteEnabled = this._traceRouteEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkConnectionMonitorTestConfigurationIcmpConfiguration | undefined) {
+    if (value === undefined) {
+      this._traceRouteEnabled = undefined;
+    }
+    else {
+      this._traceRouteEnabled = value.traceRouteEnabled;
+    }
+  }
+
   // trace_route_enabled - computed: false, optional: true, required: false
-  private _traceRouteEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _traceRouteEnabled?: boolean | cdktf.IResolvable; 
   public get traceRouteEnabled() {
     return this.getBooleanAttribute('trace_route_enabled') as any;
   }
-  public set traceRouteEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set traceRouteEnabled(value: boolean | cdktf.IResolvable) {
     this._traceRouteEnabled = value;
   }
   public resetTraceRouteEnabled() {
@@ -586,7 +735,7 @@ export class NetworkConnectionMonitorTestConfigurationIcmpConfigurationOutputRef
   }
   // Temporarily expose input value. Use with caution.
   public get traceRouteEnabledInput() {
-    return this._traceRouteEnabled
+    return this._traceRouteEnabled;
   }
 }
 export interface NetworkConnectionMonitorTestConfigurationSuccessThreshold {
@@ -600,7 +749,7 @@ export interface NetworkConnectionMonitorTestConfigurationSuccessThreshold {
   readonly roundTripTimeMs?: number;
 }
 
-function networkConnectionMonitorTestConfigurationSuccessThresholdToTerraform(struct?: NetworkConnectionMonitorTestConfigurationSuccessThresholdOutputReference | NetworkConnectionMonitorTestConfigurationSuccessThreshold): any {
+export function networkConnectionMonitorTestConfigurationSuccessThresholdToTerraform(struct?: NetworkConnectionMonitorTestConfigurationSuccessThresholdOutputReference | NetworkConnectionMonitorTestConfigurationSuccessThreshold): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -621,12 +770,37 @@ export class NetworkConnectionMonitorTestConfigurationSuccessThresholdOutputRefe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkConnectionMonitorTestConfigurationSuccessThreshold | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._checksFailedPercent) {
+      hasAnyValues = true;
+      internalValueResult.checksFailedPercent = this._checksFailedPercent;
+    }
+    if (this._roundTripTimeMs) {
+      hasAnyValues = true;
+      internalValueResult.roundTripTimeMs = this._roundTripTimeMs;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkConnectionMonitorTestConfigurationSuccessThreshold | undefined) {
+    if (value === undefined) {
+      this._checksFailedPercent = undefined;
+      this._roundTripTimeMs = undefined;
+    }
+    else {
+      this._checksFailedPercent = value.checksFailedPercent;
+      this._roundTripTimeMs = value.roundTripTimeMs;
+    }
+  }
+
   // checks_failed_percent - computed: false, optional: true, required: false
-  private _checksFailedPercent?: number | undefined; 
+  private _checksFailedPercent?: number; 
   public get checksFailedPercent() {
     return this.getNumberAttribute('checks_failed_percent');
   }
-  public set checksFailedPercent(value: number | undefined) {
+  public set checksFailedPercent(value: number) {
     this._checksFailedPercent = value;
   }
   public resetChecksFailedPercent() {
@@ -634,15 +808,15 @@ export class NetworkConnectionMonitorTestConfigurationSuccessThresholdOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get checksFailedPercentInput() {
-    return this._checksFailedPercent
+    return this._checksFailedPercent;
   }
 
   // round_trip_time_ms - computed: false, optional: true, required: false
-  private _roundTripTimeMs?: number | undefined; 
+  private _roundTripTimeMs?: number; 
   public get roundTripTimeMs() {
     return this.getNumberAttribute('round_trip_time_ms');
   }
-  public set roundTripTimeMs(value: number | undefined) {
+  public set roundTripTimeMs(value: number) {
     this._roundTripTimeMs = value;
   }
   public resetRoundTripTimeMs() {
@@ -650,7 +824,7 @@ export class NetworkConnectionMonitorTestConfigurationSuccessThresholdOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get roundTripTimeMsInput() {
-    return this._roundTripTimeMs
+    return this._roundTripTimeMs;
   }
 }
 export interface NetworkConnectionMonitorTestConfigurationTcpConfiguration {
@@ -668,7 +842,7 @@ export interface NetworkConnectionMonitorTestConfigurationTcpConfiguration {
   readonly traceRouteEnabled?: boolean | cdktf.IResolvable;
 }
 
-function networkConnectionMonitorTestConfigurationTcpConfigurationToTerraform(struct?: NetworkConnectionMonitorTestConfigurationTcpConfigurationOutputReference | NetworkConnectionMonitorTestConfigurationTcpConfiguration): any {
+export function networkConnectionMonitorTestConfigurationTcpConfigurationToTerraform(struct?: NetworkConnectionMonitorTestConfigurationTcpConfigurationOutputReference | NetworkConnectionMonitorTestConfigurationTcpConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -690,12 +864,43 @@ export class NetworkConnectionMonitorTestConfigurationTcpConfigurationOutputRefe
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkConnectionMonitorTestConfigurationTcpConfiguration | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._destinationPortBehavior) {
+      hasAnyValues = true;
+      internalValueResult.destinationPortBehavior = this._destinationPortBehavior;
+    }
+    if (this._port) {
+      hasAnyValues = true;
+      internalValueResult.port = this._port;
+    }
+    if (this._traceRouteEnabled) {
+      hasAnyValues = true;
+      internalValueResult.traceRouteEnabled = this._traceRouteEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkConnectionMonitorTestConfigurationTcpConfiguration | undefined) {
+    if (value === undefined) {
+      this._destinationPortBehavior = undefined;
+      this._port = undefined;
+      this._traceRouteEnabled = undefined;
+    }
+    else {
+      this._destinationPortBehavior = value.destinationPortBehavior;
+      this._port = value.port;
+      this._traceRouteEnabled = value.traceRouteEnabled;
+    }
+  }
+
   // destination_port_behavior - computed: false, optional: true, required: false
-  private _destinationPortBehavior?: string | undefined; 
+  private _destinationPortBehavior?: string; 
   public get destinationPortBehavior() {
     return this.getStringAttribute('destination_port_behavior');
   }
-  public set destinationPortBehavior(value: string | undefined) {
+  public set destinationPortBehavior(value: string) {
     this._destinationPortBehavior = value;
   }
   public resetDestinationPortBehavior() {
@@ -703,7 +908,7 @@ export class NetworkConnectionMonitorTestConfigurationTcpConfigurationOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get destinationPortBehaviorInput() {
-    return this._destinationPortBehavior
+    return this._destinationPortBehavior;
   }
 
   // port - computed: false, optional: false, required: true
@@ -716,15 +921,15 @@ export class NetworkConnectionMonitorTestConfigurationTcpConfigurationOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get portInput() {
-    return this._port
+    return this._port;
   }
 
   // trace_route_enabled - computed: false, optional: true, required: false
-  private _traceRouteEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _traceRouteEnabled?: boolean | cdktf.IResolvable; 
   public get traceRouteEnabled() {
     return this.getBooleanAttribute('trace_route_enabled') as any;
   }
-  public set traceRouteEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set traceRouteEnabled(value: boolean | cdktf.IResolvable) {
     this._traceRouteEnabled = value;
   }
   public resetTraceRouteEnabled() {
@@ -732,7 +937,7 @@ export class NetworkConnectionMonitorTestConfigurationTcpConfigurationOutputRefe
   }
   // Temporarily expose input value. Use with caution.
   public get traceRouteEnabledInput() {
-    return this._traceRouteEnabled
+    return this._traceRouteEnabled;
   }
 }
 export interface NetworkConnectionMonitorTestConfiguration {
@@ -778,7 +983,7 @@ export interface NetworkConnectionMonitorTestConfiguration {
   readonly tcpConfiguration?: NetworkConnectionMonitorTestConfigurationTcpConfiguration;
 }
 
-function networkConnectionMonitorTestConfigurationToTerraform(struct?: NetworkConnectionMonitorTestConfiguration): any {
+export function networkConnectionMonitorTestConfigurationToTerraform(struct?: NetworkConnectionMonitorTestConfiguration): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -818,7 +1023,7 @@ export interface NetworkConnectionMonitorTestGroup {
   readonly testConfigurationNames: string[];
 }
 
-function networkConnectionMonitorTestGroupToTerraform(struct?: NetworkConnectionMonitorTestGroup): any {
+export function networkConnectionMonitorTestGroupToTerraform(struct?: NetworkConnectionMonitorTestGroup): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -851,7 +1056,7 @@ export interface NetworkConnectionMonitorTimeouts {
   readonly update?: string;
 }
 
-function networkConnectionMonitorTimeoutsToTerraform(struct?: NetworkConnectionMonitorTimeoutsOutputReference | NetworkConnectionMonitorTimeouts): any {
+export function networkConnectionMonitorTimeoutsToTerraform(struct?: NetworkConnectionMonitorTimeoutsOutputReference | NetworkConnectionMonitorTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -874,12 +1079,49 @@ export class NetworkConnectionMonitorTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkConnectionMonitorTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkConnectionMonitorTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -887,15 +1129,15 @@ export class NetworkConnectionMonitorTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -903,15 +1145,15 @@ export class NetworkConnectionMonitorTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -919,15 +1161,15 @@ export class NetworkConnectionMonitorTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -935,7 +1177,7 @@ export class NetworkConnectionMonitorTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -979,12 +1221,12 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
     this._notes = config.notes;
     this._outputWorkspaceResourceIds = config.outputWorkspaceResourceIds;
     this._tags = config.tags;
-    this._destination = config.destination;
+    this._destination.internalValue = config.destination;
     this._endpoint = config.endpoint;
-    this._source = config.source;
+    this._source.internalValue = config.source;
     this._testConfiguration = config.testConfiguration;
     this._testGroup = config.testGroup;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -992,11 +1234,11 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   // ==========
 
   // auto_start - computed: true, optional: true, required: false
-  private _autoStart?: boolean | cdktf.IResolvable | undefined; 
+  private _autoStart?: boolean | cdktf.IResolvable; 
   public get autoStart() {
     return this.getBooleanAttribute('auto_start') as any;
   }
-  public set autoStart(value: boolean | cdktf.IResolvable | undefined) {
+  public set autoStart(value: boolean | cdktf.IResolvable) {
     this._autoStart = value;
   }
   public resetAutoStart() {
@@ -1004,7 +1246,7 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get autoStartInput() {
-    return this._autoStart
+    return this._autoStart;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1013,11 +1255,11 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   }
 
   // interval_in_seconds - computed: true, optional: true, required: false
-  private _intervalInSeconds?: number | undefined; 
+  private _intervalInSeconds?: number; 
   public get intervalInSeconds() {
     return this.getNumberAttribute('interval_in_seconds');
   }
-  public set intervalInSeconds(value: number | undefined) {
+  public set intervalInSeconds(value: number) {
     this._intervalInSeconds = value;
   }
   public resetIntervalInSeconds() {
@@ -1025,7 +1267,7 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get intervalInSecondsInput() {
-    return this._intervalInSeconds
+    return this._intervalInSeconds;
   }
 
   // location - computed: false, optional: false, required: true
@@ -1038,7 +1280,7 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -1051,7 +1293,7 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network_watcher_id - computed: false, optional: false, required: true
@@ -1064,15 +1306,15 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkWatcherIdInput() {
-    return this._networkWatcherId
+    return this._networkWatcherId;
   }
 
   // notes - computed: false, optional: true, required: false
-  private _notes?: string | undefined; 
+  private _notes?: string; 
   public get notes() {
     return this.getStringAttribute('notes');
   }
-  public set notes(value: string | undefined) {
+  public set notes(value: string) {
     this._notes = value;
   }
   public resetNotes() {
@@ -1080,15 +1322,15 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get notesInput() {
-    return this._notes
+    return this._notes;
   }
 
   // output_workspace_resource_ids - computed: true, optional: true, required: false
-  private _outputWorkspaceResourceIds?: string[] | undefined; 
+  private _outputWorkspaceResourceIds?: string[]; 
   public get outputWorkspaceResourceIds() {
     return this.getListAttribute('output_workspace_resource_ids');
   }
-  public set outputWorkspaceResourceIds(value: string[] | undefined) {
+  public set outputWorkspaceResourceIds(value: string[]) {
     this._outputWorkspaceResourceIds = value;
   }
   public resetOutputWorkspaceResourceIds() {
@@ -1096,16 +1338,16 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get outputWorkspaceResourceIdsInput() {
-    return this._outputWorkspaceResourceIds
+    return this._outputWorkspaceResourceIds;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -1113,24 +1355,23 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // destination - computed: false, optional: true, required: false
-  private _destination?: NetworkConnectionMonitorDestination | undefined; 
-  private __destinationOutput = new NetworkConnectionMonitorDestinationOutputReference(this as any, "destination", true);
+  private _destination = new NetworkConnectionMonitorDestinationOutputReference(this as any, "destination", true);
   public get destination() {
-    return this.__destinationOutput;
+    return this._destination;
   }
-  public putDestination(value: NetworkConnectionMonitorDestination | undefined) {
-    this._destination = value;
+  public putDestination(value: NetworkConnectionMonitorDestination) {
+    this._destination.internalValue = value;
   }
   public resetDestination() {
-    this._destination = undefined;
+    this._destination.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get destinationInput() {
-    return this._destination
+    return this._destination.internalValue;
   }
 
   // endpoint - computed: false, optional: false, required: true
@@ -1144,24 +1385,23 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get endpointInput() {
-    return this._endpoint
+    return this._endpoint;
   }
 
   // source - computed: false, optional: true, required: false
-  private _source?: NetworkConnectionMonitorSource | undefined; 
-  private __sourceOutput = new NetworkConnectionMonitorSourceOutputReference(this as any, "source", true);
+  private _source = new NetworkConnectionMonitorSourceOutputReference(this as any, "source", true);
   public get source() {
-    return this.__sourceOutput;
+    return this._source;
   }
-  public putSource(value: NetworkConnectionMonitorSource | undefined) {
-    this._source = value;
+  public putSource(value: NetworkConnectionMonitorSource) {
+    this._source.internalValue = value;
   }
   public resetSource() {
-    this._source = undefined;
+    this._source.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get sourceInput() {
-    return this._source
+    return this._source.internalValue;
   }
 
   // test_configuration - computed: false, optional: false, required: true
@@ -1175,7 +1415,7 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get testConfigurationInput() {
-    return this._testConfiguration
+    return this._testConfiguration;
   }
 
   // test_group - computed: false, optional: false, required: true
@@ -1189,24 +1429,23 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get testGroupInput() {
-    return this._testGroup
+    return this._testGroup;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: NetworkConnectionMonitorTimeouts | undefined; 
-  private __timeoutsOutput = new NetworkConnectionMonitorTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NetworkConnectionMonitorTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: NetworkConnectionMonitorTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: NetworkConnectionMonitorTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -1223,12 +1462,12 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
       notes: cdktf.stringToTerraform(this._notes),
       output_workspace_resource_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._outputWorkspaceResourceIds),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      destination: networkConnectionMonitorDestinationToTerraform(this._destination),
+      destination: networkConnectionMonitorDestinationToTerraform(this._destination.internalValue),
       endpoint: cdktf.listMapper(networkConnectionMonitorEndpointToTerraform)(this._endpoint),
-      source: networkConnectionMonitorSourceToTerraform(this._source),
+      source: networkConnectionMonitorSourceToTerraform(this._source.internalValue),
       test_configuration: cdktf.listMapper(networkConnectionMonitorTestConfigurationToTerraform)(this._testConfiguration),
       test_group: cdktf.listMapper(networkConnectionMonitorTestGroupToTerraform)(this._testGroup),
-      timeouts: networkConnectionMonitorTimeoutsToTerraform(this._timeouts),
+      timeouts: networkConnectionMonitorTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -93,7 +93,7 @@ export interface MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthent
   readonly identifier?: string;
 }
 
-function mediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKeyToTerraform(struct?: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey): any {
+export function mediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKeyToTerraform(struct?: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -120,7 +120,7 @@ export interface MediaStreamingEndpointAccessControlIpAllow {
   readonly subnetPrefixLength?: number;
 }
 
-function mediaStreamingEndpointAccessControlIpAllowToTerraform(struct?: MediaStreamingEndpointAccessControlIpAllow): any {
+export function mediaStreamingEndpointAccessControlIpAllowToTerraform(struct?: MediaStreamingEndpointAccessControlIpAllow): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -147,7 +147,7 @@ export interface MediaStreamingEndpointAccessControl {
   readonly ipAllow?: MediaStreamingEndpointAccessControlIpAllow[];
 }
 
-function mediaStreamingEndpointAccessControlToTerraform(struct?: MediaStreamingEndpointAccessControlOutputReference | MediaStreamingEndpointAccessControl): any {
+export function mediaStreamingEndpointAccessControlToTerraform(struct?: MediaStreamingEndpointAccessControlOutputReference | MediaStreamingEndpointAccessControl): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -168,13 +168,38 @@ export class MediaStreamingEndpointAccessControlOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaStreamingEndpointAccessControl | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._akamaiSignatureHeaderAuthenticationKey) {
+      hasAnyValues = true;
+      internalValueResult.akamaiSignatureHeaderAuthenticationKey = this._akamaiSignatureHeaderAuthenticationKey;
+    }
+    if (this._ipAllow) {
+      hasAnyValues = true;
+      internalValueResult.ipAllow = this._ipAllow;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingEndpointAccessControl | undefined) {
+    if (value === undefined) {
+      this._akamaiSignatureHeaderAuthenticationKey = undefined;
+      this._ipAllow = undefined;
+    }
+    else {
+      this._akamaiSignatureHeaderAuthenticationKey = value.akamaiSignatureHeaderAuthenticationKey;
+      this._ipAllow = value.ipAllow;
+    }
+  }
+
   // akamai_signature_header_authentication_key - computed: false, optional: true, required: false
-  private _akamaiSignatureHeaderAuthenticationKey?: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey[] | undefined; 
+  private _akamaiSignatureHeaderAuthenticationKey?: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey[]; 
   public get akamaiSignatureHeaderAuthenticationKey() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('akamai_signature_header_authentication_key') as any;
   }
-  public set akamaiSignatureHeaderAuthenticationKey(value: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey[] | undefined) {
+  public set akamaiSignatureHeaderAuthenticationKey(value: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey[]) {
     this._akamaiSignatureHeaderAuthenticationKey = value;
   }
   public resetAkamaiSignatureHeaderAuthenticationKey() {
@@ -182,16 +207,16 @@ export class MediaStreamingEndpointAccessControlOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get akamaiSignatureHeaderAuthenticationKeyInput() {
-    return this._akamaiSignatureHeaderAuthenticationKey
+    return this._akamaiSignatureHeaderAuthenticationKey;
   }
 
   // ip_allow - computed: false, optional: true, required: false
-  private _ipAllow?: MediaStreamingEndpointAccessControlIpAllow[] | undefined; 
+  private _ipAllow?: MediaStreamingEndpointAccessControlIpAllow[]; 
   public get ipAllow() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ip_allow') as any;
   }
-  public set ipAllow(value: MediaStreamingEndpointAccessControlIpAllow[] | undefined) {
+  public set ipAllow(value: MediaStreamingEndpointAccessControlIpAllow[]) {
     this._ipAllow = value;
   }
   public resetIpAllow() {
@@ -199,7 +224,7 @@ export class MediaStreamingEndpointAccessControlOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get ipAllowInput() {
-    return this._ipAllow
+    return this._ipAllow;
   }
 }
 export interface MediaStreamingEndpointCrossSiteAccessPolicy {
@@ -213,7 +238,7 @@ export interface MediaStreamingEndpointCrossSiteAccessPolicy {
   readonly crossDomainPolicy?: string;
 }
 
-function mediaStreamingEndpointCrossSiteAccessPolicyToTerraform(struct?: MediaStreamingEndpointCrossSiteAccessPolicyOutputReference | MediaStreamingEndpointCrossSiteAccessPolicy): any {
+export function mediaStreamingEndpointCrossSiteAccessPolicyToTerraform(struct?: MediaStreamingEndpointCrossSiteAccessPolicyOutputReference | MediaStreamingEndpointCrossSiteAccessPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -234,12 +259,37 @@ export class MediaStreamingEndpointCrossSiteAccessPolicyOutputReference extends 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaStreamingEndpointCrossSiteAccessPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._clientAccessPolicy) {
+      hasAnyValues = true;
+      internalValueResult.clientAccessPolicy = this._clientAccessPolicy;
+    }
+    if (this._crossDomainPolicy) {
+      hasAnyValues = true;
+      internalValueResult.crossDomainPolicy = this._crossDomainPolicy;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingEndpointCrossSiteAccessPolicy | undefined) {
+    if (value === undefined) {
+      this._clientAccessPolicy = undefined;
+      this._crossDomainPolicy = undefined;
+    }
+    else {
+      this._clientAccessPolicy = value.clientAccessPolicy;
+      this._crossDomainPolicy = value.crossDomainPolicy;
+    }
+  }
+
   // client_access_policy - computed: true, optional: true, required: false
-  private _clientAccessPolicy?: string | undefined; 
+  private _clientAccessPolicy?: string; 
   public get clientAccessPolicy() {
     return this.getStringAttribute('client_access_policy');
   }
-  public set clientAccessPolicy(value: string | undefined) {
+  public set clientAccessPolicy(value: string) {
     this._clientAccessPolicy = value;
   }
   public resetClientAccessPolicy() {
@@ -247,15 +297,15 @@ export class MediaStreamingEndpointCrossSiteAccessPolicyOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get clientAccessPolicyInput() {
-    return this._clientAccessPolicy
+    return this._clientAccessPolicy;
   }
 
   // cross_domain_policy - computed: true, optional: true, required: false
-  private _crossDomainPolicy?: string | undefined; 
+  private _crossDomainPolicy?: string; 
   public get crossDomainPolicy() {
     return this.getStringAttribute('cross_domain_policy');
   }
-  public set crossDomainPolicy(value: string | undefined) {
+  public set crossDomainPolicy(value: string) {
     this._crossDomainPolicy = value;
   }
   public resetCrossDomainPolicy() {
@@ -263,7 +313,7 @@ export class MediaStreamingEndpointCrossSiteAccessPolicyOutputReference extends 
   }
   // Temporarily expose input value. Use with caution.
   public get crossDomainPolicyInput() {
-    return this._crossDomainPolicy
+    return this._crossDomainPolicy;
   }
 }
 export interface MediaStreamingEndpointTimeouts {
@@ -285,7 +335,7 @@ export interface MediaStreamingEndpointTimeouts {
   readonly update?: string;
 }
 
-function mediaStreamingEndpointTimeoutsToTerraform(struct?: MediaStreamingEndpointTimeoutsOutputReference | MediaStreamingEndpointTimeouts): any {
+export function mediaStreamingEndpointTimeoutsToTerraform(struct?: MediaStreamingEndpointTimeoutsOutputReference | MediaStreamingEndpointTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -308,12 +358,49 @@ export class MediaStreamingEndpointTimeoutsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaStreamingEndpointTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaStreamingEndpointTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -321,15 +408,15 @@ export class MediaStreamingEndpointTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -337,15 +424,15 @@ export class MediaStreamingEndpointTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -353,15 +440,15 @@ export class MediaStreamingEndpointTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -369,7 +456,7 @@ export class MediaStreamingEndpointTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -418,9 +505,9 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._scaleUnits = config.scaleUnits;
     this._tags = config.tags;
-    this._accessControl = config.accessControl;
-    this._crossSiteAccessPolicy = config.crossSiteAccessPolicy;
-    this._timeouts = config.timeouts;
+    this._accessControl.internalValue = config.accessControl;
+    this._crossSiteAccessPolicy.internalValue = config.crossSiteAccessPolicy;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -428,11 +515,11 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   // ==========
 
   // auto_start_enabled - computed: true, optional: true, required: false
-  private _autoStartEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _autoStartEnabled?: boolean | cdktf.IResolvable; 
   public get autoStartEnabled() {
     return this.getBooleanAttribute('auto_start_enabled') as any;
   }
-  public set autoStartEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set autoStartEnabled(value: boolean | cdktf.IResolvable) {
     this._autoStartEnabled = value;
   }
   public resetAutoStartEnabled() {
@@ -440,15 +527,15 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get autoStartEnabledInput() {
-    return this._autoStartEnabled
+    return this._autoStartEnabled;
   }
 
   // cdn_enabled - computed: false, optional: true, required: false
-  private _cdnEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _cdnEnabled?: boolean | cdktf.IResolvable; 
   public get cdnEnabled() {
     return this.getBooleanAttribute('cdn_enabled') as any;
   }
-  public set cdnEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set cdnEnabled(value: boolean | cdktf.IResolvable) {
     this._cdnEnabled = value;
   }
   public resetCdnEnabled() {
@@ -456,15 +543,15 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get cdnEnabledInput() {
-    return this._cdnEnabled
+    return this._cdnEnabled;
   }
 
   // cdn_profile - computed: true, optional: true, required: false
-  private _cdnProfile?: string | undefined; 
+  private _cdnProfile?: string; 
   public get cdnProfile() {
     return this.getStringAttribute('cdn_profile');
   }
-  public set cdnProfile(value: string | undefined) {
+  public set cdnProfile(value: string) {
     this._cdnProfile = value;
   }
   public resetCdnProfile() {
@@ -472,15 +559,15 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get cdnProfileInput() {
-    return this._cdnProfile
+    return this._cdnProfile;
   }
 
   // cdn_provider - computed: true, optional: true, required: false
-  private _cdnProvider?: string | undefined; 
+  private _cdnProvider?: string; 
   public get cdnProvider() {
     return this.getStringAttribute('cdn_provider');
   }
-  public set cdnProvider(value: string | undefined) {
+  public set cdnProvider(value: string) {
     this._cdnProvider = value;
   }
   public resetCdnProvider() {
@@ -488,15 +575,15 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get cdnProviderInput() {
-    return this._cdnProvider
+    return this._cdnProvider;
   }
 
   // custom_host_names - computed: false, optional: true, required: false
-  private _customHostNames?: string[] | undefined; 
+  private _customHostNames?: string[]; 
   public get customHostNames() {
     return this.getListAttribute('custom_host_names');
   }
-  public set customHostNames(value: string[] | undefined) {
+  public set customHostNames(value: string[]) {
     this._customHostNames = value;
   }
   public resetCustomHostNames() {
@@ -504,15 +591,15 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get customHostNamesInput() {
-    return this._customHostNames
+    return this._customHostNames;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -520,7 +607,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // host_name - computed: true, optional: false, required: false
@@ -543,15 +630,15 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // max_cache_age_seconds - computed: false, optional: true, required: false
-  private _maxCacheAgeSeconds?: number | undefined; 
+  private _maxCacheAgeSeconds?: number; 
   public get maxCacheAgeSeconds() {
     return this.getNumberAttribute('max_cache_age_seconds');
   }
-  public set maxCacheAgeSeconds(value: number | undefined) {
+  public set maxCacheAgeSeconds(value: number) {
     this._maxCacheAgeSeconds = value;
   }
   public resetMaxCacheAgeSeconds() {
@@ -559,7 +646,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get maxCacheAgeSecondsInput() {
-    return this._maxCacheAgeSeconds
+    return this._maxCacheAgeSeconds;
   }
 
   // media_services_account_name - computed: false, optional: false, required: true
@@ -572,7 +659,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get mediaServicesAccountNameInput() {
-    return this._mediaServicesAccountName
+    return this._mediaServicesAccountName;
   }
 
   // name - computed: false, optional: false, required: true
@@ -585,7 +672,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -598,7 +685,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // scale_units - computed: false, optional: false, required: true
@@ -611,16 +698,16 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get scaleUnitsInput() {
-    return this._scaleUnits
+    return this._scaleUnits;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -628,58 +715,55 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // access_control - computed: false, optional: true, required: false
-  private _accessControl?: MediaStreamingEndpointAccessControl | undefined; 
-  private __accessControlOutput = new MediaStreamingEndpointAccessControlOutputReference(this as any, "access_control", true);
+  private _accessControl = new MediaStreamingEndpointAccessControlOutputReference(this as any, "access_control", true);
   public get accessControl() {
-    return this.__accessControlOutput;
+    return this._accessControl;
   }
-  public putAccessControl(value: MediaStreamingEndpointAccessControl | undefined) {
-    this._accessControl = value;
+  public putAccessControl(value: MediaStreamingEndpointAccessControl) {
+    this._accessControl.internalValue = value;
   }
   public resetAccessControl() {
-    this._accessControl = undefined;
+    this._accessControl.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get accessControlInput() {
-    return this._accessControl
+    return this._accessControl.internalValue;
   }
 
   // cross_site_access_policy - computed: false, optional: true, required: false
-  private _crossSiteAccessPolicy?: MediaStreamingEndpointCrossSiteAccessPolicy | undefined; 
-  private __crossSiteAccessPolicyOutput = new MediaStreamingEndpointCrossSiteAccessPolicyOutputReference(this as any, "cross_site_access_policy", true);
+  private _crossSiteAccessPolicy = new MediaStreamingEndpointCrossSiteAccessPolicyOutputReference(this as any, "cross_site_access_policy", true);
   public get crossSiteAccessPolicy() {
-    return this.__crossSiteAccessPolicyOutput;
+    return this._crossSiteAccessPolicy;
   }
-  public putCrossSiteAccessPolicy(value: MediaStreamingEndpointCrossSiteAccessPolicy | undefined) {
-    this._crossSiteAccessPolicy = value;
+  public putCrossSiteAccessPolicy(value: MediaStreamingEndpointCrossSiteAccessPolicy) {
+    this._crossSiteAccessPolicy.internalValue = value;
   }
   public resetCrossSiteAccessPolicy() {
-    this._crossSiteAccessPolicy = undefined;
+    this._crossSiteAccessPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get crossSiteAccessPolicyInput() {
-    return this._crossSiteAccessPolicy
+    return this._crossSiteAccessPolicy.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MediaStreamingEndpointTimeouts | undefined; 
-  private __timeoutsOutput = new MediaStreamingEndpointTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MediaStreamingEndpointTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MediaStreamingEndpointTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MediaStreamingEndpointTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -701,9 +785,9 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       scale_units: cdktf.numberToTerraform(this._scaleUnits),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      access_control: mediaStreamingEndpointAccessControlToTerraform(this._accessControl),
-      cross_site_access_policy: mediaStreamingEndpointCrossSiteAccessPolicyToTerraform(this._crossSiteAccessPolicy),
-      timeouts: mediaStreamingEndpointTimeoutsToTerraform(this._timeouts),
+      access_control: mediaStreamingEndpointAccessControlToTerraform(this._accessControl.internalValue),
+      cross_site_access_policy: mediaStreamingEndpointCrossSiteAccessPolicyToTerraform(this._crossSiteAccessPolicy.internalValue),
+      timeouts: mediaStreamingEndpointTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

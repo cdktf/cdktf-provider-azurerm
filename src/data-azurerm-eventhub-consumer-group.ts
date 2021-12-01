@@ -37,7 +37,7 @@ export interface DataAzurermEventhubConsumerGroupTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermEventhubConsumerGroupTimeoutsToTerraform(struct?: DataAzurermEventhubConsumerGroupTimeoutsOutputReference | DataAzurermEventhubConsumerGroupTimeouts): any {
+export function dataAzurermEventhubConsumerGroupTimeoutsToTerraform(struct?: DataAzurermEventhubConsumerGroupTimeoutsOutputReference | DataAzurermEventhubConsumerGroupTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -57,12 +57,31 @@ export class DataAzurermEventhubConsumerGroupTimeoutsOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermEventhubConsumerGroupTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermEventhubConsumerGroupTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -70,7 +89,7 @@ export class DataAzurermEventhubConsumerGroupTimeoutsOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -110,7 +129,7 @@ export class DataAzurermEventhubConsumerGroup extends cdktf.TerraformDataSource 
     this._name = config.name;
     this._namespaceName = config.namespaceName;
     this._resourceGroupName = config.resourceGroupName;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -127,7 +146,7 @@ export class DataAzurermEventhubConsumerGroup extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get eventhubNameInput() {
-    return this._eventhubName
+    return this._eventhubName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -150,7 +169,7 @@ export class DataAzurermEventhubConsumerGroup extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // namespace_name - computed: false, optional: false, required: true
@@ -163,7 +182,7 @@ export class DataAzurermEventhubConsumerGroup extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceNameInput() {
-    return this._namespaceName
+    return this._namespaceName;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -176,7 +195,7 @@ export class DataAzurermEventhubConsumerGroup extends cdktf.TerraformDataSource 
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // user_metadata - computed: true, optional: false, required: false
@@ -185,20 +204,19 @@ export class DataAzurermEventhubConsumerGroup extends cdktf.TerraformDataSource 
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermEventhubConsumerGroupTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermEventhubConsumerGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermEventhubConsumerGroupTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermEventhubConsumerGroupTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermEventhubConsumerGroupTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -211,7 +229,7 @@ export class DataAzurermEventhubConsumerGroup extends cdktf.TerraformDataSource 
       name: cdktf.stringToTerraform(this._name),
       namespace_name: cdktf.stringToTerraform(this._namespaceName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      timeouts: dataAzurermEventhubConsumerGroupTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermEventhubConsumerGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -71,7 +71,7 @@ export interface LogicAppWorkflowAccessControlAction {
   readonly allowedCallerIpAddressRange: string[];
 }
 
-function logicAppWorkflowAccessControlActionToTerraform(struct?: LogicAppWorkflowAccessControlActionOutputReference | LogicAppWorkflowAccessControlAction): any {
+export function logicAppWorkflowAccessControlActionToTerraform(struct?: LogicAppWorkflowAccessControlActionOutputReference | LogicAppWorkflowAccessControlAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -91,6 +91,25 @@ export class LogicAppWorkflowAccessControlActionOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogicAppWorkflowAccessControlAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowedCallerIpAddressRange) {
+      hasAnyValues = true;
+      internalValueResult.allowedCallerIpAddressRange = this._allowedCallerIpAddressRange;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppWorkflowAccessControlAction | undefined) {
+    if (value === undefined) {
+      this._allowedCallerIpAddressRange = undefined;
+    }
+    else {
+      this._allowedCallerIpAddressRange = value.allowedCallerIpAddressRange;
+    }
+  }
+
   // allowed_caller_ip_address_range - computed: false, optional: false, required: true
   private _allowedCallerIpAddressRange?: string[]; 
   public get allowedCallerIpAddressRange() {
@@ -101,7 +120,7 @@ export class LogicAppWorkflowAccessControlActionOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get allowedCallerIpAddressRangeInput() {
-    return this._allowedCallerIpAddressRange
+    return this._allowedCallerIpAddressRange;
   }
 }
 export interface LogicAppWorkflowAccessControlContent {
@@ -111,7 +130,7 @@ export interface LogicAppWorkflowAccessControlContent {
   readonly allowedCallerIpAddressRange: string[];
 }
 
-function logicAppWorkflowAccessControlContentToTerraform(struct?: LogicAppWorkflowAccessControlContentOutputReference | LogicAppWorkflowAccessControlContent): any {
+export function logicAppWorkflowAccessControlContentToTerraform(struct?: LogicAppWorkflowAccessControlContentOutputReference | LogicAppWorkflowAccessControlContent): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -131,6 +150,25 @@ export class LogicAppWorkflowAccessControlContentOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogicAppWorkflowAccessControlContent | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowedCallerIpAddressRange) {
+      hasAnyValues = true;
+      internalValueResult.allowedCallerIpAddressRange = this._allowedCallerIpAddressRange;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppWorkflowAccessControlContent | undefined) {
+    if (value === undefined) {
+      this._allowedCallerIpAddressRange = undefined;
+    }
+    else {
+      this._allowedCallerIpAddressRange = value.allowedCallerIpAddressRange;
+    }
+  }
+
   // allowed_caller_ip_address_range - computed: false, optional: false, required: true
   private _allowedCallerIpAddressRange?: string[]; 
   public get allowedCallerIpAddressRange() {
@@ -141,7 +179,7 @@ export class LogicAppWorkflowAccessControlContentOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get allowedCallerIpAddressRangeInput() {
-    return this._allowedCallerIpAddressRange
+    return this._allowedCallerIpAddressRange;
   }
 }
 export interface LogicAppWorkflowAccessControlTrigger {
@@ -151,7 +189,7 @@ export interface LogicAppWorkflowAccessControlTrigger {
   readonly allowedCallerIpAddressRange: string[];
 }
 
-function logicAppWorkflowAccessControlTriggerToTerraform(struct?: LogicAppWorkflowAccessControlTriggerOutputReference | LogicAppWorkflowAccessControlTrigger): any {
+export function logicAppWorkflowAccessControlTriggerToTerraform(struct?: LogicAppWorkflowAccessControlTriggerOutputReference | LogicAppWorkflowAccessControlTrigger): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -171,6 +209,25 @@ export class LogicAppWorkflowAccessControlTriggerOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogicAppWorkflowAccessControlTrigger | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowedCallerIpAddressRange) {
+      hasAnyValues = true;
+      internalValueResult.allowedCallerIpAddressRange = this._allowedCallerIpAddressRange;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppWorkflowAccessControlTrigger | undefined) {
+    if (value === undefined) {
+      this._allowedCallerIpAddressRange = undefined;
+    }
+    else {
+      this._allowedCallerIpAddressRange = value.allowedCallerIpAddressRange;
+    }
+  }
+
   // allowed_caller_ip_address_range - computed: false, optional: false, required: true
   private _allowedCallerIpAddressRange?: string[]; 
   public get allowedCallerIpAddressRange() {
@@ -181,7 +238,7 @@ export class LogicAppWorkflowAccessControlTriggerOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get allowedCallerIpAddressRangeInput() {
-    return this._allowedCallerIpAddressRange
+    return this._allowedCallerIpAddressRange;
   }
 }
 export interface LogicAppWorkflowAccessControlWorkflowManagement {
@@ -191,7 +248,7 @@ export interface LogicAppWorkflowAccessControlWorkflowManagement {
   readonly allowedCallerIpAddressRange: string[];
 }
 
-function logicAppWorkflowAccessControlWorkflowManagementToTerraform(struct?: LogicAppWorkflowAccessControlWorkflowManagementOutputReference | LogicAppWorkflowAccessControlWorkflowManagement): any {
+export function logicAppWorkflowAccessControlWorkflowManagementToTerraform(struct?: LogicAppWorkflowAccessControlWorkflowManagementOutputReference | LogicAppWorkflowAccessControlWorkflowManagement): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -211,6 +268,25 @@ export class LogicAppWorkflowAccessControlWorkflowManagementOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogicAppWorkflowAccessControlWorkflowManagement | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowedCallerIpAddressRange) {
+      hasAnyValues = true;
+      internalValueResult.allowedCallerIpAddressRange = this._allowedCallerIpAddressRange;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppWorkflowAccessControlWorkflowManagement | undefined) {
+    if (value === undefined) {
+      this._allowedCallerIpAddressRange = undefined;
+    }
+    else {
+      this._allowedCallerIpAddressRange = value.allowedCallerIpAddressRange;
+    }
+  }
+
   // allowed_caller_ip_address_range - computed: false, optional: false, required: true
   private _allowedCallerIpAddressRange?: string[]; 
   public get allowedCallerIpAddressRange() {
@@ -221,7 +297,7 @@ export class LogicAppWorkflowAccessControlWorkflowManagementOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get allowedCallerIpAddressRangeInput() {
-    return this._allowedCallerIpAddressRange
+    return this._allowedCallerIpAddressRange;
   }
 }
 export interface LogicAppWorkflowAccessControl {
@@ -251,7 +327,7 @@ export interface LogicAppWorkflowAccessControl {
   readonly workflowManagement?: LogicAppWorkflowAccessControlWorkflowManagement;
 }
 
-function logicAppWorkflowAccessControlToTerraform(struct?: LogicAppWorkflowAccessControlOutputReference | LogicAppWorkflowAccessControl): any {
+export function logicAppWorkflowAccessControlToTerraform(struct?: LogicAppWorkflowAccessControlOutputReference | LogicAppWorkflowAccessControl): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -274,72 +350,105 @@ export class LogicAppWorkflowAccessControlOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
-  // action - computed: false, optional: true, required: false
-  private _action?: LogicAppWorkflowAccessControlAction | undefined; 
-  private __actionOutput = new LogicAppWorkflowAccessControlActionOutputReference(this as any, "action", true);
-  public get action() {
-    return this.__actionOutput;
+  public get internalValue(): LogicAppWorkflowAccessControl | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._action) {
+      hasAnyValues = true;
+      internalValueResult.action = this._action?.internalValue;
+    }
+    if (this._content) {
+      hasAnyValues = true;
+      internalValueResult.content = this._content?.internalValue;
+    }
+    if (this._trigger) {
+      hasAnyValues = true;
+      internalValueResult.trigger = this._trigger?.internalValue;
+    }
+    if (this._workflowManagement) {
+      hasAnyValues = true;
+      internalValueResult.workflowManagement = this._workflowManagement?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
   }
-  public putAction(value: LogicAppWorkflowAccessControlAction | undefined) {
-    this._action = value;
+
+  public set internalValue(value: LogicAppWorkflowAccessControl | undefined) {
+    if (value === undefined) {
+      this._action.internalValue = undefined;
+      this._content.internalValue = undefined;
+      this._trigger.internalValue = undefined;
+      this._workflowManagement.internalValue = undefined;
+    }
+    else {
+      this._action.internalValue = value.action;
+      this._content.internalValue = value.content;
+      this._trigger.internalValue = value.trigger;
+      this._workflowManagement.internalValue = value.workflowManagement;
+    }
+  }
+
+  // action - computed: false, optional: true, required: false
+  private _action = new LogicAppWorkflowAccessControlActionOutputReference(this as any, "action", true);
+  public get action() {
+    return this._action;
+  }
+  public putAction(value: LogicAppWorkflowAccessControlAction) {
+    this._action.internalValue = value;
   }
   public resetAction() {
-    this._action = undefined;
+    this._action.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get actionInput() {
-    return this._action
+    return this._action.internalValue;
   }
 
   // content - computed: false, optional: true, required: false
-  private _content?: LogicAppWorkflowAccessControlContent | undefined; 
-  private __contentOutput = new LogicAppWorkflowAccessControlContentOutputReference(this as any, "content", true);
+  private _content = new LogicAppWorkflowAccessControlContentOutputReference(this as any, "content", true);
   public get content() {
-    return this.__contentOutput;
+    return this._content;
   }
-  public putContent(value: LogicAppWorkflowAccessControlContent | undefined) {
-    this._content = value;
+  public putContent(value: LogicAppWorkflowAccessControlContent) {
+    this._content.internalValue = value;
   }
   public resetContent() {
-    this._content = undefined;
+    this._content.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get contentInput() {
-    return this._content
+    return this._content.internalValue;
   }
 
   // trigger - computed: false, optional: true, required: false
-  private _trigger?: LogicAppWorkflowAccessControlTrigger | undefined; 
-  private __triggerOutput = new LogicAppWorkflowAccessControlTriggerOutputReference(this as any, "trigger", true);
+  private _trigger = new LogicAppWorkflowAccessControlTriggerOutputReference(this as any, "trigger", true);
   public get trigger() {
-    return this.__triggerOutput;
+    return this._trigger;
   }
-  public putTrigger(value: LogicAppWorkflowAccessControlTrigger | undefined) {
-    this._trigger = value;
+  public putTrigger(value: LogicAppWorkflowAccessControlTrigger) {
+    this._trigger.internalValue = value;
   }
   public resetTrigger() {
-    this._trigger = undefined;
+    this._trigger.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get triggerInput() {
-    return this._trigger
+    return this._trigger.internalValue;
   }
 
   // workflow_management - computed: false, optional: true, required: false
-  private _workflowManagement?: LogicAppWorkflowAccessControlWorkflowManagement | undefined; 
-  private __workflowManagementOutput = new LogicAppWorkflowAccessControlWorkflowManagementOutputReference(this as any, "workflow_management", true);
+  private _workflowManagement = new LogicAppWorkflowAccessControlWorkflowManagementOutputReference(this as any, "workflow_management", true);
   public get workflowManagement() {
-    return this.__workflowManagementOutput;
+    return this._workflowManagement;
   }
-  public putWorkflowManagement(value: LogicAppWorkflowAccessControlWorkflowManagement | undefined) {
-    this._workflowManagement = value;
+  public putWorkflowManagement(value: LogicAppWorkflowAccessControlWorkflowManagement) {
+    this._workflowManagement.internalValue = value;
   }
   public resetWorkflowManagement() {
-    this._workflowManagement = undefined;
+    this._workflowManagement.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get workflowManagementInput() {
-    return this._workflowManagement
+    return this._workflowManagement.internalValue;
   }
 }
 export interface LogicAppWorkflowTimeouts {
@@ -361,7 +470,7 @@ export interface LogicAppWorkflowTimeouts {
   readonly update?: string;
 }
 
-function logicAppWorkflowTimeoutsToTerraform(struct?: LogicAppWorkflowTimeoutsOutputReference | LogicAppWorkflowTimeouts): any {
+export function logicAppWorkflowTimeoutsToTerraform(struct?: LogicAppWorkflowTimeoutsOutputReference | LogicAppWorkflowTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -384,12 +493,49 @@ export class LogicAppWorkflowTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogicAppWorkflowTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppWorkflowTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -397,15 +543,15 @@ export class LogicAppWorkflowTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -413,15 +559,15 @@ export class LogicAppWorkflowTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -429,15 +575,15 @@ export class LogicAppWorkflowTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -445,7 +591,7 @@ export class LogicAppWorkflowTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -492,8 +638,8 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
     this._workflowParameters = config.workflowParameters;
     this._workflowSchema = config.workflowSchema;
     this._workflowVersion = config.workflowVersion;
-    this._accessControl = config.accessControl;
-    this._timeouts = config.timeouts;
+    this._accessControl.internalValue = config.accessControl;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -516,11 +662,11 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -528,7 +674,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -537,11 +683,11 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
 
   // integration_service_environment_id - computed: false, optional: true, required: false
-  private _integrationServiceEnvironmentId?: string | undefined; 
+  private _integrationServiceEnvironmentId?: string; 
   public get integrationServiceEnvironmentId() {
     return this.getStringAttribute('integration_service_environment_id');
   }
-  public set integrationServiceEnvironmentId(value: string | undefined) {
+  public set integrationServiceEnvironmentId(value: string) {
     this._integrationServiceEnvironmentId = value;
   }
   public resetIntegrationServiceEnvironmentId() {
@@ -549,7 +695,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get integrationServiceEnvironmentIdInput() {
-    return this._integrationServiceEnvironmentId
+    return this._integrationServiceEnvironmentId;
   }
 
   // location - computed: false, optional: false, required: true
@@ -562,15 +708,15 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // logic_app_integration_account_id - computed: false, optional: true, required: false
-  private _logicAppIntegrationAccountId?: string | undefined; 
+  private _logicAppIntegrationAccountId?: string; 
   public get logicAppIntegrationAccountId() {
     return this.getStringAttribute('logic_app_integration_account_id');
   }
-  public set logicAppIntegrationAccountId(value: string | undefined) {
+  public set logicAppIntegrationAccountId(value: string) {
     this._logicAppIntegrationAccountId = value;
   }
   public resetLogicAppIntegrationAccountId() {
@@ -578,7 +724,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get logicAppIntegrationAccountIdInput() {
-    return this._logicAppIntegrationAccountId
+    return this._logicAppIntegrationAccountId;
   }
 
   // name - computed: false, optional: false, required: true
@@ -591,16 +737,16 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -608,7 +754,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -621,16 +767,16 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -638,7 +784,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // workflow_endpoint_ip_addresses - computed: true, optional: false, required: false
@@ -652,12 +798,12 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
 
   // workflow_parameters - computed: false, optional: true, required: false
-  private _workflowParameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _workflowParameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get workflowParameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('workflow_parameters') as any;
   }
-  public set workflowParameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set workflowParameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._workflowParameters = value;
   }
   public resetWorkflowParameters() {
@@ -665,15 +811,15 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get workflowParametersInput() {
-    return this._workflowParameters
+    return this._workflowParameters;
   }
 
   // workflow_schema - computed: false, optional: true, required: false
-  private _workflowSchema?: string | undefined; 
+  private _workflowSchema?: string; 
   public get workflowSchema() {
     return this.getStringAttribute('workflow_schema');
   }
-  public set workflowSchema(value: string | undefined) {
+  public set workflowSchema(value: string) {
     this._workflowSchema = value;
   }
   public resetWorkflowSchema() {
@@ -681,15 +827,15 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get workflowSchemaInput() {
-    return this._workflowSchema
+    return this._workflowSchema;
   }
 
   // workflow_version - computed: false, optional: true, required: false
-  private _workflowVersion?: string | undefined; 
+  private _workflowVersion?: string; 
   public get workflowVersion() {
     return this.getStringAttribute('workflow_version');
   }
-  public set workflowVersion(value: string | undefined) {
+  public set workflowVersion(value: string) {
     this._workflowVersion = value;
   }
   public resetWorkflowVersion() {
@@ -697,41 +843,39 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get workflowVersionInput() {
-    return this._workflowVersion
+    return this._workflowVersion;
   }
 
   // access_control - computed: false, optional: true, required: false
-  private _accessControl?: LogicAppWorkflowAccessControl | undefined; 
-  private __accessControlOutput = new LogicAppWorkflowAccessControlOutputReference(this as any, "access_control", true);
+  private _accessControl = new LogicAppWorkflowAccessControlOutputReference(this as any, "access_control", true);
   public get accessControl() {
-    return this.__accessControlOutput;
+    return this._accessControl;
   }
-  public putAccessControl(value: LogicAppWorkflowAccessControl | undefined) {
-    this._accessControl = value;
+  public putAccessControl(value: LogicAppWorkflowAccessControl) {
+    this._accessControl.internalValue = value;
   }
   public resetAccessControl() {
-    this._accessControl = undefined;
+    this._accessControl.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get accessControlInput() {
-    return this._accessControl
+    return this._accessControl.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LogicAppWorkflowTimeouts | undefined; 
-  private __timeoutsOutput = new LogicAppWorkflowTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogicAppWorkflowTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: LogicAppWorkflowTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: LogicAppWorkflowTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -751,8 +895,8 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
       workflow_parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._workflowParameters),
       workflow_schema: cdktf.stringToTerraform(this._workflowSchema),
       workflow_version: cdktf.stringToTerraform(this._workflowVersion),
-      access_control: logicAppWorkflowAccessControlToTerraform(this._accessControl),
-      timeouts: logicAppWorkflowTimeoutsToTerraform(this._timeouts),
+      access_control: logicAppWorkflowAccessControlToTerraform(this._accessControl.internalValue),
+      timeouts: logicAppWorkflowTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -79,7 +79,7 @@ export interface VirtualNetworkSubnet {
   readonly securityGroup?: string;
 }
 
-function virtualNetworkSubnetToTerraform(struct?: VirtualNetworkSubnet): any {
+export function virtualNetworkSubnetToTerraform(struct?: VirtualNetworkSubnet): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -102,7 +102,7 @@ export interface VirtualNetworkDdosProtectionPlan {
   readonly id: string;
 }
 
-function virtualNetworkDdosProtectionPlanToTerraform(struct?: VirtualNetworkDdosProtectionPlanOutputReference | VirtualNetworkDdosProtectionPlan): any {
+export function virtualNetworkDdosProtectionPlanToTerraform(struct?: VirtualNetworkDdosProtectionPlanOutputReference | VirtualNetworkDdosProtectionPlan): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -123,6 +123,31 @@ export class VirtualNetworkDdosProtectionPlanOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): VirtualNetworkDdosProtectionPlan | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._enable) {
+      hasAnyValues = true;
+      internalValueResult.enable = this._enable;
+    }
+    if (this._id) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualNetworkDdosProtectionPlan | undefined) {
+    if (value === undefined) {
+      this._enable = undefined;
+      this._id = undefined;
+    }
+    else {
+      this._enable = value.enable;
+      this._id = value.id;
+    }
+  }
+
   // enable - computed: false, optional: false, required: true
   private _enable?: boolean | cdktf.IResolvable; 
   public get enable() {
@@ -133,7 +158,7 @@ export class VirtualNetworkDdosProtectionPlanOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get enableInput() {
-    return this._enable
+    return this._enable;
   }
 
   // id - computed: false, optional: false, required: true
@@ -146,7 +171,7 @@ export class VirtualNetworkDdosProtectionPlanOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get idInput() {
-    return this._id
+    return this._id;
   }
 }
 export interface VirtualNetworkTimeouts {
@@ -168,7 +193,7 @@ export interface VirtualNetworkTimeouts {
   readonly update?: string;
 }
 
-function virtualNetworkTimeoutsToTerraform(struct?: VirtualNetworkTimeoutsOutputReference | VirtualNetworkTimeouts): any {
+export function virtualNetworkTimeoutsToTerraform(struct?: VirtualNetworkTimeoutsOutputReference | VirtualNetworkTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -191,12 +216,49 @@ export class VirtualNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): VirtualNetworkTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualNetworkTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -204,15 +266,15 @@ export class VirtualNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -220,15 +282,15 @@ export class VirtualNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -236,15 +298,15 @@ export class VirtualNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -252,7 +314,7 @@ export class VirtualNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -298,8 +360,8 @@ export class VirtualNetwork extends cdktf.TerraformResource {
     this._subnet = config.subnet;
     this._tags = config.tags;
     this._vmProtectionEnabled = config.vmProtectionEnabled;
-    this._ddosProtectionPlan = config.ddosProtectionPlan;
-    this._timeouts = config.timeouts;
+    this._ddosProtectionPlan.internalValue = config.ddosProtectionPlan;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -316,15 +378,15 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get addressSpaceInput() {
-    return this._addressSpace
+    return this._addressSpace;
   }
 
   // bgp_community - computed: false, optional: true, required: false
-  private _bgpCommunity?: string | undefined; 
+  private _bgpCommunity?: string; 
   public get bgpCommunity() {
     return this.getStringAttribute('bgp_community');
   }
-  public set bgpCommunity(value: string | undefined) {
+  public set bgpCommunity(value: string) {
     this._bgpCommunity = value;
   }
   public resetBgpCommunity() {
@@ -332,15 +394,15 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get bgpCommunityInput() {
-    return this._bgpCommunity
+    return this._bgpCommunity;
   }
 
   // dns_servers - computed: true, optional: true, required: false
-  private _dnsServers?: string[] | undefined; 
+  private _dnsServers?: string[]; 
   public get dnsServers() {
     return this.getListAttribute('dns_servers');
   }
-  public set dnsServers(value: string[] | undefined) {
+  public set dnsServers(value: string[]) {
     this._dnsServers = value;
   }
   public resetDnsServers() {
@@ -348,15 +410,15 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dnsServersInput() {
-    return this._dnsServers
+    return this._dnsServers;
   }
 
   // flow_timeout_in_minutes - computed: false, optional: true, required: false
-  private _flowTimeoutInMinutes?: number | undefined; 
+  private _flowTimeoutInMinutes?: number; 
   public get flowTimeoutInMinutes() {
     return this.getNumberAttribute('flow_timeout_in_minutes');
   }
-  public set flowTimeoutInMinutes(value: number | undefined) {
+  public set flowTimeoutInMinutes(value: number) {
     this._flowTimeoutInMinutes = value;
   }
   public resetFlowTimeoutInMinutes() {
@@ -364,7 +426,7 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get flowTimeoutInMinutesInput() {
-    return this._flowTimeoutInMinutes
+    return this._flowTimeoutInMinutes;
   }
 
   // guid - computed: true, optional: false, required: false
@@ -387,7 +449,7 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -400,7 +462,7 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -413,16 +475,16 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // subnet - computed: true, optional: true, required: false
-  private _subnet?: VirtualNetworkSubnet[] | undefined; 
+  private _subnet?: VirtualNetworkSubnet[]; 
   public get subnet() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('subnet') as any;
   }
-  public set subnet(value: VirtualNetworkSubnet[] | undefined) {
+  public set subnet(value: VirtualNetworkSubnet[]) {
     this._subnet = value;
   }
   public resetSubnet() {
@@ -430,16 +492,16 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get subnetInput() {
-    return this._subnet
+    return this._subnet;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -447,15 +509,15 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // vm_protection_enabled - computed: false, optional: true, required: false
-  private _vmProtectionEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _vmProtectionEnabled?: boolean | cdktf.IResolvable; 
   public get vmProtectionEnabled() {
     return this.getBooleanAttribute('vm_protection_enabled') as any;
   }
-  public set vmProtectionEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set vmProtectionEnabled(value: boolean | cdktf.IResolvable) {
     this._vmProtectionEnabled = value;
   }
   public resetVmProtectionEnabled() {
@@ -463,41 +525,39 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get vmProtectionEnabledInput() {
-    return this._vmProtectionEnabled
+    return this._vmProtectionEnabled;
   }
 
   // ddos_protection_plan - computed: false, optional: true, required: false
-  private _ddosProtectionPlan?: VirtualNetworkDdosProtectionPlan | undefined; 
-  private __ddosProtectionPlanOutput = new VirtualNetworkDdosProtectionPlanOutputReference(this as any, "ddos_protection_plan", true);
+  private _ddosProtectionPlan = new VirtualNetworkDdosProtectionPlanOutputReference(this as any, "ddos_protection_plan", true);
   public get ddosProtectionPlan() {
-    return this.__ddosProtectionPlanOutput;
+    return this._ddosProtectionPlan;
   }
-  public putDdosProtectionPlan(value: VirtualNetworkDdosProtectionPlan | undefined) {
-    this._ddosProtectionPlan = value;
+  public putDdosProtectionPlan(value: VirtualNetworkDdosProtectionPlan) {
+    this._ddosProtectionPlan.internalValue = value;
   }
   public resetDdosProtectionPlan() {
-    this._ddosProtectionPlan = undefined;
+    this._ddosProtectionPlan.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get ddosProtectionPlanInput() {
-    return this._ddosProtectionPlan
+    return this._ddosProtectionPlan.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VirtualNetworkTimeouts | undefined; 
-  private __timeoutsOutput = new VirtualNetworkTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VirtualNetworkTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: VirtualNetworkTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: VirtualNetworkTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -516,8 +576,8 @@ export class VirtualNetwork extends cdktf.TerraformResource {
       subnet: cdktf.listMapper(virtualNetworkSubnetToTerraform)(this._subnet),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       vm_protection_enabled: cdktf.booleanToTerraform(this._vmProtectionEnabled),
-      ddos_protection_plan: virtualNetworkDdosProtectionPlanToTerraform(this._ddosProtectionPlan),
-      timeouts: virtualNetworkTimeoutsToTerraform(this._timeouts),
+      ddos_protection_plan: virtualNetworkDdosProtectionPlanToTerraform(this._ddosProtectionPlan.internalValue),
+      timeouts: virtualNetworkTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

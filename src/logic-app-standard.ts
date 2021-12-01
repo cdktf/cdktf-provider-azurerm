@@ -123,7 +123,7 @@ export interface LogicAppStandardConnectionString {
   readonly value: string;
 }
 
-function logicAppStandardConnectionStringToTerraform(struct?: LogicAppStandardConnectionString): any {
+export function logicAppStandardConnectionStringToTerraform(struct?: LogicAppStandardConnectionString): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -142,7 +142,7 @@ export interface LogicAppStandardIdentity {
   readonly type: string;
 }
 
-function logicAppStandardIdentityToTerraform(struct?: LogicAppStandardIdentityOutputReference | LogicAppStandardIdentity): any {
+export function logicAppStandardIdentityToTerraform(struct?: LogicAppStandardIdentityOutputReference | LogicAppStandardIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -162,6 +162,25 @@ export class LogicAppStandardIdentityOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogicAppStandardIdentity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppStandardIdentity | undefined) {
+    if (value === undefined) {
+      this._type = undefined;
+    }
+    else {
+      this._type = value.type;
+    }
+  }
+
   // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
@@ -172,7 +191,7 @@ export class LogicAppStandardIdentityOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface LogicAppStandardSiteConfigIpRestrictionHeaders {
@@ -194,7 +213,7 @@ export interface LogicAppStandardSiteConfigIpRestrictionHeaders {
   readonly xForwardedHost?: string[];
 }
 
-function logicAppStandardSiteConfigIpRestrictionHeadersToTerraform(struct?: LogicAppStandardSiteConfigIpRestrictionHeaders): any {
+export function logicAppStandardSiteConfigIpRestrictionHeadersToTerraform(struct?: LogicAppStandardSiteConfigIpRestrictionHeaders): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -238,7 +257,7 @@ export interface LogicAppStandardSiteConfigIpRestriction {
   readonly virtualNetworkSubnetId?: string;
 }
 
-function logicAppStandardSiteConfigIpRestrictionToTerraform(struct?: LogicAppStandardSiteConfigIpRestriction): any {
+export function logicAppStandardSiteConfigIpRestrictionToTerraform(struct?: LogicAppStandardSiteConfigIpRestriction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -265,7 +284,7 @@ export interface LogicAppStandardSiteConfigCors {
   readonly supportCredentials?: boolean | cdktf.IResolvable;
 }
 
-function logicAppStandardSiteConfigCorsToTerraform(struct?: LogicAppStandardSiteConfigCorsOutputReference | LogicAppStandardSiteConfigCors): any {
+export function logicAppStandardSiteConfigCorsToTerraform(struct?: LogicAppStandardSiteConfigCorsOutputReference | LogicAppStandardSiteConfigCors): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -286,6 +305,31 @@ export class LogicAppStandardSiteConfigCorsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogicAppStandardSiteConfigCors | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowedOrigins) {
+      hasAnyValues = true;
+      internalValueResult.allowedOrigins = this._allowedOrigins;
+    }
+    if (this._supportCredentials) {
+      hasAnyValues = true;
+      internalValueResult.supportCredentials = this._supportCredentials;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppStandardSiteConfigCors | undefined) {
+    if (value === undefined) {
+      this._allowedOrigins = undefined;
+      this._supportCredentials = undefined;
+    }
+    else {
+      this._allowedOrigins = value.allowedOrigins;
+      this._supportCredentials = value.supportCredentials;
+    }
+  }
+
   // allowed_origins - computed: false, optional: false, required: true
   private _allowedOrigins?: string[]; 
   public get allowedOrigins() {
@@ -296,15 +340,15 @@ export class LogicAppStandardSiteConfigCorsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get allowedOriginsInput() {
-    return this._allowedOrigins
+    return this._allowedOrigins;
   }
 
   // support_credentials - computed: false, optional: true, required: false
-  private _supportCredentials?: boolean | cdktf.IResolvable | undefined; 
+  private _supportCredentials?: boolean | cdktf.IResolvable; 
   public get supportCredentials() {
     return this.getBooleanAttribute('support_credentials') as any;
   }
-  public set supportCredentials(value: boolean | cdktf.IResolvable | undefined) {
+  public set supportCredentials(value: boolean | cdktf.IResolvable) {
     this._supportCredentials = value;
   }
   public resetSupportCredentials() {
@@ -312,7 +356,7 @@ export class LogicAppStandardSiteConfigCorsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get supportCredentialsInput() {
-    return this._supportCredentials
+    return this._supportCredentials;
   }
 }
 export interface LogicAppStandardSiteConfig {
@@ -384,7 +428,7 @@ export interface LogicAppStandardSiteConfig {
   readonly cors?: LogicAppStandardSiteConfigCors;
 }
 
-function logicAppStandardSiteConfigToTerraform(struct?: LogicAppStandardSiteConfigOutputReference | LogicAppStandardSiteConfig): any {
+export function logicAppStandardSiteConfigToTerraform(struct?: LogicAppStandardSiteConfigOutputReference | LogicAppStandardSiteConfig): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -419,12 +463,121 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogicAppStandardSiteConfig | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._alwaysOn) {
+      hasAnyValues = true;
+      internalValueResult.alwaysOn = this._alwaysOn;
+    }
+    if (this._appScaleLimit) {
+      hasAnyValues = true;
+      internalValueResult.appScaleLimit = this._appScaleLimit;
+    }
+    if (this._dotnetFrameworkVersion) {
+      hasAnyValues = true;
+      internalValueResult.dotnetFrameworkVersion = this._dotnetFrameworkVersion;
+    }
+    if (this._elasticInstanceMinimum) {
+      hasAnyValues = true;
+      internalValueResult.elasticInstanceMinimum = this._elasticInstanceMinimum;
+    }
+    if (this._ftpsState) {
+      hasAnyValues = true;
+      internalValueResult.ftpsState = this._ftpsState;
+    }
+    if (this._healthCheckPath) {
+      hasAnyValues = true;
+      internalValueResult.healthCheckPath = this._healthCheckPath;
+    }
+    if (this._http2Enabled) {
+      hasAnyValues = true;
+      internalValueResult.http2Enabled = this._http2Enabled;
+    }
+    if (this._ipRestriction) {
+      hasAnyValues = true;
+      internalValueResult.ipRestriction = this._ipRestriction;
+    }
+    if (this._linuxFxVersion) {
+      hasAnyValues = true;
+      internalValueResult.linuxFxVersion = this._linuxFxVersion;
+    }
+    if (this._minTlsVersion) {
+      hasAnyValues = true;
+      internalValueResult.minTlsVersion = this._minTlsVersion;
+    }
+    if (this._preWarmedInstanceCount) {
+      hasAnyValues = true;
+      internalValueResult.preWarmedInstanceCount = this._preWarmedInstanceCount;
+    }
+    if (this._runtimeScaleMonitoringEnabled) {
+      hasAnyValues = true;
+      internalValueResult.runtimeScaleMonitoringEnabled = this._runtimeScaleMonitoringEnabled;
+    }
+    if (this._use32BitWorkerProcess) {
+      hasAnyValues = true;
+      internalValueResult.use32BitWorkerProcess = this._use32BitWorkerProcess;
+    }
+    if (this._vnetRouteAllEnabled) {
+      hasAnyValues = true;
+      internalValueResult.vnetRouteAllEnabled = this._vnetRouteAllEnabled;
+    }
+    if (this._websocketsEnabled) {
+      hasAnyValues = true;
+      internalValueResult.websocketsEnabled = this._websocketsEnabled;
+    }
+    if (this._cors) {
+      hasAnyValues = true;
+      internalValueResult.cors = this._cors?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppStandardSiteConfig | undefined) {
+    if (value === undefined) {
+      this._alwaysOn = undefined;
+      this._appScaleLimit = undefined;
+      this._dotnetFrameworkVersion = undefined;
+      this._elasticInstanceMinimum = undefined;
+      this._ftpsState = undefined;
+      this._healthCheckPath = undefined;
+      this._http2Enabled = undefined;
+      this._ipRestriction = undefined;
+      this._linuxFxVersion = undefined;
+      this._minTlsVersion = undefined;
+      this._preWarmedInstanceCount = undefined;
+      this._runtimeScaleMonitoringEnabled = undefined;
+      this._use32BitWorkerProcess = undefined;
+      this._vnetRouteAllEnabled = undefined;
+      this._websocketsEnabled = undefined;
+      this._cors.internalValue = undefined;
+    }
+    else {
+      this._alwaysOn = value.alwaysOn;
+      this._appScaleLimit = value.appScaleLimit;
+      this._dotnetFrameworkVersion = value.dotnetFrameworkVersion;
+      this._elasticInstanceMinimum = value.elasticInstanceMinimum;
+      this._ftpsState = value.ftpsState;
+      this._healthCheckPath = value.healthCheckPath;
+      this._http2Enabled = value.http2Enabled;
+      this._ipRestriction = value.ipRestriction;
+      this._linuxFxVersion = value.linuxFxVersion;
+      this._minTlsVersion = value.minTlsVersion;
+      this._preWarmedInstanceCount = value.preWarmedInstanceCount;
+      this._runtimeScaleMonitoringEnabled = value.runtimeScaleMonitoringEnabled;
+      this._use32BitWorkerProcess = value.use32BitWorkerProcess;
+      this._vnetRouteAllEnabled = value.vnetRouteAllEnabled;
+      this._websocketsEnabled = value.websocketsEnabled;
+      this._cors.internalValue = value.cors;
+    }
+  }
+
   // always_on - computed: false, optional: true, required: false
-  private _alwaysOn?: boolean | cdktf.IResolvable | undefined; 
+  private _alwaysOn?: boolean | cdktf.IResolvable; 
   public get alwaysOn() {
     return this.getBooleanAttribute('always_on') as any;
   }
-  public set alwaysOn(value: boolean | cdktf.IResolvable | undefined) {
+  public set alwaysOn(value: boolean | cdktf.IResolvable) {
     this._alwaysOn = value;
   }
   public resetAlwaysOn() {
@@ -432,15 +585,15 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get alwaysOnInput() {
-    return this._alwaysOn
+    return this._alwaysOn;
   }
 
   // app_scale_limit - computed: true, optional: true, required: false
-  private _appScaleLimit?: number | undefined; 
+  private _appScaleLimit?: number; 
   public get appScaleLimit() {
     return this.getNumberAttribute('app_scale_limit');
   }
-  public set appScaleLimit(value: number | undefined) {
+  public set appScaleLimit(value: number) {
     this._appScaleLimit = value;
   }
   public resetAppScaleLimit() {
@@ -448,15 +601,15 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get appScaleLimitInput() {
-    return this._appScaleLimit
+    return this._appScaleLimit;
   }
 
   // dotnet_framework_version - computed: false, optional: true, required: false
-  private _dotnetFrameworkVersion?: string | undefined; 
+  private _dotnetFrameworkVersion?: string; 
   public get dotnetFrameworkVersion() {
     return this.getStringAttribute('dotnet_framework_version');
   }
-  public set dotnetFrameworkVersion(value: string | undefined) {
+  public set dotnetFrameworkVersion(value: string) {
     this._dotnetFrameworkVersion = value;
   }
   public resetDotnetFrameworkVersion() {
@@ -464,15 +617,15 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get dotnetFrameworkVersionInput() {
-    return this._dotnetFrameworkVersion
+    return this._dotnetFrameworkVersion;
   }
 
   // elastic_instance_minimum - computed: true, optional: true, required: false
-  private _elasticInstanceMinimum?: number | undefined; 
+  private _elasticInstanceMinimum?: number; 
   public get elasticInstanceMinimum() {
     return this.getNumberAttribute('elastic_instance_minimum');
   }
-  public set elasticInstanceMinimum(value: number | undefined) {
+  public set elasticInstanceMinimum(value: number) {
     this._elasticInstanceMinimum = value;
   }
   public resetElasticInstanceMinimum() {
@@ -480,15 +633,15 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get elasticInstanceMinimumInput() {
-    return this._elasticInstanceMinimum
+    return this._elasticInstanceMinimum;
   }
 
   // ftps_state - computed: true, optional: true, required: false
-  private _ftpsState?: string | undefined; 
+  private _ftpsState?: string; 
   public get ftpsState() {
     return this.getStringAttribute('ftps_state');
   }
-  public set ftpsState(value: string | undefined) {
+  public set ftpsState(value: string) {
     this._ftpsState = value;
   }
   public resetFtpsState() {
@@ -496,15 +649,15 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get ftpsStateInput() {
-    return this._ftpsState
+    return this._ftpsState;
   }
 
   // health_check_path - computed: false, optional: true, required: false
-  private _healthCheckPath?: string | undefined; 
+  private _healthCheckPath?: string; 
   public get healthCheckPath() {
     return this.getStringAttribute('health_check_path');
   }
-  public set healthCheckPath(value: string | undefined) {
+  public set healthCheckPath(value: string) {
     this._healthCheckPath = value;
   }
   public resetHealthCheckPath() {
@@ -512,15 +665,15 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get healthCheckPathInput() {
-    return this._healthCheckPath
+    return this._healthCheckPath;
   }
 
   // http2_enabled - computed: false, optional: true, required: false
-  private _http2Enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _http2Enabled?: boolean | cdktf.IResolvable; 
   public get http2Enabled() {
     return this.getBooleanAttribute('http2_enabled') as any;
   }
-  public set http2Enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set http2Enabled(value: boolean | cdktf.IResolvable) {
     this._http2Enabled = value;
   }
   public resetHttp2Enabled() {
@@ -528,16 +681,16 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get http2EnabledInput() {
-    return this._http2Enabled
+    return this._http2Enabled;
   }
 
   // ip_restriction - computed: true, optional: true, required: false
-  private _ipRestriction?: LogicAppStandardSiteConfigIpRestriction[] | undefined; 
+  private _ipRestriction?: LogicAppStandardSiteConfigIpRestriction[]; 
   public get ipRestriction() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('ip_restriction') as any;
   }
-  public set ipRestriction(value: LogicAppStandardSiteConfigIpRestriction[] | undefined) {
+  public set ipRestriction(value: LogicAppStandardSiteConfigIpRestriction[]) {
     this._ipRestriction = value;
   }
   public resetIpRestriction() {
@@ -545,15 +698,15 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get ipRestrictionInput() {
-    return this._ipRestriction
+    return this._ipRestriction;
   }
 
   // linux_fx_version - computed: true, optional: true, required: false
-  private _linuxFxVersion?: string | undefined; 
+  private _linuxFxVersion?: string; 
   public get linuxFxVersion() {
     return this.getStringAttribute('linux_fx_version');
   }
-  public set linuxFxVersion(value: string | undefined) {
+  public set linuxFxVersion(value: string) {
     this._linuxFxVersion = value;
   }
   public resetLinuxFxVersion() {
@@ -561,15 +714,15 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get linuxFxVersionInput() {
-    return this._linuxFxVersion
+    return this._linuxFxVersion;
   }
 
   // min_tls_version - computed: true, optional: true, required: false
-  private _minTlsVersion?: string | undefined; 
+  private _minTlsVersion?: string; 
   public get minTlsVersion() {
     return this.getStringAttribute('min_tls_version');
   }
-  public set minTlsVersion(value: string | undefined) {
+  public set minTlsVersion(value: string) {
     this._minTlsVersion = value;
   }
   public resetMinTlsVersion() {
@@ -577,15 +730,15 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get minTlsVersionInput() {
-    return this._minTlsVersion
+    return this._minTlsVersion;
   }
 
   // pre_warmed_instance_count - computed: true, optional: true, required: false
-  private _preWarmedInstanceCount?: number | undefined; 
+  private _preWarmedInstanceCount?: number; 
   public get preWarmedInstanceCount() {
     return this.getNumberAttribute('pre_warmed_instance_count');
   }
-  public set preWarmedInstanceCount(value: number | undefined) {
+  public set preWarmedInstanceCount(value: number) {
     this._preWarmedInstanceCount = value;
   }
   public resetPreWarmedInstanceCount() {
@@ -593,15 +746,15 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get preWarmedInstanceCountInput() {
-    return this._preWarmedInstanceCount
+    return this._preWarmedInstanceCount;
   }
 
   // runtime_scale_monitoring_enabled - computed: false, optional: true, required: false
-  private _runtimeScaleMonitoringEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _runtimeScaleMonitoringEnabled?: boolean | cdktf.IResolvable; 
   public get runtimeScaleMonitoringEnabled() {
     return this.getBooleanAttribute('runtime_scale_monitoring_enabled') as any;
   }
-  public set runtimeScaleMonitoringEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set runtimeScaleMonitoringEnabled(value: boolean | cdktf.IResolvable) {
     this._runtimeScaleMonitoringEnabled = value;
   }
   public resetRuntimeScaleMonitoringEnabled() {
@@ -609,15 +762,15 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get runtimeScaleMonitoringEnabledInput() {
-    return this._runtimeScaleMonitoringEnabled
+    return this._runtimeScaleMonitoringEnabled;
   }
 
   // use_32_bit_worker_process - computed: false, optional: true, required: false
-  private _use32BitWorkerProcess?: boolean | cdktf.IResolvable | undefined; 
+  private _use32BitWorkerProcess?: boolean | cdktf.IResolvable; 
   public get use32BitWorkerProcess() {
     return this.getBooleanAttribute('use_32_bit_worker_process') as any;
   }
-  public set use32BitWorkerProcess(value: boolean | cdktf.IResolvable | undefined) {
+  public set use32BitWorkerProcess(value: boolean | cdktf.IResolvable) {
     this._use32BitWorkerProcess = value;
   }
   public resetUse32BitWorkerProcess() {
@@ -625,15 +778,15 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get use32BitWorkerProcessInput() {
-    return this._use32BitWorkerProcess
+    return this._use32BitWorkerProcess;
   }
 
   // vnet_route_all_enabled - computed: true, optional: true, required: false
-  private _vnetRouteAllEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _vnetRouteAllEnabled?: boolean | cdktf.IResolvable; 
   public get vnetRouteAllEnabled() {
     return this.getBooleanAttribute('vnet_route_all_enabled') as any;
   }
-  public set vnetRouteAllEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set vnetRouteAllEnabled(value: boolean | cdktf.IResolvable) {
     this._vnetRouteAllEnabled = value;
   }
   public resetVnetRouteAllEnabled() {
@@ -641,15 +794,15 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get vnetRouteAllEnabledInput() {
-    return this._vnetRouteAllEnabled
+    return this._vnetRouteAllEnabled;
   }
 
   // websockets_enabled - computed: false, optional: true, required: false
-  private _websocketsEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _websocketsEnabled?: boolean | cdktf.IResolvable; 
   public get websocketsEnabled() {
     return this.getBooleanAttribute('websockets_enabled') as any;
   }
-  public set websocketsEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set websocketsEnabled(value: boolean | cdktf.IResolvable) {
     this._websocketsEnabled = value;
   }
   public resetWebsocketsEnabled() {
@@ -657,24 +810,23 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   }
   // Temporarily expose input value. Use with caution.
   public get websocketsEnabledInput() {
-    return this._websocketsEnabled
+    return this._websocketsEnabled;
   }
 
   // cors - computed: false, optional: true, required: false
-  private _cors?: LogicAppStandardSiteConfigCors | undefined; 
-  private __corsOutput = new LogicAppStandardSiteConfigCorsOutputReference(this as any, "cors", true);
+  private _cors = new LogicAppStandardSiteConfigCorsOutputReference(this as any, "cors", true);
   public get cors() {
-    return this.__corsOutput;
+    return this._cors;
   }
-  public putCors(value: LogicAppStandardSiteConfigCors | undefined) {
-    this._cors = value;
+  public putCors(value: LogicAppStandardSiteConfigCors) {
+    this._cors.internalValue = value;
   }
   public resetCors() {
-    this._cors = undefined;
+    this._cors.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get corsInput() {
-    return this._cors
+    return this._cors.internalValue;
   }
 }
 export interface LogicAppStandardTimeouts {
@@ -696,7 +848,7 @@ export interface LogicAppStandardTimeouts {
   readonly update?: string;
 }
 
-function logicAppStandardTimeoutsToTerraform(struct?: LogicAppStandardTimeoutsOutputReference | LogicAppStandardTimeouts): any {
+export function logicAppStandardTimeoutsToTerraform(struct?: LogicAppStandardTimeoutsOutputReference | LogicAppStandardTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -719,12 +871,49 @@ export class LogicAppStandardTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogicAppStandardTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppStandardTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -732,15 +921,15 @@ export class LogicAppStandardTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -748,15 +937,15 @@ export class LogicAppStandardTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -764,15 +953,15 @@ export class LogicAppStandardTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -780,7 +969,7 @@ export class LogicAppStandardTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -833,9 +1022,9 @@ export class LogicAppStandard extends cdktf.TerraformResource {
     this._useExtensionBundle = config.useExtensionBundle;
     this._version = config.version;
     this._connectionString = config.connectionString;
-    this._identity = config.identity;
-    this._siteConfig = config.siteConfig;
-    this._timeouts = config.timeouts;
+    this._identity.internalValue = config.identity;
+    this._siteConfig.internalValue = config.siteConfig;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -852,16 +1041,16 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get appServicePlanIdInput() {
-    return this._appServicePlanId
+    return this._appServicePlanId;
   }
 
   // app_settings - computed: true, optional: true, required: false
-  private _appSettings?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _appSettings?: { [key: string]: string } | cdktf.IResolvable; 
   public get appSettings() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('app_settings') as any;
   }
-  public set appSettings(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set appSettings(value: { [key: string]: string } | cdktf.IResolvable) {
     this._appSettings = value;
   }
   public resetAppSettings() {
@@ -869,15 +1058,15 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get appSettingsInput() {
-    return this._appSettings
+    return this._appSettings;
   }
 
   // bundle_version - computed: false, optional: true, required: false
-  private _bundleVersion?: string | undefined; 
+  private _bundleVersion?: string; 
   public get bundleVersion() {
     return this.getStringAttribute('bundle_version');
   }
-  public set bundleVersion(value: string | undefined) {
+  public set bundleVersion(value: string) {
     this._bundleVersion = value;
   }
   public resetBundleVersion() {
@@ -885,15 +1074,15 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get bundleVersionInput() {
-    return this._bundleVersion
+    return this._bundleVersion;
   }
 
   // client_affinity_enabled - computed: true, optional: true, required: false
-  private _clientAffinityEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _clientAffinityEnabled?: boolean | cdktf.IResolvable; 
   public get clientAffinityEnabled() {
     return this.getBooleanAttribute('client_affinity_enabled') as any;
   }
-  public set clientAffinityEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set clientAffinityEnabled(value: boolean | cdktf.IResolvable) {
     this._clientAffinityEnabled = value;
   }
   public resetClientAffinityEnabled() {
@@ -901,15 +1090,15 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get clientAffinityEnabledInput() {
-    return this._clientAffinityEnabled
+    return this._clientAffinityEnabled;
   }
 
   // client_certificate_mode - computed: false, optional: true, required: false
-  private _clientCertificateMode?: string | undefined; 
+  private _clientCertificateMode?: string; 
   public get clientCertificateMode() {
     return this.getStringAttribute('client_certificate_mode');
   }
-  public set clientCertificateMode(value: string | undefined) {
+  public set clientCertificateMode(value: string) {
     this._clientCertificateMode = value;
   }
   public resetClientCertificateMode() {
@@ -917,7 +1106,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get clientCertificateModeInput() {
-    return this._clientCertificateMode
+    return this._clientCertificateMode;
   }
 
   // custom_domain_verification_id - computed: true, optional: false, required: false
@@ -931,11 +1120,11 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -943,15 +1132,15 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // https_only - computed: false, optional: true, required: false
-  private _httpsOnly?: boolean | cdktf.IResolvable | undefined; 
+  private _httpsOnly?: boolean | cdktf.IResolvable; 
   public get httpsOnly() {
     return this.getBooleanAttribute('https_only') as any;
   }
-  public set httpsOnly(value: boolean | cdktf.IResolvable | undefined) {
+  public set httpsOnly(value: boolean | cdktf.IResolvable) {
     this._httpsOnly = value;
   }
   public resetHttpsOnly() {
@@ -959,7 +1148,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get httpsOnlyInput() {
-    return this._httpsOnly
+    return this._httpsOnly;
   }
 
   // id - computed: true, optional: true, required: false
@@ -982,7 +1171,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -995,7 +1184,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // outbound_ip_addresses - computed: true, optional: false, required: false
@@ -1018,7 +1207,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // site_credential - computed: true, optional: false, required: false
@@ -1036,7 +1225,7 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountAccessKeyInput() {
-    return this._storageAccountAccessKey
+    return this._storageAccountAccessKey;
   }
 
   // storage_account_name - computed: false, optional: false, required: true
@@ -1049,15 +1238,15 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountNameInput() {
-    return this._storageAccountName
+    return this._storageAccountName;
   }
 
   // storage_account_share_name - computed: true, optional: true, required: false
-  private _storageAccountShareName?: string | undefined; 
+  private _storageAccountShareName?: string; 
   public get storageAccountShareName() {
     return this.getStringAttribute('storage_account_share_name');
   }
-  public set storageAccountShareName(value: string | undefined) {
+  public set storageAccountShareName(value: string) {
     this._storageAccountShareName = value;
   }
   public resetStorageAccountShareName() {
@@ -1065,16 +1254,16 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountShareNameInput() {
-    return this._storageAccountShareName
+    return this._storageAccountShareName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -1082,15 +1271,15 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // use_extension_bundle - computed: false, optional: true, required: false
-  private _useExtensionBundle?: boolean | cdktf.IResolvable | undefined; 
+  private _useExtensionBundle?: boolean | cdktf.IResolvable; 
   public get useExtensionBundle() {
     return this.getBooleanAttribute('use_extension_bundle') as any;
   }
-  public set useExtensionBundle(value: boolean | cdktf.IResolvable | undefined) {
+  public set useExtensionBundle(value: boolean | cdktf.IResolvable) {
     this._useExtensionBundle = value;
   }
   public resetUseExtensionBundle() {
@@ -1098,15 +1287,15 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get useExtensionBundleInput() {
-    return this._useExtensionBundle
+    return this._useExtensionBundle;
   }
 
   // version - computed: false, optional: true, required: false
-  private _version?: string | undefined; 
+  private _version?: string; 
   public get version() {
     return this.getStringAttribute('version');
   }
-  public set version(value: string | undefined) {
+  public set version(value: string) {
     this._version = value;
   }
   public resetVersion() {
@@ -1114,16 +1303,16 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 
   // connection_string - computed: false, optional: true, required: false
-  private _connectionString?: LogicAppStandardConnectionString[] | undefined; 
+  private _connectionString?: LogicAppStandardConnectionString[]; 
   public get connectionString() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('connection_string') as any;
   }
-  public set connectionString(value: LogicAppStandardConnectionString[] | undefined) {
+  public set connectionString(value: LogicAppStandardConnectionString[]) {
     this._connectionString = value;
   }
   public resetConnectionString() {
@@ -1131,58 +1320,55 @@ export class LogicAppStandard extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get connectionStringInput() {
-    return this._connectionString
+    return this._connectionString;
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: LogicAppStandardIdentity | undefined; 
-  private __identityOutput = new LogicAppStandardIdentityOutputReference(this as any, "identity", true);
+  private _identity = new LogicAppStandardIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.__identityOutput;
+    return this._identity;
   }
-  public putIdentity(value: LogicAppStandardIdentity | undefined) {
-    this._identity = value;
+  public putIdentity(value: LogicAppStandardIdentity) {
+    this._identity.internalValue = value;
   }
   public resetIdentity() {
-    this._identity = undefined;
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
-    return this._identity
+    return this._identity.internalValue;
   }
 
   // site_config - computed: false, optional: true, required: false
-  private _siteConfig?: LogicAppStandardSiteConfig | undefined; 
-  private __siteConfigOutput = new LogicAppStandardSiteConfigOutputReference(this as any, "site_config", true);
+  private _siteConfig = new LogicAppStandardSiteConfigOutputReference(this as any, "site_config", true);
   public get siteConfig() {
-    return this.__siteConfigOutput;
+    return this._siteConfig;
   }
-  public putSiteConfig(value: LogicAppStandardSiteConfig | undefined) {
-    this._siteConfig = value;
+  public putSiteConfig(value: LogicAppStandardSiteConfig) {
+    this._siteConfig.internalValue = value;
   }
   public resetSiteConfig() {
-    this._siteConfig = undefined;
+    this._siteConfig.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get siteConfigInput() {
-    return this._siteConfig
+    return this._siteConfig.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LogicAppStandardTimeouts | undefined; 
-  private __timeoutsOutput = new LogicAppStandardTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogicAppStandardTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: LogicAppStandardTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: LogicAppStandardTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -1208,9 +1394,9 @@ export class LogicAppStandard extends cdktf.TerraformResource {
       use_extension_bundle: cdktf.booleanToTerraform(this._useExtensionBundle),
       version: cdktf.stringToTerraform(this._version),
       connection_string: cdktf.listMapper(logicAppStandardConnectionStringToTerraform)(this._connectionString),
-      identity: logicAppStandardIdentityToTerraform(this._identity),
-      site_config: logicAppStandardSiteConfigToTerraform(this._siteConfig),
-      timeouts: logicAppStandardTimeoutsToTerraform(this._timeouts),
+      identity: logicAppStandardIdentityToTerraform(this._identity.internalValue),
+      site_config: logicAppStandardSiteConfigToTerraform(this._siteConfig.internalValue),
+      timeouts: logicAppStandardTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

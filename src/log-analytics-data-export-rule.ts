@@ -57,7 +57,7 @@ export interface LogAnalyticsDataExportRuleTimeouts {
   readonly update?: string;
 }
 
-function logAnalyticsDataExportRuleTimeoutsToTerraform(struct?: LogAnalyticsDataExportRuleTimeoutsOutputReference | LogAnalyticsDataExportRuleTimeouts): any {
+export function logAnalyticsDataExportRuleTimeoutsToTerraform(struct?: LogAnalyticsDataExportRuleTimeoutsOutputReference | LogAnalyticsDataExportRuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -80,12 +80,49 @@ export class LogAnalyticsDataExportRuleTimeoutsOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LogAnalyticsDataExportRuleTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogAnalyticsDataExportRuleTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -93,15 +130,15 @@ export class LogAnalyticsDataExportRuleTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -109,15 +146,15 @@ export class LogAnalyticsDataExportRuleTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -125,15 +162,15 @@ export class LogAnalyticsDataExportRuleTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -141,7 +178,7 @@ export class LogAnalyticsDataExportRuleTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -183,7 +220,7 @@ export class LogAnalyticsDataExportRule extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._tableNames = config.tableNames;
     this._workspaceResourceId = config.workspaceResourceId;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -200,15 +237,15 @@ export class LogAnalyticsDataExportRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get destinationResourceIdInput() {
-    return this._destinationResourceId
+    return this._destinationResourceId;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -216,7 +253,7 @@ export class LogAnalyticsDataExportRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // export_rule_id - computed: true, optional: false, required: false
@@ -239,7 +276,7 @@ export class LogAnalyticsDataExportRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -252,7 +289,7 @@ export class LogAnalyticsDataExportRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // table_names - computed: false, optional: false, required: true
@@ -265,7 +302,7 @@ export class LogAnalyticsDataExportRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tableNamesInput() {
-    return this._tableNames
+    return this._tableNames;
   }
 
   // workspace_resource_id - computed: false, optional: false, required: true
@@ -278,24 +315,23 @@ export class LogAnalyticsDataExportRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get workspaceResourceIdInput() {
-    return this._workspaceResourceId
+    return this._workspaceResourceId;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LogAnalyticsDataExportRuleTimeouts | undefined; 
-  private __timeoutsOutput = new LogAnalyticsDataExportRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LogAnalyticsDataExportRuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: LogAnalyticsDataExportRuleTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: LogAnalyticsDataExportRuleTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -310,7 +346,7 @@ export class LogAnalyticsDataExportRule extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       table_names: cdktf.listMapper(cdktf.stringToTerraform)(this._tableNames),
       workspace_resource_id: cdktf.stringToTerraform(this._workspaceResourceId),
-      timeouts: logAnalyticsDataExportRuleTimeoutsToTerraform(this._timeouts),
+      timeouts: logAnalyticsDataExportRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

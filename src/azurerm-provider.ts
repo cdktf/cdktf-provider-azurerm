@@ -133,7 +133,7 @@ export interface AzurermProviderFeaturesApiManagement {
   readonly purgeSoftDeleteOnDestroy?: boolean | cdktf.IResolvable;
 }
 
-function azurermProviderFeaturesApiManagementToTerraform(struct?: AzurermProviderFeaturesApiManagementOutputReference | AzurermProviderFeaturesApiManagement): any {
+export function azurermProviderFeaturesApiManagementToTerraform(struct?: AzurermProviderFeaturesApiManagement): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -143,32 +143,6 @@ function azurermProviderFeaturesApiManagementToTerraform(struct?: AzurermProvide
   }
 }
 
-export class AzurermProviderFeaturesApiManagementOutputReference extends cdktf.ComplexObject {
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
-  */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
-  }
-
-  // purge_soft_delete_on_destroy - computed: false, optional: true, required: false
-  private _purgeSoftDeleteOnDestroy?: boolean | cdktf.IResolvable | undefined; 
-  public get purgeSoftDeleteOnDestroy() {
-    return this._purgeSoftDeleteOnDestroy;
-  }
-  public set purgeSoftDeleteOnDestroy(value: boolean | cdktf.IResolvable | undefined| undefined) {
-    this._purgeSoftDeleteOnDestroy = value;
-  }
-  public resetPurgeSoftDeleteOnDestroy() {
-    this._purgeSoftDeleteOnDestroy = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get purgeSoftDeleteOnDestroyInput() {
-    return this._purgeSoftDeleteOnDestroy
-  }
-}
 export interface AzurermProviderFeaturesCognitiveAccount {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}
@@ -176,7 +150,7 @@ export interface AzurermProviderFeaturesCognitiveAccount {
   readonly purgeSoftDeleteOnDestroy?: boolean | cdktf.IResolvable;
 }
 
-function azurermProviderFeaturesCognitiveAccountToTerraform(struct?: AzurermProviderFeaturesCognitiveAccountOutputReference | AzurermProviderFeaturesCognitiveAccount): any {
+export function azurermProviderFeaturesCognitiveAccountToTerraform(struct?: AzurermProviderFeaturesCognitiveAccount): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -186,32 +160,6 @@ function azurermProviderFeaturesCognitiveAccountToTerraform(struct?: AzurermProv
   }
 }
 
-export class AzurermProviderFeaturesCognitiveAccountOutputReference extends cdktf.ComplexObject {
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
-  */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
-  }
-
-  // purge_soft_delete_on_destroy - computed: false, optional: true, required: false
-  private _purgeSoftDeleteOnDestroy?: boolean | cdktf.IResolvable | undefined; 
-  public get purgeSoftDeleteOnDestroy() {
-    return this._purgeSoftDeleteOnDestroy;
-  }
-  public set purgeSoftDeleteOnDestroy(value: boolean | cdktf.IResolvable | undefined| undefined) {
-    this._purgeSoftDeleteOnDestroy = value;
-  }
-  public resetPurgeSoftDeleteOnDestroy() {
-    this._purgeSoftDeleteOnDestroy = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get purgeSoftDeleteOnDestroyInput() {
-    return this._purgeSoftDeleteOnDestroy
-  }
-}
 export interface AzurermProviderFeaturesKeyVault {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}
@@ -223,7 +171,7 @@ export interface AzurermProviderFeaturesKeyVault {
   readonly recoverSoftDeletedKeyVaults?: boolean | cdktf.IResolvable;
 }
 
-function azurermProviderFeaturesKeyVaultToTerraform(struct?: AzurermProviderFeaturesKeyVaultOutputReference | AzurermProviderFeaturesKeyVault): any {
+export function azurermProviderFeaturesKeyVaultToTerraform(struct?: AzurermProviderFeaturesKeyVault): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -234,48 +182,6 @@ function azurermProviderFeaturesKeyVaultToTerraform(struct?: AzurermProviderFeat
   }
 }
 
-export class AzurermProviderFeaturesKeyVaultOutputReference extends cdktf.ComplexObject {
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
-  */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
-  }
-
-  // purge_soft_delete_on_destroy - computed: false, optional: true, required: false
-  private _purgeSoftDeleteOnDestroy?: boolean | cdktf.IResolvable | undefined; 
-  public get purgeSoftDeleteOnDestroy() {
-    return this._purgeSoftDeleteOnDestroy;
-  }
-  public set purgeSoftDeleteOnDestroy(value: boolean | cdktf.IResolvable | undefined| undefined) {
-    this._purgeSoftDeleteOnDestroy = value;
-  }
-  public resetPurgeSoftDeleteOnDestroy() {
-    this._purgeSoftDeleteOnDestroy = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get purgeSoftDeleteOnDestroyInput() {
-    return this._purgeSoftDeleteOnDestroy
-  }
-
-  // recover_soft_deleted_key_vaults - computed: false, optional: true, required: false
-  private _recoverSoftDeletedKeyVaults?: boolean | cdktf.IResolvable | undefined; 
-  public get recoverSoftDeletedKeyVaults() {
-    return this._recoverSoftDeletedKeyVaults;
-  }
-  public set recoverSoftDeletedKeyVaults(value: boolean | cdktf.IResolvable | undefined| undefined) {
-    this._recoverSoftDeletedKeyVaults = value;
-  }
-  public resetRecoverSoftDeletedKeyVaults() {
-    this._recoverSoftDeletedKeyVaults = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get recoverSoftDeletedKeyVaultsInput() {
-    return this._recoverSoftDeletedKeyVaults
-  }
-}
 export interface AzurermProviderFeaturesLogAnalyticsWorkspace {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#permanently_delete_on_destroy AzurermProvider#permanently_delete_on_destroy}
@@ -283,7 +189,7 @@ export interface AzurermProviderFeaturesLogAnalyticsWorkspace {
   readonly permanentlyDeleteOnDestroy: boolean | cdktf.IResolvable;
 }
 
-function azurermProviderFeaturesLogAnalyticsWorkspaceToTerraform(struct?: AzurermProviderFeaturesLogAnalyticsWorkspaceOutputReference | AzurermProviderFeaturesLogAnalyticsWorkspace): any {
+export function azurermProviderFeaturesLogAnalyticsWorkspaceToTerraform(struct?: AzurermProviderFeaturesLogAnalyticsWorkspace): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -293,29 +199,6 @@ function azurermProviderFeaturesLogAnalyticsWorkspaceToTerraform(struct?: Azurer
   }
 }
 
-export class AzurermProviderFeaturesLogAnalyticsWorkspaceOutputReference extends cdktf.ComplexObject {
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
-  */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
-  }
-
-  // permanently_delete_on_destroy - computed: false, optional: false, required: true
-  private _permanentlyDeleteOnDestroy?: boolean | cdktf.IResolvable; 
-  public get permanentlyDeleteOnDestroy() {
-    return this._permanentlyDeleteOnDestroy;
-  }
-  public set permanentlyDeleteOnDestroy(value: boolean | cdktf.IResolvable| undefined) {
-    this._permanentlyDeleteOnDestroy = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get permanentlyDeleteOnDestroyInput() {
-    return this._permanentlyDeleteOnDestroy
-  }
-}
 export interface AzurermProviderFeaturesNetwork {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#relaxed_locking AzurermProvider#relaxed_locking}
@@ -323,7 +206,7 @@ export interface AzurermProviderFeaturesNetwork {
   readonly relaxedLocking: boolean | cdktf.IResolvable;
 }
 
-function azurermProviderFeaturesNetworkToTerraform(struct?: AzurermProviderFeaturesNetworkOutputReference | AzurermProviderFeaturesNetwork): any {
+export function azurermProviderFeaturesNetworkToTerraform(struct?: AzurermProviderFeaturesNetwork): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -333,29 +216,6 @@ function azurermProviderFeaturesNetworkToTerraform(struct?: AzurermProviderFeatu
   }
 }
 
-export class AzurermProviderFeaturesNetworkOutputReference extends cdktf.ComplexObject {
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
-  */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
-  }
-
-  // relaxed_locking - computed: false, optional: false, required: true
-  private _relaxedLocking?: boolean | cdktf.IResolvable; 
-  public get relaxedLocking() {
-    return this._relaxedLocking;
-  }
-  public set relaxedLocking(value: boolean | cdktf.IResolvable| undefined) {
-    this._relaxedLocking = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get relaxedLockingInput() {
-    return this._relaxedLocking
-  }
-}
 export interface AzurermProviderFeaturesResourceGroup {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#prevent_deletion_if_contains_resources AzurermProvider#prevent_deletion_if_contains_resources}
@@ -363,7 +223,7 @@ export interface AzurermProviderFeaturesResourceGroup {
   readonly preventDeletionIfContainsResources?: boolean | cdktf.IResolvable;
 }
 
-function azurermProviderFeaturesResourceGroupToTerraform(struct?: AzurermProviderFeaturesResourceGroupOutputReference | AzurermProviderFeaturesResourceGroup): any {
+export function azurermProviderFeaturesResourceGroupToTerraform(struct?: AzurermProviderFeaturesResourceGroup): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -373,32 +233,6 @@ function azurermProviderFeaturesResourceGroupToTerraform(struct?: AzurermProvide
   }
 }
 
-export class AzurermProviderFeaturesResourceGroupOutputReference extends cdktf.ComplexObject {
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
-  */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
-  }
-
-  // prevent_deletion_if_contains_resources - computed: false, optional: true, required: false
-  private _preventDeletionIfContainsResources?: boolean | cdktf.IResolvable | undefined; 
-  public get preventDeletionIfContainsResources() {
-    return this._preventDeletionIfContainsResources;
-  }
-  public set preventDeletionIfContainsResources(value: boolean | cdktf.IResolvable | undefined| undefined) {
-    this._preventDeletionIfContainsResources = value;
-  }
-  public resetPreventDeletionIfContainsResources() {
-    this._preventDeletionIfContainsResources = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get preventDeletionIfContainsResourcesInput() {
-    return this._preventDeletionIfContainsResources
-  }
-}
 export interface AzurermProviderFeaturesTemplateDeployment {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#delete_nested_items_during_deletion AzurermProvider#delete_nested_items_during_deletion}
@@ -406,7 +240,7 @@ export interface AzurermProviderFeaturesTemplateDeployment {
   readonly deleteNestedItemsDuringDeletion: boolean | cdktf.IResolvable;
 }
 
-function azurermProviderFeaturesTemplateDeploymentToTerraform(struct?: AzurermProviderFeaturesTemplateDeploymentOutputReference | AzurermProviderFeaturesTemplateDeployment): any {
+export function azurermProviderFeaturesTemplateDeploymentToTerraform(struct?: AzurermProviderFeaturesTemplateDeployment): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -416,29 +250,6 @@ function azurermProviderFeaturesTemplateDeploymentToTerraform(struct?: AzurermPr
   }
 }
 
-export class AzurermProviderFeaturesTemplateDeploymentOutputReference extends cdktf.ComplexObject {
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
-  */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
-  }
-
-  // delete_nested_items_during_deletion - computed: false, optional: false, required: true
-  private _deleteNestedItemsDuringDeletion?: boolean | cdktf.IResolvable; 
-  public get deleteNestedItemsDuringDeletion() {
-    return this._deleteNestedItemsDuringDeletion;
-  }
-  public set deleteNestedItemsDuringDeletion(value: boolean | cdktf.IResolvable| undefined) {
-    this._deleteNestedItemsDuringDeletion = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get deleteNestedItemsDuringDeletionInput() {
-    return this._deleteNestedItemsDuringDeletion
-  }
-}
 export interface AzurermProviderFeaturesVirtualMachine {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#delete_os_disk_on_deletion AzurermProvider#delete_os_disk_on_deletion}
@@ -454,7 +265,7 @@ export interface AzurermProviderFeaturesVirtualMachine {
   readonly skipShutdownAndForceDelete?: boolean | cdktf.IResolvable;
 }
 
-function azurermProviderFeaturesVirtualMachineToTerraform(struct?: AzurermProviderFeaturesVirtualMachineOutputReference | AzurermProviderFeaturesVirtualMachine): any {
+export function azurermProviderFeaturesVirtualMachineToTerraform(struct?: AzurermProviderFeaturesVirtualMachine): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -466,64 +277,6 @@ function azurermProviderFeaturesVirtualMachineToTerraform(struct?: AzurermProvid
   }
 }
 
-export class AzurermProviderFeaturesVirtualMachineOutputReference extends cdktf.ComplexObject {
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
-  */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
-  }
-
-  // delete_os_disk_on_deletion - computed: false, optional: true, required: false
-  private _deleteOsDiskOnDeletion?: boolean | cdktf.IResolvable | undefined; 
-  public get deleteOsDiskOnDeletion() {
-    return this._deleteOsDiskOnDeletion;
-  }
-  public set deleteOsDiskOnDeletion(value: boolean | cdktf.IResolvable | undefined| undefined) {
-    this._deleteOsDiskOnDeletion = value;
-  }
-  public resetDeleteOsDiskOnDeletion() {
-    this._deleteOsDiskOnDeletion = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get deleteOsDiskOnDeletionInput() {
-    return this._deleteOsDiskOnDeletion
-  }
-
-  // graceful_shutdown - computed: false, optional: true, required: false
-  private _gracefulShutdown?: boolean | cdktf.IResolvable | undefined; 
-  public get gracefulShutdown() {
-    return this._gracefulShutdown;
-  }
-  public set gracefulShutdown(value: boolean | cdktf.IResolvable | undefined| undefined) {
-    this._gracefulShutdown = value;
-  }
-  public resetGracefulShutdown() {
-    this._gracefulShutdown = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get gracefulShutdownInput() {
-    return this._gracefulShutdown
-  }
-
-  // skip_shutdown_and_force_delete - computed: false, optional: true, required: false
-  private _skipShutdownAndForceDelete?: boolean | cdktf.IResolvable | undefined; 
-  public get skipShutdownAndForceDelete() {
-    return this._skipShutdownAndForceDelete;
-  }
-  public set skipShutdownAndForceDelete(value: boolean | cdktf.IResolvable | undefined| undefined) {
-    this._skipShutdownAndForceDelete = value;
-  }
-  public resetSkipShutdownAndForceDelete() {
-    this._skipShutdownAndForceDelete = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get skipShutdownAndForceDeleteInput() {
-    return this._skipShutdownAndForceDelete
-  }
-}
 export interface AzurermProviderFeaturesVirtualMachineScaleSet {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm#force_delete AzurermProvider#force_delete}
@@ -539,7 +292,7 @@ export interface AzurermProviderFeaturesVirtualMachineScaleSet {
   readonly scaleToZeroBeforeDeletion?: boolean | cdktf.IResolvable;
 }
 
-function azurermProviderFeaturesVirtualMachineScaleSetToTerraform(struct?: AzurermProviderFeaturesVirtualMachineScaleSetOutputReference | AzurermProviderFeaturesVirtualMachineScaleSet): any {
+export function azurermProviderFeaturesVirtualMachineScaleSetToTerraform(struct?: AzurermProviderFeaturesVirtualMachineScaleSet): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -551,61 +304,6 @@ function azurermProviderFeaturesVirtualMachineScaleSetToTerraform(struct?: Azure
   }
 }
 
-export class AzurermProviderFeaturesVirtualMachineScaleSetOutputReference extends cdktf.ComplexObject {
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
-  */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
-  }
-
-  // force_delete - computed: false, optional: true, required: false
-  private _forceDelete?: boolean | cdktf.IResolvable | undefined; 
-  public get forceDelete() {
-    return this._forceDelete;
-  }
-  public set forceDelete(value: boolean | cdktf.IResolvable | undefined| undefined) {
-    this._forceDelete = value;
-  }
-  public resetForceDelete() {
-    this._forceDelete = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get forceDeleteInput() {
-    return this._forceDelete
-  }
-
-  // roll_instances_when_required - computed: false, optional: false, required: true
-  private _rollInstancesWhenRequired?: boolean | cdktf.IResolvable; 
-  public get rollInstancesWhenRequired() {
-    return this._rollInstancesWhenRequired;
-  }
-  public set rollInstancesWhenRequired(value: boolean | cdktf.IResolvable| undefined) {
-    this._rollInstancesWhenRequired = value;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get rollInstancesWhenRequiredInput() {
-    return this._rollInstancesWhenRequired
-  }
-
-  // scale_to_zero_before_deletion - computed: false, optional: true, required: false
-  private _scaleToZeroBeforeDeletion?: boolean | cdktf.IResolvable | undefined; 
-  public get scaleToZeroBeforeDeletion() {
-    return this._scaleToZeroBeforeDeletion;
-  }
-  public set scaleToZeroBeforeDeletion(value: boolean | cdktf.IResolvable | undefined| undefined) {
-    this._scaleToZeroBeforeDeletion = value;
-  }
-  public resetScaleToZeroBeforeDeletion() {
-    this._scaleToZeroBeforeDeletion = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get scaleToZeroBeforeDeletionInput() {
-    return this._scaleToZeroBeforeDeletion
-  }
-}
 export interface AzurermProviderFeatures {
   /**
   * api_management block
@@ -663,7 +361,7 @@ export interface AzurermProviderFeatures {
   readonly virtualMachineScaleSet?: AzurermProviderFeaturesVirtualMachineScaleSet;
 }
 
-function azurermProviderFeaturesToTerraform(struct?: AzurermProviderFeaturesOutputReference | AzurermProviderFeatures): any {
+export function azurermProviderFeaturesToTerraform(struct?: AzurermProviderFeatures): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -681,160 +379,6 @@ function azurermProviderFeaturesToTerraform(struct?: AzurermProviderFeaturesOutp
   }
 }
 
-export class AzurermProviderFeaturesOutputReference extends cdktf.ComplexObject {
-  /**
-  * @param terraformResource The parent resource
-  * @param terraformAttribute The attribute on the parent resource this class is referencing
-  * @param isSingleItem True if this is a block, false if it's a list
-  */
-  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
-    super(terraformResource, terraformAttribute, isSingleItem);
-  }
-
-  // api_management - computed: false, optional: true, required: false
-  private _apiManagement?: AzurermProviderFeaturesApiManagement | undefined; 
-  public get apiManagement() {
-    return this._apiManagement;
-  }
-  public set apiManagement(value: AzurermProviderFeaturesApiManagement | undefined| undefined) {
-    this._apiManagement = value;
-  }
-  public resetApiManagement() {
-    this._apiManagement = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get apiManagementInput() {
-    return this._apiManagement
-  }
-
-  // cognitive_account - computed: false, optional: true, required: false
-  private _cognitiveAccount?: AzurermProviderFeaturesCognitiveAccount | undefined; 
-  public get cognitiveAccount() {
-    return this._cognitiveAccount;
-  }
-  public set cognitiveAccount(value: AzurermProviderFeaturesCognitiveAccount | undefined| undefined) {
-    this._cognitiveAccount = value;
-  }
-  public resetCognitiveAccount() {
-    this._cognitiveAccount = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get cognitiveAccountInput() {
-    return this._cognitiveAccount
-  }
-
-  // key_vault - computed: false, optional: true, required: false
-  private _keyVault?: AzurermProviderFeaturesKeyVault | undefined; 
-  public get keyVault() {
-    return this._keyVault;
-  }
-  public set keyVault(value: AzurermProviderFeaturesKeyVault | undefined| undefined) {
-    this._keyVault = value;
-  }
-  public resetKeyVault() {
-    this._keyVault = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get keyVaultInput() {
-    return this._keyVault
-  }
-
-  // log_analytics_workspace - computed: false, optional: true, required: false
-  private _logAnalyticsWorkspace?: AzurermProviderFeaturesLogAnalyticsWorkspace | undefined; 
-  public get logAnalyticsWorkspace() {
-    return this._logAnalyticsWorkspace;
-  }
-  public set logAnalyticsWorkspace(value: AzurermProviderFeaturesLogAnalyticsWorkspace | undefined| undefined) {
-    this._logAnalyticsWorkspace = value;
-  }
-  public resetLogAnalyticsWorkspace() {
-    this._logAnalyticsWorkspace = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get logAnalyticsWorkspaceInput() {
-    return this._logAnalyticsWorkspace
-  }
-
-  // network - computed: false, optional: true, required: false
-  private _network?: AzurermProviderFeaturesNetwork | undefined; 
-  public get network() {
-    return this._network;
-  }
-  public set network(value: AzurermProviderFeaturesNetwork | undefined| undefined) {
-    this._network = value;
-  }
-  public resetNetwork() {
-    this._network = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get networkInput() {
-    return this._network
-  }
-
-  // resource_group - computed: false, optional: true, required: false
-  private _resourceGroup?: AzurermProviderFeaturesResourceGroup | undefined; 
-  public get resourceGroup() {
-    return this._resourceGroup;
-  }
-  public set resourceGroup(value: AzurermProviderFeaturesResourceGroup | undefined| undefined) {
-    this._resourceGroup = value;
-  }
-  public resetResourceGroup() {
-    this._resourceGroup = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get resourceGroupInput() {
-    return this._resourceGroup
-  }
-
-  // template_deployment - computed: false, optional: true, required: false
-  private _templateDeployment?: AzurermProviderFeaturesTemplateDeployment | undefined; 
-  public get templateDeployment() {
-    return this._templateDeployment;
-  }
-  public set templateDeployment(value: AzurermProviderFeaturesTemplateDeployment | undefined| undefined) {
-    this._templateDeployment = value;
-  }
-  public resetTemplateDeployment() {
-    this._templateDeployment = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get templateDeploymentInput() {
-    return this._templateDeployment
-  }
-
-  // virtual_machine - computed: false, optional: true, required: false
-  private _virtualMachine?: AzurermProviderFeaturesVirtualMachine | undefined; 
-  public get virtualMachine() {
-    return this._virtualMachine;
-  }
-  public set virtualMachine(value: AzurermProviderFeaturesVirtualMachine | undefined| undefined) {
-    this._virtualMachine = value;
-  }
-  public resetVirtualMachine() {
-    this._virtualMachine = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get virtualMachineInput() {
-    return this._virtualMachine
-  }
-
-  // virtual_machine_scale_set - computed: false, optional: true, required: false
-  private _virtualMachineScaleSet?: AzurermProviderFeaturesVirtualMachineScaleSet | undefined; 
-  public get virtualMachineScaleSet() {
-    return this._virtualMachineScaleSet;
-  }
-  public set virtualMachineScaleSet(value: AzurermProviderFeaturesVirtualMachineScaleSet | undefined| undefined) {
-    this._virtualMachineScaleSet = value;
-  }
-  public resetVirtualMachineScaleSet() {
-    this._virtualMachineScaleSet = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get virtualMachineScaleSetInput() {
-    return this._virtualMachineScaleSet
-  }
-}
 
 /**
 * Represents a {@link https://www.terraform.io/docs/providers/azurerm azurerm}
@@ -893,11 +437,11 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   // ==========
 
   // auxiliary_tenant_ids - computed: false, optional: true, required: false
-  private _auxiliaryTenantIds?: string[] | undefined; 
+  private _auxiliaryTenantIds?: string[]; 
   public get auxiliaryTenantIds() {
     return this._auxiliaryTenantIds;
   }
-  public set auxiliaryTenantIds(value: string[] | undefined| undefined) {
+  public set auxiliaryTenantIds(value: string[] | undefined) {
     this._auxiliaryTenantIds = value;
   }
   public resetAuxiliaryTenantIds() {
@@ -905,15 +449,15 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
   // Temporarily expose input value. Use with caution.
   public get auxiliaryTenantIdsInput() {
-    return this._auxiliaryTenantIds
+    return this._auxiliaryTenantIds;
   }
 
   // client_certificate_password - computed: false, optional: true, required: false
-  private _clientCertificatePassword?: string | undefined; 
+  private _clientCertificatePassword?: string; 
   public get clientCertificatePassword() {
     return this._clientCertificatePassword;
   }
-  public set clientCertificatePassword(value: string | undefined| undefined) {
+  public set clientCertificatePassword(value: string | undefined) {
     this._clientCertificatePassword = value;
   }
   public resetClientCertificatePassword() {
@@ -921,15 +465,15 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
   // Temporarily expose input value. Use with caution.
   public get clientCertificatePasswordInput() {
-    return this._clientCertificatePassword
+    return this._clientCertificatePassword;
   }
 
   // client_certificate_path - computed: false, optional: true, required: false
-  private _clientCertificatePath?: string | undefined; 
+  private _clientCertificatePath?: string; 
   public get clientCertificatePath() {
     return this._clientCertificatePath;
   }
-  public set clientCertificatePath(value: string | undefined| undefined) {
+  public set clientCertificatePath(value: string | undefined) {
     this._clientCertificatePath = value;
   }
   public resetClientCertificatePath() {
@@ -937,15 +481,15 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
   // Temporarily expose input value. Use with caution.
   public get clientCertificatePathInput() {
-    return this._clientCertificatePath
+    return this._clientCertificatePath;
   }
 
   // client_id - computed: false, optional: true, required: false
-  private _clientId?: string | undefined; 
+  private _clientId?: string; 
   public get clientId() {
     return this._clientId;
   }
-  public set clientId(value: string | undefined| undefined) {
+  public set clientId(value: string | undefined) {
     this._clientId = value;
   }
   public resetClientId() {
@@ -953,15 +497,15 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
   // Temporarily expose input value. Use with caution.
   public get clientIdInput() {
-    return this._clientId
+    return this._clientId;
   }
 
   // client_secret - computed: false, optional: true, required: false
-  private _clientSecret?: string | undefined; 
+  private _clientSecret?: string; 
   public get clientSecret() {
     return this._clientSecret;
   }
-  public set clientSecret(value: string | undefined| undefined) {
+  public set clientSecret(value: string | undefined) {
     this._clientSecret = value;
   }
   public resetClientSecret() {
@@ -969,15 +513,15 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
   // Temporarily expose input value. Use with caution.
   public get clientSecretInput() {
-    return this._clientSecret
+    return this._clientSecret;
   }
 
   // disable_correlation_request_id - computed: false, optional: true, required: false
-  private _disableCorrelationRequestId?: boolean | cdktf.IResolvable | undefined; 
+  private _disableCorrelationRequestId?: boolean | cdktf.IResolvable; 
   public get disableCorrelationRequestId() {
     return this._disableCorrelationRequestId;
   }
-  public set disableCorrelationRequestId(value: boolean | cdktf.IResolvable | undefined| undefined) {
+  public set disableCorrelationRequestId(value: boolean | cdktf.IResolvable | undefined) {
     this._disableCorrelationRequestId = value;
   }
   public resetDisableCorrelationRequestId() {
@@ -985,15 +529,15 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
   // Temporarily expose input value. Use with caution.
   public get disableCorrelationRequestIdInput() {
-    return this._disableCorrelationRequestId
+    return this._disableCorrelationRequestId;
   }
 
   // disable_terraform_partner_id - computed: false, optional: true, required: false
-  private _disableTerraformPartnerId?: boolean | cdktf.IResolvable | undefined; 
+  private _disableTerraformPartnerId?: boolean | cdktf.IResolvable; 
   public get disableTerraformPartnerId() {
     return this._disableTerraformPartnerId;
   }
-  public set disableTerraformPartnerId(value: boolean | cdktf.IResolvable | undefined| undefined) {
+  public set disableTerraformPartnerId(value: boolean | cdktf.IResolvable | undefined) {
     this._disableTerraformPartnerId = value;
   }
   public resetDisableTerraformPartnerId() {
@@ -1001,15 +545,15 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
   // Temporarily expose input value. Use with caution.
   public get disableTerraformPartnerIdInput() {
-    return this._disableTerraformPartnerId
+    return this._disableTerraformPartnerId;
   }
 
   // environment - computed: false, optional: true, required: false
-  private _environment?: string | undefined; 
+  private _environment?: string; 
   public get environment() {
     return this._environment;
   }
-  public set environment(value: string | undefined| undefined) {
+  public set environment(value: string | undefined) {
     this._environment = value;
   }
   public resetEnvironment() {
@@ -1017,15 +561,15 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
   // Temporarily expose input value. Use with caution.
   public get environmentInput() {
-    return this._environment
+    return this._environment;
   }
 
   // metadata_host - computed: false, optional: true, required: false
-  private _metadataHost?: string | undefined; 
+  private _metadataHost?: string; 
   public get metadataHost() {
     return this._metadataHost;
   }
-  public set metadataHost(value: string | undefined| undefined) {
+  public set metadataHost(value: string | undefined) {
     this._metadataHost = value;
   }
   public resetMetadataHost() {
@@ -1033,15 +577,15 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
   // Temporarily expose input value. Use with caution.
   public get metadataHostInput() {
-    return this._metadataHost
+    return this._metadataHost;
   }
 
   // metadata_url - computed: false, optional: true, required: false
-  private _metadataUrl?: string | undefined; 
+  private _metadataUrl?: string; 
   public get metadataUrl() {
     return this._metadataUrl;
   }
-  public set metadataUrl(value: string | undefined| undefined) {
+  public set metadataUrl(value: string | undefined) {
     this._metadataUrl = value;
   }
   public resetMetadataUrl() {
@@ -1049,15 +593,15 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
   // Temporarily expose input value. Use with caution.
   public get metadataUrlInput() {
-    return this._metadataUrl
+    return this._metadataUrl;
   }
 
   // msi_endpoint - computed: false, optional: true, required: false
-  private _msiEndpoint?: string | undefined; 
+  private _msiEndpoint?: string; 
   public get msiEndpoint() {
     return this._msiEndpoint;
   }
-  public set msiEndpoint(value: string | undefined| undefined) {
+  public set msiEndpoint(value: string | undefined) {
     this._msiEndpoint = value;
   }
   public resetMsiEndpoint() {
@@ -1065,15 +609,15 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
   // Temporarily expose input value. Use with caution.
   public get msiEndpointInput() {
-    return this._msiEndpoint
+    return this._msiEndpoint;
   }
 
   // partner_id - computed: false, optional: true, required: false
-  private _partnerId?: string | undefined; 
+  private _partnerId?: string; 
   public get partnerId() {
     return this._partnerId;
   }
-  public set partnerId(value: string | undefined| undefined) {
+  public set partnerId(value: string | undefined) {
     this._partnerId = value;
   }
   public resetPartnerId() {
@@ -1081,15 +625,15 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
   // Temporarily expose input value. Use with caution.
   public get partnerIdInput() {
-    return this._partnerId
+    return this._partnerId;
   }
 
   // skip_credentials_validation - computed: false, optional: true, required: false
-  private _skipCredentialsValidation?: boolean | cdktf.IResolvable | undefined; 
+  private _skipCredentialsValidation?: boolean | cdktf.IResolvable; 
   public get skipCredentialsValidation() {
     return this._skipCredentialsValidation;
   }
-  public set skipCredentialsValidation(value: boolean | cdktf.IResolvable | undefined| undefined) {
+  public set skipCredentialsValidation(value: boolean | cdktf.IResolvable | undefined) {
     this._skipCredentialsValidation = value;
   }
   public resetSkipCredentialsValidation() {
@@ -1097,15 +641,15 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
   // Temporarily expose input value. Use with caution.
   public get skipCredentialsValidationInput() {
-    return this._skipCredentialsValidation
+    return this._skipCredentialsValidation;
   }
 
   // skip_provider_registration - computed: false, optional: true, required: false
-  private _skipProviderRegistration?: boolean | cdktf.IResolvable | undefined; 
+  private _skipProviderRegistration?: boolean | cdktf.IResolvable; 
   public get skipProviderRegistration() {
     return this._skipProviderRegistration;
   }
-  public set skipProviderRegistration(value: boolean | cdktf.IResolvable | undefined| undefined) {
+  public set skipProviderRegistration(value: boolean | cdktf.IResolvable | undefined) {
     this._skipProviderRegistration = value;
   }
   public resetSkipProviderRegistration() {
@@ -1113,15 +657,15 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
   // Temporarily expose input value. Use with caution.
   public get skipProviderRegistrationInput() {
-    return this._skipProviderRegistration
+    return this._skipProviderRegistration;
   }
 
   // storage_use_azuread - computed: false, optional: true, required: false
-  private _storageUseAzuread?: boolean | cdktf.IResolvable | undefined; 
+  private _storageUseAzuread?: boolean | cdktf.IResolvable; 
   public get storageUseAzuread() {
     return this._storageUseAzuread;
   }
-  public set storageUseAzuread(value: boolean | cdktf.IResolvable | undefined| undefined) {
+  public set storageUseAzuread(value: boolean | cdktf.IResolvable | undefined) {
     this._storageUseAzuread = value;
   }
   public resetStorageUseAzuread() {
@@ -1129,15 +673,15 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
   // Temporarily expose input value. Use with caution.
   public get storageUseAzureadInput() {
-    return this._storageUseAzuread
+    return this._storageUseAzuread;
   }
 
   // subscription_id - computed: false, optional: true, required: false
-  private _subscriptionId?: string | undefined; 
+  private _subscriptionId?: string; 
   public get subscriptionId() {
     return this._subscriptionId;
   }
-  public set subscriptionId(value: string | undefined| undefined) {
+  public set subscriptionId(value: string | undefined) {
     this._subscriptionId = value;
   }
   public resetSubscriptionId() {
@@ -1145,15 +689,15 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
   // Temporarily expose input value. Use with caution.
   public get subscriptionIdInput() {
-    return this._subscriptionId
+    return this._subscriptionId;
   }
 
   // tenant_id - computed: false, optional: true, required: false
-  private _tenantId?: string | undefined; 
+  private _tenantId?: string; 
   public get tenantId() {
     return this._tenantId;
   }
-  public set tenantId(value: string | undefined| undefined) {
+  public set tenantId(value: string | undefined) {
     this._tenantId = value;
   }
   public resetTenantId() {
@@ -1161,15 +705,15 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
   // Temporarily expose input value. Use with caution.
   public get tenantIdInput() {
-    return this._tenantId
+    return this._tenantId;
   }
 
   // use_msi - computed: false, optional: true, required: false
-  private _useMsi?: boolean | cdktf.IResolvable | undefined; 
+  private _useMsi?: boolean | cdktf.IResolvable; 
   public get useMsi() {
     return this._useMsi;
   }
-  public set useMsi(value: boolean | cdktf.IResolvable | undefined| undefined) {
+  public set useMsi(value: boolean | cdktf.IResolvable | undefined) {
     this._useMsi = value;
   }
   public resetUseMsi() {
@@ -1177,15 +721,15 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
   // Temporarily expose input value. Use with caution.
   public get useMsiInput() {
-    return this._useMsi
+    return this._useMsi;
   }
 
   // alias - computed: false, optional: true, required: false
-  private _alias?: string | undefined; 
+  private _alias?: string; 
   public get alias() {
     return this._alias;
   }
-  public set alias(value: string | undefined| undefined) {
+  public set alias(value: string | undefined) {
     this._alias = value;
   }
   public resetAlias() {
@@ -1193,7 +737,7 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   }
   // Temporarily expose input value. Use with caution.
   public get aliasInput() {
-    return this._alias
+    return this._alias;
   }
 
   // features - computed: false, optional: false, required: true
@@ -1201,12 +745,12 @@ export class AzurermProvider extends cdktf.TerraformProvider {
   public get features() {
     return this._features;
   }
-  public set features(value: AzurermProviderFeatures| undefined) {
+  public set features(value: AzurermProviderFeatures | undefined) {
     this._features = value;
   }
   // Temporarily expose input value. Use with caution.
   public get featuresInput() {
-    return this._features
+    return this._features;
   }
 
   // =========

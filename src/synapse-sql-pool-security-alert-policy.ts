@@ -65,7 +65,7 @@ export interface SynapseSqlPoolSecurityAlertPolicyTimeouts {
   readonly update?: string;
 }
 
-function synapseSqlPoolSecurityAlertPolicyTimeoutsToTerraform(struct?: SynapseSqlPoolSecurityAlertPolicyTimeoutsOutputReference | SynapseSqlPoolSecurityAlertPolicyTimeouts): any {
+export function synapseSqlPoolSecurityAlertPolicyTimeoutsToTerraform(struct?: SynapseSqlPoolSecurityAlertPolicyTimeoutsOutputReference | SynapseSqlPoolSecurityAlertPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -88,12 +88,49 @@ export class SynapseSqlPoolSecurityAlertPolicyTimeoutsOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SynapseSqlPoolSecurityAlertPolicyTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SynapseSqlPoolSecurityAlertPolicyTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -101,15 +138,15 @@ export class SynapseSqlPoolSecurityAlertPolicyTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -117,15 +154,15 @@ export class SynapseSqlPoolSecurityAlertPolicyTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -133,15 +170,15 @@ export class SynapseSqlPoolSecurityAlertPolicyTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -149,7 +186,7 @@ export class SynapseSqlPoolSecurityAlertPolicyTimeoutsOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -193,7 +230,7 @@ export class SynapseSqlPoolSecurityAlertPolicy extends cdktf.TerraformResource {
     this._sqlPoolId = config.sqlPoolId;
     this._storageAccountAccessKey = config.storageAccountAccessKey;
     this._storageEndpoint = config.storageEndpoint;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -201,11 +238,11 @@ export class SynapseSqlPoolSecurityAlertPolicy extends cdktf.TerraformResource {
   // ==========
 
   // disabled_alerts - computed: false, optional: true, required: false
-  private _disabledAlerts?: string[] | undefined; 
+  private _disabledAlerts?: string[]; 
   public get disabledAlerts() {
     return this.getListAttribute('disabled_alerts');
   }
-  public set disabledAlerts(value: string[] | undefined) {
+  public set disabledAlerts(value: string[]) {
     this._disabledAlerts = value;
   }
   public resetDisabledAlerts() {
@@ -213,15 +250,15 @@ export class SynapseSqlPoolSecurityAlertPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get disabledAlertsInput() {
-    return this._disabledAlerts
+    return this._disabledAlerts;
   }
 
   // email_account_admins_enabled - computed: false, optional: true, required: false
-  private _emailAccountAdminsEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _emailAccountAdminsEnabled?: boolean | cdktf.IResolvable; 
   public get emailAccountAdminsEnabled() {
     return this.getBooleanAttribute('email_account_admins_enabled') as any;
   }
-  public set emailAccountAdminsEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set emailAccountAdminsEnabled(value: boolean | cdktf.IResolvable) {
     this._emailAccountAdminsEnabled = value;
   }
   public resetEmailAccountAdminsEnabled() {
@@ -229,15 +266,15 @@ export class SynapseSqlPoolSecurityAlertPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get emailAccountAdminsEnabledInput() {
-    return this._emailAccountAdminsEnabled
+    return this._emailAccountAdminsEnabled;
   }
 
   // email_addresses - computed: false, optional: true, required: false
-  private _emailAddresses?: string[] | undefined; 
+  private _emailAddresses?: string[]; 
   public get emailAddresses() {
     return this.getListAttribute('email_addresses');
   }
-  public set emailAddresses(value: string[] | undefined) {
+  public set emailAddresses(value: string[]) {
     this._emailAddresses = value;
   }
   public resetEmailAddresses() {
@@ -245,7 +282,7 @@ export class SynapseSqlPoolSecurityAlertPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get emailAddressesInput() {
-    return this._emailAddresses
+    return this._emailAddresses;
   }
 
   // id - computed: true, optional: true, required: false
@@ -263,15 +300,15 @@ export class SynapseSqlPoolSecurityAlertPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get policyStateInput() {
-    return this._policyState
+    return this._policyState;
   }
 
   // retention_days - computed: false, optional: true, required: false
-  private _retentionDays?: number | undefined; 
+  private _retentionDays?: number; 
   public get retentionDays() {
     return this.getNumberAttribute('retention_days');
   }
-  public set retentionDays(value: number | undefined) {
+  public set retentionDays(value: number) {
     this._retentionDays = value;
   }
   public resetRetentionDays() {
@@ -279,7 +316,7 @@ export class SynapseSqlPoolSecurityAlertPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get retentionDaysInput() {
-    return this._retentionDays
+    return this._retentionDays;
   }
 
   // sql_pool_id - computed: false, optional: false, required: true
@@ -292,15 +329,15 @@ export class SynapseSqlPoolSecurityAlertPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sqlPoolIdInput() {
-    return this._sqlPoolId
+    return this._sqlPoolId;
   }
 
   // storage_account_access_key - computed: false, optional: true, required: false
-  private _storageAccountAccessKey?: string | undefined; 
+  private _storageAccountAccessKey?: string; 
   public get storageAccountAccessKey() {
     return this.getStringAttribute('storage_account_access_key');
   }
-  public set storageAccountAccessKey(value: string | undefined) {
+  public set storageAccountAccessKey(value: string) {
     this._storageAccountAccessKey = value;
   }
   public resetStorageAccountAccessKey() {
@@ -308,15 +345,15 @@ export class SynapseSqlPoolSecurityAlertPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountAccessKeyInput() {
-    return this._storageAccountAccessKey
+    return this._storageAccountAccessKey;
   }
 
   // storage_endpoint - computed: false, optional: true, required: false
-  private _storageEndpoint?: string | undefined; 
+  private _storageEndpoint?: string; 
   public get storageEndpoint() {
     return this.getStringAttribute('storage_endpoint');
   }
-  public set storageEndpoint(value: string | undefined) {
+  public set storageEndpoint(value: string) {
     this._storageEndpoint = value;
   }
   public resetStorageEndpoint() {
@@ -324,24 +361,23 @@ export class SynapseSqlPoolSecurityAlertPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageEndpointInput() {
-    return this._storageEndpoint
+    return this._storageEndpoint;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SynapseSqlPoolSecurityAlertPolicyTimeouts | undefined; 
-  private __timeoutsOutput = new SynapseSqlPoolSecurityAlertPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SynapseSqlPoolSecurityAlertPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SynapseSqlPoolSecurityAlertPolicyTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SynapseSqlPoolSecurityAlertPolicyTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -358,7 +394,7 @@ export class SynapseSqlPoolSecurityAlertPolicy extends cdktf.TerraformResource {
       sql_pool_id: cdktf.stringToTerraform(this._sqlPoolId),
       storage_account_access_key: cdktf.stringToTerraform(this._storageAccountAccessKey),
       storage_endpoint: cdktf.stringToTerraform(this._storageEndpoint),
-      timeouts: synapseSqlPoolSecurityAlertPolicyTimeoutsToTerraform(this._timeouts),
+      timeouts: synapseSqlPoolSecurityAlertPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

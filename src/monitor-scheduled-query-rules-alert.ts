@@ -101,7 +101,7 @@ export interface MonitorScheduledQueryRulesAlertAction {
   readonly emailSubject?: string;
 }
 
-function monitorScheduledQueryRulesAlertActionToTerraform(struct?: MonitorScheduledQueryRulesAlertActionOutputReference | MonitorScheduledQueryRulesAlertAction): any {
+export function monitorScheduledQueryRulesAlertActionToTerraform(struct?: MonitorScheduledQueryRulesAlertActionOutputReference | MonitorScheduledQueryRulesAlertAction): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -123,6 +123,37 @@ export class MonitorScheduledQueryRulesAlertActionOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitorScheduledQueryRulesAlertAction | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._actionGroup) {
+      hasAnyValues = true;
+      internalValueResult.actionGroup = this._actionGroup;
+    }
+    if (this._customWebhookPayload) {
+      hasAnyValues = true;
+      internalValueResult.customWebhookPayload = this._customWebhookPayload;
+    }
+    if (this._emailSubject) {
+      hasAnyValues = true;
+      internalValueResult.emailSubject = this._emailSubject;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorScheduledQueryRulesAlertAction | undefined) {
+    if (value === undefined) {
+      this._actionGroup = undefined;
+      this._customWebhookPayload = undefined;
+      this._emailSubject = undefined;
+    }
+    else {
+      this._actionGroup = value.actionGroup;
+      this._customWebhookPayload = value.customWebhookPayload;
+      this._emailSubject = value.emailSubject;
+    }
+  }
+
   // action_group - computed: false, optional: false, required: true
   private _actionGroup?: string[]; 
   public get actionGroup() {
@@ -133,15 +164,15 @@ export class MonitorScheduledQueryRulesAlertActionOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get actionGroupInput() {
-    return this._actionGroup
+    return this._actionGroup;
   }
 
   // custom_webhook_payload - computed: true, optional: true, required: false
-  private _customWebhookPayload?: string | undefined; 
+  private _customWebhookPayload?: string; 
   public get customWebhookPayload() {
     return this.getStringAttribute('custom_webhook_payload');
   }
-  public set customWebhookPayload(value: string | undefined) {
+  public set customWebhookPayload(value: string) {
     this._customWebhookPayload = value;
   }
   public resetCustomWebhookPayload() {
@@ -149,15 +180,15 @@ export class MonitorScheduledQueryRulesAlertActionOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get customWebhookPayloadInput() {
-    return this._customWebhookPayload
+    return this._customWebhookPayload;
   }
 
   // email_subject - computed: false, optional: true, required: false
-  private _emailSubject?: string | undefined; 
+  private _emailSubject?: string; 
   public get emailSubject() {
     return this.getStringAttribute('email_subject');
   }
-  public set emailSubject(value: string | undefined) {
+  public set emailSubject(value: string) {
     this._emailSubject = value;
   }
   public resetEmailSubject() {
@@ -165,7 +196,7 @@ export class MonitorScheduledQueryRulesAlertActionOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get emailSubjectInput() {
-    return this._emailSubject
+    return this._emailSubject;
   }
 }
 export interface MonitorScheduledQueryRulesAlertTimeouts {
@@ -187,7 +218,7 @@ export interface MonitorScheduledQueryRulesAlertTimeouts {
   readonly update?: string;
 }
 
-function monitorScheduledQueryRulesAlertTimeoutsToTerraform(struct?: MonitorScheduledQueryRulesAlertTimeoutsOutputReference | MonitorScheduledQueryRulesAlertTimeouts): any {
+export function monitorScheduledQueryRulesAlertTimeoutsToTerraform(struct?: MonitorScheduledQueryRulesAlertTimeoutsOutputReference | MonitorScheduledQueryRulesAlertTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -210,12 +241,49 @@ export class MonitorScheduledQueryRulesAlertTimeoutsOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitorScheduledQueryRulesAlertTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorScheduledQueryRulesAlertTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -223,15 +291,15 @@ export class MonitorScheduledQueryRulesAlertTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -239,15 +307,15 @@ export class MonitorScheduledQueryRulesAlertTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -255,15 +323,15 @@ export class MonitorScheduledQueryRulesAlertTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -271,7 +339,7 @@ export class MonitorScheduledQueryRulesAlertTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface MonitorScheduledQueryRulesAlertTriggerMetricTrigger {
@@ -293,7 +361,7 @@ export interface MonitorScheduledQueryRulesAlertTriggerMetricTrigger {
   readonly threshold: number;
 }
 
-function monitorScheduledQueryRulesAlertTriggerMetricTriggerToTerraform(struct?: MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference | MonitorScheduledQueryRulesAlertTriggerMetricTrigger): any {
+export function monitorScheduledQueryRulesAlertTriggerMetricTriggerToTerraform(struct?: MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference | MonitorScheduledQueryRulesAlertTriggerMetricTrigger): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -316,6 +384,43 @@ export class MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitorScheduledQueryRulesAlertTriggerMetricTrigger | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._metricColumn) {
+      hasAnyValues = true;
+      internalValueResult.metricColumn = this._metricColumn;
+    }
+    if (this._metricTriggerType) {
+      hasAnyValues = true;
+      internalValueResult.metricTriggerType = this._metricTriggerType;
+    }
+    if (this._operator) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._threshold) {
+      hasAnyValues = true;
+      internalValueResult.threshold = this._threshold;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorScheduledQueryRulesAlertTriggerMetricTrigger | undefined) {
+    if (value === undefined) {
+      this._metricColumn = undefined;
+      this._metricTriggerType = undefined;
+      this._operator = undefined;
+      this._threshold = undefined;
+    }
+    else {
+      this._metricColumn = value.metricColumn;
+      this._metricTriggerType = value.metricTriggerType;
+      this._operator = value.operator;
+      this._threshold = value.threshold;
+    }
+  }
+
   // metric_column - computed: false, optional: false, required: true
   private _metricColumn?: string; 
   public get metricColumn() {
@@ -326,7 +431,7 @@ export class MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get metricColumnInput() {
-    return this._metricColumn
+    return this._metricColumn;
   }
 
   // metric_trigger_type - computed: false, optional: false, required: true
@@ -339,7 +444,7 @@ export class MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get metricTriggerTypeInput() {
-    return this._metricTriggerType
+    return this._metricTriggerType;
   }
 
   // operator - computed: false, optional: false, required: true
@@ -352,7 +457,7 @@ export class MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get operatorInput() {
-    return this._operator
+    return this._operator;
   }
 
   // threshold - computed: false, optional: false, required: true
@@ -365,7 +470,7 @@ export class MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference 
   }
   // Temporarily expose input value. Use with caution.
   public get thresholdInput() {
-    return this._threshold
+    return this._threshold;
   }
 }
 export interface MonitorScheduledQueryRulesAlertTrigger {
@@ -385,7 +490,7 @@ export interface MonitorScheduledQueryRulesAlertTrigger {
   readonly metricTrigger?: MonitorScheduledQueryRulesAlertTriggerMetricTrigger;
 }
 
-function monitorScheduledQueryRulesAlertTriggerToTerraform(struct?: MonitorScheduledQueryRulesAlertTriggerOutputReference | MonitorScheduledQueryRulesAlertTrigger): any {
+export function monitorScheduledQueryRulesAlertTriggerToTerraform(struct?: MonitorScheduledQueryRulesAlertTriggerOutputReference | MonitorScheduledQueryRulesAlertTrigger): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -407,6 +512,37 @@ export class MonitorScheduledQueryRulesAlertTriggerOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MonitorScheduledQueryRulesAlertTrigger | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._operator) {
+      hasAnyValues = true;
+      internalValueResult.operator = this._operator;
+    }
+    if (this._threshold) {
+      hasAnyValues = true;
+      internalValueResult.threshold = this._threshold;
+    }
+    if (this._metricTrigger) {
+      hasAnyValues = true;
+      internalValueResult.metricTrigger = this._metricTrigger?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MonitorScheduledQueryRulesAlertTrigger | undefined) {
+    if (value === undefined) {
+      this._operator = undefined;
+      this._threshold = undefined;
+      this._metricTrigger.internalValue = undefined;
+    }
+    else {
+      this._operator = value.operator;
+      this._threshold = value.threshold;
+      this._metricTrigger.internalValue = value.metricTrigger;
+    }
+  }
+
   // operator - computed: false, optional: false, required: true
   private _operator?: string; 
   public get operator() {
@@ -417,7 +553,7 @@ export class MonitorScheduledQueryRulesAlertTriggerOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get operatorInput() {
-    return this._operator
+    return this._operator;
   }
 
   // threshold - computed: false, optional: false, required: true
@@ -430,24 +566,23 @@ export class MonitorScheduledQueryRulesAlertTriggerOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get thresholdInput() {
-    return this._threshold
+    return this._threshold;
   }
 
   // metric_trigger - computed: false, optional: true, required: false
-  private _metricTrigger?: MonitorScheduledQueryRulesAlertTriggerMetricTrigger | undefined; 
-  private __metricTriggerOutput = new MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference(this as any, "metric_trigger", true);
+  private _metricTrigger = new MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference(this as any, "metric_trigger", true);
   public get metricTrigger() {
-    return this.__metricTriggerOutput;
+    return this._metricTrigger;
   }
-  public putMetricTrigger(value: MonitorScheduledQueryRulesAlertTriggerMetricTrigger | undefined) {
-    this._metricTrigger = value;
+  public putMetricTrigger(value: MonitorScheduledQueryRulesAlertTriggerMetricTrigger) {
+    this._metricTrigger.internalValue = value;
   }
   public resetMetricTrigger() {
-    this._metricTrigger = undefined;
+    this._metricTrigger.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get metricTriggerInput() {
-    return this._metricTrigger
+    return this._metricTrigger.internalValue;
   }
 }
 
@@ -498,9 +633,9 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._throttling = config.throttling;
     this._timeWindow = config.timeWindow;
-    this._action = config.action;
-    this._timeouts = config.timeouts;
-    this._trigger = config.trigger;
+    this._action.internalValue = config.action;
+    this._timeouts.internalValue = config.timeouts;
+    this._trigger.internalValue = config.trigger;
   }
 
   // ==========
@@ -508,11 +643,11 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   // ==========
 
   // authorized_resource_ids - computed: false, optional: true, required: false
-  private _authorizedResourceIds?: string[] | undefined; 
+  private _authorizedResourceIds?: string[]; 
   public get authorizedResourceIds() {
     return this.getListAttribute('authorized_resource_ids');
   }
-  public set authorizedResourceIds(value: string[] | undefined) {
+  public set authorizedResourceIds(value: string[]) {
     this._authorizedResourceIds = value;
   }
   public resetAuthorizedResourceIds() {
@@ -520,15 +655,15 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get authorizedResourceIdsInput() {
-    return this._authorizedResourceIds
+    return this._authorizedResourceIds;
   }
 
   // auto_mitigation_enabled - computed: false, optional: true, required: false
-  private _autoMitigationEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _autoMitigationEnabled?: boolean | cdktf.IResolvable; 
   public get autoMitigationEnabled() {
     return this.getBooleanAttribute('auto_mitigation_enabled') as any;
   }
-  public set autoMitigationEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set autoMitigationEnabled(value: boolean | cdktf.IResolvable) {
     this._autoMitigationEnabled = value;
   }
   public resetAutoMitigationEnabled() {
@@ -536,7 +671,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get autoMitigationEnabledInput() {
-    return this._autoMitigationEnabled
+    return this._autoMitigationEnabled;
   }
 
   // data_source_id - computed: false, optional: false, required: true
@@ -549,15 +684,15 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dataSourceIdInput() {
-    return this._dataSourceId
+    return this._dataSourceId;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -565,15 +700,15 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -581,7 +716,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // frequency - computed: false, optional: false, required: true
@@ -594,7 +729,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get frequencyInput() {
-    return this._frequency
+    return this._frequency;
   }
 
   // id - computed: true, optional: true, required: false
@@ -612,7 +747,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -625,7 +760,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // query - computed: false, optional: false, required: true
@@ -638,15 +773,15 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get queryInput() {
-    return this._query
+    return this._query;
   }
 
   // query_type - computed: false, optional: true, required: false
-  private _queryType?: string | undefined; 
+  private _queryType?: string; 
   public get queryType() {
     return this.getStringAttribute('query_type');
   }
-  public set queryType(value: string | undefined) {
+  public set queryType(value: string) {
     this._queryType = value;
   }
   public resetQueryType() {
@@ -654,7 +789,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get queryTypeInput() {
-    return this._queryType
+    return this._queryType;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -667,15 +802,15 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // severity - computed: false, optional: true, required: false
-  private _severity?: number | undefined; 
+  private _severity?: number; 
   public get severity() {
     return this.getNumberAttribute('severity');
   }
-  public set severity(value: number | undefined) {
+  public set severity(value: number) {
     this._severity = value;
   }
   public resetSeverity() {
@@ -683,16 +818,16 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get severityInput() {
-    return this._severity
+    return this._severity;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -700,15 +835,15 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // throttling - computed: false, optional: true, required: false
-  private _throttling?: number | undefined; 
+  private _throttling?: number; 
   public get throttling() {
     return this.getNumberAttribute('throttling');
   }
-  public set throttling(value: number | undefined) {
+  public set throttling(value: number) {
     this._throttling = value;
   }
   public resetThrottling() {
@@ -716,7 +851,7 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get throttlingInput() {
-    return this._throttling
+    return this._throttling;
   }
 
   // time_window - computed: false, optional: false, required: true
@@ -729,52 +864,49 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get timeWindowInput() {
-    return this._timeWindow
+    return this._timeWindow;
   }
 
   // action - computed: false, optional: false, required: true
-  private _action?: MonitorScheduledQueryRulesAlertAction; 
-  private __actionOutput = new MonitorScheduledQueryRulesAlertActionOutputReference(this as any, "action", true);
+  private _action = new MonitorScheduledQueryRulesAlertActionOutputReference(this as any, "action", true);
   public get action() {
-    return this.__actionOutput;
+    return this._action;
   }
   public putAction(value: MonitorScheduledQueryRulesAlertAction) {
-    this._action = value;
+    this._action.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get actionInput() {
-    return this._action
+    return this._action.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MonitorScheduledQueryRulesAlertTimeouts | undefined; 
-  private __timeoutsOutput = new MonitorScheduledQueryRulesAlertTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MonitorScheduledQueryRulesAlertTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MonitorScheduledQueryRulesAlertTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MonitorScheduledQueryRulesAlertTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // trigger - computed: false, optional: false, required: true
-  private _trigger?: MonitorScheduledQueryRulesAlertTrigger; 
-  private __triggerOutput = new MonitorScheduledQueryRulesAlertTriggerOutputReference(this as any, "trigger", true);
+  private _trigger = new MonitorScheduledQueryRulesAlertTriggerOutputReference(this as any, "trigger", true);
   public get trigger() {
-    return this.__triggerOutput;
+    return this._trigger;
   }
   public putTrigger(value: MonitorScheduledQueryRulesAlertTrigger) {
-    this._trigger = value;
+    this._trigger.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get triggerInput() {
-    return this._trigger
+    return this._trigger.internalValue;
   }
 
   // =========
@@ -798,9 +930,9 @@ export class MonitorScheduledQueryRulesAlert extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       throttling: cdktf.numberToTerraform(this._throttling),
       time_window: cdktf.numberToTerraform(this._timeWindow),
-      action: monitorScheduledQueryRulesAlertActionToTerraform(this._action),
-      timeouts: monitorScheduledQueryRulesAlertTimeoutsToTerraform(this._timeouts),
-      trigger: monitorScheduledQueryRulesAlertTriggerToTerraform(this._trigger),
+      action: monitorScheduledQueryRulesAlertActionToTerraform(this._action.internalValue),
+      timeouts: monitorScheduledQueryRulesAlertTimeoutsToTerraform(this._timeouts.internalValue),
+      trigger: monitorScheduledQueryRulesAlertTriggerToTerraform(this._trigger.internalValue),
     };
   }
 }

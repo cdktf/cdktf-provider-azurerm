@@ -59,7 +59,7 @@ export interface VirtualHubRoute {
   readonly nextHopIpAddress: string;
 }
 
-function virtualHubRouteToTerraform(struct?: VirtualHubRoute): any {
+export function virtualHubRouteToTerraform(struct?: VirtualHubRoute): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -89,7 +89,7 @@ export interface VirtualHubTimeouts {
   readonly update?: string;
 }
 
-function virtualHubTimeoutsToTerraform(struct?: VirtualHubTimeoutsOutputReference | VirtualHubTimeouts): any {
+export function virtualHubTimeoutsToTerraform(struct?: VirtualHubTimeoutsOutputReference | VirtualHubTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -112,12 +112,49 @@ export class VirtualHubTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): VirtualHubTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualHubTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -125,15 +162,15 @@ export class VirtualHubTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -141,15 +178,15 @@ export class VirtualHubTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -157,15 +194,15 @@ export class VirtualHubTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -173,7 +210,7 @@ export class VirtualHubTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -217,7 +254,7 @@ export class VirtualHub extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._virtualWanId = config.virtualWanId;
     this._route = config.route;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -225,11 +262,11 @@ export class VirtualHub extends cdktf.TerraformResource {
   // ==========
 
   // address_prefix - computed: false, optional: true, required: false
-  private _addressPrefix?: string | undefined; 
+  private _addressPrefix?: string; 
   public get addressPrefix() {
     return this.getStringAttribute('address_prefix');
   }
-  public set addressPrefix(value: string | undefined) {
+  public set addressPrefix(value: string) {
     this._addressPrefix = value;
   }
   public resetAddressPrefix() {
@@ -237,7 +274,7 @@ export class VirtualHub extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get addressPrefixInput() {
-    return this._addressPrefix
+    return this._addressPrefix;
   }
 
   // default_route_table_id - computed: true, optional: false, required: false
@@ -260,7 +297,7 @@ export class VirtualHub extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -273,7 +310,7 @@ export class VirtualHub extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -286,15 +323,15 @@ export class VirtualHub extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // sku - computed: false, optional: true, required: false
-  private _sku?: string | undefined; 
+  private _sku?: string; 
   public get sku() {
     return this.getStringAttribute('sku');
   }
-  public set sku(value: string | undefined) {
+  public set sku(value: string) {
     this._sku = value;
   }
   public resetSku() {
@@ -302,16 +339,16 @@ export class VirtualHub extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuInput() {
-    return this._sku
+    return this._sku;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -319,15 +356,15 @@ export class VirtualHub extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // virtual_wan_id - computed: false, optional: true, required: false
-  private _virtualWanId?: string | undefined; 
+  private _virtualWanId?: string; 
   public get virtualWanId() {
     return this.getStringAttribute('virtual_wan_id');
   }
-  public set virtualWanId(value: string | undefined) {
+  public set virtualWanId(value: string) {
     this._virtualWanId = value;
   }
   public resetVirtualWanId() {
@@ -335,16 +372,16 @@ export class VirtualHub extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get virtualWanIdInput() {
-    return this._virtualWanId
+    return this._virtualWanId;
   }
 
   // route - computed: false, optional: true, required: false
-  private _route?: VirtualHubRoute[] | undefined; 
+  private _route?: VirtualHubRoute[]; 
   public get route() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('route') as any;
   }
-  public set route(value: VirtualHubRoute[] | undefined) {
+  public set route(value: VirtualHubRoute[]) {
     this._route = value;
   }
   public resetRoute() {
@@ -352,24 +389,23 @@ export class VirtualHub extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get routeInput() {
-    return this._route
+    return this._route;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VirtualHubTimeouts | undefined; 
-  private __timeoutsOutput = new VirtualHubTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VirtualHubTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: VirtualHubTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: VirtualHubTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -386,7 +422,7 @@ export class VirtualHub extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       virtual_wan_id: cdktf.stringToTerraform(this._virtualWanId),
       route: cdktf.listMapper(virtualHubRouteToTerraform)(this._route),
-      timeouts: virtualHubTimeoutsToTerraform(this._timeouts),
+      timeouts: virtualHubTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

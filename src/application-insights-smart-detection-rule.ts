@@ -53,7 +53,7 @@ export interface ApplicationInsightsSmartDetectionRuleTimeouts {
   readonly update?: string;
 }
 
-function applicationInsightsSmartDetectionRuleTimeoutsToTerraform(struct?: ApplicationInsightsSmartDetectionRuleTimeoutsOutputReference | ApplicationInsightsSmartDetectionRuleTimeouts): any {
+export function applicationInsightsSmartDetectionRuleTimeoutsToTerraform(struct?: ApplicationInsightsSmartDetectionRuleTimeoutsOutputReference | ApplicationInsightsSmartDetectionRuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -76,12 +76,49 @@ export class ApplicationInsightsSmartDetectionRuleTimeoutsOutputReference extend
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApplicationInsightsSmartDetectionRuleTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApplicationInsightsSmartDetectionRuleTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -89,15 +126,15 @@ export class ApplicationInsightsSmartDetectionRuleTimeoutsOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -105,15 +142,15 @@ export class ApplicationInsightsSmartDetectionRuleTimeoutsOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -121,15 +158,15 @@ export class ApplicationInsightsSmartDetectionRuleTimeoutsOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -137,7 +174,7 @@ export class ApplicationInsightsSmartDetectionRuleTimeoutsOutputReference extend
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -178,7 +215,7 @@ export class ApplicationInsightsSmartDetectionRule extends cdktf.TerraformResour
     this._enabled = config.enabled;
     this._name = config.name;
     this._sendEmailsToSubscriptionOwners = config.sendEmailsToSubscriptionOwners;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -186,11 +223,11 @@ export class ApplicationInsightsSmartDetectionRule extends cdktf.TerraformResour
   // ==========
 
   // additional_email_recipients - computed: false, optional: true, required: false
-  private _additionalEmailRecipients?: string[] | undefined; 
+  private _additionalEmailRecipients?: string[]; 
   public get additionalEmailRecipients() {
     return this.getListAttribute('additional_email_recipients');
   }
-  public set additionalEmailRecipients(value: string[] | undefined) {
+  public set additionalEmailRecipients(value: string[]) {
     this._additionalEmailRecipients = value;
   }
   public resetAdditionalEmailRecipients() {
@@ -198,7 +235,7 @@ export class ApplicationInsightsSmartDetectionRule extends cdktf.TerraformResour
   }
   // Temporarily expose input value. Use with caution.
   public get additionalEmailRecipientsInput() {
-    return this._additionalEmailRecipients
+    return this._additionalEmailRecipients;
   }
 
   // application_insights_id - computed: false, optional: false, required: true
@@ -211,15 +248,15 @@ export class ApplicationInsightsSmartDetectionRule extends cdktf.TerraformResour
   }
   // Temporarily expose input value. Use with caution.
   public get applicationInsightsIdInput() {
-    return this._applicationInsightsId
+    return this._applicationInsightsId;
   }
 
   // enabled - computed: false, optional: true, required: false
-  private _enabled?: boolean | cdktf.IResolvable | undefined; 
+  private _enabled?: boolean | cdktf.IResolvable; 
   public get enabled() {
     return this.getBooleanAttribute('enabled') as any;
   }
-  public set enabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set enabled(value: boolean | cdktf.IResolvable) {
     this._enabled = value;
   }
   public resetEnabled() {
@@ -227,7 +264,7 @@ export class ApplicationInsightsSmartDetectionRule extends cdktf.TerraformResour
   }
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
-    return this._enabled
+    return this._enabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -245,15 +282,15 @@ export class ApplicationInsightsSmartDetectionRule extends cdktf.TerraformResour
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // send_emails_to_subscription_owners - computed: false, optional: true, required: false
-  private _sendEmailsToSubscriptionOwners?: boolean | cdktf.IResolvable | undefined; 
+  private _sendEmailsToSubscriptionOwners?: boolean | cdktf.IResolvable; 
   public get sendEmailsToSubscriptionOwners() {
     return this.getBooleanAttribute('send_emails_to_subscription_owners') as any;
   }
-  public set sendEmailsToSubscriptionOwners(value: boolean | cdktf.IResolvable | undefined) {
+  public set sendEmailsToSubscriptionOwners(value: boolean | cdktf.IResolvable) {
     this._sendEmailsToSubscriptionOwners = value;
   }
   public resetSendEmailsToSubscriptionOwners() {
@@ -261,24 +298,23 @@ export class ApplicationInsightsSmartDetectionRule extends cdktf.TerraformResour
   }
   // Temporarily expose input value. Use with caution.
   public get sendEmailsToSubscriptionOwnersInput() {
-    return this._sendEmailsToSubscriptionOwners
+    return this._sendEmailsToSubscriptionOwners;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ApplicationInsightsSmartDetectionRuleTimeouts | undefined; 
-  private __timeoutsOutput = new ApplicationInsightsSmartDetectionRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApplicationInsightsSmartDetectionRuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ApplicationInsightsSmartDetectionRuleTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ApplicationInsightsSmartDetectionRuleTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -292,7 +328,7 @@ export class ApplicationInsightsSmartDetectionRule extends cdktf.TerraformResour
       enabled: cdktf.booleanToTerraform(this._enabled),
       name: cdktf.stringToTerraform(this._name),
       send_emails_to_subscription_owners: cdktf.booleanToTerraform(this._sendEmailsToSubscriptionOwners),
-      timeouts: applicationInsightsSmartDetectionRuleTimeoutsToTerraform(this._timeouts),
+      timeouts: applicationInsightsSmartDetectionRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

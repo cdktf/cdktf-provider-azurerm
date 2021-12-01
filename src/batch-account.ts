@@ -65,7 +65,7 @@ export interface BatchAccountIdentity {
   readonly type: string;
 }
 
-function batchAccountIdentityToTerraform(struct?: BatchAccountIdentityOutputReference | BatchAccountIdentity): any {
+export function batchAccountIdentityToTerraform(struct?: BatchAccountIdentityOutputReference | BatchAccountIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -86,12 +86,37 @@ export class BatchAccountIdentityOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BatchAccountIdentity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._identityIds) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchAccountIdentity | undefined) {
+    if (value === undefined) {
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
   // identity_ids - computed: false, optional: true, required: false
-  private _identityIds?: string[] | undefined; 
+  private _identityIds?: string[]; 
   public get identityIds() {
     return this.getListAttribute('identity_ids');
   }
-  public set identityIds(value: string[] | undefined) {
+  public set identityIds(value: string[]) {
     this._identityIds = value;
   }
   public resetIdentityIds() {
@@ -99,7 +124,7 @@ export class BatchAccountIdentityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
-    return this._identityIds
+    return this._identityIds;
   }
 
   // type - computed: false, optional: false, required: true
@@ -112,7 +137,7 @@ export class BatchAccountIdentityOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface BatchAccountKeyVaultReference {
@@ -126,7 +151,7 @@ export interface BatchAccountKeyVaultReference {
   readonly url: string;
 }
 
-function batchAccountKeyVaultReferenceToTerraform(struct?: BatchAccountKeyVaultReferenceOutputReference | BatchAccountKeyVaultReference): any {
+export function batchAccountKeyVaultReferenceToTerraform(struct?: BatchAccountKeyVaultReferenceOutputReference | BatchAccountKeyVaultReference): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -147,6 +172,31 @@ export class BatchAccountKeyVaultReferenceOutputReference extends cdktf.ComplexO
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BatchAccountKeyVaultReference | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._id) {
+      hasAnyValues = true;
+      internalValueResult.id = this._id;
+    }
+    if (this._url) {
+      hasAnyValues = true;
+      internalValueResult.url = this._url;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchAccountKeyVaultReference | undefined) {
+    if (value === undefined) {
+      this._id = undefined;
+      this._url = undefined;
+    }
+    else {
+      this._id = value.id;
+      this._url = value.url;
+    }
+  }
+
   // id - computed: false, optional: false, required: true
   private _id?: string; 
   public get id() {
@@ -157,7 +207,7 @@ export class BatchAccountKeyVaultReferenceOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get idInput() {
-    return this._id
+    return this._id;
   }
 
   // url - computed: false, optional: false, required: true
@@ -170,7 +220,7 @@ export class BatchAccountKeyVaultReferenceOutputReference extends cdktf.ComplexO
   }
   // Temporarily expose input value. Use with caution.
   public get urlInput() {
-    return this._url
+    return this._url;
   }
 }
 export interface BatchAccountTimeouts {
@@ -192,7 +242,7 @@ export interface BatchAccountTimeouts {
   readonly update?: string;
 }
 
-function batchAccountTimeoutsToTerraform(struct?: BatchAccountTimeoutsOutputReference | BatchAccountTimeouts): any {
+export function batchAccountTimeoutsToTerraform(struct?: BatchAccountTimeoutsOutputReference | BatchAccountTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -215,12 +265,49 @@ export class BatchAccountTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): BatchAccountTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BatchAccountTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -228,15 +315,15 @@ export class BatchAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -244,15 +331,15 @@ export class BatchAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -260,15 +347,15 @@ export class BatchAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -276,7 +363,7 @@ export class BatchAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -319,9 +406,9 @@ export class BatchAccount extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._storageAccountId = config.storageAccountId;
     this._tags = config.tags;
-    this._identity = config.identity;
-    this._keyVaultReference = config.keyVaultReference;
-    this._timeouts = config.timeouts;
+    this._identity.internalValue = config.identity;
+    this._keyVaultReference.internalValue = config.keyVaultReference;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -348,7 +435,7 @@ export class BatchAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -361,15 +448,15 @@ export class BatchAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // pool_allocation_mode - computed: false, optional: true, required: false
-  private _poolAllocationMode?: string | undefined; 
+  private _poolAllocationMode?: string; 
   public get poolAllocationMode() {
     return this.getStringAttribute('pool_allocation_mode');
   }
-  public set poolAllocationMode(value: string | undefined) {
+  public set poolAllocationMode(value: string) {
     this._poolAllocationMode = value;
   }
   public resetPoolAllocationMode() {
@@ -377,7 +464,7 @@ export class BatchAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get poolAllocationModeInput() {
-    return this._poolAllocationMode
+    return this._poolAllocationMode;
   }
 
   // primary_access_key - computed: true, optional: false, required: false
@@ -386,11 +473,11 @@ export class BatchAccount extends cdktf.TerraformResource {
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled') as any;
   }
-  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -398,7 +485,7 @@ export class BatchAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get publicNetworkAccessEnabledInput() {
-    return this._publicNetworkAccessEnabled
+    return this._publicNetworkAccessEnabled;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -411,7 +498,7 @@ export class BatchAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // secondary_access_key - computed: true, optional: false, required: false
@@ -420,11 +507,11 @@ export class BatchAccount extends cdktf.TerraformResource {
   }
 
   // storage_account_id - computed: true, optional: true, required: false
-  private _storageAccountId?: string | undefined; 
+  private _storageAccountId?: string; 
   public get storageAccountId() {
     return this.getStringAttribute('storage_account_id');
   }
-  public set storageAccountId(value: string | undefined) {
+  public set storageAccountId(value: string) {
     this._storageAccountId = value;
   }
   public resetStorageAccountId() {
@@ -432,16 +519,16 @@ export class BatchAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountIdInput() {
-    return this._storageAccountId
+    return this._storageAccountId;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -449,58 +536,55 @@ export class BatchAccount extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: BatchAccountIdentity | undefined; 
-  private __identityOutput = new BatchAccountIdentityOutputReference(this as any, "identity", true);
+  private _identity = new BatchAccountIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.__identityOutput;
+    return this._identity;
   }
-  public putIdentity(value: BatchAccountIdentity | undefined) {
-    this._identity = value;
+  public putIdentity(value: BatchAccountIdentity) {
+    this._identity.internalValue = value;
   }
   public resetIdentity() {
-    this._identity = undefined;
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
-    return this._identity
+    return this._identity.internalValue;
   }
 
   // key_vault_reference - computed: false, optional: true, required: false
-  private _keyVaultReference?: BatchAccountKeyVaultReference | undefined; 
-  private __keyVaultReferenceOutput = new BatchAccountKeyVaultReferenceOutputReference(this as any, "key_vault_reference", true);
+  private _keyVaultReference = new BatchAccountKeyVaultReferenceOutputReference(this as any, "key_vault_reference", true);
   public get keyVaultReference() {
-    return this.__keyVaultReferenceOutput;
+    return this._keyVaultReference;
   }
-  public putKeyVaultReference(value: BatchAccountKeyVaultReference | undefined) {
-    this._keyVaultReference = value;
+  public putKeyVaultReference(value: BatchAccountKeyVaultReference) {
+    this._keyVaultReference.internalValue = value;
   }
   public resetKeyVaultReference() {
-    this._keyVaultReference = undefined;
+    this._keyVaultReference.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get keyVaultReferenceInput() {
-    return this._keyVaultReference
+    return this._keyVaultReference.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: BatchAccountTimeouts | undefined; 
-  private __timeoutsOutput = new BatchAccountTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new BatchAccountTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: BatchAccountTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: BatchAccountTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -516,9 +600,9 @@ export class BatchAccount extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      identity: batchAccountIdentityToTerraform(this._identity),
-      key_vault_reference: batchAccountKeyVaultReferenceToTerraform(this._keyVaultReference),
-      timeouts: batchAccountTimeoutsToTerraform(this._timeouts),
+      identity: batchAccountIdentityToTerraform(this._identity.internalValue),
+      key_vault_reference: batchAccountKeyVaultReferenceToTerraform(this._keyVaultReference.internalValue),
+      timeouts: batchAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -57,7 +57,7 @@ export interface StaticSiteTimeouts {
   readonly update?: string;
 }
 
-function staticSiteTimeoutsToTerraform(struct?: StaticSiteTimeoutsOutputReference | StaticSiteTimeouts): any {
+export function staticSiteTimeoutsToTerraform(struct?: StaticSiteTimeoutsOutputReference | StaticSiteTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -80,12 +80,49 @@ export class StaticSiteTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StaticSiteTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StaticSiteTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -93,15 +130,15 @@ export class StaticSiteTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -109,15 +146,15 @@ export class StaticSiteTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -125,15 +162,15 @@ export class StaticSiteTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -141,7 +178,7 @@ export class StaticSiteTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -183,7 +220,7 @@ export class StaticSite extends cdktf.TerraformResource {
     this._skuSize = config.skuSize;
     this._skuTier = config.skuTier;
     this._tags = config.tags;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -215,7 +252,7 @@ export class StaticSite extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -228,7 +265,7 @@ export class StaticSite extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -241,15 +278,15 @@ export class StaticSite extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // sku_size - computed: false, optional: true, required: false
-  private _skuSize?: string | undefined; 
+  private _skuSize?: string; 
   public get skuSize() {
     return this.getStringAttribute('sku_size');
   }
-  public set skuSize(value: string | undefined) {
+  public set skuSize(value: string) {
     this._skuSize = value;
   }
   public resetSkuSize() {
@@ -257,15 +294,15 @@ export class StaticSite extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuSizeInput() {
-    return this._skuSize
+    return this._skuSize;
   }
 
   // sku_tier - computed: false, optional: true, required: false
-  private _skuTier?: string | undefined; 
+  private _skuTier?: string; 
   public get skuTier() {
     return this.getStringAttribute('sku_tier');
   }
-  public set skuTier(value: string | undefined) {
+  public set skuTier(value: string) {
     this._skuTier = value;
   }
   public resetSkuTier() {
@@ -273,16 +310,16 @@ export class StaticSite extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuTierInput() {
-    return this._skuTier
+    return this._skuTier;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -290,24 +327,23 @@ export class StaticSite extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: StaticSiteTimeouts | undefined; 
-  private __timeoutsOutput = new StaticSiteTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StaticSiteTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: StaticSiteTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: StaticSiteTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -322,7 +358,7 @@ export class StaticSite extends cdktf.TerraformResource {
       sku_size: cdktf.stringToTerraform(this._skuSize),
       sku_tier: cdktf.stringToTerraform(this._skuTier),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      timeouts: staticSiteTimeoutsToTerraform(this._timeouts),
+      timeouts: staticSiteTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

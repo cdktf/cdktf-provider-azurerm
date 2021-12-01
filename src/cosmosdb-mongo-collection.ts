@@ -77,7 +77,7 @@ export interface CosmosdbMongoCollectionAutoscaleSettings {
   readonly maxThroughput?: number;
 }
 
-function cosmosdbMongoCollectionAutoscaleSettingsToTerraform(struct?: CosmosdbMongoCollectionAutoscaleSettingsOutputReference | CosmosdbMongoCollectionAutoscaleSettings): any {
+export function cosmosdbMongoCollectionAutoscaleSettingsToTerraform(struct?: CosmosdbMongoCollectionAutoscaleSettingsOutputReference | CosmosdbMongoCollectionAutoscaleSettings): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -97,12 +97,31 @@ export class CosmosdbMongoCollectionAutoscaleSettingsOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbMongoCollectionAutoscaleSettings | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._maxThroughput) {
+      hasAnyValues = true;
+      internalValueResult.maxThroughput = this._maxThroughput;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbMongoCollectionAutoscaleSettings | undefined) {
+    if (value === undefined) {
+      this._maxThroughput = undefined;
+    }
+    else {
+      this._maxThroughput = value.maxThroughput;
+    }
+  }
+
   // max_throughput - computed: true, optional: true, required: false
-  private _maxThroughput?: number | undefined; 
+  private _maxThroughput?: number; 
   public get maxThroughput() {
     return this.getNumberAttribute('max_throughput');
   }
-  public set maxThroughput(value: number | undefined) {
+  public set maxThroughput(value: number) {
     this._maxThroughput = value;
   }
   public resetMaxThroughput() {
@@ -110,7 +129,7 @@ export class CosmosdbMongoCollectionAutoscaleSettingsOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get maxThroughputInput() {
-    return this._maxThroughput
+    return this._maxThroughput;
   }
 }
 export interface CosmosdbMongoCollectionIndex {
@@ -124,7 +143,7 @@ export interface CosmosdbMongoCollectionIndex {
   readonly unique?: boolean | cdktf.IResolvable;
 }
 
-function cosmosdbMongoCollectionIndexToTerraform(struct?: CosmosdbMongoCollectionIndex): any {
+export function cosmosdbMongoCollectionIndexToTerraform(struct?: CosmosdbMongoCollectionIndex): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -154,7 +173,7 @@ export interface CosmosdbMongoCollectionTimeouts {
   readonly update?: string;
 }
 
-function cosmosdbMongoCollectionTimeoutsToTerraform(struct?: CosmosdbMongoCollectionTimeoutsOutputReference | CosmosdbMongoCollectionTimeouts): any {
+export function cosmosdbMongoCollectionTimeoutsToTerraform(struct?: CosmosdbMongoCollectionTimeoutsOutputReference | CosmosdbMongoCollectionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -177,12 +196,49 @@ export class CosmosdbMongoCollectionTimeoutsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): CosmosdbMongoCollectionTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbMongoCollectionTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -190,15 +246,15 @@ export class CosmosdbMongoCollectionTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -206,15 +262,15 @@ export class CosmosdbMongoCollectionTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -222,15 +278,15 @@ export class CosmosdbMongoCollectionTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -238,7 +294,7 @@ export class CosmosdbMongoCollectionTimeoutsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -282,9 +338,9 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._shardKey = config.shardKey;
     this._throughput = config.throughput;
-    this._autoscaleSettings = config.autoscaleSettings;
+    this._autoscaleSettings.internalValue = config.autoscaleSettings;
     this._index = config.index;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -301,15 +357,15 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get accountNameInput() {
-    return this._accountName
+    return this._accountName;
   }
 
   // analytical_storage_ttl - computed: false, optional: true, required: false
-  private _analyticalStorageTtl?: number | undefined; 
+  private _analyticalStorageTtl?: number; 
   public get analyticalStorageTtl() {
     return this.getNumberAttribute('analytical_storage_ttl');
   }
-  public set analyticalStorageTtl(value: number | undefined) {
+  public set analyticalStorageTtl(value: number) {
     this._analyticalStorageTtl = value;
   }
   public resetAnalyticalStorageTtl() {
@@ -317,7 +373,7 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get analyticalStorageTtlInput() {
-    return this._analyticalStorageTtl
+    return this._analyticalStorageTtl;
   }
 
   // database_name - computed: false, optional: false, required: true
@@ -330,15 +386,15 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get databaseNameInput() {
-    return this._databaseName
+    return this._databaseName;
   }
 
   // default_ttl_seconds - computed: false, optional: true, required: false
-  private _defaultTtlSeconds?: number | undefined; 
+  private _defaultTtlSeconds?: number; 
   public get defaultTtlSeconds() {
     return this.getNumberAttribute('default_ttl_seconds');
   }
-  public set defaultTtlSeconds(value: number | undefined) {
+  public set defaultTtlSeconds(value: number) {
     this._defaultTtlSeconds = value;
   }
   public resetDefaultTtlSeconds() {
@@ -346,7 +402,7 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get defaultTtlSecondsInput() {
-    return this._defaultTtlSeconds
+    return this._defaultTtlSeconds;
   }
 
   // id - computed: true, optional: true, required: false
@@ -364,7 +420,7 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -377,15 +433,15 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // shard_key - computed: false, optional: true, required: false
-  private _shardKey?: string | undefined; 
+  private _shardKey?: string; 
   public get shardKey() {
     return this.getStringAttribute('shard_key');
   }
-  public set shardKey(value: string | undefined) {
+  public set shardKey(value: string) {
     this._shardKey = value;
   }
   public resetShardKey() {
@@ -393,7 +449,7 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get shardKeyInput() {
-    return this._shardKey
+    return this._shardKey;
   }
 
   // system_indexes - computed: true, optional: false, required: false
@@ -402,11 +458,11 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
   }
 
   // throughput - computed: true, optional: true, required: false
-  private _throughput?: number | undefined; 
+  private _throughput?: number; 
   public get throughput() {
     return this.getNumberAttribute('throughput');
   }
-  public set throughput(value: number | undefined) {
+  public set throughput(value: number) {
     this._throughput = value;
   }
   public resetThroughput() {
@@ -414,33 +470,32 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get throughputInput() {
-    return this._throughput
+    return this._throughput;
   }
 
   // autoscale_settings - computed: false, optional: true, required: false
-  private _autoscaleSettings?: CosmosdbMongoCollectionAutoscaleSettings | undefined; 
-  private __autoscaleSettingsOutput = new CosmosdbMongoCollectionAutoscaleSettingsOutputReference(this as any, "autoscale_settings", true);
+  private _autoscaleSettings = new CosmosdbMongoCollectionAutoscaleSettingsOutputReference(this as any, "autoscale_settings", true);
   public get autoscaleSettings() {
-    return this.__autoscaleSettingsOutput;
+    return this._autoscaleSettings;
   }
-  public putAutoscaleSettings(value: CosmosdbMongoCollectionAutoscaleSettings | undefined) {
-    this._autoscaleSettings = value;
+  public putAutoscaleSettings(value: CosmosdbMongoCollectionAutoscaleSettings) {
+    this._autoscaleSettings.internalValue = value;
   }
   public resetAutoscaleSettings() {
-    this._autoscaleSettings = undefined;
+    this._autoscaleSettings.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get autoscaleSettingsInput() {
-    return this._autoscaleSettings
+    return this._autoscaleSettings.internalValue;
   }
 
   // index - computed: false, optional: true, required: false
-  private _index?: CosmosdbMongoCollectionIndex[] | undefined; 
+  private _index?: CosmosdbMongoCollectionIndex[]; 
   public get index() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('index') as any;
   }
-  public set index(value: CosmosdbMongoCollectionIndex[] | undefined) {
+  public set index(value: CosmosdbMongoCollectionIndex[]) {
     this._index = value;
   }
   public resetIndex() {
@@ -448,24 +503,23 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get indexInput() {
-    return this._index
+    return this._index;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: CosmosdbMongoCollectionTimeouts | undefined; 
-  private __timeoutsOutput = new CosmosdbMongoCollectionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new CosmosdbMongoCollectionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: CosmosdbMongoCollectionTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: CosmosdbMongoCollectionTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -482,9 +536,9 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       shard_key: cdktf.stringToTerraform(this._shardKey),
       throughput: cdktf.numberToTerraform(this._throughput),
-      autoscale_settings: cosmosdbMongoCollectionAutoscaleSettingsToTerraform(this._autoscaleSettings),
+      autoscale_settings: cosmosdbMongoCollectionAutoscaleSettingsToTerraform(this._autoscaleSettings.internalValue),
       index: cdktf.listMapper(cosmosdbMongoCollectionIndexToTerraform)(this._index),
-      timeouts: cosmosdbMongoCollectionTimeoutsToTerraform(this._timeouts),
+      timeouts: cosmosdbMongoCollectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -33,7 +33,7 @@ export interface DataAzurermServicebusNamespaceAuthorizationRuleTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermServicebusNamespaceAuthorizationRuleTimeoutsToTerraform(struct?: DataAzurermServicebusNamespaceAuthorizationRuleTimeoutsOutputReference | DataAzurermServicebusNamespaceAuthorizationRuleTimeouts): any {
+export function dataAzurermServicebusNamespaceAuthorizationRuleTimeoutsToTerraform(struct?: DataAzurermServicebusNamespaceAuthorizationRuleTimeoutsOutputReference | DataAzurermServicebusNamespaceAuthorizationRuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -53,12 +53,31 @@ export class DataAzurermServicebusNamespaceAuthorizationRuleTimeoutsOutputRefere
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermServicebusNamespaceAuthorizationRuleTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermServicebusNamespaceAuthorizationRuleTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -66,7 +85,7 @@ export class DataAzurermServicebusNamespaceAuthorizationRuleTimeoutsOutputRefere
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -105,7 +124,7 @@ export class DataAzurermServicebusNamespaceAuthorizationRule extends cdktf.Terra
     this._name = config.name;
     this._namespaceName = config.namespaceName;
     this._resourceGroupName = config.resourceGroupName;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -127,7 +146,7 @@ export class DataAzurermServicebusNamespaceAuthorizationRule extends cdktf.Terra
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // namespace_name - computed: false, optional: false, required: true
@@ -140,7 +159,7 @@ export class DataAzurermServicebusNamespaceAuthorizationRule extends cdktf.Terra
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceNameInput() {
-    return this._namespaceName
+    return this._namespaceName;
   }
 
   // primary_connection_string - computed: true, optional: false, required: false
@@ -168,7 +187,7 @@ export class DataAzurermServicebusNamespaceAuthorizationRule extends cdktf.Terra
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // secondary_connection_string - computed: true, optional: false, required: false
@@ -187,20 +206,19 @@ export class DataAzurermServicebusNamespaceAuthorizationRule extends cdktf.Terra
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermServicebusNamespaceAuthorizationRuleTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermServicebusNamespaceAuthorizationRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermServicebusNamespaceAuthorizationRuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermServicebusNamespaceAuthorizationRuleTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermServicebusNamespaceAuthorizationRuleTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -212,7 +230,7 @@ export class DataAzurermServicebusNamespaceAuthorizationRule extends cdktf.Terra
       name: cdktf.stringToTerraform(this._name),
       namespace_name: cdktf.stringToTerraform(this._namespaceName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      timeouts: dataAzurermServicebusNamespaceAuthorizationRuleTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermServicebusNamespaceAuthorizationRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

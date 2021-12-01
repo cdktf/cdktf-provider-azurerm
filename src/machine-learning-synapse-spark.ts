@@ -59,7 +59,7 @@ export interface MachineLearningSynapseSparkIdentity {
   readonly type: string;
 }
 
-function machineLearningSynapseSparkIdentityToTerraform(struct?: MachineLearningSynapseSparkIdentityOutputReference | MachineLearningSynapseSparkIdentity): any {
+export function machineLearningSynapseSparkIdentityToTerraform(struct?: MachineLearningSynapseSparkIdentityOutputReference | MachineLearningSynapseSparkIdentity): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -80,12 +80,37 @@ export class MachineLearningSynapseSparkIdentityOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MachineLearningSynapseSparkIdentity | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._identityIds) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MachineLearningSynapseSparkIdentity | undefined) {
+    if (value === undefined) {
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
   // identity_ids - computed: false, optional: true, required: false
-  private _identityIds?: string[] | undefined; 
+  private _identityIds?: string[]; 
   public get identityIds() {
     return this.getListAttribute('identity_ids');
   }
-  public set identityIds(value: string[] | undefined) {
+  public set identityIds(value: string[]) {
     this._identityIds = value;
   }
   public resetIdentityIds() {
@@ -93,7 +118,7 @@ export class MachineLearningSynapseSparkIdentityOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get identityIdsInput() {
-    return this._identityIds
+    return this._identityIds;
   }
 
   // type - computed: false, optional: false, required: true
@@ -106,7 +131,7 @@ export class MachineLearningSynapseSparkIdentityOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface MachineLearningSynapseSparkTimeouts {
@@ -124,7 +149,7 @@ export interface MachineLearningSynapseSparkTimeouts {
   readonly read?: string;
 }
 
-function machineLearningSynapseSparkTimeoutsToTerraform(struct?: MachineLearningSynapseSparkTimeoutsOutputReference | MachineLearningSynapseSparkTimeouts): any {
+export function machineLearningSynapseSparkTimeoutsToTerraform(struct?: MachineLearningSynapseSparkTimeoutsOutputReference | MachineLearningSynapseSparkTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -146,12 +171,43 @@ export class MachineLearningSynapseSparkTimeoutsOutputReference extends cdktf.Co
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MachineLearningSynapseSparkTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MachineLearningSynapseSparkTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -159,15 +215,15 @@ export class MachineLearningSynapseSparkTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -175,15 +231,15 @@ export class MachineLearningSynapseSparkTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -191,7 +247,7 @@ export class MachineLearningSynapseSparkTimeoutsOutputReference extends cdktf.Co
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -234,8 +290,8 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
     this._name = config.name;
     this._synapseSparkPoolId = config.synapseSparkPoolId;
     this._tags = config.tags;
-    this._identity = config.identity;
-    this._timeouts = config.timeouts;
+    this._identity.internalValue = config.identity;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -243,11 +299,11 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
   // ==========
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -255,7 +311,7 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -264,11 +320,11 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
   }
 
   // local_auth_enabled - computed: false, optional: true, required: false
-  private _localAuthEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _localAuthEnabled?: boolean | cdktf.IResolvable; 
   public get localAuthEnabled() {
     return this.getBooleanAttribute('local_auth_enabled') as any;
   }
-  public set localAuthEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set localAuthEnabled(value: boolean | cdktf.IResolvable) {
     this._localAuthEnabled = value;
   }
   public resetLocalAuthEnabled() {
@@ -276,7 +332,7 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get localAuthEnabledInput() {
-    return this._localAuthEnabled
+    return this._localAuthEnabled;
   }
 
   // location - computed: false, optional: false, required: true
@@ -289,7 +345,7 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // machine_learning_workspace_id - computed: false, optional: false, required: true
@@ -302,7 +358,7 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get machineLearningWorkspaceIdInput() {
-    return this._machineLearningWorkspaceId
+    return this._machineLearningWorkspaceId;
   }
 
   // name - computed: false, optional: false, required: true
@@ -315,7 +371,7 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // synapse_spark_pool_id - computed: false, optional: false, required: true
@@ -328,16 +384,16 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get synapseSparkPoolIdInput() {
-    return this._synapseSparkPoolId
+    return this._synapseSparkPoolId;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -345,41 +401,39 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // identity - computed: false, optional: true, required: false
-  private _identity?: MachineLearningSynapseSparkIdentity | undefined; 
-  private __identityOutput = new MachineLearningSynapseSparkIdentityOutputReference(this as any, "identity", true);
+  private _identity = new MachineLearningSynapseSparkIdentityOutputReference(this as any, "identity", true);
   public get identity() {
-    return this.__identityOutput;
+    return this._identity;
   }
-  public putIdentity(value: MachineLearningSynapseSparkIdentity | undefined) {
-    this._identity = value;
+  public putIdentity(value: MachineLearningSynapseSparkIdentity) {
+    this._identity.internalValue = value;
   }
   public resetIdentity() {
-    this._identity = undefined;
+    this._identity.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
-    return this._identity
+    return this._identity.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MachineLearningSynapseSparkTimeouts | undefined; 
-  private __timeoutsOutput = new MachineLearningSynapseSparkTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MachineLearningSynapseSparkTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MachineLearningSynapseSparkTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MachineLearningSynapseSparkTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -395,8 +449,8 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       synapse_spark_pool_id: cdktf.stringToTerraform(this._synapseSparkPoolId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
-      identity: machineLearningSynapseSparkIdentityToTerraform(this._identity),
-      timeouts: machineLearningSynapseSparkTimeoutsToTerraform(this._timeouts),
+      identity: machineLearningSynapseSparkIdentityToTerraform(this._identity.internalValue),
+      timeouts: machineLearningSynapseSparkTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

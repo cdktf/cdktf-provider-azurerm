@@ -59,7 +59,7 @@ export interface SqlFailoverGroupPartnerServers {
   readonly id: string;
 }
 
-function sqlFailoverGroupPartnerServersToTerraform(struct?: SqlFailoverGroupPartnerServers): any {
+export function sqlFailoverGroupPartnerServersToTerraform(struct?: SqlFailoverGroupPartnerServers): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -80,7 +80,7 @@ export interface SqlFailoverGroupReadWriteEndpointFailoverPolicy {
   readonly mode: string;
 }
 
-function sqlFailoverGroupReadWriteEndpointFailoverPolicyToTerraform(struct?: SqlFailoverGroupReadWriteEndpointFailoverPolicyOutputReference | SqlFailoverGroupReadWriteEndpointFailoverPolicy): any {
+export function sqlFailoverGroupReadWriteEndpointFailoverPolicyToTerraform(struct?: SqlFailoverGroupReadWriteEndpointFailoverPolicyOutputReference | SqlFailoverGroupReadWriteEndpointFailoverPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -101,12 +101,37 @@ export class SqlFailoverGroupReadWriteEndpointFailoverPolicyOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SqlFailoverGroupReadWriteEndpointFailoverPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._graceMinutes) {
+      hasAnyValues = true;
+      internalValueResult.graceMinutes = this._graceMinutes;
+    }
+    if (this._mode) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlFailoverGroupReadWriteEndpointFailoverPolicy | undefined) {
+    if (value === undefined) {
+      this._graceMinutes = undefined;
+      this._mode = undefined;
+    }
+    else {
+      this._graceMinutes = value.graceMinutes;
+      this._mode = value.mode;
+    }
+  }
+
   // grace_minutes - computed: false, optional: true, required: false
-  private _graceMinutes?: number | undefined; 
+  private _graceMinutes?: number; 
   public get graceMinutes() {
     return this.getNumberAttribute('grace_minutes');
   }
-  public set graceMinutes(value: number | undefined) {
+  public set graceMinutes(value: number) {
     this._graceMinutes = value;
   }
   public resetGraceMinutes() {
@@ -114,7 +139,7 @@ export class SqlFailoverGroupReadWriteEndpointFailoverPolicyOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get graceMinutesInput() {
-    return this._graceMinutes
+    return this._graceMinutes;
   }
 
   // mode - computed: false, optional: false, required: true
@@ -127,7 +152,7 @@ export class SqlFailoverGroupReadWriteEndpointFailoverPolicyOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get modeInput() {
-    return this._mode
+    return this._mode;
   }
 }
 export interface SqlFailoverGroupReadonlyEndpointFailoverPolicy {
@@ -137,7 +162,7 @@ export interface SqlFailoverGroupReadonlyEndpointFailoverPolicy {
   readonly mode: string;
 }
 
-function sqlFailoverGroupReadonlyEndpointFailoverPolicyToTerraform(struct?: SqlFailoverGroupReadonlyEndpointFailoverPolicyOutputReference | SqlFailoverGroupReadonlyEndpointFailoverPolicy): any {
+export function sqlFailoverGroupReadonlyEndpointFailoverPolicyToTerraform(struct?: SqlFailoverGroupReadonlyEndpointFailoverPolicyOutputReference | SqlFailoverGroupReadonlyEndpointFailoverPolicy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -157,6 +182,25 @@ export class SqlFailoverGroupReadonlyEndpointFailoverPolicyOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SqlFailoverGroupReadonlyEndpointFailoverPolicy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._mode) {
+      hasAnyValues = true;
+      internalValueResult.mode = this._mode;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlFailoverGroupReadonlyEndpointFailoverPolicy | undefined) {
+    if (value === undefined) {
+      this._mode = undefined;
+    }
+    else {
+      this._mode = value.mode;
+    }
+  }
+
   // mode - computed: false, optional: false, required: true
   private _mode?: string; 
   public get mode() {
@@ -167,7 +211,7 @@ export class SqlFailoverGroupReadonlyEndpointFailoverPolicyOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get modeInput() {
-    return this._mode
+    return this._mode;
   }
 }
 export interface SqlFailoverGroupTimeouts {
@@ -189,7 +233,7 @@ export interface SqlFailoverGroupTimeouts {
   readonly update?: string;
 }
 
-function sqlFailoverGroupTimeoutsToTerraform(struct?: SqlFailoverGroupTimeoutsOutputReference | SqlFailoverGroupTimeouts): any {
+export function sqlFailoverGroupTimeoutsToTerraform(struct?: SqlFailoverGroupTimeoutsOutputReference | SqlFailoverGroupTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -212,12 +256,49 @@ export class SqlFailoverGroupTimeoutsOutputReference extends cdktf.ComplexObject
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SqlFailoverGroupTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SqlFailoverGroupTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -225,15 +306,15 @@ export class SqlFailoverGroupTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -241,15 +322,15 @@ export class SqlFailoverGroupTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -257,15 +338,15 @@ export class SqlFailoverGroupTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -273,7 +354,7 @@ export class SqlFailoverGroupTimeoutsOutputReference extends cdktf.ComplexObject
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -315,9 +396,9 @@ export class SqlFailoverGroup extends cdktf.TerraformResource {
     this._serverName = config.serverName;
     this._tags = config.tags;
     this._partnerServers = config.partnerServers;
-    this._readWriteEndpointFailoverPolicy = config.readWriteEndpointFailoverPolicy;
-    this._readonlyEndpointFailoverPolicy = config.readonlyEndpointFailoverPolicy;
-    this._timeouts = config.timeouts;
+    this._readWriteEndpointFailoverPolicy.internalValue = config.readWriteEndpointFailoverPolicy;
+    this._readonlyEndpointFailoverPolicy.internalValue = config.readonlyEndpointFailoverPolicy;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -325,11 +406,11 @@ export class SqlFailoverGroup extends cdktf.TerraformResource {
   // ==========
 
   // databases - computed: false, optional: true, required: false
-  private _databases?: string[] | undefined; 
+  private _databases?: string[]; 
   public get databases() {
     return this.getListAttribute('databases');
   }
-  public set databases(value: string[] | undefined) {
+  public set databases(value: string[]) {
     this._databases = value;
   }
   public resetDatabases() {
@@ -337,7 +418,7 @@ export class SqlFailoverGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get databasesInput() {
-    return this._databases
+    return this._databases;
   }
 
   // id - computed: true, optional: true, required: false
@@ -360,7 +441,7 @@ export class SqlFailoverGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -373,7 +454,7 @@ export class SqlFailoverGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // role - computed: true, optional: false, required: false
@@ -391,16 +472,16 @@ export class SqlFailoverGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get serverNameInput() {
-    return this._serverName
+    return this._serverName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -408,7 +489,7 @@ export class SqlFailoverGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // partner_servers - computed: false, optional: false, required: true
@@ -422,55 +503,52 @@ export class SqlFailoverGroup extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get partnerServersInput() {
-    return this._partnerServers
+    return this._partnerServers;
   }
 
   // read_write_endpoint_failover_policy - computed: false, optional: false, required: true
-  private _readWriteEndpointFailoverPolicy?: SqlFailoverGroupReadWriteEndpointFailoverPolicy; 
-  private __readWriteEndpointFailoverPolicyOutput = new SqlFailoverGroupReadWriteEndpointFailoverPolicyOutputReference(this as any, "read_write_endpoint_failover_policy", true);
+  private _readWriteEndpointFailoverPolicy = new SqlFailoverGroupReadWriteEndpointFailoverPolicyOutputReference(this as any, "read_write_endpoint_failover_policy", true);
   public get readWriteEndpointFailoverPolicy() {
-    return this.__readWriteEndpointFailoverPolicyOutput;
+    return this._readWriteEndpointFailoverPolicy;
   }
   public putReadWriteEndpointFailoverPolicy(value: SqlFailoverGroupReadWriteEndpointFailoverPolicy) {
-    this._readWriteEndpointFailoverPolicy = value;
+    this._readWriteEndpointFailoverPolicy.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get readWriteEndpointFailoverPolicyInput() {
-    return this._readWriteEndpointFailoverPolicy
+    return this._readWriteEndpointFailoverPolicy.internalValue;
   }
 
   // readonly_endpoint_failover_policy - computed: false, optional: true, required: false
-  private _readonlyEndpointFailoverPolicy?: SqlFailoverGroupReadonlyEndpointFailoverPolicy | undefined; 
-  private __readonlyEndpointFailoverPolicyOutput = new SqlFailoverGroupReadonlyEndpointFailoverPolicyOutputReference(this as any, "readonly_endpoint_failover_policy", true);
+  private _readonlyEndpointFailoverPolicy = new SqlFailoverGroupReadonlyEndpointFailoverPolicyOutputReference(this as any, "readonly_endpoint_failover_policy", true);
   public get readonlyEndpointFailoverPolicy() {
-    return this.__readonlyEndpointFailoverPolicyOutput;
+    return this._readonlyEndpointFailoverPolicy;
   }
-  public putReadonlyEndpointFailoverPolicy(value: SqlFailoverGroupReadonlyEndpointFailoverPolicy | undefined) {
-    this._readonlyEndpointFailoverPolicy = value;
+  public putReadonlyEndpointFailoverPolicy(value: SqlFailoverGroupReadonlyEndpointFailoverPolicy) {
+    this._readonlyEndpointFailoverPolicy.internalValue = value;
   }
   public resetReadonlyEndpointFailoverPolicy() {
-    this._readonlyEndpointFailoverPolicy = undefined;
+    this._readonlyEndpointFailoverPolicy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get readonlyEndpointFailoverPolicyInput() {
-    return this._readonlyEndpointFailoverPolicy
+    return this._readonlyEndpointFailoverPolicy.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SqlFailoverGroupTimeouts | undefined; 
-  private __timeoutsOutput = new SqlFailoverGroupTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SqlFailoverGroupTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SqlFailoverGroupTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SqlFailoverGroupTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -485,9 +563,9 @@ export class SqlFailoverGroup extends cdktf.TerraformResource {
       server_name: cdktf.stringToTerraform(this._serverName),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       partner_servers: cdktf.listMapper(sqlFailoverGroupPartnerServersToTerraform)(this._partnerServers),
-      read_write_endpoint_failover_policy: sqlFailoverGroupReadWriteEndpointFailoverPolicyToTerraform(this._readWriteEndpointFailoverPolicy),
-      readonly_endpoint_failover_policy: sqlFailoverGroupReadonlyEndpointFailoverPolicyToTerraform(this._readonlyEndpointFailoverPolicy),
-      timeouts: sqlFailoverGroupTimeoutsToTerraform(this._timeouts),
+      read_write_endpoint_failover_policy: sqlFailoverGroupReadWriteEndpointFailoverPolicyToTerraform(this._readWriteEndpointFailoverPolicy.internalValue),
+      readonly_endpoint_failover_policy: sqlFailoverGroupReadonlyEndpointFailoverPolicyToTerraform(this._readonlyEndpointFailoverPolicy.internalValue),
+      timeouts: sqlFailoverGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -49,7 +49,7 @@ export interface SignalrServiceNetworkAclPrivateEndpoint {
   readonly id: string;
 }
 
-function signalrServiceNetworkAclPrivateEndpointToTerraform(struct?: SignalrServiceNetworkAclPrivateEndpoint): any {
+export function signalrServiceNetworkAclPrivateEndpointToTerraform(struct?: SignalrServiceNetworkAclPrivateEndpoint): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -72,7 +72,7 @@ export interface SignalrServiceNetworkAclPublicNetwork {
   readonly deniedRequestTypes?: string[];
 }
 
-function signalrServiceNetworkAclPublicNetworkToTerraform(struct?: SignalrServiceNetworkAclPublicNetworkOutputReference | SignalrServiceNetworkAclPublicNetwork): any {
+export function signalrServiceNetworkAclPublicNetworkToTerraform(struct?: SignalrServiceNetworkAclPublicNetworkOutputReference | SignalrServiceNetworkAclPublicNetwork): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -93,12 +93,37 @@ export class SignalrServiceNetworkAclPublicNetworkOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SignalrServiceNetworkAclPublicNetwork | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._allowedRequestTypes) {
+      hasAnyValues = true;
+      internalValueResult.allowedRequestTypes = this._allowedRequestTypes;
+    }
+    if (this._deniedRequestTypes) {
+      hasAnyValues = true;
+      internalValueResult.deniedRequestTypes = this._deniedRequestTypes;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SignalrServiceNetworkAclPublicNetwork | undefined) {
+    if (value === undefined) {
+      this._allowedRequestTypes = undefined;
+      this._deniedRequestTypes = undefined;
+    }
+    else {
+      this._allowedRequestTypes = value.allowedRequestTypes;
+      this._deniedRequestTypes = value.deniedRequestTypes;
+    }
+  }
+
   // allowed_request_types - computed: false, optional: true, required: false
-  private _allowedRequestTypes?: string[] | undefined; 
+  private _allowedRequestTypes?: string[]; 
   public get allowedRequestTypes() {
     return this.getListAttribute('allowed_request_types');
   }
-  public set allowedRequestTypes(value: string[] | undefined) {
+  public set allowedRequestTypes(value: string[]) {
     this._allowedRequestTypes = value;
   }
   public resetAllowedRequestTypes() {
@@ -106,15 +131,15 @@ export class SignalrServiceNetworkAclPublicNetworkOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get allowedRequestTypesInput() {
-    return this._allowedRequestTypes
+    return this._allowedRequestTypes;
   }
 
   // denied_request_types - computed: false, optional: true, required: false
-  private _deniedRequestTypes?: string[] | undefined; 
+  private _deniedRequestTypes?: string[]; 
   public get deniedRequestTypes() {
     return this.getListAttribute('denied_request_types');
   }
-  public set deniedRequestTypes(value: string[] | undefined) {
+  public set deniedRequestTypes(value: string[]) {
     this._deniedRequestTypes = value;
   }
   public resetDeniedRequestTypes() {
@@ -122,7 +147,7 @@ export class SignalrServiceNetworkAclPublicNetworkOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get deniedRequestTypesInput() {
-    return this._deniedRequestTypes
+    return this._deniedRequestTypes;
   }
 }
 export interface SignalrServiceNetworkAclTimeouts {
@@ -144,7 +169,7 @@ export interface SignalrServiceNetworkAclTimeouts {
   readonly update?: string;
 }
 
-function signalrServiceNetworkAclTimeoutsToTerraform(struct?: SignalrServiceNetworkAclTimeoutsOutputReference | SignalrServiceNetworkAclTimeouts): any {
+export function signalrServiceNetworkAclTimeoutsToTerraform(struct?: SignalrServiceNetworkAclTimeoutsOutputReference | SignalrServiceNetworkAclTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -167,12 +192,49 @@ export class SignalrServiceNetworkAclTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): SignalrServiceNetworkAclTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SignalrServiceNetworkAclTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -180,15 +242,15 @@ export class SignalrServiceNetworkAclTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -196,15 +258,15 @@ export class SignalrServiceNetworkAclTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -212,15 +274,15 @@ export class SignalrServiceNetworkAclTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -228,7 +290,7 @@ export class SignalrServiceNetworkAclTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -267,8 +329,8 @@ export class SignalrServiceNetworkAcl extends cdktf.TerraformResource {
     this._defaultAction = config.defaultAction;
     this._signalrServiceId = config.signalrServiceId;
     this._privateEndpoint = config.privateEndpoint;
-    this._publicNetwork = config.publicNetwork;
-    this._timeouts = config.timeouts;
+    this._publicNetwork.internalValue = config.publicNetwork;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -285,7 +347,7 @@ export class SignalrServiceNetworkAcl extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get defaultActionInput() {
-    return this._defaultAction
+    return this._defaultAction;
   }
 
   // id - computed: true, optional: true, required: false
@@ -303,16 +365,16 @@ export class SignalrServiceNetworkAcl extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get signalrServiceIdInput() {
-    return this._signalrServiceId
+    return this._signalrServiceId;
   }
 
   // private_endpoint - computed: false, optional: true, required: false
-  private _privateEndpoint?: SignalrServiceNetworkAclPrivateEndpoint[] | undefined; 
+  private _privateEndpoint?: SignalrServiceNetworkAclPrivateEndpoint[]; 
   public get privateEndpoint() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('private_endpoint') as any;
   }
-  public set privateEndpoint(value: SignalrServiceNetworkAclPrivateEndpoint[] | undefined) {
+  public set privateEndpoint(value: SignalrServiceNetworkAclPrivateEndpoint[]) {
     this._privateEndpoint = value;
   }
   public resetPrivateEndpoint() {
@@ -320,38 +382,36 @@ export class SignalrServiceNetworkAcl extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get privateEndpointInput() {
-    return this._privateEndpoint
+    return this._privateEndpoint;
   }
 
   // public_network - computed: false, optional: false, required: true
-  private _publicNetwork?: SignalrServiceNetworkAclPublicNetwork; 
-  private __publicNetworkOutput = new SignalrServiceNetworkAclPublicNetworkOutputReference(this as any, "public_network", true);
+  private _publicNetwork = new SignalrServiceNetworkAclPublicNetworkOutputReference(this as any, "public_network", true);
   public get publicNetwork() {
-    return this.__publicNetworkOutput;
+    return this._publicNetwork;
   }
   public putPublicNetwork(value: SignalrServiceNetworkAclPublicNetwork) {
-    this._publicNetwork = value;
+    this._publicNetwork.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get publicNetworkInput() {
-    return this._publicNetwork
+    return this._publicNetwork.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: SignalrServiceNetworkAclTimeouts | undefined; 
-  private __timeoutsOutput = new SignalrServiceNetworkAclTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new SignalrServiceNetworkAclTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: SignalrServiceNetworkAclTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: SignalrServiceNetworkAclTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -363,8 +423,8 @@ export class SignalrServiceNetworkAcl extends cdktf.TerraformResource {
       default_action: cdktf.stringToTerraform(this._defaultAction),
       signalr_service_id: cdktf.stringToTerraform(this._signalrServiceId),
       private_endpoint: cdktf.listMapper(signalrServiceNetworkAclPrivateEndpointToTerraform)(this._privateEndpoint),
-      public_network: signalrServiceNetworkAclPublicNetworkToTerraform(this._publicNetwork),
-      timeouts: signalrServiceNetworkAclTimeoutsToTerraform(this._timeouts),
+      public_network: signalrServiceNetworkAclPublicNetworkToTerraform(this._publicNetwork.internalValue),
+      timeouts: signalrServiceNetworkAclTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

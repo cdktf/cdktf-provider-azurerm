@@ -71,7 +71,7 @@ export interface StreamAnalyticsOutputServicebusTopicSerialization {
   readonly type: string;
 }
 
-function streamAnalyticsOutputServicebusTopicSerializationToTerraform(struct?: StreamAnalyticsOutputServicebusTopicSerializationOutputReference | StreamAnalyticsOutputServicebusTopicSerialization): any {
+export function streamAnalyticsOutputServicebusTopicSerializationToTerraform(struct?: StreamAnalyticsOutputServicebusTopicSerializationOutputReference | StreamAnalyticsOutputServicebusTopicSerialization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -94,12 +94,49 @@ export class StreamAnalyticsOutputServicebusTopicSerializationOutputReference ex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StreamAnalyticsOutputServicebusTopicSerialization | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._encoding) {
+      hasAnyValues = true;
+      internalValueResult.encoding = this._encoding;
+    }
+    if (this._fieldDelimiter) {
+      hasAnyValues = true;
+      internalValueResult.fieldDelimiter = this._fieldDelimiter;
+    }
+    if (this._format) {
+      hasAnyValues = true;
+      internalValueResult.format = this._format;
+    }
+    if (this._type) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StreamAnalyticsOutputServicebusTopicSerialization | undefined) {
+    if (value === undefined) {
+      this._encoding = undefined;
+      this._fieldDelimiter = undefined;
+      this._format = undefined;
+      this._type = undefined;
+    }
+    else {
+      this._encoding = value.encoding;
+      this._fieldDelimiter = value.fieldDelimiter;
+      this._format = value.format;
+      this._type = value.type;
+    }
+  }
+
   // encoding - computed: false, optional: true, required: false
-  private _encoding?: string | undefined; 
+  private _encoding?: string; 
   public get encoding() {
     return this.getStringAttribute('encoding');
   }
-  public set encoding(value: string | undefined) {
+  public set encoding(value: string) {
     this._encoding = value;
   }
   public resetEncoding() {
@@ -107,15 +144,15 @@ export class StreamAnalyticsOutputServicebusTopicSerializationOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get encodingInput() {
-    return this._encoding
+    return this._encoding;
   }
 
   // field_delimiter - computed: false, optional: true, required: false
-  private _fieldDelimiter?: string | undefined; 
+  private _fieldDelimiter?: string; 
   public get fieldDelimiter() {
     return this.getStringAttribute('field_delimiter');
   }
-  public set fieldDelimiter(value: string | undefined) {
+  public set fieldDelimiter(value: string) {
     this._fieldDelimiter = value;
   }
   public resetFieldDelimiter() {
@@ -123,15 +160,15 @@ export class StreamAnalyticsOutputServicebusTopicSerializationOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get fieldDelimiterInput() {
-    return this._fieldDelimiter
+    return this._fieldDelimiter;
   }
 
   // format - computed: false, optional: true, required: false
-  private _format?: string | undefined; 
+  private _format?: string; 
   public get format() {
     return this.getStringAttribute('format');
   }
-  public set format(value: string | undefined) {
+  public set format(value: string) {
     this._format = value;
   }
   public resetFormat() {
@@ -139,7 +176,7 @@ export class StreamAnalyticsOutputServicebusTopicSerializationOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get formatInput() {
-    return this._format
+    return this._format;
   }
 
   // type - computed: false, optional: false, required: true
@@ -152,7 +189,7 @@ export class StreamAnalyticsOutputServicebusTopicSerializationOutputReference ex
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
-    return this._type
+    return this._type;
   }
 }
 export interface StreamAnalyticsOutputServicebusTopicTimeouts {
@@ -174,7 +211,7 @@ export interface StreamAnalyticsOutputServicebusTopicTimeouts {
   readonly update?: string;
 }
 
-function streamAnalyticsOutputServicebusTopicTimeoutsToTerraform(struct?: StreamAnalyticsOutputServicebusTopicTimeoutsOutputReference | StreamAnalyticsOutputServicebusTopicTimeouts): any {
+export function streamAnalyticsOutputServicebusTopicTimeoutsToTerraform(struct?: StreamAnalyticsOutputServicebusTopicTimeoutsOutputReference | StreamAnalyticsOutputServicebusTopicTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -197,12 +234,49 @@ export class StreamAnalyticsOutputServicebusTopicTimeoutsOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StreamAnalyticsOutputServicebusTopicTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StreamAnalyticsOutputServicebusTopicTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -210,15 +284,15 @@ export class StreamAnalyticsOutputServicebusTopicTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -226,15 +300,15 @@ export class StreamAnalyticsOutputServicebusTopicTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -242,15 +316,15 @@ export class StreamAnalyticsOutputServicebusTopicTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -258,7 +332,7 @@ export class StreamAnalyticsOutputServicebusTopicTimeoutsOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -302,8 +376,8 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
     this._sharedAccessPolicyName = config.sharedAccessPolicyName;
     this._streamAnalyticsJobName = config.streamAnalyticsJobName;
     this._topicName = config.topicName;
-    this._serialization = config.serialization;
-    this._timeouts = config.timeouts;
+    this._serialization.internalValue = config.serialization;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -325,15 +399,15 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // property_columns - computed: false, optional: true, required: false
-  private _propertyColumns?: string[] | undefined; 
+  private _propertyColumns?: string[]; 
   public get propertyColumns() {
     return this.getListAttribute('property_columns');
   }
-  public set propertyColumns(value: string[] | undefined) {
+  public set propertyColumns(value: string[]) {
     this._propertyColumns = value;
   }
   public resetPropertyColumns() {
@@ -341,7 +415,7 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get propertyColumnsInput() {
-    return this._propertyColumns
+    return this._propertyColumns;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -354,7 +428,7 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // servicebus_namespace - computed: false, optional: false, required: true
@@ -367,7 +441,7 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get servicebusNamespaceInput() {
-    return this._servicebusNamespace
+    return this._servicebusNamespace;
   }
 
   // shared_access_policy_key - computed: false, optional: false, required: true
@@ -380,7 +454,7 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get sharedAccessPolicyKeyInput() {
-    return this._sharedAccessPolicyKey
+    return this._sharedAccessPolicyKey;
   }
 
   // shared_access_policy_name - computed: false, optional: false, required: true
@@ -393,7 +467,7 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get sharedAccessPolicyNameInput() {
-    return this._sharedAccessPolicyName
+    return this._sharedAccessPolicyName;
   }
 
   // stream_analytics_job_name - computed: false, optional: false, required: true
@@ -406,7 +480,7 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get streamAnalyticsJobNameInput() {
-    return this._streamAnalyticsJobName
+    return this._streamAnalyticsJobName;
   }
 
   // topic_name - computed: false, optional: false, required: true
@@ -419,38 +493,36 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
   }
   // Temporarily expose input value. Use with caution.
   public get topicNameInput() {
-    return this._topicName
+    return this._topicName;
   }
 
   // serialization - computed: false, optional: false, required: true
-  private _serialization?: StreamAnalyticsOutputServicebusTopicSerialization; 
-  private __serializationOutput = new StreamAnalyticsOutputServicebusTopicSerializationOutputReference(this as any, "serialization", true);
+  private _serialization = new StreamAnalyticsOutputServicebusTopicSerializationOutputReference(this as any, "serialization", true);
   public get serialization() {
-    return this.__serializationOutput;
+    return this._serialization;
   }
   public putSerialization(value: StreamAnalyticsOutputServicebusTopicSerialization) {
-    this._serialization = value;
+    this._serialization.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get serializationInput() {
-    return this._serialization
+    return this._serialization.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: StreamAnalyticsOutputServicebusTopicTimeouts | undefined; 
-  private __timeoutsOutput = new StreamAnalyticsOutputServicebusTopicTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StreamAnalyticsOutputServicebusTopicTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: StreamAnalyticsOutputServicebusTopicTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: StreamAnalyticsOutputServicebusTopicTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -467,8 +539,8 @@ export class StreamAnalyticsOutputServicebusTopic extends cdktf.TerraformResourc
       shared_access_policy_name: cdktf.stringToTerraform(this._sharedAccessPolicyName),
       stream_analytics_job_name: cdktf.stringToTerraform(this._streamAnalyticsJobName),
       topic_name: cdktf.stringToTerraform(this._topicName),
-      serialization: streamAnalyticsOutputServicebusTopicSerializationToTerraform(this._serialization),
-      timeouts: streamAnalyticsOutputServicebusTopicTimeoutsToTerraform(this._timeouts),
+      serialization: streamAnalyticsOutputServicebusTopicSerializationToTerraform(this._serialization.internalValue),
+      timeouts: streamAnalyticsOutputServicebusTopicTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

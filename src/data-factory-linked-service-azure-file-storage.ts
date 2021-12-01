@@ -83,7 +83,7 @@ export interface DataFactoryLinkedServiceAzureFileStorageKeyVaultPassword {
   readonly secretName: string;
 }
 
-function dataFactoryLinkedServiceAzureFileStorageKeyVaultPasswordToTerraform(struct?: DataFactoryLinkedServiceAzureFileStorageKeyVaultPasswordOutputReference | DataFactoryLinkedServiceAzureFileStorageKeyVaultPassword): any {
+export function dataFactoryLinkedServiceAzureFileStorageKeyVaultPasswordToTerraform(struct?: DataFactoryLinkedServiceAzureFileStorageKeyVaultPasswordOutputReference | DataFactoryLinkedServiceAzureFileStorageKeyVaultPassword): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -104,6 +104,31 @@ export class DataFactoryLinkedServiceAzureFileStorageKeyVaultPasswordOutputRefer
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryLinkedServiceAzureFileStorageKeyVaultPassword | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._linkedServiceName) {
+      hasAnyValues = true;
+      internalValueResult.linkedServiceName = this._linkedServiceName;
+    }
+    if (this._secretName) {
+      hasAnyValues = true;
+      internalValueResult.secretName = this._secretName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryLinkedServiceAzureFileStorageKeyVaultPassword | undefined) {
+    if (value === undefined) {
+      this._linkedServiceName = undefined;
+      this._secretName = undefined;
+    }
+    else {
+      this._linkedServiceName = value.linkedServiceName;
+      this._secretName = value.secretName;
+    }
+  }
+
   // linked_service_name - computed: false, optional: false, required: true
   private _linkedServiceName?: string; 
   public get linkedServiceName() {
@@ -114,7 +139,7 @@ export class DataFactoryLinkedServiceAzureFileStorageKeyVaultPasswordOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get linkedServiceNameInput() {
-    return this._linkedServiceName
+    return this._linkedServiceName;
   }
 
   // secret_name - computed: false, optional: false, required: true
@@ -127,7 +152,7 @@ export class DataFactoryLinkedServiceAzureFileStorageKeyVaultPasswordOutputRefer
   }
   // Temporarily expose input value. Use with caution.
   public get secretNameInput() {
-    return this._secretName
+    return this._secretName;
   }
 }
 export interface DataFactoryLinkedServiceAzureFileStorageTimeouts {
@@ -149,7 +174,7 @@ export interface DataFactoryLinkedServiceAzureFileStorageTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryLinkedServiceAzureFileStorageTimeoutsToTerraform(struct?: DataFactoryLinkedServiceAzureFileStorageTimeoutsOutputReference | DataFactoryLinkedServiceAzureFileStorageTimeouts): any {
+export function dataFactoryLinkedServiceAzureFileStorageTimeoutsToTerraform(struct?: DataFactoryLinkedServiceAzureFileStorageTimeoutsOutputReference | DataFactoryLinkedServiceAzureFileStorageTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -172,12 +197,49 @@ export class DataFactoryLinkedServiceAzureFileStorageTimeoutsOutputReference ext
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryLinkedServiceAzureFileStorageTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryLinkedServiceAzureFileStorageTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -185,15 +247,15 @@ export class DataFactoryLinkedServiceAzureFileStorageTimeoutsOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -201,15 +263,15 @@ export class DataFactoryLinkedServiceAzureFileStorageTimeoutsOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -217,15 +279,15 @@ export class DataFactoryLinkedServiceAzureFileStorageTimeoutsOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -233,7 +295,7 @@ export class DataFactoryLinkedServiceAzureFileStorageTimeoutsOutputReference ext
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -282,8 +344,8 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
     this._password = config.password;
     this._resourceGroupName = config.resourceGroupName;
     this._userId = config.userId;
-    this._keyVaultPassword = config.keyVaultPassword;
-    this._timeouts = config.timeouts;
+    this._keyVaultPassword.internalValue = config.keyVaultPassword;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -291,12 +353,12 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable; 
   public get additionalProperties() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -304,15 +366,15 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
   }
   // Temporarily expose input value. Use with caution.
   public get additionalPropertiesInput() {
-    return this._additionalProperties
+    return this._additionalProperties;
   }
 
   // annotations - computed: false, optional: true, required: false
-  private _annotations?: string[] | undefined; 
+  private _annotations?: string[]; 
   public get annotations() {
     return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] | undefined) {
+  public set annotations(value: string[]) {
     this._annotations = value;
   }
   public resetAnnotations() {
@@ -320,7 +382,7 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
   }
   // Temporarily expose input value. Use with caution.
   public get annotationsInput() {
-    return this._annotations
+    return this._annotations;
   }
 
   // connection_string - computed: false, optional: false, required: true
@@ -333,7 +395,7 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
   }
   // Temporarily expose input value. Use with caution.
   public get connectionStringInput() {
-    return this._connectionString
+    return this._connectionString;
   }
 
   // data_factory_name - computed: false, optional: false, required: true
@@ -346,15 +408,15 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
   }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryNameInput() {
-    return this._dataFactoryName
+    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -362,15 +424,15 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // file_share - computed: false, optional: true, required: false
-  private _fileShare?: string | undefined; 
+  private _fileShare?: string; 
   public get fileShare() {
     return this.getStringAttribute('file_share');
   }
-  public set fileShare(value: string | undefined) {
+  public set fileShare(value: string) {
     this._fileShare = value;
   }
   public resetFileShare() {
@@ -378,15 +440,15 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
   }
   // Temporarily expose input value. Use with caution.
   public get fileShareInput() {
-    return this._fileShare
+    return this._fileShare;
   }
 
   // host - computed: false, optional: true, required: false
-  private _host?: string | undefined; 
+  private _host?: string; 
   public get host() {
     return this.getStringAttribute('host');
   }
-  public set host(value: string | undefined) {
+  public set host(value: string) {
     this._host = value;
   }
   public resetHost() {
@@ -394,7 +456,7 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
   }
   // Temporarily expose input value. Use with caution.
   public get hostInput() {
-    return this._host
+    return this._host;
   }
 
   // id - computed: true, optional: true, required: false
@@ -403,11 +465,11 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
   }
 
   // integration_runtime_name - computed: false, optional: true, required: false
-  private _integrationRuntimeName?: string | undefined; 
+  private _integrationRuntimeName?: string; 
   public get integrationRuntimeName() {
     return this.getStringAttribute('integration_runtime_name');
   }
-  public set integrationRuntimeName(value: string | undefined) {
+  public set integrationRuntimeName(value: string) {
     this._integrationRuntimeName = value;
   }
   public resetIntegrationRuntimeName() {
@@ -415,7 +477,7 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
   }
   // Temporarily expose input value. Use with caution.
   public get integrationRuntimeNameInput() {
-    return this._integrationRuntimeName
+    return this._integrationRuntimeName;
   }
 
   // name - computed: false, optional: false, required: true
@@ -428,16 +490,16 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -445,15 +507,15 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 
   // password - computed: false, optional: true, required: false
-  private _password?: string | undefined; 
+  private _password?: string; 
   public get password() {
     return this.getStringAttribute('password');
   }
-  public set password(value: string | undefined) {
+  public set password(value: string) {
     this._password = value;
   }
   public resetPassword() {
@@ -461,7 +523,7 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -474,15 +536,15 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // user_id - computed: false, optional: true, required: false
-  private _userId?: string | undefined; 
+  private _userId?: string; 
   public get userId() {
     return this.getStringAttribute('user_id');
   }
-  public set userId(value: string | undefined) {
+  public set userId(value: string) {
     this._userId = value;
   }
   public resetUserId() {
@@ -490,41 +552,39 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
   }
   // Temporarily expose input value. Use with caution.
   public get userIdInput() {
-    return this._userId
+    return this._userId;
   }
 
   // key_vault_password - computed: false, optional: true, required: false
-  private _keyVaultPassword?: DataFactoryLinkedServiceAzureFileStorageKeyVaultPassword | undefined; 
-  private __keyVaultPasswordOutput = new DataFactoryLinkedServiceAzureFileStorageKeyVaultPasswordOutputReference(this as any, "key_vault_password", true);
+  private _keyVaultPassword = new DataFactoryLinkedServiceAzureFileStorageKeyVaultPasswordOutputReference(this as any, "key_vault_password", true);
   public get keyVaultPassword() {
-    return this.__keyVaultPasswordOutput;
+    return this._keyVaultPassword;
   }
-  public putKeyVaultPassword(value: DataFactoryLinkedServiceAzureFileStorageKeyVaultPassword | undefined) {
-    this._keyVaultPassword = value;
+  public putKeyVaultPassword(value: DataFactoryLinkedServiceAzureFileStorageKeyVaultPassword) {
+    this._keyVaultPassword.internalValue = value;
   }
   public resetKeyVaultPassword() {
-    this._keyVaultPassword = undefined;
+    this._keyVaultPassword.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get keyVaultPasswordInput() {
-    return this._keyVaultPassword
+    return this._keyVaultPassword.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryLinkedServiceAzureFileStorageTimeouts | undefined; 
-  private __timeoutsOutput = new DataFactoryLinkedServiceAzureFileStorageTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryLinkedServiceAzureFileStorageTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataFactoryLinkedServiceAzureFileStorageTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataFactoryLinkedServiceAzureFileStorageTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -546,8 +606,8 @@ export class DataFactoryLinkedServiceAzureFileStorage extends cdktf.TerraformRes
       password: cdktf.stringToTerraform(this._password),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       user_id: cdktf.stringToTerraform(this._userId),
-      key_vault_password: dataFactoryLinkedServiceAzureFileStorageKeyVaultPasswordToTerraform(this._keyVaultPassword),
-      timeouts: dataFactoryLinkedServiceAzureFileStorageTimeoutsToTerraform(this._timeouts),
+      key_vault_password: dataFactoryLinkedServiceAzureFileStorageKeyVaultPasswordToTerraform(this._keyVaultPassword.internalValue),
+      timeouts: dataFactoryLinkedServiceAzureFileStorageTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

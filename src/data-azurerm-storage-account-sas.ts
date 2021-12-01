@@ -91,7 +91,7 @@ export interface DataAzurermStorageAccountSasPermissions {
   readonly write: boolean | cdktf.IResolvable;
 }
 
-function dataAzurermStorageAccountSasPermissionsToTerraform(struct?: DataAzurermStorageAccountSasPermissionsOutputReference | DataAzurermStorageAccountSasPermissions): any {
+export function dataAzurermStorageAccountSasPermissionsToTerraform(struct?: DataAzurermStorageAccountSasPermissionsOutputReference | DataAzurermStorageAccountSasPermissions): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -118,6 +118,67 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermStorageAccountSasPermissions | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._add) {
+      hasAnyValues = true;
+      internalValueResult.add = this._add;
+    }
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._list) {
+      hasAnyValues = true;
+      internalValueResult.list = this._list;
+    }
+    if (this._process) {
+      hasAnyValues = true;
+      internalValueResult.process = this._process;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    if (this._write) {
+      hasAnyValues = true;
+      internalValueResult.write = this._write;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermStorageAccountSasPermissions | undefined) {
+    if (value === undefined) {
+      this._add = undefined;
+      this._create = undefined;
+      this._delete = undefined;
+      this._list = undefined;
+      this._process = undefined;
+      this._read = undefined;
+      this._update = undefined;
+      this._write = undefined;
+    }
+    else {
+      this._add = value.add;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._list = value.list;
+      this._process = value.process;
+      this._read = value.read;
+      this._update = value.update;
+      this._write = value.write;
+    }
+  }
+
   // add - computed: false, optional: false, required: true
   private _add?: boolean | cdktf.IResolvable; 
   public get add() {
@@ -128,7 +189,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get addInput() {
-    return this._add
+    return this._add;
   }
 
   // create - computed: false, optional: false, required: true
@@ -141,7 +202,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: false, required: true
@@ -154,7 +215,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // list - computed: false, optional: false, required: true
@@ -167,7 +228,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get listInput() {
-    return this._list
+    return this._list;
   }
 
   // process - computed: false, optional: false, required: true
@@ -180,7 +241,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get processInput() {
-    return this._process
+    return this._process;
   }
 
   // read - computed: false, optional: false, required: true
@@ -193,7 +254,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: false, required: true
@@ -206,7 +267,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 
   // write - computed: false, optional: false, required: true
@@ -219,7 +280,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get writeInput() {
-    return this._write
+    return this._write;
   }
 }
 export interface DataAzurermStorageAccountSasResourceTypes {
@@ -237,7 +298,7 @@ export interface DataAzurermStorageAccountSasResourceTypes {
   readonly service: boolean | cdktf.IResolvable;
 }
 
-function dataAzurermStorageAccountSasResourceTypesToTerraform(struct?: DataAzurermStorageAccountSasResourceTypesOutputReference | DataAzurermStorageAccountSasResourceTypes): any {
+export function dataAzurermStorageAccountSasResourceTypesToTerraform(struct?: DataAzurermStorageAccountSasResourceTypesOutputReference | DataAzurermStorageAccountSasResourceTypes): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -259,6 +320,37 @@ export class DataAzurermStorageAccountSasResourceTypesOutputReference extends cd
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermStorageAccountSasResourceTypes | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._container) {
+      hasAnyValues = true;
+      internalValueResult.container = this._container;
+    }
+    if (this._object) {
+      hasAnyValues = true;
+      internalValueResult.object = this._object;
+    }
+    if (this._service) {
+      hasAnyValues = true;
+      internalValueResult.service = this._service;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermStorageAccountSasResourceTypes | undefined) {
+    if (value === undefined) {
+      this._container = undefined;
+      this._object = undefined;
+      this._service = undefined;
+    }
+    else {
+      this._container = value.container;
+      this._object = value.object;
+      this._service = value.service;
+    }
+  }
+
   // container - computed: false, optional: false, required: true
   private _container?: boolean | cdktf.IResolvable; 
   public get container() {
@@ -269,7 +361,7 @@ export class DataAzurermStorageAccountSasResourceTypesOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get containerInput() {
-    return this._container
+    return this._container;
   }
 
   // object - computed: false, optional: false, required: true
@@ -282,7 +374,7 @@ export class DataAzurermStorageAccountSasResourceTypesOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get objectInput() {
-    return this._object
+    return this._object;
   }
 
   // service - computed: false, optional: false, required: true
@@ -295,7 +387,7 @@ export class DataAzurermStorageAccountSasResourceTypesOutputReference extends cd
   }
   // Temporarily expose input value. Use with caution.
   public get serviceInput() {
-    return this._service
+    return this._service;
   }
 }
 export interface DataAzurermStorageAccountSasServices {
@@ -317,7 +409,7 @@ export interface DataAzurermStorageAccountSasServices {
   readonly table: boolean | cdktf.IResolvable;
 }
 
-function dataAzurermStorageAccountSasServicesToTerraform(struct?: DataAzurermStorageAccountSasServicesOutputReference | DataAzurermStorageAccountSasServices): any {
+export function dataAzurermStorageAccountSasServicesToTerraform(struct?: DataAzurermStorageAccountSasServicesOutputReference | DataAzurermStorageAccountSasServices): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -340,6 +432,43 @@ export class DataAzurermStorageAccountSasServicesOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermStorageAccountSasServices | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._blob) {
+      hasAnyValues = true;
+      internalValueResult.blob = this._blob;
+    }
+    if (this._file) {
+      hasAnyValues = true;
+      internalValueResult.file = this._file;
+    }
+    if (this._queue) {
+      hasAnyValues = true;
+      internalValueResult.queue = this._queue;
+    }
+    if (this._table) {
+      hasAnyValues = true;
+      internalValueResult.table = this._table;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermStorageAccountSasServices | undefined) {
+    if (value === undefined) {
+      this._blob = undefined;
+      this._file = undefined;
+      this._queue = undefined;
+      this._table = undefined;
+    }
+    else {
+      this._blob = value.blob;
+      this._file = value.file;
+      this._queue = value.queue;
+      this._table = value.table;
+    }
+  }
+
   // blob - computed: false, optional: false, required: true
   private _blob?: boolean | cdktf.IResolvable; 
   public get blob() {
@@ -350,7 +479,7 @@ export class DataAzurermStorageAccountSasServicesOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get blobInput() {
-    return this._blob
+    return this._blob;
   }
 
   // file - computed: false, optional: false, required: true
@@ -363,7 +492,7 @@ export class DataAzurermStorageAccountSasServicesOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get fileInput() {
-    return this._file
+    return this._file;
   }
 
   // queue - computed: false, optional: false, required: true
@@ -376,7 +505,7 @@ export class DataAzurermStorageAccountSasServicesOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get queueInput() {
-    return this._queue
+    return this._queue;
   }
 
   // table - computed: false, optional: false, required: true
@@ -389,7 +518,7 @@ export class DataAzurermStorageAccountSasServicesOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get tableInput() {
-    return this._table
+    return this._table;
   }
 }
 export interface DataAzurermStorageAccountSasTimeouts {
@@ -399,7 +528,7 @@ export interface DataAzurermStorageAccountSasTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermStorageAccountSasTimeoutsToTerraform(struct?: DataAzurermStorageAccountSasTimeoutsOutputReference | DataAzurermStorageAccountSasTimeouts): any {
+export function dataAzurermStorageAccountSasTimeoutsToTerraform(struct?: DataAzurermStorageAccountSasTimeoutsOutputReference | DataAzurermStorageAccountSasTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -419,12 +548,31 @@ export class DataAzurermStorageAccountSasTimeoutsOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermStorageAccountSasTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermStorageAccountSasTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -432,7 +580,7 @@ export class DataAzurermStorageAccountSasTimeoutsOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -474,10 +622,10 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
     this._ipAddresses = config.ipAddresses;
     this._signedVersion = config.signedVersion;
     this._start = config.start;
-    this._permissions = config.permissions;
-    this._resourceTypes = config.resourceTypes;
-    this._services = config.services;
-    this._timeouts = config.timeouts;
+    this._permissions.internalValue = config.permissions;
+    this._resourceTypes.internalValue = config.resourceTypes;
+    this._services.internalValue = config.services;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -494,7 +642,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get connectionStringInput() {
-    return this._connectionString
+    return this._connectionString;
   }
 
   // expiry - computed: false, optional: false, required: true
@@ -507,15 +655,15 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get expiryInput() {
-    return this._expiry
+    return this._expiry;
   }
 
   // https_only - computed: false, optional: true, required: false
-  private _httpsOnly?: boolean | cdktf.IResolvable | undefined; 
+  private _httpsOnly?: boolean | cdktf.IResolvable; 
   public get httpsOnly() {
     return this.getBooleanAttribute('https_only') as any;
   }
-  public set httpsOnly(value: boolean | cdktf.IResolvable | undefined) {
+  public set httpsOnly(value: boolean | cdktf.IResolvable) {
     this._httpsOnly = value;
   }
   public resetHttpsOnly() {
@@ -523,7 +671,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get httpsOnlyInput() {
-    return this._httpsOnly
+    return this._httpsOnly;
   }
 
   // id - computed: true, optional: true, required: false
@@ -532,11 +680,11 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // ip_addresses - computed: false, optional: true, required: false
-  private _ipAddresses?: string | undefined; 
+  private _ipAddresses?: string; 
   public get ipAddresses() {
     return this.getStringAttribute('ip_addresses');
   }
-  public set ipAddresses(value: string | undefined) {
+  public set ipAddresses(value: string) {
     this._ipAddresses = value;
   }
   public resetIpAddresses() {
@@ -544,7 +692,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get ipAddressesInput() {
-    return this._ipAddresses
+    return this._ipAddresses;
   }
 
   // sas - computed: true, optional: false, required: false
@@ -553,11 +701,11 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
 
   // signed_version - computed: false, optional: true, required: false
-  private _signedVersion?: string | undefined; 
+  private _signedVersion?: string; 
   public get signedVersion() {
     return this.getStringAttribute('signed_version');
   }
-  public set signedVersion(value: string | undefined) {
+  public set signedVersion(value: string) {
     this._signedVersion = value;
   }
   public resetSignedVersion() {
@@ -565,7 +713,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get signedVersionInput() {
-    return this._signedVersion
+    return this._signedVersion;
   }
 
   // start - computed: false, optional: false, required: true
@@ -578,66 +726,62 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get startInput() {
-    return this._start
+    return this._start;
   }
 
   // permissions - computed: false, optional: false, required: true
-  private _permissions?: DataAzurermStorageAccountSasPermissions; 
-  private __permissionsOutput = new DataAzurermStorageAccountSasPermissionsOutputReference(this as any, "permissions", true);
+  private _permissions = new DataAzurermStorageAccountSasPermissionsOutputReference(this as any, "permissions", true);
   public get permissions() {
-    return this.__permissionsOutput;
+    return this._permissions;
   }
   public putPermissions(value: DataAzurermStorageAccountSasPermissions) {
-    this._permissions = value;
+    this._permissions.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get permissionsInput() {
-    return this._permissions
+    return this._permissions.internalValue;
   }
 
   // resource_types - computed: false, optional: false, required: true
-  private _resourceTypes?: DataAzurermStorageAccountSasResourceTypes; 
-  private __resourceTypesOutput = new DataAzurermStorageAccountSasResourceTypesOutputReference(this as any, "resource_types", true);
+  private _resourceTypes = new DataAzurermStorageAccountSasResourceTypesOutputReference(this as any, "resource_types", true);
   public get resourceTypes() {
-    return this.__resourceTypesOutput;
+    return this._resourceTypes;
   }
   public putResourceTypes(value: DataAzurermStorageAccountSasResourceTypes) {
-    this._resourceTypes = value;
+    this._resourceTypes.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get resourceTypesInput() {
-    return this._resourceTypes
+    return this._resourceTypes.internalValue;
   }
 
   // services - computed: false, optional: false, required: true
-  private _services?: DataAzurermStorageAccountSasServices; 
-  private __servicesOutput = new DataAzurermStorageAccountSasServicesOutputReference(this as any, "services", true);
+  private _services = new DataAzurermStorageAccountSasServicesOutputReference(this as any, "services", true);
   public get services() {
-    return this.__servicesOutput;
+    return this._services;
   }
   public putServices(value: DataAzurermStorageAccountSasServices) {
-    this._services = value;
+    this._services.internalValue = value;
   }
   // Temporarily expose input value. Use with caution.
   public get servicesInput() {
-    return this._services
+    return this._services.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermStorageAccountSasTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermStorageAccountSasTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermStorageAccountSasTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermStorageAccountSasTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermStorageAccountSasTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -652,10 +796,10 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
       ip_addresses: cdktf.stringToTerraform(this._ipAddresses),
       signed_version: cdktf.stringToTerraform(this._signedVersion),
       start: cdktf.stringToTerraform(this._start),
-      permissions: dataAzurermStorageAccountSasPermissionsToTerraform(this._permissions),
-      resource_types: dataAzurermStorageAccountSasResourceTypesToTerraform(this._resourceTypes),
-      services: dataAzurermStorageAccountSasServicesToTerraform(this._services),
-      timeouts: dataAzurermStorageAccountSasTimeoutsToTerraform(this._timeouts),
+      permissions: dataAzurermStorageAccountSasPermissionsToTerraform(this._permissions.internalValue),
+      resource_types: dataAzurermStorageAccountSasResourceTypesToTerraform(this._resourceTypes.internalValue),
+      services: dataAzurermStorageAccountSasServicesToTerraform(this._services.internalValue),
+      timeouts: dataAzurermStorageAccountSasTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

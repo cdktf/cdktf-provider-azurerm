@@ -53,7 +53,7 @@ export interface DataAzurermLbBackendAddressPoolTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermLbBackendAddressPoolTimeoutsToTerraform(struct?: DataAzurermLbBackendAddressPoolTimeoutsOutputReference | DataAzurermLbBackendAddressPoolTimeouts): any {
+export function dataAzurermLbBackendAddressPoolTimeoutsToTerraform(struct?: DataAzurermLbBackendAddressPoolTimeoutsOutputReference | DataAzurermLbBackendAddressPoolTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -73,12 +73,31 @@ export class DataAzurermLbBackendAddressPoolTimeoutsOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermLbBackendAddressPoolTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermLbBackendAddressPoolTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -86,7 +105,7 @@ export class DataAzurermLbBackendAddressPoolTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -124,7 +143,7 @@ export class DataAzurermLbBackendAddressPool extends cdktf.TerraformDataSource {
     });
     this._loadbalancerId = config.loadbalancerId;
     this._name = config.name;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -161,7 +180,7 @@ export class DataAzurermLbBackendAddressPool extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get loadbalancerIdInput() {
-    return this._loadbalancerId
+    return this._loadbalancerId;
   }
 
   // name - computed: false, optional: false, required: true
@@ -174,7 +193,7 @@ export class DataAzurermLbBackendAddressPool extends cdktf.TerraformDataSource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // outbound_rules - computed: true, optional: false, required: false
@@ -183,20 +202,19 @@ export class DataAzurermLbBackendAddressPool extends cdktf.TerraformDataSource {
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermLbBackendAddressPoolTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermLbBackendAddressPoolTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermLbBackendAddressPoolTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermLbBackendAddressPoolTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermLbBackendAddressPoolTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -207,7 +225,7 @@ export class DataAzurermLbBackendAddressPool extends cdktf.TerraformDataSource {
     return {
       loadbalancer_id: cdktf.stringToTerraform(this._loadbalancerId),
       name: cdktf.stringToTerraform(this._name),
-      timeouts: dataAzurermLbBackendAddressPoolTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermLbBackendAddressPoolTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

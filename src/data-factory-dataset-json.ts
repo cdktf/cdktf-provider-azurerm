@@ -95,7 +95,7 @@ export interface DataFactoryDatasetJsonAzureBlobStorageLocation {
   readonly path: string;
 }
 
-function dataFactoryDatasetJsonAzureBlobStorageLocationToTerraform(struct?: DataFactoryDatasetJsonAzureBlobStorageLocationOutputReference | DataFactoryDatasetJsonAzureBlobStorageLocation): any {
+export function dataFactoryDatasetJsonAzureBlobStorageLocationToTerraform(struct?: DataFactoryDatasetJsonAzureBlobStorageLocationOutputReference | DataFactoryDatasetJsonAzureBlobStorageLocation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -119,6 +119,49 @@ export class DataFactoryDatasetJsonAzureBlobStorageLocationOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryDatasetJsonAzureBlobStorageLocation | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._container) {
+      hasAnyValues = true;
+      internalValueResult.container = this._container;
+    }
+    if (this._dynamicFilenameEnabled) {
+      hasAnyValues = true;
+      internalValueResult.dynamicFilenameEnabled = this._dynamicFilenameEnabled;
+    }
+    if (this._dynamicPathEnabled) {
+      hasAnyValues = true;
+      internalValueResult.dynamicPathEnabled = this._dynamicPathEnabled;
+    }
+    if (this._filename) {
+      hasAnyValues = true;
+      internalValueResult.filename = this._filename;
+    }
+    if (this._path) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryDatasetJsonAzureBlobStorageLocation | undefined) {
+    if (value === undefined) {
+      this._container = undefined;
+      this._dynamicFilenameEnabled = undefined;
+      this._dynamicPathEnabled = undefined;
+      this._filename = undefined;
+      this._path = undefined;
+    }
+    else {
+      this._container = value.container;
+      this._dynamicFilenameEnabled = value.dynamicFilenameEnabled;
+      this._dynamicPathEnabled = value.dynamicPathEnabled;
+      this._filename = value.filename;
+      this._path = value.path;
+    }
+  }
+
   // container - computed: false, optional: false, required: true
   private _container?: string; 
   public get container() {
@@ -129,15 +172,15 @@ export class DataFactoryDatasetJsonAzureBlobStorageLocationOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get containerInput() {
-    return this._container
+    return this._container;
   }
 
   // dynamic_filename_enabled - computed: false, optional: true, required: false
-  private _dynamicFilenameEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _dynamicFilenameEnabled?: boolean | cdktf.IResolvable; 
   public get dynamicFilenameEnabled() {
     return this.getBooleanAttribute('dynamic_filename_enabled') as any;
   }
-  public set dynamicFilenameEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set dynamicFilenameEnabled(value: boolean | cdktf.IResolvable) {
     this._dynamicFilenameEnabled = value;
   }
   public resetDynamicFilenameEnabled() {
@@ -145,15 +188,15 @@ export class DataFactoryDatasetJsonAzureBlobStorageLocationOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get dynamicFilenameEnabledInput() {
-    return this._dynamicFilenameEnabled
+    return this._dynamicFilenameEnabled;
   }
 
   // dynamic_path_enabled - computed: false, optional: true, required: false
-  private _dynamicPathEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _dynamicPathEnabled?: boolean | cdktf.IResolvable; 
   public get dynamicPathEnabled() {
     return this.getBooleanAttribute('dynamic_path_enabled') as any;
   }
-  public set dynamicPathEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set dynamicPathEnabled(value: boolean | cdktf.IResolvable) {
     this._dynamicPathEnabled = value;
   }
   public resetDynamicPathEnabled() {
@@ -161,7 +204,7 @@ export class DataFactoryDatasetJsonAzureBlobStorageLocationOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get dynamicPathEnabledInput() {
-    return this._dynamicPathEnabled
+    return this._dynamicPathEnabled;
   }
 
   // filename - computed: false, optional: false, required: true
@@ -174,7 +217,7 @@ export class DataFactoryDatasetJsonAzureBlobStorageLocationOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get filenameInput() {
-    return this._filename
+    return this._filename;
   }
 
   // path - computed: false, optional: false, required: true
@@ -187,7 +230,7 @@ export class DataFactoryDatasetJsonAzureBlobStorageLocationOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
-    return this._path
+    return this._path;
   }
 }
 export interface DataFactoryDatasetJsonHttpServerLocation {
@@ -213,7 +256,7 @@ export interface DataFactoryDatasetJsonHttpServerLocation {
   readonly relativeUrl: string;
 }
 
-function dataFactoryDatasetJsonHttpServerLocationToTerraform(struct?: DataFactoryDatasetJsonHttpServerLocationOutputReference | DataFactoryDatasetJsonHttpServerLocation): any {
+export function dataFactoryDatasetJsonHttpServerLocationToTerraform(struct?: DataFactoryDatasetJsonHttpServerLocationOutputReference | DataFactoryDatasetJsonHttpServerLocation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -237,12 +280,55 @@ export class DataFactoryDatasetJsonHttpServerLocationOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryDatasetJsonHttpServerLocation | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._dynamicFilenameEnabled) {
+      hasAnyValues = true;
+      internalValueResult.dynamicFilenameEnabled = this._dynamicFilenameEnabled;
+    }
+    if (this._dynamicPathEnabled) {
+      hasAnyValues = true;
+      internalValueResult.dynamicPathEnabled = this._dynamicPathEnabled;
+    }
+    if (this._filename) {
+      hasAnyValues = true;
+      internalValueResult.filename = this._filename;
+    }
+    if (this._path) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    if (this._relativeUrl) {
+      hasAnyValues = true;
+      internalValueResult.relativeUrl = this._relativeUrl;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryDatasetJsonHttpServerLocation | undefined) {
+    if (value === undefined) {
+      this._dynamicFilenameEnabled = undefined;
+      this._dynamicPathEnabled = undefined;
+      this._filename = undefined;
+      this._path = undefined;
+      this._relativeUrl = undefined;
+    }
+    else {
+      this._dynamicFilenameEnabled = value.dynamicFilenameEnabled;
+      this._dynamicPathEnabled = value.dynamicPathEnabled;
+      this._filename = value.filename;
+      this._path = value.path;
+      this._relativeUrl = value.relativeUrl;
+    }
+  }
+
   // dynamic_filename_enabled - computed: false, optional: true, required: false
-  private _dynamicFilenameEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _dynamicFilenameEnabled?: boolean | cdktf.IResolvable; 
   public get dynamicFilenameEnabled() {
     return this.getBooleanAttribute('dynamic_filename_enabled') as any;
   }
-  public set dynamicFilenameEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set dynamicFilenameEnabled(value: boolean | cdktf.IResolvable) {
     this._dynamicFilenameEnabled = value;
   }
   public resetDynamicFilenameEnabled() {
@@ -250,15 +336,15 @@ export class DataFactoryDatasetJsonHttpServerLocationOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get dynamicFilenameEnabledInput() {
-    return this._dynamicFilenameEnabled
+    return this._dynamicFilenameEnabled;
   }
 
   // dynamic_path_enabled - computed: false, optional: true, required: false
-  private _dynamicPathEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _dynamicPathEnabled?: boolean | cdktf.IResolvable; 
   public get dynamicPathEnabled() {
     return this.getBooleanAttribute('dynamic_path_enabled') as any;
   }
-  public set dynamicPathEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set dynamicPathEnabled(value: boolean | cdktf.IResolvable) {
     this._dynamicPathEnabled = value;
   }
   public resetDynamicPathEnabled() {
@@ -266,7 +352,7 @@ export class DataFactoryDatasetJsonHttpServerLocationOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get dynamicPathEnabledInput() {
-    return this._dynamicPathEnabled
+    return this._dynamicPathEnabled;
   }
 
   // filename - computed: false, optional: false, required: true
@@ -279,7 +365,7 @@ export class DataFactoryDatasetJsonHttpServerLocationOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get filenameInput() {
-    return this._filename
+    return this._filename;
   }
 
   // path - computed: false, optional: false, required: true
@@ -292,7 +378,7 @@ export class DataFactoryDatasetJsonHttpServerLocationOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get pathInput() {
-    return this._path
+    return this._path;
   }
 
   // relative_url - computed: false, optional: false, required: true
@@ -305,7 +391,7 @@ export class DataFactoryDatasetJsonHttpServerLocationOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get relativeUrlInput() {
-    return this._relativeUrl
+    return this._relativeUrl;
   }
 }
 export interface DataFactoryDatasetJsonSchemaColumn {
@@ -323,7 +409,7 @@ export interface DataFactoryDatasetJsonSchemaColumn {
   readonly type?: string;
 }
 
-function dataFactoryDatasetJsonSchemaColumnToTerraform(struct?: DataFactoryDatasetJsonSchemaColumn): any {
+export function dataFactoryDatasetJsonSchemaColumnToTerraform(struct?: DataFactoryDatasetJsonSchemaColumn): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -354,7 +440,7 @@ export interface DataFactoryDatasetJsonTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryDatasetJsonTimeoutsToTerraform(struct?: DataFactoryDatasetJsonTimeoutsOutputReference | DataFactoryDatasetJsonTimeouts): any {
+export function dataFactoryDatasetJsonTimeoutsToTerraform(struct?: DataFactoryDatasetJsonTimeoutsOutputReference | DataFactoryDatasetJsonTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -377,12 +463,49 @@ export class DataFactoryDatasetJsonTimeoutsOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryDatasetJsonTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryDatasetJsonTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -390,15 +513,15 @@ export class DataFactoryDatasetJsonTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -406,15 +529,15 @@ export class DataFactoryDatasetJsonTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -422,15 +545,15 @@ export class DataFactoryDatasetJsonTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -438,7 +561,7 @@ export class DataFactoryDatasetJsonTimeoutsOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -484,10 +607,10 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
     this._name = config.name;
     this._parameters = config.parameters;
     this._resourceGroupName = config.resourceGroupName;
-    this._azureBlobStorageLocation = config.azureBlobStorageLocation;
-    this._httpServerLocation = config.httpServerLocation;
+    this._azureBlobStorageLocation.internalValue = config.azureBlobStorageLocation;
+    this._httpServerLocation.internalValue = config.httpServerLocation;
     this._schemaColumn = config.schemaColumn;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -495,12 +618,12 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
   // ==========
 
   // additional_properties - computed: false, optional: true, required: false
-  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _additionalProperties?: { [key: string]: string } | cdktf.IResolvable; 
   public get additionalProperties() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('additional_properties') as any;
   }
-  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set additionalProperties(value: { [key: string]: string } | cdktf.IResolvable) {
     this._additionalProperties = value;
   }
   public resetAdditionalProperties() {
@@ -508,15 +631,15 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get additionalPropertiesInput() {
-    return this._additionalProperties
+    return this._additionalProperties;
   }
 
   // annotations - computed: false, optional: true, required: false
-  private _annotations?: string[] | undefined; 
+  private _annotations?: string[]; 
   public get annotations() {
     return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] | undefined) {
+  public set annotations(value: string[]) {
     this._annotations = value;
   }
   public resetAnnotations() {
@@ -524,7 +647,7 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get annotationsInput() {
-    return this._annotations
+    return this._annotations;
   }
 
   // data_factory_name - computed: false, optional: false, required: true
@@ -537,15 +660,15 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryNameInput() {
-    return this._dataFactoryName
+    return this._dataFactoryName;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -553,15 +676,15 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // encoding - computed: false, optional: true, required: false
-  private _encoding?: string | undefined; 
+  private _encoding?: string; 
   public get encoding() {
     return this.getStringAttribute('encoding');
   }
-  public set encoding(value: string | undefined) {
+  public set encoding(value: string) {
     this._encoding = value;
   }
   public resetEncoding() {
@@ -569,15 +692,15 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get encodingInput() {
-    return this._encoding
+    return this._encoding;
   }
 
   // folder - computed: false, optional: true, required: false
-  private _folder?: string | undefined; 
+  private _folder?: string; 
   public get folder() {
     return this.getStringAttribute('folder');
   }
-  public set folder(value: string | undefined) {
+  public set folder(value: string) {
     this._folder = value;
   }
   public resetFolder() {
@@ -585,7 +708,7 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get folderInput() {
-    return this._folder
+    return this._folder;
   }
 
   // id - computed: true, optional: true, required: false
@@ -603,7 +726,7 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get linkedServiceNameInput() {
-    return this._linkedServiceName
+    return this._linkedServiceName;
   }
 
   // name - computed: false, optional: false, required: true
@@ -616,16 +739,16 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -633,7 +756,7 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -646,50 +769,48 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // azure_blob_storage_location - computed: false, optional: true, required: false
-  private _azureBlobStorageLocation?: DataFactoryDatasetJsonAzureBlobStorageLocation | undefined; 
-  private __azureBlobStorageLocationOutput = new DataFactoryDatasetJsonAzureBlobStorageLocationOutputReference(this as any, "azure_blob_storage_location", true);
+  private _azureBlobStorageLocation = new DataFactoryDatasetJsonAzureBlobStorageLocationOutputReference(this as any, "azure_blob_storage_location", true);
   public get azureBlobStorageLocation() {
-    return this.__azureBlobStorageLocationOutput;
+    return this._azureBlobStorageLocation;
   }
-  public putAzureBlobStorageLocation(value: DataFactoryDatasetJsonAzureBlobStorageLocation | undefined) {
-    this._azureBlobStorageLocation = value;
+  public putAzureBlobStorageLocation(value: DataFactoryDatasetJsonAzureBlobStorageLocation) {
+    this._azureBlobStorageLocation.internalValue = value;
   }
   public resetAzureBlobStorageLocation() {
-    this._azureBlobStorageLocation = undefined;
+    this._azureBlobStorageLocation.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get azureBlobStorageLocationInput() {
-    return this._azureBlobStorageLocation
+    return this._azureBlobStorageLocation.internalValue;
   }
 
   // http_server_location - computed: false, optional: true, required: false
-  private _httpServerLocation?: DataFactoryDatasetJsonHttpServerLocation | undefined; 
-  private __httpServerLocationOutput = new DataFactoryDatasetJsonHttpServerLocationOutputReference(this as any, "http_server_location", true);
+  private _httpServerLocation = new DataFactoryDatasetJsonHttpServerLocationOutputReference(this as any, "http_server_location", true);
   public get httpServerLocation() {
-    return this.__httpServerLocationOutput;
+    return this._httpServerLocation;
   }
-  public putHttpServerLocation(value: DataFactoryDatasetJsonHttpServerLocation | undefined) {
-    this._httpServerLocation = value;
+  public putHttpServerLocation(value: DataFactoryDatasetJsonHttpServerLocation) {
+    this._httpServerLocation.internalValue = value;
   }
   public resetHttpServerLocation() {
-    this._httpServerLocation = undefined;
+    this._httpServerLocation.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get httpServerLocationInput() {
-    return this._httpServerLocation
+    return this._httpServerLocation.internalValue;
   }
 
   // schema_column - computed: false, optional: true, required: false
-  private _schemaColumn?: DataFactoryDatasetJsonSchemaColumn[] | undefined; 
+  private _schemaColumn?: DataFactoryDatasetJsonSchemaColumn[]; 
   public get schemaColumn() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('schema_column') as any;
   }
-  public set schemaColumn(value: DataFactoryDatasetJsonSchemaColumn[] | undefined) {
+  public set schemaColumn(value: DataFactoryDatasetJsonSchemaColumn[]) {
     this._schemaColumn = value;
   }
   public resetSchemaColumn() {
@@ -697,24 +818,23 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get schemaColumnInput() {
-    return this._schemaColumn
+    return this._schemaColumn;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryDatasetJsonTimeouts | undefined; 
-  private __timeoutsOutput = new DataFactoryDatasetJsonTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryDatasetJsonTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataFactoryDatasetJsonTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataFactoryDatasetJsonTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -733,10 +853,10 @@ export class DataFactoryDatasetJson extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.anyToTerraform)(this._parameters),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      azure_blob_storage_location: dataFactoryDatasetJsonAzureBlobStorageLocationToTerraform(this._azureBlobStorageLocation),
-      http_server_location: dataFactoryDatasetJsonHttpServerLocationToTerraform(this._httpServerLocation),
+      azure_blob_storage_location: dataFactoryDatasetJsonAzureBlobStorageLocationToTerraform(this._azureBlobStorageLocation.internalValue),
+      http_server_location: dataFactoryDatasetJsonHttpServerLocationToTerraform(this._httpServerLocation.internalValue),
       schema_column: cdktf.listMapper(dataFactoryDatasetJsonSchemaColumnToTerraform)(this._schemaColumn),
-      timeouts: dataFactoryDatasetJsonTimeoutsToTerraform(this._timeouts),
+      timeouts: dataFactoryDatasetJsonTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

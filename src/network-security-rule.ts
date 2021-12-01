@@ -105,7 +105,7 @@ export interface NetworkSecurityRuleTimeouts {
   readonly update?: string;
 }
 
-function networkSecurityRuleTimeoutsToTerraform(struct?: NetworkSecurityRuleTimeoutsOutputReference | NetworkSecurityRuleTimeouts): any {
+export function networkSecurityRuleTimeoutsToTerraform(struct?: NetworkSecurityRuleTimeoutsOutputReference | NetworkSecurityRuleTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -128,12 +128,49 @@ export class NetworkSecurityRuleTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): NetworkSecurityRuleTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetworkSecurityRuleTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -141,15 +178,15 @@ export class NetworkSecurityRuleTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -157,15 +194,15 @@ export class NetworkSecurityRuleTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -173,15 +210,15 @@ export class NetworkSecurityRuleTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -189,7 +226,7 @@ export class NetworkSecurityRuleTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -243,7 +280,7 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
     this._sourceApplicationSecurityGroupIds = config.sourceApplicationSecurityGroupIds;
     this._sourcePortRange = config.sourcePortRange;
     this._sourcePortRanges = config.sourcePortRanges;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -260,15 +297,15 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get accessInput() {
-    return this._access
+    return this._access;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -276,15 +313,15 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // destination_address_prefix - computed: false, optional: true, required: false
-  private _destinationAddressPrefix?: string | undefined; 
+  private _destinationAddressPrefix?: string; 
   public get destinationAddressPrefix() {
     return this.getStringAttribute('destination_address_prefix');
   }
-  public set destinationAddressPrefix(value: string | undefined) {
+  public set destinationAddressPrefix(value: string) {
     this._destinationAddressPrefix = value;
   }
   public resetDestinationAddressPrefix() {
@@ -292,15 +329,15 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get destinationAddressPrefixInput() {
-    return this._destinationAddressPrefix
+    return this._destinationAddressPrefix;
   }
 
   // destination_address_prefixes - computed: false, optional: true, required: false
-  private _destinationAddressPrefixes?: string[] | undefined; 
+  private _destinationAddressPrefixes?: string[]; 
   public get destinationAddressPrefixes() {
     return this.getListAttribute('destination_address_prefixes');
   }
-  public set destinationAddressPrefixes(value: string[] | undefined) {
+  public set destinationAddressPrefixes(value: string[]) {
     this._destinationAddressPrefixes = value;
   }
   public resetDestinationAddressPrefixes() {
@@ -308,15 +345,15 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get destinationAddressPrefixesInput() {
-    return this._destinationAddressPrefixes
+    return this._destinationAddressPrefixes;
   }
 
   // destination_application_security_group_ids - computed: false, optional: true, required: false
-  private _destinationApplicationSecurityGroupIds?: string[] | undefined; 
+  private _destinationApplicationSecurityGroupIds?: string[]; 
   public get destinationApplicationSecurityGroupIds() {
     return this.getListAttribute('destination_application_security_group_ids');
   }
-  public set destinationApplicationSecurityGroupIds(value: string[] | undefined) {
+  public set destinationApplicationSecurityGroupIds(value: string[]) {
     this._destinationApplicationSecurityGroupIds = value;
   }
   public resetDestinationApplicationSecurityGroupIds() {
@@ -324,15 +361,15 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get destinationApplicationSecurityGroupIdsInput() {
-    return this._destinationApplicationSecurityGroupIds
+    return this._destinationApplicationSecurityGroupIds;
   }
 
   // destination_port_range - computed: false, optional: true, required: false
-  private _destinationPortRange?: string | undefined; 
+  private _destinationPortRange?: string; 
   public get destinationPortRange() {
     return this.getStringAttribute('destination_port_range');
   }
-  public set destinationPortRange(value: string | undefined) {
+  public set destinationPortRange(value: string) {
     this._destinationPortRange = value;
   }
   public resetDestinationPortRange() {
@@ -340,15 +377,15 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get destinationPortRangeInput() {
-    return this._destinationPortRange
+    return this._destinationPortRange;
   }
 
   // destination_port_ranges - computed: false, optional: true, required: false
-  private _destinationPortRanges?: string[] | undefined; 
+  private _destinationPortRanges?: string[]; 
   public get destinationPortRanges() {
     return this.getListAttribute('destination_port_ranges');
   }
-  public set destinationPortRanges(value: string[] | undefined) {
+  public set destinationPortRanges(value: string[]) {
     this._destinationPortRanges = value;
   }
   public resetDestinationPortRanges() {
@@ -356,7 +393,7 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get destinationPortRangesInput() {
-    return this._destinationPortRanges
+    return this._destinationPortRanges;
   }
 
   // direction - computed: false, optional: false, required: true
@@ -369,7 +406,7 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get directionInput() {
-    return this._direction
+    return this._direction;
   }
 
   // id - computed: true, optional: true, required: false
@@ -387,7 +424,7 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // network_security_group_name - computed: false, optional: false, required: true
@@ -400,7 +437,7 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get networkSecurityGroupNameInput() {
-    return this._networkSecurityGroupName
+    return this._networkSecurityGroupName;
   }
 
   // priority - computed: false, optional: false, required: true
@@ -413,7 +450,7 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get priorityInput() {
-    return this._priority
+    return this._priority;
   }
 
   // protocol - computed: false, optional: false, required: true
@@ -426,7 +463,7 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get protocolInput() {
-    return this._protocol
+    return this._protocol;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -439,15 +476,15 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // source_address_prefix - computed: false, optional: true, required: false
-  private _sourceAddressPrefix?: string | undefined; 
+  private _sourceAddressPrefix?: string; 
   public get sourceAddressPrefix() {
     return this.getStringAttribute('source_address_prefix');
   }
-  public set sourceAddressPrefix(value: string | undefined) {
+  public set sourceAddressPrefix(value: string) {
     this._sourceAddressPrefix = value;
   }
   public resetSourceAddressPrefix() {
@@ -455,15 +492,15 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sourceAddressPrefixInput() {
-    return this._sourceAddressPrefix
+    return this._sourceAddressPrefix;
   }
 
   // source_address_prefixes - computed: false, optional: true, required: false
-  private _sourceAddressPrefixes?: string[] | undefined; 
+  private _sourceAddressPrefixes?: string[]; 
   public get sourceAddressPrefixes() {
     return this.getListAttribute('source_address_prefixes');
   }
-  public set sourceAddressPrefixes(value: string[] | undefined) {
+  public set sourceAddressPrefixes(value: string[]) {
     this._sourceAddressPrefixes = value;
   }
   public resetSourceAddressPrefixes() {
@@ -471,15 +508,15 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sourceAddressPrefixesInput() {
-    return this._sourceAddressPrefixes
+    return this._sourceAddressPrefixes;
   }
 
   // source_application_security_group_ids - computed: false, optional: true, required: false
-  private _sourceApplicationSecurityGroupIds?: string[] | undefined; 
+  private _sourceApplicationSecurityGroupIds?: string[]; 
   public get sourceApplicationSecurityGroupIds() {
     return this.getListAttribute('source_application_security_group_ids');
   }
-  public set sourceApplicationSecurityGroupIds(value: string[] | undefined) {
+  public set sourceApplicationSecurityGroupIds(value: string[]) {
     this._sourceApplicationSecurityGroupIds = value;
   }
   public resetSourceApplicationSecurityGroupIds() {
@@ -487,15 +524,15 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sourceApplicationSecurityGroupIdsInput() {
-    return this._sourceApplicationSecurityGroupIds
+    return this._sourceApplicationSecurityGroupIds;
   }
 
   // source_port_range - computed: false, optional: true, required: false
-  private _sourcePortRange?: string | undefined; 
+  private _sourcePortRange?: string; 
   public get sourcePortRange() {
     return this.getStringAttribute('source_port_range');
   }
-  public set sourcePortRange(value: string | undefined) {
+  public set sourcePortRange(value: string) {
     this._sourcePortRange = value;
   }
   public resetSourcePortRange() {
@@ -503,15 +540,15 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sourcePortRangeInput() {
-    return this._sourcePortRange
+    return this._sourcePortRange;
   }
 
   // source_port_ranges - computed: false, optional: true, required: false
-  private _sourcePortRanges?: string[] | undefined; 
+  private _sourcePortRanges?: string[]; 
   public get sourcePortRanges() {
     return this.getListAttribute('source_port_ranges');
   }
-  public set sourcePortRanges(value: string[] | undefined) {
+  public set sourcePortRanges(value: string[]) {
     this._sourcePortRanges = value;
   }
   public resetSourcePortRanges() {
@@ -519,24 +556,23 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sourcePortRangesInput() {
-    return this._sourcePortRanges
+    return this._sourcePortRanges;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: NetworkSecurityRuleTimeouts | undefined; 
-  private __timeoutsOutput = new NetworkSecurityRuleTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new NetworkSecurityRuleTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: NetworkSecurityRuleTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: NetworkSecurityRuleTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -563,7 +599,7 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
       source_application_security_group_ids: cdktf.listMapper(cdktf.stringToTerraform)(this._sourceApplicationSecurityGroupIds),
       source_port_range: cdktf.stringToTerraform(this._sourcePortRange),
       source_port_ranges: cdktf.listMapper(cdktf.stringToTerraform)(this._sourcePortRanges),
-      timeouts: networkSecurityRuleTimeoutsToTerraform(this._timeouts),
+      timeouts: networkSecurityRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

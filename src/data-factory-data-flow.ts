@@ -67,7 +67,7 @@ export interface DataFactoryDataFlowSinkDataset {
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataFactoryDataFlowSinkDatasetToTerraform(struct?: DataFactoryDataFlowSinkDatasetOutputReference | DataFactoryDataFlowSinkDataset): any {
+export function dataFactoryDataFlowSinkDatasetToTerraform(struct?: DataFactoryDataFlowSinkDatasetOutputReference | DataFactoryDataFlowSinkDataset): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -88,6 +88,31 @@ export class DataFactoryDataFlowSinkDatasetOutputReference extends cdktf.Complex
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryDataFlowSinkDataset | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryDataFlowSinkDataset | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._parameters = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._parameters = value.parameters;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -98,16 +123,16 @@ export class DataFactoryDataFlowSinkDatasetOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -115,7 +140,7 @@ export class DataFactoryDataFlowSinkDatasetOutputReference extends cdktf.Complex
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 }
 export interface DataFactoryDataFlowSinkLinkedService {
@@ -129,7 +154,7 @@ export interface DataFactoryDataFlowSinkLinkedService {
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataFactoryDataFlowSinkLinkedServiceToTerraform(struct?: DataFactoryDataFlowSinkLinkedServiceOutputReference | DataFactoryDataFlowSinkLinkedService): any {
+export function dataFactoryDataFlowSinkLinkedServiceToTerraform(struct?: DataFactoryDataFlowSinkLinkedServiceOutputReference | DataFactoryDataFlowSinkLinkedService): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -150,6 +175,31 @@ export class DataFactoryDataFlowSinkLinkedServiceOutputReference extends cdktf.C
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryDataFlowSinkLinkedService | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryDataFlowSinkLinkedService | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._parameters = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._parameters = value.parameters;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -160,16 +210,16 @@ export class DataFactoryDataFlowSinkLinkedServiceOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -177,7 +227,7 @@ export class DataFactoryDataFlowSinkLinkedServiceOutputReference extends cdktf.C
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 }
 export interface DataFactoryDataFlowSinkSchemaLinkedService {
@@ -191,7 +241,7 @@ export interface DataFactoryDataFlowSinkSchemaLinkedService {
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataFactoryDataFlowSinkSchemaLinkedServiceToTerraform(struct?: DataFactoryDataFlowSinkSchemaLinkedServiceOutputReference | DataFactoryDataFlowSinkSchemaLinkedService): any {
+export function dataFactoryDataFlowSinkSchemaLinkedServiceToTerraform(struct?: DataFactoryDataFlowSinkSchemaLinkedServiceOutputReference | DataFactoryDataFlowSinkSchemaLinkedService): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -212,6 +262,31 @@ export class DataFactoryDataFlowSinkSchemaLinkedServiceOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryDataFlowSinkSchemaLinkedService | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryDataFlowSinkSchemaLinkedService | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._parameters = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._parameters = value.parameters;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -222,16 +297,16 @@ export class DataFactoryDataFlowSinkSchemaLinkedServiceOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -239,7 +314,7 @@ export class DataFactoryDataFlowSinkSchemaLinkedServiceOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 }
 export interface DataFactoryDataFlowSink {
@@ -271,7 +346,7 @@ export interface DataFactoryDataFlowSink {
   readonly schemaLinkedService?: DataFactoryDataFlowSinkSchemaLinkedService;
 }
 
-function dataFactoryDataFlowSinkToTerraform(struct?: DataFactoryDataFlowSink): any {
+export function dataFactoryDataFlowSinkToTerraform(struct?: DataFactoryDataFlowSink): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -296,7 +371,7 @@ export interface DataFactoryDataFlowSourceDataset {
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataFactoryDataFlowSourceDatasetToTerraform(struct?: DataFactoryDataFlowSourceDatasetOutputReference | DataFactoryDataFlowSourceDataset): any {
+export function dataFactoryDataFlowSourceDatasetToTerraform(struct?: DataFactoryDataFlowSourceDatasetOutputReference | DataFactoryDataFlowSourceDataset): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -317,6 +392,31 @@ export class DataFactoryDataFlowSourceDatasetOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryDataFlowSourceDataset | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryDataFlowSourceDataset | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._parameters = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._parameters = value.parameters;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -327,16 +427,16 @@ export class DataFactoryDataFlowSourceDatasetOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -344,7 +444,7 @@ export class DataFactoryDataFlowSourceDatasetOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 }
 export interface DataFactoryDataFlowSourceLinkedService {
@@ -358,7 +458,7 @@ export interface DataFactoryDataFlowSourceLinkedService {
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataFactoryDataFlowSourceLinkedServiceToTerraform(struct?: DataFactoryDataFlowSourceLinkedServiceOutputReference | DataFactoryDataFlowSourceLinkedService): any {
+export function dataFactoryDataFlowSourceLinkedServiceToTerraform(struct?: DataFactoryDataFlowSourceLinkedServiceOutputReference | DataFactoryDataFlowSourceLinkedService): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -379,6 +479,31 @@ export class DataFactoryDataFlowSourceLinkedServiceOutputReference extends cdktf
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryDataFlowSourceLinkedService | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryDataFlowSourceLinkedService | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._parameters = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._parameters = value.parameters;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -389,16 +514,16 @@ export class DataFactoryDataFlowSourceLinkedServiceOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -406,7 +531,7 @@ export class DataFactoryDataFlowSourceLinkedServiceOutputReference extends cdktf
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 }
 export interface DataFactoryDataFlowSourceSchemaLinkedService {
@@ -420,7 +545,7 @@ export interface DataFactoryDataFlowSourceSchemaLinkedService {
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
 
-function dataFactoryDataFlowSourceSchemaLinkedServiceToTerraform(struct?: DataFactoryDataFlowSourceSchemaLinkedServiceOutputReference | DataFactoryDataFlowSourceSchemaLinkedService): any {
+export function dataFactoryDataFlowSourceSchemaLinkedServiceToTerraform(struct?: DataFactoryDataFlowSourceSchemaLinkedServiceOutputReference | DataFactoryDataFlowSourceSchemaLinkedService): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -441,6 +566,31 @@ export class DataFactoryDataFlowSourceSchemaLinkedServiceOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryDataFlowSourceSchemaLinkedService | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._name) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._parameters) {
+      hasAnyValues = true;
+      internalValueResult.parameters = this._parameters;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryDataFlowSourceSchemaLinkedService | undefined) {
+    if (value === undefined) {
+      this._name = undefined;
+      this._parameters = undefined;
+    }
+    else {
+      this._name = value.name;
+      this._parameters = value.parameters;
+    }
+  }
+
   // name - computed: false, optional: false, required: true
   private _name?: string; 
   public get name() {
@@ -451,16 +601,16 @@ export class DataFactoryDataFlowSourceSchemaLinkedServiceOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // parameters - computed: false, optional: true, required: false
-  private _parameters?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _parameters?: { [key: string]: string } | cdktf.IResolvable; 
   public get parameters() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('parameters') as any;
   }
-  public set parameters(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set parameters(value: { [key: string]: string } | cdktf.IResolvable) {
     this._parameters = value;
   }
   public resetParameters() {
@@ -468,7 +618,7 @@ export class DataFactoryDataFlowSourceSchemaLinkedServiceOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get parametersInput() {
-    return this._parameters
+    return this._parameters;
   }
 }
 export interface DataFactoryDataFlowSource {
@@ -500,7 +650,7 @@ export interface DataFactoryDataFlowSource {
   readonly schemaLinkedService?: DataFactoryDataFlowSourceSchemaLinkedService;
 }
 
-function dataFactoryDataFlowSourceToTerraform(struct?: DataFactoryDataFlowSource): any {
+export function dataFactoryDataFlowSourceToTerraform(struct?: DataFactoryDataFlowSource): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -533,7 +683,7 @@ export interface DataFactoryDataFlowTimeouts {
   readonly update?: string;
 }
 
-function dataFactoryDataFlowTimeoutsToTerraform(struct?: DataFactoryDataFlowTimeoutsOutputReference | DataFactoryDataFlowTimeouts): any {
+export function dataFactoryDataFlowTimeoutsToTerraform(struct?: DataFactoryDataFlowTimeoutsOutputReference | DataFactoryDataFlowTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -556,12 +706,49 @@ export class DataFactoryDataFlowTimeoutsOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataFactoryDataFlowTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryDataFlowTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -569,15 +756,15 @@ export class DataFactoryDataFlowTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -585,15 +772,15 @@ export class DataFactoryDataFlowTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -601,15 +788,15 @@ export class DataFactoryDataFlowTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -617,7 +804,7 @@ export class DataFactoryDataFlowTimeoutsOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface DataFactoryDataFlowTransformation {
@@ -631,7 +818,7 @@ export interface DataFactoryDataFlowTransformation {
   readonly name: string;
 }
 
-function dataFactoryDataFlowTransformationToTerraform(struct?: DataFactoryDataFlowTransformation): any {
+export function dataFactoryDataFlowTransformationToTerraform(struct?: DataFactoryDataFlowTransformation): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -683,7 +870,7 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
     this._script = config.script;
     this._sink = config.sink;
     this._source = config.source;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
     this._transformation = config.transformation;
   }
 
@@ -692,11 +879,11 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   // ==========
 
   // annotations - computed: false, optional: true, required: false
-  private _annotations?: string[] | undefined; 
+  private _annotations?: string[]; 
   public get annotations() {
     return this.getListAttribute('annotations');
   }
-  public set annotations(value: string[] | undefined) {
+  public set annotations(value: string[]) {
     this._annotations = value;
   }
   public resetAnnotations() {
@@ -704,7 +891,7 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get annotationsInput() {
-    return this._annotations
+    return this._annotations;
   }
 
   // data_factory_id - computed: false, optional: false, required: true
@@ -717,15 +904,15 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryIdInput() {
-    return this._dataFactoryId
+    return this._dataFactoryId;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -733,15 +920,15 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // folder - computed: false, optional: true, required: false
-  private _folder?: string | undefined; 
+  private _folder?: string; 
   public get folder() {
     return this.getStringAttribute('folder');
   }
-  public set folder(value: string | undefined) {
+  public set folder(value: string) {
     this._folder = value;
   }
   public resetFolder() {
@@ -749,7 +936,7 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get folderInput() {
-    return this._folder
+    return this._folder;
   }
 
   // id - computed: true, optional: true, required: false
@@ -767,7 +954,7 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // script - computed: false, optional: false, required: true
@@ -780,7 +967,7 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get scriptInput() {
-    return this._script
+    return this._script;
   }
 
   // sink - computed: false, optional: false, required: true
@@ -794,7 +981,7 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sinkInput() {
-    return this._sink
+    return this._sink;
   }
 
   // source - computed: false, optional: false, required: true
@@ -808,33 +995,32 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sourceInput() {
-    return this._source
+    return this._source;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataFactoryDataFlowTimeouts | undefined; 
-  private __timeoutsOutput = new DataFactoryDataFlowTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataFactoryDataFlowTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataFactoryDataFlowTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataFactoryDataFlowTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // transformation - computed: false, optional: true, required: false
-  private _transformation?: DataFactoryDataFlowTransformation[] | undefined; 
+  private _transformation?: DataFactoryDataFlowTransformation[]; 
   public get transformation() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('transformation') as any;
   }
-  public set transformation(value: DataFactoryDataFlowTransformation[] | undefined) {
+  public set transformation(value: DataFactoryDataFlowTransformation[]) {
     this._transformation = value;
   }
   public resetTransformation() {
@@ -842,7 +1028,7 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get transformationInput() {
-    return this._transformation
+    return this._transformation;
   }
 
   // =========
@@ -859,7 +1045,7 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
       script: cdktf.stringToTerraform(this._script),
       sink: cdktf.listMapper(dataFactoryDataFlowSinkToTerraform)(this._sink),
       source: cdktf.listMapper(dataFactoryDataFlowSourceToTerraform)(this._source),
-      timeouts: dataFactoryDataFlowTimeoutsToTerraform(this._timeouts),
+      timeouts: dataFactoryDataFlowTimeoutsToTerraform(this._timeouts.internalValue),
       transformation: cdktf.listMapper(dataFactoryDataFlowTransformationToTerraform)(this._transformation),
     };
   }

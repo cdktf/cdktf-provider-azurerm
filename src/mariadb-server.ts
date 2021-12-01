@@ -111,7 +111,7 @@ export interface MariadbServerStorageProfile {
   readonly storageMb?: number;
 }
 
-function mariadbServerStorageProfileToTerraform(struct?: MariadbServerStorageProfileOutputReference | MariadbServerStorageProfile): any {
+export function mariadbServerStorageProfileToTerraform(struct?: MariadbServerStorageProfileOutputReference | MariadbServerStorageProfile): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -134,12 +134,49 @@ export class MariadbServerStorageProfileOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MariadbServerStorageProfile | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._autoGrow) {
+      hasAnyValues = true;
+      internalValueResult.autoGrow = this._autoGrow;
+    }
+    if (this._backupRetentionDays) {
+      hasAnyValues = true;
+      internalValueResult.backupRetentionDays = this._backupRetentionDays;
+    }
+    if (this._geoRedundantBackup) {
+      hasAnyValues = true;
+      internalValueResult.geoRedundantBackup = this._geoRedundantBackup;
+    }
+    if (this._storageMb) {
+      hasAnyValues = true;
+      internalValueResult.storageMb = this._storageMb;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MariadbServerStorageProfile | undefined) {
+    if (value === undefined) {
+      this._autoGrow = undefined;
+      this._backupRetentionDays = undefined;
+      this._geoRedundantBackup = undefined;
+      this._storageMb = undefined;
+    }
+    else {
+      this._autoGrow = value.autoGrow;
+      this._backupRetentionDays = value.backupRetentionDays;
+      this._geoRedundantBackup = value.geoRedundantBackup;
+      this._storageMb = value.storageMb;
+    }
+  }
+
   // auto_grow - computed: true, optional: true, required: false
-  private _autoGrow?: string | undefined; 
+  private _autoGrow?: string; 
   public get autoGrow() {
     return this.getStringAttribute('auto_grow');
   }
-  public set autoGrow(value: string | undefined) {
+  public set autoGrow(value: string) {
     this._autoGrow = value;
   }
   public resetAutoGrow() {
@@ -147,15 +184,15 @@ export class MariadbServerStorageProfileOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get autoGrowInput() {
-    return this._autoGrow
+    return this._autoGrow;
   }
 
   // backup_retention_days - computed: true, optional: true, required: false
-  private _backupRetentionDays?: number | undefined; 
+  private _backupRetentionDays?: number; 
   public get backupRetentionDays() {
     return this.getNumberAttribute('backup_retention_days');
   }
-  public set backupRetentionDays(value: number | undefined) {
+  public set backupRetentionDays(value: number) {
     this._backupRetentionDays = value;
   }
   public resetBackupRetentionDays() {
@@ -163,15 +200,15 @@ export class MariadbServerStorageProfileOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get backupRetentionDaysInput() {
-    return this._backupRetentionDays
+    return this._backupRetentionDays;
   }
 
   // geo_redundant_backup - computed: true, optional: true, required: false
-  private _geoRedundantBackup?: string | undefined; 
+  private _geoRedundantBackup?: string; 
   public get geoRedundantBackup() {
     return this.getStringAttribute('geo_redundant_backup');
   }
-  public set geoRedundantBackup(value: string | undefined) {
+  public set geoRedundantBackup(value: string) {
     this._geoRedundantBackup = value;
   }
   public resetGeoRedundantBackup() {
@@ -179,15 +216,15 @@ export class MariadbServerStorageProfileOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get geoRedundantBackupInput() {
-    return this._geoRedundantBackup
+    return this._geoRedundantBackup;
   }
 
   // storage_mb - computed: false, optional: true, required: false
-  private _storageMb?: number | undefined; 
+  private _storageMb?: number; 
   public get storageMb() {
     return this.getNumberAttribute('storage_mb');
   }
-  public set storageMb(value: number | undefined) {
+  public set storageMb(value: number) {
     this._storageMb = value;
   }
   public resetStorageMb() {
@@ -195,7 +232,7 @@ export class MariadbServerStorageProfileOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get storageMbInput() {
-    return this._storageMb
+    return this._storageMb;
   }
 }
 export interface MariadbServerTimeouts {
@@ -217,7 +254,7 @@ export interface MariadbServerTimeouts {
   readonly update?: string;
 }
 
-function mariadbServerTimeoutsToTerraform(struct?: MariadbServerTimeoutsOutputReference | MariadbServerTimeouts): any {
+export function mariadbServerTimeoutsToTerraform(struct?: MariadbServerTimeoutsOutputReference | MariadbServerTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -240,12 +277,49 @@ export class MariadbServerTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MariadbServerTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MariadbServerTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -253,15 +327,15 @@ export class MariadbServerTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -269,15 +343,15 @@ export class MariadbServerTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -285,15 +359,15 @@ export class MariadbServerTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -301,7 +375,7 @@ export class MariadbServerTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -355,8 +429,8 @@ export class MariadbServer extends cdktf.TerraformResource {
     this._storageMb = config.storageMb;
     this._tags = config.tags;
     this._version = config.version;
-    this._storageProfile = config.storageProfile;
-    this._timeouts = config.timeouts;
+    this._storageProfile.internalValue = config.storageProfile;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -364,11 +438,11 @@ export class MariadbServer extends cdktf.TerraformResource {
   // ==========
 
   // administrator_login - computed: true, optional: true, required: false
-  private _administratorLogin?: string | undefined; 
+  private _administratorLogin?: string; 
   public get administratorLogin() {
     return this.getStringAttribute('administrator_login');
   }
-  public set administratorLogin(value: string | undefined) {
+  public set administratorLogin(value: string) {
     this._administratorLogin = value;
   }
   public resetAdministratorLogin() {
@@ -376,15 +450,15 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get administratorLoginInput() {
-    return this._administratorLogin
+    return this._administratorLogin;
   }
 
   // administrator_login_password - computed: false, optional: true, required: false
-  private _administratorLoginPassword?: string | undefined; 
+  private _administratorLoginPassword?: string; 
   public get administratorLoginPassword() {
     return this.getStringAttribute('administrator_login_password');
   }
-  public set administratorLoginPassword(value: string | undefined) {
+  public set administratorLoginPassword(value: string) {
     this._administratorLoginPassword = value;
   }
   public resetAdministratorLoginPassword() {
@@ -392,15 +466,15 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get administratorLoginPasswordInput() {
-    return this._administratorLoginPassword
+    return this._administratorLoginPassword;
   }
 
   // auto_grow_enabled - computed: true, optional: true, required: false
-  private _autoGrowEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _autoGrowEnabled?: boolean | cdktf.IResolvable; 
   public get autoGrowEnabled() {
     return this.getBooleanAttribute('auto_grow_enabled') as any;
   }
-  public set autoGrowEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set autoGrowEnabled(value: boolean | cdktf.IResolvable) {
     this._autoGrowEnabled = value;
   }
   public resetAutoGrowEnabled() {
@@ -408,15 +482,15 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get autoGrowEnabledInput() {
-    return this._autoGrowEnabled
+    return this._autoGrowEnabled;
   }
 
   // backup_retention_days - computed: true, optional: true, required: false
-  private _backupRetentionDays?: number | undefined; 
+  private _backupRetentionDays?: number; 
   public get backupRetentionDays() {
     return this.getNumberAttribute('backup_retention_days');
   }
-  public set backupRetentionDays(value: number | undefined) {
+  public set backupRetentionDays(value: number) {
     this._backupRetentionDays = value;
   }
   public resetBackupRetentionDays() {
@@ -424,15 +498,15 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get backupRetentionDaysInput() {
-    return this._backupRetentionDays
+    return this._backupRetentionDays;
   }
 
   // create_mode - computed: false, optional: true, required: false
-  private _createMode?: string | undefined; 
+  private _createMode?: string; 
   public get createMode() {
     return this.getStringAttribute('create_mode');
   }
-  public set createMode(value: string | undefined) {
+  public set createMode(value: string) {
     this._createMode = value;
   }
   public resetCreateMode() {
@@ -440,15 +514,15 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get createModeInput() {
-    return this._createMode
+    return this._createMode;
   }
 
   // creation_source_server_id - computed: false, optional: true, required: false
-  private _creationSourceServerId?: string | undefined; 
+  private _creationSourceServerId?: string; 
   public get creationSourceServerId() {
     return this.getStringAttribute('creation_source_server_id');
   }
-  public set creationSourceServerId(value: string | undefined) {
+  public set creationSourceServerId(value: string) {
     this._creationSourceServerId = value;
   }
   public resetCreationSourceServerId() {
@@ -456,7 +530,7 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get creationSourceServerIdInput() {
-    return this._creationSourceServerId
+    return this._creationSourceServerId;
   }
 
   // fqdn - computed: true, optional: false, required: false
@@ -465,11 +539,11 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
 
   // geo_redundant_backup_enabled - computed: true, optional: true, required: false
-  private _geoRedundantBackupEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _geoRedundantBackupEnabled?: boolean | cdktf.IResolvable; 
   public get geoRedundantBackupEnabled() {
     return this.getBooleanAttribute('geo_redundant_backup_enabled') as any;
   }
-  public set geoRedundantBackupEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set geoRedundantBackupEnabled(value: boolean | cdktf.IResolvable) {
     this._geoRedundantBackupEnabled = value;
   }
   public resetGeoRedundantBackupEnabled() {
@@ -477,7 +551,7 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get geoRedundantBackupEnabledInput() {
-    return this._geoRedundantBackupEnabled
+    return this._geoRedundantBackupEnabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -495,7 +569,7 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
-    return this._location
+    return this._location;
   }
 
   // name - computed: false, optional: false, required: true
@@ -508,15 +582,15 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled') as any;
   }
-  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
     this._publicNetworkAccessEnabled = value;
   }
   public resetPublicNetworkAccessEnabled() {
@@ -524,7 +598,7 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get publicNetworkAccessEnabledInput() {
-    return this._publicNetworkAccessEnabled
+    return this._publicNetworkAccessEnabled;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -537,15 +611,15 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // restore_point_in_time - computed: false, optional: true, required: false
-  private _restorePointInTime?: string | undefined; 
+  private _restorePointInTime?: string; 
   public get restorePointInTime() {
     return this.getStringAttribute('restore_point_in_time');
   }
-  public set restorePointInTime(value: string | undefined) {
+  public set restorePointInTime(value: string) {
     this._restorePointInTime = value;
   }
   public resetRestorePointInTime() {
@@ -553,7 +627,7 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get restorePointInTimeInput() {
-    return this._restorePointInTime
+    return this._restorePointInTime;
   }
 
   // sku_name - computed: false, optional: false, required: true
@@ -566,15 +640,15 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get skuNameInput() {
-    return this._skuName
+    return this._skuName;
   }
 
   // ssl_enforcement - computed: true, optional: true, required: false
-  private _sslEnforcement?: string | undefined; 
+  private _sslEnforcement?: string; 
   public get sslEnforcement() {
     return this.getStringAttribute('ssl_enforcement');
   }
-  public set sslEnforcement(value: string | undefined) {
+  public set sslEnforcement(value: string) {
     this._sslEnforcement = value;
   }
   public resetSslEnforcement() {
@@ -582,15 +656,15 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sslEnforcementInput() {
-    return this._sslEnforcement
+    return this._sslEnforcement;
   }
 
   // ssl_enforcement_enabled - computed: false, optional: true, required: false
-  private _sslEnforcementEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _sslEnforcementEnabled?: boolean | cdktf.IResolvable; 
   public get sslEnforcementEnabled() {
     return this.getBooleanAttribute('ssl_enforcement_enabled') as any;
   }
-  public set sslEnforcementEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set sslEnforcementEnabled(value: boolean | cdktf.IResolvable) {
     this._sslEnforcementEnabled = value;
   }
   public resetSslEnforcementEnabled() {
@@ -598,15 +672,15 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get sslEnforcementEnabledInput() {
-    return this._sslEnforcementEnabled
+    return this._sslEnforcementEnabled;
   }
 
   // storage_mb - computed: true, optional: true, required: false
-  private _storageMb?: number | undefined; 
+  private _storageMb?: number; 
   public get storageMb() {
     return this.getNumberAttribute('storage_mb');
   }
-  public set storageMb(value: number | undefined) {
+  public set storageMb(value: number) {
     this._storageMb = value;
   }
   public resetStorageMb() {
@@ -614,16 +688,16 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageMbInput() {
-    return this._storageMb
+    return this._storageMb;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -631,7 +705,7 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // version - computed: false, optional: false, required: true
@@ -644,41 +718,39 @@ export class MariadbServer extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get versionInput() {
-    return this._version
+    return this._version;
   }
 
   // storage_profile - computed: false, optional: true, required: false
-  private _storageProfile?: MariadbServerStorageProfile | undefined; 
-  private __storageProfileOutput = new MariadbServerStorageProfileOutputReference(this as any, "storage_profile", true);
+  private _storageProfile = new MariadbServerStorageProfileOutputReference(this as any, "storage_profile", true);
   public get storageProfile() {
-    return this.__storageProfileOutput;
+    return this._storageProfile;
   }
-  public putStorageProfile(value: MariadbServerStorageProfile | undefined) {
-    this._storageProfile = value;
+  public putStorageProfile(value: MariadbServerStorageProfile) {
+    this._storageProfile.internalValue = value;
   }
   public resetStorageProfile() {
-    this._storageProfile = undefined;
+    this._storageProfile.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get storageProfileInput() {
-    return this._storageProfile
+    return this._storageProfile.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MariadbServerTimeouts | undefined; 
-  private __timeoutsOutput = new MariadbServerTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MariadbServerTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MariadbServerTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MariadbServerTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -705,8 +777,8 @@ export class MariadbServer extends cdktf.TerraformResource {
       storage_mb: cdktf.numberToTerraform(this._storageMb),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
-      storage_profile: mariadbServerStorageProfileToTerraform(this._storageProfile),
-      timeouts: mariadbServerTimeoutsToTerraform(this._timeouts),
+      storage_profile: mariadbServerStorageProfileToTerraform(this._storageProfile.internalValue),
+      timeouts: mariadbServerTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

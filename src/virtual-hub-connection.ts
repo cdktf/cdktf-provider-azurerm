@@ -55,7 +55,7 @@ export interface VirtualHubConnectionRoutingPropagatedRouteTable {
   readonly routeTableIds?: string[];
 }
 
-function virtualHubConnectionRoutingPropagatedRouteTableToTerraform(struct?: VirtualHubConnectionRoutingPropagatedRouteTableOutputReference | VirtualHubConnectionRoutingPropagatedRouteTable): any {
+export function virtualHubConnectionRoutingPropagatedRouteTableToTerraform(struct?: VirtualHubConnectionRoutingPropagatedRouteTableOutputReference | VirtualHubConnectionRoutingPropagatedRouteTable): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -76,12 +76,37 @@ export class VirtualHubConnectionRoutingPropagatedRouteTableOutputReference exte
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): VirtualHubConnectionRoutingPropagatedRouteTable | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._labels) {
+      hasAnyValues = true;
+      internalValueResult.labels = this._labels;
+    }
+    if (this._routeTableIds) {
+      hasAnyValues = true;
+      internalValueResult.routeTableIds = this._routeTableIds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualHubConnectionRoutingPropagatedRouteTable | undefined) {
+    if (value === undefined) {
+      this._labels = undefined;
+      this._routeTableIds = undefined;
+    }
+    else {
+      this._labels = value.labels;
+      this._routeTableIds = value.routeTableIds;
+    }
+  }
+
   // labels - computed: true, optional: true, required: false
-  private _labels?: string[] | undefined; 
+  private _labels?: string[]; 
   public get labels() {
     return this.getListAttribute('labels');
   }
-  public set labels(value: string[] | undefined) {
+  public set labels(value: string[]) {
     this._labels = value;
   }
   public resetLabels() {
@@ -89,15 +114,15 @@ export class VirtualHubConnectionRoutingPropagatedRouteTableOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get labelsInput() {
-    return this._labels
+    return this._labels;
   }
 
   // route_table_ids - computed: true, optional: true, required: false
-  private _routeTableIds?: string[] | undefined; 
+  private _routeTableIds?: string[]; 
   public get routeTableIds() {
     return this.getListAttribute('route_table_ids');
   }
-  public set routeTableIds(value: string[] | undefined) {
+  public set routeTableIds(value: string[]) {
     this._routeTableIds = value;
   }
   public resetRouteTableIds() {
@@ -105,7 +130,7 @@ export class VirtualHubConnectionRoutingPropagatedRouteTableOutputReference exte
   }
   // Temporarily expose input value. Use with caution.
   public get routeTableIdsInput() {
-    return this._routeTableIds
+    return this._routeTableIds;
   }
 }
 export interface VirtualHubConnectionRoutingStaticVnetRoute {
@@ -123,7 +148,7 @@ export interface VirtualHubConnectionRoutingStaticVnetRoute {
   readonly nextHopIpAddress?: string;
 }
 
-function virtualHubConnectionRoutingStaticVnetRouteToTerraform(struct?: VirtualHubConnectionRoutingStaticVnetRoute): any {
+export function virtualHubConnectionRoutingStaticVnetRouteToTerraform(struct?: VirtualHubConnectionRoutingStaticVnetRoute): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -154,7 +179,7 @@ export interface VirtualHubConnectionRouting {
   readonly staticVnetRoute?: VirtualHubConnectionRoutingStaticVnetRoute[];
 }
 
-function virtualHubConnectionRoutingToTerraform(struct?: VirtualHubConnectionRoutingOutputReference | VirtualHubConnectionRouting): any {
+export function virtualHubConnectionRoutingToTerraform(struct?: VirtualHubConnectionRoutingOutputReference | VirtualHubConnectionRouting): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -176,12 +201,43 @@ export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObj
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): VirtualHubConnectionRouting | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._associatedRouteTableId) {
+      hasAnyValues = true;
+      internalValueResult.associatedRouteTableId = this._associatedRouteTableId;
+    }
+    if (this._propagatedRouteTable) {
+      hasAnyValues = true;
+      internalValueResult.propagatedRouteTable = this._propagatedRouteTable?.internalValue;
+    }
+    if (this._staticVnetRoute) {
+      hasAnyValues = true;
+      internalValueResult.staticVnetRoute = this._staticVnetRoute;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualHubConnectionRouting | undefined) {
+    if (value === undefined) {
+      this._associatedRouteTableId = undefined;
+      this._propagatedRouteTable.internalValue = undefined;
+      this._staticVnetRoute = undefined;
+    }
+    else {
+      this._associatedRouteTableId = value.associatedRouteTableId;
+      this._propagatedRouteTable.internalValue = value.propagatedRouteTable;
+      this._staticVnetRoute = value.staticVnetRoute;
+    }
+  }
+
   // associated_route_table_id - computed: true, optional: true, required: false
-  private _associatedRouteTableId?: string | undefined; 
+  private _associatedRouteTableId?: string; 
   public get associatedRouteTableId() {
     return this.getStringAttribute('associated_route_table_id');
   }
-  public set associatedRouteTableId(value: string | undefined) {
+  public set associatedRouteTableId(value: string) {
     this._associatedRouteTableId = value;
   }
   public resetAssociatedRouteTableId() {
@@ -189,33 +245,32 @@ export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get associatedRouteTableIdInput() {
-    return this._associatedRouteTableId
+    return this._associatedRouteTableId;
   }
 
   // propagated_route_table - computed: false, optional: true, required: false
-  private _propagatedRouteTable?: VirtualHubConnectionRoutingPropagatedRouteTable | undefined; 
-  private __propagatedRouteTableOutput = new VirtualHubConnectionRoutingPropagatedRouteTableOutputReference(this as any, "propagated_route_table", true);
+  private _propagatedRouteTable = new VirtualHubConnectionRoutingPropagatedRouteTableOutputReference(this as any, "propagated_route_table", true);
   public get propagatedRouteTable() {
-    return this.__propagatedRouteTableOutput;
+    return this._propagatedRouteTable;
   }
-  public putPropagatedRouteTable(value: VirtualHubConnectionRoutingPropagatedRouteTable | undefined) {
-    this._propagatedRouteTable = value;
+  public putPropagatedRouteTable(value: VirtualHubConnectionRoutingPropagatedRouteTable) {
+    this._propagatedRouteTable.internalValue = value;
   }
   public resetPropagatedRouteTable() {
-    this._propagatedRouteTable = undefined;
+    this._propagatedRouteTable.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get propagatedRouteTableInput() {
-    return this._propagatedRouteTable
+    return this._propagatedRouteTable.internalValue;
   }
 
   // static_vnet_route - computed: false, optional: true, required: false
-  private _staticVnetRoute?: VirtualHubConnectionRoutingStaticVnetRoute[] | undefined; 
+  private _staticVnetRoute?: VirtualHubConnectionRoutingStaticVnetRoute[]; 
   public get staticVnetRoute() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('static_vnet_route') as any;
   }
-  public set staticVnetRoute(value: VirtualHubConnectionRoutingStaticVnetRoute[] | undefined) {
+  public set staticVnetRoute(value: VirtualHubConnectionRoutingStaticVnetRoute[]) {
     this._staticVnetRoute = value;
   }
   public resetStaticVnetRoute() {
@@ -223,7 +278,7 @@ export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObj
   }
   // Temporarily expose input value. Use with caution.
   public get staticVnetRouteInput() {
-    return this._staticVnetRoute
+    return this._staticVnetRoute;
   }
 }
 export interface VirtualHubConnectionTimeouts {
@@ -245,7 +300,7 @@ export interface VirtualHubConnectionTimeouts {
   readonly update?: string;
 }
 
-function virtualHubConnectionTimeoutsToTerraform(struct?: VirtualHubConnectionTimeoutsOutputReference | VirtualHubConnectionTimeouts): any {
+export function virtualHubConnectionTimeoutsToTerraform(struct?: VirtualHubConnectionTimeoutsOutputReference | VirtualHubConnectionTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -268,12 +323,49 @@ export class VirtualHubConnectionTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): VirtualHubConnectionTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualHubConnectionTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -281,15 +373,15 @@ export class VirtualHubConnectionTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -297,15 +389,15 @@ export class VirtualHubConnectionTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -313,15 +405,15 @@ export class VirtualHubConnectionTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -329,7 +421,7 @@ export class VirtualHubConnectionTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -371,8 +463,8 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
     this._remoteVirtualNetworkId = config.remoteVirtualNetworkId;
     this._virtualHubId = config.virtualHubId;
     this._vitualNetworkToHubGatewaysTrafficAllowed = config.vitualNetworkToHubGatewaysTrafficAllowed;
-    this._routing = config.routing;
-    this._timeouts = config.timeouts;
+    this._routing.internalValue = config.routing;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -380,11 +472,11 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   // ==========
 
   // hub_to_vitual_network_traffic_allowed - computed: false, optional: true, required: false
-  private _hubToVitualNetworkTrafficAllowed?: boolean | cdktf.IResolvable | undefined; 
+  private _hubToVitualNetworkTrafficAllowed?: boolean | cdktf.IResolvable; 
   public get hubToVitualNetworkTrafficAllowed() {
     return this.getBooleanAttribute('hub_to_vitual_network_traffic_allowed') as any;
   }
-  public set hubToVitualNetworkTrafficAllowed(value: boolean | cdktf.IResolvable | undefined) {
+  public set hubToVitualNetworkTrafficAllowed(value: boolean | cdktf.IResolvable) {
     this._hubToVitualNetworkTrafficAllowed = value;
   }
   public resetHubToVitualNetworkTrafficAllowed() {
@@ -392,7 +484,7 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get hubToVitualNetworkTrafficAllowedInput() {
-    return this._hubToVitualNetworkTrafficAllowed
+    return this._hubToVitualNetworkTrafficAllowed;
   }
 
   // id - computed: true, optional: true, required: false
@@ -401,11 +493,11 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   }
 
   // internet_security_enabled - computed: false, optional: true, required: false
-  private _internetSecurityEnabled?: boolean | cdktf.IResolvable | undefined; 
+  private _internetSecurityEnabled?: boolean | cdktf.IResolvable; 
   public get internetSecurityEnabled() {
     return this.getBooleanAttribute('internet_security_enabled') as any;
   }
-  public set internetSecurityEnabled(value: boolean | cdktf.IResolvable | undefined) {
+  public set internetSecurityEnabled(value: boolean | cdktf.IResolvable) {
     this._internetSecurityEnabled = value;
   }
   public resetInternetSecurityEnabled() {
@@ -413,7 +505,7 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get internetSecurityEnabledInput() {
-    return this._internetSecurityEnabled
+    return this._internetSecurityEnabled;
   }
 
   // name - computed: false, optional: false, required: true
@@ -426,7 +518,7 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // remote_virtual_network_id - computed: false, optional: false, required: true
@@ -439,7 +531,7 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get remoteVirtualNetworkIdInput() {
-    return this._remoteVirtualNetworkId
+    return this._remoteVirtualNetworkId;
   }
 
   // virtual_hub_id - computed: false, optional: false, required: true
@@ -452,15 +544,15 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get virtualHubIdInput() {
-    return this._virtualHubId
+    return this._virtualHubId;
   }
 
   // vitual_network_to_hub_gateways_traffic_allowed - computed: false, optional: true, required: false
-  private _vitualNetworkToHubGatewaysTrafficAllowed?: boolean | cdktf.IResolvable | undefined; 
+  private _vitualNetworkToHubGatewaysTrafficAllowed?: boolean | cdktf.IResolvable; 
   public get vitualNetworkToHubGatewaysTrafficAllowed() {
     return this.getBooleanAttribute('vitual_network_to_hub_gateways_traffic_allowed') as any;
   }
-  public set vitualNetworkToHubGatewaysTrafficAllowed(value: boolean | cdktf.IResolvable | undefined) {
+  public set vitualNetworkToHubGatewaysTrafficAllowed(value: boolean | cdktf.IResolvable) {
     this._vitualNetworkToHubGatewaysTrafficAllowed = value;
   }
   public resetVitualNetworkToHubGatewaysTrafficAllowed() {
@@ -468,41 +560,39 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get vitualNetworkToHubGatewaysTrafficAllowedInput() {
-    return this._vitualNetworkToHubGatewaysTrafficAllowed
+    return this._vitualNetworkToHubGatewaysTrafficAllowed;
   }
 
   // routing - computed: false, optional: true, required: false
-  private _routing?: VirtualHubConnectionRouting | undefined; 
-  private __routingOutput = new VirtualHubConnectionRoutingOutputReference(this as any, "routing", true);
+  private _routing = new VirtualHubConnectionRoutingOutputReference(this as any, "routing", true);
   public get routing() {
-    return this.__routingOutput;
+    return this._routing;
   }
-  public putRouting(value: VirtualHubConnectionRouting | undefined) {
-    this._routing = value;
+  public putRouting(value: VirtualHubConnectionRouting) {
+    this._routing.internalValue = value;
   }
   public resetRouting() {
-    this._routing = undefined;
+    this._routing.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get routingInput() {
-    return this._routing
+    return this._routing.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: VirtualHubConnectionTimeouts | undefined; 
-  private __timeoutsOutput = new VirtualHubConnectionTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new VirtualHubConnectionTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: VirtualHubConnectionTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: VirtualHubConnectionTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -517,8 +607,8 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
       remote_virtual_network_id: cdktf.stringToTerraform(this._remoteVirtualNetworkId),
       virtual_hub_id: cdktf.stringToTerraform(this._virtualHubId),
       vitual_network_to_hub_gateways_traffic_allowed: cdktf.booleanToTerraform(this._vitualNetworkToHubGatewaysTrafficAllowed),
-      routing: virtualHubConnectionRoutingToTerraform(this._routing),
-      timeouts: virtualHubConnectionTimeoutsToTerraform(this._timeouts),
+      routing: virtualHubConnectionRoutingToTerraform(this._routing.internalValue),
+      timeouts: virtualHubConnectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

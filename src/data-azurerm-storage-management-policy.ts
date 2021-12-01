@@ -155,7 +155,7 @@ export interface DataAzurermStorageManagementPolicyTimeouts {
   readonly read?: string;
 }
 
-function dataAzurermStorageManagementPolicyTimeoutsToTerraform(struct?: DataAzurermStorageManagementPolicyTimeoutsOutputReference | DataAzurermStorageManagementPolicyTimeouts): any {
+export function dataAzurermStorageManagementPolicyTimeoutsToTerraform(struct?: DataAzurermStorageManagementPolicyTimeoutsOutputReference | DataAzurermStorageManagementPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -175,12 +175,31 @@ export class DataAzurermStorageManagementPolicyTimeoutsOutputReference extends c
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): DataAzurermStorageManagementPolicyTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermStorageManagementPolicyTimeouts | undefined) {
+    if (value === undefined) {
+      this._read = undefined;
+    }
+    else {
+      this._read = value.read;
+    }
+  }
+
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -188,7 +207,7 @@ export class DataAzurermStorageManagementPolicyTimeoutsOutputReference extends c
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -225,7 +244,7 @@ export class DataAzurermStorageManagementPolicy extends cdktf.TerraformDataSourc
       lifecycle: config.lifecycle
     });
     this._storageAccountId = config.storageAccountId;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -252,24 +271,23 @@ export class DataAzurermStorageManagementPolicy extends cdktf.TerraformDataSourc
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountIdInput() {
-    return this._storageAccountId
+    return this._storageAccountId;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: DataAzurermStorageManagementPolicyTimeouts | undefined; 
-  private __timeoutsOutput = new DataAzurermStorageManagementPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new DataAzurermStorageManagementPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: DataAzurermStorageManagementPolicyTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: DataAzurermStorageManagementPolicyTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -279,7 +297,7 @@ export class DataAzurermStorageManagementPolicy extends cdktf.TerraformDataSourc
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
-      timeouts: dataAzurermStorageManagementPolicyTimeoutsToTerraform(this._timeouts),
+      timeouts: dataAzurermStorageManagementPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

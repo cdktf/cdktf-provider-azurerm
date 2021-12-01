@@ -49,7 +49,7 @@ export interface StorageSyncCloudEndpointTimeouts {
   readonly read?: string;
 }
 
-function storageSyncCloudEndpointTimeoutsToTerraform(struct?: StorageSyncCloudEndpointTimeoutsOutputReference | StorageSyncCloudEndpointTimeouts): any {
+export function storageSyncCloudEndpointTimeoutsToTerraform(struct?: StorageSyncCloudEndpointTimeoutsOutputReference | StorageSyncCloudEndpointTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -71,12 +71,43 @@ export class StorageSyncCloudEndpointTimeoutsOutputReference extends cdktf.Compl
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageSyncCloudEndpointTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageSyncCloudEndpointTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -84,15 +115,15 @@ export class StorageSyncCloudEndpointTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -100,15 +131,15 @@ export class StorageSyncCloudEndpointTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -116,7 +147,7 @@ export class StorageSyncCloudEndpointTimeoutsOutputReference extends cdktf.Compl
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -157,7 +188,7 @@ export class StorageSyncCloudEndpoint extends cdktf.TerraformResource {
     this._storageAccountId = config.storageAccountId;
     this._storageAccountTenantId = config.storageAccountTenantId;
     this._storageSyncGroupId = config.storageSyncGroupId;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -174,7 +205,7 @@ export class StorageSyncCloudEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get fileShareNameInput() {
-    return this._fileShareName
+    return this._fileShareName;
   }
 
   // id - computed: true, optional: true, required: false
@@ -192,7 +223,7 @@ export class StorageSyncCloudEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // storage_account_id - computed: false, optional: false, required: true
@@ -205,15 +236,15 @@ export class StorageSyncCloudEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountIdInput() {
-    return this._storageAccountId
+    return this._storageAccountId;
   }
 
   // storage_account_tenant_id - computed: true, optional: true, required: false
-  private _storageAccountTenantId?: string | undefined; 
+  private _storageAccountTenantId?: string; 
   public get storageAccountTenantId() {
     return this.getStringAttribute('storage_account_tenant_id');
   }
-  public set storageAccountTenantId(value: string | undefined) {
+  public set storageAccountTenantId(value: string) {
     this._storageAccountTenantId = value;
   }
   public resetStorageAccountTenantId() {
@@ -221,7 +252,7 @@ export class StorageSyncCloudEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountTenantIdInput() {
-    return this._storageAccountTenantId
+    return this._storageAccountTenantId;
   }
 
   // storage_sync_group_id - computed: false, optional: false, required: true
@@ -234,24 +265,23 @@ export class StorageSyncCloudEndpoint extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageSyncGroupIdInput() {
-    return this._storageSyncGroupId
+    return this._storageSyncGroupId;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: StorageSyncCloudEndpointTimeouts | undefined; 
-  private __timeoutsOutput = new StorageSyncCloudEndpointTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StorageSyncCloudEndpointTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: StorageSyncCloudEndpointTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: StorageSyncCloudEndpointTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -265,7 +295,7 @@ export class StorageSyncCloudEndpoint extends cdktf.TerraformResource {
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       storage_account_tenant_id: cdktf.stringToTerraform(this._storageAccountTenantId),
       storage_sync_group_id: cdktf.stringToTerraform(this._storageSyncGroupId),
-      timeouts: storageSyncCloudEndpointTimeoutsToTerraform(this._timeouts),
+      timeouts: storageSyncCloudEndpointTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

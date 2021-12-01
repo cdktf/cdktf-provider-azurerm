@@ -47,7 +47,7 @@ export interface StorageBlobInventoryPolicyRulesFilter {
   readonly prefixMatch?: string[];
 }
 
-function storageBlobInventoryPolicyRulesFilterToTerraform(struct?: StorageBlobInventoryPolicyRulesFilterOutputReference | StorageBlobInventoryPolicyRulesFilter): any {
+export function storageBlobInventoryPolicyRulesFilterToTerraform(struct?: StorageBlobInventoryPolicyRulesFilterOutputReference | StorageBlobInventoryPolicyRulesFilter): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -70,6 +70,43 @@ export class StorageBlobInventoryPolicyRulesFilterOutputReference extends cdktf.
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageBlobInventoryPolicyRulesFilter | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._blobTypes) {
+      hasAnyValues = true;
+      internalValueResult.blobTypes = this._blobTypes;
+    }
+    if (this._includeBlobVersions) {
+      hasAnyValues = true;
+      internalValueResult.includeBlobVersions = this._includeBlobVersions;
+    }
+    if (this._includeSnapshots) {
+      hasAnyValues = true;
+      internalValueResult.includeSnapshots = this._includeSnapshots;
+    }
+    if (this._prefixMatch) {
+      hasAnyValues = true;
+      internalValueResult.prefixMatch = this._prefixMatch;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageBlobInventoryPolicyRulesFilter | undefined) {
+    if (value === undefined) {
+      this._blobTypes = undefined;
+      this._includeBlobVersions = undefined;
+      this._includeSnapshots = undefined;
+      this._prefixMatch = undefined;
+    }
+    else {
+      this._blobTypes = value.blobTypes;
+      this._includeBlobVersions = value.includeBlobVersions;
+      this._includeSnapshots = value.includeSnapshots;
+      this._prefixMatch = value.prefixMatch;
+    }
+  }
+
   // blob_types - computed: false, optional: false, required: true
   private _blobTypes?: string[]; 
   public get blobTypes() {
@@ -80,15 +117,15 @@ export class StorageBlobInventoryPolicyRulesFilterOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get blobTypesInput() {
-    return this._blobTypes
+    return this._blobTypes;
   }
 
   // include_blob_versions - computed: false, optional: true, required: false
-  private _includeBlobVersions?: boolean | cdktf.IResolvable | undefined; 
+  private _includeBlobVersions?: boolean | cdktf.IResolvable; 
   public get includeBlobVersions() {
     return this.getBooleanAttribute('include_blob_versions') as any;
   }
-  public set includeBlobVersions(value: boolean | cdktf.IResolvable | undefined) {
+  public set includeBlobVersions(value: boolean | cdktf.IResolvable) {
     this._includeBlobVersions = value;
   }
   public resetIncludeBlobVersions() {
@@ -96,15 +133,15 @@ export class StorageBlobInventoryPolicyRulesFilterOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get includeBlobVersionsInput() {
-    return this._includeBlobVersions
+    return this._includeBlobVersions;
   }
 
   // include_snapshots - computed: false, optional: true, required: false
-  private _includeSnapshots?: boolean | cdktf.IResolvable | undefined; 
+  private _includeSnapshots?: boolean | cdktf.IResolvable; 
   public get includeSnapshots() {
     return this.getBooleanAttribute('include_snapshots') as any;
   }
-  public set includeSnapshots(value: boolean | cdktf.IResolvable | undefined) {
+  public set includeSnapshots(value: boolean | cdktf.IResolvable) {
     this._includeSnapshots = value;
   }
   public resetIncludeSnapshots() {
@@ -112,15 +149,15 @@ export class StorageBlobInventoryPolicyRulesFilterOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get includeSnapshotsInput() {
-    return this._includeSnapshots
+    return this._includeSnapshots;
   }
 
   // prefix_match - computed: false, optional: true, required: false
-  private _prefixMatch?: string[] | undefined; 
+  private _prefixMatch?: string[]; 
   public get prefixMatch() {
     return this.getListAttribute('prefix_match');
   }
-  public set prefixMatch(value: string[] | undefined) {
+  public set prefixMatch(value: string[]) {
     this._prefixMatch = value;
   }
   public resetPrefixMatch() {
@@ -128,7 +165,7 @@ export class StorageBlobInventoryPolicyRulesFilterOutputReference extends cdktf.
   }
   // Temporarily expose input value. Use with caution.
   public get prefixMatchInput() {
-    return this._prefixMatch
+    return this._prefixMatch;
   }
 }
 export interface StorageBlobInventoryPolicyRules {
@@ -144,7 +181,7 @@ export interface StorageBlobInventoryPolicyRules {
   readonly filter: StorageBlobInventoryPolicyRulesFilter;
 }
 
-function storageBlobInventoryPolicyRulesToTerraform(struct?: StorageBlobInventoryPolicyRules): any {
+export function storageBlobInventoryPolicyRulesToTerraform(struct?: StorageBlobInventoryPolicyRules): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -174,7 +211,7 @@ export interface StorageBlobInventoryPolicyTimeouts {
   readonly update?: string;
 }
 
-function storageBlobInventoryPolicyTimeoutsToTerraform(struct?: StorageBlobInventoryPolicyTimeoutsOutputReference | StorageBlobInventoryPolicyTimeouts): any {
+export function storageBlobInventoryPolicyTimeoutsToTerraform(struct?: StorageBlobInventoryPolicyTimeoutsOutputReference | StorageBlobInventoryPolicyTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -197,12 +234,49 @@ export class StorageBlobInventoryPolicyTimeoutsOutputReference extends cdktf.Com
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): StorageBlobInventoryPolicyTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StorageBlobInventoryPolicyTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -210,15 +284,15 @@ export class StorageBlobInventoryPolicyTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -226,15 +300,15 @@ export class StorageBlobInventoryPolicyTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -242,15 +316,15 @@ export class StorageBlobInventoryPolicyTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -258,7 +332,7 @@ export class StorageBlobInventoryPolicyTimeoutsOutputReference extends cdktf.Com
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -297,7 +371,7 @@ export class StorageBlobInventoryPolicy extends cdktf.TerraformResource {
     this._storageAccountId = config.storageAccountId;
     this._storageContainerName = config.storageContainerName;
     this._rules = config.rules;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -319,7 +393,7 @@ export class StorageBlobInventoryPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountIdInput() {
-    return this._storageAccountId
+    return this._storageAccountId;
   }
 
   // storage_container_name - computed: false, optional: false, required: true
@@ -332,7 +406,7 @@ export class StorageBlobInventoryPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageContainerNameInput() {
-    return this._storageContainerName
+    return this._storageContainerName;
   }
 
   // rules - computed: false, optional: false, required: true
@@ -346,24 +420,23 @@ export class StorageBlobInventoryPolicy extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get rulesInput() {
-    return this._rules
+    return this._rules;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: StorageBlobInventoryPolicyTimeouts | undefined; 
-  private __timeoutsOutput = new StorageBlobInventoryPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new StorageBlobInventoryPolicyTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: StorageBlobInventoryPolicyTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: StorageBlobInventoryPolicyTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -375,7 +448,7 @@ export class StorageBlobInventoryPolicy extends cdktf.TerraformResource {
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       storage_container_name: cdktf.stringToTerraform(this._storageContainerName),
       rules: cdktf.listMapper(storageBlobInventoryPolicyRulesToTerraform)(this._rules),
-      timeouts: storageBlobInventoryPolicyTimeoutsToTerraform(this._timeouts),
+      timeouts: storageBlobInventoryPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

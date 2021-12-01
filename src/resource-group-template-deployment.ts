@@ -65,7 +65,7 @@ export interface ResourceGroupTemplateDeploymentTimeouts {
   readonly update?: string;
 }
 
-function resourceGroupTemplateDeploymentTimeoutsToTerraform(struct?: ResourceGroupTemplateDeploymentTimeoutsOutputReference | ResourceGroupTemplateDeploymentTimeouts): any {
+export function resourceGroupTemplateDeploymentTimeoutsToTerraform(struct?: ResourceGroupTemplateDeploymentTimeoutsOutputReference | ResourceGroupTemplateDeploymentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -88,12 +88,49 @@ export class ResourceGroupTemplateDeploymentTimeoutsOutputReference extends cdkt
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ResourceGroupTemplateDeploymentTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ResourceGroupTemplateDeploymentTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -101,15 +138,15 @@ export class ResourceGroupTemplateDeploymentTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -117,15 +154,15 @@ export class ResourceGroupTemplateDeploymentTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -133,15 +170,15 @@ export class ResourceGroupTemplateDeploymentTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -149,7 +186,7 @@ export class ResourceGroupTemplateDeploymentTimeoutsOutputReference extends cdkt
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -193,7 +230,7 @@ export class ResourceGroupTemplateDeployment extends cdktf.TerraformResource {
     this._tags = config.tags;
     this._templateContent = config.templateContent;
     this._templateSpecVersionId = config.templateSpecVersionId;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -201,11 +238,11 @@ export class ResourceGroupTemplateDeployment extends cdktf.TerraformResource {
   // ==========
 
   // debug_level - computed: false, optional: true, required: false
-  private _debugLevel?: string | undefined; 
+  private _debugLevel?: string; 
   public get debugLevel() {
     return this.getStringAttribute('debug_level');
   }
-  public set debugLevel(value: string | undefined) {
+  public set debugLevel(value: string) {
     this._debugLevel = value;
   }
   public resetDebugLevel() {
@@ -213,7 +250,7 @@ export class ResourceGroupTemplateDeployment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get debugLevelInput() {
-    return this._debugLevel
+    return this._debugLevel;
   }
 
   // deployment_mode - computed: false, optional: false, required: true
@@ -226,7 +263,7 @@ export class ResourceGroupTemplateDeployment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get deploymentModeInput() {
-    return this._deploymentMode
+    return this._deploymentMode;
   }
 
   // id - computed: true, optional: true, required: false
@@ -244,7 +281,7 @@ export class ResourceGroupTemplateDeployment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // output_content - computed: true, optional: false, required: false
@@ -253,11 +290,11 @@ export class ResourceGroupTemplateDeployment extends cdktf.TerraformResource {
   }
 
   // parameters_content - computed: true, optional: true, required: false
-  private _parametersContent?: string | undefined; 
+  private _parametersContent?: string; 
   public get parametersContent() {
     return this.getStringAttribute('parameters_content');
   }
-  public set parametersContent(value: string | undefined) {
+  public set parametersContent(value: string) {
     this._parametersContent = value;
   }
   public resetParametersContent() {
@@ -265,7 +302,7 @@ export class ResourceGroupTemplateDeployment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get parametersContentInput() {
-    return this._parametersContent
+    return this._parametersContent;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -278,16 +315,16 @@ export class ResourceGroupTemplateDeployment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('tags') as any;
   }
-  public set tags(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
     this._tags = value;
   }
   public resetTags() {
@@ -295,15 +332,15 @@ export class ResourceGroupTemplateDeployment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
-    return this._tags
+    return this._tags;
   }
 
   // template_content - computed: true, optional: true, required: false
-  private _templateContent?: string | undefined; 
+  private _templateContent?: string; 
   public get templateContent() {
     return this.getStringAttribute('template_content');
   }
-  public set templateContent(value: string | undefined) {
+  public set templateContent(value: string) {
     this._templateContent = value;
   }
   public resetTemplateContent() {
@@ -311,15 +348,15 @@ export class ResourceGroupTemplateDeployment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get templateContentInput() {
-    return this._templateContent
+    return this._templateContent;
   }
 
   // template_spec_version_id - computed: false, optional: true, required: false
-  private _templateSpecVersionId?: string | undefined; 
+  private _templateSpecVersionId?: string; 
   public get templateSpecVersionId() {
     return this.getStringAttribute('template_spec_version_id');
   }
-  public set templateSpecVersionId(value: string | undefined) {
+  public set templateSpecVersionId(value: string) {
     this._templateSpecVersionId = value;
   }
   public resetTemplateSpecVersionId() {
@@ -327,24 +364,23 @@ export class ResourceGroupTemplateDeployment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get templateSpecVersionIdInput() {
-    return this._templateSpecVersionId
+    return this._templateSpecVersionId;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ResourceGroupTemplateDeploymentTimeouts | undefined; 
-  private __timeoutsOutput = new ResourceGroupTemplateDeploymentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ResourceGroupTemplateDeploymentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ResourceGroupTemplateDeploymentTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ResourceGroupTemplateDeploymentTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -361,7 +397,7 @@ export class ResourceGroupTemplateDeployment extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       template_content: cdktf.stringToTerraform(this._templateContent),
       template_spec_version_id: cdktf.stringToTerraform(this._templateSpecVersionId),
-      timeouts: resourceGroupTemplateDeploymentTimeoutsToTerraform(this._timeouts),
+      timeouts: resourceGroupTemplateDeploymentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

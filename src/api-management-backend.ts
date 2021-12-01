@@ -81,7 +81,7 @@ export interface ApiManagementBackendCredentialsAuthorization {
   readonly scheme?: string;
 }
 
-function apiManagementBackendCredentialsAuthorizationToTerraform(struct?: ApiManagementBackendCredentialsAuthorizationOutputReference | ApiManagementBackendCredentialsAuthorization): any {
+export function apiManagementBackendCredentialsAuthorizationToTerraform(struct?: ApiManagementBackendCredentialsAuthorizationOutputReference | ApiManagementBackendCredentialsAuthorization): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -102,12 +102,37 @@ export class ApiManagementBackendCredentialsAuthorizationOutputReference extends
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementBackendCredentialsAuthorization | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._parameter) {
+      hasAnyValues = true;
+      internalValueResult.parameter = this._parameter;
+    }
+    if (this._scheme) {
+      hasAnyValues = true;
+      internalValueResult.scheme = this._scheme;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementBackendCredentialsAuthorization | undefined) {
+    if (value === undefined) {
+      this._parameter = undefined;
+      this._scheme = undefined;
+    }
+    else {
+      this._parameter = value.parameter;
+      this._scheme = value.scheme;
+    }
+  }
+
   // parameter - computed: false, optional: true, required: false
-  private _parameter?: string | undefined; 
+  private _parameter?: string; 
   public get parameter() {
     return this.getStringAttribute('parameter');
   }
-  public set parameter(value: string | undefined) {
+  public set parameter(value: string) {
     this._parameter = value;
   }
   public resetParameter() {
@@ -115,15 +140,15 @@ export class ApiManagementBackendCredentialsAuthorizationOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get parameterInput() {
-    return this._parameter
+    return this._parameter;
   }
 
   // scheme - computed: false, optional: true, required: false
-  private _scheme?: string | undefined; 
+  private _scheme?: string; 
   public get scheme() {
     return this.getStringAttribute('scheme');
   }
-  public set scheme(value: string | undefined) {
+  public set scheme(value: string) {
     this._scheme = value;
   }
   public resetScheme() {
@@ -131,7 +156,7 @@ export class ApiManagementBackendCredentialsAuthorizationOutputReference extends
   }
   // Temporarily expose input value. Use with caution.
   public get schemeInput() {
-    return this._scheme
+    return this._scheme;
   }
 }
 export interface ApiManagementBackendCredentials {
@@ -155,7 +180,7 @@ export interface ApiManagementBackendCredentials {
   readonly authorization?: ApiManagementBackendCredentialsAuthorization;
 }
 
-function apiManagementBackendCredentialsToTerraform(struct?: ApiManagementBackendCredentialsOutputReference | ApiManagementBackendCredentials): any {
+export function apiManagementBackendCredentialsToTerraform(struct?: ApiManagementBackendCredentialsOutputReference | ApiManagementBackendCredentials): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -178,12 +203,49 @@ export class ApiManagementBackendCredentialsOutputReference extends cdktf.Comple
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementBackendCredentials | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._certificate) {
+      hasAnyValues = true;
+      internalValueResult.certificate = this._certificate;
+    }
+    if (this._header) {
+      hasAnyValues = true;
+      internalValueResult.header = this._header;
+    }
+    if (this._query) {
+      hasAnyValues = true;
+      internalValueResult.query = this._query;
+    }
+    if (this._authorization) {
+      hasAnyValues = true;
+      internalValueResult.authorization = this._authorization?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementBackendCredentials | undefined) {
+    if (value === undefined) {
+      this._certificate = undefined;
+      this._header = undefined;
+      this._query = undefined;
+      this._authorization.internalValue = undefined;
+    }
+    else {
+      this._certificate = value.certificate;
+      this._header = value.header;
+      this._query = value.query;
+      this._authorization.internalValue = value.authorization;
+    }
+  }
+
   // certificate - computed: false, optional: true, required: false
-  private _certificate?: string[] | undefined; 
+  private _certificate?: string[]; 
   public get certificate() {
     return this.getListAttribute('certificate');
   }
-  public set certificate(value: string[] | undefined) {
+  public set certificate(value: string[]) {
     this._certificate = value;
   }
   public resetCertificate() {
@@ -191,16 +253,16 @@ export class ApiManagementBackendCredentialsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get certificateInput() {
-    return this._certificate
+    return this._certificate;
   }
 
   // header - computed: false, optional: true, required: false
-  private _header?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _header?: { [key: string]: string } | cdktf.IResolvable; 
   public get header() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('header') as any;
   }
-  public set header(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set header(value: { [key: string]: string } | cdktf.IResolvable) {
     this._header = value;
   }
   public resetHeader() {
@@ -208,16 +270,16 @@ export class ApiManagementBackendCredentialsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get headerInput() {
-    return this._header
+    return this._header;
   }
 
   // query - computed: false, optional: true, required: false
-  private _query?: { [key: string]: string } | cdktf.IResolvable | undefined; 
+  private _query?: { [key: string]: string } | cdktf.IResolvable; 
   public get query() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('query') as any;
   }
-  public set query(value: { [key: string]: string } | cdktf.IResolvable | undefined) {
+  public set query(value: { [key: string]: string } | cdktf.IResolvable) {
     this._query = value;
   }
   public resetQuery() {
@@ -225,24 +287,23 @@ export class ApiManagementBackendCredentialsOutputReference extends cdktf.Comple
   }
   // Temporarily expose input value. Use with caution.
   public get queryInput() {
-    return this._query
+    return this._query;
   }
 
   // authorization - computed: false, optional: true, required: false
-  private _authorization?: ApiManagementBackendCredentialsAuthorization | undefined; 
-  private __authorizationOutput = new ApiManagementBackendCredentialsAuthorizationOutputReference(this as any, "authorization", true);
+  private _authorization = new ApiManagementBackendCredentialsAuthorizationOutputReference(this as any, "authorization", true);
   public get authorization() {
-    return this.__authorizationOutput;
+    return this._authorization;
   }
-  public putAuthorization(value: ApiManagementBackendCredentialsAuthorization | undefined) {
-    this._authorization = value;
+  public putAuthorization(value: ApiManagementBackendCredentialsAuthorization) {
+    this._authorization.internalValue = value;
   }
   public resetAuthorization() {
-    this._authorization = undefined;
+    this._authorization.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get authorizationInput() {
-    return this._authorization
+    return this._authorization.internalValue;
   }
 }
 export interface ApiManagementBackendProxy {
@@ -260,7 +321,7 @@ export interface ApiManagementBackendProxy {
   readonly username: string;
 }
 
-function apiManagementBackendProxyToTerraform(struct?: ApiManagementBackendProxyOutputReference | ApiManagementBackendProxy): any {
+export function apiManagementBackendProxyToTerraform(struct?: ApiManagementBackendProxyOutputReference | ApiManagementBackendProxy): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -282,12 +343,43 @@ export class ApiManagementBackendProxyOutputReference extends cdktf.ComplexObjec
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementBackendProxy | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._password) {
+      hasAnyValues = true;
+      internalValueResult.password = this._password;
+    }
+    if (this._url) {
+      hasAnyValues = true;
+      internalValueResult.url = this._url;
+    }
+    if (this._username) {
+      hasAnyValues = true;
+      internalValueResult.username = this._username;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementBackendProxy | undefined) {
+    if (value === undefined) {
+      this._password = undefined;
+      this._url = undefined;
+      this._username = undefined;
+    }
+    else {
+      this._password = value.password;
+      this._url = value.url;
+      this._username = value.username;
+    }
+  }
+
   // password - computed: false, optional: true, required: false
-  private _password?: string | undefined; 
+  private _password?: string; 
   public get password() {
     return this.getStringAttribute('password');
   }
-  public set password(value: string | undefined) {
+  public set password(value: string) {
     this._password = value;
   }
   public resetPassword() {
@@ -295,7 +387,7 @@ export class ApiManagementBackendProxyOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get passwordInput() {
-    return this._password
+    return this._password;
   }
 
   // url - computed: false, optional: false, required: true
@@ -308,7 +400,7 @@ export class ApiManagementBackendProxyOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get urlInput() {
-    return this._url
+    return this._url;
   }
 
   // username - computed: false, optional: false, required: true
@@ -321,7 +413,7 @@ export class ApiManagementBackendProxyOutputReference extends cdktf.ComplexObjec
   }
   // Temporarily expose input value. Use with caution.
   public get usernameInput() {
-    return this._username
+    return this._username;
   }
 }
 export interface ApiManagementBackendServiceFabricClusterServerX509Name {
@@ -335,7 +427,7 @@ export interface ApiManagementBackendServiceFabricClusterServerX509Name {
   readonly name: string;
 }
 
-function apiManagementBackendServiceFabricClusterServerX509NameToTerraform(struct?: ApiManagementBackendServiceFabricClusterServerX509Name): any {
+export function apiManagementBackendServiceFabricClusterServerX509NameToTerraform(struct?: ApiManagementBackendServiceFabricClusterServerX509Name): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -375,7 +467,7 @@ export interface ApiManagementBackendServiceFabricCluster {
   readonly serverX509Name?: ApiManagementBackendServiceFabricClusterServerX509Name[];
 }
 
-function apiManagementBackendServiceFabricClusterToTerraform(struct?: ApiManagementBackendServiceFabricClusterOutputReference | ApiManagementBackendServiceFabricCluster): any {
+export function apiManagementBackendServiceFabricClusterToTerraform(struct?: ApiManagementBackendServiceFabricClusterOutputReference | ApiManagementBackendServiceFabricCluster): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -400,12 +492,61 @@ export class ApiManagementBackendServiceFabricClusterOutputReference extends cdk
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementBackendServiceFabricCluster | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._clientCertificateId) {
+      hasAnyValues = true;
+      internalValueResult.clientCertificateId = this._clientCertificateId;
+    }
+    if (this._clientCertificateThumbprint) {
+      hasAnyValues = true;
+      internalValueResult.clientCertificateThumbprint = this._clientCertificateThumbprint;
+    }
+    if (this._managementEndpoints) {
+      hasAnyValues = true;
+      internalValueResult.managementEndpoints = this._managementEndpoints;
+    }
+    if (this._maxPartitionResolutionRetries) {
+      hasAnyValues = true;
+      internalValueResult.maxPartitionResolutionRetries = this._maxPartitionResolutionRetries;
+    }
+    if (this._serverCertificateThumbprints) {
+      hasAnyValues = true;
+      internalValueResult.serverCertificateThumbprints = this._serverCertificateThumbprints;
+    }
+    if (this._serverX509Name) {
+      hasAnyValues = true;
+      internalValueResult.serverX509Name = this._serverX509Name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementBackendServiceFabricCluster | undefined) {
+    if (value === undefined) {
+      this._clientCertificateId = undefined;
+      this._clientCertificateThumbprint = undefined;
+      this._managementEndpoints = undefined;
+      this._maxPartitionResolutionRetries = undefined;
+      this._serverCertificateThumbprints = undefined;
+      this._serverX509Name = undefined;
+    }
+    else {
+      this._clientCertificateId = value.clientCertificateId;
+      this._clientCertificateThumbprint = value.clientCertificateThumbprint;
+      this._managementEndpoints = value.managementEndpoints;
+      this._maxPartitionResolutionRetries = value.maxPartitionResolutionRetries;
+      this._serverCertificateThumbprints = value.serverCertificateThumbprints;
+      this._serverX509Name = value.serverX509Name;
+    }
+  }
+
   // client_certificate_id - computed: true, optional: true, required: false
-  private _clientCertificateId?: string | undefined; 
+  private _clientCertificateId?: string; 
   public get clientCertificateId() {
     return this.getStringAttribute('client_certificate_id');
   }
-  public set clientCertificateId(value: string | undefined) {
+  public set clientCertificateId(value: string) {
     this._clientCertificateId = value;
   }
   public resetClientCertificateId() {
@@ -413,15 +554,15 @@ export class ApiManagementBackendServiceFabricClusterOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get clientCertificateIdInput() {
-    return this._clientCertificateId
+    return this._clientCertificateId;
   }
 
   // client_certificate_thumbprint - computed: true, optional: true, required: false
-  private _clientCertificateThumbprint?: string | undefined; 
+  private _clientCertificateThumbprint?: string; 
   public get clientCertificateThumbprint() {
     return this.getStringAttribute('client_certificate_thumbprint');
   }
-  public set clientCertificateThumbprint(value: string | undefined) {
+  public set clientCertificateThumbprint(value: string) {
     this._clientCertificateThumbprint = value;
   }
   public resetClientCertificateThumbprint() {
@@ -429,7 +570,7 @@ export class ApiManagementBackendServiceFabricClusterOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get clientCertificateThumbprintInput() {
-    return this._clientCertificateThumbprint
+    return this._clientCertificateThumbprint;
   }
 
   // management_endpoints - computed: false, optional: false, required: true
@@ -442,7 +583,7 @@ export class ApiManagementBackendServiceFabricClusterOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get managementEndpointsInput() {
-    return this._managementEndpoints
+    return this._managementEndpoints;
   }
 
   // max_partition_resolution_retries - computed: false, optional: false, required: true
@@ -455,15 +596,15 @@ export class ApiManagementBackendServiceFabricClusterOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get maxPartitionResolutionRetriesInput() {
-    return this._maxPartitionResolutionRetries
+    return this._maxPartitionResolutionRetries;
   }
 
   // server_certificate_thumbprints - computed: false, optional: true, required: false
-  private _serverCertificateThumbprints?: string[] | undefined; 
+  private _serverCertificateThumbprints?: string[]; 
   public get serverCertificateThumbprints() {
     return this.getListAttribute('server_certificate_thumbprints');
   }
-  public set serverCertificateThumbprints(value: string[] | undefined) {
+  public set serverCertificateThumbprints(value: string[]) {
     this._serverCertificateThumbprints = value;
   }
   public resetServerCertificateThumbprints() {
@@ -471,16 +612,16 @@ export class ApiManagementBackendServiceFabricClusterOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get serverCertificateThumbprintsInput() {
-    return this._serverCertificateThumbprints
+    return this._serverCertificateThumbprints;
   }
 
   // server_x509_name - computed: false, optional: true, required: false
-  private _serverX509Name?: ApiManagementBackendServiceFabricClusterServerX509Name[] | undefined; 
+  private _serverX509Name?: ApiManagementBackendServiceFabricClusterServerX509Name[]; 
   public get serverX509Name() {
     // Getting the computed value is not yet implemented
     return this.interpolationForAttribute('server_x509_name') as any;
   }
-  public set serverX509Name(value: ApiManagementBackendServiceFabricClusterServerX509Name[] | undefined) {
+  public set serverX509Name(value: ApiManagementBackendServiceFabricClusterServerX509Name[]) {
     this._serverX509Name = value;
   }
   public resetServerX509Name() {
@@ -488,7 +629,7 @@ export class ApiManagementBackendServiceFabricClusterOutputReference extends cdk
   }
   // Temporarily expose input value. Use with caution.
   public get serverX509NameInput() {
-    return this._serverX509Name
+    return this._serverX509Name;
   }
 }
 export interface ApiManagementBackendTimeouts {
@@ -510,7 +651,7 @@ export interface ApiManagementBackendTimeouts {
   readonly update?: string;
 }
 
-function apiManagementBackendTimeoutsToTerraform(struct?: ApiManagementBackendTimeoutsOutputReference | ApiManagementBackendTimeouts): any {
+export function apiManagementBackendTimeoutsToTerraform(struct?: ApiManagementBackendTimeoutsOutputReference | ApiManagementBackendTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -533,12 +674,49 @@ export class ApiManagementBackendTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementBackendTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementBackendTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -546,15 +724,15 @@ export class ApiManagementBackendTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -562,15 +740,15 @@ export class ApiManagementBackendTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -578,15 +756,15 @@ export class ApiManagementBackendTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -594,7 +772,7 @@ export class ApiManagementBackendTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 export interface ApiManagementBackendTls {
@@ -608,7 +786,7 @@ export interface ApiManagementBackendTls {
   readonly validateCertificateName?: boolean | cdktf.IResolvable;
 }
 
-function apiManagementBackendTlsToTerraform(struct?: ApiManagementBackendTlsOutputReference | ApiManagementBackendTls): any {
+export function apiManagementBackendTlsToTerraform(struct?: ApiManagementBackendTlsOutputReference | ApiManagementBackendTls): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -629,12 +807,37 @@ export class ApiManagementBackendTlsOutputReference extends cdktf.ComplexObject 
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementBackendTls | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._validateCertificateChain) {
+      hasAnyValues = true;
+      internalValueResult.validateCertificateChain = this._validateCertificateChain;
+    }
+    if (this._validateCertificateName) {
+      hasAnyValues = true;
+      internalValueResult.validateCertificateName = this._validateCertificateName;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementBackendTls | undefined) {
+    if (value === undefined) {
+      this._validateCertificateChain = undefined;
+      this._validateCertificateName = undefined;
+    }
+    else {
+      this._validateCertificateChain = value.validateCertificateChain;
+      this._validateCertificateName = value.validateCertificateName;
+    }
+  }
+
   // validate_certificate_chain - computed: false, optional: true, required: false
-  private _validateCertificateChain?: boolean | cdktf.IResolvable | undefined; 
+  private _validateCertificateChain?: boolean | cdktf.IResolvable; 
   public get validateCertificateChain() {
     return this.getBooleanAttribute('validate_certificate_chain') as any;
   }
-  public set validateCertificateChain(value: boolean | cdktf.IResolvable | undefined) {
+  public set validateCertificateChain(value: boolean | cdktf.IResolvable) {
     this._validateCertificateChain = value;
   }
   public resetValidateCertificateChain() {
@@ -642,15 +845,15 @@ export class ApiManagementBackendTlsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get validateCertificateChainInput() {
-    return this._validateCertificateChain
+    return this._validateCertificateChain;
   }
 
   // validate_certificate_name - computed: false, optional: true, required: false
-  private _validateCertificateName?: boolean | cdktf.IResolvable | undefined; 
+  private _validateCertificateName?: boolean | cdktf.IResolvable; 
   public get validateCertificateName() {
     return this.getBooleanAttribute('validate_certificate_name') as any;
   }
-  public set validateCertificateName(value: boolean | cdktf.IResolvable | undefined) {
+  public set validateCertificateName(value: boolean | cdktf.IResolvable) {
     this._validateCertificateName = value;
   }
   public resetValidateCertificateName() {
@@ -658,7 +861,7 @@ export class ApiManagementBackendTlsOutputReference extends cdktf.ComplexObject 
   }
   // Temporarily expose input value. Use with caution.
   public get validateCertificateNameInput() {
-    return this._validateCertificateName
+    return this._validateCertificateName;
   }
 }
 
@@ -702,11 +905,11 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
     this._resourceId = config.resourceId;
     this._title = config.title;
     this._url = config.url;
-    this._credentials = config.credentials;
-    this._proxy = config.proxy;
-    this._serviceFabricCluster = config.serviceFabricCluster;
-    this._timeouts = config.timeouts;
-    this._tls = config.tls;
+    this._credentials.internalValue = config.credentials;
+    this._proxy.internalValue = config.proxy;
+    this._serviceFabricCluster.internalValue = config.serviceFabricCluster;
+    this._timeouts.internalValue = config.timeouts;
+    this._tls.internalValue = config.tls;
   }
 
   // ==========
@@ -723,15 +926,15 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get apiManagementNameInput() {
-    return this._apiManagementName
+    return this._apiManagementName;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -739,7 +942,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -757,7 +960,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // protocol - computed: false, optional: false, required: true
@@ -770,7 +973,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get protocolInput() {
-    return this._protocol
+    return this._protocol;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -783,15 +986,15 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // resource_id - computed: false, optional: true, required: false
-  private _resourceId?: string | undefined; 
+  private _resourceId?: string; 
   public get resourceId() {
     return this.getStringAttribute('resource_id');
   }
-  public set resourceId(value: string | undefined) {
+  public set resourceId(value: string) {
     this._resourceId = value;
   }
   public resetResourceId() {
@@ -799,15 +1002,15 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceIdInput() {
-    return this._resourceId
+    return this._resourceId;
   }
 
   // title - computed: false, optional: true, required: false
-  private _title?: string | undefined; 
+  private _title?: string; 
   public get title() {
     return this.getStringAttribute('title');
   }
-  public set title(value: string | undefined) {
+  public set title(value: string) {
     this._title = value;
   }
   public resetTitle() {
@@ -815,7 +1018,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get titleInput() {
-    return this._title
+    return this._title;
   }
 
   // url - computed: false, optional: false, required: true
@@ -828,92 +1031,87 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get urlInput() {
-    return this._url
+    return this._url;
   }
 
   // credentials - computed: false, optional: true, required: false
-  private _credentials?: ApiManagementBackendCredentials | undefined; 
-  private __credentialsOutput = new ApiManagementBackendCredentialsOutputReference(this as any, "credentials", true);
+  private _credentials = new ApiManagementBackendCredentialsOutputReference(this as any, "credentials", true);
   public get credentials() {
-    return this.__credentialsOutput;
+    return this._credentials;
   }
-  public putCredentials(value: ApiManagementBackendCredentials | undefined) {
-    this._credentials = value;
+  public putCredentials(value: ApiManagementBackendCredentials) {
+    this._credentials.internalValue = value;
   }
   public resetCredentials() {
-    this._credentials = undefined;
+    this._credentials.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get credentialsInput() {
-    return this._credentials
+    return this._credentials.internalValue;
   }
 
   // proxy - computed: false, optional: true, required: false
-  private _proxy?: ApiManagementBackendProxy | undefined; 
-  private __proxyOutput = new ApiManagementBackendProxyOutputReference(this as any, "proxy", true);
+  private _proxy = new ApiManagementBackendProxyOutputReference(this as any, "proxy", true);
   public get proxy() {
-    return this.__proxyOutput;
+    return this._proxy;
   }
-  public putProxy(value: ApiManagementBackendProxy | undefined) {
-    this._proxy = value;
+  public putProxy(value: ApiManagementBackendProxy) {
+    this._proxy.internalValue = value;
   }
   public resetProxy() {
-    this._proxy = undefined;
+    this._proxy.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get proxyInput() {
-    return this._proxy
+    return this._proxy.internalValue;
   }
 
   // service_fabric_cluster - computed: false, optional: true, required: false
-  private _serviceFabricCluster?: ApiManagementBackendServiceFabricCluster | undefined; 
-  private __serviceFabricClusterOutput = new ApiManagementBackendServiceFabricClusterOutputReference(this as any, "service_fabric_cluster", true);
+  private _serviceFabricCluster = new ApiManagementBackendServiceFabricClusterOutputReference(this as any, "service_fabric_cluster", true);
   public get serviceFabricCluster() {
-    return this.__serviceFabricClusterOutput;
+    return this._serviceFabricCluster;
   }
-  public putServiceFabricCluster(value: ApiManagementBackendServiceFabricCluster | undefined) {
-    this._serviceFabricCluster = value;
+  public putServiceFabricCluster(value: ApiManagementBackendServiceFabricCluster) {
+    this._serviceFabricCluster.internalValue = value;
   }
   public resetServiceFabricCluster() {
-    this._serviceFabricCluster = undefined;
+    this._serviceFabricCluster.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get serviceFabricClusterInput() {
-    return this._serviceFabricCluster
+    return this._serviceFabricCluster.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ApiManagementBackendTimeouts | undefined; 
-  private __timeoutsOutput = new ApiManagementBackendTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApiManagementBackendTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ApiManagementBackendTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ApiManagementBackendTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // tls - computed: false, optional: true, required: false
-  private _tls?: ApiManagementBackendTls | undefined; 
-  private __tlsOutput = new ApiManagementBackendTlsOutputReference(this as any, "tls", true);
+  private _tls = new ApiManagementBackendTlsOutputReference(this as any, "tls", true);
   public get tls() {
-    return this.__tlsOutput;
+    return this._tls;
   }
-  public putTls(value: ApiManagementBackendTls | undefined) {
-    this._tls = value;
+  public putTls(value: ApiManagementBackendTls) {
+    this._tls.internalValue = value;
   }
   public resetTls() {
-    this._tls = undefined;
+    this._tls.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get tlsInput() {
-    return this._tls
+    return this._tls.internalValue;
   }
 
   // =========
@@ -930,11 +1128,11 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
       resource_id: cdktf.stringToTerraform(this._resourceId),
       title: cdktf.stringToTerraform(this._title),
       url: cdktf.stringToTerraform(this._url),
-      credentials: apiManagementBackendCredentialsToTerraform(this._credentials),
-      proxy: apiManagementBackendProxyToTerraform(this._proxy),
-      service_fabric_cluster: apiManagementBackendServiceFabricClusterToTerraform(this._serviceFabricCluster),
-      timeouts: apiManagementBackendTimeoutsToTerraform(this._timeouts),
-      tls: apiManagementBackendTlsToTerraform(this._tls),
+      credentials: apiManagementBackendCredentialsToTerraform(this._credentials.internalValue),
+      proxy: apiManagementBackendProxyToTerraform(this._proxy.internalValue),
+      service_fabric_cluster: apiManagementBackendServiceFabricClusterToTerraform(this._serviceFabricCluster.internalValue),
+      timeouts: apiManagementBackendTimeoutsToTerraform(this._timeouts.internalValue),
+      tls: apiManagementBackendTlsToTerraform(this._tls.internalValue),
     };
   }
 }

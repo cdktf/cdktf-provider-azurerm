@@ -41,7 +41,7 @@ export interface LighthouseAssignmentTimeouts {
   readonly read?: string;
 }
 
-function lighthouseAssignmentTimeoutsToTerraform(struct?: LighthouseAssignmentTimeoutsOutputReference | LighthouseAssignmentTimeouts): any {
+export function lighthouseAssignmentTimeoutsToTerraform(struct?: LighthouseAssignmentTimeoutsOutputReference | LighthouseAssignmentTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -63,12 +63,43 @@ export class LighthouseAssignmentTimeoutsOutputReference extends cdktf.ComplexOb
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): LighthouseAssignmentTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LighthouseAssignmentTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -76,15 +107,15 @@ export class LighthouseAssignmentTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -92,15 +123,15 @@ export class LighthouseAssignmentTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -108,7 +139,7 @@ export class LighthouseAssignmentTimeoutsOutputReference extends cdktf.ComplexOb
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -147,7 +178,7 @@ export class LighthouseAssignment extends cdktf.TerraformResource {
     this._lighthouseDefinitionId = config.lighthouseDefinitionId;
     this._name = config.name;
     this._scope = config.scope;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -169,15 +200,15 @@ export class LighthouseAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get lighthouseDefinitionIdInput() {
-    return this._lighthouseDefinitionId
+    return this._lighthouseDefinitionId;
   }
 
   // name - computed: true, optional: true, required: false
-  private _name?: string | undefined; 
+  private _name?: string; 
   public get name() {
     return this.getStringAttribute('name');
   }
-  public set name(value: string | undefined) {
+  public set name(value: string) {
     this._name = value;
   }
   public resetName() {
@@ -185,7 +216,7 @@ export class LighthouseAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // scope - computed: false, optional: false, required: true
@@ -198,24 +229,23 @@ export class LighthouseAssignment extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get scopeInput() {
-    return this._scope
+    return this._scope;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: LighthouseAssignmentTimeouts | undefined; 
-  private __timeoutsOutput = new LighthouseAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new LighthouseAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: LighthouseAssignmentTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: LighthouseAssignmentTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -227,7 +257,7 @@ export class LighthouseAssignment extends cdktf.TerraformResource {
       lighthouse_definition_id: cdktf.stringToTerraform(this._lighthouseDefinitionId),
       name: cdktf.stringToTerraform(this._name),
       scope: cdktf.stringToTerraform(this._scope),
-      timeouts: lighthouseAssignmentTimeoutsToTerraform(this._timeouts),
+      timeouts: lighthouseAssignmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -41,7 +41,7 @@ export interface ApiManagementNotificationRecipientUserTimeouts {
   readonly read?: string;
 }
 
-function apiManagementNotificationRecipientUserTimeoutsToTerraform(struct?: ApiManagementNotificationRecipientUserTimeoutsOutputReference | ApiManagementNotificationRecipientUserTimeouts): any {
+export function apiManagementNotificationRecipientUserTimeoutsToTerraform(struct?: ApiManagementNotificationRecipientUserTimeoutsOutputReference | ApiManagementNotificationRecipientUserTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -63,12 +63,43 @@ export class ApiManagementNotificationRecipientUserTimeoutsOutputReference exten
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): ApiManagementNotificationRecipientUserTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementNotificationRecipientUserTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -76,15 +107,15 @@ export class ApiManagementNotificationRecipientUserTimeoutsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -92,15 +123,15 @@ export class ApiManagementNotificationRecipientUserTimeoutsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -108,7 +139,7 @@ export class ApiManagementNotificationRecipientUserTimeoutsOutputReference exten
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 }
 
@@ -147,7 +178,7 @@ export class ApiManagementNotificationRecipientUser extends cdktf.TerraformResou
     this._apiManagementId = config.apiManagementId;
     this._notificationType = config.notificationType;
     this._userId = config.userId;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -164,7 +195,7 @@ export class ApiManagementNotificationRecipientUser extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get apiManagementIdInput() {
-    return this._apiManagementId
+    return this._apiManagementId;
   }
 
   // id - computed: true, optional: true, required: false
@@ -182,7 +213,7 @@ export class ApiManagementNotificationRecipientUser extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get notificationTypeInput() {
-    return this._notificationType
+    return this._notificationType;
   }
 
   // user_id - computed: false, optional: false, required: true
@@ -195,24 +226,23 @@ export class ApiManagementNotificationRecipientUser extends cdktf.TerraformResou
   }
   // Temporarily expose input value. Use with caution.
   public get userIdInput() {
-    return this._userId
+    return this._userId;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: ApiManagementNotificationRecipientUserTimeouts | undefined; 
-  private __timeoutsOutput = new ApiManagementNotificationRecipientUserTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new ApiManagementNotificationRecipientUserTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: ApiManagementNotificationRecipientUserTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: ApiManagementNotificationRecipientUserTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -224,7 +254,7 @@ export class ApiManagementNotificationRecipientUser extends cdktf.TerraformResou
       api_management_id: cdktf.stringToTerraform(this._apiManagementId),
       notification_type: cdktf.stringToTerraform(this._notificationType),
       user_id: cdktf.stringToTerraform(this._userId),
-      timeouts: apiManagementNotificationRecipientUserTimeoutsToTerraform(this._timeouts),
+      timeouts: apiManagementNotificationRecipientUserTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }

@@ -61,7 +61,7 @@ export interface MediaAssetTimeouts {
   readonly update?: string;
 }
 
-function mediaAssetTimeoutsToTerraform(struct?: MediaAssetTimeoutsOutputReference | MediaAssetTimeouts): any {
+export function mediaAssetTimeoutsToTerraform(struct?: MediaAssetTimeoutsOutputReference | MediaAssetTimeouts): any {
   if (!cdktf.canInspect(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -84,12 +84,49 @@ export class MediaAssetTimeoutsOutputReference extends cdktf.ComplexObject {
     super(terraformResource, terraformAttribute, isSingleItem);
   }
 
+  public get internalValue(): MediaAssetTimeouts | undefined {
+    let hasAnyValues = false;
+    const internalValueResult: any = {};
+    if (this._create) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MediaAssetTimeouts | undefined) {
+    if (value === undefined) {
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
   // create - computed: false, optional: true, required: false
-  private _create?: string | undefined; 
+  private _create?: string; 
   public get create() {
     return this.getStringAttribute('create');
   }
-  public set create(value: string | undefined) {
+  public set create(value: string) {
     this._create = value;
   }
   public resetCreate() {
@@ -97,15 +134,15 @@ export class MediaAssetTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get createInput() {
-    return this._create
+    return this._create;
   }
 
   // delete - computed: false, optional: true, required: false
-  private _delete?: string | undefined; 
+  private _delete?: string; 
   public get delete() {
     return this.getStringAttribute('delete');
   }
-  public set delete(value: string | undefined) {
+  public set delete(value: string) {
     this._delete = value;
   }
   public resetDelete() {
@@ -113,15 +150,15 @@ export class MediaAssetTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get deleteInput() {
-    return this._delete
+    return this._delete;
   }
 
   // read - computed: false, optional: true, required: false
-  private _read?: string | undefined; 
+  private _read?: string; 
   public get read() {
     return this.getStringAttribute('read');
   }
-  public set read(value: string | undefined) {
+  public set read(value: string) {
     this._read = value;
   }
   public resetRead() {
@@ -129,15 +166,15 @@ export class MediaAssetTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get readInput() {
-    return this._read
+    return this._read;
   }
 
   // update - computed: false, optional: true, required: false
-  private _update?: string | undefined; 
+  private _update?: string; 
   public get update() {
     return this.getStringAttribute('update');
   }
-  public set update(value: string | undefined) {
+  public set update(value: string) {
     this._update = value;
   }
   public resetUpdate() {
@@ -145,7 +182,7 @@ export class MediaAssetTimeoutsOutputReference extends cdktf.ComplexObject {
   }
   // Temporarily expose input value. Use with caution.
   public get updateInput() {
-    return this._update
+    return this._update;
   }
 }
 
@@ -188,7 +225,7 @@ export class MediaAsset extends cdktf.TerraformResource {
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
     this._storageAccountName = config.storageAccountName;
-    this._timeouts = config.timeouts;
+    this._timeouts.internalValue = config.timeouts;
   }
 
   // ==========
@@ -196,11 +233,11 @@ export class MediaAsset extends cdktf.TerraformResource {
   // ==========
 
   // alternate_id - computed: false, optional: true, required: false
-  private _alternateId?: string | undefined; 
+  private _alternateId?: string; 
   public get alternateId() {
     return this.getStringAttribute('alternate_id');
   }
-  public set alternateId(value: string | undefined) {
+  public set alternateId(value: string) {
     this._alternateId = value;
   }
   public resetAlternateId() {
@@ -208,15 +245,15 @@ export class MediaAsset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get alternateIdInput() {
-    return this._alternateId
+    return this._alternateId;
   }
 
   // container - computed: true, optional: true, required: false
-  private _container?: string | undefined; 
+  private _container?: string; 
   public get container() {
     return this.getStringAttribute('container');
   }
-  public set container(value: string | undefined) {
+  public set container(value: string) {
     this._container = value;
   }
   public resetContainer() {
@@ -224,15 +261,15 @@ export class MediaAsset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get containerInput() {
-    return this._container
+    return this._container;
   }
 
   // description - computed: false, optional: true, required: false
-  private _description?: string | undefined; 
+  private _description?: string; 
   public get description() {
     return this.getStringAttribute('description');
   }
-  public set description(value: string | undefined) {
+  public set description(value: string) {
     this._description = value;
   }
   public resetDescription() {
@@ -240,7 +277,7 @@ export class MediaAsset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get descriptionInput() {
-    return this._description
+    return this._description;
   }
 
   // id - computed: true, optional: true, required: false
@@ -258,7 +295,7 @@ export class MediaAsset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get mediaServicesAccountNameInput() {
-    return this._mediaServicesAccountName
+    return this._mediaServicesAccountName;
   }
 
   // name - computed: false, optional: false, required: true
@@ -271,7 +308,7 @@ export class MediaAsset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
-    return this._name
+    return this._name;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -284,15 +321,15 @@ export class MediaAsset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
-    return this._resourceGroupName
+    return this._resourceGroupName;
   }
 
   // storage_account_name - computed: true, optional: true, required: false
-  private _storageAccountName?: string | undefined; 
+  private _storageAccountName?: string; 
   public get storageAccountName() {
     return this.getStringAttribute('storage_account_name');
   }
-  public set storageAccountName(value: string | undefined) {
+  public set storageAccountName(value: string) {
     this._storageAccountName = value;
   }
   public resetStorageAccountName() {
@@ -300,24 +337,23 @@ export class MediaAsset extends cdktf.TerraformResource {
   }
   // Temporarily expose input value. Use with caution.
   public get storageAccountNameInput() {
-    return this._storageAccountName
+    return this._storageAccountName;
   }
 
   // timeouts - computed: false, optional: true, required: false
-  private _timeouts?: MediaAssetTimeouts | undefined; 
-  private __timeoutsOutput = new MediaAssetTimeoutsOutputReference(this as any, "timeouts", true);
+  private _timeouts = new MediaAssetTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
-    return this.__timeoutsOutput;
+    return this._timeouts;
   }
-  public putTimeouts(value: MediaAssetTimeouts | undefined) {
-    this._timeouts = value;
+  public putTimeouts(value: MediaAssetTimeouts) {
+    this._timeouts.internalValue = value;
   }
   public resetTimeouts() {
-    this._timeouts = undefined;
+    this._timeouts.internalValue = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get timeoutsInput() {
-    return this._timeouts
+    return this._timeouts.internalValue;
   }
 
   // =========
@@ -333,7 +369,7 @@ export class MediaAsset extends cdktf.TerraformResource {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       storage_account_name: cdktf.stringToTerraform(this._storageAccountName),
-      timeouts: mediaAssetTimeoutsToTerraform(this._timeouts),
+      timeouts: mediaAssetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
 }
