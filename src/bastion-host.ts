@@ -20,6 +20,10 @@ export interface BastionHostConfig extends cdktf.TerraformMetaArguments {
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html#sku BastionHost#sku}
+  */
+  readonly sku?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html#tags BastionHost#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
@@ -322,6 +326,7 @@ export class BastionHost extends cdktf.TerraformResource {
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._sku = config.sku;
     this._tags = config.tags;
     this._ipConfiguration.internalValue = config.ipConfiguration;
     this._timeouts.internalValue = config.timeouts;
@@ -378,6 +383,22 @@ export class BastionHost extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName;
+  }
+
+  // sku - computed: false, optional: true, required: false
+  private _sku?: string; 
+  public get sku() {
+    return this.getStringAttribute('sku');
+  }
+  public set sku(value: string) {
+    this._sku = value;
+  }
+  public resetSku() {
+    this._sku = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get skuInput() {
+    return this._sku;
   }
 
   // tags - computed: false, optional: true, required: false
@@ -438,6 +459,7 @@ export class BastionHost extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       ip_configuration: bastionHostIpConfigurationToTerraform(this._ipConfiguration.internalValue),
       timeouts: bastionHostTimeoutsToTerraform(this._timeouts.internalValue),

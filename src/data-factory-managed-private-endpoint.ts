@@ -12,13 +12,17 @@ export interface DataFactoryManagedPrivateEndpointConfig extends cdktf.Terraform
   */
   readonly dataFactoryId: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_managed_private_endpoint.html#fqdns DataFactoryManagedPrivateEndpoint#fqdns}
+  */
+  readonly fqdns?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_managed_private_endpoint.html#name DataFactoryManagedPrivateEndpoint#name}
   */
   readonly name: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_managed_private_endpoint.html#subresource_name DataFactoryManagedPrivateEndpoint#subresource_name}
   */
-  readonly subresourceName: string;
+  readonly subresourceName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_managed_private_endpoint.html#target_resource_id DataFactoryManagedPrivateEndpoint#target_resource_id}
   */
@@ -180,6 +184,7 @@ export class DataFactoryManagedPrivateEndpoint extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._dataFactoryId = config.dataFactoryId;
+    this._fqdns = config.fqdns;
     this._name = config.name;
     this._subresourceName = config.subresourceName;
     this._targetResourceId = config.targetResourceId;
@@ -203,6 +208,22 @@ export class DataFactoryManagedPrivateEndpoint extends cdktf.TerraformResource {
     return this._dataFactoryId;
   }
 
+  // fqdns - computed: false, optional: true, required: false
+  private _fqdns?: string[]; 
+  public get fqdns() {
+    return this.getListAttribute('fqdns');
+  }
+  public set fqdns(value: string[]) {
+    this._fqdns = value;
+  }
+  public resetFqdns() {
+    this._fqdns = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fqdnsInput() {
+    return this._fqdns;
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
@@ -221,13 +242,16 @@ export class DataFactoryManagedPrivateEndpoint extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // subresource_name - computed: false, optional: false, required: true
+  // subresource_name - computed: false, optional: true, required: false
   private _subresourceName?: string; 
   public get subresourceName() {
     return this.getStringAttribute('subresource_name');
   }
   public set subresourceName(value: string) {
     this._subresourceName = value;
+  }
+  public resetSubresourceName() {
+    this._subresourceName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get subresourceNameInput() {
@@ -270,6 +294,7 @@ export class DataFactoryManagedPrivateEndpoint extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
+      fqdns: cdktf.listMapper(cdktf.stringToTerraform)(this._fqdns),
       name: cdktf.stringToTerraform(this._name),
       subresource_name: cdktf.stringToTerraform(this._subresourceName),
       target_resource_id: cdktf.stringToTerraform(this._targetResourceId),

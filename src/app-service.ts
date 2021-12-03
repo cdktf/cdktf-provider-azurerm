@@ -24,6 +24,10 @@ export interface AppServiceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly clientCertEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#client_cert_mode AppService#client_cert_mode}
+  */
+  readonly clientCertMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service.html#enabled AppService#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
@@ -3594,6 +3598,7 @@ export class AppService extends cdktf.TerraformResource {
     this._appSettings = config.appSettings;
     this._clientAffinityEnabled = config.clientAffinityEnabled;
     this._clientCertEnabled = config.clientCertEnabled;
+    this._clientCertMode = config.clientCertMode;
     this._enabled = config.enabled;
     this._httpsOnly = config.httpsOnly;
     this._keyVaultReferenceIdentityId = config.keyVaultReferenceIdentityId;
@@ -3676,6 +3681,22 @@ export class AppService extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get clientCertEnabledInput() {
     return this._clientCertEnabled;
+  }
+
+  // client_cert_mode - computed: true, optional: true, required: false
+  private _clientCertMode?: string; 
+  public get clientCertMode() {
+    return this.getStringAttribute('client_cert_mode');
+  }
+  public set clientCertMode(value: string) {
+    this._clientCertMode = value;
+  }
+  public resetClientCertMode() {
+    this._clientCertMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get clientCertModeInput() {
+    return this._clientCertMode;
   }
 
   // custom_domain_verification_id - computed: true, optional: false, required: false
@@ -3978,6 +3999,7 @@ export class AppService extends cdktf.TerraformResource {
       app_settings: cdktf.hashMapper(cdktf.anyToTerraform)(this._appSettings),
       client_affinity_enabled: cdktf.booleanToTerraform(this._clientAffinityEnabled),
       client_cert_enabled: cdktf.booleanToTerraform(this._clientCertEnabled),
+      client_cert_mode: cdktf.stringToTerraform(this._clientCertMode),
       enabled: cdktf.booleanToTerraform(this._enabled),
       https_only: cdktf.booleanToTerraform(this._httpsOnly),
       key_vault_reference_identity_id: cdktf.stringToTerraform(this._keyVaultReferenceIdentityId),

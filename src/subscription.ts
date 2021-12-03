@@ -30,6 +30,10 @@ export interface SubscriptionConfig extends cdktf.TerraformMetaArguments {
   */
   readonly subscriptionName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription.html#tags Subscription#tags}
+  */
+  readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  /**
   * The workload type for the Subscription. Possible values are `Production` (default) and `DevTest`.
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription.html#workload Subscription#workload}
@@ -222,6 +226,7 @@ export class Subscription extends cdktf.TerraformResource {
     this._billingScopeId = config.billingScopeId;
     this._subscriptionId = config.subscriptionId;
     this._subscriptionName = config.subscriptionName;
+    this._tags = config.tags;
     this._workload = config.workload;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -296,9 +301,21 @@ export class Subscription extends cdktf.TerraformResource {
     return this._subscriptionName;
   }
 
-  // tags - computed: true, optional: false, required: false
-  public tags(key: string): string {
-    return new cdktf.StringMap(this, 'tags').lookup(key);
+  // tags - computed: false, optional: true, required: false
+  private _tags?: { [key: string]: string } | cdktf.IResolvable; 
+  public get tags() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('tags') as any;
+  }
+  public set tags(value: { [key: string]: string } | cdktf.IResolvable) {
+    this._tags = value;
+  }
+  public resetTags() {
+    this._tags = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tagsInput() {
+    return this._tags;
   }
 
   // tenant_id - computed: true, optional: false, required: false
@@ -348,6 +365,7 @@ export class Subscription extends cdktf.TerraformResource {
       billing_scope_id: cdktf.stringToTerraform(this._billingScopeId),
       subscription_id: cdktf.stringToTerraform(this._subscriptionId),
       subscription_name: cdktf.stringToTerraform(this._subscriptionName),
+      tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       workload: cdktf.stringToTerraform(this._workload),
       timeouts: subscriptionTimeoutsToTerraform(this._timeouts.internalValue),
     };
