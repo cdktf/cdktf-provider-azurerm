@@ -1186,11 +1186,11 @@ export interface ContainerGroupDnsConfig {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group.html#options ContainerGroup#options}
   */
-  readonly options: string[];
+  readonly options?: string[];
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_group.html#search_domains ContainerGroup#search_domains}
   */
-  readonly searchDomains: string[];
+  readonly searchDomains?: string[];
 }
 
 export function containerGroupDnsConfigToTerraform(struct?: ContainerGroupDnsConfigOutputReference | ContainerGroupDnsConfig): any {
@@ -1259,7 +1259,7 @@ export class ContainerGroupDnsConfigOutputReference extends cdktf.ComplexObject 
     return this._nameservers;
   }
 
-  // options - computed: false, optional: false, required: true
+  // options - computed: false, optional: true, required: false
   private _options?: string[]; 
   public get options() {
     return this.getListAttribute('options');
@@ -1267,18 +1267,24 @@ export class ContainerGroupDnsConfigOutputReference extends cdktf.ComplexObject 
   public set options(value: string[]) {
     this._options = value;
   }
+  public resetOptions() {
+    this._options = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get optionsInput() {
     return this._options;
   }
 
-  // search_domains - computed: false, optional: false, required: true
+  // search_domains - computed: false, optional: true, required: false
   private _searchDomains?: string[]; 
   public get searchDomains() {
     return this.getListAttribute('search_domains');
   }
   public set searchDomains(value: string[]) {
     this._searchDomains = value;
+  }
+  public resetSearchDomains() {
+    this._searchDomains = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get searchDomainsInput() {

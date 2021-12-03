@@ -1759,7 +1759,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     return this._enableNodePublicIp;
   }
 
-  // eviction_policy - computed: true, optional: true, required: false
+  // eviction_policy - computed: false, optional: true, required: false
   private _evictionPolicy?: string; 
   public get evictionPolicy() {
     return this.getStringAttribute('eviction_policy');
@@ -1951,7 +1951,7 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     return this._nodePublicIpPrefixId;
   }
 
-  // node_taints - computed: true, optional: true, required: false
+  // node_taints - computed: false, optional: true, required: false
   private _nodeTaints?: string[]; 
   public get nodeTaints() {
     return this.getListAttribute('node_taints');

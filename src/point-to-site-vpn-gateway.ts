@@ -287,6 +287,10 @@ export class PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolOut
 }
 export interface PointToSiteVpnGatewayConnectionConfiguration {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#internet_security_enabled PointToSiteVpnGateway#internet_security_enabled}
+  */
+  readonly internetSecurityEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/point_to_site_vpn_gateway.html#name PointToSiteVpnGateway#name}
   */
   readonly name: string;
@@ -310,6 +314,7 @@ export function pointToSiteVpnGatewayConnectionConfigurationToTerraform(struct?:
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    internet_security_enabled: cdktf.booleanToTerraform(struct!.internetSecurityEnabled),
     name: cdktf.stringToTerraform(struct!.name),
     route: pointToSiteVpnGatewayConnectionConfigurationRouteToTerraform(struct!.route),
     vpn_client_address_pool: pointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolToTerraform(struct!.vpnClientAddressPool),
@@ -329,6 +334,10 @@ export class PointToSiteVpnGatewayConnectionConfigurationOutputReference extends
   public get internalValue(): PointToSiteVpnGatewayConnectionConfiguration | undefined {
     let hasAnyValues = false;
     const internalValueResult: any = {};
+    if (this._internetSecurityEnabled) {
+      hasAnyValues = true;
+      internalValueResult.internetSecurityEnabled = this._internetSecurityEnabled;
+    }
     if (this._name) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
@@ -346,15 +355,33 @@ export class PointToSiteVpnGatewayConnectionConfigurationOutputReference extends
 
   public set internalValue(value: PointToSiteVpnGatewayConnectionConfiguration | undefined) {
     if (value === undefined) {
+      this._internetSecurityEnabled = undefined;
       this._name = undefined;
       this._route.internalValue = undefined;
       this._vpnClientAddressPool.internalValue = undefined;
     }
     else {
+      this._internetSecurityEnabled = value.internetSecurityEnabled;
       this._name = value.name;
       this._route.internalValue = value.route;
       this._vpnClientAddressPool.internalValue = value.vpnClientAddressPool;
     }
+  }
+
+  // internet_security_enabled - computed: false, optional: true, required: false
+  private _internetSecurityEnabled?: boolean | cdktf.IResolvable; 
+  public get internetSecurityEnabled() {
+    return this.getBooleanAttribute('internet_security_enabled') as any;
+  }
+  public set internetSecurityEnabled(value: boolean | cdktf.IResolvable) {
+    this._internetSecurityEnabled = value;
+  }
+  public resetInternetSecurityEnabled() {
+    this._internetSecurityEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get internetSecurityEnabledInput() {
+    return this._internetSecurityEnabled;
   }
 
   // name - computed: false, optional: false, required: true

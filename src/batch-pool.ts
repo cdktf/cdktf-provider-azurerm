@@ -996,6 +996,10 @@ export interface BatchPoolStartTask {
   */
   readonly commandLine: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#common_environment_properties BatchPool#common_environment_properties}
+  */
+  readonly commonEnvironmentProperties?: { [key: string]: string } | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#environment BatchPool#environment}
   */
   readonly environment?: { [key: string]: string } | cdktf.IResolvable;
@@ -1003,6 +1007,10 @@ export interface BatchPoolStartTask {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#max_task_retry_count BatchPool#max_task_retry_count}
   */
   readonly maxTaskRetryCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#task_retry_maximum BatchPool#task_retry_maximum}
+  */
+  readonly taskRetryMaximum?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_pool.html#wait_for_success BatchPool#wait_for_success}
   */
@@ -1028,8 +1036,10 @@ export function batchPoolStartTaskToTerraform(struct?: BatchPoolStartTaskOutputR
   }
   return {
     command_line: cdktf.stringToTerraform(struct!.commandLine),
+    common_environment_properties: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.commonEnvironmentProperties),
     environment: cdktf.hashMapper(cdktf.anyToTerraform)(struct!.environment),
     max_task_retry_count: cdktf.numberToTerraform(struct!.maxTaskRetryCount),
+    task_retry_maximum: cdktf.numberToTerraform(struct!.taskRetryMaximum),
     wait_for_success: cdktf.booleanToTerraform(struct!.waitForSuccess),
     resource_file: cdktf.listMapper(batchPoolStartTaskResourceFileToTerraform)(struct!.resourceFile),
     user_identity: batchPoolStartTaskUserIdentityToTerraform(struct!.userIdentity),
@@ -1053,6 +1063,10 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.commandLine = this._commandLine;
     }
+    if (this._commonEnvironmentProperties) {
+      hasAnyValues = true;
+      internalValueResult.commonEnvironmentProperties = this._commonEnvironmentProperties;
+    }
     if (this._environment) {
       hasAnyValues = true;
       internalValueResult.environment = this._environment;
@@ -1060,6 +1074,10 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
     if (this._maxTaskRetryCount) {
       hasAnyValues = true;
       internalValueResult.maxTaskRetryCount = this._maxTaskRetryCount;
+    }
+    if (this._taskRetryMaximum) {
+      hasAnyValues = true;
+      internalValueResult.taskRetryMaximum = this._taskRetryMaximum;
     }
     if (this._waitForSuccess) {
       hasAnyValues = true;
@@ -1079,16 +1097,20 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
   public set internalValue(value: BatchPoolStartTask | undefined) {
     if (value === undefined) {
       this._commandLine = undefined;
+      this._commonEnvironmentProperties = undefined;
       this._environment = undefined;
       this._maxTaskRetryCount = undefined;
+      this._taskRetryMaximum = undefined;
       this._waitForSuccess = undefined;
       this._resourceFile = undefined;
       this._userIdentity.internalValue = undefined;
     }
     else {
       this._commandLine = value.commandLine;
+      this._commonEnvironmentProperties = value.commonEnvironmentProperties;
       this._environment = value.environment;
       this._maxTaskRetryCount = value.maxTaskRetryCount;
+      this._taskRetryMaximum = value.taskRetryMaximum;
       this._waitForSuccess = value.waitForSuccess;
       this._resourceFile = value.resourceFile;
       this._userIdentity.internalValue = value.userIdentity;
@@ -1108,7 +1130,24 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
     return this._commandLine;
   }
 
-  // environment - computed: false, optional: true, required: false
+  // common_environment_properties - computed: true, optional: true, required: false
+  private _commonEnvironmentProperties?: { [key: string]: string } | cdktf.IResolvable; 
+  public get commonEnvironmentProperties() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('common_environment_properties') as any;
+  }
+  public set commonEnvironmentProperties(value: { [key: string]: string } | cdktf.IResolvable) {
+    this._commonEnvironmentProperties = value;
+  }
+  public resetCommonEnvironmentProperties() {
+    this._commonEnvironmentProperties = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get commonEnvironmentPropertiesInput() {
+    return this._commonEnvironmentProperties;
+  }
+
+  // environment - computed: true, optional: true, required: false
   private _environment?: { [key: string]: string } | cdktf.IResolvable; 
   public get environment() {
     // Getting the computed value is not yet implemented
@@ -1125,7 +1164,7 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
     return this._environment;
   }
 
-  // max_task_retry_count - computed: false, optional: true, required: false
+  // max_task_retry_count - computed: true, optional: true, required: false
   private _maxTaskRetryCount?: number; 
   public get maxTaskRetryCount() {
     return this.getNumberAttribute('max_task_retry_count');
@@ -1139,6 +1178,22 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get maxTaskRetryCountInput() {
     return this._maxTaskRetryCount;
+  }
+
+  // task_retry_maximum - computed: true, optional: true, required: false
+  private _taskRetryMaximum?: number; 
+  public get taskRetryMaximum() {
+    return this.getNumberAttribute('task_retry_maximum');
+  }
+  public set taskRetryMaximum(value: number) {
+    this._taskRetryMaximum = value;
+  }
+  public resetTaskRetryMaximum() {
+    this._taskRetryMaximum = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get taskRetryMaximumInput() {
+    return this._taskRetryMaximum;
   }
 
   // wait_for_success - computed: false, optional: true, required: false
