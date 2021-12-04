@@ -138,6 +138,8 @@ export function dataFactoryDatasetDelimitedTextAzureBlobFsLocationToTerraform(st
 }
 
 export class DataFactoryDatasetDelimitedTextAzureBlobFsLocationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -148,7 +150,7 @@ export class DataFactoryDatasetDelimitedTextAzureBlobFsLocationOutputReference e
   }
 
   public get internalValue(): DataFactoryDatasetDelimitedTextAzureBlobFsLocation | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._fileSystem) {
       hasAnyValues = true;
@@ -167,11 +169,13 @@ export class DataFactoryDatasetDelimitedTextAzureBlobFsLocationOutputReference e
 
   public set internalValue(value: DataFactoryDatasetDelimitedTextAzureBlobFsLocation | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._fileSystem = undefined;
       this._filename = undefined;
       this._path = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._fileSystem = value.fileSystem;
       this._filename = value.filename;
       this._path = value.path;
@@ -261,6 +265,8 @@ export function dataFactoryDatasetDelimitedTextAzureBlobStorageLocationToTerrafo
 }
 
 export class DataFactoryDatasetDelimitedTextAzureBlobStorageLocationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -271,7 +277,7 @@ export class DataFactoryDatasetDelimitedTextAzureBlobStorageLocationOutputRefere
   }
 
   public get internalValue(): DataFactoryDatasetDelimitedTextAzureBlobStorageLocation | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._container) {
       hasAnyValues = true;
@@ -298,6 +304,7 @@ export class DataFactoryDatasetDelimitedTextAzureBlobStorageLocationOutputRefere
 
   public set internalValue(value: DataFactoryDatasetDelimitedTextAzureBlobStorageLocation | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._container = undefined;
       this._dynamicFilenameEnabled = undefined;
       this._dynamicPathEnabled = undefined;
@@ -305,6 +312,7 @@ export class DataFactoryDatasetDelimitedTextAzureBlobStorageLocationOutputRefere
       this._path = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._container = value.container;
       this._dynamicFilenameEnabled = value.dynamicFilenameEnabled;
       this._dynamicPathEnabled = value.dynamicPathEnabled;
@@ -428,6 +436,8 @@ export function dataFactoryDatasetDelimitedTextHttpServerLocationToTerraform(str
 }
 
 export class DataFactoryDatasetDelimitedTextHttpServerLocationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -438,7 +448,7 @@ export class DataFactoryDatasetDelimitedTextHttpServerLocationOutputReference ex
   }
 
   public get internalValue(): DataFactoryDatasetDelimitedTextHttpServerLocation | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dynamicFilenameEnabled) {
       hasAnyValues = true;
@@ -465,6 +475,7 @@ export class DataFactoryDatasetDelimitedTextHttpServerLocationOutputReference ex
 
   public set internalValue(value: DataFactoryDatasetDelimitedTextHttpServerLocation | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dynamicFilenameEnabled = undefined;
       this._dynamicPathEnabled = undefined;
       this._filename = undefined;
@@ -472,6 +483,7 @@ export class DataFactoryDatasetDelimitedTextHttpServerLocationOutputReference ex
       this._relativeUrl = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dynamicFilenameEnabled = value.dynamicFilenameEnabled;
       this._dynamicPathEnabled = value.dynamicPathEnabled;
       this._filename = value.filename;
@@ -611,6 +623,8 @@ export function dataFactoryDatasetDelimitedTextTimeoutsToTerraform(struct?: Data
 }
 
 export class DataFactoryDatasetDelimitedTextTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -621,7 +635,7 @@ export class DataFactoryDatasetDelimitedTextTimeoutsOutputReference extends cdkt
   }
 
   public get internalValue(): DataFactoryDatasetDelimitedTextTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -644,12 +658,14 @@ export class DataFactoryDatasetDelimitedTextTimeoutsOutputReference extends cdkt
 
   public set internalValue(value: DataFactoryDatasetDelimitedTextTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

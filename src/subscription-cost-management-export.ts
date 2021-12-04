@@ -73,6 +73,8 @@ export function subscriptionCostManagementExportExportDataOptionsToTerraform(str
 }
 
 export class SubscriptionCostManagementExportExportDataOptionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -83,7 +85,7 @@ export class SubscriptionCostManagementExportExportDataOptionsOutputReference ex
   }
 
   public get internalValue(): SubscriptionCostManagementExportExportDataOptions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._timeFrame) {
       hasAnyValues = true;
@@ -98,10 +100,12 @@ export class SubscriptionCostManagementExportExportDataOptionsOutputReference ex
 
   public set internalValue(value: SubscriptionCostManagementExportExportDataOptions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._timeFrame = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._timeFrame = value.timeFrame;
       this._type = value.type;
     }
@@ -156,6 +160,8 @@ export function subscriptionCostManagementExportExportDataStorageLocationToTerra
 }
 
 export class SubscriptionCostManagementExportExportDataStorageLocationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -166,7 +172,7 @@ export class SubscriptionCostManagementExportExportDataStorageLocationOutputRefe
   }
 
   public get internalValue(): SubscriptionCostManagementExportExportDataStorageLocation | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._containerId) {
       hasAnyValues = true;
@@ -181,10 +187,12 @@ export class SubscriptionCostManagementExportExportDataStorageLocationOutputRefe
 
   public set internalValue(value: SubscriptionCostManagementExportExportDataStorageLocation | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._containerId = undefined;
       this._rootFolderPath = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._containerId = value.containerId;
       this._rootFolderPath = value.rootFolderPath;
     }
@@ -249,6 +257,8 @@ export function subscriptionCostManagementExportTimeoutsToTerraform(struct?: Sub
 }
 
 export class SubscriptionCostManagementExportTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -259,7 +269,7 @@ export class SubscriptionCostManagementExportTimeoutsOutputReference extends cdk
   }
 
   public get internalValue(): SubscriptionCostManagementExportTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -282,12 +292,14 @@ export class SubscriptionCostManagementExportTimeoutsOutputReference extends cdk
 
   public set internalValue(value: SubscriptionCostManagementExportTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

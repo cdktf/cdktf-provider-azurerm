@@ -85,6 +85,8 @@ export function mssqlElasticpoolPerDatabaseSettingsToTerraform(struct?: MssqlEla
 }
 
 export class MssqlElasticpoolPerDatabaseSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -95,7 +97,7 @@ export class MssqlElasticpoolPerDatabaseSettingsOutputReference extends cdktf.Co
   }
 
   public get internalValue(): MssqlElasticpoolPerDatabaseSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxCapacity) {
       hasAnyValues = true;
@@ -110,10 +112,12 @@ export class MssqlElasticpoolPerDatabaseSettingsOutputReference extends cdktf.Co
 
   public set internalValue(value: MssqlElasticpoolPerDatabaseSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxCapacity = undefined;
       this._minCapacity = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxCapacity = value.maxCapacity;
       this._minCapacity = value.minCapacity;
     }
@@ -178,6 +182,8 @@ export function mssqlElasticpoolSkuToTerraform(struct?: MssqlElasticpoolSkuOutpu
 }
 
 export class MssqlElasticpoolSkuOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -188,7 +194,7 @@ export class MssqlElasticpoolSkuOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): MssqlElasticpoolSku | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._capacity) {
       hasAnyValues = true;
@@ -211,12 +217,14 @@ export class MssqlElasticpoolSkuOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: MssqlElasticpoolSku | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._capacity = undefined;
       this._family = undefined;
       this._name = undefined;
       this._tier = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._capacity = value.capacity;
       this._family = value.family;
       this._name = value.name;
@@ -312,6 +320,8 @@ export function mssqlElasticpoolTimeoutsToTerraform(struct?: MssqlElasticpoolTim
 }
 
 export class MssqlElasticpoolTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -322,7 +332,7 @@ export class MssqlElasticpoolTimeoutsOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): MssqlElasticpoolTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -345,12 +355,14 @@ export class MssqlElasticpoolTimeoutsOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: MssqlElasticpoolTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

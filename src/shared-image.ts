@@ -102,6 +102,8 @@ export function sharedImageIdentifierToTerraform(struct?: SharedImageIdentifierO
 }
 
 export class SharedImageIdentifierOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -112,7 +114,7 @@ export class SharedImageIdentifierOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): SharedImageIdentifier | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._offer) {
       hasAnyValues = true;
@@ -131,11 +133,13 @@ export class SharedImageIdentifierOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: SharedImageIdentifier | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._offer = undefined;
       this._publisher = undefined;
       this._sku = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._offer = value.offer;
       this._publisher = value.publisher;
       this._sku = value.sku;
@@ -209,6 +213,8 @@ export function sharedImagePurchasePlanToTerraform(struct?: SharedImagePurchaseP
 }
 
 export class SharedImagePurchasePlanOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -219,7 +225,7 @@ export class SharedImagePurchasePlanOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): SharedImagePurchasePlan | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -238,11 +244,13 @@ export class SharedImagePurchasePlanOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: SharedImagePurchasePlan | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._product = undefined;
       this._publisher = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._product = value.product;
       this._publisher = value.publisher;
@@ -327,6 +335,8 @@ export function sharedImageTimeoutsToTerraform(struct?: SharedImageTimeoutsOutpu
 }
 
 export class SharedImageTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -337,7 +347,7 @@ export class SharedImageTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): SharedImageTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -360,12 +370,14 @@ export class SharedImageTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: SharedImageTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

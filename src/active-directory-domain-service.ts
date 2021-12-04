@@ -84,6 +84,8 @@ export function activeDirectoryDomainServiceInitialReplicaSetToTerraform(struct?
 }
 
 export class ActiveDirectoryDomainServiceInitialReplicaSetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -94,7 +96,7 @@ export class ActiveDirectoryDomainServiceInitialReplicaSetOutputReference extend
   }
 
   public get internalValue(): ActiveDirectoryDomainServiceInitialReplicaSet | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._subnetId) {
       hasAnyValues = true;
@@ -105,9 +107,11 @@ export class ActiveDirectoryDomainServiceInitialReplicaSetOutputReference extend
 
   public set internalValue(value: ActiveDirectoryDomainServiceInitialReplicaSet | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._subnetId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._subnetId = value.subnetId;
     }
   }
@@ -153,6 +157,8 @@ export function activeDirectoryDomainServiceNotificationsToTerraform(struct?: Ac
 }
 
 export class ActiveDirectoryDomainServiceNotificationsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -163,7 +169,7 @@ export class ActiveDirectoryDomainServiceNotificationsOutputReference extends cd
   }
 
   public get internalValue(): ActiveDirectoryDomainServiceNotifications | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._additionalRecipients) {
       hasAnyValues = true;
@@ -182,11 +188,13 @@ export class ActiveDirectoryDomainServiceNotificationsOutputReference extends cd
 
   public set internalValue(value: ActiveDirectoryDomainServiceNotifications | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._additionalRecipients = undefined;
       this._notifyDcAdmins = undefined;
       this._notifyGlobalAdmins = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._additionalRecipients = value.additionalRecipients;
       this._notifyDcAdmins = value.notifyDcAdmins;
       this._notifyGlobalAdmins = value.notifyGlobalAdmins;
@@ -274,6 +282,8 @@ export function activeDirectoryDomainServiceSecureLdapToTerraform(struct?: Activ
 }
 
 export class ActiveDirectoryDomainServiceSecureLdapOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -284,7 +294,7 @@ export class ActiveDirectoryDomainServiceSecureLdapOutputReference extends cdktf
   }
 
   public get internalValue(): ActiveDirectoryDomainServiceSecureLdap | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -307,12 +317,14 @@ export class ActiveDirectoryDomainServiceSecureLdapOutputReference extends cdktf
 
   public set internalValue(value: ActiveDirectoryDomainServiceSecureLdap | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
       this._externalAccessEnabled = undefined;
       this._pfxCertificate = undefined;
       this._pfxCertificatePassword = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
       this._externalAccessEnabled = value.externalAccessEnabled;
       this._pfxCertificate = value.pfxCertificate;
@@ -413,6 +425,8 @@ export function activeDirectoryDomainServiceSecurityToTerraform(struct?: ActiveD
 }
 
 export class ActiveDirectoryDomainServiceSecurityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -423,7 +437,7 @@ export class ActiveDirectoryDomainServiceSecurityOutputReference extends cdktf.C
   }
 
   public get internalValue(): ActiveDirectoryDomainServiceSecurity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._ntlmV1Enabled) {
       hasAnyValues = true;
@@ -450,6 +464,7 @@ export class ActiveDirectoryDomainServiceSecurityOutputReference extends cdktf.C
 
   public set internalValue(value: ActiveDirectoryDomainServiceSecurity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._ntlmV1Enabled = undefined;
       this._syncKerberosPasswords = undefined;
       this._syncNtlmPasswords = undefined;
@@ -457,6 +472,7 @@ export class ActiveDirectoryDomainServiceSecurityOutputReference extends cdktf.C
       this._tlsV1Enabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._ntlmV1Enabled = value.ntlmV1Enabled;
       this._syncKerberosPasswords = value.syncKerberosPasswords;
       this._syncNtlmPasswords = value.syncNtlmPasswords;
@@ -578,6 +594,8 @@ export function activeDirectoryDomainServiceTimeoutsToTerraform(struct?: ActiveD
 }
 
 export class ActiveDirectoryDomainServiceTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -588,7 +606,7 @@ export class ActiveDirectoryDomainServiceTimeoutsOutputReference extends cdktf.C
   }
 
   public get internalValue(): ActiveDirectoryDomainServiceTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -611,12 +629,14 @@ export class ActiveDirectoryDomainServiceTimeoutsOutputReference extends cdktf.C
 
   public set internalValue(value: ActiveDirectoryDomainServiceTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

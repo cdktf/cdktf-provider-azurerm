@@ -123,6 +123,8 @@ export function mysqlFlexibleServerHighAvailabilityToTerraform(struct?: MysqlFle
 }
 
 export class MysqlFlexibleServerHighAvailabilityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -133,7 +135,7 @@ export class MysqlFlexibleServerHighAvailabilityOutputReference extends cdktf.Co
   }
 
   public get internalValue(): MysqlFlexibleServerHighAvailability | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._mode) {
       hasAnyValues = true;
@@ -148,10 +150,12 @@ export class MysqlFlexibleServerHighAvailabilityOutputReference extends cdktf.Co
 
   public set internalValue(value: MysqlFlexibleServerHighAvailability | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._mode = undefined;
       this._standbyAvailabilityZone = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._mode = value.mode;
       this._standbyAvailabilityZone = value.standbyAvailabilityZone;
     }
@@ -214,6 +218,8 @@ export function mysqlFlexibleServerMaintenanceWindowToTerraform(struct?: MysqlFl
 }
 
 export class MysqlFlexibleServerMaintenanceWindowOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -224,7 +230,7 @@ export class MysqlFlexibleServerMaintenanceWindowOutputReference extends cdktf.C
   }
 
   public get internalValue(): MysqlFlexibleServerMaintenanceWindow | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dayOfWeek) {
       hasAnyValues = true;
@@ -243,11 +249,13 @@ export class MysqlFlexibleServerMaintenanceWindowOutputReference extends cdktf.C
 
   public set internalValue(value: MysqlFlexibleServerMaintenanceWindow | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dayOfWeek = undefined;
       this._startHour = undefined;
       this._startMinute = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dayOfWeek = value.dayOfWeek;
       this._startHour = value.startHour;
       this._startMinute = value.startMinute;
@@ -330,6 +338,8 @@ export function mysqlFlexibleServerStorageToTerraform(struct?: MysqlFlexibleServ
 }
 
 export class MysqlFlexibleServerStorageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -340,7 +350,7 @@ export class MysqlFlexibleServerStorageOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): MysqlFlexibleServerStorage | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._autoGrowEnabled) {
       hasAnyValues = true;
@@ -359,11 +369,13 @@ export class MysqlFlexibleServerStorageOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: MysqlFlexibleServerStorage | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._autoGrowEnabled = undefined;
       this._iops = undefined;
       this._sizeGb = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._autoGrowEnabled = value.autoGrowEnabled;
       this._iops = value.iops;
       this._sizeGb = value.sizeGb;
@@ -451,6 +463,8 @@ export function mysqlFlexibleServerTimeoutsToTerraform(struct?: MysqlFlexibleSer
 }
 
 export class MysqlFlexibleServerTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -461,7 +475,7 @@ export class MysqlFlexibleServerTimeoutsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): MysqlFlexibleServerTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -484,12 +498,14 @@ export class MysqlFlexibleServerTimeoutsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: MysqlFlexibleServerTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

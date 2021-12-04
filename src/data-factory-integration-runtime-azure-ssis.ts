@@ -128,6 +128,8 @@ export function dataFactoryIntegrationRuntimeAzureSsisCatalogInfoToTerraform(str
 }
 
 export class DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -138,7 +140,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference ex
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisCatalogInfo | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._administratorLogin) {
       hasAnyValues = true;
@@ -165,6 +167,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference ex
 
   public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisCatalogInfo | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._administratorLogin = undefined;
       this._administratorPassword = undefined;
       this._dualStandbyPairName = undefined;
@@ -172,6 +175,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference ex
       this._serverEndpoint = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._administratorLogin = value.administratorLogin;
       this._administratorPassword = value.administratorPassword;
       this._dualStandbyPairName = value.dualStandbyPairName;
@@ -280,6 +284,8 @@ export function dataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptToTerrafo
 }
 
 export class DataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -290,7 +296,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptOutputRefere
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._blobContainerUri) {
       hasAnyValues = true;
@@ -305,10 +311,12 @@ export class DataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptOutputRefere
 
   public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._blobContainerUri = undefined;
       this._sasToken = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._blobContainerUri = value.blobContainerUri;
       this._sasToken = value.sasToken;
     }
@@ -373,6 +381,8 @@ export function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandK
 }
 
 export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPasswordOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -383,7 +393,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyK
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPassword | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._linkedServiceName) {
       hasAnyValues = true;
@@ -406,12 +416,14 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyK
 
   public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPassword | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._linkedServiceName = undefined;
       this._parameters = undefined;
       this._secretName = undefined;
       this._secretVersion = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._linkedServiceName = value.linkedServiceName;
       this._parameters = value.parameters;
       this._secretName = value.secretName;
@@ -545,6 +557,8 @@ export function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponen
 }
 
 export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicenseOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -555,7 +569,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKe
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicense | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._linkedServiceName) {
       hasAnyValues = true;
@@ -578,12 +592,14 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKe
 
   public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicense | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._linkedServiceName = undefined;
       this._parameters = undefined;
       this._secretName = undefined;
       this._secretVersion = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._linkedServiceName = value.linkedServiceName;
       this._parameters = value.parameters;
       this._secretName = value.secretName;
@@ -716,6 +732,8 @@ export function dataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupToTerraf
 }
 
 export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -726,7 +744,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputRefer
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._environment) {
       hasAnyValues = true;
@@ -749,12 +767,14 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputRefer
 
   public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._environment = undefined;
       this._powershellVersion = undefined;
       this._commandKey = undefined;
       this._component = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._environment = value.environment;
       this._powershellVersion = value.powershellVersion;
       this._commandKey = value.commandKey;
@@ -879,6 +899,8 @@ export function dataFactoryIntegrationRuntimeAzureSsisProxyToTerraform(struct?: 
 }
 
 export class DataFactoryIntegrationRuntimeAzureSsisProxyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -889,7 +911,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisProxyOutputReference extends 
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisProxy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._path) {
       hasAnyValues = true;
@@ -908,11 +930,13 @@ export class DataFactoryIntegrationRuntimeAzureSsisProxyOutputReference extends 
 
   public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisProxy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._path = undefined;
       this._selfHostedIntegrationRuntimeName = undefined;
       this._stagingStorageLinkedServiceName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._path = value.path;
       this._selfHostedIntegrationRuntimeName = value.selfHostedIntegrationRuntimeName;
       this._stagingStorageLinkedServiceName = value.stagingStorageLinkedServiceName;
@@ -994,6 +1018,8 @@ export function dataFactoryIntegrationRuntimeAzureSsisTimeoutsToTerraform(struct
 }
 
 export class DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1004,7 +1030,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference exten
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1027,12 +1053,14 @@ export class DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference exten
 
   public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -1137,6 +1165,8 @@ export function dataFactoryIntegrationRuntimeAzureSsisVnetIntegrationToTerraform
 }
 
 export class DataFactoryIntegrationRuntimeAzureSsisVnetIntegrationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1147,7 +1177,7 @@ export class DataFactoryIntegrationRuntimeAzureSsisVnetIntegrationOutputReferenc
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisVnetIntegration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._publicIps) {
       hasAnyValues = true;
@@ -1170,12 +1200,14 @@ export class DataFactoryIntegrationRuntimeAzureSsisVnetIntegrationOutputReferenc
 
   public set internalValue(value: DataFactoryIntegrationRuntimeAzureSsisVnetIntegration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._publicIps = undefined;
       this._subnetId = undefined;
       this._subnetName = undefined;
       this._vnetId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._publicIps = value.publicIps;
       this._subnetId = value.subnetId;
       this._subnetName = value.subnetName;

@@ -105,6 +105,8 @@ export function machineLearningWorkspaceEncryptionToTerraform(struct?: MachineLe
 }
 
 export class MachineLearningWorkspaceEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -115,7 +117,7 @@ export class MachineLearningWorkspaceEncryptionOutputReference extends cdktf.Com
   }
 
   public get internalValue(): MachineLearningWorkspaceEncryption | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._keyId) {
       hasAnyValues = true;
@@ -130,10 +132,12 @@ export class MachineLearningWorkspaceEncryptionOutputReference extends cdktf.Com
 
   public set internalValue(value: MachineLearningWorkspaceEncryption | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._keyId = undefined;
       this._keyVaultId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._keyId = value.keyId;
       this._keyVaultId = value.keyVaultId;
     }
@@ -183,6 +187,8 @@ export function machineLearningWorkspaceIdentityToTerraform(struct?: MachineLear
 }
 
 export class MachineLearningWorkspaceIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -193,7 +199,7 @@ export class MachineLearningWorkspaceIdentityOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): MachineLearningWorkspaceIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._type) {
       hasAnyValues = true;
@@ -204,9 +210,11 @@ export class MachineLearningWorkspaceIdentityOutputReference extends cdktf.Compl
 
   public set internalValue(value: MachineLearningWorkspaceIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
   }
@@ -257,6 +265,8 @@ export function machineLearningWorkspaceTimeoutsToTerraform(struct?: MachineLear
 }
 
 export class MachineLearningWorkspaceTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -267,7 +277,7 @@ export class MachineLearningWorkspaceTimeoutsOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): MachineLearningWorkspaceTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -290,12 +300,14 @@ export class MachineLearningWorkspaceTimeoutsOutputReference extends cdktf.Compl
 
   public set internalValue(value: MachineLearningWorkspaceTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

@@ -66,6 +66,8 @@ export function dataAzurermRoleDefinitionTimeoutsToTerraform(struct?: DataAzurer
 }
 
 export class DataAzurermRoleDefinitionTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -76,7 +78,7 @@ export class DataAzurermRoleDefinitionTimeoutsOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): DataAzurermRoleDefinitionTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read) {
       hasAnyValues = true;
@@ -87,9 +89,11 @@ export class DataAzurermRoleDefinitionTimeoutsOutputReference extends cdktf.Comp
 
   public set internalValue(value: DataAzurermRoleDefinitionTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._read = value.read;
     }
   }

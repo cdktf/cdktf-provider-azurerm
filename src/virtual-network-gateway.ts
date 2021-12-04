@@ -143,6 +143,8 @@ export function virtualNetworkGatewayBgpSettingsToTerraform(struct?: VirtualNetw
 }
 
 export class VirtualNetworkGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -153,7 +155,7 @@ export class VirtualNetworkGatewayBgpSettingsOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): VirtualNetworkGatewayBgpSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._asn) {
       hasAnyValues = true;
@@ -176,12 +178,14 @@ export class VirtualNetworkGatewayBgpSettingsOutputReference extends cdktf.Compl
 
   public set internalValue(value: VirtualNetworkGatewayBgpSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._asn = undefined;
       this._peerWeight = undefined;
       this._peeringAddress = undefined;
       this._peeringAddresses = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._asn = value.asn;
       this._peerWeight = value.peerWeight;
       this._peeringAddress = value.peeringAddress;
@@ -272,6 +276,8 @@ export function virtualNetworkGatewayCustomRouteToTerraform(struct?: VirtualNetw
 }
 
 export class VirtualNetworkGatewayCustomRouteOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -282,7 +288,7 @@ export class VirtualNetworkGatewayCustomRouteOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): VirtualNetworkGatewayCustomRoute | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._addressPrefixes) {
       hasAnyValues = true;
@@ -293,9 +299,11 @@ export class VirtualNetworkGatewayCustomRouteOutputReference extends cdktf.Compl
 
   public set internalValue(value: VirtualNetworkGatewayCustomRoute | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._addressPrefixes = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._addressPrefixes = value.addressPrefixes;
     }
   }
@@ -381,6 +389,8 @@ export function virtualNetworkGatewayTimeoutsToTerraform(struct?: VirtualNetwork
 }
 
 export class VirtualNetworkGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -391,7 +401,7 @@ export class VirtualNetworkGatewayTimeoutsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): VirtualNetworkGatewayTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -414,12 +424,14 @@ export class VirtualNetworkGatewayTimeoutsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: VirtualNetworkGatewayTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -602,6 +614,8 @@ export function virtualNetworkGatewayVpnClientConfigurationToTerraform(struct?: 
 }
 
 export class VirtualNetworkGatewayVpnClientConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -612,7 +626,7 @@ export class VirtualNetworkGatewayVpnClientConfigurationOutputReference extends 
   }
 
   public get internalValue(): VirtualNetworkGatewayVpnClientConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._aadAudience) {
       hasAnyValues = true;
@@ -659,6 +673,7 @@ export class VirtualNetworkGatewayVpnClientConfigurationOutputReference extends 
 
   public set internalValue(value: VirtualNetworkGatewayVpnClientConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._aadAudience = undefined;
       this._aadIssuer = undefined;
       this._aadTenant = undefined;
@@ -671,6 +686,7 @@ export class VirtualNetworkGatewayVpnClientConfigurationOutputReference extends 
       this._rootCertificate = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._aadAudience = value.aadAudience;
       this._aadIssuer = value.aadIssuer;
       this._aadTenant = value.aadTenant;

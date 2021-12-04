@@ -79,6 +79,8 @@ export function dataFactoryDataFlowSinkDatasetToTerraform(struct?: DataFactoryDa
 }
 
 export class DataFactoryDataFlowSinkDatasetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -89,7 +91,7 @@ export class DataFactoryDataFlowSinkDatasetOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): DataFactoryDataFlowSinkDataset | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -104,10 +106,12 @@ export class DataFactoryDataFlowSinkDatasetOutputReference extends cdktf.Complex
 
   public set internalValue(value: DataFactoryDataFlowSinkDataset | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._parameters = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._parameters = value.parameters;
     }
@@ -166,6 +170,8 @@ export function dataFactoryDataFlowSinkLinkedServiceToTerraform(struct?: DataFac
 }
 
 export class DataFactoryDataFlowSinkLinkedServiceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -176,7 +182,7 @@ export class DataFactoryDataFlowSinkLinkedServiceOutputReference extends cdktf.C
   }
 
   public get internalValue(): DataFactoryDataFlowSinkLinkedService | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -191,10 +197,12 @@ export class DataFactoryDataFlowSinkLinkedServiceOutputReference extends cdktf.C
 
   public set internalValue(value: DataFactoryDataFlowSinkLinkedService | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._parameters = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._parameters = value.parameters;
     }
@@ -253,6 +261,8 @@ export function dataFactoryDataFlowSinkSchemaLinkedServiceToTerraform(struct?: D
 }
 
 export class DataFactoryDataFlowSinkSchemaLinkedServiceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -263,7 +273,7 @@ export class DataFactoryDataFlowSinkSchemaLinkedServiceOutputReference extends c
   }
 
   public get internalValue(): DataFactoryDataFlowSinkSchemaLinkedService | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -278,10 +288,12 @@ export class DataFactoryDataFlowSinkSchemaLinkedServiceOutputReference extends c
 
   public set internalValue(value: DataFactoryDataFlowSinkSchemaLinkedService | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._parameters = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._parameters = value.parameters;
     }
@@ -383,6 +395,8 @@ export function dataFactoryDataFlowSourceDatasetToTerraform(struct?: DataFactory
 }
 
 export class DataFactoryDataFlowSourceDatasetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -393,7 +407,7 @@ export class DataFactoryDataFlowSourceDatasetOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): DataFactoryDataFlowSourceDataset | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -408,10 +422,12 @@ export class DataFactoryDataFlowSourceDatasetOutputReference extends cdktf.Compl
 
   public set internalValue(value: DataFactoryDataFlowSourceDataset | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._parameters = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._parameters = value.parameters;
     }
@@ -470,6 +486,8 @@ export function dataFactoryDataFlowSourceLinkedServiceToTerraform(struct?: DataF
 }
 
 export class DataFactoryDataFlowSourceLinkedServiceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -480,7 +498,7 @@ export class DataFactoryDataFlowSourceLinkedServiceOutputReference extends cdktf
   }
 
   public get internalValue(): DataFactoryDataFlowSourceLinkedService | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -495,10 +513,12 @@ export class DataFactoryDataFlowSourceLinkedServiceOutputReference extends cdktf
 
   public set internalValue(value: DataFactoryDataFlowSourceLinkedService | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._parameters = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._parameters = value.parameters;
     }
@@ -557,6 +577,8 @@ export function dataFactoryDataFlowSourceSchemaLinkedServiceToTerraform(struct?:
 }
 
 export class DataFactoryDataFlowSourceSchemaLinkedServiceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -567,7 +589,7 @@ export class DataFactoryDataFlowSourceSchemaLinkedServiceOutputReference extends
   }
 
   public get internalValue(): DataFactoryDataFlowSourceSchemaLinkedService | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -582,10 +604,12 @@ export class DataFactoryDataFlowSourceSchemaLinkedServiceOutputReference extends
 
   public set internalValue(value: DataFactoryDataFlowSourceSchemaLinkedService | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._parameters = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._parameters = value.parameters;
     }
@@ -697,6 +721,8 @@ export function dataFactoryDataFlowTimeoutsToTerraform(struct?: DataFactoryDataF
 }
 
 export class DataFactoryDataFlowTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -707,7 +733,7 @@ export class DataFactoryDataFlowTimeoutsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): DataFactoryDataFlowTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -730,12 +756,14 @@ export class DataFactoryDataFlowTimeoutsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: DataFactoryDataFlowTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

@@ -81,6 +81,8 @@ export function maintenanceConfigurationTimeoutsToTerraform(struct?: Maintenance
 }
 
 export class MaintenanceConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -91,7 +93,7 @@ export class MaintenanceConfigurationTimeoutsOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): MaintenanceConfigurationTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -114,12 +116,14 @@ export class MaintenanceConfigurationTimeoutsOutputReference extends cdktf.Compl
 
   public set internalValue(value: MaintenanceConfigurationTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -229,6 +233,8 @@ export function maintenanceConfigurationWindowToTerraform(struct?: MaintenanceCo
 }
 
 export class MaintenanceConfigurationWindowOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -239,7 +245,7 @@ export class MaintenanceConfigurationWindowOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): MaintenanceConfigurationWindow | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._duration) {
       hasAnyValues = true;
@@ -266,6 +272,7 @@ export class MaintenanceConfigurationWindowOutputReference extends cdktf.Complex
 
   public set internalValue(value: MaintenanceConfigurationWindow | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._duration = undefined;
       this._expirationDateTime = undefined;
       this._recurEvery = undefined;
@@ -273,6 +280,7 @@ export class MaintenanceConfigurationWindowOutputReference extends cdktf.Complex
       this._timeZone = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._duration = value.duration;
       this._expirationDateTime = value.expirationDateTime;
       this._recurEvery = value.recurEvery;

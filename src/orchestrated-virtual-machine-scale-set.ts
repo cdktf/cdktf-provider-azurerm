@@ -171,6 +171,8 @@ export function orchestratedVirtualMachineScaleSetAutomaticInstanceRepairToTerra
 }
 
 export class OrchestratedVirtualMachineScaleSetAutomaticInstanceRepairOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -181,7 +183,7 @@ export class OrchestratedVirtualMachineScaleSetAutomaticInstanceRepairOutputRefe
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetAutomaticInstanceRepair | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -196,10 +198,12 @@ export class OrchestratedVirtualMachineScaleSetAutomaticInstanceRepairOutputRefe
 
   public set internalValue(value: OrchestratedVirtualMachineScaleSetAutomaticInstanceRepair | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
       this._gracePeriod = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
       this._gracePeriod = value.gracePeriod;
     }
@@ -252,6 +256,8 @@ export function orchestratedVirtualMachineScaleSetBootDiagnosticsToTerraform(str
 }
 
 export class OrchestratedVirtualMachineScaleSetBootDiagnosticsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -262,7 +268,7 @@ export class OrchestratedVirtualMachineScaleSetBootDiagnosticsOutputReference ex
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetBootDiagnostics | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._storageAccountUri) {
       hasAnyValues = true;
@@ -273,9 +279,11 @@ export class OrchestratedVirtualMachineScaleSetBootDiagnosticsOutputReference ex
 
   public set internalValue(value: OrchestratedVirtualMachineScaleSetBootDiagnostics | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._storageAccountUri = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._storageAccountUri = value.storageAccountUri;
     }
   }
@@ -433,6 +441,8 @@ export function orchestratedVirtualMachineScaleSetIdentityToTerraform(struct?: O
 }
 
 export class OrchestratedVirtualMachineScaleSetIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -443,7 +453,7 @@ export class OrchestratedVirtualMachineScaleSetIdentityOutputReference extends c
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -458,10 +468,12 @@ export class OrchestratedVirtualMachineScaleSetIdentityOutputReference extends c
 
   public set internalValue(value: OrchestratedVirtualMachineScaleSetIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -675,6 +687,8 @@ export function orchestratedVirtualMachineScaleSetOsDiskDiffDiskSettingsToTerraf
 }
 
 export class OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -685,7 +699,7 @@ export class OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputRefer
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._option) {
       hasAnyValues = true;
@@ -696,9 +710,11 @@ export class OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputRefer
 
   public set internalValue(value: OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._option = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._option = value.option;
     }
   }
@@ -761,6 +777,8 @@ export function orchestratedVirtualMachineScaleSetOsDiskToTerraform(struct?: Orc
 }
 
 export class OrchestratedVirtualMachineScaleSetOsDiskOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -771,7 +789,7 @@ export class OrchestratedVirtualMachineScaleSetOsDiskOutputReference extends cdk
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetOsDisk | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._caching) {
       hasAnyValues = true;
@@ -793,7 +811,7 @@ export class OrchestratedVirtualMachineScaleSetOsDiskOutputReference extends cdk
       hasAnyValues = true;
       internalValueResult.writeAcceleratorEnabled = this._writeAcceleratorEnabled;
     }
-    if (this._diffDiskSettings) {
+    if (this._diffDiskSettings?.internalValue) {
       hasAnyValues = true;
       internalValueResult.diffDiskSettings = this._diffDiskSettings?.internalValue;
     }
@@ -802,6 +820,7 @@ export class OrchestratedVirtualMachineScaleSetOsDiskOutputReference extends cdk
 
   public set internalValue(value: OrchestratedVirtualMachineScaleSetOsDisk | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._caching = undefined;
       this._diskEncryptionSetId = undefined;
       this._diskSizeGb = undefined;
@@ -810,6 +829,7 @@ export class OrchestratedVirtualMachineScaleSetOsDiskOutputReference extends cdk
       this._diffDiskSettings.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._caching = value.caching;
       this._diskEncryptionSetId = value.diskEncryptionSetId;
       this._diskSizeGb = value.diskSizeGb;
@@ -1024,6 +1044,8 @@ export function orchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationToT
 }
 
 export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1034,7 +1056,7 @@ export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutput
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetOsProfileLinuxConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._adminPassword) {
       hasAnyValues = true;
@@ -1069,6 +1091,7 @@ export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutput
 
   public set internalValue(value: OrchestratedVirtualMachineScaleSetOsProfileLinuxConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._adminPassword = undefined;
       this._adminUsername = undefined;
       this._computerNamePrefix = undefined;
@@ -1078,6 +1101,7 @@ export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutput
       this._secret = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._adminPassword = value.adminPassword;
       this._adminUsername = value.adminUsername;
       this._computerNamePrefix = value.computerNamePrefix;
@@ -1324,6 +1348,8 @@ export function orchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationT
 }
 
 export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1334,7 +1360,7 @@ export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutp
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetOsProfileWindowsConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._adminPassword) {
       hasAnyValues = true;
@@ -1373,6 +1399,7 @@ export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutp
 
   public set internalValue(value: OrchestratedVirtualMachineScaleSetOsProfileWindowsConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._adminPassword = undefined;
       this._adminUsername = undefined;
       this._computerNamePrefix = undefined;
@@ -1383,6 +1410,7 @@ export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutp
       this._winrmListener = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._adminPassword = value.adminPassword;
       this._adminUsername = value.adminUsername;
       this._computerNamePrefix = value.computerNamePrefix;
@@ -1550,6 +1578,8 @@ export function orchestratedVirtualMachineScaleSetOsProfileToTerraform(struct?: 
 }
 
 export class OrchestratedVirtualMachineScaleSetOsProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1560,17 +1590,17 @@ export class OrchestratedVirtualMachineScaleSetOsProfileOutputReference extends 
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetOsProfile | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._customData) {
       hasAnyValues = true;
       internalValueResult.customData = this._customData;
     }
-    if (this._linuxConfiguration) {
+    if (this._linuxConfiguration?.internalValue) {
       hasAnyValues = true;
       internalValueResult.linuxConfiguration = this._linuxConfiguration?.internalValue;
     }
-    if (this._windowsConfiguration) {
+    if (this._windowsConfiguration?.internalValue) {
       hasAnyValues = true;
       internalValueResult.windowsConfiguration = this._windowsConfiguration?.internalValue;
     }
@@ -1579,11 +1609,13 @@ export class OrchestratedVirtualMachineScaleSetOsProfileOutputReference extends 
 
   public set internalValue(value: OrchestratedVirtualMachineScaleSetOsProfile | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._customData = undefined;
       this._linuxConfiguration.internalValue = undefined;
       this._windowsConfiguration.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._customData = value.customData;
       this._linuxConfiguration.internalValue = value.linuxConfiguration;
       this._windowsConfiguration.internalValue = value.windowsConfiguration;
@@ -1666,6 +1698,8 @@ export function orchestratedVirtualMachineScaleSetPlanToTerraform(struct?: Orche
 }
 
 export class OrchestratedVirtualMachineScaleSetPlanOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1676,7 +1710,7 @@ export class OrchestratedVirtualMachineScaleSetPlanOutputReference extends cdktf
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetPlan | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -1695,11 +1729,13 @@ export class OrchestratedVirtualMachineScaleSetPlanOutputReference extends cdktf
 
   public set internalValue(value: OrchestratedVirtualMachineScaleSetPlan | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._product = undefined;
       this._publisher = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._product = value.product;
       this._publisher = value.publisher;
@@ -1778,6 +1814,8 @@ export function orchestratedVirtualMachineScaleSetSourceImageReferenceToTerrafor
 }
 
 export class OrchestratedVirtualMachineScaleSetSourceImageReferenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1788,7 +1826,7 @@ export class OrchestratedVirtualMachineScaleSetSourceImageReferenceOutputReferen
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetSourceImageReference | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._offer) {
       hasAnyValues = true;
@@ -1811,12 +1849,14 @@ export class OrchestratedVirtualMachineScaleSetSourceImageReferenceOutputReferen
 
   public set internalValue(value: OrchestratedVirtualMachineScaleSetSourceImageReference | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._offer = undefined;
       this._publisher = undefined;
       this._sku = undefined;
       this._version = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._offer = value.offer;
       this._publisher = value.publisher;
       this._sku = value.sku;
@@ -1899,6 +1939,8 @@ export function orchestratedVirtualMachineScaleSetTerminationNotificationToTerra
 }
 
 export class OrchestratedVirtualMachineScaleSetTerminationNotificationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1909,7 +1951,7 @@ export class OrchestratedVirtualMachineScaleSetTerminationNotificationOutputRefe
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetTerminationNotification | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -1924,10 +1966,12 @@ export class OrchestratedVirtualMachineScaleSetTerminationNotificationOutputRefe
 
   public set internalValue(value: OrchestratedVirtualMachineScaleSetTerminationNotification | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
       this._timeout = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
       this._timeout = value.timeout;
     }
@@ -1995,6 +2039,8 @@ export function orchestratedVirtualMachineScaleSetTimeoutsToTerraform(struct?: O
 }
 
 export class OrchestratedVirtualMachineScaleSetTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2005,7 +2051,7 @@ export class OrchestratedVirtualMachineScaleSetTimeoutsOutputReference extends c
   }
 
   public get internalValue(): OrchestratedVirtualMachineScaleSetTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -2028,12 +2074,14 @@ export class OrchestratedVirtualMachineScaleSetTimeoutsOutputReference extends c
 
   public set internalValue(value: OrchestratedVirtualMachineScaleSetTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

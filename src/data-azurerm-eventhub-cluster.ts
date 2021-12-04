@@ -40,6 +40,8 @@ export function dataAzurermEventhubClusterTimeoutsToTerraform(struct?: DataAzure
 }
 
 export class DataAzurermEventhubClusterTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -50,7 +52,7 @@ export class DataAzurermEventhubClusterTimeoutsOutputReference extends cdktf.Com
   }
 
   public get internalValue(): DataAzurermEventhubClusterTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read) {
       hasAnyValues = true;
@@ -61,9 +63,11 @@ export class DataAzurermEventhubClusterTimeoutsOutputReference extends cdktf.Com
 
   public set internalValue(value: DataAzurermEventhubClusterTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._read = value.read;
     }
   }

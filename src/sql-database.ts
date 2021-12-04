@@ -187,6 +187,8 @@ export function sqlDatabaseImportToTerraform(struct?: SqlDatabaseImportOutputRef
 }
 
 export class SqlDatabaseImportOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -197,7 +199,7 @@ export class SqlDatabaseImportOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): SqlDatabaseImport | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._administratorLogin) {
       hasAnyValues = true;
@@ -232,6 +234,7 @@ export class SqlDatabaseImportOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: SqlDatabaseImport | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._administratorLogin = undefined;
       this._administratorLoginPassword = undefined;
       this._authenticationType = undefined;
@@ -241,6 +244,7 @@ export class SqlDatabaseImportOutputReference extends cdktf.ComplexObject {
       this._storageUri = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._administratorLogin = value.administratorLogin;
       this._administratorLoginPassword = value.administratorLoginPassword;
       this._authenticationType = value.authenticationType;
@@ -398,6 +402,8 @@ export function sqlDatabaseThreatDetectionPolicyToTerraform(struct?: SqlDatabase
 }
 
 export class SqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -408,7 +414,7 @@ export class SqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): SqlDatabaseThreatDetectionPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._disabledAlerts) {
       hasAnyValues = true;
@@ -447,6 +453,7 @@ export class SqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Compl
 
   public set internalValue(value: SqlDatabaseThreatDetectionPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._disabledAlerts = undefined;
       this._emailAccountAdmins = undefined;
       this._emailAddresses = undefined;
@@ -457,6 +464,7 @@ export class SqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Compl
       this._useServerDefault = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._disabledAlerts = value.disabledAlerts;
       this._emailAccountAdmins = value.emailAccountAdmins;
       this._emailAddresses = value.emailAddresses;
@@ -629,6 +637,8 @@ export function sqlDatabaseTimeoutsToTerraform(struct?: SqlDatabaseTimeoutsOutpu
 }
 
 export class SqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -639,7 +649,7 @@ export class SqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): SqlDatabaseTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -662,12 +672,14 @@ export class SqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: SqlDatabaseTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

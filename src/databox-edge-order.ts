@@ -152,6 +152,8 @@ export function databoxEdgeOrderContactToTerraform(struct?: DataboxEdgeOrderCont
 }
 
 export class DataboxEdgeOrderContactOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -162,7 +164,7 @@ export class DataboxEdgeOrderContactOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): DataboxEdgeOrderContact | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._companyName) {
       hasAnyValues = true;
@@ -185,12 +187,14 @@ export class DataboxEdgeOrderContactOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: DataboxEdgeOrderContact | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._companyName = undefined;
       this._emails = undefined;
       this._name = undefined;
       this._phoneNumber = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._companyName = value.companyName;
       this._emails = value.emails;
       this._name = value.name;
@@ -288,6 +292,8 @@ export function databoxEdgeOrderShipmentAddressToTerraform(struct?: DataboxEdgeO
 }
 
 export class DataboxEdgeOrderShipmentAddressOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -298,7 +304,7 @@ export class DataboxEdgeOrderShipmentAddressOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): DataboxEdgeOrderShipmentAddress | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._address) {
       hasAnyValues = true;
@@ -325,6 +331,7 @@ export class DataboxEdgeOrderShipmentAddressOutputReference extends cdktf.Comple
 
   public set internalValue(value: DataboxEdgeOrderShipmentAddress | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._address = undefined;
       this._city = undefined;
       this._country = undefined;
@@ -332,6 +339,7 @@ export class DataboxEdgeOrderShipmentAddressOutputReference extends cdktf.Comple
       this._state = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._address = value.address;
       this._city = value.city;
       this._country = value.country;
@@ -438,6 +446,8 @@ export function databoxEdgeOrderTimeoutsToTerraform(struct?: DataboxEdgeOrderTim
 }
 
 export class DataboxEdgeOrderTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -448,7 +458,7 @@ export class DataboxEdgeOrderTimeoutsOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): DataboxEdgeOrderTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -471,12 +481,14 @@ export class DataboxEdgeOrderTimeoutsOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: DataboxEdgeOrderTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

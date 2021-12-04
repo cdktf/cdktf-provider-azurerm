@@ -66,6 +66,8 @@ export function vpnGatewayBgpSettingsInstance0BgpPeeringAddressToTerraform(struc
 }
 
 export class VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -76,7 +78,7 @@ export class VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference exte
   }
 
   public get internalValue(): VpnGatewayBgpSettingsInstance0BgpPeeringAddress | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._customIps) {
       hasAnyValues = true;
@@ -87,9 +89,11 @@ export class VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference exte
 
   public set internalValue(value: VpnGatewayBgpSettingsInstance0BgpPeeringAddress | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._customIps = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._customIps = value.customIps;
     }
   }
@@ -125,6 +129,8 @@ export function vpnGatewayBgpSettingsInstance1BgpPeeringAddressToTerraform(struc
 }
 
 export class VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -135,7 +141,7 @@ export class VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference exte
   }
 
   public get internalValue(): VpnGatewayBgpSettingsInstance1BgpPeeringAddress | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._customIps) {
       hasAnyValues = true;
@@ -146,9 +152,11 @@ export class VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference exte
 
   public set internalValue(value: VpnGatewayBgpSettingsInstance1BgpPeeringAddress | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._customIps = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._customIps = value.customIps;
     }
   }
@@ -203,6 +211,8 @@ export function vpnGatewayBgpSettingsToTerraform(struct?: VpnGatewayBgpSettingsO
 }
 
 export class VpnGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -213,7 +223,7 @@ export class VpnGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): VpnGatewayBgpSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._asn) {
       hasAnyValues = true;
@@ -223,11 +233,11 @@ export class VpnGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.peerWeight = this._peerWeight;
     }
-    if (this._instance0BgpPeeringAddress) {
+    if (this._instance0BgpPeeringAddress?.internalValue) {
       hasAnyValues = true;
       internalValueResult.instance0BgpPeeringAddress = this._instance0BgpPeeringAddress?.internalValue;
     }
-    if (this._instance1BgpPeeringAddress) {
+    if (this._instance1BgpPeeringAddress?.internalValue) {
       hasAnyValues = true;
       internalValueResult.instance1BgpPeeringAddress = this._instance1BgpPeeringAddress?.internalValue;
     }
@@ -236,12 +246,14 @@ export class VpnGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: VpnGatewayBgpSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._asn = undefined;
       this._peerWeight = undefined;
       this._instance0BgpPeeringAddress.internalValue = undefined;
       this._instance1BgpPeeringAddress.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._asn = value.asn;
       this._peerWeight = value.peerWeight;
       this._instance0BgpPeeringAddress.internalValue = value.instance0BgpPeeringAddress;
@@ -340,6 +352,8 @@ export function vpnGatewayTimeoutsToTerraform(struct?: VpnGatewayTimeoutsOutputR
 }
 
 export class VpnGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -350,7 +364,7 @@ export class VpnGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): VpnGatewayTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -373,12 +387,14 @@ export class VpnGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: VpnGatewayTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

@@ -86,6 +86,8 @@ export function mssqlFailoverGroupReadWriteEndpointFailoverPolicyToTerraform(str
 }
 
 export class MssqlFailoverGroupReadWriteEndpointFailoverPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -96,7 +98,7 @@ export class MssqlFailoverGroupReadWriteEndpointFailoverPolicyOutputReference ex
   }
 
   public get internalValue(): MssqlFailoverGroupReadWriteEndpointFailoverPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._graceMinutes) {
       hasAnyValues = true;
@@ -111,10 +113,12 @@ export class MssqlFailoverGroupReadWriteEndpointFailoverPolicyOutputReference ex
 
   public set internalValue(value: MssqlFailoverGroupReadWriteEndpointFailoverPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._graceMinutes = undefined;
       this._mode = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._graceMinutes = value.graceMinutes;
       this._mode = value.mode;
     }
@@ -182,6 +186,8 @@ export function mssqlFailoverGroupTimeoutsToTerraform(struct?: MssqlFailoverGrou
 }
 
 export class MssqlFailoverGroupTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -192,7 +198,7 @@ export class MssqlFailoverGroupTimeoutsOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): MssqlFailoverGroupTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -215,12 +221,14 @@ export class MssqlFailoverGroupTimeoutsOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: MssqlFailoverGroupTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

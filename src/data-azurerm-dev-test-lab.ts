@@ -40,6 +40,8 @@ export function dataAzurermDevTestLabTimeoutsToTerraform(struct?: DataAzurermDev
 }
 
 export class DataAzurermDevTestLabTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -50,7 +52,7 @@ export class DataAzurermDevTestLabTimeoutsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): DataAzurermDevTestLabTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read) {
       hasAnyValues = true;
@@ -61,9 +63,11 @@ export class DataAzurermDevTestLabTimeoutsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: DataAzurermDevTestLabTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._read = value.read;
     }
   }

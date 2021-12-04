@@ -88,6 +88,8 @@ export function devTestScheduleDailyRecurrenceToTerraform(struct?: DevTestSchedu
 }
 
 export class DevTestScheduleDailyRecurrenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -98,7 +100,7 @@ export class DevTestScheduleDailyRecurrenceOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): DevTestScheduleDailyRecurrence | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._time) {
       hasAnyValues = true;
@@ -109,9 +111,11 @@ export class DevTestScheduleDailyRecurrenceOutputReference extends cdktf.Complex
 
   public set internalValue(value: DevTestScheduleDailyRecurrence | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._time = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._time = value.time;
     }
   }
@@ -147,6 +151,8 @@ export function devTestScheduleHourlyRecurrenceToTerraform(struct?: DevTestSched
 }
 
 export class DevTestScheduleHourlyRecurrenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -157,7 +163,7 @@ export class DevTestScheduleHourlyRecurrenceOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): DevTestScheduleHourlyRecurrence | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._minute) {
       hasAnyValues = true;
@@ -168,9 +174,11 @@ export class DevTestScheduleHourlyRecurrenceOutputReference extends cdktf.Comple
 
   public set internalValue(value: DevTestScheduleHourlyRecurrence | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._minute = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._minute = value.minute;
     }
   }
@@ -216,6 +224,8 @@ export function devTestScheduleNotificationSettingsToTerraform(struct?: DevTestS
 }
 
 export class DevTestScheduleNotificationSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -226,7 +236,7 @@ export class DevTestScheduleNotificationSettingsOutputReference extends cdktf.Co
   }
 
   public get internalValue(): DevTestScheduleNotificationSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._status) {
       hasAnyValues = true;
@@ -245,11 +255,13 @@ export class DevTestScheduleNotificationSettingsOutputReference extends cdktf.Co
 
   public set internalValue(value: DevTestScheduleNotificationSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._status = undefined;
       this._timeInMinutes = undefined;
       this._webhookUrl = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._status = value.status;
       this._timeInMinutes = value.timeInMinutes;
       this._webhookUrl = value.webhookUrl;
@@ -337,6 +349,8 @@ export function devTestScheduleTimeoutsToTerraform(struct?: DevTestScheduleTimeo
 }
 
 export class DevTestScheduleTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -347,7 +361,7 @@ export class DevTestScheduleTimeoutsOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): DevTestScheduleTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -370,12 +384,14 @@ export class DevTestScheduleTimeoutsOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: DevTestScheduleTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -470,6 +486,8 @@ export function devTestScheduleWeeklyRecurrenceToTerraform(struct?: DevTestSched
 }
 
 export class DevTestScheduleWeeklyRecurrenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -480,7 +498,7 @@ export class DevTestScheduleWeeklyRecurrenceOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): DevTestScheduleWeeklyRecurrence | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._time) {
       hasAnyValues = true;
@@ -495,10 +513,12 @@ export class DevTestScheduleWeeklyRecurrenceOutputReference extends cdktf.Comple
 
   public set internalValue(value: DevTestScheduleWeeklyRecurrence | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._time = undefined;
       this._weekDays = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._time = value.time;
       this._weekDays = value.weekDays;
     }

@@ -68,6 +68,8 @@ export function dataShareDatasetBlobStorageStorageAccountToTerraform(struct?: Da
 }
 
 export class DataShareDatasetBlobStorageStorageAccountOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -78,7 +80,7 @@ export class DataShareDatasetBlobStorageStorageAccountOutputReference extends cd
   }
 
   public get internalValue(): DataShareDatasetBlobStorageStorageAccount | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -97,11 +99,13 @@ export class DataShareDatasetBlobStorageStorageAccountOutputReference extends cd
 
   public set internalValue(value: DataShareDatasetBlobStorageStorageAccount | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._resourceGroupName = undefined;
       this._subscriptionId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._resourceGroupName = value.resourceGroupName;
       this._subscriptionId = value.subscriptionId;
@@ -175,6 +179,8 @@ export function dataShareDatasetBlobStorageTimeoutsToTerraform(struct?: DataShar
 }
 
 export class DataShareDatasetBlobStorageTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -185,7 +191,7 @@ export class DataShareDatasetBlobStorageTimeoutsOutputReference extends cdktf.Co
   }
 
   public get internalValue(): DataShareDatasetBlobStorageTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -204,11 +210,13 @@ export class DataShareDatasetBlobStorageTimeoutsOutputReference extends cdktf.Co
 
   public set internalValue(value: DataShareDatasetBlobStorageTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

@@ -203,6 +203,8 @@ export function redisCacheRedisConfigurationToTerraform(struct?: RedisCacheRedis
 }
 
 export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -213,7 +215,7 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): RedisCacheRedisConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._aofBackupEnabled) {
       hasAnyValues = true;
@@ -272,6 +274,7 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: RedisCacheRedisConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._aofBackupEnabled = undefined;
       this._aofStorageConnectionString0 = undefined;
       this._aofStorageConnectionString1 = undefined;
@@ -287,6 +290,7 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
       this._rdbStorageConnectionString = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._aofBackupEnabled = value.aofBackupEnabled;
       this._aofStorageConnectionString0 = value.aofStorageConnectionString0;
       this._aofStorageConnectionString1 = value.aofStorageConnectionString1;
@@ -544,6 +548,8 @@ export function redisCacheTimeoutsToTerraform(struct?: RedisCacheTimeoutsOutputR
 }
 
 export class RedisCacheTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -554,7 +560,7 @@ export class RedisCacheTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): RedisCacheTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -577,12 +583,14 @@ export class RedisCacheTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: RedisCacheTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

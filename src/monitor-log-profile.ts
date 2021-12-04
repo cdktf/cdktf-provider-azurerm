@@ -63,6 +63,8 @@ export function monitorLogProfileRetentionPolicyToTerraform(struct?: MonitorLogP
 }
 
 export class MonitorLogProfileRetentionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -73,7 +75,7 @@ export class MonitorLogProfileRetentionPolicyOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): MonitorLogProfileRetentionPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._days) {
       hasAnyValues = true;
@@ -88,10 +90,12 @@ export class MonitorLogProfileRetentionPolicyOutputReference extends cdktf.Compl
 
   public set internalValue(value: MonitorLogProfileRetentionPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._days = undefined;
       this._enabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._days = value.days;
       this._enabled = value.enabled;
     }
@@ -159,6 +163,8 @@ export function monitorLogProfileTimeoutsToTerraform(struct?: MonitorLogProfileT
 }
 
 export class MonitorLogProfileTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -169,7 +175,7 @@ export class MonitorLogProfileTimeoutsOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): MonitorLogProfileTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -192,12 +198,14 @@ export class MonitorLogProfileTimeoutsOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: MonitorLogProfileTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

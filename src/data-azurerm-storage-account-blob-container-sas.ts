@@ -107,6 +107,8 @@ export function dataAzurermStorageAccountBlobContainerSasPermissionsToTerraform(
 }
 
 export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -117,7 +119,7 @@ export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference
   }
 
   public get internalValue(): DataAzurermStorageAccountBlobContainerSasPermissions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._add) {
       hasAnyValues = true;
@@ -148,6 +150,7 @@ export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference
 
   public set internalValue(value: DataAzurermStorageAccountBlobContainerSasPermissions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._add = undefined;
       this._create = undefined;
       this._delete = undefined;
@@ -156,6 +159,7 @@ export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference
       this._write = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._add = value.add;
       this._create = value.create;
       this._delete = value.delete;
@@ -261,6 +265,8 @@ export function dataAzurermStorageAccountBlobContainerSasTimeoutsToTerraform(str
 }
 
 export class DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -271,7 +277,7 @@ export class DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference ex
   }
 
   public get internalValue(): DataAzurermStorageAccountBlobContainerSasTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read) {
       hasAnyValues = true;
@@ -282,9 +288,11 @@ export class DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference ex
 
   public set internalValue(value: DataAzurermStorageAccountBlobContainerSasTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._read = value.read;
     }
   }

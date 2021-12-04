@@ -102,6 +102,8 @@ export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecur
 }
 
 export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -112,7 +114,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   }
 
   public get internalValue(): LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceSchedule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._hours) {
       hasAnyValues = true;
@@ -139,6 +141,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
 
   public set internalValue(value: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceSchedule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hours = undefined;
       this._minutes = undefined;
       this._monthDays = undefined;
@@ -146,6 +149,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
       this._monthly = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hours = value.hours;
       this._minutes = value.minutes;
       this._monthDays = value.monthDays;
@@ -283,6 +287,8 @@ export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecur
 }
 
 export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -293,7 +299,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   }
 
   public get internalValue(): LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrence | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._endTime) {
       hasAnyValues = true;
@@ -315,7 +321,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
       hasAnyValues = true;
       internalValueResult.timeZone = this._timeZone;
     }
-    if (this._schedule) {
+    if (this._schedule?.internalValue) {
       hasAnyValues = true;
       internalValueResult.schedule = this._schedule?.internalValue;
     }
@@ -324,6 +330,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
 
   public set internalValue(value: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrence | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._endTime = undefined;
       this._frequency = undefined;
       this._interval = undefined;
@@ -332,6 +339,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
       this._schedule.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._endTime = value.endTime;
       this._frequency = value.frequency;
       this._interval = value.interval;
@@ -461,6 +469,8 @@ export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaToTer
 }
 
 export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -471,7 +481,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputRe
   }
 
   public get internalValue(): LogicAppIntegrationAccountBatchConfigurationReleaseCriteria | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._batchSize) {
       hasAnyValues = true;
@@ -481,7 +491,7 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputRe
       hasAnyValues = true;
       internalValueResult.messageCount = this._messageCount;
     }
-    if (this._recurrence) {
+    if (this._recurrence?.internalValue) {
       hasAnyValues = true;
       internalValueResult.recurrence = this._recurrence?.internalValue;
     }
@@ -490,11 +500,13 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputRe
 
   public set internalValue(value: LogicAppIntegrationAccountBatchConfigurationReleaseCriteria | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._batchSize = undefined;
       this._messageCount = undefined;
       this._recurrence.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._batchSize = value.batchSize;
       this._messageCount = value.messageCount;
       this._recurrence.internalValue = value.recurrence;
@@ -582,6 +594,8 @@ export function logicAppIntegrationAccountBatchConfigurationTimeoutsToTerraform(
 }
 
 export class LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -592,7 +606,7 @@ export class LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference
   }
 
   public get internalValue(): LogicAppIntegrationAccountBatchConfigurationTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -615,12 +629,14 @@ export class LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference
 
   public set internalValue(value: LogicAppIntegrationAccountBatchConfigurationTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

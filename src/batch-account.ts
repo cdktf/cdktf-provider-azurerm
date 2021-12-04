@@ -77,6 +77,8 @@ export function batchAccountIdentityToTerraform(struct?: BatchAccountIdentityOut
 }
 
 export class BatchAccountIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -87,7 +89,7 @@ export class BatchAccountIdentityOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): BatchAccountIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -102,10 +104,12 @@ export class BatchAccountIdentityOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: BatchAccountIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -163,6 +167,8 @@ export function batchAccountKeyVaultReferenceToTerraform(struct?: BatchAccountKe
 }
 
 export class BatchAccountKeyVaultReferenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -173,7 +179,7 @@ export class BatchAccountKeyVaultReferenceOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): BatchAccountKeyVaultReference | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._id) {
       hasAnyValues = true;
@@ -188,10 +194,12 @@ export class BatchAccountKeyVaultReferenceOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: BatchAccountKeyVaultReference | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._id = undefined;
       this._url = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._id = value.id;
       this._url = value.url;
     }
@@ -256,6 +264,8 @@ export function batchAccountTimeoutsToTerraform(struct?: BatchAccountTimeoutsOut
 }
 
 export class BatchAccountTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -266,7 +276,7 @@ export class BatchAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): BatchAccountTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -289,12 +299,14 @@ export class BatchAccountTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: BatchAccountTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

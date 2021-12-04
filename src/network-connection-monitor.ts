@@ -104,6 +104,8 @@ export function networkConnectionMonitorDestinationToTerraform(struct?: NetworkC
 }
 
 export class NetworkConnectionMonitorDestinationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -114,7 +116,7 @@ export class NetworkConnectionMonitorDestinationOutputReference extends cdktf.Co
   }
 
   public get internalValue(): NetworkConnectionMonitorDestination | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._address) {
       hasAnyValues = true;
@@ -133,11 +135,13 @@ export class NetworkConnectionMonitorDestinationOutputReference extends cdktf.Co
 
   public set internalValue(value: NetworkConnectionMonitorDestination | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._address = undefined;
       this._port = undefined;
       this._virtualMachineId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._address = value.address;
       this._port = value.port;
       this._virtualMachineId = value.virtualMachineId;
@@ -239,6 +243,8 @@ export function networkConnectionMonitorEndpointFilterToTerraform(struct?: Netwo
 }
 
 export class NetworkConnectionMonitorEndpointFilterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -249,7 +255,7 @@ export class NetworkConnectionMonitorEndpointFilterOutputReference extends cdktf
   }
 
   public get internalValue(): NetworkConnectionMonitorEndpointFilter | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._type) {
       hasAnyValues = true;
@@ -264,10 +270,12 @@ export class NetworkConnectionMonitorEndpointFilterOutputReference extends cdktf
 
   public set internalValue(value: NetworkConnectionMonitorEndpointFilter | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._type = undefined;
       this._item = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
       this._item = value.item;
     }
@@ -388,6 +396,8 @@ export function networkConnectionMonitorSourceToTerraform(struct?: NetworkConnec
 }
 
 export class NetworkConnectionMonitorSourceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -398,7 +408,7 @@ export class NetworkConnectionMonitorSourceOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): NetworkConnectionMonitorSource | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._port) {
       hasAnyValues = true;
@@ -413,10 +423,12 @@ export class NetworkConnectionMonitorSourceOutputReference extends cdktf.Complex
 
   public set internalValue(value: NetworkConnectionMonitorSource | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._port = undefined;
       this._virtualMachineId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._port = value.port;
       this._virtualMachineId = value.virtualMachineId;
     }
@@ -521,6 +533,8 @@ export function networkConnectionMonitorTestConfigurationHttpConfigurationToTerr
 }
 
 export class NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -531,7 +545,7 @@ export class NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputRef
   }
 
   public get internalValue(): NetworkConnectionMonitorTestConfigurationHttpConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._method) {
       hasAnyValues = true;
@@ -562,6 +576,7 @@ export class NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputRef
 
   public set internalValue(value: NetworkConnectionMonitorTestConfigurationHttpConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._method = undefined;
       this._path = undefined;
       this._port = undefined;
@@ -570,6 +585,7 @@ export class NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputRef
       this._requestHeader = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._method = value.method;
       this._path = value.path;
       this._port = value.port;
@@ -694,6 +710,8 @@ export function networkConnectionMonitorTestConfigurationIcmpConfigurationToTerr
 }
 
 export class NetworkConnectionMonitorTestConfigurationIcmpConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -704,7 +722,7 @@ export class NetworkConnectionMonitorTestConfigurationIcmpConfigurationOutputRef
   }
 
   public get internalValue(): NetworkConnectionMonitorTestConfigurationIcmpConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._traceRouteEnabled) {
       hasAnyValues = true;
@@ -715,9 +733,11 @@ export class NetworkConnectionMonitorTestConfigurationIcmpConfigurationOutputRef
 
   public set internalValue(value: NetworkConnectionMonitorTestConfigurationIcmpConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._traceRouteEnabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._traceRouteEnabled = value.traceRouteEnabled;
     }
   }
@@ -761,6 +781,8 @@ export function networkConnectionMonitorTestConfigurationSuccessThresholdToTerra
 }
 
 export class NetworkConnectionMonitorTestConfigurationSuccessThresholdOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -771,7 +793,7 @@ export class NetworkConnectionMonitorTestConfigurationSuccessThresholdOutputRefe
   }
 
   public get internalValue(): NetworkConnectionMonitorTestConfigurationSuccessThreshold | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._checksFailedPercent) {
       hasAnyValues = true;
@@ -786,10 +808,12 @@ export class NetworkConnectionMonitorTestConfigurationSuccessThresholdOutputRefe
 
   public set internalValue(value: NetworkConnectionMonitorTestConfigurationSuccessThreshold | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._checksFailedPercent = undefined;
       this._roundTripTimeMs = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._checksFailedPercent = value.checksFailedPercent;
       this._roundTripTimeMs = value.roundTripTimeMs;
     }
@@ -855,6 +879,8 @@ export function networkConnectionMonitorTestConfigurationTcpConfigurationToTerra
 }
 
 export class NetworkConnectionMonitorTestConfigurationTcpConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -865,7 +891,7 @@ export class NetworkConnectionMonitorTestConfigurationTcpConfigurationOutputRefe
   }
 
   public get internalValue(): NetworkConnectionMonitorTestConfigurationTcpConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._destinationPortBehavior) {
       hasAnyValues = true;
@@ -884,11 +910,13 @@ export class NetworkConnectionMonitorTestConfigurationTcpConfigurationOutputRefe
 
   public set internalValue(value: NetworkConnectionMonitorTestConfigurationTcpConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._destinationPortBehavior = undefined;
       this._port = undefined;
       this._traceRouteEnabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._destinationPortBehavior = value.destinationPortBehavior;
       this._port = value.port;
       this._traceRouteEnabled = value.traceRouteEnabled;
@@ -1070,6 +1098,8 @@ export function networkConnectionMonitorTimeoutsToTerraform(struct?: NetworkConn
 }
 
 export class NetworkConnectionMonitorTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1080,7 +1110,7 @@ export class NetworkConnectionMonitorTimeoutsOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): NetworkConnectionMonitorTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1103,12 +1133,14 @@ export class NetworkConnectionMonitorTimeoutsOutputReference extends cdktf.Compl
 
   public set internalValue(value: NetworkConnectionMonitorTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

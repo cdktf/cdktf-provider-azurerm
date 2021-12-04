@@ -90,6 +90,8 @@ export function expressRouteCircuitPeeringIpv6MicrosoftPeeringToTerraform(struct
 }
 
 export class ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -100,7 +102,7 @@ export class ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference exten
   }
 
   public get internalValue(): ExpressRouteCircuitPeeringIpv6MicrosoftPeering | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._advertisedPublicPrefixes) {
       hasAnyValues = true;
@@ -119,11 +121,13 @@ export class ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference exten
 
   public set internalValue(value: ExpressRouteCircuitPeeringIpv6MicrosoftPeering | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._advertisedPublicPrefixes = undefined;
       this._customerAsn = undefined;
       this._routingRegistryName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._advertisedPublicPrefixes = value.advertisedPublicPrefixes;
       this._customerAsn = value.customerAsn;
       this._routingRegistryName = value.routingRegistryName;
@@ -213,6 +217,8 @@ export function expressRouteCircuitPeeringIpv6ToTerraform(struct?: ExpressRouteC
 }
 
 export class ExpressRouteCircuitPeeringIpv6OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -223,7 +229,7 @@ export class ExpressRouteCircuitPeeringIpv6OutputReference extends cdktf.Complex
   }
 
   public get internalValue(): ExpressRouteCircuitPeeringIpv6 | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._primaryPeerAddressPrefix) {
       hasAnyValues = true;
@@ -237,7 +243,7 @@ export class ExpressRouteCircuitPeeringIpv6OutputReference extends cdktf.Complex
       hasAnyValues = true;
       internalValueResult.secondaryPeerAddressPrefix = this._secondaryPeerAddressPrefix;
     }
-    if (this._microsoftPeering) {
+    if (this._microsoftPeering?.internalValue) {
       hasAnyValues = true;
       internalValueResult.microsoftPeering = this._microsoftPeering?.internalValue;
     }
@@ -246,12 +252,14 @@ export class ExpressRouteCircuitPeeringIpv6OutputReference extends cdktf.Complex
 
   public set internalValue(value: ExpressRouteCircuitPeeringIpv6 | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._primaryPeerAddressPrefix = undefined;
       this._routeFilterId = undefined;
       this._secondaryPeerAddressPrefix = undefined;
       this._microsoftPeering.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._primaryPeerAddressPrefix = value.primaryPeerAddressPrefix;
       this._routeFilterId = value.routeFilterId;
       this._secondaryPeerAddressPrefix = value.secondaryPeerAddressPrefix;
@@ -342,6 +350,8 @@ export function expressRouteCircuitPeeringMicrosoftPeeringConfigToTerraform(stru
 }
 
 export class ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -352,7 +362,7 @@ export class ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference ext
   }
 
   public get internalValue(): ExpressRouteCircuitPeeringMicrosoftPeeringConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._advertisedPublicPrefixes) {
       hasAnyValues = true;
@@ -371,11 +381,13 @@ export class ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference ext
 
   public set internalValue(value: ExpressRouteCircuitPeeringMicrosoftPeeringConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._advertisedPublicPrefixes = undefined;
       this._customerAsn = undefined;
       this._routingRegistryName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._advertisedPublicPrefixes = value.advertisedPublicPrefixes;
       this._customerAsn = value.customerAsn;
       this._routingRegistryName = value.routingRegistryName;
@@ -460,6 +472,8 @@ export function expressRouteCircuitPeeringTimeoutsToTerraform(struct?: ExpressRo
 }
 
 export class ExpressRouteCircuitPeeringTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -470,7 +484,7 @@ export class ExpressRouteCircuitPeeringTimeoutsOutputReference extends cdktf.Com
   }
 
   public get internalValue(): ExpressRouteCircuitPeeringTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -493,12 +507,14 @@ export class ExpressRouteCircuitPeeringTimeoutsOutputReference extends cdktf.Com
 
   public set internalValue(value: ExpressRouteCircuitPeeringTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

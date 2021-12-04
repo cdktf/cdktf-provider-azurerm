@@ -109,6 +109,8 @@ export function dataAzurermStorageAccountSasPermissionsToTerraform(struct?: Data
 }
 
 export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -119,7 +121,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   }
 
   public get internalValue(): DataAzurermStorageAccountSasPermissions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._add) {
       hasAnyValues = true;
@@ -158,6 +160,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
 
   public set internalValue(value: DataAzurermStorageAccountSasPermissions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._add = undefined;
       this._create = undefined;
       this._delete = undefined;
@@ -168,6 +171,7 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
       this._write = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._add = value.add;
       this._create = value.create;
       this._delete = value.delete;
@@ -311,6 +315,8 @@ export function dataAzurermStorageAccountSasResourceTypesToTerraform(struct?: Da
 }
 
 export class DataAzurermStorageAccountSasResourceTypesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -321,7 +327,7 @@ export class DataAzurermStorageAccountSasResourceTypesOutputReference extends cd
   }
 
   public get internalValue(): DataAzurermStorageAccountSasResourceTypes | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._container) {
       hasAnyValues = true;
@@ -340,11 +346,13 @@ export class DataAzurermStorageAccountSasResourceTypesOutputReference extends cd
 
   public set internalValue(value: DataAzurermStorageAccountSasResourceTypes | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._container = undefined;
       this._object = undefined;
       this._service = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._container = value.container;
       this._object = value.object;
       this._service = value.service;
@@ -423,6 +431,8 @@ export function dataAzurermStorageAccountSasServicesToTerraform(struct?: DataAzu
 }
 
 export class DataAzurermStorageAccountSasServicesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -433,7 +443,7 @@ export class DataAzurermStorageAccountSasServicesOutputReference extends cdktf.C
   }
 
   public get internalValue(): DataAzurermStorageAccountSasServices | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._blob) {
       hasAnyValues = true;
@@ -456,12 +466,14 @@ export class DataAzurermStorageAccountSasServicesOutputReference extends cdktf.C
 
   public set internalValue(value: DataAzurermStorageAccountSasServices | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._blob = undefined;
       this._file = undefined;
       this._queue = undefined;
       this._table = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._blob = value.blob;
       this._file = value.file;
       this._queue = value.queue;
@@ -539,6 +551,8 @@ export function dataAzurermStorageAccountSasTimeoutsToTerraform(struct?: DataAzu
 }
 
 export class DataAzurermStorageAccountSasTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -549,7 +563,7 @@ export class DataAzurermStorageAccountSasTimeoutsOutputReference extends cdktf.C
   }
 
   public get internalValue(): DataAzurermStorageAccountSasTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read) {
       hasAnyValues = true;
@@ -560,9 +574,11 @@ export class DataAzurermStorageAccountSasTimeoutsOutputReference extends cdktf.C
 
   public set internalValue(value: DataAzurermStorageAccountSasTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._read = value.read;
     }
   }

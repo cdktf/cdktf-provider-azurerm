@@ -121,6 +121,8 @@ export function batchPoolAutoScaleToTerraform(struct?: BatchPoolAutoScaleOutputR
 }
 
 export class BatchPoolAutoScaleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -131,7 +133,7 @@ export class BatchPoolAutoScaleOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): BatchPoolAutoScale | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._evaluationInterval) {
       hasAnyValues = true;
@@ -146,10 +148,12 @@ export class BatchPoolAutoScaleOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: BatchPoolAutoScale | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._evaluationInterval = undefined;
       this._formula = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._evaluationInterval = value.evaluationInterval;
       this._formula = value.formula;
     }
@@ -271,6 +275,8 @@ export function batchPoolContainerConfigurationToTerraform(struct?: BatchPoolCon
 }
 
 export class BatchPoolContainerConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -281,7 +287,7 @@ export class BatchPoolContainerConfigurationOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): BatchPoolContainerConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._containerImageNames) {
       hasAnyValues = true;
@@ -300,11 +306,13 @@ export class BatchPoolContainerConfigurationOutputReference extends cdktf.Comple
 
   public set internalValue(value: BatchPoolContainerConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._containerImageNames = undefined;
       this._containerRegistries = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._containerImageNames = value.containerImageNames;
       this._containerRegistries = value.containerRegistries;
       this._type = value.type;
@@ -388,6 +396,8 @@ export function batchPoolFixedScaleToTerraform(struct?: BatchPoolFixedScaleOutpu
 }
 
 export class BatchPoolFixedScaleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -398,7 +408,7 @@ export class BatchPoolFixedScaleOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): BatchPoolFixedScale | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._resizeTimeout) {
       hasAnyValues = true;
@@ -417,11 +427,13 @@ export class BatchPoolFixedScaleOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: BatchPoolFixedScale | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._resizeTimeout = undefined;
       this._targetDedicatedNodes = undefined;
       this._targetLowPriorityNodes = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._resizeTimeout = value.resizeTimeout;
       this._targetDedicatedNodes = value.targetDedicatedNodes;
       this._targetLowPriorityNodes = value.targetLowPriorityNodes;
@@ -499,6 +511,8 @@ export function batchPoolIdentityToTerraform(struct?: BatchPoolIdentityOutputRef
 }
 
 export class BatchPoolIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -509,7 +523,7 @@ export class BatchPoolIdentityOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): BatchPoolIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -524,10 +538,12 @@ export class BatchPoolIdentityOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: BatchPoolIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -660,6 +676,8 @@ export function batchPoolNetworkConfigurationToTerraform(struct?: BatchPoolNetwo
 }
 
 export class BatchPoolNetworkConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -670,7 +688,7 @@ export class BatchPoolNetworkConfigurationOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): BatchPoolNetworkConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._publicAddressProvisioningType) {
       hasAnyValues = true;
@@ -693,12 +711,14 @@ export class BatchPoolNetworkConfigurationOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: BatchPoolNetworkConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._publicAddressProvisioningType = undefined;
       this._publicIps = undefined;
       this._subnetId = undefined;
       this._endpointConfiguration = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._publicAddressProvisioningType = value.publicAddressProvisioningType;
       this._publicIps = value.publicIps;
       this._subnetId = value.subnetId;
@@ -833,6 +853,8 @@ export function batchPoolStartTaskUserIdentityAutoUserToTerraform(struct?: Batch
 }
 
 export class BatchPoolStartTaskUserIdentityAutoUserOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -843,7 +865,7 @@ export class BatchPoolStartTaskUserIdentityAutoUserOutputReference extends cdktf
   }
 
   public get internalValue(): BatchPoolStartTaskUserIdentityAutoUser | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._elevationLevel) {
       hasAnyValues = true;
@@ -858,10 +880,12 @@ export class BatchPoolStartTaskUserIdentityAutoUserOutputReference extends cdktf
 
   public set internalValue(value: BatchPoolStartTaskUserIdentityAutoUser | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._elevationLevel = undefined;
       this._scope = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._elevationLevel = value.elevationLevel;
       this._scope = value.scope;
     }
@@ -924,6 +948,8 @@ export function batchPoolStartTaskUserIdentityToTerraform(struct?: BatchPoolStar
 }
 
 export class BatchPoolStartTaskUserIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -934,13 +960,13 @@ export class BatchPoolStartTaskUserIdentityOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): BatchPoolStartTaskUserIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._userName) {
       hasAnyValues = true;
       internalValueResult.userName = this._userName;
     }
-    if (this._autoUser) {
+    if (this._autoUser?.internalValue) {
       hasAnyValues = true;
       internalValueResult.autoUser = this._autoUser?.internalValue;
     }
@@ -949,10 +975,12 @@ export class BatchPoolStartTaskUserIdentityOutputReference extends cdktf.Complex
 
   public set internalValue(value: BatchPoolStartTaskUserIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._userName = undefined;
       this._autoUser.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._userName = value.userName;
       this._autoUser.internalValue = value.autoUser;
     }
@@ -1047,6 +1075,8 @@ export function batchPoolStartTaskToTerraform(struct?: BatchPoolStartTaskOutputR
 }
 
 export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1057,7 +1087,7 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): BatchPoolStartTask | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._commandLine) {
       hasAnyValues = true;
@@ -1087,7 +1117,7 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.resourceFile = this._resourceFile;
     }
-    if (this._userIdentity) {
+    if (this._userIdentity?.internalValue) {
       hasAnyValues = true;
       internalValueResult.userIdentity = this._userIdentity?.internalValue;
     }
@@ -1096,6 +1126,7 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: BatchPoolStartTask | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._commandLine = undefined;
       this._commonEnvironmentProperties = undefined;
       this._environment = undefined;
@@ -1106,6 +1137,7 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
       this._userIdentity.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._commandLine = value.commandLine;
       this._commonEnvironmentProperties = value.commonEnvironmentProperties;
       this._environment = value.environment;
@@ -1280,6 +1312,8 @@ export function batchPoolStorageImageReferenceToTerraform(struct?: BatchPoolStor
 }
 
 export class BatchPoolStorageImageReferenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1290,7 +1324,7 @@ export class BatchPoolStorageImageReferenceOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): BatchPoolStorageImageReference | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._id) {
       hasAnyValues = true;
@@ -1317,6 +1351,7 @@ export class BatchPoolStorageImageReferenceOutputReference extends cdktf.Complex
 
   public set internalValue(value: BatchPoolStorageImageReference | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._id = undefined;
       this._offer = undefined;
       this._publisher = undefined;
@@ -1324,6 +1359,7 @@ export class BatchPoolStorageImageReferenceOutputReference extends cdktf.Complex
       this._version = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._id = value.id;
       this._offer = value.offer;
       this._publisher = value.publisher;
@@ -1445,6 +1481,8 @@ export function batchPoolTimeoutsToTerraform(struct?: BatchPoolTimeoutsOutputRef
 }
 
 export class BatchPoolTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1455,7 +1493,7 @@ export class BatchPoolTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): BatchPoolTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1478,12 +1516,14 @@ export class BatchPoolTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: BatchPoolTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

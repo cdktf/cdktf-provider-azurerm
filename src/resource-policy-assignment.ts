@@ -78,6 +78,8 @@ export function resourcePolicyAssignmentIdentityToTerraform(struct?: ResourcePol
 }
 
 export class ResourcePolicyAssignmentIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -88,7 +90,7 @@ export class ResourcePolicyAssignmentIdentityOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): ResourcePolicyAssignmentIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._type) {
       hasAnyValues = true;
@@ -99,9 +101,11 @@ export class ResourcePolicyAssignmentIdentityOutputReference extends cdktf.Compl
 
   public set internalValue(value: ResourcePolicyAssignmentIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
   }
@@ -155,6 +159,8 @@ export function resourcePolicyAssignmentTimeoutsToTerraform(struct?: ResourcePol
 }
 
 export class ResourcePolicyAssignmentTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -165,7 +171,7 @@ export class ResourcePolicyAssignmentTimeoutsOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): ResourcePolicyAssignmentTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -188,12 +194,14 @@ export class ResourcePolicyAssignmentTimeoutsOutputReference extends cdktf.Compl
 
   public set internalValue(value: ResourcePolicyAssignmentTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

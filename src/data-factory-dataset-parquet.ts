@@ -114,6 +114,8 @@ export function dataFactoryDatasetParquetAzureBlobStorageLocationToTerraform(str
 }
 
 export class DataFactoryDatasetParquetAzureBlobStorageLocationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -124,7 +126,7 @@ export class DataFactoryDatasetParquetAzureBlobStorageLocationOutputReference ex
   }
 
   public get internalValue(): DataFactoryDatasetParquetAzureBlobStorageLocation | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._container) {
       hasAnyValues = true;
@@ -151,6 +153,7 @@ export class DataFactoryDatasetParquetAzureBlobStorageLocationOutputReference ex
 
   public set internalValue(value: DataFactoryDatasetParquetAzureBlobStorageLocation | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._container = undefined;
       this._dynamicFilenameEnabled = undefined;
       this._dynamicPathEnabled = undefined;
@@ -158,6 +161,7 @@ export class DataFactoryDatasetParquetAzureBlobStorageLocationOutputReference ex
       this._path = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._container = value.container;
       this._dynamicFilenameEnabled = value.dynamicFilenameEnabled;
       this._dynamicPathEnabled = value.dynamicPathEnabled;
@@ -278,6 +282,8 @@ export function dataFactoryDatasetParquetHttpServerLocationToTerraform(struct?: 
 }
 
 export class DataFactoryDatasetParquetHttpServerLocationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -288,7 +294,7 @@ export class DataFactoryDatasetParquetHttpServerLocationOutputReference extends 
   }
 
   public get internalValue(): DataFactoryDatasetParquetHttpServerLocation | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dynamicFilenameEnabled) {
       hasAnyValues = true;
@@ -315,6 +321,7 @@ export class DataFactoryDatasetParquetHttpServerLocationOutputReference extends 
 
   public set internalValue(value: DataFactoryDatasetParquetHttpServerLocation | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dynamicFilenameEnabled = undefined;
       this._dynamicPathEnabled = undefined;
       this._filename = undefined;
@@ -322,6 +329,7 @@ export class DataFactoryDatasetParquetHttpServerLocationOutputReference extends 
       this._relativeUrl = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dynamicFilenameEnabled = value.dynamicFilenameEnabled;
       this._dynamicPathEnabled = value.dynamicPathEnabled;
       this._filename = value.filename;
@@ -461,6 +469,8 @@ export function dataFactoryDatasetParquetTimeoutsToTerraform(struct?: DataFactor
 }
 
 export class DataFactoryDatasetParquetTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -471,7 +481,7 @@ export class DataFactoryDatasetParquetTimeoutsOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): DataFactoryDatasetParquetTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -494,12 +504,14 @@ export class DataFactoryDatasetParquetTimeoutsOutputReference extends cdktf.Comp
 
   public set internalValue(value: DataFactoryDatasetParquetTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

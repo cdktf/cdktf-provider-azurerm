@@ -81,6 +81,8 @@ export function logicAppIntegrationAccountAgreementGuestIdentityToTerraform(stru
 }
 
 export class LogicAppIntegrationAccountAgreementGuestIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -91,7 +93,7 @@ export class LogicAppIntegrationAccountAgreementGuestIdentityOutputReference ext
   }
 
   public get internalValue(): LogicAppIntegrationAccountAgreementGuestIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._qualifier) {
       hasAnyValues = true;
@@ -106,10 +108,12 @@ export class LogicAppIntegrationAccountAgreementGuestIdentityOutputReference ext
 
   public set internalValue(value: LogicAppIntegrationAccountAgreementGuestIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._qualifier = undefined;
       this._value = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._qualifier = value.qualifier;
       this._value = value.value;
     }
@@ -164,6 +168,8 @@ export function logicAppIntegrationAccountAgreementHostIdentityToTerraform(struc
 }
 
 export class LogicAppIntegrationAccountAgreementHostIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -174,7 +180,7 @@ export class LogicAppIntegrationAccountAgreementHostIdentityOutputReference exte
   }
 
   public get internalValue(): LogicAppIntegrationAccountAgreementHostIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._qualifier) {
       hasAnyValues = true;
@@ -189,10 +195,12 @@ export class LogicAppIntegrationAccountAgreementHostIdentityOutputReference exte
 
   public set internalValue(value: LogicAppIntegrationAccountAgreementHostIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._qualifier = undefined;
       this._value = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._qualifier = value.qualifier;
       this._value = value.value;
     }
@@ -257,6 +265,8 @@ export function logicAppIntegrationAccountAgreementTimeoutsToTerraform(struct?: 
 }
 
 export class LogicAppIntegrationAccountAgreementTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -267,7 +277,7 @@ export class LogicAppIntegrationAccountAgreementTimeoutsOutputReference extends 
   }
 
   public get internalValue(): LogicAppIntegrationAccountAgreementTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -290,12 +300,14 @@ export class LogicAppIntegrationAccountAgreementTimeoutsOutputReference extends 
 
   public set internalValue(value: LogicAppIntegrationAccountAgreementTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

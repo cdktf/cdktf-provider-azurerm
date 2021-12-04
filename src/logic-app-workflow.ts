@@ -82,6 +82,8 @@ export function logicAppWorkflowAccessControlActionToTerraform(struct?: LogicApp
 }
 
 export class LogicAppWorkflowAccessControlActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -92,7 +94,7 @@ export class LogicAppWorkflowAccessControlActionOutputReference extends cdktf.Co
   }
 
   public get internalValue(): LogicAppWorkflowAccessControlAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedCallerIpAddressRange) {
       hasAnyValues = true;
@@ -103,9 +105,11 @@ export class LogicAppWorkflowAccessControlActionOutputReference extends cdktf.Co
 
   public set internalValue(value: LogicAppWorkflowAccessControlAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedCallerIpAddressRange = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedCallerIpAddressRange = value.allowedCallerIpAddressRange;
     }
   }
@@ -141,6 +145,8 @@ export function logicAppWorkflowAccessControlContentToTerraform(struct?: LogicAp
 }
 
 export class LogicAppWorkflowAccessControlContentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -151,7 +157,7 @@ export class LogicAppWorkflowAccessControlContentOutputReference extends cdktf.C
   }
 
   public get internalValue(): LogicAppWorkflowAccessControlContent | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedCallerIpAddressRange) {
       hasAnyValues = true;
@@ -162,9 +168,11 @@ export class LogicAppWorkflowAccessControlContentOutputReference extends cdktf.C
 
   public set internalValue(value: LogicAppWorkflowAccessControlContent | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedCallerIpAddressRange = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedCallerIpAddressRange = value.allowedCallerIpAddressRange;
     }
   }
@@ -200,6 +208,8 @@ export function logicAppWorkflowAccessControlTriggerToTerraform(struct?: LogicAp
 }
 
 export class LogicAppWorkflowAccessControlTriggerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -210,7 +220,7 @@ export class LogicAppWorkflowAccessControlTriggerOutputReference extends cdktf.C
   }
 
   public get internalValue(): LogicAppWorkflowAccessControlTrigger | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedCallerIpAddressRange) {
       hasAnyValues = true;
@@ -221,9 +231,11 @@ export class LogicAppWorkflowAccessControlTriggerOutputReference extends cdktf.C
 
   public set internalValue(value: LogicAppWorkflowAccessControlTrigger | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedCallerIpAddressRange = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedCallerIpAddressRange = value.allowedCallerIpAddressRange;
     }
   }
@@ -259,6 +271,8 @@ export function logicAppWorkflowAccessControlWorkflowManagementToTerraform(struc
 }
 
 export class LogicAppWorkflowAccessControlWorkflowManagementOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -269,7 +283,7 @@ export class LogicAppWorkflowAccessControlWorkflowManagementOutputReference exte
   }
 
   public get internalValue(): LogicAppWorkflowAccessControlWorkflowManagement | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedCallerIpAddressRange) {
       hasAnyValues = true;
@@ -280,9 +294,11 @@ export class LogicAppWorkflowAccessControlWorkflowManagementOutputReference exte
 
   public set internalValue(value: LogicAppWorkflowAccessControlWorkflowManagement | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedCallerIpAddressRange = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedCallerIpAddressRange = value.allowedCallerIpAddressRange;
     }
   }
@@ -341,6 +357,8 @@ export function logicAppWorkflowAccessControlToTerraform(struct?: LogicAppWorkfl
 }
 
 export class LogicAppWorkflowAccessControlOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -351,21 +369,21 @@ export class LogicAppWorkflowAccessControlOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): LogicAppWorkflowAccessControl | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._action) {
+    if (this._action?.internalValue) {
       hasAnyValues = true;
       internalValueResult.action = this._action?.internalValue;
     }
-    if (this._content) {
+    if (this._content?.internalValue) {
       hasAnyValues = true;
       internalValueResult.content = this._content?.internalValue;
     }
-    if (this._trigger) {
+    if (this._trigger?.internalValue) {
       hasAnyValues = true;
       internalValueResult.trigger = this._trigger?.internalValue;
     }
-    if (this._workflowManagement) {
+    if (this._workflowManagement?.internalValue) {
       hasAnyValues = true;
       internalValueResult.workflowManagement = this._workflowManagement?.internalValue;
     }
@@ -374,12 +392,14 @@ export class LogicAppWorkflowAccessControlOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: LogicAppWorkflowAccessControl | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._action.internalValue = undefined;
       this._content.internalValue = undefined;
       this._trigger.internalValue = undefined;
       this._workflowManagement.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._action.internalValue = value.action;
       this._content.internalValue = value.content;
       this._trigger.internalValue = value.trigger;
@@ -484,6 +504,8 @@ export function logicAppWorkflowTimeoutsToTerraform(struct?: LogicAppWorkflowTim
 }
 
 export class LogicAppWorkflowTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -494,7 +516,7 @@ export class LogicAppWorkflowTimeoutsOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): LogicAppWorkflowTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -517,12 +539,14 @@ export class LogicAppWorkflowTimeoutsOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: LogicAppWorkflowTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

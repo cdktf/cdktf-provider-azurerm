@@ -61,6 +61,8 @@ export function storageBlobInventoryPolicyRulesFilterToTerraform(struct?: Storag
 }
 
 export class StorageBlobInventoryPolicyRulesFilterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -71,7 +73,7 @@ export class StorageBlobInventoryPolicyRulesFilterOutputReference extends cdktf.
   }
 
   public get internalValue(): StorageBlobInventoryPolicyRulesFilter | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._blobTypes) {
       hasAnyValues = true;
@@ -94,12 +96,14 @@ export class StorageBlobInventoryPolicyRulesFilterOutputReference extends cdktf.
 
   public set internalValue(value: StorageBlobInventoryPolicyRulesFilter | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._blobTypes = undefined;
       this._includeBlobVersions = undefined;
       this._includeSnapshots = undefined;
       this._prefixMatch = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._blobTypes = value.blobTypes;
       this._includeBlobVersions = value.includeBlobVersions;
       this._includeSnapshots = value.includeSnapshots;
@@ -225,6 +229,8 @@ export function storageBlobInventoryPolicyTimeoutsToTerraform(struct?: StorageBl
 }
 
 export class StorageBlobInventoryPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -235,7 +241,7 @@ export class StorageBlobInventoryPolicyTimeoutsOutputReference extends cdktf.Com
   }
 
   public get internalValue(): StorageBlobInventoryPolicyTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -258,12 +264,14 @@ export class StorageBlobInventoryPolicyTimeoutsOutputReference extends cdktf.Com
 
   public set internalValue(value: StorageBlobInventoryPolicyTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

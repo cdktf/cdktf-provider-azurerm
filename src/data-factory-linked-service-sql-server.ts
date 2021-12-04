@@ -85,6 +85,8 @@ export function dataFactoryLinkedServiceSqlServerKeyVaultConnectionStringToTerra
 }
 
 export class DataFactoryLinkedServiceSqlServerKeyVaultConnectionStringOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -95,7 +97,7 @@ export class DataFactoryLinkedServiceSqlServerKeyVaultConnectionStringOutputRefe
   }
 
   public get internalValue(): DataFactoryLinkedServiceSqlServerKeyVaultConnectionString | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._linkedServiceName) {
       hasAnyValues = true;
@@ -110,10 +112,12 @@ export class DataFactoryLinkedServiceSqlServerKeyVaultConnectionStringOutputRefe
 
   public set internalValue(value: DataFactoryLinkedServiceSqlServerKeyVaultConnectionString | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._linkedServiceName = undefined;
       this._secretName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._linkedServiceName = value.linkedServiceName;
       this._secretName = value.secretName;
     }
@@ -168,6 +172,8 @@ export function dataFactoryLinkedServiceSqlServerKeyVaultPasswordToTerraform(str
 }
 
 export class DataFactoryLinkedServiceSqlServerKeyVaultPasswordOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -178,7 +184,7 @@ export class DataFactoryLinkedServiceSqlServerKeyVaultPasswordOutputReference ex
   }
 
   public get internalValue(): DataFactoryLinkedServiceSqlServerKeyVaultPassword | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._linkedServiceName) {
       hasAnyValues = true;
@@ -193,10 +199,12 @@ export class DataFactoryLinkedServiceSqlServerKeyVaultPasswordOutputReference ex
 
   public set internalValue(value: DataFactoryLinkedServiceSqlServerKeyVaultPassword | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._linkedServiceName = undefined;
       this._secretName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._linkedServiceName = value.linkedServiceName;
       this._secretName = value.secretName;
     }
@@ -261,6 +269,8 @@ export function dataFactoryLinkedServiceSqlServerTimeoutsToTerraform(struct?: Da
 }
 
 export class DataFactoryLinkedServiceSqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -271,7 +281,7 @@ export class DataFactoryLinkedServiceSqlServerTimeoutsOutputReference extends cd
   }
 
   public get internalValue(): DataFactoryLinkedServiceSqlServerTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -294,12 +304,14 @@ export class DataFactoryLinkedServiceSqlServerTimeoutsOutputReference extends cd
 
   public set internalValue(value: DataFactoryLinkedServiceSqlServerTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

@@ -118,6 +118,8 @@ export function serviceFabricManagedClusterAuthenticationActiveDirectoryToTerraf
 }
 
 export class ServiceFabricManagedClusterAuthenticationActiveDirectoryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -128,7 +130,7 @@ export class ServiceFabricManagedClusterAuthenticationActiveDirectoryOutputRefer
   }
 
   public get internalValue(): ServiceFabricManagedClusterAuthenticationActiveDirectory | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._clientApplicationId) {
       hasAnyValues = true;
@@ -147,11 +149,13 @@ export class ServiceFabricManagedClusterAuthenticationActiveDirectoryOutputRefer
 
   public set internalValue(value: ServiceFabricManagedClusterAuthenticationActiveDirectory | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._clientApplicationId = undefined;
       this._clusterApplicationId = undefined;
       this._tenantId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._clientApplicationId = value.clientApplicationId;
       this._clusterApplicationId = value.clusterApplicationId;
       this._tenantId = value.tenantId;
@@ -251,6 +255,8 @@ export function serviceFabricManagedClusterAuthenticationToTerraform(struct?: Se
 }
 
 export class ServiceFabricManagedClusterAuthenticationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -261,9 +267,9 @@ export class ServiceFabricManagedClusterAuthenticationOutputReference extends cd
   }
 
   public get internalValue(): ServiceFabricManagedClusterAuthentication | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._activeDirectory) {
+    if (this._activeDirectory?.internalValue) {
       hasAnyValues = true;
       internalValueResult.activeDirectory = this._activeDirectory?.internalValue;
     }
@@ -276,10 +282,12 @@ export class ServiceFabricManagedClusterAuthenticationOutputReference extends cd
 
   public set internalValue(value: ServiceFabricManagedClusterAuthentication | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._activeDirectory.internalValue = undefined;
       this._certificate = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._activeDirectory.internalValue = value.activeDirectory;
       this._certificate = value.certificate;
     }
@@ -560,6 +568,8 @@ export function serviceFabricManagedClusterTimeoutsToTerraform(struct?: ServiceF
 }
 
 export class ServiceFabricManagedClusterTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -570,7 +580,7 @@ export class ServiceFabricManagedClusterTimeoutsOutputReference extends cdktf.Co
   }
 
   public get internalValue(): ServiceFabricManagedClusterTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -593,12 +603,14 @@ export class ServiceFabricManagedClusterTimeoutsOutputReference extends cdktf.Co
 
   public set internalValue(value: ServiceFabricManagedClusterTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

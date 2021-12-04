@@ -83,6 +83,8 @@ export function expressRoutePortIdentityToTerraform(struct?: ExpressRoutePortIde
 }
 
 export class ExpressRoutePortIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -93,7 +95,7 @@ export class ExpressRoutePortIdentityOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): ExpressRoutePortIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -108,10 +110,12 @@ export class ExpressRoutePortIdentityOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: ExpressRoutePortIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -179,6 +183,8 @@ export function expressRoutePortLink1ToTerraform(struct?: ExpressRoutePortLink1O
 }
 
 export class ExpressRoutePortLink1OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -189,7 +195,7 @@ export class ExpressRoutePortLink1OutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): ExpressRoutePortLink1 | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._adminEnabled) {
       hasAnyValues = true;
@@ -212,12 +218,14 @@ export class ExpressRoutePortLink1OutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: ExpressRoutePortLink1 | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._adminEnabled = undefined;
       this._macsecCakKeyvaultSecretId = undefined;
       this._macsecCipher = undefined;
       this._macsecCknKeyvaultSecretId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._adminEnabled = value.adminEnabled;
       this._macsecCakKeyvaultSecretId = value.macsecCakKeyvaultSecretId;
       this._macsecCipher = value.macsecCipher;
@@ -322,6 +330,8 @@ export function expressRoutePortLink2ToTerraform(struct?: ExpressRoutePortLink2O
 }
 
 export class ExpressRoutePortLink2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -332,7 +342,7 @@ export class ExpressRoutePortLink2OutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): ExpressRoutePortLink2 | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._adminEnabled) {
       hasAnyValues = true;
@@ -355,12 +365,14 @@ export class ExpressRoutePortLink2OutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: ExpressRoutePortLink2 | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._adminEnabled = undefined;
       this._macsecCakKeyvaultSecretId = undefined;
       this._macsecCipher = undefined;
       this._macsecCknKeyvaultSecretId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._adminEnabled = value.adminEnabled;
       this._macsecCakKeyvaultSecretId = value.macsecCakKeyvaultSecretId;
       this._macsecCipher = value.macsecCipher;
@@ -465,6 +477,8 @@ export function expressRoutePortTimeoutsToTerraform(struct?: ExpressRoutePortTim
 }
 
 export class ExpressRoutePortTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -475,7 +489,7 @@ export class ExpressRoutePortTimeoutsOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): ExpressRoutePortTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -498,12 +512,14 @@ export class ExpressRoutePortTimeoutsOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: ExpressRoutePortTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

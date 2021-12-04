@@ -66,6 +66,8 @@ export function dataShareDatasetDataLakeGen2TimeoutsToTerraform(struct?: DataSha
 }
 
 export class DataShareDatasetDataLakeGen2TimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -76,7 +78,7 @@ export class DataShareDatasetDataLakeGen2TimeoutsOutputReference extends cdktf.C
   }
 
   public get internalValue(): DataShareDatasetDataLakeGen2Timeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -95,11 +97,13 @@ export class DataShareDatasetDataLakeGen2TimeoutsOutputReference extends cdktf.C
 
   public set internalValue(value: DataShareDatasetDataLakeGen2Timeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

@@ -88,6 +88,8 @@ export function cosmosdbMongoCollectionAutoscaleSettingsToTerraform(struct?: Cos
 }
 
 export class CosmosdbMongoCollectionAutoscaleSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -98,7 +100,7 @@ export class CosmosdbMongoCollectionAutoscaleSettingsOutputReference extends cdk
   }
 
   public get internalValue(): CosmosdbMongoCollectionAutoscaleSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxThroughput) {
       hasAnyValues = true;
@@ -109,9 +111,11 @@ export class CosmosdbMongoCollectionAutoscaleSettingsOutputReference extends cdk
 
   public set internalValue(value: CosmosdbMongoCollectionAutoscaleSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxThroughput = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxThroughput = value.maxThroughput;
     }
   }
@@ -187,6 +191,8 @@ export function cosmosdbMongoCollectionTimeoutsToTerraform(struct?: CosmosdbMong
 }
 
 export class CosmosdbMongoCollectionTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -197,7 +203,7 @@ export class CosmosdbMongoCollectionTimeoutsOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): CosmosdbMongoCollectionTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -220,12 +226,14 @@ export class CosmosdbMongoCollectionTimeoutsOutputReference extends cdktf.Comple
 
   public set internalValue(value: CosmosdbMongoCollectionTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

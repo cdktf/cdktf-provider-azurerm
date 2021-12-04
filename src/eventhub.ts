@@ -77,6 +77,8 @@ export function eventhubCaptureDescriptionDestinationToTerraform(struct?: Eventh
 }
 
 export class EventhubCaptureDescriptionDestinationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -87,7 +89,7 @@ export class EventhubCaptureDescriptionDestinationOutputReference extends cdktf.
   }
 
   public get internalValue(): EventhubCaptureDescriptionDestination | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._archiveNameFormat) {
       hasAnyValues = true;
@@ -110,12 +112,14 @@ export class EventhubCaptureDescriptionDestinationOutputReference extends cdktf.
 
   public set internalValue(value: EventhubCaptureDescriptionDestination | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._archiveNameFormat = undefined;
       this._blobContainerName = undefined;
       this._name = undefined;
       this._storageAccountId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._archiveNameFormat = value.archiveNameFormat;
       this._blobContainerName = value.blobContainerName;
       this._name = value.name;
@@ -220,6 +224,8 @@ export function eventhubCaptureDescriptionToTerraform(struct?: EventhubCaptureDe
 }
 
 export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -230,7 +236,7 @@ export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): EventhubCaptureDescription | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -252,7 +258,7 @@ export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObje
       hasAnyValues = true;
       internalValueResult.skipEmptyArchives = this._skipEmptyArchives;
     }
-    if (this._destination) {
+    if (this._destination?.internalValue) {
       hasAnyValues = true;
       internalValueResult.destination = this._destination?.internalValue;
     }
@@ -261,6 +267,7 @@ export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: EventhubCaptureDescription | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
       this._encoding = undefined;
       this._intervalInSeconds = undefined;
@@ -269,6 +276,7 @@ export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObje
       this._destination.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
       this._encoding = value.encoding;
       this._intervalInSeconds = value.intervalInSeconds;
@@ -398,6 +406,8 @@ export function eventhubTimeoutsToTerraform(struct?: EventhubTimeoutsOutputRefer
 }
 
 export class EventhubTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -408,7 +418,7 @@ export class EventhubTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): EventhubTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -431,12 +441,14 @@ export class EventhubTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: EventhubTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

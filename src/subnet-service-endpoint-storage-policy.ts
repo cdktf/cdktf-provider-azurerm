@@ -64,6 +64,8 @@ export function subnetServiceEndpointStoragePolicyDefinitionToTerraform(struct?:
 }
 
 export class SubnetServiceEndpointStoragePolicyDefinitionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -74,7 +76,7 @@ export class SubnetServiceEndpointStoragePolicyDefinitionOutputReference extends
   }
 
   public get internalValue(): SubnetServiceEndpointStoragePolicyDefinition | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._description) {
       hasAnyValues = true;
@@ -93,11 +95,13 @@ export class SubnetServiceEndpointStoragePolicyDefinitionOutputReference extends
 
   public set internalValue(value: SubnetServiceEndpointStoragePolicyDefinition | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._description = undefined;
       this._name = undefined;
       this._serviceResources = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._description = value.description;
       this._name = value.name;
       this._serviceResources = value.serviceResources;
@@ -179,6 +183,8 @@ export function subnetServiceEndpointStoragePolicyTimeoutsToTerraform(struct?: S
 }
 
 export class SubnetServiceEndpointStoragePolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -189,7 +195,7 @@ export class SubnetServiceEndpointStoragePolicyTimeoutsOutputReference extends c
   }
 
   public get internalValue(): SubnetServiceEndpointStoragePolicyTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -212,12 +218,14 @@ export class SubnetServiceEndpointStoragePolicyTimeoutsOutputReference extends c
 
   public set internalValue(value: SubnetServiceEndpointStoragePolicyTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

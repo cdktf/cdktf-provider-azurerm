@@ -219,6 +219,8 @@ export function synapseWorkspaceAzureDevopsRepoToTerraform(struct?: SynapseWorks
 }
 
 export class SynapseWorkspaceAzureDevopsRepoOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -229,7 +231,7 @@ export class SynapseWorkspaceAzureDevopsRepoOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): SynapseWorkspaceAzureDevopsRepo | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._accountName) {
       hasAnyValues = true;
@@ -264,6 +266,7 @@ export class SynapseWorkspaceAzureDevopsRepoOutputReference extends cdktf.Comple
 
   public set internalValue(value: SynapseWorkspaceAzureDevopsRepo | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._accountName = undefined;
       this._branchName = undefined;
       this._lastCommitId = undefined;
@@ -273,6 +276,7 @@ export class SynapseWorkspaceAzureDevopsRepoOutputReference extends cdktf.Comple
       this._tenantId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._accountName = value.accountName;
       this._branchName = value.branchName;
       this._lastCommitId = value.lastCommitId;
@@ -403,6 +407,8 @@ export function synapseWorkspaceCustomerManagedKeyToTerraform(struct?: SynapseWo
 }
 
 export class SynapseWorkspaceCustomerManagedKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -413,7 +419,7 @@ export class SynapseWorkspaceCustomerManagedKeyOutputReference extends cdktf.Com
   }
 
   public get internalValue(): SynapseWorkspaceCustomerManagedKey | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._keyName) {
       hasAnyValues = true;
@@ -428,10 +434,12 @@ export class SynapseWorkspaceCustomerManagedKeyOutputReference extends cdktf.Com
 
   public set internalValue(value: SynapseWorkspaceCustomerManagedKey | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._keyName = undefined;
       this._keyVersionlessId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._keyName = value.keyName;
       this._keyVersionlessId = value.keyVersionlessId;
     }
@@ -509,6 +517,8 @@ export function synapseWorkspaceGithubRepoToTerraform(struct?: SynapseWorkspaceG
 }
 
 export class SynapseWorkspaceGithubRepoOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -519,7 +529,7 @@ export class SynapseWorkspaceGithubRepoOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): SynapseWorkspaceGithubRepo | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._accountName) {
       hasAnyValues = true;
@@ -550,6 +560,7 @@ export class SynapseWorkspaceGithubRepoOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: SynapseWorkspaceGithubRepo | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._accountName = undefined;
       this._branchName = undefined;
       this._gitUrl = undefined;
@@ -558,6 +569,7 @@ export class SynapseWorkspaceGithubRepoOutputReference extends cdktf.ComplexObje
       this._rootFolder = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._accountName = value.accountName;
       this._branchName = value.branchName;
       this._gitUrl = value.gitUrl;
@@ -684,6 +696,8 @@ export function synapseWorkspaceTimeoutsToTerraform(struct?: SynapseWorkspaceTim
 }
 
 export class SynapseWorkspaceTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -694,7 +708,7 @@ export class SynapseWorkspaceTimeoutsOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): SynapseWorkspaceTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -717,12 +731,14 @@ export class SynapseWorkspaceTimeoutsOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: SynapseWorkspaceTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

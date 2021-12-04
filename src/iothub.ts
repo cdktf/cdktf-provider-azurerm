@@ -258,6 +258,8 @@ export function iothubFallbackRouteToTerraform(struct?: IothubFallbackRouteOutpu
 }
 
 export class IothubFallbackRouteOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -268,7 +270,7 @@ export class IothubFallbackRouteOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): IothubFallbackRoute | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._condition) {
       hasAnyValues = true;
@@ -291,12 +293,14 @@ export class IothubFallbackRouteOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: IothubFallbackRoute | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._condition = undefined;
       this._enabled = undefined;
       this._endpointNames = undefined;
       this._source = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._condition = value.condition;
       this._enabled = value.enabled;
       this._endpointNames = value.endpointNames;
@@ -416,6 +420,8 @@ export function iothubFileUploadToTerraform(struct?: IothubFileUploadOutputRefer
 }
 
 export class IothubFileUploadOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -426,7 +432,7 @@ export class IothubFileUploadOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): IothubFileUpload | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._connectionString) {
       hasAnyValues = true;
@@ -461,6 +467,7 @@ export class IothubFileUploadOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: IothubFileUpload | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._connectionString = undefined;
       this._containerName = undefined;
       this._defaultTtl = undefined;
@@ -470,6 +477,7 @@ export class IothubFileUploadOutputReference extends cdktf.ComplexObject {
       this._sasTtl = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._connectionString = value.connectionString;
       this._containerName = value.containerName;
       this._defaultTtl = value.defaultTtl;
@@ -636,6 +644,8 @@ export function iothubSkuToTerraform(struct?: IothubSkuOutputReference | IothubS
 }
 
 export class IothubSkuOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -646,7 +656,7 @@ export class IothubSkuOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): IothubSku | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._capacity) {
       hasAnyValues = true;
@@ -661,10 +671,12 @@ export class IothubSkuOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: IothubSku | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._capacity = undefined;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._capacity = value.capacity;
       this._name = value.name;
     }
@@ -729,6 +741,8 @@ export function iothubTimeoutsToTerraform(struct?: IothubTimeoutsOutputReference
 }
 
 export class IothubTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -739,7 +753,7 @@ export class IothubTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): IothubTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -762,12 +776,14 @@ export class IothubTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: IothubTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

@@ -119,6 +119,8 @@ export function automationRunbookPublishContentLinkHashToTerraform(struct?: Auto
 }
 
 export class AutomationRunbookPublishContentLinkHashOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -129,7 +131,7 @@ export class AutomationRunbookPublishContentLinkHashOutputReference extends cdkt
   }
 
   public get internalValue(): AutomationRunbookPublishContentLinkHash | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._algorithm) {
       hasAnyValues = true;
@@ -144,10 +146,12 @@ export class AutomationRunbookPublishContentLinkHashOutputReference extends cdkt
 
   public set internalValue(value: AutomationRunbookPublishContentLinkHash | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._algorithm = undefined;
       this._value = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._algorithm = value.algorithm;
       this._value = value.value;
     }
@@ -209,6 +213,8 @@ export function automationRunbookPublishContentLinkToTerraform(struct?: Automati
 }
 
 export class AutomationRunbookPublishContentLinkOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -219,7 +225,7 @@ export class AutomationRunbookPublishContentLinkOutputReference extends cdktf.Co
   }
 
   public get internalValue(): AutomationRunbookPublishContentLink | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._uri) {
       hasAnyValues = true;
@@ -229,7 +235,7 @@ export class AutomationRunbookPublishContentLinkOutputReference extends cdktf.Co
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
-    if (this._hash) {
+    if (this._hash?.internalValue) {
       hasAnyValues = true;
       internalValueResult.hash = this._hash?.internalValue;
     }
@@ -238,11 +244,13 @@ export class AutomationRunbookPublishContentLinkOutputReference extends cdktf.Co
 
   public set internalValue(value: AutomationRunbookPublishContentLink | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._uri = undefined;
       this._version = undefined;
       this._hash.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._uri = value.uri;
       this._version = value.version;
       this._hash.internalValue = value.hash;
@@ -327,6 +335,8 @@ export function automationRunbookTimeoutsToTerraform(struct?: AutomationRunbookT
 }
 
 export class AutomationRunbookTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -337,7 +347,7 @@ export class AutomationRunbookTimeoutsOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): AutomationRunbookTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -360,12 +370,14 @@ export class AutomationRunbookTimeoutsOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: AutomationRunbookTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

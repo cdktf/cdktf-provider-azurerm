@@ -112,6 +112,8 @@ export function dataFactoryDatasetBinaryAzureBlobStorageLocationToTerraform(stru
 }
 
 export class DataFactoryDatasetBinaryAzureBlobStorageLocationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -122,7 +124,7 @@ export class DataFactoryDatasetBinaryAzureBlobStorageLocationOutputReference ext
   }
 
   public get internalValue(): DataFactoryDatasetBinaryAzureBlobStorageLocation | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._container) {
       hasAnyValues = true;
@@ -149,6 +151,7 @@ export class DataFactoryDatasetBinaryAzureBlobStorageLocationOutputReference ext
 
   public set internalValue(value: DataFactoryDatasetBinaryAzureBlobStorageLocation | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._container = undefined;
       this._dynamicFilenameEnabled = undefined;
       this._dynamicPathEnabled = undefined;
@@ -156,6 +159,7 @@ export class DataFactoryDatasetBinaryAzureBlobStorageLocationOutputReference ext
       this._path = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._container = value.container;
       this._dynamicFilenameEnabled = value.dynamicFilenameEnabled;
       this._dynamicPathEnabled = value.dynamicPathEnabled;
@@ -264,6 +268,8 @@ export function dataFactoryDatasetBinaryCompressionToTerraform(struct?: DataFact
 }
 
 export class DataFactoryDatasetBinaryCompressionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -274,7 +280,7 @@ export class DataFactoryDatasetBinaryCompressionOutputReference extends cdktf.Co
   }
 
   public get internalValue(): DataFactoryDatasetBinaryCompression | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._level) {
       hasAnyValues = true;
@@ -289,10 +295,12 @@ export class DataFactoryDatasetBinaryCompressionOutputReference extends cdktf.Co
 
   public set internalValue(value: DataFactoryDatasetBinaryCompression | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._level = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._level = value.level;
       this._type = value.type;
     }
@@ -365,6 +373,8 @@ export function dataFactoryDatasetBinaryHttpServerLocationToTerraform(struct?: D
 }
 
 export class DataFactoryDatasetBinaryHttpServerLocationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -375,7 +385,7 @@ export class DataFactoryDatasetBinaryHttpServerLocationOutputReference extends c
   }
 
   public get internalValue(): DataFactoryDatasetBinaryHttpServerLocation | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dynamicFilenameEnabled) {
       hasAnyValues = true;
@@ -402,6 +412,7 @@ export class DataFactoryDatasetBinaryHttpServerLocationOutputReference extends c
 
   public set internalValue(value: DataFactoryDatasetBinaryHttpServerLocation | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dynamicFilenameEnabled = undefined;
       this._dynamicPathEnabled = undefined;
       this._filename = undefined;
@@ -409,6 +420,7 @@ export class DataFactoryDatasetBinaryHttpServerLocationOutputReference extends c
       this._relativeUrl = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dynamicFilenameEnabled = value.dynamicFilenameEnabled;
       this._dynamicPathEnabled = value.dynamicPathEnabled;
       this._filename = value.filename;
@@ -521,6 +533,8 @@ export function dataFactoryDatasetBinarySftpServerLocationToTerraform(struct?: D
 }
 
 export class DataFactoryDatasetBinarySftpServerLocationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -531,7 +545,7 @@ export class DataFactoryDatasetBinarySftpServerLocationOutputReference extends c
   }
 
   public get internalValue(): DataFactoryDatasetBinarySftpServerLocation | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dynamicFilenameEnabled) {
       hasAnyValues = true;
@@ -554,12 +568,14 @@ export class DataFactoryDatasetBinarySftpServerLocationOutputReference extends c
 
   public set internalValue(value: DataFactoryDatasetBinarySftpServerLocation | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dynamicFilenameEnabled = undefined;
       this._dynamicPathEnabled = undefined;
       this._filename = undefined;
       this._path = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dynamicFilenameEnabled = value.dynamicFilenameEnabled;
       this._dynamicPathEnabled = value.dynamicPathEnabled;
       this._filename = value.filename;
@@ -658,6 +674,8 @@ export function dataFactoryDatasetBinaryTimeoutsToTerraform(struct?: DataFactory
 }
 
 export class DataFactoryDatasetBinaryTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -668,7 +686,7 @@ export class DataFactoryDatasetBinaryTimeoutsOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): DataFactoryDatasetBinaryTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -691,12 +709,14 @@ export class DataFactoryDatasetBinaryTimeoutsOutputReference extends cdktf.Compl
 
   public set internalValue(value: DataFactoryDatasetBinaryTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

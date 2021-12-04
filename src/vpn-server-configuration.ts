@@ -198,6 +198,8 @@ export function vpnServerConfigurationIpsecPolicyToTerraform(struct?: VpnServerC
 }
 
 export class VpnServerConfigurationIpsecPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -208,7 +210,7 @@ export class VpnServerConfigurationIpsecPolicyOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): VpnServerConfigurationIpsecPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dhGroup) {
       hasAnyValues = true;
@@ -247,6 +249,7 @@ export class VpnServerConfigurationIpsecPolicyOutputReference extends cdktf.Comp
 
   public set internalValue(value: VpnServerConfigurationIpsecPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dhGroup = undefined;
       this._ikeEncryption = undefined;
       this._ikeIntegrity = undefined;
@@ -257,6 +260,7 @@ export class VpnServerConfigurationIpsecPolicyOutputReference extends cdktf.Comp
       this._saLifetimeSeconds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dhGroup = value.dhGroup;
       this._ikeEncryption = value.ikeEncryption;
       this._ikeIntegrity = value.ikeIntegrity;
@@ -477,6 +481,8 @@ export function vpnServerConfigurationRadiusToTerraform(struct?: VpnServerConfig
 }
 
 export class VpnServerConfigurationRadiusOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -487,7 +493,7 @@ export class VpnServerConfigurationRadiusOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): VpnServerConfigurationRadius | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._clientRootCertificate) {
       hasAnyValues = true;
@@ -506,11 +512,13 @@ export class VpnServerConfigurationRadiusOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: VpnServerConfigurationRadius | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._clientRootCertificate = undefined;
       this._server = undefined;
       this._serverRootCertificate = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._clientRootCertificate = value.clientRootCertificate;
       this._server = value.server;
       this._serverRootCertificate = value.serverRootCertificate;
@@ -646,6 +654,8 @@ export function vpnServerConfigurationRadiusServerAToTerraform(struct?: VpnServe
 }
 
 export class VpnServerConfigurationRadiusServerAOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -656,7 +666,7 @@ export class VpnServerConfigurationRadiusServerAOutputReference extends cdktf.Co
   }
 
   public get internalValue(): VpnServerConfigurationRadiusServerA | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._address) {
       hasAnyValues = true;
@@ -679,12 +689,14 @@ export class VpnServerConfigurationRadiusServerAOutputReference extends cdktf.Co
 
   public set internalValue(value: VpnServerConfigurationRadiusServerA | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._address = undefined;
       this._secret = undefined;
       this._clientRootCertificate = undefined;
       this._serverRootCertificate = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._address = value.address;
       this._secret = value.secret;
       this._clientRootCertificate = value.clientRootCertificate;
@@ -782,6 +794,8 @@ export function vpnServerConfigurationTimeoutsToTerraform(struct?: VpnServerConf
 }
 
 export class VpnServerConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -792,7 +806,7 @@ export class VpnServerConfigurationTimeoutsOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): VpnServerConfigurationTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -815,12 +829,14 @@ export class VpnServerConfigurationTimeoutsOutputReference extends cdktf.Complex
 
   public set internalValue(value: VpnServerConfigurationTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

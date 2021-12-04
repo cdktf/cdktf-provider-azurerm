@@ -114,6 +114,8 @@ export function networkPacketCaptureStorageLocationToTerraform(struct?: NetworkP
 }
 
 export class NetworkPacketCaptureStorageLocationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -124,7 +126,7 @@ export class NetworkPacketCaptureStorageLocationOutputReference extends cdktf.Co
   }
 
   public get internalValue(): NetworkPacketCaptureStorageLocation | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._filePath) {
       hasAnyValues = true;
@@ -139,10 +141,12 @@ export class NetworkPacketCaptureStorageLocationOutputReference extends cdktf.Co
 
   public set internalValue(value: NetworkPacketCaptureStorageLocation | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._filePath = undefined;
       this._storageAccountId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._filePath = value.filePath;
       this._storageAccountId = value.storageAccountId;
     }
@@ -213,6 +217,8 @@ export function networkPacketCaptureTimeoutsToTerraform(struct?: NetworkPacketCa
 }
 
 export class NetworkPacketCaptureTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -223,7 +229,7 @@ export class NetworkPacketCaptureTimeoutsOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): NetworkPacketCaptureTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -246,12 +252,14 @@ export class NetworkPacketCaptureTimeoutsOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: NetworkPacketCaptureTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

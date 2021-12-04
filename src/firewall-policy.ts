@@ -110,6 +110,8 @@ export function firewallPolicyDnsToTerraform(struct?: FirewallPolicyDnsOutputRef
 }
 
 export class FirewallPolicyDnsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -120,7 +122,7 @@ export class FirewallPolicyDnsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): FirewallPolicyDns | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._networkRuleFqdnEnabled) {
       hasAnyValues = true;
@@ -139,11 +141,13 @@ export class FirewallPolicyDnsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: FirewallPolicyDns | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._networkRuleFqdnEnabled = undefined;
       this._proxyEnabled = undefined;
       this._servers = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._networkRuleFqdnEnabled = value.networkRuleFqdnEnabled;
       this._proxyEnabled = value.proxyEnabled;
       this._servers = value.servers;
@@ -221,6 +225,8 @@ export function firewallPolicyIdentityToTerraform(struct?: FirewallPolicyIdentit
 }
 
 export class FirewallPolicyIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -231,7 +237,7 @@ export class FirewallPolicyIdentityOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): FirewallPolicyIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._type) {
       hasAnyValues = true;
@@ -246,10 +252,12 @@ export class FirewallPolicyIdentityOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: FirewallPolicyIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._type = undefined;
       this._userAssignedIdentityIds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
       this._userAssignedIdentityIds = value.userAssignedIdentityIds;
     }
@@ -341,6 +349,8 @@ export function firewallPolicyInsightsToTerraform(struct?: FirewallPolicyInsight
 }
 
 export class FirewallPolicyInsightsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -351,7 +361,7 @@ export class FirewallPolicyInsightsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): FirewallPolicyInsights | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._defaultLogAnalyticsWorkspaceId) {
       hasAnyValues = true;
@@ -374,12 +384,14 @@ export class FirewallPolicyInsightsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: FirewallPolicyInsights | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._defaultLogAnalyticsWorkspaceId = undefined;
       this._enabled = undefined;
       this._retentionInDays = undefined;
       this._logAnalyticsWorkspace = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._defaultLogAnalyticsWorkspaceId = value.defaultLogAnalyticsWorkspaceId;
       this._enabled = value.enabled;
       this._retentionInDays = value.retentionInDays;
@@ -552,6 +564,8 @@ export function firewallPolicyIntrusionDetectionToTerraform(struct?: FirewallPol
 }
 
 export class FirewallPolicyIntrusionDetectionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -562,7 +576,7 @@ export class FirewallPolicyIntrusionDetectionOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): FirewallPolicyIntrusionDetection | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._mode) {
       hasAnyValues = true;
@@ -581,11 +595,13 @@ export class FirewallPolicyIntrusionDetectionOutputReference extends cdktf.Compl
 
   public set internalValue(value: FirewallPolicyIntrusionDetection | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._mode = undefined;
       this._signatureOverrides = undefined;
       this._trafficBypass = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._mode = value.mode;
       this._signatureOverrides = value.signatureOverrides;
       this._trafficBypass = value.trafficBypass;
@@ -665,6 +681,8 @@ export function firewallPolicyThreatIntelligenceAllowlistToTerraform(struct?: Fi
 }
 
 export class FirewallPolicyThreatIntelligenceAllowlistOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -675,7 +693,7 @@ export class FirewallPolicyThreatIntelligenceAllowlistOutputReference extends cd
   }
 
   public get internalValue(): FirewallPolicyThreatIntelligenceAllowlist | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._fqdns) {
       hasAnyValues = true;
@@ -690,10 +708,12 @@ export class FirewallPolicyThreatIntelligenceAllowlistOutputReference extends cd
 
   public set internalValue(value: FirewallPolicyThreatIntelligenceAllowlist | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._fqdns = undefined;
       this._ipAddresses = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._fqdns = value.fqdns;
       this._ipAddresses = value.ipAddresses;
     }
@@ -764,6 +784,8 @@ export function firewallPolicyTimeoutsToTerraform(struct?: FirewallPolicyTimeout
 }
 
 export class FirewallPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -774,7 +796,7 @@ export class FirewallPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): FirewallPolicyTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -797,12 +819,14 @@ export class FirewallPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: FirewallPolicyTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -897,6 +921,8 @@ export function firewallPolicyTlsCertificateToTerraform(struct?: FirewallPolicyT
 }
 
 export class FirewallPolicyTlsCertificateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -907,7 +933,7 @@ export class FirewallPolicyTlsCertificateOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): FirewallPolicyTlsCertificate | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._keyVaultSecretId) {
       hasAnyValues = true;
@@ -922,10 +948,12 @@ export class FirewallPolicyTlsCertificateOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: FirewallPolicyTlsCertificate | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._keyVaultSecretId = undefined;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._keyVaultSecretId = value.keyVaultSecretId;
       this._name = value.name;
     }

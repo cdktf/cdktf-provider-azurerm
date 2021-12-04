@@ -81,6 +81,8 @@ export function networkWatcherFlowLogRetentionPolicyToTerraform(struct?: Network
 }
 
 export class NetworkWatcherFlowLogRetentionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -91,7 +93,7 @@ export class NetworkWatcherFlowLogRetentionPolicyOutputReference extends cdktf.C
   }
 
   public get internalValue(): NetworkWatcherFlowLogRetentionPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._days) {
       hasAnyValues = true;
@@ -106,10 +108,12 @@ export class NetworkWatcherFlowLogRetentionPolicyOutputReference extends cdktf.C
 
   public set internalValue(value: NetworkWatcherFlowLogRetentionPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._days = undefined;
       this._enabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._days = value.days;
       this._enabled = value.enabled;
     }
@@ -174,6 +178,8 @@ export function networkWatcherFlowLogTimeoutsToTerraform(struct?: NetworkWatcher
 }
 
 export class NetworkWatcherFlowLogTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -184,7 +190,7 @@ export class NetworkWatcherFlowLogTimeoutsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): NetworkWatcherFlowLogTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -207,12 +213,14 @@ export class NetworkWatcherFlowLogTimeoutsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: NetworkWatcherFlowLogTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -322,6 +330,8 @@ export function networkWatcherFlowLogTrafficAnalyticsToTerraform(struct?: Networ
 }
 
 export class NetworkWatcherFlowLogTrafficAnalyticsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -332,7 +342,7 @@ export class NetworkWatcherFlowLogTrafficAnalyticsOutputReference extends cdktf.
   }
 
   public get internalValue(): NetworkWatcherFlowLogTrafficAnalytics | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -359,6 +369,7 @@ export class NetworkWatcherFlowLogTrafficAnalyticsOutputReference extends cdktf.
 
   public set internalValue(value: NetworkWatcherFlowLogTrafficAnalytics | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
       this._intervalInMinutes = undefined;
       this._workspaceId = undefined;
@@ -366,6 +377,7 @@ export class NetworkWatcherFlowLogTrafficAnalyticsOutputReference extends cdktf.
       this._workspaceResourceId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
       this._intervalInMinutes = value.intervalInMinutes;
       this._workspaceId = value.workspaceId;

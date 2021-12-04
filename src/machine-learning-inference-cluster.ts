@@ -77,6 +77,8 @@ export function machineLearningInferenceClusterIdentityToTerraform(struct?: Mach
 }
 
 export class MachineLearningInferenceClusterIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -87,7 +89,7 @@ export class MachineLearningInferenceClusterIdentityOutputReference extends cdkt
   }
 
   public get internalValue(): MachineLearningInferenceClusterIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -102,10 +104,12 @@ export class MachineLearningInferenceClusterIdentityOutputReference extends cdkt
 
   public set internalValue(value: MachineLearningInferenceClusterIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -178,6 +182,8 @@ export function machineLearningInferenceClusterSslToTerraform(struct?: MachineLe
 }
 
 export class MachineLearningInferenceClusterSslOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -188,7 +194,7 @@ export class MachineLearningInferenceClusterSslOutputReference extends cdktf.Com
   }
 
   public get internalValue(): MachineLearningInferenceClusterSsl | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cert) {
       hasAnyValues = true;
@@ -215,6 +221,7 @@ export class MachineLearningInferenceClusterSslOutputReference extends cdktf.Com
 
   public set internalValue(value: MachineLearningInferenceClusterSsl | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cert = undefined;
       this._cname = undefined;
       this._key = undefined;
@@ -222,6 +229,7 @@ export class MachineLearningInferenceClusterSslOutputReference extends cdktf.Com
       this._overwriteExistingDomain = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cert = value.cert;
       this._cname = value.cname;
       this._key = value.key;
@@ -343,6 +351,8 @@ export function machineLearningInferenceClusterTimeoutsToTerraform(struct?: Mach
 }
 
 export class MachineLearningInferenceClusterTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -353,7 +363,7 @@ export class MachineLearningInferenceClusterTimeoutsOutputReference extends cdkt
   }
 
   public get internalValue(): MachineLearningInferenceClusterTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -376,12 +386,14 @@ export class MachineLearningInferenceClusterTimeoutsOutputReference extends cdkt
 
   public set internalValue(value: MachineLearningInferenceClusterTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

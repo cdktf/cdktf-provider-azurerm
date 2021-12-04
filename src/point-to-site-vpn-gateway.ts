@@ -75,6 +75,8 @@ export function pointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRoute
 }
 
 export class PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTableOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -85,7 +87,7 @@ export class PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTab
   }
 
   public get internalValue(): PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTable | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._ids) {
       hasAnyValues = true;
@@ -100,10 +102,12 @@ export class PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTab
 
   public set internalValue(value: PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTable | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._ids = undefined;
       this._labels = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._ids = value.ids;
       this._labels = value.labels;
     }
@@ -163,6 +167,8 @@ export function pointToSiteVpnGatewayConnectionConfigurationRouteToTerraform(str
 }
 
 export class PointToSiteVpnGatewayConnectionConfigurationRouteOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -173,13 +179,13 @@ export class PointToSiteVpnGatewayConnectionConfigurationRouteOutputReference ex
   }
 
   public get internalValue(): PointToSiteVpnGatewayConnectionConfigurationRoute | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._associatedRouteTableId) {
       hasAnyValues = true;
       internalValueResult.associatedRouteTableId = this._associatedRouteTableId;
     }
-    if (this._propagatedRouteTable) {
+    if (this._propagatedRouteTable?.internalValue) {
       hasAnyValues = true;
       internalValueResult.propagatedRouteTable = this._propagatedRouteTable?.internalValue;
     }
@@ -188,10 +194,12 @@ export class PointToSiteVpnGatewayConnectionConfigurationRouteOutputReference ex
 
   public set internalValue(value: PointToSiteVpnGatewayConnectionConfigurationRoute | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._associatedRouteTableId = undefined;
       this._propagatedRouteTable.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._associatedRouteTableId = value.associatedRouteTableId;
       this._propagatedRouteTable.internalValue = value.propagatedRouteTable;
     }
@@ -244,6 +252,8 @@ export function pointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool
 }
 
 export class PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -254,7 +264,7 @@ export class PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolOut
   }
 
   public get internalValue(): PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._addressPrefixes) {
       hasAnyValues = true;
@@ -265,9 +275,11 @@ export class PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolOut
 
   public set internalValue(value: PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._addressPrefixes = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._addressPrefixes = value.addressPrefixes;
     }
   }
@@ -322,6 +334,8 @@ export function pointToSiteVpnGatewayConnectionConfigurationToTerraform(struct?:
 }
 
 export class PointToSiteVpnGatewayConnectionConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -332,7 +346,7 @@ export class PointToSiteVpnGatewayConnectionConfigurationOutputReference extends
   }
 
   public get internalValue(): PointToSiteVpnGatewayConnectionConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._internetSecurityEnabled) {
       hasAnyValues = true;
@@ -342,11 +356,11 @@ export class PointToSiteVpnGatewayConnectionConfigurationOutputReference extends
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._route) {
+    if (this._route?.internalValue) {
       hasAnyValues = true;
       internalValueResult.route = this._route?.internalValue;
     }
-    if (this._vpnClientAddressPool) {
+    if (this._vpnClientAddressPool?.internalValue) {
       hasAnyValues = true;
       internalValueResult.vpnClientAddressPool = this._vpnClientAddressPool?.internalValue;
     }
@@ -355,12 +369,14 @@ export class PointToSiteVpnGatewayConnectionConfigurationOutputReference extends
 
   public set internalValue(value: PointToSiteVpnGatewayConnectionConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._internetSecurityEnabled = undefined;
       this._name = undefined;
       this._route.internalValue = undefined;
       this._vpnClientAddressPool.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._internetSecurityEnabled = value.internetSecurityEnabled;
       this._name = value.name;
       this._route.internalValue = value.route;
@@ -459,6 +475,8 @@ export function pointToSiteVpnGatewayTimeoutsToTerraform(struct?: PointToSiteVpn
 }
 
 export class PointToSiteVpnGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -469,7 +487,7 @@ export class PointToSiteVpnGatewayTimeoutsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): PointToSiteVpnGatewayTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -492,12 +510,14 @@ export class PointToSiteVpnGatewayTimeoutsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: PointToSiteVpnGatewayTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

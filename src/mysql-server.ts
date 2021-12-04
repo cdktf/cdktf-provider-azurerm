@@ -130,6 +130,8 @@ export function mysqlServerIdentityToTerraform(struct?: MysqlServerIdentityOutpu
 }
 
 export class MysqlServerIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -140,7 +142,7 @@ export class MysqlServerIdentityOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): MysqlServerIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._type) {
       hasAnyValues = true;
@@ -151,9 +153,11 @@ export class MysqlServerIdentityOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: MysqlServerIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
   }
@@ -204,6 +208,8 @@ export function mysqlServerStorageProfileToTerraform(struct?: MysqlServerStorage
 }
 
 export class MysqlServerStorageProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -214,7 +220,7 @@ export class MysqlServerStorageProfileOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): MysqlServerStorageProfile | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._autoGrow) {
       hasAnyValues = true;
@@ -237,12 +243,14 @@ export class MysqlServerStorageProfileOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: MysqlServerStorageProfile | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._autoGrow = undefined;
       this._backupRetentionDays = undefined;
       this._geoRedundantBackup = undefined;
       this._storageMb = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._autoGrow = value.autoGrow;
       this._backupRetentionDays = value.backupRetentionDays;
       this._geoRedundantBackup = value.geoRedundantBackup;
@@ -362,6 +370,8 @@ export function mysqlServerThreatDetectionPolicyToTerraform(struct?: MysqlServer
 }
 
 export class MysqlServerThreatDetectionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -372,7 +382,7 @@ export class MysqlServerThreatDetectionPolicyOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): MysqlServerThreatDetectionPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._disabledAlerts) {
       hasAnyValues = true;
@@ -407,6 +417,7 @@ export class MysqlServerThreatDetectionPolicyOutputReference extends cdktf.Compl
 
   public set internalValue(value: MysqlServerThreatDetectionPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._disabledAlerts = undefined;
       this._emailAccountAdmins = undefined;
       this._emailAddresses = undefined;
@@ -416,6 +427,7 @@ export class MysqlServerThreatDetectionPolicyOutputReference extends cdktf.Compl
       this._storageEndpoint = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._disabledAlerts = value.disabledAlerts;
       this._emailAccountAdmins = value.emailAccountAdmins;
       this._emailAddresses = value.emailAddresses;
@@ -571,6 +583,8 @@ export function mysqlServerTimeoutsToTerraform(struct?: MysqlServerTimeoutsOutpu
 }
 
 export class MysqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -581,7 +595,7 @@ export class MysqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): MysqlServerTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -604,12 +618,14 @@ export class MysqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: MysqlServerTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

@@ -52,6 +52,8 @@ export function storageManagementPolicyRuleActionsBaseBlobToTerraform(struct?: S
 }
 
 export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -62,7 +64,7 @@ export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends c
   }
 
   public get internalValue(): StorageManagementPolicyRuleActionsBaseBlob | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._deleteAfterDaysSinceModificationGreaterThan) {
       hasAnyValues = true;
@@ -81,11 +83,13 @@ export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends c
 
   public set internalValue(value: StorageManagementPolicyRuleActionsBaseBlob | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._deleteAfterDaysSinceModificationGreaterThan = undefined;
       this._tierToArchiveAfterDaysSinceModificationGreaterThan = undefined;
       this._tierToCoolAfterDaysSinceModificationGreaterThan = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._deleteAfterDaysSinceModificationGreaterThan = value.deleteAfterDaysSinceModificationGreaterThan;
       this._tierToArchiveAfterDaysSinceModificationGreaterThan = value.tierToArchiveAfterDaysSinceModificationGreaterThan;
       this._tierToCoolAfterDaysSinceModificationGreaterThan = value.tierToCoolAfterDaysSinceModificationGreaterThan;
@@ -168,6 +172,8 @@ export function storageManagementPolicyRuleActionsSnapshotToTerraform(struct?: S
 }
 
 export class StorageManagementPolicyRuleActionsSnapshotOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -178,7 +184,7 @@ export class StorageManagementPolicyRuleActionsSnapshotOutputReference extends c
   }
 
   public get internalValue(): StorageManagementPolicyRuleActionsSnapshot | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._changeTierToArchiveAfterDaysSinceCreation) {
       hasAnyValues = true;
@@ -197,11 +203,13 @@ export class StorageManagementPolicyRuleActionsSnapshotOutputReference extends c
 
   public set internalValue(value: StorageManagementPolicyRuleActionsSnapshot | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._changeTierToArchiveAfterDaysSinceCreation = undefined;
       this._changeTierToCoolAfterDaysSinceCreation = undefined;
       this._deleteAfterDaysSinceCreationGreaterThan = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._changeTierToArchiveAfterDaysSinceCreation = value.changeTierToArchiveAfterDaysSinceCreation;
       this._changeTierToCoolAfterDaysSinceCreation = value.changeTierToCoolAfterDaysSinceCreation;
       this._deleteAfterDaysSinceCreationGreaterThan = value.deleteAfterDaysSinceCreationGreaterThan;
@@ -284,6 +292,8 @@ export function storageManagementPolicyRuleActionsVersionToTerraform(struct?: St
 }
 
 export class StorageManagementPolicyRuleActionsVersionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -294,7 +304,7 @@ export class StorageManagementPolicyRuleActionsVersionOutputReference extends cd
   }
 
   public get internalValue(): StorageManagementPolicyRuleActionsVersion | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._changeTierToArchiveAfterDaysSinceCreation) {
       hasAnyValues = true;
@@ -313,11 +323,13 @@ export class StorageManagementPolicyRuleActionsVersionOutputReference extends cd
 
   public set internalValue(value: StorageManagementPolicyRuleActionsVersion | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._changeTierToArchiveAfterDaysSinceCreation = undefined;
       this._changeTierToCoolAfterDaysSinceCreation = undefined;
       this._deleteAfterDaysSinceCreation = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._changeTierToArchiveAfterDaysSinceCreation = value.changeTierToArchiveAfterDaysSinceCreation;
       this._changeTierToCoolAfterDaysSinceCreation = value.changeTierToCoolAfterDaysSinceCreation;
       this._deleteAfterDaysSinceCreation = value.deleteAfterDaysSinceCreation;
@@ -406,6 +418,8 @@ export function storageManagementPolicyRuleActionsToTerraform(struct?: StorageMa
 }
 
 export class StorageManagementPolicyRuleActionsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -416,17 +430,17 @@ export class StorageManagementPolicyRuleActionsOutputReference extends cdktf.Com
   }
 
   public get internalValue(): StorageManagementPolicyRuleActions | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._baseBlob) {
+    if (this._baseBlob?.internalValue) {
       hasAnyValues = true;
       internalValueResult.baseBlob = this._baseBlob?.internalValue;
     }
-    if (this._snapshot) {
+    if (this._snapshot?.internalValue) {
       hasAnyValues = true;
       internalValueResult.snapshot = this._snapshot?.internalValue;
     }
-    if (this._version) {
+    if (this._version?.internalValue) {
       hasAnyValues = true;
       internalValueResult.version = this._version?.internalValue;
     }
@@ -435,11 +449,13 @@ export class StorageManagementPolicyRuleActionsOutputReference extends cdktf.Com
 
   public set internalValue(value: StorageManagementPolicyRuleActions | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._baseBlob.internalValue = undefined;
       this._snapshot.internalValue = undefined;
       this._version.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._baseBlob.internalValue = value.baseBlob;
       this._snapshot.internalValue = value.snapshot;
       this._version.internalValue = value.version;
@@ -551,6 +567,8 @@ export function storageManagementPolicyRuleFiltersToTerraform(struct?: StorageMa
 }
 
 export class StorageManagementPolicyRuleFiltersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -561,7 +579,7 @@ export class StorageManagementPolicyRuleFiltersOutputReference extends cdktf.Com
   }
 
   public get internalValue(): StorageManagementPolicyRuleFilters | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._blobTypes) {
       hasAnyValues = true;
@@ -580,11 +598,13 @@ export class StorageManagementPolicyRuleFiltersOutputReference extends cdktf.Com
 
   public set internalValue(value: StorageManagementPolicyRuleFilters | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._blobTypes = undefined;
       this._prefixMatch = undefined;
       this._matchBlobIndexTag = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._blobTypes = value.blobTypes;
       this._prefixMatch = value.prefixMatch;
       this._matchBlobIndexTag = value.matchBlobIndexTag;
@@ -709,6 +729,8 @@ export function storageManagementPolicyTimeoutsToTerraform(struct?: StorageManag
 }
 
 export class StorageManagementPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -719,7 +741,7 @@ export class StorageManagementPolicyTimeoutsOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): StorageManagementPolicyTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -742,12 +764,14 @@ export class StorageManagementPolicyTimeoutsOutputReference extends cdktf.Comple
 
   public set internalValue(value: StorageManagementPolicyTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

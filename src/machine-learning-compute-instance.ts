@@ -91,6 +91,8 @@ export function machineLearningComputeInstanceAssignToUserToTerraform(struct?: M
 }
 
 export class MachineLearningComputeInstanceAssignToUserOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -101,7 +103,7 @@ export class MachineLearningComputeInstanceAssignToUserOutputReference extends c
   }
 
   public get internalValue(): MachineLearningComputeInstanceAssignToUser | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._objectId) {
       hasAnyValues = true;
@@ -116,10 +118,12 @@ export class MachineLearningComputeInstanceAssignToUserOutputReference extends c
 
   public set internalValue(value: MachineLearningComputeInstanceAssignToUser | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._objectId = undefined;
       this._tenantId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._objectId = value.objectId;
       this._tenantId = value.tenantId;
     }
@@ -180,6 +184,8 @@ export function machineLearningComputeInstanceIdentityToTerraform(struct?: Machi
 }
 
 export class MachineLearningComputeInstanceIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -190,7 +196,7 @@ export class MachineLearningComputeInstanceIdentityOutputReference extends cdktf
   }
 
   public get internalValue(): MachineLearningComputeInstanceIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -205,10 +211,12 @@ export class MachineLearningComputeInstanceIdentityOutputReference extends cdktf
 
   public set internalValue(value: MachineLearningComputeInstanceIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -261,6 +269,8 @@ export function machineLearningComputeInstanceSshToTerraform(struct?: MachineLea
 }
 
 export class MachineLearningComputeInstanceSshOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -271,7 +281,7 @@ export class MachineLearningComputeInstanceSshOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): MachineLearningComputeInstanceSsh | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._publicKey) {
       hasAnyValues = true;
@@ -282,9 +292,11 @@ export class MachineLearningComputeInstanceSshOutputReference extends cdktf.Comp
 
   public set internalValue(value: MachineLearningComputeInstanceSsh | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._publicKey = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._publicKey = value.publicKey;
     }
   }
@@ -330,6 +342,8 @@ export function machineLearningComputeInstanceTimeoutsToTerraform(struct?: Machi
 }
 
 export class MachineLearningComputeInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -340,7 +354,7 @@ export class MachineLearningComputeInstanceTimeoutsOutputReference extends cdktf
   }
 
   public get internalValue(): MachineLearningComputeInstanceTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -359,11 +373,13 @@ export class MachineLearningComputeInstanceTimeoutsOutputReference extends cdktf
 
   public set internalValue(value: MachineLearningComputeInstanceTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

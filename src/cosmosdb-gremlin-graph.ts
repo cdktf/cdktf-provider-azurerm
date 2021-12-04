@@ -88,6 +88,8 @@ export function cosmosdbGremlinGraphAutoscaleSettingsToTerraform(struct?: Cosmos
 }
 
 export class CosmosdbGremlinGraphAutoscaleSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -98,7 +100,7 @@ export class CosmosdbGremlinGraphAutoscaleSettingsOutputReference extends cdktf.
   }
 
   public get internalValue(): CosmosdbGremlinGraphAutoscaleSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxThroughput) {
       hasAnyValues = true;
@@ -109,9 +111,11 @@ export class CosmosdbGremlinGraphAutoscaleSettingsOutputReference extends cdktf.
 
   public set internalValue(value: CosmosdbGremlinGraphAutoscaleSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxThroughput = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxThroughput = value.maxThroughput;
     }
   }
@@ -160,6 +164,8 @@ export function cosmosdbGremlinGraphConflictResolutionPolicyToTerraform(struct?:
 }
 
 export class CosmosdbGremlinGraphConflictResolutionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -170,7 +176,7 @@ export class CosmosdbGremlinGraphConflictResolutionPolicyOutputReference extends
   }
 
   public get internalValue(): CosmosdbGremlinGraphConflictResolutionPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._conflictResolutionPath) {
       hasAnyValues = true;
@@ -189,11 +195,13 @@ export class CosmosdbGremlinGraphConflictResolutionPolicyOutputReference extends
 
   public set internalValue(value: CosmosdbGremlinGraphConflictResolutionPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._conflictResolutionPath = undefined;
       this._conflictResolutionProcedure = undefined;
       this._mode = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._conflictResolutionPath = value.conflictResolutionPath;
       this._conflictResolutionProcedure = value.conflictResolutionProcedure;
       this._mode = value.mode;
@@ -350,6 +358,8 @@ export function cosmosdbGremlinGraphIndexPolicyToTerraform(struct?: CosmosdbGrem
 }
 
 export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -360,7 +370,7 @@ export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): CosmosdbGremlinGraphIndexPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._automatic) {
       hasAnyValues = true;
@@ -391,6 +401,7 @@ export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.Comple
 
   public set internalValue(value: CosmosdbGremlinGraphIndexPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._automatic = undefined;
       this._excludedPaths = undefined;
       this._includedPaths = undefined;
@@ -399,6 +410,7 @@ export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.Comple
       this._spatialIndex = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._automatic = value.automatic;
       this._excludedPaths = value.excludedPaths;
       this._includedPaths = value.includedPaths;
@@ -536,6 +548,8 @@ export function cosmosdbGremlinGraphTimeoutsToTerraform(struct?: CosmosdbGremlin
 }
 
 export class CosmosdbGremlinGraphTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -546,7 +560,7 @@ export class CosmosdbGremlinGraphTimeoutsOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): CosmosdbGremlinGraphTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -569,12 +583,14 @@ export class CosmosdbGremlinGraphTimeoutsOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: CosmosdbGremlinGraphTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

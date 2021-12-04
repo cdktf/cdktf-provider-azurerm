@@ -107,6 +107,8 @@ export function consumptionBudgetSubscriptionFilterNotDimensionToTerraform(struc
 }
 
 export class ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -117,7 +119,7 @@ export class ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference exte
   }
 
   public get internalValue(): ConsumptionBudgetSubscriptionFilterNotDimension | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -136,11 +138,13 @@ export class ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference exte
 
   public set internalValue(value: ConsumptionBudgetSubscriptionFilterNotDimension | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._operator = undefined;
       this._values = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._operator = value.operator;
       this._values = value.values;
@@ -217,6 +221,8 @@ export function consumptionBudgetSubscriptionFilterNotTagToTerraform(struct?: Co
 }
 
 export class ConsumptionBudgetSubscriptionFilterNotTagOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -227,7 +233,7 @@ export class ConsumptionBudgetSubscriptionFilterNotTagOutputReference extends cd
   }
 
   public get internalValue(): ConsumptionBudgetSubscriptionFilterNotTag | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -246,11 +252,13 @@ export class ConsumptionBudgetSubscriptionFilterNotTagOutputReference extends cd
 
   public set internalValue(value: ConsumptionBudgetSubscriptionFilterNotTag | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._operator = undefined;
       this._values = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._operator = value.operator;
       this._values = value.values;
@@ -326,6 +334,8 @@ export function consumptionBudgetSubscriptionFilterNotToTerraform(struct?: Consu
 }
 
 export class ConsumptionBudgetSubscriptionFilterNotOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -336,13 +346,13 @@ export class ConsumptionBudgetSubscriptionFilterNotOutputReference extends cdktf
   }
 
   public get internalValue(): ConsumptionBudgetSubscriptionFilterNot | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dimension) {
+    if (this._dimension?.internalValue) {
       hasAnyValues = true;
       internalValueResult.dimension = this._dimension?.internalValue;
     }
-    if (this._tag) {
+    if (this._tag?.internalValue) {
       hasAnyValues = true;
       internalValueResult.tag = this._tag?.internalValue;
     }
@@ -351,10 +361,12 @@ export class ConsumptionBudgetSubscriptionFilterNotOutputReference extends cdktf
 
   public set internalValue(value: ConsumptionBudgetSubscriptionFilterNot | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dimension.internalValue = undefined;
       this._tag.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dimension.internalValue = value.dimension;
       this._tag.internalValue = value.tag;
     }
@@ -453,6 +465,8 @@ export function consumptionBudgetSubscriptionFilterToTerraform(struct?: Consumpt
 }
 
 export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -463,13 +477,13 @@ export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.Co
   }
 
   public get internalValue(): ConsumptionBudgetSubscriptionFilter | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dimension) {
       hasAnyValues = true;
       internalValueResult.dimension = this._dimension;
     }
-    if (this._not) {
+    if (this._not?.internalValue) {
       hasAnyValues = true;
       internalValueResult.not = this._not?.internalValue;
     }
@@ -482,11 +496,13 @@ export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.Co
 
   public set internalValue(value: ConsumptionBudgetSubscriptionFilter | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dimension = undefined;
       this._not.internalValue = undefined;
       this._tag = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dimension = value.dimension;
       this._not.internalValue = value.not;
       this._tag = value.tag;
@@ -613,6 +629,8 @@ export function consumptionBudgetSubscriptionTimePeriodToTerraform(struct?: Cons
 }
 
 export class ConsumptionBudgetSubscriptionTimePeriodOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -623,7 +641,7 @@ export class ConsumptionBudgetSubscriptionTimePeriodOutputReference extends cdkt
   }
 
   public get internalValue(): ConsumptionBudgetSubscriptionTimePeriod | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._endDate) {
       hasAnyValues = true;
@@ -638,10 +656,12 @@ export class ConsumptionBudgetSubscriptionTimePeriodOutputReference extends cdkt
 
   public set internalValue(value: ConsumptionBudgetSubscriptionTimePeriod | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._endDate = undefined;
       this._startDate = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._endDate = value.endDate;
       this._startDate = value.startDate;
     }
@@ -709,6 +729,8 @@ export function consumptionBudgetSubscriptionTimeoutsToTerraform(struct?: Consum
 }
 
 export class ConsumptionBudgetSubscriptionTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -719,7 +741,7 @@ export class ConsumptionBudgetSubscriptionTimeoutsOutputReference extends cdktf.
   }
 
   public get internalValue(): ConsumptionBudgetSubscriptionTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -742,12 +764,14 @@ export class ConsumptionBudgetSubscriptionTimeoutsOutputReference extends cdktf.
 
   public set internalValue(value: ConsumptionBudgetSubscriptionTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

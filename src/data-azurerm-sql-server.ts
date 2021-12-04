@@ -57,6 +57,8 @@ export function dataAzurermSqlServerTimeoutsToTerraform(struct?: DataAzurermSqlS
 }
 
 export class DataAzurermSqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -67,7 +69,7 @@ export class DataAzurermSqlServerTimeoutsOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): DataAzurermSqlServerTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read) {
       hasAnyValues = true;
@@ -78,9 +80,11 @@ export class DataAzurermSqlServerTimeoutsOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: DataAzurermSqlServerTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._read = value.read;
     }
   }

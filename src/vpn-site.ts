@@ -75,6 +75,8 @@ export function vpnSiteLinkBgpToTerraform(struct?: VpnSiteLinkBgpOutputReference
 }
 
 export class VpnSiteLinkBgpOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -85,7 +87,7 @@ export class VpnSiteLinkBgpOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): VpnSiteLinkBgp | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._asn) {
       hasAnyValues = true;
@@ -100,10 +102,12 @@ export class VpnSiteLinkBgpOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: VpnSiteLinkBgp | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._asn = undefined;
       this._peeringAddress = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._asn = value.asn;
       this._peeringAddress = value.peeringAddress;
     }
@@ -212,6 +216,8 @@ export function vpnSiteTimeoutsToTerraform(struct?: VpnSiteTimeoutsOutputReferen
 }
 
 export class VpnSiteTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -222,7 +228,7 @@ export class VpnSiteTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): VpnSiteTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -245,12 +251,14 @@ export class VpnSiteTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: VpnSiteTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

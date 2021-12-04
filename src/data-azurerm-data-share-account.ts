@@ -57,6 +57,8 @@ export function dataAzurermDataShareAccountTimeoutsToTerraform(struct?: DataAzur
 }
 
 export class DataAzurermDataShareAccountTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -67,7 +69,7 @@ export class DataAzurermDataShareAccountTimeoutsOutputReference extends cdktf.Co
   }
 
   public get internalValue(): DataAzurermDataShareAccountTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read) {
       hasAnyValues = true;
@@ -78,9 +80,11 @@ export class DataAzurermDataShareAccountTimeoutsOutputReference extends cdktf.Co
 
   public set internalValue(value: DataAzurermDataShareAccountTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._read = value.read;
     }
   }

@@ -93,6 +93,8 @@ export function apiManagementBackendCredentialsAuthorizationToTerraform(struct?:
 }
 
 export class ApiManagementBackendCredentialsAuthorizationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -103,7 +105,7 @@ export class ApiManagementBackendCredentialsAuthorizationOutputReference extends
   }
 
   public get internalValue(): ApiManagementBackendCredentialsAuthorization | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._parameter) {
       hasAnyValues = true;
@@ -118,10 +120,12 @@ export class ApiManagementBackendCredentialsAuthorizationOutputReference extends
 
   public set internalValue(value: ApiManagementBackendCredentialsAuthorization | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._parameter = undefined;
       this._scheme = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._parameter = value.parameter;
       this._scheme = value.scheme;
     }
@@ -194,6 +198,8 @@ export function apiManagementBackendCredentialsToTerraform(struct?: ApiManagemen
 }
 
 export class ApiManagementBackendCredentialsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -204,7 +210,7 @@ export class ApiManagementBackendCredentialsOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): ApiManagementBackendCredentials | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._certificate) {
       hasAnyValues = true;
@@ -218,7 +224,7 @@ export class ApiManagementBackendCredentialsOutputReference extends cdktf.Comple
       hasAnyValues = true;
       internalValueResult.query = this._query;
     }
-    if (this._authorization) {
+    if (this._authorization?.internalValue) {
       hasAnyValues = true;
       internalValueResult.authorization = this._authorization?.internalValue;
     }
@@ -227,12 +233,14 @@ export class ApiManagementBackendCredentialsOutputReference extends cdktf.Comple
 
   public set internalValue(value: ApiManagementBackendCredentials | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._certificate = undefined;
       this._header = undefined;
       this._query = undefined;
       this._authorization.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._certificate = value.certificate;
       this._header = value.header;
       this._query = value.query;
@@ -334,6 +342,8 @@ export function apiManagementBackendProxyToTerraform(struct?: ApiManagementBacke
 }
 
 export class ApiManagementBackendProxyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -344,7 +354,7 @@ export class ApiManagementBackendProxyOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): ApiManagementBackendProxy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._password) {
       hasAnyValues = true;
@@ -363,11 +373,13 @@ export class ApiManagementBackendProxyOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: ApiManagementBackendProxy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._password = undefined;
       this._url = undefined;
       this._username = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._password = value.password;
       this._url = value.url;
       this._username = value.username;
@@ -483,6 +495,8 @@ export function apiManagementBackendServiceFabricClusterToTerraform(struct?: Api
 }
 
 export class ApiManagementBackendServiceFabricClusterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -493,7 +507,7 @@ export class ApiManagementBackendServiceFabricClusterOutputReference extends cdk
   }
 
   public get internalValue(): ApiManagementBackendServiceFabricCluster | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._clientCertificateId) {
       hasAnyValues = true;
@@ -524,6 +538,7 @@ export class ApiManagementBackendServiceFabricClusterOutputReference extends cdk
 
   public set internalValue(value: ApiManagementBackendServiceFabricCluster | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._clientCertificateId = undefined;
       this._clientCertificateThumbprint = undefined;
       this._managementEndpoints = undefined;
@@ -532,6 +547,7 @@ export class ApiManagementBackendServiceFabricClusterOutputReference extends cdk
       this._serverX509Name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._clientCertificateId = value.clientCertificateId;
       this._clientCertificateThumbprint = value.clientCertificateThumbprint;
       this._managementEndpoints = value.managementEndpoints;
@@ -665,6 +681,8 @@ export function apiManagementBackendTimeoutsToTerraform(struct?: ApiManagementBa
 }
 
 export class ApiManagementBackendTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -675,7 +693,7 @@ export class ApiManagementBackendTimeoutsOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): ApiManagementBackendTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -698,12 +716,14 @@ export class ApiManagementBackendTimeoutsOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: ApiManagementBackendTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -798,6 +818,8 @@ export function apiManagementBackendTlsToTerraform(struct?: ApiManagementBackend
 }
 
 export class ApiManagementBackendTlsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -808,7 +830,7 @@ export class ApiManagementBackendTlsOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): ApiManagementBackendTls | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._validateCertificateChain) {
       hasAnyValues = true;
@@ -823,10 +845,12 @@ export class ApiManagementBackendTlsOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: ApiManagementBackendTls | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._validateCertificateChain = undefined;
       this._validateCertificateName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._validateCertificateChain = value.validateCertificateChain;
       this._validateCertificateName = value.validateCertificateName;
     }

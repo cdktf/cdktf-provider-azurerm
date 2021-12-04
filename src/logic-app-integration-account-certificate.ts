@@ -68,6 +68,8 @@ export function logicAppIntegrationAccountCertificateKeyVaultKeyToTerraform(stru
 }
 
 export class LogicAppIntegrationAccountCertificateKeyVaultKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -78,7 +80,7 @@ export class LogicAppIntegrationAccountCertificateKeyVaultKeyOutputReference ext
   }
 
   public get internalValue(): LogicAppIntegrationAccountCertificateKeyVaultKey | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._keyName) {
       hasAnyValues = true;
@@ -97,11 +99,13 @@ export class LogicAppIntegrationAccountCertificateKeyVaultKeyOutputReference ext
 
   public set internalValue(value: LogicAppIntegrationAccountCertificateKeyVaultKey | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._keyName = undefined;
       this._keyVaultId = undefined;
       this._keyVersion = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._keyName = value.keyName;
       this._keyVaultId = value.keyVaultId;
       this._keyVersion = value.keyVersion;
@@ -183,6 +187,8 @@ export function logicAppIntegrationAccountCertificateTimeoutsToTerraform(struct?
 }
 
 export class LogicAppIntegrationAccountCertificateTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -193,7 +199,7 @@ export class LogicAppIntegrationAccountCertificateTimeoutsOutputReference extend
   }
 
   public get internalValue(): LogicAppIntegrationAccountCertificateTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -216,12 +222,14 @@ export class LogicAppIntegrationAccountCertificateTimeoutsOutputReference extend
 
   public set internalValue(value: LogicAppIntegrationAccountCertificateTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

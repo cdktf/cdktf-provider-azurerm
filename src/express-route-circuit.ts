@@ -83,6 +83,8 @@ export function expressRouteCircuitSkuToTerraform(struct?: ExpressRouteCircuitSk
 }
 
 export class ExpressRouteCircuitSkuOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -93,7 +95,7 @@ export class ExpressRouteCircuitSkuOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): ExpressRouteCircuitSku | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._family) {
       hasAnyValues = true;
@@ -108,10 +110,12 @@ export class ExpressRouteCircuitSkuOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: ExpressRouteCircuitSku | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._family = undefined;
       this._tier = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._family = value.family;
       this._tier = value.tier;
     }
@@ -176,6 +180,8 @@ export function expressRouteCircuitTimeoutsToTerraform(struct?: ExpressRouteCirc
 }
 
 export class ExpressRouteCircuitTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -186,7 +192,7 @@ export class ExpressRouteCircuitTimeoutsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): ExpressRouteCircuitTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -209,12 +215,14 @@ export class ExpressRouteCircuitTimeoutsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: ExpressRouteCircuitTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

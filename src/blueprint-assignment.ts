@@ -75,6 +75,8 @@ export function blueprintAssignmentIdentityToTerraform(struct?: BlueprintAssignm
 }
 
 export class BlueprintAssignmentIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -85,7 +87,7 @@ export class BlueprintAssignmentIdentityOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): BlueprintAssignmentIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -100,10 +102,12 @@ export class BlueprintAssignmentIdentityOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: BlueprintAssignmentIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -168,6 +172,8 @@ export function blueprintAssignmentTimeoutsToTerraform(struct?: BlueprintAssignm
 }
 
 export class BlueprintAssignmentTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -178,7 +184,7 @@ export class BlueprintAssignmentTimeoutsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): BlueprintAssignmentTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -201,12 +207,14 @@ export class BlueprintAssignmentTimeoutsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: BlueprintAssignmentTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

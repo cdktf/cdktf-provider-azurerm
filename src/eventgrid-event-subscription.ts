@@ -688,6 +688,8 @@ export function eventgridEventSubscriptionAdvancedFilterToTerraform(struct?: Eve
 }
 
 export class EventgridEventSubscriptionAdvancedFilterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -698,7 +700,7 @@ export class EventgridEventSubscriptionAdvancedFilterOutputReference extends cdk
   }
 
   public get internalValue(): EventgridEventSubscriptionAdvancedFilter | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._boolEquals) {
       hasAnyValues = true;
@@ -781,6 +783,7 @@ export class EventgridEventSubscriptionAdvancedFilterOutputReference extends cdk
 
   public set internalValue(value: EventgridEventSubscriptionAdvancedFilter | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._boolEquals = undefined;
       this._isNotNull = undefined;
       this._isNullOrUndefined = undefined;
@@ -802,6 +805,7 @@ export class EventgridEventSubscriptionAdvancedFilterOutputReference extends cdk
       this._stringNotIn = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._boolEquals = value.boolEquals;
       this._isNotNull = value.isNotNull;
       this._isNullOrUndefined = value.isNullOrUndefined;
@@ -1175,6 +1179,8 @@ export function eventgridEventSubscriptionAzureFunctionEndpointToTerraform(struc
 }
 
 export class EventgridEventSubscriptionAzureFunctionEndpointOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1185,7 +1191,7 @@ export class EventgridEventSubscriptionAzureFunctionEndpointOutputReference exte
   }
 
   public get internalValue(): EventgridEventSubscriptionAzureFunctionEndpoint | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._functionId) {
       hasAnyValues = true;
@@ -1204,11 +1210,13 @@ export class EventgridEventSubscriptionAzureFunctionEndpointOutputReference exte
 
   public set internalValue(value: EventgridEventSubscriptionAzureFunctionEndpoint | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._functionId = undefined;
       this._maxEventsPerBatch = undefined;
       this._preferredBatchSizeInKilobytes = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._functionId = value.functionId;
       this._maxEventsPerBatch = value.maxEventsPerBatch;
       this._preferredBatchSizeInKilobytes = value.preferredBatchSizeInKilobytes;
@@ -1283,6 +1291,8 @@ export function eventgridEventSubscriptionDeadLetterIdentityToTerraform(struct?:
 }
 
 export class EventgridEventSubscriptionDeadLetterIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1293,7 +1303,7 @@ export class EventgridEventSubscriptionDeadLetterIdentityOutputReference extends
   }
 
   public get internalValue(): EventgridEventSubscriptionDeadLetterIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._type) {
       hasAnyValues = true;
@@ -1308,10 +1318,12 @@ export class EventgridEventSubscriptionDeadLetterIdentityOutputReference extends
 
   public set internalValue(value: EventgridEventSubscriptionDeadLetterIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._type = undefined;
       this._userAssignedIdentity = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
       this._userAssignedIdentity = value.userAssignedIdentity;
     }
@@ -1369,6 +1381,8 @@ export function eventgridEventSubscriptionDeliveryIdentityToTerraform(struct?: E
 }
 
 export class EventgridEventSubscriptionDeliveryIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1379,7 +1393,7 @@ export class EventgridEventSubscriptionDeliveryIdentityOutputReference extends c
   }
 
   public get internalValue(): EventgridEventSubscriptionDeliveryIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._type) {
       hasAnyValues = true;
@@ -1394,10 +1408,12 @@ export class EventgridEventSubscriptionDeliveryIdentityOutputReference extends c
 
   public set internalValue(value: EventgridEventSubscriptionDeliveryIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._type = undefined;
       this._userAssignedIdentity = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
       this._userAssignedIdentity = value.userAssignedIdentity;
     }
@@ -1487,6 +1503,8 @@ export function eventgridEventSubscriptionEventhubEndpointToTerraform(struct?: E
 }
 
 export class EventgridEventSubscriptionEventhubEndpointOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1497,7 +1515,7 @@ export class EventgridEventSubscriptionEventhubEndpointOutputReference extends c
   }
 
   public get internalValue(): EventgridEventSubscriptionEventhubEndpoint | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._eventhubId) {
       hasAnyValues = true;
@@ -1508,9 +1526,11 @@ export class EventgridEventSubscriptionEventhubEndpointOutputReference extends c
 
   public set internalValue(value: EventgridEventSubscriptionEventhubEndpoint | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._eventhubId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._eventhubId = value.eventhubId;
     }
   }
@@ -1549,6 +1569,8 @@ export function eventgridEventSubscriptionHybridConnectionEndpointToTerraform(st
 }
 
 export class EventgridEventSubscriptionHybridConnectionEndpointOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1559,7 +1581,7 @@ export class EventgridEventSubscriptionHybridConnectionEndpointOutputReference e
   }
 
   public get internalValue(): EventgridEventSubscriptionHybridConnectionEndpoint | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._hybridConnectionId) {
       hasAnyValues = true;
@@ -1570,9 +1592,11 @@ export class EventgridEventSubscriptionHybridConnectionEndpointOutputReference e
 
   public set internalValue(value: EventgridEventSubscriptionHybridConnectionEndpoint | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hybridConnectionId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hybridConnectionId = value.hybridConnectionId;
     }
   }
@@ -1616,6 +1640,8 @@ export function eventgridEventSubscriptionRetryPolicyToTerraform(struct?: Eventg
 }
 
 export class EventgridEventSubscriptionRetryPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1626,7 +1652,7 @@ export class EventgridEventSubscriptionRetryPolicyOutputReference extends cdktf.
   }
 
   public get internalValue(): EventgridEventSubscriptionRetryPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._eventTimeToLive) {
       hasAnyValues = true;
@@ -1641,10 +1667,12 @@ export class EventgridEventSubscriptionRetryPolicyOutputReference extends cdktf.
 
   public set internalValue(value: EventgridEventSubscriptionRetryPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._eventTimeToLive = undefined;
       this._maxDeliveryAttempts = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._eventTimeToLive = value.eventTimeToLive;
       this._maxDeliveryAttempts = value.maxDeliveryAttempts;
     }
@@ -1699,6 +1727,8 @@ export function eventgridEventSubscriptionStorageBlobDeadLetterDestinationToTerr
 }
 
 export class EventgridEventSubscriptionStorageBlobDeadLetterDestinationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1709,7 +1739,7 @@ export class EventgridEventSubscriptionStorageBlobDeadLetterDestinationOutputRef
   }
 
   public get internalValue(): EventgridEventSubscriptionStorageBlobDeadLetterDestination | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._storageAccountId) {
       hasAnyValues = true;
@@ -1724,10 +1754,12 @@ export class EventgridEventSubscriptionStorageBlobDeadLetterDestinationOutputRef
 
   public set internalValue(value: EventgridEventSubscriptionStorageBlobDeadLetterDestination | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._storageAccountId = undefined;
       this._storageBlobContainerName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._storageAccountId = value.storageAccountId;
       this._storageBlobContainerName = value.storageBlobContainerName;
     }
@@ -1787,6 +1819,8 @@ export function eventgridEventSubscriptionStorageQueueEndpointToTerraform(struct
 }
 
 export class EventgridEventSubscriptionStorageQueueEndpointOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1797,7 +1831,7 @@ export class EventgridEventSubscriptionStorageQueueEndpointOutputReference exten
   }
 
   public get internalValue(): EventgridEventSubscriptionStorageQueueEndpoint | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._queueMessageTimeToLiveInSeconds) {
       hasAnyValues = true;
@@ -1816,11 +1850,13 @@ export class EventgridEventSubscriptionStorageQueueEndpointOutputReference exten
 
   public set internalValue(value: EventgridEventSubscriptionStorageQueueEndpoint | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._queueMessageTimeToLiveInSeconds = undefined;
       this._queueName = undefined;
       this._storageAccountId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._queueMessageTimeToLiveInSeconds = value.queueMessageTimeToLiveInSeconds;
       this._queueName = value.queueName;
       this._storageAccountId = value.storageAccountId;
@@ -1897,6 +1933,8 @@ export function eventgridEventSubscriptionSubjectFilterToTerraform(struct?: Even
 }
 
 export class EventgridEventSubscriptionSubjectFilterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1907,7 +1945,7 @@ export class EventgridEventSubscriptionSubjectFilterOutputReference extends cdkt
   }
 
   public get internalValue(): EventgridEventSubscriptionSubjectFilter | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._caseSensitive) {
       hasAnyValues = true;
@@ -1926,11 +1964,13 @@ export class EventgridEventSubscriptionSubjectFilterOutputReference extends cdkt
 
   public set internalValue(value: EventgridEventSubscriptionSubjectFilter | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._caseSensitive = undefined;
       this._subjectBeginsWith = undefined;
       this._subjectEndsWith = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._caseSensitive = value.caseSensitive;
       this._subjectBeginsWith = value.subjectBeginsWith;
       this._subjectEndsWith = value.subjectEndsWith;
@@ -2018,6 +2058,8 @@ export function eventgridEventSubscriptionTimeoutsToTerraform(struct?: Eventgrid
 }
 
 export class EventgridEventSubscriptionTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2028,7 +2070,7 @@ export class EventgridEventSubscriptionTimeoutsOutputReference extends cdktf.Com
   }
 
   public get internalValue(): EventgridEventSubscriptionTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -2051,12 +2093,14 @@ export class EventgridEventSubscriptionTimeoutsOutputReference extends cdktf.Com
 
   public set internalValue(value: EventgridEventSubscriptionTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -2166,6 +2210,8 @@ export function eventgridEventSubscriptionWebhookEndpointToTerraform(struct?: Ev
 }
 
 export class EventgridEventSubscriptionWebhookEndpointOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2176,7 +2222,7 @@ export class EventgridEventSubscriptionWebhookEndpointOutputReference extends cd
   }
 
   public get internalValue(): EventgridEventSubscriptionWebhookEndpoint | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._activeDirectoryAppIdOrUri) {
       hasAnyValues = true;
@@ -2203,6 +2249,7 @@ export class EventgridEventSubscriptionWebhookEndpointOutputReference extends cd
 
   public set internalValue(value: EventgridEventSubscriptionWebhookEndpoint | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._activeDirectoryAppIdOrUri = undefined;
       this._activeDirectoryTenantId = undefined;
       this._maxEventsPerBatch = undefined;
@@ -2210,6 +2257,7 @@ export class EventgridEventSubscriptionWebhookEndpointOutputReference extends cd
       this._url = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._activeDirectoryAppIdOrUri = value.activeDirectoryAppIdOrUri;
       this._activeDirectoryTenantId = value.activeDirectoryTenantId;
       this._maxEventsPerBatch = value.maxEventsPerBatch;

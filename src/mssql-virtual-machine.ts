@@ -103,6 +103,8 @@ export function mssqlVirtualMachineAutoBackupManualScheduleToTerraform(struct?: 
 }
 
 export class MssqlVirtualMachineAutoBackupManualScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -113,7 +115,7 @@ export class MssqlVirtualMachineAutoBackupManualScheduleOutputReference extends 
   }
 
   public get internalValue(): MssqlVirtualMachineAutoBackupManualSchedule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._fullBackupFrequency) {
       hasAnyValues = true;
@@ -136,12 +138,14 @@ export class MssqlVirtualMachineAutoBackupManualScheduleOutputReference extends 
 
   public set internalValue(value: MssqlVirtualMachineAutoBackupManualSchedule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._fullBackupFrequency = undefined;
       this._fullBackupStartHour = undefined;
       this._fullBackupWindowInHours = undefined;
       this._logBackupFrequencyInMinutes = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._fullBackupFrequency = value.fullBackupFrequency;
       this._fullBackupStartHour = value.fullBackupStartHour;
       this._fullBackupWindowInHours = value.fullBackupWindowInHours;
@@ -251,6 +255,8 @@ export function mssqlVirtualMachineAutoBackupToTerraform(struct?: MssqlVirtualMa
 }
 
 export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -261,7 +267,7 @@ export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): MssqlVirtualMachineAutoBackup | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._encryptionEnabled) {
       hasAnyValues = true;
@@ -287,7 +293,7 @@ export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexO
       hasAnyValues = true;
       internalValueResult.systemDatabasesBackupEnabled = this._systemDatabasesBackupEnabled;
     }
-    if (this._manualSchedule) {
+    if (this._manualSchedule?.internalValue) {
       hasAnyValues = true;
       internalValueResult.manualSchedule = this._manualSchedule?.internalValue;
     }
@@ -296,6 +302,7 @@ export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: MssqlVirtualMachineAutoBackup | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._encryptionEnabled = undefined;
       this._encryptionPassword = undefined;
       this._retentionPeriodInDays = undefined;
@@ -305,6 +312,7 @@ export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexO
       this._manualSchedule.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._encryptionEnabled = value.encryptionEnabled;
       this._encryptionPassword = value.encryptionPassword;
       this._retentionPeriodInDays = value.retentionPeriodInDays;
@@ -446,6 +454,8 @@ export function mssqlVirtualMachineAutoPatchingToTerraform(struct?: MssqlVirtual
 }
 
 export class MssqlVirtualMachineAutoPatchingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -456,7 +466,7 @@ export class MssqlVirtualMachineAutoPatchingOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): MssqlVirtualMachineAutoPatching | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dayOfWeek) {
       hasAnyValues = true;
@@ -475,11 +485,13 @@ export class MssqlVirtualMachineAutoPatchingOutputReference extends cdktf.Comple
 
   public set internalValue(value: MssqlVirtualMachineAutoPatching | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dayOfWeek = undefined;
       this._maintenanceWindowDurationInMinutes = undefined;
       this._maintenanceWindowStartingHour = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dayOfWeek = value.dayOfWeek;
       this._maintenanceWindowDurationInMinutes = value.maintenanceWindowDurationInMinutes;
       this._maintenanceWindowStartingHour = value.maintenanceWindowStartingHour;
@@ -558,6 +570,8 @@ export function mssqlVirtualMachineKeyVaultCredentialToTerraform(struct?: MssqlV
 }
 
 export class MssqlVirtualMachineKeyVaultCredentialOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -568,7 +582,7 @@ export class MssqlVirtualMachineKeyVaultCredentialOutputReference extends cdktf.
   }
 
   public get internalValue(): MssqlVirtualMachineKeyVaultCredential | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._keyVaultUrl) {
       hasAnyValues = true;
@@ -591,12 +605,14 @@ export class MssqlVirtualMachineKeyVaultCredentialOutputReference extends cdktf.
 
   public set internalValue(value: MssqlVirtualMachineKeyVaultCredential | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._keyVaultUrl = undefined;
       this._name = undefined;
       this._servicePrincipalName = undefined;
       this._servicePrincipalSecret = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._keyVaultUrl = value.keyVaultUrl;
       this._name = value.name;
       this._servicePrincipalName = value.servicePrincipalName;
@@ -679,6 +695,8 @@ export function mssqlVirtualMachineStorageConfigurationDataSettingsToTerraform(s
 }
 
 export class MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -689,7 +707,7 @@ export class MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference 
   }
 
   public get internalValue(): MssqlVirtualMachineStorageConfigurationDataSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._defaultFilePath) {
       hasAnyValues = true;
@@ -704,10 +722,12 @@ export class MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference 
 
   public set internalValue(value: MssqlVirtualMachineStorageConfigurationDataSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._defaultFilePath = undefined;
       this._luns = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._defaultFilePath = value.defaultFilePath;
       this._luns = value.luns;
     }
@@ -763,6 +783,8 @@ export function mssqlVirtualMachineStorageConfigurationLogSettingsToTerraform(st
 }
 
 export class MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -773,7 +795,7 @@ export class MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference e
   }
 
   public get internalValue(): MssqlVirtualMachineStorageConfigurationLogSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._defaultFilePath) {
       hasAnyValues = true;
@@ -788,10 +810,12 @@ export class MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference e
 
   public set internalValue(value: MssqlVirtualMachineStorageConfigurationLogSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._defaultFilePath = undefined;
       this._luns = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._defaultFilePath = value.defaultFilePath;
       this._luns = value.luns;
     }
@@ -847,6 +871,8 @@ export function mssqlVirtualMachineStorageConfigurationTempDbSettingsToTerraform
 }
 
 export class MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -857,7 +883,7 @@ export class MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReferenc
   }
 
   public get internalValue(): MssqlVirtualMachineStorageConfigurationTempDbSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._defaultFilePath) {
       hasAnyValues = true;
@@ -872,10 +898,12 @@ export class MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReferenc
 
   public set internalValue(value: MssqlVirtualMachineStorageConfigurationTempDbSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._defaultFilePath = undefined;
       this._luns = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._defaultFilePath = value.defaultFilePath;
       this._luns = value.luns;
     }
@@ -952,6 +980,8 @@ export function mssqlVirtualMachineStorageConfigurationToTerraform(struct?: Mssq
 }
 
 export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -962,7 +992,7 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
   }
 
   public get internalValue(): MssqlVirtualMachineStorageConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._diskType) {
       hasAnyValues = true;
@@ -972,15 +1002,15 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
       hasAnyValues = true;
       internalValueResult.storageWorkloadType = this._storageWorkloadType;
     }
-    if (this._dataSettings) {
+    if (this._dataSettings?.internalValue) {
       hasAnyValues = true;
       internalValueResult.dataSettings = this._dataSettings?.internalValue;
     }
-    if (this._logSettings) {
+    if (this._logSettings?.internalValue) {
       hasAnyValues = true;
       internalValueResult.logSettings = this._logSettings?.internalValue;
     }
-    if (this._tempDbSettings) {
+    if (this._tempDbSettings?.internalValue) {
       hasAnyValues = true;
       internalValueResult.tempDbSettings = this._tempDbSettings?.internalValue;
     }
@@ -989,6 +1019,7 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
 
   public set internalValue(value: MssqlVirtualMachineStorageConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._diskType = undefined;
       this._storageWorkloadType = undefined;
       this._dataSettings.internalValue = undefined;
@@ -996,6 +1027,7 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
       this._tempDbSettings.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._diskType = value.diskType;
       this._storageWorkloadType = value.storageWorkloadType;
       this._dataSettings.internalValue = value.dataSettings;
@@ -1111,6 +1143,8 @@ export function mssqlVirtualMachineTimeoutsToTerraform(struct?: MssqlVirtualMach
 }
 
 export class MssqlVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1121,7 +1155,7 @@ export class MssqlVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): MssqlVirtualMachineTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1144,12 +1178,14 @@ export class MssqlVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: MssqlVirtualMachineTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

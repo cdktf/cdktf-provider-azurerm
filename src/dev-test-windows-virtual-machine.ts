@@ -115,6 +115,8 @@ export function devTestWindowsVirtualMachineGalleryImageReferenceToTerraform(str
 }
 
 export class DevTestWindowsVirtualMachineGalleryImageReferenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -125,7 +127,7 @@ export class DevTestWindowsVirtualMachineGalleryImageReferenceOutputReference ex
   }
 
   public get internalValue(): DevTestWindowsVirtualMachineGalleryImageReference | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._offer) {
       hasAnyValues = true;
@@ -148,12 +150,14 @@ export class DevTestWindowsVirtualMachineGalleryImageReferenceOutputReference ex
 
   public set internalValue(value: DevTestWindowsVirtualMachineGalleryImageReference | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._offer = undefined;
       this._publisher = undefined;
       this._sku = undefined;
       this._version = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._offer = value.offer;
       this._publisher = value.publisher;
       this._sku = value.sku;
@@ -268,6 +272,8 @@ export function devTestWindowsVirtualMachineTimeoutsToTerraform(struct?: DevTest
 }
 
 export class DevTestWindowsVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -278,7 +284,7 @@ export class DevTestWindowsVirtualMachineTimeoutsOutputReference extends cdktf.C
   }
 
   public get internalValue(): DevTestWindowsVirtualMachineTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -301,12 +307,14 @@ export class DevTestWindowsVirtualMachineTimeoutsOutputReference extends cdktf.C
 
   public set internalValue(value: DevTestWindowsVirtualMachineTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

@@ -95,6 +95,8 @@ export function machineLearningComputeClusterIdentityToTerraform(struct?: Machin
 }
 
 export class MachineLearningComputeClusterIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -105,7 +107,7 @@ export class MachineLearningComputeClusterIdentityOutputReference extends cdktf.
   }
 
   public get internalValue(): MachineLearningComputeClusterIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -120,10 +122,12 @@ export class MachineLearningComputeClusterIdentityOutputReference extends cdktf.
 
   public set internalValue(value: MachineLearningComputeClusterIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -186,6 +190,8 @@ export function machineLearningComputeClusterScaleSettingsToTerraform(struct?: M
 }
 
 export class MachineLearningComputeClusterScaleSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -196,7 +202,7 @@ export class MachineLearningComputeClusterScaleSettingsOutputReference extends c
   }
 
   public get internalValue(): MachineLearningComputeClusterScaleSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxNodeCount) {
       hasAnyValues = true;
@@ -215,11 +221,13 @@ export class MachineLearningComputeClusterScaleSettingsOutputReference extends c
 
   public set internalValue(value: MachineLearningComputeClusterScaleSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxNodeCount = undefined;
       this._minNodeCount = undefined;
       this._scaleDownNodesAfterIdleDuration = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxNodeCount = value.maxNodeCount;
       this._minNodeCount = value.minNodeCount;
       this._scaleDownNodesAfterIdleDuration = value.scaleDownNodesAfterIdleDuration;
@@ -293,6 +301,8 @@ export function machineLearningComputeClusterSshToTerraform(struct?: MachineLear
 }
 
 export class MachineLearningComputeClusterSshOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -303,7 +313,7 @@ export class MachineLearningComputeClusterSshOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): MachineLearningComputeClusterSsh | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._adminPassword) {
       hasAnyValues = true;
@@ -322,11 +332,13 @@ export class MachineLearningComputeClusterSshOutputReference extends cdktf.Compl
 
   public set internalValue(value: MachineLearningComputeClusterSsh | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._adminPassword = undefined;
       this._adminUsername = undefined;
       this._keyValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._adminPassword = value.adminPassword;
       this._adminUsername = value.adminUsername;
       this._keyValue = value.keyValue;
@@ -406,6 +418,8 @@ export function machineLearningComputeClusterTimeoutsToTerraform(struct?: Machin
 }
 
 export class MachineLearningComputeClusterTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -416,7 +430,7 @@ export class MachineLearningComputeClusterTimeoutsOutputReference extends cdktf.
   }
 
   public get internalValue(): MachineLearningComputeClusterTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -435,11 +449,13 @@ export class MachineLearningComputeClusterTimeoutsOutputReference extends cdktf.
 
   public set internalValue(value: MachineLearningComputeClusterTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

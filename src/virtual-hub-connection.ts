@@ -67,6 +67,8 @@ export function virtualHubConnectionRoutingPropagatedRouteTableToTerraform(struc
 }
 
 export class VirtualHubConnectionRoutingPropagatedRouteTableOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -77,7 +79,7 @@ export class VirtualHubConnectionRoutingPropagatedRouteTableOutputReference exte
   }
 
   public get internalValue(): VirtualHubConnectionRoutingPropagatedRouteTable | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._labels) {
       hasAnyValues = true;
@@ -92,10 +94,12 @@ export class VirtualHubConnectionRoutingPropagatedRouteTableOutputReference exte
 
   public set internalValue(value: VirtualHubConnectionRoutingPropagatedRouteTable | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._labels = undefined;
       this._routeTableIds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._labels = value.labels;
       this._routeTableIds = value.routeTableIds;
     }
@@ -192,6 +196,8 @@ export function virtualHubConnectionRoutingToTerraform(struct?: VirtualHubConnec
 }
 
 export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -202,13 +208,13 @@ export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): VirtualHubConnectionRouting | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._associatedRouteTableId) {
       hasAnyValues = true;
       internalValueResult.associatedRouteTableId = this._associatedRouteTableId;
     }
-    if (this._propagatedRouteTable) {
+    if (this._propagatedRouteTable?.internalValue) {
       hasAnyValues = true;
       internalValueResult.propagatedRouteTable = this._propagatedRouteTable?.internalValue;
     }
@@ -221,11 +227,13 @@ export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: VirtualHubConnectionRouting | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._associatedRouteTableId = undefined;
       this._propagatedRouteTable.internalValue = undefined;
       this._staticVnetRoute = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._associatedRouteTableId = value.associatedRouteTableId;
       this._propagatedRouteTable.internalValue = value.propagatedRouteTable;
       this._staticVnetRoute = value.staticVnetRoute;
@@ -314,6 +322,8 @@ export function virtualHubConnectionTimeoutsToTerraform(struct?: VirtualHubConne
 }
 
 export class VirtualHubConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -324,7 +334,7 @@ export class VirtualHubConnectionTimeoutsOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): VirtualHubConnectionTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -347,12 +357,14 @@ export class VirtualHubConnectionTimeoutsOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: VirtualHubConnectionTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

@@ -68,6 +68,8 @@ export function apiManagementLoggerApplicationInsightsToTerraform(struct?: ApiMa
 }
 
 export class ApiManagementLoggerApplicationInsightsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -78,7 +80,7 @@ export class ApiManagementLoggerApplicationInsightsOutputReference extends cdktf
   }
 
   public get internalValue(): ApiManagementLoggerApplicationInsights | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._instrumentationKey) {
       hasAnyValues = true;
@@ -89,9 +91,11 @@ export class ApiManagementLoggerApplicationInsightsOutputReference extends cdktf
 
   public set internalValue(value: ApiManagementLoggerApplicationInsights | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._instrumentationKey = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._instrumentationKey = value.instrumentationKey;
     }
   }
@@ -132,6 +136,8 @@ export function apiManagementLoggerEventhubToTerraform(struct?: ApiManagementLog
 }
 
 export class ApiManagementLoggerEventhubOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -142,7 +148,7 @@ export class ApiManagementLoggerEventhubOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): ApiManagementLoggerEventhub | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._connectionString) {
       hasAnyValues = true;
@@ -157,10 +163,12 @@ export class ApiManagementLoggerEventhubOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: ApiManagementLoggerEventhub | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._connectionString = undefined;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._connectionString = value.connectionString;
       this._name = value.name;
     }
@@ -225,6 +233,8 @@ export function apiManagementLoggerTimeoutsToTerraform(struct?: ApiManagementLog
 }
 
 export class ApiManagementLoggerTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -235,7 +245,7 @@ export class ApiManagementLoggerTimeoutsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): ApiManagementLoggerTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -258,12 +268,14 @@ export class ApiManagementLoggerTimeoutsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: ApiManagementLoggerTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

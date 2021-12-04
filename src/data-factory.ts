@@ -104,6 +104,8 @@ export function dataFactoryGithubConfigurationToTerraform(struct?: DataFactoryGi
 }
 
 export class DataFactoryGithubConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -114,7 +116,7 @@ export class DataFactoryGithubConfigurationOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): DataFactoryGithubConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._accountName) {
       hasAnyValues = true;
@@ -141,6 +143,7 @@ export class DataFactoryGithubConfigurationOutputReference extends cdktf.Complex
 
   public set internalValue(value: DataFactoryGithubConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._accountName = undefined;
       this._branchName = undefined;
       this._gitUrl = undefined;
@@ -148,6 +151,7 @@ export class DataFactoryGithubConfigurationOutputReference extends cdktf.Complex
       this._rootFolder = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._accountName = value.accountName;
       this._branchName = value.branchName;
       this._gitUrl = value.gitUrl;
@@ -271,6 +275,8 @@ export function dataFactoryIdentityToTerraform(struct?: DataFactoryIdentityOutpu
 }
 
 export class DataFactoryIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -281,7 +287,7 @@ export class DataFactoryIdentityOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): DataFactoryIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -296,10 +302,12 @@ export class DataFactoryIdentityOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: DataFactoryIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -367,6 +375,8 @@ export function dataFactoryTimeoutsToTerraform(struct?: DataFactoryTimeoutsOutpu
 }
 
 export class DataFactoryTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -377,7 +387,7 @@ export class DataFactoryTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): DataFactoryTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -400,12 +410,14 @@ export class DataFactoryTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: DataFactoryTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -520,6 +532,8 @@ export function dataFactoryVstsConfigurationToTerraform(struct?: DataFactoryVsts
 }
 
 export class DataFactoryVstsConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -530,7 +544,7 @@ export class DataFactoryVstsConfigurationOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): DataFactoryVstsConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._accountName) {
       hasAnyValues = true;
@@ -561,6 +575,7 @@ export class DataFactoryVstsConfigurationOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: DataFactoryVstsConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._accountName = undefined;
       this._branchName = undefined;
       this._projectName = undefined;
@@ -569,6 +584,7 @@ export class DataFactoryVstsConfigurationOutputReference extends cdktf.ComplexOb
       this._tenantId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._accountName = value.accountName;
       this._branchName = value.branchName;
       this._projectName = value.projectName;

@@ -81,6 +81,8 @@ export function mediaAssetFilterPresentationTimeRangeToTerraform(struct?: MediaA
 }
 
 export class MediaAssetFilterPresentationTimeRangeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -91,7 +93,7 @@ export class MediaAssetFilterPresentationTimeRangeOutputReference extends cdktf.
   }
 
   public get internalValue(): MediaAssetFilterPresentationTimeRange | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._endInUnits) {
       hasAnyValues = true;
@@ -122,6 +124,7 @@ export class MediaAssetFilterPresentationTimeRangeOutputReference extends cdktf.
 
   public set internalValue(value: MediaAssetFilterPresentationTimeRange | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._endInUnits = undefined;
       this._forceEnd = undefined;
       this._liveBackoffInUnits = undefined;
@@ -130,6 +133,7 @@ export class MediaAssetFilterPresentationTimeRangeOutputReference extends cdktf.
       this._unitTimescaleInMiliseconds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._endInUnits = value.endInUnits;
       this._forceEnd = value.forceEnd;
       this._liveBackoffInUnits = value.liveBackoffInUnits;
@@ -268,6 +272,8 @@ export function mediaAssetFilterTimeoutsToTerraform(struct?: MediaAssetFilterTim
 }
 
 export class MediaAssetFilterTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -278,7 +284,7 @@ export class MediaAssetFilterTimeoutsOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): MediaAssetFilterTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -301,12 +307,14 @@ export class MediaAssetFilterTimeoutsOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: MediaAssetFilterTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

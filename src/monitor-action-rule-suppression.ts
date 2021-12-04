@@ -75,6 +75,8 @@ export function monitorActionRuleSuppressionConditionAlertContextToTerraform(str
 }
 
 export class MonitorActionRuleSuppressionConditionAlertContextOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -85,7 +87,7 @@ export class MonitorActionRuleSuppressionConditionAlertContextOutputReference ex
   }
 
   public get internalValue(): MonitorActionRuleSuppressionConditionAlertContext | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._operator) {
       hasAnyValues = true;
@@ -100,10 +102,12 @@ export class MonitorActionRuleSuppressionConditionAlertContextOutputReference ex
 
   public set internalValue(value: MonitorActionRuleSuppressionConditionAlertContext | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._operator = undefined;
       this._values = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._operator = value.operator;
       this._values = value.values;
     }
@@ -158,6 +162,8 @@ export function monitorActionRuleSuppressionConditionAlertRuleIdToTerraform(stru
 }
 
 export class MonitorActionRuleSuppressionConditionAlertRuleIdOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -168,7 +174,7 @@ export class MonitorActionRuleSuppressionConditionAlertRuleIdOutputReference ext
   }
 
   public get internalValue(): MonitorActionRuleSuppressionConditionAlertRuleId | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._operator) {
       hasAnyValues = true;
@@ -183,10 +189,12 @@ export class MonitorActionRuleSuppressionConditionAlertRuleIdOutputReference ext
 
   public set internalValue(value: MonitorActionRuleSuppressionConditionAlertRuleId | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._operator = undefined;
       this._values = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._operator = value.operator;
       this._values = value.values;
     }
@@ -241,6 +249,8 @@ export function monitorActionRuleSuppressionConditionDescriptionToTerraform(stru
 }
 
 export class MonitorActionRuleSuppressionConditionDescriptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -251,7 +261,7 @@ export class MonitorActionRuleSuppressionConditionDescriptionOutputReference ext
   }
 
   public get internalValue(): MonitorActionRuleSuppressionConditionDescription | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._operator) {
       hasAnyValues = true;
@@ -266,10 +276,12 @@ export class MonitorActionRuleSuppressionConditionDescriptionOutputReference ext
 
   public set internalValue(value: MonitorActionRuleSuppressionConditionDescription | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._operator = undefined;
       this._values = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._operator = value.operator;
       this._values = value.values;
     }
@@ -324,6 +336,8 @@ export function monitorActionRuleSuppressionConditionMonitorToTerraform(struct?:
 }
 
 export class MonitorActionRuleSuppressionConditionMonitorOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -334,7 +348,7 @@ export class MonitorActionRuleSuppressionConditionMonitorOutputReference extends
   }
 
   public get internalValue(): MonitorActionRuleSuppressionConditionMonitor | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._operator) {
       hasAnyValues = true;
@@ -349,10 +363,12 @@ export class MonitorActionRuleSuppressionConditionMonitorOutputReference extends
 
   public set internalValue(value: MonitorActionRuleSuppressionConditionMonitor | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._operator = undefined;
       this._values = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._operator = value.operator;
       this._values = value.values;
     }
@@ -407,6 +423,8 @@ export function monitorActionRuleSuppressionConditionMonitorServiceToTerraform(s
 }
 
 export class MonitorActionRuleSuppressionConditionMonitorServiceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -417,7 +435,7 @@ export class MonitorActionRuleSuppressionConditionMonitorServiceOutputReference 
   }
 
   public get internalValue(): MonitorActionRuleSuppressionConditionMonitorService | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._operator) {
       hasAnyValues = true;
@@ -432,10 +450,12 @@ export class MonitorActionRuleSuppressionConditionMonitorServiceOutputReference 
 
   public set internalValue(value: MonitorActionRuleSuppressionConditionMonitorService | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._operator = undefined;
       this._values = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._operator = value.operator;
       this._values = value.values;
     }
@@ -490,6 +510,8 @@ export function monitorActionRuleSuppressionConditionSeverityToTerraform(struct?
 }
 
 export class MonitorActionRuleSuppressionConditionSeverityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -500,7 +522,7 @@ export class MonitorActionRuleSuppressionConditionSeverityOutputReference extend
   }
 
   public get internalValue(): MonitorActionRuleSuppressionConditionSeverity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._operator) {
       hasAnyValues = true;
@@ -515,10 +537,12 @@ export class MonitorActionRuleSuppressionConditionSeverityOutputReference extend
 
   public set internalValue(value: MonitorActionRuleSuppressionConditionSeverity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._operator = undefined;
       this._values = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._operator = value.operator;
       this._values = value.values;
     }
@@ -573,6 +597,8 @@ export function monitorActionRuleSuppressionConditionTargetResourceTypeToTerrafo
 }
 
 export class MonitorActionRuleSuppressionConditionTargetResourceTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -583,7 +609,7 @@ export class MonitorActionRuleSuppressionConditionTargetResourceTypeOutputRefere
   }
 
   public get internalValue(): MonitorActionRuleSuppressionConditionTargetResourceType | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._operator) {
       hasAnyValues = true;
@@ -598,10 +624,12 @@ export class MonitorActionRuleSuppressionConditionTargetResourceTypeOutputRefere
 
   public set internalValue(value: MonitorActionRuleSuppressionConditionTargetResourceType | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._operator = undefined;
       this._values = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._operator = value.operator;
       this._values = value.values;
     }
@@ -695,6 +723,8 @@ export function monitorActionRuleSuppressionConditionToTerraform(struct?: Monito
 }
 
 export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -705,33 +735,33 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
   }
 
   public get internalValue(): MonitorActionRuleSuppressionCondition | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._alertContext) {
+    if (this._alertContext?.internalValue) {
       hasAnyValues = true;
       internalValueResult.alertContext = this._alertContext?.internalValue;
     }
-    if (this._alertRuleId) {
+    if (this._alertRuleId?.internalValue) {
       hasAnyValues = true;
       internalValueResult.alertRuleId = this._alertRuleId?.internalValue;
     }
-    if (this._description) {
+    if (this._description?.internalValue) {
       hasAnyValues = true;
       internalValueResult.description = this._description?.internalValue;
     }
-    if (this._monitor) {
+    if (this._monitor?.internalValue) {
       hasAnyValues = true;
       internalValueResult.monitor = this._monitor?.internalValue;
     }
-    if (this._monitorService) {
+    if (this._monitorService?.internalValue) {
       hasAnyValues = true;
       internalValueResult.monitorService = this._monitorService?.internalValue;
     }
-    if (this._severity) {
+    if (this._severity?.internalValue) {
       hasAnyValues = true;
       internalValueResult.severity = this._severity?.internalValue;
     }
-    if (this._targetResourceType) {
+    if (this._targetResourceType?.internalValue) {
       hasAnyValues = true;
       internalValueResult.targetResourceType = this._targetResourceType?.internalValue;
     }
@@ -740,6 +770,7 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
 
   public set internalValue(value: MonitorActionRuleSuppressionCondition | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._alertContext.internalValue = undefined;
       this._alertRuleId.internalValue = undefined;
       this._description.internalValue = undefined;
@@ -749,6 +780,7 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
       this._targetResourceType.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._alertContext.internalValue = value.alertContext;
       this._alertRuleId.internalValue = value.alertRuleId;
       this._description.internalValue = value.description;
@@ -894,6 +926,8 @@ export function monitorActionRuleSuppressionScopeToTerraform(struct?: MonitorAct
 }
 
 export class MonitorActionRuleSuppressionScopeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -904,7 +938,7 @@ export class MonitorActionRuleSuppressionScopeOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): MonitorActionRuleSuppressionScope | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._resourceIds) {
       hasAnyValues = true;
@@ -919,10 +953,12 @@ export class MonitorActionRuleSuppressionScopeOutputReference extends cdktf.Comp
 
   public set internalValue(value: MonitorActionRuleSuppressionScope | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._resourceIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._resourceIds = value.resourceIds;
       this._type = value.type;
     }
@@ -987,6 +1023,8 @@ export function monitorActionRuleSuppressionSuppressionScheduleToTerraform(struc
 }
 
 export class MonitorActionRuleSuppressionSuppressionScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -997,7 +1035,7 @@ export class MonitorActionRuleSuppressionSuppressionScheduleOutputReference exte
   }
 
   public get internalValue(): MonitorActionRuleSuppressionSuppressionSchedule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._endDateUtc) {
       hasAnyValues = true;
@@ -1020,12 +1058,14 @@ export class MonitorActionRuleSuppressionSuppressionScheduleOutputReference exte
 
   public set internalValue(value: MonitorActionRuleSuppressionSuppressionSchedule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._endDateUtc = undefined;
       this._recurrenceMonthly = undefined;
       this._recurrenceWeekly = undefined;
       this._startDateUtc = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._endDateUtc = value.endDateUtc;
       this._recurrenceMonthly = value.recurrenceMonthly;
       this._recurrenceWeekly = value.recurrenceWeekly;
@@ -1117,6 +1157,8 @@ export function monitorActionRuleSuppressionSuppressionToTerraform(struct?: Moni
 }
 
 export class MonitorActionRuleSuppressionSuppressionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1127,13 +1169,13 @@ export class MonitorActionRuleSuppressionSuppressionOutputReference extends cdkt
   }
 
   public get internalValue(): MonitorActionRuleSuppressionSuppression | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._recurrenceType) {
       hasAnyValues = true;
       internalValueResult.recurrenceType = this._recurrenceType;
     }
-    if (this._schedule) {
+    if (this._schedule?.internalValue) {
       hasAnyValues = true;
       internalValueResult.schedule = this._schedule?.internalValue;
     }
@@ -1142,10 +1184,12 @@ export class MonitorActionRuleSuppressionSuppressionOutputReference extends cdkt
 
   public set internalValue(value: MonitorActionRuleSuppressionSuppression | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._recurrenceType = undefined;
       this._schedule.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._recurrenceType = value.recurrenceType;
       this._schedule.internalValue = value.schedule;
     }
@@ -1213,6 +1257,8 @@ export function monitorActionRuleSuppressionTimeoutsToTerraform(struct?: Monitor
 }
 
 export class MonitorActionRuleSuppressionTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1223,7 +1269,7 @@ export class MonitorActionRuleSuppressionTimeoutsOutputReference extends cdktf.C
   }
 
   public get internalValue(): MonitorActionRuleSuppressionTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1246,12 +1292,14 @@ export class MonitorActionRuleSuppressionTimeoutsOutputReference extends cdktf.C
 
   public set internalValue(value: MonitorActionRuleSuppressionTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

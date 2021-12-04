@@ -84,6 +84,8 @@ export function virtualMachineConfigurationPolicyAssignmentConfigurationToTerraf
 }
 
 export class VirtualMachineConfigurationPolicyAssignmentConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -94,7 +96,7 @@ export class VirtualMachineConfigurationPolicyAssignmentConfigurationOutputRefer
   }
 
   public get internalValue(): VirtualMachineConfigurationPolicyAssignmentConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -113,11 +115,13 @@ export class VirtualMachineConfigurationPolicyAssignmentConfigurationOutputRefer
 
   public set internalValue(value: VirtualMachineConfigurationPolicyAssignmentConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._version = undefined;
       this._parameter = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._version = value.version;
       this._parameter = value.parameter;
@@ -203,6 +207,8 @@ export function virtualMachineConfigurationPolicyAssignmentTimeoutsToTerraform(s
 }
 
 export class VirtualMachineConfigurationPolicyAssignmentTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -213,7 +219,7 @@ export class VirtualMachineConfigurationPolicyAssignmentTimeoutsOutputReference 
   }
 
   public get internalValue(): VirtualMachineConfigurationPolicyAssignmentTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -236,12 +242,14 @@ export class VirtualMachineConfigurationPolicyAssignmentTimeoutsOutputReference 
 
   public set internalValue(value: VirtualMachineConfigurationPolicyAssignmentTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

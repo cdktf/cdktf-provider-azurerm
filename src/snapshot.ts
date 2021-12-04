@@ -79,6 +79,8 @@ export function snapshotEncryptionSettingsDiskEncryptionKeyToTerraform(struct?: 
 }
 
 export class SnapshotEncryptionSettingsDiskEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -89,7 +91,7 @@ export class SnapshotEncryptionSettingsDiskEncryptionKeyOutputReference extends 
   }
 
   public get internalValue(): SnapshotEncryptionSettingsDiskEncryptionKey | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._secretUrl) {
       hasAnyValues = true;
@@ -104,10 +106,12 @@ export class SnapshotEncryptionSettingsDiskEncryptionKeyOutputReference extends 
 
   public set internalValue(value: SnapshotEncryptionSettingsDiskEncryptionKey | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._secretUrl = undefined;
       this._sourceVaultId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._secretUrl = value.secretUrl;
       this._sourceVaultId = value.sourceVaultId;
     }
@@ -162,6 +166,8 @@ export function snapshotEncryptionSettingsKeyEncryptionKeyToTerraform(struct?: S
 }
 
 export class SnapshotEncryptionSettingsKeyEncryptionKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -172,7 +178,7 @@ export class SnapshotEncryptionSettingsKeyEncryptionKeyOutputReference extends c
   }
 
   public get internalValue(): SnapshotEncryptionSettingsKeyEncryptionKey | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._keyUrl) {
       hasAnyValues = true;
@@ -187,10 +193,12 @@ export class SnapshotEncryptionSettingsKeyEncryptionKeyOutputReference extends c
 
   public set internalValue(value: SnapshotEncryptionSettingsKeyEncryptionKey | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._keyUrl = undefined;
       this._sourceVaultId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._keyUrl = value.keyUrl;
       this._sourceVaultId = value.sourceVaultId;
     }
@@ -254,6 +262,8 @@ export function snapshotEncryptionSettingsToTerraform(struct?: SnapshotEncryptio
 }
 
 export class SnapshotEncryptionSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -264,17 +274,17 @@ export class SnapshotEncryptionSettingsOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): SnapshotEncryptionSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._diskEncryptionKey) {
+    if (this._diskEncryptionKey?.internalValue) {
       hasAnyValues = true;
       internalValueResult.diskEncryptionKey = this._diskEncryptionKey?.internalValue;
     }
-    if (this._keyEncryptionKey) {
+    if (this._keyEncryptionKey?.internalValue) {
       hasAnyValues = true;
       internalValueResult.keyEncryptionKey = this._keyEncryptionKey?.internalValue;
     }
@@ -283,11 +293,13 @@ export class SnapshotEncryptionSettingsOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: SnapshotEncryptionSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
       this._diskEncryptionKey.internalValue = undefined;
       this._keyEncryptionKey.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
       this._diskEncryptionKey.internalValue = value.diskEncryptionKey;
       this._keyEncryptionKey.internalValue = value.keyEncryptionKey;
@@ -372,6 +384,8 @@ export function snapshotTimeoutsToTerraform(struct?: SnapshotTimeoutsOutputRefer
 }
 
 export class SnapshotTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -382,7 +396,7 @@ export class SnapshotTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): SnapshotTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -405,12 +419,14 @@ export class SnapshotTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: SnapshotTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

@@ -36,6 +36,8 @@ export function dataAzurermKeyVaultAccessPolicyTimeoutsToTerraform(struct?: Data
 }
 
 export class DataAzurermKeyVaultAccessPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -46,7 +48,7 @@ export class DataAzurermKeyVaultAccessPolicyTimeoutsOutputReference extends cdkt
   }
 
   public get internalValue(): DataAzurermKeyVaultAccessPolicyTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read) {
       hasAnyValues = true;
@@ -57,9 +59,11 @@ export class DataAzurermKeyVaultAccessPolicyTimeoutsOutputReference extends cdkt
 
   public set internalValue(value: DataAzurermKeyVaultAccessPolicyTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._read = value.read;
     }
   }

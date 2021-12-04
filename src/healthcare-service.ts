@@ -90,6 +90,8 @@ export function healthcareServiceAuthenticationConfigurationToTerraform(struct?:
 }
 
 export class HealthcareServiceAuthenticationConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -100,7 +102,7 @@ export class HealthcareServiceAuthenticationConfigurationOutputReference extends
   }
 
   public get internalValue(): HealthcareServiceAuthenticationConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._audience) {
       hasAnyValues = true;
@@ -119,11 +121,13 @@ export class HealthcareServiceAuthenticationConfigurationOutputReference extends
 
   public set internalValue(value: HealthcareServiceAuthenticationConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._audience = undefined;
       this._authority = undefined;
       this._smartProxyEnabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._audience = value.audience;
       this._authority = value.authority;
       this._smartProxyEnabled = value.smartProxyEnabled;
@@ -216,6 +220,8 @@ export function healthcareServiceCorsConfigurationToTerraform(struct?: Healthcar
 }
 
 export class HealthcareServiceCorsConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -226,7 +232,7 @@ export class HealthcareServiceCorsConfigurationOutputReference extends cdktf.Com
   }
 
   public get internalValue(): HealthcareServiceCorsConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowCredentials) {
       hasAnyValues = true;
@@ -253,6 +259,7 @@ export class HealthcareServiceCorsConfigurationOutputReference extends cdktf.Com
 
   public set internalValue(value: HealthcareServiceCorsConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowCredentials = undefined;
       this._allowedHeaders = undefined;
       this._allowedMethods = undefined;
@@ -260,6 +267,7 @@ export class HealthcareServiceCorsConfigurationOutputReference extends cdktf.Com
       this._maxAgeInSeconds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowCredentials = value.allowCredentials;
       this._allowedHeaders = value.allowedHeaders;
       this._allowedMethods = value.allowedMethods;
@@ -381,6 +389,8 @@ export function healthcareServiceTimeoutsToTerraform(struct?: HealthcareServiceT
 }
 
 export class HealthcareServiceTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -391,7 +401,7 @@ export class HealthcareServiceTimeoutsOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): HealthcareServiceTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -414,12 +424,14 @@ export class HealthcareServiceTimeoutsOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: HealthcareServiceTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

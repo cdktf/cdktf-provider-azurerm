@@ -114,6 +114,8 @@ export function monitorScheduledQueryRulesAlertActionToTerraform(struct?: Monito
 }
 
 export class MonitorScheduledQueryRulesAlertActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -124,7 +126,7 @@ export class MonitorScheduledQueryRulesAlertActionOutputReference extends cdktf.
   }
 
   public get internalValue(): MonitorScheduledQueryRulesAlertAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._actionGroup) {
       hasAnyValues = true;
@@ -143,11 +145,13 @@ export class MonitorScheduledQueryRulesAlertActionOutputReference extends cdktf.
 
   public set internalValue(value: MonitorScheduledQueryRulesAlertAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._actionGroup = undefined;
       this._customWebhookPayload = undefined;
       this._emailSubject = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._actionGroup = value.actionGroup;
       this._customWebhookPayload = value.customWebhookPayload;
       this._emailSubject = value.emailSubject;
@@ -232,6 +236,8 @@ export function monitorScheduledQueryRulesAlertTimeoutsToTerraform(struct?: Moni
 }
 
 export class MonitorScheduledQueryRulesAlertTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -242,7 +248,7 @@ export class MonitorScheduledQueryRulesAlertTimeoutsOutputReference extends cdkt
   }
 
   public get internalValue(): MonitorScheduledQueryRulesAlertTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -265,12 +271,14 @@ export class MonitorScheduledQueryRulesAlertTimeoutsOutputReference extends cdkt
 
   public set internalValue(value: MonitorScheduledQueryRulesAlertTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -375,6 +383,8 @@ export function monitorScheduledQueryRulesAlertTriggerMetricTriggerToTerraform(s
 }
 
 export class MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -385,7 +395,7 @@ export class MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference 
   }
 
   public get internalValue(): MonitorScheduledQueryRulesAlertTriggerMetricTrigger | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._metricColumn) {
       hasAnyValues = true;
@@ -408,12 +418,14 @@ export class MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference 
 
   public set internalValue(value: MonitorScheduledQueryRulesAlertTriggerMetricTrigger | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._metricColumn = undefined;
       this._metricTriggerType = undefined;
       this._operator = undefined;
       this._threshold = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._metricColumn = value.metricColumn;
       this._metricTriggerType = value.metricTriggerType;
       this._operator = value.operator;
@@ -503,6 +515,8 @@ export function monitorScheduledQueryRulesAlertTriggerToTerraform(struct?: Monit
 }
 
 export class MonitorScheduledQueryRulesAlertTriggerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -513,7 +527,7 @@ export class MonitorScheduledQueryRulesAlertTriggerOutputReference extends cdktf
   }
 
   public get internalValue(): MonitorScheduledQueryRulesAlertTrigger | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._operator) {
       hasAnyValues = true;
@@ -523,7 +537,7 @@ export class MonitorScheduledQueryRulesAlertTriggerOutputReference extends cdktf
       hasAnyValues = true;
       internalValueResult.threshold = this._threshold;
     }
-    if (this._metricTrigger) {
+    if (this._metricTrigger?.internalValue) {
       hasAnyValues = true;
       internalValueResult.metricTrigger = this._metricTrigger?.internalValue;
     }
@@ -532,11 +546,13 @@ export class MonitorScheduledQueryRulesAlertTriggerOutputReference extends cdktf
 
   public set internalValue(value: MonitorScheduledQueryRulesAlertTrigger | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._operator = undefined;
       this._threshold = undefined;
       this._metricTrigger.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._operator = value.operator;
       this._threshold = value.threshold;
       this._metricTrigger.internalValue = value.metricTrigger;

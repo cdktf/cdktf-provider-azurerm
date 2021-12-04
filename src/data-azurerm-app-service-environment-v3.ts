@@ -69,6 +69,8 @@ export function dataAzurermAppServiceEnvironmentV3TimeoutsToTerraform(struct?: D
 }
 
 export class DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -79,7 +81,7 @@ export class DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference extends c
   }
 
   public get internalValue(): DataAzurermAppServiceEnvironmentV3Timeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read) {
       hasAnyValues = true;
@@ -90,9 +92,11 @@ export class DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference extends c
 
   public set internalValue(value: DataAzurermAppServiceEnvironmentV3Timeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._read = value.read;
     }
   }

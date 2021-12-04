@@ -90,6 +90,8 @@ export function dnsZoneSoaRecordToTerraform(struct?: DnsZoneSoaRecordOutputRefer
 }
 
 export class DnsZoneSoaRecordOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -100,7 +102,7 @@ export class DnsZoneSoaRecordOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): DnsZoneSoaRecord | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._email) {
       hasAnyValues = true;
@@ -143,6 +145,7 @@ export class DnsZoneSoaRecordOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: DnsZoneSoaRecord | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._email = undefined;
       this._expireTime = undefined;
       this._hostName = undefined;
@@ -154,6 +157,7 @@ export class DnsZoneSoaRecordOutputReference extends cdktf.ComplexObject {
       this._ttl = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._email = value.email;
       this._expireTime = value.expireTime;
       this._hostName = value.hostName;
@@ -338,6 +342,8 @@ export function dnsZoneTimeoutsToTerraform(struct?: DnsZoneTimeoutsOutputReferen
 }
 
 export class DnsZoneTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -348,7 +354,7 @@ export class DnsZoneTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): DnsZoneTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -371,12 +377,14 @@ export class DnsZoneTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: DnsZoneTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

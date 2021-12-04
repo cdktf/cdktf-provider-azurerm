@@ -51,6 +51,8 @@ export function dataAzurermEventgridSystemTopicIdentityToTerraform(struct?: Data
 }
 
 export class DataAzurermEventgridSystemTopicIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -61,7 +63,7 @@ export class DataAzurermEventgridSystemTopicIdentityOutputReference extends cdkt
   }
 
   public get internalValue(): DataAzurermEventgridSystemTopicIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -76,10 +78,12 @@ export class DataAzurermEventgridSystemTopicIdentityOutputReference extends cdkt
 
   public set internalValue(value: DataAzurermEventgridSystemTopicIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -132,6 +136,8 @@ export function dataAzurermEventgridSystemTopicTimeoutsToTerraform(struct?: Data
 }
 
 export class DataAzurermEventgridSystemTopicTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -142,7 +148,7 @@ export class DataAzurermEventgridSystemTopicTimeoutsOutputReference extends cdkt
   }
 
   public get internalValue(): DataAzurermEventgridSystemTopicTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read) {
       hasAnyValues = true;
@@ -153,9 +159,11 @@ export class DataAzurermEventgridSystemTopicTimeoutsOutputReference extends cdkt
 
   public set internalValue(value: DataAzurermEventgridSystemTopicTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._read = value.read;
     }
   }
