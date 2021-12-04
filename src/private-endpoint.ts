@@ -143,6 +143,8 @@ export function privateEndpointPrivateDnsZoneGroupToTerraform(struct?: PrivateEn
 }
 
 export class PrivateEndpointPrivateDnsZoneGroupOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -153,7 +155,7 @@ export class PrivateEndpointPrivateDnsZoneGroupOutputReference extends cdktf.Com
   }
 
   public get internalValue(): PrivateEndpointPrivateDnsZoneGroup | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -168,10 +170,12 @@ export class PrivateEndpointPrivateDnsZoneGroupOutputReference extends cdktf.Com
 
   public set internalValue(value: PrivateEndpointPrivateDnsZoneGroup | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._privateDnsZoneIds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._privateDnsZoneIds = value.privateDnsZoneIds;
     }
@@ -246,6 +250,8 @@ export function privateEndpointPrivateServiceConnectionToTerraform(struct?: Priv
 }
 
 export class PrivateEndpointPrivateServiceConnectionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -256,7 +262,7 @@ export class PrivateEndpointPrivateServiceConnectionOutputReference extends cdkt
   }
 
   public get internalValue(): PrivateEndpointPrivateServiceConnection | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._isManualConnection) {
       hasAnyValues = true;
@@ -287,6 +293,7 @@ export class PrivateEndpointPrivateServiceConnectionOutputReference extends cdkt
 
   public set internalValue(value: PrivateEndpointPrivateServiceConnection | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._isManualConnection = undefined;
       this._name = undefined;
       this._privateConnectionResourceAlias = undefined;
@@ -295,6 +302,7 @@ export class PrivateEndpointPrivateServiceConnectionOutputReference extends cdkt
       this._subresourceNames = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._isManualConnection = value.isManualConnection;
       this._name = value.name;
       this._privateConnectionResourceAlias = value.privateConnectionResourceAlias;
@@ -427,6 +435,8 @@ export function privateEndpointTimeoutsToTerraform(struct?: PrivateEndpointTimeo
 }
 
 export class PrivateEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -437,7 +447,7 @@ export class PrivateEndpointTimeoutsOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): PrivateEndpointTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -460,12 +470,14 @@ export class PrivateEndpointTimeoutsOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: PrivateEndpointTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

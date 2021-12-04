@@ -156,6 +156,8 @@ export function hpcCacheDefaultAccessPolicyToTerraform(struct?: HpcCacheDefaultA
 }
 
 export class HpcCacheDefaultAccessPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -166,7 +168,7 @@ export class HpcCacheDefaultAccessPolicyOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): HpcCacheDefaultAccessPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._accessRule) {
       hasAnyValues = true;
@@ -177,9 +179,11 @@ export class HpcCacheDefaultAccessPolicyOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: HpcCacheDefaultAccessPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._accessRule = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._accessRule = value.accessRule;
     }
   }
@@ -246,6 +250,8 @@ export function hpcCacheDirectoryActiveDirectoryToTerraform(struct?: HpcCacheDir
 }
 
 export class HpcCacheDirectoryActiveDirectoryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -256,7 +262,7 @@ export class HpcCacheDirectoryActiveDirectoryOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): HpcCacheDirectoryActiveDirectory | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cacheNetbiosName) {
       hasAnyValues = true;
@@ -291,6 +297,7 @@ export class HpcCacheDirectoryActiveDirectoryOutputReference extends cdktf.Compl
 
   public set internalValue(value: HpcCacheDirectoryActiveDirectory | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cacheNetbiosName = undefined;
       this._dnsPrimaryIp = undefined;
       this._dnsSecondaryIp = undefined;
@@ -300,6 +307,7 @@ export class HpcCacheDirectoryActiveDirectoryOutputReference extends cdktf.Compl
       this._username = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cacheNetbiosName = value.cacheNetbiosName;
       this._dnsPrimaryIp = value.dnsPrimaryIp;
       this._dnsSecondaryIp = value.dnsSecondaryIp;
@@ -427,6 +435,8 @@ export function hpcCacheDirectoryFlatFileToTerraform(struct?: HpcCacheDirectoryF
 }
 
 export class HpcCacheDirectoryFlatFileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -437,7 +447,7 @@ export class HpcCacheDirectoryFlatFileOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): HpcCacheDirectoryFlatFile | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._groupFileUri) {
       hasAnyValues = true;
@@ -452,10 +462,12 @@ export class HpcCacheDirectoryFlatFileOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: HpcCacheDirectoryFlatFile | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._groupFileUri = undefined;
       this._passwordFileUri = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._groupFileUri = value.groupFileUri;
       this._passwordFileUri = value.passwordFileUri;
     }
@@ -510,6 +522,8 @@ export function hpcCacheDirectoryLdapBindToTerraform(struct?: HpcCacheDirectoryL
 }
 
 export class HpcCacheDirectoryLdapBindOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -520,7 +534,7 @@ export class HpcCacheDirectoryLdapBindOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): HpcCacheDirectoryLdapBind | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dn) {
       hasAnyValues = true;
@@ -535,10 +549,12 @@ export class HpcCacheDirectoryLdapBindOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: HpcCacheDirectoryLdapBind | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dn = undefined;
       this._password = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dn = value.dn;
       this._password = value.password;
     }
@@ -615,6 +631,8 @@ export function hpcCacheDirectoryLdapToTerraform(struct?: HpcCacheDirectoryLdapO
 }
 
 export class HpcCacheDirectoryLdapOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -625,7 +643,7 @@ export class HpcCacheDirectoryLdapOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): HpcCacheDirectoryLdap | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._baseDn) {
       hasAnyValues = true;
@@ -647,7 +665,7 @@ export class HpcCacheDirectoryLdapOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.server = this._server;
     }
-    if (this._bind) {
+    if (this._bind?.internalValue) {
       hasAnyValues = true;
       internalValueResult.bind = this._bind?.internalValue;
     }
@@ -656,6 +674,7 @@ export class HpcCacheDirectoryLdapOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: HpcCacheDirectoryLdap | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._baseDn = undefined;
       this._certificateValidationUri = undefined;
       this._downloadCertificateAutomatically = undefined;
@@ -664,6 +683,7 @@ export class HpcCacheDirectoryLdapOutputReference extends cdktf.ComplexObject {
       this._bind.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._baseDn = value.baseDn;
       this._certificateValidationUri = value.certificateValidationUri;
       this._downloadCertificateAutomatically = value.downloadCertificateAutomatically;
@@ -786,6 +806,8 @@ export function hpcCacheDnsToTerraform(struct?: HpcCacheDnsOutputReference | Hpc
 }
 
 export class HpcCacheDnsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -796,7 +818,7 @@ export class HpcCacheDnsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): HpcCacheDns | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._searchDomain) {
       hasAnyValues = true;
@@ -811,10 +833,12 @@ export class HpcCacheDnsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: HpcCacheDns | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._searchDomain = undefined;
       this._servers = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._searchDomain = value.searchDomain;
       this._servers = value.servers;
     }
@@ -882,6 +906,8 @@ export function hpcCacheTimeoutsToTerraform(struct?: HpcCacheTimeoutsOutputRefer
 }
 
 export class HpcCacheTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -892,7 +918,7 @@ export class HpcCacheTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): HpcCacheTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -915,12 +941,14 @@ export class HpcCacheTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: HpcCacheTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

@@ -73,6 +73,8 @@ export function monitorActionRuleActionGroupConditionAlertContextToTerraform(str
 }
 
 export class MonitorActionRuleActionGroupConditionAlertContextOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -83,7 +85,7 @@ export class MonitorActionRuleActionGroupConditionAlertContextOutputReference ex
   }
 
   public get internalValue(): MonitorActionRuleActionGroupConditionAlertContext | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._operator) {
       hasAnyValues = true;
@@ -98,10 +100,12 @@ export class MonitorActionRuleActionGroupConditionAlertContextOutputReference ex
 
   public set internalValue(value: MonitorActionRuleActionGroupConditionAlertContext | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._operator = undefined;
       this._values = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._operator = value.operator;
       this._values = value.values;
     }
@@ -156,6 +160,8 @@ export function monitorActionRuleActionGroupConditionAlertRuleIdToTerraform(stru
 }
 
 export class MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -166,7 +172,7 @@ export class MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference ext
   }
 
   public get internalValue(): MonitorActionRuleActionGroupConditionAlertRuleId | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._operator) {
       hasAnyValues = true;
@@ -181,10 +187,12 @@ export class MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference ext
 
   public set internalValue(value: MonitorActionRuleActionGroupConditionAlertRuleId | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._operator = undefined;
       this._values = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._operator = value.operator;
       this._values = value.values;
     }
@@ -239,6 +247,8 @@ export function monitorActionRuleActionGroupConditionDescriptionToTerraform(stru
 }
 
 export class MonitorActionRuleActionGroupConditionDescriptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -249,7 +259,7 @@ export class MonitorActionRuleActionGroupConditionDescriptionOutputReference ext
   }
 
   public get internalValue(): MonitorActionRuleActionGroupConditionDescription | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._operator) {
       hasAnyValues = true;
@@ -264,10 +274,12 @@ export class MonitorActionRuleActionGroupConditionDescriptionOutputReference ext
 
   public set internalValue(value: MonitorActionRuleActionGroupConditionDescription | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._operator = undefined;
       this._values = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._operator = value.operator;
       this._values = value.values;
     }
@@ -322,6 +334,8 @@ export function monitorActionRuleActionGroupConditionMonitorToTerraform(struct?:
 }
 
 export class MonitorActionRuleActionGroupConditionMonitorOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -332,7 +346,7 @@ export class MonitorActionRuleActionGroupConditionMonitorOutputReference extends
   }
 
   public get internalValue(): MonitorActionRuleActionGroupConditionMonitor | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._operator) {
       hasAnyValues = true;
@@ -347,10 +361,12 @@ export class MonitorActionRuleActionGroupConditionMonitorOutputReference extends
 
   public set internalValue(value: MonitorActionRuleActionGroupConditionMonitor | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._operator = undefined;
       this._values = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._operator = value.operator;
       this._values = value.values;
     }
@@ -405,6 +421,8 @@ export function monitorActionRuleActionGroupConditionMonitorServiceToTerraform(s
 }
 
 export class MonitorActionRuleActionGroupConditionMonitorServiceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -415,7 +433,7 @@ export class MonitorActionRuleActionGroupConditionMonitorServiceOutputReference 
   }
 
   public get internalValue(): MonitorActionRuleActionGroupConditionMonitorService | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._operator) {
       hasAnyValues = true;
@@ -430,10 +448,12 @@ export class MonitorActionRuleActionGroupConditionMonitorServiceOutputReference 
 
   public set internalValue(value: MonitorActionRuleActionGroupConditionMonitorService | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._operator = undefined;
       this._values = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._operator = value.operator;
       this._values = value.values;
     }
@@ -488,6 +508,8 @@ export function monitorActionRuleActionGroupConditionSeverityToTerraform(struct?
 }
 
 export class MonitorActionRuleActionGroupConditionSeverityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -498,7 +520,7 @@ export class MonitorActionRuleActionGroupConditionSeverityOutputReference extend
   }
 
   public get internalValue(): MonitorActionRuleActionGroupConditionSeverity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._operator) {
       hasAnyValues = true;
@@ -513,10 +535,12 @@ export class MonitorActionRuleActionGroupConditionSeverityOutputReference extend
 
   public set internalValue(value: MonitorActionRuleActionGroupConditionSeverity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._operator = undefined;
       this._values = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._operator = value.operator;
       this._values = value.values;
     }
@@ -571,6 +595,8 @@ export function monitorActionRuleActionGroupConditionTargetResourceTypeToTerrafo
 }
 
 export class MonitorActionRuleActionGroupConditionTargetResourceTypeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -581,7 +607,7 @@ export class MonitorActionRuleActionGroupConditionTargetResourceTypeOutputRefere
   }
 
   public get internalValue(): MonitorActionRuleActionGroupConditionTargetResourceType | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._operator) {
       hasAnyValues = true;
@@ -596,10 +622,12 @@ export class MonitorActionRuleActionGroupConditionTargetResourceTypeOutputRefere
 
   public set internalValue(value: MonitorActionRuleActionGroupConditionTargetResourceType | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._operator = undefined;
       this._values = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._operator = value.operator;
       this._values = value.values;
     }
@@ -693,6 +721,8 @@ export function monitorActionRuleActionGroupConditionToTerraform(struct?: Monito
 }
 
 export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -703,33 +733,33 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
   }
 
   public get internalValue(): MonitorActionRuleActionGroupCondition | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._alertContext) {
+    if (this._alertContext?.internalValue) {
       hasAnyValues = true;
       internalValueResult.alertContext = this._alertContext?.internalValue;
     }
-    if (this._alertRuleId) {
+    if (this._alertRuleId?.internalValue) {
       hasAnyValues = true;
       internalValueResult.alertRuleId = this._alertRuleId?.internalValue;
     }
-    if (this._description) {
+    if (this._description?.internalValue) {
       hasAnyValues = true;
       internalValueResult.description = this._description?.internalValue;
     }
-    if (this._monitor) {
+    if (this._monitor?.internalValue) {
       hasAnyValues = true;
       internalValueResult.monitor = this._monitor?.internalValue;
     }
-    if (this._monitorService) {
+    if (this._monitorService?.internalValue) {
       hasAnyValues = true;
       internalValueResult.monitorService = this._monitorService?.internalValue;
     }
-    if (this._severity) {
+    if (this._severity?.internalValue) {
       hasAnyValues = true;
       internalValueResult.severity = this._severity?.internalValue;
     }
-    if (this._targetResourceType) {
+    if (this._targetResourceType?.internalValue) {
       hasAnyValues = true;
       internalValueResult.targetResourceType = this._targetResourceType?.internalValue;
     }
@@ -738,6 +768,7 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
 
   public set internalValue(value: MonitorActionRuleActionGroupCondition | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._alertContext.internalValue = undefined;
       this._alertRuleId.internalValue = undefined;
       this._description.internalValue = undefined;
@@ -747,6 +778,7 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
       this._targetResourceType.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._alertContext.internalValue = value.alertContext;
       this._alertRuleId.internalValue = value.alertRuleId;
       this._description.internalValue = value.description;
@@ -892,6 +924,8 @@ export function monitorActionRuleActionGroupScopeToTerraform(struct?: MonitorAct
 }
 
 export class MonitorActionRuleActionGroupScopeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -902,7 +936,7 @@ export class MonitorActionRuleActionGroupScopeOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): MonitorActionRuleActionGroupScope | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._resourceIds) {
       hasAnyValues = true;
@@ -917,10 +951,12 @@ export class MonitorActionRuleActionGroupScopeOutputReference extends cdktf.Comp
 
   public set internalValue(value: MonitorActionRuleActionGroupScope | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._resourceIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._resourceIds = value.resourceIds;
       this._type = value.type;
     }
@@ -985,6 +1021,8 @@ export function monitorActionRuleActionGroupTimeoutsToTerraform(struct?: Monitor
 }
 
 export class MonitorActionRuleActionGroupTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -995,7 +1033,7 @@ export class MonitorActionRuleActionGroupTimeoutsOutputReference extends cdktf.C
   }
 
   public get internalValue(): MonitorActionRuleActionGroupTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1018,12 +1056,14 @@ export class MonitorActionRuleActionGroupTimeoutsOutputReference extends cdktf.C
 
   public set internalValue(value: MonitorActionRuleActionGroupTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

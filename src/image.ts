@@ -134,6 +134,8 @@ export function imageOsDiskToTerraform(struct?: ImageOsDiskOutputReference | Ima
 }
 
 export class ImageOsDiskOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -144,7 +146,7 @@ export class ImageOsDiskOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): ImageOsDisk | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._blobUri) {
       hasAnyValues = true;
@@ -175,6 +177,7 @@ export class ImageOsDiskOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: ImageOsDisk | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._blobUri = undefined;
       this._caching = undefined;
       this._managedDiskId = undefined;
@@ -183,6 +186,7 @@ export class ImageOsDiskOutputReference extends cdktf.ComplexObject {
       this._sizeGb = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._blobUri = value.blobUri;
       this._caching = value.caching;
       this._managedDiskId = value.managedDiskId;
@@ -321,6 +325,8 @@ export function imageTimeoutsToTerraform(struct?: ImageTimeoutsOutputReference |
 }
 
 export class ImageTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -331,7 +337,7 @@ export class ImageTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): ImageTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -354,12 +360,14 @@ export class ImageTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: ImageTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

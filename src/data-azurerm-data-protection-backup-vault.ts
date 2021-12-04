@@ -57,6 +57,8 @@ export function dataAzurermDataProtectionBackupVaultTimeoutsToTerraform(struct?:
 }
 
 export class DataAzurermDataProtectionBackupVaultTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -67,7 +69,7 @@ export class DataAzurermDataProtectionBackupVaultTimeoutsOutputReference extends
   }
 
   public get internalValue(): DataAzurermDataProtectionBackupVaultTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read) {
       hasAnyValues = true;
@@ -78,9 +80,11 @@ export class DataAzurermDataProtectionBackupVaultTimeoutsOutputReference extends
 
   public set internalValue(value: DataAzurermDataProtectionBackupVaultTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._read = value.read;
     }
   }

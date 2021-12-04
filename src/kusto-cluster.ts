@@ -109,6 +109,8 @@ export function kustoClusterIdentityToTerraform(struct?: KustoClusterIdentityOut
 }
 
 export class KustoClusterIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -119,7 +121,7 @@ export class KustoClusterIdentityOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): KustoClusterIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -134,10 +136,12 @@ export class KustoClusterIdentityOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: KustoClusterIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -195,6 +199,8 @@ export function kustoClusterOptimizedAutoScaleToTerraform(struct?: KustoClusterO
 }
 
 export class KustoClusterOptimizedAutoScaleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -205,7 +211,7 @@ export class KustoClusterOptimizedAutoScaleOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): KustoClusterOptimizedAutoScale | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maximumInstances) {
       hasAnyValues = true;
@@ -220,10 +226,12 @@ export class KustoClusterOptimizedAutoScaleOutputReference extends cdktf.Complex
 
   public set internalValue(value: KustoClusterOptimizedAutoScale | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maximumInstances = undefined;
       this._minimumInstances = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maximumInstances = value.maximumInstances;
       this._minimumInstances = value.minimumInstances;
     }
@@ -278,6 +286,8 @@ export function kustoClusterSkuToTerraform(struct?: KustoClusterSkuOutputReferen
 }
 
 export class KustoClusterSkuOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -288,7 +298,7 @@ export class KustoClusterSkuOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): KustoClusterSku | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._capacity) {
       hasAnyValues = true;
@@ -303,10 +313,12 @@ export class KustoClusterSkuOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: KustoClusterSku | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._capacity = undefined;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._capacity = value.capacity;
       this._name = value.name;
     }
@@ -374,6 +386,8 @@ export function kustoClusterTimeoutsToTerraform(struct?: KustoClusterTimeoutsOut
 }
 
 export class KustoClusterTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -384,7 +398,7 @@ export class KustoClusterTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): KustoClusterTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -407,12 +421,14 @@ export class KustoClusterTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: KustoClusterTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -512,6 +528,8 @@ export function kustoClusterVirtualNetworkConfigurationToTerraform(struct?: Kust
 }
 
 export class KustoClusterVirtualNetworkConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -522,7 +540,7 @@ export class KustoClusterVirtualNetworkConfigurationOutputReference extends cdkt
   }
 
   public get internalValue(): KustoClusterVirtualNetworkConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dataManagementPublicIpId) {
       hasAnyValues = true;
@@ -541,11 +559,13 @@ export class KustoClusterVirtualNetworkConfigurationOutputReference extends cdkt
 
   public set internalValue(value: KustoClusterVirtualNetworkConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dataManagementPublicIpId = undefined;
       this._enginePublicIpId = undefined;
       this._subnetId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dataManagementPublicIpId = value.dataManagementPublicIpId;
       this._enginePublicIpId = value.enginePublicIpId;
       this._subnetId = value.subnetId;

@@ -77,6 +77,8 @@ export function monitorDiagnosticSettingLogRetentionPolicyToTerraform(struct?: M
 }
 
 export class MonitorDiagnosticSettingLogRetentionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -87,7 +89,7 @@ export class MonitorDiagnosticSettingLogRetentionPolicyOutputReference extends c
   }
 
   public get internalValue(): MonitorDiagnosticSettingLogRetentionPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._days) {
       hasAnyValues = true;
@@ -102,10 +104,12 @@ export class MonitorDiagnosticSettingLogRetentionPolicyOutputReference extends c
 
   public set internalValue(value: MonitorDiagnosticSettingLogRetentionPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._days = undefined;
       this._enabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._days = value.days;
       this._enabled = value.enabled;
     }
@@ -192,6 +196,8 @@ export function monitorDiagnosticSettingMetricRetentionPolicyToTerraform(struct?
 }
 
 export class MonitorDiagnosticSettingMetricRetentionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -202,7 +208,7 @@ export class MonitorDiagnosticSettingMetricRetentionPolicyOutputReference extend
   }
 
   public get internalValue(): MonitorDiagnosticSettingMetricRetentionPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._days) {
       hasAnyValues = true;
@@ -217,10 +223,12 @@ export class MonitorDiagnosticSettingMetricRetentionPolicyOutputReference extend
 
   public set internalValue(value: MonitorDiagnosticSettingMetricRetentionPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._days = undefined;
       this._enabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._days = value.days;
       this._enabled = value.enabled;
     }
@@ -317,6 +325,8 @@ export function monitorDiagnosticSettingTimeoutsToTerraform(struct?: MonitorDiag
 }
 
 export class MonitorDiagnosticSettingTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -327,7 +337,7 @@ export class MonitorDiagnosticSettingTimeoutsOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): MonitorDiagnosticSettingTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -350,12 +360,14 @@ export class MonitorDiagnosticSettingTimeoutsOutputReference extends cdktf.Compl
 
   public set internalValue(value: MonitorDiagnosticSettingTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

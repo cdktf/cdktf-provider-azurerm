@@ -156,6 +156,8 @@ export function serviceFabricClusterAzureActiveDirectoryToTerraform(struct?: Ser
 }
 
 export class ServiceFabricClusterAzureActiveDirectoryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -166,7 +168,7 @@ export class ServiceFabricClusterAzureActiveDirectoryOutputReference extends cdk
   }
 
   public get internalValue(): ServiceFabricClusterAzureActiveDirectory | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._clientApplicationId) {
       hasAnyValues = true;
@@ -185,11 +187,13 @@ export class ServiceFabricClusterAzureActiveDirectoryOutputReference extends cdk
 
   public set internalValue(value: ServiceFabricClusterAzureActiveDirectory | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._clientApplicationId = undefined;
       this._clusterApplicationId = undefined;
       this._tenantId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._clientApplicationId = value.clientApplicationId;
       this._clusterApplicationId = value.clusterApplicationId;
       this._tenantId = value.tenantId;
@@ -263,6 +267,8 @@ export function serviceFabricClusterCertificateToTerraform(struct?: ServiceFabri
 }
 
 export class ServiceFabricClusterCertificateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -273,7 +279,7 @@ export class ServiceFabricClusterCertificateOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): ServiceFabricClusterCertificate | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._thumbprint) {
       hasAnyValues = true;
@@ -292,11 +298,13 @@ export class ServiceFabricClusterCertificateOutputReference extends cdktf.Comple
 
   public set internalValue(value: ServiceFabricClusterCertificate | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._thumbprint = undefined;
       this._thumbprintSecondary = undefined;
       this._x509StoreName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._thumbprint = value.thumbprint;
       this._thumbprintSecondary = value.thumbprintSecondary;
       this._x509StoreName = value.x509StoreName;
@@ -392,6 +400,8 @@ export function serviceFabricClusterCertificateCommonNamesToTerraform(struct?: S
 }
 
 export class ServiceFabricClusterCertificateCommonNamesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -402,7 +412,7 @@ export class ServiceFabricClusterCertificateCommonNamesOutputReference extends c
   }
 
   public get internalValue(): ServiceFabricClusterCertificateCommonNames | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._x509StoreName) {
       hasAnyValues = true;
@@ -417,10 +427,12 @@ export class ServiceFabricClusterCertificateCommonNamesOutputReference extends c
 
   public set internalValue(value: ServiceFabricClusterCertificateCommonNames | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._x509StoreName = undefined;
       this._commonNames = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._x509StoreName = value.x509StoreName;
       this._commonNames = value.commonNames;
     }
@@ -540,6 +552,8 @@ export function serviceFabricClusterDiagnosticsConfigToTerraform(struct?: Servic
 }
 
 export class ServiceFabricClusterDiagnosticsConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -550,7 +564,7 @@ export class ServiceFabricClusterDiagnosticsConfigOutputReference extends cdktf.
   }
 
   public get internalValue(): ServiceFabricClusterDiagnosticsConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._blobEndpoint) {
       hasAnyValues = true;
@@ -577,6 +591,7 @@ export class ServiceFabricClusterDiagnosticsConfigOutputReference extends cdktf.
 
   public set internalValue(value: ServiceFabricClusterDiagnosticsConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._blobEndpoint = undefined;
       this._protectedAccountKeyName = undefined;
       this._queueEndpoint = undefined;
@@ -584,6 +599,7 @@ export class ServiceFabricClusterDiagnosticsConfigOutputReference extends cdktf.
       this._tableEndpoint = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._blobEndpoint = value.blobEndpoint;
       this._protectedAccountKeyName = value.protectedAccountKeyName;
       this._queueEndpoint = value.queueEndpoint;
@@ -702,6 +718,8 @@ export function serviceFabricClusterNodeTypeApplicationPortsToTerraform(struct?:
 }
 
 export class ServiceFabricClusterNodeTypeApplicationPortsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -712,7 +730,7 @@ export class ServiceFabricClusterNodeTypeApplicationPortsOutputReference extends
   }
 
   public get internalValue(): ServiceFabricClusterNodeTypeApplicationPorts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._endPort) {
       hasAnyValues = true;
@@ -727,10 +745,12 @@ export class ServiceFabricClusterNodeTypeApplicationPortsOutputReference extends
 
   public set internalValue(value: ServiceFabricClusterNodeTypeApplicationPorts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._endPort = undefined;
       this._startPort = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._endPort = value.endPort;
       this._startPort = value.startPort;
     }
@@ -785,6 +805,8 @@ export function serviceFabricClusterNodeTypeEphemeralPortsToTerraform(struct?: S
 }
 
 export class ServiceFabricClusterNodeTypeEphemeralPortsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -795,7 +817,7 @@ export class ServiceFabricClusterNodeTypeEphemeralPortsOutputReference extends c
   }
 
   public get internalValue(): ServiceFabricClusterNodeTypeEphemeralPorts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._endPort) {
       hasAnyValues = true;
@@ -810,10 +832,12 @@ export class ServiceFabricClusterNodeTypeEphemeralPortsOutputReference extends c
 
   public set internalValue(value: ServiceFabricClusterNodeTypeEphemeralPorts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._endPort = undefined;
       this._startPort = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._endPort = value.endPort;
       this._startPort = value.startPort;
     }
@@ -954,6 +978,8 @@ export function serviceFabricClusterReverseProxyCertificateToTerraform(struct?: 
 }
 
 export class ServiceFabricClusterReverseProxyCertificateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -964,7 +990,7 @@ export class ServiceFabricClusterReverseProxyCertificateOutputReference extends 
   }
 
   public get internalValue(): ServiceFabricClusterReverseProxyCertificate | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._thumbprint) {
       hasAnyValues = true;
@@ -983,11 +1009,13 @@ export class ServiceFabricClusterReverseProxyCertificateOutputReference extends 
 
   public set internalValue(value: ServiceFabricClusterReverseProxyCertificate | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._thumbprint = undefined;
       this._thumbprintSecondary = undefined;
       this._x509StoreName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._thumbprint = value.thumbprint;
       this._thumbprintSecondary = value.thumbprintSecondary;
       this._x509StoreName = value.x509StoreName;
@@ -1083,6 +1111,8 @@ export function serviceFabricClusterReverseProxyCertificateCommonNamesToTerrafor
 }
 
 export class ServiceFabricClusterReverseProxyCertificateCommonNamesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1093,7 +1123,7 @@ export class ServiceFabricClusterReverseProxyCertificateCommonNamesOutputReferen
   }
 
   public get internalValue(): ServiceFabricClusterReverseProxyCertificateCommonNames | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._x509StoreName) {
       hasAnyValues = true;
@@ -1108,10 +1138,12 @@ export class ServiceFabricClusterReverseProxyCertificateCommonNamesOutputReferen
 
   public set internalValue(value: ServiceFabricClusterReverseProxyCertificateCommonNames | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._x509StoreName = undefined;
       this._commonNames = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._x509StoreName = value.x509StoreName;
       this._commonNames = value.commonNames;
     }
@@ -1177,6 +1209,8 @@ export function serviceFabricClusterTimeoutsToTerraform(struct?: ServiceFabricCl
 }
 
 export class ServiceFabricClusterTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1187,7 +1221,7 @@ export class ServiceFabricClusterTimeoutsOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): ServiceFabricClusterTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1210,12 +1244,14 @@ export class ServiceFabricClusterTimeoutsOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: ServiceFabricClusterTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -1315,6 +1351,8 @@ export function serviceFabricClusterUpgradePolicyDeltaHealthPolicyToTerraform(st
 }
 
 export class ServiceFabricClusterUpgradePolicyDeltaHealthPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1325,7 +1363,7 @@ export class ServiceFabricClusterUpgradePolicyDeltaHealthPolicyOutputReference e
   }
 
   public get internalValue(): ServiceFabricClusterUpgradePolicyDeltaHealthPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxDeltaUnhealthyApplicationsPercent) {
       hasAnyValues = true;
@@ -1344,11 +1382,13 @@ export class ServiceFabricClusterUpgradePolicyDeltaHealthPolicyOutputReference e
 
   public set internalValue(value: ServiceFabricClusterUpgradePolicyDeltaHealthPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxDeltaUnhealthyApplicationsPercent = undefined;
       this._maxDeltaUnhealthyNodesPercent = undefined;
       this._maxUpgradeDomainDeltaUnhealthyNodesPercent = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxDeltaUnhealthyApplicationsPercent = value.maxDeltaUnhealthyApplicationsPercent;
       this._maxDeltaUnhealthyNodesPercent = value.maxDeltaUnhealthyNodesPercent;
       this._maxUpgradeDomainDeltaUnhealthyNodesPercent = value.maxUpgradeDomainDeltaUnhealthyNodesPercent;
@@ -1426,6 +1466,8 @@ export function serviceFabricClusterUpgradePolicyHealthPolicyToTerraform(struct?
 }
 
 export class ServiceFabricClusterUpgradePolicyHealthPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1436,7 +1478,7 @@ export class ServiceFabricClusterUpgradePolicyHealthPolicyOutputReference extend
   }
 
   public get internalValue(): ServiceFabricClusterUpgradePolicyHealthPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxUnhealthyApplicationsPercent) {
       hasAnyValues = true;
@@ -1451,10 +1493,12 @@ export class ServiceFabricClusterUpgradePolicyHealthPolicyOutputReference extend
 
   public set internalValue(value: ServiceFabricClusterUpgradePolicyHealthPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxUnhealthyApplicationsPercent = undefined;
       this._maxUnhealthyNodesPercent = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxUnhealthyApplicationsPercent = value.maxUnhealthyApplicationsPercent;
       this._maxUnhealthyNodesPercent = value.maxUnhealthyNodesPercent;
     }
@@ -1554,6 +1598,8 @@ export function serviceFabricClusterUpgradePolicyToTerraform(struct?: ServiceFab
 }
 
 export class ServiceFabricClusterUpgradePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1564,7 +1610,7 @@ export class ServiceFabricClusterUpgradePolicyOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): ServiceFabricClusterUpgradePolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._forceRestartEnabled) {
       hasAnyValues = true;
@@ -1594,11 +1640,11 @@ export class ServiceFabricClusterUpgradePolicyOutputReference extends cdktf.Comp
       hasAnyValues = true;
       internalValueResult.upgradeTimeout = this._upgradeTimeout;
     }
-    if (this._deltaHealthPolicy) {
+    if (this._deltaHealthPolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.deltaHealthPolicy = this._deltaHealthPolicy?.internalValue;
     }
-    if (this._healthPolicy) {
+    if (this._healthPolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.healthPolicy = this._healthPolicy?.internalValue;
     }
@@ -1607,6 +1653,7 @@ export class ServiceFabricClusterUpgradePolicyOutputReference extends cdktf.Comp
 
   public set internalValue(value: ServiceFabricClusterUpgradePolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._forceRestartEnabled = undefined;
       this._healthCheckRetryTimeout = undefined;
       this._healthCheckStableDuration = undefined;
@@ -1618,6 +1665,7 @@ export class ServiceFabricClusterUpgradePolicyOutputReference extends cdktf.Comp
       this._healthPolicy.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._forceRestartEnabled = value.forceRestartEnabled;
       this._healthCheckRetryTimeout = value.healthCheckRetryTimeout;
       this._healthCheckStableDuration = value.healthCheckStableDuration;

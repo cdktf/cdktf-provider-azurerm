@@ -153,6 +153,8 @@ export function apiManagementApiDiagnosticBackendRequestDataMaskingToTerraform(s
 }
 
 export class ApiManagementApiDiagnosticBackendRequestDataMaskingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -163,7 +165,7 @@ export class ApiManagementApiDiagnosticBackendRequestDataMaskingOutputReference 
   }
 
   public get internalValue(): ApiManagementApiDiagnosticBackendRequestDataMasking | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._headers) {
       hasAnyValues = true;
@@ -178,10 +180,12 @@ export class ApiManagementApiDiagnosticBackendRequestDataMaskingOutputReference 
 
   public set internalValue(value: ApiManagementApiDiagnosticBackendRequestDataMasking | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._headers = undefined;
       this._queryParams = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._headers = value.headers;
       this._queryParams = value.queryParams;
     }
@@ -251,6 +255,8 @@ export function apiManagementApiDiagnosticBackendRequestToTerraform(struct?: Api
 }
 
 export class ApiManagementApiDiagnosticBackendRequestOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -261,7 +267,7 @@ export class ApiManagementApiDiagnosticBackendRequestOutputReference extends cdk
   }
 
   public get internalValue(): ApiManagementApiDiagnosticBackendRequest | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._bodyBytes) {
       hasAnyValues = true;
@@ -271,7 +277,7 @@ export class ApiManagementApiDiagnosticBackendRequestOutputReference extends cdk
       hasAnyValues = true;
       internalValueResult.headersToLog = this._headersToLog;
     }
-    if (this._dataMasking) {
+    if (this._dataMasking?.internalValue) {
       hasAnyValues = true;
       internalValueResult.dataMasking = this._dataMasking?.internalValue;
     }
@@ -280,11 +286,13 @@ export class ApiManagementApiDiagnosticBackendRequestOutputReference extends cdk
 
   public set internalValue(value: ApiManagementApiDiagnosticBackendRequest | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bodyBytes = undefined;
       this._headersToLog = undefined;
       this._dataMasking.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bodyBytes = value.bodyBytes;
       this._headersToLog = value.headersToLog;
       this._dataMasking.internalValue = value.dataMasking;
@@ -410,6 +418,8 @@ export function apiManagementApiDiagnosticBackendResponseDataMaskingToTerraform(
 }
 
 export class ApiManagementApiDiagnosticBackendResponseDataMaskingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -420,7 +430,7 @@ export class ApiManagementApiDiagnosticBackendResponseDataMaskingOutputReference
   }
 
   public get internalValue(): ApiManagementApiDiagnosticBackendResponseDataMasking | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._headers) {
       hasAnyValues = true;
@@ -435,10 +445,12 @@ export class ApiManagementApiDiagnosticBackendResponseDataMaskingOutputReference
 
   public set internalValue(value: ApiManagementApiDiagnosticBackendResponseDataMasking | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._headers = undefined;
       this._queryParams = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._headers = value.headers;
       this._queryParams = value.queryParams;
     }
@@ -508,6 +520,8 @@ export function apiManagementApiDiagnosticBackendResponseToTerraform(struct?: Ap
 }
 
 export class ApiManagementApiDiagnosticBackendResponseOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -518,7 +532,7 @@ export class ApiManagementApiDiagnosticBackendResponseOutputReference extends cd
   }
 
   public get internalValue(): ApiManagementApiDiagnosticBackendResponse | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._bodyBytes) {
       hasAnyValues = true;
@@ -528,7 +542,7 @@ export class ApiManagementApiDiagnosticBackendResponseOutputReference extends cd
       hasAnyValues = true;
       internalValueResult.headersToLog = this._headersToLog;
     }
-    if (this._dataMasking) {
+    if (this._dataMasking?.internalValue) {
       hasAnyValues = true;
       internalValueResult.dataMasking = this._dataMasking?.internalValue;
     }
@@ -537,11 +551,13 @@ export class ApiManagementApiDiagnosticBackendResponseOutputReference extends cd
 
   public set internalValue(value: ApiManagementApiDiagnosticBackendResponse | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bodyBytes = undefined;
       this._headersToLog = undefined;
       this._dataMasking.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bodyBytes = value.bodyBytes;
       this._headersToLog = value.headersToLog;
       this._dataMasking.internalValue = value.dataMasking;
@@ -667,6 +683,8 @@ export function apiManagementApiDiagnosticFrontendRequestDataMaskingToTerraform(
 }
 
 export class ApiManagementApiDiagnosticFrontendRequestDataMaskingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -677,7 +695,7 @@ export class ApiManagementApiDiagnosticFrontendRequestDataMaskingOutputReference
   }
 
   public get internalValue(): ApiManagementApiDiagnosticFrontendRequestDataMasking | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._headers) {
       hasAnyValues = true;
@@ -692,10 +710,12 @@ export class ApiManagementApiDiagnosticFrontendRequestDataMaskingOutputReference
 
   public set internalValue(value: ApiManagementApiDiagnosticFrontendRequestDataMasking | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._headers = undefined;
       this._queryParams = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._headers = value.headers;
       this._queryParams = value.queryParams;
     }
@@ -765,6 +785,8 @@ export function apiManagementApiDiagnosticFrontendRequestToTerraform(struct?: Ap
 }
 
 export class ApiManagementApiDiagnosticFrontendRequestOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -775,7 +797,7 @@ export class ApiManagementApiDiagnosticFrontendRequestOutputReference extends cd
   }
 
   public get internalValue(): ApiManagementApiDiagnosticFrontendRequest | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._bodyBytes) {
       hasAnyValues = true;
@@ -785,7 +807,7 @@ export class ApiManagementApiDiagnosticFrontendRequestOutputReference extends cd
       hasAnyValues = true;
       internalValueResult.headersToLog = this._headersToLog;
     }
-    if (this._dataMasking) {
+    if (this._dataMasking?.internalValue) {
       hasAnyValues = true;
       internalValueResult.dataMasking = this._dataMasking?.internalValue;
     }
@@ -794,11 +816,13 @@ export class ApiManagementApiDiagnosticFrontendRequestOutputReference extends cd
 
   public set internalValue(value: ApiManagementApiDiagnosticFrontendRequest | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bodyBytes = undefined;
       this._headersToLog = undefined;
       this._dataMasking.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bodyBytes = value.bodyBytes;
       this._headersToLog = value.headersToLog;
       this._dataMasking.internalValue = value.dataMasking;
@@ -924,6 +948,8 @@ export function apiManagementApiDiagnosticFrontendResponseDataMaskingToTerraform
 }
 
 export class ApiManagementApiDiagnosticFrontendResponseDataMaskingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -934,7 +960,7 @@ export class ApiManagementApiDiagnosticFrontendResponseDataMaskingOutputReferenc
   }
 
   public get internalValue(): ApiManagementApiDiagnosticFrontendResponseDataMasking | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._headers) {
       hasAnyValues = true;
@@ -949,10 +975,12 @@ export class ApiManagementApiDiagnosticFrontendResponseDataMaskingOutputReferenc
 
   public set internalValue(value: ApiManagementApiDiagnosticFrontendResponseDataMasking | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._headers = undefined;
       this._queryParams = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._headers = value.headers;
       this._queryParams = value.queryParams;
     }
@@ -1022,6 +1050,8 @@ export function apiManagementApiDiagnosticFrontendResponseToTerraform(struct?: A
 }
 
 export class ApiManagementApiDiagnosticFrontendResponseOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1032,7 +1062,7 @@ export class ApiManagementApiDiagnosticFrontendResponseOutputReference extends c
   }
 
   public get internalValue(): ApiManagementApiDiagnosticFrontendResponse | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._bodyBytes) {
       hasAnyValues = true;
@@ -1042,7 +1072,7 @@ export class ApiManagementApiDiagnosticFrontendResponseOutputReference extends c
       hasAnyValues = true;
       internalValueResult.headersToLog = this._headersToLog;
     }
-    if (this._dataMasking) {
+    if (this._dataMasking?.internalValue) {
       hasAnyValues = true;
       internalValueResult.dataMasking = this._dataMasking?.internalValue;
     }
@@ -1051,11 +1081,13 @@ export class ApiManagementApiDiagnosticFrontendResponseOutputReference extends c
 
   public set internalValue(value: ApiManagementApiDiagnosticFrontendResponse | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bodyBytes = undefined;
       this._headersToLog = undefined;
       this._dataMasking.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bodyBytes = value.bodyBytes;
       this._headersToLog = value.headersToLog;
       this._dataMasking.internalValue = value.dataMasking;
@@ -1143,6 +1175,8 @@ export function apiManagementApiDiagnosticTimeoutsToTerraform(struct?: ApiManage
 }
 
 export class ApiManagementApiDiagnosticTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1153,7 +1187,7 @@ export class ApiManagementApiDiagnosticTimeoutsOutputReference extends cdktf.Com
   }
 
   public get internalValue(): ApiManagementApiDiagnosticTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1176,12 +1210,14 @@ export class ApiManagementApiDiagnosticTimeoutsOutputReference extends cdktf.Com
 
   public set internalValue(value: ApiManagementApiDiagnosticTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

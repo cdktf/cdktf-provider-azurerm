@@ -79,6 +79,8 @@ export function netappAccountActiveDirectoryToTerraform(struct?: NetappAccountAc
 }
 
 export class NetappAccountActiveDirectoryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -89,7 +91,7 @@ export class NetappAccountActiveDirectoryOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): NetappAccountActiveDirectory | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dnsServers) {
       hasAnyValues = true;
@@ -120,6 +122,7 @@ export class NetappAccountActiveDirectoryOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: NetappAccountActiveDirectory | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dnsServers = undefined;
       this._domain = undefined;
       this._organizationalUnit = undefined;
@@ -128,6 +131,7 @@ export class NetappAccountActiveDirectoryOutputReference extends cdktf.ComplexOb
       this._username = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dnsServers = value.dnsServers;
       this._domain = value.domain;
       this._organizationalUnit = value.organizationalUnit;
@@ -251,6 +255,8 @@ export function netappAccountTimeoutsToTerraform(struct?: NetappAccountTimeoutsO
 }
 
 export class NetappAccountTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -261,7 +267,7 @@ export class NetappAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): NetappAccountTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -284,12 +290,14 @@ export class NetappAccountTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: NetappAccountTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

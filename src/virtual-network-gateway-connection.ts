@@ -151,6 +151,8 @@ export function virtualNetworkGatewayConnectionIpsecPolicyToTerraform(struct?: V
 }
 
 export class VirtualNetworkGatewayConnectionIpsecPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -161,7 +163,7 @@ export class VirtualNetworkGatewayConnectionIpsecPolicyOutputReference extends c
   }
 
   public get internalValue(): VirtualNetworkGatewayConnectionIpsecPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dhGroup) {
       hasAnyValues = true;
@@ -200,6 +202,7 @@ export class VirtualNetworkGatewayConnectionIpsecPolicyOutputReference extends c
 
   public set internalValue(value: VirtualNetworkGatewayConnectionIpsecPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dhGroup = undefined;
       this._ikeEncryption = undefined;
       this._ikeIntegrity = undefined;
@@ -210,6 +213,7 @@ export class VirtualNetworkGatewayConnectionIpsecPolicyOutputReference extends c
       this._saLifetime = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dhGroup = value.dhGroup;
       this._ikeEncryption = value.ikeEncryption;
       this._ikeIntegrity = value.ikeIntegrity;
@@ -364,6 +368,8 @@ export function virtualNetworkGatewayConnectionTimeoutsToTerraform(struct?: Virt
 }
 
 export class VirtualNetworkGatewayConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -374,7 +380,7 @@ export class VirtualNetworkGatewayConnectionTimeoutsOutputReference extends cdkt
   }
 
   public get internalValue(): VirtualNetworkGatewayConnectionTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -397,12 +403,14 @@ export class VirtualNetworkGatewayConnectionTimeoutsOutputReference extends cdkt
 
   public set internalValue(value: VirtualNetworkGatewayConnectionTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -497,6 +505,8 @@ export function virtualNetworkGatewayConnectionTrafficSelectorPolicyToTerraform(
 }
 
 export class VirtualNetworkGatewayConnectionTrafficSelectorPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -507,7 +517,7 @@ export class VirtualNetworkGatewayConnectionTrafficSelectorPolicyOutputReference
   }
 
   public get internalValue(): VirtualNetworkGatewayConnectionTrafficSelectorPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._localAddressCidrs) {
       hasAnyValues = true;
@@ -522,10 +532,12 @@ export class VirtualNetworkGatewayConnectionTrafficSelectorPolicyOutputReference
 
   public set internalValue(value: VirtualNetworkGatewayConnectionTrafficSelectorPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._localAddressCidrs = undefined;
       this._remoteAddressCidrs = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._localAddressCidrs = value.localAddressCidrs;
       this._remoteAddressCidrs = value.remoteAddressCidrs;
     }

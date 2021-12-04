@@ -93,6 +93,8 @@ export function keyVaultCertificateCertificateToTerraform(struct?: KeyVaultCerti
 }
 
 export class KeyVaultCertificateCertificateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -103,7 +105,7 @@ export class KeyVaultCertificateCertificateOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): KeyVaultCertificateCertificate | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._contents) {
       hasAnyValues = true;
@@ -118,10 +120,12 @@ export class KeyVaultCertificateCertificateOutputReference extends cdktf.Complex
 
   public set internalValue(value: KeyVaultCertificateCertificate | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._contents = undefined;
       this._password = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._contents = value.contents;
       this._password = value.password;
     }
@@ -174,6 +178,8 @@ export function keyVaultCertificateCertificatePolicyIssuerParametersToTerraform(
 }
 
 export class KeyVaultCertificateCertificatePolicyIssuerParametersOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -184,7 +190,7 @@ export class KeyVaultCertificateCertificatePolicyIssuerParametersOutputReference
   }
 
   public get internalValue(): KeyVaultCertificateCertificatePolicyIssuerParameters | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -195,9 +201,11 @@ export class KeyVaultCertificateCertificatePolicyIssuerParametersOutputReference
 
   public set internalValue(value: KeyVaultCertificateCertificatePolicyIssuerParameters | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
     }
   }
@@ -253,6 +261,8 @@ export function keyVaultCertificateCertificatePolicyKeyPropertiesToTerraform(str
 }
 
 export class KeyVaultCertificateCertificatePolicyKeyPropertiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -263,7 +273,7 @@ export class KeyVaultCertificateCertificatePolicyKeyPropertiesOutputReference ex
   }
 
   public get internalValue(): KeyVaultCertificateCertificatePolicyKeyProperties | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._curve) {
       hasAnyValues = true;
@@ -290,6 +300,7 @@ export class KeyVaultCertificateCertificatePolicyKeyPropertiesOutputReference ex
 
   public set internalValue(value: KeyVaultCertificateCertificatePolicyKeyProperties | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._curve = undefined;
       this._exportable = undefined;
       this._keySize = undefined;
@@ -297,6 +308,7 @@ export class KeyVaultCertificateCertificatePolicyKeyPropertiesOutputReference ex
       this._reuseKey = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._curve = value.curve;
       this._exportable = value.exportable;
       this._keySize = value.keySize;
@@ -394,6 +406,8 @@ export function keyVaultCertificateCertificatePolicyLifetimeActionActionToTerraf
 }
 
 export class KeyVaultCertificateCertificatePolicyLifetimeActionActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -404,7 +418,7 @@ export class KeyVaultCertificateCertificatePolicyLifetimeActionActionOutputRefer
   }
 
   public get internalValue(): KeyVaultCertificateCertificatePolicyLifetimeActionAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._actionType) {
       hasAnyValues = true;
@@ -415,9 +429,11 @@ export class KeyVaultCertificateCertificatePolicyLifetimeActionActionOutputRefer
 
   public set internalValue(value: KeyVaultCertificateCertificatePolicyLifetimeActionAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._actionType = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._actionType = value.actionType;
     }
   }
@@ -458,6 +474,8 @@ export function keyVaultCertificateCertificatePolicyLifetimeActionTriggerToTerra
 }
 
 export class KeyVaultCertificateCertificatePolicyLifetimeActionTriggerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -468,7 +486,7 @@ export class KeyVaultCertificateCertificatePolicyLifetimeActionTriggerOutputRefe
   }
 
   public get internalValue(): KeyVaultCertificateCertificatePolicyLifetimeActionTrigger | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._daysBeforeExpiry) {
       hasAnyValues = true;
@@ -483,10 +501,12 @@ export class KeyVaultCertificateCertificatePolicyLifetimeActionTriggerOutputRefe
 
   public set internalValue(value: KeyVaultCertificateCertificatePolicyLifetimeActionTrigger | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._daysBeforeExpiry = undefined;
       this._lifetimePercentage = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._daysBeforeExpiry = value.daysBeforeExpiry;
       this._lifetimePercentage = value.lifetimePercentage;
     }
@@ -568,6 +588,8 @@ export function keyVaultCertificateCertificatePolicySecretPropertiesToTerraform(
 }
 
 export class KeyVaultCertificateCertificatePolicySecretPropertiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -578,7 +600,7 @@ export class KeyVaultCertificateCertificatePolicySecretPropertiesOutputReference
   }
 
   public get internalValue(): KeyVaultCertificateCertificatePolicySecretProperties | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._contentType) {
       hasAnyValues = true;
@@ -589,9 +611,11 @@ export class KeyVaultCertificateCertificatePolicySecretPropertiesOutputReference
 
   public set internalValue(value: KeyVaultCertificateCertificatePolicySecretProperties | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._contentType = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._contentType = value.contentType;
     }
   }
@@ -637,6 +661,8 @@ export function keyVaultCertificateCertificatePolicyX509CertificatePropertiesSub
 }
 
 export class KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -647,7 +673,7 @@ export class KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjec
   }
 
   public get internalValue(): KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dnsNames) {
       hasAnyValues = true;
@@ -666,11 +692,13 @@ export class KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjec
 
   public set internalValue(value: KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dnsNames = undefined;
       this._emails = undefined;
       this._upns = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dnsNames = value.dnsNames;
       this._emails = value.emails;
       this._upns = value.upns;
@@ -765,6 +793,8 @@ export function keyVaultCertificateCertificatePolicyX509CertificatePropertiesToT
 }
 
 export class KeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -775,7 +805,7 @@ export class KeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutput
   }
 
   public get internalValue(): KeyVaultCertificateCertificatePolicyX509CertificateProperties | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._extendedKeyUsage) {
       hasAnyValues = true;
@@ -793,7 +823,7 @@ export class KeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutput
       hasAnyValues = true;
       internalValueResult.validityInMonths = this._validityInMonths;
     }
-    if (this._subjectAlternativeNames) {
+    if (this._subjectAlternativeNames?.internalValue) {
       hasAnyValues = true;
       internalValueResult.subjectAlternativeNames = this._subjectAlternativeNames?.internalValue;
     }
@@ -802,6 +832,7 @@ export class KeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutput
 
   public set internalValue(value: KeyVaultCertificateCertificatePolicyX509CertificateProperties | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._extendedKeyUsage = undefined;
       this._keyUsage = undefined;
       this._subject = undefined;
@@ -809,6 +840,7 @@ export class KeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutput
       this._subjectAlternativeNames.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._extendedKeyUsage = value.extendedKeyUsage;
       this._keyUsage = value.keyUsage;
       this._subject = value.subject;
@@ -936,6 +968,8 @@ export function keyVaultCertificateCertificatePolicyToTerraform(struct?: KeyVaul
 }
 
 export class KeyVaultCertificateCertificatePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -946,13 +980,13 @@ export class KeyVaultCertificateCertificatePolicyOutputReference extends cdktf.C
   }
 
   public get internalValue(): KeyVaultCertificateCertificatePolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._issuerParameters) {
+    if (this._issuerParameters?.internalValue) {
       hasAnyValues = true;
       internalValueResult.issuerParameters = this._issuerParameters?.internalValue;
     }
-    if (this._keyProperties) {
+    if (this._keyProperties?.internalValue) {
       hasAnyValues = true;
       internalValueResult.keyProperties = this._keyProperties?.internalValue;
     }
@@ -960,11 +994,11 @@ export class KeyVaultCertificateCertificatePolicyOutputReference extends cdktf.C
       hasAnyValues = true;
       internalValueResult.lifetimeAction = this._lifetimeAction;
     }
-    if (this._secretProperties) {
+    if (this._secretProperties?.internalValue) {
       hasAnyValues = true;
       internalValueResult.secretProperties = this._secretProperties?.internalValue;
     }
-    if (this._x509CertificateProperties) {
+    if (this._x509CertificateProperties?.internalValue) {
       hasAnyValues = true;
       internalValueResult.x509CertificateProperties = this._x509CertificateProperties?.internalValue;
     }
@@ -973,6 +1007,7 @@ export class KeyVaultCertificateCertificatePolicyOutputReference extends cdktf.C
 
   public set internalValue(value: KeyVaultCertificateCertificatePolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._issuerParameters.internalValue = undefined;
       this._keyProperties.internalValue = undefined;
       this._lifetimeAction = undefined;
@@ -980,6 +1015,7 @@ export class KeyVaultCertificateCertificatePolicyOutputReference extends cdktf.C
       this._x509CertificateProperties.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._issuerParameters.internalValue = value.issuerParameters;
       this._keyProperties.internalValue = value.keyProperties;
       this._lifetimeAction = value.lifetimeAction;
@@ -1093,6 +1129,8 @@ export function keyVaultCertificateTimeoutsToTerraform(struct?: KeyVaultCertific
 }
 
 export class KeyVaultCertificateTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1103,7 +1141,7 @@ export class KeyVaultCertificateTimeoutsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): KeyVaultCertificateTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1126,12 +1164,14 @@ export class KeyVaultCertificateTimeoutsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: KeyVaultCertificateTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

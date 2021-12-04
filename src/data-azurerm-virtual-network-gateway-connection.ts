@@ -94,6 +94,8 @@ export function dataAzurermVirtualNetworkGatewayConnectionTimeoutsToTerraform(st
 }
 
 export class DataAzurermVirtualNetworkGatewayConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -104,7 +106,7 @@ export class DataAzurermVirtualNetworkGatewayConnectionTimeoutsOutputReference e
   }
 
   public get internalValue(): DataAzurermVirtualNetworkGatewayConnectionTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read) {
       hasAnyValues = true;
@@ -115,9 +117,11 @@ export class DataAzurermVirtualNetworkGatewayConnectionTimeoutsOutputReference e
 
   public set internalValue(value: DataAzurermVirtualNetworkGatewayConnectionTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._read = value.read;
     }
   }

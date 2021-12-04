@@ -166,6 +166,8 @@ export function cosmosdbAccountAnalyticalStorageToTerraform(struct?: CosmosdbAcc
 }
 
 export class CosmosdbAccountAnalyticalStorageOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -176,7 +178,7 @@ export class CosmosdbAccountAnalyticalStorageOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): CosmosdbAccountAnalyticalStorage | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._schemaType) {
       hasAnyValues = true;
@@ -187,9 +189,11 @@ export class CosmosdbAccountAnalyticalStorageOutputReference extends cdktf.Compl
 
   public set internalValue(value: CosmosdbAccountAnalyticalStorage | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._schemaType = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._schemaType = value.schemaType;
     }
   }
@@ -240,6 +244,8 @@ export function cosmosdbAccountBackupToTerraform(struct?: CosmosdbAccountBackupO
 }
 
 export class CosmosdbAccountBackupOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -250,7 +256,7 @@ export class CosmosdbAccountBackupOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): CosmosdbAccountBackup | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._intervalInMinutes) {
       hasAnyValues = true;
@@ -273,12 +279,14 @@ export class CosmosdbAccountBackupOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: CosmosdbAccountBackup | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._intervalInMinutes = undefined;
       this._retentionInHours = undefined;
       this._storageRedundancy = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._intervalInMinutes = value.intervalInMinutes;
       this._retentionInHours = value.retentionInHours;
       this._storageRedundancy = value.storageRedundancy;
@@ -382,6 +390,8 @@ export function cosmosdbAccountCapacityToTerraform(struct?: CosmosdbAccountCapac
 }
 
 export class CosmosdbAccountCapacityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -392,7 +402,7 @@ export class CosmosdbAccountCapacityOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): CosmosdbAccountCapacity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._totalThroughputLimit) {
       hasAnyValues = true;
@@ -403,9 +413,11 @@ export class CosmosdbAccountCapacityOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: CosmosdbAccountCapacity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._totalThroughputLimit = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._totalThroughputLimit = value.totalThroughputLimit;
     }
   }
@@ -451,6 +463,8 @@ export function cosmosdbAccountConsistencyPolicyToTerraform(struct?: CosmosdbAcc
 }
 
 export class CosmosdbAccountConsistencyPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -461,7 +475,7 @@ export class CosmosdbAccountConsistencyPolicyOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): CosmosdbAccountConsistencyPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._consistencyLevel) {
       hasAnyValues = true;
@@ -480,11 +494,13 @@ export class CosmosdbAccountConsistencyPolicyOutputReference extends cdktf.Compl
 
   public set internalValue(value: CosmosdbAccountConsistencyPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._consistencyLevel = undefined;
       this._maxIntervalInSeconds = undefined;
       this._maxStalenessPrefix = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._consistencyLevel = value.consistencyLevel;
       this._maxIntervalInSeconds = value.maxIntervalInSeconds;
       this._maxStalenessPrefix = value.maxStalenessPrefix;
@@ -574,6 +590,8 @@ export function cosmosdbAccountCorsRuleToTerraform(struct?: CosmosdbAccountCorsR
 }
 
 export class CosmosdbAccountCorsRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -584,7 +602,7 @@ export class CosmosdbAccountCorsRuleOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): CosmosdbAccountCorsRule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedHeaders) {
       hasAnyValues = true;
@@ -611,6 +629,7 @@ export class CosmosdbAccountCorsRuleOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: CosmosdbAccountCorsRule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedHeaders = undefined;
       this._allowedMethods = undefined;
       this._allowedOrigins = undefined;
@@ -618,6 +637,7 @@ export class CosmosdbAccountCorsRuleOutputReference extends cdktf.ComplexObject 
       this._maxAgeInSeconds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedHeaders = value.allowedHeaders;
       this._allowedMethods = value.allowedMethods;
       this._allowedOrigins = value.allowedOrigins;
@@ -741,6 +761,8 @@ export function cosmosdbAccountIdentityToTerraform(struct?: CosmosdbAccountIdent
 }
 
 export class CosmosdbAccountIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -751,7 +773,7 @@ export class CosmosdbAccountIdentityOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): CosmosdbAccountIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._type) {
       hasAnyValues = true;
@@ -762,9 +784,11 @@ export class CosmosdbAccountIdentityOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: CosmosdbAccountIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
   }
@@ -815,6 +839,8 @@ export function cosmosdbAccountTimeoutsToTerraform(struct?: CosmosdbAccountTimeo
 }
 
 export class CosmosdbAccountTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -825,7 +851,7 @@ export class CosmosdbAccountTimeoutsOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): CosmosdbAccountTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -848,12 +874,14 @@ export class CosmosdbAccountTimeoutsOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: CosmosdbAccountTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

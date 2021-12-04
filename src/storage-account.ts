@@ -179,6 +179,8 @@ export function storageAccountAzureFilesAuthenticationActiveDirectoryToTerraform
 }
 
 export class StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -189,7 +191,7 @@ export class StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReferenc
   }
 
   public get internalValue(): StorageAccountAzureFilesAuthenticationActiveDirectory | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._domainGuid) {
       hasAnyValues = true;
@@ -220,6 +222,7 @@ export class StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReferenc
 
   public set internalValue(value: StorageAccountAzureFilesAuthenticationActiveDirectory | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._domainGuid = undefined;
       this._domainName = undefined;
       this._domainSid = undefined;
@@ -228,6 +231,7 @@ export class StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReferenc
       this._storageSid = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._domainGuid = value.domainGuid;
       this._domainName = value.domainName;
       this._domainSid = value.domainSid;
@@ -340,6 +344,8 @@ export function storageAccountAzureFilesAuthenticationToTerraform(struct?: Stora
 }
 
 export class StorageAccountAzureFilesAuthenticationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -350,13 +356,13 @@ export class StorageAccountAzureFilesAuthenticationOutputReference extends cdktf
   }
 
   public get internalValue(): StorageAccountAzureFilesAuthentication | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._directoryType) {
       hasAnyValues = true;
       internalValueResult.directoryType = this._directoryType;
     }
-    if (this._activeDirectory) {
+    if (this._activeDirectory?.internalValue) {
       hasAnyValues = true;
       internalValueResult.activeDirectory = this._activeDirectory?.internalValue;
     }
@@ -365,10 +371,12 @@ export class StorageAccountAzureFilesAuthenticationOutputReference extends cdktf
 
   public set internalValue(value: StorageAccountAzureFilesAuthentication | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._directoryType = undefined;
       this._activeDirectory.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._directoryType = value.directoryType;
       this._activeDirectory.internalValue = value.activeDirectory;
     }
@@ -421,6 +429,8 @@ export function storageAccountBlobPropertiesContainerDeleteRetentionPolicyToTerr
 }
 
 export class StorageAccountBlobPropertiesContainerDeleteRetentionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -431,7 +441,7 @@ export class StorageAccountBlobPropertiesContainerDeleteRetentionPolicyOutputRef
   }
 
   public get internalValue(): StorageAccountBlobPropertiesContainerDeleteRetentionPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._days) {
       hasAnyValues = true;
@@ -442,9 +452,11 @@ export class StorageAccountBlobPropertiesContainerDeleteRetentionPolicyOutputRef
 
   public set internalValue(value: StorageAccountBlobPropertiesContainerDeleteRetentionPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._days = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._days = value.days;
     }
   }
@@ -520,6 +532,8 @@ export function storageAccountBlobPropertiesDeleteRetentionPolicyToTerraform(str
 }
 
 export class StorageAccountBlobPropertiesDeleteRetentionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -530,7 +544,7 @@ export class StorageAccountBlobPropertiesDeleteRetentionPolicyOutputReference ex
   }
 
   public get internalValue(): StorageAccountBlobPropertiesDeleteRetentionPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._days) {
       hasAnyValues = true;
@@ -541,9 +555,11 @@ export class StorageAccountBlobPropertiesDeleteRetentionPolicyOutputReference ex
 
   public set internalValue(value: StorageAccountBlobPropertiesDeleteRetentionPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._days = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._days = value.days;
     }
   }
@@ -618,6 +634,8 @@ export function storageAccountBlobPropertiesToTerraform(struct?: StorageAccountB
 }
 
 export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -628,7 +646,7 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): StorageAccountBlobProperties | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._changeFeedEnabled) {
       hasAnyValues = true;
@@ -646,7 +664,7 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
       hasAnyValues = true;
       internalValueResult.versioningEnabled = this._versioningEnabled;
     }
-    if (this._containerDeleteRetentionPolicy) {
+    if (this._containerDeleteRetentionPolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.containerDeleteRetentionPolicy = this._containerDeleteRetentionPolicy?.internalValue;
     }
@@ -654,7 +672,7 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
       hasAnyValues = true;
       internalValueResult.corsRule = this._corsRule;
     }
-    if (this._deleteRetentionPolicy) {
+    if (this._deleteRetentionPolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.deleteRetentionPolicy = this._deleteRetentionPolicy?.internalValue;
     }
@@ -663,6 +681,7 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: StorageAccountBlobProperties | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._changeFeedEnabled = undefined;
       this._defaultServiceVersion = undefined;
       this._lastAccessTimeEnabled = undefined;
@@ -672,6 +691,7 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
       this._deleteRetentionPolicy.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._changeFeedEnabled = value.changeFeedEnabled;
       this._defaultServiceVersion = value.defaultServiceVersion;
       this._lastAccessTimeEnabled = value.lastAccessTimeEnabled;
@@ -818,6 +838,8 @@ export function storageAccountCustomDomainToTerraform(struct?: StorageAccountCus
 }
 
 export class StorageAccountCustomDomainOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -828,7 +850,7 @@ export class StorageAccountCustomDomainOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): StorageAccountCustomDomain | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -843,10 +865,12 @@ export class StorageAccountCustomDomainOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: StorageAccountCustomDomain | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._useSubdomain = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._useSubdomain = value.useSubdomain;
     }
@@ -904,6 +928,8 @@ export function storageAccountIdentityToTerraform(struct?: StorageAccountIdentit
 }
 
 export class StorageAccountIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -914,7 +940,7 @@ export class StorageAccountIdentityOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): StorageAccountIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -929,10 +955,12 @@ export class StorageAccountIdentityOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: StorageAccountIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -1029,6 +1057,8 @@ export function storageAccountNetworkRulesToTerraform(struct?: StorageAccountNet
 }
 
 export class StorageAccountNetworkRulesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1039,7 +1069,7 @@ export class StorageAccountNetworkRulesOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): StorageAccountNetworkRules | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._bypass) {
       hasAnyValues = true;
@@ -1066,6 +1096,7 @@ export class StorageAccountNetworkRulesOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: StorageAccountNetworkRules | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._bypass = undefined;
       this._defaultAction = undefined;
       this._ipRules = undefined;
@@ -1073,6 +1104,7 @@ export class StorageAccountNetworkRulesOutputReference extends cdktf.ComplexObje
       this._privateLinkAccess = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._bypass = value.bypass;
       this._defaultAction = value.defaultAction;
       this._ipRules = value.ipRules;
@@ -1229,6 +1261,8 @@ export function storageAccountQueuePropertiesHourMetricsToTerraform(struct?: Sto
 }
 
 export class StorageAccountQueuePropertiesHourMetricsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1239,7 +1273,7 @@ export class StorageAccountQueuePropertiesHourMetricsOutputReference extends cdk
   }
 
   public get internalValue(): StorageAccountQueuePropertiesHourMetrics | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -1262,12 +1296,14 @@ export class StorageAccountQueuePropertiesHourMetricsOutputReference extends cdk
 
   public set internalValue(value: StorageAccountQueuePropertiesHourMetrics | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
       this._includeApis = undefined;
       this._retentionPolicyDays = undefined;
       this._version = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
       this._includeApis = value.includeApis;
       this._retentionPolicyDays = value.retentionPolicyDays;
@@ -1371,6 +1407,8 @@ export function storageAccountQueuePropertiesLoggingToTerraform(struct?: Storage
 }
 
 export class StorageAccountQueuePropertiesLoggingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1381,7 +1419,7 @@ export class StorageAccountQueuePropertiesLoggingOutputReference extends cdktf.C
   }
 
   public get internalValue(): StorageAccountQueuePropertiesLogging | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._delete) {
       hasAnyValues = true;
@@ -1408,6 +1446,7 @@ export class StorageAccountQueuePropertiesLoggingOutputReference extends cdktf.C
 
   public set internalValue(value: StorageAccountQueuePropertiesLogging | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._delete = undefined;
       this._read = undefined;
       this._retentionPolicyDays = undefined;
@@ -1415,6 +1454,7 @@ export class StorageAccountQueuePropertiesLoggingOutputReference extends cdktf.C
       this._write = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._delete = value.delete;
       this._read = value.read;
       this._retentionPolicyDays = value.retentionPolicyDays;
@@ -1524,6 +1564,8 @@ export function storageAccountQueuePropertiesMinuteMetricsToTerraform(struct?: S
 }
 
 export class StorageAccountQueuePropertiesMinuteMetricsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1534,7 +1576,7 @@ export class StorageAccountQueuePropertiesMinuteMetricsOutputReference extends c
   }
 
   public get internalValue(): StorageAccountQueuePropertiesMinuteMetrics | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -1557,12 +1599,14 @@ export class StorageAccountQueuePropertiesMinuteMetricsOutputReference extends c
 
   public set internalValue(value: StorageAccountQueuePropertiesMinuteMetrics | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
       this._includeApis = undefined;
       this._retentionPolicyDays = undefined;
       this._version = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
       this._includeApis = value.includeApis;
       this._retentionPolicyDays = value.retentionPolicyDays;
@@ -1669,6 +1713,8 @@ export function storageAccountQueuePropertiesToTerraform(struct?: StorageAccount
 }
 
 export class StorageAccountQueuePropertiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1679,21 +1725,21 @@ export class StorageAccountQueuePropertiesOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): StorageAccountQueueProperties | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._corsRule) {
       hasAnyValues = true;
       internalValueResult.corsRule = this._corsRule;
     }
-    if (this._hourMetrics) {
+    if (this._hourMetrics?.internalValue) {
       hasAnyValues = true;
       internalValueResult.hourMetrics = this._hourMetrics?.internalValue;
     }
-    if (this._logging) {
+    if (this._logging?.internalValue) {
       hasAnyValues = true;
       internalValueResult.logging = this._logging?.internalValue;
     }
-    if (this._minuteMetrics) {
+    if (this._minuteMetrics?.internalValue) {
       hasAnyValues = true;
       internalValueResult.minuteMetrics = this._minuteMetrics?.internalValue;
     }
@@ -1702,12 +1748,14 @@ export class StorageAccountQueuePropertiesOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: StorageAccountQueueProperties | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._corsRule = undefined;
       this._hourMetrics.internalValue = undefined;
       this._logging.internalValue = undefined;
       this._minuteMetrics.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._corsRule = value.corsRule;
       this._hourMetrics.internalValue = value.hourMetrics;
       this._logging.internalValue = value.logging;
@@ -1808,6 +1856,8 @@ export function storageAccountRoutingToTerraform(struct?: StorageAccountRoutingO
 }
 
 export class StorageAccountRoutingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1818,7 +1868,7 @@ export class StorageAccountRoutingOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): StorageAccountRouting | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._choice) {
       hasAnyValues = true;
@@ -1837,11 +1887,13 @@ export class StorageAccountRoutingOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: StorageAccountRouting | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._choice = undefined;
       this._publishInternetEndpoints = undefined;
       this._publishMicrosoftEndpoints = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._choice = value.choice;
       this._publishInternetEndpoints = value.publishInternetEndpoints;
       this._publishMicrosoftEndpoints = value.publishMicrosoftEndpoints;
@@ -1951,6 +2003,8 @@ export function storageAccountSharePropertiesRetentionPolicyToTerraform(struct?:
 }
 
 export class StorageAccountSharePropertiesRetentionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1961,7 +2015,7 @@ export class StorageAccountSharePropertiesRetentionPolicyOutputReference extends
   }
 
   public get internalValue(): StorageAccountSharePropertiesRetentionPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._days) {
       hasAnyValues = true;
@@ -1972,9 +2026,11 @@ export class StorageAccountSharePropertiesRetentionPolicyOutputReference extends
 
   public set internalValue(value: StorageAccountSharePropertiesRetentionPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._days = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._days = value.days;
     }
   }
@@ -2028,6 +2084,8 @@ export function storageAccountSharePropertiesSmbToTerraform(struct?: StorageAcco
 }
 
 export class StorageAccountSharePropertiesSmbOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2038,7 +2096,7 @@ export class StorageAccountSharePropertiesSmbOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): StorageAccountSharePropertiesSmb | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._authenticationTypes) {
       hasAnyValues = true;
@@ -2061,12 +2119,14 @@ export class StorageAccountSharePropertiesSmbOutputReference extends cdktf.Compl
 
   public set internalValue(value: StorageAccountSharePropertiesSmb | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._authenticationTypes = undefined;
       this._channelEncryptionType = undefined;
       this._kerberosTicketEncryptionType = undefined;
       this._versions = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._authenticationTypes = value.authenticationTypes;
       this._channelEncryptionType = value.channelEncryptionType;
       this._kerberosTicketEncryptionType = value.kerberosTicketEncryptionType;
@@ -2172,6 +2232,8 @@ export function storageAccountSharePropertiesToTerraform(struct?: StorageAccount
 }
 
 export class StorageAccountSharePropertiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2182,17 +2244,17 @@ export class StorageAccountSharePropertiesOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): StorageAccountShareProperties | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._corsRule) {
       hasAnyValues = true;
       internalValueResult.corsRule = this._corsRule;
     }
-    if (this._retentionPolicy) {
+    if (this._retentionPolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.retentionPolicy = this._retentionPolicy?.internalValue;
     }
-    if (this._smb) {
+    if (this._smb?.internalValue) {
       hasAnyValues = true;
       internalValueResult.smb = this._smb?.internalValue;
     }
@@ -2201,11 +2263,13 @@ export class StorageAccountSharePropertiesOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: StorageAccountShareProperties | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._corsRule = undefined;
       this._retentionPolicy.internalValue = undefined;
       this._smb.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._corsRule = value.corsRule;
       this._retentionPolicy.internalValue = value.retentionPolicy;
       this._smb.internalValue = value.smb;
@@ -2284,6 +2348,8 @@ export function storageAccountStaticWebsiteToTerraform(struct?: StorageAccountSt
 }
 
 export class StorageAccountStaticWebsiteOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2294,7 +2360,7 @@ export class StorageAccountStaticWebsiteOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): StorageAccountStaticWebsite | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._error404Document) {
       hasAnyValues = true;
@@ -2309,10 +2375,12 @@ export class StorageAccountStaticWebsiteOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: StorageAccountStaticWebsite | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._error404Document = undefined;
       this._indexDocument = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._error404Document = value.error404Document;
       this._indexDocument = value.indexDocument;
     }
@@ -2383,6 +2451,8 @@ export function storageAccountTimeoutsToTerraform(struct?: StorageAccountTimeout
 }
 
 export class StorageAccountTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2393,7 +2463,7 @@ export class StorageAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): StorageAccountTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -2416,12 +2486,14 @@ export class StorageAccountTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: StorageAccountTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

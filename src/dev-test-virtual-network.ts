@@ -63,6 +63,8 @@ export function devTestVirtualNetworkSubnetToTerraform(struct?: DevTestVirtualNe
 }
 
 export class DevTestVirtualNetworkSubnetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -73,7 +75,7 @@ export class DevTestVirtualNetworkSubnetOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): DevTestVirtualNetworkSubnet | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._useInVirtualMachineCreation) {
       hasAnyValues = true;
@@ -88,10 +90,12 @@ export class DevTestVirtualNetworkSubnetOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: DevTestVirtualNetworkSubnet | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._useInVirtualMachineCreation = undefined;
       this._usePublicIpAddress = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._useInVirtualMachineCreation = value.useInVirtualMachineCreation;
       this._usePublicIpAddress = value.usePublicIpAddress;
     }
@@ -162,6 +166,8 @@ export function devTestVirtualNetworkTimeoutsToTerraform(struct?: DevTestVirtual
 }
 
 export class DevTestVirtualNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -172,7 +178,7 @@ export class DevTestVirtualNetworkTimeoutsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): DevTestVirtualNetworkTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -195,12 +201,14 @@ export class DevTestVirtualNetworkTimeoutsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: DevTestVirtualNetworkTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

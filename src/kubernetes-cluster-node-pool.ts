@@ -215,6 +215,8 @@ export function kubernetesClusterNodePoolKubeletConfigToTerraform(struct?: Kuber
 }
 
 export class KubernetesClusterNodePoolKubeletConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -225,7 +227,7 @@ export class KubernetesClusterNodePoolKubeletConfigOutputReference extends cdktf
   }
 
   public get internalValue(): KubernetesClusterNodePoolKubeletConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedUnsafeSysctls) {
       hasAnyValues = true;
@@ -272,6 +274,7 @@ export class KubernetesClusterNodePoolKubeletConfigOutputReference extends cdktf
 
   public set internalValue(value: KubernetesClusterNodePoolKubeletConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedUnsafeSysctls = undefined;
       this._containerLogMaxLine = undefined;
       this._containerLogMaxSizeMb = undefined;
@@ -284,6 +287,7 @@ export class KubernetesClusterNodePoolKubeletConfigOutputReference extends cdktf
       this._topologyManagerPolicy = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedUnsafeSysctls = value.allowedUnsafeSysctls;
       this._containerLogMaxLine = value.containerLogMaxLine;
       this._containerLogMaxSizeMb = value.containerLogMaxSizeMb;
@@ -615,6 +619,8 @@ export function kubernetesClusterNodePoolLinuxOsConfigSysctlConfigToTerraform(st
 }
 
 export class KubernetesClusterNodePoolLinuxOsConfigSysctlConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -625,7 +631,7 @@ export class KubernetesClusterNodePoolLinuxOsConfigSysctlConfigOutputReference e
   }
 
   public get internalValue(): KubernetesClusterNodePoolLinuxOsConfigSysctlConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._fsAioMaxNr) {
       hasAnyValues = true;
@@ -748,6 +754,7 @@ export class KubernetesClusterNodePoolLinuxOsConfigSysctlConfigOutputReference e
 
   public set internalValue(value: KubernetesClusterNodePoolLinuxOsConfigSysctlConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._fsAioMaxNr = undefined;
       this._fsFileMax = undefined;
       this._fsInotifyMaxUserWatches = undefined;
@@ -779,6 +786,7 @@ export class KubernetesClusterNodePoolLinuxOsConfigSysctlConfigOutputReference e
       this._vmVfsCachePressure = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._fsAioMaxNr = value.fsAioMaxNr;
       this._fsFileMax = value.fsFileMax;
       this._fsInotifyMaxUserWatches = value.fsInotifyMaxUserWatches;
@@ -1310,6 +1318,8 @@ export function kubernetesClusterNodePoolLinuxOsConfigToTerraform(struct?: Kuber
 }
 
 export class KubernetesClusterNodePoolLinuxOsConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1320,7 +1330,7 @@ export class KubernetesClusterNodePoolLinuxOsConfigOutputReference extends cdktf
   }
 
   public get internalValue(): KubernetesClusterNodePoolLinuxOsConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._swapFileSizeMb) {
       hasAnyValues = true;
@@ -1334,7 +1344,7 @@ export class KubernetesClusterNodePoolLinuxOsConfigOutputReference extends cdktf
       hasAnyValues = true;
       internalValueResult.transparentHugePageEnabled = this._transparentHugePageEnabled;
     }
-    if (this._sysctlConfig) {
+    if (this._sysctlConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.sysctlConfig = this._sysctlConfig?.internalValue;
     }
@@ -1343,12 +1353,14 @@ export class KubernetesClusterNodePoolLinuxOsConfigOutputReference extends cdktf
 
   public set internalValue(value: KubernetesClusterNodePoolLinuxOsConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._swapFileSizeMb = undefined;
       this._transparentHugePageDefrag = undefined;
       this._transparentHugePageEnabled = undefined;
       this._sysctlConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._swapFileSizeMb = value.swapFileSizeMb;
       this._transparentHugePageDefrag = value.transparentHugePageDefrag;
       this._transparentHugePageEnabled = value.transparentHugePageEnabled;
@@ -1453,6 +1465,8 @@ export function kubernetesClusterNodePoolTimeoutsToTerraform(struct?: Kubernetes
 }
 
 export class KubernetesClusterNodePoolTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1463,7 +1477,7 @@ export class KubernetesClusterNodePoolTimeoutsOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): KubernetesClusterNodePoolTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1486,12 +1500,14 @@ export class KubernetesClusterNodePoolTimeoutsOutputReference extends cdktf.Comp
 
   public set internalValue(value: KubernetesClusterNodePoolTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -1581,6 +1597,8 @@ export function kubernetesClusterNodePoolUpgradeSettingsToTerraform(struct?: Kub
 }
 
 export class KubernetesClusterNodePoolUpgradeSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1591,7 +1609,7 @@ export class KubernetesClusterNodePoolUpgradeSettingsOutputReference extends cdk
   }
 
   public get internalValue(): KubernetesClusterNodePoolUpgradeSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxSurge) {
       hasAnyValues = true;
@@ -1602,9 +1620,11 @@ export class KubernetesClusterNodePoolUpgradeSettingsOutputReference extends cdk
 
   public set internalValue(value: KubernetesClusterNodePoolUpgradeSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxSurge = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxSurge = value.maxSurge;
     }
   }

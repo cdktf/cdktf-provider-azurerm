@@ -97,6 +97,8 @@ export function streamAnalyticsOutputBlobSerializationToTerraform(struct?: Strea
 }
 
 export class StreamAnalyticsOutputBlobSerializationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -107,7 +109,7 @@ export class StreamAnalyticsOutputBlobSerializationOutputReference extends cdktf
   }
 
   public get internalValue(): StreamAnalyticsOutputBlobSerialization | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._encoding) {
       hasAnyValues = true;
@@ -130,12 +132,14 @@ export class StreamAnalyticsOutputBlobSerializationOutputReference extends cdktf
 
   public set internalValue(value: StreamAnalyticsOutputBlobSerialization | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._encoding = undefined;
       this._fieldDelimiter = undefined;
       this._format = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._encoding = value.encoding;
       this._fieldDelimiter = value.fieldDelimiter;
       this._format = value.format;
@@ -237,6 +241,8 @@ export function streamAnalyticsOutputBlobTimeoutsToTerraform(struct?: StreamAnal
 }
 
 export class StreamAnalyticsOutputBlobTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -247,7 +253,7 @@ export class StreamAnalyticsOutputBlobTimeoutsOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): StreamAnalyticsOutputBlobTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -270,12 +276,14 @@ export class StreamAnalyticsOutputBlobTimeoutsOutputReference extends cdktf.Comp
 
   public set internalValue(value: StreamAnalyticsOutputBlobTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

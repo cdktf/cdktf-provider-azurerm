@@ -184,6 +184,8 @@ export function monitorActivityLogAlertCriteriaToTerraform(struct?: MonitorActiv
 }
 
 export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -194,7 +196,7 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): MonitorActivityLogAlertCriteria | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._caller) {
       hasAnyValues = true;
@@ -257,6 +259,7 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
 
   public set internalValue(value: MonitorActivityLogAlertCriteria | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._caller = undefined;
       this._category = undefined;
       this._level = undefined;
@@ -273,6 +276,7 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
       this._serviceHealth = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._caller = value.caller;
       this._category = value.category;
       this._level = value.level;
@@ -545,6 +549,8 @@ export function monitorActivityLogAlertTimeoutsToTerraform(struct?: MonitorActiv
 }
 
 export class MonitorActivityLogAlertTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -555,7 +561,7 @@ export class MonitorActivityLogAlertTimeoutsOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): MonitorActivityLogAlertTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -578,12 +584,14 @@ export class MonitorActivityLogAlertTimeoutsOutputReference extends cdktf.Comple
 
   public set internalValue(value: MonitorActivityLogAlertTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

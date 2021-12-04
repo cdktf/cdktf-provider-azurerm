@@ -196,6 +196,8 @@ export function linuxVirtualMachineAdditionalCapabilitiesToTerraform(struct?: Li
 }
 
 export class LinuxVirtualMachineAdditionalCapabilitiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -206,7 +208,7 @@ export class LinuxVirtualMachineAdditionalCapabilitiesOutputReference extends cd
   }
 
   public get internalValue(): LinuxVirtualMachineAdditionalCapabilities | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._ultraSsdEnabled) {
       hasAnyValues = true;
@@ -217,9 +219,11 @@ export class LinuxVirtualMachineAdditionalCapabilitiesOutputReference extends cd
 
   public set internalValue(value: LinuxVirtualMachineAdditionalCapabilities | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._ultraSsdEnabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._ultraSsdEnabled = value.ultraSsdEnabled;
     }
   }
@@ -280,6 +284,8 @@ export function linuxVirtualMachineBootDiagnosticsToTerraform(struct?: LinuxVirt
 }
 
 export class LinuxVirtualMachineBootDiagnosticsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -290,7 +296,7 @@ export class LinuxVirtualMachineBootDiagnosticsOutputReference extends cdktf.Com
   }
 
   public get internalValue(): LinuxVirtualMachineBootDiagnostics | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._storageAccountUri) {
       hasAnyValues = true;
@@ -301,9 +307,11 @@ export class LinuxVirtualMachineBootDiagnosticsOutputReference extends cdktf.Com
 
   public set internalValue(value: LinuxVirtualMachineBootDiagnostics | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._storageAccountUri = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._storageAccountUri = value.storageAccountUri;
     }
   }
@@ -347,6 +355,8 @@ export function linuxVirtualMachineIdentityToTerraform(struct?: LinuxVirtualMach
 }
 
 export class LinuxVirtualMachineIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -357,7 +367,7 @@ export class LinuxVirtualMachineIdentityOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): LinuxVirtualMachineIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -372,10 +382,12 @@ export class LinuxVirtualMachineIdentityOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: LinuxVirtualMachineIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -428,6 +440,8 @@ export function linuxVirtualMachineOsDiskDiffDiskSettingsToTerraform(struct?: Li
 }
 
 export class LinuxVirtualMachineOsDiskDiffDiskSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -438,7 +452,7 @@ export class LinuxVirtualMachineOsDiskDiffDiskSettingsOutputReference extends cd
   }
 
   public get internalValue(): LinuxVirtualMachineOsDiskDiffDiskSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._option) {
       hasAnyValues = true;
@@ -449,9 +463,11 @@ export class LinuxVirtualMachineOsDiskDiffDiskSettingsOutputReference extends cd
 
   public set internalValue(value: LinuxVirtualMachineOsDiskDiffDiskSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._option = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._option = value.option;
     }
   }
@@ -519,6 +535,8 @@ export function linuxVirtualMachineOsDiskToTerraform(struct?: LinuxVirtualMachin
 }
 
 export class LinuxVirtualMachineOsDiskOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -529,7 +547,7 @@ export class LinuxVirtualMachineOsDiskOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): LinuxVirtualMachineOsDisk | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._caching) {
       hasAnyValues = true;
@@ -555,7 +573,7 @@ export class LinuxVirtualMachineOsDiskOutputReference extends cdktf.ComplexObjec
       hasAnyValues = true;
       internalValueResult.writeAcceleratorEnabled = this._writeAcceleratorEnabled;
     }
-    if (this._diffDiskSettings) {
+    if (this._diffDiskSettings?.internalValue) {
       hasAnyValues = true;
       internalValueResult.diffDiskSettings = this._diffDiskSettings?.internalValue;
     }
@@ -564,6 +582,7 @@ export class LinuxVirtualMachineOsDiskOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: LinuxVirtualMachineOsDisk | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._caching = undefined;
       this._diskEncryptionSetId = undefined;
       this._diskSizeGb = undefined;
@@ -573,6 +592,7 @@ export class LinuxVirtualMachineOsDiskOutputReference extends cdktf.ComplexObjec
       this._diffDiskSettings.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._caching = value.caching;
       this._diskEncryptionSetId = value.diskEncryptionSetId;
       this._diskSizeGb = value.diskSizeGb;
@@ -717,6 +737,8 @@ export function linuxVirtualMachinePlanToTerraform(struct?: LinuxVirtualMachineP
 }
 
 export class LinuxVirtualMachinePlanOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -727,7 +749,7 @@ export class LinuxVirtualMachinePlanOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): LinuxVirtualMachinePlan | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -746,11 +768,13 @@ export class LinuxVirtualMachinePlanOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: LinuxVirtualMachinePlan | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._product = undefined;
       this._publisher = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._product = value.product;
       this._publisher = value.publisher;
@@ -870,6 +894,8 @@ export function linuxVirtualMachineSourceImageReferenceToTerraform(struct?: Linu
 }
 
 export class LinuxVirtualMachineSourceImageReferenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -880,7 +906,7 @@ export class LinuxVirtualMachineSourceImageReferenceOutputReference extends cdkt
   }
 
   public get internalValue(): LinuxVirtualMachineSourceImageReference | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._offer) {
       hasAnyValues = true;
@@ -903,12 +929,14 @@ export class LinuxVirtualMachineSourceImageReferenceOutputReference extends cdkt
 
   public set internalValue(value: LinuxVirtualMachineSourceImageReference | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._offer = undefined;
       this._publisher = undefined;
       this._sku = undefined;
       this._version = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._offer = value.offer;
       this._publisher = value.publisher;
       this._sku = value.sku;
@@ -1001,6 +1029,8 @@ export function linuxVirtualMachineTimeoutsToTerraform(struct?: LinuxVirtualMach
 }
 
 export class LinuxVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1011,7 +1041,7 @@ export class LinuxVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): LinuxVirtualMachineTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1034,12 +1064,14 @@ export class LinuxVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: LinuxVirtualMachineTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

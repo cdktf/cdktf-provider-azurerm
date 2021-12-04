@@ -91,6 +91,8 @@ export function kustoAttachedDatabaseConfigurationSharingToTerraform(struct?: Ku
 }
 
 export class KustoAttachedDatabaseConfigurationSharingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -101,7 +103,7 @@ export class KustoAttachedDatabaseConfigurationSharingOutputReference extends cd
   }
 
   public get internalValue(): KustoAttachedDatabaseConfigurationSharing | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._externalTablesToExclude) {
       hasAnyValues = true;
@@ -132,6 +134,7 @@ export class KustoAttachedDatabaseConfigurationSharingOutputReference extends cd
 
   public set internalValue(value: KustoAttachedDatabaseConfigurationSharing | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._externalTablesToExclude = undefined;
       this._externalTablesToInclude = undefined;
       this._materializedViewsToExclude = undefined;
@@ -140,6 +143,7 @@ export class KustoAttachedDatabaseConfigurationSharingOutputReference extends cd
       this._tablesToInclude = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._externalTablesToExclude = value.externalTablesToExclude;
       this._externalTablesToInclude = value.externalTablesToInclude;
       this._materializedViewsToExclude = value.materializedViewsToExclude;
@@ -278,6 +282,8 @@ export function kustoAttachedDatabaseConfigurationTimeoutsToTerraform(struct?: K
 }
 
 export class KustoAttachedDatabaseConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -288,7 +294,7 @@ export class KustoAttachedDatabaseConfigurationTimeoutsOutputReference extends c
   }
 
   public get internalValue(): KustoAttachedDatabaseConfigurationTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -311,12 +317,14 @@ export class KustoAttachedDatabaseConfigurationTimeoutsOutputReference extends c
 
   public set internalValue(value: KustoAttachedDatabaseConfigurationTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

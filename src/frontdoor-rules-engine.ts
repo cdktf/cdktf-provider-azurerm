@@ -117,6 +117,8 @@ export function frontdoorRulesEngineRuleActionToTerraform(struct?: FrontdoorRule
 }
 
 export class FrontdoorRulesEngineRuleActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -127,7 +129,7 @@ export class FrontdoorRulesEngineRuleActionOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): FrontdoorRulesEngineRuleAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._requestHeader) {
       hasAnyValues = true;
@@ -142,10 +144,12 @@ export class FrontdoorRulesEngineRuleActionOutputReference extends cdktf.Complex
 
   public set internalValue(value: FrontdoorRulesEngineRuleAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._requestHeader = undefined;
       this._responseHeader = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._requestHeader = value.requestHeader;
       this._responseHeader = value.responseHeader;
     }
@@ -296,6 +300,8 @@ export function frontdoorRulesEngineTimeoutsToTerraform(struct?: FrontdoorRulesE
 }
 
 export class FrontdoorRulesEngineTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -306,7 +312,7 @@ export class FrontdoorRulesEngineTimeoutsOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): FrontdoorRulesEngineTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -329,12 +335,14 @@ export class FrontdoorRulesEngineTimeoutsOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: FrontdoorRulesEngineTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

@@ -87,6 +87,8 @@ export function logzMonitorPlanToTerraform(struct?: LogzMonitorPlanOutputReferen
 }
 
 export class LogzMonitorPlanOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -97,7 +99,7 @@ export class LogzMonitorPlanOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): LogzMonitorPlan | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._billingCycle) {
       hasAnyValues = true;
@@ -120,12 +122,14 @@ export class LogzMonitorPlanOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: LogzMonitorPlan | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._billingCycle = undefined;
       this._effectiveDate = undefined;
       this._planId = undefined;
       this._usageType = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._billingCycle = value.billingCycle;
       this._effectiveDate = value.effectiveDate;
       this._planId = value.planId;
@@ -218,6 +222,8 @@ export function logzMonitorTimeoutsToTerraform(struct?: LogzMonitorTimeoutsOutpu
 }
 
 export class LogzMonitorTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -228,7 +234,7 @@ export class LogzMonitorTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): LogzMonitorTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -251,12 +257,14 @@ export class LogzMonitorTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: LogzMonitorTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -361,6 +369,8 @@ export function logzMonitorUserToTerraform(struct?: LogzMonitorUserOutputReferen
 }
 
 export class LogzMonitorUserOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -371,7 +381,7 @@ export class LogzMonitorUserOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): LogzMonitorUser | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._email) {
       hasAnyValues = true;
@@ -394,12 +404,14 @@ export class LogzMonitorUserOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: LogzMonitorUser | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._email = undefined;
       this._firstName = undefined;
       this._lastName = undefined;
       this._phoneNumber = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._email = value.email;
       this._firstName = value.firstName;
       this._lastName = value.lastName;

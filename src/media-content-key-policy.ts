@@ -59,6 +59,8 @@ export function mediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRen
 }
 
 export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -69,7 +71,7 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRental
   }
 
   public get internalValue(): MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._playbackDurationSeconds) {
       hasAnyValues = true;
@@ -84,10 +86,12 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRental
 
   public set internalValue(value: MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._playbackDurationSeconds = undefined;
       this._storageDurationSeconds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._playbackDurationSeconds = value.playbackDurationSeconds;
       this._storageDurationSeconds = value.storageDurationSeconds;
     }
@@ -170,6 +174,8 @@ export function mediaContentKeyPolicyPolicyOptionFairplayConfigurationToTerrafor
 }
 
 export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -180,7 +186,7 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReferen
   }
 
   public get internalValue(): MediaContentKeyPolicyPolicyOptionFairplayConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._ask) {
       hasAnyValues = true;
@@ -202,7 +208,7 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReferen
       hasAnyValues = true;
       internalValueResult.rentalDurationSeconds = this._rentalDurationSeconds;
     }
-    if (this._offlineRentalConfiguration) {
+    if (this._offlineRentalConfiguration?.internalValue) {
       hasAnyValues = true;
       internalValueResult.offlineRentalConfiguration = this._offlineRentalConfiguration?.internalValue;
     }
@@ -211,6 +217,7 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReferen
 
   public set internalValue(value: MediaContentKeyPolicyPolicyOptionFairplayConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._ask = undefined;
       this._pfx = undefined;
       this._pfxPassword = undefined;
@@ -219,6 +226,7 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReferen
       this._offlineRentalConfiguration.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._ask = value.ask;
       this._pfx = value.pfx;
       this._pfxPassword = value.pfxPassword;
@@ -392,6 +400,8 @@ export function mediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePl
 }
 
 export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -402,7 +412,7 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
   }
 
   public get internalValue(): MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._agcAndColorStripeRestriction) {
       hasAnyValues = true;
@@ -453,6 +463,7 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
 
   public set internalValue(value: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._agcAndColorStripeRestriction = undefined;
       this._allowPassingVideoContentToUnknownOutput = undefined;
       this._analogVideoOpl = undefined;
@@ -466,6 +477,7 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
       this._uncompressedDigitalVideoOpl = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._agcAndColorStripeRestriction = value.agcAndColorStripeRestriction;
       this._allowPassingVideoContentToUnknownOutput = value.allowPassingVideoContentToUnknownOutput;
       this._analogVideoOpl = value.analogVideoOpl;
@@ -807,6 +819,8 @@ export function mediaContentKeyPolicyPolicyOptionTokenRestrictionToTerraform(str
 }
 
 export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -817,7 +831,7 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
   }
 
   public get internalValue(): MediaContentKeyPolicyPolicyOptionTokenRestriction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._audience) {
       hasAnyValues = true;
@@ -860,6 +874,7 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
 
   public set internalValue(value: MediaContentKeyPolicyPolicyOptionTokenRestriction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._audience = undefined;
       this._issuer = undefined;
       this._openIdConnectDiscoveryDocument = undefined;
@@ -871,6 +886,7 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
       this._requiredClaim = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._audience = value.audience;
       this._issuer = value.issuer;
       this._openIdConnectDiscoveryDocument = value.openIdConnectDiscoveryDocument;
@@ -1114,6 +1130,8 @@ export function mediaContentKeyPolicyTimeoutsToTerraform(struct?: MediaContentKe
 }
 
 export class MediaContentKeyPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1124,7 +1142,7 @@ export class MediaContentKeyPolicyTimeoutsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): MediaContentKeyPolicyTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1147,12 +1165,14 @@ export class MediaContentKeyPolicyTimeoutsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: MediaContentKeyPolicyTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

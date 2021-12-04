@@ -117,6 +117,8 @@ export function cdnEndpointDeliveryRuleCacheExpirationActionToTerraform(struct?:
 }
 
 export class CdnEndpointDeliveryRuleCacheExpirationActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -127,7 +129,7 @@ export class CdnEndpointDeliveryRuleCacheExpirationActionOutputReference extends
   }
 
   public get internalValue(): CdnEndpointDeliveryRuleCacheExpirationAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._behavior) {
       hasAnyValues = true;
@@ -142,10 +144,12 @@ export class CdnEndpointDeliveryRuleCacheExpirationActionOutputReference extends
 
   public set internalValue(value: CdnEndpointDeliveryRuleCacheExpirationAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._behavior = undefined;
       this._duration = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._behavior = value.behavior;
       this._duration = value.duration;
     }
@@ -203,6 +207,8 @@ export function cdnEndpointDeliveryRuleCacheKeyQueryStringActionToTerraform(stru
 }
 
 export class CdnEndpointDeliveryRuleCacheKeyQueryStringActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -213,7 +219,7 @@ export class CdnEndpointDeliveryRuleCacheKeyQueryStringActionOutputReference ext
   }
 
   public get internalValue(): CdnEndpointDeliveryRuleCacheKeyQueryStringAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._behavior) {
       hasAnyValues = true;
@@ -228,10 +234,12 @@ export class CdnEndpointDeliveryRuleCacheKeyQueryStringActionOutputReference ext
 
   public set internalValue(value: CdnEndpointDeliveryRuleCacheKeyQueryStringAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._behavior = undefined;
       this._parameters = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._behavior = value.behavior;
       this._parameters = value.parameters;
     }
@@ -331,6 +339,8 @@ export function cdnEndpointDeliveryRuleDeviceConditionToTerraform(struct?: CdnEn
 }
 
 export class CdnEndpointDeliveryRuleDeviceConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -341,7 +351,7 @@ export class CdnEndpointDeliveryRuleDeviceConditionOutputReference extends cdktf
   }
 
   public get internalValue(): CdnEndpointDeliveryRuleDeviceCondition | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._matchValues) {
       hasAnyValues = true;
@@ -360,11 +370,13 @@ export class CdnEndpointDeliveryRuleDeviceConditionOutputReference extends cdktf
 
   public set internalValue(value: CdnEndpointDeliveryRuleDeviceCondition | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._matchValues = undefined;
       this._negateCondition = undefined;
       this._operator = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._matchValues = value.matchValues;
       this._negateCondition = value.negateCondition;
       this._operator = value.operator;
@@ -690,6 +702,8 @@ export function cdnEndpointDeliveryRuleRequestMethodConditionToTerraform(struct?
 }
 
 export class CdnEndpointDeliveryRuleRequestMethodConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -700,7 +714,7 @@ export class CdnEndpointDeliveryRuleRequestMethodConditionOutputReference extend
   }
 
   public get internalValue(): CdnEndpointDeliveryRuleRequestMethodCondition | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._matchValues) {
       hasAnyValues = true;
@@ -719,11 +733,13 @@ export class CdnEndpointDeliveryRuleRequestMethodConditionOutputReference extend
 
   public set internalValue(value: CdnEndpointDeliveryRuleRequestMethodCondition | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._matchValues = undefined;
       this._negateCondition = undefined;
       this._operator = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._matchValues = value.matchValues;
       this._negateCondition = value.negateCondition;
       this._operator = value.operator;
@@ -803,6 +819,8 @@ export function cdnEndpointDeliveryRuleRequestSchemeConditionToTerraform(struct?
 }
 
 export class CdnEndpointDeliveryRuleRequestSchemeConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -813,7 +831,7 @@ export class CdnEndpointDeliveryRuleRequestSchemeConditionOutputReference extend
   }
 
   public get internalValue(): CdnEndpointDeliveryRuleRequestSchemeCondition | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._matchValues) {
       hasAnyValues = true;
@@ -832,11 +850,13 @@ export class CdnEndpointDeliveryRuleRequestSchemeConditionOutputReference extend
 
   public set internalValue(value: CdnEndpointDeliveryRuleRequestSchemeCondition | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._matchValues = undefined;
       this._negateCondition = undefined;
       this._operator = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._matchValues = value.matchValues;
       this._negateCondition = value.negateCondition;
       this._operator = value.operator;
@@ -1059,6 +1079,8 @@ export function cdnEndpointDeliveryRuleUrlRedirectActionToTerraform(struct?: Cdn
 }
 
 export class CdnEndpointDeliveryRuleUrlRedirectActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1069,7 +1091,7 @@ export class CdnEndpointDeliveryRuleUrlRedirectActionOutputReference extends cdk
   }
 
   public get internalValue(): CdnEndpointDeliveryRuleUrlRedirectAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._fragment) {
       hasAnyValues = true;
@@ -1100,6 +1122,7 @@ export class CdnEndpointDeliveryRuleUrlRedirectActionOutputReference extends cdk
 
   public set internalValue(value: CdnEndpointDeliveryRuleUrlRedirectAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._fragment = undefined;
       this._hostname = undefined;
       this._path = undefined;
@@ -1108,6 +1131,7 @@ export class CdnEndpointDeliveryRuleUrlRedirectActionOutputReference extends cdk
       this._redirectType = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._fragment = value.fragment;
       this._hostname = value.hostname;
       this._path = value.path;
@@ -1238,6 +1262,8 @@ export function cdnEndpointDeliveryRuleUrlRewriteActionToTerraform(struct?: CdnE
 }
 
 export class CdnEndpointDeliveryRuleUrlRewriteActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1248,7 +1274,7 @@ export class CdnEndpointDeliveryRuleUrlRewriteActionOutputReference extends cdkt
   }
 
   public get internalValue(): CdnEndpointDeliveryRuleUrlRewriteAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._destination) {
       hasAnyValues = true;
@@ -1267,11 +1293,13 @@ export class CdnEndpointDeliveryRuleUrlRewriteActionOutputReference extends cdkt
 
   public set internalValue(value: CdnEndpointDeliveryRuleUrlRewriteAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._destination = undefined;
       this._preserveUnmatchedPath = undefined;
       this._sourcePattern = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._destination = value.destination;
       this._preserveUnmatchedPath = value.preserveUnmatchedPath;
       this._sourcePattern = value.sourcePattern;
@@ -1532,6 +1560,8 @@ export function cdnEndpointGlobalDeliveryRuleCacheExpirationActionToTerraform(st
 }
 
 export class CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1542,7 +1572,7 @@ export class CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference e
   }
 
   public get internalValue(): CdnEndpointGlobalDeliveryRuleCacheExpirationAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._behavior) {
       hasAnyValues = true;
@@ -1557,10 +1587,12 @@ export class CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference e
 
   public set internalValue(value: CdnEndpointGlobalDeliveryRuleCacheExpirationAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._behavior = undefined;
       this._duration = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._behavior = value.behavior;
       this._duration = value.duration;
     }
@@ -1618,6 +1650,8 @@ export function cdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionToTerrafor
 }
 
 export class CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1628,7 +1662,7 @@ export class CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReferen
   }
 
   public get internalValue(): CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._behavior) {
       hasAnyValues = true;
@@ -1643,10 +1677,12 @@ export class CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReferen
 
   public set internalValue(value: CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._behavior = undefined;
       this._parameters = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._behavior = value.behavior;
       this._parameters = value.parameters;
     }
@@ -1778,6 +1814,8 @@ export function cdnEndpointGlobalDeliveryRuleUrlRedirectActionToTerraform(struct
 }
 
 export class CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1788,7 +1826,7 @@ export class CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference exten
   }
 
   public get internalValue(): CdnEndpointGlobalDeliveryRuleUrlRedirectAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._fragment) {
       hasAnyValues = true;
@@ -1819,6 +1857,7 @@ export class CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference exten
 
   public set internalValue(value: CdnEndpointGlobalDeliveryRuleUrlRedirectAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._fragment = undefined;
       this._hostname = undefined;
       this._path = undefined;
@@ -1827,6 +1866,7 @@ export class CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference exten
       this._redirectType = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._fragment = value.fragment;
       this._hostname = value.hostname;
       this._path = value.path;
@@ -1957,6 +1997,8 @@ export function cdnEndpointGlobalDeliveryRuleUrlRewriteActionToTerraform(struct?
 }
 
 export class CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1967,7 +2009,7 @@ export class CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference extend
   }
 
   public get internalValue(): CdnEndpointGlobalDeliveryRuleUrlRewriteAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._destination) {
       hasAnyValues = true;
@@ -1986,11 +2028,13 @@ export class CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference extend
 
   public set internalValue(value: CdnEndpointGlobalDeliveryRuleUrlRewriteAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._destination = undefined;
       this._preserveUnmatchedPath = undefined;
       this._sourcePattern = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._destination = value.destination;
       this._preserveUnmatchedPath = value.preserveUnmatchedPath;
       this._sourcePattern = value.sourcePattern;
@@ -2094,6 +2138,8 @@ export function cdnEndpointGlobalDeliveryRuleToTerraform(struct?: CdnEndpointGlo
 }
 
 export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2104,13 +2150,13 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): CdnEndpointGlobalDeliveryRule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cacheExpirationAction) {
+    if (this._cacheExpirationAction?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cacheExpirationAction = this._cacheExpirationAction?.internalValue;
     }
-    if (this._cacheKeyQueryStringAction) {
+    if (this._cacheKeyQueryStringAction?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cacheKeyQueryStringAction = this._cacheKeyQueryStringAction?.internalValue;
     }
@@ -2122,11 +2168,11 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
       hasAnyValues = true;
       internalValueResult.modifyResponseHeaderAction = this._modifyResponseHeaderAction;
     }
-    if (this._urlRedirectAction) {
+    if (this._urlRedirectAction?.internalValue) {
       hasAnyValues = true;
       internalValueResult.urlRedirectAction = this._urlRedirectAction?.internalValue;
     }
-    if (this._urlRewriteAction) {
+    if (this._urlRewriteAction?.internalValue) {
       hasAnyValues = true;
       internalValueResult.urlRewriteAction = this._urlRewriteAction?.internalValue;
     }
@@ -2135,6 +2181,7 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: CdnEndpointGlobalDeliveryRule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cacheExpirationAction.internalValue = undefined;
       this._cacheKeyQueryStringAction.internalValue = undefined;
       this._modifyRequestHeaderAction = undefined;
@@ -2143,6 +2190,7 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
       this._urlRewriteAction.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cacheExpirationAction.internalValue = value.cacheExpirationAction;
       this._cacheKeyQueryStringAction.internalValue = value.cacheKeyQueryStringAction;
       this._modifyRequestHeaderAction = value.modifyRequestHeaderAction;
@@ -2315,6 +2363,8 @@ export function cdnEndpointTimeoutsToTerraform(struct?: CdnEndpointTimeoutsOutpu
 }
 
 export class CdnEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2325,7 +2375,7 @@ export class CdnEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): CdnEndpointTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -2348,12 +2398,14 @@ export class CdnEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: CdnEndpointTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

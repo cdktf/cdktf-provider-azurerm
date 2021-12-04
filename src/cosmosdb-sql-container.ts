@@ -92,6 +92,8 @@ export function cosmosdbSqlContainerAutoscaleSettingsToTerraform(struct?: Cosmos
 }
 
 export class CosmosdbSqlContainerAutoscaleSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -102,7 +104,7 @@ export class CosmosdbSqlContainerAutoscaleSettingsOutputReference extends cdktf.
   }
 
   public get internalValue(): CosmosdbSqlContainerAutoscaleSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxThroughput) {
       hasAnyValues = true;
@@ -113,9 +115,11 @@ export class CosmosdbSqlContainerAutoscaleSettingsOutputReference extends cdktf.
 
   public set internalValue(value: CosmosdbSqlContainerAutoscaleSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxThroughput = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxThroughput = value.maxThroughput;
     }
   }
@@ -164,6 +168,8 @@ export function cosmosdbSqlContainerConflictResolutionPolicyToTerraform(struct?:
 }
 
 export class CosmosdbSqlContainerConflictResolutionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -174,7 +180,7 @@ export class CosmosdbSqlContainerConflictResolutionPolicyOutputReference extends
   }
 
   public get internalValue(): CosmosdbSqlContainerConflictResolutionPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._conflictResolutionPath) {
       hasAnyValues = true;
@@ -193,11 +199,13 @@ export class CosmosdbSqlContainerConflictResolutionPolicyOutputReference extends
 
   public set internalValue(value: CosmosdbSqlContainerConflictResolutionPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._conflictResolutionPath = undefined;
       this._conflictResolutionProcedure = undefined;
       this._mode = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._conflictResolutionPath = value.conflictResolutionPath;
       this._conflictResolutionProcedure = value.conflictResolutionProcedure;
       this._mode = value.mode;
@@ -387,6 +395,8 @@ export function cosmosdbSqlContainerIndexingPolicyToTerraform(struct?: CosmosdbS
 }
 
 export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -397,7 +407,7 @@ export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.Com
   }
 
   public get internalValue(): CosmosdbSqlContainerIndexingPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._indexingMode) {
       hasAnyValues = true;
@@ -424,6 +434,7 @@ export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.Com
 
   public set internalValue(value: CosmosdbSqlContainerIndexingPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._indexingMode = undefined;
       this._compositeIndex = undefined;
       this._excludedPath = undefined;
@@ -431,6 +442,7 @@ export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.Com
       this._spatialIndex = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._indexingMode = value.indexingMode;
       this._compositeIndex = value.compositeIndex;
       this._excludedPath = value.excludedPath;
@@ -556,6 +568,8 @@ export function cosmosdbSqlContainerTimeoutsToTerraform(struct?: CosmosdbSqlCont
 }
 
 export class CosmosdbSqlContainerTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -566,7 +580,7 @@ export class CosmosdbSqlContainerTimeoutsOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): CosmosdbSqlContainerTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -589,12 +603,14 @@ export class CosmosdbSqlContainerTimeoutsOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: CosmosdbSqlContainerTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

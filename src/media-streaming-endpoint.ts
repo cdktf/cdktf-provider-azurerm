@@ -159,6 +159,8 @@ export function mediaStreamingEndpointAccessControlToTerraform(struct?: MediaStr
 }
 
 export class MediaStreamingEndpointAccessControlOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -169,7 +171,7 @@ export class MediaStreamingEndpointAccessControlOutputReference extends cdktf.Co
   }
 
   public get internalValue(): MediaStreamingEndpointAccessControl | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._akamaiSignatureHeaderAuthenticationKey) {
       hasAnyValues = true;
@@ -184,10 +186,12 @@ export class MediaStreamingEndpointAccessControlOutputReference extends cdktf.Co
 
   public set internalValue(value: MediaStreamingEndpointAccessControl | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._akamaiSignatureHeaderAuthenticationKey = undefined;
       this._ipAllow = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._akamaiSignatureHeaderAuthenticationKey = value.akamaiSignatureHeaderAuthenticationKey;
       this._ipAllow = value.ipAllow;
     }
@@ -250,6 +254,8 @@ export function mediaStreamingEndpointCrossSiteAccessPolicyToTerraform(struct?: 
 }
 
 export class MediaStreamingEndpointCrossSiteAccessPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -260,7 +266,7 @@ export class MediaStreamingEndpointCrossSiteAccessPolicyOutputReference extends 
   }
 
   public get internalValue(): MediaStreamingEndpointCrossSiteAccessPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._clientAccessPolicy) {
       hasAnyValues = true;
@@ -275,10 +281,12 @@ export class MediaStreamingEndpointCrossSiteAccessPolicyOutputReference extends 
 
   public set internalValue(value: MediaStreamingEndpointCrossSiteAccessPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._clientAccessPolicy = undefined;
       this._crossDomainPolicy = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._clientAccessPolicy = value.clientAccessPolicy;
       this._crossDomainPolicy = value.crossDomainPolicy;
     }
@@ -349,6 +357,8 @@ export function mediaStreamingEndpointTimeoutsToTerraform(struct?: MediaStreamin
 }
 
 export class MediaStreamingEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -359,7 +369,7 @@ export class MediaStreamingEndpointTimeoutsOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): MediaStreamingEndpointTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -382,12 +392,14 @@ export class MediaStreamingEndpointTimeoutsOutputReference extends cdktf.Complex
 
   public set internalValue(value: MediaStreamingEndpointTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

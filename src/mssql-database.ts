@@ -190,6 +190,8 @@ export function mssqlDatabaseLongTermRetentionPolicyToTerraform(struct?: MssqlDa
 }
 
 export class MssqlDatabaseLongTermRetentionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -200,7 +202,7 @@ export class MssqlDatabaseLongTermRetentionPolicyOutputReference extends cdktf.C
   }
 
   public get internalValue(): MssqlDatabaseLongTermRetentionPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._monthlyRetention) {
       hasAnyValues = true;
@@ -223,12 +225,14 @@ export class MssqlDatabaseLongTermRetentionPolicyOutputReference extends cdktf.C
 
   public set internalValue(value: MssqlDatabaseLongTermRetentionPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._monthlyRetention = undefined;
       this._weekOfYear = undefined;
       this._weeklyRetention = undefined;
       this._yearlyRetention = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._monthlyRetention = value.monthlyRetention;
       this._weekOfYear = value.weekOfYear;
       this._weeklyRetention = value.weeklyRetention;
@@ -318,6 +322,8 @@ export function mssqlDatabaseShortTermRetentionPolicyToTerraform(struct?: MssqlD
 }
 
 export class MssqlDatabaseShortTermRetentionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -328,7 +334,7 @@ export class MssqlDatabaseShortTermRetentionPolicyOutputReference extends cdktf.
   }
 
   public get internalValue(): MssqlDatabaseShortTermRetentionPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._retentionDays) {
       hasAnyValues = true;
@@ -339,9 +345,11 @@ export class MssqlDatabaseShortTermRetentionPolicyOutputReference extends cdktf.
 
   public set internalValue(value: MssqlDatabaseShortTermRetentionPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._retentionDays = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._retentionDays = value.retentionDays;
     }
   }
@@ -412,6 +420,8 @@ export function mssqlDatabaseThreatDetectionPolicyToTerraform(struct?: MssqlData
 }
 
 export class MssqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -422,7 +432,7 @@ export class MssqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Com
   }
 
   public get internalValue(): MssqlDatabaseThreatDetectionPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._disabledAlerts) {
       hasAnyValues = true;
@@ -461,6 +471,7 @@ export class MssqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Com
 
   public set internalValue(value: MssqlDatabaseThreatDetectionPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._disabledAlerts = undefined;
       this._emailAccountAdmins = undefined;
       this._emailAddresses = undefined;
@@ -471,6 +482,7 @@ export class MssqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Com
       this._useServerDefault = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._disabledAlerts = value.disabledAlerts;
       this._emailAccountAdmins = value.emailAccountAdmins;
       this._emailAddresses = value.emailAddresses;
@@ -643,6 +655,8 @@ export function mssqlDatabaseTimeoutsToTerraform(struct?: MssqlDatabaseTimeoutsO
 }
 
 export class MssqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -653,7 +667,7 @@ export class MssqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): MssqlDatabaseTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -676,12 +690,14 @@ export class MssqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: MssqlDatabaseTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

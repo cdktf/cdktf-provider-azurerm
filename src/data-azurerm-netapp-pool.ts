@@ -44,6 +44,8 @@ export function dataAzurermNetappPoolTimeoutsToTerraform(struct?: DataAzurermNet
 }
 
 export class DataAzurermNetappPoolTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -54,7 +56,7 @@ export class DataAzurermNetappPoolTimeoutsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): DataAzurermNetappPoolTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read) {
       hasAnyValues = true;
@@ -65,9 +67,11 @@ export class DataAzurermNetappPoolTimeoutsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: DataAzurermNetappPoolTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._read = value.read;
     }
   }

@@ -84,6 +84,8 @@ export function notificationHubApnsCredentialToTerraform(struct?: NotificationHu
 }
 
 export class NotificationHubApnsCredentialOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -94,7 +96,7 @@ export class NotificationHubApnsCredentialOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): NotificationHubApnsCredential | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._applicationMode) {
       hasAnyValues = true;
@@ -121,6 +123,7 @@ export class NotificationHubApnsCredentialOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: NotificationHubApnsCredential | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._applicationMode = undefined;
       this._bundleId = undefined;
       this._keyId = undefined;
@@ -128,6 +131,7 @@ export class NotificationHubApnsCredentialOutputReference extends cdktf.ComplexO
       this._token = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._applicationMode = value.applicationMode;
       this._bundleId = value.bundleId;
       this._keyId = value.keyId;
@@ -219,6 +223,8 @@ export function notificationHubGcmCredentialToTerraform(struct?: NotificationHub
 }
 
 export class NotificationHubGcmCredentialOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -229,7 +235,7 @@ export class NotificationHubGcmCredentialOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): NotificationHubGcmCredential | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._apiKey) {
       hasAnyValues = true;
@@ -240,9 +246,11 @@ export class NotificationHubGcmCredentialOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: NotificationHubGcmCredential | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._apiKey = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._apiKey = value.apiKey;
     }
   }
@@ -293,6 +301,8 @@ export function notificationHubTimeoutsToTerraform(struct?: NotificationHubTimeo
 }
 
 export class NotificationHubTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -303,7 +313,7 @@ export class NotificationHubTimeoutsOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): NotificationHubTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -326,12 +336,14 @@ export class NotificationHubTimeoutsOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: NotificationHubTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

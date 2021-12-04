@@ -105,6 +105,8 @@ export function dataFactoryIntegrationRuntimeManagedCatalogInfoToTerraform(struc
 }
 
 export class DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -115,7 +117,7 @@ export class DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference exte
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeManagedCatalogInfo | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._administratorLogin) {
       hasAnyValues = true;
@@ -138,12 +140,14 @@ export class DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference exte
 
   public set internalValue(value: DataFactoryIntegrationRuntimeManagedCatalogInfo | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._administratorLogin = undefined;
       this._administratorPassword = undefined;
       this._pricingTier = undefined;
       this._serverEndpoint = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._administratorLogin = value.administratorLogin;
       this._administratorPassword = value.administratorPassword;
       this._pricingTier = value.pricingTier;
@@ -235,6 +239,8 @@ export function dataFactoryIntegrationRuntimeManagedCustomSetupScriptToTerraform
 }
 
 export class DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -245,7 +251,7 @@ export class DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReferenc
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeManagedCustomSetupScript | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._blobContainerUri) {
       hasAnyValues = true;
@@ -260,10 +266,12 @@ export class DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReferenc
 
   public set internalValue(value: DataFactoryIntegrationRuntimeManagedCustomSetupScript | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._blobContainerUri = undefined;
       this._sasToken = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._blobContainerUri = value.blobContainerUri;
       this._sasToken = value.sasToken;
     }
@@ -328,6 +336,8 @@ export function dataFactoryIntegrationRuntimeManagedTimeoutsToTerraform(struct?:
 }
 
 export class DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -338,7 +348,7 @@ export class DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference extends
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeManagedTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -361,12 +371,14 @@ export class DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference extends
 
   public set internalValue(value: DataFactoryIntegrationRuntimeManagedTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -461,6 +473,8 @@ export function dataFactoryIntegrationRuntimeManagedVnetIntegrationToTerraform(s
 }
 
 export class DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -471,7 +485,7 @@ export class DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference 
   }
 
   public get internalValue(): DataFactoryIntegrationRuntimeManagedVnetIntegration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._subnetName) {
       hasAnyValues = true;
@@ -486,10 +500,12 @@ export class DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference 
 
   public set internalValue(value: DataFactoryIntegrationRuntimeManagedVnetIntegration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._subnetName = undefined;
       this._vnetId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._subnetName = value.subnetName;
       this._vnetId = value.vnetId;
     }

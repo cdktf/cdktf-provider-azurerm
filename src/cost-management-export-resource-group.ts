@@ -78,6 +78,8 @@ export function costManagementExportResourceGroupDeliveryInfoToTerraform(struct?
 }
 
 export class CostManagementExportResourceGroupDeliveryInfoOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -88,7 +90,7 @@ export class CostManagementExportResourceGroupDeliveryInfoOutputReference extend
   }
 
   public get internalValue(): CostManagementExportResourceGroupDeliveryInfo | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._containerName) {
       hasAnyValues = true;
@@ -107,11 +109,13 @@ export class CostManagementExportResourceGroupDeliveryInfoOutputReference extend
 
   public set internalValue(value: CostManagementExportResourceGroupDeliveryInfo | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._containerName = undefined;
       this._rootFolderPath = undefined;
       this._storageAccountId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._containerName = value.containerName;
       this._rootFolderPath = value.rootFolderPath;
       this._storageAccountId = value.storageAccountId;
@@ -180,6 +184,8 @@ export function costManagementExportResourceGroupQueryToTerraform(struct?: CostM
 }
 
 export class CostManagementExportResourceGroupQueryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -190,7 +196,7 @@ export class CostManagementExportResourceGroupQueryOutputReference extends cdktf
   }
 
   public get internalValue(): CostManagementExportResourceGroupQuery | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._timeFrame) {
       hasAnyValues = true;
@@ -205,10 +211,12 @@ export class CostManagementExportResourceGroupQueryOutputReference extends cdktf
 
   public set internalValue(value: CostManagementExportResourceGroupQuery | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._timeFrame = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._timeFrame = value.timeFrame;
       this._type = value.type;
     }
@@ -273,6 +281,8 @@ export function costManagementExportResourceGroupTimeoutsToTerraform(struct?: Co
 }
 
 export class CostManagementExportResourceGroupTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -283,7 +293,7 @@ export class CostManagementExportResourceGroupTimeoutsOutputReference extends cd
   }
 
   public get internalValue(): CostManagementExportResourceGroupTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -306,12 +316,14 @@ export class CostManagementExportResourceGroupTimeoutsOutputReference extends cd
 
   public set internalValue(value: CostManagementExportResourceGroupTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

@@ -55,6 +55,8 @@ export function automationModuleModuleLinkHashToTerraform(struct?: AutomationMod
 }
 
 export class AutomationModuleModuleLinkHashOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -65,7 +67,7 @@ export class AutomationModuleModuleLinkHashOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): AutomationModuleModuleLinkHash | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._algorithm) {
       hasAnyValues = true;
@@ -80,10 +82,12 @@ export class AutomationModuleModuleLinkHashOutputReference extends cdktf.Complex
 
   public set internalValue(value: AutomationModuleModuleLinkHash | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._algorithm = undefined;
       this._value = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._algorithm = value.algorithm;
       this._value = value.value;
     }
@@ -140,6 +144,8 @@ export function automationModuleModuleLinkToTerraform(struct?: AutomationModuleM
 }
 
 export class AutomationModuleModuleLinkOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -150,13 +156,13 @@ export class AutomationModuleModuleLinkOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): AutomationModuleModuleLink | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._uri) {
       hasAnyValues = true;
       internalValueResult.uri = this._uri;
     }
-    if (this._hash) {
+    if (this._hash?.internalValue) {
       hasAnyValues = true;
       internalValueResult.hash = this._hash?.internalValue;
     }
@@ -165,10 +171,12 @@ export class AutomationModuleModuleLinkOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: AutomationModuleModuleLink | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._uri = undefined;
       this._hash.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._uri = value.uri;
       this._hash.internalValue = value.hash;
     }
@@ -236,6 +244,8 @@ export function automationModuleTimeoutsToTerraform(struct?: AutomationModuleTim
 }
 
 export class AutomationModuleTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -246,7 +256,7 @@ export class AutomationModuleTimeoutsOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): AutomationModuleTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -269,12 +279,14 @@ export class AutomationModuleTimeoutsOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: AutomationModuleTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

@@ -117,6 +117,8 @@ export function sqlServerIdentityToTerraform(struct?: SqlServerIdentityOutputRef
 }
 
 export class SqlServerIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -127,7 +129,7 @@ export class SqlServerIdentityOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): SqlServerIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._type) {
       hasAnyValues = true;
@@ -138,9 +140,11 @@ export class SqlServerIdentityOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: SqlServerIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
   }
@@ -206,6 +210,8 @@ export function sqlServerThreatDetectionPolicyToTerraform(struct?: SqlServerThre
 }
 
 export class SqlServerThreatDetectionPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -216,7 +222,7 @@ export class SqlServerThreatDetectionPolicyOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): SqlServerThreatDetectionPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._disabledAlerts) {
       hasAnyValues = true;
@@ -251,6 +257,7 @@ export class SqlServerThreatDetectionPolicyOutputReference extends cdktf.Complex
 
   public set internalValue(value: SqlServerThreatDetectionPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._disabledAlerts = undefined;
       this._emailAccountAdmins = undefined;
       this._emailAddresses = undefined;
@@ -260,6 +267,7 @@ export class SqlServerThreatDetectionPolicyOutputReference extends cdktf.Complex
       this._storageEndpoint = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._disabledAlerts = value.disabledAlerts;
       this._emailAccountAdmins = value.emailAccountAdmins;
       this._emailAddresses = value.emailAddresses;
@@ -415,6 +423,8 @@ export function sqlServerTimeoutsToTerraform(struct?: SqlServerTimeoutsOutputRef
 }
 
 export class SqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -425,7 +435,7 @@ export class SqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): SqlServerTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -448,12 +458,14 @@ export class SqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: SqlServerTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

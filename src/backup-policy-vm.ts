@@ -96,6 +96,8 @@ export function backupPolicyVmBackupToTerraform(struct?: BackupPolicyVmBackupOut
 }
 
 export class BackupPolicyVmBackupOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -106,7 +108,7 @@ export class BackupPolicyVmBackupOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): BackupPolicyVmBackup | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._frequency) {
       hasAnyValues = true;
@@ -125,11 +127,13 @@ export class BackupPolicyVmBackupOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: BackupPolicyVmBackup | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._frequency = undefined;
       this._time = undefined;
       this._weekdays = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._frequency = value.frequency;
       this._time = value.time;
       this._weekdays = value.weekdays;
@@ -196,6 +200,8 @@ export function backupPolicyVmRetentionDailyToTerraform(struct?: BackupPolicyVmR
 }
 
 export class BackupPolicyVmRetentionDailyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -206,7 +212,7 @@ export class BackupPolicyVmRetentionDailyOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): BackupPolicyVmRetentionDaily | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._count) {
       hasAnyValues = true;
@@ -217,9 +223,11 @@ export class BackupPolicyVmRetentionDailyOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: BackupPolicyVmRetentionDaily | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._count = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._count = value.count;
     }
   }
@@ -265,6 +273,8 @@ export function backupPolicyVmRetentionMonthlyToTerraform(struct?: BackupPolicyV
 }
 
 export class BackupPolicyVmRetentionMonthlyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -275,7 +285,7 @@ export class BackupPolicyVmRetentionMonthlyOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): BackupPolicyVmRetentionMonthly | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._count) {
       hasAnyValues = true;
@@ -294,11 +304,13 @@ export class BackupPolicyVmRetentionMonthlyOutputReference extends cdktf.Complex
 
   public set internalValue(value: BackupPolicyVmRetentionMonthly | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._count = undefined;
       this._weekdays = undefined;
       this._weeks = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._count = value.count;
       this._weekdays = value.weekdays;
       this._weeks = value.weeks;
@@ -367,6 +379,8 @@ export function backupPolicyVmRetentionWeeklyToTerraform(struct?: BackupPolicyVm
 }
 
 export class BackupPolicyVmRetentionWeeklyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -377,7 +391,7 @@ export class BackupPolicyVmRetentionWeeklyOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): BackupPolicyVmRetentionWeekly | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._count) {
       hasAnyValues = true;
@@ -392,10 +406,12 @@ export class BackupPolicyVmRetentionWeeklyOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: BackupPolicyVmRetentionWeekly | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._count = undefined;
       this._weekdays = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._count = value.count;
       this._weekdays = value.weekdays;
     }
@@ -460,6 +476,8 @@ export function backupPolicyVmRetentionYearlyToTerraform(struct?: BackupPolicyVm
 }
 
 export class BackupPolicyVmRetentionYearlyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -470,7 +488,7 @@ export class BackupPolicyVmRetentionYearlyOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): BackupPolicyVmRetentionYearly | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._count) {
       hasAnyValues = true;
@@ -493,12 +511,14 @@ export class BackupPolicyVmRetentionYearlyOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: BackupPolicyVmRetentionYearly | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._count = undefined;
       this._months = undefined;
       this._weekdays = undefined;
       this._weeks = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._count = value.count;
       this._months = value.months;
       this._weekdays = value.weekdays;
@@ -591,6 +611,8 @@ export function backupPolicyVmTimeoutsToTerraform(struct?: BackupPolicyVmTimeout
 }
 
 export class BackupPolicyVmTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -601,7 +623,7 @@ export class BackupPolicyVmTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): BackupPolicyVmTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -624,12 +646,14 @@ export class BackupPolicyVmTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: BackupPolicyVmTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

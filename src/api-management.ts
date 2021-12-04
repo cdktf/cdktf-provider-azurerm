@@ -170,6 +170,8 @@ export function apiManagementAdditionalLocationVirtualNetworkConfigurationToTerr
 }
 
 export class ApiManagementAdditionalLocationVirtualNetworkConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -180,7 +182,7 @@ export class ApiManagementAdditionalLocationVirtualNetworkConfigurationOutputRef
   }
 
   public get internalValue(): ApiManagementAdditionalLocationVirtualNetworkConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._subnetId) {
       hasAnyValues = true;
@@ -191,9 +193,11 @@ export class ApiManagementAdditionalLocationVirtualNetworkConfigurationOutputRef
 
   public set internalValue(value: ApiManagementAdditionalLocationVirtualNetworkConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._subnetId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._subnetId = value.subnetId;
     }
   }
@@ -525,6 +529,8 @@ export function apiManagementHostnameConfigurationToTerraform(struct?: ApiManage
 }
 
 export class ApiManagementHostnameConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -535,7 +541,7 @@ export class ApiManagementHostnameConfigurationOutputReference extends cdktf.Com
   }
 
   public get internalValue(): ApiManagementHostnameConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._developerPortal) {
       hasAnyValues = true;
@@ -562,6 +568,7 @@ export class ApiManagementHostnameConfigurationOutputReference extends cdktf.Com
 
   public set internalValue(value: ApiManagementHostnameConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._developerPortal = undefined;
       this._management = undefined;
       this._portal = undefined;
@@ -569,6 +576,7 @@ export class ApiManagementHostnameConfigurationOutputReference extends cdktf.Com
       this._scm = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._developerPortal = value.developerPortal;
       this._management = value.management;
       this._portal = value.portal;
@@ -685,6 +693,8 @@ export function apiManagementIdentityToTerraform(struct?: ApiManagementIdentityO
 }
 
 export class ApiManagementIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -695,7 +705,7 @@ export class ApiManagementIdentityOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): ApiManagementIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -710,10 +720,12 @@ export class ApiManagementIdentityOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: ApiManagementIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -769,6 +781,8 @@ export function apiManagementProtocolsToTerraform(struct?: ApiManagementProtocol
 }
 
 export class ApiManagementProtocolsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -779,7 +793,7 @@ export class ApiManagementProtocolsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): ApiManagementProtocols | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enableHttp2) {
       hasAnyValues = true;
@@ -790,9 +804,11 @@ export class ApiManagementProtocolsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: ApiManagementProtocols | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enableHttp2 = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enableHttp2 = value.enableHttp2;
     }
   }
@@ -911,6 +927,8 @@ export function apiManagementSecurityToTerraform(struct?: ApiManagementSecurityO
 }
 
 export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -921,7 +939,7 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): ApiManagementSecurity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enableBackendSsl30) {
       hasAnyValues = true;
@@ -996,6 +1014,7 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: ApiManagementSecurity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enableBackendSsl30 = undefined;
       this._enableBackendTls10 = undefined;
       this._enableBackendTls11 = undefined;
@@ -1015,6 +1034,7 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
       this._tripleDesCiphersEnabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enableBackendSsl30 = value.enableBackendSsl30;
       this._enableBackendTls10 = value.enableBackendTls10;
       this._enableBackendTls11 = value.enableBackendTls11;
@@ -1325,6 +1345,8 @@ export function apiManagementSignInToTerraform(struct?: ApiManagementSignInOutpu
 }
 
 export class ApiManagementSignInOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1335,7 +1357,7 @@ export class ApiManagementSignInOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): ApiManagementSignIn | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -1346,9 +1368,11 @@ export class ApiManagementSignInOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: ApiManagementSignIn | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
     }
   }
@@ -1394,6 +1418,8 @@ export function apiManagementSignUpTermsOfServiceToTerraform(struct?: ApiManagem
 }
 
 export class ApiManagementSignUpTermsOfServiceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1404,7 +1430,7 @@ export class ApiManagementSignUpTermsOfServiceOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): ApiManagementSignUpTermsOfService | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._consentRequired) {
       hasAnyValues = true;
@@ -1423,11 +1449,13 @@ export class ApiManagementSignUpTermsOfServiceOutputReference extends cdktf.Comp
 
   public set internalValue(value: ApiManagementSignUpTermsOfService | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._consentRequired = undefined;
       this._enabled = undefined;
       this._text = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._consentRequired = value.consentRequired;
       this._enabled = value.enabled;
       this._text = value.text;
@@ -1501,6 +1529,8 @@ export function apiManagementSignUpToTerraform(struct?: ApiManagementSignUpOutpu
 }
 
 export class ApiManagementSignUpOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1511,13 +1541,13 @@ export class ApiManagementSignUpOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): ApiManagementSignUp | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._termsOfService) {
+    if (this._termsOfService?.internalValue) {
       hasAnyValues = true;
       internalValueResult.termsOfService = this._termsOfService?.internalValue;
     }
@@ -1526,10 +1556,12 @@ export class ApiManagementSignUpOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: ApiManagementSignUp | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
       this._termsOfService.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
       this._termsOfService.internalValue = value.termsOfService;
     }
@@ -1579,6 +1611,8 @@ export function apiManagementTenantAccessToTerraform(struct?: ApiManagementTenan
 }
 
 export class ApiManagementTenantAccessOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1589,7 +1623,7 @@ export class ApiManagementTenantAccessOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): ApiManagementTenantAccess | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -1600,9 +1634,11 @@ export class ApiManagementTenantAccessOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: ApiManagementTenantAccess | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
     }
   }
@@ -1653,6 +1689,8 @@ export function apiManagementTimeoutsToTerraform(struct?: ApiManagementTimeoutsO
 }
 
 export class ApiManagementTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1663,7 +1701,7 @@ export class ApiManagementTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): ApiManagementTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1686,12 +1724,14 @@ export class ApiManagementTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: ApiManagementTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -1781,6 +1821,8 @@ export function apiManagementVirtualNetworkConfigurationToTerraform(struct?: Api
 }
 
 export class ApiManagementVirtualNetworkConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1791,7 +1833,7 @@ export class ApiManagementVirtualNetworkConfigurationOutputReference extends cdk
   }
 
   public get internalValue(): ApiManagementVirtualNetworkConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._subnetId) {
       hasAnyValues = true;
@@ -1802,9 +1844,11 @@ export class ApiManagementVirtualNetworkConfigurationOutputReference extends cdk
 
   public set internalValue(value: ApiManagementVirtualNetworkConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._subnetId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._subnetId = value.subnetId;
     }
   }

@@ -101,6 +101,8 @@ export function mediaLiveEventCrossSiteAccessPolicyToTerraform(struct?: MediaLiv
 }
 
 export class MediaLiveEventCrossSiteAccessPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -111,7 +113,7 @@ export class MediaLiveEventCrossSiteAccessPolicyOutputReference extends cdktf.Co
   }
 
   public get internalValue(): MediaLiveEventCrossSiteAccessPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._clientAccessPolicy) {
       hasAnyValues = true;
@@ -126,10 +128,12 @@ export class MediaLiveEventCrossSiteAccessPolicyOutputReference extends cdktf.Co
 
   public set internalValue(value: MediaLiveEventCrossSiteAccessPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._clientAccessPolicy = undefined;
       this._crossDomainPolicy = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._clientAccessPolicy = value.clientAccessPolicy;
       this._crossDomainPolicy = value.crossDomainPolicy;
     }
@@ -200,6 +204,8 @@ export function mediaLiveEventEncodingToTerraform(struct?: MediaLiveEventEncodin
 }
 
 export class MediaLiveEventEncodingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -210,7 +216,7 @@ export class MediaLiveEventEncodingOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): MediaLiveEventEncoding | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._keyFrameInterval) {
       hasAnyValues = true;
@@ -233,12 +239,14 @@ export class MediaLiveEventEncodingOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: MediaLiveEventEncoding | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._keyFrameInterval = undefined;
       this._presetName = undefined;
       this._stretchMode = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._keyFrameInterval = value.keyFrameInterval;
       this._presetName = value.presetName;
       this._stretchMode = value.stretchMode;
@@ -372,6 +380,8 @@ export function mediaLiveEventInputToTerraform(struct?: MediaLiveEventInputOutpu
 }
 
 export class MediaLiveEventInputOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -382,7 +392,7 @@ export class MediaLiveEventInputOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): MediaLiveEventInput | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._accessToken) {
       hasAnyValues = true;
@@ -405,12 +415,14 @@ export class MediaLiveEventInputOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: MediaLiveEventInput | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._accessToken = undefined;
       this._keyFrameIntervalDuration = undefined;
       this._streamingProtocol = undefined;
       this._ipAccessControlAllow = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._accessToken = value.accessToken;
       this._keyFrameIntervalDuration = value.keyFrameIntervalDuration;
       this._streamingProtocol = value.streamingProtocol;
@@ -545,6 +557,8 @@ export function mediaLiveEventPreviewToTerraform(struct?: MediaLiveEventPreviewO
 }
 
 export class MediaLiveEventPreviewOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -555,7 +569,7 @@ export class MediaLiveEventPreviewOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): MediaLiveEventPreview | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._alternativeMediaId) {
       hasAnyValues = true;
@@ -578,12 +592,14 @@ export class MediaLiveEventPreviewOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: MediaLiveEventPreview | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._alternativeMediaId = undefined;
       this._previewLocator = undefined;
       this._streamingPolicyName = undefined;
       this._ipAccessControlAllow = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._alternativeMediaId = value.alternativeMediaId;
       this._previewLocator = value.previewLocator;
       this._streamingPolicyName = value.streamingPolicyName;
@@ -689,6 +705,8 @@ export function mediaLiveEventTimeoutsToTerraform(struct?: MediaLiveEventTimeout
 }
 
 export class MediaLiveEventTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -699,7 +717,7 @@ export class MediaLiveEventTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): MediaLiveEventTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -722,12 +740,14 @@ export class MediaLiveEventTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: MediaLiveEventTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

@@ -67,6 +67,8 @@ export function dataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeoutsT
 }
 
 export class DataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -77,7 +79,7 @@ export class DataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeoutsOutp
   }
 
   public get internalValue(): DataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read) {
       hasAnyValues = true;
@@ -88,9 +90,11 @@ export class DataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeoutsOutp
 
   public set internalValue(value: DataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._read = value.read;
     }
   }

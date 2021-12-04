@@ -119,6 +119,8 @@ export function cognitiveAccountIdentityToTerraform(struct?: CognitiveAccountIde
 }
 
 export class CognitiveAccountIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -129,7 +131,7 @@ export class CognitiveAccountIdentityOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): CognitiveAccountIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -144,10 +146,12 @@ export class CognitiveAccountIdentityOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: CognitiveAccountIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -240,6 +244,8 @@ export function cognitiveAccountNetworkAclsToTerraform(struct?: CognitiveAccount
 }
 
 export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -250,7 +256,7 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): CognitiveAccountNetworkAcls | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._defaultAction) {
       hasAnyValues = true;
@@ -273,12 +279,14 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: CognitiveAccountNetworkAcls | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._defaultAction = undefined;
       this._ipRules = undefined;
       this._virtualNetworkRules = undefined;
       this._virtualNetworkSubnetIds = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._defaultAction = value.defaultAction;
       this._ipRules = value.ipRules;
       this._virtualNetworkRules = value.virtualNetworkRules;
@@ -403,6 +411,8 @@ export function cognitiveAccountTimeoutsToTerraform(struct?: CognitiveAccountTim
 }
 
 export class CognitiveAccountTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -413,7 +423,7 @@ export class CognitiveAccountTimeoutsOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): CognitiveAccountTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -436,12 +446,14 @@ export class CognitiveAccountTimeoutsOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: CognitiveAccountTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

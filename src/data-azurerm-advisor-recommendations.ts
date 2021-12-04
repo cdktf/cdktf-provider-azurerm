@@ -87,6 +87,8 @@ export function dataAzurermAdvisorRecommendationsTimeoutsToTerraform(struct?: Da
 }
 
 export class DataAzurermAdvisorRecommendationsTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -97,7 +99,7 @@ export class DataAzurermAdvisorRecommendationsTimeoutsOutputReference extends cd
   }
 
   public get internalValue(): DataAzurermAdvisorRecommendationsTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read) {
       hasAnyValues = true;
@@ -108,9 +110,11 @@ export class DataAzurermAdvisorRecommendationsTimeoutsOutputReference extends cd
 
   public set internalValue(value: DataAzurermAdvisorRecommendationsTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._read = value.read;
     }
   }

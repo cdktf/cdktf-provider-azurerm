@@ -253,6 +253,8 @@ export function webApplicationFirewallPolicyManagedRulesToTerraform(struct?: Web
 }
 
 export class WebApplicationFirewallPolicyManagedRulesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -263,7 +265,7 @@ export class WebApplicationFirewallPolicyManagedRulesOutputReference extends cdk
   }
 
   public get internalValue(): WebApplicationFirewallPolicyManagedRules | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._exclusion) {
       hasAnyValues = true;
@@ -278,10 +280,12 @@ export class WebApplicationFirewallPolicyManagedRulesOutputReference extends cdk
 
   public set internalValue(value: WebApplicationFirewallPolicyManagedRules | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._exclusion = undefined;
       this._managedRuleSet = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._exclusion = value.exclusion;
       this._managedRuleSet = value.managedRuleSet;
     }
@@ -356,6 +360,8 @@ export function webApplicationFirewallPolicyPolicySettingsToTerraform(struct?: W
 }
 
 export class WebApplicationFirewallPolicyPolicySettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -366,7 +372,7 @@ export class WebApplicationFirewallPolicyPolicySettingsOutputReference extends c
   }
 
   public get internalValue(): WebApplicationFirewallPolicyPolicySettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -393,6 +399,7 @@ export class WebApplicationFirewallPolicyPolicySettingsOutputReference extends c
 
   public set internalValue(value: WebApplicationFirewallPolicyPolicySettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
       this._fileUploadLimitInMb = undefined;
       this._maxRequestBodySizeInKb = undefined;
@@ -400,6 +407,7 @@ export class WebApplicationFirewallPolicyPolicySettingsOutputReference extends c
       this._requestBodyCheck = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
       this._fileUploadLimitInMb = value.fileUploadLimitInMb;
       this._maxRequestBodySizeInKb = value.maxRequestBodySizeInKb;
@@ -521,6 +529,8 @@ export function webApplicationFirewallPolicyTimeoutsToTerraform(struct?: WebAppl
 }
 
 export class WebApplicationFirewallPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -531,7 +541,7 @@ export class WebApplicationFirewallPolicyTimeoutsOutputReference extends cdktf.C
   }
 
   public get internalValue(): WebApplicationFirewallPolicyTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -554,12 +564,14 @@ export class WebApplicationFirewallPolicyTimeoutsOutputReference extends cdktf.C
 
   public set internalValue(value: WebApplicationFirewallPolicyTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

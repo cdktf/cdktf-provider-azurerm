@@ -153,6 +153,8 @@ export function logicAppStandardIdentityToTerraform(struct?: LogicAppStandardIde
 }
 
 export class LogicAppStandardIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -163,7 +165,7 @@ export class LogicAppStandardIdentityOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): LogicAppStandardIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._type) {
       hasAnyValues = true;
@@ -174,9 +176,11 @@ export class LogicAppStandardIdentityOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: LogicAppStandardIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
   }
@@ -296,6 +300,8 @@ export function logicAppStandardSiteConfigCorsToTerraform(struct?: LogicAppStand
 }
 
 export class LogicAppStandardSiteConfigCorsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -306,7 +312,7 @@ export class LogicAppStandardSiteConfigCorsOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): LogicAppStandardSiteConfigCors | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedOrigins) {
       hasAnyValues = true;
@@ -321,10 +327,12 @@ export class LogicAppStandardSiteConfigCorsOutputReference extends cdktf.Complex
 
   public set internalValue(value: LogicAppStandardSiteConfigCors | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedOrigins = undefined;
       this._supportCredentials = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedOrigins = value.allowedOrigins;
       this._supportCredentials = value.supportCredentials;
     }
@@ -454,6 +462,8 @@ export function logicAppStandardSiteConfigToTerraform(struct?: LogicAppStandardS
 }
 
 export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -464,7 +474,7 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): LogicAppStandardSiteConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._alwaysOn) {
       hasAnyValues = true;
@@ -526,7 +536,7 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
       hasAnyValues = true;
       internalValueResult.websocketsEnabled = this._websocketsEnabled;
     }
-    if (this._cors) {
+    if (this._cors?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cors = this._cors?.internalValue;
     }
@@ -535,6 +545,7 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: LogicAppStandardSiteConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._alwaysOn = undefined;
       this._appScaleLimit = undefined;
       this._dotnetFrameworkVersion = undefined;
@@ -553,6 +564,7 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
       this._cors.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._alwaysOn = value.alwaysOn;
       this._appScaleLimit = value.appScaleLimit;
       this._dotnetFrameworkVersion = value.dotnetFrameworkVersion;
@@ -862,6 +874,8 @@ export function logicAppStandardTimeoutsToTerraform(struct?: LogicAppStandardTim
 }
 
 export class LogicAppStandardTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -872,7 +886,7 @@ export class LogicAppStandardTimeoutsOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): LogicAppStandardTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -895,12 +909,14 @@ export class LogicAppStandardTimeoutsOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: LogicAppStandardTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

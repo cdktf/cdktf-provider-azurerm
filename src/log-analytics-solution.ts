@@ -72,6 +72,8 @@ export function logAnalyticsSolutionPlanToTerraform(struct?: LogAnalyticsSolutio
 }
 
 export class LogAnalyticsSolutionPlanOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -82,7 +84,7 @@ export class LogAnalyticsSolutionPlanOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): LogAnalyticsSolutionPlan | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._product) {
       hasAnyValues = true;
@@ -101,11 +103,13 @@ export class LogAnalyticsSolutionPlanOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: LogAnalyticsSolutionPlan | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._product = undefined;
       this._promotionCode = undefined;
       this._publisher = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._product = value.product;
       this._promotionCode = value.promotionCode;
       this._publisher = value.publisher;
@@ -187,6 +191,8 @@ export function logAnalyticsSolutionTimeoutsToTerraform(struct?: LogAnalyticsSol
 }
 
 export class LogAnalyticsSolutionTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -197,7 +203,7 @@ export class LogAnalyticsSolutionTimeoutsOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): LogAnalyticsSolutionTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -220,12 +226,14 @@ export class LogAnalyticsSolutionTimeoutsOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: LogAnalyticsSolutionTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

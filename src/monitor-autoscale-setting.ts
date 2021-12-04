@@ -78,6 +78,8 @@ export function monitorAutoscaleSettingNotificationEmailToTerraform(struct?: Mon
 }
 
 export class MonitorAutoscaleSettingNotificationEmailOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -88,7 +90,7 @@ export class MonitorAutoscaleSettingNotificationEmailOutputReference extends cdk
   }
 
   public get internalValue(): MonitorAutoscaleSettingNotificationEmail | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._customEmails) {
       hasAnyValues = true;
@@ -107,11 +109,13 @@ export class MonitorAutoscaleSettingNotificationEmailOutputReference extends cdk
 
   public set internalValue(value: MonitorAutoscaleSettingNotificationEmail | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._customEmails = undefined;
       this._sendToSubscriptionAdministrator = undefined;
       this._sendToSubscriptionCoAdministrator = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._customEmails = value.customEmails;
       this._sendToSubscriptionAdministrator = value.sendToSubscriptionAdministrator;
       this._sendToSubscriptionCoAdministrator = value.sendToSubscriptionCoAdministrator;
@@ -215,6 +219,8 @@ export function monitorAutoscaleSettingNotificationToTerraform(struct?: MonitorA
 }
 
 export class MonitorAutoscaleSettingNotificationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -225,9 +231,9 @@ export class MonitorAutoscaleSettingNotificationOutputReference extends cdktf.Co
   }
 
   public get internalValue(): MonitorAutoscaleSettingNotification | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._email) {
+    if (this._email?.internalValue) {
       hasAnyValues = true;
       internalValueResult.email = this._email?.internalValue;
     }
@@ -240,10 +246,12 @@ export class MonitorAutoscaleSettingNotificationOutputReference extends cdktf.Co
 
   public set internalValue(value: MonitorAutoscaleSettingNotification | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._email.internalValue = undefined;
       this._webhook = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._email.internalValue = value.email;
       this._webhook = value.webhook;
     }
@@ -310,6 +318,8 @@ export function monitorAutoscaleSettingProfileCapacityToTerraform(struct?: Monit
 }
 
 export class MonitorAutoscaleSettingProfileCapacityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -320,7 +330,7 @@ export class MonitorAutoscaleSettingProfileCapacityOutputReference extends cdktf
   }
 
   public get internalValue(): MonitorAutoscaleSettingProfileCapacity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._default) {
       hasAnyValues = true;
@@ -339,11 +349,13 @@ export class MonitorAutoscaleSettingProfileCapacityOutputReference extends cdktf
 
   public set internalValue(value: MonitorAutoscaleSettingProfileCapacity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._default = undefined;
       this._maximum = undefined;
       this._minimum = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._default = value.default;
       this._maximum = value.maximum;
       this._minimum = value.minimum;
@@ -417,6 +429,8 @@ export function monitorAutoscaleSettingProfileFixedDateToTerraform(struct?: Moni
 }
 
 export class MonitorAutoscaleSettingProfileFixedDateOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -427,7 +441,7 @@ export class MonitorAutoscaleSettingProfileFixedDateOutputReference extends cdkt
   }
 
   public get internalValue(): MonitorAutoscaleSettingProfileFixedDate | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._end) {
       hasAnyValues = true;
@@ -446,11 +460,13 @@ export class MonitorAutoscaleSettingProfileFixedDateOutputReference extends cdkt
 
   public set internalValue(value: MonitorAutoscaleSettingProfileFixedDate | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._end = undefined;
       this._start = undefined;
       this._timezone = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._end = value.end;
       this._start = value.start;
       this._timezone = value.timezone;
@@ -532,6 +548,8 @@ export function monitorAutoscaleSettingProfileRecurrenceToTerraform(struct?: Mon
 }
 
 export class MonitorAutoscaleSettingProfileRecurrenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -542,7 +560,7 @@ export class MonitorAutoscaleSettingProfileRecurrenceOutputReference extends cdk
   }
 
   public get internalValue(): MonitorAutoscaleSettingProfileRecurrence | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._days) {
       hasAnyValues = true;
@@ -565,12 +583,14 @@ export class MonitorAutoscaleSettingProfileRecurrenceOutputReference extends cdk
 
   public set internalValue(value: MonitorAutoscaleSettingProfileRecurrence | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._days = undefined;
       this._hours = undefined;
       this._minutes = undefined;
       this._timezone = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._days = value.days;
       this._hours = value.hours;
       this._minutes = value.minutes;
@@ -732,6 +752,8 @@ export function monitorAutoscaleSettingProfileRuleMetricTriggerToTerraform(struc
 }
 
 export class MonitorAutoscaleSettingProfileRuleMetricTriggerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -742,7 +764,7 @@ export class MonitorAutoscaleSettingProfileRuleMetricTriggerOutputReference exte
   }
 
   public get internalValue(): MonitorAutoscaleSettingProfileRuleMetricTrigger | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._divideByInstanceCount) {
       hasAnyValues = true;
@@ -793,6 +815,7 @@ export class MonitorAutoscaleSettingProfileRuleMetricTriggerOutputReference exte
 
   public set internalValue(value: MonitorAutoscaleSettingProfileRuleMetricTrigger | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._divideByInstanceCount = undefined;
       this._metricName = undefined;
       this._metricNamespace = undefined;
@@ -806,6 +829,7 @@ export class MonitorAutoscaleSettingProfileRuleMetricTriggerOutputReference exte
       this._dimensions = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._divideByInstanceCount = value.divideByInstanceCount;
       this._metricName = value.metricName;
       this._metricNamespace = value.metricNamespace;
@@ -1006,6 +1030,8 @@ export function monitorAutoscaleSettingProfileRuleScaleActionToTerraform(struct?
 }
 
 export class MonitorAutoscaleSettingProfileRuleScaleActionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1016,7 +1042,7 @@ export class MonitorAutoscaleSettingProfileRuleScaleActionOutputReference extend
   }
 
   public get internalValue(): MonitorAutoscaleSettingProfileRuleScaleAction | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cooldown) {
       hasAnyValues = true;
@@ -1039,12 +1065,14 @@ export class MonitorAutoscaleSettingProfileRuleScaleActionOutputReference extend
 
   public set internalValue(value: MonitorAutoscaleSettingProfileRuleScaleAction | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cooldown = undefined;
       this._direction = undefined;
       this._type = undefined;
       this._value = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cooldown = value.cooldown;
       this._direction = value.direction;
       this._type = value.type;
@@ -1208,6 +1236,8 @@ export function monitorAutoscaleSettingTimeoutsToTerraform(struct?: MonitorAutos
 }
 
 export class MonitorAutoscaleSettingTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1218,7 +1248,7 @@ export class MonitorAutoscaleSettingTimeoutsOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): MonitorAutoscaleSettingTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1241,12 +1271,14 @@ export class MonitorAutoscaleSettingTimeoutsOutputReference extends cdktf.Comple
 
   public set internalValue(value: MonitorAutoscaleSettingTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

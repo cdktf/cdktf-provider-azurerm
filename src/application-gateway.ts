@@ -219,6 +219,8 @@ export function applicationGatewayAutoscaleConfigurationToTerraform(struct?: App
 }
 
 export class ApplicationGatewayAutoscaleConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -229,7 +231,7 @@ export class ApplicationGatewayAutoscaleConfigurationOutputReference extends cdk
   }
 
   public get internalValue(): ApplicationGatewayAutoscaleConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxCapacity) {
       hasAnyValues = true;
@@ -244,10 +246,12 @@ export class ApplicationGatewayAutoscaleConfigurationOutputReference extends cdk
 
   public set internalValue(value: ApplicationGatewayAutoscaleConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxCapacity = undefined;
       this._minCapacity = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxCapacity = value.maxCapacity;
       this._minCapacity = value.minCapacity;
     }
@@ -349,6 +353,8 @@ export function applicationGatewayBackendHttpSettingsConnectionDrainingToTerrafo
 }
 
 export class ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -359,7 +365,7 @@ export class ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputRefere
   }
 
   public get internalValue(): ApplicationGatewayBackendHttpSettingsConnectionDraining | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._drainTimeoutSec) {
       hasAnyValues = true;
@@ -374,10 +380,12 @@ export class ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputRefere
 
   public set internalValue(value: ApplicationGatewayBackendHttpSettingsConnectionDraining | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._drainTimeoutSec = undefined;
       this._enabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._drainTimeoutSec = value.drainTimeoutSec;
       this._enabled = value.enabled;
     }
@@ -707,6 +715,8 @@ export function applicationGatewayIdentityToTerraform(struct?: ApplicationGatewa
 }
 
 export class ApplicationGatewayIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -717,7 +727,7 @@ export class ApplicationGatewayIdentityOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): ApplicationGatewayIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -732,10 +742,12 @@ export class ApplicationGatewayIdentityOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: ApplicationGatewayIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -793,6 +805,8 @@ export function applicationGatewayProbeMatchToTerraform(struct?: ApplicationGate
 }
 
 export class ApplicationGatewayProbeMatchOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -803,7 +817,7 @@ export class ApplicationGatewayProbeMatchOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): ApplicationGatewayProbeMatch | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._body) {
       hasAnyValues = true;
@@ -818,10 +832,12 @@ export class ApplicationGatewayProbeMatchOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: ApplicationGatewayProbeMatch | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._body = undefined;
       this._statusCode = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._body = value.body;
       this._statusCode = value.statusCode;
     }
@@ -1131,6 +1147,8 @@ export function applicationGatewayRewriteRuleSetRewriteRuleUrlToTerraform(struct
 }
 
 export class ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1141,7 +1159,7 @@ export class ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference exten
   }
 
   public get internalValue(): ApplicationGatewayRewriteRuleSetRewriteRuleUrl | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._path) {
       hasAnyValues = true;
@@ -1160,11 +1178,13 @@ export class ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference exten
 
   public set internalValue(value: ApplicationGatewayRewriteRuleSetRewriteRuleUrl | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._path = undefined;
       this._queryString = undefined;
       this._reroute = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._path = value.path;
       this._queryString = value.queryString;
       this._reroute = value.reroute;
@@ -1321,6 +1341,8 @@ export function applicationGatewaySkuToTerraform(struct?: ApplicationGatewaySkuO
 }
 
 export class ApplicationGatewaySkuOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1331,7 +1353,7 @@ export class ApplicationGatewaySkuOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): ApplicationGatewaySku | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._capacity) {
       hasAnyValues = true;
@@ -1350,11 +1372,13 @@ export class ApplicationGatewaySkuOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: ApplicationGatewaySku | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._capacity = undefined;
       this._name = undefined;
       this._tier = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._capacity = value.capacity;
       this._name = value.name;
       this._tier = value.tier;
@@ -1473,6 +1497,8 @@ export function applicationGatewaySslPolicyToTerraform(struct?: ApplicationGatew
 }
 
 export class ApplicationGatewaySslPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1483,7 +1509,7 @@ export class ApplicationGatewaySslPolicyOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): ApplicationGatewaySslPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cipherSuites) {
       hasAnyValues = true;
@@ -1510,6 +1536,7 @@ export class ApplicationGatewaySslPolicyOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: ApplicationGatewaySslPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cipherSuites = undefined;
       this._disabledProtocols = undefined;
       this._minProtocolVersion = undefined;
@@ -1517,6 +1544,7 @@ export class ApplicationGatewaySslPolicyOutputReference extends cdktf.ComplexObj
       this._policyType = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cipherSuites = value.cipherSuites;
       this._disabledProtocols = value.disabledProtocols;
       this._minProtocolVersion = value.minProtocolVersion;
@@ -1643,6 +1671,8 @@ export function applicationGatewaySslProfileSslPolicyToTerraform(struct?: Applic
 }
 
 export class ApplicationGatewaySslProfileSslPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1653,7 +1683,7 @@ export class ApplicationGatewaySslProfileSslPolicyOutputReference extends cdktf.
   }
 
   public get internalValue(): ApplicationGatewaySslProfileSslPolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cipherSuites) {
       hasAnyValues = true;
@@ -1680,6 +1710,7 @@ export class ApplicationGatewaySslProfileSslPolicyOutputReference extends cdktf.
 
   public set internalValue(value: ApplicationGatewaySslProfileSslPolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cipherSuites = undefined;
       this._disabledProtocols = undefined;
       this._minProtocolVersion = undefined;
@@ -1687,6 +1718,7 @@ export class ApplicationGatewaySslProfileSslPolicyOutputReference extends cdktf.
       this._policyType = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cipherSuites = value.cipherSuites;
       this._disabledProtocols = value.disabledProtocols;
       this._minProtocolVersion = value.minProtocolVersion;
@@ -1842,6 +1874,8 @@ export function applicationGatewayTimeoutsToTerraform(struct?: ApplicationGatewa
 }
 
 export class ApplicationGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1852,7 +1886,7 @@ export class ApplicationGatewayTimeoutsOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): ApplicationGatewayTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1875,12 +1909,14 @@ export class ApplicationGatewayTimeoutsOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: ApplicationGatewayTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -2198,6 +2234,8 @@ export function applicationGatewayWafConfigurationToTerraform(struct?: Applicati
 }
 
 export class ApplicationGatewayWafConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2208,7 +2246,7 @@ export class ApplicationGatewayWafConfigurationOutputReference extends cdktf.Com
   }
 
   public get internalValue(): ApplicationGatewayWafConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -2251,6 +2289,7 @@ export class ApplicationGatewayWafConfigurationOutputReference extends cdktf.Com
 
   public set internalValue(value: ApplicationGatewayWafConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
       this._fileUploadLimitMb = undefined;
       this._firewallMode = undefined;
@@ -2262,6 +2301,7 @@ export class ApplicationGatewayWafConfigurationOutputReference extends cdktf.Com
       this._exclusion = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
       this._fileUploadLimitMb = value.fileUploadLimitMb;
       this._firewallMode = value.firewallMode;

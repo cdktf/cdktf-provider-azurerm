@@ -114,6 +114,8 @@ export function virtualNetworkDdosProtectionPlanToTerraform(struct?: VirtualNetw
 }
 
 export class VirtualNetworkDdosProtectionPlanOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -124,7 +126,7 @@ export class VirtualNetworkDdosProtectionPlanOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): VirtualNetworkDdosProtectionPlan | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enable) {
       hasAnyValues = true;
@@ -139,10 +141,12 @@ export class VirtualNetworkDdosProtectionPlanOutputReference extends cdktf.Compl
 
   public set internalValue(value: VirtualNetworkDdosProtectionPlan | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enable = undefined;
       this._id = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enable = value.enable;
       this._id = value.id;
     }
@@ -207,6 +211,8 @@ export function virtualNetworkTimeoutsToTerraform(struct?: VirtualNetworkTimeout
 }
 
 export class VirtualNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -217,7 +223,7 @@ export class VirtualNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): VirtualNetworkTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -240,12 +246,14 @@ export class VirtualNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: VirtualNetworkTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

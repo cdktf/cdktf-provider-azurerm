@@ -108,6 +108,8 @@ export function synapseSparkPoolAutoPauseToTerraform(struct?: SynapseSparkPoolAu
 }
 
 export class SynapseSparkPoolAutoPauseOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -118,7 +120,7 @@ export class SynapseSparkPoolAutoPauseOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): SynapseSparkPoolAutoPause | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._delayInMinutes) {
       hasAnyValues = true;
@@ -129,9 +131,11 @@ export class SynapseSparkPoolAutoPauseOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: SynapseSparkPoolAutoPause | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._delayInMinutes = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._delayInMinutes = value.delayInMinutes;
     }
   }
@@ -172,6 +176,8 @@ export function synapseSparkPoolAutoScaleToTerraform(struct?: SynapseSparkPoolAu
 }
 
 export class SynapseSparkPoolAutoScaleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -182,7 +188,7 @@ export class SynapseSparkPoolAutoScaleOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): SynapseSparkPoolAutoScale | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxNodeCount) {
       hasAnyValues = true;
@@ -197,10 +203,12 @@ export class SynapseSparkPoolAutoScaleOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: SynapseSparkPoolAutoScale | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxNodeCount = undefined;
       this._minNodeCount = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxNodeCount = value.maxNodeCount;
       this._minNodeCount = value.minNodeCount;
     }
@@ -255,6 +263,8 @@ export function synapseSparkPoolLibraryRequirementToTerraform(struct?: SynapseSp
 }
 
 export class SynapseSparkPoolLibraryRequirementOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -265,7 +275,7 @@ export class SynapseSparkPoolLibraryRequirementOutputReference extends cdktf.Com
   }
 
   public get internalValue(): SynapseSparkPoolLibraryRequirement | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._content) {
       hasAnyValues = true;
@@ -280,10 +290,12 @@ export class SynapseSparkPoolLibraryRequirementOutputReference extends cdktf.Com
 
   public set internalValue(value: SynapseSparkPoolLibraryRequirement | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._content = undefined;
       this._filename = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._content = value.content;
       this._filename = value.filename;
     }
@@ -338,6 +350,8 @@ export function synapseSparkPoolSparkConfigToTerraform(struct?: SynapseSparkPool
 }
 
 export class SynapseSparkPoolSparkConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -348,7 +362,7 @@ export class SynapseSparkPoolSparkConfigOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): SynapseSparkPoolSparkConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._content) {
       hasAnyValues = true;
@@ -363,10 +377,12 @@ export class SynapseSparkPoolSparkConfigOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: SynapseSparkPoolSparkConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._content = undefined;
       this._filename = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._content = value.content;
       this._filename = value.filename;
     }
@@ -431,6 +447,8 @@ export function synapseSparkPoolTimeoutsToTerraform(struct?: SynapseSparkPoolTim
 }
 
 export class SynapseSparkPoolTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -441,7 +459,7 @@ export class SynapseSparkPoolTimeoutsOutputReference extends cdktf.ComplexObject
   }
 
   public get internalValue(): SynapseSparkPoolTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -464,12 +482,14 @@ export class SynapseSparkPoolTimeoutsOutputReference extends cdktf.ComplexObject
 
   public set internalValue(value: SynapseSparkPoolTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

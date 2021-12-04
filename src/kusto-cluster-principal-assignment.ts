@@ -75,6 +75,8 @@ export function kustoClusterPrincipalAssignmentTimeoutsToTerraform(struct?: Kust
 }
 
 export class KustoClusterPrincipalAssignmentTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -85,7 +87,7 @@ export class KustoClusterPrincipalAssignmentTimeoutsOutputReference extends cdkt
   }
 
   public get internalValue(): KustoClusterPrincipalAssignmentTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -108,12 +110,14 @@ export class KustoClusterPrincipalAssignmentTimeoutsOutputReference extends cdkt
 
   public set internalValue(value: KustoClusterPrincipalAssignmentTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

@@ -166,6 +166,8 @@ export function dataAzurermStorageManagementPolicyTimeoutsToTerraform(struct?: D
 }
 
 export class DataAzurermStorageManagementPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -176,7 +178,7 @@ export class DataAzurermStorageManagementPolicyTimeoutsOutputReference extends c
   }
 
   public get internalValue(): DataAzurermStorageManagementPolicyTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read) {
       hasAnyValues = true;
@@ -187,9 +189,11 @@ export class DataAzurermStorageManagementPolicyTimeoutsOutputReference extends c
 
   public set internalValue(value: DataAzurermStorageManagementPolicyTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._read = value.read;
     }
   }

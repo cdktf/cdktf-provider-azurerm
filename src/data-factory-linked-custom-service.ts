@@ -75,6 +75,8 @@ export function dataFactoryLinkedCustomServiceIntegrationRuntimeToTerraform(stru
 }
 
 export class DataFactoryLinkedCustomServiceIntegrationRuntimeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -85,7 +87,7 @@ export class DataFactoryLinkedCustomServiceIntegrationRuntimeOutputReference ext
   }
 
   public get internalValue(): DataFactoryLinkedCustomServiceIntegrationRuntime | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -100,10 +102,12 @@ export class DataFactoryLinkedCustomServiceIntegrationRuntimeOutputReference ext
 
   public set internalValue(value: DataFactoryLinkedCustomServiceIntegrationRuntime | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._parameters = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._parameters = value.parameters;
     }
@@ -172,6 +176,8 @@ export function dataFactoryLinkedCustomServiceTimeoutsToTerraform(struct?: DataF
 }
 
 export class DataFactoryLinkedCustomServiceTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -182,7 +188,7 @@ export class DataFactoryLinkedCustomServiceTimeoutsOutputReference extends cdktf
   }
 
   public get internalValue(): DataFactoryLinkedCustomServiceTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -205,12 +211,14 @@ export class DataFactoryLinkedCustomServiceTimeoutsOutputReference extends cdktf
 
   public set internalValue(value: DataFactoryLinkedCustomServiceTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

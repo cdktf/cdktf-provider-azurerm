@@ -113,6 +113,8 @@ export function dataFactoryLinkedServiceAzureDatabricksInstancePoolToTerraform(s
 }
 
 export class DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -123,7 +125,7 @@ export class DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference 
   }
 
   public get internalValue(): DataFactoryLinkedServiceAzureDatabricksInstancePool | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._clusterVersion) {
       hasAnyValues = true;
@@ -146,12 +148,14 @@ export class DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference 
 
   public set internalValue(value: DataFactoryLinkedServiceAzureDatabricksInstancePool | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._clusterVersion = undefined;
       this._instancePoolId = undefined;
       this._maxNumberOfWorkers = undefined;
       this._minNumberOfWorkers = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._clusterVersion = value.clusterVersion;
       this._instancePoolId = value.instancePoolId;
       this._maxNumberOfWorkers = value.maxNumberOfWorkers;
@@ -240,6 +244,8 @@ export function dataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordToTerrafo
 }
 
 export class DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -250,7 +256,7 @@ export class DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputRefere
   }
 
   public get internalValue(): DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._linkedServiceName) {
       hasAnyValues = true;
@@ -265,10 +271,12 @@ export class DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputRefere
 
   public set internalValue(value: DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._linkedServiceName = undefined;
       this._secretName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._linkedServiceName = value.linkedServiceName;
       this._secretName = value.secretName;
     }
@@ -363,6 +371,8 @@ export function dataFactoryLinkedServiceAzureDatabricksNewClusterConfigToTerrafo
 }
 
 export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -373,7 +383,7 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
   }
 
   public get internalValue(): DataFactoryLinkedServiceAzureDatabricksNewClusterConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._clusterVersion) {
       hasAnyValues = true;
@@ -420,6 +430,7 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
 
   public set internalValue(value: DataFactoryLinkedServiceAzureDatabricksNewClusterConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._clusterVersion = undefined;
       this._customTags = undefined;
       this._driverNodeType = undefined;
@@ -432,6 +443,7 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
       this._sparkEnvironmentVariables = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._clusterVersion = value.clusterVersion;
       this._customTags = value.customTags;
       this._driverNodeType = value.driverNodeType;
@@ -635,6 +647,8 @@ export function dataFactoryLinkedServiceAzureDatabricksTimeoutsToTerraform(struc
 }
 
 export class DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -645,7 +659,7 @@ export class DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference exte
   }
 
   public get internalValue(): DataFactoryLinkedServiceAzureDatabricksTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -668,12 +682,14 @@ export class DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference exte
 
   public set internalValue(value: DataFactoryLinkedServiceAzureDatabricksTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

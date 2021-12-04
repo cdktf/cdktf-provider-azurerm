@@ -104,6 +104,8 @@ export function sentinelAlertRuleScheduledEventGroupingToTerraform(struct?: Sent
 }
 
 export class SentinelAlertRuleScheduledEventGroupingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -114,7 +116,7 @@ export class SentinelAlertRuleScheduledEventGroupingOutputReference extends cdkt
   }
 
   public get internalValue(): SentinelAlertRuleScheduledEventGrouping | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._aggregationMethod) {
       hasAnyValues = true;
@@ -125,9 +127,11 @@ export class SentinelAlertRuleScheduledEventGroupingOutputReference extends cdkt
 
   public set internalValue(value: SentinelAlertRuleScheduledEventGrouping | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._aggregationMethod = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._aggregationMethod = value.aggregationMethod;
     }
   }
@@ -183,6 +187,8 @@ export function sentinelAlertRuleScheduledIncidentConfigurationGroupingToTerrafo
 }
 
 export class SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -193,7 +199,7 @@ export class SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputRefere
   }
 
   public get internalValue(): SentinelAlertRuleScheduledIncidentConfigurationGrouping | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -220,6 +226,7 @@ export class SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputRefere
 
   public set internalValue(value: SentinelAlertRuleScheduledIncidentConfigurationGrouping | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
       this._entityMatchingMethod = undefined;
       this._groupBy = undefined;
@@ -227,6 +234,7 @@ export class SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputRefere
       this._reopenClosedIncidents = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
       this._entityMatchingMethod = value.entityMatchingMethod;
       this._groupBy = value.groupBy;
@@ -340,6 +348,8 @@ export function sentinelAlertRuleScheduledIncidentConfigurationToTerraform(struc
 }
 
 export class SentinelAlertRuleScheduledIncidentConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -350,13 +360,13 @@ export class SentinelAlertRuleScheduledIncidentConfigurationOutputReference exte
   }
 
   public get internalValue(): SentinelAlertRuleScheduledIncidentConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._createIncident) {
       hasAnyValues = true;
       internalValueResult.createIncident = this._createIncident;
     }
-    if (this._grouping) {
+    if (this._grouping?.internalValue) {
       hasAnyValues = true;
       internalValueResult.grouping = this._grouping?.internalValue;
     }
@@ -365,10 +375,12 @@ export class SentinelAlertRuleScheduledIncidentConfigurationOutputReference exte
 
   public set internalValue(value: SentinelAlertRuleScheduledIncidentConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._createIncident = undefined;
       this._grouping.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._createIncident = value.createIncident;
       this._grouping.internalValue = value.grouping;
     }
@@ -433,6 +445,8 @@ export function sentinelAlertRuleScheduledTimeoutsToTerraform(struct?: SentinelA
 }
 
 export class SentinelAlertRuleScheduledTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -443,7 +457,7 @@ export class SentinelAlertRuleScheduledTimeoutsOutputReference extends cdktf.Com
   }
 
   public get internalValue(): SentinelAlertRuleScheduledTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -466,12 +480,14 @@ export class SentinelAlertRuleScheduledTimeoutsOutputReference extends cdktf.Com
 
   public set internalValue(value: SentinelAlertRuleScheduledTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

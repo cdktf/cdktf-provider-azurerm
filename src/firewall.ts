@@ -131,6 +131,8 @@ export function firewallManagementIpConfigurationToTerraform(struct?: FirewallMa
 }
 
 export class FirewallManagementIpConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -141,7 +143,7 @@ export class FirewallManagementIpConfigurationOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): FirewallManagementIpConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -160,11 +162,13 @@ export class FirewallManagementIpConfigurationOutputReference extends cdktf.Comp
 
   public set internalValue(value: FirewallManagementIpConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._publicIpAddressId = undefined;
       this._subnetId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._publicIpAddressId = value.publicIpAddressId;
       this._subnetId = value.subnetId;
@@ -243,6 +247,8 @@ export function firewallTimeoutsToTerraform(struct?: FirewallTimeoutsOutputRefer
 }
 
 export class FirewallTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -253,7 +259,7 @@ export class FirewallTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): FirewallTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -276,12 +282,14 @@ export class FirewallTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: FirewallTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -376,6 +384,8 @@ export function firewallVirtualHubToTerraform(struct?: FirewallVirtualHubOutputR
 }
 
 export class FirewallVirtualHubOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -386,7 +396,7 @@ export class FirewallVirtualHubOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): FirewallVirtualHub | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._publicIpCount) {
       hasAnyValues = true;
@@ -401,10 +411,12 @@ export class FirewallVirtualHubOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: FirewallVirtualHub | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._publicIpCount = undefined;
       this._virtualHubId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._publicIpCount = value.publicIpCount;
       this._virtualHubId = value.virtualHubId;
     }

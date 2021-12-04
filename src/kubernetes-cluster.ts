@@ -239,6 +239,8 @@ export function kubernetesClusterAddonProfileAciConnectorLinuxToTerraform(struct
 }
 
 export class KubernetesClusterAddonProfileAciConnectorLinuxOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -249,7 +251,7 @@ export class KubernetesClusterAddonProfileAciConnectorLinuxOutputReference exten
   }
 
   public get internalValue(): KubernetesClusterAddonProfileAciConnectorLinux | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -264,10 +266,12 @@ export class KubernetesClusterAddonProfileAciConnectorLinuxOutputReference exten
 
   public set internalValue(value: KubernetesClusterAddonProfileAciConnectorLinux | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
       this._subnetName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
       this._subnetName = value.subnetName;
     }
@@ -320,6 +324,8 @@ export function kubernetesClusterAddonProfileAzurePolicyToTerraform(struct?: Kub
 }
 
 export class KubernetesClusterAddonProfileAzurePolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -330,7 +336,7 @@ export class KubernetesClusterAddonProfileAzurePolicyOutputReference extends cdk
   }
 
   public get internalValue(): KubernetesClusterAddonProfileAzurePolicy | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -341,9 +347,11 @@ export class KubernetesClusterAddonProfileAzurePolicyOutputReference extends cdk
 
   public set internalValue(value: KubernetesClusterAddonProfileAzurePolicy | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
     }
   }
@@ -379,6 +387,8 @@ export function kubernetesClusterAddonProfileHttpApplicationRoutingToTerraform(s
 }
 
 export class KubernetesClusterAddonProfileHttpApplicationRoutingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -389,7 +399,7 @@ export class KubernetesClusterAddonProfileHttpApplicationRoutingOutputReference 
   }
 
   public get internalValue(): KubernetesClusterAddonProfileHttpApplicationRouting | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -400,9 +410,11 @@ export class KubernetesClusterAddonProfileHttpApplicationRoutingOutputReference 
 
   public set internalValue(value: KubernetesClusterAddonProfileHttpApplicationRouting | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
     }
   }
@@ -458,6 +470,8 @@ export function kubernetesClusterAddonProfileIngressApplicationGatewayToTerrafor
 }
 
 export class KubernetesClusterAddonProfileIngressApplicationGatewayOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -468,7 +482,7 @@ export class KubernetesClusterAddonProfileIngressApplicationGatewayOutputReferen
   }
 
   public get internalValue(): KubernetesClusterAddonProfileIngressApplicationGateway | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -495,6 +509,7 @@ export class KubernetesClusterAddonProfileIngressApplicationGatewayOutputReferen
 
   public set internalValue(value: KubernetesClusterAddonProfileIngressApplicationGateway | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
       this._gatewayId = undefined;
       this._gatewayName = undefined;
@@ -502,6 +517,7 @@ export class KubernetesClusterAddonProfileIngressApplicationGatewayOutputReferen
       this._subnetId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
       this._gatewayId = value.gatewayId;
       this._gatewayName = value.gatewayName;
@@ -605,6 +621,8 @@ export function kubernetesClusterAddonProfileKubeDashboardToTerraform(struct?: K
 }
 
 export class KubernetesClusterAddonProfileKubeDashboardOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -615,7 +633,7 @@ export class KubernetesClusterAddonProfileKubeDashboardOutputReference extends c
   }
 
   public get internalValue(): KubernetesClusterAddonProfileKubeDashboard | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -626,9 +644,11 @@ export class KubernetesClusterAddonProfileKubeDashboardOutputReference extends c
 
   public set internalValue(value: KubernetesClusterAddonProfileKubeDashboard | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
     }
   }
@@ -669,6 +689,8 @@ export function kubernetesClusterAddonProfileOmsAgentToTerraform(struct?: Kubern
 }
 
 export class KubernetesClusterAddonProfileOmsAgentOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -679,7 +701,7 @@ export class KubernetesClusterAddonProfileOmsAgentOutputReference extends cdktf.
   }
 
   public get internalValue(): KubernetesClusterAddonProfileOmsAgent | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -694,10 +716,12 @@ export class KubernetesClusterAddonProfileOmsAgentOutputReference extends cdktf.
 
   public set internalValue(value: KubernetesClusterAddonProfileOmsAgent | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
       this._logAnalyticsWorkspaceId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
       this._logAnalyticsWorkspaceId = value.logAnalyticsWorkspaceId;
     }
@@ -750,6 +774,8 @@ export function kubernetesClusterAddonProfileOpenServiceMeshToTerraform(struct?:
 }
 
 export class KubernetesClusterAddonProfileOpenServiceMeshOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -760,7 +786,7 @@ export class KubernetesClusterAddonProfileOpenServiceMeshOutputReference extends
   }
 
   public get internalValue(): KubernetesClusterAddonProfileOpenServiceMesh | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -771,9 +797,11 @@ export class KubernetesClusterAddonProfileOpenServiceMeshOutputReference extends
 
   public set internalValue(value: KubernetesClusterAddonProfileOpenServiceMesh | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
     }
   }
@@ -853,6 +881,8 @@ export function kubernetesClusterAddonProfileToTerraform(struct?: KubernetesClus
 }
 
 export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -863,33 +893,33 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): KubernetesClusterAddonProfile | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._aciConnectorLinux) {
+    if (this._aciConnectorLinux?.internalValue) {
       hasAnyValues = true;
       internalValueResult.aciConnectorLinux = this._aciConnectorLinux?.internalValue;
     }
-    if (this._azurePolicy) {
+    if (this._azurePolicy?.internalValue) {
       hasAnyValues = true;
       internalValueResult.azurePolicy = this._azurePolicy?.internalValue;
     }
-    if (this._httpApplicationRouting) {
+    if (this._httpApplicationRouting?.internalValue) {
       hasAnyValues = true;
       internalValueResult.httpApplicationRouting = this._httpApplicationRouting?.internalValue;
     }
-    if (this._ingressApplicationGateway) {
+    if (this._ingressApplicationGateway?.internalValue) {
       hasAnyValues = true;
       internalValueResult.ingressApplicationGateway = this._ingressApplicationGateway?.internalValue;
     }
-    if (this._kubeDashboard) {
+    if (this._kubeDashboard?.internalValue) {
       hasAnyValues = true;
       internalValueResult.kubeDashboard = this._kubeDashboard?.internalValue;
     }
-    if (this._omsAgent) {
+    if (this._omsAgent?.internalValue) {
       hasAnyValues = true;
       internalValueResult.omsAgent = this._omsAgent?.internalValue;
     }
-    if (this._openServiceMesh) {
+    if (this._openServiceMesh?.internalValue) {
       hasAnyValues = true;
       internalValueResult.openServiceMesh = this._openServiceMesh?.internalValue;
     }
@@ -898,6 +928,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: KubernetesClusterAddonProfile | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._aciConnectorLinux.internalValue = undefined;
       this._azurePolicy.internalValue = undefined;
       this._httpApplicationRouting.internalValue = undefined;
@@ -907,6 +938,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
       this._openServiceMesh.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._aciConnectorLinux.internalValue = value.aciConnectorLinux;
       this._azurePolicy.internalValue = value.azurePolicy;
       this._httpApplicationRouting.internalValue = value.httpApplicationRouting;
@@ -1127,6 +1159,8 @@ export function kubernetesClusterAutoScalerProfileToTerraform(struct?: Kubernete
 }
 
 export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1137,7 +1171,7 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
   }
 
   public get internalValue(): KubernetesClusterAutoScalerProfile | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._balanceSimilarNodeGroups) {
       hasAnyValues = true;
@@ -1212,6 +1246,7 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
 
   public set internalValue(value: KubernetesClusterAutoScalerProfile | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._balanceSimilarNodeGroups = undefined;
       this._emptyBulkDeleteMax = undefined;
       this._expander = undefined;
@@ -1231,6 +1266,7 @@ export class KubernetesClusterAutoScalerProfileOutputReference extends cdktf.Com
       this._skipNodesWithSystemPods = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._balanceSimilarNodeGroups = value.balanceSimilarNodeGroups;
       this._emptyBulkDeleteMax = value.emptyBulkDeleteMax;
       this._expander = value.expander;
@@ -1586,6 +1622,8 @@ export function kubernetesClusterDefaultNodePoolKubeletConfigToTerraform(struct?
 }
 
 export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1596,7 +1634,7 @@ export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extend
   }
 
   public get internalValue(): KubernetesClusterDefaultNodePoolKubeletConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedUnsafeSysctls) {
       hasAnyValues = true;
@@ -1643,6 +1681,7 @@ export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extend
 
   public set internalValue(value: KubernetesClusterDefaultNodePoolKubeletConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedUnsafeSysctls = undefined;
       this._containerLogMaxLine = undefined;
       this._containerLogMaxSizeMb = undefined;
@@ -1655,6 +1694,7 @@ export class KubernetesClusterDefaultNodePoolKubeletConfigOutputReference extend
       this._topologyManagerPolicy = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedUnsafeSysctls = value.allowedUnsafeSysctls;
       this._containerLogMaxLine = value.containerLogMaxLine;
       this._containerLogMaxSizeMb = value.containerLogMaxSizeMb;
@@ -1986,6 +2026,8 @@ export function kubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigToTerra
 }
 
 export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1996,7 +2038,7 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
   }
 
   public get internalValue(): KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._fsAioMaxNr) {
       hasAnyValues = true;
@@ -2119,6 +2161,7 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
 
   public set internalValue(value: KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._fsAioMaxNr = undefined;
       this._fsFileMax = undefined;
       this._fsInotifyMaxUserWatches = undefined;
@@ -2150,6 +2193,7 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputRefe
       this._vmVfsCachePressure = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._fsAioMaxNr = value.fsAioMaxNr;
       this._fsFileMax = value.fsFileMax;
       this._fsInotifyMaxUserWatches = value.fsInotifyMaxUserWatches;
@@ -2681,6 +2725,8 @@ export function kubernetesClusterDefaultNodePoolLinuxOsConfigToTerraform(struct?
 }
 
 export class KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2691,7 +2737,7 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference extend
   }
 
   public get internalValue(): KubernetesClusterDefaultNodePoolLinuxOsConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._swapFileSizeMb) {
       hasAnyValues = true;
@@ -2705,7 +2751,7 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference extend
       hasAnyValues = true;
       internalValueResult.transparentHugePageEnabled = this._transparentHugePageEnabled;
     }
-    if (this._sysctlConfig) {
+    if (this._sysctlConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.sysctlConfig = this._sysctlConfig?.internalValue;
     }
@@ -2714,12 +2760,14 @@ export class KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference extend
 
   public set internalValue(value: KubernetesClusterDefaultNodePoolLinuxOsConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._swapFileSizeMb = undefined;
       this._transparentHugePageDefrag = undefined;
       this._transparentHugePageEnabled = undefined;
       this._sysctlConfig.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._swapFileSizeMb = value.swapFileSizeMb;
       this._transparentHugePageDefrag = value.transparentHugePageDefrag;
       this._transparentHugePageEnabled = value.transparentHugePageEnabled;
@@ -2809,6 +2857,8 @@ export function kubernetesClusterDefaultNodePoolUpgradeSettingsToTerraform(struc
 }
 
 export class KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2819,7 +2869,7 @@ export class KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference exte
   }
 
   public get internalValue(): KubernetesClusterDefaultNodePoolUpgradeSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxSurge) {
       hasAnyValues = true;
@@ -2830,9 +2880,11 @@ export class KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference exte
 
   public set internalValue(value: KubernetesClusterDefaultNodePoolUpgradeSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxSurge = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxSurge = value.maxSurge;
     }
   }
@@ -3014,6 +3066,8 @@ export function kubernetesClusterDefaultNodePoolToTerraform(struct?: KubernetesC
 }
 
 export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3024,7 +3078,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): KubernetesClusterDefaultNodePool | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._availabilityZones) {
       hasAnyValues = true;
@@ -3130,15 +3184,15 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
       hasAnyValues = true;
       internalValueResult.vnetSubnetId = this._vnetSubnetId;
     }
-    if (this._kubeletConfig) {
+    if (this._kubeletConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.kubeletConfig = this._kubeletConfig?.internalValue;
     }
-    if (this._linuxOsConfig) {
+    if (this._linuxOsConfig?.internalValue) {
       hasAnyValues = true;
       internalValueResult.linuxOsConfig = this._linuxOsConfig?.internalValue;
     }
-    if (this._upgradeSettings) {
+    if (this._upgradeSettings?.internalValue) {
       hasAnyValues = true;
       internalValueResult.upgradeSettings = this._upgradeSettings?.internalValue;
     }
@@ -3147,6 +3201,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
 
   public set internalValue(value: KubernetesClusterDefaultNodePool | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._availabilityZones = undefined;
       this._enableAutoScaling = undefined;
       this._enableHostEncryption = undefined;
@@ -3178,6 +3233,7 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
       this._upgradeSettings.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._availabilityZones = value.availabilityZones;
       this._enableAutoScaling = value.enableAutoScaling;
       this._enableHostEncryption = value.enableHostEncryption;
@@ -3693,6 +3749,8 @@ export function kubernetesClusterIdentityToTerraform(struct?: KubernetesClusterI
 }
 
 export class KubernetesClusterIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3703,7 +3761,7 @@ export class KubernetesClusterIdentityOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): KubernetesClusterIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._type) {
       hasAnyValues = true;
@@ -3718,10 +3776,12 @@ export class KubernetesClusterIdentityOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: KubernetesClusterIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._type = undefined;
       this._userAssignedIdentityId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
       this._userAssignedIdentityId = value.userAssignedIdentityId;
     }
@@ -3784,6 +3844,8 @@ export function kubernetesClusterKubeletIdentityToTerraform(struct?: KubernetesC
 }
 
 export class KubernetesClusterKubeletIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3794,7 +3856,7 @@ export class KubernetesClusterKubeletIdentityOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): KubernetesClusterKubeletIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._clientId) {
       hasAnyValues = true;
@@ -3813,11 +3875,13 @@ export class KubernetesClusterKubeletIdentityOutputReference extends cdktf.Compl
 
   public set internalValue(value: KubernetesClusterKubeletIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._clientId = undefined;
       this._objectId = undefined;
       this._userAssignedIdentityId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._clientId = value.clientId;
       this._objectId = value.objectId;
       this._userAssignedIdentityId = value.userAssignedIdentityId;
@@ -3890,6 +3954,8 @@ export function kubernetesClusterLinuxProfileSshKeyToTerraform(struct?: Kubernet
 }
 
 export class KubernetesClusterLinuxProfileSshKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3900,7 +3966,7 @@ export class KubernetesClusterLinuxProfileSshKeyOutputReference extends cdktf.Co
   }
 
   public get internalValue(): KubernetesClusterLinuxProfileSshKey | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._keyData) {
       hasAnyValues = true;
@@ -3911,9 +3977,11 @@ export class KubernetesClusterLinuxProfileSshKeyOutputReference extends cdktf.Co
 
   public set internalValue(value: KubernetesClusterLinuxProfileSshKey | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._keyData = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._keyData = value.keyData;
     }
   }
@@ -3956,6 +4024,8 @@ export function kubernetesClusterLinuxProfileToTerraform(struct?: KubernetesClus
 }
 
 export class KubernetesClusterLinuxProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -3966,13 +4036,13 @@ export class KubernetesClusterLinuxProfileOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): KubernetesClusterLinuxProfile | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._adminUsername) {
       hasAnyValues = true;
       internalValueResult.adminUsername = this._adminUsername;
     }
-    if (this._sshKey) {
+    if (this._sshKey?.internalValue) {
       hasAnyValues = true;
       internalValueResult.sshKey = this._sshKey?.internalValue;
     }
@@ -3981,10 +4051,12 @@ export class KubernetesClusterLinuxProfileOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: KubernetesClusterLinuxProfile | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._adminUsername = undefined;
       this._sshKey.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._adminUsername = value.adminUsername;
       this._sshKey.internalValue = value.sshKey;
     }
@@ -4087,6 +4159,8 @@ export function kubernetesClusterMaintenanceWindowToTerraform(struct?: Kubernete
 }
 
 export class KubernetesClusterMaintenanceWindowOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -4097,7 +4171,7 @@ export class KubernetesClusterMaintenanceWindowOutputReference extends cdktf.Com
   }
 
   public get internalValue(): KubernetesClusterMaintenanceWindow | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowed) {
       hasAnyValues = true;
@@ -4112,10 +4186,12 @@ export class KubernetesClusterMaintenanceWindowOutputReference extends cdktf.Com
 
   public set internalValue(value: KubernetesClusterMaintenanceWindow | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowed = undefined;
       this._notAllowed = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowed = value.allowed;
       this._notAllowed = value.notAllowed;
     }
@@ -4193,6 +4269,8 @@ export function kubernetesClusterNetworkProfileLoadBalancerProfileToTerraform(st
 }
 
 export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -4203,7 +4281,7 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
   }
 
   public get internalValue(): KubernetesClusterNetworkProfileLoadBalancerProfile | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._idleTimeoutInMinutes) {
       hasAnyValues = true;
@@ -4230,6 +4308,7 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
 
   public set internalValue(value: KubernetesClusterNetworkProfileLoadBalancerProfile | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._idleTimeoutInMinutes = undefined;
       this._managedOutboundIpCount = undefined;
       this._outboundIpAddressIds = undefined;
@@ -4237,6 +4316,7 @@ export class KubernetesClusterNetworkProfileLoadBalancerProfileOutputReference e
       this._outboundPortsAllocated = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._idleTimeoutInMinutes = value.idleTimeoutInMinutes;
       this._managedOutboundIpCount = value.managedOutboundIpCount;
       this._outboundIpAddressIds = value.outboundIpAddressIds;
@@ -4348,6 +4428,8 @@ export function kubernetesClusterNetworkProfileNatGatewayProfileToTerraform(stru
 }
 
 export class KubernetesClusterNetworkProfileNatGatewayProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -4358,7 +4440,7 @@ export class KubernetesClusterNetworkProfileNatGatewayProfileOutputReference ext
   }
 
   public get internalValue(): KubernetesClusterNetworkProfileNatGatewayProfile | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._idleTimeoutInMinutes) {
       hasAnyValues = true;
@@ -4373,10 +4455,12 @@ export class KubernetesClusterNetworkProfileNatGatewayProfileOutputReference ext
 
   public set internalValue(value: KubernetesClusterNetworkProfileNatGatewayProfile | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._idleTimeoutInMinutes = undefined;
       this._managedOutboundIpCount = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._idleTimeoutInMinutes = value.idleTimeoutInMinutes;
       this._managedOutboundIpCount = value.managedOutboundIpCount;
     }
@@ -4486,6 +4570,8 @@ export function kubernetesClusterNetworkProfileToTerraform(struct?: KubernetesCl
 }
 
 export class KubernetesClusterNetworkProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -4496,7 +4582,7 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): KubernetesClusterNetworkProfile | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dnsServiceIp) {
       hasAnyValues = true;
@@ -4534,11 +4620,11 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
       hasAnyValues = true;
       internalValueResult.serviceCidr = this._serviceCidr;
     }
-    if (this._loadBalancerProfile) {
+    if (this._loadBalancerProfile?.internalValue) {
       hasAnyValues = true;
       internalValueResult.loadBalancerProfile = this._loadBalancerProfile?.internalValue;
     }
-    if (this._natGatewayProfile) {
+    if (this._natGatewayProfile?.internalValue) {
       hasAnyValues = true;
       internalValueResult.natGatewayProfile = this._natGatewayProfile?.internalValue;
     }
@@ -4547,6 +4633,7 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
 
   public set internalValue(value: KubernetesClusterNetworkProfile | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dnsServiceIp = undefined;
       this._dockerBridgeCidr = undefined;
       this._loadBalancerSku = undefined;
@@ -4560,6 +4647,7 @@ export class KubernetesClusterNetworkProfileOutputReference extends cdktf.Comple
       this._natGatewayProfile.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dnsServiceIp = value.dnsServiceIp;
       this._dockerBridgeCidr = value.dockerBridgeCidr;
       this._loadBalancerSku = value.loadBalancerSku;
@@ -4795,6 +4883,8 @@ export function kubernetesClusterRoleBasedAccessControlAzureActiveDirectoryToTer
 }
 
 export class KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -4805,7 +4895,7 @@ export class KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputRe
   }
 
   public get internalValue(): KubernetesClusterRoleBasedAccessControlAzureActiveDirectory | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._adminGroupObjectIds) {
       hasAnyValues = true;
@@ -4840,6 +4930,7 @@ export class KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputRe
 
   public set internalValue(value: KubernetesClusterRoleBasedAccessControlAzureActiveDirectory | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._adminGroupObjectIds = undefined;
       this._azureRbacEnabled = undefined;
       this._clientAppId = undefined;
@@ -4849,6 +4940,7 @@ export class KubernetesClusterRoleBasedAccessControlAzureActiveDirectoryOutputRe
       this._tenantId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._adminGroupObjectIds = value.adminGroupObjectIds;
       this._azureRbacEnabled = value.azureRbacEnabled;
       this._clientAppId = value.clientAppId;
@@ -4996,6 +5088,8 @@ export function kubernetesClusterRoleBasedAccessControlToTerraform(struct?: Kube
 }
 
 export class KubernetesClusterRoleBasedAccessControlOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -5006,13 +5100,13 @@ export class KubernetesClusterRoleBasedAccessControlOutputReference extends cdkt
   }
 
   public get internalValue(): KubernetesClusterRoleBasedAccessControl | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._azureActiveDirectory) {
+    if (this._azureActiveDirectory?.internalValue) {
       hasAnyValues = true;
       internalValueResult.azureActiveDirectory = this._azureActiveDirectory?.internalValue;
     }
@@ -5021,10 +5115,12 @@ export class KubernetesClusterRoleBasedAccessControlOutputReference extends cdkt
 
   public set internalValue(value: KubernetesClusterRoleBasedAccessControl | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
       this._azureActiveDirectory.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
       this._azureActiveDirectory.internalValue = value.azureActiveDirectory;
     }
@@ -5082,6 +5178,8 @@ export function kubernetesClusterServicePrincipalToTerraform(struct?: Kubernetes
 }
 
 export class KubernetesClusterServicePrincipalOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -5092,7 +5190,7 @@ export class KubernetesClusterServicePrincipalOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): KubernetesClusterServicePrincipal | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._clientId) {
       hasAnyValues = true;
@@ -5107,10 +5205,12 @@ export class KubernetesClusterServicePrincipalOutputReference extends cdktf.Comp
 
   public set internalValue(value: KubernetesClusterServicePrincipal | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._clientId = undefined;
       this._clientSecret = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._clientId = value.clientId;
       this._clientSecret = value.clientSecret;
     }
@@ -5175,6 +5275,8 @@ export function kubernetesClusterTimeoutsToTerraform(struct?: KubernetesClusterT
 }
 
 export class KubernetesClusterTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -5185,7 +5287,7 @@ export class KubernetesClusterTimeoutsOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): KubernetesClusterTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -5208,12 +5310,14 @@ export class KubernetesClusterTimeoutsOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: KubernetesClusterTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -5313,6 +5417,8 @@ export function kubernetesClusterWindowsProfileToTerraform(struct?: KubernetesCl
 }
 
 export class KubernetesClusterWindowsProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -5323,7 +5429,7 @@ export class KubernetesClusterWindowsProfileOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): KubernetesClusterWindowsProfile | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._adminPassword) {
       hasAnyValues = true;
@@ -5342,11 +5448,13 @@ export class KubernetesClusterWindowsProfileOutputReference extends cdktf.Comple
 
   public set internalValue(value: KubernetesClusterWindowsProfile | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._adminPassword = undefined;
       this._adminUsername = undefined;
       this._license = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._adminPassword = value.adminPassword;
       this._adminUsername = value.adminUsername;
       this._license = value.license;

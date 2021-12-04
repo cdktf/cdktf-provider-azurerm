@@ -71,6 +71,8 @@ export function dedicatedHardwareSecurityModuleNetworkProfileToTerraform(struct?
 }
 
 export class DedicatedHardwareSecurityModuleNetworkProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -81,7 +83,7 @@ export class DedicatedHardwareSecurityModuleNetworkProfileOutputReference extend
   }
 
   public get internalValue(): DedicatedHardwareSecurityModuleNetworkProfile | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._networkInterfacePrivateIpAddresses) {
       hasAnyValues = true;
@@ -96,10 +98,12 @@ export class DedicatedHardwareSecurityModuleNetworkProfileOutputReference extend
 
   public set internalValue(value: DedicatedHardwareSecurityModuleNetworkProfile | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._networkInterfacePrivateIpAddresses = undefined;
       this._subnetId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._networkInterfacePrivateIpAddresses = value.networkInterfacePrivateIpAddresses;
       this._subnetId = value.subnetId;
     }
@@ -164,6 +168,8 @@ export function dedicatedHardwareSecurityModuleTimeoutsToTerraform(struct?: Dedi
 }
 
 export class DedicatedHardwareSecurityModuleTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -174,7 +180,7 @@ export class DedicatedHardwareSecurityModuleTimeoutsOutputReference extends cdkt
   }
 
   public get internalValue(): DedicatedHardwareSecurityModuleTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -197,12 +203,14 @@ export class DedicatedHardwareSecurityModuleTimeoutsOutputReference extends cdkt
 
   public set internalValue(value: DedicatedHardwareSecurityModuleTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

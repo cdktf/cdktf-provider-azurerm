@@ -206,6 +206,8 @@ export function windowsVirtualMachineAdditionalCapabilitiesToTerraform(struct?: 
 }
 
 export class WindowsVirtualMachineAdditionalCapabilitiesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -216,7 +218,7 @@ export class WindowsVirtualMachineAdditionalCapabilitiesOutputReference extends 
   }
 
   public get internalValue(): WindowsVirtualMachineAdditionalCapabilities | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._ultraSsdEnabled) {
       hasAnyValues = true;
@@ -227,9 +229,11 @@ export class WindowsVirtualMachineAdditionalCapabilitiesOutputReference extends 
 
   public set internalValue(value: WindowsVirtualMachineAdditionalCapabilities | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._ultraSsdEnabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._ultraSsdEnabled = value.ultraSsdEnabled;
     }
   }
@@ -290,6 +294,8 @@ export function windowsVirtualMachineBootDiagnosticsToTerraform(struct?: Windows
 }
 
 export class WindowsVirtualMachineBootDiagnosticsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -300,7 +306,7 @@ export class WindowsVirtualMachineBootDiagnosticsOutputReference extends cdktf.C
   }
 
   public get internalValue(): WindowsVirtualMachineBootDiagnostics | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._storageAccountUri) {
       hasAnyValues = true;
@@ -311,9 +317,11 @@ export class WindowsVirtualMachineBootDiagnosticsOutputReference extends cdktf.C
 
   public set internalValue(value: WindowsVirtualMachineBootDiagnostics | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._storageAccountUri = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._storageAccountUri = value.storageAccountUri;
     }
   }
@@ -357,6 +365,8 @@ export function windowsVirtualMachineIdentityToTerraform(struct?: WindowsVirtual
 }
 
 export class WindowsVirtualMachineIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -367,7 +377,7 @@ export class WindowsVirtualMachineIdentityOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): WindowsVirtualMachineIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -382,10 +392,12 @@ export class WindowsVirtualMachineIdentityOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: WindowsVirtualMachineIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -438,6 +450,8 @@ export function windowsVirtualMachineOsDiskDiffDiskSettingsToTerraform(struct?: 
 }
 
 export class WindowsVirtualMachineOsDiskDiffDiskSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -448,7 +462,7 @@ export class WindowsVirtualMachineOsDiskDiffDiskSettingsOutputReference extends 
   }
 
   public get internalValue(): WindowsVirtualMachineOsDiskDiffDiskSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._option) {
       hasAnyValues = true;
@@ -459,9 +473,11 @@ export class WindowsVirtualMachineOsDiskDiffDiskSettingsOutputReference extends 
 
   public set internalValue(value: WindowsVirtualMachineOsDiskDiffDiskSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._option = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._option = value.option;
     }
   }
@@ -529,6 +545,8 @@ export function windowsVirtualMachineOsDiskToTerraform(struct?: WindowsVirtualMa
 }
 
 export class WindowsVirtualMachineOsDiskOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -539,7 +557,7 @@ export class WindowsVirtualMachineOsDiskOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): WindowsVirtualMachineOsDisk | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._caching) {
       hasAnyValues = true;
@@ -565,7 +583,7 @@ export class WindowsVirtualMachineOsDiskOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.writeAcceleratorEnabled = this._writeAcceleratorEnabled;
     }
-    if (this._diffDiskSettings) {
+    if (this._diffDiskSettings?.internalValue) {
       hasAnyValues = true;
       internalValueResult.diffDiskSettings = this._diffDiskSettings?.internalValue;
     }
@@ -574,6 +592,7 @@ export class WindowsVirtualMachineOsDiskOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: WindowsVirtualMachineOsDisk | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._caching = undefined;
       this._diskEncryptionSetId = undefined;
       this._diskSizeGb = undefined;
@@ -583,6 +602,7 @@ export class WindowsVirtualMachineOsDiskOutputReference extends cdktf.ComplexObj
       this._diffDiskSettings.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._caching = value.caching;
       this._diskEncryptionSetId = value.diskEncryptionSetId;
       this._diskSizeGb = value.diskSizeGb;
@@ -727,6 +747,8 @@ export function windowsVirtualMachinePlanToTerraform(struct?: WindowsVirtualMach
 }
 
 export class WindowsVirtualMachinePlanOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -737,7 +759,7 @@ export class WindowsVirtualMachinePlanOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): WindowsVirtualMachinePlan | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -756,11 +778,13 @@ export class WindowsVirtualMachinePlanOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: WindowsVirtualMachinePlan | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._product = undefined;
       this._publisher = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._product = value.product;
       this._publisher = value.publisher;
@@ -885,6 +909,8 @@ export function windowsVirtualMachineSourceImageReferenceToTerraform(struct?: Wi
 }
 
 export class WindowsVirtualMachineSourceImageReferenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -895,7 +921,7 @@ export class WindowsVirtualMachineSourceImageReferenceOutputReference extends cd
   }
 
   public get internalValue(): WindowsVirtualMachineSourceImageReference | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._offer) {
       hasAnyValues = true;
@@ -918,12 +944,14 @@ export class WindowsVirtualMachineSourceImageReferenceOutputReference extends cd
 
   public set internalValue(value: WindowsVirtualMachineSourceImageReference | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._offer = undefined;
       this._publisher = undefined;
       this._sku = undefined;
       this._version = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._offer = value.offer;
       this._publisher = value.publisher;
       this._sku = value.sku;
@@ -1016,6 +1044,8 @@ export function windowsVirtualMachineTimeoutsToTerraform(struct?: WindowsVirtual
 }
 
 export class WindowsVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1026,7 +1056,7 @@ export class WindowsVirtualMachineTimeoutsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): WindowsVirtualMachineTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1049,12 +1079,14 @@ export class WindowsVirtualMachineTimeoutsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: WindowsVirtualMachineTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

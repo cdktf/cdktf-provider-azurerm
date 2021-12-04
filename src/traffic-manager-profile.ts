@@ -77,6 +77,8 @@ export function trafficManagerProfileDnsConfigToTerraform(struct?: TrafficManage
 }
 
 export class TrafficManagerProfileDnsConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -87,7 +89,7 @@ export class TrafficManagerProfileDnsConfigOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): TrafficManagerProfileDnsConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._relativeName) {
       hasAnyValues = true;
@@ -102,10 +104,12 @@ export class TrafficManagerProfileDnsConfigOutputReference extends cdktf.Complex
 
   public set internalValue(value: TrafficManagerProfileDnsConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._relativeName = undefined;
       this._ttl = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._relativeName = value.relativeName;
       this._ttl = value.ttl;
     }
@@ -214,6 +218,8 @@ export function trafficManagerProfileMonitorConfigToTerraform(struct?: TrafficMa
 }
 
 export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -224,7 +230,7 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
   }
 
   public get internalValue(): TrafficManagerProfileMonitorConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._expectedStatusCodeRanges) {
       hasAnyValues = true;
@@ -263,6 +269,7 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
 
   public set internalValue(value: TrafficManagerProfileMonitorConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._expectedStatusCodeRanges = undefined;
       this._intervalInSeconds = undefined;
       this._path = undefined;
@@ -273,6 +280,7 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
       this._customHeader = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._expectedStatusCodeRanges = value.expectedStatusCodeRanges;
       this._intervalInSeconds = value.intervalInSeconds;
       this._path = value.path;
@@ -440,6 +448,8 @@ export function trafficManagerProfileTimeoutsToTerraform(struct?: TrafficManager
 }
 
 export class TrafficManagerProfileTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -450,7 +460,7 @@ export class TrafficManagerProfileTimeoutsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): TrafficManagerProfileTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -473,12 +483,14 @@ export class TrafficManagerProfileTimeoutsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: TrafficManagerProfileTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

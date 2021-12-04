@@ -102,6 +102,8 @@ export function springCloudServiceConfigServerGitSettingHttpBasicAuthToTerraform
 }
 
 export class SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -112,7 +114,7 @@ export class SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReferenc
   }
 
   public get internalValue(): SpringCloudServiceConfigServerGitSettingHttpBasicAuth | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._password) {
       hasAnyValues = true;
@@ -127,10 +129,12 @@ export class SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReferenc
 
   public set internalValue(value: SpringCloudServiceConfigServerGitSettingHttpBasicAuth | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._password = undefined;
       this._username = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._password = value.password;
       this._username = value.username;
     }
@@ -185,6 +189,8 @@ export function springCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthT
 }
 
 export class SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -195,7 +201,7 @@ export class SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutp
   }
 
   public get internalValue(): SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._password) {
       hasAnyValues = true;
@@ -210,10 +216,12 @@ export class SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutp
 
   public set internalValue(value: SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._password = undefined;
       this._username = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._password = value.password;
       this._username = value.username;
     }
@@ -278,6 +286,8 @@ export function springCloudServiceConfigServerGitSettingRepositorySshAuthToTerra
 }
 
 export class SpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -288,7 +298,7 @@ export class SpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputRefe
   }
 
   public get internalValue(): SpringCloudServiceConfigServerGitSettingRepositorySshAuth | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._hostKey) {
       hasAnyValues = true;
@@ -311,12 +321,14 @@ export class SpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputRefe
 
   public set internalValue(value: SpringCloudServiceConfigServerGitSettingRepositorySshAuth | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hostKey = undefined;
       this._hostKeyAlgorithm = undefined;
       this._privateKey = undefined;
       this._strictHostKeyCheckingEnabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hostKey = value.hostKey;
       this._hostKeyAlgorithm = value.hostKeyAlgorithm;
       this._privateKey = value.privateKey;
@@ -469,6 +481,8 @@ export function springCloudServiceConfigServerGitSettingSshAuthToTerraform(struc
 }
 
 export class SpringCloudServiceConfigServerGitSettingSshAuthOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -479,7 +493,7 @@ export class SpringCloudServiceConfigServerGitSettingSshAuthOutputReference exte
   }
 
   public get internalValue(): SpringCloudServiceConfigServerGitSettingSshAuth | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._hostKey) {
       hasAnyValues = true;
@@ -502,12 +516,14 @@ export class SpringCloudServiceConfigServerGitSettingSshAuthOutputReference exte
 
   public set internalValue(value: SpringCloudServiceConfigServerGitSettingSshAuth | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hostKey = undefined;
       this._hostKeyAlgorithm = undefined;
       this._privateKey = undefined;
       this._strictHostKeyCheckingEnabled = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hostKey = value.hostKey;
       this._hostKeyAlgorithm = value.hostKeyAlgorithm;
       this._privateKey = value.privateKey;
@@ -625,6 +641,8 @@ export function springCloudServiceConfigServerGitSettingToTerraform(struct?: Spr
 }
 
 export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -635,7 +653,7 @@ export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdk
   }
 
   public get internalValue(): SpringCloudServiceConfigServerGitSetting | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._label) {
       hasAnyValues = true;
@@ -649,7 +667,7 @@ export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdk
       hasAnyValues = true;
       internalValueResult.uri = this._uri;
     }
-    if (this._httpBasicAuth) {
+    if (this._httpBasicAuth?.internalValue) {
       hasAnyValues = true;
       internalValueResult.httpBasicAuth = this._httpBasicAuth?.internalValue;
     }
@@ -657,7 +675,7 @@ export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdk
       hasAnyValues = true;
       internalValueResult.repository = this._repository;
     }
-    if (this._sshAuth) {
+    if (this._sshAuth?.internalValue) {
       hasAnyValues = true;
       internalValueResult.sshAuth = this._sshAuth?.internalValue;
     }
@@ -666,6 +684,7 @@ export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdk
 
   public set internalValue(value: SpringCloudServiceConfigServerGitSetting | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._label = undefined;
       this._searchPaths = undefined;
       this._uri = undefined;
@@ -674,6 +693,7 @@ export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdk
       this._sshAuth.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._label = value.label;
       this._searchPaths = value.searchPaths;
       this._uri = value.uri;
@@ -815,6 +835,8 @@ export function springCloudServiceNetworkToTerraform(struct?: SpringCloudService
 }
 
 export class SpringCloudServiceNetworkOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -825,7 +847,7 @@ export class SpringCloudServiceNetworkOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): SpringCloudServiceNetwork | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._appNetworkResourceGroup) {
       hasAnyValues = true;
@@ -852,6 +874,7 @@ export class SpringCloudServiceNetworkOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: SpringCloudServiceNetwork | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._appNetworkResourceGroup = undefined;
       this._appSubnetId = undefined;
       this._cidrRanges = undefined;
@@ -859,6 +882,7 @@ export class SpringCloudServiceNetworkOutputReference extends cdktf.ComplexObjec
       this._serviceRuntimeSubnetId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._appNetworkResourceGroup = value.appNetworkResourceGroup;
       this._appSubnetId = value.appSubnetId;
       this._cidrRanges = value.cidrRanges;
@@ -971,6 +995,8 @@ export function springCloudServiceTimeoutsToTerraform(struct?: SpringCloudServic
 }
 
 export class SpringCloudServiceTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -981,7 +1007,7 @@ export class SpringCloudServiceTimeoutsOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): SpringCloudServiceTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1004,12 +1030,14 @@ export class SpringCloudServiceTimeoutsOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: SpringCloudServiceTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
@@ -1109,6 +1137,8 @@ export function springCloudServiceTraceToTerraform(struct?: SpringCloudServiceTr
 }
 
 export class SpringCloudServiceTraceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1119,7 +1149,7 @@ export class SpringCloudServiceTraceOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): SpringCloudServiceTrace | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._connectionString) {
       hasAnyValues = true;
@@ -1138,11 +1168,13 @@ export class SpringCloudServiceTraceOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: SpringCloudServiceTrace | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._connectionString = undefined;
       this._instrumentationKey = undefined;
       this._sampleRate = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._connectionString = value.connectionString;
       this._instrumentationKey = value.instrumentationKey;
       this._sampleRate = value.sampleRate;

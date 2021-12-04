@@ -78,6 +78,8 @@ export function dataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaToTerra
 }
 
 export class DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -88,7 +90,7 @@ export class DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputRefe
   }
 
   public get internalValue(): DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._absoluteCriteria) {
       hasAnyValues = true;
@@ -115,6 +117,7 @@ export class DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputRefe
 
   public set internalValue(value: DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._absoluteCriteria = undefined;
       this._daysOfWeek = undefined;
       this._monthsOfYear = undefined;
@@ -122,6 +125,7 @@ export class DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputRefe
       this._weeksOfMonth = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._absoluteCriteria = value.absoluteCriteria;
       this._daysOfWeek = value.daysOfWeek;
       this._monthsOfYear = value.monthsOfYear;
@@ -277,6 +281,8 @@ export function dataProtectionBackupPolicyPostgresqlTimeoutsToTerraform(struct?:
 }
 
 export class DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -287,7 +293,7 @@ export class DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference extends
   }
 
   public get internalValue(): DataProtectionBackupPolicyPostgresqlTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -310,12 +316,14 @@ export class DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference extends
 
   public set internalValue(value: DataProtectionBackupPolicyPostgresqlTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

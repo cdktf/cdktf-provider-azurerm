@@ -59,6 +59,8 @@ export function serviceFabricMeshApplicationServiceCodePackageResourcesLimitsToT
 }
 
 export class ServiceFabricMeshApplicationServiceCodePackageResourcesLimitsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -69,7 +71,7 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesLimitsOutput
   }
 
   public get internalValue(): ServiceFabricMeshApplicationServiceCodePackageResourcesLimits | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cpu) {
       hasAnyValues = true;
@@ -84,10 +86,12 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesLimitsOutput
 
   public set internalValue(value: ServiceFabricMeshApplicationServiceCodePackageResourcesLimits | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cpu = undefined;
       this._memory = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cpu = value.cpu;
       this._memory = value.memory;
     }
@@ -142,6 +146,8 @@ export function serviceFabricMeshApplicationServiceCodePackageResourcesRequestsT
 }
 
 export class ServiceFabricMeshApplicationServiceCodePackageResourcesRequestsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -152,7 +158,7 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesRequestsOutp
   }
 
   public get internalValue(): ServiceFabricMeshApplicationServiceCodePackageResourcesRequests | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._cpu) {
       hasAnyValues = true;
@@ -167,10 +173,12 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesRequestsOutp
 
   public set internalValue(value: ServiceFabricMeshApplicationServiceCodePackageResourcesRequests | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._cpu = undefined;
       this._memory = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._cpu = value.cpu;
       this._memory = value.memory;
     }
@@ -229,6 +237,8 @@ export function serviceFabricMeshApplicationServiceCodePackageResourcesToTerrafo
 }
 
 export class ServiceFabricMeshApplicationServiceCodePackageResourcesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -239,13 +249,13 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesOutputRefere
   }
 
   public get internalValue(): ServiceFabricMeshApplicationServiceCodePackageResources | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._limits) {
+    if (this._limits?.internalValue) {
       hasAnyValues = true;
       internalValueResult.limits = this._limits?.internalValue;
     }
-    if (this._requests) {
+    if (this._requests?.internalValue) {
       hasAnyValues = true;
       internalValueResult.requests = this._requests?.internalValue;
     }
@@ -254,10 +264,12 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesOutputRefere
 
   public set internalValue(value: ServiceFabricMeshApplicationServiceCodePackageResources | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._limits.internalValue = undefined;
       this._requests.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._limits.internalValue = value.limits;
       this._requests.internalValue = value.requests;
     }
@@ -383,6 +395,8 @@ export function serviceFabricMeshApplicationTimeoutsToTerraform(struct?: Service
 }
 
 export class ServiceFabricMeshApplicationTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -393,7 +407,7 @@ export class ServiceFabricMeshApplicationTimeoutsOutputReference extends cdktf.C
   }
 
   public get internalValue(): ServiceFabricMeshApplicationTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -416,12 +430,14 @@ export class ServiceFabricMeshApplicationTimeoutsOutputReference extends cdktf.C
 
   public set internalValue(value: ServiceFabricMeshApplicationTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

@@ -40,6 +40,8 @@ export function dataAzurermLogicAppWorkflowTimeoutsToTerraform(struct?: DataAzur
 }
 
 export class DataAzurermLogicAppWorkflowTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -50,7 +52,7 @@ export class DataAzurermLogicAppWorkflowTimeoutsOutputReference extends cdktf.Co
   }
 
   public get internalValue(): DataAzurermLogicAppWorkflowTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read) {
       hasAnyValues = true;
@@ -61,9 +63,11 @@ export class DataAzurermLogicAppWorkflowTimeoutsOutputReference extends cdktf.Co
 
   public set internalValue(value: DataAzurermLogicAppWorkflowTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._read = value.read;
     }
   }

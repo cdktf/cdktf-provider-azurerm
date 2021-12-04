@@ -129,6 +129,8 @@ export function containerGroupContainerGpuToTerraform(struct?: ContainerGroupCon
 }
 
 export class ContainerGroupContainerGpuOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -139,7 +141,7 @@ export class ContainerGroupContainerGpuOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): ContainerGroupContainerGpu | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._count) {
       hasAnyValues = true;
@@ -154,10 +156,12 @@ export class ContainerGroupContainerGpuOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: ContainerGroupContainerGpu | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._count = undefined;
       this._sku = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._count = value.count;
       this._sku = value.sku;
     }
@@ -272,6 +276,8 @@ export function containerGroupContainerLivenessProbeToTerraform(struct?: Contain
 }
 
 export class ContainerGroupContainerLivenessProbeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -282,7 +288,7 @@ export class ContainerGroupContainerLivenessProbeOutputReference extends cdktf.C
   }
 
   public get internalValue(): ContainerGroupContainerLivenessProbe | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._exec) {
       hasAnyValues = true;
@@ -317,6 +323,7 @@ export class ContainerGroupContainerLivenessProbeOutputReference extends cdktf.C
 
   public set internalValue(value: ContainerGroupContainerLivenessProbe | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._exec = undefined;
       this._failureThreshold = undefined;
       this._initialDelaySeconds = undefined;
@@ -326,6 +333,7 @@ export class ContainerGroupContainerLivenessProbeOutputReference extends cdktf.C
       this._httpGet = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._exec = value.exec;
       this._failureThreshold = value.failureThreshold;
       this._initialDelaySeconds = value.initialDelaySeconds;
@@ -548,6 +556,8 @@ export function containerGroupContainerReadinessProbeToTerraform(struct?: Contai
 }
 
 export class ContainerGroupContainerReadinessProbeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -558,7 +568,7 @@ export class ContainerGroupContainerReadinessProbeOutputReference extends cdktf.
   }
 
   public get internalValue(): ContainerGroupContainerReadinessProbe | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._exec) {
       hasAnyValues = true;
@@ -593,6 +603,7 @@ export class ContainerGroupContainerReadinessProbeOutputReference extends cdktf.
 
   public set internalValue(value: ContainerGroupContainerReadinessProbe | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._exec = undefined;
       this._failureThreshold = undefined;
       this._initialDelaySeconds = undefined;
@@ -602,6 +613,7 @@ export class ContainerGroupContainerReadinessProbeOutputReference extends cdktf.
       this._httpGet = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._exec = value.exec;
       this._failureThreshold = value.failureThreshold;
       this._initialDelaySeconds = value.initialDelaySeconds;
@@ -753,6 +765,8 @@ export function containerGroupContainerVolumeGitRepoToTerraform(struct?: Contain
 }
 
 export class ContainerGroupContainerVolumeGitRepoOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -763,7 +777,7 @@ export class ContainerGroupContainerVolumeGitRepoOutputReference extends cdktf.C
   }
 
   public get internalValue(): ContainerGroupContainerVolumeGitRepo | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._directory) {
       hasAnyValues = true;
@@ -782,11 +796,13 @@ export class ContainerGroupContainerVolumeGitRepoOutputReference extends cdktf.C
 
   public set internalValue(value: ContainerGroupContainerVolumeGitRepo | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._directory = undefined;
       this._revision = undefined;
       this._url = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._directory = value.directory;
       this._revision = value.revision;
       this._url = value.url;
@@ -1012,6 +1028,8 @@ export function containerGroupDiagnosticsLogAnalyticsToTerraform(struct?: Contai
 }
 
 export class ContainerGroupDiagnosticsLogAnalyticsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1022,7 +1040,7 @@ export class ContainerGroupDiagnosticsLogAnalyticsOutputReference extends cdktf.
   }
 
   public get internalValue(): ContainerGroupDiagnosticsLogAnalytics | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._logType) {
       hasAnyValues = true;
@@ -1045,12 +1063,14 @@ export class ContainerGroupDiagnosticsLogAnalyticsOutputReference extends cdktf.
 
   public set internalValue(value: ContainerGroupDiagnosticsLogAnalytics | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._logType = undefined;
       this._metadata = undefined;
       this._workspaceId = undefined;
       this._workspaceKey = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._logType = value.logType;
       this._metadata = value.metadata;
       this._workspaceId = value.workspaceId;
@@ -1137,6 +1157,8 @@ export function containerGroupDiagnosticsToTerraform(struct?: ContainerGroupDiag
 }
 
 export class ContainerGroupDiagnosticsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1147,9 +1169,9 @@ export class ContainerGroupDiagnosticsOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): ContainerGroupDiagnostics | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._logAnalytics) {
+    if (this._logAnalytics?.internalValue) {
       hasAnyValues = true;
       internalValueResult.logAnalytics = this._logAnalytics?.internalValue;
     }
@@ -1158,9 +1180,11 @@ export class ContainerGroupDiagnosticsOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: ContainerGroupDiagnostics | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._logAnalytics.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._logAnalytics.internalValue = value.logAnalytics;
     }
   }
@@ -1206,6 +1230,8 @@ export function containerGroupDnsConfigToTerraform(struct?: ContainerGroupDnsCon
 }
 
 export class ContainerGroupDnsConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1216,7 +1242,7 @@ export class ContainerGroupDnsConfigOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): ContainerGroupDnsConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._nameservers) {
       hasAnyValues = true;
@@ -1235,11 +1261,13 @@ export class ContainerGroupDnsConfigOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: ContainerGroupDnsConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._nameservers = undefined;
       this._options = undefined;
       this._searchDomains = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._nameservers = value.nameservers;
       this._options = value.options;
       this._searchDomains = value.searchDomains;
@@ -1314,6 +1342,8 @@ export function containerGroupIdentityToTerraform(struct?: ContainerGroupIdentit
 }
 
 export class ContainerGroupIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1324,7 +1354,7 @@ export class ContainerGroupIdentityOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): ContainerGroupIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -1339,10 +1369,12 @@ export class ContainerGroupIdentityOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: ContainerGroupIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -1437,6 +1469,8 @@ export function containerGroupTimeoutsToTerraform(struct?: ContainerGroupTimeout
 }
 
 export class ContainerGroupTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1447,7 +1481,7 @@ export class ContainerGroupTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): ContainerGroupTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1470,12 +1504,14 @@ export class ContainerGroupTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: ContainerGroupTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

@@ -79,6 +79,8 @@ export function dataFactoryLinkedServiceSynapseKeyVaultPasswordToTerraform(struc
 }
 
 export class DataFactoryLinkedServiceSynapseKeyVaultPasswordOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -89,7 +91,7 @@ export class DataFactoryLinkedServiceSynapseKeyVaultPasswordOutputReference exte
   }
 
   public get internalValue(): DataFactoryLinkedServiceSynapseKeyVaultPassword | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._linkedServiceName) {
       hasAnyValues = true;
@@ -104,10 +106,12 @@ export class DataFactoryLinkedServiceSynapseKeyVaultPasswordOutputReference exte
 
   public set internalValue(value: DataFactoryLinkedServiceSynapseKeyVaultPassword | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._linkedServiceName = undefined;
       this._secretName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._linkedServiceName = value.linkedServiceName;
       this._secretName = value.secretName;
     }
@@ -172,6 +176,8 @@ export function dataFactoryLinkedServiceSynapseTimeoutsToTerraform(struct?: Data
 }
 
 export class DataFactoryLinkedServiceSynapseTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -182,7 +188,7 @@ export class DataFactoryLinkedServiceSynapseTimeoutsOutputReference extends cdkt
   }
 
   public get internalValue(): DataFactoryLinkedServiceSynapseTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -205,12 +211,14 @@ export class DataFactoryLinkedServiceSynapseTimeoutsOutputReference extends cdkt
 
   public set internalValue(value: DataFactoryLinkedServiceSynapseTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

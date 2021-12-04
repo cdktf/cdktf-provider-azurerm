@@ -359,6 +359,8 @@ export function dataAzurermFunctionAppTimeoutsToTerraform(struct?: DataAzurermFu
 }
 
 export class DataAzurermFunctionAppTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -369,7 +371,7 @@ export class DataAzurermFunctionAppTimeoutsOutputReference extends cdktf.Complex
   }
 
   public get internalValue(): DataAzurermFunctionAppTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._read) {
       hasAnyValues = true;
@@ -380,9 +382,11 @@ export class DataAzurermFunctionAppTimeoutsOutputReference extends cdktf.Complex
 
   public set internalValue(value: DataAzurermFunctionAppTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._read = value.read;
     }
   }

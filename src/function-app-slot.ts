@@ -142,6 +142,8 @@ export function functionAppSlotAuthSettingsActiveDirectoryToTerraform(struct?: F
 }
 
 export class FunctionAppSlotAuthSettingsActiveDirectoryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -152,7 +154,7 @@ export class FunctionAppSlotAuthSettingsActiveDirectoryOutputReference extends c
   }
 
   public get internalValue(): FunctionAppSlotAuthSettingsActiveDirectory | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedAudiences) {
       hasAnyValues = true;
@@ -171,11 +173,13 @@ export class FunctionAppSlotAuthSettingsActiveDirectoryOutputReference extends c
 
   public set internalValue(value: FunctionAppSlotAuthSettingsActiveDirectory | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedAudiences = undefined;
       this._clientId = undefined;
       this._clientSecret = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedAudiences = value.allowedAudiences;
       this._clientId = value.clientId;
       this._clientSecret = value.clientSecret;
@@ -255,6 +259,8 @@ export function functionAppSlotAuthSettingsFacebookToTerraform(struct?: Function
 }
 
 export class FunctionAppSlotAuthSettingsFacebookOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -265,7 +271,7 @@ export class FunctionAppSlotAuthSettingsFacebookOutputReference extends cdktf.Co
   }
 
   public get internalValue(): FunctionAppSlotAuthSettingsFacebook | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._appId) {
       hasAnyValues = true;
@@ -284,11 +290,13 @@ export class FunctionAppSlotAuthSettingsFacebookOutputReference extends cdktf.Co
 
   public set internalValue(value: FunctionAppSlotAuthSettingsFacebook | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._appId = undefined;
       this._appSecret = undefined;
       this._oauthScopes = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._appId = value.appId;
       this._appSecret = value.appSecret;
       this._oauthScopes = value.oauthScopes;
@@ -365,6 +373,8 @@ export function functionAppSlotAuthSettingsGoogleToTerraform(struct?: FunctionAp
 }
 
 export class FunctionAppSlotAuthSettingsGoogleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -375,7 +385,7 @@ export class FunctionAppSlotAuthSettingsGoogleOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): FunctionAppSlotAuthSettingsGoogle | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._clientId) {
       hasAnyValues = true;
@@ -394,11 +404,13 @@ export class FunctionAppSlotAuthSettingsGoogleOutputReference extends cdktf.Comp
 
   public set internalValue(value: FunctionAppSlotAuthSettingsGoogle | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._clientId = undefined;
       this._clientSecret = undefined;
       this._oauthScopes = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._clientId = value.clientId;
       this._clientSecret = value.clientSecret;
       this._oauthScopes = value.oauthScopes;
@@ -475,6 +487,8 @@ export function functionAppSlotAuthSettingsMicrosoftToTerraform(struct?: Functio
 }
 
 export class FunctionAppSlotAuthSettingsMicrosoftOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -485,7 +499,7 @@ export class FunctionAppSlotAuthSettingsMicrosoftOutputReference extends cdktf.C
   }
 
   public get internalValue(): FunctionAppSlotAuthSettingsMicrosoft | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._clientId) {
       hasAnyValues = true;
@@ -504,11 +518,13 @@ export class FunctionAppSlotAuthSettingsMicrosoftOutputReference extends cdktf.C
 
   public set internalValue(value: FunctionAppSlotAuthSettingsMicrosoft | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._clientId = undefined;
       this._clientSecret = undefined;
       this._oauthScopes = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._clientId = value.clientId;
       this._clientSecret = value.clientSecret;
       this._oauthScopes = value.oauthScopes;
@@ -580,6 +596,8 @@ export function functionAppSlotAuthSettingsTwitterToTerraform(struct?: FunctionA
 }
 
 export class FunctionAppSlotAuthSettingsTwitterOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -590,7 +608,7 @@ export class FunctionAppSlotAuthSettingsTwitterOutputReference extends cdktf.Com
   }
 
   public get internalValue(): FunctionAppSlotAuthSettingsTwitter | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._consumerKey) {
       hasAnyValues = true;
@@ -605,10 +623,12 @@ export class FunctionAppSlotAuthSettingsTwitterOutputReference extends cdktf.Com
 
   public set internalValue(value: FunctionAppSlotAuthSettingsTwitter | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._consumerKey = undefined;
       this._consumerSecret = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._consumerKey = value.consumerKey;
       this._consumerSecret = value.consumerSecret;
     }
@@ -733,6 +753,8 @@ export function functionAppSlotAuthSettingsToTerraform(struct?: FunctionAppSlotA
 }
 
 export class FunctionAppSlotAuthSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -743,7 +765,7 @@ export class FunctionAppSlotAuthSettingsOutputReference extends cdktf.ComplexObj
   }
 
   public get internalValue(): FunctionAppSlotAuthSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._additionalLoginParams) {
       hasAnyValues = true;
@@ -781,23 +803,23 @@ export class FunctionAppSlotAuthSettingsOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.unauthenticatedClientAction = this._unauthenticatedClientAction;
     }
-    if (this._activeDirectory) {
+    if (this._activeDirectory?.internalValue) {
       hasAnyValues = true;
       internalValueResult.activeDirectory = this._activeDirectory?.internalValue;
     }
-    if (this._facebook) {
+    if (this._facebook?.internalValue) {
       hasAnyValues = true;
       internalValueResult.facebook = this._facebook?.internalValue;
     }
-    if (this._google) {
+    if (this._google?.internalValue) {
       hasAnyValues = true;
       internalValueResult.google = this._google?.internalValue;
     }
-    if (this._microsoft) {
+    if (this._microsoft?.internalValue) {
       hasAnyValues = true;
       internalValueResult.microsoft = this._microsoft?.internalValue;
     }
-    if (this._twitter) {
+    if (this._twitter?.internalValue) {
       hasAnyValues = true;
       internalValueResult.twitter = this._twitter?.internalValue;
     }
@@ -806,6 +828,7 @@ export class FunctionAppSlotAuthSettingsOutputReference extends cdktf.ComplexObj
 
   public set internalValue(value: FunctionAppSlotAuthSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._additionalLoginParams = undefined;
       this._allowedExternalRedirectUrls = undefined;
       this._defaultProvider = undefined;
@@ -822,6 +845,7 @@ export class FunctionAppSlotAuthSettingsOutputReference extends cdktf.ComplexObj
       this._twitter.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._additionalLoginParams = value.additionalLoginParams;
       this._allowedExternalRedirectUrls = value.allowedExternalRedirectUrls;
       this._defaultProvider = value.defaultProvider;
@@ -1111,6 +1135,8 @@ export function functionAppSlotIdentityToTerraform(struct?: FunctionAppSlotIdent
 }
 
 export class FunctionAppSlotIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1121,7 +1147,7 @@ export class FunctionAppSlotIdentityOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): FunctionAppSlotIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -1136,10 +1162,12 @@ export class FunctionAppSlotIdentityOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: FunctionAppSlotIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -1355,6 +1383,8 @@ export function functionAppSlotSiteConfigCorsToTerraform(struct?: FunctionAppSlo
 }
 
 export class FunctionAppSlotSiteConfigCorsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1365,7 +1395,7 @@ export class FunctionAppSlotSiteConfigCorsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): FunctionAppSlotSiteConfigCors | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedOrigins) {
       hasAnyValues = true;
@@ -1380,10 +1410,12 @@ export class FunctionAppSlotSiteConfigCorsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: FunctionAppSlotSiteConfigCors | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedOrigins = undefined;
       this._supportCredentials = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedOrigins = value.allowedOrigins;
       this._supportCredentials = value.supportCredentials;
     }
@@ -1538,6 +1570,8 @@ export function functionAppSlotSiteConfigToTerraform(struct?: FunctionAppSlotSit
 }
 
 export class FunctionAppSlotSiteConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1548,7 +1582,7 @@ export class FunctionAppSlotSiteConfigOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): FunctionAppSlotSiteConfig | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._alwaysOn) {
       hasAnyValues = true;
@@ -1630,7 +1664,7 @@ export class FunctionAppSlotSiteConfigOutputReference extends cdktf.ComplexObjec
       hasAnyValues = true;
       internalValueResult.websocketsEnabled = this._websocketsEnabled;
     }
-    if (this._cors) {
+    if (this._cors?.internalValue) {
       hasAnyValues = true;
       internalValueResult.cors = this._cors?.internalValue;
     }
@@ -1639,6 +1673,7 @@ export class FunctionAppSlotSiteConfigOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: FunctionAppSlotSiteConfig | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._alwaysOn = undefined;
       this._appScaleLimit = undefined;
       this._autoSwapSlotName = undefined;
@@ -1662,6 +1697,7 @@ export class FunctionAppSlotSiteConfigOutputReference extends cdktf.ComplexObjec
       this._cors.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._alwaysOn = value.alwaysOn;
       this._appScaleLimit = value.appScaleLimit;
       this._autoSwapSlotName = value.autoSwapSlotName;
@@ -2057,6 +2093,8 @@ export function functionAppSlotTimeoutsToTerraform(struct?: FunctionAppSlotTimeo
 }
 
 export class FunctionAppSlotTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2067,7 +2105,7 @@ export class FunctionAppSlotTimeoutsOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): FunctionAppSlotTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -2090,12 +2128,14 @@ export class FunctionAppSlotTimeoutsOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: FunctionAppSlotTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

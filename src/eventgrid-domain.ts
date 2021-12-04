@@ -105,6 +105,8 @@ export function eventgridDomainIdentityToTerraform(struct?: EventgridDomainIdent
 }
 
 export class EventgridDomainIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -115,7 +117,7 @@ export class EventgridDomainIdentityOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): EventgridDomainIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._identityIds) {
       hasAnyValues = true;
@@ -130,10 +132,12 @@ export class EventgridDomainIdentityOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: EventgridDomainIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._identityIds = undefined;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._identityIds = value.identityIds;
       this._type = value.type;
     }
@@ -196,6 +200,8 @@ export function eventgridDomainInputMappingDefaultValuesToTerraform(struct?: Eve
 }
 
 export class EventgridDomainInputMappingDefaultValuesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -206,7 +212,7 @@ export class EventgridDomainInputMappingDefaultValuesOutputReference extends cdk
   }
 
   public get internalValue(): EventgridDomainInputMappingDefaultValues | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dataVersion) {
       hasAnyValues = true;
@@ -225,11 +231,13 @@ export class EventgridDomainInputMappingDefaultValuesOutputReference extends cdk
 
   public set internalValue(value: EventgridDomainInputMappingDefaultValues | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dataVersion = undefined;
       this._eventType = undefined;
       this._subject = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dataVersion = value.dataVersion;
       this._eventType = value.eventType;
       this._subject = value.subject;
@@ -327,6 +335,8 @@ export function eventgridDomainInputMappingFieldsToTerraform(struct?: EventgridD
 }
 
 export class EventgridDomainInputMappingFieldsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -337,7 +347,7 @@ export class EventgridDomainInputMappingFieldsOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): EventgridDomainInputMappingFields | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dataVersion) {
       hasAnyValues = true;
@@ -368,6 +378,7 @@ export class EventgridDomainInputMappingFieldsOutputReference extends cdktf.Comp
 
   public set internalValue(value: EventgridDomainInputMappingFields | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dataVersion = undefined;
       this._eventTime = undefined;
       this._eventType = undefined;
@@ -376,6 +387,7 @@ export class EventgridDomainInputMappingFieldsOutputReference extends cdktf.Comp
       this._topic = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dataVersion = value.dataVersion;
       this._eventTime = value.eventTime;
       this._eventType = value.eventType;
@@ -514,6 +526,8 @@ export function eventgridDomainTimeoutsToTerraform(struct?: EventgridDomainTimeo
 }
 
 export class EventgridDomainTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -524,7 +538,7 @@ export class EventgridDomainTimeoutsOutputReference extends cdktf.ComplexObject 
   }
 
   public get internalValue(): EventgridDomainTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -547,12 +561,14 @@ export class EventgridDomainTimeoutsOutputReference extends cdktf.ComplexObject 
 
   public set internalValue(value: EventgridDomainTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

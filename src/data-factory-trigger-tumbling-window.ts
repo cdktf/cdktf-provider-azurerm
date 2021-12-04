@@ -103,6 +103,8 @@ export function dataFactoryTriggerTumblingWindowPipelineToTerraform(struct?: Dat
 }
 
 export class DataFactoryTriggerTumblingWindowPipelineOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -113,7 +115,7 @@ export class DataFactoryTriggerTumblingWindowPipelineOutputReference extends cdk
   }
 
   public get internalValue(): DataFactoryTriggerTumblingWindowPipeline | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -128,10 +130,12 @@ export class DataFactoryTriggerTumblingWindowPipelineOutputReference extends cdk
 
   public set internalValue(value: DataFactoryTriggerTumblingWindowPipeline | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._parameters = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._parameters = value.parameters;
     }
@@ -190,6 +194,8 @@ export function dataFactoryTriggerTumblingWindowRetryToTerraform(struct?: DataFa
 }
 
 export class DataFactoryTriggerTumblingWindowRetryOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -200,7 +206,7 @@ export class DataFactoryTriggerTumblingWindowRetryOutputReference extends cdktf.
   }
 
   public get internalValue(): DataFactoryTriggerTumblingWindowRetry | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._count) {
       hasAnyValues = true;
@@ -215,10 +221,12 @@ export class DataFactoryTriggerTumblingWindowRetryOutputReference extends cdktf.
 
   public set internalValue(value: DataFactoryTriggerTumblingWindowRetry | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._count = undefined;
       this._interval = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._count = value.count;
       this._interval = value.interval;
     }
@@ -286,6 +294,8 @@ export function dataFactoryTriggerTumblingWindowTimeoutsToTerraform(struct?: Dat
 }
 
 export class DataFactoryTriggerTumblingWindowTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -296,7 +306,7 @@ export class DataFactoryTriggerTumblingWindowTimeoutsOutputReference extends cdk
   }
 
   public get internalValue(): DataFactoryTriggerTumblingWindowTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -319,12 +329,14 @@ export class DataFactoryTriggerTumblingWindowTimeoutsOutputReference extends cdk
 
   public set internalValue(value: DataFactoryTriggerTumblingWindowTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

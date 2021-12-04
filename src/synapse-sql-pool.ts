@@ -75,6 +75,8 @@ export function synapseSqlPoolRestoreToTerraform(struct?: SynapseSqlPoolRestoreO
 }
 
 export class SynapseSqlPoolRestoreOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -85,7 +87,7 @@ export class SynapseSqlPoolRestoreOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): SynapseSqlPoolRestore | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._pointInTime) {
       hasAnyValues = true;
@@ -100,10 +102,12 @@ export class SynapseSqlPoolRestoreOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: SynapseSqlPoolRestore | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._pointInTime = undefined;
       this._sourceDatabaseId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._pointInTime = value.pointInTime;
       this._sourceDatabaseId = value.sourceDatabaseId;
     }
@@ -168,6 +172,8 @@ export function synapseSqlPoolTimeoutsToTerraform(struct?: SynapseSqlPoolTimeout
 }
 
 export class SynapseSqlPoolTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -178,7 +184,7 @@ export class SynapseSqlPoolTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): SynapseSqlPoolTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -201,12 +207,14 @@ export class SynapseSqlPoolTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: SynapseSqlPoolTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

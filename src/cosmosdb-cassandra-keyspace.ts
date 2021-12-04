@@ -54,6 +54,8 @@ export function cosmosdbCassandraKeyspaceAutoscaleSettingsToTerraform(struct?: C
 }
 
 export class CosmosdbCassandraKeyspaceAutoscaleSettingsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -64,7 +66,7 @@ export class CosmosdbCassandraKeyspaceAutoscaleSettingsOutputReference extends c
   }
 
   public get internalValue(): CosmosdbCassandraKeyspaceAutoscaleSettings | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._maxThroughput) {
       hasAnyValues = true;
@@ -75,9 +77,11 @@ export class CosmosdbCassandraKeyspaceAutoscaleSettingsOutputReference extends c
 
   public set internalValue(value: CosmosdbCassandraKeyspaceAutoscaleSettings | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._maxThroughput = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._maxThroughput = value.maxThroughput;
     }
   }
@@ -131,6 +135,8 @@ export function cosmosdbCassandraKeyspaceTimeoutsToTerraform(struct?: CosmosdbCa
 }
 
 export class CosmosdbCassandraKeyspaceTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -141,7 +147,7 @@ export class CosmosdbCassandraKeyspaceTimeoutsOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): CosmosdbCassandraKeyspaceTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -164,12 +170,14 @@ export class CosmosdbCassandraKeyspaceTimeoutsOutputReference extends cdktf.Comp
 
   public set internalValue(value: CosmosdbCassandraKeyspaceTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

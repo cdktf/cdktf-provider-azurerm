@@ -84,6 +84,8 @@ export function signalrServiceNetworkAclPublicNetworkToTerraform(struct?: Signal
 }
 
 export class SignalrServiceNetworkAclPublicNetworkOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -94,7 +96,7 @@ export class SignalrServiceNetworkAclPublicNetworkOutputReference extends cdktf.
   }
 
   public get internalValue(): SignalrServiceNetworkAclPublicNetwork | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowedRequestTypes) {
       hasAnyValues = true;
@@ -109,10 +111,12 @@ export class SignalrServiceNetworkAclPublicNetworkOutputReference extends cdktf.
 
   public set internalValue(value: SignalrServiceNetworkAclPublicNetwork | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowedRequestTypes = undefined;
       this._deniedRequestTypes = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedRequestTypes = value.allowedRequestTypes;
       this._deniedRequestTypes = value.deniedRequestTypes;
     }
@@ -183,6 +187,8 @@ export function signalrServiceNetworkAclTimeoutsToTerraform(struct?: SignalrServ
 }
 
 export class SignalrServiceNetworkAclTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -193,7 +199,7 @@ export class SignalrServiceNetworkAclTimeoutsOutputReference extends cdktf.Compl
   }
 
   public get internalValue(): SignalrServiceNetworkAclTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -216,12 +222,14 @@ export class SignalrServiceNetworkAclTimeoutsOutputReference extends cdktf.Compl
 
   public set internalValue(value: SignalrServiceNetworkAclTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

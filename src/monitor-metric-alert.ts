@@ -140,6 +140,8 @@ export function monitorMetricAlertApplicationInsightsWebTestLocationAvailability
 }
 
 export class MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteriaOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -150,7 +152,7 @@ export class MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCri
   }
 
   public get internalValue(): MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._componentId) {
       hasAnyValues = true;
@@ -169,11 +171,13 @@ export class MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCri
 
   public set internalValue(value: MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._componentId = undefined;
       this._failedLocationCount = undefined;
       this._webTestId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._componentId = value.componentId;
       this._failedLocationCount = value.failedLocationCount;
       this._webTestId = value.webTestId;
@@ -387,6 +391,8 @@ export function monitorMetricAlertDynamicCriteriaToTerraform(struct?: MonitorMet
 }
 
 export class MonitorMetricAlertDynamicCriteriaOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -397,7 +403,7 @@ export class MonitorMetricAlertDynamicCriteriaOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): MonitorMetricAlertDynamicCriteria | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._aggregation) {
       hasAnyValues = true;
@@ -444,6 +450,7 @@ export class MonitorMetricAlertDynamicCriteriaOutputReference extends cdktf.Comp
 
   public set internalValue(value: MonitorMetricAlertDynamicCriteria | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._aggregation = undefined;
       this._alertSensitivity = undefined;
       this._evaluationFailureCount = undefined;
@@ -456,6 +463,7 @@ export class MonitorMetricAlertDynamicCriteriaOutputReference extends cdktf.Comp
       this._dimension = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._aggregation = value.aggregation;
       this._alertSensitivity = value.alertSensitivity;
       this._evaluationFailureCount = value.evaluationFailureCount;
@@ -648,6 +656,8 @@ export function monitorMetricAlertTimeoutsToTerraform(struct?: MonitorMetricAler
 }
 
 export class MonitorMetricAlertTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -658,7 +668,7 @@ export class MonitorMetricAlertTimeoutsOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): MonitorMetricAlertTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -681,12 +691,14 @@ export class MonitorMetricAlertTimeoutsOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: MonitorMetricAlertTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

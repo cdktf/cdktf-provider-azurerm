@@ -59,6 +59,8 @@ export function mediaTransformOutputAudioAnalyzerPresetToTerraform(struct?: Medi
 }
 
 export class MediaTransformOutputAudioAnalyzerPresetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -69,7 +71,7 @@ export class MediaTransformOutputAudioAnalyzerPresetOutputReference extends cdkt
   }
 
   public get internalValue(): MediaTransformOutputAudioAnalyzerPreset | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._audioAnalysisMode) {
       hasAnyValues = true;
@@ -84,10 +86,12 @@ export class MediaTransformOutputAudioAnalyzerPresetOutputReference extends cdkt
 
   public set internalValue(value: MediaTransformOutputAudioAnalyzerPreset | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._audioAnalysisMode = undefined;
       this._audioLanguage = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._audioAnalysisMode = value.audioAnalysisMode;
       this._audioLanguage = value.audioLanguage;
     }
@@ -143,6 +147,8 @@ export function mediaTransformOutputBuiltinPresetToTerraform(struct?: MediaTrans
 }
 
 export class MediaTransformOutputBuiltinPresetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -153,7 +159,7 @@ export class MediaTransformOutputBuiltinPresetOutputReference extends cdktf.Comp
   }
 
   public get internalValue(): MediaTransformOutputBuiltinPreset | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._presetName) {
       hasAnyValues = true;
@@ -164,9 +170,11 @@ export class MediaTransformOutputBuiltinPresetOutputReference extends cdktf.Comp
 
   public set internalValue(value: MediaTransformOutputBuiltinPreset | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._presetName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._presetName = value.presetName;
     }
   }
@@ -205,6 +213,8 @@ export function mediaTransformOutputFaceDetectorPresetToTerraform(struct?: Media
 }
 
 export class MediaTransformOutputFaceDetectorPresetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -215,7 +225,7 @@ export class MediaTransformOutputFaceDetectorPresetOutputReference extends cdktf
   }
 
   public get internalValue(): MediaTransformOutputFaceDetectorPreset | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._analysisResolution) {
       hasAnyValues = true;
@@ -226,9 +236,11 @@ export class MediaTransformOutputFaceDetectorPresetOutputReference extends cdktf
 
   public set internalValue(value: MediaTransformOutputFaceDetectorPreset | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._analysisResolution = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._analysisResolution = value.analysisResolution;
     }
   }
@@ -277,6 +289,8 @@ export function mediaTransformOutputVideoAnalyzerPresetToTerraform(struct?: Medi
 }
 
 export class MediaTransformOutputVideoAnalyzerPresetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -287,7 +301,7 @@ export class MediaTransformOutputVideoAnalyzerPresetOutputReference extends cdkt
   }
 
   public get internalValue(): MediaTransformOutputVideoAnalyzerPreset | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._audioAnalysisMode) {
       hasAnyValues = true;
@@ -306,11 +320,13 @@ export class MediaTransformOutputVideoAnalyzerPresetOutputReference extends cdkt
 
   public set internalValue(value: MediaTransformOutputVideoAnalyzerPreset | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._audioAnalysisMode = undefined;
       this._audioLanguage = undefined;
       this._insightsType = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._audioAnalysisMode = value.audioAnalysisMode;
       this._audioLanguage = value.audioLanguage;
       this._insightsType = value.insightsType;
@@ -448,6 +464,8 @@ export function mediaTransformTimeoutsToTerraform(struct?: MediaTransformTimeout
 }
 
 export class MediaTransformTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -458,7 +476,7 @@ export class MediaTransformTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): MediaTransformTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -481,12 +499,14 @@ export class MediaTransformTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: MediaTransformTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

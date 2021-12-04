@@ -101,6 +101,8 @@ export function iothubDpsSkuToTerraform(struct?: IothubDpsSkuOutputReference | I
 }
 
 export class IothubDpsSkuOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -111,7 +113,7 @@ export class IothubDpsSkuOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): IothubDpsSku | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._capacity) {
       hasAnyValues = true;
@@ -126,10 +128,12 @@ export class IothubDpsSkuOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: IothubDpsSku | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._capacity = undefined;
       this._name = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._capacity = value.capacity;
       this._name = value.name;
     }
@@ -194,6 +198,8 @@ export function iothubDpsTimeoutsToTerraform(struct?: IothubDpsTimeoutsOutputRef
 }
 
 export class IothubDpsTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -204,7 +210,7 @@ export class IothubDpsTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): IothubDpsTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -227,12 +233,14 @@ export class IothubDpsTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: IothubDpsTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

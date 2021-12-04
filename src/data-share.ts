@@ -68,6 +68,8 @@ export function dataShareSnapshotScheduleToTerraform(struct?: DataShareSnapshotS
 }
 
 export class DataShareSnapshotScheduleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -78,7 +80,7 @@ export class DataShareSnapshotScheduleOutputReference extends cdktf.ComplexObjec
   }
 
   public get internalValue(): DataShareSnapshotSchedule | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._name) {
       hasAnyValues = true;
@@ -97,11 +99,13 @@ export class DataShareSnapshotScheduleOutputReference extends cdktf.ComplexObjec
 
   public set internalValue(value: DataShareSnapshotSchedule | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._name = undefined;
       this._recurrence = undefined;
       this._startTime = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._name = value.name;
       this._recurrence = value.recurrence;
       this._startTime = value.startTime;
@@ -180,6 +184,8 @@ export function dataShareTimeoutsToTerraform(struct?: DataShareTimeoutsOutputRef
 }
 
 export class DataShareTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -190,7 +196,7 @@ export class DataShareTimeoutsOutputReference extends cdktf.ComplexObject {
   }
 
   public get internalValue(): DataShareTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -213,12 +219,14 @@ export class DataShareTimeoutsOutputReference extends cdktf.ComplexObject {
 
   public set internalValue(value: DataShareTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

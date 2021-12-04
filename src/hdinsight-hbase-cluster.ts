@@ -108,6 +108,8 @@ export function hdinsightHbaseClusterComponentVersionToTerraform(struct?: Hdinsi
 }
 
 export class HdinsightHbaseClusterComponentVersionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -118,7 +120,7 @@ export class HdinsightHbaseClusterComponentVersionOutputReference extends cdktf.
   }
 
   public get internalValue(): HdinsightHbaseClusterComponentVersion | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._hbase) {
       hasAnyValues = true;
@@ -129,9 +131,11 @@ export class HdinsightHbaseClusterComponentVersionOutputReference extends cdktf.
 
   public set internalValue(value: HdinsightHbaseClusterComponentVersion | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._hbase = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._hbase = value.hbase;
     }
   }
@@ -177,6 +181,8 @@ export function hdinsightHbaseClusterGatewayToTerraform(struct?: HdinsightHbaseC
 }
 
 export class HdinsightHbaseClusterGatewayOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -187,7 +193,7 @@ export class HdinsightHbaseClusterGatewayOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): HdinsightHbaseClusterGateway | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._enabled) {
       hasAnyValues = true;
@@ -206,11 +212,13 @@ export class HdinsightHbaseClusterGatewayOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: HdinsightHbaseClusterGateway | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._enabled = undefined;
       this._password = undefined;
       this._username = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._enabled = value.enabled;
       this._password = value.password;
       this._username = value.username;
@@ -292,6 +300,8 @@ export function hdinsightHbaseClusterMetastoresAmbariToTerraform(struct?: Hdinsi
 }
 
 export class HdinsightHbaseClusterMetastoresAmbariOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -302,7 +312,7 @@ export class HdinsightHbaseClusterMetastoresAmbariOutputReference extends cdktf.
   }
 
   public get internalValue(): HdinsightHbaseClusterMetastoresAmbari | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._databaseName) {
       hasAnyValues = true;
@@ -325,12 +335,14 @@ export class HdinsightHbaseClusterMetastoresAmbariOutputReference extends cdktf.
 
   public set internalValue(value: HdinsightHbaseClusterMetastoresAmbari | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._databaseName = undefined;
       this._password = undefined;
       this._server = undefined;
       this._username = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._databaseName = value.databaseName;
       this._password = value.password;
       this._server = value.server;
@@ -423,6 +435,8 @@ export function hdinsightHbaseClusterMetastoresHiveToTerraform(struct?: Hdinsigh
 }
 
 export class HdinsightHbaseClusterMetastoresHiveOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -433,7 +447,7 @@ export class HdinsightHbaseClusterMetastoresHiveOutputReference extends cdktf.Co
   }
 
   public get internalValue(): HdinsightHbaseClusterMetastoresHive | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._databaseName) {
       hasAnyValues = true;
@@ -456,12 +470,14 @@ export class HdinsightHbaseClusterMetastoresHiveOutputReference extends cdktf.Co
 
   public set internalValue(value: HdinsightHbaseClusterMetastoresHive | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._databaseName = undefined;
       this._password = undefined;
       this._server = undefined;
       this._username = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._databaseName = value.databaseName;
       this._password = value.password;
       this._server = value.server;
@@ -554,6 +570,8 @@ export function hdinsightHbaseClusterMetastoresOozieToTerraform(struct?: Hdinsig
 }
 
 export class HdinsightHbaseClusterMetastoresOozieOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -564,7 +582,7 @@ export class HdinsightHbaseClusterMetastoresOozieOutputReference extends cdktf.C
   }
 
   public get internalValue(): HdinsightHbaseClusterMetastoresOozie | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._databaseName) {
       hasAnyValues = true;
@@ -587,12 +605,14 @@ export class HdinsightHbaseClusterMetastoresOozieOutputReference extends cdktf.C
 
   public set internalValue(value: HdinsightHbaseClusterMetastoresOozie | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._databaseName = undefined;
       this._password = undefined;
       this._server = undefined;
       this._username = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._databaseName = value.databaseName;
       this._password = value.password;
       this._server = value.server;
@@ -686,6 +706,8 @@ export function hdinsightHbaseClusterMetastoresToTerraform(struct?: HdinsightHba
 }
 
 export class HdinsightHbaseClusterMetastoresOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -696,17 +718,17 @@ export class HdinsightHbaseClusterMetastoresOutputReference extends cdktf.Comple
   }
 
   public get internalValue(): HdinsightHbaseClusterMetastores | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._ambari) {
+    if (this._ambari?.internalValue) {
       hasAnyValues = true;
       internalValueResult.ambari = this._ambari?.internalValue;
     }
-    if (this._hive) {
+    if (this._hive?.internalValue) {
       hasAnyValues = true;
       internalValueResult.hive = this._hive?.internalValue;
     }
-    if (this._oozie) {
+    if (this._oozie?.internalValue) {
       hasAnyValues = true;
       internalValueResult.oozie = this._oozie?.internalValue;
     }
@@ -715,11 +737,13 @@ export class HdinsightHbaseClusterMetastoresOutputReference extends cdktf.Comple
 
   public set internalValue(value: HdinsightHbaseClusterMetastores | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._ambari.internalValue = undefined;
       this._hive.internalValue = undefined;
       this._oozie.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._ambari.internalValue = value.ambari;
       this._hive.internalValue = value.hive;
       this._oozie.internalValue = value.oozie;
@@ -797,6 +821,8 @@ export function hdinsightHbaseClusterMonitorToTerraform(struct?: HdinsightHbaseC
 }
 
 export class HdinsightHbaseClusterMonitorOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -807,7 +833,7 @@ export class HdinsightHbaseClusterMonitorOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): HdinsightHbaseClusterMonitor | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._logAnalyticsWorkspaceId) {
       hasAnyValues = true;
@@ -822,10 +848,12 @@ export class HdinsightHbaseClusterMonitorOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: HdinsightHbaseClusterMonitor | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._logAnalyticsWorkspaceId = undefined;
       this._primaryKey = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._logAnalyticsWorkspaceId = value.logAnalyticsWorkspaceId;
       this._primaryKey = value.primaryKey;
     }
@@ -900,6 +928,8 @@ export function hdinsightHbaseClusterRolesHeadNodeToTerraform(struct?: Hdinsight
 }
 
 export class HdinsightHbaseClusterRolesHeadNodeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -910,7 +940,7 @@ export class HdinsightHbaseClusterRolesHeadNodeOutputReference extends cdktf.Com
   }
 
   public get internalValue(): HdinsightHbaseClusterRolesHeadNode | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._password) {
       hasAnyValues = true;
@@ -941,6 +971,7 @@ export class HdinsightHbaseClusterRolesHeadNodeOutputReference extends cdktf.Com
 
   public set internalValue(value: HdinsightHbaseClusterRolesHeadNode | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._password = undefined;
       this._sshKeys = undefined;
       this._subnetId = undefined;
@@ -949,6 +980,7 @@ export class HdinsightHbaseClusterRolesHeadNodeOutputReference extends cdktf.Com
       this._vmSize = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._password = value.password;
       this._sshKeys = value.sshKeys;
       this._subnetId = value.subnetId;
@@ -1100,6 +1132,8 @@ export function hdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceToTerrafo
 }
 
 export class HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1110,7 +1144,7 @@ export class HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceOutputRefere
   }
 
   public get internalValue(): HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrence | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._timezone) {
       hasAnyValues = true;
@@ -1125,10 +1159,12 @@ export class HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceOutputRefere
 
   public set internalValue(value: HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrence | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._timezone = undefined;
       this._schedule = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._timezone = value.timezone;
       this._schedule = value.schedule;
     }
@@ -1181,6 +1217,8 @@ export function hdinsightHbaseClusterRolesWorkerNodeAutoscaleToTerraform(struct?
 }
 
 export class HdinsightHbaseClusterRolesWorkerNodeAutoscaleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1191,9 +1229,9 @@ export class HdinsightHbaseClusterRolesWorkerNodeAutoscaleOutputReference extend
   }
 
   public get internalValue(): HdinsightHbaseClusterRolesWorkerNodeAutoscale | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._recurrence) {
+    if (this._recurrence?.internalValue) {
       hasAnyValues = true;
       internalValueResult.recurrence = this._recurrence?.internalValue;
     }
@@ -1202,9 +1240,11 @@ export class HdinsightHbaseClusterRolesWorkerNodeAutoscaleOutputReference extend
 
   public set internalValue(value: HdinsightHbaseClusterRolesWorkerNodeAutoscale | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._recurrence.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._recurrence.internalValue = value.recurrence;
     }
   }
@@ -1285,6 +1325,8 @@ export function hdinsightHbaseClusterRolesWorkerNodeToTerraform(struct?: Hdinsig
 }
 
 export class HdinsightHbaseClusterRolesWorkerNodeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1295,7 +1337,7 @@ export class HdinsightHbaseClusterRolesWorkerNodeOutputReference extends cdktf.C
   }
 
   public get internalValue(): HdinsightHbaseClusterRolesWorkerNode | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._minInstanceCount) {
       hasAnyValues = true;
@@ -1329,7 +1371,7 @@ export class HdinsightHbaseClusterRolesWorkerNodeOutputReference extends cdktf.C
       hasAnyValues = true;
       internalValueResult.vmSize = this._vmSize;
     }
-    if (this._autoscale) {
+    if (this._autoscale?.internalValue) {
       hasAnyValues = true;
       internalValueResult.autoscale = this._autoscale?.internalValue;
     }
@@ -1338,6 +1380,7 @@ export class HdinsightHbaseClusterRolesWorkerNodeOutputReference extends cdktf.C
 
   public set internalValue(value: HdinsightHbaseClusterRolesWorkerNode | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._minInstanceCount = undefined;
       this._password = undefined;
       this._sshKeys = undefined;
@@ -1349,6 +1392,7 @@ export class HdinsightHbaseClusterRolesWorkerNodeOutputReference extends cdktf.C
       this._autoscale.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._minInstanceCount = value.minInstanceCount;
       this._password = value.password;
       this._sshKeys = value.sshKeys;
@@ -1539,6 +1583,8 @@ export function hdinsightHbaseClusterRolesZookeeperNodeToTerraform(struct?: Hdin
 }
 
 export class HdinsightHbaseClusterRolesZookeeperNodeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1549,7 +1595,7 @@ export class HdinsightHbaseClusterRolesZookeeperNodeOutputReference extends cdkt
   }
 
   public get internalValue(): HdinsightHbaseClusterRolesZookeeperNode | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._password) {
       hasAnyValues = true;
@@ -1580,6 +1626,7 @@ export class HdinsightHbaseClusterRolesZookeeperNodeOutputReference extends cdkt
 
   public set internalValue(value: HdinsightHbaseClusterRolesZookeeperNode | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._password = undefined;
       this._sshKeys = undefined;
       this._subnetId = undefined;
@@ -1588,6 +1635,7 @@ export class HdinsightHbaseClusterRolesZookeeperNodeOutputReference extends cdkt
       this._vmSize = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._password = value.password;
       this._sshKeys = value.sshKeys;
       this._subnetId = value.subnetId;
@@ -1721,6 +1769,8 @@ export function hdinsightHbaseClusterRolesToTerraform(struct?: HdinsightHbaseClu
 }
 
 export class HdinsightHbaseClusterRolesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1731,17 +1781,17 @@ export class HdinsightHbaseClusterRolesOutputReference extends cdktf.ComplexObje
   }
 
   public get internalValue(): HdinsightHbaseClusterRoles | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._headNode) {
+    if (this._headNode?.internalValue) {
       hasAnyValues = true;
       internalValueResult.headNode = this._headNode?.internalValue;
     }
-    if (this._workerNode) {
+    if (this._workerNode?.internalValue) {
       hasAnyValues = true;
       internalValueResult.workerNode = this._workerNode?.internalValue;
     }
-    if (this._zookeeperNode) {
+    if (this._zookeeperNode?.internalValue) {
       hasAnyValues = true;
       internalValueResult.zookeeperNode = this._zookeeperNode?.internalValue;
     }
@@ -1750,11 +1800,13 @@ export class HdinsightHbaseClusterRolesOutputReference extends cdktf.ComplexObje
 
   public set internalValue(value: HdinsightHbaseClusterRoles | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._headNode.internalValue = undefined;
       this._workerNode.internalValue = undefined;
       this._zookeeperNode.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._headNode.internalValue = value.headNode;
       this._workerNode.internalValue = value.workerNode;
       this._zookeeperNode.internalValue = value.zookeeperNode;
@@ -1848,6 +1900,8 @@ export function hdinsightHbaseClusterSecurityProfileToTerraform(struct?: Hdinsig
 }
 
 export class HdinsightHbaseClusterSecurityProfileOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1858,7 +1912,7 @@ export class HdinsightHbaseClusterSecurityProfileOutputReference extends cdktf.C
   }
 
   public get internalValue(): HdinsightHbaseClusterSecurityProfile | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._aaddsResourceId) {
       hasAnyValues = true;
@@ -1893,6 +1947,7 @@ export class HdinsightHbaseClusterSecurityProfileOutputReference extends cdktf.C
 
   public set internalValue(value: HdinsightHbaseClusterSecurityProfile | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._aaddsResourceId = undefined;
       this._clusterUsersGroupDns = undefined;
       this._domainName = undefined;
@@ -1902,6 +1957,7 @@ export class HdinsightHbaseClusterSecurityProfileOutputReference extends cdktf.C
       this._msiResourceId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._aaddsResourceId = value.aaddsResourceId;
       this._clusterUsersGroupDns = value.clusterUsersGroupDns;
       this._domainName = value.domainName;
@@ -2066,6 +2122,8 @@ export function hdinsightHbaseClusterStorageAccountGen2ToTerraform(struct?: Hdin
 }
 
 export class HdinsightHbaseClusterStorageAccountGen2OutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2076,7 +2134,7 @@ export class HdinsightHbaseClusterStorageAccountGen2OutputReference extends cdkt
   }
 
   public get internalValue(): HdinsightHbaseClusterStorageAccountGen2 | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._filesystemId) {
       hasAnyValues = true;
@@ -2099,12 +2157,14 @@ export class HdinsightHbaseClusterStorageAccountGen2OutputReference extends cdkt
 
   public set internalValue(value: HdinsightHbaseClusterStorageAccountGen2 | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._filesystemId = undefined;
       this._isDefault = undefined;
       this._managedIdentityResourceId = undefined;
       this._storageResourceId = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._filesystemId = value.filesystemId;
       this._isDefault = value.isDefault;
       this._managedIdentityResourceId = value.managedIdentityResourceId;
@@ -2197,6 +2257,8 @@ export function hdinsightHbaseClusterTimeoutsToTerraform(struct?: HdinsightHbase
 }
 
 export class HdinsightHbaseClusterTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -2207,7 +2269,7 @@ export class HdinsightHbaseClusterTimeoutsOutputReference extends cdktf.ComplexO
   }
 
   public get internalValue(): HdinsightHbaseClusterTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -2230,12 +2292,14 @@ export class HdinsightHbaseClusterTimeoutsOutputReference extends cdktf.ComplexO
 
   public set internalValue(value: HdinsightHbaseClusterTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

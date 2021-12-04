@@ -71,6 +71,8 @@ export function mediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyToTerra
 }
 
 export class MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -81,7 +83,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputRefe
   }
 
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._label) {
       hasAnyValues = true;
@@ -96,10 +98,12 @@ export class MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputRefe
 
   public set internalValue(value: MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._label = undefined;
       this._policyName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._label = value.label;
       this._policyName = value.policyName;
     }
@@ -160,6 +164,8 @@ export function mediaStreamingPolicyCommonEncryptionCbcsDrmFairplayToTerraform(s
 }
 
 export class MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -170,7 +176,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference 
   }
 
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._allowPersistentLicense) {
       hasAnyValues = true;
@@ -185,10 +191,12 @@ export class MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference 
 
   public set internalValue(value: MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._allowPersistentLicense = undefined;
       this._customLicenseAcquisitionUrlTemplate = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._allowPersistentLicense = value.allowPersistentLicense;
       this._customLicenseAcquisitionUrlTemplate = value.customLicenseAcquisitionUrlTemplate;
     }
@@ -259,6 +267,8 @@ export function mediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsToTerraf
 }
 
 export class MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -269,7 +279,7 @@ export class MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputRefer
   }
 
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dash) {
       hasAnyValues = true;
@@ -292,12 +302,14 @@ export class MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputRefer
 
   public set internalValue(value: MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dash = undefined;
       this._download = undefined;
       this._hls = undefined;
       this._smoothStreaming = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dash = value.dash;
       this._download = value.download;
       this._hls = value.hls;
@@ -403,6 +415,8 @@ export function mediaStreamingPolicyCommonEncryptionCbcsToTerraform(struct?: Med
 }
 
 export class MediaStreamingPolicyCommonEncryptionCbcsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -413,17 +427,17 @@ export class MediaStreamingPolicyCommonEncryptionCbcsOutputReference extends cdk
   }
 
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCbcs | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._defaultContentKey) {
+    if (this._defaultContentKey?.internalValue) {
       hasAnyValues = true;
       internalValueResult.defaultContentKey = this._defaultContentKey?.internalValue;
     }
-    if (this._drmFairplay) {
+    if (this._drmFairplay?.internalValue) {
       hasAnyValues = true;
       internalValueResult.drmFairplay = this._drmFairplay?.internalValue;
     }
-    if (this._enabledProtocols) {
+    if (this._enabledProtocols?.internalValue) {
       hasAnyValues = true;
       internalValueResult.enabledProtocols = this._enabledProtocols?.internalValue;
     }
@@ -432,11 +446,13 @@ export class MediaStreamingPolicyCommonEncryptionCbcsOutputReference extends cdk
 
   public set internalValue(value: MediaStreamingPolicyCommonEncryptionCbcs | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._defaultContentKey.internalValue = undefined;
       this._drmFairplay.internalValue = undefined;
       this._enabledProtocols.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._defaultContentKey.internalValue = value.defaultContentKey;
       this._drmFairplay.internalValue = value.drmFairplay;
       this._enabledProtocols.internalValue = value.enabledProtocols;
@@ -514,6 +530,8 @@ export function mediaStreamingPolicyCommonEncryptionCencDefaultContentKeyToTerra
 }
 
 export class MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -524,7 +542,7 @@ export class MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputRefe
   }
 
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCencDefaultContentKey | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._label) {
       hasAnyValues = true;
@@ -539,10 +557,12 @@ export class MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputRefe
 
   public set internalValue(value: MediaStreamingPolicyCommonEncryptionCencDefaultContentKey | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._label = undefined;
       this._policyName = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._label = value.label;
       this._policyName = value.policyName;
     }
@@ -603,6 +623,8 @@ export function mediaStreamingPolicyCommonEncryptionCencDrmPlayreadyToTerraform(
 }
 
 export class MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -613,7 +635,7 @@ export class MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference
   }
 
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCencDrmPlayready | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._customAttributes) {
       hasAnyValues = true;
@@ -628,10 +650,12 @@ export class MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference
 
   public set internalValue(value: MediaStreamingPolicyCommonEncryptionCencDrmPlayready | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._customAttributes = undefined;
       this._customLicenseAcquisitionUrlTemplate = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._customAttributes = value.customAttributes;
       this._customLicenseAcquisitionUrlTemplate = value.customLicenseAcquisitionUrlTemplate;
     }
@@ -702,6 +726,8 @@ export function mediaStreamingPolicyCommonEncryptionCencEnabledProtocolsToTerraf
 }
 
 export class MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -712,7 +738,7 @@ export class MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputRefer
   }
 
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCencEnabledProtocols | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dash) {
       hasAnyValues = true;
@@ -735,12 +761,14 @@ export class MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputRefer
 
   public set internalValue(value: MediaStreamingPolicyCommonEncryptionCencEnabledProtocols | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dash = undefined;
       this._download = undefined;
       this._hls = undefined;
       this._smoothStreaming = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dash = value.dash;
       this._download = value.download;
       this._hls = value.hls;
@@ -851,6 +879,8 @@ export function mediaStreamingPolicyCommonEncryptionCencToTerraform(struct?: Med
 }
 
 export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -861,21 +891,21 @@ export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdk
   }
 
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCenc | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._drmWidevineCustomLicenseAcquisitionUrlTemplate) {
       hasAnyValues = true;
       internalValueResult.drmWidevineCustomLicenseAcquisitionUrlTemplate = this._drmWidevineCustomLicenseAcquisitionUrlTemplate;
     }
-    if (this._defaultContentKey) {
+    if (this._defaultContentKey?.internalValue) {
       hasAnyValues = true;
       internalValueResult.defaultContentKey = this._defaultContentKey?.internalValue;
     }
-    if (this._drmPlayready) {
+    if (this._drmPlayready?.internalValue) {
       hasAnyValues = true;
       internalValueResult.drmPlayready = this._drmPlayready?.internalValue;
     }
-    if (this._enabledProtocols) {
+    if (this._enabledProtocols?.internalValue) {
       hasAnyValues = true;
       internalValueResult.enabledProtocols = this._enabledProtocols?.internalValue;
     }
@@ -884,12 +914,14 @@ export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdk
 
   public set internalValue(value: MediaStreamingPolicyCommonEncryptionCenc | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._drmWidevineCustomLicenseAcquisitionUrlTemplate = undefined;
       this._defaultContentKey.internalValue = undefined;
       this._drmPlayready.internalValue = undefined;
       this._enabledProtocols.internalValue = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._drmWidevineCustomLicenseAcquisitionUrlTemplate = value.drmWidevineCustomLicenseAcquisitionUrlTemplate;
       this._defaultContentKey.internalValue = value.defaultContentKey;
       this._drmPlayready.internalValue = value.drmPlayready;
@@ -994,6 +1026,8 @@ export function mediaStreamingPolicyNoEncryptionEnabledProtocolsToTerraform(stru
 }
 
 export class MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1004,7 +1038,7 @@ export class MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference ext
   }
 
   public get internalValue(): MediaStreamingPolicyNoEncryptionEnabledProtocols | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._dash) {
       hasAnyValues = true;
@@ -1027,12 +1061,14 @@ export class MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference ext
 
   public set internalValue(value: MediaStreamingPolicyNoEncryptionEnabledProtocols | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._dash = undefined;
       this._download = undefined;
       this._hls = undefined;
       this._smoothStreaming = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._dash = value.dash;
       this._download = value.download;
       this._hls = value.hls;
@@ -1132,6 +1168,8 @@ export function mediaStreamingPolicyTimeoutsToTerraform(struct?: MediaStreamingP
 }
 
 export class MediaStreamingPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -1142,7 +1180,7 @@ export class MediaStreamingPolicyTimeoutsOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): MediaStreamingPolicyTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -1161,11 +1199,13 @@ export class MediaStreamingPolicyTimeoutsOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: MediaStreamingPolicyTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

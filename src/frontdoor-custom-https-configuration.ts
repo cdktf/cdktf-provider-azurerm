@@ -61,6 +61,8 @@ export function frontdoorCustomHttpsConfigurationCustomHttpsConfigurationToTerra
 }
 
 export class FrontdoorCustomHttpsConfigurationCustomHttpsConfigurationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -71,7 +73,7 @@ export class FrontdoorCustomHttpsConfigurationCustomHttpsConfigurationOutputRefe
   }
 
   public get internalValue(): FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._azureKeyVaultCertificateSecretName) {
       hasAnyValues = true;
@@ -94,12 +96,14 @@ export class FrontdoorCustomHttpsConfigurationCustomHttpsConfigurationOutputRefe
 
   public set internalValue(value: FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._azureKeyVaultCertificateSecretName = undefined;
       this._azureKeyVaultCertificateSecretVersion = undefined;
       this._azureKeyVaultCertificateVaultId = undefined;
       this._certificateSource = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._azureKeyVaultCertificateSecretName = value.azureKeyVaultCertificateSecretName;
       this._azureKeyVaultCertificateSecretVersion = value.azureKeyVaultCertificateSecretVersion;
       this._azureKeyVaultCertificateVaultId = value.azureKeyVaultCertificateVaultId;
@@ -204,6 +208,8 @@ export function frontdoorCustomHttpsConfigurationTimeoutsToTerraform(struct?: Fr
 }
 
 export class FrontdoorCustomHttpsConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -214,7 +220,7 @@ export class FrontdoorCustomHttpsConfigurationTimeoutsOutputReference extends cd
   }
 
   public get internalValue(): FrontdoorCustomHttpsConfigurationTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -237,12 +243,14 @@ export class FrontdoorCustomHttpsConfigurationTimeoutsOutputReference extends cd
 
   public set internalValue(value: FrontdoorCustomHttpsConfigurationTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;

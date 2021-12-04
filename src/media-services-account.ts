@@ -70,6 +70,8 @@ export function mediaServicesAccountIdentityToTerraform(struct?: MediaServicesAc
 }
 
 export class MediaServicesAccountIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -80,7 +82,7 @@ export class MediaServicesAccountIdentityOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): MediaServicesAccountIdentity | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._type) {
       hasAnyValues = true;
@@ -91,9 +93,11 @@ export class MediaServicesAccountIdentityOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: MediaServicesAccountIdentity | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._type = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._type = value.type;
     }
   }
@@ -137,6 +141,8 @@ export function mediaServicesAccountKeyDeliveryAccessControlToTerraform(struct?:
 }
 
 export class MediaServicesAccountKeyDeliveryAccessControlOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -147,7 +153,7 @@ export class MediaServicesAccountKeyDeliveryAccessControlOutputReference extends
   }
 
   public get internalValue(): MediaServicesAccountKeyDeliveryAccessControl | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._defaultAction) {
       hasAnyValues = true;
@@ -162,10 +168,12 @@ export class MediaServicesAccountKeyDeliveryAccessControlOutputReference extends
 
   public set internalValue(value: MediaServicesAccountKeyDeliveryAccessControl | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._defaultAction = undefined;
       this._ipAllowList = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._defaultAction = value.defaultAction;
       this._ipAllowList = value.ipAllowList;
     }
@@ -258,6 +266,8 @@ export function mediaServicesAccountTimeoutsToTerraform(struct?: MediaServicesAc
 }
 
 export class MediaServicesAccountTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
   /**
   * @param terraformResource The parent resource
   * @param terraformAttribute The attribute on the parent resource this class is referencing
@@ -268,7 +278,7 @@ export class MediaServicesAccountTimeoutsOutputReference extends cdktf.ComplexOb
   }
 
   public get internalValue(): MediaServicesAccountTimeouts | undefined {
-    let hasAnyValues = false;
+    let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
     if (this._create) {
       hasAnyValues = true;
@@ -291,12 +301,14 @@ export class MediaServicesAccountTimeoutsOutputReference extends cdktf.ComplexOb
 
   public set internalValue(value: MediaServicesAccountTimeouts | undefined) {
     if (value === undefined) {
+      this.isEmptyObject = false;
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
       this._update = undefined;
     }
     else {
+      this.isEmptyObject = Object.keys(value).length === 0;
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
