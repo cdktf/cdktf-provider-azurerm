@@ -40,6 +40,10 @@ export interface ManagedDiskConfig extends cdktf.TerraformMetaArguments {
   */
   readonly diskSizeGb?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#hyper_v_generation ManagedDisk#hyper_v_generation}
+  */
+  readonly hyperVGeneration?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#image_reference_id ManagedDisk#image_reference_id}
   */
   readonly imageReferenceId?: string;
@@ -607,6 +611,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
     this._diskMbpsReadOnly = config.diskMbpsReadOnly;
     this._diskMbpsReadWrite = config.diskMbpsReadWrite;
     this._diskSizeGb = config.diskSizeGb;
+    this._hyperVGeneration = config.hyperVGeneration;
     this._imageReferenceId = config.imageReferenceId;
     this._location = config.location;
     this._logicalSectorSize = config.logicalSectorSize;
@@ -756,6 +761,22 @@ export class ManagedDisk extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get diskSizeGbInput() {
     return this._diskSizeGb;
+  }
+
+  // hyper_v_generation - computed: false, optional: true, required: false
+  private _hyperVGeneration?: string; 
+  public get hyperVGeneration() {
+    return this.getStringAttribute('hyper_v_generation');
+  }
+  public set hyperVGeneration(value: string) {
+    this._hyperVGeneration = value;
+  }
+  public resetHyperVGeneration() {
+    this._hyperVGeneration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get hyperVGenerationInput() {
+    return this._hyperVGeneration;
   }
 
   // id - computed: true, optional: true, required: false
@@ -1086,6 +1107,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
       disk_mbps_read_only: cdktf.numberToTerraform(this._diskMbpsReadOnly),
       disk_mbps_read_write: cdktf.numberToTerraform(this._diskMbpsReadWrite),
       disk_size_gb: cdktf.numberToTerraform(this._diskSizeGb),
+      hyper_v_generation: cdktf.stringToTerraform(this._hyperVGeneration),
       image_reference_id: cdktf.stringToTerraform(this._imageReferenceId),
       location: cdktf.stringToTerraform(this._location),
       logical_sector_size: cdktf.numberToTerraform(this._logicalSectorSize),

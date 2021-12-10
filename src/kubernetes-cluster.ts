@@ -98,6 +98,12 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly defaultNodePool: KubernetesClusterDefaultNodePool;
   /**
+  * http_proxy_config block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#http_proxy_config KubernetesCluster#http_proxy_config}
+  */
+  readonly httpProxyConfig?: KubernetesClusterHttpProxyConfig;
+  /**
   * identity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#identity KubernetesCluster#identity}
@@ -304,6 +310,123 @@ export class KubernetesClusterAddonProfileAciConnectorLinuxOutputReference exten
   // Temporarily expose input value. Use with caution.
   public get subnetNameInput() {
     return this._subnetName;
+  }
+}
+export interface KubernetesClusterAddonProfileAzureKeyvaultSecretsProvider {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#enabled KubernetesCluster#enabled}
+  */
+  readonly enabled: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#secret_rotation_enabled KubernetesCluster#secret_rotation_enabled}
+  */
+  readonly secretRotationEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#secret_rotation_interval KubernetesCluster#secret_rotation_interval}
+  */
+  readonly secretRotationInterval?: string;
+}
+
+export function kubernetesClusterAddonProfileAzureKeyvaultSecretsProviderToTerraform(struct?: KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderOutputReference | KubernetesClusterAddonProfileAzureKeyvaultSecretsProvider): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    secret_rotation_enabled: cdktf.booleanToTerraform(struct!.secretRotationEnabled),
+    secret_rotation_interval: cdktf.stringToTerraform(struct!.secretRotationInterval),
+  }
+}
+
+export class KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): KubernetesClusterAddonProfileAzureKeyvaultSecretsProvider | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._secretRotationEnabled) {
+      hasAnyValues = true;
+      internalValueResult.secretRotationEnabled = this._secretRotationEnabled;
+    }
+    if (this._secretRotationInterval) {
+      hasAnyValues = true;
+      internalValueResult.secretRotationInterval = this._secretRotationInterval;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterAddonProfileAzureKeyvaultSecretsProvider | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+      this._secretRotationEnabled = undefined;
+      this._secretRotationInterval = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+      this._secretRotationEnabled = value.secretRotationEnabled;
+      this._secretRotationInterval = value.secretRotationInterval;
+    }
+  }
+
+  // enabled - computed: false, optional: false, required: true
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled') as any;
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // secret_rotation_enabled - computed: false, optional: true, required: false
+  private _secretRotationEnabled?: boolean | cdktf.IResolvable; 
+  public get secretRotationEnabled() {
+    return this.getBooleanAttribute('secret_rotation_enabled') as any;
+  }
+  public set secretRotationEnabled(value: boolean | cdktf.IResolvable) {
+    this._secretRotationEnabled = value;
+  }
+  public resetSecretRotationEnabled() {
+    this._secretRotationEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretRotationEnabledInput() {
+    return this._secretRotationEnabled;
+  }
+
+  // secret_rotation_interval - computed: false, optional: true, required: false
+  private _secretRotationInterval?: string; 
+  public get secretRotationInterval() {
+    return this.getStringAttribute('secret_rotation_interval');
+  }
+  public set secretRotationInterval(value: string) {
+    this._secretRotationInterval = value;
+  }
+  public resetSecretRotationInterval() {
+    this._secretRotationInterval = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretRotationIntervalInput() {
+    return this._secretRotationInterval;
   }
 }
 export interface KubernetesClusterAddonProfileAzurePolicy {
@@ -827,6 +950,12 @@ export interface KubernetesClusterAddonProfile {
   */
   readonly aciConnectorLinux?: KubernetesClusterAddonProfileAciConnectorLinux;
   /**
+  * azure_keyvault_secrets_provider block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#azure_keyvault_secrets_provider KubernetesCluster#azure_keyvault_secrets_provider}
+  */
+  readonly azureKeyvaultSecretsProvider?: KubernetesClusterAddonProfileAzureKeyvaultSecretsProvider;
+  /**
   * azure_policy block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#azure_policy KubernetesCluster#azure_policy}
@@ -871,6 +1000,7 @@ export function kubernetesClusterAddonProfileToTerraform(struct?: KubernetesClus
   }
   return {
     aci_connector_linux: kubernetesClusterAddonProfileAciConnectorLinuxToTerraform(struct!.aciConnectorLinux),
+    azure_keyvault_secrets_provider: kubernetesClusterAddonProfileAzureKeyvaultSecretsProviderToTerraform(struct!.azureKeyvaultSecretsProvider),
     azure_policy: kubernetesClusterAddonProfileAzurePolicyToTerraform(struct!.azurePolicy),
     http_application_routing: kubernetesClusterAddonProfileHttpApplicationRoutingToTerraform(struct!.httpApplicationRouting),
     ingress_application_gateway: kubernetesClusterAddonProfileIngressApplicationGatewayToTerraform(struct!.ingressApplicationGateway),
@@ -898,6 +1028,10 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
     if (this._aciConnectorLinux?.internalValue) {
       hasAnyValues = true;
       internalValueResult.aciConnectorLinux = this._aciConnectorLinux?.internalValue;
+    }
+    if (this._azureKeyvaultSecretsProvider?.internalValue) {
+      hasAnyValues = true;
+      internalValueResult.azureKeyvaultSecretsProvider = this._azureKeyvaultSecretsProvider?.internalValue;
     }
     if (this._azurePolicy?.internalValue) {
       hasAnyValues = true;
@@ -930,6 +1064,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
     if (value === undefined) {
       this.isEmptyObject = false;
       this._aciConnectorLinux.internalValue = undefined;
+      this._azureKeyvaultSecretsProvider.internalValue = undefined;
       this._azurePolicy.internalValue = undefined;
       this._httpApplicationRouting.internalValue = undefined;
       this._ingressApplicationGateway.internalValue = undefined;
@@ -940,6 +1075,7 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._aciConnectorLinux.internalValue = value.aciConnectorLinux;
+      this._azureKeyvaultSecretsProvider.internalValue = value.azureKeyvaultSecretsProvider;
       this._azurePolicy.internalValue = value.azurePolicy;
       this._httpApplicationRouting.internalValue = value.httpApplicationRouting;
       this._ingressApplicationGateway.internalValue = value.ingressApplicationGateway;
@@ -963,6 +1099,22 @@ export class KubernetesClusterAddonProfileOutputReference extends cdktf.ComplexO
   // Temporarily expose input value. Use with caution.
   public get aciConnectorLinuxInput() {
     return this._aciConnectorLinux.internalValue;
+  }
+
+  // azure_keyvault_secrets_provider - computed: false, optional: true, required: false
+  private _azureKeyvaultSecretsProvider = new KubernetesClusterAddonProfileAzureKeyvaultSecretsProviderOutputReference(this as any, "azure_keyvault_secrets_provider", true);
+  public get azureKeyvaultSecretsProvider() {
+    return this._azureKeyvaultSecretsProvider;
+  }
+  public putAzureKeyvaultSecretsProvider(value: KubernetesClusterAddonProfileAzureKeyvaultSecretsProvider) {
+    this._azureKeyvaultSecretsProvider.internalValue = value;
+  }
+  public resetAzureKeyvaultSecretsProvider() {
+    this._azureKeyvaultSecretsProvider.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureKeyvaultSecretsProviderInput() {
+    return this._azureKeyvaultSecretsProvider.internalValue;
   }
 
   // azure_policy - computed: false, optional: true, required: false
@@ -3726,6 +3878,153 @@ export class KubernetesClusterDefaultNodePoolOutputReference extends cdktf.Compl
     return this._upgradeSettings.internalValue;
   }
 }
+export interface KubernetesClusterHttpProxyConfig {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#http_proxy KubernetesCluster#http_proxy}
+  */
+  readonly httpProxy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#https_proxy KubernetesCluster#https_proxy}
+  */
+  readonly httpsProxy?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#no_proxy KubernetesCluster#no_proxy}
+  */
+  readonly noProxy?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#trusted_ca KubernetesCluster#trusted_ca}
+  */
+  readonly trustedCa?: string;
+}
+
+export function kubernetesClusterHttpProxyConfigToTerraform(struct?: KubernetesClusterHttpProxyConfigOutputReference | KubernetesClusterHttpProxyConfig): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    http_proxy: cdktf.stringToTerraform(struct!.httpProxy),
+    https_proxy: cdktf.stringToTerraform(struct!.httpsProxy),
+    no_proxy: cdktf.listMapper(cdktf.stringToTerraform)(struct!.noProxy),
+    trusted_ca: cdktf.stringToTerraform(struct!.trustedCa),
+  }
+}
+
+export class KubernetesClusterHttpProxyConfigOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): KubernetesClusterHttpProxyConfig | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._httpProxy) {
+      hasAnyValues = true;
+      internalValueResult.httpProxy = this._httpProxy;
+    }
+    if (this._httpsProxy) {
+      hasAnyValues = true;
+      internalValueResult.httpsProxy = this._httpsProxy;
+    }
+    if (this._noProxy) {
+      hasAnyValues = true;
+      internalValueResult.noProxy = this._noProxy;
+    }
+    if (this._trustedCa) {
+      hasAnyValues = true;
+      internalValueResult.trustedCa = this._trustedCa;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: KubernetesClusterHttpProxyConfig | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._httpProxy = undefined;
+      this._httpsProxy = undefined;
+      this._noProxy = undefined;
+      this._trustedCa = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._httpProxy = value.httpProxy;
+      this._httpsProxy = value.httpsProxy;
+      this._noProxy = value.noProxy;
+      this._trustedCa = value.trustedCa;
+    }
+  }
+
+  // http_proxy - computed: false, optional: true, required: false
+  private _httpProxy?: string; 
+  public get httpProxy() {
+    return this.getStringAttribute('http_proxy');
+  }
+  public set httpProxy(value: string) {
+    this._httpProxy = value;
+  }
+  public resetHttpProxy() {
+    this._httpProxy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpProxyInput() {
+    return this._httpProxy;
+  }
+
+  // https_proxy - computed: false, optional: true, required: false
+  private _httpsProxy?: string; 
+  public get httpsProxy() {
+    return this.getStringAttribute('https_proxy');
+  }
+  public set httpsProxy(value: string) {
+    this._httpsProxy = value;
+  }
+  public resetHttpsProxy() {
+    this._httpsProxy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpsProxyInput() {
+    return this._httpsProxy;
+  }
+
+  // no_proxy - computed: false, optional: true, required: false
+  private _noProxy?: string[]; 
+  public get noProxy() {
+    return this.getListAttribute('no_proxy');
+  }
+  public set noProxy(value: string[]) {
+    this._noProxy = value;
+  }
+  public resetNoProxy() {
+    this._noProxy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get noProxyInput() {
+    return this._noProxy;
+  }
+
+  // trusted_ca - computed: false, optional: true, required: false
+  private _trustedCa?: string; 
+  public get trustedCa() {
+    return this.getStringAttribute('trusted_ca');
+  }
+  public set trustedCa(value: string) {
+    this._trustedCa = value;
+  }
+  public resetTrustedCa() {
+    this._trustedCa = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustedCaInput() {
+    return this._trustedCa;
+  }
+}
 export interface KubernetesClusterIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#type KubernetesCluster#type}
@@ -5560,6 +5859,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._addonProfile.internalValue = config.addonProfile;
     this._autoScalerProfile.internalValue = config.autoScalerProfile;
     this._defaultNodePool.internalValue = config.defaultNodePool;
+    this._httpProxyConfig.internalValue = config.httpProxyConfig;
     this._identity.internalValue = config.identity;
     this._kubeletIdentity.internalValue = config.kubeletIdentity;
     this._linuxProfile.internalValue = config.linuxProfile;
@@ -5940,6 +6240,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     return this._defaultNodePool.internalValue;
   }
 
+  // http_proxy_config - computed: false, optional: true, required: false
+  private _httpProxyConfig = new KubernetesClusterHttpProxyConfigOutputReference(this as any, "http_proxy_config", true);
+  public get httpProxyConfig() {
+    return this._httpProxyConfig;
+  }
+  public putHttpProxyConfig(value: KubernetesClusterHttpProxyConfig) {
+    this._httpProxyConfig.internalValue = value;
+  }
+  public resetHttpProxyConfig() {
+    this._httpProxyConfig.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpProxyConfigInput() {
+    return this._httpProxyConfig.internalValue;
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity = new KubernetesClusterIdentityOutputReference(this as any, "identity", true);
   public get identity() {
@@ -6111,6 +6427,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       addon_profile: kubernetesClusterAddonProfileToTerraform(this._addonProfile.internalValue),
       auto_scaler_profile: kubernetesClusterAutoScalerProfileToTerraform(this._autoScalerProfile.internalValue),
       default_node_pool: kubernetesClusterDefaultNodePoolToTerraform(this._defaultNodePool.internalValue),
+      http_proxy_config: kubernetesClusterHttpProxyConfigToTerraform(this._httpProxyConfig.internalValue),
       identity: kubernetesClusterIdentityToTerraform(this._identity.internalValue),
       kubelet_identity: kubernetesClusterKubeletIdentityToTerraform(this._kubeletIdentity.internalValue),
       linux_profile: kubernetesClusterLinuxProfileToTerraform(this._linuxProfile.internalValue),

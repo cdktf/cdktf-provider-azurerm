@@ -56,6 +56,10 @@ export interface SqlManagedInstanceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly skuName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance.html#storage_account_type SqlManagedInstance#storage_account_type}
+  */
+  readonly storageAccountType?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance.html#storage_size_in_gb SqlManagedInstance#storage_size_in_gb}
   */
   readonly storageSizeInGb: number;
@@ -346,6 +350,7 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
     this._publicDataEndpointEnabled = config.publicDataEndpointEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._skuName = config.skuName;
+    this._storageAccountType = config.storageAccountType;
     this._storageSizeInGb = config.storageSizeInGb;
     this._subnetId = config.subnetId;
     this._tags = config.tags;
@@ -540,6 +545,22 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
     return this._skuName;
   }
 
+  // storage_account_type - computed: false, optional: true, required: false
+  private _storageAccountType?: string; 
+  public get storageAccountType() {
+    return this.getStringAttribute('storage_account_type');
+  }
+  public set storageAccountType(value: string) {
+    this._storageAccountType = value;
+  }
+  public resetStorageAccountType() {
+    this._storageAccountType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountTypeInput() {
+    return this._storageAccountType;
+  }
+
   // storage_size_in_gb - computed: false, optional: false, required: true
   private _storageSizeInGb?: number; 
   public get storageSizeInGb() {
@@ -662,6 +683,7 @@ export class SqlManagedInstance extends cdktf.TerraformResource {
       public_data_endpoint_enabled: cdktf.booleanToTerraform(this._publicDataEndpointEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_name: cdktf.stringToTerraform(this._skuName),
+      storage_account_type: cdktf.stringToTerraform(this._storageAccountType),
       storage_size_in_gb: cdktf.numberToTerraform(this._storageSizeInGb),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),

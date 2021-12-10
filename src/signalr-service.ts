@@ -8,9 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface SignalrServiceConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#connectivity_logs_enabled SignalrService#connectivity_logs_enabled}
+  */
+  readonly connectivityLogsEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#location SignalrService#location}
   */
   readonly location: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#messaging_logs_enabled SignalrService#messaging_logs_enabled}
+  */
+  readonly messagingLogsEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#name SignalrService#name}
   */
@@ -19,6 +27,10 @@ export interface SignalrServiceConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#resource_group_name SignalrService#resource_group_name}
   */
   readonly resourceGroupName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#service_mode SignalrService#service_mode}
+  */
+  readonly serviceMode?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#tags SignalrService#tags}
   */
@@ -392,9 +404,12 @@ export class SignalrService extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._connectivityLogsEnabled = config.connectivityLogsEnabled;
     this._location = config.location;
+    this._messagingLogsEnabled = config.messagingLogsEnabled;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._serviceMode = config.serviceMode;
     this._tags = config.tags;
     this._cors = config.cors;
     this._features = config.features;
@@ -406,6 +421,22 @@ export class SignalrService extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // connectivity_logs_enabled - computed: true, optional: true, required: false
+  private _connectivityLogsEnabled?: boolean | cdktf.IResolvable; 
+  public get connectivityLogsEnabled() {
+    return this.getBooleanAttribute('connectivity_logs_enabled') as any;
+  }
+  public set connectivityLogsEnabled(value: boolean | cdktf.IResolvable) {
+    this._connectivityLogsEnabled = value;
+  }
+  public resetConnectivityLogsEnabled() {
+    this._connectivityLogsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectivityLogsEnabledInput() {
+    return this._connectivityLogsEnabled;
+  }
 
   // hostname - computed: true, optional: false, required: false
   public get hostname() {
@@ -433,6 +464,22 @@ export class SignalrService extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location;
+  }
+
+  // messaging_logs_enabled - computed: true, optional: true, required: false
+  private _messagingLogsEnabled?: boolean | cdktf.IResolvable; 
+  public get messagingLogsEnabled() {
+    return this.getBooleanAttribute('messaging_logs_enabled') as any;
+  }
+  public set messagingLogsEnabled(value: boolean | cdktf.IResolvable) {
+    this._messagingLogsEnabled = value;
+  }
+  public resetMessagingLogsEnabled() {
+    this._messagingLogsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get messagingLogsEnabledInput() {
+    return this._messagingLogsEnabled;
   }
 
   // name - computed: false, optional: false, required: true
@@ -489,6 +536,22 @@ export class SignalrService extends cdktf.TerraformResource {
   // server_port - computed: true, optional: false, required: false
   public get serverPort() {
     return this.getNumberAttribute('server_port');
+  }
+
+  // service_mode - computed: true, optional: true, required: false
+  private _serviceMode?: string; 
+  public get serviceMode() {
+    return this.getStringAttribute('service_mode');
+  }
+  public set serviceMode(value: string) {
+    this._serviceMode = value;
+  }
+  public resetServiceMode() {
+    this._serviceMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get serviceModeInput() {
+    return this._serviceMode;
   }
 
   // tags - computed: false, optional: true, required: false
@@ -594,9 +657,12 @@ export class SignalrService extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      connectivity_logs_enabled: cdktf.booleanToTerraform(this._connectivityLogsEnabled),
       location: cdktf.stringToTerraform(this._location),
+      messaging_logs_enabled: cdktf.booleanToTerraform(this._messagingLogsEnabled),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      service_mode: cdktf.stringToTerraform(this._serviceMode),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       cors: cdktf.listMapper(signalrServiceCorsToTerraform)(this._cors),
       features: cdktf.listMapper(signalrServiceFeaturesToTerraform)(this._features),

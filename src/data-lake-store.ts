@@ -60,7 +60,7 @@ export interface DataLakeStoreIdentity {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store.html#type DataLakeStore#type}
   */
-  readonly type?: string;
+  readonly type: string;
 }
 
 export function dataLakeStoreIdentityToTerraform(struct?: DataLakeStoreIdentityOutputReference | DataLakeStoreIdentity): any {
@@ -106,16 +106,13 @@ export class DataLakeStoreIdentityOutputReference extends cdktf.ComplexObject {
     }
   }
 
-  // type - computed: false, optional: true, required: false
+  // type - computed: false, optional: false, required: true
   private _type?: string; 
   public get type() {
     return this.getStringAttribute('type');
   }
   public set type(value: string) {
     this._type = value;
-  }
-  public resetType() {
-    this._type = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get typeInput() {

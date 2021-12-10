@@ -20,6 +20,10 @@ export interface NetappPoolConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_pool.html#qos_type NetappPool#qos_type}
+  */
+  readonly qosType?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_pool.html#resource_group_name NetappPool#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -225,6 +229,7 @@ export class NetappPool extends cdktf.TerraformResource {
     this._accountName = config.accountName;
     this._location = config.location;
     this._name = config.name;
+    this._qosType = config.qosType;
     this._resourceGroupName = config.resourceGroupName;
     this._serviceLevel = config.serviceLevel;
     this._sizeInTb = config.sizeInTb;
@@ -278,6 +283,22 @@ export class NetappPool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // qos_type - computed: true, optional: true, required: false
+  private _qosType?: string; 
+  public get qosType() {
+    return this.getStringAttribute('qos_type');
+  }
+  public set qosType(value: string) {
+    this._qosType = value;
+  }
+  public resetQosType() {
+    this._qosType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get qosTypeInput() {
+    return this._qosType;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -361,6 +382,7 @@ export class NetappPool extends cdktf.TerraformResource {
       account_name: cdktf.stringToTerraform(this._accountName),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      qos_type: cdktf.stringToTerraform(this._qosType),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       service_level: cdktf.stringToTerraform(this._serviceLevel),
       size_in_tb: cdktf.numberToTerraform(this._sizeInTb),

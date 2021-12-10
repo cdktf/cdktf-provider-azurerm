@@ -56,6 +56,10 @@ export interface SharedImageConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#trusted_launch_enabled SharedImage#trusted_launch_enabled}
+  */
+  readonly trustedLaunchEnabled?: boolean | cdktf.IResolvable;
+  /**
   * identifier block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image.html#identifier SharedImage#identifier}
@@ -494,6 +498,7 @@ export class SharedImage extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._specialized = config.specialized;
     this._tags = config.tags;
+    this._trustedLaunchEnabled = config.trustedLaunchEnabled;
     this._identifier.internalValue = config.identifier;
     this._purchasePlan.internalValue = config.purchasePlan;
     this._timeouts.internalValue = config.timeouts;
@@ -686,6 +691,22 @@ export class SharedImage extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // trusted_launch_enabled - computed: false, optional: true, required: false
+  private _trustedLaunchEnabled?: boolean | cdktf.IResolvable; 
+  public get trustedLaunchEnabled() {
+    return this.getBooleanAttribute('trusted_launch_enabled') as any;
+  }
+  public set trustedLaunchEnabled(value: boolean | cdktf.IResolvable) {
+    this._trustedLaunchEnabled = value;
+  }
+  public resetTrustedLaunchEnabled() {
+    this._trustedLaunchEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustedLaunchEnabledInput() {
+    return this._trustedLaunchEnabled;
+  }
+
   // identifier - computed: false, optional: false, required: true
   private _identifier = new SharedImageIdentifierOutputReference(this as any, "identifier", true);
   public get identifier() {
@@ -749,6 +770,7 @@ export class SharedImage extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       specialized: cdktf.booleanToTerraform(this._specialized),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      trusted_launch_enabled: cdktf.booleanToTerraform(this._trustedLaunchEnabled),
       identifier: sharedImageIdentifierToTerraform(this._identifier.internalValue),
       purchase_plan: sharedImagePurchasePlanToTerraform(this._purchasePlan.internalValue),
       timeouts: sharedImageTimeoutsToTerraform(this._timeouts.internalValue),

@@ -22,6 +22,46 @@ export interface DataAzurermKubernetesClusterConfig extends cdktf.TerraformMetaA
   */
   readonly timeouts?: DataAzurermKubernetesClusterTimeouts;
 }
+export class DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProviderSecretIdentity extends cdktf.ComplexComputedList {
+
+  // client_id - computed: true, optional: false, required: false
+  public get clientId() {
+    return this.getStringAttribute('client_id');
+  }
+
+  // object_id - computed: true, optional: false, required: false
+  public get objectId() {
+    return this.getStringAttribute('object_id');
+  }
+
+  // user_assigned_identity_id - computed: true, optional: false, required: false
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+}
+export class DataAzurermKubernetesClusterAddonProfileAzureKeyvaultSecretsProvider extends cdktf.ComplexComputedList {
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled') as any;
+  }
+
+  // secret_identity - computed: true, optional: false, required: false
+  public get secretIdentity() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('secret_identity') as any;
+  }
+
+  // secret_rotation_enabled - computed: true, optional: false, required: false
+  public get secretRotationEnabled() {
+    return this.getStringAttribute('secret_rotation_enabled');
+  }
+
+  // secret_rotation_interval - computed: true, optional: false, required: false
+  public get secretRotationInterval() {
+    return this.getStringAttribute('secret_rotation_interval');
+  }
+}
 export class DataAzurermKubernetesClusterAddonProfileAzurePolicy extends cdktf.ComplexComputedList {
 
   // enabled - computed: true, optional: false, required: false
@@ -141,6 +181,12 @@ export class DataAzurermKubernetesClusterAddonProfileOpenServiceMesh extends cdk
   }
 }
 export class DataAzurermKubernetesClusterAddonProfile extends cdktf.ComplexComputedList {
+
+  // azure_keyvault_secrets_provider - computed: true, optional: false, required: false
+  public get azureKeyvaultSecretsProvider() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('azure_keyvault_secrets_provider') as any;
+  }
 
   // azure_policy - computed: true, optional: false, required: false
   public get azurePolicy() {
