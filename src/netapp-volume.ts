@@ -60,6 +60,10 @@ export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume.html#throughput_in_mibps NetappVolume#throughput_in_mibps}
+  */
+  readonly throughputInMibps?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume.html#volume_path NetappVolume#volume_path}
   */
   readonly volumePath: string;
@@ -470,6 +474,7 @@ export class NetappVolume extends cdktf.TerraformResource {
     this._storageQuotaInGb = config.storageQuotaInGb;
     this._subnetId = config.subnetId;
     this._tags = config.tags;
+    this._throughputInMibps = config.throughputInMibps;
     this._volumePath = config.volumePath;
     this._dataProtectionReplication.internalValue = config.dataProtectionReplication;
     this._exportPolicyRule = config.exportPolicyRule;
@@ -675,6 +680,22 @@ export class NetappVolume extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // throughput_in_mibps - computed: true, optional: true, required: false
+  private _throughputInMibps?: number; 
+  public get throughputInMibps() {
+    return this.getNumberAttribute('throughput_in_mibps');
+  }
+  public set throughputInMibps(value: number) {
+    this._throughputInMibps = value;
+  }
+  public resetThroughputInMibps() {
+    this._throughputInMibps = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get throughputInMibpsInput() {
+    return this._throughputInMibps;
+  }
+
   // volume_path - computed: false, optional: false, required: true
   private _volumePath?: string; 
   public get volumePath() {
@@ -756,6 +777,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       storage_quota_in_gb: cdktf.numberToTerraform(this._storageQuotaInGb),
       subnet_id: cdktf.stringToTerraform(this._subnetId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      throughput_in_mibps: cdktf.numberToTerraform(this._throughputInMibps),
       volume_path: cdktf.stringToTerraform(this._volumePath),
       data_protection_replication: netappVolumeDataProtectionReplicationToTerraform(this._dataProtectionReplication.internalValue),
       export_policy_rule: cdktf.listMapper(netappVolumeExportPolicyRuleToTerraform)(this._exportPolicyRule),

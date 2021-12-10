@@ -16,9 +16,13 @@ export interface DataFactoryLinkedServiceOdataConfig extends cdktf.TerraformMeta
   */
   readonly annotations?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odata.html#data_factory_id DataFactoryLinkedServiceOdata#data_factory_id}
+  */
+  readonly dataFactoryId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odata.html#data_factory_name DataFactoryLinkedServiceOdata#data_factory_name}
   */
-  readonly dataFactoryName: string;
+  readonly dataFactoryName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odata.html#description DataFactoryLinkedServiceOdata#description}
   */
@@ -325,6 +329,7 @@ export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
     });
     this._additionalProperties = config.additionalProperties;
     this._annotations = config.annotations;
+    this._dataFactoryId = config.dataFactoryId;
     this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._integrationRuntimeName = config.integrationRuntimeName;
@@ -373,13 +378,32 @@ export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
     return this._annotations;
   }
 
-  // data_factory_name - computed: false, optional: false, required: true
+  // data_factory_id - computed: true, optional: true, required: false
+  private _dataFactoryId?: string; 
+  public get dataFactoryId() {
+    return this.getStringAttribute('data_factory_id');
+  }
+  public set dataFactoryId(value: string) {
+    this._dataFactoryId = value;
+  }
+  public resetDataFactoryId() {
+    this._dataFactoryId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataFactoryIdInput() {
+    return this._dataFactoryId;
+  }
+
+  // data_factory_name - computed: true, optional: true, required: false
   private _dataFactoryName?: string; 
   public get dataFactoryName() {
     return this.getStringAttribute('data_factory_name');
   }
   public set dataFactoryName(value: string) {
     this._dataFactoryName = value;
+  }
+  public resetDataFactoryName() {
+    this._dataFactoryName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryNameInput() {
@@ -519,6 +543,7 @@ export class DataFactoryLinkedServiceOdata extends cdktf.TerraformResource {
     return {
       additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),

@@ -16,9 +16,13 @@ export interface DataFactoryLinkedServiceDataLakeStorageGen2Config extends cdktf
   */
   readonly annotations?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#data_factory_id DataFactoryLinkedServiceDataLakeStorageGen2#data_factory_id}
+  */
+  readonly dataFactoryId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#data_factory_name DataFactoryLinkedServiceDataLakeStorageGen2#data_factory_name}
   */
-  readonly dataFactoryName: string;
+  readonly dataFactoryName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_data_lake_storage_gen2.html#description DataFactoryLinkedServiceDataLakeStorageGen2#description}
   */
@@ -252,6 +256,7 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends cdktf.Terraform
     });
     this._additionalProperties = config.additionalProperties;
     this._annotations = config.annotations;
+    this._dataFactoryId = config.dataFactoryId;
     this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._integrationRuntimeName = config.integrationRuntimeName;
@@ -304,13 +309,32 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends cdktf.Terraform
     return this._annotations;
   }
 
-  // data_factory_name - computed: false, optional: false, required: true
+  // data_factory_id - computed: true, optional: true, required: false
+  private _dataFactoryId?: string; 
+  public get dataFactoryId() {
+    return this.getStringAttribute('data_factory_id');
+  }
+  public set dataFactoryId(value: string) {
+    this._dataFactoryId = value;
+  }
+  public resetDataFactoryId() {
+    this._dataFactoryId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataFactoryIdInput() {
+    return this._dataFactoryId;
+  }
+
+  // data_factory_name - computed: true, optional: true, required: false
   private _dataFactoryName?: string; 
   public get dataFactoryName() {
     return this.getStringAttribute('data_factory_name');
   }
   public set dataFactoryName(value: string) {
     this._dataFactoryName = value;
+  }
+  public resetDataFactoryName() {
+    this._dataFactoryName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryNameInput() {
@@ -514,6 +538,7 @@ export class DataFactoryLinkedServiceDataLakeStorageGen2 extends cdktf.Terraform
     return {
       additional_properties: cdktf.hashMapper(cdktf.anyToTerraform)(this._additionalProperties),
       annotations: cdktf.listMapper(cdktf.stringToTerraform)(this._annotations),
+      data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       integration_runtime_name: cdktf.stringToTerraform(this._integrationRuntimeName),

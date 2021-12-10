@@ -373,6 +373,16 @@ export class DataAzurermKeyVaultCertificate extends cdktf.TerraformDataSource {
     return this._version;
   }
 
+  // versionless_id - computed: true, optional: false, required: false
+  public get versionlessId() {
+    return this.getStringAttribute('versionless_id');
+  }
+
+  // versionless_secret_id - computed: true, optional: false, required: false
+  public get versionlessSecretId() {
+    return this.getStringAttribute('versionless_secret_id');
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new DataAzurermKeyVaultCertificateTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {

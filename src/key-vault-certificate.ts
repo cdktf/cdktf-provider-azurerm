@@ -1366,6 +1366,16 @@ export class KeyVaultCertificate extends cdktf.TerraformResource {
     return this.getStringAttribute('version');
   }
 
+  // versionless_id - computed: true, optional: false, required: false
+  public get versionlessId() {
+    return this.getStringAttribute('versionless_id');
+  }
+
+  // versionless_secret_id - computed: true, optional: false, required: false
+  public get versionlessSecretId() {
+    return this.getStringAttribute('versionless_secret_id');
+  }
+
   // certificate - computed: false, optional: true, required: false
   private _certificate = new KeyVaultCertificateCertificateOutputReference(this as any, "certificate", true);
   public get certificate() {
