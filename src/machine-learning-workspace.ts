@@ -119,11 +119,11 @@ export class MachineLearningWorkspaceEncryptionOutputReference extends cdktf.Com
   public get internalValue(): MachineLearningWorkspaceEncryption | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._keyId) {
+    if (this._keyId !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyId = this._keyId;
     }
-    if (this._keyVaultId) {
+    if (this._keyVaultId !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyVaultId = this._keyVaultId;
     }
@@ -201,7 +201,7 @@ export class MachineLearningWorkspaceIdentityOutputReference extends cdktf.Compl
   public get internalValue(): MachineLearningWorkspaceIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -279,19 +279,19 @@ export class MachineLearningWorkspaceTimeoutsOutputReference extends cdktf.Compl
   public get internalValue(): MachineLearningWorkspaceTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

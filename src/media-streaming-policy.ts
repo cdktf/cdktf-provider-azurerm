@@ -85,11 +85,11 @@ export class MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputRefe
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._label) {
+    if (this._label !== undefined) {
       hasAnyValues = true;
       internalValueResult.label = this._label;
     }
-    if (this._policyName) {
+    if (this._policyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.policyName = this._policyName;
     }
@@ -178,11 +178,11 @@ export class MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference 
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowPersistentLicense) {
+    if (this._allowPersistentLicense !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowPersistentLicense = this._allowPersistentLicense;
     }
-    if (this._customLicenseAcquisitionUrlTemplate) {
+    if (this._customLicenseAcquisitionUrlTemplate !== undefined) {
       hasAnyValues = true;
       internalValueResult.customLicenseAcquisitionUrlTemplate = this._customLicenseAcquisitionUrlTemplate;
     }
@@ -281,19 +281,19 @@ export class MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocolsOutputRefer
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dash) {
+    if (this._dash !== undefined) {
       hasAnyValues = true;
       internalValueResult.dash = this._dash;
     }
-    if (this._download) {
+    if (this._download !== undefined) {
       hasAnyValues = true;
       internalValueResult.download = this._download;
     }
-    if (this._hls) {
+    if (this._hls !== undefined) {
       hasAnyValues = true;
       internalValueResult.hls = this._hls;
     }
-    if (this._smoothStreaming) {
+    if (this._smoothStreaming !== undefined) {
       hasAnyValues = true;
       internalValueResult.smoothStreaming = this._smoothStreaming;
     }
@@ -429,15 +429,15 @@ export class MediaStreamingPolicyCommonEncryptionCbcsOutputReference extends cdk
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCbcs | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._defaultContentKey?.internalValue) {
+    if (this._defaultContentKey?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultContentKey = this._defaultContentKey?.internalValue;
     }
-    if (this._drmFairplay?.internalValue) {
+    if (this._drmFairplay?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.drmFairplay = this._drmFairplay?.internalValue;
     }
-    if (this._enabledProtocols?.internalValue) {
+    if (this._enabledProtocols?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabledProtocols = this._enabledProtocols?.internalValue;
     }
@@ -544,11 +544,11 @@ export class MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputRefe
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCencDefaultContentKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._label) {
+    if (this._label !== undefined) {
       hasAnyValues = true;
       internalValueResult.label = this._label;
     }
-    if (this._policyName) {
+    if (this._policyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.policyName = this._policyName;
     }
@@ -637,11 +637,11 @@ export class MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCencDrmPlayready | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._customAttributes) {
+    if (this._customAttributes !== undefined) {
       hasAnyValues = true;
       internalValueResult.customAttributes = this._customAttributes;
     }
-    if (this._customLicenseAcquisitionUrlTemplate) {
+    if (this._customLicenseAcquisitionUrlTemplate !== undefined) {
       hasAnyValues = true;
       internalValueResult.customLicenseAcquisitionUrlTemplate = this._customLicenseAcquisitionUrlTemplate;
     }
@@ -740,19 +740,19 @@ export class MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputRefer
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCencEnabledProtocols | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dash) {
+    if (this._dash !== undefined) {
       hasAnyValues = true;
       internalValueResult.dash = this._dash;
     }
-    if (this._download) {
+    if (this._download !== undefined) {
       hasAnyValues = true;
       internalValueResult.download = this._download;
     }
-    if (this._hls) {
+    if (this._hls !== undefined) {
       hasAnyValues = true;
       internalValueResult.hls = this._hls;
     }
-    if (this._smoothStreaming) {
+    if (this._smoothStreaming !== undefined) {
       hasAnyValues = true;
       internalValueResult.smoothStreaming = this._smoothStreaming;
     }
@@ -893,19 +893,19 @@ export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdk
   public get internalValue(): MediaStreamingPolicyCommonEncryptionCenc | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._drmWidevineCustomLicenseAcquisitionUrlTemplate) {
+    if (this._drmWidevineCustomLicenseAcquisitionUrlTemplate !== undefined) {
       hasAnyValues = true;
       internalValueResult.drmWidevineCustomLicenseAcquisitionUrlTemplate = this._drmWidevineCustomLicenseAcquisitionUrlTemplate;
     }
-    if (this._defaultContentKey?.internalValue) {
+    if (this._defaultContentKey?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultContentKey = this._defaultContentKey?.internalValue;
     }
-    if (this._drmPlayready?.internalValue) {
+    if (this._drmPlayready?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.drmPlayready = this._drmPlayready?.internalValue;
     }
-    if (this._enabledProtocols?.internalValue) {
+    if (this._enabledProtocols?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabledProtocols = this._enabledProtocols?.internalValue;
     }
@@ -1040,19 +1040,19 @@ export class MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference ext
   public get internalValue(): MediaStreamingPolicyNoEncryptionEnabledProtocols | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dash) {
+    if (this._dash !== undefined) {
       hasAnyValues = true;
       internalValueResult.dash = this._dash;
     }
-    if (this._download) {
+    if (this._download !== undefined) {
       hasAnyValues = true;
       internalValueResult.download = this._download;
     }
-    if (this._hls) {
+    if (this._hls !== undefined) {
       hasAnyValues = true;
       internalValueResult.hls = this._hls;
     }
-    if (this._smoothStreaming) {
+    if (this._smoothStreaming !== undefined) {
       hasAnyValues = true;
       internalValueResult.smoothStreaming = this._smoothStreaming;
     }
@@ -1182,15 +1182,15 @@ export class MediaStreamingPolicyTimeoutsOutputReference extends cdktf.ComplexOb
   public get internalValue(): MediaStreamingPolicyTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

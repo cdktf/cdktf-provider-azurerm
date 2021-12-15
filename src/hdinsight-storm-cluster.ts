@@ -110,7 +110,7 @@ export class HdinsightStormClusterComponentVersionOutputReference extends cdktf.
   public get internalValue(): HdinsightStormClusterComponentVersion | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._storm) {
+    if (this._storm !== undefined) {
       hasAnyValues = true;
       internalValueResult.storm = this._storm;
     }
@@ -183,15 +183,15 @@ export class HdinsightStormClusterGatewayOutputReference extends cdktf.ComplexOb
   public get internalValue(): HdinsightStormClusterGateway | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
@@ -302,19 +302,19 @@ export class HdinsightStormClusterMetastoresAmbariOutputReference extends cdktf.
   public get internalValue(): HdinsightStormClusterMetastoresAmbari | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._databaseName) {
+    if (this._databaseName !== undefined) {
       hasAnyValues = true;
       internalValueResult.databaseName = this._databaseName;
     }
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._server) {
+    if (this._server !== undefined) {
       hasAnyValues = true;
       internalValueResult.server = this._server;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
@@ -437,19 +437,19 @@ export class HdinsightStormClusterMetastoresHiveOutputReference extends cdktf.Co
   public get internalValue(): HdinsightStormClusterMetastoresHive | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._databaseName) {
+    if (this._databaseName !== undefined) {
       hasAnyValues = true;
       internalValueResult.databaseName = this._databaseName;
     }
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._server) {
+    if (this._server !== undefined) {
       hasAnyValues = true;
       internalValueResult.server = this._server;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
@@ -572,19 +572,19 @@ export class HdinsightStormClusterMetastoresOozieOutputReference extends cdktf.C
   public get internalValue(): HdinsightStormClusterMetastoresOozie | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._databaseName) {
+    if (this._databaseName !== undefined) {
       hasAnyValues = true;
       internalValueResult.databaseName = this._databaseName;
     }
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._server) {
+    if (this._server !== undefined) {
       hasAnyValues = true;
       internalValueResult.server = this._server;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
@@ -708,15 +708,15 @@ export class HdinsightStormClusterMetastoresOutputReference extends cdktf.Comple
   public get internalValue(): HdinsightStormClusterMetastores | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._ambari?.internalValue) {
+    if (this._ambari?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.ambari = this._ambari?.internalValue;
     }
-    if (this._hive?.internalValue) {
+    if (this._hive?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.hive = this._hive?.internalValue;
     }
-    if (this._oozie?.internalValue) {
+    if (this._oozie?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.oozie = this._oozie?.internalValue;
     }
@@ -823,11 +823,11 @@ export class HdinsightStormClusterMonitorOutputReference extends cdktf.ComplexOb
   public get internalValue(): HdinsightStormClusterMonitor | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._logAnalyticsWorkspaceId) {
+    if (this._logAnalyticsWorkspaceId !== undefined) {
       hasAnyValues = true;
       internalValueResult.logAnalyticsWorkspaceId = this._logAnalyticsWorkspaceId;
     }
-    if (this._primaryKey) {
+    if (this._primaryKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.primaryKey = this._primaryKey;
     }
@@ -930,27 +930,27 @@ export class HdinsightStormClusterRolesHeadNodeOutputReference extends cdktf.Com
   public get internalValue(): HdinsightStormClusterRolesHeadNode | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._sshKeys) {
+    if (this._sshKeys !== undefined) {
       hasAnyValues = true;
       internalValueResult.sshKeys = this._sshKeys;
     }
-    if (this._subnetId) {
+    if (this._subnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetId = this._subnetId;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
-    if (this._virtualNetworkId) {
+    if (this._virtualNetworkId !== undefined) {
       hasAnyValues = true;
       internalValueResult.virtualNetworkId = this._virtualNetworkId;
     }
-    if (this._vmSize) {
+    if (this._vmSize !== undefined) {
       hasAnyValues = true;
       internalValueResult.vmSize = this._vmSize;
     }
@@ -1135,35 +1135,35 @@ export class HdinsightStormClusterRolesWorkerNodeOutputReference extends cdktf.C
   public get internalValue(): HdinsightStormClusterRolesWorkerNode | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._minInstanceCount) {
+    if (this._minInstanceCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.minInstanceCount = this._minInstanceCount;
     }
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._sshKeys) {
+    if (this._sshKeys !== undefined) {
       hasAnyValues = true;
       internalValueResult.sshKeys = this._sshKeys;
     }
-    if (this._subnetId) {
+    if (this._subnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetId = this._subnetId;
     }
-    if (this._targetInstanceCount) {
+    if (this._targetInstanceCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetInstanceCount = this._targetInstanceCount;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
-    if (this._virtualNetworkId) {
+    if (this._virtualNetworkId !== undefined) {
       hasAnyValues = true;
       internalValueResult.virtualNetworkId = this._virtualNetworkId;
     }
-    if (this._vmSize) {
+    if (this._vmSize !== undefined) {
       hasAnyValues = true;
       internalValueResult.vmSize = this._vmSize;
     }
@@ -1371,27 +1371,27 @@ export class HdinsightStormClusterRolesZookeeperNodeOutputReference extends cdkt
   public get internalValue(): HdinsightStormClusterRolesZookeeperNode | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._sshKeys) {
+    if (this._sshKeys !== undefined) {
       hasAnyValues = true;
       internalValueResult.sshKeys = this._sshKeys;
     }
-    if (this._subnetId) {
+    if (this._subnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetId = this._subnetId;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
-    if (this._virtualNetworkId) {
+    if (this._virtualNetworkId !== undefined) {
       hasAnyValues = true;
       internalValueResult.virtualNetworkId = this._virtualNetworkId;
     }
-    if (this._vmSize) {
+    if (this._vmSize !== undefined) {
       hasAnyValues = true;
       internalValueResult.vmSize = this._vmSize;
     }
@@ -1557,15 +1557,15 @@ export class HdinsightStormClusterRolesOutputReference extends cdktf.ComplexObje
   public get internalValue(): HdinsightStormClusterRoles | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._headNode?.internalValue) {
+    if (this._headNode?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.headNode = this._headNode?.internalValue;
     }
-    if (this._workerNode?.internalValue) {
+    if (this._workerNode?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.workerNode = this._workerNode?.internalValue;
     }
-    if (this._zookeeperNode?.internalValue) {
+    if (this._zookeeperNode?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.zookeeperNode = this._zookeeperNode?.internalValue;
     }
@@ -1700,19 +1700,19 @@ export class HdinsightStormClusterTimeoutsOutputReference extends cdktf.ComplexO
   public get internalValue(): HdinsightStormClusterTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

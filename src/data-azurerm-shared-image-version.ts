@@ -79,7 +79,7 @@ export class DataAzurermSharedImageVersionTimeoutsOutputReference extends cdktf.
   public get internalValue(): DataAzurermSharedImageVersionTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

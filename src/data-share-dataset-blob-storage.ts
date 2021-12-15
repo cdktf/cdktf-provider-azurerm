@@ -82,15 +82,15 @@ export class DataShareDatasetBlobStorageStorageAccountOutputReference extends cd
   public get internalValue(): DataShareDatasetBlobStorageStorageAccount | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._resourceGroupName) {
+    if (this._resourceGroupName !== undefined) {
       hasAnyValues = true;
       internalValueResult.resourceGroupName = this._resourceGroupName;
     }
-    if (this._subscriptionId) {
+    if (this._subscriptionId !== undefined) {
       hasAnyValues = true;
       internalValueResult.subscriptionId = this._subscriptionId;
     }
@@ -193,15 +193,15 @@ export class DataShareDatasetBlobStorageTimeoutsOutputReference extends cdktf.Co
   public get internalValue(): DataShareDatasetBlobStorageTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

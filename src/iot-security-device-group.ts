@@ -96,31 +96,31 @@ export class IotSecurityDeviceGroupAllowRuleOutputReference extends cdktf.Comple
   public get internalValue(): IotSecurityDeviceGroupAllowRule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._connectionFromIpsNotAllowed) {
+    if (this._connectionFromIpsNotAllowed !== undefined) {
       hasAnyValues = true;
       internalValueResult.connectionFromIpsNotAllowed = this._connectionFromIpsNotAllowed;
     }
-    if (this._connectionToIpNotAllowed) {
+    if (this._connectionToIpNotAllowed !== undefined) {
       hasAnyValues = true;
       internalValueResult.connectionToIpNotAllowed = this._connectionToIpNotAllowed;
     }
-    if (this._connectionToIpsNotAllowed) {
+    if (this._connectionToIpsNotAllowed !== undefined) {
       hasAnyValues = true;
       internalValueResult.connectionToIpsNotAllowed = this._connectionToIpsNotAllowed;
     }
-    if (this._localUserNotAllowed) {
+    if (this._localUserNotAllowed !== undefined) {
       hasAnyValues = true;
       internalValueResult.localUserNotAllowed = this._localUserNotAllowed;
     }
-    if (this._localUsersNotAllowed) {
+    if (this._localUsersNotAllowed !== undefined) {
       hasAnyValues = true;
       internalValueResult.localUsersNotAllowed = this._localUsersNotAllowed;
     }
-    if (this._processNotAllowed) {
+    if (this._processNotAllowed !== undefined) {
       hasAnyValues = true;
       internalValueResult.processNotAllowed = this._processNotAllowed;
     }
-    if (this._processesNotAllowed) {
+    if (this._processesNotAllowed !== undefined) {
       hasAnyValues = true;
       internalValueResult.processesNotAllowed = this._processesNotAllowed;
     }
@@ -341,19 +341,19 @@ export class IotSecurityDeviceGroupTimeoutsOutputReference extends cdktf.Complex
   public get internalValue(): IotSecurityDeviceGroupTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

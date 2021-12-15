@@ -124,15 +124,15 @@ export class FirewallPolicyDnsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): FirewallPolicyDns | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._networkRuleFqdnEnabled) {
+    if (this._networkRuleFqdnEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.networkRuleFqdnEnabled = this._networkRuleFqdnEnabled;
     }
-    if (this._proxyEnabled) {
+    if (this._proxyEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.proxyEnabled = this._proxyEnabled;
     }
-    if (this._servers) {
+    if (this._servers !== undefined) {
       hasAnyValues = true;
       internalValueResult.servers = this._servers;
     }
@@ -239,11 +239,11 @@ export class FirewallPolicyIdentityOutputReference extends cdktf.ComplexObject {
   public get internalValue(): FirewallPolicyIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
-    if (this._userAssignedIdentityIds) {
+    if (this._userAssignedIdentityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.userAssignedIdentityIds = this._userAssignedIdentityIds;
     }
@@ -363,19 +363,19 @@ export class FirewallPolicyInsightsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): FirewallPolicyInsights | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._defaultLogAnalyticsWorkspaceId) {
+    if (this._defaultLogAnalyticsWorkspaceId !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultLogAnalyticsWorkspaceId = this._defaultLogAnalyticsWorkspaceId;
     }
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._retentionInDays) {
+    if (this._retentionInDays !== undefined) {
       hasAnyValues = true;
       internalValueResult.retentionInDays = this._retentionInDays;
     }
-    if (this._logAnalyticsWorkspace) {
+    if (this._logAnalyticsWorkspace !== undefined) {
       hasAnyValues = true;
       internalValueResult.logAnalyticsWorkspace = this._logAnalyticsWorkspace;
     }
@@ -578,15 +578,15 @@ export class FirewallPolicyIntrusionDetectionOutputReference extends cdktf.Compl
   public get internalValue(): FirewallPolicyIntrusionDetection | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._mode) {
+    if (this._mode !== undefined) {
       hasAnyValues = true;
       internalValueResult.mode = this._mode;
     }
-    if (this._signatureOverrides) {
+    if (this._signatureOverrides !== undefined) {
       hasAnyValues = true;
       internalValueResult.signatureOverrides = this._signatureOverrides;
     }
-    if (this._trafficBypass) {
+    if (this._trafficBypass !== undefined) {
       hasAnyValues = true;
       internalValueResult.trafficBypass = this._trafficBypass;
     }
@@ -695,11 +695,11 @@ export class FirewallPolicyThreatIntelligenceAllowlistOutputReference extends cd
   public get internalValue(): FirewallPolicyThreatIntelligenceAllowlist | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._fqdns) {
+    if (this._fqdns !== undefined) {
       hasAnyValues = true;
       internalValueResult.fqdns = this._fqdns;
     }
-    if (this._ipAddresses) {
+    if (this._ipAddresses !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipAddresses = this._ipAddresses;
     }
@@ -798,19 +798,19 @@ export class FirewallPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): FirewallPolicyTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -935,11 +935,11 @@ export class FirewallPolicyTlsCertificateOutputReference extends cdktf.ComplexOb
   public get internalValue(): FirewallPolicyTlsCertificate | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._keyVaultSecretId) {
+    if (this._keyVaultSecretId !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyVaultSecretId = this._keyVaultSecretId;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }

@@ -91,19 +91,19 @@ export class EventhubCaptureDescriptionDestinationOutputReference extends cdktf.
   public get internalValue(): EventhubCaptureDescriptionDestination | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._archiveNameFormat) {
+    if (this._archiveNameFormat !== undefined) {
       hasAnyValues = true;
       internalValueResult.archiveNameFormat = this._archiveNameFormat;
     }
-    if (this._blobContainerName) {
+    if (this._blobContainerName !== undefined) {
       hasAnyValues = true;
       internalValueResult.blobContainerName = this._blobContainerName;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._storageAccountId) {
+    if (this._storageAccountId !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageAccountId = this._storageAccountId;
     }
@@ -238,27 +238,27 @@ export class EventhubCaptureDescriptionOutputReference extends cdktf.ComplexObje
   public get internalValue(): EventhubCaptureDescription | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._encoding) {
+    if (this._encoding !== undefined) {
       hasAnyValues = true;
       internalValueResult.encoding = this._encoding;
     }
-    if (this._intervalInSeconds) {
+    if (this._intervalInSeconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.intervalInSeconds = this._intervalInSeconds;
     }
-    if (this._sizeLimitInBytes) {
+    if (this._sizeLimitInBytes !== undefined) {
       hasAnyValues = true;
       internalValueResult.sizeLimitInBytes = this._sizeLimitInBytes;
     }
-    if (this._skipEmptyArchives) {
+    if (this._skipEmptyArchives !== undefined) {
       hasAnyValues = true;
       internalValueResult.skipEmptyArchives = this._skipEmptyArchives;
     }
-    if (this._destination?.internalValue) {
+    if (this._destination?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.destination = this._destination?.internalValue;
     }
@@ -420,19 +420,19 @@ export class EventhubTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): EventhubTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

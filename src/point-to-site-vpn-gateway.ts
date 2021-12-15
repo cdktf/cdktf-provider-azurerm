@@ -89,11 +89,11 @@ export class PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTab
   public get internalValue(): PointToSiteVpnGatewayConnectionConfigurationRoutePropagatedRouteTable | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._ids) {
+    if (this._ids !== undefined) {
       hasAnyValues = true;
       internalValueResult.ids = this._ids;
     }
-    if (this._labels) {
+    if (this._labels !== undefined) {
       hasAnyValues = true;
       internalValueResult.labels = this._labels;
     }
@@ -181,11 +181,11 @@ export class PointToSiteVpnGatewayConnectionConfigurationRouteOutputReference ex
   public get internalValue(): PointToSiteVpnGatewayConnectionConfigurationRoute | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._associatedRouteTableId) {
+    if (this._associatedRouteTableId !== undefined) {
       hasAnyValues = true;
       internalValueResult.associatedRouteTableId = this._associatedRouteTableId;
     }
-    if (this._propagatedRouteTable?.internalValue) {
+    if (this._propagatedRouteTable?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.propagatedRouteTable = this._propagatedRouteTable?.internalValue;
     }
@@ -266,7 +266,7 @@ export class PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPoolOut
   public get internalValue(): PointToSiteVpnGatewayConnectionConfigurationVpnClientAddressPool | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._addressPrefixes) {
+    if (this._addressPrefixes !== undefined) {
       hasAnyValues = true;
       internalValueResult.addressPrefixes = this._addressPrefixes;
     }
@@ -348,19 +348,19 @@ export class PointToSiteVpnGatewayConnectionConfigurationOutputReference extends
   public get internalValue(): PointToSiteVpnGatewayConnectionConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._internetSecurityEnabled) {
+    if (this._internetSecurityEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.internetSecurityEnabled = this._internetSecurityEnabled;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._route?.internalValue) {
+    if (this._route?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.route = this._route?.internalValue;
     }
-    if (this._vpnClientAddressPool?.internalValue) {
+    if (this._vpnClientAddressPool?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.vpnClientAddressPool = this._vpnClientAddressPool?.internalValue;
     }
@@ -489,19 +489,19 @@ export class PointToSiteVpnGatewayTimeoutsOutputReference extends cdktf.ComplexO
   public get internalValue(): PointToSiteVpnGatewayTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -62,7 +62,7 @@ export class DataAzurermSqlDatabaseTimeoutsOutputReference extends cdktf.Complex
   public get internalValue(): DataAzurermSqlDatabaseTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

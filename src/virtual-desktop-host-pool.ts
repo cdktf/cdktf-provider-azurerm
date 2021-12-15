@@ -110,7 +110,7 @@ export class VirtualDesktopHostPoolRegistrationInfoOutputReference extends cdktf
   public get internalValue(): VirtualDesktopHostPoolRegistrationInfo | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._expirationDate) {
+    if (this._expirationDate !== undefined) {
       hasAnyValues = true;
       internalValueResult.expirationDate = this._expirationDate;
     }
@@ -188,19 +188,19 @@ export class VirtualDesktopHostPoolTimeoutsOutputReference extends cdktf.Complex
   public get internalValue(): VirtualDesktopHostPoolTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -109,11 +109,11 @@ export class MachineLearningComputeClusterIdentityOutputReference extends cdktf.
   public get internalValue(): MachineLearningComputeClusterIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityIds) {
+    if (this._identityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityIds = this._identityIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -204,15 +204,15 @@ export class MachineLearningComputeClusterScaleSettingsOutputReference extends c
   public get internalValue(): MachineLearningComputeClusterScaleSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxNodeCount) {
+    if (this._maxNodeCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxNodeCount = this._maxNodeCount;
     }
-    if (this._minNodeCount) {
+    if (this._minNodeCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.minNodeCount = this._minNodeCount;
     }
-    if (this._scaleDownNodesAfterIdleDuration) {
+    if (this._scaleDownNodesAfterIdleDuration !== undefined) {
       hasAnyValues = true;
       internalValueResult.scaleDownNodesAfterIdleDuration = this._scaleDownNodesAfterIdleDuration;
     }
@@ -315,15 +315,15 @@ export class MachineLearningComputeClusterSshOutputReference extends cdktf.Compl
   public get internalValue(): MachineLearningComputeClusterSsh | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._adminPassword) {
+    if (this._adminPassword !== undefined) {
       hasAnyValues = true;
       internalValueResult.adminPassword = this._adminPassword;
     }
-    if (this._adminUsername) {
+    if (this._adminUsername !== undefined) {
       hasAnyValues = true;
       internalValueResult.adminUsername = this._adminUsername;
     }
-    if (this._keyValue) {
+    if (this._keyValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyValue = this._keyValue;
     }
@@ -432,15 +432,15 @@ export class MachineLearningComputeClusterTimeoutsOutputReference extends cdktf.
   public get internalValue(): MachineLearningComputeClusterTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

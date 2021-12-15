@@ -75,19 +75,19 @@ export class StorageBlobInventoryPolicyRulesFilterOutputReference extends cdktf.
   public get internalValue(): StorageBlobInventoryPolicyRulesFilter | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._blobTypes) {
+    if (this._blobTypes !== undefined) {
       hasAnyValues = true;
       internalValueResult.blobTypes = this._blobTypes;
     }
-    if (this._includeBlobVersions) {
+    if (this._includeBlobVersions !== undefined) {
       hasAnyValues = true;
       internalValueResult.includeBlobVersions = this._includeBlobVersions;
     }
-    if (this._includeSnapshots) {
+    if (this._includeSnapshots !== undefined) {
       hasAnyValues = true;
       internalValueResult.includeSnapshots = this._includeSnapshots;
     }
-    if (this._prefixMatch) {
+    if (this._prefixMatch !== undefined) {
       hasAnyValues = true;
       internalValueResult.prefixMatch = this._prefixMatch;
     }
@@ -243,19 +243,19 @@ export class StorageBlobInventoryPolicyTimeoutsOutputReference extends cdktf.Com
   public get internalValue(): StorageBlobInventoryPolicyTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

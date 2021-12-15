@@ -233,11 +233,11 @@ export class ApplicationGatewayAutoscaleConfigurationOutputReference extends cdk
   public get internalValue(): ApplicationGatewayAutoscaleConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxCapacity) {
+    if (this._maxCapacity !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxCapacity = this._maxCapacity;
     }
-    if (this._minCapacity) {
+    if (this._minCapacity !== undefined) {
       hasAnyValues = true;
       internalValueResult.minCapacity = this._minCapacity;
     }
@@ -367,11 +367,11 @@ export class ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputRefere
   public get internalValue(): ApplicationGatewayBackendHttpSettingsConnectionDraining | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._drainTimeoutSec) {
+    if (this._drainTimeoutSec !== undefined) {
       hasAnyValues = true;
       internalValueResult.drainTimeoutSec = this._drainTimeoutSec;
     }
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
@@ -729,11 +729,11 @@ export class ApplicationGatewayIdentityOutputReference extends cdktf.ComplexObje
   public get internalValue(): ApplicationGatewayIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityIds) {
+    if (this._identityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityIds = this._identityIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -819,11 +819,11 @@ export class ApplicationGatewayProbeMatchOutputReference extends cdktf.ComplexOb
   public get internalValue(): ApplicationGatewayProbeMatch | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._body) {
+    if (this._body !== undefined) {
       hasAnyValues = true;
       internalValueResult.body = this._body;
     }
-    if (this._statusCode) {
+    if (this._statusCode !== undefined) {
       hasAnyValues = true;
       internalValueResult.statusCode = this._statusCode;
     }
@@ -1161,15 +1161,15 @@ export class ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference exten
   public get internalValue(): ApplicationGatewayRewriteRuleSetRewriteRuleUrl | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
-    if (this._queryString) {
+    if (this._queryString !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryString = this._queryString;
     }
-    if (this._reroute) {
+    if (this._reroute !== undefined) {
       hasAnyValues = true;
       internalValueResult.reroute = this._reroute;
     }
@@ -1355,15 +1355,15 @@ export class ApplicationGatewaySkuOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ApplicationGatewaySku | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._capacity) {
+    if (this._capacity !== undefined) {
       hasAnyValues = true;
       internalValueResult.capacity = this._capacity;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._tier) {
+    if (this._tier !== undefined) {
       hasAnyValues = true;
       internalValueResult.tier = this._tier;
     }
@@ -1511,23 +1511,23 @@ export class ApplicationGatewaySslPolicyOutputReference extends cdktf.ComplexObj
   public get internalValue(): ApplicationGatewaySslPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cipherSuites) {
+    if (this._cipherSuites !== undefined) {
       hasAnyValues = true;
       internalValueResult.cipherSuites = this._cipherSuites;
     }
-    if (this._disabledProtocols) {
+    if (this._disabledProtocols !== undefined) {
       hasAnyValues = true;
       internalValueResult.disabledProtocols = this._disabledProtocols;
     }
-    if (this._minProtocolVersion) {
+    if (this._minProtocolVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.minProtocolVersion = this._minProtocolVersion;
     }
-    if (this._policyName) {
+    if (this._policyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.policyName = this._policyName;
     }
-    if (this._policyType) {
+    if (this._policyType !== undefined) {
       hasAnyValues = true;
       internalValueResult.policyType = this._policyType;
     }
@@ -1685,23 +1685,23 @@ export class ApplicationGatewaySslProfileSslPolicyOutputReference extends cdktf.
   public get internalValue(): ApplicationGatewaySslProfileSslPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cipherSuites) {
+    if (this._cipherSuites !== undefined) {
       hasAnyValues = true;
       internalValueResult.cipherSuites = this._cipherSuites;
     }
-    if (this._disabledProtocols) {
+    if (this._disabledProtocols !== undefined) {
       hasAnyValues = true;
       internalValueResult.disabledProtocols = this._disabledProtocols;
     }
-    if (this._minProtocolVersion) {
+    if (this._minProtocolVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.minProtocolVersion = this._minProtocolVersion;
     }
-    if (this._policyName) {
+    if (this._policyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.policyName = this._policyName;
     }
-    if (this._policyType) {
+    if (this._policyType !== undefined) {
       hasAnyValues = true;
       internalValueResult.policyType = this._policyType;
     }
@@ -1888,19 +1888,19 @@ export class ApplicationGatewayTimeoutsOutputReference extends cdktf.ComplexObje
   public get internalValue(): ApplicationGatewayTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -2248,39 +2248,39 @@ export class ApplicationGatewayWafConfigurationOutputReference extends cdktf.Com
   public get internalValue(): ApplicationGatewayWafConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._fileUploadLimitMb) {
+    if (this._fileUploadLimitMb !== undefined) {
       hasAnyValues = true;
       internalValueResult.fileUploadLimitMb = this._fileUploadLimitMb;
     }
-    if (this._firewallMode) {
+    if (this._firewallMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.firewallMode = this._firewallMode;
     }
-    if (this._maxRequestBodySizeKb) {
+    if (this._maxRequestBodySizeKb !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxRequestBodySizeKb = this._maxRequestBodySizeKb;
     }
-    if (this._requestBodyCheck) {
+    if (this._requestBodyCheck !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestBodyCheck = this._requestBodyCheck;
     }
-    if (this._ruleSetType) {
+    if (this._ruleSetType !== undefined) {
       hasAnyValues = true;
       internalValueResult.ruleSetType = this._ruleSetType;
     }
-    if (this._ruleSetVersion) {
+    if (this._ruleSetVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.ruleSetVersion = this._ruleSetVersion;
     }
-    if (this._disabledRuleGroup) {
+    if (this._disabledRuleGroup !== undefined) {
       hasAnyValues = true;
       internalValueResult.disabledRuleGroup = this._disabledRuleGroup;
     }
-    if (this._exclusion) {
+    if (this._exclusion !== undefined) {
       hasAnyValues = true;
       internalValueResult.exclusion = this._exclusion;
     }

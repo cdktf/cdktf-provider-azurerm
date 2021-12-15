@@ -137,7 +137,7 @@ export class DataAzurermEventgridDomainTimeoutsOutputReference extends cdktf.Com
   public get internalValue(): DataAzurermEventgridDomainTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

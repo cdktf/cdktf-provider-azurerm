@@ -165,11 +165,11 @@ export class ManagedDiskEncryptionSettingsDiskEncryptionKeyOutputReference exten
   public get internalValue(): ManagedDiskEncryptionSettingsDiskEncryptionKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._secretUrl) {
+    if (this._secretUrl !== undefined) {
       hasAnyValues = true;
       internalValueResult.secretUrl = this._secretUrl;
     }
-    if (this._sourceVaultId) {
+    if (this._sourceVaultId !== undefined) {
       hasAnyValues = true;
       internalValueResult.sourceVaultId = this._sourceVaultId;
     }
@@ -252,11 +252,11 @@ export class ManagedDiskEncryptionSettingsKeyEncryptionKeyOutputReference extend
   public get internalValue(): ManagedDiskEncryptionSettingsKeyEncryptionKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._keyUrl) {
+    if (this._keyUrl !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyUrl = this._keyUrl;
     }
-    if (this._sourceVaultId) {
+    if (this._sourceVaultId !== undefined) {
       hasAnyValues = true;
       internalValueResult.sourceVaultId = this._sourceVaultId;
     }
@@ -348,15 +348,15 @@ export class ManagedDiskEncryptionSettingsOutputReference extends cdktf.ComplexO
   public get internalValue(): ManagedDiskEncryptionSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._diskEncryptionKey?.internalValue) {
+    if (this._diskEncryptionKey?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskEncryptionKey = this._diskEncryptionKey?.internalValue;
     }
-    if (this._keyEncryptionKey?.internalValue) {
+    if (this._keyEncryptionKey?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyEncryptionKey = this._keyEncryptionKey?.internalValue;
     }
@@ -470,19 +470,19 @@ export class ManagedDiskTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ManagedDiskTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

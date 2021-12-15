@@ -97,11 +97,11 @@ export class ExpressRoutePortIdentityOutputReference extends cdktf.ComplexObject
   public get internalValue(): ExpressRoutePortIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityIds) {
+    if (this._identityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityIds = this._identityIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -197,19 +197,19 @@ export class ExpressRoutePortLink1OutputReference extends cdktf.ComplexObject {
   public get internalValue(): ExpressRoutePortLink1 | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._adminEnabled) {
+    if (this._adminEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.adminEnabled = this._adminEnabled;
     }
-    if (this._macsecCakKeyvaultSecretId) {
+    if (this._macsecCakKeyvaultSecretId !== undefined) {
       hasAnyValues = true;
       internalValueResult.macsecCakKeyvaultSecretId = this._macsecCakKeyvaultSecretId;
     }
-    if (this._macsecCipher) {
+    if (this._macsecCipher !== undefined) {
       hasAnyValues = true;
       internalValueResult.macsecCipher = this._macsecCipher;
     }
-    if (this._macsecCknKeyvaultSecretId) {
+    if (this._macsecCknKeyvaultSecretId !== undefined) {
       hasAnyValues = true;
       internalValueResult.macsecCknKeyvaultSecretId = this._macsecCknKeyvaultSecretId;
     }
@@ -344,19 +344,19 @@ export class ExpressRoutePortLink2OutputReference extends cdktf.ComplexObject {
   public get internalValue(): ExpressRoutePortLink2 | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._adminEnabled) {
+    if (this._adminEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.adminEnabled = this._adminEnabled;
     }
-    if (this._macsecCakKeyvaultSecretId) {
+    if (this._macsecCakKeyvaultSecretId !== undefined) {
       hasAnyValues = true;
       internalValueResult.macsecCakKeyvaultSecretId = this._macsecCakKeyvaultSecretId;
     }
-    if (this._macsecCipher) {
+    if (this._macsecCipher !== undefined) {
       hasAnyValues = true;
       internalValueResult.macsecCipher = this._macsecCipher;
     }
-    if (this._macsecCknKeyvaultSecretId) {
+    if (this._macsecCknKeyvaultSecretId !== undefined) {
       hasAnyValues = true;
       internalValueResult.macsecCknKeyvaultSecretId = this._macsecCknKeyvaultSecretId;
     }
@@ -491,19 +491,19 @@ export class ExpressRoutePortTimeoutsOutputReference extends cdktf.ComplexObject
   public get internalValue(): ExpressRoutePortTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -106,15 +106,15 @@ export class HdinsightMlServicesClusterGatewayOutputReference extends cdktf.Comp
   public get internalValue(): HdinsightMlServicesClusterGateway | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
@@ -235,27 +235,27 @@ export class HdinsightMlServicesClusterRolesEdgeNodeOutputReference extends cdkt
   public get internalValue(): HdinsightMlServicesClusterRolesEdgeNode | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._sshKeys) {
+    if (this._sshKeys !== undefined) {
       hasAnyValues = true;
       internalValueResult.sshKeys = this._sshKeys;
     }
-    if (this._subnetId) {
+    if (this._subnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetId = this._subnetId;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
-    if (this._virtualNetworkId) {
+    if (this._virtualNetworkId !== undefined) {
       hasAnyValues = true;
       internalValueResult.virtualNetworkId = this._virtualNetworkId;
     }
-    if (this._vmSize) {
+    if (this._vmSize !== undefined) {
       hasAnyValues = true;
       internalValueResult.vmSize = this._vmSize;
     }
@@ -430,27 +430,27 @@ export class HdinsightMlServicesClusterRolesHeadNodeOutputReference extends cdkt
   public get internalValue(): HdinsightMlServicesClusterRolesHeadNode | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._sshKeys) {
+    if (this._sshKeys !== undefined) {
       hasAnyValues = true;
       internalValueResult.sshKeys = this._sshKeys;
     }
-    if (this._subnetId) {
+    if (this._subnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetId = this._subnetId;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
-    if (this._virtualNetworkId) {
+    if (this._virtualNetworkId !== undefined) {
       hasAnyValues = true;
       internalValueResult.virtualNetworkId = this._virtualNetworkId;
     }
-    if (this._vmSize) {
+    if (this._vmSize !== undefined) {
       hasAnyValues = true;
       internalValueResult.vmSize = this._vmSize;
     }
@@ -635,35 +635,35 @@ export class HdinsightMlServicesClusterRolesWorkerNodeOutputReference extends cd
   public get internalValue(): HdinsightMlServicesClusterRolesWorkerNode | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._minInstanceCount) {
+    if (this._minInstanceCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.minInstanceCount = this._minInstanceCount;
     }
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._sshKeys) {
+    if (this._sshKeys !== undefined) {
       hasAnyValues = true;
       internalValueResult.sshKeys = this._sshKeys;
     }
-    if (this._subnetId) {
+    if (this._subnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetId = this._subnetId;
     }
-    if (this._targetInstanceCount) {
+    if (this._targetInstanceCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetInstanceCount = this._targetInstanceCount;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
-    if (this._virtualNetworkId) {
+    if (this._virtualNetworkId !== undefined) {
       hasAnyValues = true;
       internalValueResult.virtualNetworkId = this._virtualNetworkId;
     }
-    if (this._vmSize) {
+    if (this._vmSize !== undefined) {
       hasAnyValues = true;
       internalValueResult.vmSize = this._vmSize;
     }
@@ -871,27 +871,27 @@ export class HdinsightMlServicesClusterRolesZookeeperNodeOutputReference extends
   public get internalValue(): HdinsightMlServicesClusterRolesZookeeperNode | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._sshKeys) {
+    if (this._sshKeys !== undefined) {
       hasAnyValues = true;
       internalValueResult.sshKeys = this._sshKeys;
     }
-    if (this._subnetId) {
+    if (this._subnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetId = this._subnetId;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
-    if (this._virtualNetworkId) {
+    if (this._virtualNetworkId !== undefined) {
       hasAnyValues = true;
       internalValueResult.virtualNetworkId = this._virtualNetworkId;
     }
-    if (this._vmSize) {
+    if (this._vmSize !== undefined) {
       hasAnyValues = true;
       internalValueResult.vmSize = this._vmSize;
     }
@@ -1064,19 +1064,19 @@ export class HdinsightMlServicesClusterRolesOutputReference extends cdktf.Comple
   public get internalValue(): HdinsightMlServicesClusterRoles | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._edgeNode?.internalValue) {
+    if (this._edgeNode?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.edgeNode = this._edgeNode?.internalValue;
     }
-    if (this._headNode?.internalValue) {
+    if (this._headNode?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.headNode = this._headNode?.internalValue;
     }
-    if (this._workerNode?.internalValue) {
+    if (this._workerNode?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.workerNode = this._workerNode?.internalValue;
     }
-    if (this._zookeeperNode?.internalValue) {
+    if (this._zookeeperNode?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.zookeeperNode = this._zookeeperNode?.internalValue;
     }
@@ -1226,19 +1226,19 @@ export class HdinsightMlServicesClusterTimeoutsOutputReference extends cdktf.Com
   public get internalValue(): HdinsightMlServicesClusterTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

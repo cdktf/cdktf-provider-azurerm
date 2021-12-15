@@ -107,11 +107,11 @@ export class ApiManagementBackendCredentialsAuthorizationOutputReference extends
   public get internalValue(): ApiManagementBackendCredentialsAuthorization | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._parameter) {
+    if (this._parameter !== undefined) {
       hasAnyValues = true;
       internalValueResult.parameter = this._parameter;
     }
-    if (this._scheme) {
+    if (this._scheme !== undefined) {
       hasAnyValues = true;
       internalValueResult.scheme = this._scheme;
     }
@@ -212,19 +212,19 @@ export class ApiManagementBackendCredentialsOutputReference extends cdktf.Comple
   public get internalValue(): ApiManagementBackendCredentials | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._certificate) {
+    if (this._certificate !== undefined) {
       hasAnyValues = true;
       internalValueResult.certificate = this._certificate;
     }
-    if (this._header) {
+    if (this._header !== undefined) {
       hasAnyValues = true;
       internalValueResult.header = this._header;
     }
-    if (this._query) {
+    if (this._query !== undefined) {
       hasAnyValues = true;
       internalValueResult.query = this._query;
     }
-    if (this._authorization?.internalValue) {
+    if (this._authorization?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.authorization = this._authorization?.internalValue;
     }
@@ -356,15 +356,15 @@ export class ApiManagementBackendProxyOutputReference extends cdktf.ComplexObjec
   public get internalValue(): ApiManagementBackendProxy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._url) {
+    if (this._url !== undefined) {
       hasAnyValues = true;
       internalValueResult.url = this._url;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
@@ -509,27 +509,27 @@ export class ApiManagementBackendServiceFabricClusterOutputReference extends cdk
   public get internalValue(): ApiManagementBackendServiceFabricCluster | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clientCertificateId) {
+    if (this._clientCertificateId !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientCertificateId = this._clientCertificateId;
     }
-    if (this._clientCertificateThumbprint) {
+    if (this._clientCertificateThumbprint !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientCertificateThumbprint = this._clientCertificateThumbprint;
     }
-    if (this._managementEndpoints) {
+    if (this._managementEndpoints !== undefined) {
       hasAnyValues = true;
       internalValueResult.managementEndpoints = this._managementEndpoints;
     }
-    if (this._maxPartitionResolutionRetries) {
+    if (this._maxPartitionResolutionRetries !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxPartitionResolutionRetries = this._maxPartitionResolutionRetries;
     }
-    if (this._serverCertificateThumbprints) {
+    if (this._serverCertificateThumbprints !== undefined) {
       hasAnyValues = true;
       internalValueResult.serverCertificateThumbprints = this._serverCertificateThumbprints;
     }
-    if (this._serverX509Name) {
+    if (this._serverX509Name !== undefined) {
       hasAnyValues = true;
       internalValueResult.serverX509Name = this._serverX509Name;
     }
@@ -695,19 +695,19 @@ export class ApiManagementBackendTimeoutsOutputReference extends cdktf.ComplexOb
   public get internalValue(): ApiManagementBackendTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -832,11 +832,11 @@ export class ApiManagementBackendTlsOutputReference extends cdktf.ComplexObject 
   public get internalValue(): ApiManagementBackendTls | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._validateCertificateChain) {
+    if (this._validateCertificateChain !== undefined) {
       hasAnyValues = true;
       internalValueResult.validateCertificateChain = this._validateCertificateChain;
     }
-    if (this._validateCertificateName) {
+    if (this._validateCertificateName !== undefined) {
       hasAnyValues = true;
       internalValueResult.validateCertificateName = this._validateCertificateName;
     }

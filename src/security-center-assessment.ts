@@ -74,15 +74,15 @@ export class SecurityCenterAssessmentStatusOutputReference extends cdktf.Complex
   public get internalValue(): SecurityCenterAssessmentStatus | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cause) {
+    if (this._cause !== undefined) {
       hasAnyValues = true;
       internalValueResult.cause = this._cause;
     }
-    if (this._code) {
+    if (this._code !== undefined) {
       hasAnyValues = true;
       internalValueResult.code = this._code;
     }
-    if (this._description) {
+    if (this._description !== undefined) {
       hasAnyValues = true;
       internalValueResult.description = this._description;
     }
@@ -196,19 +196,19 @@ export class SecurityCenterAssessmentTimeoutsOutputReference extends cdktf.Compl
   public get internalValue(): SecurityCenterAssessmentTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

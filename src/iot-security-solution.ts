@@ -207,67 +207,67 @@ export class IotSecuritySolutionRecommendationsEnabledOutputReference extends cd
   public get internalValue(): IotSecuritySolutionRecommendationsEnabled | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._acrAuthentication) {
+    if (this._acrAuthentication !== undefined) {
       hasAnyValues = true;
       internalValueResult.acrAuthentication = this._acrAuthentication;
     }
-    if (this._agentSendUnutilizedMsg) {
+    if (this._agentSendUnutilizedMsg !== undefined) {
       hasAnyValues = true;
       internalValueResult.agentSendUnutilizedMsg = this._agentSendUnutilizedMsg;
     }
-    if (this._baseline) {
+    if (this._baseline !== undefined) {
       hasAnyValues = true;
       internalValueResult.baseline = this._baseline;
     }
-    if (this._edgeHubMemOptimize) {
+    if (this._edgeHubMemOptimize !== undefined) {
       hasAnyValues = true;
       internalValueResult.edgeHubMemOptimize = this._edgeHubMemOptimize;
     }
-    if (this._edgeLoggingOption) {
+    if (this._edgeLoggingOption !== undefined) {
       hasAnyValues = true;
       internalValueResult.edgeLoggingOption = this._edgeLoggingOption;
     }
-    if (this._inconsistentModuleSettings) {
+    if (this._inconsistentModuleSettings !== undefined) {
       hasAnyValues = true;
       internalValueResult.inconsistentModuleSettings = this._inconsistentModuleSettings;
     }
-    if (this._installAgent) {
+    if (this._installAgent !== undefined) {
       hasAnyValues = true;
       internalValueResult.installAgent = this._installAgent;
     }
-    if (this._ipFilterDenyAll) {
+    if (this._ipFilterDenyAll !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipFilterDenyAll = this._ipFilterDenyAll;
     }
-    if (this._ipFilterPermissiveRule) {
+    if (this._ipFilterPermissiveRule !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipFilterPermissiveRule = this._ipFilterPermissiveRule;
     }
-    if (this._openPorts) {
+    if (this._openPorts !== undefined) {
       hasAnyValues = true;
       internalValueResult.openPorts = this._openPorts;
     }
-    if (this._permissiveFirewallPolicy) {
+    if (this._permissiveFirewallPolicy !== undefined) {
       hasAnyValues = true;
       internalValueResult.permissiveFirewallPolicy = this._permissiveFirewallPolicy;
     }
-    if (this._permissiveInputFirewallRules) {
+    if (this._permissiveInputFirewallRules !== undefined) {
       hasAnyValues = true;
       internalValueResult.permissiveInputFirewallRules = this._permissiveInputFirewallRules;
     }
-    if (this._permissiveOutputFirewallRules) {
+    if (this._permissiveOutputFirewallRules !== undefined) {
       hasAnyValues = true;
       internalValueResult.permissiveOutputFirewallRules = this._permissiveOutputFirewallRules;
     }
-    if (this._privilegedDockerOptions) {
+    if (this._privilegedDockerOptions !== undefined) {
       hasAnyValues = true;
       internalValueResult.privilegedDockerOptions = this._privilegedDockerOptions;
     }
-    if (this._sharedCredentials) {
+    if (this._sharedCredentials !== undefined) {
       hasAnyValues = true;
       internalValueResult.sharedCredentials = this._sharedCredentials;
     }
-    if (this._vulnerableTlsCipherSuite) {
+    if (this._vulnerableTlsCipherSuite !== undefined) {
       hasAnyValues = true;
       internalValueResult.vulnerableTlsCipherSuite = this._vulnerableTlsCipherSuite;
     }
@@ -618,19 +618,19 @@ export class IotSecuritySolutionTimeoutsOutputReference extends cdktf.ComplexObj
   public get internalValue(): IotSecuritySolutionTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

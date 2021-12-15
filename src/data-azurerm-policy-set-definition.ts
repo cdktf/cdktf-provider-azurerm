@@ -113,7 +113,7 @@ export class DataAzurermPolicySetDefinitionTimeoutsOutputReference extends cdktf
   public get internalValue(): DataAzurermPolicySetDefinitionTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

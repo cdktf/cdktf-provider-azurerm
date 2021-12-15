@@ -702,79 +702,79 @@ export class EventgridEventSubscriptionAdvancedFilterOutputReference extends cdk
   public get internalValue(): EventgridEventSubscriptionAdvancedFilter | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._boolEquals) {
+    if (this._boolEquals !== undefined) {
       hasAnyValues = true;
       internalValueResult.boolEquals = this._boolEquals;
     }
-    if (this._isNotNull) {
+    if (this._isNotNull !== undefined) {
       hasAnyValues = true;
       internalValueResult.isNotNull = this._isNotNull;
     }
-    if (this._isNullOrUndefined) {
+    if (this._isNullOrUndefined !== undefined) {
       hasAnyValues = true;
       internalValueResult.isNullOrUndefined = this._isNullOrUndefined;
     }
-    if (this._numberGreaterThan) {
+    if (this._numberGreaterThan !== undefined) {
       hasAnyValues = true;
       internalValueResult.numberGreaterThan = this._numberGreaterThan;
     }
-    if (this._numberGreaterThanOrEquals) {
+    if (this._numberGreaterThanOrEquals !== undefined) {
       hasAnyValues = true;
       internalValueResult.numberGreaterThanOrEquals = this._numberGreaterThanOrEquals;
     }
-    if (this._numberIn) {
+    if (this._numberIn !== undefined) {
       hasAnyValues = true;
       internalValueResult.numberIn = this._numberIn;
     }
-    if (this._numberInRange) {
+    if (this._numberInRange !== undefined) {
       hasAnyValues = true;
       internalValueResult.numberInRange = this._numberInRange;
     }
-    if (this._numberLessThan) {
+    if (this._numberLessThan !== undefined) {
       hasAnyValues = true;
       internalValueResult.numberLessThan = this._numberLessThan;
     }
-    if (this._numberLessThanOrEquals) {
+    if (this._numberLessThanOrEquals !== undefined) {
       hasAnyValues = true;
       internalValueResult.numberLessThanOrEquals = this._numberLessThanOrEquals;
     }
-    if (this._numberNotIn) {
+    if (this._numberNotIn !== undefined) {
       hasAnyValues = true;
       internalValueResult.numberNotIn = this._numberNotIn;
     }
-    if (this._numberNotInRange) {
+    if (this._numberNotInRange !== undefined) {
       hasAnyValues = true;
       internalValueResult.numberNotInRange = this._numberNotInRange;
     }
-    if (this._stringBeginsWith) {
+    if (this._stringBeginsWith !== undefined) {
       hasAnyValues = true;
       internalValueResult.stringBeginsWith = this._stringBeginsWith;
     }
-    if (this._stringContains) {
+    if (this._stringContains !== undefined) {
       hasAnyValues = true;
       internalValueResult.stringContains = this._stringContains;
     }
-    if (this._stringEndsWith) {
+    if (this._stringEndsWith !== undefined) {
       hasAnyValues = true;
       internalValueResult.stringEndsWith = this._stringEndsWith;
     }
-    if (this._stringIn) {
+    if (this._stringIn !== undefined) {
       hasAnyValues = true;
       internalValueResult.stringIn = this._stringIn;
     }
-    if (this._stringNotBeginsWith) {
+    if (this._stringNotBeginsWith !== undefined) {
       hasAnyValues = true;
       internalValueResult.stringNotBeginsWith = this._stringNotBeginsWith;
     }
-    if (this._stringNotContains) {
+    if (this._stringNotContains !== undefined) {
       hasAnyValues = true;
       internalValueResult.stringNotContains = this._stringNotContains;
     }
-    if (this._stringNotEndsWith) {
+    if (this._stringNotEndsWith !== undefined) {
       hasAnyValues = true;
       internalValueResult.stringNotEndsWith = this._stringNotEndsWith;
     }
-    if (this._stringNotIn) {
+    if (this._stringNotIn !== undefined) {
       hasAnyValues = true;
       internalValueResult.stringNotIn = this._stringNotIn;
     }
@@ -1193,15 +1193,15 @@ export class EventgridEventSubscriptionAzureFunctionEndpointOutputReference exte
   public get internalValue(): EventgridEventSubscriptionAzureFunctionEndpoint | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._functionId) {
+    if (this._functionId !== undefined) {
       hasAnyValues = true;
       internalValueResult.functionId = this._functionId;
     }
-    if (this._maxEventsPerBatch) {
+    if (this._maxEventsPerBatch !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxEventsPerBatch = this._maxEventsPerBatch;
     }
-    if (this._preferredBatchSizeInKilobytes) {
+    if (this._preferredBatchSizeInKilobytes !== undefined) {
       hasAnyValues = true;
       internalValueResult.preferredBatchSizeInKilobytes = this._preferredBatchSizeInKilobytes;
     }
@@ -1305,11 +1305,11 @@ export class EventgridEventSubscriptionDeadLetterIdentityOutputReference extends
   public get internalValue(): EventgridEventSubscriptionDeadLetterIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
-    if (this._userAssignedIdentity) {
+    if (this._userAssignedIdentity !== undefined) {
       hasAnyValues = true;
       internalValueResult.userAssignedIdentity = this._userAssignedIdentity;
     }
@@ -1395,11 +1395,11 @@ export class EventgridEventSubscriptionDeliveryIdentityOutputReference extends c
   public get internalValue(): EventgridEventSubscriptionDeliveryIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
-    if (this._userAssignedIdentity) {
+    if (this._userAssignedIdentity !== undefined) {
       hasAnyValues = true;
       internalValueResult.userAssignedIdentity = this._userAssignedIdentity;
     }
@@ -1517,7 +1517,7 @@ export class EventgridEventSubscriptionEventhubEndpointOutputReference extends c
   public get internalValue(): EventgridEventSubscriptionEventhubEndpoint | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._eventhubId) {
+    if (this._eventhubId !== undefined) {
       hasAnyValues = true;
       internalValueResult.eventhubId = this._eventhubId;
     }
@@ -1583,7 +1583,7 @@ export class EventgridEventSubscriptionHybridConnectionEndpointOutputReference e
   public get internalValue(): EventgridEventSubscriptionHybridConnectionEndpoint | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hybridConnectionId) {
+    if (this._hybridConnectionId !== undefined) {
       hasAnyValues = true;
       internalValueResult.hybridConnectionId = this._hybridConnectionId;
     }
@@ -1654,11 +1654,11 @@ export class EventgridEventSubscriptionRetryPolicyOutputReference extends cdktf.
   public get internalValue(): EventgridEventSubscriptionRetryPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._eventTimeToLive) {
+    if (this._eventTimeToLive !== undefined) {
       hasAnyValues = true;
       internalValueResult.eventTimeToLive = this._eventTimeToLive;
     }
-    if (this._maxDeliveryAttempts) {
+    if (this._maxDeliveryAttempts !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxDeliveryAttempts = this._maxDeliveryAttempts;
     }
@@ -1741,11 +1741,11 @@ export class EventgridEventSubscriptionStorageBlobDeadLetterDestinationOutputRef
   public get internalValue(): EventgridEventSubscriptionStorageBlobDeadLetterDestination | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._storageAccountId) {
+    if (this._storageAccountId !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageAccountId = this._storageAccountId;
     }
-    if (this._storageBlobContainerName) {
+    if (this._storageBlobContainerName !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageBlobContainerName = this._storageBlobContainerName;
     }
@@ -1833,15 +1833,15 @@ export class EventgridEventSubscriptionStorageQueueEndpointOutputReference exten
   public get internalValue(): EventgridEventSubscriptionStorageQueueEndpoint | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._queueMessageTimeToLiveInSeconds) {
+    if (this._queueMessageTimeToLiveInSeconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.queueMessageTimeToLiveInSeconds = this._queueMessageTimeToLiveInSeconds;
     }
-    if (this._queueName) {
+    if (this._queueName !== undefined) {
       hasAnyValues = true;
       internalValueResult.queueName = this._queueName;
     }
-    if (this._storageAccountId) {
+    if (this._storageAccountId !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageAccountId = this._storageAccountId;
     }
@@ -1947,15 +1947,15 @@ export class EventgridEventSubscriptionSubjectFilterOutputReference extends cdkt
   public get internalValue(): EventgridEventSubscriptionSubjectFilter | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._caseSensitive) {
+    if (this._caseSensitive !== undefined) {
       hasAnyValues = true;
       internalValueResult.caseSensitive = this._caseSensitive;
     }
-    if (this._subjectBeginsWith) {
+    if (this._subjectBeginsWith !== undefined) {
       hasAnyValues = true;
       internalValueResult.subjectBeginsWith = this._subjectBeginsWith;
     }
-    if (this._subjectEndsWith) {
+    if (this._subjectEndsWith !== undefined) {
       hasAnyValues = true;
       internalValueResult.subjectEndsWith = this._subjectEndsWith;
     }
@@ -2072,19 +2072,19 @@ export class EventgridEventSubscriptionTimeoutsOutputReference extends cdktf.Com
   public get internalValue(): EventgridEventSubscriptionTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -2224,23 +2224,23 @@ export class EventgridEventSubscriptionWebhookEndpointOutputReference extends cd
   public get internalValue(): EventgridEventSubscriptionWebhookEndpoint | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._activeDirectoryAppIdOrUri) {
+    if (this._activeDirectoryAppIdOrUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.activeDirectoryAppIdOrUri = this._activeDirectoryAppIdOrUri;
     }
-    if (this._activeDirectoryTenantId) {
+    if (this._activeDirectoryTenantId !== undefined) {
       hasAnyValues = true;
       internalValueResult.activeDirectoryTenantId = this._activeDirectoryTenantId;
     }
-    if (this._maxEventsPerBatch) {
+    if (this._maxEventsPerBatch !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxEventsPerBatch = this._maxEventsPerBatch;
     }
-    if (this._preferredBatchSizeInKilobytes) {
+    if (this._preferredBatchSizeInKilobytes !== undefined) {
       hasAnyValues = true;
       internalValueResult.preferredBatchSizeInKilobytes = this._preferredBatchSizeInKilobytes;
     }
-    if (this._url) {
+    if (this._url !== undefined) {
       hasAnyValues = true;
       internalValueResult.url = this._url;
     }

@@ -95,11 +95,11 @@ export class LogicAppIntegrationAccountAgreementGuestIdentityOutputReference ext
   public get internalValue(): LogicAppIntegrationAccountAgreementGuestIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._qualifier) {
+    if (this._qualifier !== undefined) {
       hasAnyValues = true;
       internalValueResult.qualifier = this._qualifier;
     }
-    if (this._value) {
+    if (this._value !== undefined) {
       hasAnyValues = true;
       internalValueResult.value = this._value;
     }
@@ -182,11 +182,11 @@ export class LogicAppIntegrationAccountAgreementHostIdentityOutputReference exte
   public get internalValue(): LogicAppIntegrationAccountAgreementHostIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._qualifier) {
+    if (this._qualifier !== undefined) {
       hasAnyValues = true;
       internalValueResult.qualifier = this._qualifier;
     }
-    if (this._value) {
+    if (this._value !== undefined) {
       hasAnyValues = true;
       internalValueResult.value = this._value;
     }
@@ -279,19 +279,19 @@ export class LogicAppIntegrationAccountAgreementTimeoutsOutputReference extends 
   public get internalValue(): LogicAppIntegrationAccountAgreementTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

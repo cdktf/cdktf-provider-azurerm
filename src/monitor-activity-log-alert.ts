@@ -198,59 +198,59 @@ export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.Comple
   public get internalValue(): MonitorActivityLogAlertCriteria | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._caller) {
+    if (this._caller !== undefined) {
       hasAnyValues = true;
       internalValueResult.caller = this._caller;
     }
-    if (this._category) {
+    if (this._category !== undefined) {
       hasAnyValues = true;
       internalValueResult.category = this._category;
     }
-    if (this._level) {
+    if (this._level !== undefined) {
       hasAnyValues = true;
       internalValueResult.level = this._level;
     }
-    if (this._operationName) {
+    if (this._operationName !== undefined) {
       hasAnyValues = true;
       internalValueResult.operationName = this._operationName;
     }
-    if (this._recommendationCategory) {
+    if (this._recommendationCategory !== undefined) {
       hasAnyValues = true;
       internalValueResult.recommendationCategory = this._recommendationCategory;
     }
-    if (this._recommendationImpact) {
+    if (this._recommendationImpact !== undefined) {
       hasAnyValues = true;
       internalValueResult.recommendationImpact = this._recommendationImpact;
     }
-    if (this._recommendationType) {
+    if (this._recommendationType !== undefined) {
       hasAnyValues = true;
       internalValueResult.recommendationType = this._recommendationType;
     }
-    if (this._resourceGroup) {
+    if (this._resourceGroup !== undefined) {
       hasAnyValues = true;
       internalValueResult.resourceGroup = this._resourceGroup;
     }
-    if (this._resourceId) {
+    if (this._resourceId !== undefined) {
       hasAnyValues = true;
       internalValueResult.resourceId = this._resourceId;
     }
-    if (this._resourceProvider) {
+    if (this._resourceProvider !== undefined) {
       hasAnyValues = true;
       internalValueResult.resourceProvider = this._resourceProvider;
     }
-    if (this._resourceType) {
+    if (this._resourceType !== undefined) {
       hasAnyValues = true;
       internalValueResult.resourceType = this._resourceType;
     }
-    if (this._status) {
+    if (this._status !== undefined) {
       hasAnyValues = true;
       internalValueResult.status = this._status;
     }
-    if (this._subStatus) {
+    if (this._subStatus !== undefined) {
       hasAnyValues = true;
       internalValueResult.subStatus = this._subStatus;
     }
-    if (this._serviceHealth) {
+    if (this._serviceHealth !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceHealth = this._serviceHealth;
     }
@@ -563,19 +563,19 @@ export class MonitorActivityLogAlertTimeoutsOutputReference extends cdktf.Comple
   public get internalValue(): MonitorActivityLogAlertTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

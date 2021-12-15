@@ -121,15 +121,15 @@ export class ConsumptionBudgetResourceGroupFilterNotDimensionOutputReference ext
   public get internalValue(): ConsumptionBudgetResourceGroupFilterNotDimension | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -235,15 +235,15 @@ export class ConsumptionBudgetResourceGroupFilterNotTagOutputReference extends c
   public get internalValue(): ConsumptionBudgetResourceGroupFilterNotTag | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -348,11 +348,11 @@ export class ConsumptionBudgetResourceGroupFilterNotOutputReference extends cdkt
   public get internalValue(): ConsumptionBudgetResourceGroupFilterNot | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dimension?.internalValue) {
+    if (this._dimension?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.dimension = this._dimension?.internalValue;
     }
-    if (this._tag?.internalValue) {
+    if (this._tag?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.tag = this._tag?.internalValue;
     }
@@ -479,15 +479,15 @@ export class ConsumptionBudgetResourceGroupFilterOutputReference extends cdktf.C
   public get internalValue(): ConsumptionBudgetResourceGroupFilter | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dimension) {
+    if (this._dimension !== undefined) {
       hasAnyValues = true;
       internalValueResult.dimension = this._dimension;
     }
-    if (this._not?.internalValue) {
+    if (this._not?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.not = this._not?.internalValue;
     }
-    if (this._tag) {
+    if (this._tag !== undefined) {
       hasAnyValues = true;
       internalValueResult.tag = this._tag;
     }
@@ -643,11 +643,11 @@ export class ConsumptionBudgetResourceGroupTimePeriodOutputReference extends cdk
   public get internalValue(): ConsumptionBudgetResourceGroupTimePeriod | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._endDate) {
+    if (this._endDate !== undefined) {
       hasAnyValues = true;
       internalValueResult.endDate = this._endDate;
     }
-    if (this._startDate) {
+    if (this._startDate !== undefined) {
       hasAnyValues = true;
       internalValueResult.startDate = this._startDate;
     }
@@ -743,19 +743,19 @@ export class ConsumptionBudgetResourceGroupTimeoutsOutputReference extends cdktf
   public get internalValue(): ConsumptionBudgetResourceGroupTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

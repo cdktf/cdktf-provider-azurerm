@@ -105,27 +105,27 @@ export class KustoAttachedDatabaseConfigurationSharingOutputReference extends cd
   public get internalValue(): KustoAttachedDatabaseConfigurationSharing | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._externalTablesToExclude) {
+    if (this._externalTablesToExclude !== undefined) {
       hasAnyValues = true;
       internalValueResult.externalTablesToExclude = this._externalTablesToExclude;
     }
-    if (this._externalTablesToInclude) {
+    if (this._externalTablesToInclude !== undefined) {
       hasAnyValues = true;
       internalValueResult.externalTablesToInclude = this._externalTablesToInclude;
     }
-    if (this._materializedViewsToExclude) {
+    if (this._materializedViewsToExclude !== undefined) {
       hasAnyValues = true;
       internalValueResult.materializedViewsToExclude = this._materializedViewsToExclude;
     }
-    if (this._materializedViewsToInclude) {
+    if (this._materializedViewsToInclude !== undefined) {
       hasAnyValues = true;
       internalValueResult.materializedViewsToInclude = this._materializedViewsToInclude;
     }
-    if (this._tablesToExclude) {
+    if (this._tablesToExclude !== undefined) {
       hasAnyValues = true;
       internalValueResult.tablesToExclude = this._tablesToExclude;
     }
-    if (this._tablesToInclude) {
+    if (this._tablesToInclude !== undefined) {
       hasAnyValues = true;
       internalValueResult.tablesToInclude = this._tablesToInclude;
     }
@@ -296,19 +296,19 @@ export class KustoAttachedDatabaseConfigurationTimeoutsOutputReference extends c
   public get internalValue(): KustoAttachedDatabaseConfigurationTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

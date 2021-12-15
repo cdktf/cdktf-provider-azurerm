@@ -101,19 +101,19 @@ export class LogzMonitorPlanOutputReference extends cdktf.ComplexObject {
   public get internalValue(): LogzMonitorPlan | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._billingCycle) {
+    if (this._billingCycle !== undefined) {
       hasAnyValues = true;
       internalValueResult.billingCycle = this._billingCycle;
     }
-    if (this._effectiveDate) {
+    if (this._effectiveDate !== undefined) {
       hasAnyValues = true;
       internalValueResult.effectiveDate = this._effectiveDate;
     }
-    if (this._planId) {
+    if (this._planId !== undefined) {
       hasAnyValues = true;
       internalValueResult.planId = this._planId;
     }
-    if (this._usageType) {
+    if (this._usageType !== undefined) {
       hasAnyValues = true;
       internalValueResult.usageType = this._usageType;
     }
@@ -236,19 +236,19 @@ export class LogzMonitorTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): LogzMonitorTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -383,19 +383,19 @@ export class LogzMonitorUserOutputReference extends cdktf.ComplexObject {
   public get internalValue(): LogzMonitorUser | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._email) {
+    if (this._email !== undefined) {
       hasAnyValues = true;
       internalValueResult.email = this._email;
     }
-    if (this._firstName) {
+    if (this._firstName !== undefined) {
       hasAnyValues = true;
       internalValueResult.firstName = this._firstName;
     }
-    if (this._lastName) {
+    if (this._lastName !== undefined) {
       hasAnyValues = true;
       internalValueResult.lastName = this._lastName;
     }
-    if (this._phoneNumber) {
+    if (this._phoneNumber !== undefined) {
       hasAnyValues = true;
       internalValueResult.phoneNumber = this._phoneNumber;
     }

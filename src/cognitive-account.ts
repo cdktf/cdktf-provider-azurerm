@@ -133,11 +133,11 @@ export class CognitiveAccountIdentityOutputReference extends cdktf.ComplexObject
   public get internalValue(): CognitiveAccountIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityIds) {
+    if (this._identityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityIds = this._identityIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -258,19 +258,19 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
   public get internalValue(): CognitiveAccountNetworkAcls | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._defaultAction) {
+    if (this._defaultAction !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultAction = this._defaultAction;
     }
-    if (this._ipRules) {
+    if (this._ipRules !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipRules = this._ipRules;
     }
-    if (this._virtualNetworkRules) {
+    if (this._virtualNetworkRules !== undefined) {
       hasAnyValues = true;
       internalValueResult.virtualNetworkRules = this._virtualNetworkRules;
     }
-    if (this._virtualNetworkSubnetIds) {
+    if (this._virtualNetworkSubnetIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.virtualNetworkSubnetIds = this._virtualNetworkSubnetIds;
     }
@@ -425,19 +425,19 @@ export class CognitiveAccountTimeoutsOutputReference extends cdktf.ComplexObject
   public get internalValue(): CognitiveAccountTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

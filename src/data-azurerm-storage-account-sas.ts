@@ -123,35 +123,35 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
   public get internalValue(): DataAzurermStorageAccountSasPermissions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._add) {
+    if (this._add !== undefined) {
       hasAnyValues = true;
       internalValueResult.add = this._add;
     }
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._list) {
+    if (this._list !== undefined) {
       hasAnyValues = true;
       internalValueResult.list = this._list;
     }
-    if (this._process) {
+    if (this._process !== undefined) {
       hasAnyValues = true;
       internalValueResult.process = this._process;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
-    if (this._write) {
+    if (this._write !== undefined) {
       hasAnyValues = true;
       internalValueResult.write = this._write;
     }
@@ -329,15 +329,15 @@ export class DataAzurermStorageAccountSasResourceTypesOutputReference extends cd
   public get internalValue(): DataAzurermStorageAccountSasResourceTypes | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._container) {
+    if (this._container !== undefined) {
       hasAnyValues = true;
       internalValueResult.container = this._container;
     }
-    if (this._object) {
+    if (this._object !== undefined) {
       hasAnyValues = true;
       internalValueResult.object = this._object;
     }
-    if (this._service) {
+    if (this._service !== undefined) {
       hasAnyValues = true;
       internalValueResult.service = this._service;
     }
@@ -445,19 +445,19 @@ export class DataAzurermStorageAccountSasServicesOutputReference extends cdktf.C
   public get internalValue(): DataAzurermStorageAccountSasServices | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._blob) {
+    if (this._blob !== undefined) {
       hasAnyValues = true;
       internalValueResult.blob = this._blob;
     }
-    if (this._file) {
+    if (this._file !== undefined) {
       hasAnyValues = true;
       internalValueResult.file = this._file;
     }
-    if (this._queue) {
+    if (this._queue !== undefined) {
       hasAnyValues = true;
       internalValueResult.queue = this._queue;
     }
-    if (this._table) {
+    if (this._table !== undefined) {
       hasAnyValues = true;
       internalValueResult.table = this._table;
     }
@@ -565,7 +565,7 @@ export class DataAzurermStorageAccountSasTimeoutsOutputReference extends cdktf.C
   public get internalValue(): DataAzurermStorageAccountSasTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

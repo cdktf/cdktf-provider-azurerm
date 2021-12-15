@@ -135,11 +135,11 @@ export class BatchPoolAutoScaleOutputReference extends cdktf.ComplexObject {
   public get internalValue(): BatchPoolAutoScale | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._evaluationInterval) {
+    if (this._evaluationInterval !== undefined) {
       hasAnyValues = true;
       internalValueResult.evaluationInterval = this._evaluationInterval;
     }
-    if (this._formula) {
+    if (this._formula !== undefined) {
       hasAnyValues = true;
       internalValueResult.formula = this._formula;
     }
@@ -289,15 +289,15 @@ export class BatchPoolContainerConfigurationOutputReference extends cdktf.Comple
   public get internalValue(): BatchPoolContainerConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._containerImageNames) {
+    if (this._containerImageNames !== undefined) {
       hasAnyValues = true;
       internalValueResult.containerImageNames = this._containerImageNames;
     }
-    if (this._containerRegistries) {
+    if (this._containerRegistries !== undefined) {
       hasAnyValues = true;
       internalValueResult.containerRegistries = this._containerRegistries;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -410,15 +410,15 @@ export class BatchPoolFixedScaleOutputReference extends cdktf.ComplexObject {
   public get internalValue(): BatchPoolFixedScale | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._resizeTimeout) {
+    if (this._resizeTimeout !== undefined) {
       hasAnyValues = true;
       internalValueResult.resizeTimeout = this._resizeTimeout;
     }
-    if (this._targetDedicatedNodes) {
+    if (this._targetDedicatedNodes !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetDedicatedNodes = this._targetDedicatedNodes;
     }
-    if (this._targetLowPriorityNodes) {
+    if (this._targetLowPriorityNodes !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetLowPriorityNodes = this._targetLowPriorityNodes;
     }
@@ -525,11 +525,11 @@ export class BatchPoolIdentityOutputReference extends cdktf.ComplexObject {
   public get internalValue(): BatchPoolIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityIds) {
+    if (this._identityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityIds = this._identityIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -690,19 +690,19 @@ export class BatchPoolNetworkConfigurationOutputReference extends cdktf.ComplexO
   public get internalValue(): BatchPoolNetworkConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._publicAddressProvisioningType) {
+    if (this._publicAddressProvisioningType !== undefined) {
       hasAnyValues = true;
       internalValueResult.publicAddressProvisioningType = this._publicAddressProvisioningType;
     }
-    if (this._publicIps) {
+    if (this._publicIps !== undefined) {
       hasAnyValues = true;
       internalValueResult.publicIps = this._publicIps;
     }
-    if (this._subnetId) {
+    if (this._subnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetId = this._subnetId;
     }
-    if (this._endpointConfiguration) {
+    if (this._endpointConfiguration !== undefined) {
       hasAnyValues = true;
       internalValueResult.endpointConfiguration = this._endpointConfiguration;
     }
@@ -867,11 +867,11 @@ export class BatchPoolStartTaskUserIdentityAutoUserOutputReference extends cdktf
   public get internalValue(): BatchPoolStartTaskUserIdentityAutoUser | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._elevationLevel) {
+    if (this._elevationLevel !== undefined) {
       hasAnyValues = true;
       internalValueResult.elevationLevel = this._elevationLevel;
     }
-    if (this._scope) {
+    if (this._scope !== undefined) {
       hasAnyValues = true;
       internalValueResult.scope = this._scope;
     }
@@ -962,11 +962,11 @@ export class BatchPoolStartTaskUserIdentityOutputReference extends cdktf.Complex
   public get internalValue(): BatchPoolStartTaskUserIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._userName) {
+    if (this._userName !== undefined) {
       hasAnyValues = true;
       internalValueResult.userName = this._userName;
     }
-    if (this._autoUser?.internalValue) {
+    if (this._autoUser?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.autoUser = this._autoUser?.internalValue;
     }
@@ -1089,35 +1089,35 @@ export class BatchPoolStartTaskOutputReference extends cdktf.ComplexObject {
   public get internalValue(): BatchPoolStartTask | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._commandLine) {
+    if (this._commandLine !== undefined) {
       hasAnyValues = true;
       internalValueResult.commandLine = this._commandLine;
     }
-    if (this._commonEnvironmentProperties) {
+    if (this._commonEnvironmentProperties !== undefined) {
       hasAnyValues = true;
       internalValueResult.commonEnvironmentProperties = this._commonEnvironmentProperties;
     }
-    if (this._environment) {
+    if (this._environment !== undefined) {
       hasAnyValues = true;
       internalValueResult.environment = this._environment;
     }
-    if (this._maxTaskRetryCount) {
+    if (this._maxTaskRetryCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxTaskRetryCount = this._maxTaskRetryCount;
     }
-    if (this._taskRetryMaximum) {
+    if (this._taskRetryMaximum !== undefined) {
       hasAnyValues = true;
       internalValueResult.taskRetryMaximum = this._taskRetryMaximum;
     }
-    if (this._waitForSuccess) {
+    if (this._waitForSuccess !== undefined) {
       hasAnyValues = true;
       internalValueResult.waitForSuccess = this._waitForSuccess;
     }
-    if (this._resourceFile) {
+    if (this._resourceFile !== undefined) {
       hasAnyValues = true;
       internalValueResult.resourceFile = this._resourceFile;
     }
-    if (this._userIdentity?.internalValue) {
+    if (this._userIdentity?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.userIdentity = this._userIdentity?.internalValue;
     }
@@ -1326,23 +1326,23 @@ export class BatchPoolStorageImageReferenceOutputReference extends cdktf.Complex
   public get internalValue(): BatchPoolStorageImageReference | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._id) {
+    if (this._id !== undefined) {
       hasAnyValues = true;
       internalValueResult.id = this._id;
     }
-    if (this._offer) {
+    if (this._offer !== undefined) {
       hasAnyValues = true;
       internalValueResult.offer = this._offer;
     }
-    if (this._publisher) {
+    if (this._publisher !== undefined) {
       hasAnyValues = true;
       internalValueResult.publisher = this._publisher;
     }
-    if (this._sku) {
+    if (this._sku !== undefined) {
       hasAnyValues = true;
       internalValueResult.sku = this._sku;
     }
-    if (this._version) {
+    if (this._version !== undefined) {
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
@@ -1495,19 +1495,19 @@ export class BatchPoolTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): BatchPoolTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

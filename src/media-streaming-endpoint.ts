@@ -173,11 +173,11 @@ export class MediaStreamingEndpointAccessControlOutputReference extends cdktf.Co
   public get internalValue(): MediaStreamingEndpointAccessControl | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._akamaiSignatureHeaderAuthenticationKey) {
+    if (this._akamaiSignatureHeaderAuthenticationKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.akamaiSignatureHeaderAuthenticationKey = this._akamaiSignatureHeaderAuthenticationKey;
     }
-    if (this._ipAllow) {
+    if (this._ipAllow !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipAllow = this._ipAllow;
     }
@@ -268,11 +268,11 @@ export class MediaStreamingEndpointCrossSiteAccessPolicyOutputReference extends 
   public get internalValue(): MediaStreamingEndpointCrossSiteAccessPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clientAccessPolicy) {
+    if (this._clientAccessPolicy !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientAccessPolicy = this._clientAccessPolicy;
     }
-    if (this._crossDomainPolicy) {
+    if (this._crossDomainPolicy !== undefined) {
       hasAnyValues = true;
       internalValueResult.crossDomainPolicy = this._crossDomainPolicy;
     }
@@ -371,19 +371,19 @@ export class MediaStreamingEndpointTimeoutsOutputReference extends cdktf.Complex
   public get internalValue(): MediaStreamingEndpointTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

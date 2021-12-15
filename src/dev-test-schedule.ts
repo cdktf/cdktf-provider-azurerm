@@ -102,7 +102,7 @@ export class DevTestScheduleDailyRecurrenceOutputReference extends cdktf.Complex
   public get internalValue(): DevTestScheduleDailyRecurrence | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._time) {
+    if (this._time !== undefined) {
       hasAnyValues = true;
       internalValueResult.time = this._time;
     }
@@ -165,7 +165,7 @@ export class DevTestScheduleHourlyRecurrenceOutputReference extends cdktf.Comple
   public get internalValue(): DevTestScheduleHourlyRecurrence | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._minute) {
+    if (this._minute !== undefined) {
       hasAnyValues = true;
       internalValueResult.minute = this._minute;
     }
@@ -238,15 +238,15 @@ export class DevTestScheduleNotificationSettingsOutputReference extends cdktf.Co
   public get internalValue(): DevTestScheduleNotificationSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._status) {
+    if (this._status !== undefined) {
       hasAnyValues = true;
       internalValueResult.status = this._status;
     }
-    if (this._timeInMinutes) {
+    if (this._timeInMinutes !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeInMinutes = this._timeInMinutes;
     }
-    if (this._webhookUrl) {
+    if (this._webhookUrl !== undefined) {
       hasAnyValues = true;
       internalValueResult.webhookUrl = this._webhookUrl;
     }
@@ -363,19 +363,19 @@ export class DevTestScheduleTimeoutsOutputReference extends cdktf.ComplexObject 
   public get internalValue(): DevTestScheduleTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -500,11 +500,11 @@ export class DevTestScheduleWeeklyRecurrenceOutputReference extends cdktf.Comple
   public get internalValue(): DevTestScheduleWeeklyRecurrence | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._time) {
+    if (this._time !== undefined) {
       hasAnyValues = true;
       internalValueResult.time = this._time;
     }
-    if (this._weekDays) {
+    if (this._weekDays !== undefined) {
       hasAnyValues = true;
       internalValueResult.weekDays = this._weekDays;
     }

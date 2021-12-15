@@ -93,11 +93,11 @@ export class DataFactoryDataFlowSinkDatasetOutputReference extends cdktf.Complex
   public get internalValue(): DataFactoryDataFlowSinkDataset | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._parameters) {
+    if (this._parameters !== undefined) {
       hasAnyValues = true;
       internalValueResult.parameters = this._parameters;
     }
@@ -184,11 +184,11 @@ export class DataFactoryDataFlowSinkLinkedServiceOutputReference extends cdktf.C
   public get internalValue(): DataFactoryDataFlowSinkLinkedService | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._parameters) {
+    if (this._parameters !== undefined) {
       hasAnyValues = true;
       internalValueResult.parameters = this._parameters;
     }
@@ -275,11 +275,11 @@ export class DataFactoryDataFlowSinkSchemaLinkedServiceOutputReference extends c
   public get internalValue(): DataFactoryDataFlowSinkSchemaLinkedService | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._parameters) {
+    if (this._parameters !== undefined) {
       hasAnyValues = true;
       internalValueResult.parameters = this._parameters;
     }
@@ -409,11 +409,11 @@ export class DataFactoryDataFlowSourceDatasetOutputReference extends cdktf.Compl
   public get internalValue(): DataFactoryDataFlowSourceDataset | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._parameters) {
+    if (this._parameters !== undefined) {
       hasAnyValues = true;
       internalValueResult.parameters = this._parameters;
     }
@@ -500,11 +500,11 @@ export class DataFactoryDataFlowSourceLinkedServiceOutputReference extends cdktf
   public get internalValue(): DataFactoryDataFlowSourceLinkedService | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._parameters) {
+    if (this._parameters !== undefined) {
       hasAnyValues = true;
       internalValueResult.parameters = this._parameters;
     }
@@ -591,11 +591,11 @@ export class DataFactoryDataFlowSourceSchemaLinkedServiceOutputReference extends
   public get internalValue(): DataFactoryDataFlowSourceSchemaLinkedService | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._parameters) {
+    if (this._parameters !== undefined) {
       hasAnyValues = true;
       internalValueResult.parameters = this._parameters;
     }
@@ -735,19 +735,19 @@ export class DataFactoryDataFlowTimeoutsOutputReference extends cdktf.ComplexObj
   public get internalValue(): DataFactoryDataFlowTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

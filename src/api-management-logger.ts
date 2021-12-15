@@ -82,7 +82,7 @@ export class ApiManagementLoggerApplicationInsightsOutputReference extends cdktf
   public get internalValue(): ApiManagementLoggerApplicationInsights | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._instrumentationKey) {
+    if (this._instrumentationKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.instrumentationKey = this._instrumentationKey;
     }
@@ -150,11 +150,11 @@ export class ApiManagementLoggerEventhubOutputReference extends cdktf.ComplexObj
   public get internalValue(): ApiManagementLoggerEventhub | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._connectionString) {
+    if (this._connectionString !== undefined) {
       hasAnyValues = true;
       internalValueResult.connectionString = this._connectionString;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -247,19 +247,19 @@ export class ApiManagementLoggerTimeoutsOutputReference extends cdktf.ComplexObj
   public get internalValue(): ApiManagementLoggerTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

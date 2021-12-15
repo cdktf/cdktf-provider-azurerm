@@ -193,27 +193,27 @@ export class StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReferenc
   public get internalValue(): StorageAccountAzureFilesAuthenticationActiveDirectory | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._domainGuid) {
+    if (this._domainGuid !== undefined) {
       hasAnyValues = true;
       internalValueResult.domainGuid = this._domainGuid;
     }
-    if (this._domainName) {
+    if (this._domainName !== undefined) {
       hasAnyValues = true;
       internalValueResult.domainName = this._domainName;
     }
-    if (this._domainSid) {
+    if (this._domainSid !== undefined) {
       hasAnyValues = true;
       internalValueResult.domainSid = this._domainSid;
     }
-    if (this._forestName) {
+    if (this._forestName !== undefined) {
       hasAnyValues = true;
       internalValueResult.forestName = this._forestName;
     }
-    if (this._netbiosDomainName) {
+    if (this._netbiosDomainName !== undefined) {
       hasAnyValues = true;
       internalValueResult.netbiosDomainName = this._netbiosDomainName;
     }
-    if (this._storageSid) {
+    if (this._storageSid !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageSid = this._storageSid;
     }
@@ -358,11 +358,11 @@ export class StorageAccountAzureFilesAuthenticationOutputReference extends cdktf
   public get internalValue(): StorageAccountAzureFilesAuthentication | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._directoryType) {
+    if (this._directoryType !== undefined) {
       hasAnyValues = true;
       internalValueResult.directoryType = this._directoryType;
     }
-    if (this._activeDirectory?.internalValue) {
+    if (this._activeDirectory?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.activeDirectory = this._activeDirectory?.internalValue;
     }
@@ -443,7 +443,7 @@ export class StorageAccountBlobPropertiesContainerDeleteRetentionPolicyOutputRef
   public get internalValue(): StorageAccountBlobPropertiesContainerDeleteRetentionPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._days) {
+    if (this._days !== undefined) {
       hasAnyValues = true;
       internalValueResult.days = this._days;
     }
@@ -546,7 +546,7 @@ export class StorageAccountBlobPropertiesDeleteRetentionPolicyOutputReference ex
   public get internalValue(): StorageAccountBlobPropertiesDeleteRetentionPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._days) {
+    if (this._days !== undefined) {
       hasAnyValues = true;
       internalValueResult.days = this._days;
     }
@@ -648,31 +648,31 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
   public get internalValue(): StorageAccountBlobProperties | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._changeFeedEnabled) {
+    if (this._changeFeedEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.changeFeedEnabled = this._changeFeedEnabled;
     }
-    if (this._defaultServiceVersion) {
+    if (this._defaultServiceVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultServiceVersion = this._defaultServiceVersion;
     }
-    if (this._lastAccessTimeEnabled) {
+    if (this._lastAccessTimeEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.lastAccessTimeEnabled = this._lastAccessTimeEnabled;
     }
-    if (this._versioningEnabled) {
+    if (this._versioningEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.versioningEnabled = this._versioningEnabled;
     }
-    if (this._containerDeleteRetentionPolicy?.internalValue) {
+    if (this._containerDeleteRetentionPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.containerDeleteRetentionPolicy = this._containerDeleteRetentionPolicy?.internalValue;
     }
-    if (this._corsRule) {
+    if (this._corsRule !== undefined) {
       hasAnyValues = true;
       internalValueResult.corsRule = this._corsRule;
     }
-    if (this._deleteRetentionPolicy?.internalValue) {
+    if (this._deleteRetentionPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.deleteRetentionPolicy = this._deleteRetentionPolicy?.internalValue;
     }
@@ -852,11 +852,11 @@ export class StorageAccountCustomDomainOutputReference extends cdktf.ComplexObje
   public get internalValue(): StorageAccountCustomDomain | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._useSubdomain) {
+    if (this._useSubdomain !== undefined) {
       hasAnyValues = true;
       internalValueResult.useSubdomain = this._useSubdomain;
     }
@@ -942,11 +942,11 @@ export class StorageAccountIdentityOutputReference extends cdktf.ComplexObject {
   public get internalValue(): StorageAccountIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityIds) {
+    if (this._identityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityIds = this._identityIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -1071,23 +1071,23 @@ export class StorageAccountNetworkRulesOutputReference extends cdktf.ComplexObje
   public get internalValue(): StorageAccountNetworkRules | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bypass) {
+    if (this._bypass !== undefined) {
       hasAnyValues = true;
       internalValueResult.bypass = this._bypass;
     }
-    if (this._defaultAction) {
+    if (this._defaultAction !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultAction = this._defaultAction;
     }
-    if (this._ipRules) {
+    if (this._ipRules !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipRules = this._ipRules;
     }
-    if (this._virtualNetworkSubnetIds) {
+    if (this._virtualNetworkSubnetIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.virtualNetworkSubnetIds = this._virtualNetworkSubnetIds;
     }
-    if (this._privateLinkAccess) {
+    if (this._privateLinkAccess !== undefined) {
       hasAnyValues = true;
       internalValueResult.privateLinkAccess = this._privateLinkAccess;
     }
@@ -1275,19 +1275,19 @@ export class StorageAccountQueuePropertiesHourMetricsOutputReference extends cdk
   public get internalValue(): StorageAccountQueuePropertiesHourMetrics | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._includeApis) {
+    if (this._includeApis !== undefined) {
       hasAnyValues = true;
       internalValueResult.includeApis = this._includeApis;
     }
-    if (this._retentionPolicyDays) {
+    if (this._retentionPolicyDays !== undefined) {
       hasAnyValues = true;
       internalValueResult.retentionPolicyDays = this._retentionPolicyDays;
     }
-    if (this._version) {
+    if (this._version !== undefined) {
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
@@ -1421,23 +1421,23 @@ export class StorageAccountQueuePropertiesLoggingOutputReference extends cdktf.C
   public get internalValue(): StorageAccountQueuePropertiesLogging | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._retentionPolicyDays) {
+    if (this._retentionPolicyDays !== undefined) {
       hasAnyValues = true;
       internalValueResult.retentionPolicyDays = this._retentionPolicyDays;
     }
-    if (this._version) {
+    if (this._version !== undefined) {
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
-    if (this._write) {
+    if (this._write !== undefined) {
       hasAnyValues = true;
       internalValueResult.write = this._write;
     }
@@ -1578,19 +1578,19 @@ export class StorageAccountQueuePropertiesMinuteMetricsOutputReference extends c
   public get internalValue(): StorageAccountQueuePropertiesMinuteMetrics | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._includeApis) {
+    if (this._includeApis !== undefined) {
       hasAnyValues = true;
       internalValueResult.includeApis = this._includeApis;
     }
-    if (this._retentionPolicyDays) {
+    if (this._retentionPolicyDays !== undefined) {
       hasAnyValues = true;
       internalValueResult.retentionPolicyDays = this._retentionPolicyDays;
     }
-    if (this._version) {
+    if (this._version !== undefined) {
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
@@ -1727,19 +1727,19 @@ export class StorageAccountQueuePropertiesOutputReference extends cdktf.ComplexO
   public get internalValue(): StorageAccountQueueProperties | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._corsRule) {
+    if (this._corsRule !== undefined) {
       hasAnyValues = true;
       internalValueResult.corsRule = this._corsRule;
     }
-    if (this._hourMetrics?.internalValue) {
+    if (this._hourMetrics?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.hourMetrics = this._hourMetrics?.internalValue;
     }
-    if (this._logging?.internalValue) {
+    if (this._logging?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.logging = this._logging?.internalValue;
     }
-    if (this._minuteMetrics?.internalValue) {
+    if (this._minuteMetrics?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.minuteMetrics = this._minuteMetrics?.internalValue;
     }
@@ -1870,15 +1870,15 @@ export class StorageAccountRoutingOutputReference extends cdktf.ComplexObject {
   public get internalValue(): StorageAccountRouting | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._choice) {
+    if (this._choice !== undefined) {
       hasAnyValues = true;
       internalValueResult.choice = this._choice;
     }
-    if (this._publishInternetEndpoints) {
+    if (this._publishInternetEndpoints !== undefined) {
       hasAnyValues = true;
       internalValueResult.publishInternetEndpoints = this._publishInternetEndpoints;
     }
-    if (this._publishMicrosoftEndpoints) {
+    if (this._publishMicrosoftEndpoints !== undefined) {
       hasAnyValues = true;
       internalValueResult.publishMicrosoftEndpoints = this._publishMicrosoftEndpoints;
     }
@@ -2017,7 +2017,7 @@ export class StorageAccountSharePropertiesRetentionPolicyOutputReference extends
   public get internalValue(): StorageAccountSharePropertiesRetentionPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._days) {
+    if (this._days !== undefined) {
       hasAnyValues = true;
       internalValueResult.days = this._days;
     }
@@ -2098,19 +2098,19 @@ export class StorageAccountSharePropertiesSmbOutputReference extends cdktf.Compl
   public get internalValue(): StorageAccountSharePropertiesSmb | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._authenticationTypes) {
+    if (this._authenticationTypes !== undefined) {
       hasAnyValues = true;
       internalValueResult.authenticationTypes = this._authenticationTypes;
     }
-    if (this._channelEncryptionType) {
+    if (this._channelEncryptionType !== undefined) {
       hasAnyValues = true;
       internalValueResult.channelEncryptionType = this._channelEncryptionType;
     }
-    if (this._kerberosTicketEncryptionType) {
+    if (this._kerberosTicketEncryptionType !== undefined) {
       hasAnyValues = true;
       internalValueResult.kerberosTicketEncryptionType = this._kerberosTicketEncryptionType;
     }
-    if (this._versions) {
+    if (this._versions !== undefined) {
       hasAnyValues = true;
       internalValueResult.versions = this._versions;
     }
@@ -2246,15 +2246,15 @@ export class StorageAccountSharePropertiesOutputReference extends cdktf.ComplexO
   public get internalValue(): StorageAccountShareProperties | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._corsRule) {
+    if (this._corsRule !== undefined) {
       hasAnyValues = true;
       internalValueResult.corsRule = this._corsRule;
     }
-    if (this._retentionPolicy?.internalValue) {
+    if (this._retentionPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.retentionPolicy = this._retentionPolicy?.internalValue;
     }
-    if (this._smb?.internalValue) {
+    if (this._smb?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.smb = this._smb?.internalValue;
     }
@@ -2362,11 +2362,11 @@ export class StorageAccountStaticWebsiteOutputReference extends cdktf.ComplexObj
   public get internalValue(): StorageAccountStaticWebsite | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._error404Document) {
+    if (this._error404Document !== undefined) {
       hasAnyValues = true;
       internalValueResult.error404Document = this._error404Document;
     }
-    if (this._indexDocument) {
+    if (this._indexDocument !== undefined) {
       hasAnyValues = true;
       internalValueResult.indexDocument = this._indexDocument;
     }
@@ -2465,19 +2465,19 @@ export class StorageAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): StorageAccountTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

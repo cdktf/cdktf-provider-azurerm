@@ -82,15 +82,15 @@ export class LogicAppIntegrationAccountCertificateKeyVaultKeyOutputReference ext
   public get internalValue(): LogicAppIntegrationAccountCertificateKeyVaultKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._keyName) {
+    if (this._keyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyName = this._keyName;
     }
-    if (this._keyVaultId) {
+    if (this._keyVaultId !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyVaultId = this._keyVaultId;
     }
-    if (this._keyVersion) {
+    if (this._keyVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyVersion = this._keyVersion;
     }
@@ -201,19 +201,19 @@ export class LogicAppIntegrationAccountCertificateTimeoutsOutputReference extend
   public get internalValue(): LogicAppIntegrationAccountCertificateTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

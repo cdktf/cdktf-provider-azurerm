@@ -71,7 +71,7 @@ export class DataAzurermDataShareTimeoutsOutputReference extends cdktf.ComplexOb
   public get internalValue(): DataAzurermDataShareTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

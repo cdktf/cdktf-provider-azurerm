@@ -91,11 +91,11 @@ export class TrafficManagerProfileDnsConfigOutputReference extends cdktf.Complex
   public get internalValue(): TrafficManagerProfileDnsConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._relativeName) {
+    if (this._relativeName !== undefined) {
       hasAnyValues = true;
       internalValueResult.relativeName = this._relativeName;
     }
-    if (this._ttl) {
+    if (this._ttl !== undefined) {
       hasAnyValues = true;
       internalValueResult.ttl = this._ttl;
     }
@@ -232,35 +232,35 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
   public get internalValue(): TrafficManagerProfileMonitorConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._expectedStatusCodeRanges) {
+    if (this._expectedStatusCodeRanges !== undefined) {
       hasAnyValues = true;
       internalValueResult.expectedStatusCodeRanges = this._expectedStatusCodeRanges;
     }
-    if (this._intervalInSeconds) {
+    if (this._intervalInSeconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.intervalInSeconds = this._intervalInSeconds;
     }
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
-    if (this._port) {
+    if (this._port !== undefined) {
       hasAnyValues = true;
       internalValueResult.port = this._port;
     }
-    if (this._protocol) {
+    if (this._protocol !== undefined) {
       hasAnyValues = true;
       internalValueResult.protocol = this._protocol;
     }
-    if (this._timeoutInSeconds) {
+    if (this._timeoutInSeconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeoutInSeconds = this._timeoutInSeconds;
     }
-    if (this._toleratedNumberOfFailures) {
+    if (this._toleratedNumberOfFailures !== undefined) {
       hasAnyValues = true;
       internalValueResult.toleratedNumberOfFailures = this._toleratedNumberOfFailures;
     }
-    if (this._customHeader) {
+    if (this._customHeader !== undefined) {
       hasAnyValues = true;
       internalValueResult.customHeader = this._customHeader;
     }
@@ -462,19 +462,19 @@ export class TrafficManagerProfileTimeoutsOutputReference extends cdktf.ComplexO
   public get internalValue(): TrafficManagerProfileTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

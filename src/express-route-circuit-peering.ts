@@ -104,15 +104,15 @@ export class ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference exten
   public get internalValue(): ExpressRouteCircuitPeeringIpv6MicrosoftPeering | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._advertisedPublicPrefixes) {
+    if (this._advertisedPublicPrefixes !== undefined) {
       hasAnyValues = true;
       internalValueResult.advertisedPublicPrefixes = this._advertisedPublicPrefixes;
     }
-    if (this._customerAsn) {
+    if (this._customerAsn !== undefined) {
       hasAnyValues = true;
       internalValueResult.customerAsn = this._customerAsn;
     }
-    if (this._routingRegistryName) {
+    if (this._routingRegistryName !== undefined) {
       hasAnyValues = true;
       internalValueResult.routingRegistryName = this._routingRegistryName;
     }
@@ -231,19 +231,19 @@ export class ExpressRouteCircuitPeeringIpv6OutputReference extends cdktf.Complex
   public get internalValue(): ExpressRouteCircuitPeeringIpv6 | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._primaryPeerAddressPrefix) {
+    if (this._primaryPeerAddressPrefix !== undefined) {
       hasAnyValues = true;
       internalValueResult.primaryPeerAddressPrefix = this._primaryPeerAddressPrefix;
     }
-    if (this._routeFilterId) {
+    if (this._routeFilterId !== undefined) {
       hasAnyValues = true;
       internalValueResult.routeFilterId = this._routeFilterId;
     }
-    if (this._secondaryPeerAddressPrefix) {
+    if (this._secondaryPeerAddressPrefix !== undefined) {
       hasAnyValues = true;
       internalValueResult.secondaryPeerAddressPrefix = this._secondaryPeerAddressPrefix;
     }
-    if (this._microsoftPeering?.internalValue) {
+    if (this._microsoftPeering?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.microsoftPeering = this._microsoftPeering?.internalValue;
     }
@@ -364,15 +364,15 @@ export class ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference ext
   public get internalValue(): ExpressRouteCircuitPeeringMicrosoftPeeringConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._advertisedPublicPrefixes) {
+    if (this._advertisedPublicPrefixes !== undefined) {
       hasAnyValues = true;
       internalValueResult.advertisedPublicPrefixes = this._advertisedPublicPrefixes;
     }
-    if (this._customerAsn) {
+    if (this._customerAsn !== undefined) {
       hasAnyValues = true;
       internalValueResult.customerAsn = this._customerAsn;
     }
-    if (this._routingRegistryName) {
+    if (this._routingRegistryName !== undefined) {
       hasAnyValues = true;
       internalValueResult.routingRegistryName = this._routingRegistryName;
     }
@@ -486,19 +486,19 @@ export class ExpressRouteCircuitPeeringTimeoutsOutputReference extends cdktf.Com
   public get internalValue(): ExpressRouteCircuitPeeringTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

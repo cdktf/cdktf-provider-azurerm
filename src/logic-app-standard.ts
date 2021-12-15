@@ -167,7 +167,7 @@ export class LogicAppStandardIdentityOutputReference extends cdktf.ComplexObject
   public get internalValue(): LogicAppStandardIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -314,11 +314,11 @@ export class LogicAppStandardSiteConfigCorsOutputReference extends cdktf.Complex
   public get internalValue(): LogicAppStandardSiteConfigCors | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedOrigins) {
+    if (this._allowedOrigins !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedOrigins = this._allowedOrigins;
     }
-    if (this._supportCredentials) {
+    if (this._supportCredentials !== undefined) {
       hasAnyValues = true;
       internalValueResult.supportCredentials = this._supportCredentials;
     }
@@ -476,67 +476,67 @@ export class LogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObje
   public get internalValue(): LogicAppStandardSiteConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._alwaysOn) {
+    if (this._alwaysOn !== undefined) {
       hasAnyValues = true;
       internalValueResult.alwaysOn = this._alwaysOn;
     }
-    if (this._appScaleLimit) {
+    if (this._appScaleLimit !== undefined) {
       hasAnyValues = true;
       internalValueResult.appScaleLimit = this._appScaleLimit;
     }
-    if (this._dotnetFrameworkVersion) {
+    if (this._dotnetFrameworkVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.dotnetFrameworkVersion = this._dotnetFrameworkVersion;
     }
-    if (this._elasticInstanceMinimum) {
+    if (this._elasticInstanceMinimum !== undefined) {
       hasAnyValues = true;
       internalValueResult.elasticInstanceMinimum = this._elasticInstanceMinimum;
     }
-    if (this._ftpsState) {
+    if (this._ftpsState !== undefined) {
       hasAnyValues = true;
       internalValueResult.ftpsState = this._ftpsState;
     }
-    if (this._healthCheckPath) {
+    if (this._healthCheckPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.healthCheckPath = this._healthCheckPath;
     }
-    if (this._http2Enabled) {
+    if (this._http2Enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.http2Enabled = this._http2Enabled;
     }
-    if (this._ipRestriction) {
+    if (this._ipRestriction !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipRestriction = this._ipRestriction;
     }
-    if (this._linuxFxVersion) {
+    if (this._linuxFxVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.linuxFxVersion = this._linuxFxVersion;
     }
-    if (this._minTlsVersion) {
+    if (this._minTlsVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.minTlsVersion = this._minTlsVersion;
     }
-    if (this._preWarmedInstanceCount) {
+    if (this._preWarmedInstanceCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.preWarmedInstanceCount = this._preWarmedInstanceCount;
     }
-    if (this._runtimeScaleMonitoringEnabled) {
+    if (this._runtimeScaleMonitoringEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.runtimeScaleMonitoringEnabled = this._runtimeScaleMonitoringEnabled;
     }
-    if (this._use32BitWorkerProcess) {
+    if (this._use32BitWorkerProcess !== undefined) {
       hasAnyValues = true;
       internalValueResult.use32BitWorkerProcess = this._use32BitWorkerProcess;
     }
-    if (this._vnetRouteAllEnabled) {
+    if (this._vnetRouteAllEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.vnetRouteAllEnabled = this._vnetRouteAllEnabled;
     }
-    if (this._websocketsEnabled) {
+    if (this._websocketsEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.websocketsEnabled = this._websocketsEnabled;
     }
-    if (this._cors?.internalValue) {
+    if (this._cors?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cors = this._cors?.internalValue;
     }
@@ -888,19 +888,19 @@ export class LogicAppStandardTimeoutsOutputReference extends cdktf.ComplexObject
   public get internalValue(): LogicAppStandardTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

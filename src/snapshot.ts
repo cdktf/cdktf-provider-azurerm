@@ -93,11 +93,11 @@ export class SnapshotEncryptionSettingsDiskEncryptionKeyOutputReference extends 
   public get internalValue(): SnapshotEncryptionSettingsDiskEncryptionKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._secretUrl) {
+    if (this._secretUrl !== undefined) {
       hasAnyValues = true;
       internalValueResult.secretUrl = this._secretUrl;
     }
-    if (this._sourceVaultId) {
+    if (this._sourceVaultId !== undefined) {
       hasAnyValues = true;
       internalValueResult.sourceVaultId = this._sourceVaultId;
     }
@@ -180,11 +180,11 @@ export class SnapshotEncryptionSettingsKeyEncryptionKeyOutputReference extends c
   public get internalValue(): SnapshotEncryptionSettingsKeyEncryptionKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._keyUrl) {
+    if (this._keyUrl !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyUrl = this._keyUrl;
     }
-    if (this._sourceVaultId) {
+    if (this._sourceVaultId !== undefined) {
       hasAnyValues = true;
       internalValueResult.sourceVaultId = this._sourceVaultId;
     }
@@ -276,15 +276,15 @@ export class SnapshotEncryptionSettingsOutputReference extends cdktf.ComplexObje
   public get internalValue(): SnapshotEncryptionSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._diskEncryptionKey?.internalValue) {
+    if (this._diskEncryptionKey?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskEncryptionKey = this._diskEncryptionKey?.internalValue;
     }
-    if (this._keyEncryptionKey?.internalValue) {
+    if (this._keyEncryptionKey?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyEncryptionKey = this._keyEncryptionKey?.internalValue;
     }
@@ -398,19 +398,19 @@ export class SnapshotTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): SnapshotTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

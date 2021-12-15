@@ -118,7 +118,7 @@ export class SentinelAlertRuleScheduledEventGroupingOutputReference extends cdkt
   public get internalValue(): SentinelAlertRuleScheduledEventGrouping | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._aggregationMethod) {
+    if (this._aggregationMethod !== undefined) {
       hasAnyValues = true;
       internalValueResult.aggregationMethod = this._aggregationMethod;
     }
@@ -201,23 +201,23 @@ export class SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputRefere
   public get internalValue(): SentinelAlertRuleScheduledIncidentConfigurationGrouping | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._entityMatchingMethod) {
+    if (this._entityMatchingMethod !== undefined) {
       hasAnyValues = true;
       internalValueResult.entityMatchingMethod = this._entityMatchingMethod;
     }
-    if (this._groupBy) {
+    if (this._groupBy !== undefined) {
       hasAnyValues = true;
       internalValueResult.groupBy = this._groupBy;
     }
-    if (this._lookbackDuration) {
+    if (this._lookbackDuration !== undefined) {
       hasAnyValues = true;
       internalValueResult.lookbackDuration = this._lookbackDuration;
     }
-    if (this._reopenClosedIncidents) {
+    if (this._reopenClosedIncidents !== undefined) {
       hasAnyValues = true;
       internalValueResult.reopenClosedIncidents = this._reopenClosedIncidents;
     }
@@ -362,11 +362,11 @@ export class SentinelAlertRuleScheduledIncidentConfigurationOutputReference exte
   public get internalValue(): SentinelAlertRuleScheduledIncidentConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._createIncident) {
+    if (this._createIncident !== undefined) {
       hasAnyValues = true;
       internalValueResult.createIncident = this._createIncident;
     }
-    if (this._grouping?.internalValue) {
+    if (this._grouping?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.grouping = this._grouping?.internalValue;
     }
@@ -459,19 +459,19 @@ export class SentinelAlertRuleScheduledTimeoutsOutputReference extends cdktf.Com
   public get internalValue(): SentinelAlertRuleScheduledTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

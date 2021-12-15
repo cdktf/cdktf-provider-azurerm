@@ -203,19 +203,19 @@ export class KeyVaultNetworkAclsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): KeyVaultNetworkAcls | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bypass) {
+    if (this._bypass !== undefined) {
       hasAnyValues = true;
       internalValueResult.bypass = this._bypass;
     }
-    if (this._defaultAction) {
+    if (this._defaultAction !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultAction = this._defaultAction;
     }
-    if (this._ipRules) {
+    if (this._ipRules !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipRules = this._ipRules;
     }
-    if (this._virtualNetworkSubnetIds) {
+    if (this._virtualNetworkSubnetIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.virtualNetworkSubnetIds = this._virtualNetworkSubnetIds;
     }
@@ -344,19 +344,19 @@ export class KeyVaultTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): KeyVaultTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

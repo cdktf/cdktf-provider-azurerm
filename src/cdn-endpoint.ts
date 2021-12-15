@@ -131,11 +131,11 @@ export class CdnEndpointDeliveryRuleCacheExpirationActionOutputReference extends
   public get internalValue(): CdnEndpointDeliveryRuleCacheExpirationAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._behavior) {
+    if (this._behavior !== undefined) {
       hasAnyValues = true;
       internalValueResult.behavior = this._behavior;
     }
-    if (this._duration) {
+    if (this._duration !== undefined) {
       hasAnyValues = true;
       internalValueResult.duration = this._duration;
     }
@@ -221,11 +221,11 @@ export class CdnEndpointDeliveryRuleCacheKeyQueryStringActionOutputReference ext
   public get internalValue(): CdnEndpointDeliveryRuleCacheKeyQueryStringAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._behavior) {
+    if (this._behavior !== undefined) {
       hasAnyValues = true;
       internalValueResult.behavior = this._behavior;
     }
-    if (this._parameters) {
+    if (this._parameters !== undefined) {
       hasAnyValues = true;
       internalValueResult.parameters = this._parameters;
     }
@@ -353,15 +353,15 @@ export class CdnEndpointDeliveryRuleDeviceConditionOutputReference extends cdktf
   public get internalValue(): CdnEndpointDeliveryRuleDeviceCondition | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._matchValues) {
+    if (this._matchValues !== undefined) {
       hasAnyValues = true;
       internalValueResult.matchValues = this._matchValues;
     }
-    if (this._negateCondition) {
+    if (this._negateCondition !== undefined) {
       hasAnyValues = true;
       internalValueResult.negateCondition = this._negateCondition;
     }
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
@@ -716,15 +716,15 @@ export class CdnEndpointDeliveryRuleRequestMethodConditionOutputReference extend
   public get internalValue(): CdnEndpointDeliveryRuleRequestMethodCondition | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._matchValues) {
+    if (this._matchValues !== undefined) {
       hasAnyValues = true;
       internalValueResult.matchValues = this._matchValues;
     }
-    if (this._negateCondition) {
+    if (this._negateCondition !== undefined) {
       hasAnyValues = true;
       internalValueResult.negateCondition = this._negateCondition;
     }
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
@@ -833,15 +833,15 @@ export class CdnEndpointDeliveryRuleRequestSchemeConditionOutputReference extend
   public get internalValue(): CdnEndpointDeliveryRuleRequestSchemeCondition | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._matchValues) {
+    if (this._matchValues !== undefined) {
       hasAnyValues = true;
       internalValueResult.matchValues = this._matchValues;
     }
-    if (this._negateCondition) {
+    if (this._negateCondition !== undefined) {
       hasAnyValues = true;
       internalValueResult.negateCondition = this._negateCondition;
     }
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
@@ -1093,27 +1093,27 @@ export class CdnEndpointDeliveryRuleUrlRedirectActionOutputReference extends cdk
   public get internalValue(): CdnEndpointDeliveryRuleUrlRedirectAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._fragment) {
+    if (this._fragment !== undefined) {
       hasAnyValues = true;
       internalValueResult.fragment = this._fragment;
     }
-    if (this._hostname) {
+    if (this._hostname !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostname = this._hostname;
     }
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
-    if (this._protocol) {
+    if (this._protocol !== undefined) {
       hasAnyValues = true;
       internalValueResult.protocol = this._protocol;
     }
-    if (this._queryString) {
+    if (this._queryString !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryString = this._queryString;
     }
-    if (this._redirectType) {
+    if (this._redirectType !== undefined) {
       hasAnyValues = true;
       internalValueResult.redirectType = this._redirectType;
     }
@@ -1276,15 +1276,15 @@ export class CdnEndpointDeliveryRuleUrlRewriteActionOutputReference extends cdkt
   public get internalValue(): CdnEndpointDeliveryRuleUrlRewriteAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._destination) {
+    if (this._destination !== undefined) {
       hasAnyValues = true;
       internalValueResult.destination = this._destination;
     }
-    if (this._preserveUnmatchedPath) {
+    if (this._preserveUnmatchedPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.preserveUnmatchedPath = this._preserveUnmatchedPath;
     }
-    if (this._sourcePattern) {
+    if (this._sourcePattern !== undefined) {
       hasAnyValues = true;
       internalValueResult.sourcePattern = this._sourcePattern;
     }
@@ -1574,11 +1574,11 @@ export class CdnEndpointGlobalDeliveryRuleCacheExpirationActionOutputReference e
   public get internalValue(): CdnEndpointGlobalDeliveryRuleCacheExpirationAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._behavior) {
+    if (this._behavior !== undefined) {
       hasAnyValues = true;
       internalValueResult.behavior = this._behavior;
     }
-    if (this._duration) {
+    if (this._duration !== undefined) {
       hasAnyValues = true;
       internalValueResult.duration = this._duration;
     }
@@ -1664,11 +1664,11 @@ export class CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringActionOutputReferen
   public get internalValue(): CdnEndpointGlobalDeliveryRuleCacheKeyQueryStringAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._behavior) {
+    if (this._behavior !== undefined) {
       hasAnyValues = true;
       internalValueResult.behavior = this._behavior;
     }
-    if (this._parameters) {
+    if (this._parameters !== undefined) {
       hasAnyValues = true;
       internalValueResult.parameters = this._parameters;
     }
@@ -1828,27 +1828,27 @@ export class CdnEndpointGlobalDeliveryRuleUrlRedirectActionOutputReference exten
   public get internalValue(): CdnEndpointGlobalDeliveryRuleUrlRedirectAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._fragment) {
+    if (this._fragment !== undefined) {
       hasAnyValues = true;
       internalValueResult.fragment = this._fragment;
     }
-    if (this._hostname) {
+    if (this._hostname !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostname = this._hostname;
     }
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
-    if (this._protocol) {
+    if (this._protocol !== undefined) {
       hasAnyValues = true;
       internalValueResult.protocol = this._protocol;
     }
-    if (this._queryString) {
+    if (this._queryString !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryString = this._queryString;
     }
-    if (this._redirectType) {
+    if (this._redirectType !== undefined) {
       hasAnyValues = true;
       internalValueResult.redirectType = this._redirectType;
     }
@@ -2011,15 +2011,15 @@ export class CdnEndpointGlobalDeliveryRuleUrlRewriteActionOutputReference extend
   public get internalValue(): CdnEndpointGlobalDeliveryRuleUrlRewriteAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._destination) {
+    if (this._destination !== undefined) {
       hasAnyValues = true;
       internalValueResult.destination = this._destination;
     }
-    if (this._preserveUnmatchedPath) {
+    if (this._preserveUnmatchedPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.preserveUnmatchedPath = this._preserveUnmatchedPath;
     }
-    if (this._sourcePattern) {
+    if (this._sourcePattern !== undefined) {
       hasAnyValues = true;
       internalValueResult.sourcePattern = this._sourcePattern;
     }
@@ -2152,27 +2152,27 @@ export class CdnEndpointGlobalDeliveryRuleOutputReference extends cdktf.ComplexO
   public get internalValue(): CdnEndpointGlobalDeliveryRule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cacheExpirationAction?.internalValue) {
+    if (this._cacheExpirationAction?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cacheExpirationAction = this._cacheExpirationAction?.internalValue;
     }
-    if (this._cacheKeyQueryStringAction?.internalValue) {
+    if (this._cacheKeyQueryStringAction?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cacheKeyQueryStringAction = this._cacheKeyQueryStringAction?.internalValue;
     }
-    if (this._modifyRequestHeaderAction) {
+    if (this._modifyRequestHeaderAction !== undefined) {
       hasAnyValues = true;
       internalValueResult.modifyRequestHeaderAction = this._modifyRequestHeaderAction;
     }
-    if (this._modifyResponseHeaderAction) {
+    if (this._modifyResponseHeaderAction !== undefined) {
       hasAnyValues = true;
       internalValueResult.modifyResponseHeaderAction = this._modifyResponseHeaderAction;
     }
-    if (this._urlRedirectAction?.internalValue) {
+    if (this._urlRedirectAction?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.urlRedirectAction = this._urlRedirectAction?.internalValue;
     }
-    if (this._urlRewriteAction?.internalValue) {
+    if (this._urlRewriteAction?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.urlRewriteAction = this._urlRewriteAction?.internalValue;
     }
@@ -2377,19 +2377,19 @@ export class CdnEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): CdnEndpointTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

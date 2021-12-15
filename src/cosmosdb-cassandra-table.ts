@@ -78,7 +78,7 @@ export class CosmosdbCassandraTableAutoscaleSettingsOutputReference extends cdkt
   public get internalValue(): CosmosdbCassandraTableAutoscaleSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxThroughput) {
+    if (this._maxThroughput !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxThroughput = this._maxThroughput;
     }
@@ -221,15 +221,15 @@ export class CosmosdbCassandraTableSchemaOutputReference extends cdktf.ComplexOb
   public get internalValue(): CosmosdbCassandraTableSchema | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clusterKey) {
+    if (this._clusterKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.clusterKey = this._clusterKey;
     }
-    if (this._column) {
+    if (this._column !== undefined) {
       hasAnyValues = true;
       internalValueResult.column = this._column;
     }
-    if (this._partitionKey) {
+    if (this._partitionKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.partitionKey = this._partitionKey;
     }
@@ -343,19 +343,19 @@ export class CosmosdbCassandraTableTimeoutsOutputReference extends cdktf.Complex
   public get internalValue(): CosmosdbCassandraTableTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

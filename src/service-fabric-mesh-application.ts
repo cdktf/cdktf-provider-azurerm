@@ -73,11 +73,11 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesLimitsOutput
   public get internalValue(): ServiceFabricMeshApplicationServiceCodePackageResourcesLimits | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cpu) {
+    if (this._cpu !== undefined) {
       hasAnyValues = true;
       internalValueResult.cpu = this._cpu;
     }
-    if (this._memory) {
+    if (this._memory !== undefined) {
       hasAnyValues = true;
       internalValueResult.memory = this._memory;
     }
@@ -160,11 +160,11 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesRequestsOutp
   public get internalValue(): ServiceFabricMeshApplicationServiceCodePackageResourcesRequests | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cpu) {
+    if (this._cpu !== undefined) {
       hasAnyValues = true;
       internalValueResult.cpu = this._cpu;
     }
-    if (this._memory) {
+    if (this._memory !== undefined) {
       hasAnyValues = true;
       internalValueResult.memory = this._memory;
     }
@@ -251,11 +251,11 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesOutputRefere
   public get internalValue(): ServiceFabricMeshApplicationServiceCodePackageResources | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._limits?.internalValue) {
+    if (this._limits?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.limits = this._limits?.internalValue;
     }
-    if (this._requests?.internalValue) {
+    if (this._requests?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.requests = this._requests?.internalValue;
     }
@@ -409,19 +409,19 @@ export class ServiceFabricMeshApplicationTimeoutsOutputReference extends cdktf.C
   public get internalValue(): ServiceFabricMeshApplicationTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

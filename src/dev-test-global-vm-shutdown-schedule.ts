@@ -91,19 +91,19 @@ export class DevTestGlobalVmShutdownScheduleNotificationSettingsOutputReference 
   public get internalValue(): DevTestGlobalVmShutdownScheduleNotificationSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._email) {
+    if (this._email !== undefined) {
       hasAnyValues = true;
       internalValueResult.email = this._email;
     }
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._timeInMinutes) {
+    if (this._timeInMinutes !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeInMinutes = this._timeInMinutes;
     }
-    if (this._webhookUrl) {
+    if (this._webhookUrl !== undefined) {
       hasAnyValues = true;
       internalValueResult.webhookUrl = this._webhookUrl;
     }
@@ -235,19 +235,19 @@ export class DevTestGlobalVmShutdownScheduleTimeoutsOutputReference extends cdkt
   public get internalValue(): DevTestGlobalVmShutdownScheduleTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

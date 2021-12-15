@@ -85,11 +85,11 @@ export class DedicatedHardwareSecurityModuleNetworkProfileOutputReference extend
   public get internalValue(): DedicatedHardwareSecurityModuleNetworkProfile | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._networkInterfacePrivateIpAddresses) {
+    if (this._networkInterfacePrivateIpAddresses !== undefined) {
       hasAnyValues = true;
       internalValueResult.networkInterfacePrivateIpAddresses = this._networkInterfacePrivateIpAddresses;
     }
-    if (this._subnetId) {
+    if (this._subnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetId = this._subnetId;
     }
@@ -182,19 +182,19 @@ export class DedicatedHardwareSecurityModuleTimeoutsOutputReference extends cdkt
   public get internalValue(): DedicatedHardwareSecurityModuleTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

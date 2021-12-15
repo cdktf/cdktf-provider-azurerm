@@ -173,7 +173,7 @@ export class DataAzurermVirtualNetworkGatewayTimeoutsOutputReference extends cdk
   public get internalValue(): DataAzurermVirtualNetworkGatewayTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

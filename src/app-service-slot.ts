@@ -142,15 +142,15 @@ export class AppServiceSlotAuthSettingsActiveDirectoryOutputReference extends cd
   public get internalValue(): AppServiceSlotAuthSettingsActiveDirectory | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedAudiences) {
+    if (this._allowedAudiences !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedAudiences = this._allowedAudiences;
     }
-    if (this._clientId) {
+    if (this._clientId !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientId = this._clientId;
     }
-    if (this._clientSecret) {
+    if (this._clientSecret !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientSecret = this._clientSecret;
     }
@@ -259,15 +259,15 @@ export class AppServiceSlotAuthSettingsFacebookOutputReference extends cdktf.Com
   public get internalValue(): AppServiceSlotAuthSettingsFacebook | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._appId) {
+    if (this._appId !== undefined) {
       hasAnyValues = true;
       internalValueResult.appId = this._appId;
     }
-    if (this._appSecret) {
+    if (this._appSecret !== undefined) {
       hasAnyValues = true;
       internalValueResult.appSecret = this._appSecret;
     }
-    if (this._oauthScopes) {
+    if (this._oauthScopes !== undefined) {
       hasAnyValues = true;
       internalValueResult.oauthScopes = this._oauthScopes;
     }
@@ -373,15 +373,15 @@ export class AppServiceSlotAuthSettingsGoogleOutputReference extends cdktf.Compl
   public get internalValue(): AppServiceSlotAuthSettingsGoogle | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clientId) {
+    if (this._clientId !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientId = this._clientId;
     }
-    if (this._clientSecret) {
+    if (this._clientSecret !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientSecret = this._clientSecret;
     }
-    if (this._oauthScopes) {
+    if (this._oauthScopes !== undefined) {
       hasAnyValues = true;
       internalValueResult.oauthScopes = this._oauthScopes;
     }
@@ -487,15 +487,15 @@ export class AppServiceSlotAuthSettingsMicrosoftOutputReference extends cdktf.Co
   public get internalValue(): AppServiceSlotAuthSettingsMicrosoft | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clientId) {
+    if (this._clientId !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientId = this._clientId;
     }
-    if (this._clientSecret) {
+    if (this._clientSecret !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientSecret = this._clientSecret;
     }
-    if (this._oauthScopes) {
+    if (this._oauthScopes !== undefined) {
       hasAnyValues = true;
       internalValueResult.oauthScopes = this._oauthScopes;
     }
@@ -596,11 +596,11 @@ export class AppServiceSlotAuthSettingsTwitterOutputReference extends cdktf.Comp
   public get internalValue(): AppServiceSlotAuthSettingsTwitter | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._consumerKey) {
+    if (this._consumerKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.consumerKey = this._consumerKey;
     }
-    if (this._consumerSecret) {
+    if (this._consumerSecret !== undefined) {
       hasAnyValues = true;
       internalValueResult.consumerSecret = this._consumerSecret;
     }
@@ -753,59 +753,59 @@ export class AppServiceSlotAuthSettingsOutputReference extends cdktf.ComplexObje
   public get internalValue(): AppServiceSlotAuthSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._additionalLoginParams) {
+    if (this._additionalLoginParams !== undefined) {
       hasAnyValues = true;
       internalValueResult.additionalLoginParams = this._additionalLoginParams;
     }
-    if (this._allowedExternalRedirectUrls) {
+    if (this._allowedExternalRedirectUrls !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedExternalRedirectUrls = this._allowedExternalRedirectUrls;
     }
-    if (this._defaultProvider) {
+    if (this._defaultProvider !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultProvider = this._defaultProvider;
     }
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._issuer) {
+    if (this._issuer !== undefined) {
       hasAnyValues = true;
       internalValueResult.issuer = this._issuer;
     }
-    if (this._runtimeVersion) {
+    if (this._runtimeVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.runtimeVersion = this._runtimeVersion;
     }
-    if (this._tokenRefreshExtensionHours) {
+    if (this._tokenRefreshExtensionHours !== undefined) {
       hasAnyValues = true;
       internalValueResult.tokenRefreshExtensionHours = this._tokenRefreshExtensionHours;
     }
-    if (this._tokenStoreEnabled) {
+    if (this._tokenStoreEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.tokenStoreEnabled = this._tokenStoreEnabled;
     }
-    if (this._unauthenticatedClientAction) {
+    if (this._unauthenticatedClientAction !== undefined) {
       hasAnyValues = true;
       internalValueResult.unauthenticatedClientAction = this._unauthenticatedClientAction;
     }
-    if (this._activeDirectory?.internalValue) {
+    if (this._activeDirectory?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.activeDirectory = this._activeDirectory?.internalValue;
     }
-    if (this._facebook?.internalValue) {
+    if (this._facebook?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.facebook = this._facebook?.internalValue;
     }
-    if (this._google?.internalValue) {
+    if (this._google?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.google = this._google?.internalValue;
     }
-    if (this._microsoft?.internalValue) {
+    if (this._microsoft?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.microsoft = this._microsoft?.internalValue;
     }
-    if (this._twitter?.internalValue) {
+    if (this._twitter?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.twitter = this._twitter?.internalValue;
     }
@@ -1135,11 +1135,11 @@ export class AppServiceSlotIdentityOutputReference extends cdktf.ComplexObject {
   public get internalValue(): AppServiceSlotIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityIds) {
+    if (this._identityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityIds = this._identityIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -1230,15 +1230,15 @@ export class AppServiceSlotLogsApplicationLogsAzureBlobStorageOutputReference ex
   public get internalValue(): AppServiceSlotLogsApplicationLogsAzureBlobStorage | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._level) {
+    if (this._level !== undefined) {
       hasAnyValues = true;
       internalValueResult.level = this._level;
     }
-    if (this._retentionInDays) {
+    if (this._retentionInDays !== undefined) {
       hasAnyValues = true;
       internalValueResult.retentionInDays = this._retentionInDays;
     }
-    if (this._sasUrl) {
+    if (this._sasUrl !== undefined) {
       hasAnyValues = true;
       internalValueResult.sasUrl = this._sasUrl;
     }
@@ -1338,11 +1338,11 @@ export class AppServiceSlotLogsApplicationLogsOutputReference extends cdktf.Comp
   public get internalValue(): AppServiceSlotLogsApplicationLogs | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._fileSystemLevel) {
+    if (this._fileSystemLevel !== undefined) {
       hasAnyValues = true;
       internalValueResult.fileSystemLevel = this._fileSystemLevel;
     }
-    if (this._azureBlobStorage?.internalValue) {
+    if (this._azureBlobStorage?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.azureBlobStorage = this._azureBlobStorage?.internalValue;
     }
@@ -1431,11 +1431,11 @@ export class AppServiceSlotLogsHttpLogsAzureBlobStorageOutputReference extends c
   public get internalValue(): AppServiceSlotLogsHttpLogsAzureBlobStorage | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._retentionInDays) {
+    if (this._retentionInDays !== undefined) {
       hasAnyValues = true;
       internalValueResult.retentionInDays = this._retentionInDays;
     }
-    if (this._sasUrl) {
+    if (this._sasUrl !== undefined) {
       hasAnyValues = true;
       internalValueResult.sasUrl = this._sasUrl;
     }
@@ -1518,11 +1518,11 @@ export class AppServiceSlotLogsHttpLogsFileSystemOutputReference extends cdktf.C
   public get internalValue(): AppServiceSlotLogsHttpLogsFileSystem | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._retentionInDays) {
+    if (this._retentionInDays !== undefined) {
       hasAnyValues = true;
       internalValueResult.retentionInDays = this._retentionInDays;
     }
-    if (this._retentionInMb) {
+    if (this._retentionInMb !== undefined) {
       hasAnyValues = true;
       internalValueResult.retentionInMb = this._retentionInMb;
     }
@@ -1609,11 +1609,11 @@ export class AppServiceSlotLogsHttpLogsOutputReference extends cdktf.ComplexObje
   public get internalValue(): AppServiceSlotLogsHttpLogs | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._azureBlobStorage?.internalValue) {
+    if (this._azureBlobStorage?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.azureBlobStorage = this._azureBlobStorage?.internalValue;
     }
-    if (this._fileSystem?.internalValue) {
+    if (this._fileSystem?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.fileSystem = this._fileSystem?.internalValue;
     }
@@ -1716,19 +1716,19 @@ export class AppServiceSlotLogsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): AppServiceSlotLogs | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._detailedErrorMessagesEnabled) {
+    if (this._detailedErrorMessagesEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.detailedErrorMessagesEnabled = this._detailedErrorMessagesEnabled;
     }
-    if (this._failedRequestTracingEnabled) {
+    if (this._failedRequestTracingEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.failedRequestTracingEnabled = this._failedRequestTracingEnabled;
     }
-    if (this._applicationLogs?.internalValue) {
+    if (this._applicationLogs?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.applicationLogs = this._applicationLogs?.internalValue;
     }
-    if (this._httpLogs?.internalValue) {
+    if (this._httpLogs?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpLogs = this._httpLogs?.internalValue;
     }
@@ -2011,11 +2011,11 @@ export class AppServiceSlotSiteConfigCorsOutputReference extends cdktf.ComplexOb
   public get internalValue(): AppServiceSlotSiteConfigCors | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedOrigins) {
+    if (this._allowedOrigins !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedOrigins = this._allowedOrigins;
     }
-    if (this._supportCredentials) {
+    if (this._supportCredentials !== undefined) {
       hasAnyValues = true;
       internalValueResult.supportCredentials = this._supportCredentials;
     }
@@ -2248,127 +2248,127 @@ export class AppServiceSlotSiteConfigOutputReference extends cdktf.ComplexObject
   public get internalValue(): AppServiceSlotSiteConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._acrUseManagedIdentityCredentials) {
+    if (this._acrUseManagedIdentityCredentials !== undefined) {
       hasAnyValues = true;
       internalValueResult.acrUseManagedIdentityCredentials = this._acrUseManagedIdentityCredentials;
     }
-    if (this._acrUserManagedIdentityClientId) {
+    if (this._acrUserManagedIdentityClientId !== undefined) {
       hasAnyValues = true;
       internalValueResult.acrUserManagedIdentityClientId = this._acrUserManagedIdentityClientId;
     }
-    if (this._alwaysOn) {
+    if (this._alwaysOn !== undefined) {
       hasAnyValues = true;
       internalValueResult.alwaysOn = this._alwaysOn;
     }
-    if (this._appCommandLine) {
+    if (this._appCommandLine !== undefined) {
       hasAnyValues = true;
       internalValueResult.appCommandLine = this._appCommandLine;
     }
-    if (this._autoSwapSlotName) {
+    if (this._autoSwapSlotName !== undefined) {
       hasAnyValues = true;
       internalValueResult.autoSwapSlotName = this._autoSwapSlotName;
     }
-    if (this._defaultDocuments) {
+    if (this._defaultDocuments !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultDocuments = this._defaultDocuments;
     }
-    if (this._dotnetFrameworkVersion) {
+    if (this._dotnetFrameworkVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.dotnetFrameworkVersion = this._dotnetFrameworkVersion;
     }
-    if (this._ftpsState) {
+    if (this._ftpsState !== undefined) {
       hasAnyValues = true;
       internalValueResult.ftpsState = this._ftpsState;
     }
-    if (this._healthCheckPath) {
+    if (this._healthCheckPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.healthCheckPath = this._healthCheckPath;
     }
-    if (this._http2Enabled) {
+    if (this._http2Enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.http2Enabled = this._http2Enabled;
     }
-    if (this._ipRestriction) {
+    if (this._ipRestriction !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipRestriction = this._ipRestriction;
     }
-    if (this._javaContainer) {
+    if (this._javaContainer !== undefined) {
       hasAnyValues = true;
       internalValueResult.javaContainer = this._javaContainer;
     }
-    if (this._javaContainerVersion) {
+    if (this._javaContainerVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.javaContainerVersion = this._javaContainerVersion;
     }
-    if (this._javaVersion) {
+    if (this._javaVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.javaVersion = this._javaVersion;
     }
-    if (this._linuxFxVersion) {
+    if (this._linuxFxVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.linuxFxVersion = this._linuxFxVersion;
     }
-    if (this._localMysqlEnabled) {
+    if (this._localMysqlEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.localMysqlEnabled = this._localMysqlEnabled;
     }
-    if (this._managedPipelineMode) {
+    if (this._managedPipelineMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.managedPipelineMode = this._managedPipelineMode;
     }
-    if (this._minTlsVersion) {
+    if (this._minTlsVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.minTlsVersion = this._minTlsVersion;
     }
-    if (this._numberOfWorkers) {
+    if (this._numberOfWorkers !== undefined) {
       hasAnyValues = true;
       internalValueResult.numberOfWorkers = this._numberOfWorkers;
     }
-    if (this._phpVersion) {
+    if (this._phpVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.phpVersion = this._phpVersion;
     }
-    if (this._pythonVersion) {
+    if (this._pythonVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.pythonVersion = this._pythonVersion;
     }
-    if (this._remoteDebuggingEnabled) {
+    if (this._remoteDebuggingEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.remoteDebuggingEnabled = this._remoteDebuggingEnabled;
     }
-    if (this._remoteDebuggingVersion) {
+    if (this._remoteDebuggingVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.remoteDebuggingVersion = this._remoteDebuggingVersion;
     }
-    if (this._scmIpRestriction) {
+    if (this._scmIpRestriction !== undefined) {
       hasAnyValues = true;
       internalValueResult.scmIpRestriction = this._scmIpRestriction;
     }
-    if (this._scmType) {
+    if (this._scmType !== undefined) {
       hasAnyValues = true;
       internalValueResult.scmType = this._scmType;
     }
-    if (this._scmUseMainIpRestriction) {
+    if (this._scmUseMainIpRestriction !== undefined) {
       hasAnyValues = true;
       internalValueResult.scmUseMainIpRestriction = this._scmUseMainIpRestriction;
     }
-    if (this._use32BitWorkerProcess) {
+    if (this._use32BitWorkerProcess !== undefined) {
       hasAnyValues = true;
       internalValueResult.use32BitWorkerProcess = this._use32BitWorkerProcess;
     }
-    if (this._vnetRouteAllEnabled) {
+    if (this._vnetRouteAllEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.vnetRouteAllEnabled = this._vnetRouteAllEnabled;
     }
-    if (this._websocketsEnabled) {
+    if (this._websocketsEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.websocketsEnabled = this._websocketsEnabled;
     }
-    if (this._windowsFxVersion) {
+    if (this._windowsFxVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.windowsFxVersion = this._windowsFxVersion;
     }
-    if (this._cors?.internalValue) {
+    if (this._cors?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.cors = this._cors?.internalValue;
     }
@@ -2991,19 +2991,19 @@ export class AppServiceSlotTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): AppServiceSlotTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

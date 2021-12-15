@@ -233,31 +233,31 @@ export class SynapseWorkspaceAzureDevopsRepoOutputReference extends cdktf.Comple
   public get internalValue(): SynapseWorkspaceAzureDevopsRepo | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._accountName) {
+    if (this._accountName !== undefined) {
       hasAnyValues = true;
       internalValueResult.accountName = this._accountName;
     }
-    if (this._branchName) {
+    if (this._branchName !== undefined) {
       hasAnyValues = true;
       internalValueResult.branchName = this._branchName;
     }
-    if (this._lastCommitId) {
+    if (this._lastCommitId !== undefined) {
       hasAnyValues = true;
       internalValueResult.lastCommitId = this._lastCommitId;
     }
-    if (this._projectName) {
+    if (this._projectName !== undefined) {
       hasAnyValues = true;
       internalValueResult.projectName = this._projectName;
     }
-    if (this._repositoryName) {
+    if (this._repositoryName !== undefined) {
       hasAnyValues = true;
       internalValueResult.repositoryName = this._repositoryName;
     }
-    if (this._rootFolder) {
+    if (this._rootFolder !== undefined) {
       hasAnyValues = true;
       internalValueResult.rootFolder = this._rootFolder;
     }
-    if (this._tenantId) {
+    if (this._tenantId !== undefined) {
       hasAnyValues = true;
       internalValueResult.tenantId = this._tenantId;
     }
@@ -421,11 +421,11 @@ export class SynapseWorkspaceCustomerManagedKeyOutputReference extends cdktf.Com
   public get internalValue(): SynapseWorkspaceCustomerManagedKey | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._keyName) {
+    if (this._keyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyName = this._keyName;
     }
-    if (this._keyVersionlessId) {
+    if (this._keyVersionlessId !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyVersionlessId = this._keyVersionlessId;
     }
@@ -531,27 +531,27 @@ export class SynapseWorkspaceGithubRepoOutputReference extends cdktf.ComplexObje
   public get internalValue(): SynapseWorkspaceGithubRepo | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._accountName) {
+    if (this._accountName !== undefined) {
       hasAnyValues = true;
       internalValueResult.accountName = this._accountName;
     }
-    if (this._branchName) {
+    if (this._branchName !== undefined) {
       hasAnyValues = true;
       internalValueResult.branchName = this._branchName;
     }
-    if (this._gitUrl) {
+    if (this._gitUrl !== undefined) {
       hasAnyValues = true;
       internalValueResult.gitUrl = this._gitUrl;
     }
-    if (this._lastCommitId) {
+    if (this._lastCommitId !== undefined) {
       hasAnyValues = true;
       internalValueResult.lastCommitId = this._lastCommitId;
     }
-    if (this._repositoryName) {
+    if (this._repositoryName !== undefined) {
       hasAnyValues = true;
       internalValueResult.repositoryName = this._repositoryName;
     }
-    if (this._rootFolder) {
+    if (this._rootFolder !== undefined) {
       hasAnyValues = true;
       internalValueResult.rootFolder = this._rootFolder;
     }
@@ -710,19 +710,19 @@ export class SynapseWorkspaceTimeoutsOutputReference extends cdktf.ComplexObject
   public get internalValue(): SynapseWorkspaceTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

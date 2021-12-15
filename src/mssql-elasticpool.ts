@@ -99,11 +99,11 @@ export class MssqlElasticpoolPerDatabaseSettingsOutputReference extends cdktf.Co
   public get internalValue(): MssqlElasticpoolPerDatabaseSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxCapacity) {
+    if (this._maxCapacity !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxCapacity = this._maxCapacity;
     }
-    if (this._minCapacity) {
+    if (this._minCapacity !== undefined) {
       hasAnyValues = true;
       internalValueResult.minCapacity = this._minCapacity;
     }
@@ -196,19 +196,19 @@ export class MssqlElasticpoolSkuOutputReference extends cdktf.ComplexObject {
   public get internalValue(): MssqlElasticpoolSku | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._capacity) {
+    if (this._capacity !== undefined) {
       hasAnyValues = true;
       internalValueResult.capacity = this._capacity;
     }
-    if (this._family) {
+    if (this._family !== undefined) {
       hasAnyValues = true;
       internalValueResult.family = this._family;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._tier) {
+    if (this._tier !== undefined) {
       hasAnyValues = true;
       internalValueResult.tier = this._tier;
     }
@@ -334,19 +334,19 @@ export class MssqlElasticpoolTimeoutsOutputReference extends cdktf.ComplexObject
   public get internalValue(): MssqlElasticpoolTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

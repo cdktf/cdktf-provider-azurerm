@@ -58,7 +58,7 @@ export class DataAzurermSubnetTimeoutsOutputReference extends cdktf.ComplexObjec
   public get internalValue(): DataAzurermSubnetTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

@@ -66,15 +66,15 @@ export class StorageManagementPolicyRuleActionsBaseBlobOutputReference extends c
   public get internalValue(): StorageManagementPolicyRuleActionsBaseBlob | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._deleteAfterDaysSinceModificationGreaterThan) {
+    if (this._deleteAfterDaysSinceModificationGreaterThan !== undefined) {
       hasAnyValues = true;
       internalValueResult.deleteAfterDaysSinceModificationGreaterThan = this._deleteAfterDaysSinceModificationGreaterThan;
     }
-    if (this._tierToArchiveAfterDaysSinceModificationGreaterThan) {
+    if (this._tierToArchiveAfterDaysSinceModificationGreaterThan !== undefined) {
       hasAnyValues = true;
       internalValueResult.tierToArchiveAfterDaysSinceModificationGreaterThan = this._tierToArchiveAfterDaysSinceModificationGreaterThan;
     }
-    if (this._tierToCoolAfterDaysSinceModificationGreaterThan) {
+    if (this._tierToCoolAfterDaysSinceModificationGreaterThan !== undefined) {
       hasAnyValues = true;
       internalValueResult.tierToCoolAfterDaysSinceModificationGreaterThan = this._tierToCoolAfterDaysSinceModificationGreaterThan;
     }
@@ -186,15 +186,15 @@ export class StorageManagementPolicyRuleActionsSnapshotOutputReference extends c
   public get internalValue(): StorageManagementPolicyRuleActionsSnapshot | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._changeTierToArchiveAfterDaysSinceCreation) {
+    if (this._changeTierToArchiveAfterDaysSinceCreation !== undefined) {
       hasAnyValues = true;
       internalValueResult.changeTierToArchiveAfterDaysSinceCreation = this._changeTierToArchiveAfterDaysSinceCreation;
     }
-    if (this._changeTierToCoolAfterDaysSinceCreation) {
+    if (this._changeTierToCoolAfterDaysSinceCreation !== undefined) {
       hasAnyValues = true;
       internalValueResult.changeTierToCoolAfterDaysSinceCreation = this._changeTierToCoolAfterDaysSinceCreation;
     }
-    if (this._deleteAfterDaysSinceCreationGreaterThan) {
+    if (this._deleteAfterDaysSinceCreationGreaterThan !== undefined) {
       hasAnyValues = true;
       internalValueResult.deleteAfterDaysSinceCreationGreaterThan = this._deleteAfterDaysSinceCreationGreaterThan;
     }
@@ -306,15 +306,15 @@ export class StorageManagementPolicyRuleActionsVersionOutputReference extends cd
   public get internalValue(): StorageManagementPolicyRuleActionsVersion | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._changeTierToArchiveAfterDaysSinceCreation) {
+    if (this._changeTierToArchiveAfterDaysSinceCreation !== undefined) {
       hasAnyValues = true;
       internalValueResult.changeTierToArchiveAfterDaysSinceCreation = this._changeTierToArchiveAfterDaysSinceCreation;
     }
-    if (this._changeTierToCoolAfterDaysSinceCreation) {
+    if (this._changeTierToCoolAfterDaysSinceCreation !== undefined) {
       hasAnyValues = true;
       internalValueResult.changeTierToCoolAfterDaysSinceCreation = this._changeTierToCoolAfterDaysSinceCreation;
     }
-    if (this._deleteAfterDaysSinceCreation) {
+    if (this._deleteAfterDaysSinceCreation !== undefined) {
       hasAnyValues = true;
       internalValueResult.deleteAfterDaysSinceCreation = this._deleteAfterDaysSinceCreation;
     }
@@ -432,15 +432,15 @@ export class StorageManagementPolicyRuleActionsOutputReference extends cdktf.Com
   public get internalValue(): StorageManagementPolicyRuleActions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._baseBlob?.internalValue) {
+    if (this._baseBlob?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.baseBlob = this._baseBlob?.internalValue;
     }
-    if (this._snapshot?.internalValue) {
+    if (this._snapshot?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.snapshot = this._snapshot?.internalValue;
     }
-    if (this._version?.internalValue) {
+    if (this._version?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.version = this._version?.internalValue;
     }
@@ -581,15 +581,15 @@ export class StorageManagementPolicyRuleFiltersOutputReference extends cdktf.Com
   public get internalValue(): StorageManagementPolicyRuleFilters | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._blobTypes) {
+    if (this._blobTypes !== undefined) {
       hasAnyValues = true;
       internalValueResult.blobTypes = this._blobTypes;
     }
-    if (this._prefixMatch) {
+    if (this._prefixMatch !== undefined) {
       hasAnyValues = true;
       internalValueResult.prefixMatch = this._prefixMatch;
     }
-    if (this._matchBlobIndexTag) {
+    if (this._matchBlobIndexTag !== undefined) {
       hasAnyValues = true;
       internalValueResult.matchBlobIndexTag = this._matchBlobIndexTag;
     }
@@ -743,19 +743,19 @@ export class StorageManagementPolicyTimeoutsOutputReference extends cdktf.Comple
   public get internalValue(): StorageManagementPolicyTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

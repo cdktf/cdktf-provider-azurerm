@@ -98,15 +98,15 @@ export class VirtualMachineConfigurationPolicyAssignmentConfigurationOutputRefer
   public get internalValue(): VirtualMachineConfigurationPolicyAssignmentConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._version) {
+    if (this._version !== undefined) {
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
-    if (this._parameter) {
+    if (this._parameter !== undefined) {
       hasAnyValues = true;
       internalValueResult.parameter = this._parameter;
     }
@@ -221,19 +221,19 @@ export class VirtualMachineConfigurationPolicyAssignmentTimeoutsOutputReference 
   public get internalValue(): VirtualMachineConfigurationPolicyAssignmentTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

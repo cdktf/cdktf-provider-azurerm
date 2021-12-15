@@ -133,19 +133,19 @@ export class NetappVolumeDataProtectionReplicationOutputReference extends cdktf.
   public get internalValue(): NetappVolumeDataProtectionReplication | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._endpointType) {
+    if (this._endpointType !== undefined) {
       hasAnyValues = true;
       internalValueResult.endpointType = this._endpointType;
     }
-    if (this._remoteVolumeLocation) {
+    if (this._remoteVolumeLocation !== undefined) {
       hasAnyValues = true;
       internalValueResult.remoteVolumeLocation = this._remoteVolumeLocation;
     }
-    if (this._remoteVolumeResourceId) {
+    if (this._remoteVolumeResourceId !== undefined) {
       hasAnyValues = true;
       internalValueResult.remoteVolumeResourceId = this._remoteVolumeResourceId;
     }
-    if (this._replicationFrequency) {
+    if (this._replicationFrequency !== undefined) {
       hasAnyValues = true;
       internalValueResult.replicationFrequency = this._replicationFrequency;
     }
@@ -328,19 +328,19 @@ export class NetappVolumeTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): NetappVolumeTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

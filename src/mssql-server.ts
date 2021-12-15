@@ -158,19 +158,19 @@ export class MssqlServerAzureadAdministratorOutputReference extends cdktf.Comple
   public get internalValue(): MssqlServerAzureadAdministrator | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._azureadAuthenticationOnly) {
+    if (this._azureadAuthenticationOnly !== undefined) {
       hasAnyValues = true;
       internalValueResult.azureadAuthenticationOnly = this._azureadAuthenticationOnly;
     }
-    if (this._loginUsername) {
+    if (this._loginUsername !== undefined) {
       hasAnyValues = true;
       internalValueResult.loginUsername = this._loginUsername;
     }
-    if (this._objectId) {
+    if (this._objectId !== undefined) {
       hasAnyValues = true;
       internalValueResult.objectId = this._objectId;
     }
-    if (this._tenantId) {
+    if (this._tenantId !== undefined) {
       hasAnyValues = true;
       internalValueResult.tenantId = this._tenantId;
     }
@@ -289,11 +289,11 @@ export class MssqlServerIdentityOutputReference extends cdktf.ComplexObject {
   public get internalValue(): MssqlServerIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
-    if (this._userAssignedIdentityIds) {
+    if (this._userAssignedIdentityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.userAssignedIdentityIds = this._userAssignedIdentityIds;
     }
@@ -389,19 +389,19 @@ export class MssqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): MssqlServerTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -362,35 +362,35 @@ export class FrontdoorRoutingRuleForwardingConfigurationOutputReference extends 
   public get internalValue(): FrontdoorRoutingRuleForwardingConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._backendPoolName) {
+    if (this._backendPoolName !== undefined) {
       hasAnyValues = true;
       internalValueResult.backendPoolName = this._backendPoolName;
     }
-    if (this._cacheDuration) {
+    if (this._cacheDuration !== undefined) {
       hasAnyValues = true;
       internalValueResult.cacheDuration = this._cacheDuration;
     }
-    if (this._cacheEnabled) {
+    if (this._cacheEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.cacheEnabled = this._cacheEnabled;
     }
-    if (this._cacheQueryParameterStripDirective) {
+    if (this._cacheQueryParameterStripDirective !== undefined) {
       hasAnyValues = true;
       internalValueResult.cacheQueryParameterStripDirective = this._cacheQueryParameterStripDirective;
     }
-    if (this._cacheQueryParameters) {
+    if (this._cacheQueryParameters !== undefined) {
       hasAnyValues = true;
       internalValueResult.cacheQueryParameters = this._cacheQueryParameters;
     }
-    if (this._cacheUseDynamicCompression) {
+    if (this._cacheUseDynamicCompression !== undefined) {
       hasAnyValues = true;
       internalValueResult.cacheUseDynamicCompression = this._cacheUseDynamicCompression;
     }
-    if (this._customForwardingPath) {
+    if (this._customForwardingPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.customForwardingPath = this._customForwardingPath;
     }
-    if (this._forwardingProtocol) {
+    if (this._forwardingProtocol !== undefined) {
       hasAnyValues = true;
       internalValueResult.forwardingProtocol = this._forwardingProtocol;
     }
@@ -604,27 +604,27 @@ export class FrontdoorRoutingRuleRedirectConfigurationOutputReference extends cd
   public get internalValue(): FrontdoorRoutingRuleRedirectConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._customFragment) {
+    if (this._customFragment !== undefined) {
       hasAnyValues = true;
       internalValueResult.customFragment = this._customFragment;
     }
-    if (this._customHost) {
+    if (this._customHost !== undefined) {
       hasAnyValues = true;
       internalValueResult.customHost = this._customHost;
     }
-    if (this._customPath) {
+    if (this._customPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.customPath = this._customPath;
     }
-    if (this._customQueryString) {
+    if (this._customQueryString !== undefined) {
       hasAnyValues = true;
       internalValueResult.customQueryString = this._customQueryString;
     }
-    if (this._redirectProtocol) {
+    if (this._redirectProtocol !== undefined) {
       hasAnyValues = true;
       internalValueResult.redirectProtocol = this._redirectProtocol;
     }
-    if (this._redirectType) {
+    if (this._redirectType !== undefined) {
       hasAnyValues = true;
       internalValueResult.redirectType = this._redirectType;
     }
@@ -840,19 +840,19 @@ export class FrontdoorTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): FrontdoorTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

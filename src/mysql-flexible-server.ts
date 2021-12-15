@@ -137,11 +137,11 @@ export class MysqlFlexibleServerHighAvailabilityOutputReference extends cdktf.Co
   public get internalValue(): MysqlFlexibleServerHighAvailability | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._mode) {
+    if (this._mode !== undefined) {
       hasAnyValues = true;
       internalValueResult.mode = this._mode;
     }
-    if (this._standbyAvailabilityZone) {
+    if (this._standbyAvailabilityZone !== undefined) {
       hasAnyValues = true;
       internalValueResult.standbyAvailabilityZone = this._standbyAvailabilityZone;
     }
@@ -232,15 +232,15 @@ export class MysqlFlexibleServerMaintenanceWindowOutputReference extends cdktf.C
   public get internalValue(): MysqlFlexibleServerMaintenanceWindow | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dayOfWeek) {
+    if (this._dayOfWeek !== undefined) {
       hasAnyValues = true;
       internalValueResult.dayOfWeek = this._dayOfWeek;
     }
-    if (this._startHour) {
+    if (this._startHour !== undefined) {
       hasAnyValues = true;
       internalValueResult.startHour = this._startHour;
     }
-    if (this._startMinute) {
+    if (this._startMinute !== undefined) {
       hasAnyValues = true;
       internalValueResult.startMinute = this._startMinute;
     }
@@ -352,15 +352,15 @@ export class MysqlFlexibleServerStorageOutputReference extends cdktf.ComplexObje
   public get internalValue(): MysqlFlexibleServerStorage | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._autoGrowEnabled) {
+    if (this._autoGrowEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.autoGrowEnabled = this._autoGrowEnabled;
     }
-    if (this._iops) {
+    if (this._iops !== undefined) {
       hasAnyValues = true;
       internalValueResult.iops = this._iops;
     }
-    if (this._sizeGb) {
+    if (this._sizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.sizeGb = this._sizeGb;
     }
@@ -477,19 +477,19 @@ export class MysqlFlexibleServerTimeoutsOutputReference extends cdktf.ComplexObj
   public get internalValue(): MysqlFlexibleServerTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

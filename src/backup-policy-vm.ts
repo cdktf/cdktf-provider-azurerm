@@ -110,15 +110,15 @@ export class BackupPolicyVmBackupOutputReference extends cdktf.ComplexObject {
   public get internalValue(): BackupPolicyVmBackup | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._frequency) {
+    if (this._frequency !== undefined) {
       hasAnyValues = true;
       internalValueResult.frequency = this._frequency;
     }
-    if (this._time) {
+    if (this._time !== undefined) {
       hasAnyValues = true;
       internalValueResult.time = this._time;
     }
-    if (this._weekdays) {
+    if (this._weekdays !== undefined) {
       hasAnyValues = true;
       internalValueResult.weekdays = this._weekdays;
     }
@@ -214,7 +214,7 @@ export class BackupPolicyVmRetentionDailyOutputReference extends cdktf.ComplexOb
   public get internalValue(): BackupPolicyVmRetentionDaily | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._count) {
+    if (this._count !== undefined) {
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
@@ -287,15 +287,15 @@ export class BackupPolicyVmRetentionMonthlyOutputReference extends cdktf.Complex
   public get internalValue(): BackupPolicyVmRetentionMonthly | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._count) {
+    if (this._count !== undefined) {
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
-    if (this._weekdays) {
+    if (this._weekdays !== undefined) {
       hasAnyValues = true;
       internalValueResult.weekdays = this._weekdays;
     }
-    if (this._weeks) {
+    if (this._weeks !== undefined) {
       hasAnyValues = true;
       internalValueResult.weeks = this._weeks;
     }
@@ -393,11 +393,11 @@ export class BackupPolicyVmRetentionWeeklyOutputReference extends cdktf.ComplexO
   public get internalValue(): BackupPolicyVmRetentionWeekly | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._count) {
+    if (this._count !== undefined) {
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
-    if (this._weekdays) {
+    if (this._weekdays !== undefined) {
       hasAnyValues = true;
       internalValueResult.weekdays = this._weekdays;
     }
@@ -490,19 +490,19 @@ export class BackupPolicyVmRetentionYearlyOutputReference extends cdktf.ComplexO
   public get internalValue(): BackupPolicyVmRetentionYearly | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._count) {
+    if (this._count !== undefined) {
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
-    if (this._months) {
+    if (this._months !== undefined) {
       hasAnyValues = true;
       internalValueResult.months = this._months;
     }
-    if (this._weekdays) {
+    if (this._weekdays !== undefined) {
       hasAnyValues = true;
       internalValueResult.weekdays = this._weekdays;
     }
-    if (this._weeks) {
+    if (this._weeks !== undefined) {
       hasAnyValues = true;
       internalValueResult.weeks = this._weeks;
     }
@@ -625,19 +625,19 @@ export class BackupPolicyVmTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): BackupPolicyVmTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -118,23 +118,23 @@ export class DataFactoryGithubConfigurationOutputReference extends cdktf.Complex
   public get internalValue(): DataFactoryGithubConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._accountName) {
+    if (this._accountName !== undefined) {
       hasAnyValues = true;
       internalValueResult.accountName = this._accountName;
     }
-    if (this._branchName) {
+    if (this._branchName !== undefined) {
       hasAnyValues = true;
       internalValueResult.branchName = this._branchName;
     }
-    if (this._gitUrl) {
+    if (this._gitUrl !== undefined) {
       hasAnyValues = true;
       internalValueResult.gitUrl = this._gitUrl;
     }
-    if (this._repositoryName) {
+    if (this._repositoryName !== undefined) {
       hasAnyValues = true;
       internalValueResult.repositoryName = this._repositoryName;
     }
-    if (this._rootFolder) {
+    if (this._rootFolder !== undefined) {
       hasAnyValues = true;
       internalValueResult.rootFolder = this._rootFolder;
     }
@@ -289,11 +289,11 @@ export class DataFactoryIdentityOutputReference extends cdktf.ComplexObject {
   public get internalValue(): DataFactoryIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityIds) {
+    if (this._identityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityIds = this._identityIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -389,19 +389,19 @@ export class DataFactoryTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): DataFactoryTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -546,27 +546,27 @@ export class DataFactoryVstsConfigurationOutputReference extends cdktf.ComplexOb
   public get internalValue(): DataFactoryVstsConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._accountName) {
+    if (this._accountName !== undefined) {
       hasAnyValues = true;
       internalValueResult.accountName = this._accountName;
     }
-    if (this._branchName) {
+    if (this._branchName !== undefined) {
       hasAnyValues = true;
       internalValueResult.branchName = this._branchName;
     }
-    if (this._projectName) {
+    if (this._projectName !== undefined) {
       hasAnyValues = true;
       internalValueResult.projectName = this._projectName;
     }
-    if (this._repositoryName) {
+    if (this._repositoryName !== undefined) {
       hasAnyValues = true;
       internalValueResult.repositoryName = this._repositoryName;
     }
-    if (this._rootFolder) {
+    if (this._rootFolder !== undefined) {
       hasAnyValues = true;
       internalValueResult.rootFolder = this._rootFolder;
     }
-    if (this._tenantId) {
+    if (this._tenantId !== undefined) {
       hasAnyValues = true;
       internalValueResult.tenantId = this._tenantId;
     }

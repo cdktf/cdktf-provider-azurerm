@@ -54,7 +54,7 @@ export class DataAzurermDnsZoneTimeoutsOutputReference extends cdktf.ComplexObje
   public get internalValue(): DataAzurermDnsZoneTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

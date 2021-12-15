@@ -101,11 +101,11 @@ export class BackupPolicyFileShareBackupOutputReference extends cdktf.ComplexObj
   public get internalValue(): BackupPolicyFileShareBackup | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._frequency) {
+    if (this._frequency !== undefined) {
       hasAnyValues = true;
       internalValueResult.frequency = this._frequency;
     }
-    if (this._time) {
+    if (this._time !== undefined) {
       hasAnyValues = true;
       internalValueResult.time = this._time;
     }
@@ -183,7 +183,7 @@ export class BackupPolicyFileShareRetentionDailyOutputReference extends cdktf.Co
   public get internalValue(): BackupPolicyFileShareRetentionDaily | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._count) {
+    if (this._count !== undefined) {
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
@@ -256,15 +256,15 @@ export class BackupPolicyFileShareRetentionMonthlyOutputReference extends cdktf.
   public get internalValue(): BackupPolicyFileShareRetentionMonthly | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._count) {
+    if (this._count !== undefined) {
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
-    if (this._weekdays) {
+    if (this._weekdays !== undefined) {
       hasAnyValues = true;
       internalValueResult.weekdays = this._weekdays;
     }
-    if (this._weeks) {
+    if (this._weeks !== undefined) {
       hasAnyValues = true;
       internalValueResult.weeks = this._weeks;
     }
@@ -362,11 +362,11 @@ export class BackupPolicyFileShareRetentionWeeklyOutputReference extends cdktf.C
   public get internalValue(): BackupPolicyFileShareRetentionWeekly | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._count) {
+    if (this._count !== undefined) {
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
-    if (this._weekdays) {
+    if (this._weekdays !== undefined) {
       hasAnyValues = true;
       internalValueResult.weekdays = this._weekdays;
     }
@@ -459,19 +459,19 @@ export class BackupPolicyFileShareRetentionYearlyOutputReference extends cdktf.C
   public get internalValue(): BackupPolicyFileShareRetentionYearly | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._count) {
+    if (this._count !== undefined) {
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
-    if (this._months) {
+    if (this._months !== undefined) {
       hasAnyValues = true;
       internalValueResult.months = this._months;
     }
-    if (this._weekdays) {
+    if (this._weekdays !== undefined) {
       hasAnyValues = true;
       internalValueResult.weekdays = this._weekdays;
     }
-    if (this._weeks) {
+    if (this._weeks !== undefined) {
       hasAnyValues = true;
       internalValueResult.weeks = this._weeks;
     }
@@ -594,19 +594,19 @@ export class BackupPolicyFileShareTimeoutsOutputReference extends cdktf.ComplexO
   public get internalValue(): BackupPolicyFileShareTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

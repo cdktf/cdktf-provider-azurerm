@@ -184,7 +184,7 @@ export class ApiManagementAdditionalLocationVirtualNetworkConfigurationOutputRef
   public get internalValue(): ApiManagementAdditionalLocationVirtualNetworkConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._subnetId) {
+    if (this._subnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetId = this._subnetId;
     }
@@ -543,23 +543,23 @@ export class ApiManagementHostnameConfigurationOutputReference extends cdktf.Com
   public get internalValue(): ApiManagementHostnameConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._developerPortal) {
+    if (this._developerPortal !== undefined) {
       hasAnyValues = true;
       internalValueResult.developerPortal = this._developerPortal;
     }
-    if (this._management) {
+    if (this._management !== undefined) {
       hasAnyValues = true;
       internalValueResult.management = this._management;
     }
-    if (this._portal) {
+    if (this._portal !== undefined) {
       hasAnyValues = true;
       internalValueResult.portal = this._portal;
     }
-    if (this._proxy) {
+    if (this._proxy !== undefined) {
       hasAnyValues = true;
       internalValueResult.proxy = this._proxy;
     }
-    if (this._scm) {
+    if (this._scm !== undefined) {
       hasAnyValues = true;
       internalValueResult.scm = this._scm;
     }
@@ -707,11 +707,11 @@ export class ApiManagementIdentityOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ApiManagementIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityIds) {
+    if (this._identityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityIds = this._identityIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -795,7 +795,7 @@ export class ApiManagementProtocolsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ApiManagementProtocols | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enableHttp2) {
+    if (this._enableHttp2 !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableHttp2 = this._enableHttp2;
     }
@@ -941,71 +941,71 @@ export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ApiManagementSecurity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enableBackendSsl30) {
+    if (this._enableBackendSsl30 !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableBackendSsl30 = this._enableBackendSsl30;
     }
-    if (this._enableBackendTls10) {
+    if (this._enableBackendTls10 !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableBackendTls10 = this._enableBackendTls10;
     }
-    if (this._enableBackendTls11) {
+    if (this._enableBackendTls11 !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableBackendTls11 = this._enableBackendTls11;
     }
-    if (this._enableFrontendSsl30) {
+    if (this._enableFrontendSsl30 !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableFrontendSsl30 = this._enableFrontendSsl30;
     }
-    if (this._enableFrontendTls10) {
+    if (this._enableFrontendTls10 !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableFrontendTls10 = this._enableFrontendTls10;
     }
-    if (this._enableFrontendTls11) {
+    if (this._enableFrontendTls11 !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableFrontendTls11 = this._enableFrontendTls11;
     }
-    if (this._enableTripleDesCiphers) {
+    if (this._enableTripleDesCiphers !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableTripleDesCiphers = this._enableTripleDesCiphers;
     }
-    if (this._tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled) {
+    if (this._tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled = this._tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled;
     }
-    if (this._tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled) {
+    if (this._tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled = this._tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled;
     }
-    if (this._tlsEcdheRsaWithAes128CbcShaCiphersEnabled) {
+    if (this._tlsEcdheRsaWithAes128CbcShaCiphersEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.tlsEcdheRsaWithAes128CbcShaCiphersEnabled = this._tlsEcdheRsaWithAes128CbcShaCiphersEnabled;
     }
-    if (this._tlsEcdheRsaWithAes256CbcShaCiphersEnabled) {
+    if (this._tlsEcdheRsaWithAes256CbcShaCiphersEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.tlsEcdheRsaWithAes256CbcShaCiphersEnabled = this._tlsEcdheRsaWithAes256CbcShaCiphersEnabled;
     }
-    if (this._tlsRsaWithAes128CbcSha256CiphersEnabled) {
+    if (this._tlsRsaWithAes128CbcSha256CiphersEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.tlsRsaWithAes128CbcSha256CiphersEnabled = this._tlsRsaWithAes128CbcSha256CiphersEnabled;
     }
-    if (this._tlsRsaWithAes128CbcShaCiphersEnabled) {
+    if (this._tlsRsaWithAes128CbcShaCiphersEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.tlsRsaWithAes128CbcShaCiphersEnabled = this._tlsRsaWithAes128CbcShaCiphersEnabled;
     }
-    if (this._tlsRsaWithAes128GcmSha256CiphersEnabled) {
+    if (this._tlsRsaWithAes128GcmSha256CiphersEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.tlsRsaWithAes128GcmSha256CiphersEnabled = this._tlsRsaWithAes128GcmSha256CiphersEnabled;
     }
-    if (this._tlsRsaWithAes256CbcSha256CiphersEnabled) {
+    if (this._tlsRsaWithAes256CbcSha256CiphersEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.tlsRsaWithAes256CbcSha256CiphersEnabled = this._tlsRsaWithAes256CbcSha256CiphersEnabled;
     }
-    if (this._tlsRsaWithAes256CbcShaCiphersEnabled) {
+    if (this._tlsRsaWithAes256CbcShaCiphersEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.tlsRsaWithAes256CbcShaCiphersEnabled = this._tlsRsaWithAes256CbcShaCiphersEnabled;
     }
-    if (this._tripleDesCiphersEnabled) {
+    if (this._tripleDesCiphersEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.tripleDesCiphersEnabled = this._tripleDesCiphersEnabled;
     }
@@ -1359,7 +1359,7 @@ export class ApiManagementSignInOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ApiManagementSignIn | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
@@ -1432,15 +1432,15 @@ export class ApiManagementSignUpTermsOfServiceOutputReference extends cdktf.Comp
   public get internalValue(): ApiManagementSignUpTermsOfService | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._consentRequired) {
+    if (this._consentRequired !== undefined) {
       hasAnyValues = true;
       internalValueResult.consentRequired = this._consentRequired;
     }
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._text) {
+    if (this._text !== undefined) {
       hasAnyValues = true;
       internalValueResult.text = this._text;
     }
@@ -1543,11 +1543,11 @@ export class ApiManagementSignUpOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ApiManagementSignUp | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._termsOfService?.internalValue) {
+    if (this._termsOfService?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.termsOfService = this._termsOfService?.internalValue;
     }
@@ -1625,7 +1625,7 @@ export class ApiManagementTenantAccessOutputReference extends cdktf.ComplexObjec
   public get internalValue(): ApiManagementTenantAccess | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
@@ -1703,19 +1703,19 @@ export class ApiManagementTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ApiManagementTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -1835,7 +1835,7 @@ export class ApiManagementVirtualNetworkConfigurationOutputReference extends cdk
   public get internalValue(): ApiManagementVirtualNetworkConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._subnetId) {
+    if (this._subnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetId = this._subnetId;
     }

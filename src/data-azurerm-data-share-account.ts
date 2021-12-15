@@ -71,7 +71,7 @@ export class DataAzurermDataShareAccountTimeoutsOutputReference extends cdktf.Co
   public get internalValue(): DataAzurermDataShareAccountTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

@@ -96,7 +96,7 @@ export class LogicAppWorkflowAccessControlActionOutputReference extends cdktf.Co
   public get internalValue(): LogicAppWorkflowAccessControlAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedCallerIpAddressRange) {
+    if (this._allowedCallerIpAddressRange !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedCallerIpAddressRange = this._allowedCallerIpAddressRange;
     }
@@ -159,7 +159,7 @@ export class LogicAppWorkflowAccessControlContentOutputReference extends cdktf.C
   public get internalValue(): LogicAppWorkflowAccessControlContent | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedCallerIpAddressRange) {
+    if (this._allowedCallerIpAddressRange !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedCallerIpAddressRange = this._allowedCallerIpAddressRange;
     }
@@ -222,7 +222,7 @@ export class LogicAppWorkflowAccessControlTriggerOutputReference extends cdktf.C
   public get internalValue(): LogicAppWorkflowAccessControlTrigger | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedCallerIpAddressRange) {
+    if (this._allowedCallerIpAddressRange !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedCallerIpAddressRange = this._allowedCallerIpAddressRange;
     }
@@ -285,7 +285,7 @@ export class LogicAppWorkflowAccessControlWorkflowManagementOutputReference exte
   public get internalValue(): LogicAppWorkflowAccessControlWorkflowManagement | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedCallerIpAddressRange) {
+    if (this._allowedCallerIpAddressRange !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedCallerIpAddressRange = this._allowedCallerIpAddressRange;
     }
@@ -371,19 +371,19 @@ export class LogicAppWorkflowAccessControlOutputReference extends cdktf.ComplexO
   public get internalValue(): LogicAppWorkflowAccessControl | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._action?.internalValue) {
+    if (this._action?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.action = this._action?.internalValue;
     }
-    if (this._content?.internalValue) {
+    if (this._content?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.content = this._content?.internalValue;
     }
-    if (this._trigger?.internalValue) {
+    if (this._trigger?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.trigger = this._trigger?.internalValue;
     }
-    if (this._workflowManagement?.internalValue) {
+    if (this._workflowManagement?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.workflowManagement = this._workflowManagement?.internalValue;
     }
@@ -518,19 +518,19 @@ export class LogicAppWorkflowTimeoutsOutputReference extends cdktf.ComplexObject
   public get internalValue(): LogicAppWorkflowTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

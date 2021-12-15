@@ -54,7 +54,7 @@ export class DataAzurermDigitalTwinsInstanceTimeoutsOutputReference extends cdkt
   public get internalValue(): DataAzurermDigitalTwinsInstanceTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

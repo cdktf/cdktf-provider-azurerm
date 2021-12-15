@@ -128,15 +128,15 @@ export class MonitorScheduledQueryRulesAlertActionOutputReference extends cdktf.
   public get internalValue(): MonitorScheduledQueryRulesAlertAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._actionGroup) {
+    if (this._actionGroup !== undefined) {
       hasAnyValues = true;
       internalValueResult.actionGroup = this._actionGroup;
     }
-    if (this._customWebhookPayload) {
+    if (this._customWebhookPayload !== undefined) {
       hasAnyValues = true;
       internalValueResult.customWebhookPayload = this._customWebhookPayload;
     }
-    if (this._emailSubject) {
+    if (this._emailSubject !== undefined) {
       hasAnyValues = true;
       internalValueResult.emailSubject = this._emailSubject;
     }
@@ -250,19 +250,19 @@ export class MonitorScheduledQueryRulesAlertTimeoutsOutputReference extends cdkt
   public get internalValue(): MonitorScheduledQueryRulesAlertTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -397,19 +397,19 @@ export class MonitorScheduledQueryRulesAlertTriggerMetricTriggerOutputReference 
   public get internalValue(): MonitorScheduledQueryRulesAlertTriggerMetricTrigger | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._metricColumn) {
+    if (this._metricColumn !== undefined) {
       hasAnyValues = true;
       internalValueResult.metricColumn = this._metricColumn;
     }
-    if (this._metricTriggerType) {
+    if (this._metricTriggerType !== undefined) {
       hasAnyValues = true;
       internalValueResult.metricTriggerType = this._metricTriggerType;
     }
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._threshold) {
+    if (this._threshold !== undefined) {
       hasAnyValues = true;
       internalValueResult.threshold = this._threshold;
     }
@@ -529,15 +529,15 @@ export class MonitorScheduledQueryRulesAlertTriggerOutputReference extends cdktf
   public get internalValue(): MonitorScheduledQueryRulesAlertTrigger | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._threshold) {
+    if (this._threshold !== undefined) {
       hasAnyValues = true;
       internalValueResult.threshold = this._threshold;
     }
-    if (this._metricTrigger?.internalValue) {
+    if (this._metricTrigger?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.metricTrigger = this._metricTrigger?.internalValue;
     }

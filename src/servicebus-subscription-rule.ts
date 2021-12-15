@@ -124,39 +124,39 @@ export class ServicebusSubscriptionRuleCorrelationFilterOutputReference extends 
   public get internalValue(): ServicebusSubscriptionRuleCorrelationFilter | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._contentType) {
+    if (this._contentType !== undefined) {
       hasAnyValues = true;
       internalValueResult.contentType = this._contentType;
     }
-    if (this._correlationId) {
+    if (this._correlationId !== undefined) {
       hasAnyValues = true;
       internalValueResult.correlationId = this._correlationId;
     }
-    if (this._label) {
+    if (this._label !== undefined) {
       hasAnyValues = true;
       internalValueResult.label = this._label;
     }
-    if (this._messageId) {
+    if (this._messageId !== undefined) {
       hasAnyValues = true;
       internalValueResult.messageId = this._messageId;
     }
-    if (this._properties) {
+    if (this._properties !== undefined) {
       hasAnyValues = true;
       internalValueResult.properties = this._properties;
     }
-    if (this._replyTo) {
+    if (this._replyTo !== undefined) {
       hasAnyValues = true;
       internalValueResult.replyTo = this._replyTo;
     }
-    if (this._replyToSessionId) {
+    if (this._replyToSessionId !== undefined) {
       hasAnyValues = true;
       internalValueResult.replyToSessionId = this._replyToSessionId;
     }
-    if (this._sessionId) {
+    if (this._sessionId !== undefined) {
       hasAnyValues = true;
       internalValueResult.sessionId = this._sessionId;
     }
-    if (this._to) {
+    if (this._to !== undefined) {
       hasAnyValues = true;
       internalValueResult.to = this._to;
     }
@@ -382,19 +382,19 @@ export class ServicebusSubscriptionRuleTimeoutsOutputReference extends cdktf.Com
   public get internalValue(): ServicebusSubscriptionRuleTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

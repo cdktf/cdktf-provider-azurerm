@@ -98,23 +98,23 @@ export class NotificationHubApnsCredentialOutputReference extends cdktf.ComplexO
   public get internalValue(): NotificationHubApnsCredential | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._applicationMode) {
+    if (this._applicationMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.applicationMode = this._applicationMode;
     }
-    if (this._bundleId) {
+    if (this._bundleId !== undefined) {
       hasAnyValues = true;
       internalValueResult.bundleId = this._bundleId;
     }
-    if (this._keyId) {
+    if (this._keyId !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyId = this._keyId;
     }
-    if (this._teamId) {
+    if (this._teamId !== undefined) {
       hasAnyValues = true;
       internalValueResult.teamId = this._teamId;
     }
-    if (this._token) {
+    if (this._token !== undefined) {
       hasAnyValues = true;
       internalValueResult.token = this._token;
     }
@@ -237,7 +237,7 @@ export class NotificationHubGcmCredentialOutputReference extends cdktf.ComplexOb
   public get internalValue(): NotificationHubGcmCredential | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._apiKey) {
+    if (this._apiKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.apiKey = this._apiKey;
     }
@@ -315,19 +315,19 @@ export class NotificationHubTimeoutsOutputReference extends cdktf.ComplexObject 
   public get internalValue(): NotificationHubTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

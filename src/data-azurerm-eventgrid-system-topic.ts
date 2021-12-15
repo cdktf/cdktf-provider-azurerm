@@ -65,11 +65,11 @@ export class DataAzurermEventgridSystemTopicIdentityOutputReference extends cdkt
   public get internalValue(): DataAzurermEventgridSystemTopicIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityIds) {
+    if (this._identityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityIds = this._identityIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -150,7 +150,7 @@ export class DataAzurermEventgridSystemTopicTimeoutsOutputReference extends cdkt
   public get internalValue(): DataAzurermEventgridSystemTopicTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

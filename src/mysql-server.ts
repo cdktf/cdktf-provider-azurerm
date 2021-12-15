@@ -144,7 +144,7 @@ export class MysqlServerIdentityOutputReference extends cdktf.ComplexObject {
   public get internalValue(): MysqlServerIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -222,19 +222,19 @@ export class MysqlServerStorageProfileOutputReference extends cdktf.ComplexObjec
   public get internalValue(): MysqlServerStorageProfile | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._autoGrow) {
+    if (this._autoGrow !== undefined) {
       hasAnyValues = true;
       internalValueResult.autoGrow = this._autoGrow;
     }
-    if (this._backupRetentionDays) {
+    if (this._backupRetentionDays !== undefined) {
       hasAnyValues = true;
       internalValueResult.backupRetentionDays = this._backupRetentionDays;
     }
-    if (this._geoRedundantBackup) {
+    if (this._geoRedundantBackup !== undefined) {
       hasAnyValues = true;
       internalValueResult.geoRedundantBackup = this._geoRedundantBackup;
     }
-    if (this._storageMb) {
+    if (this._storageMb !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageMb = this._storageMb;
     }
@@ -384,31 +384,31 @@ export class MysqlServerThreatDetectionPolicyOutputReference extends cdktf.Compl
   public get internalValue(): MysqlServerThreatDetectionPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._disabledAlerts) {
+    if (this._disabledAlerts !== undefined) {
       hasAnyValues = true;
       internalValueResult.disabledAlerts = this._disabledAlerts;
     }
-    if (this._emailAccountAdmins) {
+    if (this._emailAccountAdmins !== undefined) {
       hasAnyValues = true;
       internalValueResult.emailAccountAdmins = this._emailAccountAdmins;
     }
-    if (this._emailAddresses) {
+    if (this._emailAddresses !== undefined) {
       hasAnyValues = true;
       internalValueResult.emailAddresses = this._emailAddresses;
     }
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._retentionDays) {
+    if (this._retentionDays !== undefined) {
       hasAnyValues = true;
       internalValueResult.retentionDays = this._retentionDays;
     }
-    if (this._storageAccountAccessKey) {
+    if (this._storageAccountAccessKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageAccountAccessKey = this._storageAccountAccessKey;
     }
-    if (this._storageEndpoint) {
+    if (this._storageEndpoint !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageEndpoint = this._storageEndpoint;
     }
@@ -597,19 +597,19 @@ export class MysqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): MysqlServerTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

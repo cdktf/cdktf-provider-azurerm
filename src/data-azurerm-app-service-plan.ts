@@ -71,7 +71,7 @@ export class DataAzurermAppServicePlanTimeoutsOutputReference extends cdktf.Comp
   public get internalValue(): DataAzurermAppServicePlanTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

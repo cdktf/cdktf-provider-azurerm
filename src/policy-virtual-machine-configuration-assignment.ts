@@ -113,27 +113,27 @@ export class PolicyVirtualMachineConfigurationAssignmentConfigurationOutputRefer
   public get internalValue(): PolicyVirtualMachineConfigurationAssignmentConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._assignmentType) {
+    if (this._assignmentType !== undefined) {
       hasAnyValues = true;
       internalValueResult.assignmentType = this._assignmentType;
     }
-    if (this._contentHash) {
+    if (this._contentHash !== undefined) {
       hasAnyValues = true;
       internalValueResult.contentHash = this._contentHash;
     }
-    if (this._contentUri) {
+    if (this._contentUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.contentUri = this._contentUri;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._version) {
+    if (this._version !== undefined) {
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
-    if (this._parameter) {
+    if (this._parameter !== undefined) {
       hasAnyValues = true;
       internalValueResult.parameter = this._parameter;
     }
@@ -305,19 +305,19 @@ export class PolicyVirtualMachineConfigurationAssignmentTimeoutsOutputReference 
   public get internalValue(): PolicyVirtualMachineConfigurationAssignmentTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

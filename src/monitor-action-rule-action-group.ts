@@ -87,11 +87,11 @@ export class MonitorActionRuleActionGroupConditionAlertContextOutputReference ex
   public get internalValue(): MonitorActionRuleActionGroupConditionAlertContext | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -174,11 +174,11 @@ export class MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference ext
   public get internalValue(): MonitorActionRuleActionGroupConditionAlertRuleId | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -261,11 +261,11 @@ export class MonitorActionRuleActionGroupConditionDescriptionOutputReference ext
   public get internalValue(): MonitorActionRuleActionGroupConditionDescription | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -348,11 +348,11 @@ export class MonitorActionRuleActionGroupConditionMonitorOutputReference extends
   public get internalValue(): MonitorActionRuleActionGroupConditionMonitor | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -435,11 +435,11 @@ export class MonitorActionRuleActionGroupConditionMonitorServiceOutputReference 
   public get internalValue(): MonitorActionRuleActionGroupConditionMonitorService | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -522,11 +522,11 @@ export class MonitorActionRuleActionGroupConditionSeverityOutputReference extend
   public get internalValue(): MonitorActionRuleActionGroupConditionSeverity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -609,11 +609,11 @@ export class MonitorActionRuleActionGroupConditionTargetResourceTypeOutputRefere
   public get internalValue(): MonitorActionRuleActionGroupConditionTargetResourceType | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -735,31 +735,31 @@ export class MonitorActionRuleActionGroupConditionOutputReference extends cdktf.
   public get internalValue(): MonitorActionRuleActionGroupCondition | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._alertContext?.internalValue) {
+    if (this._alertContext?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.alertContext = this._alertContext?.internalValue;
     }
-    if (this._alertRuleId?.internalValue) {
+    if (this._alertRuleId?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.alertRuleId = this._alertRuleId?.internalValue;
     }
-    if (this._description?.internalValue) {
+    if (this._description?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.description = this._description?.internalValue;
     }
-    if (this._monitor?.internalValue) {
+    if (this._monitor?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.monitor = this._monitor?.internalValue;
     }
-    if (this._monitorService?.internalValue) {
+    if (this._monitorService?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.monitorService = this._monitorService?.internalValue;
     }
-    if (this._severity?.internalValue) {
+    if (this._severity?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.severity = this._severity?.internalValue;
     }
-    if (this._targetResourceType?.internalValue) {
+    if (this._targetResourceType?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetResourceType = this._targetResourceType?.internalValue;
     }
@@ -938,11 +938,11 @@ export class MonitorActionRuleActionGroupScopeOutputReference extends cdktf.Comp
   public get internalValue(): MonitorActionRuleActionGroupScope | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._resourceIds) {
+    if (this._resourceIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.resourceIds = this._resourceIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -1035,19 +1035,19 @@ export class MonitorActionRuleActionGroupTimeoutsOutputReference extends cdktf.C
   public get internalValue(): MonitorActionRuleActionGroupTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -157,19 +157,19 @@ export class VirtualNetworkGatewayBgpSettingsOutputReference extends cdktf.Compl
   public get internalValue(): VirtualNetworkGatewayBgpSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._asn) {
+    if (this._asn !== undefined) {
       hasAnyValues = true;
       internalValueResult.asn = this._asn;
     }
-    if (this._peerWeight) {
+    if (this._peerWeight !== undefined) {
       hasAnyValues = true;
       internalValueResult.peerWeight = this._peerWeight;
     }
-    if (this._peeringAddress) {
+    if (this._peeringAddress !== undefined) {
       hasAnyValues = true;
       internalValueResult.peeringAddress = this._peeringAddress;
     }
-    if (this._peeringAddresses) {
+    if (this._peeringAddresses !== undefined) {
       hasAnyValues = true;
       internalValueResult.peeringAddresses = this._peeringAddresses;
     }
@@ -290,7 +290,7 @@ export class VirtualNetworkGatewayCustomRouteOutputReference extends cdktf.Compl
   public get internalValue(): VirtualNetworkGatewayCustomRoute | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._addressPrefixes) {
+    if (this._addressPrefixes !== undefined) {
       hasAnyValues = true;
       internalValueResult.addressPrefixes = this._addressPrefixes;
     }
@@ -403,19 +403,19 @@ export class VirtualNetworkGatewayTimeoutsOutputReference extends cdktf.ComplexO
   public get internalValue(): VirtualNetworkGatewayTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -628,43 +628,43 @@ export class VirtualNetworkGatewayVpnClientConfigurationOutputReference extends 
   public get internalValue(): VirtualNetworkGatewayVpnClientConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._aadAudience) {
+    if (this._aadAudience !== undefined) {
       hasAnyValues = true;
       internalValueResult.aadAudience = this._aadAudience;
     }
-    if (this._aadIssuer) {
+    if (this._aadIssuer !== undefined) {
       hasAnyValues = true;
       internalValueResult.aadIssuer = this._aadIssuer;
     }
-    if (this._aadTenant) {
+    if (this._aadTenant !== undefined) {
       hasAnyValues = true;
       internalValueResult.aadTenant = this._aadTenant;
     }
-    if (this._addressSpace) {
+    if (this._addressSpace !== undefined) {
       hasAnyValues = true;
       internalValueResult.addressSpace = this._addressSpace;
     }
-    if (this._radiusServerAddress) {
+    if (this._radiusServerAddress !== undefined) {
       hasAnyValues = true;
       internalValueResult.radiusServerAddress = this._radiusServerAddress;
     }
-    if (this._radiusServerSecret) {
+    if (this._radiusServerSecret !== undefined) {
       hasAnyValues = true;
       internalValueResult.radiusServerSecret = this._radiusServerSecret;
     }
-    if (this._vpnAuthTypes) {
+    if (this._vpnAuthTypes !== undefined) {
       hasAnyValues = true;
       internalValueResult.vpnAuthTypes = this._vpnAuthTypes;
     }
-    if (this._vpnClientProtocols) {
+    if (this._vpnClientProtocols !== undefined) {
       hasAnyValues = true;
       internalValueResult.vpnClientProtocols = this._vpnClientProtocols;
     }
-    if (this._revokedCertificate) {
+    if (this._revokedCertificate !== undefined) {
       hasAnyValues = true;
       internalValueResult.revokedCertificate = this._revokedCertificate;
     }
-    if (this._rootCertificate) {
+    if (this._rootCertificate !== undefined) {
       hasAnyValues = true;
       internalValueResult.rootCertificate = this._rootCertificate;
     }

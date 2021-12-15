@@ -98,7 +98,7 @@ export class ActiveDirectoryDomainServiceInitialReplicaSetOutputReference extend
   public get internalValue(): ActiveDirectoryDomainServiceInitialReplicaSet | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._subnetId) {
+    if (this._subnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetId = this._subnetId;
     }
@@ -171,15 +171,15 @@ export class ActiveDirectoryDomainServiceNotificationsOutputReference extends cd
   public get internalValue(): ActiveDirectoryDomainServiceNotifications | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._additionalRecipients) {
+    if (this._additionalRecipients !== undefined) {
       hasAnyValues = true;
       internalValueResult.additionalRecipients = this._additionalRecipients;
     }
-    if (this._notifyDcAdmins) {
+    if (this._notifyDcAdmins !== undefined) {
       hasAnyValues = true;
       internalValueResult.notifyDcAdmins = this._notifyDcAdmins;
     }
-    if (this._notifyGlobalAdmins) {
+    if (this._notifyGlobalAdmins !== undefined) {
       hasAnyValues = true;
       internalValueResult.notifyGlobalAdmins = this._notifyGlobalAdmins;
     }
@@ -296,19 +296,19 @@ export class ActiveDirectoryDomainServiceSecureLdapOutputReference extends cdktf
   public get internalValue(): ActiveDirectoryDomainServiceSecureLdap | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._externalAccessEnabled) {
+    if (this._externalAccessEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.externalAccessEnabled = this._externalAccessEnabled;
     }
-    if (this._pfxCertificate) {
+    if (this._pfxCertificate !== undefined) {
       hasAnyValues = true;
       internalValueResult.pfxCertificate = this._pfxCertificate;
     }
-    if (this._pfxCertificatePassword) {
+    if (this._pfxCertificatePassword !== undefined) {
       hasAnyValues = true;
       internalValueResult.pfxCertificatePassword = this._pfxCertificatePassword;
     }
@@ -439,23 +439,23 @@ export class ActiveDirectoryDomainServiceSecurityOutputReference extends cdktf.C
   public get internalValue(): ActiveDirectoryDomainServiceSecurity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._ntlmV1Enabled) {
+    if (this._ntlmV1Enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.ntlmV1Enabled = this._ntlmV1Enabled;
     }
-    if (this._syncKerberosPasswords) {
+    if (this._syncKerberosPasswords !== undefined) {
       hasAnyValues = true;
       internalValueResult.syncKerberosPasswords = this._syncKerberosPasswords;
     }
-    if (this._syncNtlmPasswords) {
+    if (this._syncNtlmPasswords !== undefined) {
       hasAnyValues = true;
       internalValueResult.syncNtlmPasswords = this._syncNtlmPasswords;
     }
-    if (this._syncOnPremPasswords) {
+    if (this._syncOnPremPasswords !== undefined) {
       hasAnyValues = true;
       internalValueResult.syncOnPremPasswords = this._syncOnPremPasswords;
     }
-    if (this._tlsV1Enabled) {
+    if (this._tlsV1Enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.tlsV1Enabled = this._tlsV1Enabled;
     }
@@ -608,19 +608,19 @@ export class ActiveDirectoryDomainServiceTimeoutsOutputReference extends cdktf.C
   public get internalValue(): ActiveDirectoryDomainServiceTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

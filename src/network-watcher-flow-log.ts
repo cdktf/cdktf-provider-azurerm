@@ -95,11 +95,11 @@ export class NetworkWatcherFlowLogRetentionPolicyOutputReference extends cdktf.C
   public get internalValue(): NetworkWatcherFlowLogRetentionPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._days) {
+    if (this._days !== undefined) {
       hasAnyValues = true;
       internalValueResult.days = this._days;
     }
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
@@ -192,19 +192,19 @@ export class NetworkWatcherFlowLogTimeoutsOutputReference extends cdktf.ComplexO
   public get internalValue(): NetworkWatcherFlowLogTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -344,23 +344,23 @@ export class NetworkWatcherFlowLogTrafficAnalyticsOutputReference extends cdktf.
   public get internalValue(): NetworkWatcherFlowLogTrafficAnalytics | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._intervalInMinutes) {
+    if (this._intervalInMinutes !== undefined) {
       hasAnyValues = true;
       internalValueResult.intervalInMinutes = this._intervalInMinutes;
     }
-    if (this._workspaceId) {
+    if (this._workspaceId !== undefined) {
       hasAnyValues = true;
       internalValueResult.workspaceId = this._workspaceId;
     }
-    if (this._workspaceRegion) {
+    if (this._workspaceRegion !== undefined) {
       hasAnyValues = true;
       internalValueResult.workspaceRegion = this._workspaceRegion;
     }
-    if (this._workspaceResourceId) {
+    if (this._workspaceResourceId !== undefined) {
       hasAnyValues = true;
       internalValueResult.workspaceResourceId = this._workspaceResourceId;
     }

@@ -117,19 +117,19 @@ export class MssqlVirtualMachineAutoBackupManualScheduleOutputReference extends 
   public get internalValue(): MssqlVirtualMachineAutoBackupManualSchedule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._fullBackupFrequency) {
+    if (this._fullBackupFrequency !== undefined) {
       hasAnyValues = true;
       internalValueResult.fullBackupFrequency = this._fullBackupFrequency;
     }
-    if (this._fullBackupStartHour) {
+    if (this._fullBackupStartHour !== undefined) {
       hasAnyValues = true;
       internalValueResult.fullBackupStartHour = this._fullBackupStartHour;
     }
-    if (this._fullBackupWindowInHours) {
+    if (this._fullBackupWindowInHours !== undefined) {
       hasAnyValues = true;
       internalValueResult.fullBackupWindowInHours = this._fullBackupWindowInHours;
     }
-    if (this._logBackupFrequencyInMinutes) {
+    if (this._logBackupFrequencyInMinutes !== undefined) {
       hasAnyValues = true;
       internalValueResult.logBackupFrequencyInMinutes = this._logBackupFrequencyInMinutes;
     }
@@ -269,31 +269,31 @@ export class MssqlVirtualMachineAutoBackupOutputReference extends cdktf.ComplexO
   public get internalValue(): MssqlVirtualMachineAutoBackup | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._encryptionEnabled) {
+    if (this._encryptionEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.encryptionEnabled = this._encryptionEnabled;
     }
-    if (this._encryptionPassword) {
+    if (this._encryptionPassword !== undefined) {
       hasAnyValues = true;
       internalValueResult.encryptionPassword = this._encryptionPassword;
     }
-    if (this._retentionPeriodInDays) {
+    if (this._retentionPeriodInDays !== undefined) {
       hasAnyValues = true;
       internalValueResult.retentionPeriodInDays = this._retentionPeriodInDays;
     }
-    if (this._storageAccountAccessKey) {
+    if (this._storageAccountAccessKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageAccountAccessKey = this._storageAccountAccessKey;
     }
-    if (this._storageBlobEndpoint) {
+    if (this._storageBlobEndpoint !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageBlobEndpoint = this._storageBlobEndpoint;
     }
-    if (this._systemDatabasesBackupEnabled) {
+    if (this._systemDatabasesBackupEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.systemDatabasesBackupEnabled = this._systemDatabasesBackupEnabled;
     }
-    if (this._manualSchedule?.internalValue) {
+    if (this._manualSchedule?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.manualSchedule = this._manualSchedule?.internalValue;
     }
@@ -468,15 +468,15 @@ export class MssqlVirtualMachineAutoPatchingOutputReference extends cdktf.Comple
   public get internalValue(): MssqlVirtualMachineAutoPatching | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dayOfWeek) {
+    if (this._dayOfWeek !== undefined) {
       hasAnyValues = true;
       internalValueResult.dayOfWeek = this._dayOfWeek;
     }
-    if (this._maintenanceWindowDurationInMinutes) {
+    if (this._maintenanceWindowDurationInMinutes !== undefined) {
       hasAnyValues = true;
       internalValueResult.maintenanceWindowDurationInMinutes = this._maintenanceWindowDurationInMinutes;
     }
-    if (this._maintenanceWindowStartingHour) {
+    if (this._maintenanceWindowStartingHour !== undefined) {
       hasAnyValues = true;
       internalValueResult.maintenanceWindowStartingHour = this._maintenanceWindowStartingHour;
     }
@@ -584,19 +584,19 @@ export class MssqlVirtualMachineKeyVaultCredentialOutputReference extends cdktf.
   public get internalValue(): MssqlVirtualMachineKeyVaultCredential | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._keyVaultUrl) {
+    if (this._keyVaultUrl !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyVaultUrl = this._keyVaultUrl;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._servicePrincipalName) {
+    if (this._servicePrincipalName !== undefined) {
       hasAnyValues = true;
       internalValueResult.servicePrincipalName = this._servicePrincipalName;
     }
-    if (this._servicePrincipalSecret) {
+    if (this._servicePrincipalSecret !== undefined) {
       hasAnyValues = true;
       internalValueResult.servicePrincipalSecret = this._servicePrincipalSecret;
     }
@@ -709,11 +709,11 @@ export class MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference 
   public get internalValue(): MssqlVirtualMachineStorageConfigurationDataSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._defaultFilePath) {
+    if (this._defaultFilePath !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultFilePath = this._defaultFilePath;
     }
-    if (this._luns) {
+    if (this._luns !== undefined) {
       hasAnyValues = true;
       internalValueResult.luns = this._luns;
     }
@@ -797,11 +797,11 @@ export class MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference e
   public get internalValue(): MssqlVirtualMachineStorageConfigurationLogSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._defaultFilePath) {
+    if (this._defaultFilePath !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultFilePath = this._defaultFilePath;
     }
-    if (this._luns) {
+    if (this._luns !== undefined) {
       hasAnyValues = true;
       internalValueResult.luns = this._luns;
     }
@@ -885,11 +885,11 @@ export class MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReferenc
   public get internalValue(): MssqlVirtualMachineStorageConfigurationTempDbSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._defaultFilePath) {
+    if (this._defaultFilePath !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultFilePath = this._defaultFilePath;
     }
-    if (this._luns) {
+    if (this._luns !== undefined) {
       hasAnyValues = true;
       internalValueResult.luns = this._luns;
     }
@@ -994,23 +994,23 @@ export class MssqlVirtualMachineStorageConfigurationOutputReference extends cdkt
   public get internalValue(): MssqlVirtualMachineStorageConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._diskType) {
+    if (this._diskType !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskType = this._diskType;
     }
-    if (this._storageWorkloadType) {
+    if (this._storageWorkloadType !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageWorkloadType = this._storageWorkloadType;
     }
-    if (this._dataSettings?.internalValue) {
+    if (this._dataSettings?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.dataSettings = this._dataSettings?.internalValue;
     }
-    if (this._logSettings?.internalValue) {
+    if (this._logSettings?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.logSettings = this._logSettings?.internalValue;
     }
-    if (this._tempDbSettings?.internalValue) {
+    if (this._tempDbSettings?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.tempDbSettings = this._tempDbSettings?.internalValue;
     }
@@ -1157,19 +1157,19 @@ export class MssqlVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObj
   public get internalValue(): MssqlVirtualMachineTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
