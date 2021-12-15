@@ -217,55 +217,55 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
   public get internalValue(): RedisCacheRedisConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._aofBackupEnabled) {
+    if (this._aofBackupEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.aofBackupEnabled = this._aofBackupEnabled;
     }
-    if (this._aofStorageConnectionString0) {
+    if (this._aofStorageConnectionString0 !== undefined) {
       hasAnyValues = true;
       internalValueResult.aofStorageConnectionString0 = this._aofStorageConnectionString0;
     }
-    if (this._aofStorageConnectionString1) {
+    if (this._aofStorageConnectionString1 !== undefined) {
       hasAnyValues = true;
       internalValueResult.aofStorageConnectionString1 = this._aofStorageConnectionString1;
     }
-    if (this._enableAuthentication) {
+    if (this._enableAuthentication !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableAuthentication = this._enableAuthentication;
     }
-    if (this._maxfragmentationmemoryReserved) {
+    if (this._maxfragmentationmemoryReserved !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxfragmentationmemoryReserved = this._maxfragmentationmemoryReserved;
     }
-    if (this._maxmemoryDelta) {
+    if (this._maxmemoryDelta !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxmemoryDelta = this._maxmemoryDelta;
     }
-    if (this._maxmemoryPolicy) {
+    if (this._maxmemoryPolicy !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxmemoryPolicy = this._maxmemoryPolicy;
     }
-    if (this._maxmemoryReserved) {
+    if (this._maxmemoryReserved !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxmemoryReserved = this._maxmemoryReserved;
     }
-    if (this._notifyKeyspaceEvents) {
+    if (this._notifyKeyspaceEvents !== undefined) {
       hasAnyValues = true;
       internalValueResult.notifyKeyspaceEvents = this._notifyKeyspaceEvents;
     }
-    if (this._rdbBackupEnabled) {
+    if (this._rdbBackupEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.rdbBackupEnabled = this._rdbBackupEnabled;
     }
-    if (this._rdbBackupFrequency) {
+    if (this._rdbBackupFrequency !== undefined) {
       hasAnyValues = true;
       internalValueResult.rdbBackupFrequency = this._rdbBackupFrequency;
     }
-    if (this._rdbBackupMaxSnapshotCount) {
+    if (this._rdbBackupMaxSnapshotCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.rdbBackupMaxSnapshotCount = this._rdbBackupMaxSnapshotCount;
     }
-    if (this._rdbStorageConnectionString) {
+    if (this._rdbStorageConnectionString !== undefined) {
       hasAnyValues = true;
       internalValueResult.rdbStorageConnectionString = this._rdbStorageConnectionString;
     }
@@ -562,19 +562,19 @@ export class RedisCacheTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): RedisCacheTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

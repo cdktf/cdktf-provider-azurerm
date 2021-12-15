@@ -120,15 +120,15 @@ export class SharedImageIdentifierOutputReference extends cdktf.ComplexObject {
   public get internalValue(): SharedImageIdentifier | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._offer) {
+    if (this._offer !== undefined) {
       hasAnyValues = true;
       internalValueResult.offer = this._offer;
     }
-    if (this._publisher) {
+    if (this._publisher !== undefined) {
       hasAnyValues = true;
       internalValueResult.publisher = this._publisher;
     }
-    if (this._sku) {
+    if (this._sku !== undefined) {
       hasAnyValues = true;
       internalValueResult.sku = this._sku;
     }
@@ -231,15 +231,15 @@ export class SharedImagePurchasePlanOutputReference extends cdktf.ComplexObject 
   public get internalValue(): SharedImagePurchasePlan | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._product) {
+    if (this._product !== undefined) {
       hasAnyValues = true;
       internalValueResult.product = this._product;
     }
-    if (this._publisher) {
+    if (this._publisher !== undefined) {
       hasAnyValues = true;
       internalValueResult.publisher = this._publisher;
     }
@@ -353,19 +353,19 @@ export class SharedImageTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): SharedImageTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

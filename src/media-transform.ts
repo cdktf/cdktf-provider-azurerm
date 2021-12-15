@@ -73,11 +73,11 @@ export class MediaTransformOutputAudioAnalyzerPresetOutputReference extends cdkt
   public get internalValue(): MediaTransformOutputAudioAnalyzerPreset | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._audioAnalysisMode) {
+    if (this._audioAnalysisMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.audioAnalysisMode = this._audioAnalysisMode;
     }
-    if (this._audioLanguage) {
+    if (this._audioLanguage !== undefined) {
       hasAnyValues = true;
       internalValueResult.audioLanguage = this._audioLanguage;
     }
@@ -161,7 +161,7 @@ export class MediaTransformOutputBuiltinPresetOutputReference extends cdktf.Comp
   public get internalValue(): MediaTransformOutputBuiltinPreset | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._presetName) {
+    if (this._presetName !== undefined) {
       hasAnyValues = true;
       internalValueResult.presetName = this._presetName;
     }
@@ -227,7 +227,7 @@ export class MediaTransformOutputFaceDetectorPresetOutputReference extends cdktf
   public get internalValue(): MediaTransformOutputFaceDetectorPreset | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._analysisResolution) {
+    if (this._analysisResolution !== undefined) {
       hasAnyValues = true;
       internalValueResult.analysisResolution = this._analysisResolution;
     }
@@ -303,15 +303,15 @@ export class MediaTransformOutputVideoAnalyzerPresetOutputReference extends cdkt
   public get internalValue(): MediaTransformOutputVideoAnalyzerPreset | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._audioAnalysisMode) {
+    if (this._audioAnalysisMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.audioAnalysisMode = this._audioAnalysisMode;
     }
-    if (this._audioLanguage) {
+    if (this._audioLanguage !== undefined) {
       hasAnyValues = true;
       internalValueResult.audioLanguage = this._audioLanguage;
     }
-    if (this._insightsType) {
+    if (this._insightsType !== undefined) {
       hasAnyValues = true;
       internalValueResult.insightsType = this._insightsType;
     }
@@ -478,19 +478,19 @@ export class MediaTransformTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): MediaTransformTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -102,15 +102,15 @@ export class MonitorSmartDetectorAlertRuleActionGroupOutputReference extends cdk
   public get internalValue(): MonitorSmartDetectorAlertRuleActionGroup | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._emailSubject) {
+    if (this._emailSubject !== undefined) {
       hasAnyValues = true;
       internalValueResult.emailSubject = this._emailSubject;
     }
-    if (this._ids) {
+    if (this._ids !== undefined) {
       hasAnyValues = true;
       internalValueResult.ids = this._ids;
     }
-    if (this._webhookPayload) {
+    if (this._webhookPayload !== undefined) {
       hasAnyValues = true;
       internalValueResult.webhookPayload = this._webhookPayload;
     }
@@ -224,19 +224,19 @@ export class MonitorSmartDetectorAlertRuleTimeoutsOutputReference extends cdktf.
   public get internalValue(): MonitorSmartDetectorAlertRuleTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

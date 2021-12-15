@@ -104,15 +104,15 @@ export class HealthcareServiceAuthenticationConfigurationOutputReference extends
   public get internalValue(): HealthcareServiceAuthenticationConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._audience) {
+    if (this._audience !== undefined) {
       hasAnyValues = true;
       internalValueResult.audience = this._audience;
     }
-    if (this._authority) {
+    if (this._authority !== undefined) {
       hasAnyValues = true;
       internalValueResult.authority = this._authority;
     }
-    if (this._smartProxyEnabled) {
+    if (this._smartProxyEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.smartProxyEnabled = this._smartProxyEnabled;
     }
@@ -234,23 +234,23 @@ export class HealthcareServiceCorsConfigurationOutputReference extends cdktf.Com
   public get internalValue(): HealthcareServiceCorsConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowCredentials) {
+    if (this._allowCredentials !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowCredentials = this._allowCredentials;
     }
-    if (this._allowedHeaders) {
+    if (this._allowedHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedHeaders = this._allowedHeaders;
     }
-    if (this._allowedMethods) {
+    if (this._allowedMethods !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedMethods = this._allowedMethods;
     }
-    if (this._allowedOrigins) {
+    if (this._allowedOrigins !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedOrigins = this._allowedOrigins;
     }
-    if (this._maxAgeInSeconds) {
+    if (this._maxAgeInSeconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxAgeInSeconds = this._maxAgeInSeconds;
     }
@@ -403,19 +403,19 @@ export class HealthcareServiceTimeoutsOutputReference extends cdktf.ComplexObjec
   public get internalValue(): HealthcareServiceTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

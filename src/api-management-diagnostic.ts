@@ -167,11 +167,11 @@ export class ApiManagementDiagnosticBackendRequestDataMaskingOutputReference ext
   public get internalValue(): ApiManagementDiagnosticBackendRequestDataMasking | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._headers) {
+    if (this._headers !== undefined) {
       hasAnyValues = true;
       internalValueResult.headers = this._headers;
     }
-    if (this._queryParams) {
+    if (this._queryParams !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryParams = this._queryParams;
     }
@@ -269,15 +269,15 @@ export class ApiManagementDiagnosticBackendRequestOutputReference extends cdktf.
   public get internalValue(): ApiManagementDiagnosticBackendRequest | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bodyBytes) {
+    if (this._bodyBytes !== undefined) {
       hasAnyValues = true;
       internalValueResult.bodyBytes = this._bodyBytes;
     }
-    if (this._headersToLog) {
+    if (this._headersToLog !== undefined) {
       hasAnyValues = true;
       internalValueResult.headersToLog = this._headersToLog;
     }
-    if (this._dataMasking?.internalValue) {
+    if (this._dataMasking?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.dataMasking = this._dataMasking?.internalValue;
     }
@@ -432,11 +432,11 @@ export class ApiManagementDiagnosticBackendResponseDataMaskingOutputReference ex
   public get internalValue(): ApiManagementDiagnosticBackendResponseDataMasking | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._headers) {
+    if (this._headers !== undefined) {
       hasAnyValues = true;
       internalValueResult.headers = this._headers;
     }
-    if (this._queryParams) {
+    if (this._queryParams !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryParams = this._queryParams;
     }
@@ -534,15 +534,15 @@ export class ApiManagementDiagnosticBackendResponseOutputReference extends cdktf
   public get internalValue(): ApiManagementDiagnosticBackendResponse | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bodyBytes) {
+    if (this._bodyBytes !== undefined) {
       hasAnyValues = true;
       internalValueResult.bodyBytes = this._bodyBytes;
     }
-    if (this._headersToLog) {
+    if (this._headersToLog !== undefined) {
       hasAnyValues = true;
       internalValueResult.headersToLog = this._headersToLog;
     }
-    if (this._dataMasking?.internalValue) {
+    if (this._dataMasking?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.dataMasking = this._dataMasking?.internalValue;
     }
@@ -697,11 +697,11 @@ export class ApiManagementDiagnosticFrontendRequestDataMaskingOutputReference ex
   public get internalValue(): ApiManagementDiagnosticFrontendRequestDataMasking | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._headers) {
+    if (this._headers !== undefined) {
       hasAnyValues = true;
       internalValueResult.headers = this._headers;
     }
-    if (this._queryParams) {
+    if (this._queryParams !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryParams = this._queryParams;
     }
@@ -799,15 +799,15 @@ export class ApiManagementDiagnosticFrontendRequestOutputReference extends cdktf
   public get internalValue(): ApiManagementDiagnosticFrontendRequest | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bodyBytes) {
+    if (this._bodyBytes !== undefined) {
       hasAnyValues = true;
       internalValueResult.bodyBytes = this._bodyBytes;
     }
-    if (this._headersToLog) {
+    if (this._headersToLog !== undefined) {
       hasAnyValues = true;
       internalValueResult.headersToLog = this._headersToLog;
     }
-    if (this._dataMasking?.internalValue) {
+    if (this._dataMasking?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.dataMasking = this._dataMasking?.internalValue;
     }
@@ -962,11 +962,11 @@ export class ApiManagementDiagnosticFrontendResponseDataMaskingOutputReference e
   public get internalValue(): ApiManagementDiagnosticFrontendResponseDataMasking | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._headers) {
+    if (this._headers !== undefined) {
       hasAnyValues = true;
       internalValueResult.headers = this._headers;
     }
-    if (this._queryParams) {
+    if (this._queryParams !== undefined) {
       hasAnyValues = true;
       internalValueResult.queryParams = this._queryParams;
     }
@@ -1064,15 +1064,15 @@ export class ApiManagementDiagnosticFrontendResponseOutputReference extends cdkt
   public get internalValue(): ApiManagementDiagnosticFrontendResponse | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bodyBytes) {
+    if (this._bodyBytes !== undefined) {
       hasAnyValues = true;
       internalValueResult.bodyBytes = this._bodyBytes;
     }
-    if (this._headersToLog) {
+    if (this._headersToLog !== undefined) {
       hasAnyValues = true;
       internalValueResult.headersToLog = this._headersToLog;
     }
-    if (this._dataMasking?.internalValue) {
+    if (this._dataMasking?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.dataMasking = this._dataMasking?.internalValue;
     }
@@ -1189,19 +1189,19 @@ export class ApiManagementDiagnosticTimeoutsOutputReference extends cdktf.Comple
   public get internalValue(): ApiManagementDiagnosticTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

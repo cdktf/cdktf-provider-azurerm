@@ -104,39 +104,39 @@ export class DnsZoneSoaRecordOutputReference extends cdktf.ComplexObject {
   public get internalValue(): DnsZoneSoaRecord | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._email) {
+    if (this._email !== undefined) {
       hasAnyValues = true;
       internalValueResult.email = this._email;
     }
-    if (this._expireTime) {
+    if (this._expireTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.expireTime = this._expireTime;
     }
-    if (this._hostName) {
+    if (this._hostName !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostName = this._hostName;
     }
-    if (this._minimumTtl) {
+    if (this._minimumTtl !== undefined) {
       hasAnyValues = true;
       internalValueResult.minimumTtl = this._minimumTtl;
     }
-    if (this._refreshTime) {
+    if (this._refreshTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.refreshTime = this._refreshTime;
     }
-    if (this._retryTime) {
+    if (this._retryTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.retryTime = this._retryTime;
     }
-    if (this._serialNumber) {
+    if (this._serialNumber !== undefined) {
       hasAnyValues = true;
       internalValueResult.serialNumber = this._serialNumber;
     }
-    if (this._tags) {
+    if (this._tags !== undefined) {
       hasAnyValues = true;
       internalValueResult.tags = this._tags;
     }
-    if (this._ttl) {
+    if (this._ttl !== undefined) {
       hasAnyValues = true;
       internalValueResult.ttl = this._ttl;
     }
@@ -356,19 +356,19 @@ export class DnsZoneTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): DnsZoneTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

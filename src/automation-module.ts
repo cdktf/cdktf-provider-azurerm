@@ -69,11 +69,11 @@ export class AutomationModuleModuleLinkHashOutputReference extends cdktf.Complex
   public get internalValue(): AutomationModuleModuleLinkHash | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._algorithm) {
+    if (this._algorithm !== undefined) {
       hasAnyValues = true;
       internalValueResult.algorithm = this._algorithm;
     }
-    if (this._value) {
+    if (this._value !== undefined) {
       hasAnyValues = true;
       internalValueResult.value = this._value;
     }
@@ -158,11 +158,11 @@ export class AutomationModuleModuleLinkOutputReference extends cdktf.ComplexObje
   public get internalValue(): AutomationModuleModuleLink | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._uri) {
+    if (this._uri !== undefined) {
       hasAnyValues = true;
       internalValueResult.uri = this._uri;
     }
-    if (this._hash?.internalValue) {
+    if (this._hash?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.hash = this._hash?.internalValue;
     }
@@ -258,19 +258,19 @@ export class AutomationModuleTimeoutsOutputReference extends cdktf.ComplexObject
   public get internalValue(): AutomationModuleTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -79,19 +79,19 @@ export class ApiManagementGatewayLocationDataOutputReference extends cdktf.Compl
   public get internalValue(): ApiManagementGatewayLocationData | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._city) {
+    if (this._city !== undefined) {
       hasAnyValues = true;
       internalValueResult.city = this._city;
     }
-    if (this._district) {
+    if (this._district !== undefined) {
       hasAnyValues = true;
       internalValueResult.district = this._district;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._region) {
+    if (this._region !== undefined) {
       hasAnyValues = true;
       internalValueResult.region = this._region;
     }
@@ -223,19 +223,19 @@ export class ApiManagementGatewayTimeoutsOutputReference extends cdktf.ComplexOb
   public get internalValue(): ApiManagementGatewayTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

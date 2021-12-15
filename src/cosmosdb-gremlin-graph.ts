@@ -102,7 +102,7 @@ export class CosmosdbGremlinGraphAutoscaleSettingsOutputReference extends cdktf.
   public get internalValue(): CosmosdbGremlinGraphAutoscaleSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxThroughput) {
+    if (this._maxThroughput !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxThroughput = this._maxThroughput;
     }
@@ -178,15 +178,15 @@ export class CosmosdbGremlinGraphConflictResolutionPolicyOutputReference extends
   public get internalValue(): CosmosdbGremlinGraphConflictResolutionPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._conflictResolutionPath) {
+    if (this._conflictResolutionPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.conflictResolutionPath = this._conflictResolutionPath;
     }
-    if (this._conflictResolutionProcedure) {
+    if (this._conflictResolutionProcedure !== undefined) {
       hasAnyValues = true;
       internalValueResult.conflictResolutionProcedure = this._conflictResolutionProcedure;
     }
-    if (this._mode) {
+    if (this._mode !== undefined) {
       hasAnyValues = true;
       internalValueResult.mode = this._mode;
     }
@@ -372,27 +372,27 @@ export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.Comple
   public get internalValue(): CosmosdbGremlinGraphIndexPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._automatic) {
+    if (this._automatic !== undefined) {
       hasAnyValues = true;
       internalValueResult.automatic = this._automatic;
     }
-    if (this._excludedPaths) {
+    if (this._excludedPaths !== undefined) {
       hasAnyValues = true;
       internalValueResult.excludedPaths = this._excludedPaths;
     }
-    if (this._includedPaths) {
+    if (this._includedPaths !== undefined) {
       hasAnyValues = true;
       internalValueResult.includedPaths = this._includedPaths;
     }
-    if (this._indexingMode) {
+    if (this._indexingMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.indexingMode = this._indexingMode;
     }
-    if (this._compositeIndex) {
+    if (this._compositeIndex !== undefined) {
       hasAnyValues = true;
       internalValueResult.compositeIndex = this._compositeIndex;
     }
-    if (this._spatialIndex) {
+    if (this._spatialIndex !== undefined) {
       hasAnyValues = true;
       internalValueResult.spatialIndex = this._spatialIndex;
     }
@@ -562,19 +562,19 @@ export class CosmosdbGremlinGraphTimeoutsOutputReference extends cdktf.ComplexOb
   public get internalValue(): CosmosdbGremlinGraphTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

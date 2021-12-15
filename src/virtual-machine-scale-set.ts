@@ -191,11 +191,11 @@ export class VirtualMachineScaleSetBootDiagnosticsOutputReference extends cdktf.
   public get internalValue(): VirtualMachineScaleSetBootDiagnostics | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._storageUri) {
+    if (this._storageUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageUri = this._storageUri;
     }
@@ -333,11 +333,11 @@ export class VirtualMachineScaleSetIdentityOutputReference extends cdktf.Complex
   public get internalValue(): VirtualMachineScaleSetIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityIds) {
+    if (this._identityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityIds = this._identityIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -418,7 +418,7 @@ export class VirtualMachineScaleSetNetworkProfileDnsSettingsOutputReference exte
   public get internalValue(): VirtualMachineScaleSetNetworkProfileDnsSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dnsServers) {
+    if (this._dnsServers !== undefined) {
       hasAnyValues = true;
       internalValueResult.dnsServers = this._dnsServers;
     }
@@ -491,15 +491,15 @@ export class VirtualMachineScaleSetNetworkProfileIpConfigurationPublicIpAddressC
   public get internalValue(): VirtualMachineScaleSetNetworkProfileIpConfigurationPublicIpAddressConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._domainNameLabel) {
+    if (this._domainNameLabel !== undefined) {
       hasAnyValues = true;
       internalValueResult.domainNameLabel = this._domainNameLabel;
     }
-    if (this._idleTimeout) {
+    if (this._idleTimeout !== undefined) {
       hasAnyValues = true;
       internalValueResult.idleTimeout = this._idleTimeout;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -712,19 +712,19 @@ export class VirtualMachineScaleSetOsProfileOutputReference extends cdktf.Comple
   public get internalValue(): VirtualMachineScaleSetOsProfile | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._adminPassword) {
+    if (this._adminPassword !== undefined) {
       hasAnyValues = true;
       internalValueResult.adminPassword = this._adminPassword;
     }
-    if (this._adminUsername) {
+    if (this._adminUsername !== undefined) {
       hasAnyValues = true;
       internalValueResult.adminUsername = this._adminUsername;
     }
-    if (this._computerNamePrefix) {
+    if (this._computerNamePrefix !== undefined) {
       hasAnyValues = true;
       internalValueResult.computerNamePrefix = this._computerNamePrefix;
     }
-    if (this._customData) {
+    if (this._customData !== undefined) {
       hasAnyValues = true;
       internalValueResult.customData = this._customData;
     }
@@ -867,11 +867,11 @@ export class VirtualMachineScaleSetOsProfileLinuxConfigOutputReference extends c
   public get internalValue(): VirtualMachineScaleSetOsProfileLinuxConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._disablePasswordAuthentication) {
+    if (this._disablePasswordAuthentication !== undefined) {
       hasAnyValues = true;
       internalValueResult.disablePasswordAuthentication = this._disablePasswordAuthentication;
     }
-    if (this._sshKeys) {
+    if (this._sshKeys !== undefined) {
       hasAnyValues = true;
       internalValueResult.sshKeys = this._sshKeys;
     }
@@ -1075,19 +1075,19 @@ export class VirtualMachineScaleSetOsProfileWindowsConfigOutputReference extends
   public get internalValue(): VirtualMachineScaleSetOsProfileWindowsConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enableAutomaticUpgrades) {
+    if (this._enableAutomaticUpgrades !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableAutomaticUpgrades = this._enableAutomaticUpgrades;
     }
-    if (this._provisionVmAgent) {
+    if (this._provisionVmAgent !== undefined) {
       hasAnyValues = true;
       internalValueResult.provisionVmAgent = this._provisionVmAgent;
     }
-    if (this._additionalUnattendConfig) {
+    if (this._additionalUnattendConfig !== undefined) {
       hasAnyValues = true;
       internalValueResult.additionalUnattendConfig = this._additionalUnattendConfig;
     }
-    if (this._winrm) {
+    if (this._winrm !== undefined) {
       hasAnyValues = true;
       internalValueResult.winrm = this._winrm;
     }
@@ -1219,15 +1219,15 @@ export class VirtualMachineScaleSetPlanOutputReference extends cdktf.ComplexObje
   public get internalValue(): VirtualMachineScaleSetPlan | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._product) {
+    if (this._product !== undefined) {
       hasAnyValues = true;
       internalValueResult.product = this._product;
     }
-    if (this._publisher) {
+    if (this._publisher !== undefined) {
       hasAnyValues = true;
       internalValueResult.publisher = this._publisher;
     }
@@ -1335,19 +1335,19 @@ export class VirtualMachineScaleSetRollingUpgradePolicyOutputReference extends c
   public get internalValue(): VirtualMachineScaleSetRollingUpgradePolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxBatchInstancePercent) {
+    if (this._maxBatchInstancePercent !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxBatchInstancePercent = this._maxBatchInstancePercent;
     }
-    if (this._maxUnhealthyInstancePercent) {
+    if (this._maxUnhealthyInstancePercent !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxUnhealthyInstancePercent = this._maxUnhealthyInstancePercent;
     }
-    if (this._maxUnhealthyUpgradedInstancePercent) {
+    if (this._maxUnhealthyUpgradedInstancePercent !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxUnhealthyUpgradedInstancePercent = this._maxUnhealthyUpgradedInstancePercent;
     }
-    if (this._pauseTimeBetweenBatches) {
+    if (this._pauseTimeBetweenBatches !== undefined) {
       hasAnyValues = true;
       internalValueResult.pauseTimeBetweenBatches = this._pauseTimeBetweenBatches;
     }
@@ -1477,15 +1477,15 @@ export class VirtualMachineScaleSetSkuOutputReference extends cdktf.ComplexObjec
   public get internalValue(): VirtualMachineScaleSetSku | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._capacity) {
+    if (this._capacity !== undefined) {
       hasAnyValues = true;
       internalValueResult.capacity = this._capacity;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._tier) {
+    if (this._tier !== undefined) {
       hasAnyValues = true;
       internalValueResult.tier = this._tier;
     }
@@ -1638,23 +1638,23 @@ export class VirtualMachineScaleSetStorageProfileImageReferenceOutputReference e
   public get internalValue(): VirtualMachineScaleSetStorageProfileImageReference | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._id) {
+    if (this._id !== undefined) {
       hasAnyValues = true;
       internalValueResult.id = this._id;
     }
-    if (this._offer) {
+    if (this._offer !== undefined) {
       hasAnyValues = true;
       internalValueResult.offer = this._offer;
     }
-    if (this._publisher) {
+    if (this._publisher !== undefined) {
       hasAnyValues = true;
       internalValueResult.publisher = this._publisher;
     }
-    if (this._sku) {
+    if (this._sku !== undefined) {
       hasAnyValues = true;
       internalValueResult.sku = this._sku;
     }
-    if (this._version) {
+    if (this._version !== undefined) {
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
@@ -1822,31 +1822,31 @@ export class VirtualMachineScaleSetStorageProfileOsDiskOutputReference extends c
   public get internalValue(): VirtualMachineScaleSetStorageProfileOsDisk | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._caching) {
+    if (this._caching !== undefined) {
       hasAnyValues = true;
       internalValueResult.caching = this._caching;
     }
-    if (this._createOption) {
+    if (this._createOption !== undefined) {
       hasAnyValues = true;
       internalValueResult.createOption = this._createOption;
     }
-    if (this._image) {
+    if (this._image !== undefined) {
       hasAnyValues = true;
       internalValueResult.image = this._image;
     }
-    if (this._managedDiskType) {
+    if (this._managedDiskType !== undefined) {
       hasAnyValues = true;
       internalValueResult.managedDiskType = this._managedDiskType;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._osType) {
+    if (this._osType !== undefined) {
       hasAnyValues = true;
       internalValueResult.osType = this._osType;
     }
-    if (this._vhdContainers) {
+    if (this._vhdContainers !== undefined) {
       hasAnyValues = true;
       internalValueResult.vhdContainers = this._vhdContainers;
     }
@@ -2032,19 +2032,19 @@ export class VirtualMachineScaleSetTimeoutsOutputReference extends cdktf.Complex
   public get internalValue(): VirtualMachineScaleSetTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

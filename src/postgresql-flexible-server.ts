@@ -127,11 +127,11 @@ export class PostgresqlFlexibleServerHighAvailabilityOutputReference extends cdk
   public get internalValue(): PostgresqlFlexibleServerHighAvailability | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._mode) {
+    if (this._mode !== undefined) {
       hasAnyValues = true;
       internalValueResult.mode = this._mode;
     }
-    if (this._standbyAvailabilityZone) {
+    if (this._standbyAvailabilityZone !== undefined) {
       hasAnyValues = true;
       internalValueResult.standbyAvailabilityZone = this._standbyAvailabilityZone;
     }
@@ -222,15 +222,15 @@ export class PostgresqlFlexibleServerMaintenanceWindowOutputReference extends cd
   public get internalValue(): PostgresqlFlexibleServerMaintenanceWindow | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dayOfWeek) {
+    if (this._dayOfWeek !== undefined) {
       hasAnyValues = true;
       internalValueResult.dayOfWeek = this._dayOfWeek;
     }
-    if (this._startHour) {
+    if (this._startHour !== undefined) {
       hasAnyValues = true;
       internalValueResult.startHour = this._startHour;
     }
-    if (this._startMinute) {
+    if (this._startMinute !== undefined) {
       hasAnyValues = true;
       internalValueResult.startMinute = this._startMinute;
     }
@@ -347,19 +347,19 @@ export class PostgresqlFlexibleServerTimeoutsOutputReference extends cdktf.Compl
   public get internalValue(): PostgresqlFlexibleServerTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -80,7 +80,7 @@ export class VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference exte
   public get internalValue(): VpnGatewayBgpSettingsInstance0BgpPeeringAddress | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._customIps) {
+    if (this._customIps !== undefined) {
       hasAnyValues = true;
       internalValueResult.customIps = this._customIps;
     }
@@ -143,7 +143,7 @@ export class VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference exte
   public get internalValue(): VpnGatewayBgpSettingsInstance1BgpPeeringAddress | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._customIps) {
+    if (this._customIps !== undefined) {
       hasAnyValues = true;
       internalValueResult.customIps = this._customIps;
     }
@@ -225,19 +225,19 @@ export class VpnGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): VpnGatewayBgpSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._asn) {
+    if (this._asn !== undefined) {
       hasAnyValues = true;
       internalValueResult.asn = this._asn;
     }
-    if (this._peerWeight) {
+    if (this._peerWeight !== undefined) {
       hasAnyValues = true;
       internalValueResult.peerWeight = this._peerWeight;
     }
-    if (this._instance0BgpPeeringAddress?.internalValue) {
+    if (this._instance0BgpPeeringAddress?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.instance0BgpPeeringAddress = this._instance0BgpPeeringAddress?.internalValue;
     }
-    if (this._instance1BgpPeeringAddress?.internalValue) {
+    if (this._instance1BgpPeeringAddress?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.instance1BgpPeeringAddress = this._instance1BgpPeeringAddress?.internalValue;
     }
@@ -366,19 +366,19 @@ export class VpnGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): VpnGatewayTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

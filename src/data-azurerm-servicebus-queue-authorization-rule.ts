@@ -62,7 +62,7 @@ export class DataAzurermServicebusQueueAuthorizationRuleTimeoutsOutputReference 
   public get internalValue(): DataAzurermServicebusQueueAuthorizationRuleTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

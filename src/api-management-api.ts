@@ -139,11 +139,11 @@ export class ApiManagementApiImportWsdlSelectorOutputReference extends cdktf.Com
   public get internalValue(): ApiManagementApiImportWsdlSelector | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._endpointName) {
+    if (this._endpointName !== undefined) {
       hasAnyValues = true;
       internalValueResult.endpointName = this._endpointName;
     }
-    if (this._serviceName) {
+    if (this._serviceName !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceName = this._serviceName;
     }
@@ -233,15 +233,15 @@ export class ApiManagementApiImportOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ApiManagementApiImport | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._contentFormat) {
+    if (this._contentFormat !== undefined) {
       hasAnyValues = true;
       internalValueResult.contentFormat = this._contentFormat;
     }
-    if (this._contentValue) {
+    if (this._contentValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.contentValue = this._contentValue;
     }
-    if (this._wsdlSelector?.internalValue) {
+    if (this._wsdlSelector?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.wsdlSelector = this._wsdlSelector?.internalValue;
     }
@@ -342,11 +342,11 @@ export class ApiManagementApiOauth2AuthorizationOutputReference extends cdktf.Co
   public get internalValue(): ApiManagementApiOauth2Authorization | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._authorizationServerName) {
+    if (this._authorizationServerName !== undefined) {
       hasAnyValues = true;
       internalValueResult.authorizationServerName = this._authorizationServerName;
     }
-    if (this._scope) {
+    if (this._scope !== undefined) {
       hasAnyValues = true;
       internalValueResult.scope = this._scope;
     }
@@ -432,11 +432,11 @@ export class ApiManagementApiOpenidAuthenticationOutputReference extends cdktf.C
   public get internalValue(): ApiManagementApiOpenidAuthentication | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._bearerTokenSendingMethods) {
+    if (this._bearerTokenSendingMethods !== undefined) {
       hasAnyValues = true;
       internalValueResult.bearerTokenSendingMethods = this._bearerTokenSendingMethods;
     }
-    if (this._openidProviderName) {
+    if (this._openidProviderName !== undefined) {
       hasAnyValues = true;
       internalValueResult.openidProviderName = this._openidProviderName;
     }
@@ -522,11 +522,11 @@ export class ApiManagementApiSubscriptionKeyParameterNamesOutputReference extend
   public get internalValue(): ApiManagementApiSubscriptionKeyParameterNames | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._header) {
+    if (this._header !== undefined) {
       hasAnyValues = true;
       internalValueResult.header = this._header;
     }
-    if (this._query) {
+    if (this._query !== undefined) {
       hasAnyValues = true;
       internalValueResult.query = this._query;
     }
@@ -619,19 +619,19 @@ export class ApiManagementApiTimeoutsOutputReference extends cdktf.ComplexObject
   public get internalValue(): ApiManagementApiTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

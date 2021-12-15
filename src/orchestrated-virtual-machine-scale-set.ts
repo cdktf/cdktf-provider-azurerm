@@ -185,11 +185,11 @@ export class OrchestratedVirtualMachineScaleSetAutomaticInstanceRepairOutputRefe
   public get internalValue(): OrchestratedVirtualMachineScaleSetAutomaticInstanceRepair | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._gracePeriod) {
+    if (this._gracePeriod !== undefined) {
       hasAnyValues = true;
       internalValueResult.gracePeriod = this._gracePeriod;
     }
@@ -270,7 +270,7 @@ export class OrchestratedVirtualMachineScaleSetBootDiagnosticsOutputReference ex
   public get internalValue(): OrchestratedVirtualMachineScaleSetBootDiagnostics | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._storageAccountUri) {
+    if (this._storageAccountUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageAccountUri = this._storageAccountUri;
     }
@@ -455,11 +455,11 @@ export class OrchestratedVirtualMachineScaleSetIdentityOutputReference extends c
   public get internalValue(): OrchestratedVirtualMachineScaleSetIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityIds) {
+    if (this._identityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityIds = this._identityIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -701,7 +701,7 @@ export class OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputRefer
   public get internalValue(): OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._option) {
+    if (this._option !== undefined) {
       hasAnyValues = true;
       internalValueResult.option = this._option;
     }
@@ -791,27 +791,27 @@ export class OrchestratedVirtualMachineScaleSetOsDiskOutputReference extends cdk
   public get internalValue(): OrchestratedVirtualMachineScaleSetOsDisk | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._caching) {
+    if (this._caching !== undefined) {
       hasAnyValues = true;
       internalValueResult.caching = this._caching;
     }
-    if (this._diskEncryptionSetId) {
+    if (this._diskEncryptionSetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskEncryptionSetId = this._diskEncryptionSetId;
     }
-    if (this._diskSizeGb) {
+    if (this._diskSizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskSizeGb = this._diskSizeGb;
     }
-    if (this._storageAccountType) {
+    if (this._storageAccountType !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageAccountType = this._storageAccountType;
     }
-    if (this._writeAcceleratorEnabled) {
+    if (this._writeAcceleratorEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.writeAcceleratorEnabled = this._writeAcceleratorEnabled;
     }
-    if (this._diffDiskSettings?.internalValue) {
+    if (this._diffDiskSettings?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.diffDiskSettings = this._diffDiskSettings?.internalValue;
     }
@@ -1058,31 +1058,31 @@ export class OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationOutput
   public get internalValue(): OrchestratedVirtualMachineScaleSetOsProfileLinuxConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._adminPassword) {
+    if (this._adminPassword !== undefined) {
       hasAnyValues = true;
       internalValueResult.adminPassword = this._adminPassword;
     }
-    if (this._adminUsername) {
+    if (this._adminUsername !== undefined) {
       hasAnyValues = true;
       internalValueResult.adminUsername = this._adminUsername;
     }
-    if (this._computerNamePrefix) {
+    if (this._computerNamePrefix !== undefined) {
       hasAnyValues = true;
       internalValueResult.computerNamePrefix = this._computerNamePrefix;
     }
-    if (this._disablePasswordAuthentication) {
+    if (this._disablePasswordAuthentication !== undefined) {
       hasAnyValues = true;
       internalValueResult.disablePasswordAuthentication = this._disablePasswordAuthentication;
     }
-    if (this._provisionVmAgent) {
+    if (this._provisionVmAgent !== undefined) {
       hasAnyValues = true;
       internalValueResult.provisionVmAgent = this._provisionVmAgent;
     }
-    if (this._adminSshKey) {
+    if (this._adminSshKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.adminSshKey = this._adminSshKey;
     }
-    if (this._secret) {
+    if (this._secret !== undefined) {
       hasAnyValues = true;
       internalValueResult.secret = this._secret;
     }
@@ -1362,35 +1362,35 @@ export class OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationOutp
   public get internalValue(): OrchestratedVirtualMachineScaleSetOsProfileWindowsConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._adminPassword) {
+    if (this._adminPassword !== undefined) {
       hasAnyValues = true;
       internalValueResult.adminPassword = this._adminPassword;
     }
-    if (this._adminUsername) {
+    if (this._adminUsername !== undefined) {
       hasAnyValues = true;
       internalValueResult.adminUsername = this._adminUsername;
     }
-    if (this._computerNamePrefix) {
+    if (this._computerNamePrefix !== undefined) {
       hasAnyValues = true;
       internalValueResult.computerNamePrefix = this._computerNamePrefix;
     }
-    if (this._enableAutomaticUpdates) {
+    if (this._enableAutomaticUpdates !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableAutomaticUpdates = this._enableAutomaticUpdates;
     }
-    if (this._provisionVmAgent) {
+    if (this._provisionVmAgent !== undefined) {
       hasAnyValues = true;
       internalValueResult.provisionVmAgent = this._provisionVmAgent;
     }
-    if (this._timezone) {
+    if (this._timezone !== undefined) {
       hasAnyValues = true;
       internalValueResult.timezone = this._timezone;
     }
-    if (this._secret) {
+    if (this._secret !== undefined) {
       hasAnyValues = true;
       internalValueResult.secret = this._secret;
     }
-    if (this._winrmListener) {
+    if (this._winrmListener !== undefined) {
       hasAnyValues = true;
       internalValueResult.winrmListener = this._winrmListener;
     }
@@ -1592,15 +1592,15 @@ export class OrchestratedVirtualMachineScaleSetOsProfileOutputReference extends 
   public get internalValue(): OrchestratedVirtualMachineScaleSetOsProfile | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._customData) {
+    if (this._customData !== undefined) {
       hasAnyValues = true;
       internalValueResult.customData = this._customData;
     }
-    if (this._linuxConfiguration?.internalValue) {
+    if (this._linuxConfiguration?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.linuxConfiguration = this._linuxConfiguration?.internalValue;
     }
-    if (this._windowsConfiguration?.internalValue) {
+    if (this._windowsConfiguration?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.windowsConfiguration = this._windowsConfiguration?.internalValue;
     }
@@ -1712,15 +1712,15 @@ export class OrchestratedVirtualMachineScaleSetPlanOutputReference extends cdktf
   public get internalValue(): OrchestratedVirtualMachineScaleSetPlan | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._product) {
+    if (this._product !== undefined) {
       hasAnyValues = true;
       internalValueResult.product = this._product;
     }
-    if (this._publisher) {
+    if (this._publisher !== undefined) {
       hasAnyValues = true;
       internalValueResult.publisher = this._publisher;
     }
@@ -1828,19 +1828,19 @@ export class OrchestratedVirtualMachineScaleSetSourceImageReferenceOutputReferen
   public get internalValue(): OrchestratedVirtualMachineScaleSetSourceImageReference | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._offer) {
+    if (this._offer !== undefined) {
       hasAnyValues = true;
       internalValueResult.offer = this._offer;
     }
-    if (this._publisher) {
+    if (this._publisher !== undefined) {
       hasAnyValues = true;
       internalValueResult.publisher = this._publisher;
     }
-    if (this._sku) {
+    if (this._sku !== undefined) {
       hasAnyValues = true;
       internalValueResult.sku = this._sku;
     }
-    if (this._version) {
+    if (this._version !== undefined) {
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
@@ -1953,11 +1953,11 @@ export class OrchestratedVirtualMachineScaleSetTerminationNotificationOutputRefe
   public get internalValue(): OrchestratedVirtualMachineScaleSetTerminationNotification | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._timeout) {
+    if (this._timeout !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeout = this._timeout;
     }
@@ -2053,19 +2053,19 @@ export class OrchestratedVirtualMachineScaleSetTimeoutsOutputReference extends c
   public get internalValue(): OrchestratedVirtualMachineScaleSetTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

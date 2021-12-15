@@ -124,23 +124,23 @@ export class DataFactoryDatasetJsonAzureBlobStorageLocationOutputReference exten
   public get internalValue(): DataFactoryDatasetJsonAzureBlobStorageLocation | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._container) {
+    if (this._container !== undefined) {
       hasAnyValues = true;
       internalValueResult.container = this._container;
     }
-    if (this._dynamicFilenameEnabled) {
+    if (this._dynamicFilenameEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.dynamicFilenameEnabled = this._dynamicFilenameEnabled;
     }
-    if (this._dynamicPathEnabled) {
+    if (this._dynamicPathEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.dynamicPathEnabled = this._dynamicPathEnabled;
     }
-    if (this._filename) {
+    if (this._filename !== undefined) {
       hasAnyValues = true;
       internalValueResult.filename = this._filename;
     }
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
@@ -289,23 +289,23 @@ export class DataFactoryDatasetJsonHttpServerLocationOutputReference extends cdk
   public get internalValue(): DataFactoryDatasetJsonHttpServerLocation | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dynamicFilenameEnabled) {
+    if (this._dynamicFilenameEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.dynamicFilenameEnabled = this._dynamicFilenameEnabled;
     }
-    if (this._dynamicPathEnabled) {
+    if (this._dynamicPathEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.dynamicPathEnabled = this._dynamicPathEnabled;
     }
-    if (this._filename) {
+    if (this._filename !== undefined) {
       hasAnyValues = true;
       internalValueResult.filename = this._filename;
     }
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
-    if (this._relativeUrl) {
+    if (this._relativeUrl !== undefined) {
       hasAnyValues = true;
       internalValueResult.relativeUrl = this._relativeUrl;
     }
@@ -476,19 +476,19 @@ export class DataFactoryDatasetJsonTimeoutsOutputReference extends cdktf.Complex
   public get internalValue(): DataFactoryDatasetJsonTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

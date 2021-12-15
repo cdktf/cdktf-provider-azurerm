@@ -164,7 +164,7 @@ export class VirtualMachineAdditionalCapabilitiesOutputReference extends cdktf.C
   public get internalValue(): VirtualMachineAdditionalCapabilities | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._ultraSsdEnabled) {
+    if (this._ultraSsdEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.ultraSsdEnabled = this._ultraSsdEnabled;
     }
@@ -232,11 +232,11 @@ export class VirtualMachineBootDiagnosticsOutputReference extends cdktf.ComplexO
   public get internalValue(): VirtualMachineBootDiagnostics | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._storageUri) {
+    if (this._storageUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageUri = this._storageUri;
     }
@@ -319,11 +319,11 @@ export class VirtualMachineIdentityOutputReference extends cdktf.ComplexObject {
   public get internalValue(): VirtualMachineIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityIds) {
+    if (this._identityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityIds = this._identityIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -419,19 +419,19 @@ export class VirtualMachineOsProfileOutputReference extends cdktf.ComplexObject 
   public get internalValue(): VirtualMachineOsProfile | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._adminPassword) {
+    if (this._adminPassword !== undefined) {
       hasAnyValues = true;
       internalValueResult.adminPassword = this._adminPassword;
     }
-    if (this._adminUsername) {
+    if (this._adminUsername !== undefined) {
       hasAnyValues = true;
       internalValueResult.adminUsername = this._adminUsername;
     }
-    if (this._computerName) {
+    if (this._computerName !== undefined) {
       hasAnyValues = true;
       internalValueResult.computerName = this._computerName;
     }
-    if (this._customData) {
+    if (this._customData !== undefined) {
       hasAnyValues = true;
       internalValueResult.customData = this._customData;
     }
@@ -574,11 +574,11 @@ export class VirtualMachineOsProfileLinuxConfigOutputReference extends cdktf.Com
   public get internalValue(): VirtualMachineOsProfileLinuxConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._disablePasswordAuthentication) {
+    if (this._disablePasswordAuthentication !== undefined) {
       hasAnyValues = true;
       internalValueResult.disablePasswordAuthentication = this._disablePasswordAuthentication;
     }
-    if (this._sshKeys) {
+    if (this._sshKeys !== undefined) {
       hasAnyValues = true;
       internalValueResult.sshKeys = this._sshKeys;
     }
@@ -784,23 +784,23 @@ export class VirtualMachineOsProfileWindowsConfigOutputReference extends cdktf.C
   public get internalValue(): VirtualMachineOsProfileWindowsConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enableAutomaticUpgrades) {
+    if (this._enableAutomaticUpgrades !== undefined) {
       hasAnyValues = true;
       internalValueResult.enableAutomaticUpgrades = this._enableAutomaticUpgrades;
     }
-    if (this._provisionVmAgent) {
+    if (this._provisionVmAgent !== undefined) {
       hasAnyValues = true;
       internalValueResult.provisionVmAgent = this._provisionVmAgent;
     }
-    if (this._timezone) {
+    if (this._timezone !== undefined) {
       hasAnyValues = true;
       internalValueResult.timezone = this._timezone;
     }
-    if (this._additionalUnattendConfig) {
+    if (this._additionalUnattendConfig !== undefined) {
       hasAnyValues = true;
       internalValueResult.additionalUnattendConfig = this._additionalUnattendConfig;
     }
-    if (this._winrm) {
+    if (this._winrm !== undefined) {
       hasAnyValues = true;
       internalValueResult.winrm = this._winrm;
     }
@@ -950,15 +950,15 @@ export class VirtualMachinePlanOutputReference extends cdktf.ComplexObject {
   public get internalValue(): VirtualMachinePlan | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._product) {
+    if (this._product !== undefined) {
       hasAnyValues = true;
       internalValueResult.product = this._product;
     }
-    if (this._publisher) {
+    if (this._publisher !== undefined) {
       hasAnyValues = true;
       internalValueResult.publisher = this._publisher;
     }
@@ -1128,23 +1128,23 @@ export class VirtualMachineStorageImageReferenceOutputReference extends cdktf.Co
   public get internalValue(): VirtualMachineStorageImageReference | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._id) {
+    if (this._id !== undefined) {
       hasAnyValues = true;
       internalValueResult.id = this._id;
     }
-    if (this._offer) {
+    if (this._offer !== undefined) {
       hasAnyValues = true;
       internalValueResult.offer = this._offer;
     }
-    if (this._publisher) {
+    if (this._publisher !== undefined) {
       hasAnyValues = true;
       internalValueResult.publisher = this._publisher;
     }
-    if (this._sku) {
+    if (this._sku !== undefined) {
       hasAnyValues = true;
       internalValueResult.sku = this._sku;
     }
-    if (this._version) {
+    if (this._version !== undefined) {
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
@@ -1327,43 +1327,43 @@ export class VirtualMachineStorageOsDiskOutputReference extends cdktf.ComplexObj
   public get internalValue(): VirtualMachineStorageOsDisk | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._caching) {
+    if (this._caching !== undefined) {
       hasAnyValues = true;
       internalValueResult.caching = this._caching;
     }
-    if (this._createOption) {
+    if (this._createOption !== undefined) {
       hasAnyValues = true;
       internalValueResult.createOption = this._createOption;
     }
-    if (this._diskSizeGb) {
+    if (this._diskSizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskSizeGb = this._diskSizeGb;
     }
-    if (this._imageUri) {
+    if (this._imageUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.imageUri = this._imageUri;
     }
-    if (this._managedDiskId) {
+    if (this._managedDiskId !== undefined) {
       hasAnyValues = true;
       internalValueResult.managedDiskId = this._managedDiskId;
     }
-    if (this._managedDiskType) {
+    if (this._managedDiskType !== undefined) {
       hasAnyValues = true;
       internalValueResult.managedDiskType = this._managedDiskType;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._osType) {
+    if (this._osType !== undefined) {
       hasAnyValues = true;
       internalValueResult.osType = this._osType;
     }
-    if (this._vhdUri) {
+    if (this._vhdUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.vhdUri = this._vhdUri;
     }
-    if (this._writeAcceleratorEnabled) {
+    if (this._writeAcceleratorEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.writeAcceleratorEnabled = this._writeAcceleratorEnabled;
     }
@@ -1600,19 +1600,19 @@ export class VirtualMachineTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): VirtualMachineTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

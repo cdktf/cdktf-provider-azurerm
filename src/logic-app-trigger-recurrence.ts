@@ -86,15 +86,15 @@ export class LogicAppTriggerRecurrenceScheduleOutputReference extends cdktf.Comp
   public get internalValue(): LogicAppTriggerRecurrenceSchedule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._atTheseHours) {
+    if (this._atTheseHours !== undefined) {
       hasAnyValues = true;
       internalValueResult.atTheseHours = this._atTheseHours;
     }
-    if (this._atTheseMinutes) {
+    if (this._atTheseMinutes !== undefined) {
       hasAnyValues = true;
       internalValueResult.atTheseMinutes = this._atTheseMinutes;
     }
-    if (this._onTheseDays) {
+    if (this._onTheseDays !== undefined) {
       hasAnyValues = true;
       internalValueResult.onTheseDays = this._onTheseDays;
     }
@@ -213,19 +213,19 @@ export class LogicAppTriggerRecurrenceTimeoutsOutputReference extends cdktf.Comp
   public get internalValue(): LogicAppTriggerRecurrenceTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

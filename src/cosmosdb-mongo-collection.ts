@@ -102,7 +102,7 @@ export class CosmosdbMongoCollectionAutoscaleSettingsOutputReference extends cdk
   public get internalValue(): CosmosdbMongoCollectionAutoscaleSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxThroughput) {
+    if (this._maxThroughput !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxThroughput = this._maxThroughput;
     }
@@ -205,19 +205,19 @@ export class CosmosdbMongoCollectionTimeoutsOutputReference extends cdktf.Comple
   public get internalValue(): CosmosdbMongoCollectionTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

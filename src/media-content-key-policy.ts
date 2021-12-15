@@ -73,11 +73,11 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRental
   public get internalValue(): MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._playbackDurationSeconds) {
+    if (this._playbackDurationSeconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.playbackDurationSeconds = this._playbackDurationSeconds;
     }
-    if (this._storageDurationSeconds) {
+    if (this._storageDurationSeconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageDurationSeconds = this._storageDurationSeconds;
     }
@@ -188,27 +188,27 @@ export class MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReferen
   public get internalValue(): MediaContentKeyPolicyPolicyOptionFairplayConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._ask) {
+    if (this._ask !== undefined) {
       hasAnyValues = true;
       internalValueResult.ask = this._ask;
     }
-    if (this._pfx) {
+    if (this._pfx !== undefined) {
       hasAnyValues = true;
       internalValueResult.pfx = this._pfx;
     }
-    if (this._pfxPassword) {
+    if (this._pfxPassword !== undefined) {
       hasAnyValues = true;
       internalValueResult.pfxPassword = this._pfxPassword;
     }
-    if (this._rentalAndLeaseKeyType) {
+    if (this._rentalAndLeaseKeyType !== undefined) {
       hasAnyValues = true;
       internalValueResult.rentalAndLeaseKeyType = this._rentalAndLeaseKeyType;
     }
-    if (this._rentalDurationSeconds) {
+    if (this._rentalDurationSeconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.rentalDurationSeconds = this._rentalDurationSeconds;
     }
-    if (this._offlineRentalConfiguration?.internalValue) {
+    if (this._offlineRentalConfiguration?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.offlineRentalConfiguration = this._offlineRentalConfiguration?.internalValue;
     }
@@ -414,47 +414,47 @@ export class MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayR
   public get internalValue(): MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._agcAndColorStripeRestriction) {
+    if (this._agcAndColorStripeRestriction !== undefined) {
       hasAnyValues = true;
       internalValueResult.agcAndColorStripeRestriction = this._agcAndColorStripeRestriction;
     }
-    if (this._allowPassingVideoContentToUnknownOutput) {
+    if (this._allowPassingVideoContentToUnknownOutput !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowPassingVideoContentToUnknownOutput = this._allowPassingVideoContentToUnknownOutput;
     }
-    if (this._analogVideoOpl) {
+    if (this._analogVideoOpl !== undefined) {
       hasAnyValues = true;
       internalValueResult.analogVideoOpl = this._analogVideoOpl;
     }
-    if (this._compressedDigitalAudioOpl) {
+    if (this._compressedDigitalAudioOpl !== undefined) {
       hasAnyValues = true;
       internalValueResult.compressedDigitalAudioOpl = this._compressedDigitalAudioOpl;
     }
-    if (this._digitalVideoOnlyContentRestriction) {
+    if (this._digitalVideoOnlyContentRestriction !== undefined) {
       hasAnyValues = true;
       internalValueResult.digitalVideoOnlyContentRestriction = this._digitalVideoOnlyContentRestriction;
     }
-    if (this._firstPlayExpiration) {
+    if (this._firstPlayExpiration !== undefined) {
       hasAnyValues = true;
       internalValueResult.firstPlayExpiration = this._firstPlayExpiration;
     }
-    if (this._imageConstraintForAnalogComponentVideoRestriction) {
+    if (this._imageConstraintForAnalogComponentVideoRestriction !== undefined) {
       hasAnyValues = true;
       internalValueResult.imageConstraintForAnalogComponentVideoRestriction = this._imageConstraintForAnalogComponentVideoRestriction;
     }
-    if (this._imageConstraintForAnalogComputerMonitorRestriction) {
+    if (this._imageConstraintForAnalogComputerMonitorRestriction !== undefined) {
       hasAnyValues = true;
       internalValueResult.imageConstraintForAnalogComputerMonitorRestriction = this._imageConstraintForAnalogComputerMonitorRestriction;
     }
-    if (this._scmsRestriction) {
+    if (this._scmsRestriction !== undefined) {
       hasAnyValues = true;
       internalValueResult.scmsRestriction = this._scmsRestriction;
     }
-    if (this._uncompressedDigitalAudioOpl) {
+    if (this._uncompressedDigitalAudioOpl !== undefined) {
       hasAnyValues = true;
       internalValueResult.uncompressedDigitalAudioOpl = this._uncompressedDigitalAudioOpl;
     }
-    if (this._uncompressedDigitalVideoOpl) {
+    if (this._uncompressedDigitalVideoOpl !== undefined) {
       hasAnyValues = true;
       internalValueResult.uncompressedDigitalVideoOpl = this._uncompressedDigitalVideoOpl;
     }
@@ -833,39 +833,39 @@ export class MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference ex
   public get internalValue(): MediaContentKeyPolicyPolicyOptionTokenRestriction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._audience) {
+    if (this._audience !== undefined) {
       hasAnyValues = true;
       internalValueResult.audience = this._audience;
     }
-    if (this._issuer) {
+    if (this._issuer !== undefined) {
       hasAnyValues = true;
       internalValueResult.issuer = this._issuer;
     }
-    if (this._openIdConnectDiscoveryDocument) {
+    if (this._openIdConnectDiscoveryDocument !== undefined) {
       hasAnyValues = true;
       internalValueResult.openIdConnectDiscoveryDocument = this._openIdConnectDiscoveryDocument;
     }
-    if (this._primaryRsaTokenKeyExponent) {
+    if (this._primaryRsaTokenKeyExponent !== undefined) {
       hasAnyValues = true;
       internalValueResult.primaryRsaTokenKeyExponent = this._primaryRsaTokenKeyExponent;
     }
-    if (this._primaryRsaTokenKeyModulus) {
+    if (this._primaryRsaTokenKeyModulus !== undefined) {
       hasAnyValues = true;
       internalValueResult.primaryRsaTokenKeyModulus = this._primaryRsaTokenKeyModulus;
     }
-    if (this._primarySymmetricTokenKey) {
+    if (this._primarySymmetricTokenKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.primarySymmetricTokenKey = this._primarySymmetricTokenKey;
     }
-    if (this._primaryX509TokenKeyRaw) {
+    if (this._primaryX509TokenKeyRaw !== undefined) {
       hasAnyValues = true;
       internalValueResult.primaryX509TokenKeyRaw = this._primaryX509TokenKeyRaw;
     }
-    if (this._tokenType) {
+    if (this._tokenType !== undefined) {
       hasAnyValues = true;
       internalValueResult.tokenType = this._tokenType;
     }
-    if (this._requiredClaim) {
+    if (this._requiredClaim !== undefined) {
       hasAnyValues = true;
       internalValueResult.requiredClaim = this._requiredClaim;
     }
@@ -1144,19 +1144,19 @@ export class MediaContentKeyPolicyTimeoutsOutputReference extends cdktf.ComplexO
   public get internalValue(): MediaContentKeyPolicyTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

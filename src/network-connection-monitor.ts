@@ -118,15 +118,15 @@ export class NetworkConnectionMonitorDestinationOutputReference extends cdktf.Co
   public get internalValue(): NetworkConnectionMonitorDestination | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._address) {
+    if (this._address !== undefined) {
       hasAnyValues = true;
       internalValueResult.address = this._address;
     }
-    if (this._port) {
+    if (this._port !== undefined) {
       hasAnyValues = true;
       internalValueResult.port = this._port;
     }
-    if (this._virtualMachineId) {
+    if (this._virtualMachineId !== undefined) {
       hasAnyValues = true;
       internalValueResult.virtualMachineId = this._virtualMachineId;
     }
@@ -257,11 +257,11 @@ export class NetworkConnectionMonitorEndpointFilterOutputReference extends cdktf
   public get internalValue(): NetworkConnectionMonitorEndpointFilter | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
-    if (this._item) {
+    if (this._item !== undefined) {
       hasAnyValues = true;
       internalValueResult.item = this._item;
     }
@@ -410,11 +410,11 @@ export class NetworkConnectionMonitorSourceOutputReference extends cdktf.Complex
   public get internalValue(): NetworkConnectionMonitorSource | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._port) {
+    if (this._port !== undefined) {
       hasAnyValues = true;
       internalValueResult.port = this._port;
     }
-    if (this._virtualMachineId) {
+    if (this._virtualMachineId !== undefined) {
       hasAnyValues = true;
       internalValueResult.virtualMachineId = this._virtualMachineId;
     }
@@ -547,27 +547,27 @@ export class NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputRef
   public get internalValue(): NetworkConnectionMonitorTestConfigurationHttpConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._method) {
+    if (this._method !== undefined) {
       hasAnyValues = true;
       internalValueResult.method = this._method;
     }
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
-    if (this._port) {
+    if (this._port !== undefined) {
       hasAnyValues = true;
       internalValueResult.port = this._port;
     }
-    if (this._preferHttps) {
+    if (this._preferHttps !== undefined) {
       hasAnyValues = true;
       internalValueResult.preferHttps = this._preferHttps;
     }
-    if (this._validStatusCodeRanges) {
+    if (this._validStatusCodeRanges !== undefined) {
       hasAnyValues = true;
       internalValueResult.validStatusCodeRanges = this._validStatusCodeRanges;
     }
-    if (this._requestHeader) {
+    if (this._requestHeader !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestHeader = this._requestHeader;
     }
@@ -724,7 +724,7 @@ export class NetworkConnectionMonitorTestConfigurationIcmpConfigurationOutputRef
   public get internalValue(): NetworkConnectionMonitorTestConfigurationIcmpConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._traceRouteEnabled) {
+    if (this._traceRouteEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.traceRouteEnabled = this._traceRouteEnabled;
     }
@@ -795,11 +795,11 @@ export class NetworkConnectionMonitorTestConfigurationSuccessThresholdOutputRefe
   public get internalValue(): NetworkConnectionMonitorTestConfigurationSuccessThreshold | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._checksFailedPercent) {
+    if (this._checksFailedPercent !== undefined) {
       hasAnyValues = true;
       internalValueResult.checksFailedPercent = this._checksFailedPercent;
     }
-    if (this._roundTripTimeMs) {
+    if (this._roundTripTimeMs !== undefined) {
       hasAnyValues = true;
       internalValueResult.roundTripTimeMs = this._roundTripTimeMs;
     }
@@ -893,15 +893,15 @@ export class NetworkConnectionMonitorTestConfigurationTcpConfigurationOutputRefe
   public get internalValue(): NetworkConnectionMonitorTestConfigurationTcpConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._destinationPortBehavior) {
+    if (this._destinationPortBehavior !== undefined) {
       hasAnyValues = true;
       internalValueResult.destinationPortBehavior = this._destinationPortBehavior;
     }
-    if (this._port) {
+    if (this._port !== undefined) {
       hasAnyValues = true;
       internalValueResult.port = this._port;
     }
-    if (this._traceRouteEnabled) {
+    if (this._traceRouteEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.traceRouteEnabled = this._traceRouteEnabled;
     }
@@ -1112,19 +1112,19 @@ export class NetworkConnectionMonitorTimeoutsOutputReference extends cdktf.Compl
   public get internalValue(): NetworkConnectionMonitorTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

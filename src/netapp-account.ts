@@ -93,27 +93,27 @@ export class NetappAccountActiveDirectoryOutputReference extends cdktf.ComplexOb
   public get internalValue(): NetappAccountActiveDirectory | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dnsServers) {
+    if (this._dnsServers !== undefined) {
       hasAnyValues = true;
       internalValueResult.dnsServers = this._dnsServers;
     }
-    if (this._domain) {
+    if (this._domain !== undefined) {
       hasAnyValues = true;
       internalValueResult.domain = this._domain;
     }
-    if (this._organizationalUnit) {
+    if (this._organizationalUnit !== undefined) {
       hasAnyValues = true;
       internalValueResult.organizationalUnit = this._organizationalUnit;
     }
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._smbServerName) {
+    if (this._smbServerName !== undefined) {
       hasAnyValues = true;
       internalValueResult.smbServerName = this._smbServerName;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
@@ -269,19 +269,19 @@ export class NetappAccountTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): NetappAccountTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

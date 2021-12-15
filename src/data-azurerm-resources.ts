@@ -90,7 +90,7 @@ export class DataAzurermResourcesTimeoutsOutputReference extends cdktf.ComplexOb
   public get internalValue(): DataAzurermResourcesTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

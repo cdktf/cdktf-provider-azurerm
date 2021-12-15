@@ -119,11 +119,11 @@ export class EventgridTopicIdentityOutputReference extends cdktf.ComplexObject {
   public get internalValue(): EventgridTopicIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityIds) {
+    if (this._identityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityIds = this._identityIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -214,15 +214,15 @@ export class EventgridTopicInputMappingDefaultValuesOutputReference extends cdkt
   public get internalValue(): EventgridTopicInputMappingDefaultValues | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dataVersion) {
+    if (this._dataVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.dataVersion = this._dataVersion;
     }
-    if (this._eventType) {
+    if (this._eventType !== undefined) {
       hasAnyValues = true;
       internalValueResult.eventType = this._eventType;
     }
-    if (this._subject) {
+    if (this._subject !== undefined) {
       hasAnyValues = true;
       internalValueResult.subject = this._subject;
     }
@@ -349,27 +349,27 @@ export class EventgridTopicInputMappingFieldsOutputReference extends cdktf.Compl
   public get internalValue(): EventgridTopicInputMappingFields | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dataVersion) {
+    if (this._dataVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.dataVersion = this._dataVersion;
     }
-    if (this._eventTime) {
+    if (this._eventTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.eventTime = this._eventTime;
     }
-    if (this._eventType) {
+    if (this._eventType !== undefined) {
       hasAnyValues = true;
       internalValueResult.eventType = this._eventType;
     }
-    if (this._id) {
+    if (this._id !== undefined) {
       hasAnyValues = true;
       internalValueResult.id = this._id;
     }
-    if (this._subject) {
+    if (this._subject !== undefined) {
       hasAnyValues = true;
       internalValueResult.subject = this._subject;
     }
-    if (this._topic) {
+    if (this._topic !== undefined) {
       hasAnyValues = true;
       internalValueResult.topic = this._topic;
     }
@@ -540,19 +540,19 @@ export class EventgridTopicTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): EventgridTopicTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

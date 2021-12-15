@@ -170,15 +170,15 @@ export class ServiceFabricClusterAzureActiveDirectoryOutputReference extends cdk
   public get internalValue(): ServiceFabricClusterAzureActiveDirectory | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clientApplicationId) {
+    if (this._clientApplicationId !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientApplicationId = this._clientApplicationId;
     }
-    if (this._clusterApplicationId) {
+    if (this._clusterApplicationId !== undefined) {
       hasAnyValues = true;
       internalValueResult.clusterApplicationId = this._clusterApplicationId;
     }
-    if (this._tenantId) {
+    if (this._tenantId !== undefined) {
       hasAnyValues = true;
       internalValueResult.tenantId = this._tenantId;
     }
@@ -281,15 +281,15 @@ export class ServiceFabricClusterCertificateOutputReference extends cdktf.Comple
   public get internalValue(): ServiceFabricClusterCertificate | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._thumbprint) {
+    if (this._thumbprint !== undefined) {
       hasAnyValues = true;
       internalValueResult.thumbprint = this._thumbprint;
     }
-    if (this._thumbprintSecondary) {
+    if (this._thumbprintSecondary !== undefined) {
       hasAnyValues = true;
       internalValueResult.thumbprintSecondary = this._thumbprintSecondary;
     }
-    if (this._x509StoreName) {
+    if (this._x509StoreName !== undefined) {
       hasAnyValues = true;
       internalValueResult.x509StoreName = this._x509StoreName;
     }
@@ -414,11 +414,11 @@ export class ServiceFabricClusterCertificateCommonNamesOutputReference extends c
   public get internalValue(): ServiceFabricClusterCertificateCommonNames | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._x509StoreName) {
+    if (this._x509StoreName !== undefined) {
       hasAnyValues = true;
       internalValueResult.x509StoreName = this._x509StoreName;
     }
-    if (this._commonNames) {
+    if (this._commonNames !== undefined) {
       hasAnyValues = true;
       internalValueResult.commonNames = this._commonNames;
     }
@@ -566,23 +566,23 @@ export class ServiceFabricClusterDiagnosticsConfigOutputReference extends cdktf.
   public get internalValue(): ServiceFabricClusterDiagnosticsConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._blobEndpoint) {
+    if (this._blobEndpoint !== undefined) {
       hasAnyValues = true;
       internalValueResult.blobEndpoint = this._blobEndpoint;
     }
-    if (this._protectedAccountKeyName) {
+    if (this._protectedAccountKeyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.protectedAccountKeyName = this._protectedAccountKeyName;
     }
-    if (this._queueEndpoint) {
+    if (this._queueEndpoint !== undefined) {
       hasAnyValues = true;
       internalValueResult.queueEndpoint = this._queueEndpoint;
     }
-    if (this._storageAccountName) {
+    if (this._storageAccountName !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageAccountName = this._storageAccountName;
     }
-    if (this._tableEndpoint) {
+    if (this._tableEndpoint !== undefined) {
       hasAnyValues = true;
       internalValueResult.tableEndpoint = this._tableEndpoint;
     }
@@ -732,11 +732,11 @@ export class ServiceFabricClusterNodeTypeApplicationPortsOutputReference extends
   public get internalValue(): ServiceFabricClusterNodeTypeApplicationPorts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._endPort) {
+    if (this._endPort !== undefined) {
       hasAnyValues = true;
       internalValueResult.endPort = this._endPort;
     }
-    if (this._startPort) {
+    if (this._startPort !== undefined) {
       hasAnyValues = true;
       internalValueResult.startPort = this._startPort;
     }
@@ -819,11 +819,11 @@ export class ServiceFabricClusterNodeTypeEphemeralPortsOutputReference extends c
   public get internalValue(): ServiceFabricClusterNodeTypeEphemeralPorts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._endPort) {
+    if (this._endPort !== undefined) {
       hasAnyValues = true;
       internalValueResult.endPort = this._endPort;
     }
-    if (this._startPort) {
+    if (this._startPort !== undefined) {
       hasAnyValues = true;
       internalValueResult.startPort = this._startPort;
     }
@@ -992,15 +992,15 @@ export class ServiceFabricClusterReverseProxyCertificateOutputReference extends 
   public get internalValue(): ServiceFabricClusterReverseProxyCertificate | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._thumbprint) {
+    if (this._thumbprint !== undefined) {
       hasAnyValues = true;
       internalValueResult.thumbprint = this._thumbprint;
     }
-    if (this._thumbprintSecondary) {
+    if (this._thumbprintSecondary !== undefined) {
       hasAnyValues = true;
       internalValueResult.thumbprintSecondary = this._thumbprintSecondary;
     }
-    if (this._x509StoreName) {
+    if (this._x509StoreName !== undefined) {
       hasAnyValues = true;
       internalValueResult.x509StoreName = this._x509StoreName;
     }
@@ -1125,11 +1125,11 @@ export class ServiceFabricClusterReverseProxyCertificateCommonNamesOutputReferen
   public get internalValue(): ServiceFabricClusterReverseProxyCertificateCommonNames | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._x509StoreName) {
+    if (this._x509StoreName !== undefined) {
       hasAnyValues = true;
       internalValueResult.x509StoreName = this._x509StoreName;
     }
-    if (this._commonNames) {
+    if (this._commonNames !== undefined) {
       hasAnyValues = true;
       internalValueResult.commonNames = this._commonNames;
     }
@@ -1223,19 +1223,19 @@ export class ServiceFabricClusterTimeoutsOutputReference extends cdktf.ComplexOb
   public get internalValue(): ServiceFabricClusterTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -1365,15 +1365,15 @@ export class ServiceFabricClusterUpgradePolicyDeltaHealthPolicyOutputReference e
   public get internalValue(): ServiceFabricClusterUpgradePolicyDeltaHealthPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxDeltaUnhealthyApplicationsPercent) {
+    if (this._maxDeltaUnhealthyApplicationsPercent !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxDeltaUnhealthyApplicationsPercent = this._maxDeltaUnhealthyApplicationsPercent;
     }
-    if (this._maxDeltaUnhealthyNodesPercent) {
+    if (this._maxDeltaUnhealthyNodesPercent !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxDeltaUnhealthyNodesPercent = this._maxDeltaUnhealthyNodesPercent;
     }
-    if (this._maxUpgradeDomainDeltaUnhealthyNodesPercent) {
+    if (this._maxUpgradeDomainDeltaUnhealthyNodesPercent !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxUpgradeDomainDeltaUnhealthyNodesPercent = this._maxUpgradeDomainDeltaUnhealthyNodesPercent;
     }
@@ -1480,11 +1480,11 @@ export class ServiceFabricClusterUpgradePolicyHealthPolicyOutputReference extend
   public get internalValue(): ServiceFabricClusterUpgradePolicyHealthPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxUnhealthyApplicationsPercent) {
+    if (this._maxUnhealthyApplicationsPercent !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxUnhealthyApplicationsPercent = this._maxUnhealthyApplicationsPercent;
     }
-    if (this._maxUnhealthyNodesPercent) {
+    if (this._maxUnhealthyNodesPercent !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxUnhealthyNodesPercent = this._maxUnhealthyNodesPercent;
     }
@@ -1612,39 +1612,39 @@ export class ServiceFabricClusterUpgradePolicyOutputReference extends cdktf.Comp
   public get internalValue(): ServiceFabricClusterUpgradePolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._forceRestartEnabled) {
+    if (this._forceRestartEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.forceRestartEnabled = this._forceRestartEnabled;
     }
-    if (this._healthCheckRetryTimeout) {
+    if (this._healthCheckRetryTimeout !== undefined) {
       hasAnyValues = true;
       internalValueResult.healthCheckRetryTimeout = this._healthCheckRetryTimeout;
     }
-    if (this._healthCheckStableDuration) {
+    if (this._healthCheckStableDuration !== undefined) {
       hasAnyValues = true;
       internalValueResult.healthCheckStableDuration = this._healthCheckStableDuration;
     }
-    if (this._healthCheckWaitDuration) {
+    if (this._healthCheckWaitDuration !== undefined) {
       hasAnyValues = true;
       internalValueResult.healthCheckWaitDuration = this._healthCheckWaitDuration;
     }
-    if (this._upgradeDomainTimeout) {
+    if (this._upgradeDomainTimeout !== undefined) {
       hasAnyValues = true;
       internalValueResult.upgradeDomainTimeout = this._upgradeDomainTimeout;
     }
-    if (this._upgradeReplicaSetCheckTimeout) {
+    if (this._upgradeReplicaSetCheckTimeout !== undefined) {
       hasAnyValues = true;
       internalValueResult.upgradeReplicaSetCheckTimeout = this._upgradeReplicaSetCheckTimeout;
     }
-    if (this._upgradeTimeout) {
+    if (this._upgradeTimeout !== undefined) {
       hasAnyValues = true;
       internalValueResult.upgradeTimeout = this._upgradeTimeout;
     }
-    if (this._deltaHealthPolicy?.internalValue) {
+    if (this._deltaHealthPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.deltaHealthPolicy = this._deltaHealthPolicy?.internalValue;
     }
-    if (this._healthPolicy?.internalValue) {
+    if (this._healthPolicy?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.healthPolicy = this._healthPolicy?.internalValue;
     }

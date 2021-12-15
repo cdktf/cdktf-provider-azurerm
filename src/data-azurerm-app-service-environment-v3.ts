@@ -83,7 +83,7 @@ export class DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference extends c
   public get internalValue(): DataAzurermAppServiceEnvironmentV3Timeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

@@ -95,27 +95,27 @@ export class MediaAssetFilterPresentationTimeRangeOutputReference extends cdktf.
   public get internalValue(): MediaAssetFilterPresentationTimeRange | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._endInUnits) {
+    if (this._endInUnits !== undefined) {
       hasAnyValues = true;
       internalValueResult.endInUnits = this._endInUnits;
     }
-    if (this._forceEnd) {
+    if (this._forceEnd !== undefined) {
       hasAnyValues = true;
       internalValueResult.forceEnd = this._forceEnd;
     }
-    if (this._liveBackoffInUnits) {
+    if (this._liveBackoffInUnits !== undefined) {
       hasAnyValues = true;
       internalValueResult.liveBackoffInUnits = this._liveBackoffInUnits;
     }
-    if (this._presentationWindowInUnits) {
+    if (this._presentationWindowInUnits !== undefined) {
       hasAnyValues = true;
       internalValueResult.presentationWindowInUnits = this._presentationWindowInUnits;
     }
-    if (this._startInUnits) {
+    if (this._startInUnits !== undefined) {
       hasAnyValues = true;
       internalValueResult.startInUnits = this._startInUnits;
     }
-    if (this._unitTimescaleInMiliseconds) {
+    if (this._unitTimescaleInMiliseconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.unitTimescaleInMiliseconds = this._unitTimescaleInMiliseconds;
     }
@@ -286,19 +286,19 @@ export class MediaAssetFilterTimeoutsOutputReference extends cdktf.ComplexObject
   public get internalValue(): MediaAssetFilterTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

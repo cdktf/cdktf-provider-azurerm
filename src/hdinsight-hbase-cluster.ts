@@ -122,7 +122,7 @@ export class HdinsightHbaseClusterComponentVersionOutputReference extends cdktf.
   public get internalValue(): HdinsightHbaseClusterComponentVersion | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hbase) {
+    if (this._hbase !== undefined) {
       hasAnyValues = true;
       internalValueResult.hbase = this._hbase;
     }
@@ -195,15 +195,15 @@ export class HdinsightHbaseClusterGatewayOutputReference extends cdktf.ComplexOb
   public get internalValue(): HdinsightHbaseClusterGateway | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
@@ -314,19 +314,19 @@ export class HdinsightHbaseClusterMetastoresAmbariOutputReference extends cdktf.
   public get internalValue(): HdinsightHbaseClusterMetastoresAmbari | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._databaseName) {
+    if (this._databaseName !== undefined) {
       hasAnyValues = true;
       internalValueResult.databaseName = this._databaseName;
     }
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._server) {
+    if (this._server !== undefined) {
       hasAnyValues = true;
       internalValueResult.server = this._server;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
@@ -449,19 +449,19 @@ export class HdinsightHbaseClusterMetastoresHiveOutputReference extends cdktf.Co
   public get internalValue(): HdinsightHbaseClusterMetastoresHive | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._databaseName) {
+    if (this._databaseName !== undefined) {
       hasAnyValues = true;
       internalValueResult.databaseName = this._databaseName;
     }
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._server) {
+    if (this._server !== undefined) {
       hasAnyValues = true;
       internalValueResult.server = this._server;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
@@ -584,19 +584,19 @@ export class HdinsightHbaseClusterMetastoresOozieOutputReference extends cdktf.C
   public get internalValue(): HdinsightHbaseClusterMetastoresOozie | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._databaseName) {
+    if (this._databaseName !== undefined) {
       hasAnyValues = true;
       internalValueResult.databaseName = this._databaseName;
     }
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._server) {
+    if (this._server !== undefined) {
       hasAnyValues = true;
       internalValueResult.server = this._server;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
@@ -720,15 +720,15 @@ export class HdinsightHbaseClusterMetastoresOutputReference extends cdktf.Comple
   public get internalValue(): HdinsightHbaseClusterMetastores | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._ambari?.internalValue) {
+    if (this._ambari?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.ambari = this._ambari?.internalValue;
     }
-    if (this._hive?.internalValue) {
+    if (this._hive?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.hive = this._hive?.internalValue;
     }
-    if (this._oozie?.internalValue) {
+    if (this._oozie?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.oozie = this._oozie?.internalValue;
     }
@@ -835,11 +835,11 @@ export class HdinsightHbaseClusterMonitorOutputReference extends cdktf.ComplexOb
   public get internalValue(): HdinsightHbaseClusterMonitor | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._logAnalyticsWorkspaceId) {
+    if (this._logAnalyticsWorkspaceId !== undefined) {
       hasAnyValues = true;
       internalValueResult.logAnalyticsWorkspaceId = this._logAnalyticsWorkspaceId;
     }
-    if (this._primaryKey) {
+    if (this._primaryKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.primaryKey = this._primaryKey;
     }
@@ -942,27 +942,27 @@ export class HdinsightHbaseClusterRolesHeadNodeOutputReference extends cdktf.Com
   public get internalValue(): HdinsightHbaseClusterRolesHeadNode | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._sshKeys) {
+    if (this._sshKeys !== undefined) {
       hasAnyValues = true;
       internalValueResult.sshKeys = this._sshKeys;
     }
-    if (this._subnetId) {
+    if (this._subnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetId = this._subnetId;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
-    if (this._virtualNetworkId) {
+    if (this._virtualNetworkId !== undefined) {
       hasAnyValues = true;
       internalValueResult.virtualNetworkId = this._virtualNetworkId;
     }
-    if (this._vmSize) {
+    if (this._vmSize !== undefined) {
       hasAnyValues = true;
       internalValueResult.vmSize = this._vmSize;
     }
@@ -1146,11 +1146,11 @@ export class HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceOutputRefere
   public get internalValue(): HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrence | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._timezone) {
+    if (this._timezone !== undefined) {
       hasAnyValues = true;
       internalValueResult.timezone = this._timezone;
     }
-    if (this._schedule) {
+    if (this._schedule !== undefined) {
       hasAnyValues = true;
       internalValueResult.schedule = this._schedule;
     }
@@ -1231,7 +1231,7 @@ export class HdinsightHbaseClusterRolesWorkerNodeAutoscaleOutputReference extend
   public get internalValue(): HdinsightHbaseClusterRolesWorkerNodeAutoscale | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._recurrence?.internalValue) {
+    if (this._recurrence?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.recurrence = this._recurrence?.internalValue;
     }
@@ -1339,39 +1339,39 @@ export class HdinsightHbaseClusterRolesWorkerNodeOutputReference extends cdktf.C
   public get internalValue(): HdinsightHbaseClusterRolesWorkerNode | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._minInstanceCount) {
+    if (this._minInstanceCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.minInstanceCount = this._minInstanceCount;
     }
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._sshKeys) {
+    if (this._sshKeys !== undefined) {
       hasAnyValues = true;
       internalValueResult.sshKeys = this._sshKeys;
     }
-    if (this._subnetId) {
+    if (this._subnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetId = this._subnetId;
     }
-    if (this._targetInstanceCount) {
+    if (this._targetInstanceCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetInstanceCount = this._targetInstanceCount;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
-    if (this._virtualNetworkId) {
+    if (this._virtualNetworkId !== undefined) {
       hasAnyValues = true;
       internalValueResult.virtualNetworkId = this._virtualNetworkId;
     }
-    if (this._vmSize) {
+    if (this._vmSize !== undefined) {
       hasAnyValues = true;
       internalValueResult.vmSize = this._vmSize;
     }
-    if (this._autoscale?.internalValue) {
+    if (this._autoscale?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.autoscale = this._autoscale?.internalValue;
     }
@@ -1597,27 +1597,27 @@ export class HdinsightHbaseClusterRolesZookeeperNodeOutputReference extends cdkt
   public get internalValue(): HdinsightHbaseClusterRolesZookeeperNode | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._sshKeys) {
+    if (this._sshKeys !== undefined) {
       hasAnyValues = true;
       internalValueResult.sshKeys = this._sshKeys;
     }
-    if (this._subnetId) {
+    if (this._subnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetId = this._subnetId;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
-    if (this._virtualNetworkId) {
+    if (this._virtualNetworkId !== undefined) {
       hasAnyValues = true;
       internalValueResult.virtualNetworkId = this._virtualNetworkId;
     }
-    if (this._vmSize) {
+    if (this._vmSize !== undefined) {
       hasAnyValues = true;
       internalValueResult.vmSize = this._vmSize;
     }
@@ -1783,15 +1783,15 @@ export class HdinsightHbaseClusterRolesOutputReference extends cdktf.ComplexObje
   public get internalValue(): HdinsightHbaseClusterRoles | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._headNode?.internalValue) {
+    if (this._headNode?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.headNode = this._headNode?.internalValue;
     }
-    if (this._workerNode?.internalValue) {
+    if (this._workerNode?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.workerNode = this._workerNode?.internalValue;
     }
-    if (this._zookeeperNode?.internalValue) {
+    if (this._zookeeperNode?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.zookeeperNode = this._zookeeperNode?.internalValue;
     }
@@ -1914,31 +1914,31 @@ export class HdinsightHbaseClusterSecurityProfileOutputReference extends cdktf.C
   public get internalValue(): HdinsightHbaseClusterSecurityProfile | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._aaddsResourceId) {
+    if (this._aaddsResourceId !== undefined) {
       hasAnyValues = true;
       internalValueResult.aaddsResourceId = this._aaddsResourceId;
     }
-    if (this._clusterUsersGroupDns) {
+    if (this._clusterUsersGroupDns !== undefined) {
       hasAnyValues = true;
       internalValueResult.clusterUsersGroupDns = this._clusterUsersGroupDns;
     }
-    if (this._domainName) {
+    if (this._domainName !== undefined) {
       hasAnyValues = true;
       internalValueResult.domainName = this._domainName;
     }
-    if (this._domainUserPassword) {
+    if (this._domainUserPassword !== undefined) {
       hasAnyValues = true;
       internalValueResult.domainUserPassword = this._domainUserPassword;
     }
-    if (this._domainUsername) {
+    if (this._domainUsername !== undefined) {
       hasAnyValues = true;
       internalValueResult.domainUsername = this._domainUsername;
     }
-    if (this._ldapsUrls) {
+    if (this._ldapsUrls !== undefined) {
       hasAnyValues = true;
       internalValueResult.ldapsUrls = this._ldapsUrls;
     }
-    if (this._msiResourceId) {
+    if (this._msiResourceId !== undefined) {
       hasAnyValues = true;
       internalValueResult.msiResourceId = this._msiResourceId;
     }
@@ -2136,19 +2136,19 @@ export class HdinsightHbaseClusterStorageAccountGen2OutputReference extends cdkt
   public get internalValue(): HdinsightHbaseClusterStorageAccountGen2 | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._filesystemId) {
+    if (this._filesystemId !== undefined) {
       hasAnyValues = true;
       internalValueResult.filesystemId = this._filesystemId;
     }
-    if (this._isDefault) {
+    if (this._isDefault !== undefined) {
       hasAnyValues = true;
       internalValueResult.isDefault = this._isDefault;
     }
-    if (this._managedIdentityResourceId) {
+    if (this._managedIdentityResourceId !== undefined) {
       hasAnyValues = true;
       internalValueResult.managedIdentityResourceId = this._managedIdentityResourceId;
     }
-    if (this._storageResourceId) {
+    if (this._storageResourceId !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageResourceId = this._storageResourceId;
     }
@@ -2271,19 +2271,19 @@ export class HdinsightHbaseClusterTimeoutsOutputReference extends cdktf.ComplexO
   public get internalValue(): HdinsightHbaseClusterTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -143,11 +143,11 @@ export class ContainerGroupContainerGpuOutputReference extends cdktf.ComplexObje
   public get internalValue(): ContainerGroupContainerGpu | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._count) {
+    if (this._count !== undefined) {
       hasAnyValues = true;
       internalValueResult.count = this._count;
     }
-    if (this._sku) {
+    if (this._sku !== undefined) {
       hasAnyValues = true;
       internalValueResult.sku = this._sku;
     }
@@ -290,31 +290,31 @@ export class ContainerGroupContainerLivenessProbeOutputReference extends cdktf.C
   public get internalValue(): ContainerGroupContainerLivenessProbe | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._exec) {
+    if (this._exec !== undefined) {
       hasAnyValues = true;
       internalValueResult.exec = this._exec;
     }
-    if (this._failureThreshold) {
+    if (this._failureThreshold !== undefined) {
       hasAnyValues = true;
       internalValueResult.failureThreshold = this._failureThreshold;
     }
-    if (this._initialDelaySeconds) {
+    if (this._initialDelaySeconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.initialDelaySeconds = this._initialDelaySeconds;
     }
-    if (this._periodSeconds) {
+    if (this._periodSeconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.periodSeconds = this._periodSeconds;
     }
-    if (this._successThreshold) {
+    if (this._successThreshold !== undefined) {
       hasAnyValues = true;
       internalValueResult.successThreshold = this._successThreshold;
     }
-    if (this._timeoutSeconds) {
+    if (this._timeoutSeconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeoutSeconds = this._timeoutSeconds;
     }
-    if (this._httpGet) {
+    if (this._httpGet !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpGet = this._httpGet;
     }
@@ -570,31 +570,31 @@ export class ContainerGroupContainerReadinessProbeOutputReference extends cdktf.
   public get internalValue(): ContainerGroupContainerReadinessProbe | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._exec) {
+    if (this._exec !== undefined) {
       hasAnyValues = true;
       internalValueResult.exec = this._exec;
     }
-    if (this._failureThreshold) {
+    if (this._failureThreshold !== undefined) {
       hasAnyValues = true;
       internalValueResult.failureThreshold = this._failureThreshold;
     }
-    if (this._initialDelaySeconds) {
+    if (this._initialDelaySeconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.initialDelaySeconds = this._initialDelaySeconds;
     }
-    if (this._periodSeconds) {
+    if (this._periodSeconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.periodSeconds = this._periodSeconds;
     }
-    if (this._successThreshold) {
+    if (this._successThreshold !== undefined) {
       hasAnyValues = true;
       internalValueResult.successThreshold = this._successThreshold;
     }
-    if (this._timeoutSeconds) {
+    if (this._timeoutSeconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeoutSeconds = this._timeoutSeconds;
     }
-    if (this._httpGet) {
+    if (this._httpGet !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpGet = this._httpGet;
     }
@@ -779,15 +779,15 @@ export class ContainerGroupContainerVolumeGitRepoOutputReference extends cdktf.C
   public get internalValue(): ContainerGroupContainerVolumeGitRepo | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._directory) {
+    if (this._directory !== undefined) {
       hasAnyValues = true;
       internalValueResult.directory = this._directory;
     }
-    if (this._revision) {
+    if (this._revision !== undefined) {
       hasAnyValues = true;
       internalValueResult.revision = this._revision;
     }
-    if (this._url) {
+    if (this._url !== undefined) {
       hasAnyValues = true;
       internalValueResult.url = this._url;
     }
@@ -1042,19 +1042,19 @@ export class ContainerGroupDiagnosticsLogAnalyticsOutputReference extends cdktf.
   public get internalValue(): ContainerGroupDiagnosticsLogAnalytics | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._logType) {
+    if (this._logType !== undefined) {
       hasAnyValues = true;
       internalValueResult.logType = this._logType;
     }
-    if (this._metadata) {
+    if (this._metadata !== undefined) {
       hasAnyValues = true;
       internalValueResult.metadata = this._metadata;
     }
-    if (this._workspaceId) {
+    if (this._workspaceId !== undefined) {
       hasAnyValues = true;
       internalValueResult.workspaceId = this._workspaceId;
     }
-    if (this._workspaceKey) {
+    if (this._workspaceKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.workspaceKey = this._workspaceKey;
     }
@@ -1171,7 +1171,7 @@ export class ContainerGroupDiagnosticsOutputReference extends cdktf.ComplexObjec
   public get internalValue(): ContainerGroupDiagnostics | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._logAnalytics?.internalValue) {
+    if (this._logAnalytics?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.logAnalytics = this._logAnalytics?.internalValue;
     }
@@ -1244,15 +1244,15 @@ export class ContainerGroupDnsConfigOutputReference extends cdktf.ComplexObject 
   public get internalValue(): ContainerGroupDnsConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._nameservers) {
+    if (this._nameservers !== undefined) {
       hasAnyValues = true;
       internalValueResult.nameservers = this._nameservers;
     }
-    if (this._options) {
+    if (this._options !== undefined) {
       hasAnyValues = true;
       internalValueResult.options = this._options;
     }
-    if (this._searchDomains) {
+    if (this._searchDomains !== undefined) {
       hasAnyValues = true;
       internalValueResult.searchDomains = this._searchDomains;
     }
@@ -1356,11 +1356,11 @@ export class ContainerGroupIdentityOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ContainerGroupIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityIds) {
+    if (this._identityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityIds = this._identityIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -1483,19 +1483,19 @@ export class ContainerGroupTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ContainerGroupTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

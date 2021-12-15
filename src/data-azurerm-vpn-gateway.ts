@@ -127,7 +127,7 @@ export class DataAzurermVpnGatewayTimeoutsOutputReference extends cdktf.ComplexO
   public get internalValue(): DataAzurermVpnGatewayTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

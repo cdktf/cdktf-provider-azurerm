@@ -139,19 +139,19 @@ export class MariadbServerStorageProfileOutputReference extends cdktf.ComplexObj
   public get internalValue(): MariadbServerStorageProfile | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._autoGrow) {
+    if (this._autoGrow !== undefined) {
       hasAnyValues = true;
       internalValueResult.autoGrow = this._autoGrow;
     }
-    if (this._backupRetentionDays) {
+    if (this._backupRetentionDays !== undefined) {
       hasAnyValues = true;
       internalValueResult.backupRetentionDays = this._backupRetentionDays;
     }
-    if (this._geoRedundantBackup) {
+    if (this._geoRedundantBackup !== undefined) {
       hasAnyValues = true;
       internalValueResult.geoRedundantBackup = this._geoRedundantBackup;
     }
-    if (this._storageMb) {
+    if (this._storageMb !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageMb = this._storageMb;
     }
@@ -286,19 +286,19 @@ export class MariadbServerTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): MariadbServerTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

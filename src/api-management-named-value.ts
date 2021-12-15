@@ -95,19 +95,19 @@ export class ApiManagementNamedValueTimeoutsOutputReference extends cdktf.Comple
   public get internalValue(): ApiManagementNamedValueTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -232,11 +232,11 @@ export class ApiManagementNamedValueValueFromKeyVaultOutputReference extends cdk
   public get internalValue(): ApiManagementNamedValueValueFromKeyVault | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityClientId) {
+    if (this._identityClientId !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityClientId = this._identityClientId;
     }
-    if (this._secretId) {
+    if (this._secretId !== undefined) {
       hasAnyValues = true;
       internalValueResult.secretId = this._secretId;
     }

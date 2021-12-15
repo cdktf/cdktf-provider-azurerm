@@ -131,19 +131,19 @@ export class DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference 
   public get internalValue(): DataFactoryLinkedServiceAzureDatabricksInstancePool | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clusterVersion) {
+    if (this._clusterVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.clusterVersion = this._clusterVersion;
     }
-    if (this._instancePoolId) {
+    if (this._instancePoolId !== undefined) {
       hasAnyValues = true;
       internalValueResult.instancePoolId = this._instancePoolId;
     }
-    if (this._maxNumberOfWorkers) {
+    if (this._maxNumberOfWorkers !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxNumberOfWorkers = this._maxNumberOfWorkers;
     }
-    if (this._minNumberOfWorkers) {
+    if (this._minNumberOfWorkers !== undefined) {
       hasAnyValues = true;
       internalValueResult.minNumberOfWorkers = this._minNumberOfWorkers;
     }
@@ -262,11 +262,11 @@ export class DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputRefere
   public get internalValue(): DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._linkedServiceName) {
+    if (this._linkedServiceName !== undefined) {
       hasAnyValues = true;
       internalValueResult.linkedServiceName = this._linkedServiceName;
     }
-    if (this._secretName) {
+    if (this._secretName !== undefined) {
       hasAnyValues = true;
       internalValueResult.secretName = this._secretName;
     }
@@ -389,43 +389,43 @@ export class DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputRefere
   public get internalValue(): DataFactoryLinkedServiceAzureDatabricksNewClusterConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clusterVersion) {
+    if (this._clusterVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.clusterVersion = this._clusterVersion;
     }
-    if (this._customTags) {
+    if (this._customTags !== undefined) {
       hasAnyValues = true;
       internalValueResult.customTags = this._customTags;
     }
-    if (this._driverNodeType) {
+    if (this._driverNodeType !== undefined) {
       hasAnyValues = true;
       internalValueResult.driverNodeType = this._driverNodeType;
     }
-    if (this._initScripts) {
+    if (this._initScripts !== undefined) {
       hasAnyValues = true;
       internalValueResult.initScripts = this._initScripts;
     }
-    if (this._logDestination) {
+    if (this._logDestination !== undefined) {
       hasAnyValues = true;
       internalValueResult.logDestination = this._logDestination;
     }
-    if (this._maxNumberOfWorkers) {
+    if (this._maxNumberOfWorkers !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxNumberOfWorkers = this._maxNumberOfWorkers;
     }
-    if (this._minNumberOfWorkers) {
+    if (this._minNumberOfWorkers !== undefined) {
       hasAnyValues = true;
       internalValueResult.minNumberOfWorkers = this._minNumberOfWorkers;
     }
-    if (this._nodeType) {
+    if (this._nodeType !== undefined) {
       hasAnyValues = true;
       internalValueResult.nodeType = this._nodeType;
     }
-    if (this._sparkConfig) {
+    if (this._sparkConfig !== undefined) {
       hasAnyValues = true;
       internalValueResult.sparkConfig = this._sparkConfig;
     }
-    if (this._sparkEnvironmentVariables) {
+    if (this._sparkEnvironmentVariables !== undefined) {
       hasAnyValues = true;
       internalValueResult.sparkEnvironmentVariables = this._sparkEnvironmentVariables;
     }
@@ -665,19 +665,19 @@ export class DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference exte
   public get internalValue(): DataFactoryLinkedServiceAzureDatabricksTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

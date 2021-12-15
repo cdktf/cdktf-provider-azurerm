@@ -272,19 +272,19 @@ export class IothubFallbackRouteOutputReference extends cdktf.ComplexObject {
   public get internalValue(): IothubFallbackRoute | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._condition) {
+    if (this._condition !== undefined) {
       hasAnyValues = true;
       internalValueResult.condition = this._condition;
     }
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._endpointNames) {
+    if (this._endpointNames !== undefined) {
       hasAnyValues = true;
       internalValueResult.endpointNames = this._endpointNames;
     }
-    if (this._source) {
+    if (this._source !== undefined) {
       hasAnyValues = true;
       internalValueResult.source = this._source;
     }
@@ -434,31 +434,31 @@ export class IothubFileUploadOutputReference extends cdktf.ComplexObject {
   public get internalValue(): IothubFileUpload | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._connectionString) {
+    if (this._connectionString !== undefined) {
       hasAnyValues = true;
       internalValueResult.connectionString = this._connectionString;
     }
-    if (this._containerName) {
+    if (this._containerName !== undefined) {
       hasAnyValues = true;
       internalValueResult.containerName = this._containerName;
     }
-    if (this._defaultTtl) {
+    if (this._defaultTtl !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultTtl = this._defaultTtl;
     }
-    if (this._lockDuration) {
+    if (this._lockDuration !== undefined) {
       hasAnyValues = true;
       internalValueResult.lockDuration = this._lockDuration;
     }
-    if (this._maxDeliveryCount) {
+    if (this._maxDeliveryCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxDeliveryCount = this._maxDeliveryCount;
     }
-    if (this._notifications) {
+    if (this._notifications !== undefined) {
       hasAnyValues = true;
       internalValueResult.notifications = this._notifications;
     }
-    if (this._sasTtl) {
+    if (this._sasTtl !== undefined) {
       hasAnyValues = true;
       internalValueResult.sasTtl = this._sasTtl;
     }
@@ -658,11 +658,11 @@ export class IothubSkuOutputReference extends cdktf.ComplexObject {
   public get internalValue(): IothubSku | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._capacity) {
+    if (this._capacity !== undefined) {
       hasAnyValues = true;
       internalValueResult.capacity = this._capacity;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -755,19 +755,19 @@ export class IothubTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): IothubTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

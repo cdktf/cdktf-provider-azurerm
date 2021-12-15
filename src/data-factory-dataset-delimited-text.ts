@@ -152,15 +152,15 @@ export class DataFactoryDatasetDelimitedTextAzureBlobFsLocationOutputReference e
   public get internalValue(): DataFactoryDatasetDelimitedTextAzureBlobFsLocation | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._fileSystem) {
+    if (this._fileSystem !== undefined) {
       hasAnyValues = true;
       internalValueResult.fileSystem = this._fileSystem;
     }
-    if (this._filename) {
+    if (this._filename !== undefined) {
       hasAnyValues = true;
       internalValueResult.filename = this._filename;
     }
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
@@ -279,23 +279,23 @@ export class DataFactoryDatasetDelimitedTextAzureBlobStorageLocationOutputRefere
   public get internalValue(): DataFactoryDatasetDelimitedTextAzureBlobStorageLocation | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._container) {
+    if (this._container !== undefined) {
       hasAnyValues = true;
       internalValueResult.container = this._container;
     }
-    if (this._dynamicFilenameEnabled) {
+    if (this._dynamicFilenameEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.dynamicFilenameEnabled = this._dynamicFilenameEnabled;
     }
-    if (this._dynamicPathEnabled) {
+    if (this._dynamicPathEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.dynamicPathEnabled = this._dynamicPathEnabled;
     }
-    if (this._filename) {
+    if (this._filename !== undefined) {
       hasAnyValues = true;
       internalValueResult.filename = this._filename;
     }
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
@@ -450,23 +450,23 @@ export class DataFactoryDatasetDelimitedTextHttpServerLocationOutputReference ex
   public get internalValue(): DataFactoryDatasetDelimitedTextHttpServerLocation | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dynamicFilenameEnabled) {
+    if (this._dynamicFilenameEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.dynamicFilenameEnabled = this._dynamicFilenameEnabled;
     }
-    if (this._dynamicPathEnabled) {
+    if (this._dynamicPathEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.dynamicPathEnabled = this._dynamicPathEnabled;
     }
-    if (this._filename) {
+    if (this._filename !== undefined) {
       hasAnyValues = true;
       internalValueResult.filename = this._filename;
     }
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
-    if (this._relativeUrl) {
+    if (this._relativeUrl !== undefined) {
       hasAnyValues = true;
       internalValueResult.relativeUrl = this._relativeUrl;
     }
@@ -637,19 +637,19 @@ export class DataFactoryDatasetDelimitedTextTimeoutsOutputReference extends cdkt
   public get internalValue(): DataFactoryDatasetDelimitedTextTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

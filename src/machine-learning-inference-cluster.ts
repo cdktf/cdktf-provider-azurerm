@@ -91,11 +91,11 @@ export class MachineLearningInferenceClusterIdentityOutputReference extends cdkt
   public get internalValue(): MachineLearningInferenceClusterIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityIds) {
+    if (this._identityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityIds = this._identityIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -196,23 +196,23 @@ export class MachineLearningInferenceClusterSslOutputReference extends cdktf.Com
   public get internalValue(): MachineLearningInferenceClusterSsl | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cert) {
+    if (this._cert !== undefined) {
       hasAnyValues = true;
       internalValueResult.cert = this._cert;
     }
-    if (this._cname) {
+    if (this._cname !== undefined) {
       hasAnyValues = true;
       internalValueResult.cname = this._cname;
     }
-    if (this._key) {
+    if (this._key !== undefined) {
       hasAnyValues = true;
       internalValueResult.key = this._key;
     }
-    if (this._leafDomainLabel) {
+    if (this._leafDomainLabel !== undefined) {
       hasAnyValues = true;
       internalValueResult.leafDomainLabel = this._leafDomainLabel;
     }
-    if (this._overwriteExistingDomain) {
+    if (this._overwriteExistingDomain !== undefined) {
       hasAnyValues = true;
       internalValueResult.overwriteExistingDomain = this._overwriteExistingDomain;
     }
@@ -365,19 +365,19 @@ export class MachineLearningInferenceClusterTimeoutsOutputReference extends cdkt
   public get internalValue(): MachineLearningInferenceClusterTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -89,11 +89,11 @@ export class MonitorActionRuleSuppressionConditionAlertContextOutputReference ex
   public get internalValue(): MonitorActionRuleSuppressionConditionAlertContext | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -176,11 +176,11 @@ export class MonitorActionRuleSuppressionConditionAlertRuleIdOutputReference ext
   public get internalValue(): MonitorActionRuleSuppressionConditionAlertRuleId | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -263,11 +263,11 @@ export class MonitorActionRuleSuppressionConditionDescriptionOutputReference ext
   public get internalValue(): MonitorActionRuleSuppressionConditionDescription | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -350,11 +350,11 @@ export class MonitorActionRuleSuppressionConditionMonitorOutputReference extends
   public get internalValue(): MonitorActionRuleSuppressionConditionMonitor | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -437,11 +437,11 @@ export class MonitorActionRuleSuppressionConditionMonitorServiceOutputReference 
   public get internalValue(): MonitorActionRuleSuppressionConditionMonitorService | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -524,11 +524,11 @@ export class MonitorActionRuleSuppressionConditionSeverityOutputReference extend
   public get internalValue(): MonitorActionRuleSuppressionConditionSeverity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -611,11 +611,11 @@ export class MonitorActionRuleSuppressionConditionTargetResourceTypeOutputRefere
   public get internalValue(): MonitorActionRuleSuppressionConditionTargetResourceType | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._values) {
+    if (this._values !== undefined) {
       hasAnyValues = true;
       internalValueResult.values = this._values;
     }
@@ -737,31 +737,31 @@ export class MonitorActionRuleSuppressionConditionOutputReference extends cdktf.
   public get internalValue(): MonitorActionRuleSuppressionCondition | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._alertContext?.internalValue) {
+    if (this._alertContext?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.alertContext = this._alertContext?.internalValue;
     }
-    if (this._alertRuleId?.internalValue) {
+    if (this._alertRuleId?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.alertRuleId = this._alertRuleId?.internalValue;
     }
-    if (this._description?.internalValue) {
+    if (this._description?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.description = this._description?.internalValue;
     }
-    if (this._monitor?.internalValue) {
+    if (this._monitor?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.monitor = this._monitor?.internalValue;
     }
-    if (this._monitorService?.internalValue) {
+    if (this._monitorService?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.monitorService = this._monitorService?.internalValue;
     }
-    if (this._severity?.internalValue) {
+    if (this._severity?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.severity = this._severity?.internalValue;
     }
-    if (this._targetResourceType?.internalValue) {
+    if (this._targetResourceType?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.targetResourceType = this._targetResourceType?.internalValue;
     }
@@ -940,11 +940,11 @@ export class MonitorActionRuleSuppressionScopeOutputReference extends cdktf.Comp
   public get internalValue(): MonitorActionRuleSuppressionScope | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._resourceIds) {
+    if (this._resourceIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.resourceIds = this._resourceIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -1037,19 +1037,19 @@ export class MonitorActionRuleSuppressionSuppressionScheduleOutputReference exte
   public get internalValue(): MonitorActionRuleSuppressionSuppressionSchedule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._endDateUtc) {
+    if (this._endDateUtc !== undefined) {
       hasAnyValues = true;
       internalValueResult.endDateUtc = this._endDateUtc;
     }
-    if (this._recurrenceMonthly) {
+    if (this._recurrenceMonthly !== undefined) {
       hasAnyValues = true;
       internalValueResult.recurrenceMonthly = this._recurrenceMonthly;
     }
-    if (this._recurrenceWeekly) {
+    if (this._recurrenceWeekly !== undefined) {
       hasAnyValues = true;
       internalValueResult.recurrenceWeekly = this._recurrenceWeekly;
     }
-    if (this._startDateUtc) {
+    if (this._startDateUtc !== undefined) {
       hasAnyValues = true;
       internalValueResult.startDateUtc = this._startDateUtc;
     }
@@ -1171,11 +1171,11 @@ export class MonitorActionRuleSuppressionSuppressionOutputReference extends cdkt
   public get internalValue(): MonitorActionRuleSuppressionSuppression | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._recurrenceType) {
+    if (this._recurrenceType !== undefined) {
       hasAnyValues = true;
       internalValueResult.recurrenceType = this._recurrenceType;
     }
-    if (this._schedule?.internalValue) {
+    if (this._schedule?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.schedule = this._schedule?.internalValue;
     }
@@ -1271,19 +1271,19 @@ export class MonitorActionRuleSuppressionTimeoutsOutputReference extends cdktf.C
   public get internalValue(): MonitorActionRuleSuppressionTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -154,15 +154,15 @@ export class MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCri
   public get internalValue(): MonitorMetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._componentId) {
+    if (this._componentId !== undefined) {
       hasAnyValues = true;
       internalValueResult.componentId = this._componentId;
     }
-    if (this._failedLocationCount) {
+    if (this._failedLocationCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.failedLocationCount = this._failedLocationCount;
     }
-    if (this._webTestId) {
+    if (this._webTestId !== undefined) {
       hasAnyValues = true;
       internalValueResult.webTestId = this._webTestId;
     }
@@ -405,43 +405,43 @@ export class MonitorMetricAlertDynamicCriteriaOutputReference extends cdktf.Comp
   public get internalValue(): MonitorMetricAlertDynamicCriteria | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._aggregation) {
+    if (this._aggregation !== undefined) {
       hasAnyValues = true;
       internalValueResult.aggregation = this._aggregation;
     }
-    if (this._alertSensitivity) {
+    if (this._alertSensitivity !== undefined) {
       hasAnyValues = true;
       internalValueResult.alertSensitivity = this._alertSensitivity;
     }
-    if (this._evaluationFailureCount) {
+    if (this._evaluationFailureCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.evaluationFailureCount = this._evaluationFailureCount;
     }
-    if (this._evaluationTotalCount) {
+    if (this._evaluationTotalCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.evaluationTotalCount = this._evaluationTotalCount;
     }
-    if (this._ignoreDataBefore) {
+    if (this._ignoreDataBefore !== undefined) {
       hasAnyValues = true;
       internalValueResult.ignoreDataBefore = this._ignoreDataBefore;
     }
-    if (this._metricName) {
+    if (this._metricName !== undefined) {
       hasAnyValues = true;
       internalValueResult.metricName = this._metricName;
     }
-    if (this._metricNamespace) {
+    if (this._metricNamespace !== undefined) {
       hasAnyValues = true;
       internalValueResult.metricNamespace = this._metricNamespace;
     }
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._skipMetricValidation) {
+    if (this._skipMetricValidation !== undefined) {
       hasAnyValues = true;
       internalValueResult.skipMetricValidation = this._skipMetricValidation;
     }
-    if (this._dimension) {
+    if (this._dimension !== undefined) {
       hasAnyValues = true;
       internalValueResult.dimension = this._dimension;
     }
@@ -670,19 +670,19 @@ export class MonitorMetricAlertTimeoutsOutputReference extends cdktf.ComplexObje
   public get internalValue(): MonitorMetricAlertTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

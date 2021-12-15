@@ -102,7 +102,7 @@ export class DataAzurermHealthcareServiceTimeoutsOutputReference extends cdktf.C
   public get internalValue(): DataAzurermHealthcareServiceTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

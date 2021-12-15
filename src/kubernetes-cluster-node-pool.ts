@@ -229,43 +229,43 @@ export class KubernetesClusterNodePoolKubeletConfigOutputReference extends cdktf
   public get internalValue(): KubernetesClusterNodePoolKubeletConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedUnsafeSysctls) {
+    if (this._allowedUnsafeSysctls !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedUnsafeSysctls = this._allowedUnsafeSysctls;
     }
-    if (this._containerLogMaxLine) {
+    if (this._containerLogMaxLine !== undefined) {
       hasAnyValues = true;
       internalValueResult.containerLogMaxLine = this._containerLogMaxLine;
     }
-    if (this._containerLogMaxSizeMb) {
+    if (this._containerLogMaxSizeMb !== undefined) {
       hasAnyValues = true;
       internalValueResult.containerLogMaxSizeMb = this._containerLogMaxSizeMb;
     }
-    if (this._cpuCfsQuotaEnabled) {
+    if (this._cpuCfsQuotaEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.cpuCfsQuotaEnabled = this._cpuCfsQuotaEnabled;
     }
-    if (this._cpuCfsQuotaPeriod) {
+    if (this._cpuCfsQuotaPeriod !== undefined) {
       hasAnyValues = true;
       internalValueResult.cpuCfsQuotaPeriod = this._cpuCfsQuotaPeriod;
     }
-    if (this._cpuManagerPolicy) {
+    if (this._cpuManagerPolicy !== undefined) {
       hasAnyValues = true;
       internalValueResult.cpuManagerPolicy = this._cpuManagerPolicy;
     }
-    if (this._imageGcHighThreshold) {
+    if (this._imageGcHighThreshold !== undefined) {
       hasAnyValues = true;
       internalValueResult.imageGcHighThreshold = this._imageGcHighThreshold;
     }
-    if (this._imageGcLowThreshold) {
+    if (this._imageGcLowThreshold !== undefined) {
       hasAnyValues = true;
       internalValueResult.imageGcLowThreshold = this._imageGcLowThreshold;
     }
-    if (this._podMaxPid) {
+    if (this._podMaxPid !== undefined) {
       hasAnyValues = true;
       internalValueResult.podMaxPid = this._podMaxPid;
     }
-    if (this._topologyManagerPolicy) {
+    if (this._topologyManagerPolicy !== undefined) {
       hasAnyValues = true;
       internalValueResult.topologyManagerPolicy = this._topologyManagerPolicy;
     }
@@ -633,119 +633,119 @@ export class KubernetesClusterNodePoolLinuxOsConfigSysctlConfigOutputReference e
   public get internalValue(): KubernetesClusterNodePoolLinuxOsConfigSysctlConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._fsAioMaxNr) {
+    if (this._fsAioMaxNr !== undefined) {
       hasAnyValues = true;
       internalValueResult.fsAioMaxNr = this._fsAioMaxNr;
     }
-    if (this._fsFileMax) {
+    if (this._fsFileMax !== undefined) {
       hasAnyValues = true;
       internalValueResult.fsFileMax = this._fsFileMax;
     }
-    if (this._fsInotifyMaxUserWatches) {
+    if (this._fsInotifyMaxUserWatches !== undefined) {
       hasAnyValues = true;
       internalValueResult.fsInotifyMaxUserWatches = this._fsInotifyMaxUserWatches;
     }
-    if (this._fsNrOpen) {
+    if (this._fsNrOpen !== undefined) {
       hasAnyValues = true;
       internalValueResult.fsNrOpen = this._fsNrOpen;
     }
-    if (this._kernelThreadsMax) {
+    if (this._kernelThreadsMax !== undefined) {
       hasAnyValues = true;
       internalValueResult.kernelThreadsMax = this._kernelThreadsMax;
     }
-    if (this._netCoreNetdevMaxBacklog) {
+    if (this._netCoreNetdevMaxBacklog !== undefined) {
       hasAnyValues = true;
       internalValueResult.netCoreNetdevMaxBacklog = this._netCoreNetdevMaxBacklog;
     }
-    if (this._netCoreOptmemMax) {
+    if (this._netCoreOptmemMax !== undefined) {
       hasAnyValues = true;
       internalValueResult.netCoreOptmemMax = this._netCoreOptmemMax;
     }
-    if (this._netCoreRmemDefault) {
+    if (this._netCoreRmemDefault !== undefined) {
       hasAnyValues = true;
       internalValueResult.netCoreRmemDefault = this._netCoreRmemDefault;
     }
-    if (this._netCoreRmemMax) {
+    if (this._netCoreRmemMax !== undefined) {
       hasAnyValues = true;
       internalValueResult.netCoreRmemMax = this._netCoreRmemMax;
     }
-    if (this._netCoreSomaxconn) {
+    if (this._netCoreSomaxconn !== undefined) {
       hasAnyValues = true;
       internalValueResult.netCoreSomaxconn = this._netCoreSomaxconn;
     }
-    if (this._netCoreWmemDefault) {
+    if (this._netCoreWmemDefault !== undefined) {
       hasAnyValues = true;
       internalValueResult.netCoreWmemDefault = this._netCoreWmemDefault;
     }
-    if (this._netCoreWmemMax) {
+    if (this._netCoreWmemMax !== undefined) {
       hasAnyValues = true;
       internalValueResult.netCoreWmemMax = this._netCoreWmemMax;
     }
-    if (this._netIpv4IpLocalPortRangeMax) {
+    if (this._netIpv4IpLocalPortRangeMax !== undefined) {
       hasAnyValues = true;
       internalValueResult.netIpv4IpLocalPortRangeMax = this._netIpv4IpLocalPortRangeMax;
     }
-    if (this._netIpv4IpLocalPortRangeMin) {
+    if (this._netIpv4IpLocalPortRangeMin !== undefined) {
       hasAnyValues = true;
       internalValueResult.netIpv4IpLocalPortRangeMin = this._netIpv4IpLocalPortRangeMin;
     }
-    if (this._netIpv4NeighDefaultGcThresh1) {
+    if (this._netIpv4NeighDefaultGcThresh1 !== undefined) {
       hasAnyValues = true;
       internalValueResult.netIpv4NeighDefaultGcThresh1 = this._netIpv4NeighDefaultGcThresh1;
     }
-    if (this._netIpv4NeighDefaultGcThresh2) {
+    if (this._netIpv4NeighDefaultGcThresh2 !== undefined) {
       hasAnyValues = true;
       internalValueResult.netIpv4NeighDefaultGcThresh2 = this._netIpv4NeighDefaultGcThresh2;
     }
-    if (this._netIpv4NeighDefaultGcThresh3) {
+    if (this._netIpv4NeighDefaultGcThresh3 !== undefined) {
       hasAnyValues = true;
       internalValueResult.netIpv4NeighDefaultGcThresh3 = this._netIpv4NeighDefaultGcThresh3;
     }
-    if (this._netIpv4TcpFinTimeout) {
+    if (this._netIpv4TcpFinTimeout !== undefined) {
       hasAnyValues = true;
       internalValueResult.netIpv4TcpFinTimeout = this._netIpv4TcpFinTimeout;
     }
-    if (this._netIpv4TcpKeepaliveIntvl) {
+    if (this._netIpv4TcpKeepaliveIntvl !== undefined) {
       hasAnyValues = true;
       internalValueResult.netIpv4TcpKeepaliveIntvl = this._netIpv4TcpKeepaliveIntvl;
     }
-    if (this._netIpv4TcpKeepaliveProbes) {
+    if (this._netIpv4TcpKeepaliveProbes !== undefined) {
       hasAnyValues = true;
       internalValueResult.netIpv4TcpKeepaliveProbes = this._netIpv4TcpKeepaliveProbes;
     }
-    if (this._netIpv4TcpKeepaliveTime) {
+    if (this._netIpv4TcpKeepaliveTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.netIpv4TcpKeepaliveTime = this._netIpv4TcpKeepaliveTime;
     }
-    if (this._netIpv4TcpMaxSynBacklog) {
+    if (this._netIpv4TcpMaxSynBacklog !== undefined) {
       hasAnyValues = true;
       internalValueResult.netIpv4TcpMaxSynBacklog = this._netIpv4TcpMaxSynBacklog;
     }
-    if (this._netIpv4TcpMaxTwBuckets) {
+    if (this._netIpv4TcpMaxTwBuckets !== undefined) {
       hasAnyValues = true;
       internalValueResult.netIpv4TcpMaxTwBuckets = this._netIpv4TcpMaxTwBuckets;
     }
-    if (this._netIpv4TcpTwReuse) {
+    if (this._netIpv4TcpTwReuse !== undefined) {
       hasAnyValues = true;
       internalValueResult.netIpv4TcpTwReuse = this._netIpv4TcpTwReuse;
     }
-    if (this._netNetfilterNfConntrackBuckets) {
+    if (this._netNetfilterNfConntrackBuckets !== undefined) {
       hasAnyValues = true;
       internalValueResult.netNetfilterNfConntrackBuckets = this._netNetfilterNfConntrackBuckets;
     }
-    if (this._netNetfilterNfConntrackMax) {
+    if (this._netNetfilterNfConntrackMax !== undefined) {
       hasAnyValues = true;
       internalValueResult.netNetfilterNfConntrackMax = this._netNetfilterNfConntrackMax;
     }
-    if (this._vmMaxMapCount) {
+    if (this._vmMaxMapCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.vmMaxMapCount = this._vmMaxMapCount;
     }
-    if (this._vmSwappiness) {
+    if (this._vmSwappiness !== undefined) {
       hasAnyValues = true;
       internalValueResult.vmSwappiness = this._vmSwappiness;
     }
-    if (this._vmVfsCachePressure) {
+    if (this._vmVfsCachePressure !== undefined) {
       hasAnyValues = true;
       internalValueResult.vmVfsCachePressure = this._vmVfsCachePressure;
     }
@@ -1332,19 +1332,19 @@ export class KubernetesClusterNodePoolLinuxOsConfigOutputReference extends cdktf
   public get internalValue(): KubernetesClusterNodePoolLinuxOsConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._swapFileSizeMb) {
+    if (this._swapFileSizeMb !== undefined) {
       hasAnyValues = true;
       internalValueResult.swapFileSizeMb = this._swapFileSizeMb;
     }
-    if (this._transparentHugePageDefrag) {
+    if (this._transparentHugePageDefrag !== undefined) {
       hasAnyValues = true;
       internalValueResult.transparentHugePageDefrag = this._transparentHugePageDefrag;
     }
-    if (this._transparentHugePageEnabled) {
+    if (this._transparentHugePageEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.transparentHugePageEnabled = this._transparentHugePageEnabled;
     }
-    if (this._sysctlConfig?.internalValue) {
+    if (this._sysctlConfig?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.sysctlConfig = this._sysctlConfig?.internalValue;
     }
@@ -1479,19 +1479,19 @@ export class KubernetesClusterNodePoolTimeoutsOutputReference extends cdktf.Comp
   public get internalValue(): KubernetesClusterNodePoolTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -1611,7 +1611,7 @@ export class KubernetesClusterNodePoolUpgradeSettingsOutputReference extends cdk
   public get internalValue(): KubernetesClusterNodePoolUpgradeSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxSurge) {
+    if (this._maxSurge !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxSurge = this._maxSurge;
     }

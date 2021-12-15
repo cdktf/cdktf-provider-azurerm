@@ -119,19 +119,19 @@ export class DataFactoryIntegrationRuntimeManagedCatalogInfoOutputReference exte
   public get internalValue(): DataFactoryIntegrationRuntimeManagedCatalogInfo | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._administratorLogin) {
+    if (this._administratorLogin !== undefined) {
       hasAnyValues = true;
       internalValueResult.administratorLogin = this._administratorLogin;
     }
-    if (this._administratorPassword) {
+    if (this._administratorPassword !== undefined) {
       hasAnyValues = true;
       internalValueResult.administratorPassword = this._administratorPassword;
     }
-    if (this._pricingTier) {
+    if (this._pricingTier !== undefined) {
       hasAnyValues = true;
       internalValueResult.pricingTier = this._pricingTier;
     }
-    if (this._serverEndpoint) {
+    if (this._serverEndpoint !== undefined) {
       hasAnyValues = true;
       internalValueResult.serverEndpoint = this._serverEndpoint;
     }
@@ -253,11 +253,11 @@ export class DataFactoryIntegrationRuntimeManagedCustomSetupScriptOutputReferenc
   public get internalValue(): DataFactoryIntegrationRuntimeManagedCustomSetupScript | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._blobContainerUri) {
+    if (this._blobContainerUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.blobContainerUri = this._blobContainerUri;
     }
-    if (this._sasToken) {
+    if (this._sasToken !== undefined) {
       hasAnyValues = true;
       internalValueResult.sasToken = this._sasToken;
     }
@@ -350,19 +350,19 @@ export class DataFactoryIntegrationRuntimeManagedTimeoutsOutputReference extends
   public get internalValue(): DataFactoryIntegrationRuntimeManagedTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -487,11 +487,11 @@ export class DataFactoryIntegrationRuntimeManagedVnetIntegrationOutputReference 
   public get internalValue(): DataFactoryIntegrationRuntimeManagedVnetIntegration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._subnetName) {
+    if (this._subnetName !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetName = this._subnetName;
     }
-    if (this._vnetId) {
+    if (this._vnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.vnetId = this._vnetId;
     }

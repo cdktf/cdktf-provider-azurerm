@@ -170,7 +170,7 @@ export class HpcCacheDefaultAccessPolicyOutputReference extends cdktf.ComplexObj
   public get internalValue(): HpcCacheDefaultAccessPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._accessRule) {
+    if (this._accessRule !== undefined) {
       hasAnyValues = true;
       internalValueResult.accessRule = this._accessRule;
     }
@@ -264,31 +264,31 @@ export class HpcCacheDirectoryActiveDirectoryOutputReference extends cdktf.Compl
   public get internalValue(): HpcCacheDirectoryActiveDirectory | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cacheNetbiosName) {
+    if (this._cacheNetbiosName !== undefined) {
       hasAnyValues = true;
       internalValueResult.cacheNetbiosName = this._cacheNetbiosName;
     }
-    if (this._dnsPrimaryIp) {
+    if (this._dnsPrimaryIp !== undefined) {
       hasAnyValues = true;
       internalValueResult.dnsPrimaryIp = this._dnsPrimaryIp;
     }
-    if (this._dnsSecondaryIp) {
+    if (this._dnsSecondaryIp !== undefined) {
       hasAnyValues = true;
       internalValueResult.dnsSecondaryIp = this._dnsSecondaryIp;
     }
-    if (this._domainName) {
+    if (this._domainName !== undefined) {
       hasAnyValues = true;
       internalValueResult.domainName = this._domainName;
     }
-    if (this._domainNetbiosName) {
+    if (this._domainNetbiosName !== undefined) {
       hasAnyValues = true;
       internalValueResult.domainNetbiosName = this._domainNetbiosName;
     }
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
@@ -449,11 +449,11 @@ export class HpcCacheDirectoryFlatFileOutputReference extends cdktf.ComplexObjec
   public get internalValue(): HpcCacheDirectoryFlatFile | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._groupFileUri) {
+    if (this._groupFileUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.groupFileUri = this._groupFileUri;
     }
-    if (this._passwordFileUri) {
+    if (this._passwordFileUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.passwordFileUri = this._passwordFileUri;
     }
@@ -536,11 +536,11 @@ export class HpcCacheDirectoryLdapBindOutputReference extends cdktf.ComplexObjec
   public get internalValue(): HpcCacheDirectoryLdapBind | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dn) {
+    if (this._dn !== undefined) {
       hasAnyValues = true;
       internalValueResult.dn = this._dn;
     }
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
@@ -645,27 +645,27 @@ export class HpcCacheDirectoryLdapOutputReference extends cdktf.ComplexObject {
   public get internalValue(): HpcCacheDirectoryLdap | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._baseDn) {
+    if (this._baseDn !== undefined) {
       hasAnyValues = true;
       internalValueResult.baseDn = this._baseDn;
     }
-    if (this._certificateValidationUri) {
+    if (this._certificateValidationUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.certificateValidationUri = this._certificateValidationUri;
     }
-    if (this._downloadCertificateAutomatically) {
+    if (this._downloadCertificateAutomatically !== undefined) {
       hasAnyValues = true;
       internalValueResult.downloadCertificateAutomatically = this._downloadCertificateAutomatically;
     }
-    if (this._encrypted) {
+    if (this._encrypted !== undefined) {
       hasAnyValues = true;
       internalValueResult.encrypted = this._encrypted;
     }
-    if (this._server) {
+    if (this._server !== undefined) {
       hasAnyValues = true;
       internalValueResult.server = this._server;
     }
-    if (this._bind?.internalValue) {
+    if (this._bind?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.bind = this._bind?.internalValue;
     }
@@ -820,11 +820,11 @@ export class HpcCacheDnsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): HpcCacheDns | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._searchDomain) {
+    if (this._searchDomain !== undefined) {
       hasAnyValues = true;
       internalValueResult.searchDomain = this._searchDomain;
     }
-    if (this._servers) {
+    if (this._servers !== undefined) {
       hasAnyValues = true;
       internalValueResult.servers = this._servers;
     }
@@ -920,19 +920,19 @@ export class HpcCacheTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): HpcCacheTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

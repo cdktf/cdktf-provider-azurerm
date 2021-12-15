@@ -97,11 +97,11 @@ export class ExpressRouteCircuitSkuOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ExpressRouteCircuitSku | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._family) {
+    if (this._family !== undefined) {
       hasAnyValues = true;
       internalValueResult.family = this._family;
     }
-    if (this._tier) {
+    if (this._tier !== undefined) {
       hasAnyValues = true;
       internalValueResult.tier = this._tier;
     }
@@ -194,19 +194,19 @@ export class ExpressRouteCircuitTimeoutsOutputReference extends cdktf.ComplexObj
   public get internalValue(): ExpressRouteCircuitTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

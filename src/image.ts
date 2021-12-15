@@ -148,27 +148,27 @@ export class ImageOsDiskOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ImageOsDisk | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._blobUri) {
+    if (this._blobUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.blobUri = this._blobUri;
     }
-    if (this._caching) {
+    if (this._caching !== undefined) {
       hasAnyValues = true;
       internalValueResult.caching = this._caching;
     }
-    if (this._managedDiskId) {
+    if (this._managedDiskId !== undefined) {
       hasAnyValues = true;
       internalValueResult.managedDiskId = this._managedDiskId;
     }
-    if (this._osState) {
+    if (this._osState !== undefined) {
       hasAnyValues = true;
       internalValueResult.osState = this._osState;
     }
-    if (this._osType) {
+    if (this._osType !== undefined) {
       hasAnyValues = true;
       internalValueResult.osType = this._osType;
     }
-    if (this._sizeGb) {
+    if (this._sizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.sizeGb = this._sizeGb;
     }
@@ -339,19 +339,19 @@ export class ImageTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): ImageTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

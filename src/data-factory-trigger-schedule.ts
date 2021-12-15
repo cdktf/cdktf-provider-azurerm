@@ -144,23 +144,23 @@ export class DataFactoryTriggerScheduleScheduleOutputReference extends cdktf.Com
   public get internalValue(): DataFactoryTriggerScheduleSchedule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._daysOfMonth) {
+    if (this._daysOfMonth !== undefined) {
       hasAnyValues = true;
       internalValueResult.daysOfMonth = this._daysOfMonth;
     }
-    if (this._daysOfWeek) {
+    if (this._daysOfWeek !== undefined) {
       hasAnyValues = true;
       internalValueResult.daysOfWeek = this._daysOfWeek;
     }
-    if (this._hours) {
+    if (this._hours !== undefined) {
       hasAnyValues = true;
       internalValueResult.hours = this._hours;
     }
-    if (this._minutes) {
+    if (this._minutes !== undefined) {
       hasAnyValues = true;
       internalValueResult.minutes = this._minutes;
     }
-    if (this._monthly) {
+    if (this._monthly !== undefined) {
       hasAnyValues = true;
       internalValueResult.monthly = this._monthly;
     }
@@ -317,19 +317,19 @@ export class DataFactoryTriggerScheduleTimeoutsOutputReference extends cdktf.Com
   public get internalValue(): DataFactoryTriggerScheduleTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

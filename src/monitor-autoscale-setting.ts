@@ -92,15 +92,15 @@ export class MonitorAutoscaleSettingNotificationEmailOutputReference extends cdk
   public get internalValue(): MonitorAutoscaleSettingNotificationEmail | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._customEmails) {
+    if (this._customEmails !== undefined) {
       hasAnyValues = true;
       internalValueResult.customEmails = this._customEmails;
     }
-    if (this._sendToSubscriptionAdministrator) {
+    if (this._sendToSubscriptionAdministrator !== undefined) {
       hasAnyValues = true;
       internalValueResult.sendToSubscriptionAdministrator = this._sendToSubscriptionAdministrator;
     }
-    if (this._sendToSubscriptionCoAdministrator) {
+    if (this._sendToSubscriptionCoAdministrator !== undefined) {
       hasAnyValues = true;
       internalValueResult.sendToSubscriptionCoAdministrator = this._sendToSubscriptionCoAdministrator;
     }
@@ -233,11 +233,11 @@ export class MonitorAutoscaleSettingNotificationOutputReference extends cdktf.Co
   public get internalValue(): MonitorAutoscaleSettingNotification | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._email?.internalValue) {
+    if (this._email?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.email = this._email?.internalValue;
     }
-    if (this._webhook) {
+    if (this._webhook !== undefined) {
       hasAnyValues = true;
       internalValueResult.webhook = this._webhook;
     }
@@ -332,15 +332,15 @@ export class MonitorAutoscaleSettingProfileCapacityOutputReference extends cdktf
   public get internalValue(): MonitorAutoscaleSettingProfileCapacity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._default) {
+    if (this._default !== undefined) {
       hasAnyValues = true;
       internalValueResult.default = this._default;
     }
-    if (this._maximum) {
+    if (this._maximum !== undefined) {
       hasAnyValues = true;
       internalValueResult.maximum = this._maximum;
     }
-    if (this._minimum) {
+    if (this._minimum !== undefined) {
       hasAnyValues = true;
       internalValueResult.minimum = this._minimum;
     }
@@ -443,15 +443,15 @@ export class MonitorAutoscaleSettingProfileFixedDateOutputReference extends cdkt
   public get internalValue(): MonitorAutoscaleSettingProfileFixedDate | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._end) {
+    if (this._end !== undefined) {
       hasAnyValues = true;
       internalValueResult.end = this._end;
     }
-    if (this._start) {
+    if (this._start !== undefined) {
       hasAnyValues = true;
       internalValueResult.start = this._start;
     }
-    if (this._timezone) {
+    if (this._timezone !== undefined) {
       hasAnyValues = true;
       internalValueResult.timezone = this._timezone;
     }
@@ -562,19 +562,19 @@ export class MonitorAutoscaleSettingProfileRecurrenceOutputReference extends cdk
   public get internalValue(): MonitorAutoscaleSettingProfileRecurrence | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._days) {
+    if (this._days !== undefined) {
       hasAnyValues = true;
       internalValueResult.days = this._days;
     }
-    if (this._hours) {
+    if (this._hours !== undefined) {
       hasAnyValues = true;
       internalValueResult.hours = this._hours;
     }
-    if (this._minutes) {
+    if (this._minutes !== undefined) {
       hasAnyValues = true;
       internalValueResult.minutes = this._minutes;
     }
-    if (this._timezone) {
+    if (this._timezone !== undefined) {
       hasAnyValues = true;
       internalValueResult.timezone = this._timezone;
     }
@@ -766,47 +766,47 @@ export class MonitorAutoscaleSettingProfileRuleMetricTriggerOutputReference exte
   public get internalValue(): MonitorAutoscaleSettingProfileRuleMetricTrigger | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._divideByInstanceCount) {
+    if (this._divideByInstanceCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.divideByInstanceCount = this._divideByInstanceCount;
     }
-    if (this._metricName) {
+    if (this._metricName !== undefined) {
       hasAnyValues = true;
       internalValueResult.metricName = this._metricName;
     }
-    if (this._metricNamespace) {
+    if (this._metricNamespace !== undefined) {
       hasAnyValues = true;
       internalValueResult.metricNamespace = this._metricNamespace;
     }
-    if (this._metricResourceId) {
+    if (this._metricResourceId !== undefined) {
       hasAnyValues = true;
       internalValueResult.metricResourceId = this._metricResourceId;
     }
-    if (this._operator) {
+    if (this._operator !== undefined) {
       hasAnyValues = true;
       internalValueResult.operator = this._operator;
     }
-    if (this._statistic) {
+    if (this._statistic !== undefined) {
       hasAnyValues = true;
       internalValueResult.statistic = this._statistic;
     }
-    if (this._threshold) {
+    if (this._threshold !== undefined) {
       hasAnyValues = true;
       internalValueResult.threshold = this._threshold;
     }
-    if (this._timeAggregation) {
+    if (this._timeAggregation !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeAggregation = this._timeAggregation;
     }
-    if (this._timeGrain) {
+    if (this._timeGrain !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeGrain = this._timeGrain;
     }
-    if (this._timeWindow) {
+    if (this._timeWindow !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeWindow = this._timeWindow;
     }
-    if (this._dimensions) {
+    if (this._dimensions !== undefined) {
       hasAnyValues = true;
       internalValueResult.dimensions = this._dimensions;
     }
@@ -1044,19 +1044,19 @@ export class MonitorAutoscaleSettingProfileRuleScaleActionOutputReference extend
   public get internalValue(): MonitorAutoscaleSettingProfileRuleScaleAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._cooldown) {
+    if (this._cooldown !== undefined) {
       hasAnyValues = true;
       internalValueResult.cooldown = this._cooldown;
     }
-    if (this._direction) {
+    if (this._direction !== undefined) {
       hasAnyValues = true;
       internalValueResult.direction = this._direction;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
-    if (this._value) {
+    if (this._value !== undefined) {
       hasAnyValues = true;
       internalValueResult.value = this._value;
     }
@@ -1250,19 +1250,19 @@ export class MonitorAutoscaleSettingTimeoutsOutputReference extends cdktf.Comple
   public get internalValue(): MonitorAutoscaleSettingTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

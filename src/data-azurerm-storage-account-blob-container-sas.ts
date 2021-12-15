@@ -121,27 +121,27 @@ export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference
   public get internalValue(): DataAzurermStorageAccountBlobContainerSasPermissions | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._add) {
+    if (this._add !== undefined) {
       hasAnyValues = true;
       internalValueResult.add = this._add;
     }
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._list) {
+    if (this._list !== undefined) {
       hasAnyValues = true;
       internalValueResult.list = this._list;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._write) {
+    if (this._write !== undefined) {
       hasAnyValues = true;
       internalValueResult.write = this._write;
     }
@@ -279,7 +279,7 @@ export class DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference ex
   public get internalValue(): DataAzurermStorageAccountBlobContainerSasTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

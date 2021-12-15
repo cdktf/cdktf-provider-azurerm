@@ -131,7 +131,7 @@ export class SqlServerIdentityOutputReference extends cdktf.ComplexObject {
   public get internalValue(): SqlServerIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -224,31 +224,31 @@ export class SqlServerThreatDetectionPolicyOutputReference extends cdktf.Complex
   public get internalValue(): SqlServerThreatDetectionPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._disabledAlerts) {
+    if (this._disabledAlerts !== undefined) {
       hasAnyValues = true;
       internalValueResult.disabledAlerts = this._disabledAlerts;
     }
-    if (this._emailAccountAdmins) {
+    if (this._emailAccountAdmins !== undefined) {
       hasAnyValues = true;
       internalValueResult.emailAccountAdmins = this._emailAccountAdmins;
     }
-    if (this._emailAddresses) {
+    if (this._emailAddresses !== undefined) {
       hasAnyValues = true;
       internalValueResult.emailAddresses = this._emailAddresses;
     }
-    if (this._retentionDays) {
+    if (this._retentionDays !== undefined) {
       hasAnyValues = true;
       internalValueResult.retentionDays = this._retentionDays;
     }
-    if (this._state) {
+    if (this._state !== undefined) {
       hasAnyValues = true;
       internalValueResult.state = this._state;
     }
-    if (this._storageAccountAccessKey) {
+    if (this._storageAccountAccessKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageAccountAccessKey = this._storageAccountAccessKey;
     }
-    if (this._storageEndpoint) {
+    if (this._storageEndpoint !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageEndpoint = this._storageEndpoint;
     }
@@ -437,19 +437,19 @@ export class SqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): SqlServerTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

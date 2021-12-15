@@ -105,11 +105,11 @@ export class MachineLearningComputeInstanceAssignToUserOutputReference extends c
   public get internalValue(): MachineLearningComputeInstanceAssignToUser | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._objectId) {
+    if (this._objectId !== undefined) {
       hasAnyValues = true;
       internalValueResult.objectId = this._objectId;
     }
-    if (this._tenantId) {
+    if (this._tenantId !== undefined) {
       hasAnyValues = true;
       internalValueResult.tenantId = this._tenantId;
     }
@@ -198,11 +198,11 @@ export class MachineLearningComputeInstanceIdentityOutputReference extends cdktf
   public get internalValue(): MachineLearningComputeInstanceIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityIds) {
+    if (this._identityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityIds = this._identityIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -283,7 +283,7 @@ export class MachineLearningComputeInstanceSshOutputReference extends cdktf.Comp
   public get internalValue(): MachineLearningComputeInstanceSsh | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._publicKey) {
+    if (this._publicKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.publicKey = this._publicKey;
     }
@@ -356,15 +356,15 @@ export class MachineLearningComputeInstanceTimeoutsOutputReference extends cdktf
   public get internalValue(): MachineLearningComputeInstanceTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

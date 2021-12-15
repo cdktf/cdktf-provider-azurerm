@@ -145,15 +145,15 @@ export class FirewallManagementIpConfigurationOutputReference extends cdktf.Comp
   public get internalValue(): FirewallManagementIpConfiguration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._publicIpAddressId) {
+    if (this._publicIpAddressId !== undefined) {
       hasAnyValues = true;
       internalValueResult.publicIpAddressId = this._publicIpAddressId;
     }
-    if (this._subnetId) {
+    if (this._subnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetId = this._subnetId;
     }
@@ -261,19 +261,19 @@ export class FirewallTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): FirewallTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -398,11 +398,11 @@ export class FirewallVirtualHubOutputReference extends cdktf.ComplexObject {
   public get internalValue(): FirewallVirtualHub | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._publicIpCount) {
+    if (this._publicIpCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.publicIpCount = this._publicIpCount;
     }
-    if (this._virtualHubId) {
+    if (this._virtualHubId !== undefined) {
       hasAnyValues = true;
       internalValueResult.virtualHubId = this._virtualHubId;
     }

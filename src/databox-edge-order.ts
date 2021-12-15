@@ -166,19 +166,19 @@ export class DataboxEdgeOrderContactOutputReference extends cdktf.ComplexObject 
   public get internalValue(): DataboxEdgeOrderContact | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._companyName) {
+    if (this._companyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.companyName = this._companyName;
     }
-    if (this._emails) {
+    if (this._emails !== undefined) {
       hasAnyValues = true;
       internalValueResult.emails = this._emails;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._phoneNumber) {
+    if (this._phoneNumber !== undefined) {
       hasAnyValues = true;
       internalValueResult.phoneNumber = this._phoneNumber;
     }
@@ -306,23 +306,23 @@ export class DataboxEdgeOrderShipmentAddressOutputReference extends cdktf.Comple
   public get internalValue(): DataboxEdgeOrderShipmentAddress | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._address) {
+    if (this._address !== undefined) {
       hasAnyValues = true;
       internalValueResult.address = this._address;
     }
-    if (this._city) {
+    if (this._city !== undefined) {
       hasAnyValues = true;
       internalValueResult.city = this._city;
     }
-    if (this._country) {
+    if (this._country !== undefined) {
       hasAnyValues = true;
       internalValueResult.country = this._country;
     }
-    if (this._postalCode) {
+    if (this._postalCode !== undefined) {
       hasAnyValues = true;
       internalValueResult.postalCode = this._postalCode;
     }
-    if (this._state) {
+    if (this._state !== undefined) {
       hasAnyValues = true;
       internalValueResult.state = this._state;
     }
@@ -460,19 +460,19 @@ export class DataboxEdgeOrderTimeoutsOutputReference extends cdktf.ComplexObject
   public get internalValue(): DataboxEdgeOrderTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -81,11 +81,11 @@ export class VirtualHubConnectionRoutingPropagatedRouteTableOutputReference exte
   public get internalValue(): VirtualHubConnectionRoutingPropagatedRouteTable | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._labels) {
+    if (this._labels !== undefined) {
       hasAnyValues = true;
       internalValueResult.labels = this._labels;
     }
-    if (this._routeTableIds) {
+    if (this._routeTableIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.routeTableIds = this._routeTableIds;
     }
@@ -210,15 +210,15 @@ export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObj
   public get internalValue(): VirtualHubConnectionRouting | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._associatedRouteTableId) {
+    if (this._associatedRouteTableId !== undefined) {
       hasAnyValues = true;
       internalValueResult.associatedRouteTableId = this._associatedRouteTableId;
     }
-    if (this._propagatedRouteTable?.internalValue) {
+    if (this._propagatedRouteTable?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.propagatedRouteTable = this._propagatedRouteTable?.internalValue;
     }
-    if (this._staticVnetRoute) {
+    if (this._staticVnetRoute !== undefined) {
       hasAnyValues = true;
       internalValueResult.staticVnetRoute = this._staticVnetRoute;
     }
@@ -336,19 +336,19 @@ export class VirtualHubConnectionTimeoutsOutputReference extends cdktf.ComplexOb
   public get internalValue(): VirtualHubConnectionTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

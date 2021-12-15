@@ -116,23 +116,23 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   public get internalValue(): LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceSchedule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hours) {
+    if (this._hours !== undefined) {
       hasAnyValues = true;
       internalValueResult.hours = this._hours;
     }
-    if (this._minutes) {
+    if (this._minutes !== undefined) {
       hasAnyValues = true;
       internalValueResult.minutes = this._minutes;
     }
-    if (this._monthDays) {
+    if (this._monthDays !== undefined) {
       hasAnyValues = true;
       internalValueResult.monthDays = this._monthDays;
     }
-    if (this._weekDays) {
+    if (this._weekDays !== undefined) {
       hasAnyValues = true;
       internalValueResult.weekDays = this._weekDays;
     }
-    if (this._monthly) {
+    if (this._monthly !== undefined) {
       hasAnyValues = true;
       internalValueResult.monthly = this._monthly;
     }
@@ -301,27 +301,27 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurren
   public get internalValue(): LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrence | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._endTime) {
+    if (this._endTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.endTime = this._endTime;
     }
-    if (this._frequency) {
+    if (this._frequency !== undefined) {
       hasAnyValues = true;
       internalValueResult.frequency = this._frequency;
     }
-    if (this._interval) {
+    if (this._interval !== undefined) {
       hasAnyValues = true;
       internalValueResult.interval = this._interval;
     }
-    if (this._startTime) {
+    if (this._startTime !== undefined) {
       hasAnyValues = true;
       internalValueResult.startTime = this._startTime;
     }
-    if (this._timeZone) {
+    if (this._timeZone !== undefined) {
       hasAnyValues = true;
       internalValueResult.timeZone = this._timeZone;
     }
-    if (this._schedule?.internalValue) {
+    if (this._schedule?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.schedule = this._schedule?.internalValue;
     }
@@ -483,15 +483,15 @@ export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputRe
   public get internalValue(): LogicAppIntegrationAccountBatchConfigurationReleaseCriteria | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._batchSize) {
+    if (this._batchSize !== undefined) {
       hasAnyValues = true;
       internalValueResult.batchSize = this._batchSize;
     }
-    if (this._messageCount) {
+    if (this._messageCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.messageCount = this._messageCount;
     }
-    if (this._recurrence?.internalValue) {
+    if (this._recurrence?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.recurrence = this._recurrence?.internalValue;
     }
@@ -608,19 +608,19 @@ export class LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference
   public get internalValue(): LogicAppIntegrationAccountBatchConfigurationTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

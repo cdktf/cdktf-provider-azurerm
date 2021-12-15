@@ -90,15 +90,15 @@ export class LocalNetworkGatewayBgpSettingsOutputReference extends cdktf.Complex
   public get internalValue(): LocalNetworkGatewayBgpSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._asn) {
+    if (this._asn !== undefined) {
       hasAnyValues = true;
       internalValueResult.asn = this._asn;
     }
-    if (this._bgpPeeringAddress) {
+    if (this._bgpPeeringAddress !== undefined) {
       hasAnyValues = true;
       internalValueResult.bgpPeeringAddress = this._bgpPeeringAddress;
     }
-    if (this._peerWeight) {
+    if (this._peerWeight !== undefined) {
       hasAnyValues = true;
       internalValueResult.peerWeight = this._peerWeight;
     }
@@ -209,19 +209,19 @@ export class LocalNetworkGatewayTimeoutsOutputReference extends cdktf.ComplexObj
   public get internalValue(): LocalNetworkGatewayTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

@@ -54,7 +54,7 @@ export class DataAzurermStorageSyncGroupTimeoutsOutputReference extends cdktf.Co
   public get internalValue(): DataAzurermStorageSyncGroupTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

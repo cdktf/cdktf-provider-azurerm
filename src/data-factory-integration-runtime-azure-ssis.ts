@@ -142,23 +142,23 @@ export class DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference ex
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisCatalogInfo | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._administratorLogin) {
+    if (this._administratorLogin !== undefined) {
       hasAnyValues = true;
       internalValueResult.administratorLogin = this._administratorLogin;
     }
-    if (this._administratorPassword) {
+    if (this._administratorPassword !== undefined) {
       hasAnyValues = true;
       internalValueResult.administratorPassword = this._administratorPassword;
     }
-    if (this._dualStandbyPairName) {
+    if (this._dualStandbyPairName !== undefined) {
       hasAnyValues = true;
       internalValueResult.dualStandbyPairName = this._dualStandbyPairName;
     }
-    if (this._pricingTier) {
+    if (this._pricingTier !== undefined) {
       hasAnyValues = true;
       internalValueResult.pricingTier = this._pricingTier;
     }
-    if (this._serverEndpoint) {
+    if (this._serverEndpoint !== undefined) {
       hasAnyValues = true;
       internalValueResult.serverEndpoint = this._serverEndpoint;
     }
@@ -298,11 +298,11 @@ export class DataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptOutputRefere
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._blobContainerUri) {
+    if (this._blobContainerUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.blobContainerUri = this._blobContainerUri;
     }
-    if (this._sasToken) {
+    if (this._sasToken !== undefined) {
       hasAnyValues = true;
       internalValueResult.sasToken = this._sasToken;
     }
@@ -395,19 +395,19 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyK
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPassword | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._linkedServiceName) {
+    if (this._linkedServiceName !== undefined) {
       hasAnyValues = true;
       internalValueResult.linkedServiceName = this._linkedServiceName;
     }
-    if (this._parameters) {
+    if (this._parameters !== undefined) {
       hasAnyValues = true;
       internalValueResult.parameters = this._parameters;
     }
-    if (this._secretName) {
+    if (this._secretName !== undefined) {
       hasAnyValues = true;
       internalValueResult.secretName = this._secretName;
     }
-    if (this._secretVersion) {
+    if (this._secretVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.secretVersion = this._secretVersion;
     }
@@ -571,19 +571,19 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKe
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicense | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._linkedServiceName) {
+    if (this._linkedServiceName !== undefined) {
       hasAnyValues = true;
       internalValueResult.linkedServiceName = this._linkedServiceName;
     }
-    if (this._parameters) {
+    if (this._parameters !== undefined) {
       hasAnyValues = true;
       internalValueResult.parameters = this._parameters;
     }
-    if (this._secretName) {
+    if (this._secretName !== undefined) {
       hasAnyValues = true;
       internalValueResult.secretName = this._secretName;
     }
-    if (this._secretVersion) {
+    if (this._secretVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.secretVersion = this._secretVersion;
     }
@@ -746,19 +746,19 @@ export class DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputRefer
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._environment) {
+    if (this._environment !== undefined) {
       hasAnyValues = true;
       internalValueResult.environment = this._environment;
     }
-    if (this._powershellVersion) {
+    if (this._powershellVersion !== undefined) {
       hasAnyValues = true;
       internalValueResult.powershellVersion = this._powershellVersion;
     }
-    if (this._commandKey) {
+    if (this._commandKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.commandKey = this._commandKey;
     }
-    if (this._component) {
+    if (this._component !== undefined) {
       hasAnyValues = true;
       internalValueResult.component = this._component;
     }
@@ -913,15 +913,15 @@ export class DataFactoryIntegrationRuntimeAzureSsisProxyOutputReference extends 
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisProxy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._path) {
+    if (this._path !== undefined) {
       hasAnyValues = true;
       internalValueResult.path = this._path;
     }
-    if (this._selfHostedIntegrationRuntimeName) {
+    if (this._selfHostedIntegrationRuntimeName !== undefined) {
       hasAnyValues = true;
       internalValueResult.selfHostedIntegrationRuntimeName = this._selfHostedIntegrationRuntimeName;
     }
-    if (this._stagingStorageLinkedServiceName) {
+    if (this._stagingStorageLinkedServiceName !== undefined) {
       hasAnyValues = true;
       internalValueResult.stagingStorageLinkedServiceName = this._stagingStorageLinkedServiceName;
     }
@@ -1032,19 +1032,19 @@ export class DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference exten
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -1179,19 +1179,19 @@ export class DataFactoryIntegrationRuntimeAzureSsisVnetIntegrationOutputReferenc
   public get internalValue(): DataFactoryIntegrationRuntimeAzureSsisVnetIntegration | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._publicIps) {
+    if (this._publicIps !== undefined) {
       hasAnyValues = true;
       internalValueResult.publicIps = this._publicIps;
     }
-    if (this._subnetId) {
+    if (this._subnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetId = this._subnetId;
     }
-    if (this._subnetName) {
+    if (this._subnetName !== undefined) {
       hasAnyValues = true;
       internalValueResult.subnetName = this._subnetName;
     }
-    if (this._vnetId) {
+    if (this._vnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.vnetId = this._vnetId;
     }

@@ -54,7 +54,7 @@ export class DataAzurermKeyVaultKeyTimeoutsOutputReference extends cdktf.Complex
   public get internalValue(): DataAzurermKeyVaultKeyTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

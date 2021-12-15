@@ -116,7 +116,7 @@ export class DataAzurermNetworkInterfaceTimeoutsOutputReference extends cdktf.Co
   public get internalValue(): DataAzurermNetworkInterfaceTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }

@@ -92,23 +92,23 @@ export class DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputRefe
   public get internalValue(): DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._absoluteCriteria) {
+    if (this._absoluteCriteria !== undefined) {
       hasAnyValues = true;
       internalValueResult.absoluteCriteria = this._absoluteCriteria;
     }
-    if (this._daysOfWeek) {
+    if (this._daysOfWeek !== undefined) {
       hasAnyValues = true;
       internalValueResult.daysOfWeek = this._daysOfWeek;
     }
-    if (this._monthsOfYear) {
+    if (this._monthsOfYear !== undefined) {
       hasAnyValues = true;
       internalValueResult.monthsOfYear = this._monthsOfYear;
     }
-    if (this._scheduledBackupTimes) {
+    if (this._scheduledBackupTimes !== undefined) {
       hasAnyValues = true;
       internalValueResult.scheduledBackupTimes = this._scheduledBackupTimes;
     }
-    if (this._weeksOfMonth) {
+    if (this._weeksOfMonth !== undefined) {
       hasAnyValues = true;
       internalValueResult.weeksOfMonth = this._weeksOfMonth;
     }
@@ -295,19 +295,19 @@ export class DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference extends
   public get internalValue(): DataProtectionBackupPolicyPostgresqlTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

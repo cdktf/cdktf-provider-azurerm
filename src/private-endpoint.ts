@@ -157,11 +157,11 @@ export class PrivateEndpointPrivateDnsZoneGroupOutputReference extends cdktf.Com
   public get internalValue(): PrivateEndpointPrivateDnsZoneGroup | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._privateDnsZoneIds) {
+    if (this._privateDnsZoneIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.privateDnsZoneIds = this._privateDnsZoneIds;
     }
@@ -264,27 +264,27 @@ export class PrivateEndpointPrivateServiceConnectionOutputReference extends cdkt
   public get internalValue(): PrivateEndpointPrivateServiceConnection | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._isManualConnection) {
+    if (this._isManualConnection !== undefined) {
       hasAnyValues = true;
       internalValueResult.isManualConnection = this._isManualConnection;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._privateConnectionResourceAlias) {
+    if (this._privateConnectionResourceAlias !== undefined) {
       hasAnyValues = true;
       internalValueResult.privateConnectionResourceAlias = this._privateConnectionResourceAlias;
     }
-    if (this._privateConnectionResourceId) {
+    if (this._privateConnectionResourceId !== undefined) {
       hasAnyValues = true;
       internalValueResult.privateConnectionResourceId = this._privateConnectionResourceId;
     }
-    if (this._requestMessage) {
+    if (this._requestMessage !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestMessage = this._requestMessage;
     }
-    if (this._subresourceNames) {
+    if (this._subresourceNames !== undefined) {
       hasAnyValues = true;
       internalValueResult.subresourceNames = this._subresourceNames;
     }
@@ -449,19 +449,19 @@ export class PrivateEndpointTimeoutsOutputReference extends cdktf.ComplexObject 
   public get internalValue(): PrivateEndpointTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

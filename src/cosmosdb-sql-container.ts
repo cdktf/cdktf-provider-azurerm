@@ -106,7 +106,7 @@ export class CosmosdbSqlContainerAutoscaleSettingsOutputReference extends cdktf.
   public get internalValue(): CosmosdbSqlContainerAutoscaleSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxThroughput) {
+    if (this._maxThroughput !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxThroughput = this._maxThroughput;
     }
@@ -182,15 +182,15 @@ export class CosmosdbSqlContainerConflictResolutionPolicyOutputReference extends
   public get internalValue(): CosmosdbSqlContainerConflictResolutionPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._conflictResolutionPath) {
+    if (this._conflictResolutionPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.conflictResolutionPath = this._conflictResolutionPath;
     }
-    if (this._conflictResolutionProcedure) {
+    if (this._conflictResolutionProcedure !== undefined) {
       hasAnyValues = true;
       internalValueResult.conflictResolutionProcedure = this._conflictResolutionProcedure;
     }
-    if (this._mode) {
+    if (this._mode !== undefined) {
       hasAnyValues = true;
       internalValueResult.mode = this._mode;
     }
@@ -409,23 +409,23 @@ export class CosmosdbSqlContainerIndexingPolicyOutputReference extends cdktf.Com
   public get internalValue(): CosmosdbSqlContainerIndexingPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._indexingMode) {
+    if (this._indexingMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.indexingMode = this._indexingMode;
     }
-    if (this._compositeIndex) {
+    if (this._compositeIndex !== undefined) {
       hasAnyValues = true;
       internalValueResult.compositeIndex = this._compositeIndex;
     }
-    if (this._excludedPath) {
+    if (this._excludedPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.excludedPath = this._excludedPath;
     }
-    if (this._includedPath) {
+    if (this._includedPath !== undefined) {
       hasAnyValues = true;
       internalValueResult.includedPath = this._includedPath;
     }
-    if (this._spatialIndex) {
+    if (this._spatialIndex !== undefined) {
       hasAnyValues = true;
       internalValueResult.spatialIndex = this._spatialIndex;
     }
@@ -582,19 +582,19 @@ export class CosmosdbSqlContainerTimeoutsOutputReference extends cdktf.ComplexOb
   public get internalValue(): CosmosdbSqlContainerTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

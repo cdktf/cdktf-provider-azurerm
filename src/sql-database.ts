@@ -201,31 +201,31 @@ export class SqlDatabaseImportOutputReference extends cdktf.ComplexObject {
   public get internalValue(): SqlDatabaseImport | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._administratorLogin) {
+    if (this._administratorLogin !== undefined) {
       hasAnyValues = true;
       internalValueResult.administratorLogin = this._administratorLogin;
     }
-    if (this._administratorLoginPassword) {
+    if (this._administratorLoginPassword !== undefined) {
       hasAnyValues = true;
       internalValueResult.administratorLoginPassword = this._administratorLoginPassword;
     }
-    if (this._authenticationType) {
+    if (this._authenticationType !== undefined) {
       hasAnyValues = true;
       internalValueResult.authenticationType = this._authenticationType;
     }
-    if (this._operationMode) {
+    if (this._operationMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.operationMode = this._operationMode;
     }
-    if (this._storageKey) {
+    if (this._storageKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageKey = this._storageKey;
     }
-    if (this._storageKeyType) {
+    if (this._storageKeyType !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageKeyType = this._storageKeyType;
     }
-    if (this._storageUri) {
+    if (this._storageUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageUri = this._storageUri;
     }
@@ -416,35 +416,35 @@ export class SqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Compl
   public get internalValue(): SqlDatabaseThreatDetectionPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._disabledAlerts) {
+    if (this._disabledAlerts !== undefined) {
       hasAnyValues = true;
       internalValueResult.disabledAlerts = this._disabledAlerts;
     }
-    if (this._emailAccountAdmins) {
+    if (this._emailAccountAdmins !== undefined) {
       hasAnyValues = true;
       internalValueResult.emailAccountAdmins = this._emailAccountAdmins;
     }
-    if (this._emailAddresses) {
+    if (this._emailAddresses !== undefined) {
       hasAnyValues = true;
       internalValueResult.emailAddresses = this._emailAddresses;
     }
-    if (this._retentionDays) {
+    if (this._retentionDays !== undefined) {
       hasAnyValues = true;
       internalValueResult.retentionDays = this._retentionDays;
     }
-    if (this._state) {
+    if (this._state !== undefined) {
       hasAnyValues = true;
       internalValueResult.state = this._state;
     }
-    if (this._storageAccountAccessKey) {
+    if (this._storageAccountAccessKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageAccountAccessKey = this._storageAccountAccessKey;
     }
-    if (this._storageEndpoint) {
+    if (this._storageEndpoint !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageEndpoint = this._storageEndpoint;
     }
-    if (this._useServerDefault) {
+    if (this._useServerDefault !== undefined) {
       hasAnyValues = true;
       internalValueResult.useServerDefault = this._useServerDefault;
     }
@@ -651,19 +651,19 @@ export class SqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): SqlDatabaseTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

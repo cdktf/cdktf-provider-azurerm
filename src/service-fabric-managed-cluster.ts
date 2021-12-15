@@ -132,15 +132,15 @@ export class ServiceFabricManagedClusterAuthenticationActiveDirectoryOutputRefer
   public get internalValue(): ServiceFabricManagedClusterAuthenticationActiveDirectory | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clientApplicationId) {
+    if (this._clientApplicationId !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientApplicationId = this._clientApplicationId;
     }
-    if (this._clusterApplicationId) {
+    if (this._clusterApplicationId !== undefined) {
       hasAnyValues = true;
       internalValueResult.clusterApplicationId = this._clusterApplicationId;
     }
-    if (this._tenantId) {
+    if (this._tenantId !== undefined) {
       hasAnyValues = true;
       internalValueResult.tenantId = this._tenantId;
     }
@@ -269,11 +269,11 @@ export class ServiceFabricManagedClusterAuthenticationOutputReference extends cd
   public get internalValue(): ServiceFabricManagedClusterAuthentication | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._activeDirectory?.internalValue) {
+    if (this._activeDirectory?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.activeDirectory = this._activeDirectory?.internalValue;
     }
-    if (this._certificate) {
+    if (this._certificate !== undefined) {
       hasAnyValues = true;
       internalValueResult.certificate = this._certificate;
     }
@@ -582,19 +582,19 @@ export class ServiceFabricManagedClusterTimeoutsOutputReference extends cdktf.Co
   public get internalValue(): ServiceFabricManagedClusterTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

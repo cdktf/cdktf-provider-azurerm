@@ -165,35 +165,35 @@ export class VirtualNetworkGatewayConnectionIpsecPolicyOutputReference extends c
   public get internalValue(): VirtualNetworkGatewayConnectionIpsecPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dhGroup) {
+    if (this._dhGroup !== undefined) {
       hasAnyValues = true;
       internalValueResult.dhGroup = this._dhGroup;
     }
-    if (this._ikeEncryption) {
+    if (this._ikeEncryption !== undefined) {
       hasAnyValues = true;
       internalValueResult.ikeEncryption = this._ikeEncryption;
     }
-    if (this._ikeIntegrity) {
+    if (this._ikeIntegrity !== undefined) {
       hasAnyValues = true;
       internalValueResult.ikeIntegrity = this._ikeIntegrity;
     }
-    if (this._ipsecEncryption) {
+    if (this._ipsecEncryption !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipsecEncryption = this._ipsecEncryption;
     }
-    if (this._ipsecIntegrity) {
+    if (this._ipsecIntegrity !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipsecIntegrity = this._ipsecIntegrity;
     }
-    if (this._pfsGroup) {
+    if (this._pfsGroup !== undefined) {
       hasAnyValues = true;
       internalValueResult.pfsGroup = this._pfsGroup;
     }
-    if (this._saDatasize) {
+    if (this._saDatasize !== undefined) {
       hasAnyValues = true;
       internalValueResult.saDatasize = this._saDatasize;
     }
-    if (this._saLifetime) {
+    if (this._saLifetime !== undefined) {
       hasAnyValues = true;
       internalValueResult.saLifetime = this._saLifetime;
     }
@@ -382,19 +382,19 @@ export class VirtualNetworkGatewayConnectionTimeoutsOutputReference extends cdkt
   public get internalValue(): VirtualNetworkGatewayConnectionTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -519,11 +519,11 @@ export class VirtualNetworkGatewayConnectionTrafficSelectorPolicyOutputReference
   public get internalValue(): VirtualNetworkGatewayConnectionTrafficSelectorPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._localAddressCidrs) {
+    if (this._localAddressCidrs !== undefined) {
       hasAnyValues = true;
       internalValueResult.localAddressCidrs = this._localAddressCidrs;
     }
-    if (this._remoteAddressCidrs) {
+    if (this._remoteAddressCidrs !== undefined) {
       hasAnyValues = true;
       internalValueResult.remoteAddressCidrs = this._remoteAddressCidrs;
     }

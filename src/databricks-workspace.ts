@@ -172,51 +172,51 @@ export class DatabricksWorkspaceCustomParametersOutputReference extends cdktf.Co
   public get internalValue(): DatabricksWorkspaceCustomParameters | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._machineLearningWorkspaceId) {
+    if (this._machineLearningWorkspaceId !== undefined) {
       hasAnyValues = true;
       internalValueResult.machineLearningWorkspaceId = this._machineLearningWorkspaceId;
     }
-    if (this._natGatewayName) {
+    if (this._natGatewayName !== undefined) {
       hasAnyValues = true;
       internalValueResult.natGatewayName = this._natGatewayName;
     }
-    if (this._noPublicIp) {
+    if (this._noPublicIp !== undefined) {
       hasAnyValues = true;
       internalValueResult.noPublicIp = this._noPublicIp;
     }
-    if (this._privateSubnetName) {
+    if (this._privateSubnetName !== undefined) {
       hasAnyValues = true;
       internalValueResult.privateSubnetName = this._privateSubnetName;
     }
-    if (this._privateSubnetNetworkSecurityGroupAssociationId) {
+    if (this._privateSubnetNetworkSecurityGroupAssociationId !== undefined) {
       hasAnyValues = true;
       internalValueResult.privateSubnetNetworkSecurityGroupAssociationId = this._privateSubnetNetworkSecurityGroupAssociationId;
     }
-    if (this._publicIpName) {
+    if (this._publicIpName !== undefined) {
       hasAnyValues = true;
       internalValueResult.publicIpName = this._publicIpName;
     }
-    if (this._publicSubnetName) {
+    if (this._publicSubnetName !== undefined) {
       hasAnyValues = true;
       internalValueResult.publicSubnetName = this._publicSubnetName;
     }
-    if (this._publicSubnetNetworkSecurityGroupAssociationId) {
+    if (this._publicSubnetNetworkSecurityGroupAssociationId !== undefined) {
       hasAnyValues = true;
       internalValueResult.publicSubnetNetworkSecurityGroupAssociationId = this._publicSubnetNetworkSecurityGroupAssociationId;
     }
-    if (this._storageAccountName) {
+    if (this._storageAccountName !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageAccountName = this._storageAccountName;
     }
-    if (this._storageAccountSkuName) {
+    if (this._storageAccountSkuName !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageAccountSkuName = this._storageAccountSkuName;
     }
-    if (this._virtualNetworkId) {
+    if (this._virtualNetworkId !== undefined) {
       hasAnyValues = true;
       internalValueResult.virtualNetworkId = this._virtualNetworkId;
     }
-    if (this._vnetAddressPrefix) {
+    if (this._vnetAddressPrefix !== undefined) {
       hasAnyValues = true;
       internalValueResult.vnetAddressPrefix = this._vnetAddressPrefix;
     }
@@ -495,19 +495,19 @@ export class DatabricksWorkspaceTimeoutsOutputReference extends cdktf.ComplexObj
   public get internalValue(): DatabricksWorkspaceTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

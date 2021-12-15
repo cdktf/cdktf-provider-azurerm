@@ -212,35 +212,35 @@ export class VpnServerConfigurationIpsecPolicyOutputReference extends cdktf.Comp
   public get internalValue(): VpnServerConfigurationIpsecPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dhGroup) {
+    if (this._dhGroup !== undefined) {
       hasAnyValues = true;
       internalValueResult.dhGroup = this._dhGroup;
     }
-    if (this._ikeEncryption) {
+    if (this._ikeEncryption !== undefined) {
       hasAnyValues = true;
       internalValueResult.ikeEncryption = this._ikeEncryption;
     }
-    if (this._ikeIntegrity) {
+    if (this._ikeIntegrity !== undefined) {
       hasAnyValues = true;
       internalValueResult.ikeIntegrity = this._ikeIntegrity;
     }
-    if (this._ipsecEncryption) {
+    if (this._ipsecEncryption !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipsecEncryption = this._ipsecEncryption;
     }
-    if (this._ipsecIntegrity) {
+    if (this._ipsecIntegrity !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipsecIntegrity = this._ipsecIntegrity;
     }
-    if (this._pfsGroup) {
+    if (this._pfsGroup !== undefined) {
       hasAnyValues = true;
       internalValueResult.pfsGroup = this._pfsGroup;
     }
-    if (this._saDataSizeKilobytes) {
+    if (this._saDataSizeKilobytes !== undefined) {
       hasAnyValues = true;
       internalValueResult.saDataSizeKilobytes = this._saDataSizeKilobytes;
     }
-    if (this._saLifetimeSeconds) {
+    if (this._saLifetimeSeconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.saLifetimeSeconds = this._saLifetimeSeconds;
     }
@@ -495,15 +495,15 @@ export class VpnServerConfigurationRadiusOutputReference extends cdktf.ComplexOb
   public get internalValue(): VpnServerConfigurationRadius | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clientRootCertificate) {
+    if (this._clientRootCertificate !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientRootCertificate = this._clientRootCertificate;
     }
-    if (this._server) {
+    if (this._server !== undefined) {
       hasAnyValues = true;
       internalValueResult.server = this._server;
     }
-    if (this._serverRootCertificate) {
+    if (this._serverRootCertificate !== undefined) {
       hasAnyValues = true;
       internalValueResult.serverRootCertificate = this._serverRootCertificate;
     }
@@ -668,19 +668,19 @@ export class VpnServerConfigurationRadiusServerAOutputReference extends cdktf.Co
   public get internalValue(): VpnServerConfigurationRadiusServerA | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._address) {
+    if (this._address !== undefined) {
       hasAnyValues = true;
       internalValueResult.address = this._address;
     }
-    if (this._secret) {
+    if (this._secret !== undefined) {
       hasAnyValues = true;
       internalValueResult.secret = this._secret;
     }
-    if (this._clientRootCertificate) {
+    if (this._clientRootCertificate !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientRootCertificate = this._clientRootCertificate;
     }
-    if (this._serverRootCertificate) {
+    if (this._serverRootCertificate !== undefined) {
       hasAnyValues = true;
       internalValueResult.serverRootCertificate = this._serverRootCertificate;
     }
@@ -808,19 +808,19 @@ export class VpnServerConfigurationTimeoutsOutputReference extends cdktf.Complex
   public get internalValue(): VpnServerConfigurationTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

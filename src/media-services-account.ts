@@ -84,7 +84,7 @@ export class MediaServicesAccountIdentityOutputReference extends cdktf.ComplexOb
   public get internalValue(): MediaServicesAccountIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -155,11 +155,11 @@ export class MediaServicesAccountKeyDeliveryAccessControlOutputReference extends
   public get internalValue(): MediaServicesAccountKeyDeliveryAccessControl | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._defaultAction) {
+    if (this._defaultAction !== undefined) {
       hasAnyValues = true;
       internalValueResult.defaultAction = this._defaultAction;
     }
-    if (this._ipAllowList) {
+    if (this._ipAllowList !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipAllowList = this._ipAllowList;
     }
@@ -280,19 +280,19 @@ export class MediaServicesAccountTimeoutsOutputReference extends cdktf.ComplexOb
   public get internalValue(): MediaServicesAccountTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

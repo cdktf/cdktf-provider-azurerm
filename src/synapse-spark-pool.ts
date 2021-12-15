@@ -122,7 +122,7 @@ export class SynapseSparkPoolAutoPauseOutputReference extends cdktf.ComplexObjec
   public get internalValue(): SynapseSparkPoolAutoPause | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._delayInMinutes) {
+    if (this._delayInMinutes !== undefined) {
       hasAnyValues = true;
       internalValueResult.delayInMinutes = this._delayInMinutes;
     }
@@ -190,11 +190,11 @@ export class SynapseSparkPoolAutoScaleOutputReference extends cdktf.ComplexObjec
   public get internalValue(): SynapseSparkPoolAutoScale | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._maxNodeCount) {
+    if (this._maxNodeCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxNodeCount = this._maxNodeCount;
     }
-    if (this._minNodeCount) {
+    if (this._minNodeCount !== undefined) {
       hasAnyValues = true;
       internalValueResult.minNodeCount = this._minNodeCount;
     }
@@ -277,11 +277,11 @@ export class SynapseSparkPoolLibraryRequirementOutputReference extends cdktf.Com
   public get internalValue(): SynapseSparkPoolLibraryRequirement | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._content) {
+    if (this._content !== undefined) {
       hasAnyValues = true;
       internalValueResult.content = this._content;
     }
-    if (this._filename) {
+    if (this._filename !== undefined) {
       hasAnyValues = true;
       internalValueResult.filename = this._filename;
     }
@@ -364,11 +364,11 @@ export class SynapseSparkPoolSparkConfigOutputReference extends cdktf.ComplexObj
   public get internalValue(): SynapseSparkPoolSparkConfig | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._content) {
+    if (this._content !== undefined) {
       hasAnyValues = true;
       internalValueResult.content = this._content;
     }
-    if (this._filename) {
+    if (this._filename !== undefined) {
       hasAnyValues = true;
       internalValueResult.filename = this._filename;
     }
@@ -461,19 +461,19 @@ export class SynapseSparkPoolTimeoutsOutputReference extends cdktf.ComplexObject
   public get internalValue(): SynapseSparkPoolTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

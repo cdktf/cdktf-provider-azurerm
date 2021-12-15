@@ -220,7 +220,7 @@ export class WindowsVirtualMachineAdditionalCapabilitiesOutputReference extends 
   public get internalValue(): WindowsVirtualMachineAdditionalCapabilities | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._ultraSsdEnabled) {
+    if (this._ultraSsdEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.ultraSsdEnabled = this._ultraSsdEnabled;
     }
@@ -308,7 +308,7 @@ export class WindowsVirtualMachineBootDiagnosticsOutputReference extends cdktf.C
   public get internalValue(): WindowsVirtualMachineBootDiagnostics | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._storageAccountUri) {
+    if (this._storageAccountUri !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageAccountUri = this._storageAccountUri;
     }
@@ -379,11 +379,11 @@ export class WindowsVirtualMachineIdentityOutputReference extends cdktf.ComplexO
   public get internalValue(): WindowsVirtualMachineIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._identityIds) {
+    if (this._identityIds !== undefined) {
       hasAnyValues = true;
       internalValueResult.identityIds = this._identityIds;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -464,7 +464,7 @@ export class WindowsVirtualMachineOsDiskDiffDiskSettingsOutputReference extends 
   public get internalValue(): WindowsVirtualMachineOsDiskDiffDiskSettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._option) {
+    if (this._option !== undefined) {
       hasAnyValues = true;
       internalValueResult.option = this._option;
     }
@@ -559,31 +559,31 @@ export class WindowsVirtualMachineOsDiskOutputReference extends cdktf.ComplexObj
   public get internalValue(): WindowsVirtualMachineOsDisk | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._caching) {
+    if (this._caching !== undefined) {
       hasAnyValues = true;
       internalValueResult.caching = this._caching;
     }
-    if (this._diskEncryptionSetId) {
+    if (this._diskEncryptionSetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskEncryptionSetId = this._diskEncryptionSetId;
     }
-    if (this._diskSizeGb) {
+    if (this._diskSizeGb !== undefined) {
       hasAnyValues = true;
       internalValueResult.diskSizeGb = this._diskSizeGb;
     }
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._storageAccountType) {
+    if (this._storageAccountType !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageAccountType = this._storageAccountType;
     }
-    if (this._writeAcceleratorEnabled) {
+    if (this._writeAcceleratorEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.writeAcceleratorEnabled = this._writeAcceleratorEnabled;
     }
-    if (this._diffDiskSettings?.internalValue) {
+    if (this._diffDiskSettings?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.diffDiskSettings = this._diffDiskSettings?.internalValue;
     }
@@ -761,15 +761,15 @@ export class WindowsVirtualMachinePlanOutputReference extends cdktf.ComplexObjec
   public get internalValue(): WindowsVirtualMachinePlan | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
-    if (this._product) {
+    if (this._product !== undefined) {
       hasAnyValues = true;
       internalValueResult.product = this._product;
     }
-    if (this._publisher) {
+    if (this._publisher !== undefined) {
       hasAnyValues = true;
       internalValueResult.publisher = this._publisher;
     }
@@ -923,19 +923,19 @@ export class WindowsVirtualMachineSourceImageReferenceOutputReference extends cd
   public get internalValue(): WindowsVirtualMachineSourceImageReference | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._offer) {
+    if (this._offer !== undefined) {
       hasAnyValues = true;
       internalValueResult.offer = this._offer;
     }
-    if (this._publisher) {
+    if (this._publisher !== undefined) {
       hasAnyValues = true;
       internalValueResult.publisher = this._publisher;
     }
-    if (this._sku) {
+    if (this._sku !== undefined) {
       hasAnyValues = true;
       internalValueResult.sku = this._sku;
     }
-    if (this._version) {
+    if (this._version !== undefined) {
       hasAnyValues = true;
       internalValueResult.version = this._version;
     }
@@ -1058,19 +1058,19 @@ export class WindowsVirtualMachineTimeoutsOutputReference extends cdktf.ComplexO
   public get internalValue(): WindowsVirtualMachineTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

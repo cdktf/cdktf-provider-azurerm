@@ -115,11 +115,11 @@ export class MediaLiveEventCrossSiteAccessPolicyOutputReference extends cdktf.Co
   public get internalValue(): MediaLiveEventCrossSiteAccessPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._clientAccessPolicy) {
+    if (this._clientAccessPolicy !== undefined) {
       hasAnyValues = true;
       internalValueResult.clientAccessPolicy = this._clientAccessPolicy;
     }
-    if (this._crossDomainPolicy) {
+    if (this._crossDomainPolicy !== undefined) {
       hasAnyValues = true;
       internalValueResult.crossDomainPolicy = this._crossDomainPolicy;
     }
@@ -218,19 +218,19 @@ export class MediaLiveEventEncodingOutputReference extends cdktf.ComplexObject {
   public get internalValue(): MediaLiveEventEncoding | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._keyFrameInterval) {
+    if (this._keyFrameInterval !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyFrameInterval = this._keyFrameInterval;
     }
-    if (this._presetName) {
+    if (this._presetName !== undefined) {
       hasAnyValues = true;
       internalValueResult.presetName = this._presetName;
     }
-    if (this._stretchMode) {
+    if (this._stretchMode !== undefined) {
       hasAnyValues = true;
       internalValueResult.stretchMode = this._stretchMode;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -394,19 +394,19 @@ export class MediaLiveEventInputOutputReference extends cdktf.ComplexObject {
   public get internalValue(): MediaLiveEventInput | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._accessToken) {
+    if (this._accessToken !== undefined) {
       hasAnyValues = true;
       internalValueResult.accessToken = this._accessToken;
     }
-    if (this._keyFrameIntervalDuration) {
+    if (this._keyFrameIntervalDuration !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyFrameIntervalDuration = this._keyFrameIntervalDuration;
     }
-    if (this._streamingProtocol) {
+    if (this._streamingProtocol !== undefined) {
       hasAnyValues = true;
       internalValueResult.streamingProtocol = this._streamingProtocol;
     }
-    if (this._ipAccessControlAllow) {
+    if (this._ipAccessControlAllow !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipAccessControlAllow = this._ipAccessControlAllow;
     }
@@ -571,19 +571,19 @@ export class MediaLiveEventPreviewOutputReference extends cdktf.ComplexObject {
   public get internalValue(): MediaLiveEventPreview | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._alternativeMediaId) {
+    if (this._alternativeMediaId !== undefined) {
       hasAnyValues = true;
       internalValueResult.alternativeMediaId = this._alternativeMediaId;
     }
-    if (this._previewLocator) {
+    if (this._previewLocator !== undefined) {
       hasAnyValues = true;
       internalValueResult.previewLocator = this._previewLocator;
     }
-    if (this._streamingPolicyName) {
+    if (this._streamingPolicyName !== undefined) {
       hasAnyValues = true;
       internalValueResult.streamingPolicyName = this._streamingPolicyName;
     }
-    if (this._ipAccessControlAllow) {
+    if (this._ipAccessControlAllow !== undefined) {
       hasAnyValues = true;
       internalValueResult.ipAccessControlAllow = this._ipAccessControlAllow;
     }
@@ -719,19 +719,19 @@ export class MediaLiveEventTimeoutsOutputReference extends cdktf.ComplexObject {
   public get internalValue(): MediaLiveEventTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

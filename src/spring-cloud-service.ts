@@ -116,11 +116,11 @@ export class SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReferenc
   public get internalValue(): SpringCloudServiceConfigServerGitSettingHttpBasicAuth | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
@@ -203,11 +203,11 @@ export class SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutp
   public get internalValue(): SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
-    if (this._username) {
+    if (this._username !== undefined) {
       hasAnyValues = true;
       internalValueResult.username = this._username;
     }
@@ -300,19 +300,19 @@ export class SpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputRefe
   public get internalValue(): SpringCloudServiceConfigServerGitSettingRepositorySshAuth | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostKey) {
+    if (this._hostKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostKey = this._hostKey;
     }
-    if (this._hostKeyAlgorithm) {
+    if (this._hostKeyAlgorithm !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostKeyAlgorithm = this._hostKeyAlgorithm;
     }
-    if (this._privateKey) {
+    if (this._privateKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.privateKey = this._privateKey;
     }
-    if (this._strictHostKeyCheckingEnabled) {
+    if (this._strictHostKeyCheckingEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.strictHostKeyCheckingEnabled = this._strictHostKeyCheckingEnabled;
     }
@@ -495,19 +495,19 @@ export class SpringCloudServiceConfigServerGitSettingSshAuthOutputReference exte
   public get internalValue(): SpringCloudServiceConfigServerGitSettingSshAuth | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._hostKey) {
+    if (this._hostKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostKey = this._hostKey;
     }
-    if (this._hostKeyAlgorithm) {
+    if (this._hostKeyAlgorithm !== undefined) {
       hasAnyValues = true;
       internalValueResult.hostKeyAlgorithm = this._hostKeyAlgorithm;
     }
-    if (this._privateKey) {
+    if (this._privateKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.privateKey = this._privateKey;
     }
-    if (this._strictHostKeyCheckingEnabled) {
+    if (this._strictHostKeyCheckingEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.strictHostKeyCheckingEnabled = this._strictHostKeyCheckingEnabled;
     }
@@ -655,27 +655,27 @@ export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdk
   public get internalValue(): SpringCloudServiceConfigServerGitSetting | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._label) {
+    if (this._label !== undefined) {
       hasAnyValues = true;
       internalValueResult.label = this._label;
     }
-    if (this._searchPaths) {
+    if (this._searchPaths !== undefined) {
       hasAnyValues = true;
       internalValueResult.searchPaths = this._searchPaths;
     }
-    if (this._uri) {
+    if (this._uri !== undefined) {
       hasAnyValues = true;
       internalValueResult.uri = this._uri;
     }
-    if (this._httpBasicAuth?.internalValue) {
+    if (this._httpBasicAuth?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.httpBasicAuth = this._httpBasicAuth?.internalValue;
     }
-    if (this._repository) {
+    if (this._repository !== undefined) {
       hasAnyValues = true;
       internalValueResult.repository = this._repository;
     }
-    if (this._sshAuth?.internalValue) {
+    if (this._sshAuth?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.sshAuth = this._sshAuth?.internalValue;
     }
@@ -849,23 +849,23 @@ export class SpringCloudServiceNetworkOutputReference extends cdktf.ComplexObjec
   public get internalValue(): SpringCloudServiceNetwork | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._appNetworkResourceGroup) {
+    if (this._appNetworkResourceGroup !== undefined) {
       hasAnyValues = true;
       internalValueResult.appNetworkResourceGroup = this._appNetworkResourceGroup;
     }
-    if (this._appSubnetId) {
+    if (this._appSubnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.appSubnetId = this._appSubnetId;
     }
-    if (this._cidrRanges) {
+    if (this._cidrRanges !== undefined) {
       hasAnyValues = true;
       internalValueResult.cidrRanges = this._cidrRanges;
     }
-    if (this._serviceRuntimeNetworkResourceGroup) {
+    if (this._serviceRuntimeNetworkResourceGroup !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceRuntimeNetworkResourceGroup = this._serviceRuntimeNetworkResourceGroup;
     }
-    if (this._serviceRuntimeSubnetId) {
+    if (this._serviceRuntimeSubnetId !== undefined) {
       hasAnyValues = true;
       internalValueResult.serviceRuntimeSubnetId = this._serviceRuntimeSubnetId;
     }
@@ -1009,19 +1009,19 @@ export class SpringCloudServiceTimeoutsOutputReference extends cdktf.ComplexObje
   public get internalValue(): SpringCloudServiceTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
@@ -1151,15 +1151,15 @@ export class SpringCloudServiceTraceOutputReference extends cdktf.ComplexObject 
   public get internalValue(): SpringCloudServiceTrace | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._connectionString) {
+    if (this._connectionString !== undefined) {
       hasAnyValues = true;
       internalValueResult.connectionString = this._connectionString;
     }
-    if (this._instrumentationKey) {
+    if (this._instrumentationKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.instrumentationKey = this._instrumentationKey;
     }
-    if (this._sampleRate) {
+    if (this._sampleRate !== undefined) {
       hasAnyValues = true;
       internalValueResult.sampleRate = this._sampleRate;
     }

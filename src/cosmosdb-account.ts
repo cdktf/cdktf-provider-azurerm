@@ -180,7 +180,7 @@ export class CosmosdbAccountAnalyticalStorageOutputReference extends cdktf.Compl
   public get internalValue(): CosmosdbAccountAnalyticalStorage | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._schemaType) {
+    if (this._schemaType !== undefined) {
       hasAnyValues = true;
       internalValueResult.schemaType = this._schemaType;
     }
@@ -258,19 +258,19 @@ export class CosmosdbAccountBackupOutputReference extends cdktf.ComplexObject {
   public get internalValue(): CosmosdbAccountBackup | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._intervalInMinutes) {
+    if (this._intervalInMinutes !== undefined) {
       hasAnyValues = true;
       internalValueResult.intervalInMinutes = this._intervalInMinutes;
     }
-    if (this._retentionInHours) {
+    if (this._retentionInHours !== undefined) {
       hasAnyValues = true;
       internalValueResult.retentionInHours = this._retentionInHours;
     }
-    if (this._storageRedundancy) {
+    if (this._storageRedundancy !== undefined) {
       hasAnyValues = true;
       internalValueResult.storageRedundancy = this._storageRedundancy;
     }
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -404,7 +404,7 @@ export class CosmosdbAccountCapacityOutputReference extends cdktf.ComplexObject 
   public get internalValue(): CosmosdbAccountCapacity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._totalThroughputLimit) {
+    if (this._totalThroughputLimit !== undefined) {
       hasAnyValues = true;
       internalValueResult.totalThroughputLimit = this._totalThroughputLimit;
     }
@@ -477,15 +477,15 @@ export class CosmosdbAccountConsistencyPolicyOutputReference extends cdktf.Compl
   public get internalValue(): CosmosdbAccountConsistencyPolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._consistencyLevel) {
+    if (this._consistencyLevel !== undefined) {
       hasAnyValues = true;
       internalValueResult.consistencyLevel = this._consistencyLevel;
     }
-    if (this._maxIntervalInSeconds) {
+    if (this._maxIntervalInSeconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxIntervalInSeconds = this._maxIntervalInSeconds;
     }
-    if (this._maxStalenessPrefix) {
+    if (this._maxStalenessPrefix !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxStalenessPrefix = this._maxStalenessPrefix;
     }
@@ -604,23 +604,23 @@ export class CosmosdbAccountCorsRuleOutputReference extends cdktf.ComplexObject 
   public get internalValue(): CosmosdbAccountCorsRule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._allowedHeaders) {
+    if (this._allowedHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedHeaders = this._allowedHeaders;
     }
-    if (this._allowedMethods) {
+    if (this._allowedMethods !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedMethods = this._allowedMethods;
     }
-    if (this._allowedOrigins) {
+    if (this._allowedOrigins !== undefined) {
       hasAnyValues = true;
       internalValueResult.allowedOrigins = this._allowedOrigins;
     }
-    if (this._exposedHeaders) {
+    if (this._exposedHeaders !== undefined) {
       hasAnyValues = true;
       internalValueResult.exposedHeaders = this._exposedHeaders;
     }
-    if (this._maxAgeInSeconds) {
+    if (this._maxAgeInSeconds !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxAgeInSeconds = this._maxAgeInSeconds;
     }
@@ -775,7 +775,7 @@ export class CosmosdbAccountIdentityOutputReference extends cdktf.ComplexObject 
   public get internalValue(): CosmosdbAccountIdentity | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._type) {
+    if (this._type !== undefined) {
       hasAnyValues = true;
       internalValueResult.type = this._type;
     }
@@ -853,19 +853,19 @@ export class CosmosdbAccountTimeoutsOutputReference extends cdktf.ComplexObject 
   public get internalValue(): CosmosdbAccountTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

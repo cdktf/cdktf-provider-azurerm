@@ -267,11 +267,11 @@ export class WebApplicationFirewallPolicyManagedRulesOutputReference extends cdk
   public get internalValue(): WebApplicationFirewallPolicyManagedRules | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._exclusion) {
+    if (this._exclusion !== undefined) {
       hasAnyValues = true;
       internalValueResult.exclusion = this._exclusion;
     }
-    if (this._managedRuleSet) {
+    if (this._managedRuleSet !== undefined) {
       hasAnyValues = true;
       internalValueResult.managedRuleSet = this._managedRuleSet;
     }
@@ -374,23 +374,23 @@ export class WebApplicationFirewallPolicyPolicySettingsOutputReference extends c
   public get internalValue(): WebApplicationFirewallPolicyPolicySettings | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._enabled) {
+    if (this._enabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
-    if (this._fileUploadLimitInMb) {
+    if (this._fileUploadLimitInMb !== undefined) {
       hasAnyValues = true;
       internalValueResult.fileUploadLimitInMb = this._fileUploadLimitInMb;
     }
-    if (this._maxRequestBodySizeInKb) {
+    if (this._maxRequestBodySizeInKb !== undefined) {
       hasAnyValues = true;
       internalValueResult.maxRequestBodySizeInKb = this._maxRequestBodySizeInKb;
     }
-    if (this._mode) {
+    if (this._mode !== undefined) {
       hasAnyValues = true;
       internalValueResult.mode = this._mode;
     }
-    if (this._requestBodyCheck) {
+    if (this._requestBodyCheck !== undefined) {
       hasAnyValues = true;
       internalValueResult.requestBodyCheck = this._requestBodyCheck;
     }
@@ -543,19 +543,19 @@ export class WebApplicationFirewallPolicyTimeoutsOutputReference extends cdktf.C
   public get internalValue(): WebApplicationFirewallPolicyTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }

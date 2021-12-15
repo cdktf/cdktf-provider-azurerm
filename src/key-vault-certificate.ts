@@ -107,11 +107,11 @@ export class KeyVaultCertificateCertificateOutputReference extends cdktf.Complex
   public get internalValue(): KeyVaultCertificateCertificate | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._contents) {
+    if (this._contents !== undefined) {
       hasAnyValues = true;
       internalValueResult.contents = this._contents;
     }
-    if (this._password) {
+    if (this._password !== undefined) {
       hasAnyValues = true;
       internalValueResult.password = this._password;
     }
@@ -192,7 +192,7 @@ export class KeyVaultCertificateCertificatePolicyIssuerParametersOutputReference
   public get internalValue(): KeyVaultCertificateCertificatePolicyIssuerParameters | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._name) {
+    if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
@@ -275,23 +275,23 @@ export class KeyVaultCertificateCertificatePolicyKeyPropertiesOutputReference ex
   public get internalValue(): KeyVaultCertificateCertificatePolicyKeyProperties | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._curve) {
+    if (this._curve !== undefined) {
       hasAnyValues = true;
       internalValueResult.curve = this._curve;
     }
-    if (this._exportable) {
+    if (this._exportable !== undefined) {
       hasAnyValues = true;
       internalValueResult.exportable = this._exportable;
     }
-    if (this._keySize) {
+    if (this._keySize !== undefined) {
       hasAnyValues = true;
       internalValueResult.keySize = this._keySize;
     }
-    if (this._keyType) {
+    if (this._keyType !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyType = this._keyType;
     }
-    if (this._reuseKey) {
+    if (this._reuseKey !== undefined) {
       hasAnyValues = true;
       internalValueResult.reuseKey = this._reuseKey;
     }
@@ -420,7 +420,7 @@ export class KeyVaultCertificateCertificatePolicyLifetimeActionActionOutputRefer
   public get internalValue(): KeyVaultCertificateCertificatePolicyLifetimeActionAction | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._actionType) {
+    if (this._actionType !== undefined) {
       hasAnyValues = true;
       internalValueResult.actionType = this._actionType;
     }
@@ -488,11 +488,11 @@ export class KeyVaultCertificateCertificatePolicyLifetimeActionTriggerOutputRefe
   public get internalValue(): KeyVaultCertificateCertificatePolicyLifetimeActionTrigger | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._daysBeforeExpiry) {
+    if (this._daysBeforeExpiry !== undefined) {
       hasAnyValues = true;
       internalValueResult.daysBeforeExpiry = this._daysBeforeExpiry;
     }
-    if (this._lifetimePercentage) {
+    if (this._lifetimePercentage !== undefined) {
       hasAnyValues = true;
       internalValueResult.lifetimePercentage = this._lifetimePercentage;
     }
@@ -602,7 +602,7 @@ export class KeyVaultCertificateCertificatePolicySecretPropertiesOutputReference
   public get internalValue(): KeyVaultCertificateCertificatePolicySecretProperties | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._contentType) {
+    if (this._contentType !== undefined) {
       hasAnyValues = true;
       internalValueResult.contentType = this._contentType;
     }
@@ -675,15 +675,15 @@ export class KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjec
   public get internalValue(): KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._dnsNames) {
+    if (this._dnsNames !== undefined) {
       hasAnyValues = true;
       internalValueResult.dnsNames = this._dnsNames;
     }
-    if (this._emails) {
+    if (this._emails !== undefined) {
       hasAnyValues = true;
       internalValueResult.emails = this._emails;
     }
-    if (this._upns) {
+    if (this._upns !== undefined) {
       hasAnyValues = true;
       internalValueResult.upns = this._upns;
     }
@@ -807,23 +807,23 @@ export class KeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutput
   public get internalValue(): KeyVaultCertificateCertificatePolicyX509CertificateProperties | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._extendedKeyUsage) {
+    if (this._extendedKeyUsage !== undefined) {
       hasAnyValues = true;
       internalValueResult.extendedKeyUsage = this._extendedKeyUsage;
     }
-    if (this._keyUsage) {
+    if (this._keyUsage !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyUsage = this._keyUsage;
     }
-    if (this._subject) {
+    if (this._subject !== undefined) {
       hasAnyValues = true;
       internalValueResult.subject = this._subject;
     }
-    if (this._validityInMonths) {
+    if (this._validityInMonths !== undefined) {
       hasAnyValues = true;
       internalValueResult.validityInMonths = this._validityInMonths;
     }
-    if (this._subjectAlternativeNames?.internalValue) {
+    if (this._subjectAlternativeNames?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.subjectAlternativeNames = this._subjectAlternativeNames?.internalValue;
     }
@@ -982,23 +982,23 @@ export class KeyVaultCertificateCertificatePolicyOutputReference extends cdktf.C
   public get internalValue(): KeyVaultCertificateCertificatePolicy | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._issuerParameters?.internalValue) {
+    if (this._issuerParameters?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.issuerParameters = this._issuerParameters?.internalValue;
     }
-    if (this._keyProperties?.internalValue) {
+    if (this._keyProperties?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.keyProperties = this._keyProperties?.internalValue;
     }
-    if (this._lifetimeAction) {
+    if (this._lifetimeAction !== undefined) {
       hasAnyValues = true;
       internalValueResult.lifetimeAction = this._lifetimeAction;
     }
-    if (this._secretProperties?.internalValue) {
+    if (this._secretProperties?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.secretProperties = this._secretProperties?.internalValue;
     }
-    if (this._x509CertificateProperties?.internalValue) {
+    if (this._x509CertificateProperties?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.x509CertificateProperties = this._x509CertificateProperties?.internalValue;
     }
@@ -1143,19 +1143,19 @@ export class KeyVaultCertificateTimeoutsOutputReference extends cdktf.ComplexObj
   public get internalValue(): KeyVaultCertificateTimeouts | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._create) {
+    if (this._create !== undefined) {
       hasAnyValues = true;
       internalValueResult.create = this._create;
     }
-    if (this._delete) {
+    if (this._delete !== undefined) {
       hasAnyValues = true;
       internalValueResult.delete = this._delete;
     }
-    if (this._read) {
+    if (this._read !== undefined) {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update) {
+    if (this._update !== undefined) {
       hasAnyValues = true;
       internalValueResult.update = this._update;
     }
