@@ -16,6 +16,10 @@ export interface CosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly analyticalStorageEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#create_mode CosmosdbAccount#create_mode}
+  */
+  readonly createMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#default_identity_type CosmosdbAccount#default_identity_type}
   */
   readonly defaultIdentityType?: string;
@@ -135,6 +139,12 @@ export interface CosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#identity CosmosdbAccount#identity}
   */
   readonly identity?: CosmosdbAccountIdentity;
+  /**
+  * restore block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#restore CosmosdbAccount#restore}
+  */
+  readonly restore?: CosmosdbAccountRestore;
   /**
   * timeouts block
   * 
@@ -806,6 +816,145 @@ export class CosmosdbAccountIdentityOutputReference extends cdktf.ComplexObject 
     return this._type;
   }
 }
+export interface CosmosdbAccountRestoreDatabase {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#collection_names CosmosdbAccount#collection_names}
+  */
+  readonly collectionNames?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#name CosmosdbAccount#name}
+  */
+  readonly name: string;
+}
+
+export function cosmosdbAccountRestoreDatabaseToTerraform(struct?: CosmosdbAccountRestoreDatabase): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    collection_names: cdktf.listMapper(cdktf.stringToTerraform)(struct!.collectionNames),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
+export interface CosmosdbAccountRestore {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#restore_timestamp_in_utc CosmosdbAccount#restore_timestamp_in_utc}
+  */
+  readonly restoreTimestampInUtc: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#source_cosmosdb_account_id CosmosdbAccount#source_cosmosdb_account_id}
+  */
+  readonly sourceCosmosdbAccountId: string;
+  /**
+  * database block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#database CosmosdbAccount#database}
+  */
+  readonly database?: CosmosdbAccountRestoreDatabase[];
+}
+
+export function cosmosdbAccountRestoreToTerraform(struct?: CosmosdbAccountRestoreOutputReference | CosmosdbAccountRestore): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    restore_timestamp_in_utc: cdktf.stringToTerraform(struct!.restoreTimestampInUtc),
+    source_cosmosdb_account_id: cdktf.stringToTerraform(struct!.sourceCosmosdbAccountId),
+    database: cdktf.listMapper(cosmosdbAccountRestoreDatabaseToTerraform)(struct!.database),
+  }
+}
+
+export class CosmosdbAccountRestoreOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): CosmosdbAccountRestore | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._restoreTimestampInUtc !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.restoreTimestampInUtc = this._restoreTimestampInUtc;
+    }
+    if (this._sourceCosmosdbAccountId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceCosmosdbAccountId = this._sourceCosmosdbAccountId;
+    }
+    if (this._database !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.database = this._database;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: CosmosdbAccountRestore | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._restoreTimestampInUtc = undefined;
+      this._sourceCosmosdbAccountId = undefined;
+      this._database = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._restoreTimestampInUtc = value.restoreTimestampInUtc;
+      this._sourceCosmosdbAccountId = value.sourceCosmosdbAccountId;
+      this._database = value.database;
+    }
+  }
+
+  // restore_timestamp_in_utc - computed: false, optional: false, required: true
+  private _restoreTimestampInUtc?: string; 
+  public get restoreTimestampInUtc() {
+    return this.getStringAttribute('restore_timestamp_in_utc');
+  }
+  public set restoreTimestampInUtc(value: string) {
+    this._restoreTimestampInUtc = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restoreTimestampInUtcInput() {
+    return this._restoreTimestampInUtc;
+  }
+
+  // source_cosmosdb_account_id - computed: false, optional: false, required: true
+  private _sourceCosmosdbAccountId?: string; 
+  public get sourceCosmosdbAccountId() {
+    return this.getStringAttribute('source_cosmosdb_account_id');
+  }
+  public set sourceCosmosdbAccountId(value: string) {
+    this._sourceCosmosdbAccountId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceCosmosdbAccountIdInput() {
+    return this._sourceCosmosdbAccountId;
+  }
+
+  // database - computed: false, optional: true, required: false
+  private _database?: CosmosdbAccountRestoreDatabase[]; 
+  public get database() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('database') as any;
+  }
+  public set database(value: CosmosdbAccountRestoreDatabase[]) {
+    this._database = value;
+  }
+  public resetDatabase() {
+    this._database = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get databaseInput() {
+    return this._database;
+  }
+}
 export interface CosmosdbAccountTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_account.html#create CosmosdbAccount#create}
@@ -1010,6 +1159,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
     });
     this._accessKeyMetadataWritesEnabled = config.accessKeyMetadataWritesEnabled;
     this._analyticalStorageEnabled = config.analyticalStorageEnabled;
+    this._createMode = config.createMode;
     this._defaultIdentityType = config.defaultIdentityType;
     this._enableAutomaticFailover = config.enableAutomaticFailover;
     this._enableFreeTier = config.enableFreeTier;
@@ -1036,6 +1186,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
     this._corsRule.internalValue = config.corsRule;
     this._geoLocation = config.geoLocation;
     this._identity.internalValue = config.identity;
+    this._restore.internalValue = config.restore;
     this._timeouts.internalValue = config.timeouts;
     this._virtualNetworkRule = config.virtualNetworkRule;
   }
@@ -1079,6 +1230,22 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
   // connection_strings - computed: true, optional: false, required: false
   public get connectionStrings() {
     return this.getListAttribute('connection_strings');
+  }
+
+  // create_mode - computed: true, optional: true, required: false
+  private _createMode?: string; 
+  public get createMode() {
+    return this.getStringAttribute('create_mode');
+  }
+  public set createMode(value: string) {
+    this._createMode = value;
+  }
+  public resetCreateMode() {
+    this._createMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createModeInput() {
+    return this._createMode;
   }
 
   // default_identity_type - computed: false, optional: true, required: false
@@ -1542,6 +1709,22 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
     return this._identity.internalValue;
   }
 
+  // restore - computed: false, optional: true, required: false
+  private _restore = new CosmosdbAccountRestoreOutputReference(this as any, "restore", true);
+  public get restore() {
+    return this._restore;
+  }
+  public putRestore(value: CosmosdbAccountRestore) {
+    this._restore.internalValue = value;
+  }
+  public resetRestore() {
+    this._restore.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restoreInput() {
+    return this._restore.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new CosmosdbAccountTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
@@ -1583,6 +1766,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
     return {
       access_key_metadata_writes_enabled: cdktf.booleanToTerraform(this._accessKeyMetadataWritesEnabled),
       analytical_storage_enabled: cdktf.booleanToTerraform(this._analyticalStorageEnabled),
+      create_mode: cdktf.stringToTerraform(this._createMode),
       default_identity_type: cdktf.stringToTerraform(this._defaultIdentityType),
       enable_automatic_failover: cdktf.booleanToTerraform(this._enableAutomaticFailover),
       enable_free_tier: cdktf.booleanToTerraform(this._enableFreeTier),
@@ -1609,6 +1793,7 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
       cors_rule: cosmosdbAccountCorsRuleToTerraform(this._corsRule.internalValue),
       geo_location: cdktf.listMapper(cosmosdbAccountGeoLocationToTerraform)(this._geoLocation),
       identity: cosmosdbAccountIdentityToTerraform(this._identity.internalValue),
+      restore: cosmosdbAccountRestoreToTerraform(this._restore.internalValue),
       timeouts: cosmosdbAccountTimeoutsToTerraform(this._timeouts.internalValue),
       virtual_network_rule: cdktf.listMapper(cosmosdbAccountVirtualNetworkRuleToTerraform)(this._virtualNetworkRule),
     };

@@ -148,6 +148,43 @@ export function apiManagementApiOperationRequestQueryParameterToTerraform(struct
   }
 }
 
+export interface ApiManagementApiOperationRequestRepresentationExample {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#description ApiManagementApiOperation#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#external_value ApiManagementApiOperation#external_value}
+  */
+  readonly externalValue?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#name ApiManagementApiOperation#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#summary ApiManagementApiOperation#summary}
+  */
+  readonly summary?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#value ApiManagementApiOperation#value}
+  */
+  readonly value?: string;
+}
+
+export function apiManagementApiOperationRequestRepresentationExampleToTerraform(struct?: ApiManagementApiOperationRequestRepresentationExample): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    external_value: cdktf.stringToTerraform(struct!.externalValue),
+    name: cdktf.stringToTerraform(struct!.name),
+    summary: cdktf.stringToTerraform(struct!.summary),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface ApiManagementApiOperationRequestRepresentationFormParameter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#default_value ApiManagementApiOperation#default_value}
@@ -208,6 +245,12 @@ export interface ApiManagementApiOperationRequestRepresentation {
   */
   readonly typeName?: string;
   /**
+  * example block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#example ApiManagementApiOperation#example}
+  */
+  readonly example?: ApiManagementApiOperationRequestRepresentationExample[];
+  /**
   * form_parameter block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#form_parameter ApiManagementApiOperation#form_parameter}
@@ -225,6 +268,7 @@ export function apiManagementApiOperationRequestRepresentationToTerraform(struct
     sample: cdktf.stringToTerraform(struct!.sample),
     schema_id: cdktf.stringToTerraform(struct!.schemaId),
     type_name: cdktf.stringToTerraform(struct!.typeName),
+    example: cdktf.listMapper(apiManagementApiOperationRequestRepresentationExampleToTerraform)(struct!.example),
     form_parameter: cdktf.listMapper(apiManagementApiOperationRequestRepresentationFormParameterToTerraform)(struct!.formParameter),
   }
 }
@@ -427,6 +471,43 @@ export function apiManagementApiOperationResponseHeaderToTerraform(struct?: ApiM
   }
 }
 
+export interface ApiManagementApiOperationResponseRepresentationExample {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#description ApiManagementApiOperation#description}
+  */
+  readonly description?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#external_value ApiManagementApiOperation#external_value}
+  */
+  readonly externalValue?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#name ApiManagementApiOperation#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#summary ApiManagementApiOperation#summary}
+  */
+  readonly summary?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#value ApiManagementApiOperation#value}
+  */
+  readonly value?: string;
+}
+
+export function apiManagementApiOperationResponseRepresentationExampleToTerraform(struct?: ApiManagementApiOperationResponseRepresentationExample): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    description: cdktf.stringToTerraform(struct!.description),
+    external_value: cdktf.stringToTerraform(struct!.externalValue),
+    name: cdktf.stringToTerraform(struct!.name),
+    summary: cdktf.stringToTerraform(struct!.summary),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
 export interface ApiManagementApiOperationResponseRepresentationFormParameter {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#default_value ApiManagementApiOperation#default_value}
@@ -487,6 +568,12 @@ export interface ApiManagementApiOperationResponseRepresentation {
   */
   readonly typeName?: string;
   /**
+  * example block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#example ApiManagementApiOperation#example}
+  */
+  readonly example?: ApiManagementApiOperationResponseRepresentationExample[];
+  /**
   * form_parameter block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation.html#form_parameter ApiManagementApiOperation#form_parameter}
@@ -504,6 +591,7 @@ export function apiManagementApiOperationResponseRepresentationToTerraform(struc
     sample: cdktf.stringToTerraform(struct!.sample),
     schema_id: cdktf.stringToTerraform(struct!.schemaId),
     type_name: cdktf.stringToTerraform(struct!.typeName),
+    example: cdktf.listMapper(apiManagementApiOperationResponseRepresentationExampleToTerraform)(struct!.example),
     form_parameter: cdktf.listMapper(apiManagementApiOperationResponseRepresentationFormParameterToTerraform)(struct!.formParameter),
   }
 }

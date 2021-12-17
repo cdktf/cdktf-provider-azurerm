@@ -1,0 +1,319 @@
+// https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy.html
+// generated from terraform resource schema
+
+import { Construct } from 'constructs';
+import * as cdktf from 'cdktf';
+
+// Configuration
+
+export interface DataAzurermNetappSnapshotPolicyConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy.html#account_name DataAzurermNetappSnapshotPolicy#account_name}
+  */
+  readonly accountName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy.html#name DataAzurermNetappSnapshotPolicy#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy.html#resource_group_name DataAzurermNetappSnapshotPolicy#resource_group_name}
+  */
+  readonly resourceGroupName: string;
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy.html#timeouts DataAzurermNetappSnapshotPolicy#timeouts}
+  */
+  readonly timeouts?: DataAzurermNetappSnapshotPolicyTimeouts;
+}
+export class DataAzurermNetappSnapshotPolicyDailySchedule extends cdktf.ComplexComputedList {
+
+  // hour - computed: true, optional: false, required: false
+  public get hour() {
+    return this.getNumberAttribute('hour');
+  }
+
+  // minute - computed: true, optional: false, required: false
+  public get minute() {
+    return this.getNumberAttribute('minute');
+  }
+
+  // snapshots_to_keep - computed: true, optional: false, required: false
+  public get snapshotsToKeep() {
+    return this.getNumberAttribute('snapshots_to_keep');
+  }
+}
+export class DataAzurermNetappSnapshotPolicyHourlySchedule extends cdktf.ComplexComputedList {
+
+  // minute - computed: true, optional: false, required: false
+  public get minute() {
+    return this.getNumberAttribute('minute');
+  }
+
+  // snapshots_to_keep - computed: true, optional: false, required: false
+  public get snapshotsToKeep() {
+    return this.getNumberAttribute('snapshots_to_keep');
+  }
+}
+export class DataAzurermNetappSnapshotPolicyMonthlySchedule extends cdktf.ComplexComputedList {
+
+  // days_of_month - computed: true, optional: false, required: false
+  public get daysOfMonth() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('days_of_month') as any;
+  }
+
+  // hour - computed: true, optional: false, required: false
+  public get hour() {
+    return this.getNumberAttribute('hour');
+  }
+
+  // minute - computed: true, optional: false, required: false
+  public get minute() {
+    return this.getNumberAttribute('minute');
+  }
+
+  // snapshots_to_keep - computed: true, optional: false, required: false
+  public get snapshotsToKeep() {
+    return this.getNumberAttribute('snapshots_to_keep');
+  }
+}
+export class DataAzurermNetappSnapshotPolicyWeeklySchedule extends cdktf.ComplexComputedList {
+
+  // days_of_week - computed: true, optional: false, required: false
+  public get daysOfWeek() {
+    return this.getListAttribute('days_of_week');
+  }
+
+  // hour - computed: true, optional: false, required: false
+  public get hour() {
+    return this.getNumberAttribute('hour');
+  }
+
+  // minute - computed: true, optional: false, required: false
+  public get minute() {
+    return this.getNumberAttribute('minute');
+  }
+
+  // snapshots_to_keep - computed: true, optional: false, required: false
+  public get snapshotsToKeep() {
+    return this.getNumberAttribute('snapshots_to_keep');
+  }
+}
+export interface DataAzurermNetappSnapshotPolicyTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy.html#read DataAzurermNetappSnapshotPolicy#read}
+  */
+  readonly read?: string;
+}
+
+export function dataAzurermNetappSnapshotPolicyTimeoutsToTerraform(struct?: DataAzurermNetappSnapshotPolicyTimeoutsOutputReference | DataAzurermNetappSnapshotPolicyTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    read: cdktf.stringToTerraform(struct!.read),
+  }
+}
+
+export class DataAzurermNetappSnapshotPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): DataAzurermNetappSnapshotPolicyTimeouts | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._read !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermNetappSnapshotPolicyTimeouts | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._read = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._read = value.read;
+    }
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read;
+  }
+}
+
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy.html azurerm_netapp_snapshot_policy}
+*/
+export class DataAzurermNetappSnapshotPolicy extends cdktf.TerraformDataSource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_netapp_snapshot_policy";
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy.html azurerm_netapp_snapshot_policy} Data Source
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options DataAzurermNetappSnapshotPolicyConfig
+  */
+  public constructor(scope: Construct, id: string, config: DataAzurermNetappSnapshotPolicyConfig) {
+    super(scope, id, {
+      terraformResourceType: 'azurerm_netapp_snapshot_policy',
+      terraformGeneratorMetadata: {
+        providerName: 'azurerm'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle
+    });
+    this._accountName = config.accountName;
+    this._name = config.name;
+    this._resourceGroupName = config.resourceGroupName;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // account_name - computed: false, optional: false, required: true
+  private _accountName?: string; 
+  public get accountName() {
+    return this.getStringAttribute('account_name');
+  }
+  public set accountName(value: string) {
+    this._accountName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get accountNameInput() {
+    return this._accountName;
+  }
+
+  // daily_schedule - computed: true, optional: false, required: false
+  public dailySchedule(index: string) {
+    return new DataAzurermNetappSnapshotPolicyDailySchedule(this, 'daily_schedule', index);
+  }
+
+  // enabled - computed: true, optional: false, required: false
+  public get enabled() {
+    return this.getBooleanAttribute('enabled') as any;
+  }
+
+  // hourly_schedule - computed: true, optional: false, required: false
+  public hourlySchedule(index: string) {
+    return new DataAzurermNetappSnapshotPolicyHourlySchedule(this, 'hourly_schedule', index);
+  }
+
+  // id - computed: true, optional: true, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // location - computed: true, optional: false, required: false
+  public get location() {
+    return this.getStringAttribute('location');
+  }
+
+  // monthly_schedule - computed: true, optional: false, required: false
+  public monthlySchedule(index: string) {
+    return new DataAzurermNetappSnapshotPolicyMonthlySchedule(this, 'monthly_schedule', index);
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // resource_group_name - computed: false, optional: false, required: true
+  private _resourceGroupName?: string; 
+  public get resourceGroupName() {
+    return this.getStringAttribute('resource_group_name');
+  }
+  public set resourceGroupName(value: string) {
+    this._resourceGroupName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get resourceGroupNameInput() {
+    return this._resourceGroupName;
+  }
+
+  // tags - computed: true, optional: false, required: false
+  public tags(key: string): string {
+    return new cdktf.StringMap(this, 'tags').lookup(key);
+  }
+
+  // weekly_schedule - computed: true, optional: false, required: false
+  public weeklySchedule(index: string) {
+    return new DataAzurermNetappSnapshotPolicyWeeklySchedule(this, 'weekly_schedule', index);
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new DataAzurermNetappSnapshotPolicyTimeoutsOutputReference(this as any, "timeouts", true);
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: DataAzurermNetappSnapshotPolicyTimeouts) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      account_name: cdktf.stringToTerraform(this._accountName),
+      name: cdktf.stringToTerraform(this._name),
+      resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      timeouts: dataAzurermNetappSnapshotPolicyTimeoutsToTerraform(this._timeouts.internalValue),
+    };
+  }
+}

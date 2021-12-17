@@ -52,6 +52,12 @@ export interface IothubConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * cloud_to_device block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#cloud_to_device Iothub#cloud_to_device}
+  */
+  readonly cloudToDevice?: IothubCloudToDevice;
+  /**
   * fallback_route block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#fallback_route Iothub#fallback_route}
@@ -223,6 +229,156 @@ export class IothubSharedAccessPolicy extends cdktf.ComplexComputedList {
   // secondary_key - computed: true, optional: false, required: false
   public get secondaryKey() {
     return this.getStringAttribute('secondary_key');
+  }
+}
+export interface IothubCloudToDeviceFeedback {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#lock_duration Iothub#lock_duration}
+  */
+  readonly lockDuration?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#max_delivery_count Iothub#max_delivery_count}
+  */
+  readonly maxDeliveryCount?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#time_to_live Iothub#time_to_live}
+  */
+  readonly timeToLive?: string;
+}
+
+export function iothubCloudToDeviceFeedbackToTerraform(struct?: IothubCloudToDeviceFeedback): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    lock_duration: cdktf.stringToTerraform(struct!.lockDuration),
+    max_delivery_count: cdktf.numberToTerraform(struct!.maxDeliveryCount),
+    time_to_live: cdktf.stringToTerraform(struct!.timeToLive),
+  }
+}
+
+export interface IothubCloudToDevice {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#default_ttl Iothub#default_ttl}
+  */
+  readonly defaultTtl?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#max_delivery_count Iothub#max_delivery_count}
+  */
+  readonly maxDeliveryCount?: number;
+  /**
+  * feedback block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#feedback Iothub#feedback}
+  */
+  readonly feedback?: IothubCloudToDeviceFeedback[];
+}
+
+export function iothubCloudToDeviceToTerraform(struct?: IothubCloudToDeviceOutputReference | IothubCloudToDevice): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    default_ttl: cdktf.stringToTerraform(struct!.defaultTtl),
+    max_delivery_count: cdktf.numberToTerraform(struct!.maxDeliveryCount),
+    feedback: cdktf.listMapper(iothubCloudToDeviceFeedbackToTerraform)(struct!.feedback),
+  }
+}
+
+export class IothubCloudToDeviceOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): IothubCloudToDevice | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._defaultTtl !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultTtl = this._defaultTtl;
+    }
+    if (this._maxDeliveryCount !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.maxDeliveryCount = this._maxDeliveryCount;
+    }
+    if (this._feedback !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.feedback = this._feedback;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IothubCloudToDevice | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._defaultTtl = undefined;
+      this._maxDeliveryCount = undefined;
+      this._feedback = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._defaultTtl = value.defaultTtl;
+      this._maxDeliveryCount = value.maxDeliveryCount;
+      this._feedback = value.feedback;
+    }
+  }
+
+  // default_ttl - computed: false, optional: true, required: false
+  private _defaultTtl?: string; 
+  public get defaultTtl() {
+    return this.getStringAttribute('default_ttl');
+  }
+  public set defaultTtl(value: string) {
+    this._defaultTtl = value;
+  }
+  public resetDefaultTtl() {
+    this._defaultTtl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultTtlInput() {
+    return this._defaultTtl;
+  }
+
+  // max_delivery_count - computed: false, optional: true, required: false
+  private _maxDeliveryCount?: number; 
+  public get maxDeliveryCount() {
+    return this.getNumberAttribute('max_delivery_count');
+  }
+  public set maxDeliveryCount(value: number) {
+    this._maxDeliveryCount = value;
+  }
+  public resetMaxDeliveryCount() {
+    this._maxDeliveryCount = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxDeliveryCountInput() {
+    return this._maxDeliveryCount;
+  }
+
+  // feedback - computed: false, optional: true, required: false
+  private _feedback?: IothubCloudToDeviceFeedback[]; 
+  public get feedback() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('feedback') as any;
+  }
+  public set feedback(value: IothubCloudToDeviceFeedback[]) {
+    this._feedback = value;
+  }
+  public resetFeedback() {
+    this._feedback = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get feedbackInput() {
+    return this._feedback;
   }
 }
 export interface IothubFallbackRoute {
@@ -899,6 +1055,7 @@ export class Iothub extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._route = config.route;
     this._tags = config.tags;
+    this._cloudToDevice.internalValue = config.cloudToDevice;
     this._fallbackRoute.internalValue = config.fallbackRoute;
     this._fileUpload.internalValue = config.fileUpload;
     this._ipFilterRule = config.ipFilterRule;
@@ -1121,6 +1278,22 @@ export class Iothub extends cdktf.TerraformResource {
     return this.getStringAttribute('type');
   }
 
+  // cloud_to_device - computed: false, optional: true, required: false
+  private _cloudToDevice = new IothubCloudToDeviceOutputReference(this as any, "cloud_to_device", true);
+  public get cloudToDevice() {
+    return this._cloudToDevice;
+  }
+  public putCloudToDevice(value: IothubCloudToDevice) {
+    this._cloudToDevice.internalValue = value;
+  }
+  public resetCloudToDevice() {
+    this._cloudToDevice.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cloudToDeviceInput() {
+    return this._cloudToDevice.internalValue;
+  }
+
   // fallback_route - computed: false, optional: true, required: false
   private _fallbackRoute = new IothubFallbackRouteOutputReference(this as any, "fallback_route", true);
   public get fallbackRoute() {
@@ -1216,6 +1389,7 @@ export class Iothub extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       route: cdktf.listMapper(iothubRouteToTerraform)(this._route),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      cloud_to_device: iothubCloudToDeviceToTerraform(this._cloudToDevice.internalValue),
       fallback_route: iothubFallbackRouteToTerraform(this._fallbackRoute.internalValue),
       file_upload: iothubFileUploadToTerraform(this._fileUpload.internalValue),
       ip_filter_rule: cdktf.listMapper(iothubIpFilterRuleToTerraform)(this._ipFilterRule),

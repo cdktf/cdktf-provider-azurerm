@@ -54,6 +54,12 @@ export interface ResourcePolicyAssignmentConfig extends cdktf.TerraformMetaArgum
   */
   readonly identity?: ResourcePolicyAssignmentIdentity;
   /**
+  * non_compliance_message block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment.html#non_compliance_message ResourcePolicyAssignment#non_compliance_message}
+  */
+  readonly nonComplianceMessage?: ResourcePolicyAssignmentNonComplianceMessage[];
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment.html#timeouts ResourcePolicyAssignment#timeouts}
@@ -126,6 +132,28 @@ export class ResourcePolicyAssignmentIdentityOutputReference extends cdktf.Compl
     return this._type;
   }
 }
+export interface ResourcePolicyAssignmentNonComplianceMessage {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment.html#content ResourcePolicyAssignment#content}
+  */
+  readonly content: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment.html#policy_definition_reference_id ResourcePolicyAssignment#policy_definition_reference_id}
+  */
+  readonly policyDefinitionReferenceId?: string;
+}
+
+export function resourcePolicyAssignmentNonComplianceMessageToTerraform(struct?: ResourcePolicyAssignmentNonComplianceMessage): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    content: cdktf.stringToTerraform(struct!.content),
+    policy_definition_reference_id: cdktf.stringToTerraform(struct!.policyDefinitionReferenceId),
+  }
+}
+
 export interface ResourcePolicyAssignmentTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_policy_assignment.html#create ResourcePolicyAssignment#create}
@@ -317,6 +345,7 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
     this._policyDefinitionId = config.policyDefinitionId;
     this._resourceId = config.resourceId;
     this._identity.internalValue = config.identity;
+    this._nonComplianceMessage = config.nonComplianceMessage;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -496,6 +525,23 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
     return this._identity.internalValue;
   }
 
+  // non_compliance_message - computed: false, optional: true, required: false
+  private _nonComplianceMessage?: ResourcePolicyAssignmentNonComplianceMessage[]; 
+  public get nonComplianceMessage() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('non_compliance_message') as any;
+  }
+  public set nonComplianceMessage(value: ResourcePolicyAssignmentNonComplianceMessage[]) {
+    this._nonComplianceMessage = value;
+  }
+  public resetNonComplianceMessage() {
+    this._nonComplianceMessage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nonComplianceMessageInput() {
+    return this._nonComplianceMessage;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ResourcePolicyAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
@@ -529,6 +575,7 @@ export class ResourcePolicyAssignment extends cdktf.TerraformResource {
       policy_definition_id: cdktf.stringToTerraform(this._policyDefinitionId),
       resource_id: cdktf.stringToTerraform(this._resourceId),
       identity: resourcePolicyAssignmentIdentityToTerraform(this._identity.internalValue),
+      non_compliance_message: cdktf.listMapper(resourcePolicyAssignmentNonComplianceMessageToTerraform)(this._nonComplianceMessage),
       timeouts: resourcePolicyAssignmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -492,6 +492,14 @@ export interface VpnGatewayConnectionVpnLink {
   */
   readonly connectionMode?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#egress_nat_rule_ids VpnGatewayConnection#egress_nat_rule_ids}
+  */
+  readonly egressNatRuleIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#ingress_nat_rule_ids VpnGatewayConnection#ingress_nat_rule_ids}
+  */
+  readonly ingressNatRuleIds?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#local_azure_ip_address_enabled VpnGatewayConnection#local_azure_ip_address_enabled}
   */
   readonly localAzureIpAddressEnabled?: boolean | cdktf.IResolvable;
@@ -540,6 +548,8 @@ export function vpnGatewayConnectionVpnLinkToTerraform(struct?: VpnGatewayConnec
     bandwidth_mbps: cdktf.numberToTerraform(struct!.bandwidthMbps),
     bgp_enabled: cdktf.booleanToTerraform(struct!.bgpEnabled),
     connection_mode: cdktf.stringToTerraform(struct!.connectionMode),
+    egress_nat_rule_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.egressNatRuleIds),
+    ingress_nat_rule_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.ingressNatRuleIds),
     local_azure_ip_address_enabled: cdktf.booleanToTerraform(struct!.localAzureIpAddressEnabled),
     name: cdktf.stringToTerraform(struct!.name),
     policy_based_traffic_selector_enabled: cdktf.booleanToTerraform(struct!.policyBasedTrafficSelectorEnabled),

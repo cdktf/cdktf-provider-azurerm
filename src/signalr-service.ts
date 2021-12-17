@@ -12,6 +12,10 @@ export interface SignalrServiceConfig extends cdktf.TerraformMetaArguments {
   */
   readonly connectivityLogsEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#live_trace_enabled SignalrService#live_trace_enabled}
+  */
+  readonly liveTraceEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service.html#location SignalrService#location}
   */
   readonly location: string;
@@ -405,6 +409,7 @@ export class SignalrService extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._connectivityLogsEnabled = config.connectivityLogsEnabled;
+    this._liveTraceEnabled = config.liveTraceEnabled;
     this._location = config.location;
     this._messagingLogsEnabled = config.messagingLogsEnabled;
     this._name = config.name;
@@ -451,6 +456,22 @@ export class SignalrService extends cdktf.TerraformResource {
   // ip_address - computed: true, optional: false, required: false
   public get ipAddress() {
     return this.getStringAttribute('ip_address');
+  }
+
+  // live_trace_enabled - computed: true, optional: true, required: false
+  private _liveTraceEnabled?: boolean | cdktf.IResolvable; 
+  public get liveTraceEnabled() {
+    return this.getBooleanAttribute('live_trace_enabled') as any;
+  }
+  public set liveTraceEnabled(value: boolean | cdktf.IResolvable) {
+    this._liveTraceEnabled = value;
+  }
+  public resetLiveTraceEnabled() {
+    this._liveTraceEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get liveTraceEnabledInput() {
+    return this._liveTraceEnabled;
   }
 
   // location - computed: false, optional: false, required: true
@@ -658,6 +679,7 @@ export class SignalrService extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       connectivity_logs_enabled: cdktf.booleanToTerraform(this._connectivityLogsEnabled),
+      live_trace_enabled: cdktf.booleanToTerraform(this._liveTraceEnabled),
       location: cdktf.stringToTerraform(this._location),
       messaging_logs_enabled: cdktf.booleanToTerraform(this._messagingLogsEnabled),
       name: cdktf.stringToTerraform(this._name),
