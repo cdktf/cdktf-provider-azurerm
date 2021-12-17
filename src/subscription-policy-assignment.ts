@@ -54,6 +54,12 @@ export interface SubscriptionPolicyAssignmentConfig extends cdktf.TerraformMetaA
   */
   readonly identity?: SubscriptionPolicyAssignmentIdentity;
   /**
+  * non_compliance_message block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_policy_assignment.html#non_compliance_message SubscriptionPolicyAssignment#non_compliance_message}
+  */
+  readonly nonComplianceMessage?: SubscriptionPolicyAssignmentNonComplianceMessage[];
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_policy_assignment.html#timeouts SubscriptionPolicyAssignment#timeouts}
@@ -126,6 +132,28 @@ export class SubscriptionPolicyAssignmentIdentityOutputReference extends cdktf.C
     return this._type;
   }
 }
+export interface SubscriptionPolicyAssignmentNonComplianceMessage {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_policy_assignment.html#content SubscriptionPolicyAssignment#content}
+  */
+  readonly content: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_policy_assignment.html#policy_definition_reference_id SubscriptionPolicyAssignment#policy_definition_reference_id}
+  */
+  readonly policyDefinitionReferenceId?: string;
+}
+
+export function subscriptionPolicyAssignmentNonComplianceMessageToTerraform(struct?: SubscriptionPolicyAssignmentNonComplianceMessage): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    content: cdktf.stringToTerraform(struct!.content),
+    policy_definition_reference_id: cdktf.stringToTerraform(struct!.policyDefinitionReferenceId),
+  }
+}
+
 export interface SubscriptionPolicyAssignmentTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subscription_policy_assignment.html#create SubscriptionPolicyAssignment#create}
@@ -317,6 +345,7 @@ export class SubscriptionPolicyAssignment extends cdktf.TerraformResource {
     this._policyDefinitionId = config.policyDefinitionId;
     this._subscriptionId = config.subscriptionId;
     this._identity.internalValue = config.identity;
+    this._nonComplianceMessage = config.nonComplianceMessage;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -496,6 +525,23 @@ export class SubscriptionPolicyAssignment extends cdktf.TerraformResource {
     return this._identity.internalValue;
   }
 
+  // non_compliance_message - computed: false, optional: true, required: false
+  private _nonComplianceMessage?: SubscriptionPolicyAssignmentNonComplianceMessage[]; 
+  public get nonComplianceMessage() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('non_compliance_message') as any;
+  }
+  public set nonComplianceMessage(value: SubscriptionPolicyAssignmentNonComplianceMessage[]) {
+    this._nonComplianceMessage = value;
+  }
+  public resetNonComplianceMessage() {
+    this._nonComplianceMessage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nonComplianceMessageInput() {
+    return this._nonComplianceMessage;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new SubscriptionPolicyAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
@@ -529,6 +575,7 @@ export class SubscriptionPolicyAssignment extends cdktf.TerraformResource {
       policy_definition_id: cdktf.stringToTerraform(this._policyDefinitionId),
       subscription_id: cdktf.stringToTerraform(this._subscriptionId),
       identity: subscriptionPolicyAssignmentIdentityToTerraform(this._identity.internalValue),
+      non_compliance_message: cdktf.listMapper(subscriptionPolicyAssignmentNonComplianceMessageToTerraform)(this._nonComplianceMessage),
       timeouts: subscriptionPolicyAssignmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

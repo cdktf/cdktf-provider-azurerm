@@ -58,6 +58,12 @@ export interface LogicAppWorkflowConfig extends cdktf.TerraformMetaArguments {
   */
   readonly accessControl?: LogicAppWorkflowAccessControl;
   /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#identity LogicAppWorkflow#identity}
+  */
+  readonly identity?: LogicAppWorkflowIdentity;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#timeouts LogicAppWorkflow#timeouts}
@@ -190,11 +196,63 @@ export class LogicAppWorkflowAccessControlContentOutputReference extends cdktf.C
     return this._allowedCallerIpAddressRange;
   }
 }
+export interface LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaim {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#name LogicAppWorkflow#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#value LogicAppWorkflow#value}
+  */
+  readonly value: string;
+}
+
+export function logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaimToTerraform(struct?: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaim): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export interface LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#name LogicAppWorkflow#name}
+  */
+  readonly name: string;
+  /**
+  * claim block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#claim LogicAppWorkflow#claim}
+  */
+  readonly claim: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaim[];
+}
+
+export function logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyToTerraform(struct?: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    claim: cdktf.listMapper(logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaimToTerraform)(struct!.claim),
+  }
+}
+
 export interface LogicAppWorkflowAccessControlTrigger {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#allowed_caller_ip_address_range LogicAppWorkflow#allowed_caller_ip_address_range}
   */
   readonly allowedCallerIpAddressRange: string[];
+  /**
+  * open_authentication_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#open_authentication_policy LogicAppWorkflow#open_authentication_policy}
+  */
+  readonly openAuthenticationPolicy?: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy[];
 }
 
 export function logicAppWorkflowAccessControlTriggerToTerraform(struct?: LogicAppWorkflowAccessControlTriggerOutputReference | LogicAppWorkflowAccessControlTrigger): any {
@@ -204,6 +262,7 @@ export function logicAppWorkflowAccessControlTriggerToTerraform(struct?: LogicAp
   }
   return {
     allowed_caller_ip_address_range: cdktf.listMapper(cdktf.stringToTerraform)(struct!.allowedCallerIpAddressRange),
+    open_authentication_policy: cdktf.listMapper(logicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyToTerraform)(struct!.openAuthenticationPolicy),
   }
 }
 
@@ -226,6 +285,10 @@ export class LogicAppWorkflowAccessControlTriggerOutputReference extends cdktf.C
       hasAnyValues = true;
       internalValueResult.allowedCallerIpAddressRange = this._allowedCallerIpAddressRange;
     }
+    if (this._openAuthenticationPolicy !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.openAuthenticationPolicy = this._openAuthenticationPolicy;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -233,10 +296,12 @@ export class LogicAppWorkflowAccessControlTriggerOutputReference extends cdktf.C
     if (value === undefined) {
       this.isEmptyObject = false;
       this._allowedCallerIpAddressRange = undefined;
+      this._openAuthenticationPolicy = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._allowedCallerIpAddressRange = value.allowedCallerIpAddressRange;
+      this._openAuthenticationPolicy = value.openAuthenticationPolicy;
     }
   }
 
@@ -251,6 +316,23 @@ export class LogicAppWorkflowAccessControlTriggerOutputReference extends cdktf.C
   // Temporarily expose input value. Use with caution.
   public get allowedCallerIpAddressRangeInput() {
     return this._allowedCallerIpAddressRange;
+  }
+
+  // open_authentication_policy - computed: false, optional: true, required: false
+  private _openAuthenticationPolicy?: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy[]; 
+  public get openAuthenticationPolicy() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('open_authentication_policy') as any;
+  }
+  public set openAuthenticationPolicy(value: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy[]) {
+    this._openAuthenticationPolicy = value;
+  }
+  public resetOpenAuthenticationPolicy() {
+    this._openAuthenticationPolicy = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get openAuthenticationPolicyInput() {
+    return this._openAuthenticationPolicy;
   }
 }
 export interface LogicAppWorkflowAccessControlWorkflowManagement {
@@ -471,6 +553,96 @@ export class LogicAppWorkflowAccessControlOutputReference extends cdktf.ComplexO
     return this._workflowManagement.internalValue;
   }
 }
+export interface LogicAppWorkflowIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#identity_ids LogicAppWorkflow#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#type LogicAppWorkflow#type}
+  */
+  readonly type: string;
+}
+
+export function logicAppWorkflowIdentityToTerraform(struct?: LogicAppWorkflowIdentityOutputReference | LogicAppWorkflowIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class LogicAppWorkflowIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): LogicAppWorkflowIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: LogicAppWorkflowIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
 export interface LogicAppWorkflowTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_workflow.html#create LogicAppWorkflow#create}
@@ -663,6 +835,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
     this._workflowSchema = config.workflowSchema;
     this._workflowVersion = config.workflowVersion;
     this._accessControl.internalValue = config.accessControl;
+    this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -886,6 +1059,22 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
     return this._accessControl.internalValue;
   }
 
+  // identity - computed: false, optional: true, required: false
+  private _identity = new LogicAppWorkflowIdentityOutputReference(this as any, "identity", true);
+  public get identity() {
+    return this._identity;
+  }
+  public putIdentity(value: LogicAppWorkflowIdentity) {
+    this._identity.internalValue = value;
+  }
+  public resetIdentity() {
+    this._identity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new LogicAppWorkflowTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
@@ -920,6 +1109,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
       workflow_schema: cdktf.stringToTerraform(this._workflowSchema),
       workflow_version: cdktf.stringToTerraform(this._workflowVersion),
       access_control: logicAppWorkflowAccessControlToTerraform(this._accessControl.internalValue),
+      identity: logicAppWorkflowIdentityToTerraform(this._identity.internalValue),
       timeouts: logicAppWorkflowTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

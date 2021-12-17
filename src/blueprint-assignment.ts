@@ -12,6 +12,10 @@ export interface BlueprintAssignmentConfig extends cdktf.TerraformMetaArguments 
   */
   readonly location: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/blueprint_assignment.html#lock_exclude_actions BlueprintAssignment#lock_exclude_actions}
+  */
+  readonly lockExcludeActions?: string[];
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/blueprint_assignment.html#lock_exclude_principals BlueprintAssignment#lock_exclude_principals}
   */
   readonly lockExcludePrincipals?: string[];
@@ -320,6 +324,7 @@ export class BlueprintAssignment extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._location = config.location;
+    this._lockExcludeActions = config.lockExcludeActions;
     this._lockExcludePrincipals = config.lockExcludePrincipals;
     this._lockMode = config.lockMode;
     this._name = config.name;
@@ -366,6 +371,22 @@ export class BlueprintAssignment extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get locationInput() {
     return this._location;
+  }
+
+  // lock_exclude_actions - computed: false, optional: true, required: false
+  private _lockExcludeActions?: string[]; 
+  public get lockExcludeActions() {
+    return this.getListAttribute('lock_exclude_actions');
+  }
+  public set lockExcludeActions(value: string[]) {
+    this._lockExcludeActions = value;
+  }
+  public resetLockExcludeActions() {
+    this._lockExcludeActions = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get lockExcludeActionsInput() {
+    return this._lockExcludeActions;
   }
 
   // lock_exclude_principals - computed: false, optional: true, required: false
@@ -515,6 +536,7 @@ export class BlueprintAssignment extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       location: cdktf.stringToTerraform(this._location),
+      lock_exclude_actions: cdktf.listMapper(cdktf.stringToTerraform)(this._lockExcludeActions),
       lock_exclude_principals: cdktf.listMapper(cdktf.stringToTerraform)(this._lockExcludePrincipals),
       lock_mode: cdktf.stringToTerraform(this._lockMode),
       name: cdktf.stringToTerraform(this._name),

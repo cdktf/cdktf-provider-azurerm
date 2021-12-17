@@ -8,9 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataFactoryIntegrationRuntimeAzureSsisConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#data_factory_id DataFactoryIntegrationRuntimeAzureSsis#data_factory_id}
+  */
+  readonly dataFactoryId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#data_factory_name DataFactoryIntegrationRuntimeAzureSsis#data_factory_name}
   */
-  readonly dataFactoryName: string;
+  readonly dataFactoryName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure_ssis.html#description DataFactoryIntegrationRuntimeAzureSsis#description}
   */
@@ -1312,6 +1316,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._dataFactoryId = config.dataFactoryId;
     this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._edition = config.edition;
@@ -1335,13 +1340,32 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
   // ATTRIBUTES
   // ==========
 
-  // data_factory_name - computed: false, optional: false, required: true
+  // data_factory_id - computed: true, optional: true, required: false
+  private _dataFactoryId?: string; 
+  public get dataFactoryId() {
+    return this.getStringAttribute('data_factory_id');
+  }
+  public set dataFactoryId(value: string) {
+    this._dataFactoryId = value;
+  }
+  public resetDataFactoryId() {
+    this._dataFactoryId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataFactoryIdInput() {
+    return this._dataFactoryId;
+  }
+
+  // data_factory_name - computed: true, optional: true, required: false
   private _dataFactoryName?: string; 
   public get dataFactoryName() {
     return this.getStringAttribute('data_factory_name');
   }
   public set dataFactoryName(value: string) {
     this._dataFactoryName = value;
+  }
+  public resetDataFactoryName() {
+    this._dataFactoryName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryNameInput() {
@@ -1604,6 +1628,7 @@ export class DataFactoryIntegrationRuntimeAzureSsis extends cdktf.TerraformResou
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       edition: cdktf.stringToTerraform(this._edition),

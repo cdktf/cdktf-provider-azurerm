@@ -54,6 +54,12 @@ export interface ManagementGroupPolicyAssignmentConfig extends cdktf.TerraformMe
   */
   readonly identity?: ManagementGroupPolicyAssignmentIdentity;
   /**
+  * non_compliance_message block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#non_compliance_message ManagementGroupPolicyAssignment#non_compliance_message}
+  */
+  readonly nonComplianceMessage?: ManagementGroupPolicyAssignmentNonComplianceMessage[];
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#timeouts ManagementGroupPolicyAssignment#timeouts}
@@ -126,6 +132,28 @@ export class ManagementGroupPolicyAssignmentIdentityOutputReference extends cdkt
     return this._type;
   }
 }
+export interface ManagementGroupPolicyAssignmentNonComplianceMessage {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#content ManagementGroupPolicyAssignment#content}
+  */
+  readonly content: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#policy_definition_reference_id ManagementGroupPolicyAssignment#policy_definition_reference_id}
+  */
+  readonly policyDefinitionReferenceId?: string;
+}
+
+export function managementGroupPolicyAssignmentNonComplianceMessageToTerraform(struct?: ManagementGroupPolicyAssignmentNonComplianceMessage): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    content: cdktf.stringToTerraform(struct!.content),
+    policy_definition_reference_id: cdktf.stringToTerraform(struct!.policyDefinitionReferenceId),
+  }
+}
+
 export interface ManagementGroupPolicyAssignmentTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#create ManagementGroupPolicyAssignment#create}
@@ -317,6 +345,7 @@ export class ManagementGroupPolicyAssignment extends cdktf.TerraformResource {
     this._parameters = config.parameters;
     this._policyDefinitionId = config.policyDefinitionId;
     this._identity.internalValue = config.identity;
+    this._nonComplianceMessage = config.nonComplianceMessage;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -496,6 +525,23 @@ export class ManagementGroupPolicyAssignment extends cdktf.TerraformResource {
     return this._identity.internalValue;
   }
 
+  // non_compliance_message - computed: false, optional: true, required: false
+  private _nonComplianceMessage?: ManagementGroupPolicyAssignmentNonComplianceMessage[]; 
+  public get nonComplianceMessage() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('non_compliance_message') as any;
+  }
+  public set nonComplianceMessage(value: ManagementGroupPolicyAssignmentNonComplianceMessage[]) {
+    this._nonComplianceMessage = value;
+  }
+  public resetNonComplianceMessage() {
+    this._nonComplianceMessage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nonComplianceMessageInput() {
+    return this._nonComplianceMessage;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ManagementGroupPolicyAssignmentTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
@@ -529,6 +575,7 @@ export class ManagementGroupPolicyAssignment extends cdktf.TerraformResource {
       parameters: cdktf.stringToTerraform(this._parameters),
       policy_definition_id: cdktf.stringToTerraform(this._policyDefinitionId),
       identity: managementGroupPolicyAssignmentIdentityToTerraform(this._identity.internalValue),
+      non_compliance_message: cdktf.listMapper(managementGroupPolicyAssignmentNonComplianceMessageToTerraform)(this._nonComplianceMessage),
       timeouts: managementGroupPolicyAssignmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

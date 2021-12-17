@@ -1,0 +1,401 @@
+// https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_classifier.html
+// generated from terraform resource schema
+
+import { Construct } from 'constructs';
+import * as cdktf from 'cdktf';
+
+// Configuration
+
+export interface SynapseSqlPoolWorkloadClassifierConfig extends cdktf.TerraformMetaArguments {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_classifier.html#context SynapseSqlPoolWorkloadClassifier#context}
+  */
+  readonly context?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_classifier.html#end_time SynapseSqlPoolWorkloadClassifier#end_time}
+  */
+  readonly endTime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_classifier.html#importance SynapseSqlPoolWorkloadClassifier#importance}
+  */
+  readonly importance?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_classifier.html#label SynapseSqlPoolWorkloadClassifier#label}
+  */
+  readonly label?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_classifier.html#member_name SynapseSqlPoolWorkloadClassifier#member_name}
+  */
+  readonly memberName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_classifier.html#name SynapseSqlPoolWorkloadClassifier#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_classifier.html#start_time SynapseSqlPoolWorkloadClassifier#start_time}
+  */
+  readonly startTime?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_classifier.html#workload_group_id SynapseSqlPoolWorkloadClassifier#workload_group_id}
+  */
+  readonly workloadGroupId: string;
+  /**
+  * timeouts block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_classifier.html#timeouts SynapseSqlPoolWorkloadClassifier#timeouts}
+  */
+  readonly timeouts?: SynapseSqlPoolWorkloadClassifierTimeouts;
+}
+export interface SynapseSqlPoolWorkloadClassifierTimeouts {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_classifier.html#create SynapseSqlPoolWorkloadClassifier#create}
+  */
+  readonly create?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_classifier.html#delete SynapseSqlPoolWorkloadClassifier#delete}
+  */
+  readonly delete?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_classifier.html#read SynapseSqlPoolWorkloadClassifier#read}
+  */
+  readonly read?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_classifier.html#update SynapseSqlPoolWorkloadClassifier#update}
+  */
+  readonly update?: string;
+}
+
+export function synapseSqlPoolWorkloadClassifierTimeoutsToTerraform(struct?: SynapseSqlPoolWorkloadClassifierTimeoutsOutputReference | SynapseSqlPoolWorkloadClassifierTimeouts): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    create: cdktf.stringToTerraform(struct!.create),
+    delete: cdktf.stringToTerraform(struct!.delete),
+    read: cdktf.stringToTerraform(struct!.read),
+    update: cdktf.stringToTerraform(struct!.update),
+  }
+}
+
+export class SynapseSqlPoolWorkloadClassifierTimeoutsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): SynapseSqlPoolWorkloadClassifierTimeouts | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._create !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.create = this._create;
+    }
+    if (this._delete !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.delete = this._delete;
+    }
+    if (this._read !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.read = this._read;
+    }
+    if (this._update !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.update = this._update;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SynapseSqlPoolWorkloadClassifierTimeouts | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._create = undefined;
+      this._delete = undefined;
+      this._read = undefined;
+      this._update = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._create = value.create;
+      this._delete = value.delete;
+      this._read = value.read;
+      this._update = value.update;
+    }
+  }
+
+  // create - computed: false, optional: true, required: false
+  private _create?: string; 
+  public get create() {
+    return this.getStringAttribute('create');
+  }
+  public set create(value: string) {
+    this._create = value;
+  }
+  public resetCreate() {
+    this._create = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get createInput() {
+    return this._create;
+  }
+
+  // delete - computed: false, optional: true, required: false
+  private _delete?: string; 
+  public get delete() {
+    return this.getStringAttribute('delete');
+  }
+  public set delete(value: string) {
+    this._delete = value;
+  }
+  public resetDelete() {
+    this._delete = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deleteInput() {
+    return this._delete;
+  }
+
+  // read - computed: false, optional: true, required: false
+  private _read?: string; 
+  public get read() {
+    return this.getStringAttribute('read');
+  }
+  public set read(value: string) {
+    this._read = value;
+  }
+  public resetRead() {
+    this._read = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get readInput() {
+    return this._read;
+  }
+
+  // update - computed: false, optional: true, required: false
+  private _update?: string; 
+  public get update() {
+    return this.getStringAttribute('update');
+  }
+  public set update(value: string) {
+    this._update = value;
+  }
+  public resetUpdate() {
+    this._update = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get updateInput() {
+    return this._update;
+  }
+}
+
+/**
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_classifier.html azurerm_synapse_sql_pool_workload_classifier}
+*/
+export class SynapseSqlPoolWorkloadClassifier extends cdktf.TerraformResource {
+
+  // =================
+  // STATIC PROPERTIES
+  // =================
+  public static readonly tfResourceType: string = "azurerm_synapse_sql_pool_workload_classifier";
+
+  // ===========
+  // INITIALIZER
+  // ===========
+
+  /**
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_classifier.html azurerm_synapse_sql_pool_workload_classifier} Resource
+  *
+  * @param scope The scope in which to define this construct
+  * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
+  * @param options SynapseSqlPoolWorkloadClassifierConfig
+  */
+  public constructor(scope: Construct, id: string, config: SynapseSqlPoolWorkloadClassifierConfig) {
+    super(scope, id, {
+      terraformResourceType: 'azurerm_synapse_sql_pool_workload_classifier',
+      terraformGeneratorMetadata: {
+        providerName: 'azurerm'
+      },
+      provider: config.provider,
+      dependsOn: config.dependsOn,
+      count: config.count,
+      lifecycle: config.lifecycle
+    });
+    this._context = config.context;
+    this._endTime = config.endTime;
+    this._importance = config.importance;
+    this._label = config.label;
+    this._memberName = config.memberName;
+    this._name = config.name;
+    this._startTime = config.startTime;
+    this._workloadGroupId = config.workloadGroupId;
+    this._timeouts.internalValue = config.timeouts;
+  }
+
+  // ==========
+  // ATTRIBUTES
+  // ==========
+
+  // context - computed: false, optional: true, required: false
+  private _context?: string; 
+  public get context() {
+    return this.getStringAttribute('context');
+  }
+  public set context(value: string) {
+    this._context = value;
+  }
+  public resetContext() {
+    this._context = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get contextInput() {
+    return this._context;
+  }
+
+  // end_time - computed: false, optional: true, required: false
+  private _endTime?: string; 
+  public get endTime() {
+    return this.getStringAttribute('end_time');
+  }
+  public set endTime(value: string) {
+    this._endTime = value;
+  }
+  public resetEndTime() {
+    this._endTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endTimeInput() {
+    return this._endTime;
+  }
+
+  // id - computed: true, optional: true, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // importance - computed: false, optional: true, required: false
+  private _importance?: string; 
+  public get importance() {
+    return this.getStringAttribute('importance');
+  }
+  public set importance(value: string) {
+    this._importance = value;
+  }
+  public resetImportance() {
+    this._importance = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get importanceInput() {
+    return this._importance;
+  }
+
+  // label - computed: false, optional: true, required: false
+  private _label?: string; 
+  public get label() {
+    return this.getStringAttribute('label');
+  }
+  public set label(value: string) {
+    this._label = value;
+  }
+  public resetLabel() {
+    this._label = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get labelInput() {
+    return this._label;
+  }
+
+  // member_name - computed: false, optional: false, required: true
+  private _memberName?: string; 
+  public get memberName() {
+    return this.getStringAttribute('member_name');
+  }
+  public set memberName(value: string) {
+    this._memberName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get memberNameInput() {
+    return this._memberName;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // start_time - computed: false, optional: true, required: false
+  private _startTime?: string; 
+  public get startTime() {
+    return this.getStringAttribute('start_time');
+  }
+  public set startTime(value: string) {
+    this._startTime = value;
+  }
+  public resetStartTime() {
+    this._startTime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get startTimeInput() {
+    return this._startTime;
+  }
+
+  // workload_group_id - computed: false, optional: false, required: true
+  private _workloadGroupId?: string; 
+  public get workloadGroupId() {
+    return this.getStringAttribute('workload_group_id');
+  }
+  public set workloadGroupId(value: string) {
+    this._workloadGroupId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workloadGroupIdInput() {
+    return this._workloadGroupId;
+  }
+
+  // timeouts - computed: false, optional: true, required: false
+  private _timeouts = new SynapseSqlPoolWorkloadClassifierTimeoutsOutputReference(this as any, "timeouts", true);
+  public get timeouts() {
+    return this._timeouts;
+  }
+  public putTimeouts(value: SynapseSqlPoolWorkloadClassifierTimeouts) {
+    this._timeouts.internalValue = value;
+  }
+  public resetTimeouts() {
+    this._timeouts.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeoutsInput() {
+    return this._timeouts.internalValue;
+  }
+
+  // =========
+  // SYNTHESIS
+  // =========
+
+  protected synthesizeAttributes(): { [name: string]: any } {
+    return {
+      context: cdktf.stringToTerraform(this._context),
+      end_time: cdktf.stringToTerraform(this._endTime),
+      importance: cdktf.stringToTerraform(this._importance),
+      label: cdktf.stringToTerraform(this._label),
+      member_name: cdktf.stringToTerraform(this._memberName),
+      name: cdktf.stringToTerraform(this._name),
+      start_time: cdktf.stringToTerraform(this._startTime),
+      workload_group_id: cdktf.stringToTerraform(this._workloadGroupId),
+      timeouts: synapseSqlPoolWorkloadClassifierTimeoutsToTerraform(this._timeouts.internalValue),
+    };
+  }
+}

@@ -96,6 +96,12 @@ export interface ApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
   */
   readonly identity?: ApplicationGatewayIdentity;
   /**
+  * private_link_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#private_link_configuration ApplicationGateway#private_link_configuration}
+  */
+  readonly privateLinkConfiguration?: ApplicationGatewayPrivateLinkConfiguration[];
+  /**
   * probe block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#probe ApplicationGateway#probe}
@@ -173,6 +179,18 @@ export interface ApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#waf_configuration ApplicationGateway#waf_configuration}
   */
   readonly wafConfiguration?: ApplicationGatewayWafConfiguration;
+}
+export class ApplicationGatewayPrivateEndpointConnection extends cdktf.ComplexComputedList {
+
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
 }
 export interface ApplicationGatewayAuthenticationCertificate {
   /**
@@ -534,6 +552,10 @@ export interface ApplicationGatewayFrontendIpConfiguration {
   */
   readonly privateIpAddressAllocation?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#private_link_configuration_name ApplicationGateway#private_link_configuration_name}
+  */
+  readonly privateLinkConfigurationName?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#public_ip_address_id ApplicationGateway#public_ip_address_id}
   */
   readonly publicIpAddressId?: string;
@@ -552,6 +574,7 @@ export function applicationGatewayFrontendIpConfigurationToTerraform(struct?: Ap
     name: cdktf.stringToTerraform(struct!.name),
     private_ip_address: cdktf.stringToTerraform(struct!.privateIpAddress),
     private_ip_address_allocation: cdktf.stringToTerraform(struct!.privateIpAddressAllocation),
+    private_link_configuration_name: cdktf.stringToTerraform(struct!.privateLinkConfigurationName),
     public_ip_address_id: cdktf.stringToTerraform(struct!.publicIpAddressId),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
   }
@@ -782,6 +805,67 @@ export class ApplicationGatewayIdentityOutputReference extends cdktf.ComplexObje
     return this._type;
   }
 }
+export interface ApplicationGatewayPrivateLinkConfigurationIpConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#primary ApplicationGateway#primary}
+  */
+  readonly primary: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#private_ip_address ApplicationGateway#private_ip_address}
+  */
+  readonly privateIpAddress?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#private_ip_address_allocation ApplicationGateway#private_ip_address_allocation}
+  */
+  readonly privateIpAddressAllocation: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#subnet_id ApplicationGateway#subnet_id}
+  */
+  readonly subnetId: string;
+}
+
+export function applicationGatewayPrivateLinkConfigurationIpConfigurationToTerraform(struct?: ApplicationGatewayPrivateLinkConfigurationIpConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    primary: cdktf.booleanToTerraform(struct!.primary),
+    private_ip_address: cdktf.stringToTerraform(struct!.privateIpAddress),
+    private_ip_address_allocation: cdktf.stringToTerraform(struct!.privateIpAddressAllocation),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
+export interface ApplicationGatewayPrivateLinkConfiguration {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
+  */
+  readonly name: string;
+  /**
+  * ip_configuration block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#ip_configuration ApplicationGateway#ip_configuration}
+  */
+  readonly ipConfiguration: ApplicationGatewayPrivateLinkConfigurationIpConfiguration[];
+}
+
+export function applicationGatewayPrivateLinkConfigurationToTerraform(struct?: ApplicationGatewayPrivateLinkConfiguration): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    ip_configuration: cdktf.listMapper(applicationGatewayPrivateLinkConfigurationIpConfigurationToTerraform)(struct!.ipConfiguration),
+  }
+}
+
 export interface ApplicationGatewayProbeMatch {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#body ApplicationGateway#body}
@@ -2501,6 +2585,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
     this._gatewayIpConfiguration = config.gatewayIpConfiguration;
     this._httpListener = config.httpListener;
     this._identity.internalValue = config.identity;
+    this._privateLinkConfiguration = config.privateLinkConfiguration;
     this._probe = config.probe;
     this._redirectConfiguration = config.redirectConfiguration;
     this._requestRoutingRule = config.requestRoutingRule;
@@ -2581,6 +2666,11 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get nameInput() {
     return this._name;
+  }
+
+  // private_endpoint_connection - computed: true, optional: false, required: false
+  public privateEndpointConnection(index: string) {
+    return new ApplicationGatewayPrivateEndpointConnection(this, 'private_endpoint_connection', index);
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -2777,6 +2867,23 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get identityInput() {
     return this._identity.internalValue;
+  }
+
+  // private_link_configuration - computed: false, optional: true, required: false
+  private _privateLinkConfiguration?: ApplicationGatewayPrivateLinkConfiguration[]; 
+  public get privateLinkConfiguration() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('private_link_configuration') as any;
+  }
+  public set privateLinkConfiguration(value: ApplicationGatewayPrivateLinkConfiguration[]) {
+    this._privateLinkConfiguration = value;
+  }
+  public resetPrivateLinkConfiguration() {
+    this._privateLinkConfiguration = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateLinkConfigurationInput() {
+    return this._privateLinkConfiguration;
   }
 
   // probe - computed: false, optional: true, required: false
@@ -3013,6 +3120,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
       gateway_ip_configuration: cdktf.listMapper(applicationGatewayGatewayIpConfigurationToTerraform)(this._gatewayIpConfiguration),
       http_listener: cdktf.listMapper(applicationGatewayHttpListenerToTerraform)(this._httpListener),
       identity: applicationGatewayIdentityToTerraform(this._identity.internalValue),
+      private_link_configuration: cdktf.listMapper(applicationGatewayPrivateLinkConfigurationToTerraform)(this._privateLinkConfiguration),
       probe: cdktf.listMapper(applicationGatewayProbeToTerraform)(this._probe),
       redirect_configuration: cdktf.listMapper(applicationGatewayRedirectConfigurationToTerraform)(this._redirectConfiguration),
       request_routing_rule: cdktf.listMapper(applicationGatewayRequestRoutingRuleToTerraform)(this._requestRoutingRule),

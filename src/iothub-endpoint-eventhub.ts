@@ -12,9 +12,13 @@ export interface IothubEndpointEventhubConfig extends cdktf.TerraformMetaArgumen
   */
   readonly connectionString: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub.html#iothub_id IothubEndpointEventhub#iothub_id}
+  */
+  readonly iothubId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub.html#iothub_name IothubEndpointEventhub#iothub_name}
   */
-  readonly iothubName: string;
+  readonly iothubName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub.html#name IothubEndpointEventhub#name}
   */
@@ -211,6 +215,7 @@ export class IothubEndpointEventhub extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._connectionString = config.connectionString;
+    this._iothubId = config.iothubId;
     this._iothubName = config.iothubName;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -239,13 +244,32 @@ export class IothubEndpointEventhub extends cdktf.TerraformResource {
     return this.getStringAttribute('id');
   }
 
-  // iothub_name - computed: false, optional: false, required: true
+  // iothub_id - computed: true, optional: true, required: false
+  private _iothubId?: string; 
+  public get iothubId() {
+    return this.getStringAttribute('iothub_id');
+  }
+  public set iothubId(value: string) {
+    this._iothubId = value;
+  }
+  public resetIothubId() {
+    this._iothubId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iothubIdInput() {
+    return this._iothubId;
+  }
+
+  // iothub_name - computed: true, optional: true, required: false
   private _iothubName?: string; 
   public get iothubName() {
     return this.getStringAttribute('iothub_name');
   }
   public set iothubName(value: string) {
     this._iothubName = value;
+  }
+  public resetIothubName() {
+    this._iothubName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get iothubNameInput() {
@@ -301,6 +325,7 @@ export class IothubEndpointEventhub extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       connection_string: cdktf.stringToTerraform(this._connectionString),
+      iothub_id: cdktf.stringToTerraform(this._iothubId),
       iothub_name: cdktf.stringToTerraform(this._iothubName),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

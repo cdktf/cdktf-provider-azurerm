@@ -74,6 +74,12 @@ export interface NetappVolumeConfig extends cdktf.TerraformMetaArguments {
   */
   readonly dataProtectionReplication?: NetappVolumeDataProtectionReplication;
   /**
+  * data_protection_snapshot_policy block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume.html#data_protection_snapshot_policy NetappVolume#data_protection_snapshot_policy}
+  */
+  readonly dataProtectionSnapshotPolicy?: NetappVolumeDataProtectionSnapshotPolicy;
+  /**
   * export_policy_rule block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume.html#export_policy_rule NetappVolume#export_policy_rule}
@@ -222,6 +228,69 @@ export class NetappVolumeDataProtectionReplicationOutputReference extends cdktf.
   // Temporarily expose input value. Use with caution.
   public get replicationFrequencyInput() {
     return this._replicationFrequency;
+  }
+}
+export interface NetappVolumeDataProtectionSnapshotPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_volume.html#snapshot_policy_id NetappVolume#snapshot_policy_id}
+  */
+  readonly snapshotPolicyId: string;
+}
+
+export function netappVolumeDataProtectionSnapshotPolicyToTerraform(struct?: NetappVolumeDataProtectionSnapshotPolicyOutputReference | NetappVolumeDataProtectionSnapshotPolicy): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    snapshot_policy_id: cdktf.stringToTerraform(struct!.snapshotPolicyId),
+  }
+}
+
+export class NetappVolumeDataProtectionSnapshotPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): NetappVolumeDataProtectionSnapshotPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._snapshotPolicyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.snapshotPolicyId = this._snapshotPolicyId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: NetappVolumeDataProtectionSnapshotPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._snapshotPolicyId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._snapshotPolicyId = value.snapshotPolicyId;
+    }
+  }
+
+  // snapshot_policy_id - computed: false, optional: false, required: true
+  private _snapshotPolicyId?: string; 
+  public get snapshotPolicyId() {
+    return this.getStringAttribute('snapshot_policy_id');
+  }
+  public set snapshotPolicyId(value: string) {
+    this._snapshotPolicyId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get snapshotPolicyIdInput() {
+    return this._snapshotPolicyId;
   }
 }
 export interface NetappVolumeExportPolicyRule {
@@ -477,6 +546,7 @@ export class NetappVolume extends cdktf.TerraformResource {
     this._throughputInMibps = config.throughputInMibps;
     this._volumePath = config.volumePath;
     this._dataProtectionReplication.internalValue = config.dataProtectionReplication;
+    this._dataProtectionSnapshotPolicy.internalValue = config.dataProtectionSnapshotPolicy;
     this._exportPolicyRule = config.exportPolicyRule;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -621,7 +691,7 @@ export class NetappVolume extends cdktf.TerraformResource {
     return this._serviceLevel;
   }
 
-  // snapshot_directory_visible - computed: false, optional: true, required: false
+  // snapshot_directory_visible - computed: true, optional: true, required: false
   private _snapshotDirectoryVisible?: boolean | cdktf.IResolvable; 
   public get snapshotDirectoryVisible() {
     return this.getBooleanAttribute('snapshot_directory_visible') as any;
@@ -725,6 +795,22 @@ export class NetappVolume extends cdktf.TerraformResource {
     return this._dataProtectionReplication.internalValue;
   }
 
+  // data_protection_snapshot_policy - computed: false, optional: true, required: false
+  private _dataProtectionSnapshotPolicy = new NetappVolumeDataProtectionSnapshotPolicyOutputReference(this as any, "data_protection_snapshot_policy", true);
+  public get dataProtectionSnapshotPolicy() {
+    return this._dataProtectionSnapshotPolicy;
+  }
+  public putDataProtectionSnapshotPolicy(value: NetappVolumeDataProtectionSnapshotPolicy) {
+    this._dataProtectionSnapshotPolicy.internalValue = value;
+  }
+  public resetDataProtectionSnapshotPolicy() {
+    this._dataProtectionSnapshotPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataProtectionSnapshotPolicyInput() {
+    return this._dataProtectionSnapshotPolicy.internalValue;
+  }
+
   // export_policy_rule - computed: false, optional: true, required: false
   private _exportPolicyRule?: NetappVolumeExportPolicyRule[]; 
   public get exportPolicyRule() {
@@ -780,6 +866,7 @@ export class NetappVolume extends cdktf.TerraformResource {
       throughput_in_mibps: cdktf.numberToTerraform(this._throughputInMibps),
       volume_path: cdktf.stringToTerraform(this._volumePath),
       data_protection_replication: netappVolumeDataProtectionReplicationToTerraform(this._dataProtectionReplication.internalValue),
+      data_protection_snapshot_policy: netappVolumeDataProtectionSnapshotPolicyToTerraform(this._dataProtectionSnapshotPolicy.internalValue),
       export_policy_rule: cdktf.listMapper(netappVolumeExportPolicyRuleToTerraform)(this._exportPolicyRule),
       timeouts: netappVolumeTimeoutsToTerraform(this._timeouts.internalValue),
     };

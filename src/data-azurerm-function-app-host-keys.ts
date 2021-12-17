@@ -135,6 +135,11 @@ export class DataAzurermFunctionAppHostKeys extends cdktf.TerraformDataSource {
     return this.getStringAttribute('default_function_key');
   }
 
+  // durabletask_extension_key - computed: true, optional: false, required: false
+  public get durabletaskExtensionKey() {
+    return this.getStringAttribute('durabletask_extension_key');
+  }
+
   // event_grid_extension_config_key - computed: true, optional: false, required: false
   public get eventGridExtensionConfigKey() {
     return this.getStringAttribute('event_grid_extension_config_key');
@@ -179,6 +184,11 @@ export class DataAzurermFunctionAppHostKeys extends cdktf.TerraformDataSource {
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
     return this._resourceGroupName;
+  }
+
+  // signalr_extension_key - computed: true, optional: false, required: false
+  public get signalrExtensionKey() {
+    return this.getStringAttribute('signalr_extension_key');
   }
 
   // timeouts - computed: false, optional: true, required: false

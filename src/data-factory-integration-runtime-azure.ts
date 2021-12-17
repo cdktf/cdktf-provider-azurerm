@@ -20,9 +20,13 @@ export interface DataFactoryIntegrationRuntimeAzureConfig extends cdktf.Terrafor
   */
   readonly coreCount?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#data_factory_id DataFactoryIntegrationRuntimeAzure#data_factory_id}
+  */
+  readonly dataFactoryId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#data_factory_name DataFactoryIntegrationRuntimeAzure#data_factory_name}
   */
-  readonly dataFactoryName: string;
+  readonly dataFactoryName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_integration_runtime_azure.html#description DataFactoryIntegrationRuntimeAzure#description}
   */
@@ -237,6 +241,7 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
     this._cleanupEnabled = config.cleanupEnabled;
     this._computeType = config.computeType;
     this._coreCount = config.coreCount;
+    this._dataFactoryId = config.dataFactoryId;
     this._dataFactoryName = config.dataFactoryName;
     this._description = config.description;
     this._location = config.location;
@@ -299,13 +304,32 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
     return this._coreCount;
   }
 
-  // data_factory_name - computed: false, optional: false, required: true
+  // data_factory_id - computed: true, optional: true, required: false
+  private _dataFactoryId?: string; 
+  public get dataFactoryId() {
+    return this.getStringAttribute('data_factory_id');
+  }
+  public set dataFactoryId(value: string) {
+    this._dataFactoryId = value;
+  }
+  public resetDataFactoryId() {
+    this._dataFactoryId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataFactoryIdInput() {
+    return this._dataFactoryId;
+  }
+
+  // data_factory_name - computed: true, optional: true, required: false
   private _dataFactoryName?: string; 
   public get dataFactoryName() {
     return this.getStringAttribute('data_factory_name');
   }
   public set dataFactoryName(value: string) {
     this._dataFactoryName = value;
+  }
+  public resetDataFactoryName() {
+    this._dataFactoryName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get dataFactoryNameInput() {
@@ -429,6 +453,7 @@ export class DataFactoryIntegrationRuntimeAzure extends cdktf.TerraformResource 
       cleanup_enabled: cdktf.booleanToTerraform(this._cleanupEnabled),
       compute_type: cdktf.stringToTerraform(this._computeType),
       core_count: cdktf.numberToTerraform(this._coreCount),
+      data_factory_id: cdktf.stringToTerraform(this._dataFactoryId),
       data_factory_name: cdktf.stringToTerraform(this._dataFactoryName),
       description: cdktf.stringToTerraform(this._description),
       location: cdktf.stringToTerraform(this._location),
