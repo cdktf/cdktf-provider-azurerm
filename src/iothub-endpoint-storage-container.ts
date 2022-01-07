@@ -28,9 +28,13 @@ export interface IothubEndpointStorageContainerConfig extends cdktf.TerraformMet
   */
   readonly fileNameFormat?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container.html#iothub_id IothubEndpointStorageContainer#iothub_id}
+  */
+  readonly iothubId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container.html#iothub_name IothubEndpointStorageContainer#iothub_name}
   */
-  readonly iothubName: string;
+  readonly iothubName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container.html#max_chunk_size_in_bytes IothubEndpointStorageContainer#max_chunk_size_in_bytes}
   */
@@ -235,6 +239,7 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
     this._containerName = config.containerName;
     this._encoding = config.encoding;
     this._fileNameFormat = config.fileNameFormat;
+    this._iothubId = config.iothubId;
     this._iothubName = config.iothubName;
     this._maxChunkSizeInBytes = config.maxChunkSizeInBytes;
     this._name = config.name;
@@ -325,13 +330,32 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
     return this.getStringAttribute('id');
   }
 
-  // iothub_name - computed: false, optional: false, required: true
+  // iothub_id - computed: true, optional: true, required: false
+  private _iothubId?: string; 
+  public get iothubId() {
+    return this.getStringAttribute('iothub_id');
+  }
+  public set iothubId(value: string) {
+    this._iothubId = value;
+  }
+  public resetIothubId() {
+    this._iothubId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get iothubIdInput() {
+    return this._iothubId;
+  }
+
+  // iothub_name - computed: true, optional: true, required: false
   private _iothubName?: string; 
   public get iothubName() {
     return this.getStringAttribute('iothub_name');
   }
   public set iothubName(value: string) {
     this._iothubName = value;
+  }
+  public resetIothubName() {
+    this._iothubName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get iothubNameInput() {
@@ -407,6 +431,7 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
       container_name: cdktf.stringToTerraform(this._containerName),
       encoding: cdktf.stringToTerraform(this._encoding),
       file_name_format: cdktf.stringToTerraform(this._fileNameFormat),
+      iothub_id: cdktf.stringToTerraform(this._iothubId),
       iothub_name: cdktf.stringToTerraform(this._iothubName),
       max_chunk_size_in_bytes: cdktf.numberToTerraform(this._maxChunkSizeInBytes),
       name: cdktf.stringToTerraform(this._name),

@@ -68,6 +68,10 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   */
   readonly privateLinkEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#public_network_access_enabled KubernetesCluster#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster.html#resource_group_name KubernetesCluster#resource_group_name}
   */
   readonly resourceGroupName: string;
@@ -5853,6 +5857,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     this._privateClusterPublicFqdnEnabled = config.privateClusterPublicFqdnEnabled;
     this._privateDnsZoneId = config.privateDnsZoneId;
     this._privateLinkEnabled = config.privateLinkEnabled;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._skuTier = config.skuTier;
     this._tags = config.tags;
@@ -6149,6 +6154,22 @@ export class KubernetesCluster extends cdktf.TerraformResource {
     return this._privateLinkEnabled;
   }
 
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled') as any;
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled;
+  }
+
   // resource_group_name - computed: false, optional: false, required: true
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
@@ -6421,6 +6442,7 @@ export class KubernetesCluster extends cdktf.TerraformResource {
       private_cluster_public_fqdn_enabled: cdktf.booleanToTerraform(this._privateClusterPublicFqdnEnabled),
       private_dns_zone_id: cdktf.stringToTerraform(this._privateDnsZoneId),
       private_link_enabled: cdktf.booleanToTerraform(this._privateLinkEnabled),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku_tier: cdktf.stringToTerraform(this._skuTier),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),

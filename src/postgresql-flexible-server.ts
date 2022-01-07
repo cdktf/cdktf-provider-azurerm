@@ -28,6 +28,10 @@ export interface PostgresqlFlexibleServerConfig extends cdktf.TerraformMetaArgum
   */
   readonly delegatedSubnetId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#geo_redundant_backup_enabled PostgresqlFlexibleServer#geo_redundant_backup_enabled}
+  */
+  readonly geoRedundantBackupEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server.html#location PostgresqlFlexibleServer#location}
   */
   readonly location: string;
@@ -485,6 +489,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
     this._backupRetentionDays = config.backupRetentionDays;
     this._createMode = config.createMode;
     this._delegatedSubnetId = config.delegatedSubnetId;
+    this._geoRedundantBackupEnabled = config.geoRedundantBackupEnabled;
     this._location = config.location;
     this._name = config.name;
     this._pointInTimeRestoreTimeInUtc = config.pointInTimeRestoreTimeInUtc;
@@ -593,6 +598,22 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
   // fqdn - computed: true, optional: false, required: false
   public get fqdn() {
     return this.getStringAttribute('fqdn');
+  }
+
+  // geo_redundant_backup_enabled - computed: false, optional: true, required: false
+  private _geoRedundantBackupEnabled?: boolean | cdktf.IResolvable; 
+  public get geoRedundantBackupEnabled() {
+    return this.getBooleanAttribute('geo_redundant_backup_enabled') as any;
+  }
+  public set geoRedundantBackupEnabled(value: boolean | cdktf.IResolvable) {
+    this._geoRedundantBackupEnabled = value;
+  }
+  public resetGeoRedundantBackupEnabled() {
+    this._geoRedundantBackupEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get geoRedundantBackupEnabledInput() {
+    return this._geoRedundantBackupEnabled;
   }
 
   // id - computed: true, optional: true, required: false
@@ -832,6 +853,7 @@ export class PostgresqlFlexibleServer extends cdktf.TerraformResource {
       backup_retention_days: cdktf.numberToTerraform(this._backupRetentionDays),
       create_mode: cdktf.stringToTerraform(this._createMode),
       delegated_subnet_id: cdktf.stringToTerraform(this._delegatedSubnetId),
+      geo_redundant_backup_enabled: cdktf.booleanToTerraform(this._geoRedundantBackupEnabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       point_in_time_restore_time_in_utc: cdktf.stringToTerraform(this._pointInTimeRestoreTimeInUtc),

@@ -44,9 +44,13 @@ export interface ServicebusTopicConfig extends cdktf.TerraformMetaArguments {
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#namespace_id ServicebusTopic#namespace_id}
+  */
+  readonly namespaceId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#namespace_name ServicebusTopic#namespace_name}
   */
-  readonly namespaceName: string;
+  readonly namespaceName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#requires_duplicate_detection ServicebusTopic#requires_duplicate_detection}
   */
@@ -54,7 +58,7 @@ export interface ServicebusTopicConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#resource_group_name ServicebusTopic#resource_group_name}
   */
-  readonly resourceGroupName: string;
+  readonly resourceGroupName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic.html#status ServicebusTopic#status}
   */
@@ -259,6 +263,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
     this._maxMessageSizeInKilobytes = config.maxMessageSizeInKilobytes;
     this._maxSizeInMegabytes = config.maxSizeInMegabytes;
     this._name = config.name;
+    this._namespaceId = config.namespaceId;
     this._namespaceName = config.namespaceName;
     this._requiresDuplicateDetection = config.requiresDuplicateDetection;
     this._resourceGroupName = config.resourceGroupName;
@@ -417,13 +422,32 @@ export class ServicebusTopic extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // namespace_name - computed: false, optional: false, required: true
+  // namespace_id - computed: true, optional: true, required: false
+  private _namespaceId?: string; 
+  public get namespaceId() {
+    return this.getStringAttribute('namespace_id');
+  }
+  public set namespaceId(value: string) {
+    this._namespaceId = value;
+  }
+  public resetNamespaceId() {
+    this._namespaceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namespaceIdInput() {
+    return this._namespaceId;
+  }
+
+  // namespace_name - computed: true, optional: true, required: false
   private _namespaceName?: string; 
   public get namespaceName() {
     return this.getStringAttribute('namespace_name');
   }
   public set namespaceName(value: string) {
     this._namespaceName = value;
+  }
+  public resetNamespaceName() {
+    this._namespaceName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceNameInput() {
@@ -446,13 +470,16 @@ export class ServicebusTopic extends cdktf.TerraformResource {
     return this._requiresDuplicateDetection;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
+  // resource_group_name - computed: true, optional: true, required: false
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  public resetResourceGroupName() {
+    this._resourceGroupName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
@@ -522,6 +549,7 @@ export class ServicebusTopic extends cdktf.TerraformResource {
       max_message_size_in_kilobytes: cdktf.numberToTerraform(this._maxMessageSizeInKilobytes),
       max_size_in_megabytes: cdktf.numberToTerraform(this._maxSizeInMegabytes),
       name: cdktf.stringToTerraform(this._name),
+      namespace_id: cdktf.stringToTerraform(this._namespaceId),
       namespace_name: cdktf.stringToTerraform(this._namespaceName),
       requires_duplicate_detection: cdktf.booleanToTerraform(this._requiresDuplicateDetection),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

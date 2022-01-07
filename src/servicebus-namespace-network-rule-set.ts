@@ -16,13 +16,17 @@ export interface ServicebusNamespaceNetworkRuleSetConfig extends cdktf.Terraform
   */
   readonly ipRules?: string[];
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#namespace_id ServicebusNamespaceNetworkRuleSet#namespace_id}
+  */
+  readonly namespaceId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#namespace_name ServicebusNamespaceNetworkRuleSet#namespace_name}
   */
-  readonly namespaceName: string;
+  readonly namespaceName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#resource_group_name ServicebusNamespaceNetworkRuleSet#resource_group_name}
   */
-  readonly resourceGroupName: string;
+  readonly resourceGroupName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set.html#trusted_services_allowed ServicebusNamespaceNetworkRuleSet#trusted_services_allowed}
   */
@@ -229,9 +233,9 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options ServicebusNamespaceNetworkRuleSetConfig
+  * @param options ServicebusNamespaceNetworkRuleSetConfig = {}
   */
-  public constructor(scope: Construct, id: string, config: ServicebusNamespaceNetworkRuleSetConfig) {
+  public constructor(scope: Construct, id: string, config: ServicebusNamespaceNetworkRuleSetConfig = {}) {
     super(scope, id, {
       terraformResourceType: 'azurerm_servicebus_namespace_network_rule_set',
       terraformGeneratorMetadata: {
@@ -244,6 +248,7 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
     });
     this._defaultAction = config.defaultAction;
     this._ipRules = config.ipRules;
+    this._namespaceId = config.namespaceId;
     this._namespaceName = config.namespaceName;
     this._resourceGroupName = config.resourceGroupName;
     this._trustedServicesAllowed = config.trustedServicesAllowed;
@@ -292,7 +297,23 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
     return this._ipRules;
   }
 
-  // namespace_name - computed: false, optional: false, required: true
+  // namespace_id - computed: true, optional: true, required: false
+  private _namespaceId?: string; 
+  public get namespaceId() {
+    return this.getStringAttribute('namespace_id');
+  }
+  public set namespaceId(value: string) {
+    this._namespaceId = value;
+  }
+  public resetNamespaceId() {
+    this._namespaceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namespaceIdInput() {
+    return this._namespaceId;
+  }
+
+  // namespace_name - computed: true, optional: true, required: false
   private _namespaceName?: string; 
   public get namespaceName() {
     return this.getStringAttribute('namespace_name');
@@ -300,18 +321,24 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   public set namespaceName(value: string) {
     this._namespaceName = value;
   }
+  public resetNamespaceName() {
+    this._namespaceName = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get namespaceNameInput() {
     return this._namespaceName;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
+  // resource_group_name - computed: true, optional: true, required: false
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  public resetResourceGroupName() {
+    this._resourceGroupName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
@@ -375,6 +402,7 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
     return {
       default_action: cdktf.stringToTerraform(this._defaultAction),
       ip_rules: cdktf.listMapper(cdktf.stringToTerraform)(this._ipRules),
+      namespace_id: cdktf.stringToTerraform(this._namespaceId),
       namespace_name: cdktf.stringToTerraform(this._namespaceName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       trusted_services_allowed: cdktf.booleanToTerraform(this._trustedServicesAllowed),

@@ -28,6 +28,10 @@ export interface IothubFallbackRouteAConfig extends cdktf.TerraformMetaArguments
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route.html#source IothubFallbackRouteA#source}
+  */
+  readonly source?: string;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route.html#timeouts IothubFallbackRouteA#timeouts}
@@ -219,6 +223,7 @@ export class IothubFallbackRouteA extends cdktf.TerraformResource {
     this._endpointNames = config.endpointNames;
     this._iothubName = config.iothubName;
     this._resourceGroupName = config.resourceGroupName;
+    this._source = config.source;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -299,6 +304,22 @@ export class IothubFallbackRouteA extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
+  // source - computed: false, optional: true, required: false
+  private _source?: string; 
+  public get source() {
+    return this.getStringAttribute('source');
+  }
+  public set source(value: string) {
+    this._source = value;
+  }
+  public resetSource() {
+    this._source = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceInput() {
+    return this._source;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new IothubFallbackRouteTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
@@ -326,6 +347,7 @@ export class IothubFallbackRouteA extends cdktf.TerraformResource {
       endpoint_names: cdktf.listMapper(cdktf.stringToTerraform)(this._endpointNames),
       iothub_name: cdktf.stringToTerraform(this._iothubName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      source: cdktf.stringToTerraform(this._source),
       timeouts: iothubFallbackRouteTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

@@ -28,6 +28,10 @@ export interface RecoveryServicesVaultConfig extends cdktf.TerraformMetaArgument
   */
   readonly softDeleteEnabled?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#storage_mode_type RecoveryServicesVault#storage_mode_type}
+  */
+  readonly storageModeType?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#tags RecoveryServicesVault#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
@@ -292,6 +296,7 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._softDeleteEnabled = config.softDeleteEnabled;
+    this._storageModeType = config.storageModeType;
     this._tags = config.tags;
     this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
@@ -374,6 +379,22 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
     return this._softDeleteEnabled;
   }
 
+  // storage_mode_type - computed: false, optional: true, required: false
+  private _storageModeType?: string; 
+  public get storageModeType() {
+    return this.getStringAttribute('storage_mode_type');
+  }
+  public set storageModeType(value: string) {
+    this._storageModeType = value;
+  }
+  public resetStorageModeType() {
+    this._storageModeType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageModeTypeInput() {
+    return this._storageModeType;
+  }
+
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string } | cdktf.IResolvable; 
   public get tags() {
@@ -434,6 +455,7 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       soft_delete_enabled: cdktf.booleanToTerraform(this._softDeleteEnabled),
+      storage_mode_type: cdktf.stringToTerraform(this._storageModeType),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       identity: recoveryServicesVaultIdentityToTerraform(this._identity.internalValue),
       timeouts: recoveryServicesVaultTimeoutsToTerraform(this._timeouts.internalValue),

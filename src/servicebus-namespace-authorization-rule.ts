@@ -20,13 +20,17 @@ export interface ServicebusNamespaceAuthorizationRuleConfig extends cdktf.Terraf
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#namespace_id ServicebusNamespaceAuthorizationRule#namespace_id}
+  */
+  readonly namespaceId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#namespace_name ServicebusNamespaceAuthorizationRule#namespace_name}
   */
-  readonly namespaceName: string;
+  readonly namespaceName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#resource_group_name ServicebusNamespaceAuthorizationRule#resource_group_name}
   */
-  readonly resourceGroupName: string;
+  readonly resourceGroupName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#send ServicebusNamespaceAuthorizationRule#send}
   */
@@ -221,6 +225,7 @@ export class ServicebusNamespaceAuthorizationRule extends cdktf.TerraformResourc
     this._listen = config.listen;
     this._manage = config.manage;
     this._name = config.name;
+    this._namespaceId = config.namespaceId;
     this._namespaceName = config.namespaceName;
     this._resourceGroupName = config.resourceGroupName;
     this._send = config.send;
@@ -281,13 +286,32 @@ export class ServicebusNamespaceAuthorizationRule extends cdktf.TerraformResourc
     return this._name;
   }
 
-  // namespace_name - computed: false, optional: false, required: true
+  // namespace_id - computed: true, optional: true, required: false
+  private _namespaceId?: string; 
+  public get namespaceId() {
+    return this.getStringAttribute('namespace_id');
+  }
+  public set namespaceId(value: string) {
+    this._namespaceId = value;
+  }
+  public resetNamespaceId() {
+    this._namespaceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get namespaceIdInput() {
+    return this._namespaceId;
+  }
+
+  // namespace_name - computed: true, optional: true, required: false
   private _namespaceName?: string; 
   public get namespaceName() {
     return this.getStringAttribute('namespace_name');
   }
   public set namespaceName(value: string) {
     this._namespaceName = value;
+  }
+  public resetNamespaceName() {
+    this._namespaceName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceNameInput() {
@@ -309,13 +333,16 @@ export class ServicebusNamespaceAuthorizationRule extends cdktf.TerraformResourc
     return this.getStringAttribute('primary_key');
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
+  // resource_group_name - computed: true, optional: true, required: false
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  public resetResourceGroupName() {
+    this._resourceGroupName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
@@ -378,6 +405,7 @@ export class ServicebusNamespaceAuthorizationRule extends cdktf.TerraformResourc
       listen: cdktf.booleanToTerraform(this._listen),
       manage: cdktf.booleanToTerraform(this._manage),
       name: cdktf.stringToTerraform(this._name),
+      namespace_id: cdktf.stringToTerraform(this._namespaceId),
       namespace_name: cdktf.stringToTerraform(this._namespaceName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       send: cdktf.booleanToTerraform(this._send),

@@ -22,19 +22,23 @@ export interface ServicebusTopicAuthorizationRuleConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic_authorization_rule.html#namespace_name ServicebusTopicAuthorizationRule#namespace_name}
   */
-  readonly namespaceName: string;
+  readonly namespaceName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic_authorization_rule.html#resource_group_name ServicebusTopicAuthorizationRule#resource_group_name}
   */
-  readonly resourceGroupName: string;
+  readonly resourceGroupName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic_authorization_rule.html#send ServicebusTopicAuthorizationRule#send}
   */
   readonly send?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic_authorization_rule.html#topic_id ServicebusTopicAuthorizationRule#topic_id}
+  */
+  readonly topicId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_topic_authorization_rule.html#topic_name ServicebusTopicAuthorizationRule#topic_name}
   */
-  readonly topicName: string;
+  readonly topicName?: string;
   /**
   * timeouts block
   * 
@@ -228,6 +232,7 @@ export class ServicebusTopicAuthorizationRule extends cdktf.TerraformResource {
     this._namespaceName = config.namespaceName;
     this._resourceGroupName = config.resourceGroupName;
     this._send = config.send;
+    this._topicId = config.topicId;
     this._topicName = config.topicName;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -286,13 +291,16 @@ export class ServicebusTopicAuthorizationRule extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // namespace_name - computed: false, optional: false, required: true
+  // namespace_name - computed: true, optional: true, required: false
   private _namespaceName?: string; 
   public get namespaceName() {
     return this.getStringAttribute('namespace_name');
   }
   public set namespaceName(value: string) {
     this._namespaceName = value;
+  }
+  public resetNamespaceName() {
+    this._namespaceName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceNameInput() {
@@ -314,13 +322,16 @@ export class ServicebusTopicAuthorizationRule extends cdktf.TerraformResource {
     return this.getStringAttribute('primary_key');
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
+  // resource_group_name - computed: true, optional: true, required: false
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  public resetResourceGroupName() {
+    this._resourceGroupName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
@@ -358,13 +369,32 @@ export class ServicebusTopicAuthorizationRule extends cdktf.TerraformResource {
     return this._send;
   }
 
-  // topic_name - computed: false, optional: false, required: true
+  // topic_id - computed: true, optional: true, required: false
+  private _topicId?: string; 
+  public get topicId() {
+    return this.getStringAttribute('topic_id');
+  }
+  public set topicId(value: string) {
+    this._topicId = value;
+  }
+  public resetTopicId() {
+    this._topicId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topicIdInput() {
+    return this._topicId;
+  }
+
+  // topic_name - computed: true, optional: true, required: false
   private _topicName?: string; 
   public get topicName() {
     return this.getStringAttribute('topic_name');
   }
   public set topicName(value: string) {
     this._topicName = value;
+  }
+  public resetTopicName() {
+    this._topicName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get topicNameInput() {
@@ -399,6 +429,7 @@ export class ServicebusTopicAuthorizationRule extends cdktf.TerraformResource {
       namespace_name: cdktf.stringToTerraform(this._namespaceName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       send: cdktf.booleanToTerraform(this._send),
+      topic_id: cdktf.stringToTerraform(this._topicId),
       topic_name: cdktf.stringToTerraform(this._topicName),
       timeouts: servicebusTopicAuthorizationRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };

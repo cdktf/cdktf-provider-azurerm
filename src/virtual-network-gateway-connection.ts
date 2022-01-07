@@ -12,6 +12,10 @@ export interface VirtualNetworkGatewayConnectionConfig extends cdktf.TerraformMe
   */
   readonly authorizationKey?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#connection_mode VirtualNetworkGatewayConnection#connection_mode}
+  */
+  readonly connectionMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_network_gateway_connection.html#connection_protocol VirtualNetworkGatewayConnection#connection_protocol}
   */
   readonly connectionProtocol?: string;
@@ -603,6 +607,7 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._authorizationKey = config.authorizationKey;
+    this._connectionMode = config.connectionMode;
     this._connectionProtocol = config.connectionProtocol;
     this._dpdTimeoutSeconds = config.dpdTimeoutSeconds;
     this._enableBgp = config.enableBgp;
@@ -643,6 +648,22 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get authorizationKeyInput() {
     return this._authorizationKey;
+  }
+
+  // connection_mode - computed: false, optional: true, required: false
+  private _connectionMode?: string; 
+  public get connectionMode() {
+    return this.getStringAttribute('connection_mode');
+  }
+  public set connectionMode(value: string) {
+    this._connectionMode = value;
+  }
+  public resetConnectionMode() {
+    this._connectionMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionModeInput() {
+    return this._connectionMode;
   }
 
   // connection_protocol - computed: true, optional: true, required: false
@@ -963,6 +984,7 @@ export class VirtualNetworkGatewayConnection extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       authorization_key: cdktf.stringToTerraform(this._authorizationKey),
+      connection_mode: cdktf.stringToTerraform(this._connectionMode),
       connection_protocol: cdktf.stringToTerraform(this._connectionProtocol),
       dpd_timeout_seconds: cdktf.numberToTerraform(this._dpdTimeoutSeconds),
       enable_bgp: cdktf.booleanToTerraform(this._enableBgp),

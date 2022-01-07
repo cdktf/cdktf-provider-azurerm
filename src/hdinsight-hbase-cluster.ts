@@ -60,6 +60,12 @@ export interface HdinsightHbaseClusterConfig extends cdktf.TerraformMetaArgument
   */
   readonly monitor?: HdinsightHbaseClusterMonitor;
   /**
+  * network block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hbase_cluster.html#network HdinsightHbaseCluster#network}
+  */
+  readonly network?: HdinsightHbaseClusterNetwork;
+  /**
   * roles block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hbase_cluster.html#roles HdinsightHbaseCluster#roles}
@@ -883,6 +889,99 @@ export class HdinsightHbaseClusterMonitorOutputReference extends cdktf.ComplexOb
   // Temporarily expose input value. Use with caution.
   public get primaryKeyInput() {
     return this._primaryKey;
+  }
+}
+export interface HdinsightHbaseClusterNetwork {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hbase_cluster.html#connection_direction HdinsightHbaseCluster#connection_direction}
+  */
+  readonly connectionDirection?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_hbase_cluster.html#private_link_enabled HdinsightHbaseCluster#private_link_enabled}
+  */
+  readonly privateLinkEnabled?: boolean | cdktf.IResolvable;
+}
+
+export function hdinsightHbaseClusterNetworkToTerraform(struct?: HdinsightHbaseClusterNetworkOutputReference | HdinsightHbaseClusterNetwork): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    connection_direction: cdktf.stringToTerraform(struct!.connectionDirection),
+    private_link_enabled: cdktf.booleanToTerraform(struct!.privateLinkEnabled),
+  }
+}
+
+export class HdinsightHbaseClusterNetworkOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): HdinsightHbaseClusterNetwork | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._connectionDirection !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.connectionDirection = this._connectionDirection;
+    }
+    if (this._privateLinkEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.privateLinkEnabled = this._privateLinkEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: HdinsightHbaseClusterNetwork | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._connectionDirection = undefined;
+      this._privateLinkEnabled = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._connectionDirection = value.connectionDirection;
+      this._privateLinkEnabled = value.privateLinkEnabled;
+    }
+  }
+
+  // connection_direction - computed: false, optional: true, required: false
+  private _connectionDirection?: string; 
+  public get connectionDirection() {
+    return this.getStringAttribute('connection_direction');
+  }
+  public set connectionDirection(value: string) {
+    this._connectionDirection = value;
+  }
+  public resetConnectionDirection() {
+    this._connectionDirection = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get connectionDirectionInput() {
+    return this._connectionDirection;
+  }
+
+  // private_link_enabled - computed: false, optional: true, required: false
+  private _privateLinkEnabled?: boolean | cdktf.IResolvable; 
+  public get privateLinkEnabled() {
+    return this.getBooleanAttribute('private_link_enabled') as any;
+  }
+  public set privateLinkEnabled(value: boolean | cdktf.IResolvable) {
+    this._privateLinkEnabled = value;
+  }
+  public resetPrivateLinkEnabled() {
+    this._privateLinkEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get privateLinkEnabledInput() {
+    return this._privateLinkEnabled;
   }
 }
 export interface HdinsightHbaseClusterRolesHeadNode {
@@ -2415,6 +2514,7 @@ export class HdinsightHbaseCluster extends cdktf.TerraformResource {
     this._gateway.internalValue = config.gateway;
     this._metastores.internalValue = config.metastores;
     this._monitor.internalValue = config.monitor;
+    this._network.internalValue = config.network;
     this._roles.internalValue = config.roles;
     this._securityProfile.internalValue = config.securityProfile;
     this._storageAccount = config.storageAccount;
@@ -2597,6 +2697,22 @@ export class HdinsightHbaseCluster extends cdktf.TerraformResource {
     return this._monitor.internalValue;
   }
 
+  // network - computed: false, optional: true, required: false
+  private _network = new HdinsightHbaseClusterNetworkOutputReference(this as any, "network", true);
+  public get network() {
+    return this._network;
+  }
+  public putNetwork(value: HdinsightHbaseClusterNetwork) {
+    this._network.internalValue = value;
+  }
+  public resetNetwork() {
+    this._network.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkInput() {
+    return this._network.internalValue;
+  }
+
   // roles - computed: false, optional: false, required: true
   private _roles = new HdinsightHbaseClusterRolesOutputReference(this as any, "roles", true);
   public get roles() {
@@ -2692,6 +2808,7 @@ export class HdinsightHbaseCluster extends cdktf.TerraformResource {
       gateway: hdinsightHbaseClusterGatewayToTerraform(this._gateway.internalValue),
       metastores: hdinsightHbaseClusterMetastoresToTerraform(this._metastores.internalValue),
       monitor: hdinsightHbaseClusterMonitorToTerraform(this._monitor.internalValue),
+      network: hdinsightHbaseClusterNetworkToTerraform(this._network.internalValue),
       roles: hdinsightHbaseClusterRolesToTerraform(this._roles.internalValue),
       security_profile: hdinsightHbaseClusterSecurityProfileToTerraform(this._securityProfile.internalValue),
       storage_account: cdktf.listMapper(hdinsightHbaseClusterStorageAccountToTerraform)(this._storageAccount),

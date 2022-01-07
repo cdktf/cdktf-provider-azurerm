@@ -50,7 +50,7 @@ export interface ServicebusSubscriptionConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#namespace_name ServicebusSubscription#namespace_name}
   */
-  readonly namespaceName: string;
+  readonly namespaceName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#requires_session ServicebusSubscription#requires_session}
   */
@@ -58,15 +58,19 @@ export interface ServicebusSubscriptionConfig extends cdktf.TerraformMetaArgumen
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#resource_group_name ServicebusSubscription#resource_group_name}
   */
-  readonly resourceGroupName: string;
+  readonly resourceGroupName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#status ServicebusSubscription#status}
   */
   readonly status?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#topic_id ServicebusSubscription#topic_id}
+  */
+  readonly topicId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_subscription.html#topic_name ServicebusSubscription#topic_name}
   */
-  readonly topicName: string;
+  readonly topicName?: string;
   /**
   * timeouts block
   * 
@@ -268,6 +272,7 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
     this._requiresSession = config.requiresSession;
     this._resourceGroupName = config.resourceGroupName;
     this._status = config.status;
+    this._topicId = config.topicId;
     this._topicName = config.topicName;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -435,13 +440,16 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // namespace_name - computed: false, optional: false, required: true
+  // namespace_name - computed: true, optional: true, required: false
   private _namespaceName?: string; 
   public get namespaceName() {
     return this.getStringAttribute('namespace_name');
   }
   public set namespaceName(value: string) {
     this._namespaceName = value;
+  }
+  public resetNamespaceName() {
+    this._namespaceName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceNameInput() {
@@ -464,13 +472,16 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
     return this._requiresSession;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
+  // resource_group_name - computed: true, optional: true, required: false
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  public resetResourceGroupName() {
+    this._resourceGroupName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
@@ -493,13 +504,32 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
     return this._status;
   }
 
-  // topic_name - computed: false, optional: false, required: true
+  // topic_id - computed: true, optional: true, required: false
+  private _topicId?: string; 
+  public get topicId() {
+    return this.getStringAttribute('topic_id');
+  }
+  public set topicId(value: string) {
+    this._topicId = value;
+  }
+  public resetTopicId() {
+    this._topicId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get topicIdInput() {
+    return this._topicId;
+  }
+
+  // topic_name - computed: true, optional: true, required: false
   private _topicName?: string; 
   public get topicName() {
     return this.getStringAttribute('topic_name');
   }
   public set topicName(value: string) {
     this._topicName = value;
+  }
+  public resetTopicName() {
+    this._topicName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get topicNameInput() {
@@ -542,6 +572,7 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
       requires_session: cdktf.booleanToTerraform(this._requiresSession),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       status: cdktf.stringToTerraform(this._status),
+      topic_id: cdktf.stringToTerraform(this._topicId),
       topic_name: cdktf.stringToTerraform(this._topicName),
       timeouts: servicebusSubscriptionTimeoutsToTerraform(this._timeouts.internalValue),
     };

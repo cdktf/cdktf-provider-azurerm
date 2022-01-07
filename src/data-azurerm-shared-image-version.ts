@@ -24,6 +24,10 @@ export interface DataAzurermSharedImageVersionConfig extends cdktf.TerraformMeta
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version.html#sort_versions_by_semver DataAzurermSharedImageVersion#sort_versions_by_semver}
+  */
+  readonly sortVersionsBySemver?: boolean | cdktf.IResolvable;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version.html#timeouts DataAzurermSharedImageVersion#timeouts}
@@ -150,6 +154,7 @@ export class DataAzurermSharedImageVersion extends cdktf.TerraformDataSource {
     this._imageName = config.imageName;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._sortVersionsBySemver = config.sortVersionsBySemver;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -239,6 +244,22 @@ export class DataAzurermSharedImageVersion extends cdktf.TerraformDataSource {
     return this._resourceGroupName;
   }
 
+  // sort_versions_by_semver - computed: false, optional: true, required: false
+  private _sortVersionsBySemver?: boolean | cdktf.IResolvable; 
+  public get sortVersionsBySemver() {
+    return this.getBooleanAttribute('sort_versions_by_semver') as any;
+  }
+  public set sortVersionsBySemver(value: boolean | cdktf.IResolvable) {
+    this._sortVersionsBySemver = value;
+  }
+  public resetSortVersionsBySemver() {
+    this._sortVersionsBySemver = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sortVersionsBySemverInput() {
+    return this._sortVersionsBySemver;
+  }
+
   // tags - computed: true, optional: false, required: false
   public tags(key: string): string {
     return new cdktf.StringMap(this, 'tags').lookup(key);
@@ -275,6 +296,7 @@ export class DataAzurermSharedImageVersion extends cdktf.TerraformDataSource {
       image_name: cdktf.stringToTerraform(this._imageName),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      sort_versions_by_semver: cdktf.booleanToTerraform(this._sortVersionsBySemver),
       timeouts: dataAzurermSharedImageVersionTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

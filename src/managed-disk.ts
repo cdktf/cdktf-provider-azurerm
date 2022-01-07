@@ -40,6 +40,10 @@ export interface ManagedDiskConfig extends cdktf.TerraformMetaArguments {
   */
   readonly diskSizeGb?: number;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#gallery_image_reference_id ManagedDisk#gallery_image_reference_id}
+  */
+  readonly galleryImageReferenceId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/managed_disk.html#hyper_v_generation ManagedDisk#hyper_v_generation}
   */
   readonly hyperVGeneration?: string;
@@ -611,6 +615,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
     this._diskMbpsReadOnly = config.diskMbpsReadOnly;
     this._diskMbpsReadWrite = config.diskMbpsReadWrite;
     this._diskSizeGb = config.diskSizeGb;
+    this._galleryImageReferenceId = config.galleryImageReferenceId;
     this._hyperVGeneration = config.hyperVGeneration;
     this._imageReferenceId = config.imageReferenceId;
     this._location = config.location;
@@ -761,6 +766,22 @@ export class ManagedDisk extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get diskSizeGbInput() {
     return this._diskSizeGb;
+  }
+
+  // gallery_image_reference_id - computed: false, optional: true, required: false
+  private _galleryImageReferenceId?: string; 
+  public get galleryImageReferenceId() {
+    return this.getStringAttribute('gallery_image_reference_id');
+  }
+  public set galleryImageReferenceId(value: string) {
+    this._galleryImageReferenceId = value;
+  }
+  public resetGalleryImageReferenceId() {
+    this._galleryImageReferenceId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get galleryImageReferenceIdInput() {
+    return this._galleryImageReferenceId;
   }
 
   // hyper_v_generation - computed: false, optional: true, required: false
@@ -1107,6 +1128,7 @@ export class ManagedDisk extends cdktf.TerraformResource {
       disk_mbps_read_only: cdktf.numberToTerraform(this._diskMbpsReadOnly),
       disk_mbps_read_write: cdktf.numberToTerraform(this._diskMbpsReadWrite),
       disk_size_gb: cdktf.numberToTerraform(this._diskSizeGb),
+      gallery_image_reference_id: cdktf.stringToTerraform(this._galleryImageReferenceId),
       hyper_v_generation: cdktf.stringToTerraform(this._hyperVGeneration),
       image_reference_id: cdktf.stringToTerraform(this._imageReferenceId),
       location: cdktf.stringToTerraform(this._location),

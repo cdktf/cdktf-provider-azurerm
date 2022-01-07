@@ -112,6 +112,10 @@ export interface LinuxVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine.html#user_data LinuxVirtualMachine#user_data}
+  */
+  readonly userData?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine.html#virtual_machine_scale_set_id LinuxVirtualMachine#virtual_machine_scale_set_id}
   */
   readonly virtualMachineScaleSetId?: string;
@@ -1202,6 +1206,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
     this._size = config.size;
     this._sourceImageId = config.sourceImageId;
     this._tags = config.tags;
+    this._userData = config.userData;
     this._virtualMachineScaleSetId = config.virtualMachineScaleSetId;
     this._vtpmEnabled = config.vtpmEnabled;
     this._zone = config.zone;
@@ -1644,6 +1649,22 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // user_data - computed: false, optional: true, required: false
+  private _userData?: string; 
+  public get userData() {
+    return this.getStringAttribute('user_data');
+  }
+  public set userData(value: string) {
+    this._userData = value;
+  }
+  public resetUserData() {
+    this._userData = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userDataInput() {
+    return this._userData;
+  }
+
   // virtual_machine_id - computed: true, optional: false, required: false
   public get virtualMachineId() {
     return this.getStringAttribute('virtual_machine_id');
@@ -1872,6 +1893,7 @@ export class LinuxVirtualMachine extends cdktf.TerraformResource {
       size: cdktf.stringToTerraform(this._size),
       source_image_id: cdktf.stringToTerraform(this._sourceImageId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      user_data: cdktf.stringToTerraform(this._userData),
       virtual_machine_scale_set_id: cdktf.stringToTerraform(this._virtualMachineScaleSetId),
       vtpm_enabled: cdktf.booleanToTerraform(this._vtpmEnabled),
       zone: cdktf.stringToTerraform(this._zone),
