@@ -8,9 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface SpringCloudCertificateConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_certificate.html#certificate_content SpringCloudCertificate#certificate_content}
+  */
+  readonly certificateContent?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_certificate.html#key_vault_certificate_id SpringCloudCertificate#key_vault_certificate_id}
   */
-  readonly keyVaultCertificateId: string;
+  readonly keyVaultCertificateId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_certificate.html#name SpringCloudCertificate#name}
   */
@@ -183,6 +187,7 @@ export class SpringCloudCertificate extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._certificateContent = config.certificateContent;
     this._keyVaultCertificateId = config.keyVaultCertificateId;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -194,18 +199,37 @@ export class SpringCloudCertificate extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
+  // certificate_content - computed: false, optional: true, required: false
+  private _certificateContent?: string; 
+  public get certificateContent() {
+    return this.getStringAttribute('certificate_content');
+  }
+  public set certificateContent(value: string) {
+    this._certificateContent = value;
+  }
+  public resetCertificateContent() {
+    this._certificateContent = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateContentInput() {
+    return this._certificateContent;
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
   }
 
-  // key_vault_certificate_id - computed: false, optional: false, required: true
+  // key_vault_certificate_id - computed: false, optional: true, required: false
   private _keyVaultCertificateId?: string; 
   public get keyVaultCertificateId() {
     return this.getStringAttribute('key_vault_certificate_id');
   }
   public set keyVaultCertificateId(value: string) {
     this._keyVaultCertificateId = value;
+  }
+  public resetKeyVaultCertificateId() {
+    this._keyVaultCertificateId = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get keyVaultCertificateIdInput() {
@@ -278,6 +302,7 @@ export class SpringCloudCertificate extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      certificate_content: cdktf.stringToTerraform(this._certificateContent),
       key_vault_certificate_id: cdktf.stringToTerraform(this._keyVaultCertificateId),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

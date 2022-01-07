@@ -22,15 +22,19 @@ export interface ServicebusQueueAuthorizationRuleConfig extends cdktf.TerraformM
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html#namespace_name ServicebusQueueAuthorizationRule#namespace_name}
   */
-  readonly namespaceName: string;
+  readonly namespaceName?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html#queue_id ServicebusQueueAuthorizationRule#queue_id}
+  */
+  readonly queueId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html#queue_name ServicebusQueueAuthorizationRule#queue_name}
   */
-  readonly queueName: string;
+  readonly queueName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html#resource_group_name ServicebusQueueAuthorizationRule#resource_group_name}
   */
-  readonly resourceGroupName: string;
+  readonly resourceGroupName?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html#send ServicebusQueueAuthorizationRule#send}
   */
@@ -226,6 +230,7 @@ export class ServicebusQueueAuthorizationRule extends cdktf.TerraformResource {
     this._manage = config.manage;
     this._name = config.name;
     this._namespaceName = config.namespaceName;
+    this._queueId = config.queueId;
     this._queueName = config.queueName;
     this._resourceGroupName = config.resourceGroupName;
     this._send = config.send;
@@ -286,13 +291,16 @@ export class ServicebusQueueAuthorizationRule extends cdktf.TerraformResource {
     return this._name;
   }
 
-  // namespace_name - computed: false, optional: false, required: true
+  // namespace_name - computed: true, optional: true, required: false
   private _namespaceName?: string; 
   public get namespaceName() {
     return this.getStringAttribute('namespace_name');
   }
   public set namespaceName(value: string) {
     this._namespaceName = value;
+  }
+  public resetNamespaceName() {
+    this._namespaceName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get namespaceNameInput() {
@@ -314,7 +322,23 @@ export class ServicebusQueueAuthorizationRule extends cdktf.TerraformResource {
     return this.getStringAttribute('primary_key');
   }
 
-  // queue_name - computed: false, optional: false, required: true
+  // queue_id - computed: true, optional: true, required: false
+  private _queueId?: string; 
+  public get queueId() {
+    return this.getStringAttribute('queue_id');
+  }
+  public set queueId(value: string) {
+    this._queueId = value;
+  }
+  public resetQueueId() {
+    this._queueId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queueIdInput() {
+    return this._queueId;
+  }
+
+  // queue_name - computed: true, optional: true, required: false
   private _queueName?: string; 
   public get queueName() {
     return this.getStringAttribute('queue_name');
@@ -322,18 +346,24 @@ export class ServicebusQueueAuthorizationRule extends cdktf.TerraformResource {
   public set queueName(value: string) {
     this._queueName = value;
   }
+  public resetQueueName() {
+    this._queueName = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get queueNameInput() {
     return this._queueName;
   }
 
-  // resource_group_name - computed: false, optional: false, required: true
+  // resource_group_name - computed: true, optional: true, required: false
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
     return this.getStringAttribute('resource_group_name');
   }
   public set resourceGroupName(value: string) {
     this._resourceGroupName = value;
+  }
+  public resetResourceGroupName() {
+    this._resourceGroupName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get resourceGroupNameInput() {
@@ -397,6 +427,7 @@ export class ServicebusQueueAuthorizationRule extends cdktf.TerraformResource {
       manage: cdktf.booleanToTerraform(this._manage),
       name: cdktf.stringToTerraform(this._name),
       namespace_name: cdktf.stringToTerraform(this._namespaceName),
+      queue_id: cdktf.stringToTerraform(this._queueId),
       queue_name: cdktf.stringToTerraform(this._queueName),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       send: cdktf.booleanToTerraform(this._send),

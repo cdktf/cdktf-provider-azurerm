@@ -116,6 +116,10 @@ export interface LinuxVirtualMachineScaleSetConfig extends cdktf.TerraformMetaAr
   */
   readonly upgradeMode?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set.html#user_data LinuxVirtualMachineScaleSet#user_data}
+  */
+  readonly userData?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine_scale_set.html#vtpm_enabled LinuxVirtualMachineScaleSet#vtpm_enabled}
   */
   readonly vtpmEnabled?: boolean | cdktf.IResolvable;
@@ -1912,6 +1916,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
     this._sourceImageId = config.sourceImageId;
     this._tags = config.tags;
     this._upgradeMode = config.upgradeMode;
+    this._userData = config.userData;
     this._vtpmEnabled = config.vtpmEnabled;
     this._zoneBalance = config.zoneBalance;
     this._zones = config.zones;
@@ -2362,6 +2367,22 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
     return this._upgradeMode;
   }
 
+  // user_data - computed: false, optional: true, required: false
+  private _userData?: string; 
+  public get userData() {
+    return this.getStringAttribute('user_data');
+  }
+  public set userData(value: string) {
+    this._userData = value;
+  }
+  public resetUserData() {
+    this._userData = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userDataInput() {
+    return this._userData;
+  }
+
   // vtpm_enabled - computed: false, optional: true, required: false
   private _vtpmEnabled?: boolean | cdktf.IResolvable; 
   public get vtpmEnabled() {
@@ -2698,6 +2719,7 @@ export class LinuxVirtualMachineScaleSet extends cdktf.TerraformResource {
       source_image_id: cdktf.stringToTerraform(this._sourceImageId),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       upgrade_mode: cdktf.stringToTerraform(this._upgradeMode),
+      user_data: cdktf.stringToTerraform(this._userData),
       vtpm_enabled: cdktf.booleanToTerraform(this._vtpmEnabled),
       zone_balance: cdktf.booleanToTerraform(this._zoneBalance),
       zones: cdktf.listMapper(cdktf.stringToTerraform)(this._zones),

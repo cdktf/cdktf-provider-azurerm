@@ -108,6 +108,10 @@ export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArgu
   */
   readonly proximityPlacementGroupId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#scale_down_mode KubernetesClusterNodePool#scale_down_mode}
+  */
+  readonly scaleDownMode?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#spot_max_price KubernetesClusterNodePool#spot_max_price}
   */
   readonly spotMaxPrice?: number;
@@ -127,6 +131,10 @@ export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArgu
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#vnet_subnet_id KubernetesClusterNodePool#vnet_subnet_id}
   */
   readonly vnetSubnetId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kubernetes_cluster_node_pool.html#workload_runtime KubernetesClusterNodePool#workload_runtime}
+  */
+  readonly workloadRuntime?: string;
   /**
   * kubelet_config block
   * 
@@ -1700,11 +1708,13 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     this._podSubnetId = config.podSubnetId;
     this._priority = config.priority;
     this._proximityPlacementGroupId = config.proximityPlacementGroupId;
+    this._scaleDownMode = config.scaleDownMode;
     this._spotMaxPrice = config.spotMaxPrice;
     this._tags = config.tags;
     this._ultraSsdEnabled = config.ultraSsdEnabled;
     this._vmSize = config.vmSize;
     this._vnetSubnetId = config.vnetSubnetId;
+    this._workloadRuntime = config.workloadRuntime;
     this._kubeletConfig.internalValue = config.kubeletConfig;
     this._linuxOsConfig.internalValue = config.linuxOsConfig;
     this._timeouts.internalValue = config.timeouts;
@@ -2115,6 +2125,22 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
     return this._proximityPlacementGroupId;
   }
 
+  // scale_down_mode - computed: false, optional: true, required: false
+  private _scaleDownMode?: string; 
+  public get scaleDownMode() {
+    return this.getStringAttribute('scale_down_mode');
+  }
+  public set scaleDownMode(value: string) {
+    this._scaleDownMode = value;
+  }
+  public resetScaleDownMode() {
+    this._scaleDownMode = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scaleDownModeInput() {
+    return this._scaleDownMode;
+  }
+
   // spot_max_price - computed: false, optional: true, required: false
   private _spotMaxPrice?: number; 
   public get spotMaxPrice() {
@@ -2191,6 +2217,22 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get vnetSubnetIdInput() {
     return this._vnetSubnetId;
+  }
+
+  // workload_runtime - computed: false, optional: true, required: false
+  private _workloadRuntime?: string; 
+  public get workloadRuntime() {
+    return this.getStringAttribute('workload_runtime');
+  }
+  public set workloadRuntime(value: string) {
+    this._workloadRuntime = value;
+  }
+  public resetWorkloadRuntime() {
+    this._workloadRuntime = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get workloadRuntimeInput() {
+    return this._workloadRuntime;
   }
 
   // kubelet_config - computed: false, optional: true, required: false
@@ -2288,11 +2330,13 @@ export class KubernetesClusterNodePool extends cdktf.TerraformResource {
       pod_subnet_id: cdktf.stringToTerraform(this._podSubnetId),
       priority: cdktf.stringToTerraform(this._priority),
       proximity_placement_group_id: cdktf.stringToTerraform(this._proximityPlacementGroupId),
+      scale_down_mode: cdktf.stringToTerraform(this._scaleDownMode),
       spot_max_price: cdktf.numberToTerraform(this._spotMaxPrice),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
       ultra_ssd_enabled: cdktf.booleanToTerraform(this._ultraSsdEnabled),
       vm_size: cdktf.stringToTerraform(this._vmSize),
       vnet_subnet_id: cdktf.stringToTerraform(this._vnetSubnetId),
+      workload_runtime: cdktf.stringToTerraform(this._workloadRuntime),
       kubelet_config: kubernetesClusterNodePoolKubeletConfigToTerraform(this._kubeletConfig.internalValue),
       linux_os_config: kubernetesClusterNodePoolLinuxOsConfigToTerraform(this._linuxOsConfig.internalValue),
       timeouts: kubernetesClusterNodePoolTimeoutsToTerraform(this._timeouts.internalValue),

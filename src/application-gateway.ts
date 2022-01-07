@@ -12,9 +12,17 @@ export interface ApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
   */
   readonly enableHttp2?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#fips_enabled ApplicationGateway#fips_enabled}
+  */
+  readonly fipsEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#firewall_policy_id ApplicationGateway#firewall_policy_id}
   */
   readonly firewallPolicyId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#force_firewall_policy_association ApplicationGateway#force_firewall_policy_association}
+  */
+  readonly forceFirewallPolicyAssociation?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#location ApplicationGateway#location}
   */
@@ -2098,7 +2106,11 @@ export interface ApplicationGatewayTrustedRootCertificate {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#data ApplicationGateway#data}
   */
-  readonly data: string;
+  readonly data?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#key_vault_secret_id ApplicationGateway#key_vault_secret_id}
+  */
+  readonly keyVaultSecretId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_gateway.html#name ApplicationGateway#name}
   */
@@ -2112,6 +2124,7 @@ export function applicationGatewayTrustedRootCertificateToTerraform(struct?: App
   }
   return {
     data: cdktf.stringToTerraform(struct!.data),
+    key_vault_secret_id: cdktf.stringToTerraform(struct!.keyVaultSecretId),
     name: cdktf.stringToTerraform(struct!.name),
   }
 }
@@ -2569,7 +2582,9 @@ export class ApplicationGateway extends cdktf.TerraformResource {
       lifecycle: config.lifecycle
     });
     this._enableHttp2 = config.enableHttp2;
+    this._fipsEnabled = config.fipsEnabled;
     this._firewallPolicyId = config.firewallPolicyId;
+    this._forceFirewallPolicyAssociation = config.forceFirewallPolicyAssociation;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -2621,6 +2636,22 @@ export class ApplicationGateway extends cdktf.TerraformResource {
     return this._enableHttp2;
   }
 
+  // fips_enabled - computed: false, optional: true, required: false
+  private _fipsEnabled?: boolean | cdktf.IResolvable; 
+  public get fipsEnabled() {
+    return this.getBooleanAttribute('fips_enabled') as any;
+  }
+  public set fipsEnabled(value: boolean | cdktf.IResolvable) {
+    this._fipsEnabled = value;
+  }
+  public resetFipsEnabled() {
+    this._fipsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fipsEnabledInput() {
+    return this._fipsEnabled;
+  }
+
   // firewall_policy_id - computed: false, optional: true, required: false
   private _firewallPolicyId?: string; 
   public get firewallPolicyId() {
@@ -2635,6 +2666,22 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get firewallPolicyIdInput() {
     return this._firewallPolicyId;
+  }
+
+  // force_firewall_policy_association - computed: false, optional: true, required: false
+  private _forceFirewallPolicyAssociation?: boolean | cdktf.IResolvable; 
+  public get forceFirewallPolicyAssociation() {
+    return this.getBooleanAttribute('force_firewall_policy_association') as any;
+  }
+  public set forceFirewallPolicyAssociation(value: boolean | cdktf.IResolvable) {
+    this._forceFirewallPolicyAssociation = value;
+  }
+  public resetForceFirewallPolicyAssociation() {
+    this._forceFirewallPolicyAssociation = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get forceFirewallPolicyAssociationInput() {
+    return this._forceFirewallPolicyAssociation;
   }
 
   // id - computed: true, optional: true, required: false
@@ -3104,7 +3151,9 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       enable_http2: cdktf.booleanToTerraform(this._enableHttp2),
+      fips_enabled: cdktf.booleanToTerraform(this._fipsEnabled),
       firewall_policy_id: cdktf.stringToTerraform(this._firewallPolicyId),
+      force_firewall_policy_association: cdktf.booleanToTerraform(this._forceFirewallPolicyAssociation),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

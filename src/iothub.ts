@@ -70,6 +70,12 @@ export interface IothubConfig extends cdktf.TerraformMetaArguments {
   */
   readonly fileUpload?: IothubFileUpload;
   /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#identity Iothub#identity}
+  */
+  readonly identity?: IothubIdentity;
+  /**
   * ip_filter_rule block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#ip_filter_rule Iothub#ip_filter_rule}
@@ -750,6 +756,96 @@ export class IothubFileUploadOutputReference extends cdktf.ComplexObject {
     return this._sasTtl;
   }
 }
+export interface IothubIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#identity_ids Iothub#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#type Iothub#type}
+  */
+  readonly type: string;
+}
+
+export function iothubIdentityToTerraform(struct?: IothubIdentityOutputReference | IothubIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class IothubIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): IothubIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: IothubIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
 export interface IothubIpFilterRule {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub.html#action Iothub#action}
@@ -1058,6 +1154,7 @@ export class Iothub extends cdktf.TerraformResource {
     this._cloudToDevice.internalValue = config.cloudToDevice;
     this._fallbackRoute.internalValue = config.fallbackRoute;
     this._fileUpload.internalValue = config.fileUpload;
+    this._identity.internalValue = config.identity;
     this._ipFilterRule = config.ipFilterRule;
     this._sku.internalValue = config.sku;
     this._timeouts.internalValue = config.timeouts;
@@ -1326,6 +1423,22 @@ export class Iothub extends cdktf.TerraformResource {
     return this._fileUpload.internalValue;
   }
 
+  // identity - computed: false, optional: true, required: false
+  private _identity = new IothubIdentityOutputReference(this as any, "identity", true);
+  public get identity() {
+    return this._identity;
+  }
+  public putIdentity(value: IothubIdentity) {
+    this._identity.internalValue = value;
+  }
+  public resetIdentity() {
+    this._identity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity.internalValue;
+  }
+
   // ip_filter_rule - computed: false, optional: true, required: false
   private _ipFilterRule?: IothubIpFilterRule[]; 
   public get ipFilterRule() {
@@ -1392,6 +1505,7 @@ export class Iothub extends cdktf.TerraformResource {
       cloud_to_device: iothubCloudToDeviceToTerraform(this._cloudToDevice.internalValue),
       fallback_route: iothubFallbackRouteToTerraform(this._fallbackRoute.internalValue),
       file_upload: iothubFileUploadToTerraform(this._fileUpload.internalValue),
+      identity: iothubIdentityToTerraform(this._identity.internalValue),
       ip_filter_rule: cdktf.listMapper(iothubIpFilterRuleToTerraform)(this._ipFilterRule),
       sku: iothubSkuToTerraform(this._sku.internalValue),
       timeouts: iothubTimeoutsToTerraform(this._timeouts.internalValue),
