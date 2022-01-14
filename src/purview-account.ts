@@ -59,6 +59,23 @@ export class PurviewAccountIdentity extends cdktf.ComplexComputedList {
     return this.getStringAttribute('type');
   }
 }
+export class PurviewAccountManagedResources extends cdktf.ComplexComputedList {
+
+  // event_hub_namespace_id - computed: true, optional: false, required: false
+  public get eventHubNamespaceId() {
+    return this.getStringAttribute('event_hub_namespace_id');
+  }
+
+  // resource_group_id - computed: true, optional: false, required: false
+  public get resourceGroupId() {
+    return this.getStringAttribute('resource_group_id');
+  }
+
+  // storage_account_id - computed: true, optional: false, required: false
+  public get storageAccountId() {
+    return this.getStringAttribute('storage_account_id');
+  }
+}
 export interface PurviewAccountTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/purview_account.html#create PurviewAccount#create}
@@ -310,6 +327,11 @@ export class PurviewAccount extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get managedResourceGroupNameInput() {
     return this._managedResourceGroupName;
+  }
+
+  // managed_resources - computed: true, optional: false, required: false
+  public managedResources(index: string) {
+    return new PurviewAccountManagedResources(this, 'managed_resources', index);
   }
 
   // name - computed: false, optional: false, required: true

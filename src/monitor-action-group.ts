@@ -58,6 +58,12 @@ export interface MonitorActionGroupConfig extends cdktf.TerraformMetaArguments {
   */
   readonly emailReceiver?: MonitorActionGroupEmailReceiver[];
   /**
+  * event_hub_receiver block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#event_hub_receiver MonitorActionGroup#event_hub_receiver}
+  */
+  readonly eventHubReceiver?: MonitorActionGroupEventHubReceiver[];
+  /**
   * itsm_receiver block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#itsm_receiver MonitorActionGroup#itsm_receiver}
@@ -250,6 +256,38 @@ export function monitorActionGroupEmailReceiverToTerraform(struct?: MonitorActio
   return {
     email_address: cdktf.stringToTerraform(struct!.emailAddress),
     name: cdktf.stringToTerraform(struct!.name),
+    use_common_alert_schema: cdktf.booleanToTerraform(struct!.useCommonAlertSchema),
+  }
+}
+
+export interface MonitorActionGroupEventHubReceiver {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#event_hub_id MonitorActionGroup#event_hub_id}
+  */
+  readonly eventHubId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#name MonitorActionGroup#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#tenant_id MonitorActionGroup#tenant_id}
+  */
+  readonly tenantId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_action_group.html#use_common_alert_schema MonitorActionGroup#use_common_alert_schema}
+  */
+  readonly useCommonAlertSchema?: boolean | cdktf.IResolvable;
+}
+
+export function monitorActionGroupEventHubReceiverToTerraform(struct?: MonitorActionGroupEventHubReceiver): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    event_hub_id: cdktf.stringToTerraform(struct!.eventHubId),
+    name: cdktf.stringToTerraform(struct!.name),
+    tenant_id: cdktf.stringToTerraform(struct!.tenantId),
     use_common_alert_schema: cdktf.booleanToTerraform(struct!.useCommonAlertSchema),
   }
 }
@@ -718,6 +756,7 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
     this._azureAppPushReceiver = config.azureAppPushReceiver;
     this._azureFunctionReceiver = config.azureFunctionReceiver;
     this._emailReceiver = config.emailReceiver;
+    this._eventHubReceiver = config.eventHubReceiver;
     this._itsmReceiver = config.itsmReceiver;
     this._logicAppReceiver = config.logicAppReceiver;
     this._smsReceiver = config.smsReceiver;
@@ -892,6 +931,23 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
     return this._emailReceiver;
   }
 
+  // event_hub_receiver - computed: false, optional: true, required: false
+  private _eventHubReceiver?: MonitorActionGroupEventHubReceiver[]; 
+  public get eventHubReceiver() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('event_hub_receiver') as any;
+  }
+  public set eventHubReceiver(value: MonitorActionGroupEventHubReceiver[]) {
+    this._eventHubReceiver = value;
+  }
+  public resetEventHubReceiver() {
+    this._eventHubReceiver = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventHubReceiverInput() {
+    return this._eventHubReceiver;
+  }
+
   // itsm_receiver - computed: false, optional: true, required: false
   private _itsmReceiver?: MonitorActionGroupItsmReceiver[]; 
   public get itsmReceiver() {
@@ -1009,6 +1065,7 @@ export class MonitorActionGroup extends cdktf.TerraformResource {
       azure_app_push_receiver: cdktf.listMapper(monitorActionGroupAzureAppPushReceiverToTerraform)(this._azureAppPushReceiver),
       azure_function_receiver: cdktf.listMapper(monitorActionGroupAzureFunctionReceiverToTerraform)(this._azureFunctionReceiver),
       email_receiver: cdktf.listMapper(monitorActionGroupEmailReceiverToTerraform)(this._emailReceiver),
+      event_hub_receiver: cdktf.listMapper(monitorActionGroupEventHubReceiverToTerraform)(this._eventHubReceiver),
       itsm_receiver: cdktf.listMapper(monitorActionGroupItsmReceiverToTerraform)(this._itsmReceiver),
       logic_app_receiver: cdktf.listMapper(monitorActionGroupLogicAppReceiverToTerraform)(this._logicAppReceiver),
       sms_receiver: cdktf.listMapper(monitorActionGroupSmsReceiverToTerraform)(this._smsReceiver),
