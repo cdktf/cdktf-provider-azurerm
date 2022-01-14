@@ -1203,6 +1203,11 @@ export class Iothub extends cdktf.TerraformResource {
     return this.getStringAttribute('event_hub_events_endpoint');
   }
 
+  // event_hub_events_namespace - computed: true, optional: false, required: false
+  public get eventHubEventsNamespace() {
+    return this.getStringAttribute('event_hub_events_namespace');
+  }
+
   // event_hub_events_path - computed: true, optional: false, required: false
   public get eventHubEventsPath() {
     return this.getStringAttribute('event_hub_events_path');

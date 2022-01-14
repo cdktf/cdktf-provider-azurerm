@@ -182,6 +182,11 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
     return this.getStringAttribute('id');
   }
 
+  // infrastructure_encryption_enabled - computed: true, optional: false, required: false
+  public get infrastructureEncryptionEnabled() {
+    return this.getBooleanAttribute('infrastructure_encryption_enabled') as any;
+  }
+
   // is_hns_enabled - computed: true, optional: false, required: false
   public get isHnsEnabled() {
     return this.getBooleanAttribute('is_hns_enabled') as any;

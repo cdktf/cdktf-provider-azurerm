@@ -28,6 +28,10 @@ export interface LogAnalyticsWorkspaceConfig extends cdktf.TerraformMetaArgument
   */
   readonly name: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#reservation_capacity_in_gb_per_day LogAnalyticsWorkspace#reservation_capacity_in_gb_per_day}
+  */
+  readonly reservationCapacityInGbPerDay?: number;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_workspace.html#reservation_capcity_in_gb_per_day LogAnalyticsWorkspace#reservation_capcity_in_gb_per_day}
   */
   readonly reservationCapcityInGbPerDay?: number;
@@ -239,6 +243,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
     this._internetQueryEnabled = config.internetQueryEnabled;
     this._location = config.location;
     this._name = config.name;
+    this._reservationCapacityInGbPerDay = config.reservationCapacityInGbPerDay;
     this._reservationCapcityInGbPerDay = config.reservationCapcityInGbPerDay;
     this._resourceGroupName = config.resourceGroupName;
     this._retentionInDays = config.retentionInDays;
@@ -340,7 +345,23 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
     return this.getStringAttribute('primary_shared_key');
   }
 
-  // reservation_capcity_in_gb_per_day - computed: false, optional: true, required: false
+  // reservation_capacity_in_gb_per_day - computed: true, optional: true, required: false
+  private _reservationCapacityInGbPerDay?: number; 
+  public get reservationCapacityInGbPerDay() {
+    return this.getNumberAttribute('reservation_capacity_in_gb_per_day');
+  }
+  public set reservationCapacityInGbPerDay(value: number) {
+    this._reservationCapacityInGbPerDay = value;
+  }
+  public resetReservationCapacityInGbPerDay() {
+    this._reservationCapacityInGbPerDay = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get reservationCapacityInGbPerDayInput() {
+    return this._reservationCapacityInGbPerDay;
+  }
+
+  // reservation_capcity_in_gb_per_day - computed: true, optional: true, required: false
   private _reservationCapcityInGbPerDay?: number; 
   public get reservationCapcityInGbPerDay() {
     return this.getNumberAttribute('reservation_capcity_in_gb_per_day');
@@ -455,6 +476,7 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
       internet_query_enabled: cdktf.booleanToTerraform(this._internetQueryEnabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
+      reservation_capacity_in_gb_per_day: cdktf.numberToTerraform(this._reservationCapacityInGbPerDay),
       reservation_capcity_in_gb_per_day: cdktf.numberToTerraform(this._reservationCapcityInGbPerDay),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       retention_in_days: cdktf.numberToTerraform(this._retentionInDays),

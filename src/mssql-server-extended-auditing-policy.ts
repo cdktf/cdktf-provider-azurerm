@@ -28,6 +28,10 @@ export interface MssqlServerExtendedAuditingPolicyAConfig extends cdktf.Terrafor
   */
   readonly storageAccountAccessKeyIsSecondary?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy.html#storage_account_subscription_id MssqlServerExtendedAuditingPolicyA#storage_account_subscription_id}
+  */
+  readonly storageAccountSubscriptionId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_extended_auditing_policy.html#storage_endpoint MssqlServerExtendedAuditingPolicyA#storage_endpoint}
   */
   readonly storageEndpoint?: string;
@@ -223,6 +227,7 @@ export class MssqlServerExtendedAuditingPolicyA extends cdktf.TerraformResource 
     this._serverId = config.serverId;
     this._storageAccountAccessKey = config.storageAccountAccessKey;
     this._storageAccountAccessKeyIsSecondary = config.storageAccountAccessKeyIsSecondary;
+    this._storageAccountSubscriptionId = config.storageAccountSubscriptionId;
     this._storageEndpoint = config.storageEndpoint;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -313,6 +318,22 @@ export class MssqlServerExtendedAuditingPolicyA extends cdktf.TerraformResource 
     return this._storageAccountAccessKeyIsSecondary;
   }
 
+  // storage_account_subscription_id - computed: false, optional: true, required: false
+  private _storageAccountSubscriptionId?: string; 
+  public get storageAccountSubscriptionId() {
+    return this.getStringAttribute('storage_account_subscription_id');
+  }
+  public set storageAccountSubscriptionId(value: string) {
+    this._storageAccountSubscriptionId = value;
+  }
+  public resetStorageAccountSubscriptionId() {
+    this._storageAccountSubscriptionId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageAccountSubscriptionIdInput() {
+    return this._storageAccountSubscriptionId;
+  }
+
   // storage_endpoint - computed: false, optional: true, required: false
   private _storageEndpoint?: string; 
   public get storageEndpoint() {
@@ -356,6 +377,7 @@ export class MssqlServerExtendedAuditingPolicyA extends cdktf.TerraformResource 
       server_id: cdktf.stringToTerraform(this._serverId),
       storage_account_access_key: cdktf.stringToTerraform(this._storageAccountAccessKey),
       storage_account_access_key_is_secondary: cdktf.booleanToTerraform(this._storageAccountAccessKeyIsSecondary),
+      storage_account_subscription_id: cdktf.stringToTerraform(this._storageAccountSubscriptionId),
       storage_endpoint: cdktf.stringToTerraform(this._storageEndpoint),
       timeouts: mssqlServerExtendedAuditingPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };

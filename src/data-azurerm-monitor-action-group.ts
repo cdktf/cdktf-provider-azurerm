@@ -16,6 +16,12 @@ export interface DataAzurermMonitorActionGroupConfig extends cdktf.TerraformMeta
   */
   readonly resourceGroupName: string;
   /**
+  * event_hub_receiver block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#event_hub_receiver DataAzurermMonitorActionGroup#event_hub_receiver}
+  */
+  readonly eventHubReceiver?: DataAzurermMonitorActionGroupEventHubReceiver[];
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#timeouts DataAzurermMonitorActionGroup#timeouts}
@@ -255,6 +261,38 @@ export class DataAzurermMonitorActionGroupWebhookReceiver extends cdktf.ComplexC
     return this.getBooleanAttribute('use_common_alert_schema') as any;
   }
 }
+export interface DataAzurermMonitorActionGroupEventHubReceiver {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#event_hub_id DataAzurermMonitorActionGroup#event_hub_id}
+  */
+  readonly eventHubId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#name DataAzurermMonitorActionGroup#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#tenant_id DataAzurermMonitorActionGroup#tenant_id}
+  */
+  readonly tenantId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#use_common_alert_schema DataAzurermMonitorActionGroup#use_common_alert_schema}
+  */
+  readonly useCommonAlertSchema?: boolean | cdktf.IResolvable;
+}
+
+export function dataAzurermMonitorActionGroupEventHubReceiverToTerraform(struct?: DataAzurermMonitorActionGroupEventHubReceiver): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    event_hub_id: cdktf.stringToTerraform(struct!.eventHubId),
+    name: cdktf.stringToTerraform(struct!.name),
+    tenant_id: cdktf.stringToTerraform(struct!.tenantId),
+    use_common_alert_schema: cdktf.booleanToTerraform(struct!.useCommonAlertSchema),
+  }
+}
+
 export interface DataAzurermMonitorActionGroupTimeouts {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#read DataAzurermMonitorActionGroup#read}
@@ -356,6 +394,7 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
     });
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._eventHubReceiver = config.eventHubReceiver;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -454,6 +493,23 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
     return new DataAzurermMonitorActionGroupWebhookReceiver(this, 'webhook_receiver', index);
   }
 
+  // event_hub_receiver - computed: false, optional: true, required: false
+  private _eventHubReceiver?: DataAzurermMonitorActionGroupEventHubReceiver[]; 
+  public get eventHubReceiver() {
+    // Getting the computed value is not yet implemented
+    return this.interpolationForAttribute('event_hub_receiver') as any;
+  }
+  public set eventHubReceiver(value: DataAzurermMonitorActionGroupEventHubReceiver[]) {
+    this._eventHubReceiver = value;
+  }
+  public resetEventHubReceiver() {
+    this._eventHubReceiver = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get eventHubReceiverInput() {
+    return this._eventHubReceiver;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new DataAzurermMonitorActionGroupTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
@@ -478,6 +534,7 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
     return {
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      event_hub_receiver: cdktf.listMapper(dataAzurermMonitorActionGroupEventHubReceiverToTerraform)(this._eventHubReceiver),
       timeouts: dataAzurermMonitorActionGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
