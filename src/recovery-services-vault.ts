@@ -36,6 +36,12 @@ export interface RecoveryServicesVaultConfig extends cdktf.TerraformMetaArgument
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * encryption block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#encryption RecoveryServicesVault#encryption}
+  */
+  readonly encryption?: RecoveryServicesVaultEncryption;
+  /**
   * identity block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#identity RecoveryServicesVault#identity}
@@ -47,6 +53,120 @@ export interface RecoveryServicesVaultConfig extends cdktf.TerraformMetaArgument
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#timeouts RecoveryServicesVault#timeouts}
   */
   readonly timeouts?: RecoveryServicesVaultTimeouts;
+}
+export interface RecoveryServicesVaultEncryption {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#infrastructure_encryption_enabled RecoveryServicesVault#infrastructure_encryption_enabled}
+  */
+  readonly infrastructureEncryptionEnabled: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#key_id RecoveryServicesVault#key_id}
+  */
+  readonly keyId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/recovery_services_vault.html#use_system_assigned_identity RecoveryServicesVault#use_system_assigned_identity}
+  */
+  readonly useSystemAssignedIdentity?: boolean | cdktf.IResolvable;
+}
+
+export function recoveryServicesVaultEncryptionToTerraform(struct?: RecoveryServicesVaultEncryptionOutputReference | RecoveryServicesVaultEncryption): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    infrastructure_encryption_enabled: cdktf.booleanToTerraform(struct!.infrastructureEncryptionEnabled),
+    key_id: cdktf.stringToTerraform(struct!.keyId),
+    use_system_assigned_identity: cdktf.booleanToTerraform(struct!.useSystemAssignedIdentity),
+  }
+}
+
+export class RecoveryServicesVaultEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): RecoveryServicesVaultEncryption | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._infrastructureEncryptionEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.infrastructureEncryptionEnabled = this._infrastructureEncryptionEnabled;
+    }
+    if (this._keyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyId = this._keyId;
+    }
+    if (this._useSystemAssignedIdentity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.useSystemAssignedIdentity = this._useSystemAssignedIdentity;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: RecoveryServicesVaultEncryption | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._infrastructureEncryptionEnabled = undefined;
+      this._keyId = undefined;
+      this._useSystemAssignedIdentity = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._infrastructureEncryptionEnabled = value.infrastructureEncryptionEnabled;
+      this._keyId = value.keyId;
+      this._useSystemAssignedIdentity = value.useSystemAssignedIdentity;
+    }
+  }
+
+  // infrastructure_encryption_enabled - computed: false, optional: false, required: true
+  private _infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable; 
+  public get infrastructureEncryptionEnabled() {
+    return this.getBooleanAttribute('infrastructure_encryption_enabled') as any;
+  }
+  public set infrastructureEncryptionEnabled(value: boolean | cdktf.IResolvable) {
+    this._infrastructureEncryptionEnabled = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get infrastructureEncryptionEnabledInput() {
+    return this._infrastructureEncryptionEnabled;
+  }
+
+  // key_id - computed: false, optional: false, required: true
+  private _keyId?: string; 
+  public get keyId() {
+    return this.getStringAttribute('key_id');
+  }
+  public set keyId(value: string) {
+    this._keyId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyIdInput() {
+    return this._keyId;
+  }
+
+  // use_system_assigned_identity - computed: false, optional: true, required: false
+  private _useSystemAssignedIdentity?: boolean | cdktf.IResolvable; 
+  public get useSystemAssignedIdentity() {
+    return this.getBooleanAttribute('use_system_assigned_identity') as any;
+  }
+  public set useSystemAssignedIdentity(value: boolean | cdktf.IResolvable) {
+    this._useSystemAssignedIdentity = value;
+  }
+  public resetUseSystemAssignedIdentity() {
+    this._useSystemAssignedIdentity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get useSystemAssignedIdentityInput() {
+    return this._useSystemAssignedIdentity;
+  }
 }
 export interface RecoveryServicesVaultIdentity {
   /**
@@ -298,6 +418,7 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
     this._softDeleteEnabled = config.softDeleteEnabled;
     this._storageModeType = config.storageModeType;
     this._tags = config.tags;
+    this._encryption.internalValue = config.encryption;
     this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -412,6 +533,22 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // encryption - computed: false, optional: true, required: false
+  private _encryption = new RecoveryServicesVaultEncryptionOutputReference(this as any, "encryption", true);
+  public get encryption() {
+    return this._encryption;
+  }
+  public putEncryption(value: RecoveryServicesVaultEncryption) {
+    this._encryption.internalValue = value;
+  }
+  public resetEncryption() {
+    this._encryption.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionInput() {
+    return this._encryption.internalValue;
+  }
+
   // identity - computed: false, optional: true, required: false
   private _identity = new RecoveryServicesVaultIdentityOutputReference(this as any, "identity", true);
   public get identity() {
@@ -457,6 +594,7 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
       soft_delete_enabled: cdktf.booleanToTerraform(this._softDeleteEnabled),
       storage_mode_type: cdktf.stringToTerraform(this._storageModeType),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      encryption: recoveryServicesVaultEncryptionToTerraform(this._encryption.internalValue),
       identity: recoveryServicesVaultIdentityToTerraform(this._identity.internalValue),
       timeouts: recoveryServicesVaultTimeoutsToTerraform(this._timeouts.internalValue),
     };

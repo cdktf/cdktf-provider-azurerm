@@ -12,7 +12,7 @@ export interface Aadb2CDirectoryConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/aadb2c_directory.html#country_code Aadb2CDirectory#country_code}
   */
-  readonly countryCode: string;
+  readonly countryCode?: string;
   /**
   * Location in which the B2C tenant is hosted and data resides. See https://aka.ms/B2CDataResidency for more information.
   * 
@@ -24,7 +24,7 @@ export interface Aadb2CDirectoryConfig extends cdktf.TerraformMetaArguments {
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/aadb2c_directory.html#display_name Aadb2CDirectory#display_name}
   */
-  readonly displayName: string;
+  readonly displayName?: string;
   /**
   * Domain name of the B2C tenant, including onmicrosoft.com suffix.
   * 
@@ -251,13 +251,16 @@ export class Aadb2CDirectory extends cdktf.TerraformResource {
     return this.getStringAttribute('billing_type');
   }
 
-  // country_code - computed: false, optional: false, required: true
+  // country_code - computed: true, optional: true, required: false
   private _countryCode?: string; 
   public get countryCode() {
     return this.getStringAttribute('country_code');
   }
   public set countryCode(value: string) {
     this._countryCode = value;
+  }
+  public resetCountryCode() {
+    this._countryCode = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get countryCodeInput() {
@@ -277,13 +280,16 @@ export class Aadb2CDirectory extends cdktf.TerraformResource {
     return this._dataResidencyLocation;
   }
 
-  // display_name - computed: false, optional: false, required: true
+  // display_name - computed: true, optional: true, required: false
   private _displayName?: string; 
   public get displayName() {
     return this.getStringAttribute('display_name');
   }
   public set displayName(value: string) {
     this._displayName = value;
+  }
+  public resetDisplayName() {
+    this._displayName = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get displayNameInput() {

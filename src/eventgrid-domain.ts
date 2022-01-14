@@ -8,6 +8,14 @@ import * as cdktf from 'cdktf';
 
 export interface EventgridDomainConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#auto_create_topic_with_first_subscription EventgridDomain#auto_create_topic_with_first_subscription}
+  */
+  readonly autoCreateTopicWithFirstSubscription?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#auto_delete_topic_with_last_subscription EventgridDomain#auto_delete_topic_with_last_subscription}
+  */
+  readonly autoDeleteTopicWithLastSubscription?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#inbound_ip_rule EventgridDomain#inbound_ip_rule}
   */
   readonly inboundIpRule?: EventgridDomainInboundIpRule[];
@@ -15,6 +23,10 @@ export interface EventgridDomainConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#input_schema EventgridDomain#input_schema}
   */
   readonly inputSchema?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#local_auth_enabled EventgridDomain#local_auth_enabled}
+  */
+  readonly localAuthEnabled?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_domain.html#location EventgridDomain#location}
   */
@@ -673,8 +685,11 @@ export class EventgridDomain extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._autoCreateTopicWithFirstSubscription = config.autoCreateTopicWithFirstSubscription;
+    this._autoDeleteTopicWithLastSubscription = config.autoDeleteTopicWithLastSubscription;
     this._inboundIpRule = config.inboundIpRule;
     this._inputSchema = config.inputSchema;
+    this._localAuthEnabled = config.localAuthEnabled;
     this._location = config.location;
     this._name = config.name;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
@@ -689,6 +704,38 @@ export class EventgridDomain extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // auto_create_topic_with_first_subscription - computed: false, optional: true, required: false
+  private _autoCreateTopicWithFirstSubscription?: boolean | cdktf.IResolvable; 
+  public get autoCreateTopicWithFirstSubscription() {
+    return this.getBooleanAttribute('auto_create_topic_with_first_subscription') as any;
+  }
+  public set autoCreateTopicWithFirstSubscription(value: boolean | cdktf.IResolvable) {
+    this._autoCreateTopicWithFirstSubscription = value;
+  }
+  public resetAutoCreateTopicWithFirstSubscription() {
+    this._autoCreateTopicWithFirstSubscription = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoCreateTopicWithFirstSubscriptionInput() {
+    return this._autoCreateTopicWithFirstSubscription;
+  }
+
+  // auto_delete_topic_with_last_subscription - computed: false, optional: true, required: false
+  private _autoDeleteTopicWithLastSubscription?: boolean | cdktf.IResolvable; 
+  public get autoDeleteTopicWithLastSubscription() {
+    return this.getBooleanAttribute('auto_delete_topic_with_last_subscription') as any;
+  }
+  public set autoDeleteTopicWithLastSubscription(value: boolean | cdktf.IResolvable) {
+    this._autoDeleteTopicWithLastSubscription = value;
+  }
+  public resetAutoDeleteTopicWithLastSubscription() {
+    this._autoDeleteTopicWithLastSubscription = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get autoDeleteTopicWithLastSubscriptionInput() {
+    return this._autoDeleteTopicWithLastSubscription;
+  }
 
   // endpoint - computed: true, optional: false, required: false
   public get endpoint() {
@@ -731,6 +778,22 @@ export class EventgridDomain extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get inputSchemaInput() {
     return this._inputSchema;
+  }
+
+  // local_auth_enabled - computed: false, optional: true, required: false
+  private _localAuthEnabled?: boolean | cdktf.IResolvable; 
+  public get localAuthEnabled() {
+    return this.getBooleanAttribute('local_auth_enabled') as any;
+  }
+  public set localAuthEnabled(value: boolean | cdktf.IResolvable) {
+    this._localAuthEnabled = value;
+  }
+  public resetLocalAuthEnabled() {
+    this._localAuthEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localAuthEnabledInput() {
+    return this._localAuthEnabled;
   }
 
   // location - computed: false, optional: false, required: true
@@ -885,8 +948,11 @@ export class EventgridDomain extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      auto_create_topic_with_first_subscription: cdktf.booleanToTerraform(this._autoCreateTopicWithFirstSubscription),
+      auto_delete_topic_with_last_subscription: cdktf.booleanToTerraform(this._autoDeleteTopicWithLastSubscription),
       inbound_ip_rule: cdktf.listMapper(eventgridDomainInboundIpRuleToTerraform)(this._inboundIpRule),
       input_schema: cdktf.stringToTerraform(this._inputSchema),
+      local_auth_enabled: cdktf.booleanToTerraform(this._localAuthEnabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),

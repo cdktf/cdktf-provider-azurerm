@@ -32,6 +32,10 @@ export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   */
   readonly enableHttpsTrafficOnly?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#infrastructure_encryption_enabled StorageAccount#infrastructure_encryption_enabled}
+  */
+  readonly infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account.html#is_hns_enabled StorageAccount#is_hns_enabled}
   */
   readonly isHnsEnabled?: boolean | cdktf.IResolvable;
@@ -2604,6 +2608,7 @@ export class StorageAccount extends cdktf.TerraformResource {
     this._accountTier = config.accountTier;
     this._allowBlobPublicAccess = config.allowBlobPublicAccess;
     this._enableHttpsTrafficOnly = config.enableHttpsTrafficOnly;
+    this._infrastructureEncryptionEnabled = config.infrastructureEncryptionEnabled;
     this._isHnsEnabled = config.isHnsEnabled;
     this._largeFileShareEnabled = config.largeFileShareEnabled;
     this._location = config.location;
@@ -2724,6 +2729,22 @@ export class StorageAccount extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // infrastructure_encryption_enabled - computed: false, optional: true, required: false
+  private _infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable; 
+  public get infrastructureEncryptionEnabled() {
+    return this.getBooleanAttribute('infrastructure_encryption_enabled') as any;
+  }
+  public set infrastructureEncryptionEnabled(value: boolean | cdktf.IResolvable) {
+    this._infrastructureEncryptionEnabled = value;
+  }
+  public resetInfrastructureEncryptionEnabled() {
+    this._infrastructureEncryptionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get infrastructureEncryptionEnabledInput() {
+    return this._infrastructureEncryptionEnabled;
   }
 
   // is_hns_enabled - computed: false, optional: true, required: false
@@ -3226,6 +3247,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       account_tier: cdktf.stringToTerraform(this._accountTier),
       allow_blob_public_access: cdktf.booleanToTerraform(this._allowBlobPublicAccess),
       enable_https_traffic_only: cdktf.booleanToTerraform(this._enableHttpsTrafficOnly),
+      infrastructure_encryption_enabled: cdktf.booleanToTerraform(this._infrastructureEncryptionEnabled),
       is_hns_enabled: cdktf.booleanToTerraform(this._isHnsEnabled),
       large_file_share_enabled: cdktf.booleanToTerraform(this._largeFileShareEnabled),
       location: cdktf.stringToTerraform(this._location),
