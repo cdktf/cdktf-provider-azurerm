@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html
+// https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,59 +8,59 @@ import * as cdktf from 'cdktf';
 
 export interface AutomationDscConfigurationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#automation_account_name AutomationDscConfiguration#automation_account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration#automation_account_name AutomationDscConfiguration#automation_account_name}
   */
   readonly automationAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#content_embedded AutomationDscConfiguration#content_embedded}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration#content_embedded AutomationDscConfiguration#content_embedded}
   */
   readonly contentEmbedded: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#description AutomationDscConfiguration#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration#description AutomationDscConfiguration#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#location AutomationDscConfiguration#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration#location AutomationDscConfiguration#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#log_verbose AutomationDscConfiguration#log_verbose}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration#log_verbose AutomationDscConfiguration#log_verbose}
   */
   readonly logVerbose?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#name AutomationDscConfiguration#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration#name AutomationDscConfiguration#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#resource_group_name AutomationDscConfiguration#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration#resource_group_name AutomationDscConfiguration#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#tags AutomationDscConfiguration#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration#tags AutomationDscConfiguration#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#timeouts AutomationDscConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration#timeouts AutomationDscConfiguration#timeouts}
   */
   readonly timeouts?: AutomationDscConfigurationTimeouts;
 }
 export interface AutomationDscConfigurationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#create AutomationDscConfiguration#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration#create AutomationDscConfiguration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#delete AutomationDscConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration#delete AutomationDscConfiguration#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#read AutomationDscConfiguration#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration#read AutomationDscConfiguration#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html#update AutomationDscConfiguration#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration#update AutomationDscConfiguration#update}
   */
   readonly update?: string;
 }
@@ -195,7 +195,7 @@ export class AutomationDscConfigurationTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html azurerm_automation_dsc_configuration}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration azurerm_automation_dsc_configuration}
 */
 export class AutomationDscConfiguration extends cdktf.TerraformResource {
 
@@ -209,7 +209,7 @@ export class AutomationDscConfiguration extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration.html azurerm_automation_dsc_configuration} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/automation_dsc_configuration azurerm_automation_dsc_configuration} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

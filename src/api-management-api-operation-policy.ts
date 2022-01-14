@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy.html
+// https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementApiOperationPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy.html#api_management_name ApiManagementApiOperationPolicy#api_management_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy#api_management_name ApiManagementApiOperationPolicy#api_management_name}
   */
   readonly apiManagementName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy.html#api_name ApiManagementApiOperationPolicy#api_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy#api_name ApiManagementApiOperationPolicy#api_name}
   */
   readonly apiName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy.html#operation_id ApiManagementApiOperationPolicy#operation_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy#operation_id ApiManagementApiOperationPolicy#operation_id}
   */
   readonly operationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy.html#resource_group_name ApiManagementApiOperationPolicy#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy#resource_group_name ApiManagementApiOperationPolicy#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy.html#xml_content ApiManagementApiOperationPolicy#xml_content}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy#xml_content ApiManagementApiOperationPolicy#xml_content}
   */
   readonly xmlContent?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy.html#xml_link ApiManagementApiOperationPolicy#xml_link}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy#xml_link ApiManagementApiOperationPolicy#xml_link}
   */
   readonly xmlLink?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy.html#timeouts ApiManagementApiOperationPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy#timeouts ApiManagementApiOperationPolicy#timeouts}
   */
   readonly timeouts?: ApiManagementApiOperationPolicyTimeouts;
 }
 export interface ApiManagementApiOperationPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy.html#create ApiManagementApiOperationPolicy#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy#create ApiManagementApiOperationPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy.html#delete ApiManagementApiOperationPolicy#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy#delete ApiManagementApiOperationPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy.html#read ApiManagementApiOperationPolicy#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy#read ApiManagementApiOperationPolicy#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy.html#update ApiManagementApiOperationPolicy#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy#update ApiManagementApiOperationPolicy#update}
   */
   readonly update?: string;
 }
@@ -187,7 +187,7 @@ export class ApiManagementApiOperationPolicyTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy.html azurerm_api_management_api_operation_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy azurerm_api_management_api_operation_policy}
 */
 export class ApiManagementApiOperationPolicy extends cdktf.TerraformResource {
 
@@ -201,7 +201,7 @@ export class ApiManagementApiOperationPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy.html azurerm_api_management_api_operation_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_policy azurerm_api_management_api_operation_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

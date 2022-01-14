@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group.html
+// https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermProximityPlacementGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group.html#name DataAzurermProximityPlacementGroup#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group#name DataAzurermProximityPlacementGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group.html#resource_group_name DataAzurermProximityPlacementGroup#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group#resource_group_name DataAzurermProximityPlacementGroup#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group.html#timeouts DataAzurermProximityPlacementGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group#timeouts DataAzurermProximityPlacementGroup#timeouts}
   */
   readonly timeouts?: DataAzurermProximityPlacementGroupTimeouts;
 }
 export interface DataAzurermProximityPlacementGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group.html#read DataAzurermProximityPlacementGroup#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group#read DataAzurermProximityPlacementGroup#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermProximityPlacementGroupTimeoutsOutputReference extends c
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group.html azurerm_proximity_placement_group}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group azurerm_proximity_placement_group}
 */
 export class DataAzurermProximityPlacementGroup extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermProximityPlacementGroup extends cdktf.TerraformDataSourc
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group.html azurerm_proximity_placement_group} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/proximity_placement_group azurerm_proximity_placement_group} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

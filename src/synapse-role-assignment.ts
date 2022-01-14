@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html
+// https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface SynapseRoleAssignmentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html#principal_id SynapseRoleAssignment#principal_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment#principal_id SynapseRoleAssignment#principal_id}
   */
   readonly principalId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html#role_name SynapseRoleAssignment#role_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment#role_name SynapseRoleAssignment#role_name}
   */
   readonly roleName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html#synapse_spark_pool_id SynapseRoleAssignment#synapse_spark_pool_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment#synapse_spark_pool_id SynapseRoleAssignment#synapse_spark_pool_id}
   */
   readonly synapseSparkPoolId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html#synapse_workspace_id SynapseRoleAssignment#synapse_workspace_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment#synapse_workspace_id SynapseRoleAssignment#synapse_workspace_id}
   */
   readonly synapseWorkspaceId?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html#timeouts SynapseRoleAssignment#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment#timeouts SynapseRoleAssignment#timeouts}
   */
   readonly timeouts?: SynapseRoleAssignmentTimeouts;
 }
 export interface SynapseRoleAssignmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html#create SynapseRoleAssignment#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment#create SynapseRoleAssignment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html#delete SynapseRoleAssignment#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment#delete SynapseRoleAssignment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html#read SynapseRoleAssignment#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment#read SynapseRoleAssignment#read}
   */
   readonly read?: string;
 }
@@ -152,7 +152,7 @@ export class SynapseRoleAssignmentTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html azurerm_synapse_role_assignment}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment azurerm_synapse_role_assignment}
 */
 export class SynapseRoleAssignment extends cdktf.TerraformResource {
 
@@ -166,7 +166,7 @@ export class SynapseRoleAssignment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment.html azurerm_synapse_role_assignment} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_role_assignment azurerm_synapse_role_assignment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

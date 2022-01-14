@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/virtual_wan.html
+// https://www.terraform.io/docs/providers/azurerm/d/virtual_wan
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermVirtualWanConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_wan.html#name DataAzurermVirtualWan#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_wan#name DataAzurermVirtualWan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_wan.html#resource_group_name DataAzurermVirtualWan#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_wan#resource_group_name DataAzurermVirtualWan#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_wan.html#timeouts DataAzurermVirtualWan#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_wan#timeouts DataAzurermVirtualWan#timeouts}
   */
   readonly timeouts?: DataAzurermVirtualWanTimeouts;
 }
 export interface DataAzurermVirtualWanTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_wan.html#read DataAzurermVirtualWan#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_wan#read DataAzurermVirtualWan#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermVirtualWanTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_wan.html azurerm_virtual_wan}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_wan azurerm_virtual_wan}
 */
 export class DataAzurermVirtualWan extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermVirtualWan extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_wan.html azurerm_virtual_wan} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_wan azurerm_virtual_wan} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

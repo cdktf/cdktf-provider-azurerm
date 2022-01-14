@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf.html
+// https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface StreamAnalyticsFunctionJavascriptUdfConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf.html#name StreamAnalyticsFunctionJavascriptUdf#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf#name StreamAnalyticsFunctionJavascriptUdf#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf.html#resource_group_name StreamAnalyticsFunctionJavascriptUdf#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf#resource_group_name StreamAnalyticsFunctionJavascriptUdf#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf.html#script StreamAnalyticsFunctionJavascriptUdf#script}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf#script StreamAnalyticsFunctionJavascriptUdf#script}
   */
   readonly script: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf.html#stream_analytics_job_name StreamAnalyticsFunctionJavascriptUdf#stream_analytics_job_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf#stream_analytics_job_name StreamAnalyticsFunctionJavascriptUdf#stream_analytics_job_name}
   */
   readonly streamAnalyticsJobName: string;
   /**
   * input block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf.html#input StreamAnalyticsFunctionJavascriptUdf#input}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf#input StreamAnalyticsFunctionJavascriptUdf#input}
   */
   readonly input: StreamAnalyticsFunctionJavascriptUdfInput[];
   /**
   * output block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf.html#output StreamAnalyticsFunctionJavascriptUdf#output}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf#output StreamAnalyticsFunctionJavascriptUdf#output}
   */
   readonly output: StreamAnalyticsFunctionJavascriptUdfOutput;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf.html#timeouts StreamAnalyticsFunctionJavascriptUdf#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf#timeouts StreamAnalyticsFunctionJavascriptUdf#timeouts}
   */
   readonly timeouts?: StreamAnalyticsFunctionJavascriptUdfTimeouts;
 }
 export interface StreamAnalyticsFunctionJavascriptUdfInput {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf.html#type StreamAnalyticsFunctionJavascriptUdf#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf#type StreamAnalyticsFunctionJavascriptUdf#type}
   */
   readonly type: string;
 }
@@ -61,7 +61,7 @@ export function streamAnalyticsFunctionJavascriptUdfInputToTerraform(struct?: St
 
 export interface StreamAnalyticsFunctionJavascriptUdfOutput {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf.html#type StreamAnalyticsFunctionJavascriptUdf#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf#type StreamAnalyticsFunctionJavascriptUdf#type}
   */
   readonly type: string;
 }
@@ -124,19 +124,19 @@ export class StreamAnalyticsFunctionJavascriptUdfOutputOutputReference extends c
 }
 export interface StreamAnalyticsFunctionJavascriptUdfTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf.html#create StreamAnalyticsFunctionJavascriptUdf#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf#create StreamAnalyticsFunctionJavascriptUdf#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf.html#delete StreamAnalyticsFunctionJavascriptUdf#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf#delete StreamAnalyticsFunctionJavascriptUdf#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf.html#read StreamAnalyticsFunctionJavascriptUdf#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf#read StreamAnalyticsFunctionJavascriptUdf#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf.html#update StreamAnalyticsFunctionJavascriptUdf#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf#update StreamAnalyticsFunctionJavascriptUdf#update}
   */
   readonly update?: string;
 }
@@ -271,7 +271,7 @@ export class StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference extends
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf.html azurerm_stream_analytics_function_javascript_udf}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf azurerm_stream_analytics_function_javascript_udf}
 */
 export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResource {
 
@@ -285,7 +285,7 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf.html azurerm_stream_analytics_function_javascript_udf} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_function_javascript_udf azurerm_stream_analytics_function_javascript_udf} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

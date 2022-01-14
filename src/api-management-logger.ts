@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html
+// https://www.terraform.io/docs/providers/azurerm/r/api_management_logger
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementLoggerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html#api_management_name ApiManagementLogger#api_management_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger#api_management_name ApiManagementLogger#api_management_name}
   */
   readonly apiManagementName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html#buffered ApiManagementLogger#buffered}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger#buffered ApiManagementLogger#buffered}
   */
   readonly buffered?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html#description ApiManagementLogger#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger#description ApiManagementLogger#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html#name ApiManagementLogger#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger#name ApiManagementLogger#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html#resource_group_name ApiManagementLogger#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger#resource_group_name ApiManagementLogger#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html#resource_id ApiManagementLogger#resource_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger#resource_id ApiManagementLogger#resource_id}
   */
   readonly resourceId?: string;
   /**
   * application_insights block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html#application_insights ApiManagementLogger#application_insights}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger#application_insights ApiManagementLogger#application_insights}
   */
   readonly applicationInsights?: ApiManagementLoggerApplicationInsights;
   /**
   * eventhub block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html#eventhub ApiManagementLogger#eventhub}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger#eventhub ApiManagementLogger#eventhub}
   */
   readonly eventhub?: ApiManagementLoggerEventhub;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html#timeouts ApiManagementLogger#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger#timeouts ApiManagementLogger#timeouts}
   */
   readonly timeouts?: ApiManagementLoggerTimeouts;
 }
 export interface ApiManagementLoggerApplicationInsights {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html#instrumentation_key ApiManagementLogger#instrumentation_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger#instrumentation_key ApiManagementLogger#instrumentation_key}
   */
   readonly instrumentationKey: string;
 }
@@ -115,11 +115,11 @@ export class ApiManagementLoggerApplicationInsightsOutputReference extends cdktf
 }
 export interface ApiManagementLoggerEventhub {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html#connection_string ApiManagementLogger#connection_string}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger#connection_string ApiManagementLogger#connection_string}
   */
   readonly connectionString: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html#name ApiManagementLogger#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger#name ApiManagementLogger#name}
   */
   readonly name: string;
 }
@@ -202,19 +202,19 @@ export class ApiManagementLoggerEventhubOutputReference extends cdktf.ComplexObj
 }
 export interface ApiManagementLoggerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html#create ApiManagementLogger#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger#create ApiManagementLogger#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html#delete ApiManagementLogger#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger#delete ApiManagementLogger#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html#read ApiManagementLogger#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger#read ApiManagementLogger#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html#update ApiManagementLogger#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger#update ApiManagementLogger#update}
   */
   readonly update?: string;
 }
@@ -349,7 +349,7 @@ export class ApiManagementLoggerTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html azurerm_api_management_logger}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger azurerm_api_management_logger}
 */
 export class ApiManagementLogger extends cdktf.TerraformResource {
 
@@ -363,7 +363,7 @@ export class ApiManagementLogger extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger.html azurerm_api_management_logger} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_logger azurerm_api_management_logger} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

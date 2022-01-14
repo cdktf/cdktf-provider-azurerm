@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html
+// https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface MysqlFirewallRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#end_ip_address MysqlFirewallRule#end_ip_address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule#end_ip_address MysqlFirewallRule#end_ip_address}
   */
   readonly endIpAddress: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#name MysqlFirewallRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule#name MysqlFirewallRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#resource_group_name MysqlFirewallRule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule#resource_group_name MysqlFirewallRule#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#server_name MysqlFirewallRule#server_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule#server_name MysqlFirewallRule#server_name}
   */
   readonly serverName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#start_ip_address MysqlFirewallRule#start_ip_address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule#start_ip_address MysqlFirewallRule#start_ip_address}
   */
   readonly startIpAddress: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#timeouts MysqlFirewallRule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule#timeouts MysqlFirewallRule#timeouts}
   */
   readonly timeouts?: MysqlFirewallRuleTimeouts;
 }
 export interface MysqlFirewallRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#create MysqlFirewallRule#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule#create MysqlFirewallRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#delete MysqlFirewallRule#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule#delete MysqlFirewallRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#read MysqlFirewallRule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule#read MysqlFirewallRule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html#update MysqlFirewallRule#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule#update MysqlFirewallRule#update}
   */
   readonly update?: string;
 }
@@ -183,7 +183,7 @@ export class MysqlFirewallRuleTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html azurerm_mysql_firewall_rule}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule azurerm_mysql_firewall_rule}
 */
 export class MysqlFirewallRule extends cdktf.TerraformResource {
 
@@ -197,7 +197,7 @@ export class MysqlFirewallRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule.html azurerm_mysql_firewall_rule} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_firewall_rule azurerm_mysql_firewall_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/sql_database.html
+// https://www.terraform.io/docs/providers/azurerm/r/sql_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,119 +8,119 @@ import * as cdktf from 'cdktf';
 
 export interface SqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#collation SqlDatabase#collation}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#collation SqlDatabase#collation}
   */
   readonly collation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#create_mode SqlDatabase#create_mode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#create_mode SqlDatabase#create_mode}
   */
   readonly createMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#edition SqlDatabase#edition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#edition SqlDatabase#edition}
   */
   readonly edition?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#elastic_pool_name SqlDatabase#elastic_pool_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#elastic_pool_name SqlDatabase#elastic_pool_name}
   */
   readonly elasticPoolName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#extended_auditing_policy SqlDatabase#extended_auditing_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#extended_auditing_policy SqlDatabase#extended_auditing_policy}
   */
   readonly extendedAuditingPolicy?: SqlDatabaseExtendedAuditingPolicy[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#location SqlDatabase#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#location SqlDatabase#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#max_size_bytes SqlDatabase#max_size_bytes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#max_size_bytes SqlDatabase#max_size_bytes}
   */
   readonly maxSizeBytes?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#max_size_gb SqlDatabase#max_size_gb}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#max_size_gb SqlDatabase#max_size_gb}
   */
   readonly maxSizeGb?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#name SqlDatabase#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#name SqlDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#read_scale SqlDatabase#read_scale}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#read_scale SqlDatabase#read_scale}
   */
   readonly readScale?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#requested_service_objective_id SqlDatabase#requested_service_objective_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#requested_service_objective_id SqlDatabase#requested_service_objective_id}
   */
   readonly requestedServiceObjectiveId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#requested_service_objective_name SqlDatabase#requested_service_objective_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#requested_service_objective_name SqlDatabase#requested_service_objective_name}
   */
   readonly requestedServiceObjectiveName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#resource_group_name SqlDatabase#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#resource_group_name SqlDatabase#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#restore_point_in_time SqlDatabase#restore_point_in_time}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#restore_point_in_time SqlDatabase#restore_point_in_time}
   */
   readonly restorePointInTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#server_name SqlDatabase#server_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#server_name SqlDatabase#server_name}
   */
   readonly serverName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#source_database_deletion_date SqlDatabase#source_database_deletion_date}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#source_database_deletion_date SqlDatabase#source_database_deletion_date}
   */
   readonly sourceDatabaseDeletionDate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#source_database_id SqlDatabase#source_database_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#source_database_id SqlDatabase#source_database_id}
   */
   readonly sourceDatabaseId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#tags SqlDatabase#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#tags SqlDatabase#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#zone_redundant SqlDatabase#zone_redundant}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#zone_redundant SqlDatabase#zone_redundant}
   */
   readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
   * import block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#import SqlDatabase#import}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#import SqlDatabase#import}
   */
   readonly import?: SqlDatabaseImport;
   /**
   * threat_detection_policy block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#threat_detection_policy SqlDatabase#threat_detection_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#threat_detection_policy SqlDatabase#threat_detection_policy}
   */
   readonly threatDetectionPolicy?: SqlDatabaseThreatDetectionPolicy;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#timeouts SqlDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#timeouts SqlDatabase#timeouts}
   */
   readonly timeouts?: SqlDatabaseTimeouts;
 }
 export interface SqlDatabaseExtendedAuditingPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#log_monitoring_enabled SqlDatabase#log_monitoring_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#log_monitoring_enabled SqlDatabase#log_monitoring_enabled}
   */
   readonly logMonitoringEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#retention_in_days SqlDatabase#retention_in_days}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#retention_in_days SqlDatabase#retention_in_days}
   */
   readonly retentionInDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#storage_account_access_key SqlDatabase#storage_account_access_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#storage_account_access_key SqlDatabase#storage_account_access_key}
   */
   readonly storageAccountAccessKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#storage_account_access_key_is_secondary SqlDatabase#storage_account_access_key_is_secondary}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#storage_account_access_key_is_secondary SqlDatabase#storage_account_access_key_is_secondary}
   */
   readonly storageAccountAccessKeyIsSecondary?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#storage_endpoint SqlDatabase#storage_endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#storage_endpoint SqlDatabase#storage_endpoint}
   */
   readonly storageEndpoint?: string;
 }
@@ -141,31 +141,31 @@ export function sqlDatabaseExtendedAuditingPolicyToTerraform(struct?: SqlDatabas
 
 export interface SqlDatabaseImport {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#administrator_login SqlDatabase#administrator_login}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#administrator_login SqlDatabase#administrator_login}
   */
   readonly administratorLogin: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#administrator_login_password SqlDatabase#administrator_login_password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#administrator_login_password SqlDatabase#administrator_login_password}
   */
   readonly administratorLoginPassword: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#authentication_type SqlDatabase#authentication_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#authentication_type SqlDatabase#authentication_type}
   */
   readonly authenticationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#operation_mode SqlDatabase#operation_mode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#operation_mode SqlDatabase#operation_mode}
   */
   readonly operationMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#storage_key SqlDatabase#storage_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#storage_key SqlDatabase#storage_key}
   */
   readonly storageKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#storage_key_type SqlDatabase#storage_key_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#storage_key_type SqlDatabase#storage_key_type}
   */
   readonly storageKeyType: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#storage_uri SqlDatabase#storage_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#storage_uri SqlDatabase#storage_uri}
   */
   readonly storageUri: string;
 }
@@ -351,35 +351,35 @@ export class SqlDatabaseImportOutputReference extends cdktf.ComplexObject {
 }
 export interface SqlDatabaseThreatDetectionPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#disabled_alerts SqlDatabase#disabled_alerts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#disabled_alerts SqlDatabase#disabled_alerts}
   */
   readonly disabledAlerts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#email_account_admins SqlDatabase#email_account_admins}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#email_account_admins SqlDatabase#email_account_admins}
   */
   readonly emailAccountAdmins?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#email_addresses SqlDatabase#email_addresses}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#email_addresses SqlDatabase#email_addresses}
   */
   readonly emailAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#retention_days SqlDatabase#retention_days}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#retention_days SqlDatabase#retention_days}
   */
   readonly retentionDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#state SqlDatabase#state}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#state SqlDatabase#state}
   */
   readonly state?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#storage_account_access_key SqlDatabase#storage_account_access_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#storage_account_access_key SqlDatabase#storage_account_access_key}
   */
   readonly storageAccountAccessKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#storage_endpoint SqlDatabase#storage_endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#storage_endpoint SqlDatabase#storage_endpoint}
   */
   readonly storageEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#use_server_default SqlDatabase#use_server_default}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#use_server_default SqlDatabase#use_server_default}
   */
   readonly useServerDefault?: string;
 }
@@ -606,19 +606,19 @@ export class SqlDatabaseThreatDetectionPolicyOutputReference extends cdktf.Compl
 }
 export interface SqlDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#create SqlDatabase#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#create SqlDatabase#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#delete SqlDatabase#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#delete SqlDatabase#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#read SqlDatabase#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#read SqlDatabase#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html#update SqlDatabase#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database#update SqlDatabase#update}
   */
   readonly update?: string;
 }
@@ -753,7 +753,7 @@ export class SqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html azurerm_sql_database}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database azurerm_sql_database}
 */
 export class SqlDatabase extends cdktf.TerraformResource {
 
@@ -767,7 +767,7 @@ export class SqlDatabase extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database.html azurerm_sql_database} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sql_database azurerm_sql_database} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

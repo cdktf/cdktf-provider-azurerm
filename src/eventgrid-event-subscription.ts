@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html
+// https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,139 +8,139 @@ import * as cdktf from 'cdktf';
 
 export interface EventgridEventSubscriptionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#advanced_filtering_on_arrays_enabled EventgridEventSubscription#advanced_filtering_on_arrays_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#advanced_filtering_on_arrays_enabled EventgridEventSubscription#advanced_filtering_on_arrays_enabled}
   */
   readonly advancedFilteringOnArraysEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#event_delivery_schema EventgridEventSubscription#event_delivery_schema}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#event_delivery_schema EventgridEventSubscription#event_delivery_schema}
   */
   readonly eventDeliverySchema?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#eventhub_endpoint_id EventgridEventSubscription#eventhub_endpoint_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#eventhub_endpoint_id EventgridEventSubscription#eventhub_endpoint_id}
   */
   readonly eventhubEndpointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#expiration_time_utc EventgridEventSubscription#expiration_time_utc}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#expiration_time_utc EventgridEventSubscription#expiration_time_utc}
   */
   readonly expirationTimeUtc?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#hybrid_connection_endpoint_id EventgridEventSubscription#hybrid_connection_endpoint_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#hybrid_connection_endpoint_id EventgridEventSubscription#hybrid_connection_endpoint_id}
   */
   readonly hybridConnectionEndpointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#included_event_types EventgridEventSubscription#included_event_types}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#included_event_types EventgridEventSubscription#included_event_types}
   */
   readonly includedEventTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#labels EventgridEventSubscription#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#labels EventgridEventSubscription#labels}
   */
   readonly labels?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#name EventgridEventSubscription#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#name EventgridEventSubscription#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#scope EventgridEventSubscription#scope}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#scope EventgridEventSubscription#scope}
   */
   readonly scope: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#service_bus_queue_endpoint_id EventgridEventSubscription#service_bus_queue_endpoint_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#service_bus_queue_endpoint_id EventgridEventSubscription#service_bus_queue_endpoint_id}
   */
   readonly serviceBusQueueEndpointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#service_bus_topic_endpoint_id EventgridEventSubscription#service_bus_topic_endpoint_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#service_bus_topic_endpoint_id EventgridEventSubscription#service_bus_topic_endpoint_id}
   */
   readonly serviceBusTopicEndpointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#topic_name EventgridEventSubscription#topic_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#topic_name EventgridEventSubscription#topic_name}
   */
   readonly topicName?: string;
   /**
   * advanced_filter block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#advanced_filter EventgridEventSubscription#advanced_filter}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#advanced_filter EventgridEventSubscription#advanced_filter}
   */
   readonly advancedFilter?: EventgridEventSubscriptionAdvancedFilter;
   /**
   * azure_function_endpoint block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#azure_function_endpoint EventgridEventSubscription#azure_function_endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#azure_function_endpoint EventgridEventSubscription#azure_function_endpoint}
   */
   readonly azureFunctionEndpoint?: EventgridEventSubscriptionAzureFunctionEndpoint;
   /**
   * dead_letter_identity block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#dead_letter_identity EventgridEventSubscription#dead_letter_identity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#dead_letter_identity EventgridEventSubscription#dead_letter_identity}
   */
   readonly deadLetterIdentity?: EventgridEventSubscriptionDeadLetterIdentity;
   /**
   * delivery_identity block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#delivery_identity EventgridEventSubscription#delivery_identity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#delivery_identity EventgridEventSubscription#delivery_identity}
   */
   readonly deliveryIdentity?: EventgridEventSubscriptionDeliveryIdentity;
   /**
   * delivery_property block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#delivery_property EventgridEventSubscription#delivery_property}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#delivery_property EventgridEventSubscription#delivery_property}
   */
   readonly deliveryProperty?: EventgridEventSubscriptionDeliveryProperty[];
   /**
   * eventhub_endpoint block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#eventhub_endpoint EventgridEventSubscription#eventhub_endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#eventhub_endpoint EventgridEventSubscription#eventhub_endpoint}
   */
   readonly eventhubEndpoint?: EventgridEventSubscriptionEventhubEndpoint;
   /**
   * hybrid_connection_endpoint block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#hybrid_connection_endpoint EventgridEventSubscription#hybrid_connection_endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#hybrid_connection_endpoint EventgridEventSubscription#hybrid_connection_endpoint}
   */
   readonly hybridConnectionEndpoint?: EventgridEventSubscriptionHybridConnectionEndpoint;
   /**
   * retry_policy block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#retry_policy EventgridEventSubscription#retry_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#retry_policy EventgridEventSubscription#retry_policy}
   */
   readonly retryPolicy?: EventgridEventSubscriptionRetryPolicy;
   /**
   * storage_blob_dead_letter_destination block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#storage_blob_dead_letter_destination EventgridEventSubscription#storage_blob_dead_letter_destination}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#storage_blob_dead_letter_destination EventgridEventSubscription#storage_blob_dead_letter_destination}
   */
   readonly storageBlobDeadLetterDestination?: EventgridEventSubscriptionStorageBlobDeadLetterDestination;
   /**
   * storage_queue_endpoint block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#storage_queue_endpoint EventgridEventSubscription#storage_queue_endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#storage_queue_endpoint EventgridEventSubscription#storage_queue_endpoint}
   */
   readonly storageQueueEndpoint?: EventgridEventSubscriptionStorageQueueEndpoint;
   /**
   * subject_filter block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#subject_filter EventgridEventSubscription#subject_filter}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#subject_filter EventgridEventSubscription#subject_filter}
   */
   readonly subjectFilter?: EventgridEventSubscriptionSubjectFilter;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#timeouts EventgridEventSubscription#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#timeouts EventgridEventSubscription#timeouts}
   */
   readonly timeouts?: EventgridEventSubscriptionTimeouts;
   /**
   * webhook_endpoint block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#webhook_endpoint EventgridEventSubscription#webhook_endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#webhook_endpoint EventgridEventSubscription#webhook_endpoint}
   */
   readonly webhookEndpoint?: EventgridEventSubscriptionWebhookEndpoint;
 }
 export interface EventgridEventSubscriptionAdvancedFilterBoolEquals {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#value EventgridEventSubscription#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#value EventgridEventSubscription#value}
   */
   readonly value: boolean | cdktf.IResolvable;
 }
@@ -158,7 +158,7 @@ export function eventgridEventSubscriptionAdvancedFilterBoolEqualsToTerraform(st
 
 export interface EventgridEventSubscriptionAdvancedFilterIsNotNull {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
   */
   readonly key: string;
 }
@@ -175,7 +175,7 @@ export function eventgridEventSubscriptionAdvancedFilterIsNotNullToTerraform(str
 
 export interface EventgridEventSubscriptionAdvancedFilterIsNullOrUndefined {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
   */
   readonly key: string;
 }
@@ -192,11 +192,11 @@ export function eventgridEventSubscriptionAdvancedFilterIsNullOrUndefinedToTerra
 
 export interface EventgridEventSubscriptionAdvancedFilterNumberGreaterThan {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#value EventgridEventSubscription#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#value EventgridEventSubscription#value}
   */
   readonly value: number;
 }
@@ -214,11 +214,11 @@ export function eventgridEventSubscriptionAdvancedFilterNumberGreaterThanToTerra
 
 export interface EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEquals {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#value EventgridEventSubscription#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#value EventgridEventSubscription#value}
   */
   readonly value: number;
 }
@@ -236,11 +236,11 @@ export function eventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEqual
 
 export interface EventgridEventSubscriptionAdvancedFilterNumberIn {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#values EventgridEventSubscription#values}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#values EventgridEventSubscription#values}
   */
   readonly values: number[];
 }
@@ -258,11 +258,11 @@ export function eventgridEventSubscriptionAdvancedFilterNumberInToTerraform(stru
 
 export interface EventgridEventSubscriptionAdvancedFilterNumberInRange {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#values EventgridEventSubscription#values}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#values EventgridEventSubscription#values}
   */
   readonly values: number[];
 }
@@ -280,11 +280,11 @@ export function eventgridEventSubscriptionAdvancedFilterNumberInRangeToTerraform
 
 export interface EventgridEventSubscriptionAdvancedFilterNumberLessThan {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#value EventgridEventSubscription#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#value EventgridEventSubscription#value}
   */
   readonly value: number;
 }
@@ -302,11 +302,11 @@ export function eventgridEventSubscriptionAdvancedFilterNumberLessThanToTerrafor
 
 export interface EventgridEventSubscriptionAdvancedFilterNumberLessThanOrEquals {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#value EventgridEventSubscription#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#value EventgridEventSubscription#value}
   */
   readonly value: number;
 }
@@ -324,11 +324,11 @@ export function eventgridEventSubscriptionAdvancedFilterNumberLessThanOrEqualsTo
 
 export interface EventgridEventSubscriptionAdvancedFilterNumberNotIn {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#values EventgridEventSubscription#values}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#values EventgridEventSubscription#values}
   */
   readonly values: number[];
 }
@@ -346,11 +346,11 @@ export function eventgridEventSubscriptionAdvancedFilterNumberNotInToTerraform(s
 
 export interface EventgridEventSubscriptionAdvancedFilterNumberNotInRange {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#values EventgridEventSubscription#values}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#values EventgridEventSubscription#values}
   */
   readonly values: number[];
 }
@@ -368,11 +368,11 @@ export function eventgridEventSubscriptionAdvancedFilterNumberNotInRangeToTerraf
 
 export interface EventgridEventSubscriptionAdvancedFilterStringBeginsWith {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#values EventgridEventSubscription#values}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#values EventgridEventSubscription#values}
   */
   readonly values: string[];
 }
@@ -390,11 +390,11 @@ export function eventgridEventSubscriptionAdvancedFilterStringBeginsWithToTerraf
 
 export interface EventgridEventSubscriptionAdvancedFilterStringContains {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#values EventgridEventSubscription#values}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#values EventgridEventSubscription#values}
   */
   readonly values: string[];
 }
@@ -412,11 +412,11 @@ export function eventgridEventSubscriptionAdvancedFilterStringContainsToTerrafor
 
 export interface EventgridEventSubscriptionAdvancedFilterStringEndsWith {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#values EventgridEventSubscription#values}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#values EventgridEventSubscription#values}
   */
   readonly values: string[];
 }
@@ -434,11 +434,11 @@ export function eventgridEventSubscriptionAdvancedFilterStringEndsWithToTerrafor
 
 export interface EventgridEventSubscriptionAdvancedFilterStringIn {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#values EventgridEventSubscription#values}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#values EventgridEventSubscription#values}
   */
   readonly values: string[];
 }
@@ -456,11 +456,11 @@ export function eventgridEventSubscriptionAdvancedFilterStringInToTerraform(stru
 
 export interface EventgridEventSubscriptionAdvancedFilterStringNotBeginsWith {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#values EventgridEventSubscription#values}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#values EventgridEventSubscription#values}
   */
   readonly values: string[];
 }
@@ -478,11 +478,11 @@ export function eventgridEventSubscriptionAdvancedFilterStringNotBeginsWithToTer
 
 export interface EventgridEventSubscriptionAdvancedFilterStringNotContains {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#values EventgridEventSubscription#values}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#values EventgridEventSubscription#values}
   */
   readonly values: string[];
 }
@@ -500,11 +500,11 @@ export function eventgridEventSubscriptionAdvancedFilterStringNotContainsToTerra
 
 export interface EventgridEventSubscriptionAdvancedFilterStringNotEndsWith {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#values EventgridEventSubscription#values}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#values EventgridEventSubscription#values}
   */
   readonly values: string[];
 }
@@ -522,11 +522,11 @@ export function eventgridEventSubscriptionAdvancedFilterStringNotEndsWithToTerra
 
 export interface EventgridEventSubscriptionAdvancedFilterStringNotIn {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#key EventgridEventSubscription#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#key EventgridEventSubscription#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#values EventgridEventSubscription#values}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#values EventgridEventSubscription#values}
   */
   readonly values: string[];
 }
@@ -546,115 +546,115 @@ export interface EventgridEventSubscriptionAdvancedFilter {
   /**
   * bool_equals block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#bool_equals EventgridEventSubscription#bool_equals}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#bool_equals EventgridEventSubscription#bool_equals}
   */
   readonly boolEquals?: EventgridEventSubscriptionAdvancedFilterBoolEquals[];
   /**
   * is_not_null block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#is_not_null EventgridEventSubscription#is_not_null}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#is_not_null EventgridEventSubscription#is_not_null}
   */
   readonly isNotNull?: EventgridEventSubscriptionAdvancedFilterIsNotNull[];
   /**
   * is_null_or_undefined block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#is_null_or_undefined EventgridEventSubscription#is_null_or_undefined}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#is_null_or_undefined EventgridEventSubscription#is_null_or_undefined}
   */
   readonly isNullOrUndefined?: EventgridEventSubscriptionAdvancedFilterIsNullOrUndefined[];
   /**
   * number_greater_than block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#number_greater_than EventgridEventSubscription#number_greater_than}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#number_greater_than EventgridEventSubscription#number_greater_than}
   */
   readonly numberGreaterThan?: EventgridEventSubscriptionAdvancedFilterNumberGreaterThan[];
   /**
   * number_greater_than_or_equals block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#number_greater_than_or_equals EventgridEventSubscription#number_greater_than_or_equals}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#number_greater_than_or_equals EventgridEventSubscription#number_greater_than_or_equals}
   */
   readonly numberGreaterThanOrEquals?: EventgridEventSubscriptionAdvancedFilterNumberGreaterThanOrEquals[];
   /**
   * number_in block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#number_in EventgridEventSubscription#number_in}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#number_in EventgridEventSubscription#number_in}
   */
   readonly numberIn?: EventgridEventSubscriptionAdvancedFilterNumberIn[];
   /**
   * number_in_range block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#number_in_range EventgridEventSubscription#number_in_range}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#number_in_range EventgridEventSubscription#number_in_range}
   */
   readonly numberInRange?: EventgridEventSubscriptionAdvancedFilterNumberInRange[];
   /**
   * number_less_than block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#number_less_than EventgridEventSubscription#number_less_than}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#number_less_than EventgridEventSubscription#number_less_than}
   */
   readonly numberLessThan?: EventgridEventSubscriptionAdvancedFilterNumberLessThan[];
   /**
   * number_less_than_or_equals block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#number_less_than_or_equals EventgridEventSubscription#number_less_than_or_equals}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#number_less_than_or_equals EventgridEventSubscription#number_less_than_or_equals}
   */
   readonly numberLessThanOrEquals?: EventgridEventSubscriptionAdvancedFilterNumberLessThanOrEquals[];
   /**
   * number_not_in block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#number_not_in EventgridEventSubscription#number_not_in}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#number_not_in EventgridEventSubscription#number_not_in}
   */
   readonly numberNotIn?: EventgridEventSubscriptionAdvancedFilterNumberNotIn[];
   /**
   * number_not_in_range block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#number_not_in_range EventgridEventSubscription#number_not_in_range}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#number_not_in_range EventgridEventSubscription#number_not_in_range}
   */
   readonly numberNotInRange?: EventgridEventSubscriptionAdvancedFilterNumberNotInRange[];
   /**
   * string_begins_with block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#string_begins_with EventgridEventSubscription#string_begins_with}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#string_begins_with EventgridEventSubscription#string_begins_with}
   */
   readonly stringBeginsWith?: EventgridEventSubscriptionAdvancedFilterStringBeginsWith[];
   /**
   * string_contains block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#string_contains EventgridEventSubscription#string_contains}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#string_contains EventgridEventSubscription#string_contains}
   */
   readonly stringContains?: EventgridEventSubscriptionAdvancedFilterStringContains[];
   /**
   * string_ends_with block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#string_ends_with EventgridEventSubscription#string_ends_with}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#string_ends_with EventgridEventSubscription#string_ends_with}
   */
   readonly stringEndsWith?: EventgridEventSubscriptionAdvancedFilterStringEndsWith[];
   /**
   * string_in block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#string_in EventgridEventSubscription#string_in}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#string_in EventgridEventSubscription#string_in}
   */
   readonly stringIn?: EventgridEventSubscriptionAdvancedFilterStringIn[];
   /**
   * string_not_begins_with block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#string_not_begins_with EventgridEventSubscription#string_not_begins_with}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#string_not_begins_with EventgridEventSubscription#string_not_begins_with}
   */
   readonly stringNotBeginsWith?: EventgridEventSubscriptionAdvancedFilterStringNotBeginsWith[];
   /**
   * string_not_contains block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#string_not_contains EventgridEventSubscription#string_not_contains}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#string_not_contains EventgridEventSubscription#string_not_contains}
   */
   readonly stringNotContains?: EventgridEventSubscriptionAdvancedFilterStringNotContains[];
   /**
   * string_not_ends_with block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#string_not_ends_with EventgridEventSubscription#string_not_ends_with}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#string_not_ends_with EventgridEventSubscription#string_not_ends_with}
   */
   readonly stringNotEndsWith?: EventgridEventSubscriptionAdvancedFilterStringNotEndsWith[];
   /**
   * string_not_in block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#string_not_in EventgridEventSubscription#string_not_in}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#string_not_in EventgridEventSubscription#string_not_in}
   */
   readonly stringNotIn?: EventgridEventSubscriptionAdvancedFilterStringNotIn[];
 }
@@ -1153,15 +1153,15 @@ export class EventgridEventSubscriptionAdvancedFilterOutputReference extends cdk
 }
 export interface EventgridEventSubscriptionAzureFunctionEndpoint {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#function_id EventgridEventSubscription#function_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#function_id EventgridEventSubscription#function_id}
   */
   readonly functionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#max_events_per_batch EventgridEventSubscription#max_events_per_batch}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#max_events_per_batch EventgridEventSubscription#max_events_per_batch}
   */
   readonly maxEventsPerBatch?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#preferred_batch_size_in_kilobytes EventgridEventSubscription#preferred_batch_size_in_kilobytes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#preferred_batch_size_in_kilobytes EventgridEventSubscription#preferred_batch_size_in_kilobytes}
   */
   readonly preferredBatchSizeInKilobytes?: number;
 }
@@ -1270,11 +1270,11 @@ export class EventgridEventSubscriptionAzureFunctionEndpointOutputReference exte
 }
 export interface EventgridEventSubscriptionDeadLetterIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#type EventgridEventSubscription#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#type EventgridEventSubscription#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#user_assigned_identity EventgridEventSubscription#user_assigned_identity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#user_assigned_identity EventgridEventSubscription#user_assigned_identity}
   */
   readonly userAssignedIdentity?: string;
 }
@@ -1360,11 +1360,11 @@ export class EventgridEventSubscriptionDeadLetterIdentityOutputReference extends
 }
 export interface EventgridEventSubscriptionDeliveryIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#type EventgridEventSubscription#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#type EventgridEventSubscription#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#user_assigned_identity EventgridEventSubscription#user_assigned_identity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#user_assigned_identity EventgridEventSubscription#user_assigned_identity}
   */
   readonly userAssignedIdentity?: string;
 }
@@ -1450,23 +1450,23 @@ export class EventgridEventSubscriptionDeliveryIdentityOutputReference extends c
 }
 export interface EventgridEventSubscriptionDeliveryProperty {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#header_name EventgridEventSubscription#header_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#header_name EventgridEventSubscription#header_name}
   */
   readonly headerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#secret EventgridEventSubscription#secret}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#secret EventgridEventSubscription#secret}
   */
   readonly secret?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#source_field EventgridEventSubscription#source_field}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#source_field EventgridEventSubscription#source_field}
   */
   readonly sourceField?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#type EventgridEventSubscription#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#type EventgridEventSubscription#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#value EventgridEventSubscription#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#value EventgridEventSubscription#value}
   */
   readonly value?: string;
 }
@@ -1487,7 +1487,7 @@ export function eventgridEventSubscriptionDeliveryPropertyToTerraform(struct?: E
 
 export interface EventgridEventSubscriptionEventhubEndpoint {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#eventhub_id EventgridEventSubscription#eventhub_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#eventhub_id EventgridEventSubscription#eventhub_id}
   */
   readonly eventhubId?: string;
 }
@@ -1553,7 +1553,7 @@ export class EventgridEventSubscriptionEventhubEndpointOutputReference extends c
 }
 export interface EventgridEventSubscriptionHybridConnectionEndpoint {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#hybrid_connection_id EventgridEventSubscription#hybrid_connection_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#hybrid_connection_id EventgridEventSubscription#hybrid_connection_id}
   */
   readonly hybridConnectionId?: string;
 }
@@ -1619,11 +1619,11 @@ export class EventgridEventSubscriptionHybridConnectionEndpointOutputReference e
 }
 export interface EventgridEventSubscriptionRetryPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#event_time_to_live EventgridEventSubscription#event_time_to_live}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#event_time_to_live EventgridEventSubscription#event_time_to_live}
   */
   readonly eventTimeToLive: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#max_delivery_attempts EventgridEventSubscription#max_delivery_attempts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#max_delivery_attempts EventgridEventSubscription#max_delivery_attempts}
   */
   readonly maxDeliveryAttempts: number;
 }
@@ -1706,11 +1706,11 @@ export class EventgridEventSubscriptionRetryPolicyOutputReference extends cdktf.
 }
 export interface EventgridEventSubscriptionStorageBlobDeadLetterDestination {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#storage_account_id EventgridEventSubscription#storage_account_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#storage_account_id EventgridEventSubscription#storage_account_id}
   */
   readonly storageAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#storage_blob_container_name EventgridEventSubscription#storage_blob_container_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#storage_blob_container_name EventgridEventSubscription#storage_blob_container_name}
   */
   readonly storageBlobContainerName: string;
 }
@@ -1793,15 +1793,15 @@ export class EventgridEventSubscriptionStorageBlobDeadLetterDestinationOutputRef
 }
 export interface EventgridEventSubscriptionStorageQueueEndpoint {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#queue_message_time_to_live_in_seconds EventgridEventSubscription#queue_message_time_to_live_in_seconds}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#queue_message_time_to_live_in_seconds EventgridEventSubscription#queue_message_time_to_live_in_seconds}
   */
   readonly queueMessageTimeToLiveInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#queue_name EventgridEventSubscription#queue_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#queue_name EventgridEventSubscription#queue_name}
   */
   readonly queueName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#storage_account_id EventgridEventSubscription#storage_account_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#storage_account_id EventgridEventSubscription#storage_account_id}
   */
   readonly storageAccountId: string;
 }
@@ -1907,15 +1907,15 @@ export class EventgridEventSubscriptionStorageQueueEndpointOutputReference exten
 }
 export interface EventgridEventSubscriptionSubjectFilter {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#case_sensitive EventgridEventSubscription#case_sensitive}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#case_sensitive EventgridEventSubscription#case_sensitive}
   */
   readonly caseSensitive?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#subject_begins_with EventgridEventSubscription#subject_begins_with}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#subject_begins_with EventgridEventSubscription#subject_begins_with}
   */
   readonly subjectBeginsWith?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#subject_ends_with EventgridEventSubscription#subject_ends_with}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#subject_ends_with EventgridEventSubscription#subject_ends_with}
   */
   readonly subjectEndsWith?: string;
 }
@@ -2027,19 +2027,19 @@ export class EventgridEventSubscriptionSubjectFilterOutputReference extends cdkt
 }
 export interface EventgridEventSubscriptionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#create EventgridEventSubscription#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#create EventgridEventSubscription#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#delete EventgridEventSubscription#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#delete EventgridEventSubscription#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#read EventgridEventSubscription#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#read EventgridEventSubscription#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#update EventgridEventSubscription#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#update EventgridEventSubscription#update}
   */
   readonly update?: string;
 }
@@ -2174,23 +2174,23 @@ export class EventgridEventSubscriptionTimeoutsOutputReference extends cdktf.Com
 }
 export interface EventgridEventSubscriptionWebhookEndpoint {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#active_directory_app_id_or_uri EventgridEventSubscription#active_directory_app_id_or_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#active_directory_app_id_or_uri EventgridEventSubscription#active_directory_app_id_or_uri}
   */
   readonly activeDirectoryAppIdOrUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#active_directory_tenant_id EventgridEventSubscription#active_directory_tenant_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#active_directory_tenant_id EventgridEventSubscription#active_directory_tenant_id}
   */
   readonly activeDirectoryTenantId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#max_events_per_batch EventgridEventSubscription#max_events_per_batch}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#max_events_per_batch EventgridEventSubscription#max_events_per_batch}
   */
   readonly maxEventsPerBatch?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#preferred_batch_size_in_kilobytes EventgridEventSubscription#preferred_batch_size_in_kilobytes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#preferred_batch_size_in_kilobytes EventgridEventSubscription#preferred_batch_size_in_kilobytes}
   */
   readonly preferredBatchSizeInKilobytes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html#url EventgridEventSubscription#url}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription#url EventgridEventSubscription#url}
   */
   readonly url: string;
 }
@@ -2345,7 +2345,7 @@ export class EventgridEventSubscriptionWebhookEndpointOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html azurerm_eventgrid_event_subscription}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription azurerm_eventgrid_event_subscription}
 */
 export class EventgridEventSubscription extends cdktf.TerraformResource {
 
@@ -2359,7 +2359,7 @@ export class EventgridEventSubscription extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription.html azurerm_eventgrid_event_subscription} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_event_subscription azurerm_eventgrid_event_subscription} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

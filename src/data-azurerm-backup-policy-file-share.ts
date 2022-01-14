@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/backup_policy_file_share.html
+// https://www.terraform.io/docs/providers/azurerm/d/backup_policy_file_share
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermBackupPolicyFileShareConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_file_share.html#name DataAzurermBackupPolicyFileShare#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_file_share#name DataAzurermBackupPolicyFileShare#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_file_share.html#recovery_vault_name DataAzurermBackupPolicyFileShare#recovery_vault_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_file_share#recovery_vault_name DataAzurermBackupPolicyFileShare#recovery_vault_name}
   */
   readonly recoveryVaultName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_file_share.html#resource_group_name DataAzurermBackupPolicyFileShare#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_file_share#resource_group_name DataAzurermBackupPolicyFileShare#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_file_share.html#timeouts DataAzurermBackupPolicyFileShare#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_file_share#timeouts DataAzurermBackupPolicyFileShare#timeouts}
   */
   readonly timeouts?: DataAzurermBackupPolicyFileShareTimeouts;
 }
 export interface DataAzurermBackupPolicyFileShareTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_file_share.html#read DataAzurermBackupPolicyFileShare#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_file_share#read DataAzurermBackupPolicyFileShare#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermBackupPolicyFileShareTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_file_share.html azurerm_backup_policy_file_share}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_file_share azurerm_backup_policy_file_share}
 */
 export class DataAzurermBackupPolicyFileShare extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermBackupPolicyFileShare extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_file_share.html azurerm_backup_policy_file_share} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_file_share azurerm_backup_policy_file_share} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

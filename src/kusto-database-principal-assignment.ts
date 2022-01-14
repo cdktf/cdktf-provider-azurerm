@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html
+// https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,55 +8,55 @@ import * as cdktf from 'cdktf';
 
 export interface KustoDatabasePrincipalAssignmentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#cluster_name KustoDatabasePrincipalAssignment#cluster_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment#cluster_name KustoDatabasePrincipalAssignment#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#database_name KustoDatabasePrincipalAssignment#database_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment#database_name KustoDatabasePrincipalAssignment#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#name KustoDatabasePrincipalAssignment#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment#name KustoDatabasePrincipalAssignment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#principal_id KustoDatabasePrincipalAssignment#principal_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment#principal_id KustoDatabasePrincipalAssignment#principal_id}
   */
   readonly principalId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#principal_type KustoDatabasePrincipalAssignment#principal_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment#principal_type KustoDatabasePrincipalAssignment#principal_type}
   */
   readonly principalType: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#resource_group_name KustoDatabasePrincipalAssignment#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment#resource_group_name KustoDatabasePrincipalAssignment#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#role KustoDatabasePrincipalAssignment#role}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment#role KustoDatabasePrincipalAssignment#role}
   */
   readonly role: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#tenant_id KustoDatabasePrincipalAssignment#tenant_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment#tenant_id KustoDatabasePrincipalAssignment#tenant_id}
   */
   readonly tenantId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#timeouts KustoDatabasePrincipalAssignment#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment#timeouts KustoDatabasePrincipalAssignment#timeouts}
   */
   readonly timeouts?: KustoDatabasePrincipalAssignmentTimeouts;
 }
 export interface KustoDatabasePrincipalAssignmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#create KustoDatabasePrincipalAssignment#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment#create KustoDatabasePrincipalAssignment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#delete KustoDatabasePrincipalAssignment#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment#delete KustoDatabasePrincipalAssignment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html#read KustoDatabasePrincipalAssignment#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment#read KustoDatabasePrincipalAssignment#read}
   */
   readonly read?: string;
 }
@@ -168,7 +168,7 @@ export class KustoDatabasePrincipalAssignmentTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html azurerm_kusto_database_principal_assignment}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment azurerm_kusto_database_principal_assignment}
 */
 export class KustoDatabasePrincipalAssignment extends cdktf.TerraformResource {
 
@@ -182,7 +182,7 @@ export class KustoDatabasePrincipalAssignment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment.html azurerm_kusto_database_principal_assignment} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database_principal_assignment azurerm_kusto_database_principal_assignment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

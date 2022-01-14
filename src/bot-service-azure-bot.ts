@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html
+// https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,79 +8,79 @@ import * as cdktf from 'cdktf';
 
 export interface BotServiceAzureBotConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html#developer_app_insights_api_key BotServiceAzureBot#developer_app_insights_api_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#developer_app_insights_api_key BotServiceAzureBot#developer_app_insights_api_key}
   */
   readonly developerAppInsightsApiKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html#developer_app_insights_application_id BotServiceAzureBot#developer_app_insights_application_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#developer_app_insights_application_id BotServiceAzureBot#developer_app_insights_application_id}
   */
   readonly developerAppInsightsApplicationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html#developer_app_insights_key BotServiceAzureBot#developer_app_insights_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#developer_app_insights_key BotServiceAzureBot#developer_app_insights_key}
   */
   readonly developerAppInsightsKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html#display_name BotServiceAzureBot#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#display_name BotServiceAzureBot#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html#endpoint BotServiceAzureBot#endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#endpoint BotServiceAzureBot#endpoint}
   */
   readonly endpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html#location BotServiceAzureBot#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#location BotServiceAzureBot#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html#luis_app_ids BotServiceAzureBot#luis_app_ids}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#luis_app_ids BotServiceAzureBot#luis_app_ids}
   */
   readonly luisAppIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html#luis_key BotServiceAzureBot#luis_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#luis_key BotServiceAzureBot#luis_key}
   */
   readonly luisKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html#microsoft_app_id BotServiceAzureBot#microsoft_app_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#microsoft_app_id BotServiceAzureBot#microsoft_app_id}
   */
   readonly microsoftAppId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html#name BotServiceAzureBot#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#name BotServiceAzureBot#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html#resource_group_name BotServiceAzureBot#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#resource_group_name BotServiceAzureBot#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html#sku BotServiceAzureBot#sku}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#sku BotServiceAzureBot#sku}
   */
   readonly sku: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html#tags BotServiceAzureBot#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#tags BotServiceAzureBot#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html#timeouts BotServiceAzureBot#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#timeouts BotServiceAzureBot#timeouts}
   */
   readonly timeouts?: BotServiceAzureBotTimeouts;
 }
 export interface BotServiceAzureBotTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html#create BotServiceAzureBot#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#create BotServiceAzureBot#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html#delete BotServiceAzureBot#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#delete BotServiceAzureBot#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html#read BotServiceAzureBot#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#read BotServiceAzureBot#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html#update BotServiceAzureBot#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot#update BotServiceAzureBot#update}
   */
   readonly update?: string;
 }
@@ -215,7 +215,7 @@ export class BotServiceAzureBotTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html azurerm_bot_service_azure_bot}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot azurerm_bot_service_azure_bot}
 */
 export class BotServiceAzureBot extends cdktf.TerraformResource {
 
@@ -229,7 +229,7 @@ export class BotServiceAzureBot extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot.html azurerm_bot_service_azure_bot} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/bot_service_azure_bot azurerm_bot_service_azure_bot} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

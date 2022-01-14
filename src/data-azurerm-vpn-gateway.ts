@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/vpn_gateway.html
+// https://www.terraform.io/docs/providers/azurerm/d/vpn_gateway
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermVpnGatewayConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/vpn_gateway.html#name DataAzurermVpnGateway#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/vpn_gateway#name DataAzurermVpnGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/vpn_gateway.html#resource_group_name DataAzurermVpnGateway#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/vpn_gateway#resource_group_name DataAzurermVpnGateway#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/vpn_gateway.html#timeouts DataAzurermVpnGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/vpn_gateway#timeouts DataAzurermVpnGateway#timeouts}
   */
   readonly timeouts?: DataAzurermVpnGatewayTimeouts;
 }
@@ -97,7 +97,7 @@ export class DataAzurermVpnGatewayBgpSettings extends cdktf.ComplexComputedList 
 }
 export interface DataAzurermVpnGatewayTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/vpn_gateway.html#read DataAzurermVpnGateway#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/vpn_gateway#read DataAzurermVpnGateway#read}
   */
   readonly read?: string;
 }
@@ -163,7 +163,7 @@ export class DataAzurermVpnGatewayTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/vpn_gateway.html azurerm_vpn_gateway}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/vpn_gateway azurerm_vpn_gateway}
 */
 export class DataAzurermVpnGateway extends cdktf.TerraformDataSource {
 
@@ -177,7 +177,7 @@ export class DataAzurermVpnGateway extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/vpn_gateway.html azurerm_vpn_gateway} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/vpn_gateway azurerm_vpn_gateway} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy.html
+// https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,59 +8,59 @@ import * as cdktf from 'cdktf';
 
 export interface SynapseWorkspaceSecurityAlertPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy.html#disabled_alerts SynapseWorkspaceSecurityAlertPolicy#disabled_alerts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy#disabled_alerts SynapseWorkspaceSecurityAlertPolicy#disabled_alerts}
   */
   readonly disabledAlerts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy.html#email_account_admins_enabled SynapseWorkspaceSecurityAlertPolicy#email_account_admins_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy#email_account_admins_enabled SynapseWorkspaceSecurityAlertPolicy#email_account_admins_enabled}
   */
   readonly emailAccountAdminsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy.html#email_addresses SynapseWorkspaceSecurityAlertPolicy#email_addresses}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy#email_addresses SynapseWorkspaceSecurityAlertPolicy#email_addresses}
   */
   readonly emailAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy.html#policy_state SynapseWorkspaceSecurityAlertPolicy#policy_state}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy#policy_state SynapseWorkspaceSecurityAlertPolicy#policy_state}
   */
   readonly policyState: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy.html#retention_days SynapseWorkspaceSecurityAlertPolicy#retention_days}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy#retention_days SynapseWorkspaceSecurityAlertPolicy#retention_days}
   */
   readonly retentionDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy.html#storage_account_access_key SynapseWorkspaceSecurityAlertPolicy#storage_account_access_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy#storage_account_access_key SynapseWorkspaceSecurityAlertPolicy#storage_account_access_key}
   */
   readonly storageAccountAccessKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy.html#storage_endpoint SynapseWorkspaceSecurityAlertPolicy#storage_endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy#storage_endpoint SynapseWorkspaceSecurityAlertPolicy#storage_endpoint}
   */
   readonly storageEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy.html#synapse_workspace_id SynapseWorkspaceSecurityAlertPolicy#synapse_workspace_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy#synapse_workspace_id SynapseWorkspaceSecurityAlertPolicy#synapse_workspace_id}
   */
   readonly synapseWorkspaceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy.html#timeouts SynapseWorkspaceSecurityAlertPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy#timeouts SynapseWorkspaceSecurityAlertPolicy#timeouts}
   */
   readonly timeouts?: SynapseWorkspaceSecurityAlertPolicyTimeouts;
 }
 export interface SynapseWorkspaceSecurityAlertPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy.html#create SynapseWorkspaceSecurityAlertPolicy#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy#create SynapseWorkspaceSecurityAlertPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy.html#delete SynapseWorkspaceSecurityAlertPolicy#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy#delete SynapseWorkspaceSecurityAlertPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy.html#read SynapseWorkspaceSecurityAlertPolicy#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy#read SynapseWorkspaceSecurityAlertPolicy#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy.html#update SynapseWorkspaceSecurityAlertPolicy#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy#update SynapseWorkspaceSecurityAlertPolicy#update}
   */
   readonly update?: string;
 }
@@ -195,7 +195,7 @@ export class SynapseWorkspaceSecurityAlertPolicyTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy.html azurerm_synapse_workspace_security_alert_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy azurerm_synapse_workspace_security_alert_policy}
 */
 export class SynapseWorkspaceSecurityAlertPolicy extends cdktf.TerraformResource {
 
@@ -209,7 +209,7 @@ export class SynapseWorkspaceSecurityAlertPolicy extends cdktf.TerraformResource
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy.html azurerm_synapse_workspace_security_alert_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_security_alert_policy azurerm_synapse_workspace_security_alert_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

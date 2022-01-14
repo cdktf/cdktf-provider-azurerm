@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/management_lock.html
+// https://www.terraform.io/docs/providers/azurerm/r/management_lock
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface ManagementLockConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html#lock_level ManagementLock#lock_level}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock#lock_level ManagementLock#lock_level}
   */
   readonly lockLevel: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html#name ManagementLock#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock#name ManagementLock#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html#notes ManagementLock#notes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock#notes ManagementLock#notes}
   */
   readonly notes?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html#scope ManagementLock#scope}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock#scope ManagementLock#scope}
   */
   readonly scope: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html#timeouts ManagementLock#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock#timeouts ManagementLock#timeouts}
   */
   readonly timeouts?: ManagementLockTimeouts;
 }
 export interface ManagementLockTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html#create ManagementLock#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock#create ManagementLock#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html#delete ManagementLock#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock#delete ManagementLock#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html#read ManagementLock#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock#read ManagementLock#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html#update ManagementLock#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock#update ManagementLock#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class ManagementLockTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html azurerm_management_lock}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock azurerm_management_lock}
 */
 export class ManagementLock extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class ManagementLock extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock.html azurerm_management_lock} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/management_lock azurerm_management_lock} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface DataLakeAnalyticsFirewallRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule.html#account_name DataLakeAnalyticsFirewallRule#account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule#account_name DataLakeAnalyticsFirewallRule#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule.html#end_ip_address DataLakeAnalyticsFirewallRule#end_ip_address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule#end_ip_address DataLakeAnalyticsFirewallRule#end_ip_address}
   */
   readonly endIpAddress: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule.html#name DataLakeAnalyticsFirewallRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule#name DataLakeAnalyticsFirewallRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule.html#resource_group_name DataLakeAnalyticsFirewallRule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule#resource_group_name DataLakeAnalyticsFirewallRule#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule.html#start_ip_address DataLakeAnalyticsFirewallRule#start_ip_address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule#start_ip_address DataLakeAnalyticsFirewallRule#start_ip_address}
   */
   readonly startIpAddress: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule.html#timeouts DataLakeAnalyticsFirewallRule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule#timeouts DataLakeAnalyticsFirewallRule#timeouts}
   */
   readonly timeouts?: DataLakeAnalyticsFirewallRuleTimeouts;
 }
 export interface DataLakeAnalyticsFirewallRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule.html#create DataLakeAnalyticsFirewallRule#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule#create DataLakeAnalyticsFirewallRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule.html#delete DataLakeAnalyticsFirewallRule#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule#delete DataLakeAnalyticsFirewallRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule.html#read DataLakeAnalyticsFirewallRule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule#read DataLakeAnalyticsFirewallRule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule.html#update DataLakeAnalyticsFirewallRule#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule#update DataLakeAnalyticsFirewallRule#update}
   */
   readonly update?: string;
 }
@@ -183,7 +183,7 @@ export class DataLakeAnalyticsFirewallRuleTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule.html azurerm_data_lake_analytics_firewall_rule}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule azurerm_data_lake_analytics_firewall_rule}
 */
 export class DataLakeAnalyticsFirewallRule extends cdktf.TerraformResource {
 
@@ -197,7 +197,7 @@ export class DataLakeAnalyticsFirewallRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule.html azurerm_data_lake_analytics_firewall_rule} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_analytics_firewall_rule azurerm_data_lake_analytics_firewall_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

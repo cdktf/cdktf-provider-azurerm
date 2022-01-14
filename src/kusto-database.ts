@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/kusto_database.html
+// https://www.terraform.io/docs/providers/azurerm/r/kusto_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface KustoDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database.html#cluster_name KustoDatabase#cluster_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database#cluster_name KustoDatabase#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database.html#hot_cache_period KustoDatabase#hot_cache_period}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database#hot_cache_period KustoDatabase#hot_cache_period}
   */
   readonly hotCachePeriod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database.html#location KustoDatabase#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database#location KustoDatabase#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database.html#name KustoDatabase#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database#name KustoDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database.html#resource_group_name KustoDatabase#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database#resource_group_name KustoDatabase#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database.html#soft_delete_period KustoDatabase#soft_delete_period}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database#soft_delete_period KustoDatabase#soft_delete_period}
   */
   readonly softDeletePeriod?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database.html#timeouts KustoDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database#timeouts KustoDatabase#timeouts}
   */
   readonly timeouts?: KustoDatabaseTimeouts;
 }
 export interface KustoDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database.html#create KustoDatabase#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database#create KustoDatabase#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database.html#delete KustoDatabase#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database#delete KustoDatabase#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database.html#read KustoDatabase#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database#read KustoDatabase#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database.html#update KustoDatabase#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database#update KustoDatabase#update}
   */
   readonly update?: string;
 }
@@ -187,7 +187,7 @@ export class KustoDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database.html azurerm_kusto_database}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database azurerm_kusto_database}
 */
 export class KustoDatabase extends cdktf.TerraformResource {
 
@@ -201,7 +201,7 @@ export class KustoDatabase extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database.html azurerm_kusto_database} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_database azurerm_kusto_database} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

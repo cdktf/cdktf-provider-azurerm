@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/iothub_shared_access_policy.html
+// https://www.terraform.io/docs/providers/azurerm/d/iothub_shared_access_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermIothubSharedAccessPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_shared_access_policy.html#iothub_name DataAzurermIothubSharedAccessPolicy#iothub_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_shared_access_policy#iothub_name DataAzurermIothubSharedAccessPolicy#iothub_name}
   */
   readonly iothubName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_shared_access_policy.html#name DataAzurermIothubSharedAccessPolicy#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_shared_access_policy#name DataAzurermIothubSharedAccessPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_shared_access_policy.html#resource_group_name DataAzurermIothubSharedAccessPolicy#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_shared_access_policy#resource_group_name DataAzurermIothubSharedAccessPolicy#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_shared_access_policy.html#timeouts DataAzurermIothubSharedAccessPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_shared_access_policy#timeouts DataAzurermIothubSharedAccessPolicy#timeouts}
   */
   readonly timeouts?: DataAzurermIothubSharedAccessPolicyTimeouts;
 }
 export interface DataAzurermIothubSharedAccessPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_shared_access_policy.html#read DataAzurermIothubSharedAccessPolicy#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_shared_access_policy#read DataAzurermIothubSharedAccessPolicy#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermIothubSharedAccessPolicyTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_shared_access_policy.html azurerm_iothub_shared_access_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_shared_access_policy azurerm_iothub_shared_access_policy}
 */
 export class DataAzurermIothubSharedAccessPolicy extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermIothubSharedAccessPolicy extends cdktf.TerraformDataSour
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_shared_access_policy.html azurerm_iothub_shared_access_policy} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_shared_access_policy azurerm_iothub_shared_access_policy} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

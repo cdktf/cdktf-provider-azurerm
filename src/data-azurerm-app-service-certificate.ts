@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate.html
+// https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermAppServiceCertificateConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate.html#name DataAzurermAppServiceCertificate#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate#name DataAzurermAppServiceCertificate#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate.html#resource_group_name DataAzurermAppServiceCertificate#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate#resource_group_name DataAzurermAppServiceCertificate#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate.html#tags DataAzurermAppServiceCertificate#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate#tags DataAzurermAppServiceCertificate#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate.html#timeouts DataAzurermAppServiceCertificate#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate#timeouts DataAzurermAppServiceCertificate#timeouts}
   */
   readonly timeouts?: DataAzurermAppServiceCertificateTimeouts;
 }
 export interface DataAzurermAppServiceCertificateTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate.html#read DataAzurermAppServiceCertificate#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate#read DataAzurermAppServiceCertificate#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermAppServiceCertificateTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate.html azurerm_app_service_certificate}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate azurerm_app_service_certificate}
 */
 export class DataAzurermAppServiceCertificate extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermAppServiceCertificate extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate.html azurerm_app_service_certificate} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_certificate azurerm_app_service_certificate} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

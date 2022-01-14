@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association.html
+// https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,31 +8,31 @@ import * as cdktf from 'cdktf';
 
 export interface NatGatewayPublicIpAssociationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association.html#nat_gateway_id NatGatewayPublicIpAssociation#nat_gateway_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association#nat_gateway_id NatGatewayPublicIpAssociation#nat_gateway_id}
   */
   readonly natGatewayId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association.html#public_ip_address_id NatGatewayPublicIpAssociation#public_ip_address_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association#public_ip_address_id NatGatewayPublicIpAssociation#public_ip_address_id}
   */
   readonly publicIpAddressId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association.html#timeouts NatGatewayPublicIpAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association#timeouts NatGatewayPublicIpAssociation#timeouts}
   */
   readonly timeouts?: NatGatewayPublicIpAssociationTimeouts;
 }
 export interface NatGatewayPublicIpAssociationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association.html#create NatGatewayPublicIpAssociation#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association#create NatGatewayPublicIpAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association.html#delete NatGatewayPublicIpAssociation#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association#delete NatGatewayPublicIpAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association.html#read NatGatewayPublicIpAssociation#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association#read NatGatewayPublicIpAssociation#read}
   */
   readonly read?: string;
 }
@@ -144,7 +144,7 @@ export class NatGatewayPublicIpAssociationTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association.html azurerm_nat_gateway_public_ip_association}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association azurerm_nat_gateway_public_ip_association}
 */
 export class NatGatewayPublicIpAssociation extends cdktf.TerraformResource {
 
@@ -158,7 +158,7 @@ export class NatGatewayPublicIpAssociation extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association.html azurerm_nat_gateway_public_ip_association} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_association azurerm_nat_gateway_public_ip_association} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

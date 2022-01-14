@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/disk_access.html
+// https://www.terraform.io/docs/providers/azurerm/d/disk_access
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDiskAccessConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access.html#name DataAzurermDiskAccess#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#name DataAzurermDiskAccess#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access.html#resource_group_name DataAzurermDiskAccess#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#resource_group_name DataAzurermDiskAccess#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access.html#tags DataAzurermDiskAccess#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#tags DataAzurermDiskAccess#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access.html#timeouts DataAzurermDiskAccess#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#timeouts DataAzurermDiskAccess#timeouts}
   */
   readonly timeouts?: DataAzurermDiskAccessTimeouts;
 }
 export interface DataAzurermDiskAccessTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access.html#read DataAzurermDiskAccess#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access#read DataAzurermDiskAccess#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermDiskAccessTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access.html azurerm_disk_access}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access azurerm_disk_access}
 */
 export class DataAzurermDiskAccess extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermDiskAccess extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access.html azurerm_disk_access} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/disk_access azurerm_disk_access} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

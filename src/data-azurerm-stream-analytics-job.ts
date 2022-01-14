@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/stream_analytics_job.html
+// https://www.terraform.io/docs/providers/azurerm/d/stream_analytics_job
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermStreamAnalyticsJobConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/stream_analytics_job.html#name DataAzurermStreamAnalyticsJob#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/stream_analytics_job#name DataAzurermStreamAnalyticsJob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/stream_analytics_job.html#resource_group_name DataAzurermStreamAnalyticsJob#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/stream_analytics_job#resource_group_name DataAzurermStreamAnalyticsJob#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/stream_analytics_job.html#timeouts DataAzurermStreamAnalyticsJob#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/stream_analytics_job#timeouts DataAzurermStreamAnalyticsJob#timeouts}
   */
   readonly timeouts?: DataAzurermStreamAnalyticsJobTimeouts;
 }
@@ -41,7 +41,7 @@ export class DataAzurermStreamAnalyticsJobIdentity extends cdktf.ComplexComputed
 }
 export interface DataAzurermStreamAnalyticsJobTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/stream_analytics_job.html#read DataAzurermStreamAnalyticsJob#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/stream_analytics_job#read DataAzurermStreamAnalyticsJob#read}
   */
   readonly read?: string;
 }
@@ -107,7 +107,7 @@ export class DataAzurermStreamAnalyticsJobTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/stream_analytics_job.html azurerm_stream_analytics_job}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/stream_analytics_job azurerm_stream_analytics_job}
 */
 export class DataAzurermStreamAnalyticsJob extends cdktf.TerraformDataSource {
 
@@ -121,7 +121,7 @@ export class DataAzurermStreamAnalyticsJob extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/stream_analytics_job.html azurerm_stream_analytics_job} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/stream_analytics_job azurerm_stream_analytics_job} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

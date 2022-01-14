@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric.html
+// https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface SiteRecoveryFabricConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric.html#location SiteRecoveryFabric#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric#location SiteRecoveryFabric#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric.html#name SiteRecoveryFabric#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric#name SiteRecoveryFabric#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric.html#recovery_vault_name SiteRecoveryFabric#recovery_vault_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric#recovery_vault_name SiteRecoveryFabric#recovery_vault_name}
   */
   readonly recoveryVaultName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric.html#resource_group_name SiteRecoveryFabric#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric#resource_group_name SiteRecoveryFabric#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric.html#timeouts SiteRecoveryFabric#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric#timeouts SiteRecoveryFabric#timeouts}
   */
   readonly timeouts?: SiteRecoveryFabricTimeouts;
 }
 export interface SiteRecoveryFabricTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric.html#create SiteRecoveryFabric#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric#create SiteRecoveryFabric#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric.html#delete SiteRecoveryFabric#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric#delete SiteRecoveryFabric#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric.html#read SiteRecoveryFabric#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric#read SiteRecoveryFabric#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric.html#update SiteRecoveryFabric#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric#update SiteRecoveryFabric#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class SiteRecoveryFabricTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric.html azurerm_site_recovery_fabric}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric azurerm_site_recovery_fabric}
 */
 export class SiteRecoveryFabric extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class SiteRecoveryFabric extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric.html azurerm_site_recovery_fabric} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/site_recovery_fabric azurerm_site_recovery_fabric} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

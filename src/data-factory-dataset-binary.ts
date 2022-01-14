@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,95 +8,95 @@ import * as cdktf from 'cdktf';
 
 export interface DataFactoryDatasetBinaryConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#additional_properties DataFactoryDatasetBinary#additional_properties}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#additional_properties DataFactoryDatasetBinary#additional_properties}
   */
   readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#annotations DataFactoryDatasetBinary#annotations}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#annotations DataFactoryDatasetBinary#annotations}
   */
   readonly annotations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#data_factory_id DataFactoryDatasetBinary#data_factory_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#data_factory_id DataFactoryDatasetBinary#data_factory_id}
   */
   readonly dataFactoryId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#data_factory_name DataFactoryDatasetBinary#data_factory_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#data_factory_name DataFactoryDatasetBinary#data_factory_name}
   */
   readonly dataFactoryName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#description DataFactoryDatasetBinary#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#description DataFactoryDatasetBinary#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#folder DataFactoryDatasetBinary#folder}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#folder DataFactoryDatasetBinary#folder}
   */
   readonly folder?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#linked_service_name DataFactoryDatasetBinary#linked_service_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#linked_service_name DataFactoryDatasetBinary#linked_service_name}
   */
   readonly linkedServiceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#name DataFactoryDatasetBinary#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#name DataFactoryDatasetBinary#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#parameters DataFactoryDatasetBinary#parameters}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#parameters DataFactoryDatasetBinary#parameters}
   */
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#resource_group_name DataFactoryDatasetBinary#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#resource_group_name DataFactoryDatasetBinary#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * azure_blob_storage_location block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#azure_blob_storage_location DataFactoryDatasetBinary#azure_blob_storage_location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#azure_blob_storage_location DataFactoryDatasetBinary#azure_blob_storage_location}
   */
   readonly azureBlobStorageLocation?: DataFactoryDatasetBinaryAzureBlobStorageLocation;
   /**
   * compression block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#compression DataFactoryDatasetBinary#compression}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#compression DataFactoryDatasetBinary#compression}
   */
   readonly compression?: DataFactoryDatasetBinaryCompression;
   /**
   * http_server_location block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#http_server_location DataFactoryDatasetBinary#http_server_location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#http_server_location DataFactoryDatasetBinary#http_server_location}
   */
   readonly httpServerLocation?: DataFactoryDatasetBinaryHttpServerLocation;
   /**
   * sftp_server_location block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#sftp_server_location DataFactoryDatasetBinary#sftp_server_location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#sftp_server_location DataFactoryDatasetBinary#sftp_server_location}
   */
   readonly sftpServerLocation?: DataFactoryDatasetBinarySftpServerLocation;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#timeouts DataFactoryDatasetBinary#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#timeouts DataFactoryDatasetBinary#timeouts}
   */
   readonly timeouts?: DataFactoryDatasetBinaryTimeouts;
 }
 export interface DataFactoryDatasetBinaryAzureBlobStorageLocation {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#container DataFactoryDatasetBinary#container}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#container DataFactoryDatasetBinary#container}
   */
   readonly container: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#dynamic_filename_enabled DataFactoryDatasetBinary#dynamic_filename_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#dynamic_filename_enabled DataFactoryDatasetBinary#dynamic_filename_enabled}
   */
   readonly dynamicFilenameEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#dynamic_path_enabled DataFactoryDatasetBinary#dynamic_path_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#dynamic_path_enabled DataFactoryDatasetBinary#dynamic_path_enabled}
   */
   readonly dynamicPathEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#filename DataFactoryDatasetBinary#filename}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#filename DataFactoryDatasetBinary#filename}
   */
   readonly filename?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#path DataFactoryDatasetBinary#path}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#path DataFactoryDatasetBinary#path}
   */
   readonly path?: string;
 }
@@ -251,11 +251,11 @@ export class DataFactoryDatasetBinaryAzureBlobStorageLocationOutputReference ext
 }
 export interface DataFactoryDatasetBinaryCompression {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#level DataFactoryDatasetBinary#level}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#level DataFactoryDatasetBinary#level}
   */
   readonly level?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#type DataFactoryDatasetBinary#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#type DataFactoryDatasetBinary#type}
   */
   readonly type: string;
 }
@@ -341,23 +341,23 @@ export class DataFactoryDatasetBinaryCompressionOutputReference extends cdktf.Co
 }
 export interface DataFactoryDatasetBinaryHttpServerLocation {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#dynamic_filename_enabled DataFactoryDatasetBinary#dynamic_filename_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#dynamic_filename_enabled DataFactoryDatasetBinary#dynamic_filename_enabled}
   */
   readonly dynamicFilenameEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#dynamic_path_enabled DataFactoryDatasetBinary#dynamic_path_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#dynamic_path_enabled DataFactoryDatasetBinary#dynamic_path_enabled}
   */
   readonly dynamicPathEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#filename DataFactoryDatasetBinary#filename}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#filename DataFactoryDatasetBinary#filename}
   */
   readonly filename: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#path DataFactoryDatasetBinary#path}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#path DataFactoryDatasetBinary#path}
   */
   readonly path: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#relative_url DataFactoryDatasetBinary#relative_url}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#relative_url DataFactoryDatasetBinary#relative_url}
   */
   readonly relativeUrl: string;
 }
@@ -506,19 +506,19 @@ export class DataFactoryDatasetBinaryHttpServerLocationOutputReference extends c
 }
 export interface DataFactoryDatasetBinarySftpServerLocation {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#dynamic_filename_enabled DataFactoryDatasetBinary#dynamic_filename_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#dynamic_filename_enabled DataFactoryDatasetBinary#dynamic_filename_enabled}
   */
   readonly dynamicFilenameEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#dynamic_path_enabled DataFactoryDatasetBinary#dynamic_path_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#dynamic_path_enabled DataFactoryDatasetBinary#dynamic_path_enabled}
   */
   readonly dynamicPathEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#filename DataFactoryDatasetBinary#filename}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#filename DataFactoryDatasetBinary#filename}
   */
   readonly filename: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#path DataFactoryDatasetBinary#path}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#path DataFactoryDatasetBinary#path}
   */
   readonly path: string;
 }
@@ -647,19 +647,19 @@ export class DataFactoryDatasetBinarySftpServerLocationOutputReference extends c
 }
 export interface DataFactoryDatasetBinaryTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#create DataFactoryDatasetBinary#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#create DataFactoryDatasetBinary#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#delete DataFactoryDatasetBinary#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#delete DataFactoryDatasetBinary#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#read DataFactoryDatasetBinary#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#read DataFactoryDatasetBinary#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html#update DataFactoryDatasetBinary#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary#update DataFactoryDatasetBinary#update}
   */
   readonly update?: string;
 }
@@ -794,7 +794,7 @@ export class DataFactoryDatasetBinaryTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html azurerm_data_factory_dataset_binary}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary azurerm_data_factory_dataset_binary}
 */
 export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
 
@@ -808,7 +808,7 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary.html azurerm_data_factory_dataset_binary} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_dataset_binary azurerm_data_factory_dataset_binary} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

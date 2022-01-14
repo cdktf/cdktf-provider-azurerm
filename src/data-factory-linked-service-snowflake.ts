@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,65 +8,65 @@ import * as cdktf from 'cdktf';
 
 export interface DataFactoryLinkedServiceSnowflakeConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#additional_properties DataFactoryLinkedServiceSnowflake#additional_properties}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake#additional_properties DataFactoryLinkedServiceSnowflake#additional_properties}
   */
   readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#annotations DataFactoryLinkedServiceSnowflake#annotations}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake#annotations DataFactoryLinkedServiceSnowflake#annotations}
   */
   readonly annotations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#connection_string DataFactoryLinkedServiceSnowflake#connection_string}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake#connection_string DataFactoryLinkedServiceSnowflake#connection_string}
   */
   readonly connectionString: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#data_factory_id DataFactoryLinkedServiceSnowflake#data_factory_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake#data_factory_id DataFactoryLinkedServiceSnowflake#data_factory_id}
   */
   readonly dataFactoryId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#data_factory_name DataFactoryLinkedServiceSnowflake#data_factory_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake#data_factory_name DataFactoryLinkedServiceSnowflake#data_factory_name}
   */
   readonly dataFactoryName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#description DataFactoryLinkedServiceSnowflake#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake#description DataFactoryLinkedServiceSnowflake#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#integration_runtime_name DataFactoryLinkedServiceSnowflake#integration_runtime_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake#integration_runtime_name DataFactoryLinkedServiceSnowflake#integration_runtime_name}
   */
   readonly integrationRuntimeName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#name DataFactoryLinkedServiceSnowflake#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake#name DataFactoryLinkedServiceSnowflake#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#parameters DataFactoryLinkedServiceSnowflake#parameters}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake#parameters DataFactoryLinkedServiceSnowflake#parameters}
   */
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#resource_group_name DataFactoryLinkedServiceSnowflake#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake#resource_group_name DataFactoryLinkedServiceSnowflake#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * key_vault_password block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#key_vault_password DataFactoryLinkedServiceSnowflake#key_vault_password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake#key_vault_password DataFactoryLinkedServiceSnowflake#key_vault_password}
   */
   readonly keyVaultPassword?: DataFactoryLinkedServiceSnowflakeKeyVaultPassword;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#timeouts DataFactoryLinkedServiceSnowflake#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake#timeouts DataFactoryLinkedServiceSnowflake#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServiceSnowflakeTimeouts;
 }
 export interface DataFactoryLinkedServiceSnowflakeKeyVaultPassword {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#linked_service_name DataFactoryLinkedServiceSnowflake#linked_service_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake#linked_service_name DataFactoryLinkedServiceSnowflake#linked_service_name}
   */
   readonly linkedServiceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#secret_name DataFactoryLinkedServiceSnowflake#secret_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake#secret_name DataFactoryLinkedServiceSnowflake#secret_name}
   */
   readonly secretName: string;
 }
@@ -149,19 +149,19 @@ export class DataFactoryLinkedServiceSnowflakeKeyVaultPasswordOutputReference ex
 }
 export interface DataFactoryLinkedServiceSnowflakeTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#create DataFactoryLinkedServiceSnowflake#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake#create DataFactoryLinkedServiceSnowflake#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#delete DataFactoryLinkedServiceSnowflake#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake#delete DataFactoryLinkedServiceSnowflake#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#read DataFactoryLinkedServiceSnowflake#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake#read DataFactoryLinkedServiceSnowflake#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html#update DataFactoryLinkedServiceSnowflake#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake#update DataFactoryLinkedServiceSnowflake#update}
   */
   readonly update?: string;
 }
@@ -296,7 +296,7 @@ export class DataFactoryLinkedServiceSnowflakeTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html azurerm_data_factory_linked_service_snowflake}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake azurerm_data_factory_linked_service_snowflake}
 */
 export class DataFactoryLinkedServiceSnowflake extends cdktf.TerraformResource {
 
@@ -310,7 +310,7 @@ export class DataFactoryLinkedServiceSnowflake extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake.html azurerm_data_factory_linked_service_snowflake} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_snowflake azurerm_data_factory_linked_service_snowflake} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

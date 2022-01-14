@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/image.html
+// https://www.terraform.io/docs/providers/azurerm/d/image
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,25 +8,25 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermImageConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image.html#name DataAzurermImage#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image#name DataAzurermImage#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image.html#name_regex DataAzurermImage#name_regex}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image#name_regex DataAzurermImage#name_regex}
   */
   readonly nameRegex?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image.html#resource_group_name DataAzurermImage#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image#resource_group_name DataAzurermImage#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image.html#sort_descending DataAzurermImage#sort_descending}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image#sort_descending DataAzurermImage#sort_descending}
   */
   readonly sortDescending?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image.html#timeouts DataAzurermImage#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image#timeouts DataAzurermImage#timeouts}
   */
   readonly timeouts?: DataAzurermImageTimeouts;
 }
@@ -91,7 +91,7 @@ export class DataAzurermImageOsDisk extends cdktf.ComplexComputedList {
 }
 export interface DataAzurermImageTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image.html#read DataAzurermImage#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/image#read DataAzurermImage#read}
   */
   readonly read?: string;
 }
@@ -157,7 +157,7 @@ export class DataAzurermImageTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/image.html azurerm_image}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/image azurerm_image}
 */
 export class DataAzurermImage extends cdktf.TerraformDataSource {
 
@@ -171,7 +171,7 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/image.html azurerm_image} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/image azurerm_image} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

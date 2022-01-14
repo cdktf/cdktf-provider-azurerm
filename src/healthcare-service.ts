@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html
+// https://www.terraform.io/docs/providers/azurerm/r/healthcare_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,71 +8,71 @@ import * as cdktf from 'cdktf';
 
 export interface HealthcareServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#access_policy_object_ids HealthcareService#access_policy_object_ids}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#access_policy_object_ids HealthcareService#access_policy_object_ids}
   */
   readonly accessPolicyObjectIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#cosmosdb_key_vault_key_versionless_id HealthcareService#cosmosdb_key_vault_key_versionless_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#cosmosdb_key_vault_key_versionless_id HealthcareService#cosmosdb_key_vault_key_versionless_id}
   */
   readonly cosmosdbKeyVaultKeyVersionlessId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#cosmosdb_throughput HealthcareService#cosmosdb_throughput}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#cosmosdb_throughput HealthcareService#cosmosdb_throughput}
   */
   readonly cosmosdbThroughput?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#kind HealthcareService#kind}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#kind HealthcareService#kind}
   */
   readonly kind?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#location HealthcareService#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#location HealthcareService#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#name HealthcareService#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#name HealthcareService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#public_network_access_enabled HealthcareService#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#public_network_access_enabled HealthcareService#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#resource_group_name HealthcareService#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#resource_group_name HealthcareService#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#tags HealthcareService#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#tags HealthcareService#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * authentication_configuration block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#authentication_configuration HealthcareService#authentication_configuration}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#authentication_configuration HealthcareService#authentication_configuration}
   */
   readonly authenticationConfiguration?: HealthcareServiceAuthenticationConfiguration;
   /**
   * cors_configuration block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#cors_configuration HealthcareService#cors_configuration}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#cors_configuration HealthcareService#cors_configuration}
   */
   readonly corsConfiguration?: HealthcareServiceCorsConfiguration;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#timeouts HealthcareService#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#timeouts HealthcareService#timeouts}
   */
   readonly timeouts?: HealthcareServiceTimeouts;
 }
 export interface HealthcareServiceAuthenticationConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#audience HealthcareService#audience}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#audience HealthcareService#audience}
   */
   readonly audience?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#authority HealthcareService#authority}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#authority HealthcareService#authority}
   */
   readonly authority?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#smart_proxy_enabled HealthcareService#smart_proxy_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#smart_proxy_enabled HealthcareService#smart_proxy_enabled}
   */
   readonly smartProxyEnabled?: boolean | cdktf.IResolvable;
 }
@@ -184,23 +184,23 @@ export class HealthcareServiceAuthenticationConfigurationOutputReference extends
 }
 export interface HealthcareServiceCorsConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#allow_credentials HealthcareService#allow_credentials}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#allow_credentials HealthcareService#allow_credentials}
   */
   readonly allowCredentials?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#allowed_headers HealthcareService#allowed_headers}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#allowed_headers HealthcareService#allowed_headers}
   */
   readonly allowedHeaders?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#allowed_methods HealthcareService#allowed_methods}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#allowed_methods HealthcareService#allowed_methods}
   */
   readonly allowedMethods?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#allowed_origins HealthcareService#allowed_origins}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#allowed_origins HealthcareService#allowed_origins}
   */
   readonly allowedOrigins?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#max_age_in_seconds HealthcareService#max_age_in_seconds}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#max_age_in_seconds HealthcareService#max_age_in_seconds}
   */
   readonly maxAgeInSeconds?: number;
 }
@@ -358,19 +358,19 @@ export class HealthcareServiceCorsConfigurationOutputReference extends cdktf.Com
 }
 export interface HealthcareServiceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#create HealthcareService#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#create HealthcareService#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#delete HealthcareService#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#delete HealthcareService#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#read HealthcareService#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#read HealthcareService#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html#update HealthcareService#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service#update HealthcareService#update}
   */
   readonly update?: string;
 }
@@ -505,7 +505,7 @@ export class HealthcareServiceTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html azurerm_healthcare_service}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service azurerm_healthcare_service}
 */
 export class HealthcareService extends cdktf.TerraformResource {
 
@@ -519,7 +519,7 @@ export class HealthcareService extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service.html azurerm_healthcare_service} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/healthcare_service azurerm_healthcare_service} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

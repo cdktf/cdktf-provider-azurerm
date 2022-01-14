@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html
+// https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,59 +8,59 @@ import * as cdktf from 'cdktf';
 
 export interface LogAnalyticsLinkedServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#linked_service_name LogAnalyticsLinkedService#linked_service_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#linked_service_name LogAnalyticsLinkedService#linked_service_name}
   */
   readonly linkedServiceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#read_access_id LogAnalyticsLinkedService#read_access_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#read_access_id LogAnalyticsLinkedService#read_access_id}
   */
   readonly readAccessId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#resource_group_name LogAnalyticsLinkedService#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#resource_group_name LogAnalyticsLinkedService#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#resource_id LogAnalyticsLinkedService#resource_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#resource_id LogAnalyticsLinkedService#resource_id}
   */
   readonly resourceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#tags LogAnalyticsLinkedService#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#tags LogAnalyticsLinkedService#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#workspace_id LogAnalyticsLinkedService#workspace_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#workspace_id LogAnalyticsLinkedService#workspace_id}
   */
   readonly workspaceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#workspace_name LogAnalyticsLinkedService#workspace_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#workspace_name LogAnalyticsLinkedService#workspace_name}
   */
   readonly workspaceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#write_access_id LogAnalyticsLinkedService#write_access_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#write_access_id LogAnalyticsLinkedService#write_access_id}
   */
   readonly writeAccessId?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#timeouts LogAnalyticsLinkedService#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#timeouts LogAnalyticsLinkedService#timeouts}
   */
   readonly timeouts?: LogAnalyticsLinkedServiceTimeouts;
 }
 export interface LogAnalyticsLinkedServiceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#create LogAnalyticsLinkedService#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#create LogAnalyticsLinkedService#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#delete LogAnalyticsLinkedService#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#delete LogAnalyticsLinkedService#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#read LogAnalyticsLinkedService#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#read LogAnalyticsLinkedService#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html#update LogAnalyticsLinkedService#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service#update LogAnalyticsLinkedService#update}
   */
   readonly update?: string;
 }
@@ -195,7 +195,7 @@ export class LogAnalyticsLinkedServiceTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html azurerm_log_analytics_linked_service}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service azurerm_log_analytics_linked_service}
 */
 export class LogAnalyticsLinkedService extends cdktf.TerraformResource {
 
@@ -209,7 +209,7 @@ export class LogAnalyticsLinkedService extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service.html azurerm_log_analytics_linked_service} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_linked_service azurerm_log_analytics_linked_service} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

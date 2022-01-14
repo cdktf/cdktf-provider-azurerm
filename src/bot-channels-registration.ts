@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html
+// https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,87 +8,87 @@ import * as cdktf from 'cdktf';
 
 export interface BotChannelsRegistrationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#cmk_key_vault_url BotChannelsRegistration#cmk_key_vault_url}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#cmk_key_vault_url BotChannelsRegistration#cmk_key_vault_url}
   */
   readonly cmkKeyVaultUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#description BotChannelsRegistration#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#description BotChannelsRegistration#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#developer_app_insights_api_key BotChannelsRegistration#developer_app_insights_api_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#developer_app_insights_api_key BotChannelsRegistration#developer_app_insights_api_key}
   */
   readonly developerAppInsightsApiKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#developer_app_insights_application_id BotChannelsRegistration#developer_app_insights_application_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#developer_app_insights_application_id BotChannelsRegistration#developer_app_insights_application_id}
   */
   readonly developerAppInsightsApplicationId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#developer_app_insights_key BotChannelsRegistration#developer_app_insights_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#developer_app_insights_key BotChannelsRegistration#developer_app_insights_key}
   */
   readonly developerAppInsightsKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#display_name BotChannelsRegistration#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#display_name BotChannelsRegistration#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#endpoint BotChannelsRegistration#endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#endpoint BotChannelsRegistration#endpoint}
   */
   readonly endpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#icon_url BotChannelsRegistration#icon_url}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#icon_url BotChannelsRegistration#icon_url}
   */
   readonly iconUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#isolated_network_enabled BotChannelsRegistration#isolated_network_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#isolated_network_enabled BotChannelsRegistration#isolated_network_enabled}
   */
   readonly isolatedNetworkEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#location BotChannelsRegistration#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#location BotChannelsRegistration#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#microsoft_app_id BotChannelsRegistration#microsoft_app_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#microsoft_app_id BotChannelsRegistration#microsoft_app_id}
   */
   readonly microsoftAppId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#name BotChannelsRegistration#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#name BotChannelsRegistration#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#resource_group_name BotChannelsRegistration#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#resource_group_name BotChannelsRegistration#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#sku BotChannelsRegistration#sku}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#sku BotChannelsRegistration#sku}
   */
   readonly sku: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#tags BotChannelsRegistration#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#tags BotChannelsRegistration#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#timeouts BotChannelsRegistration#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#timeouts BotChannelsRegistration#timeouts}
   */
   readonly timeouts?: BotChannelsRegistrationTimeouts;
 }
 export interface BotChannelsRegistrationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#create BotChannelsRegistration#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#create BotChannelsRegistration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#delete BotChannelsRegistration#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#delete BotChannelsRegistration#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#read BotChannelsRegistration#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#read BotChannelsRegistration#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html#update BotChannelsRegistration#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration#update BotChannelsRegistration#update}
   */
   readonly update?: string;
 }
@@ -223,7 +223,7 @@ export class BotChannelsRegistrationTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html azurerm_bot_channels_registration}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration azurerm_bot_channels_registration}
 */
 export class BotChannelsRegistration extends cdktf.TerraformResource {
 
@@ -237,7 +237,7 @@ export class BotChannelsRegistration extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration.html azurerm_bot_channels_registration} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channels_registration azurerm_bot_channels_registration} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

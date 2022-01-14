@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module.html
+// https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface VideoAnalyzerEdgeModuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module.html#name VideoAnalyzerEdgeModule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module#name VideoAnalyzerEdgeModule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module.html#resource_group_name VideoAnalyzerEdgeModule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module#resource_group_name VideoAnalyzerEdgeModule#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module.html#video_analyzer_name VideoAnalyzerEdgeModule#video_analyzer_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module#video_analyzer_name VideoAnalyzerEdgeModule#video_analyzer_name}
   */
   readonly videoAnalyzerName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module.html#timeouts VideoAnalyzerEdgeModule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module#timeouts VideoAnalyzerEdgeModule#timeouts}
   */
   readonly timeouts?: VideoAnalyzerEdgeModuleTimeouts;
 }
 export interface VideoAnalyzerEdgeModuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module.html#create VideoAnalyzerEdgeModule#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module#create VideoAnalyzerEdgeModule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module.html#delete VideoAnalyzerEdgeModule#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module#delete VideoAnalyzerEdgeModule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module.html#read VideoAnalyzerEdgeModule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module#read VideoAnalyzerEdgeModule#read}
   */
   readonly read?: string;
 }
@@ -148,7 +148,7 @@ export class VideoAnalyzerEdgeModuleTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module.html azurerm_video_analyzer_edge_module}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module azurerm_video_analyzer_edge_module}
 */
 export class VideoAnalyzerEdgeModule extends cdktf.TerraformResource {
 
@@ -162,7 +162,7 @@ export class VideoAnalyzerEdgeModule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module.html azurerm_video_analyzer_edge_module} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer_edge_module azurerm_video_analyzer_edge_module} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

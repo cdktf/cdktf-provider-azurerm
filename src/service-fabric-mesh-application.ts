@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html
+// https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,41 +8,41 @@ import * as cdktf from 'cdktf';
 
 export interface ServiceFabricMeshApplicationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#location ServiceFabricMeshApplication#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#location ServiceFabricMeshApplication#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#name ServiceFabricMeshApplication#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#name ServiceFabricMeshApplication#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#resource_group_name ServiceFabricMeshApplication#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#resource_group_name ServiceFabricMeshApplication#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#tags ServiceFabricMeshApplication#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#tags ServiceFabricMeshApplication#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * service block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#service ServiceFabricMeshApplication#service}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#service ServiceFabricMeshApplication#service}
   */
   readonly service: ServiceFabricMeshApplicationService[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#timeouts ServiceFabricMeshApplication#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#timeouts ServiceFabricMeshApplication#timeouts}
   */
   readonly timeouts?: ServiceFabricMeshApplicationTimeouts;
 }
 export interface ServiceFabricMeshApplicationServiceCodePackageResourcesLimits {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#cpu ServiceFabricMeshApplication#cpu}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#cpu ServiceFabricMeshApplication#cpu}
   */
   readonly cpu: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#memory ServiceFabricMeshApplication#memory}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#memory ServiceFabricMeshApplication#memory}
   */
   readonly memory: number;
 }
@@ -125,11 +125,11 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesLimitsOutput
 }
 export interface ServiceFabricMeshApplicationServiceCodePackageResourcesRequests {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#cpu ServiceFabricMeshApplication#cpu}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#cpu ServiceFabricMeshApplication#cpu}
   */
   readonly cpu: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#memory ServiceFabricMeshApplication#memory}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#memory ServiceFabricMeshApplication#memory}
   */
   readonly memory: number;
 }
@@ -214,13 +214,13 @@ export interface ServiceFabricMeshApplicationServiceCodePackageResources {
   /**
   * limits block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#limits ServiceFabricMeshApplication#limits}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#limits ServiceFabricMeshApplication#limits}
   */
   readonly limits?: ServiceFabricMeshApplicationServiceCodePackageResourcesLimits;
   /**
   * requests block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#requests ServiceFabricMeshApplication#requests}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#requests ServiceFabricMeshApplication#requests}
   */
   readonly requests: ServiceFabricMeshApplicationServiceCodePackageResourcesRequests;
 }
@@ -306,17 +306,17 @@ export class ServiceFabricMeshApplicationServiceCodePackageResourcesOutputRefere
 }
 export interface ServiceFabricMeshApplicationServiceCodePackage {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#image_name ServiceFabricMeshApplication#image_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#image_name ServiceFabricMeshApplication#image_name}
   */
   readonly imageName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#name ServiceFabricMeshApplication#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#name ServiceFabricMeshApplication#name}
   */
   readonly name: string;
   /**
   * resources block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#resources ServiceFabricMeshApplication#resources}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#resources ServiceFabricMeshApplication#resources}
   */
   readonly resources: ServiceFabricMeshApplicationServiceCodePackageResources;
 }
@@ -335,17 +335,17 @@ export function serviceFabricMeshApplicationServiceCodePackageToTerraform(struct
 
 export interface ServiceFabricMeshApplicationService {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#name ServiceFabricMeshApplication#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#name ServiceFabricMeshApplication#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#os_type ServiceFabricMeshApplication#os_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#os_type ServiceFabricMeshApplication#os_type}
   */
   readonly osType: string;
   /**
   * code_package block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#code_package ServiceFabricMeshApplication#code_package}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#code_package ServiceFabricMeshApplication#code_package}
   */
   readonly codePackage: ServiceFabricMeshApplicationServiceCodePackage[];
 }
@@ -364,19 +364,19 @@ export function serviceFabricMeshApplicationServiceToTerraform(struct?: ServiceF
 
 export interface ServiceFabricMeshApplicationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#create ServiceFabricMeshApplication#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#create ServiceFabricMeshApplication#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#delete ServiceFabricMeshApplication#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#delete ServiceFabricMeshApplication#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#read ServiceFabricMeshApplication#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#read ServiceFabricMeshApplication#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html#update ServiceFabricMeshApplication#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application#update ServiceFabricMeshApplication#update}
   */
   readonly update?: string;
 }
@@ -511,7 +511,7 @@ export class ServiceFabricMeshApplicationTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html azurerm_service_fabric_mesh_application}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application azurerm_service_fabric_mesh_application}
 */
 export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
 
@@ -525,7 +525,7 @@ export class ServiceFabricMeshApplication extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application.html azurerm_service_fabric_mesh_application} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_application azurerm_service_fabric_mesh_application} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

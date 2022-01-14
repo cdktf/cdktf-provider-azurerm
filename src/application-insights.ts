@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/application_insights.html
+// https://www.terraform.io/docs/providers/azurerm/r/application_insights
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,83 +8,83 @@ import * as cdktf from 'cdktf';
 
 export interface ApplicationInsightsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#application_type ApplicationInsights#application_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#application_type ApplicationInsights#application_type}
   */
   readonly applicationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#daily_data_cap_in_gb ApplicationInsights#daily_data_cap_in_gb}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#daily_data_cap_in_gb ApplicationInsights#daily_data_cap_in_gb}
   */
   readonly dailyDataCapInGb?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#daily_data_cap_notifications_disabled ApplicationInsights#daily_data_cap_notifications_disabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#daily_data_cap_notifications_disabled ApplicationInsights#daily_data_cap_notifications_disabled}
   */
   readonly dailyDataCapNotificationsDisabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#disable_ip_masking ApplicationInsights#disable_ip_masking}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#disable_ip_masking ApplicationInsights#disable_ip_masking}
   */
   readonly disableIpMasking?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#internet_ingestion_enabled ApplicationInsights#internet_ingestion_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#internet_ingestion_enabled ApplicationInsights#internet_ingestion_enabled}
   */
   readonly internetIngestionEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#internet_query_enabled ApplicationInsights#internet_query_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#internet_query_enabled ApplicationInsights#internet_query_enabled}
   */
   readonly internetQueryEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#local_authentication_disabled ApplicationInsights#local_authentication_disabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#local_authentication_disabled ApplicationInsights#local_authentication_disabled}
   */
   readonly localAuthenticationDisabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#location ApplicationInsights#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#location ApplicationInsights#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#name ApplicationInsights#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#name ApplicationInsights#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#resource_group_name ApplicationInsights#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#resource_group_name ApplicationInsights#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#retention_in_days ApplicationInsights#retention_in_days}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#retention_in_days ApplicationInsights#retention_in_days}
   */
   readonly retentionInDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#sampling_percentage ApplicationInsights#sampling_percentage}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#sampling_percentage ApplicationInsights#sampling_percentage}
   */
   readonly samplingPercentage?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#tags ApplicationInsights#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#tags ApplicationInsights#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#workspace_id ApplicationInsights#workspace_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#workspace_id ApplicationInsights#workspace_id}
   */
   readonly workspaceId?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#timeouts ApplicationInsights#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#timeouts ApplicationInsights#timeouts}
   */
   readonly timeouts?: ApplicationInsightsTimeouts;
 }
 export interface ApplicationInsightsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#create ApplicationInsights#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#create ApplicationInsights#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#delete ApplicationInsights#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#delete ApplicationInsights#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#read ApplicationInsights#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#read ApplicationInsights#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html#update ApplicationInsights#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights#update ApplicationInsights#update}
   */
   readonly update?: string;
 }
@@ -219,7 +219,7 @@ export class ApplicationInsightsTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html azurerm_application_insights}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights azurerm_application_insights}
 */
 export class ApplicationInsights extends cdktf.TerraformResource {
 
@@ -233,7 +233,7 @@ export class ApplicationInsights extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights.html azurerm_application_insights} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights azurerm_application_insights} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

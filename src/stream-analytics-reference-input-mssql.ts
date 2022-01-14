@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql.html
+// https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,71 +8,71 @@ import * as cdktf from 'cdktf';
 
 export interface StreamAnalyticsReferenceInputMssqlConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql.html#database StreamAnalyticsReferenceInputMssql#database}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#database StreamAnalyticsReferenceInputMssql#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql.html#delta_snapshot_query StreamAnalyticsReferenceInputMssql#delta_snapshot_query}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#delta_snapshot_query StreamAnalyticsReferenceInputMssql#delta_snapshot_query}
   */
   readonly deltaSnapshotQuery?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql.html#full_snapshot_query StreamAnalyticsReferenceInputMssql#full_snapshot_query}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#full_snapshot_query StreamAnalyticsReferenceInputMssql#full_snapshot_query}
   */
   readonly fullSnapshotQuery: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql.html#name StreamAnalyticsReferenceInputMssql#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#name StreamAnalyticsReferenceInputMssql#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql.html#password StreamAnalyticsReferenceInputMssql#password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#password StreamAnalyticsReferenceInputMssql#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql.html#refresh_interval_duration StreamAnalyticsReferenceInputMssql#refresh_interval_duration}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#refresh_interval_duration StreamAnalyticsReferenceInputMssql#refresh_interval_duration}
   */
   readonly refreshIntervalDuration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql.html#refresh_type StreamAnalyticsReferenceInputMssql#refresh_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#refresh_type StreamAnalyticsReferenceInputMssql#refresh_type}
   */
   readonly refreshType: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql.html#resource_group_name StreamAnalyticsReferenceInputMssql#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#resource_group_name StreamAnalyticsReferenceInputMssql#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql.html#server StreamAnalyticsReferenceInputMssql#server}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#server StreamAnalyticsReferenceInputMssql#server}
   */
   readonly server: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql.html#stream_analytics_job_name StreamAnalyticsReferenceInputMssql#stream_analytics_job_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#stream_analytics_job_name StreamAnalyticsReferenceInputMssql#stream_analytics_job_name}
   */
   readonly streamAnalyticsJobName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql.html#username StreamAnalyticsReferenceInputMssql#username}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#username StreamAnalyticsReferenceInputMssql#username}
   */
   readonly username: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql.html#timeouts StreamAnalyticsReferenceInputMssql#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#timeouts StreamAnalyticsReferenceInputMssql#timeouts}
   */
   readonly timeouts?: StreamAnalyticsReferenceInputMssqlTimeouts;
 }
 export interface StreamAnalyticsReferenceInputMssqlTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql.html#create StreamAnalyticsReferenceInputMssql#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#create StreamAnalyticsReferenceInputMssql#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql.html#delete StreamAnalyticsReferenceInputMssql#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#delete StreamAnalyticsReferenceInputMssql#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql.html#read StreamAnalyticsReferenceInputMssql#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#read StreamAnalyticsReferenceInputMssql#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql.html#update StreamAnalyticsReferenceInputMssql#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql#update StreamAnalyticsReferenceInputMssql#update}
   */
   readonly update?: string;
 }
@@ -207,7 +207,7 @@ export class StreamAnalyticsReferenceInputMssqlTimeoutsOutputReference extends c
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql.html azurerm_stream_analytics_reference_input_mssql}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql azurerm_stream_analytics_reference_input_mssql}
 */
 export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource {
 
@@ -221,7 +221,7 @@ export class StreamAnalyticsReferenceInputMssql extends cdktf.TerraformResource 
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql.html azurerm_stream_analytics_reference_input_mssql} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_reference_input_mssql azurerm_stream_analytics_reference_input_mssql} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

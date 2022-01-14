@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/automation_module.html
+// https://www.terraform.io/docs/providers/azurerm/r/automation_module
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,37 +8,37 @@ import * as cdktf from 'cdktf';
 
 export interface AutomationModuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#automation_account_name AutomationModule#automation_account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module#automation_account_name AutomationModule#automation_account_name}
   */
   readonly automationAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#name AutomationModule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module#name AutomationModule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#resource_group_name AutomationModule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module#resource_group_name AutomationModule#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * module_link block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#module_link AutomationModule#module_link}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module#module_link AutomationModule#module_link}
   */
   readonly moduleLink: AutomationModuleModuleLink;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#timeouts AutomationModule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module#timeouts AutomationModule#timeouts}
   */
   readonly timeouts?: AutomationModuleTimeouts;
 }
 export interface AutomationModuleModuleLinkHash {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#algorithm AutomationModule#algorithm}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module#algorithm AutomationModule#algorithm}
   */
   readonly algorithm: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#value AutomationModule#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module#value AutomationModule#value}
   */
   readonly value: string;
 }
@@ -121,13 +121,13 @@ export class AutomationModuleModuleLinkHashOutputReference extends cdktf.Complex
 }
 export interface AutomationModuleModuleLink {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#uri AutomationModule#uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module#uri AutomationModule#uri}
   */
   readonly uri: string;
   /**
   * hash block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#hash AutomationModule#hash}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module#hash AutomationModule#hash}
   */
   readonly hash?: AutomationModuleModuleLinkHash;
 }
@@ -213,19 +213,19 @@ export class AutomationModuleModuleLinkOutputReference extends cdktf.ComplexObje
 }
 export interface AutomationModuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#create AutomationModule#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module#create AutomationModule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#delete AutomationModule#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module#delete AutomationModule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#read AutomationModule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module#read AutomationModule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html#update AutomationModule#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module#update AutomationModule#update}
   */
   readonly update?: string;
 }
@@ -360,7 +360,7 @@ export class AutomationModuleTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html azurerm_automation_module}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module azurerm_automation_module}
 */
 export class AutomationModule extends cdktf.TerraformResource {
 
@@ -374,7 +374,7 @@ export class AutomationModule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module.html azurerm_automation_module} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/automation_module azurerm_automation_module} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

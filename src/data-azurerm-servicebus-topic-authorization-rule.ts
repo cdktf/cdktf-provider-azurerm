@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule.html
+// https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,31 +8,31 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermServicebusTopicAuthorizationRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule.html#name DataAzurermServicebusTopicAuthorizationRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule#name DataAzurermServicebusTopicAuthorizationRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule.html#namespace_name DataAzurermServicebusTopicAuthorizationRule#namespace_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule#namespace_name DataAzurermServicebusTopicAuthorizationRule#namespace_name}
   */
   readonly namespaceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule.html#resource_group_name DataAzurermServicebusTopicAuthorizationRule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule#resource_group_name DataAzurermServicebusTopicAuthorizationRule#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule.html#topic_name DataAzurermServicebusTopicAuthorizationRule#topic_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule#topic_name DataAzurermServicebusTopicAuthorizationRule#topic_name}
   */
   readonly topicName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule.html#timeouts DataAzurermServicebusTopicAuthorizationRule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule#timeouts DataAzurermServicebusTopicAuthorizationRule#timeouts}
   */
   readonly timeouts?: DataAzurermServicebusTopicAuthorizationRuleTimeouts;
 }
 export interface DataAzurermServicebusTopicAuthorizationRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule.html#read DataAzurermServicebusTopicAuthorizationRule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule#read DataAzurermServicebusTopicAuthorizationRule#read}
   */
   readonly read?: string;
 }
@@ -98,7 +98,7 @@ export class DataAzurermServicebusTopicAuthorizationRuleTimeoutsOutputReference 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule.html azurerm_servicebus_topic_authorization_rule}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule azurerm_servicebus_topic_authorization_rule}
 */
 export class DataAzurermServicebusTopicAuthorizationRule extends cdktf.TerraformDataSource {
 
@@ -112,7 +112,7 @@ export class DataAzurermServicebusTopicAuthorizationRule extends cdktf.Terraform
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule.html azurerm_servicebus_topic_authorization_rule} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic_authorization_rule azurerm_servicebus_topic_authorization_rule} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

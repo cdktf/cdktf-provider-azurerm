@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/media_transform.html
+// https://www.terraform.io/docs/providers/azurerm/r/media_transform
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,41 +8,41 @@ import * as cdktf from 'cdktf';
 
 export interface MediaTransformConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#description MediaTransform#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#description MediaTransform#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#media_services_account_name MediaTransform#media_services_account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#media_services_account_name MediaTransform#media_services_account_name}
   */
   readonly mediaServicesAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#name MediaTransform#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#name MediaTransform#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#resource_group_name MediaTransform#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#resource_group_name MediaTransform#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * output block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#output MediaTransform#output}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#output MediaTransform#output}
   */
   readonly output?: MediaTransformOutput[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#timeouts MediaTransform#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#timeouts MediaTransform#timeouts}
   */
   readonly timeouts?: MediaTransformTimeouts;
 }
 export interface MediaTransformOutputAudioAnalyzerPreset {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#audio_analysis_mode MediaTransform#audio_analysis_mode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}
   */
   readonly audioAnalysisMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#audio_language MediaTransform#audio_language}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#audio_language MediaTransform#audio_language}
   */
   readonly audioLanguage?: string;
 }
@@ -131,7 +131,7 @@ export class MediaTransformOutputAudioAnalyzerPresetOutputReference extends cdkt
 }
 export interface MediaTransformOutputBuiltinPreset {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#preset_name MediaTransform#preset_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#preset_name MediaTransform#preset_name}
   */
   readonly presetName?: string;
 }
@@ -197,7 +197,7 @@ export class MediaTransformOutputBuiltinPresetOutputReference extends cdktf.Comp
 }
 export interface MediaTransformOutputFaceDetectorPreset {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#analysis_resolution MediaTransform#analysis_resolution}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#analysis_resolution MediaTransform#analysis_resolution}
   */
   readonly analysisResolution?: string;
 }
@@ -263,15 +263,15 @@ export class MediaTransformOutputFaceDetectorPresetOutputReference extends cdktf
 }
 export interface MediaTransformOutputVideoAnalyzerPreset {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#audio_analysis_mode MediaTransform#audio_analysis_mode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}
   */
   readonly audioAnalysisMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#audio_language MediaTransform#audio_language}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#audio_language MediaTransform#audio_language}
   */
   readonly audioLanguage?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#insights_type MediaTransform#insights_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#insights_type MediaTransform#insights_type}
   */
   readonly insightsType?: string;
 }
@@ -383,35 +383,35 @@ export class MediaTransformOutputVideoAnalyzerPresetOutputReference extends cdkt
 }
 export interface MediaTransformOutput {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#on_error_action MediaTransform#on_error_action}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#on_error_action MediaTransform#on_error_action}
   */
   readonly onErrorAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#relative_priority MediaTransform#relative_priority}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#relative_priority MediaTransform#relative_priority}
   */
   readonly relativePriority?: string;
   /**
   * audio_analyzer_preset block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#audio_analyzer_preset MediaTransform#audio_analyzer_preset}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#audio_analyzer_preset MediaTransform#audio_analyzer_preset}
   */
   readonly audioAnalyzerPreset?: MediaTransformOutputAudioAnalyzerPreset;
   /**
   * builtin_preset block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#builtin_preset MediaTransform#builtin_preset}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#builtin_preset MediaTransform#builtin_preset}
   */
   readonly builtinPreset?: MediaTransformOutputBuiltinPreset;
   /**
   * face_detector_preset block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#face_detector_preset MediaTransform#face_detector_preset}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#face_detector_preset MediaTransform#face_detector_preset}
   */
   readonly faceDetectorPreset?: MediaTransformOutputFaceDetectorPreset;
   /**
   * video_analyzer_preset block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#video_analyzer_preset MediaTransform#video_analyzer_preset}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#video_analyzer_preset MediaTransform#video_analyzer_preset}
   */
   readonly videoAnalyzerPreset?: MediaTransformOutputVideoAnalyzerPreset;
 }
@@ -433,19 +433,19 @@ export function mediaTransformOutputToTerraform(struct?: MediaTransformOutput): 
 
 export interface MediaTransformTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#create MediaTransform#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#create MediaTransform#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#delete MediaTransform#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#delete MediaTransform#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#read MediaTransform#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#read MediaTransform#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html#update MediaTransform#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform#update MediaTransform#update}
   */
   readonly update?: string;
 }
@@ -580,7 +580,7 @@ export class MediaTransformTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html azurerm_media_transform}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform azurerm_media_transform}
 */
 export class MediaTransform extends cdktf.TerraformResource {
 
@@ -594,7 +594,7 @@ export class MediaTransform extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform.html azurerm_media_transform} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/media_transform azurerm_media_transform} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html
+// https://www.terraform.io/docs/providers/azurerm/r/express_route_connection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,49 +8,49 @@ import * as cdktf from 'cdktf';
 
 export interface ExpressRouteConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#authorization_key ExpressRouteConnection#authorization_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#authorization_key ExpressRouteConnection#authorization_key}
   */
   readonly authorizationKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#enable_internet_security ExpressRouteConnection#enable_internet_security}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#enable_internet_security ExpressRouteConnection#enable_internet_security}
   */
   readonly enableInternetSecurity?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#express_route_circuit_peering_id ExpressRouteConnection#express_route_circuit_peering_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#express_route_circuit_peering_id ExpressRouteConnection#express_route_circuit_peering_id}
   */
   readonly expressRouteCircuitPeeringId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#express_route_gateway_id ExpressRouteConnection#express_route_gateway_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#express_route_gateway_id ExpressRouteConnection#express_route_gateway_id}
   */
   readonly expressRouteGatewayId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#name ExpressRouteConnection#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#name ExpressRouteConnection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#routing_weight ExpressRouteConnection#routing_weight}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#routing_weight ExpressRouteConnection#routing_weight}
   */
   readonly routingWeight?: number;
   /**
   * routing block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#routing ExpressRouteConnection#routing}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#routing ExpressRouteConnection#routing}
   */
   readonly routing?: ExpressRouteConnectionRouting;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#timeouts ExpressRouteConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#timeouts ExpressRouteConnection#timeouts}
   */
   readonly timeouts?: ExpressRouteConnectionTimeouts;
 }
 export interface ExpressRouteConnectionRoutingPropagatedRouteTable {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#labels ExpressRouteConnection#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#labels ExpressRouteConnection#labels}
   */
   readonly labels?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#route_table_ids ExpressRouteConnection#route_table_ids}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#route_table_ids ExpressRouteConnection#route_table_ids}
   */
   readonly routeTableIds?: string[];
 }
@@ -139,13 +139,13 @@ export class ExpressRouteConnectionRoutingPropagatedRouteTableOutputReference ex
 }
 export interface ExpressRouteConnectionRouting {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#associated_route_table_id ExpressRouteConnection#associated_route_table_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#associated_route_table_id ExpressRouteConnection#associated_route_table_id}
   */
   readonly associatedRouteTableId?: string;
   /**
   * propagated_route_table block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#propagated_route_table ExpressRouteConnection#propagated_route_table}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#propagated_route_table ExpressRouteConnection#propagated_route_table}
   */
   readonly propagatedRouteTable?: ExpressRouteConnectionRoutingPropagatedRouteTable;
 }
@@ -234,19 +234,19 @@ export class ExpressRouteConnectionRoutingOutputReference extends cdktf.ComplexO
 }
 export interface ExpressRouteConnectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#create ExpressRouteConnection#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#create ExpressRouteConnection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#delete ExpressRouteConnection#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#delete ExpressRouteConnection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#read ExpressRouteConnection#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#read ExpressRouteConnection#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html#update ExpressRouteConnection#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection#update ExpressRouteConnection#update}
   */
   readonly update?: string;
 }
@@ -381,7 +381,7 @@ export class ExpressRouteConnectionTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html azurerm_express_route_connection}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection azurerm_express_route_connection}
 */
 export class ExpressRouteConnection extends cdktf.TerraformResource {
 
@@ -395,7 +395,7 @@ export class ExpressRouteConnection extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection.html azurerm_express_route_connection} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_connection azurerm_express_route_connection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

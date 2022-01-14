@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool.html
+// https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,55 +8,55 @@ import * as cdktf from 'cdktf';
 
 export interface StorageDisksPoolConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool.html#availability_zones StorageDisksPool#availability_zones}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool#availability_zones StorageDisksPool#availability_zones}
   */
   readonly availabilityZones: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool.html#location StorageDisksPool#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool#location StorageDisksPool#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool.html#name StorageDisksPool#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool#name StorageDisksPool#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool.html#resource_group_name StorageDisksPool#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool#resource_group_name StorageDisksPool#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool.html#sku_name StorageDisksPool#sku_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool#sku_name StorageDisksPool#sku_name}
   */
   readonly skuName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool.html#subnet_id StorageDisksPool#subnet_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool#subnet_id StorageDisksPool#subnet_id}
   */
   readonly subnetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool.html#tags StorageDisksPool#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool#tags StorageDisksPool#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool.html#timeouts StorageDisksPool#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool#timeouts StorageDisksPool#timeouts}
   */
   readonly timeouts?: StorageDisksPoolTimeouts;
 }
 export interface StorageDisksPoolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool.html#create StorageDisksPool#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool#create StorageDisksPool#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool.html#delete StorageDisksPool#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool#delete StorageDisksPool#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool.html#read StorageDisksPool#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool#read StorageDisksPool#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool.html#update StorageDisksPool#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool#update StorageDisksPool#update}
   */
   readonly update?: string;
 }
@@ -191,7 +191,7 @@ export class StorageDisksPoolTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool.html azurerm_storage_disks_pool}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool azurerm_storage_disks_pool}
 */
 export class StorageDisksPool extends cdktf.TerraformResource {
 
@@ -205,7 +205,7 @@ export class StorageDisksPool extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool.html azurerm_storage_disks_pool} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_disks_pool azurerm_storage_disks_pool} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

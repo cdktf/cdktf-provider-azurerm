@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration.html
+// https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface MysqlFlexibleServerConfigurationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration.html#name MysqlFlexibleServerConfiguration#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration#name MysqlFlexibleServerConfiguration#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration.html#resource_group_name MysqlFlexibleServerConfiguration#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration#resource_group_name MysqlFlexibleServerConfiguration#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration.html#server_name MysqlFlexibleServerConfiguration#server_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration#server_name MysqlFlexibleServerConfiguration#server_name}
   */
   readonly serverName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration.html#value MysqlFlexibleServerConfiguration#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration#value MysqlFlexibleServerConfiguration#value}
   */
   readonly value: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration.html#timeouts MysqlFlexibleServerConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration#timeouts MysqlFlexibleServerConfiguration#timeouts}
   */
   readonly timeouts?: MysqlFlexibleServerConfigurationTimeouts;
 }
 export interface MysqlFlexibleServerConfigurationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration.html#create MysqlFlexibleServerConfiguration#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration#create MysqlFlexibleServerConfiguration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration.html#delete MysqlFlexibleServerConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration#delete MysqlFlexibleServerConfiguration#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration.html#read MysqlFlexibleServerConfiguration#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration#read MysqlFlexibleServerConfiguration#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration.html#update MysqlFlexibleServerConfiguration#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration#update MysqlFlexibleServerConfiguration#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class MysqlFlexibleServerConfigurationTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration.html azurerm_mysql_flexible_server_configuration}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration azurerm_mysql_flexible_server_configuration}
 */
 export class MysqlFlexibleServerConfiguration extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class MysqlFlexibleServerConfiguration extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration.html azurerm_mysql_flexible_server_configuration} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mysql_flexible_server_configuration azurerm_mysql_flexible_server_configuration} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html
+// https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,53 +8,53 @@ import * as cdktf from 'cdktf';
 
 export interface CosmosdbMongoCollectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html#account_name CosmosdbMongoCollection#account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#account_name CosmosdbMongoCollection#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html#analytical_storage_ttl CosmosdbMongoCollection#analytical_storage_ttl}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#analytical_storage_ttl CosmosdbMongoCollection#analytical_storage_ttl}
   */
   readonly analyticalStorageTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html#database_name CosmosdbMongoCollection#database_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#database_name CosmosdbMongoCollection#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html#default_ttl_seconds CosmosdbMongoCollection#default_ttl_seconds}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#default_ttl_seconds CosmosdbMongoCollection#default_ttl_seconds}
   */
   readonly defaultTtlSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html#name CosmosdbMongoCollection#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#name CosmosdbMongoCollection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html#resource_group_name CosmosdbMongoCollection#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#resource_group_name CosmosdbMongoCollection#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html#shard_key CosmosdbMongoCollection#shard_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#shard_key CosmosdbMongoCollection#shard_key}
   */
   readonly shardKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html#throughput CosmosdbMongoCollection#throughput}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#throughput CosmosdbMongoCollection#throughput}
   */
   readonly throughput?: number;
   /**
   * autoscale_settings block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html#autoscale_settings CosmosdbMongoCollection#autoscale_settings}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#autoscale_settings CosmosdbMongoCollection#autoscale_settings}
   */
   readonly autoscaleSettings?: CosmosdbMongoCollectionAutoscaleSettings;
   /**
   * index block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html#index CosmosdbMongoCollection#index}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#index CosmosdbMongoCollection#index}
   */
   readonly index?: CosmosdbMongoCollectionIndex[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html#timeouts CosmosdbMongoCollection#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#timeouts CosmosdbMongoCollection#timeouts}
   */
   readonly timeouts?: CosmosdbMongoCollectionTimeouts;
 }
@@ -72,7 +72,7 @@ export class CosmosdbMongoCollectionSystemIndexes extends cdktf.ComplexComputedL
 }
 export interface CosmosdbMongoCollectionAutoscaleSettings {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html#max_throughput CosmosdbMongoCollection#max_throughput}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#max_throughput CosmosdbMongoCollection#max_throughput}
   */
   readonly maxThroughput?: number;
 }
@@ -138,11 +138,11 @@ export class CosmosdbMongoCollectionAutoscaleSettingsOutputReference extends cdk
 }
 export interface CosmosdbMongoCollectionIndex {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html#keys CosmosdbMongoCollection#keys}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#keys CosmosdbMongoCollection#keys}
   */
   readonly keys: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html#unique CosmosdbMongoCollection#unique}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#unique CosmosdbMongoCollection#unique}
   */
   readonly unique?: boolean | cdktf.IResolvable;
 }
@@ -160,19 +160,19 @@ export function cosmosdbMongoCollectionIndexToTerraform(struct?: CosmosdbMongoCo
 
 export interface CosmosdbMongoCollectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html#create CosmosdbMongoCollection#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#create CosmosdbMongoCollection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html#delete CosmosdbMongoCollection#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#delete CosmosdbMongoCollection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html#read CosmosdbMongoCollection#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#read CosmosdbMongoCollection#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html#update CosmosdbMongoCollection#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection#update CosmosdbMongoCollection#update}
   */
   readonly update?: string;
 }
@@ -307,7 +307,7 @@ export class CosmosdbMongoCollectionTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html azurerm_cosmosdb_mongo_collection}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection azurerm_cosmosdb_mongo_collection}
 */
 export class CosmosdbMongoCollection extends cdktf.TerraformResource {
 
@@ -321,7 +321,7 @@ export class CosmosdbMongoCollection extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection.html azurerm_cosmosdb_mongo_collection} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_mongo_collection azurerm_cosmosdb_mongo_collection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

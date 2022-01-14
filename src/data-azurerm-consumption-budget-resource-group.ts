@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_resource_group.html
+// https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_resource_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermConsumptionBudgetResourceGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_resource_group.html#name DataAzurermConsumptionBudgetResourceGroup#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_resource_group#name DataAzurermConsumptionBudgetResourceGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_resource_group.html#resource_group_id DataAzurermConsumptionBudgetResourceGroup#resource_group_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_resource_group#resource_group_id DataAzurermConsumptionBudgetResourceGroup#resource_group_id}
   */
   readonly resourceGroupId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_resource_group.html#timeouts DataAzurermConsumptionBudgetResourceGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_resource_group#timeouts DataAzurermConsumptionBudgetResourceGroup#timeouts}
   */
   readonly timeouts?: DataAzurermConsumptionBudgetResourceGroupTimeouts;
 }
@@ -175,7 +175,7 @@ export class DataAzurermConsumptionBudgetResourceGroupTimePeriod extends cdktf.C
 }
 export interface DataAzurermConsumptionBudgetResourceGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_resource_group.html#read DataAzurermConsumptionBudgetResourceGroup#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_resource_group#read DataAzurermConsumptionBudgetResourceGroup#read}
   */
   readonly read?: string;
 }
@@ -241,7 +241,7 @@ export class DataAzurermConsumptionBudgetResourceGroupTimeoutsOutputReference ex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_resource_group.html azurerm_consumption_budget_resource_group}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_resource_group azurerm_consumption_budget_resource_group}
 */
 export class DataAzurermConsumptionBudgetResourceGroup extends cdktf.TerraformDataSource {
 
@@ -255,7 +255,7 @@ export class DataAzurermConsumptionBudgetResourceGroup extends cdktf.TerraformDa
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_resource_group.html azurerm_consumption_budget_resource_group} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_resource_group azurerm_consumption_budget_resource_group} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html
+// https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,59 +8,59 @@ import * as cdktf from 'cdktf';
 
 export interface ServicebusQueueAuthorizationRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html#listen ServicebusQueueAuthorizationRule#listen}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule#listen ServicebusQueueAuthorizationRule#listen}
   */
   readonly listen?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html#manage ServicebusQueueAuthorizationRule#manage}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule#manage ServicebusQueueAuthorizationRule#manage}
   */
   readonly manage?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html#name ServicebusQueueAuthorizationRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule#name ServicebusQueueAuthorizationRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html#namespace_name ServicebusQueueAuthorizationRule#namespace_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule#namespace_name ServicebusQueueAuthorizationRule#namespace_name}
   */
   readonly namespaceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html#queue_id ServicebusQueueAuthorizationRule#queue_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule#queue_id ServicebusQueueAuthorizationRule#queue_id}
   */
   readonly queueId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html#queue_name ServicebusQueueAuthorizationRule#queue_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule#queue_name ServicebusQueueAuthorizationRule#queue_name}
   */
   readonly queueName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html#resource_group_name ServicebusQueueAuthorizationRule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule#resource_group_name ServicebusQueueAuthorizationRule#resource_group_name}
   */
   readonly resourceGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html#send ServicebusQueueAuthorizationRule#send}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule#send ServicebusQueueAuthorizationRule#send}
   */
   readonly send?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html#timeouts ServicebusQueueAuthorizationRule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule#timeouts ServicebusQueueAuthorizationRule#timeouts}
   */
   readonly timeouts?: ServicebusQueueAuthorizationRuleTimeouts;
 }
 export interface ServicebusQueueAuthorizationRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html#create ServicebusQueueAuthorizationRule#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule#create ServicebusQueueAuthorizationRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html#delete ServicebusQueueAuthorizationRule#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule#delete ServicebusQueueAuthorizationRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html#read ServicebusQueueAuthorizationRule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule#read ServicebusQueueAuthorizationRule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html#update ServicebusQueueAuthorizationRule#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule#update ServicebusQueueAuthorizationRule#update}
   */
   readonly update?: string;
 }
@@ -195,7 +195,7 @@ export class ServicebusQueueAuthorizationRuleTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html azurerm_servicebus_queue_authorization_rule}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule azurerm_servicebus_queue_authorization_rule}
 */
 export class ServicebusQueueAuthorizationRule extends cdktf.TerraformResource {
 
@@ -209,7 +209,7 @@ export class ServicebusQueueAuthorizationRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule.html azurerm_servicebus_queue_authorization_rule} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_queue_authorization_rule azurerm_servicebus_queue_authorization_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

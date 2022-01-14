@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association.html
+// https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface SubnetNetworkSecurityGroupAssociationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association.html#network_security_group_id SubnetNetworkSecurityGroupAssociation#network_security_group_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association#network_security_group_id SubnetNetworkSecurityGroupAssociation#network_security_group_id}
   */
   readonly networkSecurityGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association.html#subnet_id SubnetNetworkSecurityGroupAssociation#subnet_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association#subnet_id SubnetNetworkSecurityGroupAssociation#subnet_id}
   */
   readonly subnetId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association.html#timeouts SubnetNetworkSecurityGroupAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association#timeouts SubnetNetworkSecurityGroupAssociation#timeouts}
   */
   readonly timeouts?: SubnetNetworkSecurityGroupAssociationTimeouts;
 }
 export interface SubnetNetworkSecurityGroupAssociationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association.html#create SubnetNetworkSecurityGroupAssociation#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association#create SubnetNetworkSecurityGroupAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association.html#delete SubnetNetworkSecurityGroupAssociation#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association#delete SubnetNetworkSecurityGroupAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association.html#read SubnetNetworkSecurityGroupAssociation#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association#read SubnetNetworkSecurityGroupAssociation#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association.html#update SubnetNetworkSecurityGroupAssociation#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association#update SubnetNetworkSecurityGroupAssociation#update}
   */
   readonly update?: string;
 }
@@ -171,7 +171,7 @@ export class SubnetNetworkSecurityGroupAssociationTimeoutsOutputReference extend
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association.html azurerm_subnet_network_security_group_association}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association azurerm_subnet_network_security_group_association}
 */
 export class SubnetNetworkSecurityGroupAssociation extends cdktf.TerraformResource {
 
@@ -185,7 +185,7 @@ export class SubnetNetworkSecurityGroupAssociation extends cdktf.TerraformResour
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association.html azurerm_subnet_network_security_group_association} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_network_security_group_association azurerm_subnet_network_security_group_association} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

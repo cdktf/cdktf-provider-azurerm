@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace.html
+// https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface SecurityCenterWorkspaceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace.html#scope SecurityCenterWorkspace#scope}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#scope SecurityCenterWorkspace#scope}
   */
   readonly scope: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace.html#workspace_id SecurityCenterWorkspace#workspace_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#workspace_id SecurityCenterWorkspace#workspace_id}
   */
   readonly workspaceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace.html#timeouts SecurityCenterWorkspace#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#timeouts SecurityCenterWorkspace#timeouts}
   */
   readonly timeouts?: SecurityCenterWorkspaceTimeouts;
 }
 export interface SecurityCenterWorkspaceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace.html#create SecurityCenterWorkspace#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#create SecurityCenterWorkspace#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace.html#delete SecurityCenterWorkspace#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#delete SecurityCenterWorkspace#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace.html#read SecurityCenterWorkspace#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#read SecurityCenterWorkspace#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace.html#update SecurityCenterWorkspace#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace#update SecurityCenterWorkspace#update}
   */
   readonly update?: string;
 }
@@ -171,7 +171,7 @@ export class SecurityCenterWorkspaceTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace.html azurerm_security_center_workspace}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace azurerm_security_center_workspace}
 */
 export class SecurityCenterWorkspace extends cdktf.TerraformResource {
 
@@ -185,7 +185,7 @@ export class SecurityCenterWorkspace extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace.html azurerm_security_center_workspace} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_workspace azurerm_security_center_workspace} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

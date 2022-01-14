@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database.html
+// https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,37 +8,37 @@ import * as cdktf from 'cdktf';
 
 export interface CosmosdbGremlinDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database.html#account_name CosmosdbGremlinDatabase#account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database#account_name CosmosdbGremlinDatabase#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database.html#name CosmosdbGremlinDatabase#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database#name CosmosdbGremlinDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database.html#resource_group_name CosmosdbGremlinDatabase#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database#resource_group_name CosmosdbGremlinDatabase#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database.html#throughput CosmosdbGremlinDatabase#throughput}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database#throughput CosmosdbGremlinDatabase#throughput}
   */
   readonly throughput?: number;
   /**
   * autoscale_settings block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database.html#autoscale_settings CosmosdbGremlinDatabase#autoscale_settings}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database#autoscale_settings CosmosdbGremlinDatabase#autoscale_settings}
   */
   readonly autoscaleSettings?: CosmosdbGremlinDatabaseAutoscaleSettings;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database.html#timeouts CosmosdbGremlinDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database#timeouts CosmosdbGremlinDatabase#timeouts}
   */
   readonly timeouts?: CosmosdbGremlinDatabaseTimeouts;
 }
 export interface CosmosdbGremlinDatabaseAutoscaleSettings {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database.html#max_throughput CosmosdbGremlinDatabase#max_throughput}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database#max_throughput CosmosdbGremlinDatabase#max_throughput}
   */
   readonly maxThroughput?: number;
 }
@@ -104,19 +104,19 @@ export class CosmosdbGremlinDatabaseAutoscaleSettingsOutputReference extends cdk
 }
 export interface CosmosdbGremlinDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database.html#create CosmosdbGremlinDatabase#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database#create CosmosdbGremlinDatabase#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database.html#delete CosmosdbGremlinDatabase#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database#delete CosmosdbGremlinDatabase#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database.html#read CosmosdbGremlinDatabase#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database#read CosmosdbGremlinDatabase#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database.html#update CosmosdbGremlinDatabase#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database#update CosmosdbGremlinDatabase#update}
   */
   readonly update?: string;
 }
@@ -251,7 +251,7 @@ export class CosmosdbGremlinDatabaseTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database.html azurerm_cosmosdb_gremlin_database}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database azurerm_cosmosdb_gremlin_database}
 */
 export class CosmosdbGremlinDatabase extends cdktf.TerraformResource {
 
@@ -265,7 +265,7 @@ export class CosmosdbGremlinDatabase extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database.html azurerm_cosmosdb_gremlin_database} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_database azurerm_cosmosdb_gremlin_database} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html
+// https://www.terraform.io/docs/providers/azurerm/r/notification_hub
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,63 +8,63 @@ import * as cdktf from 'cdktf';
 
 export interface NotificationHubConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html#location NotificationHub#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub#location NotificationHub#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html#name NotificationHub#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub#name NotificationHub#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html#namespace_name NotificationHub#namespace_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub#namespace_name NotificationHub#namespace_name}
   */
   readonly namespaceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html#resource_group_name NotificationHub#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub#resource_group_name NotificationHub#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html#tags NotificationHub#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub#tags NotificationHub#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * apns_credential block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html#apns_credential NotificationHub#apns_credential}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub#apns_credential NotificationHub#apns_credential}
   */
   readonly apnsCredential?: NotificationHubApnsCredential;
   /**
   * gcm_credential block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html#gcm_credential NotificationHub#gcm_credential}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub#gcm_credential NotificationHub#gcm_credential}
   */
   readonly gcmCredential?: NotificationHubGcmCredential;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html#timeouts NotificationHub#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub#timeouts NotificationHub#timeouts}
   */
   readonly timeouts?: NotificationHubTimeouts;
 }
 export interface NotificationHubApnsCredential {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html#application_mode NotificationHub#application_mode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub#application_mode NotificationHub#application_mode}
   */
   readonly applicationMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html#bundle_id NotificationHub#bundle_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub#bundle_id NotificationHub#bundle_id}
   */
   readonly bundleId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html#key_id NotificationHub#key_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub#key_id NotificationHub#key_id}
   */
   readonly keyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html#team_id NotificationHub#team_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub#team_id NotificationHub#team_id}
   */
   readonly teamId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html#token NotificationHub#token}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub#token NotificationHub#token}
   */
   readonly token: string;
 }
@@ -207,7 +207,7 @@ export class NotificationHubApnsCredentialOutputReference extends cdktf.ComplexO
 }
 export interface NotificationHubGcmCredential {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html#api_key NotificationHub#api_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub#api_key NotificationHub#api_key}
   */
   readonly apiKey: string;
 }
@@ -270,19 +270,19 @@ export class NotificationHubGcmCredentialOutputReference extends cdktf.ComplexOb
 }
 export interface NotificationHubTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html#create NotificationHub#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub#create NotificationHub#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html#delete NotificationHub#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub#delete NotificationHub#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html#read NotificationHub#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub#read NotificationHub#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html#update NotificationHub#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub#update NotificationHub#update}
   */
   readonly update?: string;
 }
@@ -417,7 +417,7 @@ export class NotificationHubTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html azurerm_notification_hub}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub azurerm_notification_hub}
 */
 export class NotificationHub extends cdktf.TerraformResource {
 
@@ -431,7 +431,7 @@ export class NotificationHub extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub.html azurerm_notification_hub} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/notification_hub azurerm_notification_hub} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

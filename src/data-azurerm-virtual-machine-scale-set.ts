@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set.html
+// https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermVirtualMachineScaleSetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set.html#name DataAzurermVirtualMachineScaleSet#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set#name DataAzurermVirtualMachineScaleSet#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set.html#resource_group_name DataAzurermVirtualMachineScaleSet#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set#resource_group_name DataAzurermVirtualMachineScaleSet#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set.html#timeouts DataAzurermVirtualMachineScaleSet#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set#timeouts DataAzurermVirtualMachineScaleSet#timeouts}
   */
   readonly timeouts?: DataAzurermVirtualMachineScaleSetTimeouts;
 }
@@ -167,7 +167,7 @@ export class DataAzurermVirtualMachineScaleSetNetworkInterface extends cdktf.Com
 }
 export interface DataAzurermVirtualMachineScaleSetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set.html#read DataAzurermVirtualMachineScaleSet#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set#read DataAzurermVirtualMachineScaleSet#read}
   */
   readonly read?: string;
 }
@@ -233,7 +233,7 @@ export class DataAzurermVirtualMachineScaleSetTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set.html azurerm_virtual_machine_scale_set}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set azurerm_virtual_machine_scale_set}
 */
 export class DataAzurermVirtualMachineScaleSet extends cdktf.TerraformDataSource {
 
@@ -247,7 +247,7 @@ export class DataAzurermVirtualMachineScaleSet extends cdktf.TerraformDataSource
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set.html azurerm_virtual_machine_scale_set} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine_scale_set azurerm_virtual_machine_scale_set} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

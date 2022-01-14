@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/application_gateway.html
+// https://www.terraform.io/docs/providers/azurerm/d/application_gateway
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway.html#name DataAzurermApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway#name DataAzurermApplicationGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway.html#resource_group_name DataAzurermApplicationGateway#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway#resource_group_name DataAzurermApplicationGateway#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway.html#timeouts DataAzurermApplicationGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway#timeouts DataAzurermApplicationGateway#timeouts}
   */
   readonly timeouts?: DataAzurermApplicationGatewayTimeouts;
 }
@@ -36,7 +36,7 @@ export class DataAzurermApplicationGatewayIdentity extends cdktf.ComplexComputed
 }
 export interface DataAzurermApplicationGatewayTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway.html#read DataAzurermApplicationGateway#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway#read DataAzurermApplicationGateway#read}
   */
   readonly read?: string;
 }
@@ -102,7 +102,7 @@ export class DataAzurermApplicationGatewayTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway.html azurerm_application_gateway}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway azurerm_application_gateway}
 */
 export class DataAzurermApplicationGateway extends cdktf.TerraformDataSource {
 
@@ -116,7 +116,7 @@ export class DataAzurermApplicationGateway extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway.html azurerm_application_gateway} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/application_gateway azurerm_application_gateway} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

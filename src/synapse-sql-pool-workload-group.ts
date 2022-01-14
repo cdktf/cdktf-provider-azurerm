@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group.html
+// https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,59 +8,59 @@ import * as cdktf from 'cdktf';
 
 export interface SynapseSqlPoolWorkloadGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group.html#importance SynapseSqlPoolWorkloadGroup#importance}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group#importance SynapseSqlPoolWorkloadGroup#importance}
   */
   readonly importance?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group.html#max_resource_percent SynapseSqlPoolWorkloadGroup#max_resource_percent}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group#max_resource_percent SynapseSqlPoolWorkloadGroup#max_resource_percent}
   */
   readonly maxResourcePercent: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group.html#max_resource_percent_per_request SynapseSqlPoolWorkloadGroup#max_resource_percent_per_request}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group#max_resource_percent_per_request SynapseSqlPoolWorkloadGroup#max_resource_percent_per_request}
   */
   readonly maxResourcePercentPerRequest?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group.html#min_resource_percent SynapseSqlPoolWorkloadGroup#min_resource_percent}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group#min_resource_percent SynapseSqlPoolWorkloadGroup#min_resource_percent}
   */
   readonly minResourcePercent: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group.html#min_resource_percent_per_request SynapseSqlPoolWorkloadGroup#min_resource_percent_per_request}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group#min_resource_percent_per_request SynapseSqlPoolWorkloadGroup#min_resource_percent_per_request}
   */
   readonly minResourcePercentPerRequest?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group.html#name SynapseSqlPoolWorkloadGroup#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group#name SynapseSqlPoolWorkloadGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group.html#query_execution_timeout_in_seconds SynapseSqlPoolWorkloadGroup#query_execution_timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group#query_execution_timeout_in_seconds SynapseSqlPoolWorkloadGroup#query_execution_timeout_in_seconds}
   */
   readonly queryExecutionTimeoutInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group.html#sql_pool_id SynapseSqlPoolWorkloadGroup#sql_pool_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group#sql_pool_id SynapseSqlPoolWorkloadGroup#sql_pool_id}
   */
   readonly sqlPoolId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group.html#timeouts SynapseSqlPoolWorkloadGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group#timeouts SynapseSqlPoolWorkloadGroup#timeouts}
   */
   readonly timeouts?: SynapseSqlPoolWorkloadGroupTimeouts;
 }
 export interface SynapseSqlPoolWorkloadGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group.html#create SynapseSqlPoolWorkloadGroup#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group#create SynapseSqlPoolWorkloadGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group.html#delete SynapseSqlPoolWorkloadGroup#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group#delete SynapseSqlPoolWorkloadGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group.html#read SynapseSqlPoolWorkloadGroup#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group#read SynapseSqlPoolWorkloadGroup#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group.html#update SynapseSqlPoolWorkloadGroup#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group#update SynapseSqlPoolWorkloadGroup#update}
   */
   readonly update?: string;
 }
@@ -195,7 +195,7 @@ export class SynapseSqlPoolWorkloadGroupTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group.html azurerm_synapse_sql_pool_workload_group}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group azurerm_synapse_sql_pool_workload_group}
 */
 export class SynapseSqlPoolWorkloadGroup extends cdktf.TerraformResource {
 
@@ -209,7 +209,7 @@ export class SynapseSqlPoolWorkloadGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group.html azurerm_synapse_sql_pool_workload_group} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_sql_pool_workload_group azurerm_synapse_sql_pool_workload_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

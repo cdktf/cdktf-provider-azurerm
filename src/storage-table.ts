@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/storage_table.html
+// https://www.terraform.io/docs/providers/azurerm/r/storage_table
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,37 +8,37 @@ import * as cdktf from 'cdktf';
 
 export interface StorageTableConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table.html#name StorageTable#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table#name StorageTable#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table.html#storage_account_name StorageTable#storage_account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table#storage_account_name StorageTable#storage_account_name}
   */
   readonly storageAccountName: string;
   /**
   * acl block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table.html#acl StorageTable#acl}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table#acl StorageTable#acl}
   */
   readonly acl?: StorageTableAcl[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table.html#timeouts StorageTable#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table#timeouts StorageTable#timeouts}
   */
   readonly timeouts?: StorageTableTimeouts;
 }
 export interface StorageTableAclAccessPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table.html#expiry StorageTable#expiry}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table#expiry StorageTable#expiry}
   */
   readonly expiry: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table.html#permissions StorageTable#permissions}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table#permissions StorageTable#permissions}
   */
   readonly permissions: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table.html#start StorageTable#start}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table#start StorageTable#start}
   */
   readonly start: string;
 }
@@ -57,13 +57,13 @@ export function storageTableAclAccessPolicyToTerraform(struct?: StorageTableAclA
 
 export interface StorageTableAcl {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table.html#id StorageTable#id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table#id StorageTable#id}
   */
   readonly id: string;
   /**
   * access_policy block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table.html#access_policy StorageTable#access_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table#access_policy StorageTable#access_policy}
   */
   readonly accessPolicy?: StorageTableAclAccessPolicy[];
 }
@@ -81,19 +81,19 @@ export function storageTableAclToTerraform(struct?: StorageTableAcl): any {
 
 export interface StorageTableTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table.html#create StorageTable#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table#create StorageTable#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table.html#delete StorageTable#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table#delete StorageTable#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table.html#read StorageTable#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table#read StorageTable#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table.html#update StorageTable#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table#update StorageTable#update}
   */
   readonly update?: string;
 }
@@ -228,7 +228,7 @@ export class StorageTableTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table.html azurerm_storage_table}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table azurerm_storage_table}
 */
 export class StorageTable extends cdktf.TerraformResource {
 
@@ -242,7 +242,7 @@ export class StorageTable extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table.html azurerm_storage_table} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table azurerm_storage_table} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

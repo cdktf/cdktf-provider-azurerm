@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html
+// https://www.terraform.io/docs/providers/azurerm/r/template_deployment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface TemplateDeploymentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#deployment_mode TemplateDeployment#deployment_mode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment#deployment_mode TemplateDeployment#deployment_mode}
   */
   readonly deploymentMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#name TemplateDeployment#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment#name TemplateDeployment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#parameters TemplateDeployment#parameters}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment#parameters TemplateDeployment#parameters}
   */
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#parameters_body TemplateDeployment#parameters_body}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment#parameters_body TemplateDeployment#parameters_body}
   */
   readonly parametersBody?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#resource_group_name TemplateDeployment#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment#resource_group_name TemplateDeployment#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#template_body TemplateDeployment#template_body}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment#template_body TemplateDeployment#template_body}
   */
   readonly templateBody?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#timeouts TemplateDeployment#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment#timeouts TemplateDeployment#timeouts}
   */
   readonly timeouts?: TemplateDeploymentTimeouts;
 }
 export interface TemplateDeploymentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#create TemplateDeployment#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment#create TemplateDeployment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#delete TemplateDeployment#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment#delete TemplateDeployment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#read TemplateDeployment#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment#read TemplateDeployment#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html#update TemplateDeployment#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment#update TemplateDeployment#update}
   */
   readonly update?: string;
 }
@@ -187,7 +187,7 @@ export class TemplateDeploymentTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html azurerm_template_deployment}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment azurerm_template_deployment}
 */
 export class TemplateDeployment extends cdktf.TerraformResource {
 
@@ -201,7 +201,7 @@ export class TemplateDeployment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment.html azurerm_template_deployment} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/template_deployment azurerm_template_deployment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

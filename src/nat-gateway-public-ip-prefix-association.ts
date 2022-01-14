@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_prefix_association.html
+// https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_prefix_association
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,31 +8,31 @@ import * as cdktf from 'cdktf';
 
 export interface NatGatewayPublicIpPrefixAssociationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_prefix_association.html#nat_gateway_id NatGatewayPublicIpPrefixAssociation#nat_gateway_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_prefix_association#nat_gateway_id NatGatewayPublicIpPrefixAssociation#nat_gateway_id}
   */
   readonly natGatewayId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_prefix_association.html#public_ip_prefix_id NatGatewayPublicIpPrefixAssociation#public_ip_prefix_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_prefix_association#public_ip_prefix_id NatGatewayPublicIpPrefixAssociation#public_ip_prefix_id}
   */
   readonly publicIpPrefixId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_prefix_association.html#timeouts NatGatewayPublicIpPrefixAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_prefix_association#timeouts NatGatewayPublicIpPrefixAssociation#timeouts}
   */
   readonly timeouts?: NatGatewayPublicIpPrefixAssociationTimeouts;
 }
 export interface NatGatewayPublicIpPrefixAssociationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_prefix_association.html#create NatGatewayPublicIpPrefixAssociation#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_prefix_association#create NatGatewayPublicIpPrefixAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_prefix_association.html#delete NatGatewayPublicIpPrefixAssociation#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_prefix_association#delete NatGatewayPublicIpPrefixAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_prefix_association.html#read NatGatewayPublicIpPrefixAssociation#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_prefix_association#read NatGatewayPublicIpPrefixAssociation#read}
   */
   readonly read?: string;
 }
@@ -144,7 +144,7 @@ export class NatGatewayPublicIpPrefixAssociationTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_prefix_association.html azurerm_nat_gateway_public_ip_prefix_association}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_prefix_association azurerm_nat_gateway_public_ip_prefix_association}
 */
 export class NatGatewayPublicIpPrefixAssociation extends cdktf.TerraformResource {
 
@@ -158,7 +158,7 @@ export class NatGatewayPublicIpPrefixAssociation extends cdktf.TerraformResource
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_prefix_association.html azurerm_nat_gateway_public_ip_prefix_association} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/nat_gateway_public_ip_prefix_association azurerm_nat_gateway_public_ip_prefix_association} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

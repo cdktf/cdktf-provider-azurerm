@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/ip_group.html
+// https://www.terraform.io/docs/providers/azurerm/d/ip_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermIpGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group.html#name DataAzurermIpGroup#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group#name DataAzurermIpGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group.html#resource_group_name DataAzurermIpGroup#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group#resource_group_name DataAzurermIpGroup#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group.html#timeouts DataAzurermIpGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group#timeouts DataAzurermIpGroup#timeouts}
   */
   readonly timeouts?: DataAzurermIpGroupTimeouts;
 }
 export interface DataAzurermIpGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group.html#read DataAzurermIpGroup#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group#read DataAzurermIpGroup#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermIpGroupTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group.html azurerm_ip_group}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group azurerm_ip_group}
 */
 export class DataAzurermIpGroup extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermIpGroup extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group.html azurerm_ip_group} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/ip_group azurerm_ip_group} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

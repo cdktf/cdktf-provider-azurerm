@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/management_group.html
+// https://www.terraform.io/docs/providers/azurerm/d/management_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermManagementGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/management_group.html#display_name DataAzurermManagementGroup#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/management_group#display_name DataAzurermManagementGroup#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/management_group.html#group_id DataAzurermManagementGroup#group_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/management_group#group_id DataAzurermManagementGroup#group_id}
   */
   readonly groupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/management_group.html#name DataAzurermManagementGroup#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/management_group#name DataAzurermManagementGroup#name}
   */
   readonly name?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/management_group.html#timeouts DataAzurermManagementGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/management_group#timeouts DataAzurermManagementGroup#timeouts}
   */
   readonly timeouts?: DataAzurermManagementGroupTimeouts;
 }
 export interface DataAzurermManagementGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/management_group.html#read DataAzurermManagementGroup#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/management_group#read DataAzurermManagementGroup#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermManagementGroupTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/management_group.html azurerm_management_group}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/management_group azurerm_management_group}
 */
 export class DataAzurermManagementGroup extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermManagementGroup extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/management_group.html azurerm_management_group} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/management_group azurerm_management_group} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

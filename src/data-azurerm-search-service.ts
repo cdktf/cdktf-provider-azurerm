@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/search_service.html
+// https://www.terraform.io/docs/providers/azurerm/d/search_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSearchServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/search_service.html#name DataAzurermSearchService#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/search_service#name DataAzurermSearchService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/search_service.html#resource_group_name DataAzurermSearchService#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/search_service#resource_group_name DataAzurermSearchService#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/search_service.html#timeouts DataAzurermSearchService#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/search_service#timeouts DataAzurermSearchService#timeouts}
   */
   readonly timeouts?: DataAzurermSearchServiceTimeouts;
 }
@@ -53,7 +53,7 @@ export class DataAzurermSearchServiceQueryKeys extends cdktf.ComplexComputedList
 }
 export interface DataAzurermSearchServiceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/search_service.html#read DataAzurermSearchService#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/search_service#read DataAzurermSearchService#read}
   */
   readonly read?: string;
 }
@@ -119,7 +119,7 @@ export class DataAzurermSearchServiceTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/search_service.html azurerm_search_service}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/search_service azurerm_search_service}
 */
 export class DataAzurermSearchService extends cdktf.TerraformDataSource {
 
@@ -133,7 +133,7 @@ export class DataAzurermSearchService extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/search_service.html azurerm_search_service} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/search_service azurerm_search_service} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

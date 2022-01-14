@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace.html
+// https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermLogAnalyticsWorkspaceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace.html#name DataAzurermLogAnalyticsWorkspace#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace#name DataAzurermLogAnalyticsWorkspace#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace.html#resource_group_name DataAzurermLogAnalyticsWorkspace#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace#resource_group_name DataAzurermLogAnalyticsWorkspace#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace.html#timeouts DataAzurermLogAnalyticsWorkspace#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace#timeouts DataAzurermLogAnalyticsWorkspace#timeouts}
   */
   readonly timeouts?: DataAzurermLogAnalyticsWorkspaceTimeouts;
 }
 export interface DataAzurermLogAnalyticsWorkspaceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace.html#read DataAzurermLogAnalyticsWorkspace#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace#read DataAzurermLogAnalyticsWorkspace#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermLogAnalyticsWorkspaceTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace.html azurerm_log_analytics_workspace}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace azurerm_log_analytics_workspace}
 */
 export class DataAzurermLogAnalyticsWorkspace extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermLogAnalyticsWorkspace extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace.html azurerm_log_analytics_workspace} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/log_analytics_workspace azurerm_log_analytics_workspace} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

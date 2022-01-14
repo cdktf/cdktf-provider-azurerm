@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/image.html
+// https://www.terraform.io/docs/providers/azurerm/r/image
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,71 +8,71 @@ import * as cdktf from 'cdktf';
 
 export interface ImageConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#hyper_v_generation Image#hyper_v_generation}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#hyper_v_generation Image#hyper_v_generation}
   */
   readonly hyperVGeneration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#location Image#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#location Image#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#name Image#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#name Image#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#resource_group_name Image#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#resource_group_name Image#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#source_virtual_machine_id Image#source_virtual_machine_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#source_virtual_machine_id Image#source_virtual_machine_id}
   */
   readonly sourceVirtualMachineId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#tags Image#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#tags Image#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#zone_resilient Image#zone_resilient}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#zone_resilient Image#zone_resilient}
   */
   readonly zoneResilient?: boolean | cdktf.IResolvable;
   /**
   * data_disk block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#data_disk Image#data_disk}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#data_disk Image#data_disk}
   */
   readonly dataDisk?: ImageDataDisk[];
   /**
   * os_disk block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#os_disk Image#os_disk}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#os_disk Image#os_disk}
   */
   readonly osDisk?: ImageOsDisk;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#timeouts Image#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#timeouts Image#timeouts}
   */
   readonly timeouts?: ImageTimeouts;
 }
 export interface ImageDataDisk {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#blob_uri Image#blob_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#blob_uri Image#blob_uri}
   */
   readonly blobUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#caching Image#caching}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#caching Image#caching}
   */
   readonly caching?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#lun Image#lun}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#lun Image#lun}
   */
   readonly lun?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#managed_disk_id Image#managed_disk_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#managed_disk_id Image#managed_disk_id}
   */
   readonly managedDiskId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#size_gb Image#size_gb}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#size_gb Image#size_gb}
   */
   readonly sizeGb?: number;
 }
@@ -93,27 +93,27 @@ export function imageDataDiskToTerraform(struct?: ImageDataDisk): any {
 
 export interface ImageOsDisk {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#blob_uri Image#blob_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#blob_uri Image#blob_uri}
   */
   readonly blobUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#caching Image#caching}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#caching Image#caching}
   */
   readonly caching?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#managed_disk_id Image#managed_disk_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#managed_disk_id Image#managed_disk_id}
   */
   readonly managedDiskId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#os_state Image#os_state}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#os_state Image#os_state}
   */
   readonly osState?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#os_type Image#os_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#os_type Image#os_type}
   */
   readonly osType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#size_gb Image#size_gb}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#size_gb Image#size_gb}
   */
   readonly sizeGb?: number;
 }
@@ -294,19 +294,19 @@ export class ImageOsDiskOutputReference extends cdktf.ComplexObject {
 }
 export interface ImageTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#create Image#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#create Image#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#delete Image#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#delete Image#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#read Image#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#read Image#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image.html#update Image#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/image#update Image#update}
   */
   readonly update?: string;
 }
@@ -441,7 +441,7 @@ export class ImageTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/image.html azurerm_image}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/image azurerm_image}
 */
 export class Image extends cdktf.TerraformResource {
 
@@ -455,7 +455,7 @@ export class Image extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/image.html azurerm_image} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/image azurerm_image} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

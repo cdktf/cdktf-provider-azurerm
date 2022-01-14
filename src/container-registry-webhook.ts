@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html
+// https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,67 +8,67 @@ import * as cdktf from 'cdktf';
 
 export interface ContainerRegistryWebhookConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#actions ContainerRegistryWebhook#actions}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook#actions ContainerRegistryWebhook#actions}
   */
   readonly actions: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#custom_headers ContainerRegistryWebhook#custom_headers}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook#custom_headers ContainerRegistryWebhook#custom_headers}
   */
   readonly customHeaders?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#location ContainerRegistryWebhook#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook#location ContainerRegistryWebhook#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#name ContainerRegistryWebhook#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook#name ContainerRegistryWebhook#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#registry_name ContainerRegistryWebhook#registry_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook#registry_name ContainerRegistryWebhook#registry_name}
   */
   readonly registryName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#resource_group_name ContainerRegistryWebhook#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook#resource_group_name ContainerRegistryWebhook#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#scope ContainerRegistryWebhook#scope}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook#scope ContainerRegistryWebhook#scope}
   */
   readonly scope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#service_uri ContainerRegistryWebhook#service_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook#service_uri ContainerRegistryWebhook#service_uri}
   */
   readonly serviceUri: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#status ContainerRegistryWebhook#status}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook#status ContainerRegistryWebhook#status}
   */
   readonly status?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#tags ContainerRegistryWebhook#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook#tags ContainerRegistryWebhook#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#timeouts ContainerRegistryWebhook#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook#timeouts ContainerRegistryWebhook#timeouts}
   */
   readonly timeouts?: ContainerRegistryWebhookTimeouts;
 }
 export interface ContainerRegistryWebhookTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#create ContainerRegistryWebhook#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook#create ContainerRegistryWebhook#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#delete ContainerRegistryWebhook#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook#delete ContainerRegistryWebhook#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#read ContainerRegistryWebhook#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook#read ContainerRegistryWebhook#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html#update ContainerRegistryWebhook#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook#update ContainerRegistryWebhook#update}
   */
   readonly update?: string;
 }
@@ -203,7 +203,7 @@ export class ContainerRegistryWebhookTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html azurerm_container_registry_webhook}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook azurerm_container_registry_webhook}
 */
 export class ContainerRegistryWebhook extends cdktf.TerraformResource {
 
@@ -217,7 +217,7 @@ export class ContainerRegistryWebhook extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook.html azurerm_container_registry_webhook} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_webhook azurerm_container_registry_webhook} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

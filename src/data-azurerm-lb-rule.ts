@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/lb_rule.html
+// https://www.terraform.io/docs/providers/azurerm/d/lb_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermLbRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb_rule.html#loadbalancer_id DataAzurermLbRule#loadbalancer_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb_rule#loadbalancer_id DataAzurermLbRule#loadbalancer_id}
   */
   readonly loadbalancerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb_rule.html#name DataAzurermLbRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb_rule#name DataAzurermLbRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb_rule.html#resource_group_name DataAzurermLbRule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb_rule#resource_group_name DataAzurermLbRule#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb_rule.html#timeouts DataAzurermLbRule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb_rule#timeouts DataAzurermLbRule#timeouts}
   */
   readonly timeouts?: DataAzurermLbRuleTimeouts;
 }
 export interface DataAzurermLbRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb_rule.html#read DataAzurermLbRule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb_rule#read DataAzurermLbRule#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermLbRuleTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/lb_rule.html azurerm_lb_rule}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/lb_rule azurerm_lb_rule}
 */
 export class DataAzurermLbRule extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermLbRule extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/lb_rule.html azurerm_lb_rule} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/lb_rule azurerm_lb_rule} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

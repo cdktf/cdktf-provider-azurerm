@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization.html
+// https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface ExpressRouteCircuitAuthorizationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization.html#express_route_circuit_name ExpressRouteCircuitAuthorization#express_route_circuit_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization#express_route_circuit_name ExpressRouteCircuitAuthorization#express_route_circuit_name}
   */
   readonly expressRouteCircuitName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization.html#name ExpressRouteCircuitAuthorization#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization#name ExpressRouteCircuitAuthorization#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization.html#resource_group_name ExpressRouteCircuitAuthorization#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization#resource_group_name ExpressRouteCircuitAuthorization#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization.html#timeouts ExpressRouteCircuitAuthorization#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization#timeouts ExpressRouteCircuitAuthorization#timeouts}
   */
   readonly timeouts?: ExpressRouteCircuitAuthorizationTimeouts;
 }
 export interface ExpressRouteCircuitAuthorizationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization.html#create ExpressRouteCircuitAuthorization#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization#create ExpressRouteCircuitAuthorization#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization.html#delete ExpressRouteCircuitAuthorization#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization#delete ExpressRouteCircuitAuthorization#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization.html#read ExpressRouteCircuitAuthorization#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization#read ExpressRouteCircuitAuthorization#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization.html#update ExpressRouteCircuitAuthorization#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization#update ExpressRouteCircuitAuthorization#update}
   */
   readonly update?: string;
 }
@@ -175,7 +175,7 @@ export class ExpressRouteCircuitAuthorizationTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization.html azurerm_express_route_circuit_authorization}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization azurerm_express_route_circuit_authorization}
 */
 export class ExpressRouteCircuitAuthorization extends cdktf.TerraformResource {
 
@@ -189,7 +189,7 @@ export class ExpressRouteCircuitAuthorization extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization.html azurerm_express_route_circuit_authorization} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_authorization azurerm_express_route_circuit_authorization} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

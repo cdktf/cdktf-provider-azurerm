@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/management_group_subscription_association.html
+// https://www.terraform.io/docs/providers/azurerm/r/management_group_subscription_association
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,31 +8,31 @@ import * as cdktf from 'cdktf';
 
 export interface ManagementGroupSubscriptionAssociationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_subscription_association.html#management_group_id ManagementGroupSubscriptionAssociation#management_group_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_subscription_association#management_group_id ManagementGroupSubscriptionAssociation#management_group_id}
   */
   readonly managementGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_subscription_association.html#subscription_id ManagementGroupSubscriptionAssociation#subscription_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_subscription_association#subscription_id ManagementGroupSubscriptionAssociation#subscription_id}
   */
   readonly subscriptionId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_subscription_association.html#timeouts ManagementGroupSubscriptionAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_subscription_association#timeouts ManagementGroupSubscriptionAssociation#timeouts}
   */
   readonly timeouts?: ManagementGroupSubscriptionAssociationTimeouts;
 }
 export interface ManagementGroupSubscriptionAssociationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_subscription_association.html#create ManagementGroupSubscriptionAssociation#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_subscription_association#create ManagementGroupSubscriptionAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_subscription_association.html#delete ManagementGroupSubscriptionAssociation#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_subscription_association#delete ManagementGroupSubscriptionAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_subscription_association.html#read ManagementGroupSubscriptionAssociation#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_subscription_association#read ManagementGroupSubscriptionAssociation#read}
   */
   readonly read?: string;
 }
@@ -144,7 +144,7 @@ export class ManagementGroupSubscriptionAssociationTimeoutsOutputReference exten
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_subscription_association.html azurerm_management_group_subscription_association}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_subscription_association azurerm_management_group_subscription_association}
 */
 export class ManagementGroupSubscriptionAssociation extends cdktf.TerraformResource {
 
@@ -158,7 +158,7 @@ export class ManagementGroupSubscriptionAssociation extends cdktf.TerraformResou
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_subscription_association.html azurerm_management_group_subscription_association} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_subscription_association azurerm_management_group_subscription_association} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

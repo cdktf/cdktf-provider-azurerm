@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy.html
+// https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermNetappSnapshotPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy.html#account_name DataAzurermNetappSnapshotPolicy#account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy#account_name DataAzurermNetappSnapshotPolicy#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy.html#name DataAzurermNetappSnapshotPolicy#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy#name DataAzurermNetappSnapshotPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy.html#resource_group_name DataAzurermNetappSnapshotPolicy#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy#resource_group_name DataAzurermNetappSnapshotPolicy#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy.html#timeouts DataAzurermNetappSnapshotPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy#timeouts DataAzurermNetappSnapshotPolicy#timeouts}
   */
   readonly timeouts?: DataAzurermNetappSnapshotPolicyTimeouts;
 }
@@ -102,7 +102,7 @@ export class DataAzurermNetappSnapshotPolicyWeeklySchedule extends cdktf.Complex
 }
 export interface DataAzurermNetappSnapshotPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy.html#read DataAzurermNetappSnapshotPolicy#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy#read DataAzurermNetappSnapshotPolicy#read}
   */
   readonly read?: string;
 }
@@ -168,7 +168,7 @@ export class DataAzurermNetappSnapshotPolicyTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy.html azurerm_netapp_snapshot_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy azurerm_netapp_snapshot_policy}
 */
 export class DataAzurermNetappSnapshotPolicy extends cdktf.TerraformDataSource {
 
@@ -182,7 +182,7 @@ export class DataAzurermNetappSnapshotPolicy extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy.html azurerm_netapp_snapshot_policy} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_snapshot_policy azurerm_netapp_snapshot_policy} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account.html
+// https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermCosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account.html#name DataAzurermCosmosdbAccount#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account#name DataAzurermCosmosdbAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account.html#resource_group_name DataAzurermCosmosdbAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account#resource_group_name DataAzurermCosmosdbAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account.html#timeouts DataAzurermCosmosdbAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account#timeouts DataAzurermCosmosdbAccount#timeouts}
   */
   readonly timeouts?: DataAzurermCosmosdbAccountTimeouts;
 }
@@ -72,7 +72,7 @@ export class DataAzurermCosmosdbAccountVirtualNetworkRule extends cdktf.ComplexC
 }
 export interface DataAzurermCosmosdbAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account.html#read DataAzurermCosmosdbAccount#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account#read DataAzurermCosmosdbAccount#read}
   */
   readonly read?: string;
 }
@@ -138,7 +138,7 @@ export class DataAzurermCosmosdbAccountTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account.html azurerm_cosmosdb_account}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account azurerm_cosmosdb_account}
 */
 export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
 
@@ -152,7 +152,7 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account.html azurerm_cosmosdb_account} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_account azurerm_cosmosdb_account} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

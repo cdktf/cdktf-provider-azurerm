@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account.html
+// https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,55 +8,55 @@ import * as cdktf from 'cdktf';
 
 export interface KeyVaultManagedStorageAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account.html#key_vault_id KeyVaultManagedStorageAccount#key_vault_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account#key_vault_id KeyVaultManagedStorageAccount#key_vault_id}
   */
   readonly keyVaultId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account.html#name KeyVaultManagedStorageAccount#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account#name KeyVaultManagedStorageAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account.html#regenerate_key_automatically KeyVaultManagedStorageAccount#regenerate_key_automatically}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account#regenerate_key_automatically KeyVaultManagedStorageAccount#regenerate_key_automatically}
   */
   readonly regenerateKeyAutomatically?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account.html#regeneration_period KeyVaultManagedStorageAccount#regeneration_period}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account#regeneration_period KeyVaultManagedStorageAccount#regeneration_period}
   */
   readonly regenerationPeriod?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account.html#storage_account_id KeyVaultManagedStorageAccount#storage_account_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account#storage_account_id KeyVaultManagedStorageAccount#storage_account_id}
   */
   readonly storageAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account.html#storage_account_key KeyVaultManagedStorageAccount#storage_account_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account#storage_account_key KeyVaultManagedStorageAccount#storage_account_key}
   */
   readonly storageAccountKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account.html#tags KeyVaultManagedStorageAccount#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account#tags KeyVaultManagedStorageAccount#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account.html#timeouts KeyVaultManagedStorageAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account#timeouts KeyVaultManagedStorageAccount#timeouts}
   */
   readonly timeouts?: KeyVaultManagedStorageAccountTimeouts;
 }
 export interface KeyVaultManagedStorageAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account.html#create KeyVaultManagedStorageAccount#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account#create KeyVaultManagedStorageAccount#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account.html#delete KeyVaultManagedStorageAccount#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account#delete KeyVaultManagedStorageAccount#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account.html#read KeyVaultManagedStorageAccount#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account#read KeyVaultManagedStorageAccount#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account.html#update KeyVaultManagedStorageAccount#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account#update KeyVaultManagedStorageAccount#update}
   */
   readonly update?: string;
 }
@@ -191,7 +191,7 @@ export class KeyVaultManagedStorageAccountTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account.html azurerm_key_vault_managed_storage_account}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account azurerm_key_vault_managed_storage_account}
 */
 export class KeyVaultManagedStorageAccount extends cdktf.TerraformResource {
 
@@ -205,7 +205,7 @@ export class KeyVaultManagedStorageAccount extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account.html azurerm_key_vault_managed_storage_account} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/key_vault_managed_storage_account azurerm_key_vault_managed_storage_account} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

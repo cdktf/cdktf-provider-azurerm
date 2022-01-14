@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule.html
+// https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface PostgresqlFirewallRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule.html#end_ip_address PostgresqlFirewallRule#end_ip_address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule#end_ip_address PostgresqlFirewallRule#end_ip_address}
   */
   readonly endIpAddress: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule.html#name PostgresqlFirewallRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule#name PostgresqlFirewallRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule.html#resource_group_name PostgresqlFirewallRule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule#resource_group_name PostgresqlFirewallRule#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule.html#server_name PostgresqlFirewallRule#server_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule#server_name PostgresqlFirewallRule#server_name}
   */
   readonly serverName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule.html#start_ip_address PostgresqlFirewallRule#start_ip_address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule#start_ip_address PostgresqlFirewallRule#start_ip_address}
   */
   readonly startIpAddress: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule.html#timeouts PostgresqlFirewallRule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule#timeouts PostgresqlFirewallRule#timeouts}
   */
   readonly timeouts?: PostgresqlFirewallRuleTimeouts;
 }
 export interface PostgresqlFirewallRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule.html#create PostgresqlFirewallRule#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule#create PostgresqlFirewallRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule.html#delete PostgresqlFirewallRule#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule#delete PostgresqlFirewallRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule.html#read PostgresqlFirewallRule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule#read PostgresqlFirewallRule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule.html#update PostgresqlFirewallRule#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule#update PostgresqlFirewallRule#update}
   */
   readonly update?: string;
 }
@@ -183,7 +183,7 @@ export class PostgresqlFirewallRuleTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule.html azurerm_postgresql_firewall_rule}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule azurerm_postgresql_firewall_rule}
 */
 export class PostgresqlFirewallRule extends cdktf.TerraformResource {
 
@@ -197,7 +197,7 @@ export class PostgresqlFirewallRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule.html azurerm_postgresql_firewall_rule} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_firewall_rule azurerm_postgresql_firewall_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

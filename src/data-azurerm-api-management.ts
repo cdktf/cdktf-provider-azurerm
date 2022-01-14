@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/api_management.html
+// https://www.terraform.io/docs/providers/azurerm/d/api_management
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermApiManagementConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management.html#name DataAzurermApiManagement#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management#name DataAzurermApiManagement#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management.html#resource_group_name DataAzurermApiManagement#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management#resource_group_name DataAzurermApiManagement#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management.html#timeouts DataAzurermApiManagement#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management#timeouts DataAzurermApiManagement#timeouts}
   */
   readonly timeouts?: DataAzurermApiManagementTimeouts;
 }
@@ -190,7 +190,7 @@ export class DataAzurermApiManagementIdentity extends cdktf.ComplexComputedList 
 }
 export interface DataAzurermApiManagementTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management.html#read DataAzurermApiManagement#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management#read DataAzurermApiManagement#read}
   */
   readonly read?: string;
 }
@@ -256,7 +256,7 @@ export class DataAzurermApiManagementTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/api_management.html azurerm_api_management}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/api_management azurerm_api_management}
 */
 export class DataAzurermApiManagement extends cdktf.TerraformDataSource {
 
@@ -270,7 +270,7 @@ export class DataAzurermApiManagement extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/api_management.html azurerm_api_management} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/api_management azurerm_api_management} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

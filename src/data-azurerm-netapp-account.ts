@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/netapp_account.html
+// https://www.terraform.io/docs/providers/azurerm/d/netapp_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermNetappAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_account.html#name DataAzurermNetappAccount#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_account#name DataAzurermNetappAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_account.html#resource_group_name DataAzurermNetappAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_account#resource_group_name DataAzurermNetappAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_account.html#timeouts DataAzurermNetappAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_account#timeouts DataAzurermNetappAccount#timeouts}
   */
   readonly timeouts?: DataAzurermNetappAccountTimeouts;
 }
 export interface DataAzurermNetappAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_account.html#read DataAzurermNetappAccount#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_account#read DataAzurermNetappAccount#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermNetappAccountTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_account.html azurerm_netapp_account}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_account azurerm_netapp_account}
 */
 export class DataAzurermNetappAccount extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermNetappAccount extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_account.html azurerm_netapp_account} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/netapp_account azurerm_netapp_account} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

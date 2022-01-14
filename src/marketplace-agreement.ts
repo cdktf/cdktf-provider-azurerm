@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html
+// https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface MarketplaceAgreementConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html#offer MarketplaceAgreement#offer}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement#offer MarketplaceAgreement#offer}
   */
   readonly offer: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html#plan MarketplaceAgreement#plan}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement#plan MarketplaceAgreement#plan}
   */
   readonly plan: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html#publisher MarketplaceAgreement#publisher}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement#publisher MarketplaceAgreement#publisher}
   */
   readonly publisher: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html#timeouts MarketplaceAgreement#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement#timeouts MarketplaceAgreement#timeouts}
   */
   readonly timeouts?: MarketplaceAgreementTimeouts;
 }
 export interface MarketplaceAgreementTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html#create MarketplaceAgreement#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement#create MarketplaceAgreement#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html#delete MarketplaceAgreement#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement#delete MarketplaceAgreement#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html#read MarketplaceAgreement#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement#read MarketplaceAgreement#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html#update MarketplaceAgreement#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement#update MarketplaceAgreement#update}
   */
   readonly update?: string;
 }
@@ -175,7 +175,7 @@ export class MarketplaceAgreementTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html azurerm_marketplace_agreement}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement azurerm_marketplace_agreement}
 */
 export class MarketplaceAgreement extends cdktf.TerraformResource {
 
@@ -189,7 +189,7 @@ export class MarketplaceAgreement extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement.html azurerm_marketplace_agreement} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/marketplace_agreement azurerm_marketplace_agreement} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

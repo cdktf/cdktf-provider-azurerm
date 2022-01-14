@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter.html
+// https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,59 +8,59 @@ import * as cdktf from 'cdktf';
 
 export interface CosmosdbCassandraDatacenterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter.html#availability_zones_enabled CosmosdbCassandraDatacenter#availability_zones_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#availability_zones_enabled CosmosdbCassandraDatacenter#availability_zones_enabled}
   */
   readonly availabilityZonesEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter.html#cassandra_cluster_id CosmosdbCassandraDatacenter#cassandra_cluster_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#cassandra_cluster_id CosmosdbCassandraDatacenter#cassandra_cluster_id}
   */
   readonly cassandraClusterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter.html#delegated_management_subnet_id CosmosdbCassandraDatacenter#delegated_management_subnet_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#delegated_management_subnet_id CosmosdbCassandraDatacenter#delegated_management_subnet_id}
   */
   readonly delegatedManagementSubnetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter.html#disk_count CosmosdbCassandraDatacenter#disk_count}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#disk_count CosmosdbCassandraDatacenter#disk_count}
   */
   readonly diskCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter.html#location CosmosdbCassandraDatacenter#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#location CosmosdbCassandraDatacenter#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter.html#name CosmosdbCassandraDatacenter#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#name CosmosdbCassandraDatacenter#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter.html#node_count CosmosdbCassandraDatacenter#node_count}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#node_count CosmosdbCassandraDatacenter#node_count}
   */
   readonly nodeCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter.html#sku_name CosmosdbCassandraDatacenter#sku_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#sku_name CosmosdbCassandraDatacenter#sku_name}
   */
   readonly skuName?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter.html#timeouts CosmosdbCassandraDatacenter#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#timeouts CosmosdbCassandraDatacenter#timeouts}
   */
   readonly timeouts?: CosmosdbCassandraDatacenterTimeouts;
 }
 export interface CosmosdbCassandraDatacenterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter.html#create CosmosdbCassandraDatacenter#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#create CosmosdbCassandraDatacenter#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter.html#delete CosmosdbCassandraDatacenter#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#delete CosmosdbCassandraDatacenter#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter.html#read CosmosdbCassandraDatacenter#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#read CosmosdbCassandraDatacenter#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter.html#update CosmosdbCassandraDatacenter#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter#update CosmosdbCassandraDatacenter#update}
   */
   readonly update?: string;
 }
@@ -195,7 +195,7 @@ export class CosmosdbCassandraDatacenterTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter.html azurerm_cosmosdb_cassandra_datacenter}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter azurerm_cosmosdb_cassandra_datacenter}
 */
 export class CosmosdbCassandraDatacenter extends cdktf.TerraformResource {
 
@@ -209,7 +209,7 @@ export class CosmosdbCassandraDatacenter extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter.html azurerm_cosmosdb_cassandra_datacenter} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_cassandra_datacenter azurerm_cosmosdb_cassandra_datacenter} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

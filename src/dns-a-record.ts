@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/dns_a_record.html
+// https://www.terraform.io/docs/providers/azurerm/r/dns_a_record
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,55 +8,55 @@ import * as cdktf from 'cdktf';
 
 export interface DnsARecordConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record.html#name DnsARecord#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record#name DnsARecord#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record.html#records DnsARecord#records}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record#records DnsARecord#records}
   */
   readonly records?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record.html#resource_group_name DnsARecord#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record#resource_group_name DnsARecord#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record.html#tags DnsARecord#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record#tags DnsARecord#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record.html#target_resource_id DnsARecord#target_resource_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record#target_resource_id DnsARecord#target_resource_id}
   */
   readonly targetResourceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record.html#ttl DnsARecord#ttl}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record#ttl DnsARecord#ttl}
   */
   readonly ttl: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record.html#zone_name DnsARecord#zone_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record#zone_name DnsARecord#zone_name}
   */
   readonly zoneName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record.html#timeouts DnsARecord#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record#timeouts DnsARecord#timeouts}
   */
   readonly timeouts?: DnsARecordTimeouts;
 }
 export interface DnsARecordTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record.html#create DnsARecord#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record#create DnsARecord#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record.html#delete DnsARecord#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record#delete DnsARecord#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record.html#read DnsARecord#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record#read DnsARecord#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record.html#update DnsARecord#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record#update DnsARecord#update}
   */
   readonly update?: string;
 }
@@ -191,7 +191,7 @@ export class DnsARecordTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record.html azurerm_dns_a_record}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record azurerm_dns_a_record}
 */
 export class DnsARecord extends cdktf.TerraformResource {
 
@@ -205,7 +205,7 @@ export class DnsARecord extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record.html azurerm_dns_a_record} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dns_a_record azurerm_dns_a_record} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/app_service_plan.html
+// https://www.terraform.io/docs/providers/azurerm/d/app_service_plan
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermAppServicePlanConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_plan.html#name DataAzurermAppServicePlan#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_plan#name DataAzurermAppServicePlan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_plan.html#resource_group_name DataAzurermAppServicePlan#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_plan#resource_group_name DataAzurermAppServicePlan#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_plan.html#timeouts DataAzurermAppServicePlan#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_plan#timeouts DataAzurermAppServicePlan#timeouts}
   */
   readonly timeouts?: DataAzurermAppServicePlanTimeouts;
 }
@@ -41,7 +41,7 @@ export class DataAzurermAppServicePlanSku extends cdktf.ComplexComputedList {
 }
 export interface DataAzurermAppServicePlanTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_plan.html#read DataAzurermAppServicePlan#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_plan#read DataAzurermAppServicePlan#read}
   */
   readonly read?: string;
 }
@@ -107,7 +107,7 @@ export class DataAzurermAppServicePlanTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_plan.html azurerm_app_service_plan}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_plan azurerm_app_service_plan}
 */
 export class DataAzurermAppServicePlan extends cdktf.TerraformDataSource {
 
@@ -121,7 +121,7 @@ export class DataAzurermAppServicePlan extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_plan.html azurerm_app_service_plan} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_plan azurerm_app_service_plan} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

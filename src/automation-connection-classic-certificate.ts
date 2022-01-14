@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html
+// https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,55 +8,55 @@ import * as cdktf from 'cdktf';
 
 export interface AutomationConnectionClassicCertificateConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#automation_account_name AutomationConnectionClassicCertificate#automation_account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate#automation_account_name AutomationConnectionClassicCertificate#automation_account_name}
   */
   readonly automationAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#certificate_asset_name AutomationConnectionClassicCertificate#certificate_asset_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate#certificate_asset_name AutomationConnectionClassicCertificate#certificate_asset_name}
   */
   readonly certificateAssetName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#description AutomationConnectionClassicCertificate#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate#description AutomationConnectionClassicCertificate#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#name AutomationConnectionClassicCertificate#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate#name AutomationConnectionClassicCertificate#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#resource_group_name AutomationConnectionClassicCertificate#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate#resource_group_name AutomationConnectionClassicCertificate#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#subscription_id AutomationConnectionClassicCertificate#subscription_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate#subscription_id AutomationConnectionClassicCertificate#subscription_id}
   */
   readonly subscriptionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#subscription_name AutomationConnectionClassicCertificate#subscription_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate#subscription_name AutomationConnectionClassicCertificate#subscription_name}
   */
   readonly subscriptionName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#timeouts AutomationConnectionClassicCertificate#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate#timeouts AutomationConnectionClassicCertificate#timeouts}
   */
   readonly timeouts?: AutomationConnectionClassicCertificateTimeouts;
 }
 export interface AutomationConnectionClassicCertificateTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#create AutomationConnectionClassicCertificate#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate#create AutomationConnectionClassicCertificate#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#delete AutomationConnectionClassicCertificate#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate#delete AutomationConnectionClassicCertificate#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#read AutomationConnectionClassicCertificate#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate#read AutomationConnectionClassicCertificate#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html#update AutomationConnectionClassicCertificate#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate#update AutomationConnectionClassicCertificate#update}
   */
   readonly update?: string;
 }
@@ -191,7 +191,7 @@ export class AutomationConnectionClassicCertificateTimeoutsOutputReference exten
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html azurerm_automation_connection_classic_certificate}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate azurerm_automation_connection_classic_certificate}
 */
 export class AutomationConnectionClassicCertificate extends cdktf.TerraformResource {
 
@@ -205,7 +205,7 @@ export class AutomationConnectionClassicCertificate extends cdktf.TerraformResou
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate.html azurerm_automation_connection_classic_certificate} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/automation_connection_classic_certificate azurerm_automation_connection_classic_certificate} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

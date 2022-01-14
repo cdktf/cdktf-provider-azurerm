@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion.html
+// https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface SentinelAlertRuleFusionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion.html#alert_rule_template_guid SentinelAlertRuleFusion#alert_rule_template_guid}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion#alert_rule_template_guid SentinelAlertRuleFusion#alert_rule_template_guid}
   */
   readonly alertRuleTemplateGuid: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion.html#enabled SentinelAlertRuleFusion#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion#enabled SentinelAlertRuleFusion#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion.html#log_analytics_workspace_id SentinelAlertRuleFusion#log_analytics_workspace_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion#log_analytics_workspace_id SentinelAlertRuleFusion#log_analytics_workspace_id}
   */
   readonly logAnalyticsWorkspaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion.html#name SentinelAlertRuleFusion#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion#name SentinelAlertRuleFusion#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion.html#timeouts SentinelAlertRuleFusion#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion#timeouts SentinelAlertRuleFusion#timeouts}
   */
   readonly timeouts?: SentinelAlertRuleFusionTimeouts;
 }
 export interface SentinelAlertRuleFusionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion.html#create SentinelAlertRuleFusion#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion#create SentinelAlertRuleFusion#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion.html#delete SentinelAlertRuleFusion#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion#delete SentinelAlertRuleFusion#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion.html#read SentinelAlertRuleFusion#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion#read SentinelAlertRuleFusion#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion.html#update SentinelAlertRuleFusion#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion#update SentinelAlertRuleFusion#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class SentinelAlertRuleFusionTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion.html azurerm_sentinel_alert_rule_fusion}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion azurerm_sentinel_alert_rule_fusion}
 */
 export class SentinelAlertRuleFusion extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class SentinelAlertRuleFusion extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion.html azurerm_sentinel_alert_rule_fusion} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_alert_rule_fusion azurerm_sentinel_alert_rule_fusion} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

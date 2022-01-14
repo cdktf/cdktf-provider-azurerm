@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway.html
+// https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermVirtualNetworkGatewayConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway.html#name DataAzurermVirtualNetworkGateway#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway#name DataAzurermVirtualNetworkGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway.html#resource_group_name DataAzurermVirtualNetworkGateway#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway#resource_group_name DataAzurermVirtualNetworkGateway#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway.html#timeouts DataAzurermVirtualNetworkGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway#timeouts DataAzurermVirtualNetworkGateway#timeouts}
   */
   readonly timeouts?: DataAzurermVirtualNetworkGatewayTimeouts;
 }
@@ -143,7 +143,7 @@ export class DataAzurermVirtualNetworkGatewayVpnClientConfiguration extends cdkt
 }
 export interface DataAzurermVirtualNetworkGatewayTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway.html#read DataAzurermVirtualNetworkGateway#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway#read DataAzurermVirtualNetworkGateway#read}
   */
   readonly read?: string;
 }
@@ -209,7 +209,7 @@ export class DataAzurermVirtualNetworkGatewayTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway.html azurerm_virtual_network_gateway}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway azurerm_virtual_network_gateway}
 */
 export class DataAzurermVirtualNetworkGateway extends cdktf.TerraformDataSource {
 
@@ -223,7 +223,7 @@ export class DataAzurermVirtualNetworkGateway extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway.html azurerm_virtual_network_gateway} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network_gateway azurerm_virtual_network_gateway} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

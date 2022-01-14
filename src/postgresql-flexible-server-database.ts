@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database.html
+// https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface PostgresqlFlexibleServerDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database.html#charset PostgresqlFlexibleServerDatabase#charset}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database#charset PostgresqlFlexibleServerDatabase#charset}
   */
   readonly charset?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database.html#collation PostgresqlFlexibleServerDatabase#collation}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database#collation PostgresqlFlexibleServerDatabase#collation}
   */
   readonly collation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database.html#name PostgresqlFlexibleServerDatabase#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database#name PostgresqlFlexibleServerDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database.html#server_id PostgresqlFlexibleServerDatabase#server_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database#server_id PostgresqlFlexibleServerDatabase#server_id}
   */
   readonly serverId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database.html#timeouts PostgresqlFlexibleServerDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database#timeouts PostgresqlFlexibleServerDatabase#timeouts}
   */
   readonly timeouts?: PostgresqlFlexibleServerDatabaseTimeouts;
 }
 export interface PostgresqlFlexibleServerDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database.html#create PostgresqlFlexibleServerDatabase#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database#create PostgresqlFlexibleServerDatabase#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database.html#delete PostgresqlFlexibleServerDatabase#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database#delete PostgresqlFlexibleServerDatabase#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database.html#read PostgresqlFlexibleServerDatabase#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database#read PostgresqlFlexibleServerDatabase#read}
   */
   readonly read?: string;
 }
@@ -152,7 +152,7 @@ export class PostgresqlFlexibleServerDatabaseTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database.html azurerm_postgresql_flexible_server_database}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database azurerm_postgresql_flexible_server_database}
 */
 export class PostgresqlFlexibleServerDatabase extends cdktf.TerraformResource {
 
@@ -166,7 +166,7 @@ export class PostgresqlFlexibleServerDatabase extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database.html azurerm_postgresql_flexible_server_database} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_flexible_server_database azurerm_postgresql_flexible_server_database} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

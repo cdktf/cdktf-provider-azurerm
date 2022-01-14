@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html
+// https://www.terraform.io/docs/providers/azurerm/r/cognitive_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,101 +8,101 @@ import * as cdktf from 'cdktf';
 
 export interface CognitiveAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#custom_subdomain_name CognitiveAccount#custom_subdomain_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#custom_subdomain_name CognitiveAccount#custom_subdomain_name}
   */
   readonly customSubdomainName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#fqdns CognitiveAccount#fqdns}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#fqdns CognitiveAccount#fqdns}
   */
   readonly fqdns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#kind CognitiveAccount#kind}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#kind CognitiveAccount#kind}
   */
   readonly kind: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#local_auth_enabled CognitiveAccount#local_auth_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#local_auth_enabled CognitiveAccount#local_auth_enabled}
   */
   readonly localAuthEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#location CognitiveAccount#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#location CognitiveAccount#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#metrics_advisor_aad_client_id CognitiveAccount#metrics_advisor_aad_client_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#metrics_advisor_aad_client_id CognitiveAccount#metrics_advisor_aad_client_id}
   */
   readonly metricsAdvisorAadClientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#metrics_advisor_aad_tenant_id CognitiveAccount#metrics_advisor_aad_tenant_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#metrics_advisor_aad_tenant_id CognitiveAccount#metrics_advisor_aad_tenant_id}
   */
   readonly metricsAdvisorAadTenantId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#metrics_advisor_super_user_name CognitiveAccount#metrics_advisor_super_user_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#metrics_advisor_super_user_name CognitiveAccount#metrics_advisor_super_user_name}
   */
   readonly metricsAdvisorSuperUserName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#metrics_advisor_website_name CognitiveAccount#metrics_advisor_website_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#metrics_advisor_website_name CognitiveAccount#metrics_advisor_website_name}
   */
   readonly metricsAdvisorWebsiteName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#name CognitiveAccount#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#name CognitiveAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#outbound_network_access_restrited CognitiveAccount#outbound_network_access_restrited}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#outbound_network_access_restrited CognitiveAccount#outbound_network_access_restrited}
   */
   readonly outboundNetworkAccessRestrited?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#public_network_access_enabled CognitiveAccount#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#public_network_access_enabled CognitiveAccount#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#qna_runtime_endpoint CognitiveAccount#qna_runtime_endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#qna_runtime_endpoint CognitiveAccount#qna_runtime_endpoint}
   */
   readonly qnaRuntimeEndpoint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#resource_group_name CognitiveAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#resource_group_name CognitiveAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#sku_name CognitiveAccount#sku_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#sku_name CognitiveAccount#sku_name}
   */
   readonly skuName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#tags CognitiveAccount#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#tags CognitiveAccount#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * identity block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#identity CognitiveAccount#identity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#identity CognitiveAccount#identity}
   */
   readonly identity?: CognitiveAccountIdentity;
   /**
   * network_acls block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#network_acls CognitiveAccount#network_acls}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#network_acls CognitiveAccount#network_acls}
   */
   readonly networkAcls?: CognitiveAccountNetworkAcls;
   /**
   * storage block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#storage CognitiveAccount#storage}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#storage CognitiveAccount#storage}
   */
   readonly storage?: CognitiveAccountStorage[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#timeouts CognitiveAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#timeouts CognitiveAccount#timeouts}
   */
   readonly timeouts?: CognitiveAccountTimeouts;
 }
 export interface CognitiveAccountIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#identity_ids CognitiveAccount#identity_ids}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#identity_ids CognitiveAccount#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#type CognitiveAccount#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#type CognitiveAccount#type}
   */
   readonly type?: string;
 }
@@ -191,11 +191,11 @@ export class CognitiveAccountIdentityOutputReference extends cdktf.ComplexObject
 }
 export interface CognitiveAccountNetworkAclsVirtualNetworkRules {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#ignore_missing_vnet_service_endpoint CognitiveAccount#ignore_missing_vnet_service_endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#ignore_missing_vnet_service_endpoint CognitiveAccount#ignore_missing_vnet_service_endpoint}
   */
   readonly ignoreMissingVnetServiceEndpoint?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#subnet_id CognitiveAccount#subnet_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#subnet_id CognitiveAccount#subnet_id}
   */
   readonly subnetId?: string;
 }
@@ -213,19 +213,19 @@ export function cognitiveAccountNetworkAclsVirtualNetworkRulesToTerraform(struct
 
 export interface CognitiveAccountNetworkAcls {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#default_action CognitiveAccount#default_action}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#default_action CognitiveAccount#default_action}
   */
   readonly defaultAction: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#ip_rules CognitiveAccount#ip_rules}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#ip_rules CognitiveAccount#ip_rules}
   */
   readonly ipRules?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#virtual_network_rules CognitiveAccount#virtual_network_rules}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#virtual_network_rules CognitiveAccount#virtual_network_rules}
   */
   readonly virtualNetworkRules?: CognitiveAccountNetworkAclsVirtualNetworkRules[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#virtual_network_subnet_ids CognitiveAccount#virtual_network_subnet_ids}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#virtual_network_subnet_ids CognitiveAccount#virtual_network_subnet_ids}
   */
   readonly virtualNetworkSubnetIds?: string[];
 }
@@ -358,11 +358,11 @@ export class CognitiveAccountNetworkAclsOutputReference extends cdktf.ComplexObj
 }
 export interface CognitiveAccountStorage {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#identity_client_id CognitiveAccount#identity_client_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#identity_client_id CognitiveAccount#identity_client_id}
   */
   readonly identityClientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#storage_account_id CognitiveAccount#storage_account_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#storage_account_id CognitiveAccount#storage_account_id}
   */
   readonly storageAccountId: string;
 }
@@ -380,19 +380,19 @@ export function cognitiveAccountStorageToTerraform(struct?: CognitiveAccountStor
 
 export interface CognitiveAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#create CognitiveAccount#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#create CognitiveAccount#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#delete CognitiveAccount#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#delete CognitiveAccount#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#read CognitiveAccount#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#read CognitiveAccount#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html#update CognitiveAccount#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account#update CognitiveAccount#update}
   */
   readonly update?: string;
 }
@@ -527,7 +527,7 @@ export class CognitiveAccountTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html azurerm_cognitive_account}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account azurerm_cognitive_account}
 */
 export class CognitiveAccount extends cdktf.TerraformResource {
 
@@ -541,7 +541,7 @@ export class CognitiveAccount extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account.html azurerm_cognitive_account} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account azurerm_cognitive_account} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

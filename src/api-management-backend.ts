@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html
+// https://www.terraform.io/docs/providers/azurerm/r/api_management_backend
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,75 +8,75 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementBackendConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#api_management_name ApiManagementBackend#api_management_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#api_management_name ApiManagementBackend#api_management_name}
   */
   readonly apiManagementName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#description ApiManagementBackend#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#description ApiManagementBackend#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#name ApiManagementBackend#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#name ApiManagementBackend#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#protocol ApiManagementBackend#protocol}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#protocol ApiManagementBackend#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#resource_group_name ApiManagementBackend#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#resource_group_name ApiManagementBackend#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#resource_id ApiManagementBackend#resource_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#resource_id ApiManagementBackend#resource_id}
   */
   readonly resourceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#title ApiManagementBackend#title}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#title ApiManagementBackend#title}
   */
   readonly title?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#url ApiManagementBackend#url}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#url ApiManagementBackend#url}
   */
   readonly url: string;
   /**
   * credentials block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#credentials ApiManagementBackend#credentials}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#credentials ApiManagementBackend#credentials}
   */
   readonly credentials?: ApiManagementBackendCredentials;
   /**
   * proxy block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#proxy ApiManagementBackend#proxy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#proxy ApiManagementBackend#proxy}
   */
   readonly proxy?: ApiManagementBackendProxy;
   /**
   * service_fabric_cluster block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#service_fabric_cluster ApiManagementBackend#service_fabric_cluster}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#service_fabric_cluster ApiManagementBackend#service_fabric_cluster}
   */
   readonly serviceFabricCluster?: ApiManagementBackendServiceFabricCluster;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#timeouts ApiManagementBackend#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#timeouts ApiManagementBackend#timeouts}
   */
   readonly timeouts?: ApiManagementBackendTimeouts;
   /**
   * tls block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#tls ApiManagementBackend#tls}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#tls ApiManagementBackend#tls}
   */
   readonly tls?: ApiManagementBackendTls;
 }
 export interface ApiManagementBackendCredentialsAuthorization {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#parameter ApiManagementBackend#parameter}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#parameter ApiManagementBackend#parameter}
   */
   readonly parameter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#scheme ApiManagementBackend#scheme}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#scheme ApiManagementBackend#scheme}
   */
   readonly scheme?: string;
 }
@@ -165,21 +165,21 @@ export class ApiManagementBackendCredentialsAuthorizationOutputReference extends
 }
 export interface ApiManagementBackendCredentials {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#certificate ApiManagementBackend#certificate}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#certificate ApiManagementBackend#certificate}
   */
   readonly certificate?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#header ApiManagementBackend#header}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#header ApiManagementBackend#header}
   */
   readonly header?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#query ApiManagementBackend#query}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#query ApiManagementBackend#query}
   */
   readonly query?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * authorization block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#authorization ApiManagementBackend#authorization}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#authorization ApiManagementBackend#authorization}
   */
   readonly authorization?: ApiManagementBackendCredentialsAuthorization;
 }
@@ -316,15 +316,15 @@ export class ApiManagementBackendCredentialsOutputReference extends cdktf.Comple
 }
 export interface ApiManagementBackendProxy {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#password ApiManagementBackend#password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#password ApiManagementBackend#password}
   */
   readonly password?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#url ApiManagementBackend#url}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#url ApiManagementBackend#url}
   */
   readonly url: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#username ApiManagementBackend#username}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#username ApiManagementBackend#username}
   */
   readonly username: string;
 }
@@ -430,11 +430,11 @@ export class ApiManagementBackendProxyOutputReference extends cdktf.ComplexObjec
 }
 export interface ApiManagementBackendServiceFabricClusterServerX509Name {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#issuer_certificate_thumbprint ApiManagementBackend#issuer_certificate_thumbprint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#issuer_certificate_thumbprint ApiManagementBackend#issuer_certificate_thumbprint}
   */
   readonly issuerCertificateThumbprint: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#name ApiManagementBackend#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#name ApiManagementBackend#name}
   */
   readonly name: string;
 }
@@ -452,29 +452,29 @@ export function apiManagementBackendServiceFabricClusterServerX509NameToTerrafor
 
 export interface ApiManagementBackendServiceFabricCluster {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#client_certificate_id ApiManagementBackend#client_certificate_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#client_certificate_id ApiManagementBackend#client_certificate_id}
   */
   readonly clientCertificateId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#client_certificate_thumbprint ApiManagementBackend#client_certificate_thumbprint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#client_certificate_thumbprint ApiManagementBackend#client_certificate_thumbprint}
   */
   readonly clientCertificateThumbprint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#management_endpoints ApiManagementBackend#management_endpoints}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#management_endpoints ApiManagementBackend#management_endpoints}
   */
   readonly managementEndpoints: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#max_partition_resolution_retries ApiManagementBackend#max_partition_resolution_retries}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#max_partition_resolution_retries ApiManagementBackend#max_partition_resolution_retries}
   */
   readonly maxPartitionResolutionRetries: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#server_certificate_thumbprints ApiManagementBackend#server_certificate_thumbprints}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#server_certificate_thumbprints ApiManagementBackend#server_certificate_thumbprints}
   */
   readonly serverCertificateThumbprints?: string[];
   /**
   * server_x509_name block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#server_x509_name ApiManagementBackend#server_x509_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#server_x509_name ApiManagementBackend#server_x509_name}
   */
   readonly serverX509Name?: ApiManagementBackendServiceFabricClusterServerX509Name[];
 }
@@ -650,19 +650,19 @@ export class ApiManagementBackendServiceFabricClusterOutputReference extends cdk
 }
 export interface ApiManagementBackendTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#create ApiManagementBackend#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#create ApiManagementBackend#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#delete ApiManagementBackend#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#delete ApiManagementBackend#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#read ApiManagementBackend#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#read ApiManagementBackend#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#update ApiManagementBackend#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#update ApiManagementBackend#update}
   */
   readonly update?: string;
 }
@@ -797,11 +797,11 @@ export class ApiManagementBackendTimeoutsOutputReference extends cdktf.ComplexOb
 }
 export interface ApiManagementBackendTls {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#validate_certificate_chain ApiManagementBackend#validate_certificate_chain}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#validate_certificate_chain ApiManagementBackend#validate_certificate_chain}
   */
   readonly validateCertificateChain?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html#validate_certificate_name ApiManagementBackend#validate_certificate_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend#validate_certificate_name ApiManagementBackend#validate_certificate_name}
   */
   readonly validateCertificateName?: boolean | cdktf.IResolvable;
 }
@@ -890,7 +890,7 @@ export class ApiManagementBackendTlsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html azurerm_api_management_backend}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend azurerm_api_management_backend}
 */
 export class ApiManagementBackend extends cdktf.TerraformResource {
 
@@ -904,7 +904,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend.html azurerm_api_management_backend} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_backend azurerm_api_management_backend} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html
+// https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,57 +8,57 @@ import * as cdktf from 'cdktf';
 
 export interface SynapseLinkedServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html#additional_properties SynapseLinkedService#additional_properties}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service#additional_properties SynapseLinkedService#additional_properties}
   */
   readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html#annotations SynapseLinkedService#annotations}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service#annotations SynapseLinkedService#annotations}
   */
   readonly annotations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html#description SynapseLinkedService#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service#description SynapseLinkedService#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html#name SynapseLinkedService#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service#name SynapseLinkedService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html#parameters SynapseLinkedService#parameters}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service#parameters SynapseLinkedService#parameters}
   */
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html#synapse_workspace_id SynapseLinkedService#synapse_workspace_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service#synapse_workspace_id SynapseLinkedService#synapse_workspace_id}
   */
   readonly synapseWorkspaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html#type SynapseLinkedService#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service#type SynapseLinkedService#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html#type_properties_json SynapseLinkedService#type_properties_json}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service#type_properties_json SynapseLinkedService#type_properties_json}
   */
   readonly typePropertiesJson: string;
   /**
   * integration_runtime block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html#integration_runtime SynapseLinkedService#integration_runtime}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service#integration_runtime SynapseLinkedService#integration_runtime}
   */
   readonly integrationRuntime?: SynapseLinkedServiceIntegrationRuntime;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html#timeouts SynapseLinkedService#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service#timeouts SynapseLinkedService#timeouts}
   */
   readonly timeouts?: SynapseLinkedServiceTimeouts;
 }
 export interface SynapseLinkedServiceIntegrationRuntime {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html#name SynapseLinkedService#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service#name SynapseLinkedService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html#parameters SynapseLinkedService#parameters}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service#parameters SynapseLinkedService#parameters}
   */
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
@@ -145,19 +145,19 @@ export class SynapseLinkedServiceIntegrationRuntimeOutputReference extends cdktf
 }
 export interface SynapseLinkedServiceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html#create SynapseLinkedService#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service#create SynapseLinkedService#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html#delete SynapseLinkedService#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service#delete SynapseLinkedService#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html#read SynapseLinkedService#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service#read SynapseLinkedService#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html#update SynapseLinkedService#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service#update SynapseLinkedService#update}
   */
   readonly update?: string;
 }
@@ -292,7 +292,7 @@ export class SynapseLinkedServiceTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html azurerm_synapse_linked_service}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service azurerm_synapse_linked_service}
 */
 export class SynapseLinkedService extends cdktf.TerraformResource {
 
@@ -306,7 +306,7 @@ export class SynapseLinkedService extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service.html azurerm_synapse_linked_service} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_linked_service azurerm_synapse_linked_service} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

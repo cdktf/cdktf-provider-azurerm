@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/automation_account.html
+// https://www.terraform.io/docs/providers/azurerm/d/automation_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermAutomationAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_account.html#name DataAzurermAutomationAccount#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_account#name DataAzurermAutomationAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_account.html#resource_group_name DataAzurermAutomationAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_account#resource_group_name DataAzurermAutomationAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_account.html#timeouts DataAzurermAutomationAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_account#timeouts DataAzurermAutomationAccount#timeouts}
   */
   readonly timeouts?: DataAzurermAutomationAccountTimeouts;
 }
 export interface DataAzurermAutomationAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_account.html#read DataAzurermAutomationAccount#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_account#read DataAzurermAutomationAccount#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermAutomationAccountTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/automation_account.html azurerm_automation_account}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/automation_account azurerm_automation_account}
 */
 export class DataAzurermAutomationAccount extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermAutomationAccount extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/automation_account.html azurerm_automation_account} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/automation_account azurerm_automation_account} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

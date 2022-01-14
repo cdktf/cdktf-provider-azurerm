@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark.html
+// https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,53 +8,53 @@ import * as cdktf from 'cdktf';
 
 export interface MachineLearningSynapseSparkConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark.html#description MachineLearningSynapseSpark#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark#description MachineLearningSynapseSpark#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark.html#local_auth_enabled MachineLearningSynapseSpark#local_auth_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark#local_auth_enabled MachineLearningSynapseSpark#local_auth_enabled}
   */
   readonly localAuthEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark.html#location MachineLearningSynapseSpark#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark#location MachineLearningSynapseSpark#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark.html#machine_learning_workspace_id MachineLearningSynapseSpark#machine_learning_workspace_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark#machine_learning_workspace_id MachineLearningSynapseSpark#machine_learning_workspace_id}
   */
   readonly machineLearningWorkspaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark.html#name MachineLearningSynapseSpark#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark#name MachineLearningSynapseSpark#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark.html#synapse_spark_pool_id MachineLearningSynapseSpark#synapse_spark_pool_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark#synapse_spark_pool_id MachineLearningSynapseSpark#synapse_spark_pool_id}
   */
   readonly synapseSparkPoolId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark.html#tags MachineLearningSynapseSpark#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark#tags MachineLearningSynapseSpark#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * identity block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark.html#identity MachineLearningSynapseSpark#identity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark#identity MachineLearningSynapseSpark#identity}
   */
   readonly identity?: MachineLearningSynapseSparkIdentity;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark.html#timeouts MachineLearningSynapseSpark#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark#timeouts MachineLearningSynapseSpark#timeouts}
   */
   readonly timeouts?: MachineLearningSynapseSparkTimeouts;
 }
 export interface MachineLearningSynapseSparkIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark.html#identity_ids MachineLearningSynapseSpark#identity_ids}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark#identity_ids MachineLearningSynapseSpark#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark.html#type MachineLearningSynapseSpark#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark#type MachineLearningSynapseSpark#type}
   */
   readonly type: string;
 }
@@ -140,15 +140,15 @@ export class MachineLearningSynapseSparkIdentityOutputReference extends cdktf.Co
 }
 export interface MachineLearningSynapseSparkTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark.html#create MachineLearningSynapseSpark#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark#create MachineLearningSynapseSpark#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark.html#delete MachineLearningSynapseSpark#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark#delete MachineLearningSynapseSpark#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark.html#read MachineLearningSynapseSpark#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark#read MachineLearningSynapseSpark#read}
   */
   readonly read?: string;
 }
@@ -260,7 +260,7 @@ export class MachineLearningSynapseSparkTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark.html azurerm_machine_learning_synapse_spark}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark azurerm_machine_learning_synapse_spark}
 */
 export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
 
@@ -274,7 +274,7 @@ export class MachineLearningSynapseSpark extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark.html azurerm_machine_learning_synapse_spark} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/machine_learning_synapse_spark azurerm_machine_learning_synapse_spark} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

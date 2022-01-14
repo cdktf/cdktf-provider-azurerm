@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html
+// https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,61 +8,61 @@ import * as cdktf from 'cdktf';
 
 export interface MonitorScheduledQueryRulesLogConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html#authorized_resource_ids MonitorScheduledQueryRulesLog#authorized_resource_ids}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#authorized_resource_ids MonitorScheduledQueryRulesLog#authorized_resource_ids}
   */
   readonly authorizedResourceIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html#data_source_id MonitorScheduledQueryRulesLog#data_source_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#data_source_id MonitorScheduledQueryRulesLog#data_source_id}
   */
   readonly dataSourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html#description MonitorScheduledQueryRulesLog#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#description MonitorScheduledQueryRulesLog#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html#enabled MonitorScheduledQueryRulesLog#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#enabled MonitorScheduledQueryRulesLog#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html#location MonitorScheduledQueryRulesLog#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#location MonitorScheduledQueryRulesLog#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html#name MonitorScheduledQueryRulesLog#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#name MonitorScheduledQueryRulesLog#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html#resource_group_name MonitorScheduledQueryRulesLog#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#resource_group_name MonitorScheduledQueryRulesLog#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html#tags MonitorScheduledQueryRulesLog#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#tags MonitorScheduledQueryRulesLog#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * criteria block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html#criteria MonitorScheduledQueryRulesLog#criteria}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#criteria MonitorScheduledQueryRulesLog#criteria}
   */
   readonly criteria: MonitorScheduledQueryRulesLogCriteria;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html#timeouts MonitorScheduledQueryRulesLog#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#timeouts MonitorScheduledQueryRulesLog#timeouts}
   */
   readonly timeouts?: MonitorScheduledQueryRulesLogTimeouts;
 }
 export interface MonitorScheduledQueryRulesLogCriteriaDimension {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html#name MonitorScheduledQueryRulesLog#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#name MonitorScheduledQueryRulesLog#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html#operator MonitorScheduledQueryRulesLog#operator}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#operator MonitorScheduledQueryRulesLog#operator}
   */
   readonly operator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html#values MonitorScheduledQueryRulesLog#values}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#values MonitorScheduledQueryRulesLog#values}
   */
   readonly values: string[];
 }
@@ -81,13 +81,13 @@ export function monitorScheduledQueryRulesLogCriteriaDimensionToTerraform(struct
 
 export interface MonitorScheduledQueryRulesLogCriteria {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html#metric_name MonitorScheduledQueryRulesLog#metric_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#metric_name MonitorScheduledQueryRulesLog#metric_name}
   */
   readonly metricName: string;
   /**
   * dimension block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html#dimension MonitorScheduledQueryRulesLog#dimension}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#dimension MonitorScheduledQueryRulesLog#dimension}
   */
   readonly dimension: MonitorScheduledQueryRulesLogCriteriaDimension[];
 }
@@ -171,19 +171,19 @@ export class MonitorScheduledQueryRulesLogCriteriaOutputReference extends cdktf.
 }
 export interface MonitorScheduledQueryRulesLogTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html#create MonitorScheduledQueryRulesLog#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#create MonitorScheduledQueryRulesLog#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html#delete MonitorScheduledQueryRulesLog#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#delete MonitorScheduledQueryRulesLog#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html#read MonitorScheduledQueryRulesLog#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#read MonitorScheduledQueryRulesLog#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html#update MonitorScheduledQueryRulesLog#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log#update MonitorScheduledQueryRulesLog#update}
   */
   readonly update?: string;
 }
@@ -318,7 +318,7 @@ export class MonitorScheduledQueryRulesLogTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html azurerm_monitor_scheduled_query_rules_log}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log azurerm_monitor_scheduled_query_rules_log}
 */
 export class MonitorScheduledQueryRulesLog extends cdktf.TerraformResource {
 
@@ -332,7 +332,7 @@ export class MonitorScheduledQueryRulesLog extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log.html azurerm_monitor_scheduled_query_rules_log} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_scheduled_query_rules_log azurerm_monitor_scheduled_query_rules_log} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

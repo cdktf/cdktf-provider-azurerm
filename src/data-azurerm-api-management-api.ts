@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/api_management_api.html
+// https://www.terraform.io/docs/providers/azurerm/d/api_management_api
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,25 +8,25 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermApiManagementApiConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api.html#api_management_name DataAzurermApiManagementApi#api_management_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api#api_management_name DataAzurermApiManagementApi#api_management_name}
   */
   readonly apiManagementName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api.html#name DataAzurermApiManagementApi#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api#name DataAzurermApiManagementApi#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api.html#resource_group_name DataAzurermApiManagementApi#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api#resource_group_name DataAzurermApiManagementApi#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api.html#revision DataAzurermApiManagementApi#revision}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api#revision DataAzurermApiManagementApi#revision}
   */
   readonly revision: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api.html#timeouts DataAzurermApiManagementApi#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api#timeouts DataAzurermApiManagementApi#timeouts}
   */
   readonly timeouts?: DataAzurermApiManagementApiTimeouts;
 }
@@ -44,7 +44,7 @@ export class DataAzurermApiManagementApiSubscriptionKeyParameterNames extends cd
 }
 export interface DataAzurermApiManagementApiTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api.html#read DataAzurermApiManagementApi#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api#read DataAzurermApiManagementApi#read}
   */
   readonly read?: string;
 }
@@ -110,7 +110,7 @@ export class DataAzurermApiManagementApiTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api.html azurerm_api_management_api}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api azurerm_api_management_api}
 */
 export class DataAzurermApiManagementApi extends cdktf.TerraformDataSource {
 
@@ -124,7 +124,7 @@ export class DataAzurermApiManagementApi extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api.html azurerm_api_management_api} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_api azurerm_api_management_api} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

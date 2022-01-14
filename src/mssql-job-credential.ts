@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html
+// https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface MssqlJobCredentialConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html#job_agent_id MssqlJobCredential#job_agent_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#job_agent_id MssqlJobCredential#job_agent_id}
   */
   readonly jobAgentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html#name MssqlJobCredential#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#name MssqlJobCredential#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html#password MssqlJobCredential#password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#password MssqlJobCredential#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html#username MssqlJobCredential#username}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#username MssqlJobCredential#username}
   */
   readonly username: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html#timeouts MssqlJobCredential#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#timeouts MssqlJobCredential#timeouts}
   */
   readonly timeouts?: MssqlJobCredentialTimeouts;
 }
 export interface MssqlJobCredentialTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html#create MssqlJobCredential#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#create MssqlJobCredential#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html#delete MssqlJobCredential#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#delete MssqlJobCredential#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html#read MssqlJobCredential#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#read MssqlJobCredential#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html#update MssqlJobCredential#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential#update MssqlJobCredential#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class MssqlJobCredentialTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html azurerm_mssql_job_credential}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential azurerm_mssql_job_credential}
 */
 export class MssqlJobCredential extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class MssqlJobCredential extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential.html azurerm_mssql_job_credential} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_job_credential azurerm_mssql_job_credential} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

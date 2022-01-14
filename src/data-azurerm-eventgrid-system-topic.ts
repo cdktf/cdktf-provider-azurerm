@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic.html
+// https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,33 +8,33 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermEventgridSystemTopicConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic.html#name DataAzurermEventgridSystemTopic#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic#name DataAzurermEventgridSystemTopic#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic.html#resource_group_name DataAzurermEventgridSystemTopic#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic#resource_group_name DataAzurermEventgridSystemTopic#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * identity block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic.html#identity DataAzurermEventgridSystemTopic#identity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic#identity DataAzurermEventgridSystemTopic#identity}
   */
   readonly identity?: DataAzurermEventgridSystemTopicIdentity;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic.html#timeouts DataAzurermEventgridSystemTopic#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic#timeouts DataAzurermEventgridSystemTopic#timeouts}
   */
   readonly timeouts?: DataAzurermEventgridSystemTopicTimeouts;
 }
 export interface DataAzurermEventgridSystemTopicIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic.html#identity_ids DataAzurermEventgridSystemTopic#identity_ids}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic#identity_ids DataAzurermEventgridSystemTopic#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic.html#type DataAzurermEventgridSystemTopic#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic#type DataAzurermEventgridSystemTopic#type}
   */
   readonly type: string;
 }
@@ -120,7 +120,7 @@ export class DataAzurermEventgridSystemTopicIdentityOutputReference extends cdkt
 }
 export interface DataAzurermEventgridSystemTopicTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic.html#read DataAzurermEventgridSystemTopic#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic#read DataAzurermEventgridSystemTopic#read}
   */
   readonly read?: string;
 }
@@ -186,7 +186,7 @@ export class DataAzurermEventgridSystemTopicTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic.html azurerm_eventgrid_system_topic}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic azurerm_eventgrid_system_topic}
 */
 export class DataAzurermEventgridSystemTopic extends cdktf.TerraformDataSource {
 
@@ -200,7 +200,7 @@ export class DataAzurermEventgridSystemTopic extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic.html azurerm_eventgrid_system_topic} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_system_topic azurerm_eventgrid_system_topic} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

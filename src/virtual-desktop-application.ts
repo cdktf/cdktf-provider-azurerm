@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html
+// https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,67 +8,67 @@ import * as cdktf from 'cdktf';
 
 export interface VirtualDesktopApplicationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html#application_group_id VirtualDesktopApplication#application_group_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application#application_group_id VirtualDesktopApplication#application_group_id}
   */
   readonly applicationGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html#command_line_argument_policy VirtualDesktopApplication#command_line_argument_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application#command_line_argument_policy VirtualDesktopApplication#command_line_argument_policy}
   */
   readonly commandLineArgumentPolicy: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html#command_line_arguments VirtualDesktopApplication#command_line_arguments}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application#command_line_arguments VirtualDesktopApplication#command_line_arguments}
   */
   readonly commandLineArguments?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html#description VirtualDesktopApplication#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application#description VirtualDesktopApplication#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html#friendly_name VirtualDesktopApplication#friendly_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application#friendly_name VirtualDesktopApplication#friendly_name}
   */
   readonly friendlyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html#icon_index VirtualDesktopApplication#icon_index}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application#icon_index VirtualDesktopApplication#icon_index}
   */
   readonly iconIndex?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html#icon_path VirtualDesktopApplication#icon_path}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application#icon_path VirtualDesktopApplication#icon_path}
   */
   readonly iconPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html#name VirtualDesktopApplication#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application#name VirtualDesktopApplication#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html#path VirtualDesktopApplication#path}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application#path VirtualDesktopApplication#path}
   */
   readonly path: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html#show_in_portal VirtualDesktopApplication#show_in_portal}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application#show_in_portal VirtualDesktopApplication#show_in_portal}
   */
   readonly showInPortal?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html#timeouts VirtualDesktopApplication#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application#timeouts VirtualDesktopApplication#timeouts}
   */
   readonly timeouts?: VirtualDesktopApplicationTimeouts;
 }
 export interface VirtualDesktopApplicationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html#create VirtualDesktopApplication#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application#create VirtualDesktopApplication#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html#delete VirtualDesktopApplication#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application#delete VirtualDesktopApplication#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html#read VirtualDesktopApplication#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application#read VirtualDesktopApplication#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html#update VirtualDesktopApplication#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application#update VirtualDesktopApplication#update}
   */
   readonly update?: string;
 }
@@ -203,7 +203,7 @@ export class VirtualDesktopApplicationTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html azurerm_virtual_desktop_application}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application azurerm_virtual_desktop_application}
 */
 export class VirtualDesktopApplication extends cdktf.TerraformResource {
 
@@ -217,7 +217,7 @@ export class VirtualDesktopApplication extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application.html azurerm_virtual_desktop_application} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_desktop_application azurerm_virtual_desktop_application} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

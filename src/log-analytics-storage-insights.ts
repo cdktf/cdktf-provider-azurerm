@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights.html
+// https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,59 +8,59 @@ import * as cdktf from 'cdktf';
 
 export interface LogAnalyticsStorageInsightsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights.html#blob_container_names LogAnalyticsStorageInsights#blob_container_names}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights#blob_container_names LogAnalyticsStorageInsights#blob_container_names}
   */
   readonly blobContainerNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights.html#name LogAnalyticsStorageInsights#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights#name LogAnalyticsStorageInsights#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights.html#resource_group_name LogAnalyticsStorageInsights#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights#resource_group_name LogAnalyticsStorageInsights#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights.html#storage_account_id LogAnalyticsStorageInsights#storage_account_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights#storage_account_id LogAnalyticsStorageInsights#storage_account_id}
   */
   readonly storageAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights.html#storage_account_key LogAnalyticsStorageInsights#storage_account_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights#storage_account_key LogAnalyticsStorageInsights#storage_account_key}
   */
   readonly storageAccountKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights.html#table_names LogAnalyticsStorageInsights#table_names}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights#table_names LogAnalyticsStorageInsights#table_names}
   */
   readonly tableNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights.html#tags LogAnalyticsStorageInsights#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights#tags LogAnalyticsStorageInsights#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights.html#workspace_id LogAnalyticsStorageInsights#workspace_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights#workspace_id LogAnalyticsStorageInsights#workspace_id}
   */
   readonly workspaceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights.html#timeouts LogAnalyticsStorageInsights#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights#timeouts LogAnalyticsStorageInsights#timeouts}
   */
   readonly timeouts?: LogAnalyticsStorageInsightsTimeouts;
 }
 export interface LogAnalyticsStorageInsightsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights.html#create LogAnalyticsStorageInsights#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights#create LogAnalyticsStorageInsights#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights.html#delete LogAnalyticsStorageInsights#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights#delete LogAnalyticsStorageInsights#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights.html#read LogAnalyticsStorageInsights#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights#read LogAnalyticsStorageInsights#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights.html#update LogAnalyticsStorageInsights#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights#update LogAnalyticsStorageInsights#update}
   */
   readonly update?: string;
 }
@@ -195,7 +195,7 @@ export class LogAnalyticsStorageInsightsTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights.html azurerm_log_analytics_storage_insights}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights azurerm_log_analytics_storage_insights}
 */
 export class LogAnalyticsStorageInsights extends cdktf.TerraformResource {
 
@@ -209,7 +209,7 @@ export class LogAnalyticsStorageInsights extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights.html azurerm_log_analytics_storage_insights} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_storage_insights azurerm_log_analytics_storage_insights} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

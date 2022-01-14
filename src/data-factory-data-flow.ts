@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,61 +8,61 @@ import * as cdktf from 'cdktf';
 
 export interface DataFactoryDataFlowConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#annotations DataFactoryDataFlow#annotations}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#annotations DataFactoryDataFlow#annotations}
   */
   readonly annotations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#data_factory_id DataFactoryDataFlow#data_factory_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#data_factory_id DataFactoryDataFlow#data_factory_id}
   */
   readonly dataFactoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#description DataFactoryDataFlow#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#description DataFactoryDataFlow#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#folder DataFactoryDataFlow#folder}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#folder DataFactoryDataFlow#folder}
   */
   readonly folder?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#name DataFactoryDataFlow#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#name DataFactoryDataFlow#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#script DataFactoryDataFlow#script}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#script DataFactoryDataFlow#script}
   */
   readonly script: string;
   /**
   * sink block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#sink DataFactoryDataFlow#sink}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#sink DataFactoryDataFlow#sink}
   */
   readonly sink: DataFactoryDataFlowSink[];
   /**
   * source block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#source DataFactoryDataFlow#source}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#source DataFactoryDataFlow#source}
   */
   readonly source: DataFactoryDataFlowSource[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#timeouts DataFactoryDataFlow#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#timeouts DataFactoryDataFlow#timeouts}
   */
   readonly timeouts?: DataFactoryDataFlowTimeouts;
   /**
   * transformation block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#transformation DataFactoryDataFlow#transformation}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#transformation DataFactoryDataFlow#transformation}
   */
   readonly transformation?: DataFactoryDataFlowTransformation[];
 }
 export interface DataFactoryDataFlowSinkDataset {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#name DataFactoryDataFlow#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#name DataFactoryDataFlow#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#parameters DataFactoryDataFlow#parameters}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#parameters DataFactoryDataFlow#parameters}
   */
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
@@ -149,11 +149,11 @@ export class DataFactoryDataFlowSinkDatasetOutputReference extends cdktf.Complex
 }
 export interface DataFactoryDataFlowSinkLinkedService {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#name DataFactoryDataFlow#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#name DataFactoryDataFlow#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#parameters DataFactoryDataFlow#parameters}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#parameters DataFactoryDataFlow#parameters}
   */
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
@@ -240,11 +240,11 @@ export class DataFactoryDataFlowSinkLinkedServiceOutputReference extends cdktf.C
 }
 export interface DataFactoryDataFlowSinkSchemaLinkedService {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#name DataFactoryDataFlow#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#name DataFactoryDataFlow#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#parameters DataFactoryDataFlow#parameters}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#parameters DataFactoryDataFlow#parameters}
   */
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
@@ -331,29 +331,29 @@ export class DataFactoryDataFlowSinkSchemaLinkedServiceOutputReference extends c
 }
 export interface DataFactoryDataFlowSink {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#description DataFactoryDataFlow#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#description DataFactoryDataFlow#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#name DataFactoryDataFlow#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#name DataFactoryDataFlow#name}
   */
   readonly name: string;
   /**
   * dataset block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#dataset DataFactoryDataFlow#dataset}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#dataset DataFactoryDataFlow#dataset}
   */
   readonly dataset?: DataFactoryDataFlowSinkDataset;
   /**
   * linked_service block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#linked_service DataFactoryDataFlow#linked_service}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#linked_service DataFactoryDataFlow#linked_service}
   */
   readonly linkedService?: DataFactoryDataFlowSinkLinkedService;
   /**
   * schema_linked_service block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#schema_linked_service DataFactoryDataFlow#schema_linked_service}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#schema_linked_service DataFactoryDataFlow#schema_linked_service}
   */
   readonly schemaLinkedService?: DataFactoryDataFlowSinkSchemaLinkedService;
 }
@@ -374,11 +374,11 @@ export function dataFactoryDataFlowSinkToTerraform(struct?: DataFactoryDataFlowS
 
 export interface DataFactoryDataFlowSourceDataset {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#name DataFactoryDataFlow#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#name DataFactoryDataFlow#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#parameters DataFactoryDataFlow#parameters}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#parameters DataFactoryDataFlow#parameters}
   */
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
@@ -465,11 +465,11 @@ export class DataFactoryDataFlowSourceDatasetOutputReference extends cdktf.Compl
 }
 export interface DataFactoryDataFlowSourceLinkedService {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#name DataFactoryDataFlow#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#name DataFactoryDataFlow#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#parameters DataFactoryDataFlow#parameters}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#parameters DataFactoryDataFlow#parameters}
   */
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
@@ -556,11 +556,11 @@ export class DataFactoryDataFlowSourceLinkedServiceOutputReference extends cdktf
 }
 export interface DataFactoryDataFlowSourceSchemaLinkedService {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#name DataFactoryDataFlow#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#name DataFactoryDataFlow#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#parameters DataFactoryDataFlow#parameters}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#parameters DataFactoryDataFlow#parameters}
   */
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
@@ -647,29 +647,29 @@ export class DataFactoryDataFlowSourceSchemaLinkedServiceOutputReference extends
 }
 export interface DataFactoryDataFlowSource {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#description DataFactoryDataFlow#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#description DataFactoryDataFlow#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#name DataFactoryDataFlow#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#name DataFactoryDataFlow#name}
   */
   readonly name: string;
   /**
   * dataset block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#dataset DataFactoryDataFlow#dataset}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#dataset DataFactoryDataFlow#dataset}
   */
   readonly dataset?: DataFactoryDataFlowSourceDataset;
   /**
   * linked_service block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#linked_service DataFactoryDataFlow#linked_service}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#linked_service DataFactoryDataFlow#linked_service}
   */
   readonly linkedService?: DataFactoryDataFlowSourceLinkedService;
   /**
   * schema_linked_service block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#schema_linked_service DataFactoryDataFlow#schema_linked_service}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#schema_linked_service DataFactoryDataFlow#schema_linked_service}
   */
   readonly schemaLinkedService?: DataFactoryDataFlowSourceSchemaLinkedService;
 }
@@ -690,19 +690,19 @@ export function dataFactoryDataFlowSourceToTerraform(struct?: DataFactoryDataFlo
 
 export interface DataFactoryDataFlowTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#create DataFactoryDataFlow#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#create DataFactoryDataFlow#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#delete DataFactoryDataFlow#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#delete DataFactoryDataFlow#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#read DataFactoryDataFlow#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#read DataFactoryDataFlow#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#update DataFactoryDataFlow#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#update DataFactoryDataFlow#update}
   */
   readonly update?: string;
 }
@@ -837,11 +837,11 @@ export class DataFactoryDataFlowTimeoutsOutputReference extends cdktf.ComplexObj
 }
 export interface DataFactoryDataFlowTransformation {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#description DataFactoryDataFlow#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#description DataFactoryDataFlow#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html#name DataFactoryDataFlow#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow#name DataFactoryDataFlow#name}
   */
   readonly name: string;
 }
@@ -859,7 +859,7 @@ export function dataFactoryDataFlowTransformationToTerraform(struct?: DataFactor
 
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html azurerm_data_factory_data_flow}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow azurerm_data_factory_data_flow}
 */
 export class DataFactoryDataFlow extends cdktf.TerraformResource {
 
@@ -873,7 +873,7 @@ export class DataFactoryDataFlow extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow.html azurerm_data_factory_data_flow} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_data_flow azurerm_data_factory_data_flow} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

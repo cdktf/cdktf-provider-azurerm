@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link.html
+// https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface PrivateDnsZoneVirtualNetworkLinkConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link.html#name PrivateDnsZoneVirtualNetworkLink#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link#name PrivateDnsZoneVirtualNetworkLink#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link.html#private_dns_zone_name PrivateDnsZoneVirtualNetworkLink#private_dns_zone_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link#private_dns_zone_name PrivateDnsZoneVirtualNetworkLink#private_dns_zone_name}
   */
   readonly privateDnsZoneName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link.html#registration_enabled PrivateDnsZoneVirtualNetworkLink#registration_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link#registration_enabled PrivateDnsZoneVirtualNetworkLink#registration_enabled}
   */
   readonly registrationEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link.html#resource_group_name PrivateDnsZoneVirtualNetworkLink#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link#resource_group_name PrivateDnsZoneVirtualNetworkLink#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link.html#tags PrivateDnsZoneVirtualNetworkLink#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link#tags PrivateDnsZoneVirtualNetworkLink#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link.html#virtual_network_id PrivateDnsZoneVirtualNetworkLink#virtual_network_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link#virtual_network_id PrivateDnsZoneVirtualNetworkLink#virtual_network_id}
   */
   readonly virtualNetworkId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link.html#timeouts PrivateDnsZoneVirtualNetworkLink#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link#timeouts PrivateDnsZoneVirtualNetworkLink#timeouts}
   */
   readonly timeouts?: PrivateDnsZoneVirtualNetworkLinkTimeouts;
 }
 export interface PrivateDnsZoneVirtualNetworkLinkTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link.html#create PrivateDnsZoneVirtualNetworkLink#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link#create PrivateDnsZoneVirtualNetworkLink#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link.html#delete PrivateDnsZoneVirtualNetworkLink#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link#delete PrivateDnsZoneVirtualNetworkLink#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link.html#read PrivateDnsZoneVirtualNetworkLink#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link#read PrivateDnsZoneVirtualNetworkLink#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link.html#update PrivateDnsZoneVirtualNetworkLink#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link#update PrivateDnsZoneVirtualNetworkLink#update}
   */
   readonly update?: string;
 }
@@ -187,7 +187,7 @@ export class PrivateDnsZoneVirtualNetworkLinkTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link.html azurerm_private_dns_zone_virtual_network_link}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link azurerm_private_dns_zone_virtual_network_link}
 */
 export class PrivateDnsZoneVirtualNetworkLink extends cdktf.TerraformResource {
 
@@ -201,7 +201,7 @@ export class PrivateDnsZoneVirtualNetworkLink extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link.html azurerm_private_dns_zone_virtual_network_link} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/private_dns_zone_virtual_network_link azurerm_private_dns_zone_virtual_network_link} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

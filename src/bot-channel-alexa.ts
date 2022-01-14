@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa.html
+// https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface BotChannelAlexaConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa.html#bot_name BotChannelAlexa#bot_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa#bot_name BotChannelAlexa#bot_name}
   */
   readonly botName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa.html#location BotChannelAlexa#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa#location BotChannelAlexa#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa.html#resource_group_name BotChannelAlexa#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa#resource_group_name BotChannelAlexa#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa.html#skill_id BotChannelAlexa#skill_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa#skill_id BotChannelAlexa#skill_id}
   */
   readonly skillId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa.html#timeouts BotChannelAlexa#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa#timeouts BotChannelAlexa#timeouts}
   */
   readonly timeouts?: BotChannelAlexaTimeouts;
 }
 export interface BotChannelAlexaTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa.html#create BotChannelAlexa#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa#create BotChannelAlexa#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa.html#delete BotChannelAlexa#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa#delete BotChannelAlexa#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa.html#read BotChannelAlexa#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa#read BotChannelAlexa#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa.html#update BotChannelAlexa#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa#update BotChannelAlexa#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class BotChannelAlexaTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa.html azurerm_bot_channel_alexa}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa azurerm_bot_channel_alexa}
 */
 export class BotChannelAlexa extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class BotChannelAlexa extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa.html azurerm_bot_channel_alexa} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_alexa azurerm_bot_channel_alexa} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

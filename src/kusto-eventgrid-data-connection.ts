@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html
+// https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,79 +8,79 @@ import * as cdktf from 'cdktf';
 
 export interface KustoEventgridDataConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#blob_storage_event_type KustoEventgridDataConnection#blob_storage_event_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#blob_storage_event_type KustoEventgridDataConnection#blob_storage_event_type}
   */
   readonly blobStorageEventType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#cluster_name KustoEventgridDataConnection#cluster_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#cluster_name KustoEventgridDataConnection#cluster_name}
   */
   readonly clusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#data_format KustoEventgridDataConnection#data_format}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#data_format KustoEventgridDataConnection#data_format}
   */
   readonly dataFormat?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#database_name KustoEventgridDataConnection#database_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#database_name KustoEventgridDataConnection#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#eventhub_consumer_group_name KustoEventgridDataConnection#eventhub_consumer_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#eventhub_consumer_group_name KustoEventgridDataConnection#eventhub_consumer_group_name}
   */
   readonly eventhubConsumerGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#eventhub_id KustoEventgridDataConnection#eventhub_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#eventhub_id KustoEventgridDataConnection#eventhub_id}
   */
   readonly eventhubId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#location KustoEventgridDataConnection#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#location KustoEventgridDataConnection#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#mapping_rule_name KustoEventgridDataConnection#mapping_rule_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#mapping_rule_name KustoEventgridDataConnection#mapping_rule_name}
   */
   readonly mappingRuleName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#name KustoEventgridDataConnection#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#name KustoEventgridDataConnection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#resource_group_name KustoEventgridDataConnection#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#resource_group_name KustoEventgridDataConnection#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#skip_first_record KustoEventgridDataConnection#skip_first_record}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#skip_first_record KustoEventgridDataConnection#skip_first_record}
   */
   readonly skipFirstRecord?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#storage_account_id KustoEventgridDataConnection#storage_account_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#storage_account_id KustoEventgridDataConnection#storage_account_id}
   */
   readonly storageAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#table_name KustoEventgridDataConnection#table_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#table_name KustoEventgridDataConnection#table_name}
   */
   readonly tableName?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#timeouts KustoEventgridDataConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#timeouts KustoEventgridDataConnection#timeouts}
   */
   readonly timeouts?: KustoEventgridDataConnectionTimeouts;
 }
 export interface KustoEventgridDataConnectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#create KustoEventgridDataConnection#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#create KustoEventgridDataConnection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#delete KustoEventgridDataConnection#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#delete KustoEventgridDataConnection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#read KustoEventgridDataConnection#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#read KustoEventgridDataConnection#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html#update KustoEventgridDataConnection#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection#update KustoEventgridDataConnection#update}
   */
   readonly update?: string;
 }
@@ -215,7 +215,7 @@ export class KustoEventgridDataConnectionTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html azurerm_kusto_eventgrid_data_connection}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection azurerm_kusto_eventgrid_data_connection}
 */
 export class KustoEventgridDataConnection extends cdktf.TerraformResource {
 
@@ -229,7 +229,7 @@ export class KustoEventgridDataConnection extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection.html azurerm_kusto_eventgrid_data_connection} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_eventgrid_data_connection azurerm_kusto_eventgrid_data_connection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

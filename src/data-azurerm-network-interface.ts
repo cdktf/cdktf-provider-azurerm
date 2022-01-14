@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/network_interface.html
+// https://www.terraform.io/docs/providers/azurerm/d/network_interface
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermNetworkInterfaceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_interface.html#name DataAzurermNetworkInterface#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_interface#name DataAzurermNetworkInterface#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_interface.html#resource_group_name DataAzurermNetworkInterface#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_interface#resource_group_name DataAzurermNetworkInterface#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_interface.html#timeouts DataAzurermNetworkInterface#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_interface#timeouts DataAzurermNetworkInterface#timeouts}
   */
   readonly timeouts?: DataAzurermNetworkInterfaceTimeouts;
 }
@@ -86,7 +86,7 @@ export class DataAzurermNetworkInterfaceIpConfiguration extends cdktf.ComplexCom
 }
 export interface DataAzurermNetworkInterfaceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_interface.html#read DataAzurermNetworkInterface#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_interface#read DataAzurermNetworkInterface#read}
   */
   readonly read?: string;
 }
@@ -152,7 +152,7 @@ export class DataAzurermNetworkInterfaceTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/network_interface.html azurerm_network_interface}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/network_interface azurerm_network_interface}
 */
 export class DataAzurermNetworkInterface extends cdktf.TerraformDataSource {
 
@@ -166,7 +166,7 @@ export class DataAzurermNetworkInterface extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/network_interface.html azurerm_network_interface} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/network_interface azurerm_network_interface} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

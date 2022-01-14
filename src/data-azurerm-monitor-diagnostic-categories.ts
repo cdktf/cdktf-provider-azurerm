@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/monitor_diagnostic_categories.html
+// https://www.terraform.io/docs/providers/azurerm/d/monitor_diagnostic_categories
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,19 +8,19 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMonitorDiagnosticCategoriesConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_diagnostic_categories.html#resource_id DataAzurermMonitorDiagnosticCategories#resource_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_diagnostic_categories#resource_id DataAzurermMonitorDiagnosticCategories#resource_id}
   */
   readonly resourceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_diagnostic_categories.html#timeouts DataAzurermMonitorDiagnosticCategories#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_diagnostic_categories#timeouts DataAzurermMonitorDiagnosticCategories#timeouts}
   */
   readonly timeouts?: DataAzurermMonitorDiagnosticCategoriesTimeouts;
 }
 export interface DataAzurermMonitorDiagnosticCategoriesTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_diagnostic_categories.html#read DataAzurermMonitorDiagnosticCategories#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_diagnostic_categories#read DataAzurermMonitorDiagnosticCategories#read}
   */
   readonly read?: string;
 }
@@ -86,7 +86,7 @@ export class DataAzurermMonitorDiagnosticCategoriesTimeoutsOutputReference exten
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_diagnostic_categories.html azurerm_monitor_diagnostic_categories}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_diagnostic_categories azurerm_monitor_diagnostic_categories}
 */
 export class DataAzurermMonitorDiagnosticCategories extends cdktf.TerraformDataSource {
 
@@ -100,7 +100,7 @@ export class DataAzurermMonitorDiagnosticCategories extends cdktf.TerraformDataS
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_diagnostic_categories.html azurerm_monitor_diagnostic_categories} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_diagnostic_categories azurerm_monitor_diagnostic_categories} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

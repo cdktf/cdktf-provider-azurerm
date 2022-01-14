@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/virtual_machine.html
+// https://www.terraform.io/docs/providers/azurerm/d/virtual_machine
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermVirtualMachineConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine.html#name DataAzurermVirtualMachine#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine#name DataAzurermVirtualMachine#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine.html#resource_group_name DataAzurermVirtualMachine#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine#resource_group_name DataAzurermVirtualMachine#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine.html#timeouts DataAzurermVirtualMachine#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine#timeouts DataAzurermVirtualMachine#timeouts}
   */
   readonly timeouts?: DataAzurermVirtualMachineTimeouts;
 }
@@ -46,7 +46,7 @@ export class DataAzurermVirtualMachineIdentity extends cdktf.ComplexComputedList
 }
 export interface DataAzurermVirtualMachineTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine.html#read DataAzurermVirtualMachine#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine#read DataAzurermVirtualMachine#read}
   */
   readonly read?: string;
 }
@@ -112,7 +112,7 @@ export class DataAzurermVirtualMachineTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine.html azurerm_virtual_machine}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine azurerm_virtual_machine}
 */
 export class DataAzurermVirtualMachine extends cdktf.TerraformDataSource {
 
@@ -126,7 +126,7 @@ export class DataAzurermVirtualMachine extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine.html azurerm_virtual_machine} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_machine azurerm_virtual_machine} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

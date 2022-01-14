@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html
+// https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermKubernetesServiceVersionsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html#include_preview DataAzurermKubernetesServiceVersions#include_preview}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions#include_preview DataAzurermKubernetesServiceVersions#include_preview}
   */
   readonly includePreview?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html#location DataAzurermKubernetesServiceVersions#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions#location DataAzurermKubernetesServiceVersions#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html#version_prefix DataAzurermKubernetesServiceVersions#version_prefix}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions#version_prefix DataAzurermKubernetesServiceVersions#version_prefix}
   */
   readonly versionPrefix?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html#timeouts DataAzurermKubernetesServiceVersions#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions#timeouts DataAzurermKubernetesServiceVersions#timeouts}
   */
   readonly timeouts?: DataAzurermKubernetesServiceVersionsTimeouts;
 }
 export interface DataAzurermKubernetesServiceVersionsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html#read DataAzurermKubernetesServiceVersions#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions#read DataAzurermKubernetesServiceVersions#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermKubernetesServiceVersionsTimeoutsOutputReference extends
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html azurerm_kubernetes_service_versions}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions azurerm_kubernetes_service_versions}
 */
 export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermKubernetesServiceVersions extends cdktf.TerraformDataSou
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions.html azurerm_kubernetes_service_versions} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_service_versions azurerm_kubernetes_service_versions} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

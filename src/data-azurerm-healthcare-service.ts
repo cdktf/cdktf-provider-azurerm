@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/healthcare_service.html
+// https://www.terraform.io/docs/providers/azurerm/d/healthcare_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermHealthcareServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service.html#location DataAzurermHealthcareService#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service#location DataAzurermHealthcareService#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service.html#name DataAzurermHealthcareService#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service#name DataAzurermHealthcareService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service.html#resource_group_name DataAzurermHealthcareService#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service#resource_group_name DataAzurermHealthcareService#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service.html#timeouts DataAzurermHealthcareService#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service#timeouts DataAzurermHealthcareService#timeouts}
   */
   readonly timeouts?: DataAzurermHealthcareServiceTimeouts;
 }
@@ -72,7 +72,7 @@ export class DataAzurermHealthcareServiceCorsConfiguration extends cdktf.Complex
 }
 export interface DataAzurermHealthcareServiceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service.html#read DataAzurermHealthcareService#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service#read DataAzurermHealthcareService#read}
   */
   readonly read?: string;
 }
@@ -138,7 +138,7 @@ export class DataAzurermHealthcareServiceTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service.html azurerm_healthcare_service}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service azurerm_healthcare_service}
 */
 export class DataAzurermHealthcareService extends cdktf.TerraformDataSource {
 
@@ -152,7 +152,7 @@ export class DataAzurermHealthcareService extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service.html azurerm_healthcare_service} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/healthcare_service azurerm_healthcare_service} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

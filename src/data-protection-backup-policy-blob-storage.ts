@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface DataProtectionBackupPolicyBlobStorageConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage.html#name DataProtectionBackupPolicyBlobStorage#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage#name DataProtectionBackupPolicyBlobStorage#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage.html#retention_duration DataProtectionBackupPolicyBlobStorage#retention_duration}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage#retention_duration DataProtectionBackupPolicyBlobStorage#retention_duration}
   */
   readonly retentionDuration: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage.html#vault_id DataProtectionBackupPolicyBlobStorage#vault_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage#vault_id DataProtectionBackupPolicyBlobStorage#vault_id}
   */
   readonly vaultId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage.html#timeouts DataProtectionBackupPolicyBlobStorage#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage#timeouts DataProtectionBackupPolicyBlobStorage#timeouts}
   */
   readonly timeouts?: DataProtectionBackupPolicyBlobStorageTimeouts;
 }
 export interface DataProtectionBackupPolicyBlobStorageTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage.html#create DataProtectionBackupPolicyBlobStorage#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage#create DataProtectionBackupPolicyBlobStorage#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage.html#delete DataProtectionBackupPolicyBlobStorage#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage#delete DataProtectionBackupPolicyBlobStorage#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage.html#read DataProtectionBackupPolicyBlobStorage#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage#read DataProtectionBackupPolicyBlobStorage#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage.html#update DataProtectionBackupPolicyBlobStorage#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage#update DataProtectionBackupPolicyBlobStorage#update}
   */
   readonly update?: string;
 }
@@ -175,7 +175,7 @@ export class DataProtectionBackupPolicyBlobStorageTimeoutsOutputReference extend
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage.html azurerm_data_protection_backup_policy_blob_storage}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage azurerm_data_protection_backup_policy_blob_storage}
 */
 export class DataProtectionBackupPolicyBlobStorage extends cdktf.TerraformResource {
 
@@ -189,7 +189,7 @@ export class DataProtectionBackupPolicyBlobStorage extends cdktf.TerraformResour
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage.html azurerm_data_protection_backup_policy_blob_storage} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_blob_storage azurerm_data_protection_backup_policy_blob_storage} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html
+// https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,63 +8,63 @@ import * as cdktf from 'cdktf';
 
 export interface LogicAppIntegrationAccountAgreementConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#agreement_type LogicAppIntegrationAccountAgreement#agreement_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#agreement_type LogicAppIntegrationAccountAgreement#agreement_type}
   */
   readonly agreementType: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#content LogicAppIntegrationAccountAgreement#content}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#content LogicAppIntegrationAccountAgreement#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#guest_partner_name LogicAppIntegrationAccountAgreement#guest_partner_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#guest_partner_name LogicAppIntegrationAccountAgreement#guest_partner_name}
   */
   readonly guestPartnerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#host_partner_name LogicAppIntegrationAccountAgreement#host_partner_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#host_partner_name LogicAppIntegrationAccountAgreement#host_partner_name}
   */
   readonly hostPartnerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#integration_account_name LogicAppIntegrationAccountAgreement#integration_account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#integration_account_name LogicAppIntegrationAccountAgreement#integration_account_name}
   */
   readonly integrationAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#metadata LogicAppIntegrationAccountAgreement#metadata}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#metadata LogicAppIntegrationAccountAgreement#metadata}
   */
   readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#name LogicAppIntegrationAccountAgreement#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#name LogicAppIntegrationAccountAgreement#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#resource_group_name LogicAppIntegrationAccountAgreement#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#resource_group_name LogicAppIntegrationAccountAgreement#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * guest_identity block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#guest_identity LogicAppIntegrationAccountAgreement#guest_identity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#guest_identity LogicAppIntegrationAccountAgreement#guest_identity}
   */
   readonly guestIdentity: LogicAppIntegrationAccountAgreementGuestIdentity;
   /**
   * host_identity block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#host_identity LogicAppIntegrationAccountAgreement#host_identity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#host_identity LogicAppIntegrationAccountAgreement#host_identity}
   */
   readonly hostIdentity: LogicAppIntegrationAccountAgreementHostIdentity;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#timeouts LogicAppIntegrationAccountAgreement#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#timeouts LogicAppIntegrationAccountAgreement#timeouts}
   */
   readonly timeouts?: LogicAppIntegrationAccountAgreementTimeouts;
 }
 export interface LogicAppIntegrationAccountAgreementGuestIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#qualifier LogicAppIntegrationAccountAgreement#qualifier}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#qualifier LogicAppIntegrationAccountAgreement#qualifier}
   */
   readonly qualifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#value LogicAppIntegrationAccountAgreement#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#value LogicAppIntegrationAccountAgreement#value}
   */
   readonly value: string;
 }
@@ -147,11 +147,11 @@ export class LogicAppIntegrationAccountAgreementGuestIdentityOutputReference ext
 }
 export interface LogicAppIntegrationAccountAgreementHostIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#qualifier LogicAppIntegrationAccountAgreement#qualifier}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#qualifier LogicAppIntegrationAccountAgreement#qualifier}
   */
   readonly qualifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#value LogicAppIntegrationAccountAgreement#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#value LogicAppIntegrationAccountAgreement#value}
   */
   readonly value: string;
 }
@@ -234,19 +234,19 @@ export class LogicAppIntegrationAccountAgreementHostIdentityOutputReference exte
 }
 export interface LogicAppIntegrationAccountAgreementTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#create LogicAppIntegrationAccountAgreement#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#create LogicAppIntegrationAccountAgreement#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#delete LogicAppIntegrationAccountAgreement#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#delete LogicAppIntegrationAccountAgreement#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#read LogicAppIntegrationAccountAgreement#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#read LogicAppIntegrationAccountAgreement#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html#update LogicAppIntegrationAccountAgreement#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement#update LogicAppIntegrationAccountAgreement#update}
   */
   readonly update?: string;
 }
@@ -381,7 +381,7 @@ export class LogicAppIntegrationAccountAgreementTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html azurerm_logic_app_integration_account_agreement}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement azurerm_logic_app_integration_account_agreement}
 */
 export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource {
 
@@ -395,7 +395,7 @@ export class LogicAppIntegrationAccountAgreement extends cdktf.TerraformResource
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement.html azurerm_logic_app_integration_account_agreement} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_agreement azurerm_logic_app_integration_account_agreement} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

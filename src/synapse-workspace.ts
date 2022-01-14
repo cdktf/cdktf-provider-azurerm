@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html
+// https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,109 +8,109 @@ import * as cdktf from 'cdktf';
 
 export interface SynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#aad_admin SynapseWorkspace#aad_admin}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#aad_admin SynapseWorkspace#aad_admin}
   */
   readonly aadAdmin?: SynapseWorkspaceAadAdmin[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#compute_subnet_id SynapseWorkspace#compute_subnet_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#compute_subnet_id SynapseWorkspace#compute_subnet_id}
   */
   readonly computeSubnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#data_exfiltration_protection_enabled SynapseWorkspace#data_exfiltration_protection_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#data_exfiltration_protection_enabled SynapseWorkspace#data_exfiltration_protection_enabled}
   */
   readonly dataExfiltrationProtectionEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#linking_allowed_for_aad_tenant_ids SynapseWorkspace#linking_allowed_for_aad_tenant_ids}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#linking_allowed_for_aad_tenant_ids SynapseWorkspace#linking_allowed_for_aad_tenant_ids}
   */
   readonly linkingAllowedForAadTenantIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#location SynapseWorkspace#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#location SynapseWorkspace#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#managed_resource_group_name SynapseWorkspace#managed_resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#managed_resource_group_name SynapseWorkspace#managed_resource_group_name}
   */
   readonly managedResourceGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#managed_virtual_network_enabled SynapseWorkspace#managed_virtual_network_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#managed_virtual_network_enabled SynapseWorkspace#managed_virtual_network_enabled}
   */
   readonly managedVirtualNetworkEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#name SynapseWorkspace#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#name SynapseWorkspace#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#public_network_access_enabled SynapseWorkspace#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#public_network_access_enabled SynapseWorkspace#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#purview_id SynapseWorkspace#purview_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#purview_id SynapseWorkspace#purview_id}
   */
   readonly purviewId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#resource_group_name SynapseWorkspace#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#resource_group_name SynapseWorkspace#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#sql_aad_admin SynapseWorkspace#sql_aad_admin}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#sql_aad_admin SynapseWorkspace#sql_aad_admin}
   */
   readonly sqlAadAdmin?: SynapseWorkspaceSqlAadAdmin[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#sql_administrator_login SynapseWorkspace#sql_administrator_login}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#sql_administrator_login SynapseWorkspace#sql_administrator_login}
   */
   readonly sqlAdministratorLogin: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#sql_administrator_login_password SynapseWorkspace#sql_administrator_login_password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#sql_administrator_login_password SynapseWorkspace#sql_administrator_login_password}
   */
   readonly sqlAdministratorLoginPassword: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#sql_identity_control_enabled SynapseWorkspace#sql_identity_control_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#sql_identity_control_enabled SynapseWorkspace#sql_identity_control_enabled}
   */
   readonly sqlIdentityControlEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#storage_data_lake_gen2_filesystem_id SynapseWorkspace#storage_data_lake_gen2_filesystem_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#storage_data_lake_gen2_filesystem_id SynapseWorkspace#storage_data_lake_gen2_filesystem_id}
   */
   readonly storageDataLakeGen2FilesystemId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#tags SynapseWorkspace#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#tags SynapseWorkspace#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * azure_devops_repo block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#azure_devops_repo SynapseWorkspace#azure_devops_repo}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#azure_devops_repo SynapseWorkspace#azure_devops_repo}
   */
   readonly azureDevopsRepo?: SynapseWorkspaceAzureDevopsRepo;
   /**
   * customer_managed_key block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#customer_managed_key SynapseWorkspace#customer_managed_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#customer_managed_key SynapseWorkspace#customer_managed_key}
   */
   readonly customerManagedKey?: SynapseWorkspaceCustomerManagedKey;
   /**
   * github_repo block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#github_repo SynapseWorkspace#github_repo}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#github_repo SynapseWorkspace#github_repo}
   */
   readonly githubRepo?: SynapseWorkspaceGithubRepo;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#timeouts SynapseWorkspace#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#timeouts SynapseWorkspace#timeouts}
   */
   readonly timeouts?: SynapseWorkspaceTimeouts;
 }
 export interface SynapseWorkspaceAadAdmin {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#login SynapseWorkspace#login}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#login SynapseWorkspace#login}
   */
   readonly login?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#object_id SynapseWorkspace#object_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#object_id SynapseWorkspace#object_id}
   */
   readonly objectId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#tenant_id SynapseWorkspace#tenant_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#tenant_id SynapseWorkspace#tenant_id}
   */
   readonly tenantId?: string;
 }
@@ -146,15 +146,15 @@ export class SynapseWorkspaceIdentity extends cdktf.ComplexComputedList {
 }
 export interface SynapseWorkspaceSqlAadAdmin {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#login SynapseWorkspace#login}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#login SynapseWorkspace#login}
   */
   readonly login?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#object_id SynapseWorkspace#object_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#object_id SynapseWorkspace#object_id}
   */
   readonly objectId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#tenant_id SynapseWorkspace#tenant_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#tenant_id SynapseWorkspace#tenant_id}
   */
   readonly tenantId?: string;
 }
@@ -173,31 +173,31 @@ export function synapseWorkspaceSqlAadAdminToTerraform(struct?: SynapseWorkspace
 
 export interface SynapseWorkspaceAzureDevopsRepo {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#account_name SynapseWorkspace#account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#account_name SynapseWorkspace#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#branch_name SynapseWorkspace#branch_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#branch_name SynapseWorkspace#branch_name}
   */
   readonly branchName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#last_commit_id SynapseWorkspace#last_commit_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#last_commit_id SynapseWorkspace#last_commit_id}
   */
   readonly lastCommitId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#project_name SynapseWorkspace#project_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#project_name SynapseWorkspace#project_name}
   */
   readonly projectName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#repository_name SynapseWorkspace#repository_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#repository_name SynapseWorkspace#repository_name}
   */
   readonly repositoryName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#root_folder SynapseWorkspace#root_folder}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#root_folder SynapseWorkspace#root_folder}
   */
   readonly rootFolder: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#tenant_id SynapseWorkspace#tenant_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#tenant_id SynapseWorkspace#tenant_id}
   */
   readonly tenantId?: string;
 }
@@ -386,11 +386,11 @@ export class SynapseWorkspaceAzureDevopsRepoOutputReference extends cdktf.Comple
 }
 export interface SynapseWorkspaceCustomerManagedKey {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#key_name SynapseWorkspace#key_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#key_name SynapseWorkspace#key_name}
   */
   readonly keyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#key_versionless_id SynapseWorkspace#key_versionless_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#key_versionless_id SynapseWorkspace#key_versionless_id}
   */
   readonly keyVersionlessId: string;
 }
@@ -476,27 +476,27 @@ export class SynapseWorkspaceCustomerManagedKeyOutputReference extends cdktf.Com
 }
 export interface SynapseWorkspaceGithubRepo {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#account_name SynapseWorkspace#account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#account_name SynapseWorkspace#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#branch_name SynapseWorkspace#branch_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#branch_name SynapseWorkspace#branch_name}
   */
   readonly branchName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#git_url SynapseWorkspace#git_url}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#git_url SynapseWorkspace#git_url}
   */
   readonly gitUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#last_commit_id SynapseWorkspace#last_commit_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#last_commit_id SynapseWorkspace#last_commit_id}
   */
   readonly lastCommitId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#repository_name SynapseWorkspace#repository_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#repository_name SynapseWorkspace#repository_name}
   */
   readonly repositoryName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#root_folder SynapseWorkspace#root_folder}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#root_folder SynapseWorkspace#root_folder}
   */
   readonly rootFolder: string;
 }
@@ -665,19 +665,19 @@ export class SynapseWorkspaceGithubRepoOutputReference extends cdktf.ComplexObje
 }
 export interface SynapseWorkspaceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#create SynapseWorkspace#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#create SynapseWorkspace#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#delete SynapseWorkspace#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#delete SynapseWorkspace#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#read SynapseWorkspace#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#read SynapseWorkspace#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html#update SynapseWorkspace#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace#update SynapseWorkspace#update}
   */
   readonly update?: string;
 }
@@ -812,7 +812,7 @@ export class SynapseWorkspaceTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html azurerm_synapse_workspace}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace azurerm_synapse_workspace}
 */
 export class SynapseWorkspace extends cdktf.TerraformResource {
 
@@ -826,7 +826,7 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace.html azurerm_synapse_workspace} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace azurerm_synapse_workspace} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

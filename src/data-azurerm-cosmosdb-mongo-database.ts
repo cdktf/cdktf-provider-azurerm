@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_mongo_database.html
+// https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_mongo_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermCosmosdbMongoDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_mongo_database.html#account_name DataAzurermCosmosdbMongoDatabase#account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_mongo_database#account_name DataAzurermCosmosdbMongoDatabase#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_mongo_database.html#name DataAzurermCosmosdbMongoDatabase#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_mongo_database#name DataAzurermCosmosdbMongoDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_mongo_database.html#resource_group_name DataAzurermCosmosdbMongoDatabase#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_mongo_database#resource_group_name DataAzurermCosmosdbMongoDatabase#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_mongo_database.html#timeouts DataAzurermCosmosdbMongoDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_mongo_database#timeouts DataAzurermCosmosdbMongoDatabase#timeouts}
   */
   readonly timeouts?: DataAzurermCosmosdbMongoDatabaseTimeouts;
 }
 export interface DataAzurermCosmosdbMongoDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_mongo_database.html#read DataAzurermCosmosdbMongoDatabase#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_mongo_database#read DataAzurermCosmosdbMongoDatabase#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermCosmosdbMongoDatabaseTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_mongo_database.html azurerm_cosmosdb_mongo_database}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_mongo_database azurerm_cosmosdb_mongo_database}
 */
 export class DataAzurermCosmosdbMongoDatabase extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermCosmosdbMongoDatabase extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_mongo_database.html azurerm_cosmosdb_mongo_database} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_mongo_database azurerm_cosmosdb_mongo_database} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

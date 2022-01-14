@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain.html
+// https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface StaticSiteCustomDomainConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain.html#domain_name StaticSiteCustomDomain#domain_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain#domain_name StaticSiteCustomDomain#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain.html#static_site_id StaticSiteCustomDomain#static_site_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain#static_site_id StaticSiteCustomDomain#static_site_id}
   */
   readonly staticSiteId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain.html#validation_type StaticSiteCustomDomain#validation_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain#validation_type StaticSiteCustomDomain#validation_type}
   */
   readonly validationType: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain.html#timeouts StaticSiteCustomDomain#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain#timeouts StaticSiteCustomDomain#timeouts}
   */
   readonly timeouts?: StaticSiteCustomDomainTimeouts;
 }
 export interface StaticSiteCustomDomainTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain.html#create StaticSiteCustomDomain#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain#create StaticSiteCustomDomain#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain.html#delete StaticSiteCustomDomain#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain#delete StaticSiteCustomDomain#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain.html#read StaticSiteCustomDomain#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain#read StaticSiteCustomDomain#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain.html#update StaticSiteCustomDomain#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain#update StaticSiteCustomDomain#update}
   */
   readonly update?: string;
 }
@@ -175,7 +175,7 @@ export class StaticSiteCustomDomainTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain.html azurerm_static_site_custom_domain}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain azurerm_static_site_custom_domain}
 */
 export class StaticSiteCustomDomain extends cdktf.TerraformResource {
 
@@ -189,7 +189,7 @@ export class StaticSiteCustomDomain extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain.html azurerm_static_site_custom_domain} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/static_site_custom_domain azurerm_static_site_custom_domain} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

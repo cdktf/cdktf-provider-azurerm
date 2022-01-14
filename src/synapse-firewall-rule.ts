@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule.html
+// https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface SynapseFirewallRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule.html#end_ip_address SynapseFirewallRule#end_ip_address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule#end_ip_address SynapseFirewallRule#end_ip_address}
   */
   readonly endIpAddress: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule.html#name SynapseFirewallRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule#name SynapseFirewallRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule.html#start_ip_address SynapseFirewallRule#start_ip_address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule#start_ip_address SynapseFirewallRule#start_ip_address}
   */
   readonly startIpAddress: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule.html#synapse_workspace_id SynapseFirewallRule#synapse_workspace_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule#synapse_workspace_id SynapseFirewallRule#synapse_workspace_id}
   */
   readonly synapseWorkspaceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule.html#timeouts SynapseFirewallRule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule#timeouts SynapseFirewallRule#timeouts}
   */
   readonly timeouts?: SynapseFirewallRuleTimeouts;
 }
 export interface SynapseFirewallRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule.html#create SynapseFirewallRule#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule#create SynapseFirewallRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule.html#delete SynapseFirewallRule#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule#delete SynapseFirewallRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule.html#read SynapseFirewallRule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule#read SynapseFirewallRule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule.html#update SynapseFirewallRule#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule#update SynapseFirewallRule#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class SynapseFirewallRuleTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule.html azurerm_synapse_firewall_rule}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule azurerm_synapse_firewall_rule}
 */
 export class SynapseFirewallRule extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class SynapseFirewallRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule.html azurerm_synapse_firewall_rule} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_firewall_rule azurerm_synapse_firewall_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/maps_account.html
+// https://www.terraform.io/docs/providers/azurerm/d/maps_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMapsAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account.html#name DataAzurermMapsAccount#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account#name DataAzurermMapsAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account.html#resource_group_name DataAzurermMapsAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account#resource_group_name DataAzurermMapsAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account.html#tags DataAzurermMapsAccount#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account#tags DataAzurermMapsAccount#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account.html#timeouts DataAzurermMapsAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account#timeouts DataAzurermMapsAccount#timeouts}
   */
   readonly timeouts?: DataAzurermMapsAccountTimeouts;
 }
 export interface DataAzurermMapsAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account.html#read DataAzurermMapsAccount#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account#read DataAzurermMapsAccount#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermMapsAccountTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account.html azurerm_maps_account}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account azurerm_maps_account}
 */
 export class DataAzurermMapsAccount extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermMapsAccount extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account.html azurerm_maps_account} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/maps_account azurerm_maps_account} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

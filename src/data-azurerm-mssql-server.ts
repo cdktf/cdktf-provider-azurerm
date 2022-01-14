@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/mssql_server.html
+// https://www.terraform.io/docs/providers/azurerm/d/mssql_server
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMssqlServerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_server.html#name DataAzurermMssqlServer#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_server#name DataAzurermMssqlServer#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_server.html#resource_group_name DataAzurermMssqlServer#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_server#resource_group_name DataAzurermMssqlServer#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_server.html#timeouts DataAzurermMssqlServer#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_server#timeouts DataAzurermMssqlServer#timeouts}
   */
   readonly timeouts?: DataAzurermMssqlServerTimeouts;
 }
@@ -46,7 +46,7 @@ export class DataAzurermMssqlServerIdentity extends cdktf.ComplexComputedList {
 }
 export interface DataAzurermMssqlServerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_server.html#read DataAzurermMssqlServer#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_server#read DataAzurermMssqlServer#read}
   */
   readonly read?: string;
 }
@@ -112,7 +112,7 @@ export class DataAzurermMssqlServerTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_server.html azurerm_mssql_server}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_server azurerm_mssql_server}
 */
 export class DataAzurermMssqlServer extends cdktf.TerraformDataSource {
 
@@ -126,7 +126,7 @@ export class DataAzurermMssqlServer extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_server.html azurerm_mssql_server} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_server azurerm_mssql_server} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

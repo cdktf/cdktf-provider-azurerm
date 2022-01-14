@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain.html
+// https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface SpringCloudCustomDomainConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain.html#certificate_name SpringCloudCustomDomain#certificate_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain#certificate_name SpringCloudCustomDomain#certificate_name}
   */
   readonly certificateName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain.html#name SpringCloudCustomDomain#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain#name SpringCloudCustomDomain#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain.html#spring_cloud_app_id SpringCloudCustomDomain#spring_cloud_app_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain#spring_cloud_app_id SpringCloudCustomDomain#spring_cloud_app_id}
   */
   readonly springCloudAppId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain.html#thumbprint SpringCloudCustomDomain#thumbprint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain#thumbprint SpringCloudCustomDomain#thumbprint}
   */
   readonly thumbprint?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain.html#timeouts SpringCloudCustomDomain#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain#timeouts SpringCloudCustomDomain#timeouts}
   */
   readonly timeouts?: SpringCloudCustomDomainTimeouts;
 }
 export interface SpringCloudCustomDomainTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain.html#create SpringCloudCustomDomain#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain#create SpringCloudCustomDomain#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain.html#delete SpringCloudCustomDomain#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain#delete SpringCloudCustomDomain#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain.html#read SpringCloudCustomDomain#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain#read SpringCloudCustomDomain#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain.html#update SpringCloudCustomDomain#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain#update SpringCloudCustomDomain#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class SpringCloudCustomDomainTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain.html azurerm_spring_cloud_custom_domain}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain azurerm_spring_cloud_custom_domain}
 */
 export class SpringCloudCustomDomain extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class SpringCloudCustomDomain extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain.html azurerm_spring_cloud_custom_domain} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_custom_domain azurerm_spring_cloud_custom_domain} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

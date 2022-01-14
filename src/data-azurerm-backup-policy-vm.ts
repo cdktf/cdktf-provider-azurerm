@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm.html
+// https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermBackupPolicyVmConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm.html#name DataAzurermBackupPolicyVm#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm#name DataAzurermBackupPolicyVm#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm.html#recovery_vault_name DataAzurermBackupPolicyVm#recovery_vault_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm#recovery_vault_name DataAzurermBackupPolicyVm#recovery_vault_name}
   */
   readonly recoveryVaultName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm.html#resource_group_name DataAzurermBackupPolicyVm#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm#resource_group_name DataAzurermBackupPolicyVm#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm.html#timeouts DataAzurermBackupPolicyVm#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm#timeouts DataAzurermBackupPolicyVm#timeouts}
   */
   readonly timeouts?: DataAzurermBackupPolicyVmTimeouts;
 }
 export interface DataAzurermBackupPolicyVmTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm.html#read DataAzurermBackupPolicyVm#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm#read DataAzurermBackupPolicyVm#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermBackupPolicyVmTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm.html azurerm_backup_policy_vm}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm azurerm_backup_policy_vm}
 */
 export class DataAzurermBackupPolicyVm extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermBackupPolicyVm extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm.html azurerm_backup_policy_vm} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/backup_policy_vm azurerm_backup_policy_vm} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/managed_disk.html
+// https://www.terraform.io/docs/providers/azurerm/d/managed_disk
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermManagedDiskConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk.html#name DataAzurermManagedDisk#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk#name DataAzurermManagedDisk#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk.html#resource_group_name DataAzurermManagedDisk#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk#resource_group_name DataAzurermManagedDisk#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk.html#tags DataAzurermManagedDisk#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk#tags DataAzurermManagedDisk#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk.html#timeouts DataAzurermManagedDisk#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk#timeouts DataAzurermManagedDisk#timeouts}
   */
   readonly timeouts?: DataAzurermManagedDiskTimeouts;
 }
 export interface DataAzurermManagedDiskTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk.html#read DataAzurermManagedDisk#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk#read DataAzurermManagedDisk#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermManagedDiskTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk.html azurerm_managed_disk}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk azurerm_managed_disk}
 */
 export class DataAzurermManagedDisk extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermManagedDisk extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk.html azurerm_managed_disk} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/managed_disk azurerm_managed_disk} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

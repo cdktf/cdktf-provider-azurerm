@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub.html
+// https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface SynapsePrivateLinkHubConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub.html#location SynapsePrivateLinkHub#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub#location SynapsePrivateLinkHub#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub.html#name SynapsePrivateLinkHub#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub#name SynapsePrivateLinkHub#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub.html#resource_group_name SynapsePrivateLinkHub#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub#resource_group_name SynapsePrivateLinkHub#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub.html#tags SynapsePrivateLinkHub#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub#tags SynapsePrivateLinkHub#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub.html#timeouts SynapsePrivateLinkHub#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub#timeouts SynapsePrivateLinkHub#timeouts}
   */
   readonly timeouts?: SynapsePrivateLinkHubTimeouts;
 }
 export interface SynapsePrivateLinkHubTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub.html#create SynapsePrivateLinkHub#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub#create SynapsePrivateLinkHub#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub.html#delete SynapsePrivateLinkHub#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub#delete SynapsePrivateLinkHub#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub.html#read SynapsePrivateLinkHub#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub#read SynapsePrivateLinkHub#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub.html#update SynapsePrivateLinkHub#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub#update SynapsePrivateLinkHub#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class SynapsePrivateLinkHubTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub.html azurerm_synapse_private_link_hub}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub azurerm_synapse_private_link_hub}
 */
 export class SynapsePrivateLinkHub extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class SynapsePrivateLinkHub extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub.html azurerm_synapse_private_link_hub} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_private_link_hub azurerm_synapse_private_link_hub} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

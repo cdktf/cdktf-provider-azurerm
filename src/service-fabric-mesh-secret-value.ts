@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value.html
+// https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface ServiceFabricMeshSecretValueConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value.html#location ServiceFabricMeshSecretValue#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value#location ServiceFabricMeshSecretValue#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value.html#name ServiceFabricMeshSecretValue#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value#name ServiceFabricMeshSecretValue#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value.html#service_fabric_mesh_secret_id ServiceFabricMeshSecretValue#service_fabric_mesh_secret_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value#service_fabric_mesh_secret_id ServiceFabricMeshSecretValue#service_fabric_mesh_secret_id}
   */
   readonly serviceFabricMeshSecretId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value.html#tags ServiceFabricMeshSecretValue#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value#tags ServiceFabricMeshSecretValue#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value.html#value ServiceFabricMeshSecretValue#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value#value ServiceFabricMeshSecretValue#value}
   */
   readonly value: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value.html#timeouts ServiceFabricMeshSecretValue#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value#timeouts ServiceFabricMeshSecretValue#timeouts}
   */
   readonly timeouts?: ServiceFabricMeshSecretValueTimeouts;
 }
 export interface ServiceFabricMeshSecretValueTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value.html#create ServiceFabricMeshSecretValue#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value#create ServiceFabricMeshSecretValue#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value.html#delete ServiceFabricMeshSecretValue#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value#delete ServiceFabricMeshSecretValue#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value.html#read ServiceFabricMeshSecretValue#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value#read ServiceFabricMeshSecretValue#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value.html#update ServiceFabricMeshSecretValue#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value#update ServiceFabricMeshSecretValue#update}
   */
   readonly update?: string;
 }
@@ -183,7 +183,7 @@ export class ServiceFabricMeshSecretValueTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value.html azurerm_service_fabric_mesh_secret_value}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value azurerm_service_fabric_mesh_secret_value}
 */
 export class ServiceFabricMeshSecretValue extends cdktf.TerraformResource {
 
@@ -197,7 +197,7 @@ export class ServiceFabricMeshSecretValue extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value.html azurerm_service_fabric_mesh_secret_value} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/service_fabric_mesh_secret_value azurerm_service_fabric_mesh_secret_value} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

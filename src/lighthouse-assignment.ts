@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment.html
+// https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface LighthouseAssignmentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment.html#lighthouse_definition_id LighthouseAssignment#lighthouse_definition_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment#lighthouse_definition_id LighthouseAssignment#lighthouse_definition_id}
   */
   readonly lighthouseDefinitionId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment.html#name LighthouseAssignment#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment#name LighthouseAssignment#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment.html#scope LighthouseAssignment#scope}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment#scope LighthouseAssignment#scope}
   */
   readonly scope: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment.html#timeouts LighthouseAssignment#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment#timeouts LighthouseAssignment#timeouts}
   */
   readonly timeouts?: LighthouseAssignmentTimeouts;
 }
 export interface LighthouseAssignmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment.html#create LighthouseAssignment#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment#create LighthouseAssignment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment.html#delete LighthouseAssignment#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment#delete LighthouseAssignment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment.html#read LighthouseAssignment#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment#read LighthouseAssignment#read}
   */
   readonly read?: string;
 }
@@ -148,7 +148,7 @@ export class LighthouseAssignmentTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment.html azurerm_lighthouse_assignment}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment azurerm_lighthouse_assignment}
 */
 export class LighthouseAssignment extends cdktf.TerraformResource {
 
@@ -162,7 +162,7 @@ export class LighthouseAssignment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment.html azurerm_lighthouse_assignment} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/lighthouse_assignment azurerm_lighthouse_assignment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

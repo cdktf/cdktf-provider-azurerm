@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery.html
+// https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSharedImageGalleryConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery.html#name DataAzurermSharedImageGallery#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery#name DataAzurermSharedImageGallery#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery.html#resource_group_name DataAzurermSharedImageGallery#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery#resource_group_name DataAzurermSharedImageGallery#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery.html#timeouts DataAzurermSharedImageGallery#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery#timeouts DataAzurermSharedImageGallery#timeouts}
   */
   readonly timeouts?: DataAzurermSharedImageGalleryTimeouts;
 }
 export interface DataAzurermSharedImageGalleryTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery.html#read DataAzurermSharedImageGallery#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery#read DataAzurermSharedImageGallery#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermSharedImageGalleryTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery.html azurerm_shared_image_gallery}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery azurerm_shared_image_gallery}
 */
 export class DataAzurermSharedImageGallery extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermSharedImageGallery extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery.html azurerm_shared_image_gallery} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_gallery azurerm_shared_image_gallery} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/synapse_workspace.html
+// https://www.terraform.io/docs/providers/azurerm/d/synapse_workspace
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/synapse_workspace.html#name DataAzurermSynapseWorkspace#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/synapse_workspace#name DataAzurermSynapseWorkspace#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/synapse_workspace.html#resource_group_name DataAzurermSynapseWorkspace#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/synapse_workspace#resource_group_name DataAzurermSynapseWorkspace#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/synapse_workspace.html#timeouts DataAzurermSynapseWorkspace#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/synapse_workspace#timeouts DataAzurermSynapseWorkspace#timeouts}
   */
   readonly timeouts?: DataAzurermSynapseWorkspaceTimeouts;
 }
@@ -41,7 +41,7 @@ export class DataAzurermSynapseWorkspaceIdentity extends cdktf.ComplexComputedLi
 }
 export interface DataAzurermSynapseWorkspaceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/synapse_workspace.html#read DataAzurermSynapseWorkspace#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/synapse_workspace#read DataAzurermSynapseWorkspace#read}
   */
   readonly read?: string;
 }
@@ -107,7 +107,7 @@ export class DataAzurermSynapseWorkspaceTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/synapse_workspace.html azurerm_synapse_workspace}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/synapse_workspace azurerm_synapse_workspace}
 */
 export class DataAzurermSynapseWorkspace extends cdktf.TerraformDataSource {
 
@@ -121,7 +121,7 @@ export class DataAzurermSynapseWorkspace extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/synapse_workspace.html azurerm_synapse_workspace} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/synapse_workspace azurerm_synapse_workspace} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

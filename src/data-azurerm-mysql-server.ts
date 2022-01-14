@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/mysql_server.html
+// https://www.terraform.io/docs/providers/azurerm/d/mysql_server
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMysqlServerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server.html#name DataAzurermMysqlServer#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server#name DataAzurermMysqlServer#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server.html#resource_group_name DataAzurermMysqlServer#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server#resource_group_name DataAzurermMysqlServer#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server.html#timeouts DataAzurermMysqlServer#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server#timeouts DataAzurermMysqlServer#timeouts}
   */
   readonly timeouts?: DataAzurermMysqlServerTimeouts;
 }
@@ -78,7 +78,7 @@ export class DataAzurermMysqlServerThreatDetectionPolicy extends cdktf.ComplexCo
 }
 export interface DataAzurermMysqlServerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server.html#read DataAzurermMysqlServer#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server#read DataAzurermMysqlServer#read}
   */
   readonly read?: string;
 }
@@ -144,7 +144,7 @@ export class DataAzurermMysqlServerTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server.html azurerm_mysql_server}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server azurerm_mysql_server}
 */
 export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
 
@@ -158,7 +158,7 @@ export class DataAzurermMysqlServer extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server.html azurerm_mysql_server} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/mysql_server azurerm_mysql_server} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

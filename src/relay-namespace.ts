@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/relay_namespace.html
+// https://www.terraform.io/docs/providers/azurerm/r/relay_namespace
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface RelayNamespaceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace.html#location RelayNamespace#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace#location RelayNamespace#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace.html#name RelayNamespace#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace#name RelayNamespace#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace.html#resource_group_name RelayNamespace#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace#resource_group_name RelayNamespace#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace.html#sku_name RelayNamespace#sku_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace#sku_name RelayNamespace#sku_name}
   */
   readonly skuName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace.html#tags RelayNamespace#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace#tags RelayNamespace#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace.html#timeouts RelayNamespace#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace#timeouts RelayNamespace#timeouts}
   */
   readonly timeouts?: RelayNamespaceTimeouts;
 }
 export interface RelayNamespaceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace.html#create RelayNamespace#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace#create RelayNamespace#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace.html#delete RelayNamespace#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace#delete RelayNamespace#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace.html#read RelayNamespace#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace#read RelayNamespace#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace.html#update RelayNamespace#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace#update RelayNamespace#update}
   */
   readonly update?: string;
 }
@@ -183,7 +183,7 @@ export class RelayNamespaceTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace.html azurerm_relay_namespace}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace azurerm_relay_namespace}
 */
 export class RelayNamespace extends cdktf.TerraformResource {
 
@@ -197,7 +197,7 @@ export class RelayNamespace extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace.html azurerm_relay_namespace} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace azurerm_relay_namespace} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster.html
+// https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermEventhubClusterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster.html#name DataAzurermEventhubCluster#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster#name DataAzurermEventhubCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster.html#resource_group_name DataAzurermEventhubCluster#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster#resource_group_name DataAzurermEventhubCluster#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster.html#timeouts DataAzurermEventhubCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster#timeouts DataAzurermEventhubCluster#timeouts}
   */
   readonly timeouts?: DataAzurermEventhubClusterTimeouts;
 }
 export interface DataAzurermEventhubClusterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster.html#read DataAzurermEventhubCluster#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster#read DataAzurermEventhubCluster#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermEventhubClusterTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster.html azurerm_eventhub_cluster}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster azurerm_eventhub_cluster}
 */
 export class DataAzurermEventhubCluster extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermEventhubCluster extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster.html azurerm_eventhub_cluster} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_cluster azurerm_eventhub_cluster} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

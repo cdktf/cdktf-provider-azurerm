@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/subscriptions.html
+// https://www.terraform.io/docs/providers/azurerm/d/subscriptions
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSubscriptionsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscriptions.html#display_name_contains DataAzurermSubscriptions#display_name_contains}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscriptions#display_name_contains DataAzurermSubscriptions#display_name_contains}
   */
   readonly displayNameContains?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscriptions.html#display_name_prefix DataAzurermSubscriptions#display_name_prefix}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscriptions#display_name_prefix DataAzurermSubscriptions#display_name_prefix}
   */
   readonly displayNamePrefix?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscriptions.html#timeouts DataAzurermSubscriptions#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscriptions#timeouts DataAzurermSubscriptions#timeouts}
   */
   readonly timeouts?: DataAzurermSubscriptionsTimeouts;
 }
@@ -72,7 +72,7 @@ export class DataAzurermSubscriptionsSubscriptions extends cdktf.ComplexComputed
 }
 export interface DataAzurermSubscriptionsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscriptions.html#read DataAzurermSubscriptions#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscriptions#read DataAzurermSubscriptions#read}
   */
   readonly read?: string;
 }
@@ -138,7 +138,7 @@ export class DataAzurermSubscriptionsTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/subscriptions.html azurerm_subscriptions}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/subscriptions azurerm_subscriptions}
 */
 export class DataAzurermSubscriptions extends cdktf.TerraformDataSource {
 
@@ -152,7 +152,7 @@ export class DataAzurermSubscriptions extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/subscriptions.html azurerm_subscriptions} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/subscriptions azurerm_subscriptions} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope.html
+// https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface StorageEncryptionScopeConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope.html#infrastructure_encryption_required StorageEncryptionScope#infrastructure_encryption_required}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope#infrastructure_encryption_required StorageEncryptionScope#infrastructure_encryption_required}
   */
   readonly infrastructureEncryptionRequired?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope.html#key_vault_key_id StorageEncryptionScope#key_vault_key_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope#key_vault_key_id StorageEncryptionScope#key_vault_key_id}
   */
   readonly keyVaultKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope.html#name StorageEncryptionScope#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope#name StorageEncryptionScope#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope.html#source StorageEncryptionScope#source}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope#source StorageEncryptionScope#source}
   */
   readonly source: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope.html#storage_account_id StorageEncryptionScope#storage_account_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope#storage_account_id StorageEncryptionScope#storage_account_id}
   */
   readonly storageAccountId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope.html#timeouts StorageEncryptionScope#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope#timeouts StorageEncryptionScope#timeouts}
   */
   readonly timeouts?: StorageEncryptionScopeTimeouts;
 }
 export interface StorageEncryptionScopeTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope.html#create StorageEncryptionScope#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope#create StorageEncryptionScope#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope.html#delete StorageEncryptionScope#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope#delete StorageEncryptionScope#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope.html#read StorageEncryptionScope#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope#read StorageEncryptionScope#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope.html#update StorageEncryptionScope#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope#update StorageEncryptionScope#update}
   */
   readonly update?: string;
 }
@@ -183,7 +183,7 @@ export class StorageEncryptionScopeTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope.html azurerm_storage_encryption_scope}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope azurerm_storage_encryption_scope}
 */
 export class StorageEncryptionScope extends cdktf.TerraformResource {
 
@@ -197,7 +197,7 @@ export class StorageEncryptionScope extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope.html azurerm_storage_encryption_scope} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_encryption_scope azurerm_storage_encryption_scope} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

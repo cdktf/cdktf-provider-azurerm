@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_data_lake_gen1.html
+// https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_data_lake_gen1
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDataShareDatasetDataLakeGen1Config extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_data_lake_gen1.html#data_share_id DataAzurermDataShareDatasetDataLakeGen1#data_share_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_data_lake_gen1#data_share_id DataAzurermDataShareDatasetDataLakeGen1#data_share_id}
   */
   readonly dataShareId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_data_lake_gen1.html#name DataAzurermDataShareDatasetDataLakeGen1#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_data_lake_gen1#name DataAzurermDataShareDatasetDataLakeGen1#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_data_lake_gen1.html#timeouts DataAzurermDataShareDatasetDataLakeGen1#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_data_lake_gen1#timeouts DataAzurermDataShareDatasetDataLakeGen1#timeouts}
   */
   readonly timeouts?: DataAzurermDataShareDatasetDataLakeGen1Timeouts;
 }
 export interface DataAzurermDataShareDatasetDataLakeGen1Timeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_data_lake_gen1.html#read DataAzurermDataShareDatasetDataLakeGen1#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_data_lake_gen1#read DataAzurermDataShareDatasetDataLakeGen1#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermDataShareDatasetDataLakeGen1TimeoutsOutputReference exte
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_data_lake_gen1.html azurerm_data_share_dataset_data_lake_gen1}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_data_lake_gen1 azurerm_data_share_dataset_data_lake_gen1}
 */
 export class DataAzurermDataShareDatasetDataLakeGen1 extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermDataShareDatasetDataLakeGen1 extends cdktf.TerraformData
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_data_lake_gen1.html azurerm_data_share_dataset_data_lake_gen1} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_dataset_data_lake_gen1 azurerm_data_share_dataset_data_lake_gen1} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

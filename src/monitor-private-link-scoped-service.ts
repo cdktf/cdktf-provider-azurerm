@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service.html
+// https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface MonitorPrivateLinkScopedServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service.html#linked_resource_id MonitorPrivateLinkScopedService#linked_resource_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service#linked_resource_id MonitorPrivateLinkScopedService#linked_resource_id}
   */
   readonly linkedResourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service.html#name MonitorPrivateLinkScopedService#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service#name MonitorPrivateLinkScopedService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service.html#resource_group_name MonitorPrivateLinkScopedService#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service#resource_group_name MonitorPrivateLinkScopedService#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service.html#scope_name MonitorPrivateLinkScopedService#scope_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service#scope_name MonitorPrivateLinkScopedService#scope_name}
   */
   readonly scopeName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service.html#timeouts MonitorPrivateLinkScopedService#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service#timeouts MonitorPrivateLinkScopedService#timeouts}
   */
   readonly timeouts?: MonitorPrivateLinkScopedServiceTimeouts;
 }
 export interface MonitorPrivateLinkScopedServiceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service.html#create MonitorPrivateLinkScopedService#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service#create MonitorPrivateLinkScopedService#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service.html#delete MonitorPrivateLinkScopedService#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service#delete MonitorPrivateLinkScopedService#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service.html#read MonitorPrivateLinkScopedService#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service#read MonitorPrivateLinkScopedService#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service.html#update MonitorPrivateLinkScopedService#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service#update MonitorPrivateLinkScopedService#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class MonitorPrivateLinkScopedServiceTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service.html azurerm_monitor_private_link_scoped_service}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service azurerm_monitor_private_link_scoped_service}
 */
 export class MonitorPrivateLinkScopedService extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class MonitorPrivateLinkScopedService extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service.html azurerm_monitor_private_link_scoped_service} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/monitor_private_link_scoped_service azurerm_monitor_private_link_scoped_service} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

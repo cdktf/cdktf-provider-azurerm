@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html
+// https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,49 +8,49 @@ import * as cdktf from 'cdktf';
 
 export interface LogicAppActionHttpConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#body LogicAppActionHttp#body}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#body LogicAppActionHttp#body}
   */
   readonly body?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#headers LogicAppActionHttp#headers}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#headers LogicAppActionHttp#headers}
   */
   readonly headers?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#logic_app_id LogicAppActionHttp#logic_app_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#logic_app_id LogicAppActionHttp#logic_app_id}
   */
   readonly logicAppId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#method LogicAppActionHttp#method}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#method LogicAppActionHttp#method}
   */
   readonly method: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#name LogicAppActionHttp#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#name LogicAppActionHttp#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#uri LogicAppActionHttp#uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#uri LogicAppActionHttp#uri}
   */
   readonly uri: string;
   /**
   * run_after block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#run_after LogicAppActionHttp#run_after}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#run_after LogicAppActionHttp#run_after}
   */
   readonly runAfter?: LogicAppActionHttpRunAfter[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#timeouts LogicAppActionHttp#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#timeouts LogicAppActionHttp#timeouts}
   */
   readonly timeouts?: LogicAppActionHttpTimeouts;
 }
 export interface LogicAppActionHttpRunAfter {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#action_name LogicAppActionHttp#action_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#action_name LogicAppActionHttp#action_name}
   */
   readonly actionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#action_result LogicAppActionHttp#action_result}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#action_result LogicAppActionHttp#action_result}
   */
   readonly actionResult: string;
 }
@@ -68,19 +68,19 @@ export function logicAppActionHttpRunAfterToTerraform(struct?: LogicAppActionHtt
 
 export interface LogicAppActionHttpTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#create LogicAppActionHttp#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#create LogicAppActionHttp#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#delete LogicAppActionHttp#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#delete LogicAppActionHttp#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#read LogicAppActionHttp#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#read LogicAppActionHttp#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html#update LogicAppActionHttp#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http#update LogicAppActionHttp#update}
   */
   readonly update?: string;
 }
@@ -215,7 +215,7 @@ export class LogicAppActionHttpTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html azurerm_logic_app_action_http}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http azurerm_logic_app_action_http}
 */
 export class LogicAppActionHttp extends cdktf.TerraformResource {
 
@@ -229,7 +229,7 @@ export class LogicAppActionHttp extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http.html azurerm_logic_app_action_http} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_action_http azurerm_logic_app_action_http} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

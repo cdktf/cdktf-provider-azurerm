@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration.html
+// https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMaintenanceConfigurationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration.html#name DataAzurermMaintenanceConfiguration#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration#name DataAzurermMaintenanceConfiguration#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration.html#resource_group_name DataAzurermMaintenanceConfiguration#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration#resource_group_name DataAzurermMaintenanceConfiguration#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration.html#timeouts DataAzurermMaintenanceConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration#timeouts DataAzurermMaintenanceConfiguration#timeouts}
   */
   readonly timeouts?: DataAzurermMaintenanceConfigurationTimeouts;
 }
@@ -51,7 +51,7 @@ export class DataAzurermMaintenanceConfigurationWindow extends cdktf.ComplexComp
 }
 export interface DataAzurermMaintenanceConfigurationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration.html#read DataAzurermMaintenanceConfiguration#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration#read DataAzurermMaintenanceConfiguration#read}
   */
   readonly read?: string;
 }
@@ -117,7 +117,7 @@ export class DataAzurermMaintenanceConfigurationTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration.html azurerm_maintenance_configuration}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration azurerm_maintenance_configuration}
 */
 export class DataAzurermMaintenanceConfiguration extends cdktf.TerraformDataSource {
 
@@ -131,7 +131,7 @@ export class DataAzurermMaintenanceConfiguration extends cdktf.TerraformDataSour
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration.html azurerm_maintenance_configuration} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/maintenance_configuration azurerm_maintenance_configuration} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

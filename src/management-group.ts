@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/management_group.html
+// https://www.terraform.io/docs/providers/azurerm/r/management_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface ManagementGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group.html#display_name ManagementGroup#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group#display_name ManagementGroup#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group.html#group_id ManagementGroup#group_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group#group_id ManagementGroup#group_id}
   */
   readonly groupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group.html#name ManagementGroup#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group#name ManagementGroup#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group.html#parent_management_group_id ManagementGroup#parent_management_group_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group#parent_management_group_id ManagementGroup#parent_management_group_id}
   */
   readonly parentManagementGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group.html#subscription_ids ManagementGroup#subscription_ids}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group#subscription_ids ManagementGroup#subscription_ids}
   */
   readonly subscriptionIds?: string[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group.html#timeouts ManagementGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group#timeouts ManagementGroup#timeouts}
   */
   readonly timeouts?: ManagementGroupTimeouts;
 }
 export interface ManagementGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group.html#create ManagementGroup#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group#create ManagementGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group.html#delete ManagementGroup#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group#delete ManagementGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group.html#read ManagementGroup#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group#read ManagementGroup#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group.html#update ManagementGroup#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group#update ManagementGroup#update}
   */
   readonly update?: string;
 }
@@ -183,7 +183,7 @@ export class ManagementGroupTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/management_group.html azurerm_management_group}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/management_group azurerm_management_group}
 */
 export class ManagementGroup extends cdktf.TerraformResource {
 
@@ -197,7 +197,7 @@ export class ManagementGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/management_group.html azurerm_management_group} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/management_group azurerm_management_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

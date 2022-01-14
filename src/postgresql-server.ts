@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html
+// https://www.terraform.io/docs/providers/azurerm/r/postgresql_server
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,113 +8,113 @@ import * as cdktf from 'cdktf';
 
 export interface PostgresqlServerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#administrator_login PostgresqlServer#administrator_login}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#administrator_login PostgresqlServer#administrator_login}
   */
   readonly administratorLogin?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#administrator_login_password PostgresqlServer#administrator_login_password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#administrator_login_password PostgresqlServer#administrator_login_password}
   */
   readonly administratorLoginPassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#auto_grow_enabled PostgresqlServer#auto_grow_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#auto_grow_enabled PostgresqlServer#auto_grow_enabled}
   */
   readonly autoGrowEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#backup_retention_days PostgresqlServer#backup_retention_days}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#backup_retention_days PostgresqlServer#backup_retention_days}
   */
   readonly backupRetentionDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#create_mode PostgresqlServer#create_mode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#create_mode PostgresqlServer#create_mode}
   */
   readonly createMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#creation_source_server_id PostgresqlServer#creation_source_server_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#creation_source_server_id PostgresqlServer#creation_source_server_id}
   */
   readonly creationSourceServerId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#geo_redundant_backup_enabled PostgresqlServer#geo_redundant_backup_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#geo_redundant_backup_enabled PostgresqlServer#geo_redundant_backup_enabled}
   */
   readonly geoRedundantBackupEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#infrastructure_encryption_enabled PostgresqlServer#infrastructure_encryption_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#infrastructure_encryption_enabled PostgresqlServer#infrastructure_encryption_enabled}
   */
   readonly infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#location PostgresqlServer#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#location PostgresqlServer#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#name PostgresqlServer#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#name PostgresqlServer#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#public_network_access_enabled PostgresqlServer#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#public_network_access_enabled PostgresqlServer#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#resource_group_name PostgresqlServer#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#resource_group_name PostgresqlServer#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#restore_point_in_time PostgresqlServer#restore_point_in_time}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#restore_point_in_time PostgresqlServer#restore_point_in_time}
   */
   readonly restorePointInTime?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#sku_name PostgresqlServer#sku_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#sku_name PostgresqlServer#sku_name}
   */
   readonly skuName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#ssl_enforcement PostgresqlServer#ssl_enforcement}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#ssl_enforcement PostgresqlServer#ssl_enforcement}
   */
   readonly sslEnforcement?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#ssl_enforcement_enabled PostgresqlServer#ssl_enforcement_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#ssl_enforcement_enabled PostgresqlServer#ssl_enforcement_enabled}
   */
   readonly sslEnforcementEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#ssl_minimal_tls_version_enforced PostgresqlServer#ssl_minimal_tls_version_enforced}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#ssl_minimal_tls_version_enforced PostgresqlServer#ssl_minimal_tls_version_enforced}
   */
   readonly sslMinimalTlsVersionEnforced?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#storage_mb PostgresqlServer#storage_mb}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#storage_mb PostgresqlServer#storage_mb}
   */
   readonly storageMb?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#tags PostgresqlServer#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#tags PostgresqlServer#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#version PostgresqlServer#version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#version PostgresqlServer#version}
   */
   readonly version: string;
   /**
   * identity block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#identity PostgresqlServer#identity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#identity PostgresqlServer#identity}
   */
   readonly identity?: PostgresqlServerIdentity;
   /**
   * storage_profile block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#storage_profile PostgresqlServer#storage_profile}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#storage_profile PostgresqlServer#storage_profile}
   */
   readonly storageProfile?: PostgresqlServerStorageProfile;
   /**
   * threat_detection_policy block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#threat_detection_policy PostgresqlServer#threat_detection_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#threat_detection_policy PostgresqlServer#threat_detection_policy}
   */
   readonly threatDetectionPolicy?: PostgresqlServerThreatDetectionPolicy;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#timeouts PostgresqlServer#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#timeouts PostgresqlServer#timeouts}
   */
   readonly timeouts?: PostgresqlServerTimeouts;
 }
 export interface PostgresqlServerIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#type PostgresqlServer#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#type PostgresqlServer#type}
   */
   readonly type: string;
 }
@@ -177,19 +177,19 @@ export class PostgresqlServerIdentityOutputReference extends cdktf.ComplexObject
 }
 export interface PostgresqlServerStorageProfile {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#auto_grow PostgresqlServer#auto_grow}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#auto_grow PostgresqlServer#auto_grow}
   */
   readonly autoGrow?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#backup_retention_days PostgresqlServer#backup_retention_days}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#backup_retention_days PostgresqlServer#backup_retention_days}
   */
   readonly backupRetentionDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#geo_redundant_backup PostgresqlServer#geo_redundant_backup}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#geo_redundant_backup PostgresqlServer#geo_redundant_backup}
   */
   readonly geoRedundantBackup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#storage_mb PostgresqlServer#storage_mb}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#storage_mb PostgresqlServer#storage_mb}
   */
   readonly storageMb?: number;
 }
@@ -324,31 +324,31 @@ export class PostgresqlServerStorageProfileOutputReference extends cdktf.Complex
 }
 export interface PostgresqlServerThreatDetectionPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#disabled_alerts PostgresqlServer#disabled_alerts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#disabled_alerts PostgresqlServer#disabled_alerts}
   */
   readonly disabledAlerts?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#email_account_admins PostgresqlServer#email_account_admins}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#email_account_admins PostgresqlServer#email_account_admins}
   */
   readonly emailAccountAdmins?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#email_addresses PostgresqlServer#email_addresses}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#email_addresses PostgresqlServer#email_addresses}
   */
   readonly emailAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#enabled PostgresqlServer#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#enabled PostgresqlServer#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#retention_days PostgresqlServer#retention_days}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#retention_days PostgresqlServer#retention_days}
   */
   readonly retentionDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#storage_account_access_key PostgresqlServer#storage_account_access_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#storage_account_access_key PostgresqlServer#storage_account_access_key}
   */
   readonly storageAccountAccessKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#storage_endpoint PostgresqlServer#storage_endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#storage_endpoint PostgresqlServer#storage_endpoint}
   */
   readonly storageEndpoint?: string;
 }
@@ -552,19 +552,19 @@ export class PostgresqlServerThreatDetectionPolicyOutputReference extends cdktf.
 }
 export interface PostgresqlServerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#create PostgresqlServer#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#create PostgresqlServer#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#delete PostgresqlServer#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#delete PostgresqlServer#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#read PostgresqlServer#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#read PostgresqlServer#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html#update PostgresqlServer#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server#update PostgresqlServer#update}
   */
   readonly update?: string;
 }
@@ -699,7 +699,7 @@ export class PostgresqlServerTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html azurerm_postgresql_server}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server azurerm_postgresql_server}
 */
 export class PostgresqlServer extends cdktf.TerraformResource {
 
@@ -713,7 +713,7 @@ export class PostgresqlServer extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server.html azurerm_postgresql_server} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server azurerm_postgresql_server} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

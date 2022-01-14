@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/storage_share.html
+// https://www.terraform.io/docs/providers/azurerm/d/storage_share
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermStorageShareConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_share.html#metadata DataAzurermStorageShare#metadata}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_share#metadata DataAzurermStorageShare#metadata}
   */
   readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_share.html#name DataAzurermStorageShare#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_share#name DataAzurermStorageShare#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_share.html#storage_account_name DataAzurermStorageShare#storage_account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_share#storage_account_name DataAzurermStorageShare#storage_account_name}
   */
   readonly storageAccountName: string;
   /**
   * acl block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_share.html#acl DataAzurermStorageShare#acl}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_share#acl DataAzurermStorageShare#acl}
   */
   readonly acl?: DataAzurermStorageShareAcl[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_share.html#timeouts DataAzurermStorageShare#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_share#timeouts DataAzurermStorageShare#timeouts}
   */
   readonly timeouts?: DataAzurermStorageShareTimeouts;
 }
@@ -46,7 +46,7 @@ export function dataAzurermStorageShareAclToTerraform(struct?: DataAzurermStorag
 
 export interface DataAzurermStorageShareTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_share.html#read DataAzurermStorageShare#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_share#read DataAzurermStorageShare#read}
   */
   readonly read?: string;
 }
@@ -112,7 +112,7 @@ export class DataAzurermStorageShareTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_share.html azurerm_storage_share}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_share azurerm_storage_share}
 */
 export class DataAzurermStorageShare extends cdktf.TerraformDataSource {
 
@@ -126,7 +126,7 @@ export class DataAzurermStorageShare extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/storage_share.html azurerm_storage_share} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/storage_share azurerm_storage_share} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

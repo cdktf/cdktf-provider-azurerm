@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/kusto_script.html
+// https://www.terraform.io/docs/providers/azurerm/r/kusto_script
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface KustoScriptConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script.html#continue_on_errors_enabled KustoScript#continue_on_errors_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script#continue_on_errors_enabled KustoScript#continue_on_errors_enabled}
   */
   readonly continueOnErrorsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script.html#database_id KustoScript#database_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script#database_id KustoScript#database_id}
   */
   readonly databaseId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script.html#force_an_update_when_value_changed KustoScript#force_an_update_when_value_changed}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script#force_an_update_when_value_changed KustoScript#force_an_update_when_value_changed}
   */
   readonly forceAnUpdateWhenValueChanged?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script.html#name KustoScript#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script#name KustoScript#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script.html#sas_token KustoScript#sas_token}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script#sas_token KustoScript#sas_token}
   */
   readonly sasToken: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script.html#url KustoScript#url}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script#url KustoScript#url}
   */
   readonly url: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script.html#timeouts KustoScript#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script#timeouts KustoScript#timeouts}
   */
   readonly timeouts?: KustoScriptTimeouts;
 }
 export interface KustoScriptTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script.html#create KustoScript#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script#create KustoScript#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script.html#delete KustoScript#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script#delete KustoScript#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script.html#read KustoScript#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script#read KustoScript#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script.html#update KustoScript#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script#update KustoScript#update}
   */
   readonly update?: string;
 }
@@ -187,7 +187,7 @@ export class KustoScriptTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script.html azurerm_kusto_script}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script azurerm_kusto_script}
 */
 export class KustoScript extends cdktf.TerraformResource {
 
@@ -201,7 +201,7 @@ export class KustoScript extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script.html azurerm_kusto_script} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/kusto_script azurerm_kusto_script} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/monitor_scheduled_query_rules_log.html
+// https://www.terraform.io/docs/providers/azurerm/d/monitor_scheduled_query_rules_log
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMonitorScheduledQueryRulesLogConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_scheduled_query_rules_log.html#name DataAzurermMonitorScheduledQueryRulesLog#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_scheduled_query_rules_log#name DataAzurermMonitorScheduledQueryRulesLog#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_scheduled_query_rules_log.html#resource_group_name DataAzurermMonitorScheduledQueryRulesLog#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_scheduled_query_rules_log#resource_group_name DataAzurermMonitorScheduledQueryRulesLog#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_scheduled_query_rules_log.html#timeouts DataAzurermMonitorScheduledQueryRulesLog#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_scheduled_query_rules_log#timeouts DataAzurermMonitorScheduledQueryRulesLog#timeouts}
   */
   readonly timeouts?: DataAzurermMonitorScheduledQueryRulesLogTimeouts;
 }
@@ -54,7 +54,7 @@ export class DataAzurermMonitorScheduledQueryRulesLogCriteria extends cdktf.Comp
 }
 export interface DataAzurermMonitorScheduledQueryRulesLogTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_scheduled_query_rules_log.html#read DataAzurermMonitorScheduledQueryRulesLog#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_scheduled_query_rules_log#read DataAzurermMonitorScheduledQueryRulesLog#read}
   */
   readonly read?: string;
 }
@@ -120,7 +120,7 @@ export class DataAzurermMonitorScheduledQueryRulesLogTimeoutsOutputReference ext
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_scheduled_query_rules_log.html azurerm_monitor_scheduled_query_rules_log}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_scheduled_query_rules_log azurerm_monitor_scheduled_query_rules_log}
 */
 export class DataAzurermMonitorScheduledQueryRulesLog extends cdktf.TerraformDataSource {
 
@@ -134,7 +134,7 @@ export class DataAzurermMonitorScheduledQueryRulesLog extends cdktf.TerraformDat
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_scheduled_query_rules_log.html azurerm_monitor_scheduled_query_rules_log} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_scheduled_query_rules_log azurerm_monitor_scheduled_query_rules_log} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

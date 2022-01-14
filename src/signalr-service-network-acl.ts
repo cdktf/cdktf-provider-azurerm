@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl.html
+// https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface SignalrServiceNetworkAclConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl.html#default_action SignalrServiceNetworkAcl#default_action}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl#default_action SignalrServiceNetworkAcl#default_action}
   */
   readonly defaultAction: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl.html#signalr_service_id SignalrServiceNetworkAcl#signalr_service_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl#signalr_service_id SignalrServiceNetworkAcl#signalr_service_id}
   */
   readonly signalrServiceId: string;
   /**
   * private_endpoint block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl.html#private_endpoint SignalrServiceNetworkAcl#private_endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl#private_endpoint SignalrServiceNetworkAcl#private_endpoint}
   */
   readonly privateEndpoint?: SignalrServiceNetworkAclPrivateEndpoint[];
   /**
   * public_network block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl.html#public_network SignalrServiceNetworkAcl#public_network}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl#public_network SignalrServiceNetworkAcl#public_network}
   */
   readonly publicNetwork: SignalrServiceNetworkAclPublicNetwork;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl.html#timeouts SignalrServiceNetworkAcl#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl#timeouts SignalrServiceNetworkAcl#timeouts}
   */
   readonly timeouts?: SignalrServiceNetworkAclTimeouts;
 }
 export interface SignalrServiceNetworkAclPrivateEndpoint {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl.html#allowed_request_types SignalrServiceNetworkAcl#allowed_request_types}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl#allowed_request_types SignalrServiceNetworkAcl#allowed_request_types}
   */
   readonly allowedRequestTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl.html#denied_request_types SignalrServiceNetworkAcl#denied_request_types}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl#denied_request_types SignalrServiceNetworkAcl#denied_request_types}
   */
   readonly deniedRequestTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl.html#id SignalrServiceNetworkAcl#id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl#id SignalrServiceNetworkAcl#id}
   */
   readonly id: string;
 }
@@ -63,11 +63,11 @@ export function signalrServiceNetworkAclPrivateEndpointToTerraform(struct?: Sign
 
 export interface SignalrServiceNetworkAclPublicNetwork {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl.html#allowed_request_types SignalrServiceNetworkAcl#allowed_request_types}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl#allowed_request_types SignalrServiceNetworkAcl#allowed_request_types}
   */
   readonly allowedRequestTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl.html#denied_request_types SignalrServiceNetworkAcl#denied_request_types}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl#denied_request_types SignalrServiceNetworkAcl#denied_request_types}
   */
   readonly deniedRequestTypes?: string[];
 }
@@ -156,19 +156,19 @@ export class SignalrServiceNetworkAclPublicNetworkOutputReference extends cdktf.
 }
 export interface SignalrServiceNetworkAclTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl.html#create SignalrServiceNetworkAcl#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl#create SignalrServiceNetworkAcl#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl.html#delete SignalrServiceNetworkAcl#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl#delete SignalrServiceNetworkAcl#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl.html#read SignalrServiceNetworkAcl#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl#read SignalrServiceNetworkAcl#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl.html#update SignalrServiceNetworkAcl#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl#update SignalrServiceNetworkAcl#update}
   */
   readonly update?: string;
 }
@@ -303,7 +303,7 @@ export class SignalrServiceNetworkAclTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl.html azurerm_signalr_service_network_acl}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl azurerm_signalr_service_network_acl}
 */
 export class SignalrServiceNetworkAcl extends cdktf.TerraformResource {
 
@@ -317,7 +317,7 @@ export class SignalrServiceNetworkAcl extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl.html azurerm_signalr_service_network_acl} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/signalr_service_network_acl azurerm_signalr_service_network_acl} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/policy_virtual_machine_configuration_assignment.html
+// https://www.terraform.io/docs/providers/azurerm/d/policy_virtual_machine_configuration_assignment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermPolicyVirtualMachineConfigurationAssignmentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_virtual_machine_configuration_assignment.html#name DataAzurermPolicyVirtualMachineConfigurationAssignment#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_virtual_machine_configuration_assignment#name DataAzurermPolicyVirtualMachineConfigurationAssignment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_virtual_machine_configuration_assignment.html#resource_group_name DataAzurermPolicyVirtualMachineConfigurationAssignment#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_virtual_machine_configuration_assignment#resource_group_name DataAzurermPolicyVirtualMachineConfigurationAssignment#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_virtual_machine_configuration_assignment.html#virtual_machine_name DataAzurermPolicyVirtualMachineConfigurationAssignment#virtual_machine_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_virtual_machine_configuration_assignment#virtual_machine_name DataAzurermPolicyVirtualMachineConfigurationAssignment#virtual_machine_name}
   */
   readonly virtualMachineName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_virtual_machine_configuration_assignment.html#timeouts DataAzurermPolicyVirtualMachineConfigurationAssignment#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_virtual_machine_configuration_assignment#timeouts DataAzurermPolicyVirtualMachineConfigurationAssignment#timeouts}
   */
   readonly timeouts?: DataAzurermPolicyVirtualMachineConfigurationAssignmentTimeouts;
 }
 export interface DataAzurermPolicyVirtualMachineConfigurationAssignmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_virtual_machine_configuration_assignment.html#read DataAzurermPolicyVirtualMachineConfigurationAssignment#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_virtual_machine_configuration_assignment#read DataAzurermPolicyVirtualMachineConfigurationAssignment#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermPolicyVirtualMachineConfigurationAssignmentTimeoutsOutpu
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/policy_virtual_machine_configuration_assignment.html azurerm_policy_virtual_machine_configuration_assignment}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/policy_virtual_machine_configuration_assignment azurerm_policy_virtual_machine_configuration_assignment}
 */
 export class DataAzurermPolicyVirtualMachineConfigurationAssignment extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermPolicyVirtualMachineConfigurationAssignment extends cdkt
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/policy_virtual_machine_configuration_assignment.html azurerm_policy_virtual_machine_configuration_assignment} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/policy_virtual_machine_configuration_assignment azurerm_policy_virtual_machine_configuration_assignment} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

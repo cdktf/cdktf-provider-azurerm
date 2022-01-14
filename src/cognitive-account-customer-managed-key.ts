@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key.html
+// https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface CognitiveAccountCustomerManagedKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key.html#cognitive_account_id CognitiveAccountCustomerManagedKey#cognitive_account_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key#cognitive_account_id CognitiveAccountCustomerManagedKey#cognitive_account_id}
   */
   readonly cognitiveAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key.html#identity_client_id CognitiveAccountCustomerManagedKey#identity_client_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key#identity_client_id CognitiveAccountCustomerManagedKey#identity_client_id}
   */
   readonly identityClientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key.html#key_vault_key_id CognitiveAccountCustomerManagedKey#key_vault_key_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key#key_vault_key_id CognitiveAccountCustomerManagedKey#key_vault_key_id}
   */
   readonly keyVaultKeyId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key.html#timeouts CognitiveAccountCustomerManagedKey#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key#timeouts CognitiveAccountCustomerManagedKey#timeouts}
   */
   readonly timeouts?: CognitiveAccountCustomerManagedKeyTimeouts;
 }
 export interface CognitiveAccountCustomerManagedKeyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key.html#create CognitiveAccountCustomerManagedKey#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key#create CognitiveAccountCustomerManagedKey#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key.html#delete CognitiveAccountCustomerManagedKey#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key#delete CognitiveAccountCustomerManagedKey#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key.html#read CognitiveAccountCustomerManagedKey#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key#read CognitiveAccountCustomerManagedKey#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key.html#update CognitiveAccountCustomerManagedKey#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key#update CognitiveAccountCustomerManagedKey#update}
   */
   readonly update?: string;
 }
@@ -175,7 +175,7 @@ export class CognitiveAccountCustomerManagedKeyTimeoutsOutputReference extends c
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key.html azurerm_cognitive_account_customer_managed_key}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key azurerm_cognitive_account_customer_managed_key}
 */
 export class CognitiveAccountCustomerManagedKey extends cdktf.TerraformResource {
 
@@ -189,7 +189,7 @@ export class CognitiveAccountCustomerManagedKey extends cdktf.TerraformResource 
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key.html azurerm_cognitive_account_customer_managed_key} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cognitive_account_customer_managed_key azurerm_cognitive_account_customer_managed_key} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/lb.html
+// https://www.terraform.io/docs/providers/azurerm/d/lb
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermLbConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb.html#name DataAzurermLb#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb#name DataAzurermLb#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb.html#resource_group_name DataAzurermLb#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb#resource_group_name DataAzurermLb#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb.html#timeouts DataAzurermLb#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb#timeouts DataAzurermLb#timeouts}
   */
   readonly timeouts?: DataAzurermLbTimeouts;
 }
@@ -66,7 +66,7 @@ export class DataAzurermLbFrontendIpConfiguration extends cdktf.ComplexComputedL
 }
 export interface DataAzurermLbTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb.html#read DataAzurermLb#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/lb#read DataAzurermLb#read}
   */
   readonly read?: string;
 }
@@ -132,7 +132,7 @@ export class DataAzurermLbTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/lb.html azurerm_lb}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/lb azurerm_lb}
 */
 export class DataAzurermLb extends cdktf.TerraformDataSource {
 
@@ -146,7 +146,7 @@ export class DataAzurermLb extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/lb.html azurerm_lb} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/lb azurerm_lb} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

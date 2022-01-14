@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html
+// https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface DnsPtrRecordConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#name DnsPtrRecord#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record#name DnsPtrRecord#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#records DnsPtrRecord#records}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record#records DnsPtrRecord#records}
   */
   readonly records: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#resource_group_name DnsPtrRecord#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record#resource_group_name DnsPtrRecord#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#tags DnsPtrRecord#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record#tags DnsPtrRecord#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#ttl DnsPtrRecord#ttl}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record#ttl DnsPtrRecord#ttl}
   */
   readonly ttl: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#zone_name DnsPtrRecord#zone_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record#zone_name DnsPtrRecord#zone_name}
   */
   readonly zoneName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#timeouts DnsPtrRecord#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record#timeouts DnsPtrRecord#timeouts}
   */
   readonly timeouts?: DnsPtrRecordTimeouts;
 }
 export interface DnsPtrRecordTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#create DnsPtrRecord#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record#create DnsPtrRecord#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#delete DnsPtrRecord#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record#delete DnsPtrRecord#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#read DnsPtrRecord#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record#read DnsPtrRecord#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html#update DnsPtrRecord#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record#update DnsPtrRecord#update}
   */
   readonly update?: string;
 }
@@ -187,7 +187,7 @@ export class DnsPtrRecordTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html azurerm_dns_ptr_record}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record azurerm_dns_ptr_record}
 */
 export class DnsPtrRecord extends cdktf.TerraformResource {
 
@@ -201,7 +201,7 @@ export class DnsPtrRecord extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record.html azurerm_dns_ptr_record} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dns_ptr_record azurerm_dns_ptr_record} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

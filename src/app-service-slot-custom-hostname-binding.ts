@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding.html
+// https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface AppServiceSlotCustomHostnameBindingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding.html#app_service_slot_id AppServiceSlotCustomHostnameBinding#app_service_slot_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding#app_service_slot_id AppServiceSlotCustomHostnameBinding#app_service_slot_id}
   */
   readonly appServiceSlotId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding.html#hostname AppServiceSlotCustomHostnameBinding#hostname}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding#hostname AppServiceSlotCustomHostnameBinding#hostname}
   */
   readonly hostname: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding.html#ssl_state AppServiceSlotCustomHostnameBinding#ssl_state}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding#ssl_state AppServiceSlotCustomHostnameBinding#ssl_state}
   */
   readonly sslState?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding.html#thumbprint AppServiceSlotCustomHostnameBinding#thumbprint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding#thumbprint AppServiceSlotCustomHostnameBinding#thumbprint}
   */
   readonly thumbprint?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding.html#timeouts AppServiceSlotCustomHostnameBinding#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding#timeouts AppServiceSlotCustomHostnameBinding#timeouts}
   */
   readonly timeouts?: AppServiceSlotCustomHostnameBindingTimeouts;
 }
 export interface AppServiceSlotCustomHostnameBindingTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding.html#create AppServiceSlotCustomHostnameBinding#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding#create AppServiceSlotCustomHostnameBinding#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding.html#delete AppServiceSlotCustomHostnameBinding#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding#delete AppServiceSlotCustomHostnameBinding#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding.html#read AppServiceSlotCustomHostnameBinding#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding#read AppServiceSlotCustomHostnameBinding#read}
   */
   readonly read?: string;
 }
@@ -152,7 +152,7 @@ export class AppServiceSlotCustomHostnameBindingTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding.html azurerm_app_service_slot_custom_hostname_binding}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding azurerm_app_service_slot_custom_hostname_binding}
 */
 export class AppServiceSlotCustomHostnameBinding extends cdktf.TerraformResource {
 
@@ -166,7 +166,7 @@ export class AppServiceSlotCustomHostnameBinding extends cdktf.TerraformResource
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding.html azurerm_app_service_slot_custom_hostname_binding} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_slot_custom_hostname_binding azurerm_app_service_slot_custom_hostname_binding} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

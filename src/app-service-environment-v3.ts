@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html
+// https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface AppServiceEnvironmentV3Config extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#allow_new_private_endpoint_connections AppServiceEnvironmentV3#allow_new_private_endpoint_connections}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#allow_new_private_endpoint_connections AppServiceEnvironmentV3#allow_new_private_endpoint_connections}
   */
   readonly allowNewPrivateEndpointConnections?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#dedicated_host_count AppServiceEnvironmentV3#dedicated_host_count}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#dedicated_host_count AppServiceEnvironmentV3#dedicated_host_count}
   */
   readonly dedicatedHostCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#internal_load_balancing_mode AppServiceEnvironmentV3#internal_load_balancing_mode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#internal_load_balancing_mode AppServiceEnvironmentV3#internal_load_balancing_mode}
   */
   readonly internalLoadBalancingMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#name AppServiceEnvironmentV3#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#name AppServiceEnvironmentV3#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#resource_group_name AppServiceEnvironmentV3#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#resource_group_name AppServiceEnvironmentV3#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#subnet_id AppServiceEnvironmentV3#subnet_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#subnet_id AppServiceEnvironmentV3#subnet_id}
   */
   readonly subnetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#tags AppServiceEnvironmentV3#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#tags AppServiceEnvironmentV3#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#zone_redundant AppServiceEnvironmentV3#zone_redundant}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#zone_redundant AppServiceEnvironmentV3#zone_redundant}
   */
   readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
   * cluster_setting block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#cluster_setting AppServiceEnvironmentV3#cluster_setting}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#cluster_setting AppServiceEnvironmentV3#cluster_setting}
   */
   readonly clusterSetting?: AppServiceEnvironmentV3ClusterSetting[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#timeouts AppServiceEnvironmentV3#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#timeouts AppServiceEnvironmentV3#timeouts}
   */
   readonly timeouts?: AppServiceEnvironmentV3Timeouts;
 }
@@ -71,11 +71,11 @@ export class AppServiceEnvironmentV3InboundNetworkDependencies extends cdktf.Com
 }
 export interface AppServiceEnvironmentV3ClusterSetting {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#name AppServiceEnvironmentV3#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#name AppServiceEnvironmentV3#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#value AppServiceEnvironmentV3#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#value AppServiceEnvironmentV3#value}
   */
   readonly value: string;
 }
@@ -93,19 +93,19 @@ export function appServiceEnvironmentV3ClusterSettingToTerraform(struct?: AppSer
 
 export interface AppServiceEnvironmentV3Timeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#create AppServiceEnvironmentV3#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#create AppServiceEnvironmentV3#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#delete AppServiceEnvironmentV3#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#delete AppServiceEnvironmentV3#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#read AppServiceEnvironmentV3#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#read AppServiceEnvironmentV3#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html#update AppServiceEnvironmentV3#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3#update AppServiceEnvironmentV3#update}
   */
   readonly update?: string;
 }
@@ -240,7 +240,7 @@ export class AppServiceEnvironmentV3TimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html azurerm_app_service_environment_v3}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3 azurerm_app_service_environment_v3}
 */
 export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
 
@@ -254,7 +254,7 @@ export class AppServiceEnvironmentV3 extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3.html azurerm_app_service_environment_v3} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_environment_v3 azurerm_app_service_environment_v3} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html
+// https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,85 +8,85 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermStorageAccountSasConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#connection_string DataAzurermStorageAccountSas#connection_string}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#connection_string DataAzurermStorageAccountSas#connection_string}
   */
   readonly connectionString: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#expiry DataAzurermStorageAccountSas#expiry}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#expiry DataAzurermStorageAccountSas#expiry}
   */
   readonly expiry: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#https_only DataAzurermStorageAccountSas#https_only}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#https_only DataAzurermStorageAccountSas#https_only}
   */
   readonly httpsOnly?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#ip_addresses DataAzurermStorageAccountSas#ip_addresses}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#ip_addresses DataAzurermStorageAccountSas#ip_addresses}
   */
   readonly ipAddresses?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#signed_version DataAzurermStorageAccountSas#signed_version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#signed_version DataAzurermStorageAccountSas#signed_version}
   */
   readonly signedVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#start DataAzurermStorageAccountSas#start}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#start DataAzurermStorageAccountSas#start}
   */
   readonly start: string;
   /**
   * permissions block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#permissions DataAzurermStorageAccountSas#permissions}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#permissions DataAzurermStorageAccountSas#permissions}
   */
   readonly permissions: DataAzurermStorageAccountSasPermissions;
   /**
   * resource_types block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#resource_types DataAzurermStorageAccountSas#resource_types}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#resource_types DataAzurermStorageAccountSas#resource_types}
   */
   readonly resourceTypes: DataAzurermStorageAccountSasResourceTypes;
   /**
   * services block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#services DataAzurermStorageAccountSas#services}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#services DataAzurermStorageAccountSas#services}
   */
   readonly services: DataAzurermStorageAccountSasServices;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#timeouts DataAzurermStorageAccountSas#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#timeouts DataAzurermStorageAccountSas#timeouts}
   */
   readonly timeouts?: DataAzurermStorageAccountSasTimeouts;
 }
 export interface DataAzurermStorageAccountSasPermissions {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#add DataAzurermStorageAccountSas#add}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#add DataAzurermStorageAccountSas#add}
   */
   readonly add: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#create DataAzurermStorageAccountSas#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#create DataAzurermStorageAccountSas#create}
   */
   readonly create: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#delete DataAzurermStorageAccountSas#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#delete DataAzurermStorageAccountSas#delete}
   */
   readonly delete: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#list DataAzurermStorageAccountSas#list}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#list DataAzurermStorageAccountSas#list}
   */
   readonly list: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#process DataAzurermStorageAccountSas#process}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#process DataAzurermStorageAccountSas#process}
   */
   readonly process: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#read DataAzurermStorageAccountSas#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#read DataAzurermStorageAccountSas#read}
   */
   readonly read: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#update DataAzurermStorageAccountSas#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#update DataAzurermStorageAccountSas#update}
   */
   readonly update: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#write DataAzurermStorageAccountSas#write}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#write DataAzurermStorageAccountSas#write}
   */
   readonly write: boolean | cdktf.IResolvable;
 }
@@ -289,15 +289,15 @@ export class DataAzurermStorageAccountSasPermissionsOutputReference extends cdkt
 }
 export interface DataAzurermStorageAccountSasResourceTypes {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#container DataAzurermStorageAccountSas#container}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#container DataAzurermStorageAccountSas#container}
   */
   readonly container: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#object DataAzurermStorageAccountSas#object}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#object DataAzurermStorageAccountSas#object}
   */
   readonly object: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#service DataAzurermStorageAccountSas#service}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#service DataAzurermStorageAccountSas#service}
   */
   readonly service: boolean | cdktf.IResolvable;
 }
@@ -400,19 +400,19 @@ export class DataAzurermStorageAccountSasResourceTypesOutputReference extends cd
 }
 export interface DataAzurermStorageAccountSasServices {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#blob DataAzurermStorageAccountSas#blob}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#blob DataAzurermStorageAccountSas#blob}
   */
   readonly blob: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#file DataAzurermStorageAccountSas#file}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#file DataAzurermStorageAccountSas#file}
   */
   readonly file: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#queue DataAzurermStorageAccountSas#queue}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#queue DataAzurermStorageAccountSas#queue}
   */
   readonly queue: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#table DataAzurermStorageAccountSas#table}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#table DataAzurermStorageAccountSas#table}
   */
   readonly table: boolean | cdktf.IResolvable;
 }
@@ -535,7 +535,7 @@ export class DataAzurermStorageAccountSasServicesOutputReference extends cdktf.C
 }
 export interface DataAzurermStorageAccountSasTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html#read DataAzurermStorageAccountSas#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas#read DataAzurermStorageAccountSas#read}
   */
   readonly read?: string;
 }
@@ -601,7 +601,7 @@ export class DataAzurermStorageAccountSasTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html azurerm_storage_account_sas}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas azurerm_storage_account_sas}
 */
 export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
 
@@ -615,7 +615,7 @@ export class DataAzurermStorageAccountSas extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas.html azurerm_storage_account_sas} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/storage_account_sas azurerm_storage_account_sas} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

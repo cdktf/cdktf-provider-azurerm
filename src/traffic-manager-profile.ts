@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html
+// https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,59 +8,59 @@ import * as cdktf from 'cdktf';
 
 export interface TrafficManagerProfileConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#max_return TrafficManagerProfile#max_return}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#max_return TrafficManagerProfile#max_return}
   */
   readonly maxReturn?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#name TrafficManagerProfile#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#name TrafficManagerProfile#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#profile_status TrafficManagerProfile#profile_status}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#profile_status TrafficManagerProfile#profile_status}
   */
   readonly profileStatus?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#resource_group_name TrafficManagerProfile#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#resource_group_name TrafficManagerProfile#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#tags TrafficManagerProfile#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#tags TrafficManagerProfile#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#traffic_routing_method TrafficManagerProfile#traffic_routing_method}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#traffic_routing_method TrafficManagerProfile#traffic_routing_method}
   */
   readonly trafficRoutingMethod: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#traffic_view_enabled TrafficManagerProfile#traffic_view_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#traffic_view_enabled TrafficManagerProfile#traffic_view_enabled}
   */
   readonly trafficViewEnabled?: boolean | cdktf.IResolvable;
   /**
   * dns_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#dns_config TrafficManagerProfile#dns_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#dns_config TrafficManagerProfile#dns_config}
   */
   readonly dnsConfig: TrafficManagerProfileDnsConfig;
   /**
   * monitor_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#monitor_config TrafficManagerProfile#monitor_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#monitor_config TrafficManagerProfile#monitor_config}
   */
   readonly monitorConfig: TrafficManagerProfileMonitorConfig;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#timeouts TrafficManagerProfile#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#timeouts TrafficManagerProfile#timeouts}
   */
   readonly timeouts?: TrafficManagerProfileTimeouts;
 }
 export interface TrafficManagerProfileDnsConfig {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#relative_name TrafficManagerProfile#relative_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#relative_name TrafficManagerProfile#relative_name}
   */
   readonly relativeName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#ttl TrafficManagerProfile#ttl}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#ttl TrafficManagerProfile#ttl}
   */
   readonly ttl: number;
 }
@@ -143,11 +143,11 @@ export class TrafficManagerProfileDnsConfigOutputReference extends cdktf.Complex
 }
 export interface TrafficManagerProfileMonitorConfigCustomHeader {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#name TrafficManagerProfile#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#name TrafficManagerProfile#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#value TrafficManagerProfile#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#value TrafficManagerProfile#value}
   */
   readonly value: string;
 }
@@ -165,37 +165,37 @@ export function trafficManagerProfileMonitorConfigCustomHeaderToTerraform(struct
 
 export interface TrafficManagerProfileMonitorConfig {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#expected_status_code_ranges TrafficManagerProfile#expected_status_code_ranges}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#expected_status_code_ranges TrafficManagerProfile#expected_status_code_ranges}
   */
   readonly expectedStatusCodeRanges?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#interval_in_seconds TrafficManagerProfile#interval_in_seconds}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#interval_in_seconds TrafficManagerProfile#interval_in_seconds}
   */
   readonly intervalInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#path TrafficManagerProfile#path}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#path TrafficManagerProfile#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#port TrafficManagerProfile#port}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#port TrafficManagerProfile#port}
   */
   readonly port: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#protocol TrafficManagerProfile#protocol}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#protocol TrafficManagerProfile#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#timeout_in_seconds TrafficManagerProfile#timeout_in_seconds}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#timeout_in_seconds TrafficManagerProfile#timeout_in_seconds}
   */
   readonly timeoutInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#tolerated_number_of_failures TrafficManagerProfile#tolerated_number_of_failures}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#tolerated_number_of_failures TrafficManagerProfile#tolerated_number_of_failures}
   */
   readonly toleratedNumberOfFailures?: number;
   /**
   * custom_header block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#custom_header TrafficManagerProfile#custom_header}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#custom_header TrafficManagerProfile#custom_header}
   */
   readonly customHeader?: TrafficManagerProfileMonitorConfigCustomHeader[];
 }
@@ -417,19 +417,19 @@ export class TrafficManagerProfileMonitorConfigOutputReference extends cdktf.Com
 }
 export interface TrafficManagerProfileTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#create TrafficManagerProfile#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#create TrafficManagerProfile#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#delete TrafficManagerProfile#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#delete TrafficManagerProfile#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#read TrafficManagerProfile#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#read TrafficManagerProfile#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html#update TrafficManagerProfile#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile#update TrafficManagerProfile#update}
   */
   readonly update?: string;
 }
@@ -564,7 +564,7 @@ export class TrafficManagerProfileTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html azurerm_traffic_manager_profile}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile azurerm_traffic_manager_profile}
 */
 export class TrafficManagerProfile extends cdktf.TerraformResource {
 
@@ -578,7 +578,7 @@ export class TrafficManagerProfile extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile.html azurerm_traffic_manager_profile} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/traffic_manager_profile azurerm_traffic_manager_profile} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

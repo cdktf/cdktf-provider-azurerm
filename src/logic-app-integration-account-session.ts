@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session.html
+// https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface LogicAppIntegrationAccountSessionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session.html#content LogicAppIntegrationAccountSession#content}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session#content LogicAppIntegrationAccountSession#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session.html#integration_account_name LogicAppIntegrationAccountSession#integration_account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session#integration_account_name LogicAppIntegrationAccountSession#integration_account_name}
   */
   readonly integrationAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session.html#name LogicAppIntegrationAccountSession#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session#name LogicAppIntegrationAccountSession#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session.html#resource_group_name LogicAppIntegrationAccountSession#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session#resource_group_name LogicAppIntegrationAccountSession#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session.html#timeouts LogicAppIntegrationAccountSession#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session#timeouts LogicAppIntegrationAccountSession#timeouts}
   */
   readonly timeouts?: LogicAppIntegrationAccountSessionTimeouts;
 }
 export interface LogicAppIntegrationAccountSessionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session.html#create LogicAppIntegrationAccountSession#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session#create LogicAppIntegrationAccountSession#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session.html#delete LogicAppIntegrationAccountSession#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session#delete LogicAppIntegrationAccountSession#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session.html#read LogicAppIntegrationAccountSession#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session#read LogicAppIntegrationAccountSession#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session.html#update LogicAppIntegrationAccountSession#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session#update LogicAppIntegrationAccountSession#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class LogicAppIntegrationAccountSessionTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session.html azurerm_logic_app_integration_account_session}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session azurerm_logic_app_integration_account_session}
 */
 export class LogicAppIntegrationAccountSession extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class LogicAppIntegrationAccountSession extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session.html azurerm_logic_app_integration_account_session} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_session azurerm_logic_app_integration_account_session} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

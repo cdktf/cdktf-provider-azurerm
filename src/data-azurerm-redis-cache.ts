@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/redis_cache.html
+// https://www.terraform.io/docs/providers/azurerm/d/redis_cache
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermRedisCacheConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_cache.html#name DataAzurermRedisCache#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_cache#name DataAzurermRedisCache#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_cache.html#resource_group_name DataAzurermRedisCache#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_cache#resource_group_name DataAzurermRedisCache#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_cache.html#timeouts DataAzurermRedisCache#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_cache#timeouts DataAzurermRedisCache#timeouts}
   */
   readonly timeouts?: DataAzurermRedisCacheTimeouts;
 }
@@ -113,7 +113,7 @@ export class DataAzurermRedisCacheRedisConfiguration extends cdktf.ComplexComput
 }
 export interface DataAzurermRedisCacheTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_cache.html#read DataAzurermRedisCache#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_cache#read DataAzurermRedisCache#read}
   */
   readonly read?: string;
 }
@@ -179,7 +179,7 @@ export class DataAzurermRedisCacheTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/redis_cache.html azurerm_redis_cache}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/redis_cache azurerm_redis_cache}
 */
 export class DataAzurermRedisCache extends cdktf.TerraformDataSource {
 
@@ -193,7 +193,7 @@ export class DataAzurermRedisCache extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/redis_cache.html azurerm_redis_cache} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/redis_cache azurerm_redis_cache} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

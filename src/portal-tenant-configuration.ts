@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/portal_tenant_configuration.html
+// https://www.terraform.io/docs/providers/azurerm/r/portal_tenant_configuration
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,31 +8,31 @@ import * as cdktf from 'cdktf';
 
 export interface PortalTenantConfigurationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_tenant_configuration.html#private_markdown_storage_enforced PortalTenantConfiguration#private_markdown_storage_enforced}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_tenant_configuration#private_markdown_storage_enforced PortalTenantConfiguration#private_markdown_storage_enforced}
   */
   readonly privateMarkdownStorageEnforced: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_tenant_configuration.html#timeouts PortalTenantConfiguration#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_tenant_configuration#timeouts PortalTenantConfiguration#timeouts}
   */
   readonly timeouts?: PortalTenantConfigurationTimeouts;
 }
 export interface PortalTenantConfigurationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_tenant_configuration.html#create PortalTenantConfiguration#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_tenant_configuration#create PortalTenantConfiguration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_tenant_configuration.html#delete PortalTenantConfiguration#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_tenant_configuration#delete PortalTenantConfiguration#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_tenant_configuration.html#read PortalTenantConfiguration#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_tenant_configuration#read PortalTenantConfiguration#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_tenant_configuration.html#update PortalTenantConfiguration#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/portal_tenant_configuration#update PortalTenantConfiguration#update}
   */
   readonly update?: string;
 }
@@ -167,7 +167,7 @@ export class PortalTenantConfigurationTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/portal_tenant_configuration.html azurerm_portal_tenant_configuration}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/portal_tenant_configuration azurerm_portal_tenant_configuration}
 */
 export class PortalTenantConfiguration extends cdktf.TerraformResource {
 
@@ -181,7 +181,7 @@ export class PortalTenantConfiguration extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/portal_tenant_configuration.html azurerm_portal_tenant_configuration} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/portal_tenant_configuration azurerm_portal_tenant_configuration} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

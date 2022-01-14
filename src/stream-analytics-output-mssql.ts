@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html
+// https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,59 +8,59 @@ import * as cdktf from 'cdktf';
 
 export interface StreamAnalyticsOutputMssqlConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#database StreamAnalyticsOutputMssql#database}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#database StreamAnalyticsOutputMssql#database}
   */
   readonly database: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#name StreamAnalyticsOutputMssql#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#name StreamAnalyticsOutputMssql#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#password StreamAnalyticsOutputMssql#password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#password StreamAnalyticsOutputMssql#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#resource_group_name StreamAnalyticsOutputMssql#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#resource_group_name StreamAnalyticsOutputMssql#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#server StreamAnalyticsOutputMssql#server}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#server StreamAnalyticsOutputMssql#server}
   */
   readonly server: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#stream_analytics_job_name StreamAnalyticsOutputMssql#stream_analytics_job_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#stream_analytics_job_name StreamAnalyticsOutputMssql#stream_analytics_job_name}
   */
   readonly streamAnalyticsJobName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#table StreamAnalyticsOutputMssql#table}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#table StreamAnalyticsOutputMssql#table}
   */
   readonly table: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#user StreamAnalyticsOutputMssql#user}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#user StreamAnalyticsOutputMssql#user}
   */
   readonly user: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#timeouts StreamAnalyticsOutputMssql#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#timeouts StreamAnalyticsOutputMssql#timeouts}
   */
   readonly timeouts?: StreamAnalyticsOutputMssqlTimeouts;
 }
 export interface StreamAnalyticsOutputMssqlTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#create StreamAnalyticsOutputMssql#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#create StreamAnalyticsOutputMssql#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#delete StreamAnalyticsOutputMssql#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#delete StreamAnalyticsOutputMssql#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#read StreamAnalyticsOutputMssql#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#read StreamAnalyticsOutputMssql#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html#update StreamAnalyticsOutputMssql#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql#update StreamAnalyticsOutputMssql#update}
   */
   readonly update?: string;
 }
@@ -195,7 +195,7 @@ export class StreamAnalyticsOutputMssqlTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html azurerm_stream_analytics_output_mssql}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql azurerm_stream_analytics_output_mssql}
 */
 export class StreamAnalyticsOutputMssql extends cdktf.TerraformResource {
 
@@ -209,7 +209,7 @@ export class StreamAnalyticsOutputMssql extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql.html azurerm_stream_analytics_output_mssql} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_output_mssql azurerm_stream_analytics_output_mssql} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

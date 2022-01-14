@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint.html
+// https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface StreamAnalyticsManagedPrivateEndpointConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint.html#name StreamAnalyticsManagedPrivateEndpoint#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint#name StreamAnalyticsManagedPrivateEndpoint#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint.html#resource_group_name StreamAnalyticsManagedPrivateEndpoint#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint#resource_group_name StreamAnalyticsManagedPrivateEndpoint#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint.html#stream_analytics_cluster_name StreamAnalyticsManagedPrivateEndpoint#stream_analytics_cluster_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint#stream_analytics_cluster_name StreamAnalyticsManagedPrivateEndpoint#stream_analytics_cluster_name}
   */
   readonly streamAnalyticsClusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint.html#subresource_name StreamAnalyticsManagedPrivateEndpoint#subresource_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint#subresource_name StreamAnalyticsManagedPrivateEndpoint#subresource_name}
   */
   readonly subresourceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint.html#target_resource_id StreamAnalyticsManagedPrivateEndpoint#target_resource_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint#target_resource_id StreamAnalyticsManagedPrivateEndpoint#target_resource_id}
   */
   readonly targetResourceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint.html#timeouts StreamAnalyticsManagedPrivateEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint#timeouts StreamAnalyticsManagedPrivateEndpoint#timeouts}
   */
   readonly timeouts?: StreamAnalyticsManagedPrivateEndpointTimeouts;
 }
 export interface StreamAnalyticsManagedPrivateEndpointTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint.html#create StreamAnalyticsManagedPrivateEndpoint#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint#create StreamAnalyticsManagedPrivateEndpoint#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint.html#delete StreamAnalyticsManagedPrivateEndpoint#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint#delete StreamAnalyticsManagedPrivateEndpoint#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint.html#read StreamAnalyticsManagedPrivateEndpoint#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint#read StreamAnalyticsManagedPrivateEndpoint#read}
   */
   readonly read?: string;
 }
@@ -156,7 +156,7 @@ export class StreamAnalyticsManagedPrivateEndpointTimeoutsOutputReference extend
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint.html azurerm_stream_analytics_managed_private_endpoint}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint azurerm_stream_analytics_managed_private_endpoint}
 */
 export class StreamAnalyticsManagedPrivateEndpoint extends cdktf.TerraformResource {
 
@@ -170,7 +170,7 @@ export class StreamAnalyticsManagedPrivateEndpoint extends cdktf.TerraformResour
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint.html azurerm_stream_analytics_managed_private_endpoint} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_managed_private_endpoint azurerm_stream_analytics_managed_private_endpoint} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

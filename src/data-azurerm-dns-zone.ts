@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/dns_zone.html
+// https://www.terraform.io/docs/providers/azurerm/d/dns_zone
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDnsZoneConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone.html#name DataAzurermDnsZone#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone#name DataAzurermDnsZone#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone.html#resource_group_name DataAzurermDnsZone#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone#resource_group_name DataAzurermDnsZone#resource_group_name}
   */
   readonly resourceGroupName?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone.html#timeouts DataAzurermDnsZone#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone#timeouts DataAzurermDnsZone#timeouts}
   */
   readonly timeouts?: DataAzurermDnsZoneTimeouts;
 }
 export interface DataAzurermDnsZoneTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone.html#read DataAzurermDnsZone#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone#read DataAzurermDnsZone#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermDnsZoneTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone.html azurerm_dns_zone}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone azurerm_dns_zone}
 */
 export class DataAzurermDnsZone extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermDnsZone extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone.html azurerm_dns_zone} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/dns_zone azurerm_dns_zone} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

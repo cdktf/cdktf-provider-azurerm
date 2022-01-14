@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/automation_variable_int.html
+// https://www.terraform.io/docs/providers/azurerm/d/automation_variable_int
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermAutomationVariableIntConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_int.html#automation_account_name DataAzurermAutomationVariableInt#automation_account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_int#automation_account_name DataAzurermAutomationVariableInt#automation_account_name}
   */
   readonly automationAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_int.html#name DataAzurermAutomationVariableInt#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_int#name DataAzurermAutomationVariableInt#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_int.html#resource_group_name DataAzurermAutomationVariableInt#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_int#resource_group_name DataAzurermAutomationVariableInt#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_int.html#timeouts DataAzurermAutomationVariableInt#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_int#timeouts DataAzurermAutomationVariableInt#timeouts}
   */
   readonly timeouts?: DataAzurermAutomationVariableIntTimeouts;
 }
 export interface DataAzurermAutomationVariableIntTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_int.html#read DataAzurermAutomationVariableInt#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_int#read DataAzurermAutomationVariableInt#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermAutomationVariableIntTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_int.html azurerm_automation_variable_int}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_int azurerm_automation_variable_int}
 */
 export class DataAzurermAutomationVariableInt extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermAutomationVariableInt extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_int.html azurerm_automation_variable_int} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_int azurerm_automation_variable_int} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

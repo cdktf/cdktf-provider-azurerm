@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html
+// https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface IothubEndpointServicebusQueueConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html#connection_string IothubEndpointServicebusQueue#connection_string}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue#connection_string IothubEndpointServicebusQueue#connection_string}
   */
   readonly connectionString: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html#iothub_id IothubEndpointServicebusQueue#iothub_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue#iothub_id IothubEndpointServicebusQueue#iothub_id}
   */
   readonly iothubId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html#iothub_name IothubEndpointServicebusQueue#iothub_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue#iothub_name IothubEndpointServicebusQueue#iothub_name}
   */
   readonly iothubName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html#name IothubEndpointServicebusQueue#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue#name IothubEndpointServicebusQueue#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html#resource_group_name IothubEndpointServicebusQueue#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue#resource_group_name IothubEndpointServicebusQueue#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html#timeouts IothubEndpointServicebusQueue#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue#timeouts IothubEndpointServicebusQueue#timeouts}
   */
   readonly timeouts?: IothubEndpointServicebusQueueTimeouts;
 }
 export interface IothubEndpointServicebusQueueTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html#create IothubEndpointServicebusQueue#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue#create IothubEndpointServicebusQueue#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html#delete IothubEndpointServicebusQueue#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue#delete IothubEndpointServicebusQueue#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html#read IothubEndpointServicebusQueue#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue#read IothubEndpointServicebusQueue#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html#update IothubEndpointServicebusQueue#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue#update IothubEndpointServicebusQueue#update}
   */
   readonly update?: string;
 }
@@ -183,7 +183,7 @@ export class IothubEndpointServicebusQueueTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html azurerm_iothub_endpoint_servicebus_queue}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue azurerm_iothub_endpoint_servicebus_queue}
 */
 export class IothubEndpointServicebusQueue extends cdktf.TerraformResource {
 
@@ -197,7 +197,7 @@ export class IothubEndpointServicebusQueue extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue.html azurerm_iothub_endpoint_servicebus_queue} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_servicebus_queue azurerm_iothub_endpoint_servicebus_queue} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

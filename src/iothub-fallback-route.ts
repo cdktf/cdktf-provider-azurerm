@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route.html
+// https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface IothubFallbackRouteAConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route.html#condition IothubFallbackRouteA#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route#condition IothubFallbackRouteA#condition}
   */
   readonly condition?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route.html#enabled IothubFallbackRouteA#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route#enabled IothubFallbackRouteA#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route.html#endpoint_names IothubFallbackRouteA#endpoint_names}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route#endpoint_names IothubFallbackRouteA#endpoint_names}
   */
   readonly endpointNames: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route.html#iothub_name IothubFallbackRouteA#iothub_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route#iothub_name IothubFallbackRouteA#iothub_name}
   */
   readonly iothubName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route.html#resource_group_name IothubFallbackRouteA#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route#resource_group_name IothubFallbackRouteA#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route.html#source IothubFallbackRouteA#source}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route#source IothubFallbackRouteA#source}
   */
   readonly source?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route.html#timeouts IothubFallbackRouteA#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route#timeouts IothubFallbackRouteA#timeouts}
   */
   readonly timeouts?: IothubFallbackRouteTimeouts;
 }
 export interface IothubFallbackRouteTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route.html#create IothubFallbackRouteA#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route#create IothubFallbackRouteA#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route.html#delete IothubFallbackRouteA#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route#delete IothubFallbackRouteA#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route.html#read IothubFallbackRouteA#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route#read IothubFallbackRouteA#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route.html#update IothubFallbackRouteA#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route#update IothubFallbackRouteA#update}
   */
   readonly update?: string;
 }
@@ -187,7 +187,7 @@ export class IothubFallbackRouteTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route.html azurerm_iothub_fallback_route}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route azurerm_iothub_fallback_route}
 */
 export class IothubFallbackRouteA extends cdktf.TerraformResource {
 
@@ -201,7 +201,7 @@ export class IothubFallbackRouteA extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route.html azurerm_iothub_fallback_route} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_fallback_route azurerm_iothub_fallback_route} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

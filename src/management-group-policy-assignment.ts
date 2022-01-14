@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html
+// https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,67 +8,67 @@ import * as cdktf from 'cdktf';
 
 export interface ManagementGroupPolicyAssignmentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#description ManagementGroupPolicyAssignment#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#description ManagementGroupPolicyAssignment#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#display_name ManagementGroupPolicyAssignment#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#display_name ManagementGroupPolicyAssignment#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#enforce ManagementGroupPolicyAssignment#enforce}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#enforce ManagementGroupPolicyAssignment#enforce}
   */
   readonly enforce?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#location ManagementGroupPolicyAssignment#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#location ManagementGroupPolicyAssignment#location}
   */
   readonly location?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#management_group_id ManagementGroupPolicyAssignment#management_group_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#management_group_id ManagementGroupPolicyAssignment#management_group_id}
   */
   readonly managementGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#metadata ManagementGroupPolicyAssignment#metadata}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#metadata ManagementGroupPolicyAssignment#metadata}
   */
   readonly metadata?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#name ManagementGroupPolicyAssignment#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#name ManagementGroupPolicyAssignment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#not_scopes ManagementGroupPolicyAssignment#not_scopes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#not_scopes ManagementGroupPolicyAssignment#not_scopes}
   */
   readonly notScopes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#parameters ManagementGroupPolicyAssignment#parameters}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#parameters ManagementGroupPolicyAssignment#parameters}
   */
   readonly parameters?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#policy_definition_id ManagementGroupPolicyAssignment#policy_definition_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#policy_definition_id ManagementGroupPolicyAssignment#policy_definition_id}
   */
   readonly policyDefinitionId: string;
   /**
   * identity block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#identity ManagementGroupPolicyAssignment#identity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#identity ManagementGroupPolicyAssignment#identity}
   */
   readonly identity?: ManagementGroupPolicyAssignmentIdentity;
   /**
   * non_compliance_message block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#non_compliance_message ManagementGroupPolicyAssignment#non_compliance_message}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#non_compliance_message ManagementGroupPolicyAssignment#non_compliance_message}
   */
   readonly nonComplianceMessage?: ManagementGroupPolicyAssignmentNonComplianceMessage[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#timeouts ManagementGroupPolicyAssignment#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#timeouts ManagementGroupPolicyAssignment#timeouts}
   */
   readonly timeouts?: ManagementGroupPolicyAssignmentTimeouts;
 }
 export interface ManagementGroupPolicyAssignmentIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#type ManagementGroupPolicyAssignment#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#type ManagementGroupPolicyAssignment#type}
   */
   readonly type?: string;
 }
@@ -134,11 +134,11 @@ export class ManagementGroupPolicyAssignmentIdentityOutputReference extends cdkt
 }
 export interface ManagementGroupPolicyAssignmentNonComplianceMessage {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#content ManagementGroupPolicyAssignment#content}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#content ManagementGroupPolicyAssignment#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#policy_definition_reference_id ManagementGroupPolicyAssignment#policy_definition_reference_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#policy_definition_reference_id ManagementGroupPolicyAssignment#policy_definition_reference_id}
   */
   readonly policyDefinitionReferenceId?: string;
 }
@@ -156,19 +156,19 @@ export function managementGroupPolicyAssignmentNonComplianceMessageToTerraform(s
 
 export interface ManagementGroupPolicyAssignmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#create ManagementGroupPolicyAssignment#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#create ManagementGroupPolicyAssignment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#delete ManagementGroupPolicyAssignment#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#delete ManagementGroupPolicyAssignment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#read ManagementGroupPolicyAssignment#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#read ManagementGroupPolicyAssignment#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html#update ManagementGroupPolicyAssignment#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment#update ManagementGroupPolicyAssignment#update}
   */
   readonly update?: string;
 }
@@ -303,7 +303,7 @@ export class ManagementGroupPolicyAssignmentTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html azurerm_management_group_policy_assignment}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment azurerm_management_group_policy_assignment}
 */
 export class ManagementGroupPolicyAssignment extends cdktf.TerraformResource {
 
@@ -317,7 +317,7 @@ export class ManagementGroupPolicyAssignment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment.html azurerm_management_group_policy_assignment} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/management_group_policy_assignment azurerm_management_group_policy_assignment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

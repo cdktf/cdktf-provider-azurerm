@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html
+// https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface SpringCloudAppMysqlAssociationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#database_name SpringCloudAppMysqlAssociation#database_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association#database_name SpringCloudAppMysqlAssociation#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#mysql_server_id SpringCloudAppMysqlAssociation#mysql_server_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association#mysql_server_id SpringCloudAppMysqlAssociation#mysql_server_id}
   */
   readonly mysqlServerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#name SpringCloudAppMysqlAssociation#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association#name SpringCloudAppMysqlAssociation#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#password SpringCloudAppMysqlAssociation#password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association#password SpringCloudAppMysqlAssociation#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#spring_cloud_app_id SpringCloudAppMysqlAssociation#spring_cloud_app_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association#spring_cloud_app_id SpringCloudAppMysqlAssociation#spring_cloud_app_id}
   */
   readonly springCloudAppId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#username SpringCloudAppMysqlAssociation#username}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association#username SpringCloudAppMysqlAssociation#username}
   */
   readonly username: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#timeouts SpringCloudAppMysqlAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association#timeouts SpringCloudAppMysqlAssociation#timeouts}
   */
   readonly timeouts?: SpringCloudAppMysqlAssociationTimeouts;
 }
 export interface SpringCloudAppMysqlAssociationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#create SpringCloudAppMysqlAssociation#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association#create SpringCloudAppMysqlAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#delete SpringCloudAppMysqlAssociation#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association#delete SpringCloudAppMysqlAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#read SpringCloudAppMysqlAssociation#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association#read SpringCloudAppMysqlAssociation#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html#update SpringCloudAppMysqlAssociation#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association#update SpringCloudAppMysqlAssociation#update}
   */
   readonly update?: string;
 }
@@ -187,7 +187,7 @@ export class SpringCloudAppMysqlAssociationTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html azurerm_spring_cloud_app_mysql_association}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association azurerm_spring_cloud_app_mysql_association}
 */
 export class SpringCloudAppMysqlAssociation extends cdktf.TerraformResource {
 
@@ -201,7 +201,7 @@ export class SpringCloudAppMysqlAssociation extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association.html azurerm_spring_cloud_app_mysql_association} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_app_mysql_association azurerm_spring_cloud_app_mysql_association} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/api_management_product.html
+// https://www.terraform.io/docs/providers/azurerm/d/api_management_product
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermApiManagementProductConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product.html#api_management_name DataAzurermApiManagementProduct#api_management_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product#api_management_name DataAzurermApiManagementProduct#api_management_name}
   */
   readonly apiManagementName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product.html#product_id DataAzurermApiManagementProduct#product_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product#product_id DataAzurermApiManagementProduct#product_id}
   */
   readonly productId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product.html#resource_group_name DataAzurermApiManagementProduct#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product#resource_group_name DataAzurermApiManagementProduct#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product.html#timeouts DataAzurermApiManagementProduct#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product#timeouts DataAzurermApiManagementProduct#timeouts}
   */
   readonly timeouts?: DataAzurermApiManagementProductTimeouts;
 }
 export interface DataAzurermApiManagementProductTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product.html#read DataAzurermApiManagementProduct#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product#read DataAzurermApiManagementProduct#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermApiManagementProductTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product.html azurerm_api_management_product}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product azurerm_api_management_product}
 */
 export class DataAzurermApiManagementProduct extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermApiManagementProduct extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product.html azurerm_api_management_product} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_product azurerm_api_management_product} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

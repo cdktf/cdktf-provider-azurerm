@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/firewall.html
+// https://www.terraform.io/docs/providers/azurerm/d/firewall
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermFirewallConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/firewall.html#name DataAzurermFirewall#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/firewall#name DataAzurermFirewall#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/firewall.html#resource_group_name DataAzurermFirewall#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/firewall#resource_group_name DataAzurermFirewall#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/firewall.html#timeouts DataAzurermFirewall#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/firewall#timeouts DataAzurermFirewall#timeouts}
   */
   readonly timeouts?: DataAzurermFirewallTimeouts;
 }
@@ -90,7 +90,7 @@ export class DataAzurermFirewallVirtualHub extends cdktf.ComplexComputedList {
 }
 export interface DataAzurermFirewallTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/firewall.html#read DataAzurermFirewall#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/firewall#read DataAzurermFirewall#read}
   */
   readonly read?: string;
 }
@@ -156,7 +156,7 @@ export class DataAzurermFirewallTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/firewall.html azurerm_firewall}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/firewall azurerm_firewall}
 */
 export class DataAzurermFirewall extends cdktf.TerraformDataSource {
 
@@ -170,7 +170,7 @@ export class DataAzurermFirewall extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/firewall.html azurerm_firewall} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/firewall azurerm_firewall} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

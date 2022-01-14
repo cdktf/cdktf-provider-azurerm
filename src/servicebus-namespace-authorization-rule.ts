@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html
+// https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,55 +8,55 @@ import * as cdktf from 'cdktf';
 
 export interface ServicebusNamespaceAuthorizationRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#listen ServicebusNamespaceAuthorizationRule#listen}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule#listen ServicebusNamespaceAuthorizationRule#listen}
   */
   readonly listen?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#manage ServicebusNamespaceAuthorizationRule#manage}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule#manage ServicebusNamespaceAuthorizationRule#manage}
   */
   readonly manage?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#name ServicebusNamespaceAuthorizationRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule#name ServicebusNamespaceAuthorizationRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#namespace_id ServicebusNamespaceAuthorizationRule#namespace_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule#namespace_id ServicebusNamespaceAuthorizationRule#namespace_id}
   */
   readonly namespaceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#namespace_name ServicebusNamespaceAuthorizationRule#namespace_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule#namespace_name ServicebusNamespaceAuthorizationRule#namespace_name}
   */
   readonly namespaceName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#resource_group_name ServicebusNamespaceAuthorizationRule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule#resource_group_name ServicebusNamespaceAuthorizationRule#resource_group_name}
   */
   readonly resourceGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#send ServicebusNamespaceAuthorizationRule#send}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule#send ServicebusNamespaceAuthorizationRule#send}
   */
   readonly send?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#timeouts ServicebusNamespaceAuthorizationRule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule#timeouts ServicebusNamespaceAuthorizationRule#timeouts}
   */
   readonly timeouts?: ServicebusNamespaceAuthorizationRuleTimeouts;
 }
 export interface ServicebusNamespaceAuthorizationRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#create ServicebusNamespaceAuthorizationRule#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule#create ServicebusNamespaceAuthorizationRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#delete ServicebusNamespaceAuthorizationRule#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule#delete ServicebusNamespaceAuthorizationRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#read ServicebusNamespaceAuthorizationRule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule#read ServicebusNamespaceAuthorizationRule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html#update ServicebusNamespaceAuthorizationRule#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule#update ServicebusNamespaceAuthorizationRule#update}
   */
   readonly update?: string;
 }
@@ -191,7 +191,7 @@ export class ServicebusNamespaceAuthorizationRuleTimeoutsOutputReference extends
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html azurerm_servicebus_namespace_authorization_rule}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule azurerm_servicebus_namespace_authorization_rule}
 */
 export class ServicebusNamespaceAuthorizationRule extends cdktf.TerraformResource {
 
@@ -205,7 +205,7 @@ export class ServicebusNamespaceAuthorizationRule extends cdktf.TerraformResourc
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule.html azurerm_servicebus_namespace_authorization_rule} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_authorization_rule azurerm_servicebus_namespace_authorization_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html
+// https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,65 +8,65 @@ import * as cdktf from 'cdktf';
 
 export interface StreamAnalyticsStreamInputBlobConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#date_format StreamAnalyticsStreamInputBlob#date_format}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob#date_format StreamAnalyticsStreamInputBlob#date_format}
   */
   readonly dateFormat: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#name StreamAnalyticsStreamInputBlob#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob#name StreamAnalyticsStreamInputBlob#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#path_pattern StreamAnalyticsStreamInputBlob#path_pattern}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob#path_pattern StreamAnalyticsStreamInputBlob#path_pattern}
   */
   readonly pathPattern: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#resource_group_name StreamAnalyticsStreamInputBlob#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob#resource_group_name StreamAnalyticsStreamInputBlob#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#storage_account_key StreamAnalyticsStreamInputBlob#storage_account_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob#storage_account_key StreamAnalyticsStreamInputBlob#storage_account_key}
   */
   readonly storageAccountKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#storage_account_name StreamAnalyticsStreamInputBlob#storage_account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob#storage_account_name StreamAnalyticsStreamInputBlob#storage_account_name}
   */
   readonly storageAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#storage_container_name StreamAnalyticsStreamInputBlob#storage_container_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob#storage_container_name StreamAnalyticsStreamInputBlob#storage_container_name}
   */
   readonly storageContainerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#stream_analytics_job_name StreamAnalyticsStreamInputBlob#stream_analytics_job_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob#stream_analytics_job_name StreamAnalyticsStreamInputBlob#stream_analytics_job_name}
   */
   readonly streamAnalyticsJobName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#time_format StreamAnalyticsStreamInputBlob#time_format}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob#time_format StreamAnalyticsStreamInputBlob#time_format}
   */
   readonly timeFormat: string;
   /**
   * serialization block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#serialization StreamAnalyticsStreamInputBlob#serialization}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob#serialization StreamAnalyticsStreamInputBlob#serialization}
   */
   readonly serialization: StreamAnalyticsStreamInputBlobSerialization;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#timeouts StreamAnalyticsStreamInputBlob#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob#timeouts StreamAnalyticsStreamInputBlob#timeouts}
   */
   readonly timeouts?: StreamAnalyticsStreamInputBlobTimeouts;
 }
 export interface StreamAnalyticsStreamInputBlobSerialization {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#encoding StreamAnalyticsStreamInputBlob#encoding}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob#encoding StreamAnalyticsStreamInputBlob#encoding}
   */
   readonly encoding?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#field_delimiter StreamAnalyticsStreamInputBlob#field_delimiter}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob#field_delimiter StreamAnalyticsStreamInputBlob#field_delimiter}
   */
   readonly fieldDelimiter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#type StreamAnalyticsStreamInputBlob#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob#type StreamAnalyticsStreamInputBlob#type}
   */
   readonly type: string;
 }
@@ -175,19 +175,19 @@ export class StreamAnalyticsStreamInputBlobSerializationOutputReference extends 
 }
 export interface StreamAnalyticsStreamInputBlobTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#create StreamAnalyticsStreamInputBlob#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob#create StreamAnalyticsStreamInputBlob#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#delete StreamAnalyticsStreamInputBlob#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob#delete StreamAnalyticsStreamInputBlob#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#read StreamAnalyticsStreamInputBlob#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob#read StreamAnalyticsStreamInputBlob#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html#update StreamAnalyticsStreamInputBlob#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob#update StreamAnalyticsStreamInputBlob#update}
   */
   readonly update?: string;
 }
@@ -322,7 +322,7 @@ export class StreamAnalyticsStreamInputBlobTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html azurerm_stream_analytics_stream_input_blob}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob azurerm_stream_analytics_stream_input_blob}
 */
 export class StreamAnalyticsStreamInputBlob extends cdktf.TerraformResource {
 
@@ -336,7 +336,7 @@ export class StreamAnalyticsStreamInputBlob extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob.html azurerm_stream_analytics_stream_input_blob} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/stream_analytics_stream_input_blob azurerm_stream_analytics_stream_input_blob} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

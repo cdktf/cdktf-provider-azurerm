@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,57 +8,57 @@ import * as cdktf from 'cdktf';
 
 export interface DataProtectionBackupPolicyPostgresqlConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#backup_repeating_time_intervals DataProtectionBackupPolicyPostgresql#backup_repeating_time_intervals}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#backup_repeating_time_intervals DataProtectionBackupPolicyPostgresql#backup_repeating_time_intervals}
   */
   readonly backupRepeatingTimeIntervals: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#default_retention_duration DataProtectionBackupPolicyPostgresql#default_retention_duration}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#default_retention_duration DataProtectionBackupPolicyPostgresql#default_retention_duration}
   */
   readonly defaultRetentionDuration: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#name DataProtectionBackupPolicyPostgresql#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#name DataProtectionBackupPolicyPostgresql#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#resource_group_name DataProtectionBackupPolicyPostgresql#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#resource_group_name DataProtectionBackupPolicyPostgresql#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#vault_name DataProtectionBackupPolicyPostgresql#vault_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#vault_name DataProtectionBackupPolicyPostgresql#vault_name}
   */
   readonly vaultName: string;
   /**
   * retention_rule block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#retention_rule DataProtectionBackupPolicyPostgresql#retention_rule}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#retention_rule DataProtectionBackupPolicyPostgresql#retention_rule}
   */
   readonly retentionRule?: DataProtectionBackupPolicyPostgresqlRetentionRule[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#timeouts DataProtectionBackupPolicyPostgresql#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#timeouts DataProtectionBackupPolicyPostgresql#timeouts}
   */
   readonly timeouts?: DataProtectionBackupPolicyPostgresqlTimeouts;
 }
 export interface DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#absolute_criteria DataProtectionBackupPolicyPostgresql#absolute_criteria}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#absolute_criteria DataProtectionBackupPolicyPostgresql#absolute_criteria}
   */
   readonly absoluteCriteria?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#days_of_week DataProtectionBackupPolicyPostgresql#days_of_week}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#days_of_week DataProtectionBackupPolicyPostgresql#days_of_week}
   */
   readonly daysOfWeek?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#months_of_year DataProtectionBackupPolicyPostgresql#months_of_year}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#months_of_year DataProtectionBackupPolicyPostgresql#months_of_year}
   */
   readonly monthsOfYear?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#scheduled_backup_times DataProtectionBackupPolicyPostgresql#scheduled_backup_times}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#scheduled_backup_times DataProtectionBackupPolicyPostgresql#scheduled_backup_times}
   */
   readonly scheduledBackupTimes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#weeks_of_month DataProtectionBackupPolicyPostgresql#weeks_of_month}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#weeks_of_month DataProtectionBackupPolicyPostgresql#weeks_of_month}
   */
   readonly weeksOfMonth?: string[];
 }
@@ -216,21 +216,21 @@ export class DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputRefe
 }
 export interface DataProtectionBackupPolicyPostgresqlRetentionRule {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#duration DataProtectionBackupPolicyPostgresql#duration}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#duration DataProtectionBackupPolicyPostgresql#duration}
   */
   readonly duration: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#name DataProtectionBackupPolicyPostgresql#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#name DataProtectionBackupPolicyPostgresql#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#priority DataProtectionBackupPolicyPostgresql#priority}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#priority DataProtectionBackupPolicyPostgresql#priority}
   */
   readonly priority: number;
   /**
   * criteria block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#criteria DataProtectionBackupPolicyPostgresql#criteria}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#criteria DataProtectionBackupPolicyPostgresql#criteria}
   */
   readonly criteria: DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria;
 }
@@ -250,19 +250,19 @@ export function dataProtectionBackupPolicyPostgresqlRetentionRuleToTerraform(str
 
 export interface DataProtectionBackupPolicyPostgresqlTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#create DataProtectionBackupPolicyPostgresql#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#create DataProtectionBackupPolicyPostgresql#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#delete DataProtectionBackupPolicyPostgresql#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#delete DataProtectionBackupPolicyPostgresql#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#read DataProtectionBackupPolicyPostgresql#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#read DataProtectionBackupPolicyPostgresql#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html#update DataProtectionBackupPolicyPostgresql#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql#update DataProtectionBackupPolicyPostgresql#update}
   */
   readonly update?: string;
 }
@@ -397,7 +397,7 @@ export class DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference extends
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html azurerm_data_protection_backup_policy_postgresql}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql azurerm_data_protection_backup_policy_postgresql}
 */
 export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResource {
 
@@ -411,7 +411,7 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql.html azurerm_data_protection_backup_policy_postgresql} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_policy_postgresql azurerm_data_protection_backup_policy_postgresql} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

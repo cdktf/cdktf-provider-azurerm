@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html
+// https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,53 +8,53 @@ import * as cdktf from 'cdktf';
 
 export interface DnsSrvRecordConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#name DnsSrvRecord#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record#name DnsSrvRecord#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#resource_group_name DnsSrvRecord#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record#resource_group_name DnsSrvRecord#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#tags DnsSrvRecord#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record#tags DnsSrvRecord#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#ttl DnsSrvRecord#ttl}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record#ttl DnsSrvRecord#ttl}
   */
   readonly ttl: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#zone_name DnsSrvRecord#zone_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record#zone_name DnsSrvRecord#zone_name}
   */
   readonly zoneName: string;
   /**
   * record block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#record DnsSrvRecord#record}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record#record DnsSrvRecord#record}
   */
   readonly record: DnsSrvRecordRecord[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#timeouts DnsSrvRecord#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record#timeouts DnsSrvRecord#timeouts}
   */
   readonly timeouts?: DnsSrvRecordTimeouts;
 }
 export interface DnsSrvRecordRecord {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#port DnsSrvRecord#port}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record#port DnsSrvRecord#port}
   */
   readonly port: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#priority DnsSrvRecord#priority}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record#priority DnsSrvRecord#priority}
   */
   readonly priority: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#target DnsSrvRecord#target}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record#target DnsSrvRecord#target}
   */
   readonly target: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#weight DnsSrvRecord#weight}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record#weight DnsSrvRecord#weight}
   */
   readonly weight: number;
 }
@@ -74,19 +74,19 @@ export function dnsSrvRecordRecordToTerraform(struct?: DnsSrvRecordRecord): any 
 
 export interface DnsSrvRecordTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#create DnsSrvRecord#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record#create DnsSrvRecord#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#delete DnsSrvRecord#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record#delete DnsSrvRecord#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#read DnsSrvRecord#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record#read DnsSrvRecord#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html#update DnsSrvRecord#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record#update DnsSrvRecord#update}
   */
   readonly update?: string;
 }
@@ -221,7 +221,7 @@ export class DnsSrvRecordTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html azurerm_dns_srv_record}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record azurerm_dns_srv_record}
 */
 export class DnsSrvRecord extends cdktf.TerraformResource {
 
@@ -235,7 +235,7 @@ export class DnsSrvRecord extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record.html azurerm_dns_srv_record} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dns_srv_record azurerm_dns_srv_record} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

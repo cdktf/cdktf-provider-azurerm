@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/eventhub_namespace.html
+// https://www.terraform.io/docs/providers/azurerm/d/eventhub_namespace
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermEventhubNamespaceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_namespace.html#name DataAzurermEventhubNamespace#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_namespace#name DataAzurermEventhubNamespace#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_namespace.html#resource_group_name DataAzurermEventhubNamespace#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_namespace#resource_group_name DataAzurermEventhubNamespace#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_namespace.html#timeouts DataAzurermEventhubNamespace#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_namespace#timeouts DataAzurermEventhubNamespace#timeouts}
   */
   readonly timeouts?: DataAzurermEventhubNamespaceTimeouts;
 }
 export interface DataAzurermEventhubNamespaceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_namespace.html#read DataAzurermEventhubNamespace#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_namespace#read DataAzurermEventhubNamespace#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermEventhubNamespaceTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_namespace.html azurerm_eventhub_namespace}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_namespace azurerm_eventhub_namespace}
 */
 export class DataAzurermEventhubNamespace extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermEventhubNamespace extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_namespace.html azurerm_eventhub_namespace} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/eventhub_namespace azurerm_eventhub_namespace} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

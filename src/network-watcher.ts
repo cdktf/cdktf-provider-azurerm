@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/network_watcher.html
+// https://www.terraform.io/docs/providers/azurerm/r/network_watcher
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkWatcherConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher.html#location NetworkWatcher#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher#location NetworkWatcher#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher.html#name NetworkWatcher#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher#name NetworkWatcher#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher.html#resource_group_name NetworkWatcher#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher#resource_group_name NetworkWatcher#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher.html#tags NetworkWatcher#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher#tags NetworkWatcher#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher.html#timeouts NetworkWatcher#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher#timeouts NetworkWatcher#timeouts}
   */
   readonly timeouts?: NetworkWatcherTimeouts;
 }
 export interface NetworkWatcherTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher.html#create NetworkWatcher#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher#create NetworkWatcher#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher.html#delete NetworkWatcher#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher#delete NetworkWatcher#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher.html#read NetworkWatcher#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher#read NetworkWatcher#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher.html#update NetworkWatcher#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher#update NetworkWatcher#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class NetworkWatcherTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher.html azurerm_network_watcher}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher azurerm_network_watcher}
 */
 export class NetworkWatcher extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class NetworkWatcher extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher.html azurerm_network_watcher} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/network_watcher azurerm_network_watcher} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

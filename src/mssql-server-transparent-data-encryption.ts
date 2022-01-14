@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption.html
+// https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface MssqlServerTransparentDataEncryptionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption.html#key_vault_key_id MssqlServerTransparentDataEncryption#key_vault_key_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption#key_vault_key_id MssqlServerTransparentDataEncryption#key_vault_key_id}
   */
   readonly keyVaultKeyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption.html#server_id MssqlServerTransparentDataEncryption#server_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption#server_id MssqlServerTransparentDataEncryption#server_id}
   */
   readonly serverId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption.html#timeouts MssqlServerTransparentDataEncryption#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption#timeouts MssqlServerTransparentDataEncryption#timeouts}
   */
   readonly timeouts?: MssqlServerTransparentDataEncryptionTimeouts;
 }
 export interface MssqlServerTransparentDataEncryptionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption.html#create MssqlServerTransparentDataEncryption#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption#create MssqlServerTransparentDataEncryption#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption.html#delete MssqlServerTransparentDataEncryption#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption#delete MssqlServerTransparentDataEncryption#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption.html#read MssqlServerTransparentDataEncryption#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption#read MssqlServerTransparentDataEncryption#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption.html#update MssqlServerTransparentDataEncryption#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption#update MssqlServerTransparentDataEncryption#update}
   */
   readonly update?: string;
 }
@@ -171,7 +171,7 @@ export class MssqlServerTransparentDataEncryptionTimeoutsOutputReference extends
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption.html azurerm_mssql_server_transparent_data_encryption}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption azurerm_mssql_server_transparent_data_encryption}
 */
 export class MssqlServerTransparentDataEncryption extends cdktf.TerraformResource {
 
@@ -185,7 +185,7 @@ export class MssqlServerTransparentDataEncryption extends cdktf.TerraformResourc
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption.html azurerm_mssql_server_transparent_data_encryption} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server_transparent_data_encryption azurerm_mssql_server_transparent_data_encryption} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

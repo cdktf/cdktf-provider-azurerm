@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider.html
+// https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface VirtualHubSecurityPartnerProviderConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider.html#location VirtualHubSecurityPartnerProvider#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider#location VirtualHubSecurityPartnerProvider#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider.html#name VirtualHubSecurityPartnerProvider#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider#name VirtualHubSecurityPartnerProvider#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider.html#resource_group_name VirtualHubSecurityPartnerProvider#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider#resource_group_name VirtualHubSecurityPartnerProvider#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider.html#security_provider_name VirtualHubSecurityPartnerProvider#security_provider_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider#security_provider_name VirtualHubSecurityPartnerProvider#security_provider_name}
   */
   readonly securityProviderName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider.html#tags VirtualHubSecurityPartnerProvider#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider#tags VirtualHubSecurityPartnerProvider#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider.html#virtual_hub_id VirtualHubSecurityPartnerProvider#virtual_hub_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider#virtual_hub_id VirtualHubSecurityPartnerProvider#virtual_hub_id}
   */
   readonly virtualHubId?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider.html#timeouts VirtualHubSecurityPartnerProvider#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider#timeouts VirtualHubSecurityPartnerProvider#timeouts}
   */
   readonly timeouts?: VirtualHubSecurityPartnerProviderTimeouts;
 }
 export interface VirtualHubSecurityPartnerProviderTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider.html#create VirtualHubSecurityPartnerProvider#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider#create VirtualHubSecurityPartnerProvider#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider.html#delete VirtualHubSecurityPartnerProvider#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider#delete VirtualHubSecurityPartnerProvider#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider.html#read VirtualHubSecurityPartnerProvider#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider#read VirtualHubSecurityPartnerProvider#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider.html#update VirtualHubSecurityPartnerProvider#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider#update VirtualHubSecurityPartnerProvider#update}
   */
   readonly update?: string;
 }
@@ -187,7 +187,7 @@ export class VirtualHubSecurityPartnerProviderTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider.html azurerm_virtual_hub_security_partner_provider}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider azurerm_virtual_hub_security_partner_provider}
 */
 export class VirtualHubSecurityPartnerProvider extends cdktf.TerraformResource {
 
@@ -201,7 +201,7 @@ export class VirtualHubSecurityPartnerProvider extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider.html azurerm_virtual_hub_security_partner_provider} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/virtual_hub_security_partner_provider azurerm_virtual_hub_security_partner_provider} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

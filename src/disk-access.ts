@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/disk_access.html
+// https://www.terraform.io/docs/providers/azurerm/r/disk_access
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface DiskAccessConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html#location DiskAccess#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access#location DiskAccess#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html#name DiskAccess#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access#name DiskAccess#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html#resource_group_name DiskAccess#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access#resource_group_name DiskAccess#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html#tags DiskAccess#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access#tags DiskAccess#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html#timeouts DiskAccess#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access#timeouts DiskAccess#timeouts}
   */
   readonly timeouts?: DiskAccessTimeouts;
 }
 export interface DiskAccessTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html#create DiskAccess#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access#create DiskAccess#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html#delete DiskAccess#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access#delete DiskAccess#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html#read DiskAccess#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access#read DiskAccess#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html#update DiskAccess#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access#update DiskAccess#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class DiskAccessTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html azurerm_disk_access}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access azurerm_disk_access}
 */
 export class DiskAccess extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class DiskAccess extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access.html azurerm_disk_access} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/disk_access azurerm_disk_access} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

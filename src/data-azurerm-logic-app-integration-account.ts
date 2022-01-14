@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account.html
+// https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermLogicAppIntegrationAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account.html#name DataAzurermLogicAppIntegrationAccount#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account#name DataAzurermLogicAppIntegrationAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account.html#resource_group_name DataAzurermLogicAppIntegrationAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account#resource_group_name DataAzurermLogicAppIntegrationAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account.html#timeouts DataAzurermLogicAppIntegrationAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account#timeouts DataAzurermLogicAppIntegrationAccount#timeouts}
   */
   readonly timeouts?: DataAzurermLogicAppIntegrationAccountTimeouts;
 }
 export interface DataAzurermLogicAppIntegrationAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account.html#read DataAzurermLogicAppIntegrationAccount#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account#read DataAzurermLogicAppIntegrationAccount#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermLogicAppIntegrationAccountTimeoutsOutputReference extend
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account.html azurerm_logic_app_integration_account}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account azurerm_logic_app_integration_account}
 */
 export class DataAzurermLogicAppIntegrationAccount extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermLogicAppIntegrationAccount extends cdktf.TerraformDataSo
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account.html azurerm_logic_app_integration_account} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_integration_account azurerm_logic_app_integration_account} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

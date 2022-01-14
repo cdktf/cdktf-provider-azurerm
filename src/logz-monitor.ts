@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html
+// https://www.terraform.io/docs/providers/azurerm/r/logz_monitor
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,67 +8,67 @@ import * as cdktf from 'cdktf';
 
 export interface LogzMonitorConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#company_name LogzMonitor#company_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#company_name LogzMonitor#company_name}
   */
   readonly companyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#enabled LogzMonitor#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#enabled LogzMonitor#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#enterprise_app_id LogzMonitor#enterprise_app_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#enterprise_app_id LogzMonitor#enterprise_app_id}
   */
   readonly enterpriseAppId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#location LogzMonitor#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#location LogzMonitor#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#name LogzMonitor#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#name LogzMonitor#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#resource_group_name LogzMonitor#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#resource_group_name LogzMonitor#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#tags LogzMonitor#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#tags LogzMonitor#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * plan block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#plan LogzMonitor#plan}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#plan LogzMonitor#plan}
   */
   readonly plan: LogzMonitorPlan;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#timeouts LogzMonitor#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#timeouts LogzMonitor#timeouts}
   */
   readonly timeouts?: LogzMonitorTimeouts;
   /**
   * user block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#user LogzMonitor#user}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#user LogzMonitor#user}
   */
   readonly user: LogzMonitorUser;
 }
 export interface LogzMonitorPlan {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#billing_cycle LogzMonitor#billing_cycle}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#billing_cycle LogzMonitor#billing_cycle}
   */
   readonly billingCycle: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#effective_date LogzMonitor#effective_date}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#effective_date LogzMonitor#effective_date}
   */
   readonly effectiveDate: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#plan_id LogzMonitor#plan_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#plan_id LogzMonitor#plan_id}
   */
   readonly planId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#usage_type LogzMonitor#usage_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#usage_type LogzMonitor#usage_type}
   */
   readonly usageType: string;
 }
@@ -191,19 +191,19 @@ export class LogzMonitorPlanOutputReference extends cdktf.ComplexObject {
 }
 export interface LogzMonitorTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#create LogzMonitor#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#create LogzMonitor#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#delete LogzMonitor#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#delete LogzMonitor#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#read LogzMonitor#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#read LogzMonitor#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#update LogzMonitor#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#update LogzMonitor#update}
   */
   readonly update?: string;
 }
@@ -338,19 +338,19 @@ export class LogzMonitorTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 export interface LogzMonitorUser {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#email LogzMonitor#email}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#email LogzMonitor#email}
   */
   readonly email: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#first_name LogzMonitor#first_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#first_name LogzMonitor#first_name}
   */
   readonly firstName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#last_name LogzMonitor#last_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#last_name LogzMonitor#last_name}
   */
   readonly lastName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html#phone_number LogzMonitor#phone_number}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor#phone_number LogzMonitor#phone_number}
   */
   readonly phoneNumber: string;
 }
@@ -473,7 +473,7 @@ export class LogzMonitorUserOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html azurerm_logz_monitor}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor azurerm_logz_monitor}
 */
 export class LogzMonitor extends cdktf.TerraformResource {
 
@@ -487,7 +487,7 @@ export class LogzMonitor extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor.html azurerm_logz_monitor} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/logz_monitor azurerm_logz_monitor} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

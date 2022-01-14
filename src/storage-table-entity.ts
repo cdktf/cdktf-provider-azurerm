@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html
+// https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface StorageTableEntityConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#entity StorageTableEntity#entity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity#entity StorageTableEntity#entity}
   */
   readonly entity: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#partition_key StorageTableEntity#partition_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity#partition_key StorageTableEntity#partition_key}
   */
   readonly partitionKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#row_key StorageTableEntity#row_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity#row_key StorageTableEntity#row_key}
   */
   readonly rowKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#storage_account_name StorageTableEntity#storage_account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity#storage_account_name StorageTableEntity#storage_account_name}
   */
   readonly storageAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#table_name StorageTableEntity#table_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity#table_name StorageTableEntity#table_name}
   */
   readonly tableName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#timeouts StorageTableEntity#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity#timeouts StorageTableEntity#timeouts}
   */
   readonly timeouts?: StorageTableEntityTimeouts;
 }
 export interface StorageTableEntityTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#create StorageTableEntity#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity#create StorageTableEntity#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#delete StorageTableEntity#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity#delete StorageTableEntity#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#read StorageTableEntity#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity#read StorageTableEntity#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html#update StorageTableEntity#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity#update StorageTableEntity#update}
   */
   readonly update?: string;
 }
@@ -183,7 +183,7 @@ export class StorageTableEntityTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html azurerm_storage_table_entity}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity azurerm_storage_table_entity}
 */
 export class StorageTableEntity extends cdktf.TerraformResource {
 
@@ -197,7 +197,7 @@ export class StorageTableEntity extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity.html azurerm_storage_table_entity} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_table_entity azurerm_storage_table_entity} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

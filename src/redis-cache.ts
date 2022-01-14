@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html
+// https://www.terraform.io/docs/providers/azurerm/r/redis_cache
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,107 +8,107 @@ import * as cdktf from 'cdktf';
 
 export interface RedisCacheConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#capacity RedisCache#capacity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#capacity RedisCache#capacity}
   */
   readonly capacity: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#enable_non_ssl_port RedisCache#enable_non_ssl_port}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#enable_non_ssl_port RedisCache#enable_non_ssl_port}
   */
   readonly enableNonSslPort?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#family RedisCache#family}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#family RedisCache#family}
   */
   readonly family: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#location RedisCache#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#location RedisCache#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#minimum_tls_version RedisCache#minimum_tls_version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#minimum_tls_version RedisCache#minimum_tls_version}
   */
   readonly minimumTlsVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#name RedisCache#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#name RedisCache#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#private_static_ip_address RedisCache#private_static_ip_address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#private_static_ip_address RedisCache#private_static_ip_address}
   */
   readonly privateStaticIpAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#public_network_access_enabled RedisCache#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#public_network_access_enabled RedisCache#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#redis_version RedisCache#redis_version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#redis_version RedisCache#redis_version}
   */
   readonly redisVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#replicas_per_master RedisCache#replicas_per_master}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#replicas_per_master RedisCache#replicas_per_master}
   */
   readonly replicasPerMaster?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#replicas_per_primary RedisCache#replicas_per_primary}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#replicas_per_primary RedisCache#replicas_per_primary}
   */
   readonly replicasPerPrimary?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#resource_group_name RedisCache#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#resource_group_name RedisCache#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#shard_count RedisCache#shard_count}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#shard_count RedisCache#shard_count}
   */
   readonly shardCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#sku_name RedisCache#sku_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#sku_name RedisCache#sku_name}
   */
   readonly skuName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#subnet_id RedisCache#subnet_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#subnet_id RedisCache#subnet_id}
   */
   readonly subnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#tags RedisCache#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#tags RedisCache#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#tenant_settings RedisCache#tenant_settings}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#tenant_settings RedisCache#tenant_settings}
   */
   readonly tenantSettings?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#zones RedisCache#zones}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#zones RedisCache#zones}
   */
   readonly zones?: string[];
   /**
   * patch_schedule block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#patch_schedule RedisCache#patch_schedule}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#patch_schedule RedisCache#patch_schedule}
   */
   readonly patchSchedule?: RedisCachePatchSchedule[];
   /**
   * redis_configuration block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#redis_configuration RedisCache#redis_configuration}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#redis_configuration RedisCache#redis_configuration}
   */
   readonly redisConfiguration?: RedisCacheRedisConfiguration;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#timeouts RedisCache#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#timeouts RedisCache#timeouts}
   */
   readonly timeouts?: RedisCacheTimeouts;
 }
 export interface RedisCachePatchSchedule {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#day_of_week RedisCache#day_of_week}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#day_of_week RedisCache#day_of_week}
   */
   readonly dayOfWeek: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#maintenance_window RedisCache#maintenance_window}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#maintenance_window RedisCache#maintenance_window}
   */
   readonly maintenanceWindow?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#start_hour_utc RedisCache#start_hour_utc}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#start_hour_utc RedisCache#start_hour_utc}
   */
   readonly startHourUtc?: number;
 }
@@ -127,55 +127,55 @@ export function redisCachePatchScheduleToTerraform(struct?: RedisCachePatchSched
 
 export interface RedisCacheRedisConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#aof_backup_enabled RedisCache#aof_backup_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#aof_backup_enabled RedisCache#aof_backup_enabled}
   */
   readonly aofBackupEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#aof_storage_connection_string_0 RedisCache#aof_storage_connection_string_0}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#aof_storage_connection_string_0 RedisCache#aof_storage_connection_string_0}
   */
   readonly aofStorageConnectionString0?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#aof_storage_connection_string_1 RedisCache#aof_storage_connection_string_1}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#aof_storage_connection_string_1 RedisCache#aof_storage_connection_string_1}
   */
   readonly aofStorageConnectionString1?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#enable_authentication RedisCache#enable_authentication}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#enable_authentication RedisCache#enable_authentication}
   */
   readonly enableAuthentication?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#maxfragmentationmemory_reserved RedisCache#maxfragmentationmemory_reserved}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#maxfragmentationmemory_reserved RedisCache#maxfragmentationmemory_reserved}
   */
   readonly maxfragmentationmemoryReserved?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#maxmemory_delta RedisCache#maxmemory_delta}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#maxmemory_delta RedisCache#maxmemory_delta}
   */
   readonly maxmemoryDelta?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#maxmemory_policy RedisCache#maxmemory_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#maxmemory_policy RedisCache#maxmemory_policy}
   */
   readonly maxmemoryPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#maxmemory_reserved RedisCache#maxmemory_reserved}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#maxmemory_reserved RedisCache#maxmemory_reserved}
   */
   readonly maxmemoryReserved?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#notify_keyspace_events RedisCache#notify_keyspace_events}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#notify_keyspace_events RedisCache#notify_keyspace_events}
   */
   readonly notifyKeyspaceEvents?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#rdb_backup_enabled RedisCache#rdb_backup_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#rdb_backup_enabled RedisCache#rdb_backup_enabled}
   */
   readonly rdbBackupEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#rdb_backup_frequency RedisCache#rdb_backup_frequency}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#rdb_backup_frequency RedisCache#rdb_backup_frequency}
   */
   readonly rdbBackupFrequency?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#rdb_backup_max_snapshot_count RedisCache#rdb_backup_max_snapshot_count}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#rdb_backup_max_snapshot_count RedisCache#rdb_backup_max_snapshot_count}
   */
   readonly rdbBackupMaxSnapshotCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#rdb_storage_connection_string RedisCache#rdb_storage_connection_string}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#rdb_storage_connection_string RedisCache#rdb_storage_connection_string}
   */
   readonly rdbStorageConnectionString?: string;
 }
@@ -517,19 +517,19 @@ export class RedisCacheRedisConfigurationOutputReference extends cdktf.ComplexOb
 }
 export interface RedisCacheTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#create RedisCache#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#create RedisCache#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#delete RedisCache#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#delete RedisCache#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#read RedisCache#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#read RedisCache#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html#update RedisCache#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache#update RedisCache#update}
   */
   readonly update?: string;
 }
@@ -664,7 +664,7 @@ export class RedisCacheTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html azurerm_redis_cache}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache azurerm_redis_cache}
 */
 export class RedisCache extends cdktf.TerraformResource {
 
@@ -678,7 +678,7 @@ export class RedisCache extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache.html azurerm_redis_cache} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/redis_cache azurerm_redis_cache} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

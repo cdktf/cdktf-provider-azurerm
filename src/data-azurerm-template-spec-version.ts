@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/template_spec_version.html
+// https://www.terraform.io/docs/providers/azurerm/d/template_spec_version
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermTemplateSpecVersionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version.html#name DataAzurermTemplateSpecVersion#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version#name DataAzurermTemplateSpecVersion#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version.html#resource_group_name DataAzurermTemplateSpecVersion#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version#resource_group_name DataAzurermTemplateSpecVersion#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version.html#version DataAzurermTemplateSpecVersion#version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version#version DataAzurermTemplateSpecVersion#version}
   */
   readonly version: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version.html#timeouts DataAzurermTemplateSpecVersion#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version#timeouts DataAzurermTemplateSpecVersion#timeouts}
   */
   readonly timeouts?: DataAzurermTemplateSpecVersionTimeouts;
 }
 export interface DataAzurermTemplateSpecVersionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version.html#read DataAzurermTemplateSpecVersion#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version#read DataAzurermTemplateSpecVersion#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermTemplateSpecVersionTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version.html azurerm_template_spec_version}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version azurerm_template_spec_version}
 */
 export class DataAzurermTemplateSpecVersion extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermTemplateSpecVersion extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version.html azurerm_template_spec_version} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/template_spec_version azurerm_template_spec_version} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

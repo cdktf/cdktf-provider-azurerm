@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/video_analyzer.html
+// https://www.terraform.io/docs/providers/azurerm/r/video_analyzer
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface VideoAnalyzerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer.html#location VideoAnalyzer#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer#location VideoAnalyzer#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer.html#name VideoAnalyzer#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer#name VideoAnalyzer#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer.html#resource_group_name VideoAnalyzer#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer#resource_group_name VideoAnalyzer#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer.html#tags VideoAnalyzer#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer#tags VideoAnalyzer#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * identity block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer.html#identity VideoAnalyzer#identity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer#identity VideoAnalyzer#identity}
   */
   readonly identity: VideoAnalyzerIdentity;
   /**
   * storage_account block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer.html#storage_account VideoAnalyzer#storage_account}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer#storage_account VideoAnalyzer#storage_account}
   */
   readonly storageAccount: VideoAnalyzerStorageAccount;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer.html#timeouts VideoAnalyzer#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer#timeouts VideoAnalyzer#timeouts}
   */
   readonly timeouts?: VideoAnalyzerTimeouts;
 }
 export interface VideoAnalyzerIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer.html#identity_ids VideoAnalyzer#identity_ids}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer#identity_ids VideoAnalyzer#identity_ids}
   */
   readonly identityIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer.html#type VideoAnalyzer#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer#type VideoAnalyzer#type}
   */
   readonly type: string;
 }
@@ -131,11 +131,11 @@ export class VideoAnalyzerIdentityOutputReference extends cdktf.ComplexObject {
 }
 export interface VideoAnalyzerStorageAccount {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer.html#id VideoAnalyzer#id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer#id VideoAnalyzer#id}
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer.html#user_assigned_identity_id VideoAnalyzer#user_assigned_identity_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer#user_assigned_identity_id VideoAnalyzer#user_assigned_identity_id}
   */
   readonly userAssignedIdentityId: string;
 }
@@ -218,19 +218,19 @@ export class VideoAnalyzerStorageAccountOutputReference extends cdktf.ComplexObj
 }
 export interface VideoAnalyzerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer.html#create VideoAnalyzer#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer#create VideoAnalyzer#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer.html#delete VideoAnalyzer#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer#delete VideoAnalyzer#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer.html#read VideoAnalyzer#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer#read VideoAnalyzer#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer.html#update VideoAnalyzer#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer#update VideoAnalyzer#update}
   */
   readonly update?: string;
 }
@@ -365,7 +365,7 @@ export class VideoAnalyzerTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer.html azurerm_video_analyzer}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer azurerm_video_analyzer}
 */
 export class VideoAnalyzer extends cdktf.TerraformResource {
 
@@ -379,7 +379,7 @@ export class VideoAnalyzer extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer.html azurerm_video_analyzer} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/video_analyzer azurerm_video_analyzer} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

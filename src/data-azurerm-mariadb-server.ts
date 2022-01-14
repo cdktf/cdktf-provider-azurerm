@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/mariadb_server.html
+// https://www.terraform.io/docs/providers/azurerm/d/mariadb_server
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMariadbServerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mariadb_server.html#name DataAzurermMariadbServer#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mariadb_server#name DataAzurermMariadbServer#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mariadb_server.html#resource_group_name DataAzurermMariadbServer#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mariadb_server#resource_group_name DataAzurermMariadbServer#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mariadb_server.html#timeouts DataAzurermMariadbServer#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mariadb_server#timeouts DataAzurermMariadbServer#timeouts}
   */
   readonly timeouts?: DataAzurermMariadbServerTimeouts;
 }
@@ -46,7 +46,7 @@ export class DataAzurermMariadbServerStorageProfile extends cdktf.ComplexCompute
 }
 export interface DataAzurermMariadbServerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mariadb_server.html#read DataAzurermMariadbServer#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mariadb_server#read DataAzurermMariadbServer#read}
   */
   readonly read?: string;
 }
@@ -112,7 +112,7 @@ export class DataAzurermMariadbServerTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/mariadb_server.html azurerm_mariadb_server}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/mariadb_server azurerm_mariadb_server}
 */
 export class DataAzurermMariadbServer extends cdktf.TerraformDataSource {
 
@@ -126,7 +126,7 @@ export class DataAzurermMariadbServer extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/mariadb_server.html azurerm_mariadb_server} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/mariadb_server azurerm_mariadb_server} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

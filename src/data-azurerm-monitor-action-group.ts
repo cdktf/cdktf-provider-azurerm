@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html
+// https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMonitorActionGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#name DataAzurermMonitorActionGroup#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#name DataAzurermMonitorActionGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#resource_group_name DataAzurermMonitorActionGroup#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#resource_group_name DataAzurermMonitorActionGroup#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * event_hub_receiver block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#event_hub_receiver DataAzurermMonitorActionGroup#event_hub_receiver}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#event_hub_receiver DataAzurermMonitorActionGroup#event_hub_receiver}
   */
   readonly eventHubReceiver?: DataAzurermMonitorActionGroupEventHubReceiver[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#timeouts DataAzurermMonitorActionGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#timeouts DataAzurermMonitorActionGroup#timeouts}
   */
   readonly timeouts?: DataAzurermMonitorActionGroupTimeouts;
 }
@@ -263,19 +263,19 @@ export class DataAzurermMonitorActionGroupWebhookReceiver extends cdktf.ComplexC
 }
 export interface DataAzurermMonitorActionGroupEventHubReceiver {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#event_hub_id DataAzurermMonitorActionGroup#event_hub_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#event_hub_id DataAzurermMonitorActionGroup#event_hub_id}
   */
   readonly eventHubId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#name DataAzurermMonitorActionGroup#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#name DataAzurermMonitorActionGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#tenant_id DataAzurermMonitorActionGroup#tenant_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#tenant_id DataAzurermMonitorActionGroup#tenant_id}
   */
   readonly tenantId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#use_common_alert_schema DataAzurermMonitorActionGroup#use_common_alert_schema}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#use_common_alert_schema DataAzurermMonitorActionGroup#use_common_alert_schema}
   */
   readonly useCommonAlertSchema?: boolean | cdktf.IResolvable;
 }
@@ -295,7 +295,7 @@ export function dataAzurermMonitorActionGroupEventHubReceiverToTerraform(struct?
 
 export interface DataAzurermMonitorActionGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html#read DataAzurermMonitorActionGroup#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group#read DataAzurermMonitorActionGroup#read}
   */
   readonly read?: string;
 }
@@ -361,7 +361,7 @@ export class DataAzurermMonitorActionGroupTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html azurerm_monitor_action_group}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group azurerm_monitor_action_group}
 */
 export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
 
@@ -375,7 +375,7 @@ export class DataAzurermMonitorActionGroup extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group.html azurerm_monitor_action_group} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_action_group azurerm_monitor_action_group} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

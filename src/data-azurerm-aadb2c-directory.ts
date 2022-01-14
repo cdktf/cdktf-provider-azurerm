@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/aadb2c_directory.html
+// https://www.terraform.io/docs/providers/azurerm/d/aadb2c_directory
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -10,23 +10,23 @@ export interface DataAzurermAadb2CDirectoryConfig extends cdktf.TerraformMetaArg
   /**
   * Domain name of the B2C tenant, including onmicrosoft.com suffix.
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/aadb2c_directory.html#domain_name DataAzurermAadb2CDirectory#domain_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/aadb2c_directory#domain_name DataAzurermAadb2CDirectory#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/aadb2c_directory.html#resource_group_name DataAzurermAadb2CDirectory#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/aadb2c_directory#resource_group_name DataAzurermAadb2CDirectory#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/aadb2c_directory.html#timeouts DataAzurermAadb2CDirectory#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/aadb2c_directory#timeouts DataAzurermAadb2CDirectory#timeouts}
   */
   readonly timeouts?: DataAzurermAadb2CDirectoryTimeouts;
 }
 export interface DataAzurermAadb2CDirectoryTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/aadb2c_directory.html#read DataAzurermAadb2CDirectory#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/aadb2c_directory#read DataAzurermAadb2CDirectory#read}
   */
   readonly read?: string;
 }
@@ -92,7 +92,7 @@ export class DataAzurermAadb2CDirectoryTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/aadb2c_directory.html azurerm_aadb2c_directory}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/aadb2c_directory azurerm_aadb2c_directory}
 */
 export class DataAzurermAadb2CDirectory extends cdktf.TerraformDataSource {
 
@@ -106,7 +106,7 @@ export class DataAzurermAadb2CDirectory extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/aadb2c_directory.html azurerm_aadb2c_directory} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/aadb2c_directory azurerm_aadb2c_directory} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

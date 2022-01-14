@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html
+// https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,49 +8,49 @@ import * as cdktf from 'cdktf';
 
 export interface EventgridSystemTopicConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#location EventgridSystemTopic#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic#location EventgridSystemTopic#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#name EventgridSystemTopic#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic#name EventgridSystemTopic#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#resource_group_name EventgridSystemTopic#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic#resource_group_name EventgridSystemTopic#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#source_arm_resource_id EventgridSystemTopic#source_arm_resource_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic#source_arm_resource_id EventgridSystemTopic#source_arm_resource_id}
   */
   readonly sourceArmResourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#tags EventgridSystemTopic#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic#tags EventgridSystemTopic#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#topic_type EventgridSystemTopic#topic_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic#topic_type EventgridSystemTopic#topic_type}
   */
   readonly topicType: string;
   /**
   * identity block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#identity EventgridSystemTopic#identity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic#identity EventgridSystemTopic#identity}
   */
   readonly identity?: EventgridSystemTopicIdentity;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#timeouts EventgridSystemTopic#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic#timeouts EventgridSystemTopic#timeouts}
   */
   readonly timeouts?: EventgridSystemTopicTimeouts;
 }
 export interface EventgridSystemTopicIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#identity_ids EventgridSystemTopic#identity_ids}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic#identity_ids EventgridSystemTopic#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#type EventgridSystemTopic#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic#type EventgridSystemTopic#type}
   */
   readonly type: string;
 }
@@ -136,19 +136,19 @@ export class EventgridSystemTopicIdentityOutputReference extends cdktf.ComplexOb
 }
 export interface EventgridSystemTopicTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#create EventgridSystemTopic#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic#create EventgridSystemTopic#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#delete EventgridSystemTopic#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic#delete EventgridSystemTopic#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#read EventgridSystemTopic#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic#read EventgridSystemTopic#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html#update EventgridSystemTopic#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic#update EventgridSystemTopic#update}
   */
   readonly update?: string;
 }
@@ -283,7 +283,7 @@ export class EventgridSystemTopicTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html azurerm_eventgrid_system_topic}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic azurerm_eventgrid_system_topic}
 */
 export class EventgridSystemTopic extends cdktf.TerraformResource {
 
@@ -297,7 +297,7 @@ export class EventgridSystemTopic extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic.html azurerm_eventgrid_system_topic} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_system_topic azurerm_eventgrid_system_topic} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

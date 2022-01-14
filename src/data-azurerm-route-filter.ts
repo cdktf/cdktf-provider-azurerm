@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/route_filter.html
+// https://www.terraform.io/docs/providers/azurerm/d/route_filter
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermRouteFilterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/route_filter.html#name DataAzurermRouteFilter#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/route_filter#name DataAzurermRouteFilter#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/route_filter.html#resource_group_name DataAzurermRouteFilter#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/route_filter#resource_group_name DataAzurermRouteFilter#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/route_filter.html#timeouts DataAzurermRouteFilter#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/route_filter#timeouts DataAzurermRouteFilter#timeouts}
   */
   readonly timeouts?: DataAzurermRouteFilterTimeouts;
 }
@@ -46,7 +46,7 @@ export class DataAzurermRouteFilterRule extends cdktf.ComplexComputedList {
 }
 export interface DataAzurermRouteFilterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/route_filter.html#read DataAzurermRouteFilter#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/route_filter#read DataAzurermRouteFilter#read}
   */
   readonly read?: string;
 }
@@ -112,7 +112,7 @@ export class DataAzurermRouteFilterTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/route_filter.html azurerm_route_filter}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/route_filter azurerm_route_filter}
 */
 export class DataAzurermRouteFilter extends cdktf.TerraformDataSource {
 
@@ -126,7 +126,7 @@ export class DataAzurermRouteFilter extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/route_filter.html azurerm_route_filter} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/route_filter azurerm_route_filter} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

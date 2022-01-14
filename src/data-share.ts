@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_share.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_share
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,49 +8,49 @@ import * as cdktf from 'cdktf';
 
 export interface DataShareConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#account_id DataShare#account_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share#account_id DataShare#account_id}
   */
   readonly accountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#description DataShare#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share#description DataShare#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#kind DataShare#kind}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share#kind DataShare#kind}
   */
   readonly kind: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#name DataShare#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share#name DataShare#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#terms DataShare#terms}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share#terms DataShare#terms}
   */
   readonly terms?: string;
   /**
   * snapshot_schedule block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#snapshot_schedule DataShare#snapshot_schedule}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share#snapshot_schedule DataShare#snapshot_schedule}
   */
   readonly snapshotSchedule?: DataShareSnapshotSchedule;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#timeouts DataShare#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share#timeouts DataShare#timeouts}
   */
   readonly timeouts?: DataShareTimeouts;
 }
 export interface DataShareSnapshotSchedule {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#name DataShare#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share#name DataShare#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#recurrence DataShare#recurrence}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share#recurrence DataShare#recurrence}
   */
   readonly recurrence: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#start_time DataShare#start_time}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share#start_time DataShare#start_time}
   */
   readonly startTime: string;
 }
@@ -153,19 +153,19 @@ export class DataShareSnapshotScheduleOutputReference extends cdktf.ComplexObjec
 }
 export interface DataShareTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#create DataShare#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share#create DataShare#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#delete DataShare#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share#delete DataShare#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#read DataShare#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share#read DataShare#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html#update DataShare#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share#update DataShare#update}
   */
   readonly update?: string;
 }
@@ -300,7 +300,7 @@ export class DataShareTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html azurerm_data_share}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_share azurerm_data_share}
 */
 export class DataShare extends cdktf.TerraformResource {
 
@@ -314,7 +314,7 @@ export class DataShare extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_share.html azurerm_data_share} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_share azurerm_data_share} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

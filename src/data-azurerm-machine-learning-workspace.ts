@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/machine_learning_workspace.html
+// https://www.terraform.io/docs/providers/azurerm/d/machine_learning_workspace
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMachineLearningWorkspaceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/machine_learning_workspace.html#name DataAzurermMachineLearningWorkspace#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/machine_learning_workspace#name DataAzurermMachineLearningWorkspace#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/machine_learning_workspace.html#resource_group_name DataAzurermMachineLearningWorkspace#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/machine_learning_workspace#resource_group_name DataAzurermMachineLearningWorkspace#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/machine_learning_workspace.html#timeouts DataAzurermMachineLearningWorkspace#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/machine_learning_workspace#timeouts DataAzurermMachineLearningWorkspace#timeouts}
   */
   readonly timeouts?: DataAzurermMachineLearningWorkspaceTimeouts;
 }
@@ -41,7 +41,7 @@ export class DataAzurermMachineLearningWorkspaceIdentity extends cdktf.ComplexCo
 }
 export interface DataAzurermMachineLearningWorkspaceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/machine_learning_workspace.html#read DataAzurermMachineLearningWorkspace#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/machine_learning_workspace#read DataAzurermMachineLearningWorkspace#read}
   */
   readonly read?: string;
 }
@@ -107,7 +107,7 @@ export class DataAzurermMachineLearningWorkspaceTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/machine_learning_workspace.html azurerm_machine_learning_workspace}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/machine_learning_workspace azurerm_machine_learning_workspace}
 */
 export class DataAzurermMachineLearningWorkspace extends cdktf.TerraformDataSource {
 
@@ -121,7 +121,7 @@ export class DataAzurermMachineLearningWorkspace extends cdktf.TerraformDataSour
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/machine_learning_workspace.html azurerm_machine_learning_workspace} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/machine_learning_workspace azurerm_machine_learning_workspace} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule.html
+// https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,55 +8,55 @@ import * as cdktf from 'cdktf';
 
 export interface RelayHybridConnectionAuthorizationRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule.html#hybrid_connection_name RelayHybridConnectionAuthorizationRule#hybrid_connection_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule#hybrid_connection_name RelayHybridConnectionAuthorizationRule#hybrid_connection_name}
   */
   readonly hybridConnectionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule.html#listen RelayHybridConnectionAuthorizationRule#listen}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule#listen RelayHybridConnectionAuthorizationRule#listen}
   */
   readonly listen?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule.html#manage RelayHybridConnectionAuthorizationRule#manage}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule#manage RelayHybridConnectionAuthorizationRule#manage}
   */
   readonly manage?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule.html#name RelayHybridConnectionAuthorizationRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule#name RelayHybridConnectionAuthorizationRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule.html#namespace_name RelayHybridConnectionAuthorizationRule#namespace_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule#namespace_name RelayHybridConnectionAuthorizationRule#namespace_name}
   */
   readonly namespaceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule.html#resource_group_name RelayHybridConnectionAuthorizationRule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule#resource_group_name RelayHybridConnectionAuthorizationRule#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule.html#send RelayHybridConnectionAuthorizationRule#send}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule#send RelayHybridConnectionAuthorizationRule#send}
   */
   readonly send?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule.html#timeouts RelayHybridConnectionAuthorizationRule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule#timeouts RelayHybridConnectionAuthorizationRule#timeouts}
   */
   readonly timeouts?: RelayHybridConnectionAuthorizationRuleTimeouts;
 }
 export interface RelayHybridConnectionAuthorizationRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule.html#create RelayHybridConnectionAuthorizationRule#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule#create RelayHybridConnectionAuthorizationRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule.html#delete RelayHybridConnectionAuthorizationRule#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule#delete RelayHybridConnectionAuthorizationRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule.html#read RelayHybridConnectionAuthorizationRule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule#read RelayHybridConnectionAuthorizationRule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule.html#update RelayHybridConnectionAuthorizationRule#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule#update RelayHybridConnectionAuthorizationRule#update}
   */
   readonly update?: string;
 }
@@ -191,7 +191,7 @@ export class RelayHybridConnectionAuthorizationRuleTimeoutsOutputReference exten
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule.html azurerm_relay_hybrid_connection_authorization_rule}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule azurerm_relay_hybrid_connection_authorization_rule}
 */
 export class RelayHybridConnectionAuthorizationRule extends cdktf.TerraformResource {
 
@@ -205,7 +205,7 @@ export class RelayHybridConnectionAuthorizationRule extends cdktf.TerraformResou
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule.html azurerm_relay_hybrid_connection_authorization_rule} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/relay_hybrid_connection_authorization_rule azurerm_relay_hybrid_connection_authorization_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

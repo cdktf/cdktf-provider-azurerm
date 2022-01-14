@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map.html
+// https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface ContainerRegistryScopeMapConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map.html#actions ContainerRegistryScopeMap#actions}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map#actions ContainerRegistryScopeMap#actions}
   */
   readonly actions: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map.html#container_registry_name ContainerRegistryScopeMap#container_registry_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map#container_registry_name ContainerRegistryScopeMap#container_registry_name}
   */
   readonly containerRegistryName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map.html#description ContainerRegistryScopeMap#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map#description ContainerRegistryScopeMap#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map.html#name ContainerRegistryScopeMap#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map#name ContainerRegistryScopeMap#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map.html#resource_group_name ContainerRegistryScopeMap#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map#resource_group_name ContainerRegistryScopeMap#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map.html#timeouts ContainerRegistryScopeMap#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map#timeouts ContainerRegistryScopeMap#timeouts}
   */
   readonly timeouts?: ContainerRegistryScopeMapTimeouts;
 }
 export interface ContainerRegistryScopeMapTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map.html#create ContainerRegistryScopeMap#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map#create ContainerRegistryScopeMap#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map.html#delete ContainerRegistryScopeMap#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map#delete ContainerRegistryScopeMap#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map.html#read ContainerRegistryScopeMap#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map#read ContainerRegistryScopeMap#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map.html#update ContainerRegistryScopeMap#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map#update ContainerRegistryScopeMap#update}
   */
   readonly update?: string;
 }
@@ -183,7 +183,7 @@ export class ContainerRegistryScopeMapTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map.html azurerm_container_registry_scope_map}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map azurerm_container_registry_scope_map}
 */
 export class ContainerRegistryScopeMap extends cdktf.TerraformResource {
 
@@ -197,7 +197,7 @@ export class ContainerRegistryScopeMap extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map.html azurerm_container_registry_scope_map} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/container_registry_scope_map azurerm_container_registry_scope_map} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

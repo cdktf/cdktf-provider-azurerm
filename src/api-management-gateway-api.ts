@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api.html
+// https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementGatewayApiConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api.html#api_id ApiManagementGatewayApi#api_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api#api_id ApiManagementGatewayApi#api_id}
   */
   readonly apiId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api.html#gateway_id ApiManagementGatewayApi#gateway_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api#gateway_id ApiManagementGatewayApi#gateway_id}
   */
   readonly gatewayId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api.html#timeouts ApiManagementGatewayApi#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api#timeouts ApiManagementGatewayApi#timeouts}
   */
   readonly timeouts?: ApiManagementGatewayApiTimeouts;
 }
 export interface ApiManagementGatewayApiTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api.html#create ApiManagementGatewayApi#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api#create ApiManagementGatewayApi#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api.html#delete ApiManagementGatewayApi#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api#delete ApiManagementGatewayApi#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api.html#read ApiManagementGatewayApi#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api#read ApiManagementGatewayApi#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api.html#update ApiManagementGatewayApi#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api#update ApiManagementGatewayApi#update}
   */
   readonly update?: string;
 }
@@ -171,7 +171,7 @@ export class ApiManagementGatewayApiTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api.html azurerm_api_management_gateway_api}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api azurerm_api_management_gateway_api}
 */
 export class ApiManagementGatewayApi extends cdktf.TerraformResource {
 
@@ -185,7 +185,7 @@ export class ApiManagementGatewayApi extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api.html azurerm_api_management_gateway_api} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_gateway_api azurerm_api_management_gateway_api} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

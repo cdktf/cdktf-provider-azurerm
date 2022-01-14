@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database.html
+// https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermRedisEnterpriseDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database.html#cluster_id DataAzurermRedisEnterpriseDatabase#cluster_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database#cluster_id DataAzurermRedisEnterpriseDatabase#cluster_id}
   */
   readonly clusterId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database.html#name DataAzurermRedisEnterpriseDatabase#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database#name DataAzurermRedisEnterpriseDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database.html#resource_group_name DataAzurermRedisEnterpriseDatabase#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database#resource_group_name DataAzurermRedisEnterpriseDatabase#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database.html#timeouts DataAzurermRedisEnterpriseDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database#timeouts DataAzurermRedisEnterpriseDatabase#timeouts}
   */
   readonly timeouts?: DataAzurermRedisEnterpriseDatabaseTimeouts;
 }
 export interface DataAzurermRedisEnterpriseDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database.html#read DataAzurermRedisEnterpriseDatabase#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database#read DataAzurermRedisEnterpriseDatabase#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermRedisEnterpriseDatabaseTimeoutsOutputReference extends c
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database.html azurerm_redis_enterprise_database}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database azurerm_redis_enterprise_database}
 */
 export class DataAzurermRedisEnterpriseDatabase extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermRedisEnterpriseDatabase extends cdktf.TerraformDataSourc
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database.html azurerm_redis_enterprise_database} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/redis_enterprise_database azurerm_redis_enterprise_database} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

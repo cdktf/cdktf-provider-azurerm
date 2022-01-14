@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/snapshot.html
+// https://www.terraform.io/docs/providers/azurerm/d/snapshot
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSnapshotConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/snapshot.html#name DataAzurermSnapshot#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/snapshot#name DataAzurermSnapshot#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/snapshot.html#resource_group_name DataAzurermSnapshot#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/snapshot#resource_group_name DataAzurermSnapshot#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/snapshot.html#timeouts DataAzurermSnapshot#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/snapshot#timeouts DataAzurermSnapshot#timeouts}
   */
   readonly timeouts?: DataAzurermSnapshotTimeouts;
 }
@@ -67,7 +67,7 @@ export class DataAzurermSnapshotEncryptionSettings extends cdktf.ComplexComputed
 }
 export interface DataAzurermSnapshotTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/snapshot.html#read DataAzurermSnapshot#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/snapshot#read DataAzurermSnapshot#read}
   */
   readonly read?: string;
 }
@@ -133,7 +133,7 @@ export class DataAzurermSnapshotTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/snapshot.html azurerm_snapshot}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/snapshot azurerm_snapshot}
 */
 export class DataAzurermSnapshot extends cdktf.TerraformDataSource {
 
@@ -147,7 +147,7 @@ export class DataAzurermSnapshot extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/snapshot.html azurerm_snapshot} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/snapshot azurerm_snapshot} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

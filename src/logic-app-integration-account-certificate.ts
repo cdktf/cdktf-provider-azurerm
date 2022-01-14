@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html
+// https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,49 +8,49 @@ import * as cdktf from 'cdktf';
 
 export interface LogicAppIntegrationAccountCertificateConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html#integration_account_name LogicAppIntegrationAccountCertificate#integration_account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate#integration_account_name LogicAppIntegrationAccountCertificate#integration_account_name}
   */
   readonly integrationAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html#metadata LogicAppIntegrationAccountCertificate#metadata}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate#metadata LogicAppIntegrationAccountCertificate#metadata}
   */
   readonly metadata?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html#name LogicAppIntegrationAccountCertificate#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate#name LogicAppIntegrationAccountCertificate#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html#public_certificate LogicAppIntegrationAccountCertificate#public_certificate}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate#public_certificate LogicAppIntegrationAccountCertificate#public_certificate}
   */
   readonly publicCertificate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html#resource_group_name LogicAppIntegrationAccountCertificate#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate#resource_group_name LogicAppIntegrationAccountCertificate#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * key_vault_key block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html#key_vault_key LogicAppIntegrationAccountCertificate#key_vault_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate#key_vault_key LogicAppIntegrationAccountCertificate#key_vault_key}
   */
   readonly keyVaultKey?: LogicAppIntegrationAccountCertificateKeyVaultKey;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html#timeouts LogicAppIntegrationAccountCertificate#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate#timeouts LogicAppIntegrationAccountCertificate#timeouts}
   */
   readonly timeouts?: LogicAppIntegrationAccountCertificateTimeouts;
 }
 export interface LogicAppIntegrationAccountCertificateKeyVaultKey {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html#key_name LogicAppIntegrationAccountCertificate#key_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate#key_name LogicAppIntegrationAccountCertificate#key_name}
   */
   readonly keyName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html#key_vault_id LogicAppIntegrationAccountCertificate#key_vault_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate#key_vault_id LogicAppIntegrationAccountCertificate#key_vault_id}
   */
   readonly keyVaultId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html#key_version LogicAppIntegrationAccountCertificate#key_version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate#key_version LogicAppIntegrationAccountCertificate#key_version}
   */
   readonly keyVersion?: string;
 }
@@ -156,19 +156,19 @@ export class LogicAppIntegrationAccountCertificateKeyVaultKeyOutputReference ext
 }
 export interface LogicAppIntegrationAccountCertificateTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html#create LogicAppIntegrationAccountCertificate#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate#create LogicAppIntegrationAccountCertificate#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html#delete LogicAppIntegrationAccountCertificate#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate#delete LogicAppIntegrationAccountCertificate#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html#read LogicAppIntegrationAccountCertificate#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate#read LogicAppIntegrationAccountCertificate#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html#update LogicAppIntegrationAccountCertificate#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate#update LogicAppIntegrationAccountCertificate#update}
   */
   readonly update?: string;
 }
@@ -303,7 +303,7 @@ export class LogicAppIntegrationAccountCertificateTimeoutsOutputReference extend
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html azurerm_logic_app_integration_account_certificate}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate azurerm_logic_app_integration_account_certificate}
 */
 export class LogicAppIntegrationAccountCertificate extends cdktf.TerraformResource {
 
@@ -317,7 +317,7 @@ export class LogicAppIntegrationAccountCertificate extends cdktf.TerraformResour
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate.html azurerm_logic_app_integration_account_certificate} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_integration_account_certificate azurerm_logic_app_integration_account_certificate} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/dedicated_host.html
+// https://www.terraform.io/docs/providers/azurerm/d/dedicated_host
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDedicatedHostConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host.html#dedicated_host_group_name DataAzurermDedicatedHost#dedicated_host_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host#dedicated_host_group_name DataAzurermDedicatedHost#dedicated_host_group_name}
   */
   readonly dedicatedHostGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host.html#name DataAzurermDedicatedHost#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host#name DataAzurermDedicatedHost#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host.html#resource_group_name DataAzurermDedicatedHost#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host#resource_group_name DataAzurermDedicatedHost#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host.html#timeouts DataAzurermDedicatedHost#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host#timeouts DataAzurermDedicatedHost#timeouts}
   */
   readonly timeouts?: DataAzurermDedicatedHostTimeouts;
 }
 export interface DataAzurermDedicatedHostTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host.html#read DataAzurermDedicatedHost#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host#read DataAzurermDedicatedHost#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermDedicatedHostTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host.html azurerm_dedicated_host}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host azurerm_dedicated_host}
 */
 export class DataAzurermDedicatedHost extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermDedicatedHost extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host.html azurerm_dedicated_host} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/dedicated_host azurerm_dedicated_host} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
