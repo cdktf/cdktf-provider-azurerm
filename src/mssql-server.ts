@@ -92,6 +92,10 @@ export interface MssqlServerExtendedAuditingPolicy {
   */
   readonly storageAccountAccessKeyIsSecondary?: boolean | cdktf.IResolvable;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#storage_account_subscription_id MssqlServer#storage_account_subscription_id}
+  */
+  readonly storageAccountSubscriptionId?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_server.html#storage_endpoint MssqlServer#storage_endpoint}
   */
   readonly storageEndpoint?: string;
@@ -107,6 +111,7 @@ export function mssqlServerExtendedAuditingPolicyToTerraform(struct?: MssqlServe
     retention_in_days: struct!.retentionInDays === undefined ? null : cdktf.numberToTerraform(struct!.retentionInDays),
     storage_account_access_key: struct!.storageAccountAccessKey === undefined ? null : cdktf.stringToTerraform(struct!.storageAccountAccessKey),
     storage_account_access_key_is_secondary: struct!.storageAccountAccessKeyIsSecondary === undefined ? null : cdktf.booleanToTerraform(struct!.storageAccountAccessKeyIsSecondary),
+    storage_account_subscription_id: cdktf.stringToTerraform(struct!.storageAccountSubscriptionId),
     storage_endpoint: struct!.storageEndpoint === undefined ? null : cdktf.stringToTerraform(struct!.storageEndpoint),
   }
 }

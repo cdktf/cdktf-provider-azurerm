@@ -16,6 +16,10 @@ export interface EventgridTopicConfig extends cdktf.TerraformMetaArguments {
   */
   readonly inputSchema?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#local_auth_enabled EventgridTopic#local_auth_enabled}
+  */
+  readonly localAuthEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventgrid_topic.html#location EventgridTopic#location}
   */
   readonly location: string;
@@ -675,6 +679,7 @@ export class EventgridTopic extends cdktf.TerraformResource {
     });
     this._inboundIpRule = config.inboundIpRule;
     this._inputSchema = config.inputSchema;
+    this._localAuthEnabled = config.localAuthEnabled;
     this._location = config.location;
     this._name = config.name;
     this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
@@ -731,6 +736,22 @@ export class EventgridTopic extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get inputSchemaInput() {
     return this._inputSchema;
+  }
+
+  // local_auth_enabled - computed: false, optional: true, required: false
+  private _localAuthEnabled?: boolean | cdktf.IResolvable; 
+  public get localAuthEnabled() {
+    return this.getBooleanAttribute('local_auth_enabled') as any;
+  }
+  public set localAuthEnabled(value: boolean | cdktf.IResolvable) {
+    this._localAuthEnabled = value;
+  }
+  public resetLocalAuthEnabled() {
+    this._localAuthEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get localAuthEnabledInput() {
+    return this._localAuthEnabled;
   }
 
   // location - computed: false, optional: false, required: true
@@ -887,6 +908,7 @@ export class EventgridTopic extends cdktf.TerraformResource {
     return {
       inbound_ip_rule: cdktf.listMapper(eventgridTopicInboundIpRuleToTerraform)(this._inboundIpRule),
       input_schema: cdktf.stringToTerraform(this._inputSchema),
+      local_auth_enabled: cdktf.booleanToTerraform(this._localAuthEnabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
