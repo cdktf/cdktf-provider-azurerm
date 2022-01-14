@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html
+// https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,81 +8,81 @@ import * as cdktf from 'cdktf';
 
 export interface SentinelAutomationRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#display_name SentinelAutomationRule#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#display_name SentinelAutomationRule#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#enabled SentinelAutomationRule#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#enabled SentinelAutomationRule#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#expiration SentinelAutomationRule#expiration}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#expiration SentinelAutomationRule#expiration}
   */
   readonly expiration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#log_analytics_workspace_id SentinelAutomationRule#log_analytics_workspace_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#log_analytics_workspace_id SentinelAutomationRule#log_analytics_workspace_id}
   */
   readonly logAnalyticsWorkspaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#name SentinelAutomationRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#name SentinelAutomationRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#order SentinelAutomationRule#order}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#order SentinelAutomationRule#order}
   */
   readonly order: number;
   /**
   * action_incident block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#action_incident SentinelAutomationRule#action_incident}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#action_incident SentinelAutomationRule#action_incident}
   */
   readonly actionIncident?: SentinelAutomationRuleActionIncident[];
   /**
   * action_playbook block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#action_playbook SentinelAutomationRule#action_playbook}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#action_playbook SentinelAutomationRule#action_playbook}
   */
   readonly actionPlaybook?: SentinelAutomationRuleActionPlaybook[];
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#condition SentinelAutomationRule#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#condition SentinelAutomationRule#condition}
   */
   readonly condition?: SentinelAutomationRuleCondition[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#timeouts SentinelAutomationRule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#timeouts SentinelAutomationRule#timeouts}
   */
   readonly timeouts?: SentinelAutomationRuleTimeouts;
 }
 export interface SentinelAutomationRuleActionIncident {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#classification SentinelAutomationRule#classification}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#classification SentinelAutomationRule#classification}
   */
   readonly classification?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#classification_comment SentinelAutomationRule#classification_comment}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#classification_comment SentinelAutomationRule#classification_comment}
   */
   readonly classificationComment?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#labels SentinelAutomationRule#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#labels SentinelAutomationRule#labels}
   */
   readonly labels?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#order SentinelAutomationRule#order}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#order SentinelAutomationRule#order}
   */
   readonly order: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#owner_id SentinelAutomationRule#owner_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#owner_id SentinelAutomationRule#owner_id}
   */
   readonly ownerId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#severity SentinelAutomationRule#severity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#severity SentinelAutomationRule#severity}
   */
   readonly severity?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#status SentinelAutomationRule#status}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#status SentinelAutomationRule#status}
   */
   readonly status?: string;
 }
@@ -105,15 +105,15 @@ export function sentinelAutomationRuleActionIncidentToTerraform(struct?: Sentine
 
 export interface SentinelAutomationRuleActionPlaybook {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#logic_app_id SentinelAutomationRule#logic_app_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#logic_app_id SentinelAutomationRule#logic_app_id}
   */
   readonly logicAppId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#order SentinelAutomationRule#order}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#order SentinelAutomationRule#order}
   */
   readonly order: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#tenant_id SentinelAutomationRule#tenant_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#tenant_id SentinelAutomationRule#tenant_id}
   */
   readonly tenantId?: string;
 }
@@ -132,15 +132,15 @@ export function sentinelAutomationRuleActionPlaybookToTerraform(struct?: Sentine
 
 export interface SentinelAutomationRuleCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#operator SentinelAutomationRule#operator}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#operator SentinelAutomationRule#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#property SentinelAutomationRule#property}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#property SentinelAutomationRule#property}
   */
   readonly property: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#values SentinelAutomationRule#values}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#values SentinelAutomationRule#values}
   */
   readonly values: string[];
 }
@@ -159,19 +159,19 @@ export function sentinelAutomationRuleConditionToTerraform(struct?: SentinelAuto
 
 export interface SentinelAutomationRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#create SentinelAutomationRule#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#create SentinelAutomationRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#delete SentinelAutomationRule#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#delete SentinelAutomationRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#read SentinelAutomationRule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#read SentinelAutomationRule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html#update SentinelAutomationRule#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule#update SentinelAutomationRule#update}
   */
   readonly update?: string;
 }
@@ -306,7 +306,7 @@ export class SentinelAutomationRuleTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html azurerm_sentinel_automation_rule}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule azurerm_sentinel_automation_rule}
 */
 export class SentinelAutomationRule extends cdktf.TerraformResource {
 
@@ -320,7 +320,7 @@ export class SentinelAutomationRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule.html azurerm_sentinel_automation_rule} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sentinel_automation_rule azurerm_sentinel_automation_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

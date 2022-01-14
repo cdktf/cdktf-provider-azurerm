@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/sql_managed_instance.html
+// https://www.terraform.io/docs/providers/azurerm/d/sql_managed_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSqlManagedInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_managed_instance.html#name DataAzurermSqlManagedInstance#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_managed_instance#name DataAzurermSqlManagedInstance#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_managed_instance.html#resource_group_name DataAzurermSqlManagedInstance#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_managed_instance#resource_group_name DataAzurermSqlManagedInstance#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_managed_instance.html#tags DataAzurermSqlManagedInstance#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_managed_instance#tags DataAzurermSqlManagedInstance#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_managed_instance.html#timeouts DataAzurermSqlManagedInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_managed_instance#timeouts DataAzurermSqlManagedInstance#timeouts}
   */
   readonly timeouts?: DataAzurermSqlManagedInstanceTimeouts;
 }
@@ -50,7 +50,7 @@ export class DataAzurermSqlManagedInstanceIdentity extends cdktf.ComplexComputed
 }
 export interface DataAzurermSqlManagedInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_managed_instance.html#read DataAzurermSqlManagedInstance#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sql_managed_instance#read DataAzurermSqlManagedInstance#read}
   */
   readonly read?: string;
 }
@@ -116,7 +116,7 @@ export class DataAzurermSqlManagedInstanceTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/sql_managed_instance.html azurerm_sql_managed_instance}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/sql_managed_instance azurerm_sql_managed_instance}
 */
 export class DataAzurermSqlManagedInstance extends cdktf.TerraformDataSource {
 
@@ -130,7 +130,7 @@ export class DataAzurermSqlManagedInstance extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/sql_managed_instance.html azurerm_sql_managed_instance} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/sql_managed_instance azurerm_sql_managed_instance} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html
+// https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface BackupProtectedFileShareConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#backup_policy_id BackupProtectedFileShare#backup_policy_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share#backup_policy_id BackupProtectedFileShare#backup_policy_id}
   */
   readonly backupPolicyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#recovery_vault_name BackupProtectedFileShare#recovery_vault_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share#recovery_vault_name BackupProtectedFileShare#recovery_vault_name}
   */
   readonly recoveryVaultName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#resource_group_name BackupProtectedFileShare#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share#resource_group_name BackupProtectedFileShare#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#source_file_share_name BackupProtectedFileShare#source_file_share_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share#source_file_share_name BackupProtectedFileShare#source_file_share_name}
   */
   readonly sourceFileShareName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#source_storage_account_id BackupProtectedFileShare#source_storage_account_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share#source_storage_account_id BackupProtectedFileShare#source_storage_account_id}
   */
   readonly sourceStorageAccountId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#timeouts BackupProtectedFileShare#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share#timeouts BackupProtectedFileShare#timeouts}
   */
   readonly timeouts?: BackupProtectedFileShareTimeouts;
 }
 export interface BackupProtectedFileShareTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#create BackupProtectedFileShare#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share#create BackupProtectedFileShare#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#delete BackupProtectedFileShare#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share#delete BackupProtectedFileShare#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#read BackupProtectedFileShare#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share#read BackupProtectedFileShare#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html#update BackupProtectedFileShare#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share#update BackupProtectedFileShare#update}
   */
   readonly update?: string;
 }
@@ -183,7 +183,7 @@ export class BackupProtectedFileShareTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html azurerm_backup_protected_file_share}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share azurerm_backup_protected_file_share}
 */
 export class BackupProtectedFileShare extends cdktf.TerraformResource {
 
@@ -197,7 +197,7 @@ export class BackupProtectedFileShare extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share.html azurerm_backup_protected_file_share} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/backup_protected_file_share azurerm_backup_protected_file_share} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

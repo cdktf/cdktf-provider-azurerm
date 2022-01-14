@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html
+// https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface AdvancedThreatProtectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html#enabled AdvancedThreatProtection#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection#enabled AdvancedThreatProtection#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html#target_resource_id AdvancedThreatProtection#target_resource_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection#target_resource_id AdvancedThreatProtection#target_resource_id}
   */
   readonly targetResourceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html#timeouts AdvancedThreatProtection#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection#timeouts AdvancedThreatProtection#timeouts}
   */
   readonly timeouts?: AdvancedThreatProtectionTimeouts;
 }
 export interface AdvancedThreatProtectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html#create AdvancedThreatProtection#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection#create AdvancedThreatProtection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html#delete AdvancedThreatProtection#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection#delete AdvancedThreatProtection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html#read AdvancedThreatProtection#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection#read AdvancedThreatProtection#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html#update AdvancedThreatProtection#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection#update AdvancedThreatProtection#update}
   */
   readonly update?: string;
 }
@@ -171,7 +171,7 @@ export class AdvancedThreatProtectionTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html azurerm_advanced_threat_protection}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection azurerm_advanced_threat_protection}
 */
 export class AdvancedThreatProtection extends cdktf.TerraformResource {
 
@@ -185,7 +185,7 @@ export class AdvancedThreatProtection extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection.html azurerm_advanced_threat_protection} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/advanced_threat_protection azurerm_advanced_threat_protection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

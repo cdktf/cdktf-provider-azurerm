@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace.html
+// https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermServicebusNamespaceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace.html#name DataAzurermServicebusNamespace#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace#name DataAzurermServicebusNamespace#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace.html#resource_group_name DataAzurermServicebusNamespace#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace#resource_group_name DataAzurermServicebusNamespace#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace.html#timeouts DataAzurermServicebusNamespace#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace#timeouts DataAzurermServicebusNamespace#timeouts}
   */
   readonly timeouts?: DataAzurermServicebusNamespaceTimeouts;
 }
 export interface DataAzurermServicebusNamespaceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace.html#read DataAzurermServicebusNamespace#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace#read DataAzurermServicebusNamespace#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermServicebusNamespaceTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace.html azurerm_servicebus_namespace}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace azurerm_servicebus_namespace}
 */
 export class DataAzurermServicebusNamespace extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermServicebusNamespace extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace.html azurerm_servicebus_namespace} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace azurerm_servicebus_namespace} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

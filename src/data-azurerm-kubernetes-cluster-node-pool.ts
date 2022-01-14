@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool.html
+// https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermKubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool.html#kubernetes_cluster_name DataAzurermKubernetesClusterNodePool#kubernetes_cluster_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool#kubernetes_cluster_name DataAzurermKubernetesClusterNodePool#kubernetes_cluster_name}
   */
   readonly kubernetesClusterName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool.html#name DataAzurermKubernetesClusterNodePool#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool#name DataAzurermKubernetesClusterNodePool#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool.html#resource_group_name DataAzurermKubernetesClusterNodePool#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool#resource_group_name DataAzurermKubernetesClusterNodePool#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool.html#timeouts DataAzurermKubernetesClusterNodePool#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool#timeouts DataAzurermKubernetesClusterNodePool#timeouts}
   */
   readonly timeouts?: DataAzurermKubernetesClusterNodePoolTimeouts;
 }
@@ -35,7 +35,7 @@ export class DataAzurermKubernetesClusterNodePoolUpgradeSettings extends cdktf.C
 }
 export interface DataAzurermKubernetesClusterNodePoolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool.html#read DataAzurermKubernetesClusterNodePool#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool#read DataAzurermKubernetesClusterNodePool#read}
   */
   readonly read?: string;
 }
@@ -101,7 +101,7 @@ export class DataAzurermKubernetesClusterNodePoolTimeoutsOutputReference extends
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool.html azurerm_kubernetes_cluster_node_pool}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool azurerm_kubernetes_cluster_node_pool}
 */
 export class DataAzurermKubernetesClusterNodePool extends cdktf.TerraformDataSource {
 
@@ -115,7 +115,7 @@ export class DataAzurermKubernetesClusterNodePool extends cdktf.TerraformDataSou
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool.html azurerm_kubernetes_cluster_node_pool} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster_node_pool azurerm_kubernetes_cluster_node_pool} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

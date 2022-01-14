@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/function_app.html
+// https://www.terraform.io/docs/providers/azurerm/d/function_app
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermFunctionAppConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app.html#name DataAzurermFunctionApp#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app#name DataAzurermFunctionApp#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app.html#resource_group_name DataAzurermFunctionApp#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app#resource_group_name DataAzurermFunctionApp#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app.html#tags DataAzurermFunctionApp#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app#tags DataAzurermFunctionApp#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app.html#timeouts DataAzurermFunctionApp#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app#timeouts DataAzurermFunctionApp#timeouts}
   */
   readonly timeouts?: DataAzurermFunctionAppTimeouts;
 }
@@ -343,7 +343,7 @@ export class DataAzurermFunctionAppSourceControl extends cdktf.ComplexComputedLi
 }
 export interface DataAzurermFunctionAppTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app.html#read DataAzurermFunctionApp#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/function_app#read DataAzurermFunctionApp#read}
   */
   readonly read?: string;
 }
@@ -409,7 +409,7 @@ export class DataAzurermFunctionAppTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/function_app.html azurerm_function_app}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/function_app azurerm_function_app}
 */
 export class DataAzurermFunctionApp extends cdktf.TerraformDataSource {
 
@@ -423,7 +423,7 @@ export class DataAzurermFunctionApp extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/function_app.html azurerm_function_app} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/function_app azurerm_function_app} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record.html
+// https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,49 +8,49 @@ import * as cdktf from 'cdktf';
 
 export interface DnsCaaRecordConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record.html#name DnsCaaRecord#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record#name DnsCaaRecord#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record.html#resource_group_name DnsCaaRecord#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record#resource_group_name DnsCaaRecord#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record.html#tags DnsCaaRecord#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record#tags DnsCaaRecord#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record.html#ttl DnsCaaRecord#ttl}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record#ttl DnsCaaRecord#ttl}
   */
   readonly ttl: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record.html#zone_name DnsCaaRecord#zone_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record#zone_name DnsCaaRecord#zone_name}
   */
   readonly zoneName: string;
   /**
   * record block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record.html#record DnsCaaRecord#record}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record#record DnsCaaRecord#record}
   */
   readonly record: DnsCaaRecordRecord[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record.html#timeouts DnsCaaRecord#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record#timeouts DnsCaaRecord#timeouts}
   */
   readonly timeouts?: DnsCaaRecordTimeouts;
 }
 export interface DnsCaaRecordRecord {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record.html#flags DnsCaaRecord#flags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record#flags DnsCaaRecord#flags}
   */
   readonly flags: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record.html#tag DnsCaaRecord#tag}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record#tag DnsCaaRecord#tag}
   */
   readonly tag: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record.html#value DnsCaaRecord#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record#value DnsCaaRecord#value}
   */
   readonly value: string;
 }
@@ -69,19 +69,19 @@ export function dnsCaaRecordRecordToTerraform(struct?: DnsCaaRecordRecord): any 
 
 export interface DnsCaaRecordTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record.html#create DnsCaaRecord#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record#create DnsCaaRecord#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record.html#delete DnsCaaRecord#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record#delete DnsCaaRecord#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record.html#read DnsCaaRecord#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record#read DnsCaaRecord#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record.html#update DnsCaaRecord#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record#update DnsCaaRecord#update}
   */
   readonly update?: string;
 }
@@ -216,7 +216,7 @@ export class DnsCaaRecordTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record.html azurerm_dns_caa_record}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record azurerm_dns_caa_record}
 */
 export class DnsCaaRecord extends cdktf.TerraformResource {
 
@@ -230,7 +230,7 @@ export class DnsCaaRecord extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record.html azurerm_dns_caa_record} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/dns_caa_record azurerm_dns_caa_record} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

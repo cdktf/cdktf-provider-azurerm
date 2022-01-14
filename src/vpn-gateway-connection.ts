@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html
+// https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,53 +8,53 @@ import * as cdktf from 'cdktf';
 
 export interface VpnGatewayConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#internet_security_enabled VpnGatewayConnection#internet_security_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#internet_security_enabled VpnGatewayConnection#internet_security_enabled}
   */
   readonly internetSecurityEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#name VpnGatewayConnection#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#name VpnGatewayConnection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#remote_vpn_site_id VpnGatewayConnection#remote_vpn_site_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#remote_vpn_site_id VpnGatewayConnection#remote_vpn_site_id}
   */
   readonly remoteVpnSiteId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#vpn_gateway_id VpnGatewayConnection#vpn_gateway_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#vpn_gateway_id VpnGatewayConnection#vpn_gateway_id}
   */
   readonly vpnGatewayId: string;
   /**
   * routing block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#routing VpnGatewayConnection#routing}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#routing VpnGatewayConnection#routing}
   */
   readonly routing?: VpnGatewayConnectionRouting;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#timeouts VpnGatewayConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#timeouts VpnGatewayConnection#timeouts}
   */
   readonly timeouts?: VpnGatewayConnectionTimeouts;
   /**
   * traffic_selector_policy block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#traffic_selector_policy VpnGatewayConnection#traffic_selector_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#traffic_selector_policy VpnGatewayConnection#traffic_selector_policy}
   */
   readonly trafficSelectorPolicy?: VpnGatewayConnectionTrafficSelectorPolicy[];
   /**
   * vpn_link block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#vpn_link VpnGatewayConnection#vpn_link}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#vpn_link VpnGatewayConnection#vpn_link}
   */
   readonly vpnLink: VpnGatewayConnectionVpnLink[];
 }
 export interface VpnGatewayConnectionRoutingPropagatedRouteTable {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#labels VpnGatewayConnection#labels}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#labels VpnGatewayConnection#labels}
   */
   readonly labels?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#route_table_ids VpnGatewayConnection#route_table_ids}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#route_table_ids VpnGatewayConnection#route_table_ids}
   */
   readonly routeTableIds: string[];
 }
@@ -140,17 +140,17 @@ export class VpnGatewayConnectionRoutingPropagatedRouteTableOutputReference exte
 }
 export interface VpnGatewayConnectionRouting {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#associated_route_table VpnGatewayConnection#associated_route_table}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#associated_route_table VpnGatewayConnection#associated_route_table}
   */
   readonly associatedRouteTable: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#propagated_route_tables VpnGatewayConnection#propagated_route_tables}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#propagated_route_tables VpnGatewayConnection#propagated_route_tables}
   */
   readonly propagatedRouteTables?: string[];
   /**
   * propagated_route_table block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#propagated_route_table VpnGatewayConnection#propagated_route_table}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#propagated_route_table VpnGatewayConnection#propagated_route_table}
   */
   readonly propagatedRouteTable?: VpnGatewayConnectionRoutingPropagatedRouteTable;
 }
@@ -259,19 +259,19 @@ export class VpnGatewayConnectionRoutingOutputReference extends cdktf.ComplexObj
 }
 export interface VpnGatewayConnectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#create VpnGatewayConnection#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#create VpnGatewayConnection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#delete VpnGatewayConnection#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#delete VpnGatewayConnection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#read VpnGatewayConnection#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#read VpnGatewayConnection#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#update VpnGatewayConnection#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#update VpnGatewayConnection#update}
   */
   readonly update?: string;
 }
@@ -406,11 +406,11 @@ export class VpnGatewayConnectionTimeoutsOutputReference extends cdktf.ComplexOb
 }
 export interface VpnGatewayConnectionTrafficSelectorPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#local_address_ranges VpnGatewayConnection#local_address_ranges}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#local_address_ranges VpnGatewayConnection#local_address_ranges}
   */
   readonly localAddressRanges: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#remote_address_ranges VpnGatewayConnection#remote_address_ranges}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#remote_address_ranges VpnGatewayConnection#remote_address_ranges}
   */
   readonly remoteAddressRanges: string[];
 }
@@ -428,35 +428,35 @@ export function vpnGatewayConnectionTrafficSelectorPolicyToTerraform(struct?: Vp
 
 export interface VpnGatewayConnectionVpnLinkIpsecPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#dh_group VpnGatewayConnection#dh_group}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#dh_group VpnGatewayConnection#dh_group}
   */
   readonly dhGroup: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#encryption_algorithm VpnGatewayConnection#encryption_algorithm}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#encryption_algorithm VpnGatewayConnection#encryption_algorithm}
   */
   readonly encryptionAlgorithm: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#ike_encryption_algorithm VpnGatewayConnection#ike_encryption_algorithm}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#ike_encryption_algorithm VpnGatewayConnection#ike_encryption_algorithm}
   */
   readonly ikeEncryptionAlgorithm: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#ike_integrity_algorithm VpnGatewayConnection#ike_integrity_algorithm}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#ike_integrity_algorithm VpnGatewayConnection#ike_integrity_algorithm}
   */
   readonly ikeIntegrityAlgorithm: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#integrity_algorithm VpnGatewayConnection#integrity_algorithm}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#integrity_algorithm VpnGatewayConnection#integrity_algorithm}
   */
   readonly integrityAlgorithm: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#pfs_group VpnGatewayConnection#pfs_group}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#pfs_group VpnGatewayConnection#pfs_group}
   */
   readonly pfsGroup: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#sa_data_size_kb VpnGatewayConnection#sa_data_size_kb}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#sa_data_size_kb VpnGatewayConnection#sa_data_size_kb}
   */
   readonly saDataSizeKb: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#sa_lifetime_sec VpnGatewayConnection#sa_lifetime_sec}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#sa_lifetime_sec VpnGatewayConnection#sa_lifetime_sec}
   */
   readonly saLifetimeSec: number;
 }
@@ -480,61 +480,61 @@ export function vpnGatewayConnectionVpnLinkIpsecPolicyToTerraform(struct?: VpnGa
 
 export interface VpnGatewayConnectionVpnLink {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#bandwidth_mbps VpnGatewayConnection#bandwidth_mbps}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#bandwidth_mbps VpnGatewayConnection#bandwidth_mbps}
   */
   readonly bandwidthMbps?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#bgp_enabled VpnGatewayConnection#bgp_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#bgp_enabled VpnGatewayConnection#bgp_enabled}
   */
   readonly bgpEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#connection_mode VpnGatewayConnection#connection_mode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#connection_mode VpnGatewayConnection#connection_mode}
   */
   readonly connectionMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#egress_nat_rule_ids VpnGatewayConnection#egress_nat_rule_ids}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#egress_nat_rule_ids VpnGatewayConnection#egress_nat_rule_ids}
   */
   readonly egressNatRuleIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#ingress_nat_rule_ids VpnGatewayConnection#ingress_nat_rule_ids}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#ingress_nat_rule_ids VpnGatewayConnection#ingress_nat_rule_ids}
   */
   readonly ingressNatRuleIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#local_azure_ip_address_enabled VpnGatewayConnection#local_azure_ip_address_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#local_azure_ip_address_enabled VpnGatewayConnection#local_azure_ip_address_enabled}
   */
   readonly localAzureIpAddressEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#name VpnGatewayConnection#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#name VpnGatewayConnection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#policy_based_traffic_selector_enabled VpnGatewayConnection#policy_based_traffic_selector_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#policy_based_traffic_selector_enabled VpnGatewayConnection#policy_based_traffic_selector_enabled}
   */
   readonly policyBasedTrafficSelectorEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#protocol VpnGatewayConnection#protocol}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#protocol VpnGatewayConnection#protocol}
   */
   readonly protocol?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#ratelimit_enabled VpnGatewayConnection#ratelimit_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#ratelimit_enabled VpnGatewayConnection#ratelimit_enabled}
   */
   readonly ratelimitEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#route_weight VpnGatewayConnection#route_weight}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#route_weight VpnGatewayConnection#route_weight}
   */
   readonly routeWeight?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#shared_key VpnGatewayConnection#shared_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#shared_key VpnGatewayConnection#shared_key}
   */
   readonly sharedKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#vpn_site_link_id VpnGatewayConnection#vpn_site_link_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#vpn_site_link_id VpnGatewayConnection#vpn_site_link_id}
   */
   readonly vpnSiteLinkId: string;
   /**
   * ipsec_policy block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html#ipsec_policy VpnGatewayConnection#ipsec_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection#ipsec_policy VpnGatewayConnection#ipsec_policy}
   */
   readonly ipsecPolicy?: VpnGatewayConnectionVpnLinkIpsecPolicy[];
 }
@@ -564,7 +564,7 @@ export function vpnGatewayConnectionVpnLinkToTerraform(struct?: VpnGatewayConnec
 
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html azurerm_vpn_gateway_connection}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection azurerm_vpn_gateway_connection}
 */
 export class VpnGatewayConnection extends cdktf.TerraformResource {
 
@@ -578,7 +578,7 @@ export class VpnGatewayConnection extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection.html azurerm_vpn_gateway_connection} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/vpn_gateway_connection azurerm_vpn_gateway_connection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault.html
+// https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermRecoveryServicesVaultConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault.html#name DataAzurermRecoveryServicesVault#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault#name DataAzurermRecoveryServicesVault#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault.html#resource_group_name DataAzurermRecoveryServicesVault#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault#resource_group_name DataAzurermRecoveryServicesVault#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault.html#timeouts DataAzurermRecoveryServicesVault#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault#timeouts DataAzurermRecoveryServicesVault#timeouts}
   */
   readonly timeouts?: DataAzurermRecoveryServicesVaultTimeouts;
 }
 export interface DataAzurermRecoveryServicesVaultTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault.html#read DataAzurermRecoveryServicesVault#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault#read DataAzurermRecoveryServicesVault#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermRecoveryServicesVaultTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault.html azurerm_recovery_services_vault}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault azurerm_recovery_services_vault}
 */
 export class DataAzurermRecoveryServicesVault extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermRecoveryServicesVault extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault.html azurerm_recovery_services_vault} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/recovery_services_vault azurerm_recovery_services_vault} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

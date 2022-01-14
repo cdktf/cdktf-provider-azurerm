@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/route_filter.html
+// https://www.terraform.io/docs/providers/azurerm/r/route_filter
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface RouteFilterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter.html#location RouteFilter#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter#location RouteFilter#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter.html#name RouteFilter#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter#name RouteFilter#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter.html#resource_group_name RouteFilter#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter#resource_group_name RouteFilter#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter.html#rule RouteFilter#rule}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter#rule RouteFilter#rule}
   */
   readonly rule?: RouteFilterRule[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter.html#tags RouteFilter#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter#tags RouteFilter#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter.html#timeouts RouteFilter#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter#timeouts RouteFilter#timeouts}
   */
   readonly timeouts?: RouteFilterTimeouts;
 }
 export interface RouteFilterRule {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter.html#access RouteFilter#access}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter#access RouteFilter#access}
   */
   readonly access?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter.html#communities RouteFilter#communities}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter#communities RouteFilter#communities}
   */
   readonly communities?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter.html#name RouteFilter#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter#name RouteFilter#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter.html#rule_type RouteFilter#rule_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter#rule_type RouteFilter#rule_type}
   */
   readonly ruleType?: string;
 }
@@ -68,19 +68,19 @@ export function routeFilterRuleToTerraform(struct?: RouteFilterRule): any {
 
 export interface RouteFilterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter.html#create RouteFilter#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter#create RouteFilter#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter.html#delete RouteFilter#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter#delete RouteFilter#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter.html#read RouteFilter#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter#read RouteFilter#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter.html#update RouteFilter#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter#update RouteFilter#update}
   */
   readonly update?: string;
 }
@@ -215,7 +215,7 @@ export class RouteFilterTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter.html azurerm_route_filter}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter azurerm_route_filter}
 */
 export class RouteFilter extends cdktf.TerraformResource {
 
@@ -229,7 +229,7 @@ export class RouteFilter extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter.html azurerm_route_filter} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/route_filter azurerm_route_filter} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

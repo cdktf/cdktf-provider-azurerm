@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile.html
+// https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,13 +8,13 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMonitorLogProfileConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile.html#name DataAzurermMonitorLogProfile#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile#name DataAzurermMonitorLogProfile#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile.html#timeouts DataAzurermMonitorLogProfile#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile#timeouts DataAzurermMonitorLogProfile#timeouts}
   */
   readonly timeouts?: DataAzurermMonitorLogProfileTimeouts;
 }
@@ -32,7 +32,7 @@ export class DataAzurermMonitorLogProfileRetentionPolicy extends cdktf.ComplexCo
 }
 export interface DataAzurermMonitorLogProfileTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile.html#read DataAzurermMonitorLogProfile#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile#read DataAzurermMonitorLogProfile#read}
   */
   readonly read?: string;
 }
@@ -98,7 +98,7 @@ export class DataAzurermMonitorLogProfileTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile.html azurerm_monitor_log_profile}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile azurerm_monitor_log_profile}
 */
 export class DataAzurermMonitorLogProfile extends cdktf.TerraformDataSource {
 
@@ -112,7 +112,7 @@ export class DataAzurermMonitorLogProfile extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile.html azurerm_monitor_log_profile} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/monitor_log_profile azurerm_monitor_log_profile} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

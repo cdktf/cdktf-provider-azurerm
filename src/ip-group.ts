@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/ip_group.html
+// https://www.terraform.io/docs/providers/azurerm/r/ip_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface IpGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group.html#cidrs IpGroup#cidrs}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group#cidrs IpGroup#cidrs}
   */
   readonly cidrs?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group.html#location IpGroup#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group#location IpGroup#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group.html#name IpGroup#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group#name IpGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group.html#resource_group_name IpGroup#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group#resource_group_name IpGroup#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group.html#tags IpGroup#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group#tags IpGroup#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group.html#timeouts IpGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group#timeouts IpGroup#timeouts}
   */
   readonly timeouts?: IpGroupTimeouts;
 }
 export interface IpGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group.html#create IpGroup#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group#create IpGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group.html#delete IpGroup#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group#delete IpGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group.html#read IpGroup#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group#read IpGroup#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group.html#update IpGroup#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group#update IpGroup#update}
   */
   readonly update?: string;
 }
@@ -183,7 +183,7 @@ export class IpGroupTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group.html azurerm_ip_group}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group azurerm_ip_group}
 */
 export class IpGroup extends cdktf.TerraformResource {
 
@@ -197,7 +197,7 @@ export class IpGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group.html azurerm_ip_group} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/ip_group azurerm_ip_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

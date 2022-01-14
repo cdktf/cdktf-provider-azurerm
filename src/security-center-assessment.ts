@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment.html
+// https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,41 +8,41 @@ import * as cdktf from 'cdktf';
 
 export interface SecurityCenterAssessmentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment.html#additional_data SecurityCenterAssessment#additional_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment#additional_data SecurityCenterAssessment#additional_data}
   */
   readonly additionalData?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment.html#assessment_policy_id SecurityCenterAssessment#assessment_policy_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment#assessment_policy_id SecurityCenterAssessment#assessment_policy_id}
   */
   readonly assessmentPolicyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment.html#target_resource_id SecurityCenterAssessment#target_resource_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment#target_resource_id SecurityCenterAssessment#target_resource_id}
   */
   readonly targetResourceId: string;
   /**
   * status block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment.html#status SecurityCenterAssessment#status}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment#status SecurityCenterAssessment#status}
   */
   readonly status: SecurityCenterAssessmentStatus;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment.html#timeouts SecurityCenterAssessment#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment#timeouts SecurityCenterAssessment#timeouts}
   */
   readonly timeouts?: SecurityCenterAssessmentTimeouts;
 }
 export interface SecurityCenterAssessmentStatus {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment.html#cause SecurityCenterAssessment#cause}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment#cause SecurityCenterAssessment#cause}
   */
   readonly cause?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment.html#code SecurityCenterAssessment#code}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment#code SecurityCenterAssessment#code}
   */
   readonly code: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment.html#description SecurityCenterAssessment#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment#description SecurityCenterAssessment#description}
   */
   readonly description?: string;
 }
@@ -151,19 +151,19 @@ export class SecurityCenterAssessmentStatusOutputReference extends cdktf.Complex
 }
 export interface SecurityCenterAssessmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment.html#create SecurityCenterAssessment#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment#create SecurityCenterAssessment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment.html#delete SecurityCenterAssessment#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment#delete SecurityCenterAssessment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment.html#read SecurityCenterAssessment#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment#read SecurityCenterAssessment#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment.html#update SecurityCenterAssessment#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment#update SecurityCenterAssessment#update}
   */
   readonly update?: string;
 }
@@ -298,7 +298,7 @@ export class SecurityCenterAssessmentTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment.html azurerm_security_center_assessment}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment azurerm_security_center_assessment}
 */
 export class SecurityCenterAssessment extends cdktf.TerraformResource {
 
@@ -312,7 +312,7 @@ export class SecurityCenterAssessment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment.html azurerm_security_center_assessment} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment azurerm_security_center_assessment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

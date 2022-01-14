@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account.html
+// https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface SpatialAnchorsAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account.html#location SpatialAnchorsAccount#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#location SpatialAnchorsAccount#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account.html#name SpatialAnchorsAccount#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#name SpatialAnchorsAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account.html#resource_group_name SpatialAnchorsAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#resource_group_name SpatialAnchorsAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account.html#tags SpatialAnchorsAccount#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#tags SpatialAnchorsAccount#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account.html#timeouts SpatialAnchorsAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#timeouts SpatialAnchorsAccount#timeouts}
   */
   readonly timeouts?: SpatialAnchorsAccountTimeouts;
 }
 export interface SpatialAnchorsAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account.html#create SpatialAnchorsAccount#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#create SpatialAnchorsAccount#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account.html#delete SpatialAnchorsAccount#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#delete SpatialAnchorsAccount#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account.html#read SpatialAnchorsAccount#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#read SpatialAnchorsAccount#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account.html#update SpatialAnchorsAccount#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account#update SpatialAnchorsAccount#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class SpatialAnchorsAccountTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account.html azurerm_spatial_anchors_account}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account azurerm_spatial_anchors_account}
 */
 export class SpatialAnchorsAccount extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class SpatialAnchorsAccount extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account.html azurerm_spatial_anchors_account} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/spatial_anchors_account azurerm_spatial_anchors_account} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

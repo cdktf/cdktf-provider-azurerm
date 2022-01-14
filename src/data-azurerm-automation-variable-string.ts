@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/automation_variable_string.html
+// https://www.terraform.io/docs/providers/azurerm/d/automation_variable_string
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermAutomationVariableStringConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_string.html#automation_account_name DataAzurermAutomationVariableString#automation_account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_string#automation_account_name DataAzurermAutomationVariableString#automation_account_name}
   */
   readonly automationAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_string.html#name DataAzurermAutomationVariableString#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_string#name DataAzurermAutomationVariableString#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_string.html#resource_group_name DataAzurermAutomationVariableString#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_string#resource_group_name DataAzurermAutomationVariableString#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_string.html#timeouts DataAzurermAutomationVariableString#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_string#timeouts DataAzurermAutomationVariableString#timeouts}
   */
   readonly timeouts?: DataAzurermAutomationVariableStringTimeouts;
 }
 export interface DataAzurermAutomationVariableStringTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_string.html#read DataAzurermAutomationVariableString#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_string#read DataAzurermAutomationVariableString#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermAutomationVariableStringTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_string.html azurerm_automation_variable_string}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_string azurerm_automation_variable_string}
 */
 export class DataAzurermAutomationVariableString extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermAutomationVariableString extends cdktf.TerraformDataSour
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_string.html azurerm_automation_variable_string} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/automation_variable_string azurerm_automation_variable_string} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

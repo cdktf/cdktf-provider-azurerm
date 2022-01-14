@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule.html
+// https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface LogAnalyticsDataExportRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule.html#destination_resource_id LogAnalyticsDataExportRule#destination_resource_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule#destination_resource_id LogAnalyticsDataExportRule#destination_resource_id}
   */
   readonly destinationResourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule.html#enabled LogAnalyticsDataExportRule#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule#enabled LogAnalyticsDataExportRule#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule.html#name LogAnalyticsDataExportRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule#name LogAnalyticsDataExportRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule.html#resource_group_name LogAnalyticsDataExportRule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule#resource_group_name LogAnalyticsDataExportRule#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule.html#table_names LogAnalyticsDataExportRule#table_names}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule#table_names LogAnalyticsDataExportRule#table_names}
   */
   readonly tableNames: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule.html#workspace_resource_id LogAnalyticsDataExportRule#workspace_resource_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule#workspace_resource_id LogAnalyticsDataExportRule#workspace_resource_id}
   */
   readonly workspaceResourceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule.html#timeouts LogAnalyticsDataExportRule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule#timeouts LogAnalyticsDataExportRule#timeouts}
   */
   readonly timeouts?: LogAnalyticsDataExportRuleTimeouts;
 }
 export interface LogAnalyticsDataExportRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule.html#create LogAnalyticsDataExportRule#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule#create LogAnalyticsDataExportRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule.html#delete LogAnalyticsDataExportRule#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule#delete LogAnalyticsDataExportRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule.html#read LogAnalyticsDataExportRule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule#read LogAnalyticsDataExportRule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule.html#update LogAnalyticsDataExportRule#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule#update LogAnalyticsDataExportRule#update}
   */
   readonly update?: string;
 }
@@ -187,7 +187,7 @@ export class LogAnalyticsDataExportRuleTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule.html azurerm_log_analytics_data_export_rule}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule azurerm_log_analytics_data_export_rule}
 */
 export class LogAnalyticsDataExportRule extends cdktf.TerraformResource {
 
@@ -201,7 +201,7 @@ export class LogAnalyticsDataExportRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule.html azurerm_log_analytics_data_export_rule} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/log_analytics_data_export_rule azurerm_log_analytics_data_export_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/signalr_service.html
+// https://www.terraform.io/docs/providers/azurerm/d/signalr_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSignalrServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/signalr_service.html#name DataAzurermSignalrService#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/signalr_service#name DataAzurermSignalrService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/signalr_service.html#resource_group_name DataAzurermSignalrService#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/signalr_service#resource_group_name DataAzurermSignalrService#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/signalr_service.html#timeouts DataAzurermSignalrService#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/signalr_service#timeouts DataAzurermSignalrService#timeouts}
   */
   readonly timeouts?: DataAzurermSignalrServiceTimeouts;
 }
 export interface DataAzurermSignalrServiceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/signalr_service.html#read DataAzurermSignalrService#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/signalr_service#read DataAzurermSignalrService#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermSignalrServiceTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/signalr_service.html azurerm_signalr_service}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/signalr_service azurerm_signalr_service}
 */
 export class DataAzurermSignalrService extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermSignalrService extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/signalr_service.html azurerm_signalr_service} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/signalr_service azurerm_signalr_service} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

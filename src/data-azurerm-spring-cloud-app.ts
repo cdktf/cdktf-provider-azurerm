@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app.html
+// https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSpringCloudAppConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app.html#name DataAzurermSpringCloudApp#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app#name DataAzurermSpringCloudApp#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app.html#resource_group_name DataAzurermSpringCloudApp#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app#resource_group_name DataAzurermSpringCloudApp#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app.html#service_name DataAzurermSpringCloudApp#service_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app#service_name DataAzurermSpringCloudApp#service_name}
   */
   readonly serviceName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app.html#timeouts DataAzurermSpringCloudApp#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app#timeouts DataAzurermSpringCloudApp#timeouts}
   */
   readonly timeouts?: DataAzurermSpringCloudAppTimeouts;
 }
@@ -57,7 +57,7 @@ export class DataAzurermSpringCloudAppPersistentDisk extends cdktf.ComplexComput
 }
 export interface DataAzurermSpringCloudAppTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app.html#read DataAzurermSpringCloudApp#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app#read DataAzurermSpringCloudApp#read}
   */
   readonly read?: string;
 }
@@ -123,7 +123,7 @@ export class DataAzurermSpringCloudAppTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app.html azurerm_spring_cloud_app}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app azurerm_spring_cloud_app}
 */
 export class DataAzurermSpringCloudApp extends cdktf.TerraformDataSource {
 
@@ -137,7 +137,7 @@ export class DataAzurermSpringCloudApp extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app.html azurerm_spring_cloud_app} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/spring_cloud_app azurerm_spring_cloud_app} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

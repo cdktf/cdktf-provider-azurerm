@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/search_service.html
+// https://www.terraform.io/docs/providers/azurerm/r/search_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface SearchServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service.html#allowed_ips SearchService#allowed_ips}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service#allowed_ips SearchService#allowed_ips}
   */
   readonly allowedIps?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service.html#location SearchService#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service#location SearchService#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service.html#name SearchService#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service#name SearchService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service.html#partition_count SearchService#partition_count}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service#partition_count SearchService#partition_count}
   */
   readonly partitionCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service.html#public_network_access_enabled SearchService#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service#public_network_access_enabled SearchService#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service.html#replica_count SearchService#replica_count}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service#replica_count SearchService#replica_count}
   */
   readonly replicaCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service.html#resource_group_name SearchService#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service#resource_group_name SearchService#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service.html#sku SearchService#sku}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service#sku SearchService#sku}
   */
   readonly sku: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service.html#tags SearchService#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service#tags SearchService#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * identity block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service.html#identity SearchService#identity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service#identity SearchService#identity}
   */
   readonly identity?: SearchServiceIdentity;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service.html#timeouts SearchService#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service#timeouts SearchService#timeouts}
   */
   readonly timeouts?: SearchServiceTimeouts;
 }
@@ -70,7 +70,7 @@ export class SearchServiceQueryKeys extends cdktf.ComplexComputedList {
 }
 export interface SearchServiceIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service.html#type SearchService#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service#type SearchService#type}
   */
   readonly type: string;
 }
@@ -133,19 +133,19 @@ export class SearchServiceIdentityOutputReference extends cdktf.ComplexObject {
 }
 export interface SearchServiceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service.html#create SearchService#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service#create SearchService#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service.html#delete SearchService#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service#delete SearchService#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service.html#read SearchService#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service#read SearchService#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service.html#update SearchService#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/search_service#update SearchService#update}
   */
   readonly update?: string;
 }
@@ -280,7 +280,7 @@ export class SearchServiceTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/search_service.html azurerm_search_service}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/search_service azurerm_search_service}
 */
 export class SearchService extends cdktf.TerraformResource {
 
@@ -294,7 +294,7 @@ export class SearchService extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/search_service.html azurerm_search_service} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/search_service azurerm_search_service} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

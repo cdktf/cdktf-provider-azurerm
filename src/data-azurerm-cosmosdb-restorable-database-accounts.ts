@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_restorable_database_accounts.html
+// https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_restorable_database_accounts
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermCosmosdbRestorableDatabaseAccountsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_restorable_database_accounts.html#location DataAzurermCosmosdbRestorableDatabaseAccounts#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_restorable_database_accounts#location DataAzurermCosmosdbRestorableDatabaseAccounts#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_restorable_database_accounts.html#name DataAzurermCosmosdbRestorableDatabaseAccounts#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_restorable_database_accounts#name DataAzurermCosmosdbRestorableDatabaseAccounts#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_restorable_database_accounts.html#timeouts DataAzurermCosmosdbRestorableDatabaseAccounts#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_restorable_database_accounts#timeouts DataAzurermCosmosdbRestorableDatabaseAccounts#timeouts}
   */
   readonly timeouts?: DataAzurermCosmosdbRestorableDatabaseAccountsTimeouts;
 }
@@ -74,7 +74,7 @@ export class DataAzurermCosmosdbRestorableDatabaseAccountsAccounts extends cdktf
 }
 export interface DataAzurermCosmosdbRestorableDatabaseAccountsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_restorable_database_accounts.html#read DataAzurermCosmosdbRestorableDatabaseAccounts#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_restorable_database_accounts#read DataAzurermCosmosdbRestorableDatabaseAccounts#read}
   */
   readonly read?: string;
 }
@@ -140,7 +140,7 @@ export class DataAzurermCosmosdbRestorableDatabaseAccountsTimeoutsOutputReferenc
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_restorable_database_accounts.html azurerm_cosmosdb_restorable_database_accounts}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_restorable_database_accounts azurerm_cosmosdb_restorable_database_accounts}
 */
 export class DataAzurermCosmosdbRestorableDatabaseAccounts extends cdktf.TerraformDataSource {
 
@@ -154,7 +154,7 @@ export class DataAzurermCosmosdbRestorableDatabaseAccounts extends cdktf.Terrafo
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_restorable_database_accounts.html azurerm_cosmosdb_restorable_database_accounts} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/cosmosdb_restorable_database_accounts azurerm_cosmosdb_restorable_database_accounts} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/container_registry.html
+// https://www.terraform.io/docs/providers/azurerm/d/container_registry
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermContainerRegistryConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry.html#name DataAzurermContainerRegistry#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry#name DataAzurermContainerRegistry#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry.html#resource_group_name DataAzurermContainerRegistry#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry#resource_group_name DataAzurermContainerRegistry#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry.html#timeouts DataAzurermContainerRegistry#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry#timeouts DataAzurermContainerRegistry#timeouts}
   */
   readonly timeouts?: DataAzurermContainerRegistryTimeouts;
 }
 export interface DataAzurermContainerRegistryTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry.html#read DataAzurermContainerRegistry#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry#read DataAzurermContainerRegistry#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermContainerRegistryTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry.html azurerm_container_registry}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry azurerm_container_registry}
 */
 export class DataAzurermContainerRegistry extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermContainerRegistry extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry.html azurerm_container_registry} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry azurerm_container_registry} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/subscription.html
+// https://www.terraform.io/docs/providers/azurerm/d/subscription
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,19 +8,19 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSubscriptionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscription.html#subscription_id DataAzurermSubscription#subscription_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscription#subscription_id DataAzurermSubscription#subscription_id}
   */
   readonly subscriptionId?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscription.html#timeouts DataAzurermSubscription#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscription#timeouts DataAzurermSubscription#timeouts}
   */
   readonly timeouts?: DataAzurermSubscriptionTimeouts;
 }
 export interface DataAzurermSubscriptionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscription.html#read DataAzurermSubscription#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subscription#read DataAzurermSubscription#read}
   */
   readonly read?: string;
 }
@@ -86,7 +86,7 @@ export class DataAzurermSubscriptionTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/subscription.html azurerm_subscription}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/subscription azurerm_subscription}
 */
 export class DataAzurermSubscription extends cdktf.TerraformDataSource {
 
@@ -100,7 +100,7 @@ export class DataAzurermSubscription extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/subscription.html azurerm_subscription} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/subscription azurerm_subscription} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

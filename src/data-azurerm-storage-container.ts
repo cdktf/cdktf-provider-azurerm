@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/storage_container.html
+// https://www.terraform.io/docs/providers/azurerm/d/storage_container
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermStorageContainerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container.html#metadata DataAzurermStorageContainer#metadata}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container#metadata DataAzurermStorageContainer#metadata}
   */
   readonly metadata?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container.html#name DataAzurermStorageContainer#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container#name DataAzurermStorageContainer#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container.html#storage_account_name DataAzurermStorageContainer#storage_account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container#storage_account_name DataAzurermStorageContainer#storage_account_name}
   */
   readonly storageAccountName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container.html#timeouts DataAzurermStorageContainer#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container#timeouts DataAzurermStorageContainer#timeouts}
   */
   readonly timeouts?: DataAzurermStorageContainerTimeouts;
 }
 export interface DataAzurermStorageContainerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container.html#read DataAzurermStorageContainer#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container#read DataAzurermStorageContainer#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermStorageContainerTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container.html azurerm_storage_container}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container azurerm_storage_container}
 */
 export class DataAzurermStorageContainer extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermStorageContainer extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container.html azurerm_storage_container} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/storage_container azurerm_storage_container} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

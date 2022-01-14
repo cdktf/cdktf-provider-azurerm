@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations.html
+// https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermAdvisorRecommendationsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations.html#filter_by_category DataAzurermAdvisorRecommendations#filter_by_category}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations#filter_by_category DataAzurermAdvisorRecommendations#filter_by_category}
   */
   readonly filterByCategory?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations.html#filter_by_resource_groups DataAzurermAdvisorRecommendations#filter_by_resource_groups}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations#filter_by_resource_groups DataAzurermAdvisorRecommendations#filter_by_resource_groups}
   */
   readonly filterByResourceGroups?: string[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations.html#timeouts DataAzurermAdvisorRecommendations#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations#timeouts DataAzurermAdvisorRecommendations#timeouts}
   */
   readonly timeouts?: DataAzurermAdvisorRecommendationsTimeouts;
 }
@@ -71,7 +71,7 @@ export class DataAzurermAdvisorRecommendationsRecommendations extends cdktf.Comp
 }
 export interface DataAzurermAdvisorRecommendationsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations.html#read DataAzurermAdvisorRecommendations#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations#read DataAzurermAdvisorRecommendations#read}
   */
   readonly read?: string;
 }
@@ -137,7 +137,7 @@ export class DataAzurermAdvisorRecommendationsTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations.html azurerm_advisor_recommendations}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations azurerm_advisor_recommendations}
 */
 export class DataAzurermAdvisorRecommendations extends cdktf.TerraformDataSource {
 
@@ -151,7 +151,7 @@ export class DataAzurermAdvisorRecommendations extends cdktf.TerraformDataSource
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations.html azurerm_advisor_recommendations} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/advisor_recommendations azurerm_advisor_recommendations} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

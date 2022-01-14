@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure.html
+// https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,55 +8,55 @@ import * as cdktf from 'cdktf';
 
 export interface SynapseIntegrationRuntimeAzureConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure.html#compute_type SynapseIntegrationRuntimeAzure#compute_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure#compute_type SynapseIntegrationRuntimeAzure#compute_type}
   */
   readonly computeType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure.html#core_count SynapseIntegrationRuntimeAzure#core_count}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure#core_count SynapseIntegrationRuntimeAzure#core_count}
   */
   readonly coreCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure.html#description SynapseIntegrationRuntimeAzure#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure#description SynapseIntegrationRuntimeAzure#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure.html#location SynapseIntegrationRuntimeAzure#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure#location SynapseIntegrationRuntimeAzure#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure.html#name SynapseIntegrationRuntimeAzure#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure#name SynapseIntegrationRuntimeAzure#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure.html#synapse_workspace_id SynapseIntegrationRuntimeAzure#synapse_workspace_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure#synapse_workspace_id SynapseIntegrationRuntimeAzure#synapse_workspace_id}
   */
   readonly synapseWorkspaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure.html#time_to_live_min SynapseIntegrationRuntimeAzure#time_to_live_min}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure#time_to_live_min SynapseIntegrationRuntimeAzure#time_to_live_min}
   */
   readonly timeToLiveMin?: number;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure.html#timeouts SynapseIntegrationRuntimeAzure#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure#timeouts SynapseIntegrationRuntimeAzure#timeouts}
   */
   readonly timeouts?: SynapseIntegrationRuntimeAzureTimeouts;
 }
 export interface SynapseIntegrationRuntimeAzureTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure.html#create SynapseIntegrationRuntimeAzure#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure#create SynapseIntegrationRuntimeAzure#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure.html#delete SynapseIntegrationRuntimeAzure#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure#delete SynapseIntegrationRuntimeAzure#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure.html#read SynapseIntegrationRuntimeAzure#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure#read SynapseIntegrationRuntimeAzure#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure.html#update SynapseIntegrationRuntimeAzure#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure#update SynapseIntegrationRuntimeAzure#update}
   */
   readonly update?: string;
 }
@@ -191,7 +191,7 @@ export class SynapseIntegrationRuntimeAzureTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure.html azurerm_synapse_integration_runtime_azure}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure azurerm_synapse_integration_runtime_azure}
 */
 export class SynapseIntegrationRuntimeAzure extends cdktf.TerraformResource {
 
@@ -205,7 +205,7 @@ export class SynapseIntegrationRuntimeAzure extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure.html azurerm_synapse_integration_runtime_azure} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_integration_runtime_azure azurerm_synapse_integration_runtime_azure} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

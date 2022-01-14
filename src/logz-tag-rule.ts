@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule.html
+// https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,45 +8,45 @@ import * as cdktf from 'cdktf';
 
 export interface LogzTagRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule.html#logz_monitor_id LogzTagRule#logz_monitor_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule#logz_monitor_id LogzTagRule#logz_monitor_id}
   */
   readonly logzMonitorId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule.html#send_aad_logs LogzTagRule#send_aad_logs}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule#send_aad_logs LogzTagRule#send_aad_logs}
   */
   readonly sendAadLogs?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule.html#send_activity_logs LogzTagRule#send_activity_logs}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule#send_activity_logs LogzTagRule#send_activity_logs}
   */
   readonly sendActivityLogs?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule.html#send_subscription_logs LogzTagRule#send_subscription_logs}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule#send_subscription_logs LogzTagRule#send_subscription_logs}
   */
   readonly sendSubscriptionLogs?: boolean | cdktf.IResolvable;
   /**
   * tag_filter block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule.html#tag_filter LogzTagRule#tag_filter}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule#tag_filter LogzTagRule#tag_filter}
   */
   readonly tagFilter?: LogzTagRuleTagFilter[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule.html#timeouts LogzTagRule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule#timeouts LogzTagRule#timeouts}
   */
   readonly timeouts?: LogzTagRuleTimeouts;
 }
 export interface LogzTagRuleTagFilter {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule.html#action LogzTagRule#action}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule#action LogzTagRule#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule.html#name LogzTagRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule#name LogzTagRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule.html#value LogzTagRule#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule#value LogzTagRule#value}
   */
   readonly value?: string;
 }
@@ -65,19 +65,19 @@ export function logzTagRuleTagFilterToTerraform(struct?: LogzTagRuleTagFilter): 
 
 export interface LogzTagRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule.html#create LogzTagRule#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule#create LogzTagRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule.html#delete LogzTagRule#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule#delete LogzTagRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule.html#read LogzTagRule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule#read LogzTagRule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule.html#update LogzTagRule#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule#update LogzTagRule#update}
   */
   readonly update?: string;
 }
@@ -212,7 +212,7 @@ export class LogzTagRuleTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule.html azurerm_logz_tag_rule}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule azurerm_logz_tag_rule}
 */
 export class LogzTagRule extends cdktf.TerraformResource {
 
@@ -226,7 +226,7 @@ export class LogzTagRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule.html azurerm_logz_tag_rule} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/logz_tag_rule azurerm_logz_tag_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/route_table.html
+// https://www.terraform.io/docs/providers/azurerm/d/route_table
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermRouteTableConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/route_table.html#name DataAzurermRouteTable#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/route_table#name DataAzurermRouteTable#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/route_table.html#resource_group_name DataAzurermRouteTable#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/route_table#resource_group_name DataAzurermRouteTable#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/route_table.html#timeouts DataAzurermRouteTable#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/route_table#timeouts DataAzurermRouteTable#timeouts}
   */
   readonly timeouts?: DataAzurermRouteTableTimeouts;
 }
@@ -46,7 +46,7 @@ export class DataAzurermRouteTableRoute extends cdktf.ComplexComputedList {
 }
 export interface DataAzurermRouteTableTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/route_table.html#read DataAzurermRouteTable#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/route_table#read DataAzurermRouteTable#read}
   */
   readonly read?: string;
 }
@@ -112,7 +112,7 @@ export class DataAzurermRouteTableTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/route_table.html azurerm_route_table}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/route_table azurerm_route_table}
 */
 export class DataAzurermRouteTable extends cdktf.TerraformDataSource {
 
@@ -126,7 +126,7 @@ export class DataAzurermRouteTable extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/route_table.html azurerm_route_table} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/route_table azurerm_route_table} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

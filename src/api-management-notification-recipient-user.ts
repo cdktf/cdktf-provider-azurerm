@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user.html
+// https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementNotificationRecipientUserConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user.html#api_management_id ApiManagementNotificationRecipientUser#api_management_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user#api_management_id ApiManagementNotificationRecipientUser#api_management_id}
   */
   readonly apiManagementId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user.html#notification_type ApiManagementNotificationRecipientUser#notification_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user#notification_type ApiManagementNotificationRecipientUser#notification_type}
   */
   readonly notificationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user.html#user_id ApiManagementNotificationRecipientUser#user_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user#user_id ApiManagementNotificationRecipientUser#user_id}
   */
   readonly userId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user.html#timeouts ApiManagementNotificationRecipientUser#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user#timeouts ApiManagementNotificationRecipientUser#timeouts}
   */
   readonly timeouts?: ApiManagementNotificationRecipientUserTimeouts;
 }
 export interface ApiManagementNotificationRecipientUserTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user.html#create ApiManagementNotificationRecipientUser#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user#create ApiManagementNotificationRecipientUser#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user.html#delete ApiManagementNotificationRecipientUser#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user#delete ApiManagementNotificationRecipientUser#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user.html#read ApiManagementNotificationRecipientUser#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user#read ApiManagementNotificationRecipientUser#read}
   */
   readonly read?: string;
 }
@@ -148,7 +148,7 @@ export class ApiManagementNotificationRecipientUserTimeoutsOutputReference exten
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user.html azurerm_api_management_notification_recipient_user}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user azurerm_api_management_notification_recipient_user}
 */
 export class ApiManagementNotificationRecipientUser extends cdktf.TerraformResource {
 
@@ -162,7 +162,7 @@ export class ApiManagementNotificationRecipientUser extends cdktf.TerraformResou
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user.html azurerm_api_management_notification_recipient_user} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_user azurerm_api_management_notification_recipient_user} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

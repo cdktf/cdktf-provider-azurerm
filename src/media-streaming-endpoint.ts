@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html
+// https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,87 +8,87 @@ import * as cdktf from 'cdktf';
 
 export interface MediaStreamingEndpointConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#auto_start_enabled MediaStreamingEndpoint#auto_start_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#auto_start_enabled MediaStreamingEndpoint#auto_start_enabled}
   */
   readonly autoStartEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#cdn_enabled MediaStreamingEndpoint#cdn_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#cdn_enabled MediaStreamingEndpoint#cdn_enabled}
   */
   readonly cdnEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#cdn_profile MediaStreamingEndpoint#cdn_profile}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#cdn_profile MediaStreamingEndpoint#cdn_profile}
   */
   readonly cdnProfile?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#cdn_provider MediaStreamingEndpoint#cdn_provider}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#cdn_provider MediaStreamingEndpoint#cdn_provider}
   */
   readonly cdnProvider?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#custom_host_names MediaStreamingEndpoint#custom_host_names}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#custom_host_names MediaStreamingEndpoint#custom_host_names}
   */
   readonly customHostNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#description MediaStreamingEndpoint#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#description MediaStreamingEndpoint#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#location MediaStreamingEndpoint#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#location MediaStreamingEndpoint#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#max_cache_age_seconds MediaStreamingEndpoint#max_cache_age_seconds}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#max_cache_age_seconds MediaStreamingEndpoint#max_cache_age_seconds}
   */
   readonly maxCacheAgeSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#media_services_account_name MediaStreamingEndpoint#media_services_account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#media_services_account_name MediaStreamingEndpoint#media_services_account_name}
   */
   readonly mediaServicesAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#name MediaStreamingEndpoint#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#name MediaStreamingEndpoint#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#resource_group_name MediaStreamingEndpoint#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#resource_group_name MediaStreamingEndpoint#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#scale_units MediaStreamingEndpoint#scale_units}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#scale_units MediaStreamingEndpoint#scale_units}
   */
   readonly scaleUnits: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#tags MediaStreamingEndpoint#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#tags MediaStreamingEndpoint#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * access_control block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#access_control MediaStreamingEndpoint#access_control}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#access_control MediaStreamingEndpoint#access_control}
   */
   readonly accessControl?: MediaStreamingEndpointAccessControl;
   /**
   * cross_site_access_policy block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#cross_site_access_policy MediaStreamingEndpoint#cross_site_access_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#cross_site_access_policy MediaStreamingEndpoint#cross_site_access_policy}
   */
   readonly crossSiteAccessPolicy?: MediaStreamingEndpointCrossSiteAccessPolicy;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#timeouts MediaStreamingEndpoint#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#timeouts MediaStreamingEndpoint#timeouts}
   */
   readonly timeouts?: MediaStreamingEndpointTimeouts;
 }
 export interface MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#base64_key MediaStreamingEndpoint#base64_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#base64_key MediaStreamingEndpoint#base64_key}
   */
   readonly base64Key?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#expiration MediaStreamingEndpoint#expiration}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#expiration MediaStreamingEndpoint#expiration}
   */
   readonly expiration?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#identifier MediaStreamingEndpoint#identifier}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#identifier MediaStreamingEndpoint#identifier}
   */
   readonly identifier?: string;
 }
@@ -107,15 +107,15 @@ export function mediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenti
 
 export interface MediaStreamingEndpointAccessControlIpAllow {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#address MediaStreamingEndpoint#address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#address MediaStreamingEndpoint#address}
   */
   readonly address?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#name MediaStreamingEndpoint#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#name MediaStreamingEndpoint#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#subnet_prefix_length MediaStreamingEndpoint#subnet_prefix_length}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#subnet_prefix_length MediaStreamingEndpoint#subnet_prefix_length}
   */
   readonly subnetPrefixLength?: number;
 }
@@ -136,13 +136,13 @@ export interface MediaStreamingEndpointAccessControl {
   /**
   * akamai_signature_header_authentication_key block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#akamai_signature_header_authentication_key MediaStreamingEndpoint#akamai_signature_header_authentication_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#akamai_signature_header_authentication_key MediaStreamingEndpoint#akamai_signature_header_authentication_key}
   */
   readonly akamaiSignatureHeaderAuthenticationKey?: MediaStreamingEndpointAccessControlAkamaiSignatureHeaderAuthenticationKey[];
   /**
   * ip_allow block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#ip_allow MediaStreamingEndpoint#ip_allow}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#ip_allow MediaStreamingEndpoint#ip_allow}
   */
   readonly ipAllow?: MediaStreamingEndpointAccessControlIpAllow[];
 }
@@ -233,11 +233,11 @@ export class MediaStreamingEndpointAccessControlOutputReference extends cdktf.Co
 }
 export interface MediaStreamingEndpointCrossSiteAccessPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#client_access_policy MediaStreamingEndpoint#client_access_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#client_access_policy MediaStreamingEndpoint#client_access_policy}
   */
   readonly clientAccessPolicy?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#cross_domain_policy MediaStreamingEndpoint#cross_domain_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#cross_domain_policy MediaStreamingEndpoint#cross_domain_policy}
   */
   readonly crossDomainPolicy?: string;
 }
@@ -326,19 +326,19 @@ export class MediaStreamingEndpointCrossSiteAccessPolicyOutputReference extends 
 }
 export interface MediaStreamingEndpointTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#create MediaStreamingEndpoint#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#create MediaStreamingEndpoint#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#delete MediaStreamingEndpoint#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#delete MediaStreamingEndpoint#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#read MediaStreamingEndpoint#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#read MediaStreamingEndpoint#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html#update MediaStreamingEndpoint#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint#update MediaStreamingEndpoint#update}
   */
   readonly update?: string;
 }
@@ -473,7 +473,7 @@ export class MediaStreamingEndpointTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html azurerm_media_streaming_endpoint}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint azurerm_media_streaming_endpoint}
 */
 export class MediaStreamingEndpoint extends cdktf.TerraformResource {
 
@@ -487,7 +487,7 @@ export class MediaStreamingEndpoint extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint.html azurerm_media_streaming_endpoint} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_endpoint azurerm_media_streaming_endpoint} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,67 +8,67 @@ import * as cdktf from 'cdktf';
 
 export interface DataFactoryLinkedServicePostgresqlConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#additional_properties DataFactoryLinkedServicePostgresql#additional_properties}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql#additional_properties DataFactoryLinkedServicePostgresql#additional_properties}
   */
   readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#annotations DataFactoryLinkedServicePostgresql#annotations}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql#annotations DataFactoryLinkedServicePostgresql#annotations}
   */
   readonly annotations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#connection_string DataFactoryLinkedServicePostgresql#connection_string}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql#connection_string DataFactoryLinkedServicePostgresql#connection_string}
   */
   readonly connectionString: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#data_factory_id DataFactoryLinkedServicePostgresql#data_factory_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql#data_factory_id DataFactoryLinkedServicePostgresql#data_factory_id}
   */
   readonly dataFactoryId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#data_factory_name DataFactoryLinkedServicePostgresql#data_factory_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql#data_factory_name DataFactoryLinkedServicePostgresql#data_factory_name}
   */
   readonly dataFactoryName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#description DataFactoryLinkedServicePostgresql#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql#description DataFactoryLinkedServicePostgresql#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#integration_runtime_name DataFactoryLinkedServicePostgresql#integration_runtime_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql#integration_runtime_name DataFactoryLinkedServicePostgresql#integration_runtime_name}
   */
   readonly integrationRuntimeName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#name DataFactoryLinkedServicePostgresql#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql#name DataFactoryLinkedServicePostgresql#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#parameters DataFactoryLinkedServicePostgresql#parameters}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql#parameters DataFactoryLinkedServicePostgresql#parameters}
   */
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#resource_group_name DataFactoryLinkedServicePostgresql#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql#resource_group_name DataFactoryLinkedServicePostgresql#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#timeouts DataFactoryLinkedServicePostgresql#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql#timeouts DataFactoryLinkedServicePostgresql#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServicePostgresqlTimeouts;
 }
 export interface DataFactoryLinkedServicePostgresqlTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#create DataFactoryLinkedServicePostgresql#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql#create DataFactoryLinkedServicePostgresql#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#delete DataFactoryLinkedServicePostgresql#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql#delete DataFactoryLinkedServicePostgresql#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#read DataFactoryLinkedServicePostgresql#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql#read DataFactoryLinkedServicePostgresql#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html#update DataFactoryLinkedServicePostgresql#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql#update DataFactoryLinkedServicePostgresql#update}
   */
   readonly update?: string;
 }
@@ -203,7 +203,7 @@ export class DataFactoryLinkedServicePostgresqlTimeoutsOutputReference extends c
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html azurerm_data_factory_linked_service_postgresql}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql azurerm_data_factory_linked_service_postgresql}
 */
 export class DataFactoryLinkedServicePostgresql extends cdktf.TerraformResource {
 
@@ -217,7 +217,7 @@ export class DataFactoryLinkedServicePostgresql extends cdktf.TerraformResource 
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql.html azurerm_data_factory_linked_service_postgresql} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_postgresql azurerm_data_factory_linked_service_postgresql} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

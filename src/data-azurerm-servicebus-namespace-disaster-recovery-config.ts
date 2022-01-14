@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace_disaster_recovery_config.html
+// https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace_disaster_recovery_config
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermServicebusNamespaceDisasterRecoveryConfigConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace_disaster_recovery_config.html#name DataAzurermServicebusNamespaceDisasterRecoveryConfig#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace_disaster_recovery_config#name DataAzurermServicebusNamespaceDisasterRecoveryConfig#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace_disaster_recovery_config.html#namespace_name DataAzurermServicebusNamespaceDisasterRecoveryConfig#namespace_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace_disaster_recovery_config#namespace_name DataAzurermServicebusNamespaceDisasterRecoveryConfig#namespace_name}
   */
   readonly namespaceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace_disaster_recovery_config.html#resource_group_name DataAzurermServicebusNamespaceDisasterRecoveryConfig#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace_disaster_recovery_config#resource_group_name DataAzurermServicebusNamespaceDisasterRecoveryConfig#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace_disaster_recovery_config.html#timeouts DataAzurermServicebusNamespaceDisasterRecoveryConfig#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace_disaster_recovery_config#timeouts DataAzurermServicebusNamespaceDisasterRecoveryConfig#timeouts}
   */
   readonly timeouts?: DataAzurermServicebusNamespaceDisasterRecoveryConfigTimeouts;
 }
 export interface DataAzurermServicebusNamespaceDisasterRecoveryConfigTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace_disaster_recovery_config.html#read DataAzurermServicebusNamespaceDisasterRecoveryConfig#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace_disaster_recovery_config#read DataAzurermServicebusNamespaceDisasterRecoveryConfig#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermServicebusNamespaceDisasterRecoveryConfigTimeoutsOutputR
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace_disaster_recovery_config.html azurerm_servicebus_namespace_disaster_recovery_config}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace_disaster_recovery_config azurerm_servicebus_namespace_disaster_recovery_config}
 */
 export class DataAzurermServicebusNamespaceDisasterRecoveryConfig extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermServicebusNamespaceDisasterRecoveryConfig extends cdktf.
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace_disaster_recovery_config.html azurerm_servicebus_namespace_disaster_recovery_config} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_namespace_disaster_recovery_config azurerm_servicebus_namespace_disaster_recovery_config} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

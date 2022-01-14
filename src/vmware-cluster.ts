@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html
+// https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface VmwareClusterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html#cluster_node_count VmwareCluster#cluster_node_count}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster#cluster_node_count VmwareCluster#cluster_node_count}
   */
   readonly clusterNodeCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html#name VmwareCluster#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster#name VmwareCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html#sku_name VmwareCluster#sku_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster#sku_name VmwareCluster#sku_name}
   */
   readonly skuName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html#vmware_cloud_id VmwareCluster#vmware_cloud_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster#vmware_cloud_id VmwareCluster#vmware_cloud_id}
   */
   readonly vmwareCloudId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html#timeouts VmwareCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster#timeouts VmwareCluster#timeouts}
   */
   readonly timeouts?: VmwareClusterTimeouts;
 }
 export interface VmwareClusterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html#create VmwareCluster#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster#create VmwareCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html#delete VmwareCluster#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster#delete VmwareCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html#read VmwareCluster#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster#read VmwareCluster#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html#update VmwareCluster#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster#update VmwareCluster#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class VmwareClusterTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html azurerm_vmware_cluster}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster azurerm_vmware_cluster}
 */
 export class VmwareCluster extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class VmwareCluster extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster.html azurerm_vmware_cluster} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_cluster azurerm_vmware_cluster} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

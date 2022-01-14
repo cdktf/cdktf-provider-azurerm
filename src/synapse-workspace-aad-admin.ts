@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin.html
+// https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface SynapseWorkspaceAadAdminAConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin.html#login SynapseWorkspaceAadAdminA#login}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin#login SynapseWorkspaceAadAdminA#login}
   */
   readonly login: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin.html#object_id SynapseWorkspaceAadAdminA#object_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin#object_id SynapseWorkspaceAadAdminA#object_id}
   */
   readonly objectId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin.html#synapse_workspace_id SynapseWorkspaceAadAdminA#synapse_workspace_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin#synapse_workspace_id SynapseWorkspaceAadAdminA#synapse_workspace_id}
   */
   readonly synapseWorkspaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin.html#tenant_id SynapseWorkspaceAadAdminA#tenant_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin#tenant_id SynapseWorkspaceAadAdminA#tenant_id}
   */
   readonly tenantId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin.html#timeouts SynapseWorkspaceAadAdminA#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin#timeouts SynapseWorkspaceAadAdminA#timeouts}
   */
   readonly timeouts?: SynapseWorkspaceAadAdminTimeouts;
 }
 export interface SynapseWorkspaceAadAdminTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin.html#create SynapseWorkspaceAadAdminA#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin#create SynapseWorkspaceAadAdminA#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin.html#delete SynapseWorkspaceAadAdminA#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin#delete SynapseWorkspaceAadAdminA#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin.html#read SynapseWorkspaceAadAdminA#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin#read SynapseWorkspaceAadAdminA#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin.html#update SynapseWorkspaceAadAdminA#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin#update SynapseWorkspaceAadAdminA#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class SynapseWorkspaceAadAdminTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin.html azurerm_synapse_workspace_aad_admin}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin azurerm_synapse_workspace_aad_admin}
 */
 export class SynapseWorkspaceAadAdminA extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class SynapseWorkspaceAadAdminA extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin.html azurerm_synapse_workspace_aad_admin} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/synapse_workspace_aad_admin azurerm_synapse_workspace_aad_admin} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

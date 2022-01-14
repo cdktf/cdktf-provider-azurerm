@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning.html
+// https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,31 +8,31 @@ import * as cdktf from 'cdktf';
 
 export interface SecurityCenterAutoProvisioningConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning.html#auto_provision SecurityCenterAutoProvisioning#auto_provision}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning#auto_provision SecurityCenterAutoProvisioning#auto_provision}
   */
   readonly autoProvision: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning.html#timeouts SecurityCenterAutoProvisioning#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning#timeouts SecurityCenterAutoProvisioning#timeouts}
   */
   readonly timeouts?: SecurityCenterAutoProvisioningTimeouts;
 }
 export interface SecurityCenterAutoProvisioningTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning.html#create SecurityCenterAutoProvisioning#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning#create SecurityCenterAutoProvisioning#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning.html#delete SecurityCenterAutoProvisioning#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning#delete SecurityCenterAutoProvisioning#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning.html#read SecurityCenterAutoProvisioning#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning#read SecurityCenterAutoProvisioning#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning.html#update SecurityCenterAutoProvisioning#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning#update SecurityCenterAutoProvisioning#update}
   */
   readonly update?: string;
 }
@@ -167,7 +167,7 @@ export class SecurityCenterAutoProvisioningTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning.html azurerm_security_center_auto_provisioning}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning azurerm_security_center_auto_provisioning}
 */
 export class SecurityCenterAutoProvisioning extends cdktf.TerraformResource {
 
@@ -181,7 +181,7 @@ export class SecurityCenterAutoProvisioning extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning.html azurerm_security_center_auto_provisioning} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_auto_provisioning azurerm_security_center_auto_provisioning} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html
+// https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,29 +8,29 @@ import * as cdktf from 'cdktf';
 
 export interface DataboxEdgeDeviceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#location DataboxEdgeDevice#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device#location DataboxEdgeDevice#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#name DataboxEdgeDevice#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device#name DataboxEdgeDevice#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#resource_group_name DataboxEdgeDevice#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device#resource_group_name DataboxEdgeDevice#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#sku_name DataboxEdgeDevice#sku_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device#sku_name DataboxEdgeDevice#sku_name}
   */
   readonly skuName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#tags DataboxEdgeDevice#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device#tags DataboxEdgeDevice#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#timeouts DataboxEdgeDevice#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device#timeouts DataboxEdgeDevice#timeouts}
   */
   readonly timeouts?: DataboxEdgeDeviceTimeouts;
 }
@@ -93,19 +93,19 @@ export class DataboxEdgeDeviceDeviceProperties extends cdktf.ComplexComputedList
 }
 export interface DataboxEdgeDeviceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#create DataboxEdgeDevice#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device#create DataboxEdgeDevice#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#delete DataboxEdgeDevice#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device#delete DataboxEdgeDevice#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#read DataboxEdgeDevice#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device#read DataboxEdgeDevice#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html#update DataboxEdgeDevice#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device#update DataboxEdgeDevice#update}
   */
   readonly update?: string;
 }
@@ -240,7 +240,7 @@ export class DataboxEdgeDeviceTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html azurerm_databox_edge_device}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device azurerm_databox_edge_device}
 */
 export class DataboxEdgeDevice extends cdktf.TerraformResource {
 
@@ -254,7 +254,7 @@ export class DataboxEdgeDevice extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device.html azurerm_databox_edge_device} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/databox_edge_device azurerm_databox_edge_device} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/resource_group.html
+// https://www.terraform.io/docs/providers/azurerm/d/resource_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,19 +8,19 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermResourceGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/resource_group.html#name DataAzurermResourceGroup#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/resource_group#name DataAzurermResourceGroup#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/resource_group.html#timeouts DataAzurermResourceGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/resource_group#timeouts DataAzurermResourceGroup#timeouts}
   */
   readonly timeouts?: DataAzurermResourceGroupTimeouts;
 }
 export interface DataAzurermResourceGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/resource_group.html#read DataAzurermResourceGroup#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/resource_group#read DataAzurermResourceGroup#read}
   */
   readonly read?: string;
 }
@@ -86,7 +86,7 @@ export class DataAzurermResourceGroupTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/resource_group.html azurerm_resource_group}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/resource_group azurerm_resource_group}
 */
 export class DataAzurermResourceGroup extends cdktf.TerraformDataSource {
 
@@ -100,7 +100,7 @@ export class DataAzurermResourceGroup extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/resource_group.html azurerm_resource_group} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/resource_group azurerm_resource_group} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

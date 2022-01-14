@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html
+// https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,59 +8,59 @@ import * as cdktf from 'cdktf';
 
 export interface ResourceGroupTemplateDeploymentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#debug_level ResourceGroupTemplateDeployment#debug_level}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment#debug_level ResourceGroupTemplateDeployment#debug_level}
   */
   readonly debugLevel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#deployment_mode ResourceGroupTemplateDeployment#deployment_mode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment#deployment_mode ResourceGroupTemplateDeployment#deployment_mode}
   */
   readonly deploymentMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#name ResourceGroupTemplateDeployment#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment#name ResourceGroupTemplateDeployment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#parameters_content ResourceGroupTemplateDeployment#parameters_content}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment#parameters_content ResourceGroupTemplateDeployment#parameters_content}
   */
   readonly parametersContent?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#resource_group_name ResourceGroupTemplateDeployment#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment#resource_group_name ResourceGroupTemplateDeployment#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#tags ResourceGroupTemplateDeployment#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment#tags ResourceGroupTemplateDeployment#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#template_content ResourceGroupTemplateDeployment#template_content}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment#template_content ResourceGroupTemplateDeployment#template_content}
   */
   readonly templateContent?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#template_spec_version_id ResourceGroupTemplateDeployment#template_spec_version_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment#template_spec_version_id ResourceGroupTemplateDeployment#template_spec_version_id}
   */
   readonly templateSpecVersionId?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#timeouts ResourceGroupTemplateDeployment#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment#timeouts ResourceGroupTemplateDeployment#timeouts}
   */
   readonly timeouts?: ResourceGroupTemplateDeploymentTimeouts;
 }
 export interface ResourceGroupTemplateDeploymentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#create ResourceGroupTemplateDeployment#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment#create ResourceGroupTemplateDeployment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#delete ResourceGroupTemplateDeployment#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment#delete ResourceGroupTemplateDeployment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#read ResourceGroupTemplateDeployment#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment#read ResourceGroupTemplateDeployment#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html#update ResourceGroupTemplateDeployment#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment#update ResourceGroupTemplateDeployment#update}
   */
   readonly update?: string;
 }
@@ -195,7 +195,7 @@ export class ResourceGroupTemplateDeploymentTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html azurerm_resource_group_template_deployment}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment azurerm_resource_group_template_deployment}
 */
 export class ResourceGroupTemplateDeployment extends cdktf.TerraformResource {
 
@@ -209,7 +209,7 @@ export class ResourceGroupTemplateDeployment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment.html azurerm_resource_group_template_deployment} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/resource_group_template_deployment azurerm_resource_group_template_deployment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

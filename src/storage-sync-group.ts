@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group.html
+// https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,31 +8,31 @@ import * as cdktf from 'cdktf';
 
 export interface StorageSyncGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group.html#name StorageSyncGroup#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group#name StorageSyncGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group.html#storage_sync_id StorageSyncGroup#storage_sync_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group#storage_sync_id StorageSyncGroup#storage_sync_id}
   */
   readonly storageSyncId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group.html#timeouts StorageSyncGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group#timeouts StorageSyncGroup#timeouts}
   */
   readonly timeouts?: StorageSyncGroupTimeouts;
 }
 export interface StorageSyncGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group.html#create StorageSyncGroup#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group#create StorageSyncGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group.html#delete StorageSyncGroup#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group#delete StorageSyncGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group.html#read StorageSyncGroup#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group#read StorageSyncGroup#read}
   */
   readonly read?: string;
 }
@@ -144,7 +144,7 @@ export class StorageSyncGroupTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group.html azurerm_storage_sync_group}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group azurerm_storage_sync_group}
 */
 export class StorageSyncGroup extends cdktf.TerraformResource {
 
@@ -158,7 +158,7 @@ export class StorageSyncGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group.html azurerm_storage_sync_group} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_sync_group azurerm_storage_sync_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

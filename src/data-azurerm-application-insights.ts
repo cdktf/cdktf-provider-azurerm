@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/application_insights.html
+// https://www.terraform.io/docs/providers/azurerm/d/application_insights
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermApplicationInsightsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_insights.html#name DataAzurermApplicationInsights#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_insights#name DataAzurermApplicationInsights#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_insights.html#resource_group_name DataAzurermApplicationInsights#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_insights#resource_group_name DataAzurermApplicationInsights#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_insights.html#timeouts DataAzurermApplicationInsights#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_insights#timeouts DataAzurermApplicationInsights#timeouts}
   */
   readonly timeouts?: DataAzurermApplicationInsightsTimeouts;
 }
 export interface DataAzurermApplicationInsightsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_insights.html#read DataAzurermApplicationInsights#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/application_insights#read DataAzurermApplicationInsights#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermApplicationInsightsTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/application_insights.html azurerm_application_insights}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/application_insights azurerm_application_insights}
 */
 export class DataAzurermApplicationInsights extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermApplicationInsights extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/application_insights.html azurerm_application_insights} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/application_insights azurerm_application_insights} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

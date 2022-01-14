@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom.html
+// https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface LogicAppTriggerCustomConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom.html#body LogicAppTriggerCustom#body}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom#body LogicAppTriggerCustom#body}
   */
   readonly body: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom.html#logic_app_id LogicAppTriggerCustom#logic_app_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom#logic_app_id LogicAppTriggerCustom#logic_app_id}
   */
   readonly logicAppId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom.html#name LogicAppTriggerCustom#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom#name LogicAppTriggerCustom#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom.html#timeouts LogicAppTriggerCustom#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom#timeouts LogicAppTriggerCustom#timeouts}
   */
   readonly timeouts?: LogicAppTriggerCustomTimeouts;
 }
 export interface LogicAppTriggerCustomTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom.html#create LogicAppTriggerCustom#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom#create LogicAppTriggerCustom#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom.html#delete LogicAppTriggerCustom#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom#delete LogicAppTriggerCustom#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom.html#read LogicAppTriggerCustom#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom#read LogicAppTriggerCustom#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom.html#update LogicAppTriggerCustom#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom#update LogicAppTriggerCustom#update}
   */
   readonly update?: string;
 }
@@ -175,7 +175,7 @@ export class LogicAppTriggerCustomTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom.html azurerm_logic_app_trigger_custom}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom azurerm_logic_app_trigger_custom}
 */
 export class LogicAppTriggerCustom extends cdktf.TerraformResource {
 
@@ -189,7 +189,7 @@ export class LogicAppTriggerCustom extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom.html azurerm_logic_app_trigger_custom} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/logic_app_trigger_custom azurerm_logic_app_trigger_custom} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

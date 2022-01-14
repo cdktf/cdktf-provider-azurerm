@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule.html
+// https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSentinelAlertRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule.html#log_analytics_workspace_id DataAzurermSentinelAlertRule#log_analytics_workspace_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule#log_analytics_workspace_id DataAzurermSentinelAlertRule#log_analytics_workspace_id}
   */
   readonly logAnalyticsWorkspaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule.html#name DataAzurermSentinelAlertRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule#name DataAzurermSentinelAlertRule#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule.html#timeouts DataAzurermSentinelAlertRule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule#timeouts DataAzurermSentinelAlertRule#timeouts}
   */
   readonly timeouts?: DataAzurermSentinelAlertRuleTimeouts;
 }
 export interface DataAzurermSentinelAlertRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule.html#read DataAzurermSentinelAlertRule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule#read DataAzurermSentinelAlertRule#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermSentinelAlertRuleTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule.html azurerm_sentinel_alert_rule}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule azurerm_sentinel_alert_rule}
 */
 export class DataAzurermSentinelAlertRule extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermSentinelAlertRule extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule.html azurerm_sentinel_alert_rule} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/sentinel_alert_rule azurerm_sentinel_alert_rule} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html
+// https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,53 +8,53 @@ import * as cdktf from 'cdktf';
 
 export interface LbOutboundRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html#allocated_outbound_ports LbOutboundRule#allocated_outbound_ports}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#allocated_outbound_ports LbOutboundRule#allocated_outbound_ports}
   */
   readonly allocatedOutboundPorts?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html#backend_address_pool_id LbOutboundRule#backend_address_pool_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#backend_address_pool_id LbOutboundRule#backend_address_pool_id}
   */
   readonly backendAddressPoolId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html#enable_tcp_reset LbOutboundRule#enable_tcp_reset}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#enable_tcp_reset LbOutboundRule#enable_tcp_reset}
   */
   readonly enableTcpReset?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html#idle_timeout_in_minutes LbOutboundRule#idle_timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#idle_timeout_in_minutes LbOutboundRule#idle_timeout_in_minutes}
   */
   readonly idleTimeoutInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html#loadbalancer_id LbOutboundRule#loadbalancer_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#loadbalancer_id LbOutboundRule#loadbalancer_id}
   */
   readonly loadbalancerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html#name LbOutboundRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#name LbOutboundRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html#protocol LbOutboundRule#protocol}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#protocol LbOutboundRule#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html#resource_group_name LbOutboundRule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#resource_group_name LbOutboundRule#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * frontend_ip_configuration block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html#frontend_ip_configuration LbOutboundRule#frontend_ip_configuration}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#frontend_ip_configuration LbOutboundRule#frontend_ip_configuration}
   */
   readonly frontendIpConfiguration?: LbOutboundRuleFrontendIpConfiguration[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html#timeouts LbOutboundRule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#timeouts LbOutboundRule#timeouts}
   */
   readonly timeouts?: LbOutboundRuleTimeouts;
 }
 export interface LbOutboundRuleFrontendIpConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html#name LbOutboundRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#name LbOutboundRule#name}
   */
   readonly name: string;
 }
@@ -71,19 +71,19 @@ export function lbOutboundRuleFrontendIpConfigurationToTerraform(struct?: LbOutb
 
 export interface LbOutboundRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html#create LbOutboundRule#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#create LbOutboundRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html#delete LbOutboundRule#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#delete LbOutboundRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html#read LbOutboundRule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#read LbOutboundRule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html#update LbOutboundRule#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule#update LbOutboundRule#update}
   */
   readonly update?: string;
 }
@@ -218,7 +218,7 @@ export class LbOutboundRuleTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html azurerm_lb_outbound_rule}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule azurerm_lb_outbound_rule}
 */
 export class LbOutboundRule extends cdktf.TerraformResource {
 
@@ -232,7 +232,7 @@ export class LbOutboundRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule.html azurerm_lb_outbound_rule} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/lb_outbound_rule azurerm_lb_outbound_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

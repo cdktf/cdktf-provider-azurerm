@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key.html
+// https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface EventhubNamespaceCustomerManagedKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key.html#eventhub_namespace_id EventhubNamespaceCustomerManagedKey#eventhub_namespace_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key#eventhub_namespace_id EventhubNamespaceCustomerManagedKey#eventhub_namespace_id}
   */
   readonly eventhubNamespaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key.html#key_vault_key_ids EventhubNamespaceCustomerManagedKey#key_vault_key_ids}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key#key_vault_key_ids EventhubNamespaceCustomerManagedKey#key_vault_key_ids}
   */
   readonly keyVaultKeyIds: string[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key.html#timeouts EventhubNamespaceCustomerManagedKey#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key#timeouts EventhubNamespaceCustomerManagedKey#timeouts}
   */
   readonly timeouts?: EventhubNamespaceCustomerManagedKeyTimeouts;
 }
 export interface EventhubNamespaceCustomerManagedKeyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key.html#create EventhubNamespaceCustomerManagedKey#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key#create EventhubNamespaceCustomerManagedKey#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key.html#delete EventhubNamespaceCustomerManagedKey#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key#delete EventhubNamespaceCustomerManagedKey#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key.html#read EventhubNamespaceCustomerManagedKey#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key#read EventhubNamespaceCustomerManagedKey#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key.html#update EventhubNamespaceCustomerManagedKey#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key#update EventhubNamespaceCustomerManagedKey#update}
   */
   readonly update?: string;
 }
@@ -171,7 +171,7 @@ export class EventhubNamespaceCustomerManagedKeyTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key.html azurerm_eventhub_namespace_customer_managed_key}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key azurerm_eventhub_namespace_customer_managed_key}
 */
 export class EventhubNamespaceCustomerManagedKey extends cdktf.TerraformResource {
 
@@ -185,7 +185,7 @@ export class EventhubNamespaceCustomerManagedKey extends cdktf.TerraformResource
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key.html azurerm_eventhub_namespace_customer_managed_key} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/eventhub_namespace_customer_managed_key azurerm_eventhub_namespace_customer_managed_key} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface DataProtectionBackupInstanceDiskConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk.html#backup_policy_id DataProtectionBackupInstanceDisk#backup_policy_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk#backup_policy_id DataProtectionBackupInstanceDisk#backup_policy_id}
   */
   readonly backupPolicyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk.html#disk_id DataProtectionBackupInstanceDisk#disk_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk#disk_id DataProtectionBackupInstanceDisk#disk_id}
   */
   readonly diskId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk.html#location DataProtectionBackupInstanceDisk#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk#location DataProtectionBackupInstanceDisk#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk.html#name DataProtectionBackupInstanceDisk#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk#name DataProtectionBackupInstanceDisk#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk.html#snapshot_resource_group_name DataProtectionBackupInstanceDisk#snapshot_resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk#snapshot_resource_group_name DataProtectionBackupInstanceDisk#snapshot_resource_group_name}
   */
   readonly snapshotResourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk.html#vault_id DataProtectionBackupInstanceDisk#vault_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk#vault_id DataProtectionBackupInstanceDisk#vault_id}
   */
   readonly vaultId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk.html#timeouts DataProtectionBackupInstanceDisk#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk#timeouts DataProtectionBackupInstanceDisk#timeouts}
   */
   readonly timeouts?: DataProtectionBackupInstanceDiskTimeouts;
 }
 export interface DataProtectionBackupInstanceDiskTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk.html#create DataProtectionBackupInstanceDisk#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk#create DataProtectionBackupInstanceDisk#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk.html#delete DataProtectionBackupInstanceDisk#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk#delete DataProtectionBackupInstanceDisk#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk.html#read DataProtectionBackupInstanceDisk#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk#read DataProtectionBackupInstanceDisk#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk.html#update DataProtectionBackupInstanceDisk#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk#update DataProtectionBackupInstanceDisk#update}
   */
   readonly update?: string;
 }
@@ -187,7 +187,7 @@ export class DataProtectionBackupInstanceDiskTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk.html azurerm_data_protection_backup_instance_disk}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk azurerm_data_protection_backup_instance_disk}
 */
 export class DataProtectionBackupInstanceDisk extends cdktf.TerraformResource {
 
@@ -201,7 +201,7 @@ export class DataProtectionBackupInstanceDisk extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk.html azurerm_data_protection_backup_instance_disk} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_disk azurerm_data_protection_backup_instance_disk} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

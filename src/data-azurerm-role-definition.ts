@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/role_definition.html
+// https://www.terraform.io/docs/providers/azurerm/d/role_definition
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermRoleDefinitionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition.html#name DataAzurermRoleDefinition#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition#name DataAzurermRoleDefinition#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition.html#role_definition_id DataAzurermRoleDefinition#role_definition_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition#role_definition_id DataAzurermRoleDefinition#role_definition_id}
   */
   readonly roleDefinitionId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition.html#scope DataAzurermRoleDefinition#scope}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition#scope DataAzurermRoleDefinition#scope}
   */
   readonly scope?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition.html#timeouts DataAzurermRoleDefinition#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition#timeouts DataAzurermRoleDefinition#timeouts}
   */
   readonly timeouts?: DataAzurermRoleDefinitionTimeouts;
 }
@@ -50,7 +50,7 @@ export class DataAzurermRoleDefinitionPermissions extends cdktf.ComplexComputedL
 }
 export interface DataAzurermRoleDefinitionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition.html#read DataAzurermRoleDefinition#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition#read DataAzurermRoleDefinition#read}
   */
   readonly read?: string;
 }
@@ -116,7 +116,7 @@ export class DataAzurermRoleDefinitionTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition.html azurerm_role_definition}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition azurerm_role_definition}
 */
 export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
 
@@ -130,7 +130,7 @@ export class DataAzurermRoleDefinition extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition.html azurerm_role_definition} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/role_definition azurerm_role_definition} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

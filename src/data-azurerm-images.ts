@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/images.html
+// https://www.terraform.io/docs/providers/azurerm/d/images
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermImagesConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/images.html#resource_group_name DataAzurermImages#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/images#resource_group_name DataAzurermImages#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/images.html#tags_filter DataAzurermImages#tags_filter}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/images#tags_filter DataAzurermImages#tags_filter}
   */
   readonly tagsFilter?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/images.html#timeouts DataAzurermImages#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/images#timeouts DataAzurermImages#timeouts}
   */
   readonly timeouts?: DataAzurermImagesTimeouts;
 }
@@ -118,7 +118,7 @@ export class DataAzurermImagesImages extends cdktf.ComplexComputedList {
 }
 export interface DataAzurermImagesTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/images.html#read DataAzurermImages#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/images#read DataAzurermImages#read}
   */
   readonly read?: string;
 }
@@ -184,7 +184,7 @@ export class DataAzurermImagesTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/images.html azurerm_images}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/images azurerm_images}
 */
 export class DataAzurermImages extends cdktf.TerraformDataSource {
 
@@ -198,7 +198,7 @@ export class DataAzurermImages extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/images.html azurerm_images} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/images azurerm_images} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

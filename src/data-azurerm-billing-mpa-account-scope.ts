@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope.html
+// https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermBillingMpaAccountScopeConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope.html#billing_account_name DataAzurermBillingMpaAccountScope#billing_account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope#billing_account_name DataAzurermBillingMpaAccountScope#billing_account_name}
   */
   readonly billingAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope.html#customer_name DataAzurermBillingMpaAccountScope#customer_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope#customer_name DataAzurermBillingMpaAccountScope#customer_name}
   */
   readonly customerName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope.html#timeouts DataAzurermBillingMpaAccountScope#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope#timeouts DataAzurermBillingMpaAccountScope#timeouts}
   */
   readonly timeouts?: DataAzurermBillingMpaAccountScopeTimeouts;
 }
 export interface DataAzurermBillingMpaAccountScopeTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope.html#read DataAzurermBillingMpaAccountScope#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope#read DataAzurermBillingMpaAccountScope#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermBillingMpaAccountScopeTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope.html azurerm_billing_mpa_account_scope}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope azurerm_billing_mpa_account_scope}
 */
 export class DataAzurermBillingMpaAccountScope extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermBillingMpaAccountScope extends cdktf.TerraformDataSource
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope.html azurerm_billing_mpa_account_scope} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/billing_mpa_account_scope azurerm_billing_mpa_account_scope} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

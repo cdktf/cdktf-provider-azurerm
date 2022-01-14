@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/network_security_group.html
+// https://www.terraform.io/docs/providers/azurerm/d/network_security_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermNetworkSecurityGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_security_group.html#name DataAzurermNetworkSecurityGroup#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_security_group#name DataAzurermNetworkSecurityGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_security_group.html#resource_group_name DataAzurermNetworkSecurityGroup#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_security_group#resource_group_name DataAzurermNetworkSecurityGroup#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_security_group.html#timeouts DataAzurermNetworkSecurityGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_security_group#timeouts DataAzurermNetworkSecurityGroup#timeouts}
   */
   readonly timeouts?: DataAzurermNetworkSecurityGroupTimeouts;
 }
@@ -106,7 +106,7 @@ export class DataAzurermNetworkSecurityGroupSecurityRule extends cdktf.ComplexCo
 }
 export interface DataAzurermNetworkSecurityGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_security_group.html#read DataAzurermNetworkSecurityGroup#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_security_group#read DataAzurermNetworkSecurityGroup#read}
   */
   readonly read?: string;
 }
@@ -172,7 +172,7 @@ export class DataAzurermNetworkSecurityGroupTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/network_security_group.html azurerm_network_security_group}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/network_security_group azurerm_network_security_group}
 */
 export class DataAzurermNetworkSecurityGroup extends cdktf.TerraformDataSource {
 
@@ -186,7 +186,7 @@ export class DataAzurermNetworkSecurityGroup extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/network_security_group.html azurerm_network_security_group} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/network_security_group azurerm_network_security_group} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

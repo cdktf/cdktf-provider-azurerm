@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,61 +8,61 @@ import * as cdktf from 'cdktf';
 
 export interface DataFactoryLinkedServiceOdbcConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html#additional_properties DataFactoryLinkedServiceOdbc#additional_properties}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc#additional_properties DataFactoryLinkedServiceOdbc#additional_properties}
   */
   readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html#annotations DataFactoryLinkedServiceOdbc#annotations}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc#annotations DataFactoryLinkedServiceOdbc#annotations}
   */
   readonly annotations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html#connection_string DataFactoryLinkedServiceOdbc#connection_string}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc#connection_string DataFactoryLinkedServiceOdbc#connection_string}
   */
   readonly connectionString: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html#data_factory_id DataFactoryLinkedServiceOdbc#data_factory_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc#data_factory_id DataFactoryLinkedServiceOdbc#data_factory_id}
   */
   readonly dataFactoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html#description DataFactoryLinkedServiceOdbc#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc#description DataFactoryLinkedServiceOdbc#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html#integration_runtime_name DataFactoryLinkedServiceOdbc#integration_runtime_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc#integration_runtime_name DataFactoryLinkedServiceOdbc#integration_runtime_name}
   */
   readonly integrationRuntimeName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html#name DataFactoryLinkedServiceOdbc#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc#name DataFactoryLinkedServiceOdbc#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html#parameters DataFactoryLinkedServiceOdbc#parameters}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc#parameters DataFactoryLinkedServiceOdbc#parameters}
   */
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html#resource_group_name DataFactoryLinkedServiceOdbc#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc#resource_group_name DataFactoryLinkedServiceOdbc#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * basic_authentication block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html#basic_authentication DataFactoryLinkedServiceOdbc#basic_authentication}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc#basic_authentication DataFactoryLinkedServiceOdbc#basic_authentication}
   */
   readonly basicAuthentication?: DataFactoryLinkedServiceOdbcBasicAuthentication;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html#timeouts DataFactoryLinkedServiceOdbc#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc#timeouts DataFactoryLinkedServiceOdbc#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServiceOdbcTimeouts;
 }
 export interface DataFactoryLinkedServiceOdbcBasicAuthentication {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html#password DataFactoryLinkedServiceOdbc#password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc#password DataFactoryLinkedServiceOdbc#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html#username DataFactoryLinkedServiceOdbc#username}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc#username DataFactoryLinkedServiceOdbc#username}
   */
   readonly username: string;
 }
@@ -145,19 +145,19 @@ export class DataFactoryLinkedServiceOdbcBasicAuthenticationOutputReference exte
 }
 export interface DataFactoryLinkedServiceOdbcTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html#create DataFactoryLinkedServiceOdbc#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc#create DataFactoryLinkedServiceOdbc#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html#delete DataFactoryLinkedServiceOdbc#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc#delete DataFactoryLinkedServiceOdbc#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html#read DataFactoryLinkedServiceOdbc#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc#read DataFactoryLinkedServiceOdbc#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html#update DataFactoryLinkedServiceOdbc#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc#update DataFactoryLinkedServiceOdbc#update}
   */
   readonly update?: string;
 }
@@ -292,7 +292,7 @@ export class DataFactoryLinkedServiceOdbcTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html azurerm_data_factory_linked_service_odbc}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc azurerm_data_factory_linked_service_odbc}
 */
 export class DataFactoryLinkedServiceOdbc extends cdktf.TerraformResource {
 
@@ -306,7 +306,7 @@ export class DataFactoryLinkedServiceOdbc extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc.html azurerm_data_factory_linked_service_odbc} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_service_odbc azurerm_data_factory_linked_service_odbc} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

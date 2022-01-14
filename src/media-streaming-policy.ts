@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html
+// https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,53 +8,53 @@ import * as cdktf from 'cdktf';
 
 export interface MediaStreamingPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#default_content_key_policy_name MediaStreamingPolicy#default_content_key_policy_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#default_content_key_policy_name MediaStreamingPolicy#default_content_key_policy_name}
   */
   readonly defaultContentKeyPolicyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#media_services_account_name MediaStreamingPolicy#media_services_account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#media_services_account_name MediaStreamingPolicy#media_services_account_name}
   */
   readonly mediaServicesAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#name MediaStreamingPolicy#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#name MediaStreamingPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#resource_group_name MediaStreamingPolicy#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#resource_group_name MediaStreamingPolicy#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * common_encryption_cbcs block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#common_encryption_cbcs MediaStreamingPolicy#common_encryption_cbcs}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#common_encryption_cbcs MediaStreamingPolicy#common_encryption_cbcs}
   */
   readonly commonEncryptionCbcs?: MediaStreamingPolicyCommonEncryptionCbcs;
   /**
   * common_encryption_cenc block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#common_encryption_cenc MediaStreamingPolicy#common_encryption_cenc}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#common_encryption_cenc MediaStreamingPolicy#common_encryption_cenc}
   */
   readonly commonEncryptionCenc?: MediaStreamingPolicyCommonEncryptionCenc;
   /**
   * no_encryption_enabled_protocols block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#no_encryption_enabled_protocols MediaStreamingPolicy#no_encryption_enabled_protocols}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#no_encryption_enabled_protocols MediaStreamingPolicy#no_encryption_enabled_protocols}
   */
   readonly noEncryptionEnabledProtocols?: MediaStreamingPolicyNoEncryptionEnabledProtocols;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#timeouts MediaStreamingPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#timeouts MediaStreamingPolicy#timeouts}
   */
   readonly timeouts?: MediaStreamingPolicyTimeouts;
 }
 export interface MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#label MediaStreamingPolicy#label}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#label MediaStreamingPolicy#label}
   */
   readonly label?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#policy_name MediaStreamingPolicy#policy_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#policy_name MediaStreamingPolicy#policy_name}
   */
   readonly policyName?: string;
 }
@@ -143,11 +143,11 @@ export class MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKeyOutputRefe
 }
 export interface MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#allow_persistent_license MediaStreamingPolicy#allow_persistent_license}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#allow_persistent_license MediaStreamingPolicy#allow_persistent_license}
   */
   readonly allowPersistentLicense?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#custom_license_acquisition_url_template MediaStreamingPolicy#custom_license_acquisition_url_template}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#custom_license_acquisition_url_template MediaStreamingPolicy#custom_license_acquisition_url_template}
   */
   readonly customLicenseAcquisitionUrlTemplate?: string;
 }
@@ -236,19 +236,19 @@ export class MediaStreamingPolicyCommonEncryptionCbcsDrmFairplayOutputReference 
 }
 export interface MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#dash MediaStreamingPolicy#dash}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#dash MediaStreamingPolicy#dash}
   */
   readonly dash?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#download MediaStreamingPolicy#download}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#download MediaStreamingPolicy#download}
   */
   readonly download?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#hls MediaStreamingPolicy#hls}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#hls MediaStreamingPolicy#hls}
   */
   readonly hls?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#smooth_streaming MediaStreamingPolicy#smooth_streaming}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#smooth_streaming MediaStreamingPolicy#smooth_streaming}
   */
   readonly smoothStreaming?: boolean | cdktf.IResolvable;
 }
@@ -385,19 +385,19 @@ export interface MediaStreamingPolicyCommonEncryptionCbcs {
   /**
   * default_content_key block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#default_content_key MediaStreamingPolicy#default_content_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#default_content_key MediaStreamingPolicy#default_content_key}
   */
   readonly defaultContentKey?: MediaStreamingPolicyCommonEncryptionCbcsDefaultContentKey;
   /**
   * drm_fairplay block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#drm_fairplay MediaStreamingPolicy#drm_fairplay}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#drm_fairplay MediaStreamingPolicy#drm_fairplay}
   */
   readonly drmFairplay?: MediaStreamingPolicyCommonEncryptionCbcsDrmFairplay;
   /**
   * enabled_protocols block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#enabled_protocols MediaStreamingPolicy#enabled_protocols}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#enabled_protocols MediaStreamingPolicy#enabled_protocols}
   */
   readonly enabledProtocols?: MediaStreamingPolicyCommonEncryptionCbcsEnabledProtocols;
 }
@@ -509,11 +509,11 @@ export class MediaStreamingPolicyCommonEncryptionCbcsOutputReference extends cdk
 }
 export interface MediaStreamingPolicyCommonEncryptionCencDefaultContentKey {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#label MediaStreamingPolicy#label}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#label MediaStreamingPolicy#label}
   */
   readonly label?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#policy_name MediaStreamingPolicy#policy_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#policy_name MediaStreamingPolicy#policy_name}
   */
   readonly policyName?: string;
 }
@@ -602,11 +602,11 @@ export class MediaStreamingPolicyCommonEncryptionCencDefaultContentKeyOutputRefe
 }
 export interface MediaStreamingPolicyCommonEncryptionCencDrmPlayready {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#custom_attributes MediaStreamingPolicy#custom_attributes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#custom_attributes MediaStreamingPolicy#custom_attributes}
   */
   readonly customAttributes?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#custom_license_acquisition_url_template MediaStreamingPolicy#custom_license_acquisition_url_template}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#custom_license_acquisition_url_template MediaStreamingPolicy#custom_license_acquisition_url_template}
   */
   readonly customLicenseAcquisitionUrlTemplate?: string;
 }
@@ -695,19 +695,19 @@ export class MediaStreamingPolicyCommonEncryptionCencDrmPlayreadyOutputReference
 }
 export interface MediaStreamingPolicyCommonEncryptionCencEnabledProtocols {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#dash MediaStreamingPolicy#dash}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#dash MediaStreamingPolicy#dash}
   */
   readonly dash?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#download MediaStreamingPolicy#download}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#download MediaStreamingPolicy#download}
   */
   readonly download?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#hls MediaStreamingPolicy#hls}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#hls MediaStreamingPolicy#hls}
   */
   readonly hls?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#smooth_streaming MediaStreamingPolicy#smooth_streaming}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#smooth_streaming MediaStreamingPolicy#smooth_streaming}
   */
   readonly smoothStreaming?: boolean | cdktf.IResolvable;
 }
@@ -842,25 +842,25 @@ export class MediaStreamingPolicyCommonEncryptionCencEnabledProtocolsOutputRefer
 }
 export interface MediaStreamingPolicyCommonEncryptionCenc {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#drm_widevine_custom_license_acquisition_url_template MediaStreamingPolicy#drm_widevine_custom_license_acquisition_url_template}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#drm_widevine_custom_license_acquisition_url_template MediaStreamingPolicy#drm_widevine_custom_license_acquisition_url_template}
   */
   readonly drmWidevineCustomLicenseAcquisitionUrlTemplate?: string;
   /**
   * default_content_key block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#default_content_key MediaStreamingPolicy#default_content_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#default_content_key MediaStreamingPolicy#default_content_key}
   */
   readonly defaultContentKey?: MediaStreamingPolicyCommonEncryptionCencDefaultContentKey;
   /**
   * drm_playready block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#drm_playready MediaStreamingPolicy#drm_playready}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#drm_playready MediaStreamingPolicy#drm_playready}
   */
   readonly drmPlayready?: MediaStreamingPolicyCommonEncryptionCencDrmPlayready;
   /**
   * enabled_protocols block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#enabled_protocols MediaStreamingPolicy#enabled_protocols}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#enabled_protocols MediaStreamingPolicy#enabled_protocols}
   */
   readonly enabledProtocols?: MediaStreamingPolicyCommonEncryptionCencEnabledProtocols;
 }
@@ -995,19 +995,19 @@ export class MediaStreamingPolicyCommonEncryptionCencOutputReference extends cdk
 }
 export interface MediaStreamingPolicyNoEncryptionEnabledProtocols {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#dash MediaStreamingPolicy#dash}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#dash MediaStreamingPolicy#dash}
   */
   readonly dash?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#download MediaStreamingPolicy#download}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#download MediaStreamingPolicy#download}
   */
   readonly download?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#hls MediaStreamingPolicy#hls}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#hls MediaStreamingPolicy#hls}
   */
   readonly hls?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#smooth_streaming MediaStreamingPolicy#smooth_streaming}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#smooth_streaming MediaStreamingPolicy#smooth_streaming}
   */
   readonly smoothStreaming?: boolean | cdktf.IResolvable;
 }
@@ -1142,15 +1142,15 @@ export class MediaStreamingPolicyNoEncryptionEnabledProtocolsOutputReference ext
 }
 export interface MediaStreamingPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#create MediaStreamingPolicy#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#create MediaStreamingPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#delete MediaStreamingPolicy#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#delete MediaStreamingPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html#read MediaStreamingPolicy#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy#read MediaStreamingPolicy#read}
   */
   readonly read?: string;
 }
@@ -1262,7 +1262,7 @@ export class MediaStreamingPolicyTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html azurerm_media_streaming_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy azurerm_media_streaming_policy}
 */
 export class MediaStreamingPolicy extends cdktf.TerraformResource {
 
@@ -1276,7 +1276,7 @@ export class MediaStreamingPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy.html azurerm_media_streaming_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/media_streaming_policy azurerm_media_streaming_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

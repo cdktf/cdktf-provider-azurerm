@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab.html
+// https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDevTestLabConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab.html#name DataAzurermDevTestLab#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab#name DataAzurermDevTestLab#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab.html#resource_group_name DataAzurermDevTestLab#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab#resource_group_name DataAzurermDevTestLab#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab.html#timeouts DataAzurermDevTestLab#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab#timeouts DataAzurermDevTestLab#timeouts}
   */
   readonly timeouts?: DataAzurermDevTestLabTimeouts;
 }
 export interface DataAzurermDevTestLabTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab.html#read DataAzurermDevTestLab#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab#read DataAzurermDevTestLab#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermDevTestLabTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab.html azurerm_dev_test_lab}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab azurerm_dev_test_lab}
 */
 export class DataAzurermDevTestLab extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermDevTestLab extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab.html azurerm_dev_test_lab} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/dev_test_lab azurerm_dev_test_lab} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

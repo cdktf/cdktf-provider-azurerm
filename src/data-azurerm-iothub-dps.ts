@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/iothub_dps.html
+// https://www.terraform.io/docs/providers/azurerm/d/iothub_dps
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermIothubDpsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps.html#name DataAzurermIothubDps#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps#name DataAzurermIothubDps#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps.html#resource_group_name DataAzurermIothubDps#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps#resource_group_name DataAzurermIothubDps#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps.html#tags DataAzurermIothubDps#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps#tags DataAzurermIothubDps#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps.html#timeouts DataAzurermIothubDps#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps#timeouts DataAzurermIothubDps#timeouts}
   */
   readonly timeouts?: DataAzurermIothubDpsTimeouts;
 }
 export interface DataAzurermIothubDpsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps.html#read DataAzurermIothubDps#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps#read DataAzurermIothubDps#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermIothubDpsTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps.html azurerm_iothub_dps}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps azurerm_iothub_dps}
 */
 export class DataAzurermIothubDps extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermIothubDps extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps.html azurerm_iothub_dps} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/iothub_dps azurerm_iothub_dps} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

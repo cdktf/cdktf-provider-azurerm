@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/api_management_tag.html
+// https://www.terraform.io/docs/providers/azurerm/r/api_management_tag
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementTagConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag.html#api_management_id ApiManagementTag#api_management_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag#api_management_id ApiManagementTag#api_management_id}
   */
   readonly apiManagementId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag.html#display_name ApiManagementTag#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag#display_name ApiManagementTag#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag.html#name ApiManagementTag#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag#name ApiManagementTag#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag.html#timeouts ApiManagementTag#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag#timeouts ApiManagementTag#timeouts}
   */
   readonly timeouts?: ApiManagementTagTimeouts;
 }
 export interface ApiManagementTagTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag.html#create ApiManagementTag#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag#create ApiManagementTag#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag.html#delete ApiManagementTag#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag#delete ApiManagementTag#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag.html#read ApiManagementTag#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag#read ApiManagementTag#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag.html#update ApiManagementTag#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag#update ApiManagementTag#update}
   */
   readonly update?: string;
 }
@@ -175,7 +175,7 @@ export class ApiManagementTagTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag.html azurerm_api_management_tag}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag azurerm_api_management_tag}
 */
 export class ApiManagementTag extends cdktf.TerraformResource {
 
@@ -189,7 +189,7 @@ export class ApiManagementTag extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag.html azurerm_api_management_tag} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_tag azurerm_api_management_tag} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

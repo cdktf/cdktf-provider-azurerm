@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/batch_certificate.html
+// https://www.terraform.io/docs/providers/azurerm/r/batch_certificate
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,55 +8,55 @@ import * as cdktf from 'cdktf';
 
 export interface BatchCertificateConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate.html#account_name BatchCertificate#account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate#account_name BatchCertificate#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate.html#certificate BatchCertificate#certificate}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate#certificate BatchCertificate#certificate}
   */
   readonly certificate: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate.html#format BatchCertificate#format}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate#format BatchCertificate#format}
   */
   readonly format: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate.html#password BatchCertificate#password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate#password BatchCertificate#password}
   */
   readonly password?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate.html#resource_group_name BatchCertificate#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate#resource_group_name BatchCertificate#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate.html#thumbprint BatchCertificate#thumbprint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate#thumbprint BatchCertificate#thumbprint}
   */
   readonly thumbprint: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate.html#thumbprint_algorithm BatchCertificate#thumbprint_algorithm}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate#thumbprint_algorithm BatchCertificate#thumbprint_algorithm}
   */
   readonly thumbprintAlgorithm: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate.html#timeouts BatchCertificate#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate#timeouts BatchCertificate#timeouts}
   */
   readonly timeouts?: BatchCertificateTimeouts;
 }
 export interface BatchCertificateTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate.html#create BatchCertificate#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate#create BatchCertificate#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate.html#delete BatchCertificate#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate#delete BatchCertificate#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate.html#read BatchCertificate#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate#read BatchCertificate#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate.html#update BatchCertificate#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate#update BatchCertificate#update}
   */
   readonly update?: string;
 }
@@ -191,7 +191,7 @@ export class BatchCertificateTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate.html azurerm_batch_certificate}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate azurerm_batch_certificate}
 */
 export class BatchCertificate extends cdktf.TerraformResource {
 
@@ -205,7 +205,7 @@ export class BatchCertificate extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate.html azurerm_batch_certificate} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/batch_certificate azurerm_batch_certificate} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook.html
+// https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementIdentityProviderFacebookConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook.html#api_management_name ApiManagementIdentityProviderFacebook#api_management_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook#api_management_name ApiManagementIdentityProviderFacebook#api_management_name}
   */
   readonly apiManagementName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook.html#app_id ApiManagementIdentityProviderFacebook#app_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook#app_id ApiManagementIdentityProviderFacebook#app_id}
   */
   readonly appId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook.html#app_secret ApiManagementIdentityProviderFacebook#app_secret}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook#app_secret ApiManagementIdentityProviderFacebook#app_secret}
   */
   readonly appSecret: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook.html#resource_group_name ApiManagementIdentityProviderFacebook#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook#resource_group_name ApiManagementIdentityProviderFacebook#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook.html#timeouts ApiManagementIdentityProviderFacebook#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook#timeouts ApiManagementIdentityProviderFacebook#timeouts}
   */
   readonly timeouts?: ApiManagementIdentityProviderFacebookTimeouts;
 }
 export interface ApiManagementIdentityProviderFacebookTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook.html#create ApiManagementIdentityProviderFacebook#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook#create ApiManagementIdentityProviderFacebook#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook.html#delete ApiManagementIdentityProviderFacebook#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook#delete ApiManagementIdentityProviderFacebook#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook.html#read ApiManagementIdentityProviderFacebook#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook#read ApiManagementIdentityProviderFacebook#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook.html#update ApiManagementIdentityProviderFacebook#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook#update ApiManagementIdentityProviderFacebook#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class ApiManagementIdentityProviderFacebookTimeoutsOutputReference extend
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook.html azurerm_api_management_identity_provider_facebook}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook azurerm_api_management_identity_provider_facebook}
 */
 export class ApiManagementIdentityProviderFacebook extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class ApiManagementIdentityProviderFacebook extends cdktf.TerraformResour
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook.html azurerm_api_management_identity_provider_facebook} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_identity_provider_facebook azurerm_api_management_identity_provider_facebook} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

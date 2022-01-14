@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface DataLakeStoreFileConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html#account_name DataLakeStoreFile#account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file#account_name DataLakeStoreFile#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html#local_file_path DataLakeStoreFile#local_file_path}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file#local_file_path DataLakeStoreFile#local_file_path}
   */
   readonly localFilePath: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html#remote_file_path DataLakeStoreFile#remote_file_path}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file#remote_file_path DataLakeStoreFile#remote_file_path}
   */
   readonly remoteFilePath: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html#timeouts DataLakeStoreFile#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file#timeouts DataLakeStoreFile#timeouts}
   */
   readonly timeouts?: DataLakeStoreFileTimeouts;
 }
 export interface DataLakeStoreFileTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html#create DataLakeStoreFile#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file#create DataLakeStoreFile#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html#delete DataLakeStoreFile#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file#delete DataLakeStoreFile#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html#read DataLakeStoreFile#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file#read DataLakeStoreFile#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html#update DataLakeStoreFile#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file#update DataLakeStoreFile#update}
   */
   readonly update?: string;
 }
@@ -175,7 +175,7 @@ export class DataLakeStoreFileTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html azurerm_data_lake_store_file}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file azurerm_data_lake_store_file}
 */
 export class DataLakeStoreFile extends cdktf.TerraformResource {
 
@@ -189,7 +189,7 @@ export class DataLakeStoreFile extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file.html azurerm_data_lake_store_file} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_file azurerm_data_lake_store_file} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

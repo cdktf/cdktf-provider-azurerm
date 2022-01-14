@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html
+// https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,73 +8,73 @@ import * as cdktf from 'cdktf';
 
 export interface FirewallNetworkRuleCollectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#action FirewallNetworkRuleCollection#action}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#action FirewallNetworkRuleCollection#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#azure_firewall_name FirewallNetworkRuleCollection#azure_firewall_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#azure_firewall_name FirewallNetworkRuleCollection#azure_firewall_name}
   */
   readonly azureFirewallName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#name FirewallNetworkRuleCollection#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#name FirewallNetworkRuleCollection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#priority FirewallNetworkRuleCollection#priority}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#priority FirewallNetworkRuleCollection#priority}
   */
   readonly priority: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#resource_group_name FirewallNetworkRuleCollection#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#resource_group_name FirewallNetworkRuleCollection#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * rule block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#rule FirewallNetworkRuleCollection#rule}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#rule FirewallNetworkRuleCollection#rule}
   */
   readonly rule: FirewallNetworkRuleCollectionRule[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#timeouts FirewallNetworkRuleCollection#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#timeouts FirewallNetworkRuleCollection#timeouts}
   */
   readonly timeouts?: FirewallNetworkRuleCollectionTimeouts;
 }
 export interface FirewallNetworkRuleCollectionRule {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#description FirewallNetworkRuleCollection#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#description FirewallNetworkRuleCollection#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#destination_addresses FirewallNetworkRuleCollection#destination_addresses}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#destination_addresses FirewallNetworkRuleCollection#destination_addresses}
   */
   readonly destinationAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#destination_fqdns FirewallNetworkRuleCollection#destination_fqdns}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#destination_fqdns FirewallNetworkRuleCollection#destination_fqdns}
   */
   readonly destinationFqdns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#destination_ip_groups FirewallNetworkRuleCollection#destination_ip_groups}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#destination_ip_groups FirewallNetworkRuleCollection#destination_ip_groups}
   */
   readonly destinationIpGroups?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#destination_ports FirewallNetworkRuleCollection#destination_ports}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#destination_ports FirewallNetworkRuleCollection#destination_ports}
   */
   readonly destinationPorts: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#name FirewallNetworkRuleCollection#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#name FirewallNetworkRuleCollection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#protocols FirewallNetworkRuleCollection#protocols}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#protocols FirewallNetworkRuleCollection#protocols}
   */
   readonly protocols: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#source_addresses FirewallNetworkRuleCollection#source_addresses}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#source_addresses FirewallNetworkRuleCollection#source_addresses}
   */
   readonly sourceAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#source_ip_groups FirewallNetworkRuleCollection#source_ip_groups}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#source_ip_groups FirewallNetworkRuleCollection#source_ip_groups}
   */
   readonly sourceIpGroups?: string[];
 }
@@ -99,19 +99,19 @@ export function firewallNetworkRuleCollectionRuleToTerraform(struct?: FirewallNe
 
 export interface FirewallNetworkRuleCollectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#create FirewallNetworkRuleCollection#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#create FirewallNetworkRuleCollection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#delete FirewallNetworkRuleCollection#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#delete FirewallNetworkRuleCollection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#read FirewallNetworkRuleCollection#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#read FirewallNetworkRuleCollection#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html#update FirewallNetworkRuleCollection#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection#update FirewallNetworkRuleCollection#update}
   */
   readonly update?: string;
 }
@@ -246,7 +246,7 @@ export class FirewallNetworkRuleCollectionTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html azurerm_firewall_network_rule_collection}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection azurerm_firewall_network_rule_collection}
 */
 export class FirewallNetworkRuleCollection extends cdktf.TerraformResource {
 
@@ -260,7 +260,7 @@ export class FirewallNetworkRuleCollection extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection.html azurerm_firewall_network_rule_collection} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/firewall_network_rule_collection azurerm_firewall_network_rule_collection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

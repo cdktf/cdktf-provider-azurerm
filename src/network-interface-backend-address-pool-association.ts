@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association.html
+// https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkInterfaceBackendAddressPoolAssociationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association.html#backend_address_pool_id NetworkInterfaceBackendAddressPoolAssociation#backend_address_pool_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association#backend_address_pool_id NetworkInterfaceBackendAddressPoolAssociation#backend_address_pool_id}
   */
   readonly backendAddressPoolId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association.html#ip_configuration_name NetworkInterfaceBackendAddressPoolAssociation#ip_configuration_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association#ip_configuration_name NetworkInterfaceBackendAddressPoolAssociation#ip_configuration_name}
   */
   readonly ipConfigurationName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association.html#network_interface_id NetworkInterfaceBackendAddressPoolAssociation#network_interface_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association#network_interface_id NetworkInterfaceBackendAddressPoolAssociation#network_interface_id}
   */
   readonly networkInterfaceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association.html#timeouts NetworkInterfaceBackendAddressPoolAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association#timeouts NetworkInterfaceBackendAddressPoolAssociation#timeouts}
   */
   readonly timeouts?: NetworkInterfaceBackendAddressPoolAssociationTimeouts;
 }
 export interface NetworkInterfaceBackendAddressPoolAssociationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association.html#create NetworkInterfaceBackendAddressPoolAssociation#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association#create NetworkInterfaceBackendAddressPoolAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association.html#delete NetworkInterfaceBackendAddressPoolAssociation#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association#delete NetworkInterfaceBackendAddressPoolAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association.html#read NetworkInterfaceBackendAddressPoolAssociation#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association#read NetworkInterfaceBackendAddressPoolAssociation#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association.html#update NetworkInterfaceBackendAddressPoolAssociation#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association#update NetworkInterfaceBackendAddressPoolAssociation#update}
   */
   readonly update?: string;
 }
@@ -175,7 +175,7 @@ export class NetworkInterfaceBackendAddressPoolAssociationTimeoutsOutputReferenc
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association.html azurerm_network_interface_backend_address_pool_association}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association azurerm_network_interface_backend_address_pool_association}
 */
 export class NetworkInterfaceBackendAddressPoolAssociation extends cdktf.TerraformResource {
 
@@ -189,7 +189,7 @@ export class NetworkInterfaceBackendAddressPoolAssociation extends cdktf.Terrafo
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association.html azurerm_network_interface_backend_address_pool_association} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/network_interface_backend_address_pool_association azurerm_network_interface_backend_address_pool_association} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

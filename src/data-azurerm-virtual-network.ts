@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/virtual_network.html
+// https://www.terraform.io/docs/providers/azurerm/d/virtual_network
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermVirtualNetworkConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network.html#name DataAzurermVirtualNetwork#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network#name DataAzurermVirtualNetwork#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network.html#resource_group_name DataAzurermVirtualNetwork#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network#resource_group_name DataAzurermVirtualNetwork#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network.html#timeouts DataAzurermVirtualNetwork#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network#timeouts DataAzurermVirtualNetwork#timeouts}
   */
   readonly timeouts?: DataAzurermVirtualNetworkTimeouts;
 }
 export interface DataAzurermVirtualNetworkTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network.html#read DataAzurermVirtualNetwork#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network#read DataAzurermVirtualNetwork#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermVirtualNetworkTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network.html azurerm_virtual_network}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network azurerm_virtual_network}
 */
 export class DataAzurermVirtualNetwork extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermVirtualNetwork extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network.html azurerm_virtual_network} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/virtual_network azurerm_virtual_network} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

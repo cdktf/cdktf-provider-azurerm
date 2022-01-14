@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/cognitive_account.html
+// https://www.terraform.io/docs/providers/azurerm/d/cognitive_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermCognitiveAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cognitive_account.html#name DataAzurermCognitiveAccount#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cognitive_account#name DataAzurermCognitiveAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cognitive_account.html#resource_group_name DataAzurermCognitiveAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cognitive_account#resource_group_name DataAzurermCognitiveAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cognitive_account.html#timeouts DataAzurermCognitiveAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cognitive_account#timeouts DataAzurermCognitiveAccount#timeouts}
   */
   readonly timeouts?: DataAzurermCognitiveAccountTimeouts;
 }
 export interface DataAzurermCognitiveAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cognitive_account.html#read DataAzurermCognitiveAccount#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cognitive_account#read DataAzurermCognitiveAccount#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermCognitiveAccountTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/cognitive_account.html azurerm_cognitive_account}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/cognitive_account azurerm_cognitive_account}
 */
 export class DataAzurermCognitiveAccount extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermCognitiveAccount extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/cognitive_account.html azurerm_cognitive_account} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/cognitive_account azurerm_cognitive_account} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

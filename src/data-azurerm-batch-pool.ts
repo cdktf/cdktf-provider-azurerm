@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/batch_pool.html
+// https://www.terraform.io/docs/providers/azurerm/d/batch_pool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermBatchPoolConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_pool.html#account_name DataAzurermBatchPool#account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_pool#account_name DataAzurermBatchPool#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_pool.html#name DataAzurermBatchPool#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_pool#name DataAzurermBatchPool#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_pool.html#resource_group_name DataAzurermBatchPool#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_pool#resource_group_name DataAzurermBatchPool#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_pool.html#timeouts DataAzurermBatchPool#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_pool#timeouts DataAzurermBatchPool#timeouts}
   */
   readonly timeouts?: DataAzurermBatchPoolTimeouts;
 }
@@ -302,7 +302,7 @@ export class DataAzurermBatchPoolStorageImageReference extends cdktf.ComplexComp
 }
 export interface DataAzurermBatchPoolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_pool.html#read DataAzurermBatchPool#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_pool#read DataAzurermBatchPool#read}
   */
   readonly read?: string;
 }
@@ -368,7 +368,7 @@ export class DataAzurermBatchPoolTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/batch_pool.html azurerm_batch_pool}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/batch_pool azurerm_batch_pool}
 */
 export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
 
@@ -382,7 +382,7 @@ export class DataAzurermBatchPool extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/batch_pool.html azurerm_batch_pool} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/batch_pool azurerm_batch_pool} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

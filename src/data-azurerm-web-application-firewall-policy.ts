@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/web_application_firewall_policy.html
+// https://www.terraform.io/docs/providers/azurerm/d/web_application_firewall_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermWebApplicationFirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/web_application_firewall_policy.html#name DataAzurermWebApplicationFirewallPolicy#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/web_application_firewall_policy#name DataAzurermWebApplicationFirewallPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/web_application_firewall_policy.html#resource_group_name DataAzurermWebApplicationFirewallPolicy#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/web_application_firewall_policy#resource_group_name DataAzurermWebApplicationFirewallPolicy#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/web_application_firewall_policy.html#tags DataAzurermWebApplicationFirewallPolicy#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/web_application_firewall_policy#tags DataAzurermWebApplicationFirewallPolicy#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/web_application_firewall_policy.html#timeouts DataAzurermWebApplicationFirewallPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/web_application_firewall_policy#timeouts DataAzurermWebApplicationFirewallPolicy#timeouts}
   */
   readonly timeouts?: DataAzurermWebApplicationFirewallPolicyTimeouts;
 }
 export interface DataAzurermWebApplicationFirewallPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/web_application_firewall_policy.html#read DataAzurermWebApplicationFirewallPolicy#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/web_application_firewall_policy#read DataAzurermWebApplicationFirewallPolicy#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermWebApplicationFirewallPolicyTimeoutsOutputReference exte
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/web_application_firewall_policy.html azurerm_web_application_firewall_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/web_application_firewall_policy azurerm_web_application_firewall_policy}
 */
 export class DataAzurermWebApplicationFirewallPolicy extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermWebApplicationFirewallPolicy extends cdktf.TerraformData
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/web_application_firewall_policy.html azurerm_web_application_firewall_policy} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/web_application_firewall_policy azurerm_web_application_firewall_policy} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

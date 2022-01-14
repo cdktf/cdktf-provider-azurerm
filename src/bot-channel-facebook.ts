@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook.html
+// https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,45 +8,45 @@ import * as cdktf from 'cdktf';
 
 export interface BotChannelFacebookConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook.html#bot_name BotChannelFacebook#bot_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook#bot_name BotChannelFacebook#bot_name}
   */
   readonly botName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook.html#facebook_application_id BotChannelFacebook#facebook_application_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook#facebook_application_id BotChannelFacebook#facebook_application_id}
   */
   readonly facebookApplicationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook.html#facebook_application_secret BotChannelFacebook#facebook_application_secret}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook#facebook_application_secret BotChannelFacebook#facebook_application_secret}
   */
   readonly facebookApplicationSecret: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook.html#location BotChannelFacebook#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook#location BotChannelFacebook#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook.html#resource_group_name BotChannelFacebook#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook#resource_group_name BotChannelFacebook#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * page block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook.html#page BotChannelFacebook#page}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook#page BotChannelFacebook#page}
   */
   readonly page: BotChannelFacebookPage[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook.html#timeouts BotChannelFacebook#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook#timeouts BotChannelFacebook#timeouts}
   */
   readonly timeouts?: BotChannelFacebookTimeouts;
 }
 export interface BotChannelFacebookPage {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook.html#access_token BotChannelFacebook#access_token}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook#access_token BotChannelFacebook#access_token}
   */
   readonly accessToken: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook.html#id BotChannelFacebook#id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook#id BotChannelFacebook#id}
   */
   readonly id: string;
 }
@@ -64,19 +64,19 @@ export function botChannelFacebookPageToTerraform(struct?: BotChannelFacebookPag
 
 export interface BotChannelFacebookTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook.html#create BotChannelFacebook#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook#create BotChannelFacebook#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook.html#delete BotChannelFacebook#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook#delete BotChannelFacebook#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook.html#read BotChannelFacebook#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook#read BotChannelFacebook#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook.html#update BotChannelFacebook#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook#update BotChannelFacebook#update}
   */
   readonly update?: string;
 }
@@ -211,7 +211,7 @@ export class BotChannelFacebookTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook.html azurerm_bot_channel_facebook}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook azurerm_bot_channel_facebook}
 */
 export class BotChannelFacebook extends cdktf.TerraformResource {
 
@@ -225,7 +225,7 @@ export class BotChannelFacebook extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook.html azurerm_bot_channel_facebook} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_facebook azurerm_bot_channel_facebook} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

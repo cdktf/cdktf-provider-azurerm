@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html
+// https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,67 +8,67 @@ import * as cdktf from 'cdktf';
 
 export interface SqlElasticpoolConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html#db_dtu_max SqlElasticpool#db_dtu_max}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool#db_dtu_max SqlElasticpool#db_dtu_max}
   */
   readonly dbDtuMax?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html#db_dtu_min SqlElasticpool#db_dtu_min}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool#db_dtu_min SqlElasticpool#db_dtu_min}
   */
   readonly dbDtuMin?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html#dtu SqlElasticpool#dtu}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool#dtu SqlElasticpool#dtu}
   */
   readonly dtu: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html#edition SqlElasticpool#edition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool#edition SqlElasticpool#edition}
   */
   readonly edition: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html#location SqlElasticpool#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool#location SqlElasticpool#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html#name SqlElasticpool#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool#name SqlElasticpool#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html#pool_size SqlElasticpool#pool_size}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool#pool_size SqlElasticpool#pool_size}
   */
   readonly poolSize?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html#resource_group_name SqlElasticpool#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool#resource_group_name SqlElasticpool#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html#server_name SqlElasticpool#server_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool#server_name SqlElasticpool#server_name}
   */
   readonly serverName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html#tags SqlElasticpool#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool#tags SqlElasticpool#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html#timeouts SqlElasticpool#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool#timeouts SqlElasticpool#timeouts}
   */
   readonly timeouts?: SqlElasticpoolTimeouts;
 }
 export interface SqlElasticpoolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html#create SqlElasticpool#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool#create SqlElasticpool#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html#delete SqlElasticpool#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool#delete SqlElasticpool#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html#read SqlElasticpool#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool#read SqlElasticpool#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html#update SqlElasticpool#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool#update SqlElasticpool#update}
   */
   readonly update?: string;
 }
@@ -203,7 +203,7 @@ export class SqlElasticpoolTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html azurerm_sql_elasticpool}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool azurerm_sql_elasticpool}
 */
 export class SqlElasticpool extends cdktf.TerraformResource {
 
@@ -217,7 +217,7 @@ export class SqlElasticpool extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool.html azurerm_sql_elasticpool} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sql_elasticpool azurerm_sql_elasticpool} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html
+// https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,79 +8,79 @@ import * as cdktf from 'cdktf';
 
 export interface FrontdoorFirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#custom_block_response_body FrontdoorFirewallPolicy#custom_block_response_body}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#custom_block_response_body FrontdoorFirewallPolicy#custom_block_response_body}
   */
   readonly customBlockResponseBody?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#custom_block_response_status_code FrontdoorFirewallPolicy#custom_block_response_status_code}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#custom_block_response_status_code FrontdoorFirewallPolicy#custom_block_response_status_code}
   */
   readonly customBlockResponseStatusCode?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#enabled FrontdoorFirewallPolicy#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#enabled FrontdoorFirewallPolicy#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#mode FrontdoorFirewallPolicy#mode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#mode FrontdoorFirewallPolicy#mode}
   */
   readonly mode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#name FrontdoorFirewallPolicy#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#name FrontdoorFirewallPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#redirect_url FrontdoorFirewallPolicy#redirect_url}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#redirect_url FrontdoorFirewallPolicy#redirect_url}
   */
   readonly redirectUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#resource_group_name FrontdoorFirewallPolicy#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#resource_group_name FrontdoorFirewallPolicy#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#tags FrontdoorFirewallPolicy#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#tags FrontdoorFirewallPolicy#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * custom_rule block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#custom_rule FrontdoorFirewallPolicy#custom_rule}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#custom_rule FrontdoorFirewallPolicy#custom_rule}
   */
   readonly customRule?: FrontdoorFirewallPolicyCustomRule[];
   /**
   * managed_rule block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#managed_rule FrontdoorFirewallPolicy#managed_rule}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#managed_rule FrontdoorFirewallPolicy#managed_rule}
   */
   readonly managedRule?: FrontdoorFirewallPolicyManagedRule[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#timeouts FrontdoorFirewallPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#timeouts FrontdoorFirewallPolicy#timeouts}
   */
   readonly timeouts?: FrontdoorFirewallPolicyTimeouts;
 }
 export interface FrontdoorFirewallPolicyCustomRuleMatchCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#match_values FrontdoorFirewallPolicy#match_values}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#match_values FrontdoorFirewallPolicy#match_values}
   */
   readonly matchValues: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#match_variable FrontdoorFirewallPolicy#match_variable}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#match_variable FrontdoorFirewallPolicy#match_variable}
   */
   readonly matchVariable: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#negation_condition FrontdoorFirewallPolicy#negation_condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#negation_condition FrontdoorFirewallPolicy#negation_condition}
   */
   readonly negationCondition?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#operator FrontdoorFirewallPolicy#operator}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#operator FrontdoorFirewallPolicy#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#selector FrontdoorFirewallPolicy#selector}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#selector FrontdoorFirewallPolicy#selector}
   */
   readonly selector?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#transforms FrontdoorFirewallPolicy#transforms}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#transforms FrontdoorFirewallPolicy#transforms}
   */
   readonly transforms?: string[];
 }
@@ -102,37 +102,37 @@ export function frontdoorFirewallPolicyCustomRuleMatchConditionToTerraform(struc
 
 export interface FrontdoorFirewallPolicyCustomRule {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#action FrontdoorFirewallPolicy#action}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#action FrontdoorFirewallPolicy#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#enabled FrontdoorFirewallPolicy#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#enabled FrontdoorFirewallPolicy#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#name FrontdoorFirewallPolicy#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#name FrontdoorFirewallPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#priority FrontdoorFirewallPolicy#priority}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#priority FrontdoorFirewallPolicy#priority}
   */
   readonly priority?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#rate_limit_duration_in_minutes FrontdoorFirewallPolicy#rate_limit_duration_in_minutes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#rate_limit_duration_in_minutes FrontdoorFirewallPolicy#rate_limit_duration_in_minutes}
   */
   readonly rateLimitDurationInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#rate_limit_threshold FrontdoorFirewallPolicy#rate_limit_threshold}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#rate_limit_threshold FrontdoorFirewallPolicy#rate_limit_threshold}
   */
   readonly rateLimitThreshold?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#type FrontdoorFirewallPolicy#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#type FrontdoorFirewallPolicy#type}
   */
   readonly type: string;
   /**
   * match_condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#match_condition FrontdoorFirewallPolicy#match_condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#match_condition FrontdoorFirewallPolicy#match_condition}
   */
   readonly matchCondition?: FrontdoorFirewallPolicyCustomRuleMatchCondition[];
 }
@@ -156,15 +156,15 @@ export function frontdoorFirewallPolicyCustomRuleToTerraform(struct?: FrontdoorF
 
 export interface FrontdoorFirewallPolicyManagedRuleExclusion {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#match_variable FrontdoorFirewallPolicy#match_variable}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#match_variable FrontdoorFirewallPolicy#match_variable}
   */
   readonly matchVariable: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#operator FrontdoorFirewallPolicy#operator}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#operator FrontdoorFirewallPolicy#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#selector FrontdoorFirewallPolicy#selector}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#selector FrontdoorFirewallPolicy#selector}
   */
   readonly selector: string;
 }
@@ -183,15 +183,15 @@ export function frontdoorFirewallPolicyManagedRuleExclusionToTerraform(struct?: 
 
 export interface FrontdoorFirewallPolicyManagedRuleOverrideExclusion {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#match_variable FrontdoorFirewallPolicy#match_variable}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#match_variable FrontdoorFirewallPolicy#match_variable}
   */
   readonly matchVariable: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#operator FrontdoorFirewallPolicy#operator}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#operator FrontdoorFirewallPolicy#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#selector FrontdoorFirewallPolicy#selector}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#selector FrontdoorFirewallPolicy#selector}
   */
   readonly selector: string;
 }
@@ -210,15 +210,15 @@ export function frontdoorFirewallPolicyManagedRuleOverrideExclusionToTerraform(s
 
 export interface FrontdoorFirewallPolicyManagedRuleOverrideRuleExclusion {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#match_variable FrontdoorFirewallPolicy#match_variable}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#match_variable FrontdoorFirewallPolicy#match_variable}
   */
   readonly matchVariable: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#operator FrontdoorFirewallPolicy#operator}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#operator FrontdoorFirewallPolicy#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#selector FrontdoorFirewallPolicy#selector}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#selector FrontdoorFirewallPolicy#selector}
   */
   readonly selector: string;
 }
@@ -237,21 +237,21 @@ export function frontdoorFirewallPolicyManagedRuleOverrideRuleExclusionToTerrafo
 
 export interface FrontdoorFirewallPolicyManagedRuleOverrideRule {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#action FrontdoorFirewallPolicy#action}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#action FrontdoorFirewallPolicy#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#enabled FrontdoorFirewallPolicy#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#enabled FrontdoorFirewallPolicy#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#rule_id FrontdoorFirewallPolicy#rule_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#rule_id FrontdoorFirewallPolicy#rule_id}
   */
   readonly ruleId: string;
   /**
   * exclusion block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#exclusion FrontdoorFirewallPolicy#exclusion}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#exclusion FrontdoorFirewallPolicy#exclusion}
   */
   readonly exclusion?: FrontdoorFirewallPolicyManagedRuleOverrideRuleExclusion[];
 }
@@ -271,19 +271,19 @@ export function frontdoorFirewallPolicyManagedRuleOverrideRuleToTerraform(struct
 
 export interface FrontdoorFirewallPolicyManagedRuleOverride {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#rule_group_name FrontdoorFirewallPolicy#rule_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#rule_group_name FrontdoorFirewallPolicy#rule_group_name}
   */
   readonly ruleGroupName: string;
   /**
   * exclusion block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#exclusion FrontdoorFirewallPolicy#exclusion}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#exclusion FrontdoorFirewallPolicy#exclusion}
   */
   readonly exclusion?: FrontdoorFirewallPolicyManagedRuleOverrideExclusion[];
   /**
   * rule block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#rule FrontdoorFirewallPolicy#rule}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#rule FrontdoorFirewallPolicy#rule}
   */
   readonly rule?: FrontdoorFirewallPolicyManagedRuleOverrideRule[];
 }
@@ -302,23 +302,23 @@ export function frontdoorFirewallPolicyManagedRuleOverrideToTerraform(struct?: F
 
 export interface FrontdoorFirewallPolicyManagedRule {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#type FrontdoorFirewallPolicy#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#type FrontdoorFirewallPolicy#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#version FrontdoorFirewallPolicy#version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#version FrontdoorFirewallPolicy#version}
   */
   readonly version: string;
   /**
   * exclusion block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#exclusion FrontdoorFirewallPolicy#exclusion}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#exclusion FrontdoorFirewallPolicy#exclusion}
   */
   readonly exclusion?: FrontdoorFirewallPolicyManagedRuleExclusion[];
   /**
   * override block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#override FrontdoorFirewallPolicy#override}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#override FrontdoorFirewallPolicy#override}
   */
   readonly override?: FrontdoorFirewallPolicyManagedRuleOverride[];
 }
@@ -338,19 +338,19 @@ export function frontdoorFirewallPolicyManagedRuleToTerraform(struct?: Frontdoor
 
 export interface FrontdoorFirewallPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#create FrontdoorFirewallPolicy#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#create FrontdoorFirewallPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#delete FrontdoorFirewallPolicy#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#delete FrontdoorFirewallPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#read FrontdoorFirewallPolicy#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#read FrontdoorFirewallPolicy#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html#update FrontdoorFirewallPolicy#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy#update FrontdoorFirewallPolicy#update}
   */
   readonly update?: string;
 }
@@ -485,7 +485,7 @@ export class FrontdoorFirewallPolicyTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html azurerm_frontdoor_firewall_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy azurerm_frontdoor_firewall_policy}
 */
 export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
 
@@ -499,7 +499,7 @@ export class FrontdoorFirewallPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy.html azurerm_frontdoor_firewall_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/frontdoor_firewall_policy azurerm_frontdoor_firewall_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

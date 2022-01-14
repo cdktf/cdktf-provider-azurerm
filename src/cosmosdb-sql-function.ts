@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html
+// https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface CosmosdbSqlFunctionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html#body CosmosdbSqlFunction#body}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function#body CosmosdbSqlFunction#body}
   */
   readonly body: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html#container_id CosmosdbSqlFunction#container_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function#container_id CosmosdbSqlFunction#container_id}
   */
   readonly containerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html#name CosmosdbSqlFunction#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function#name CosmosdbSqlFunction#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html#timeouts CosmosdbSqlFunction#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function#timeouts CosmosdbSqlFunction#timeouts}
   */
   readonly timeouts?: CosmosdbSqlFunctionTimeouts;
 }
 export interface CosmosdbSqlFunctionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html#create CosmosdbSqlFunction#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function#create CosmosdbSqlFunction#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html#delete CosmosdbSqlFunction#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function#delete CosmosdbSqlFunction#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html#read CosmosdbSqlFunction#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function#read CosmosdbSqlFunction#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html#update CosmosdbSqlFunction#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function#update CosmosdbSqlFunction#update}
   */
   readonly update?: string;
 }
@@ -175,7 +175,7 @@ export class CosmosdbSqlFunctionTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html azurerm_cosmosdb_sql_function}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function azurerm_cosmosdb_sql_function}
 */
 export class CosmosdbSqlFunction extends cdktf.TerraformResource {
 
@@ -189,7 +189,7 @@ export class CosmosdbSqlFunction extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function.html azurerm_cosmosdb_sql_function} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_function azurerm_cosmosdb_sql_function} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

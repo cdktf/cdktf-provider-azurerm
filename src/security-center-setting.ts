@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html
+// https://www.terraform.io/docs/providers/azurerm/r/security_center_setting
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface SecurityCenterSettingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html#enabled SecurityCenterSetting#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting#enabled SecurityCenterSetting#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html#setting_name SecurityCenterSetting#setting_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting#setting_name SecurityCenterSetting#setting_name}
   */
   readonly settingName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html#timeouts SecurityCenterSetting#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting#timeouts SecurityCenterSetting#timeouts}
   */
   readonly timeouts?: SecurityCenterSettingTimeouts;
 }
 export interface SecurityCenterSettingTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html#create SecurityCenterSetting#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting#create SecurityCenterSetting#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html#delete SecurityCenterSetting#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting#delete SecurityCenterSetting#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html#read SecurityCenterSetting#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting#read SecurityCenterSetting#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html#update SecurityCenterSetting#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting#update SecurityCenterSetting#update}
   */
   readonly update?: string;
 }
@@ -171,7 +171,7 @@ export class SecurityCenterSettingTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html azurerm_security_center_setting}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting azurerm_security_center_setting}
 */
 export class SecurityCenterSetting extends cdktf.TerraformResource {
 
@@ -185,7 +185,7 @@ export class SecurityCenterSetting extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting.html azurerm_security_center_setting} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_setting azurerm_security_center_setting} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

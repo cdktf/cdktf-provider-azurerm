@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html
+// https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkDdosProtectionPlanConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html#location NetworkDdosProtectionPlan#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan#location NetworkDdosProtectionPlan#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html#name NetworkDdosProtectionPlan#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan#name NetworkDdosProtectionPlan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html#resource_group_name NetworkDdosProtectionPlan#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan#resource_group_name NetworkDdosProtectionPlan#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html#tags NetworkDdosProtectionPlan#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan#tags NetworkDdosProtectionPlan#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html#timeouts NetworkDdosProtectionPlan#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan#timeouts NetworkDdosProtectionPlan#timeouts}
   */
   readonly timeouts?: NetworkDdosProtectionPlanTimeouts;
 }
 export interface NetworkDdosProtectionPlanTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html#create NetworkDdosProtectionPlan#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan#create NetworkDdosProtectionPlan#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html#delete NetworkDdosProtectionPlan#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan#delete NetworkDdosProtectionPlan#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html#read NetworkDdosProtectionPlan#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan#read NetworkDdosProtectionPlan#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html#update NetworkDdosProtectionPlan#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan#update NetworkDdosProtectionPlan#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class NetworkDdosProtectionPlanTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html azurerm_network_ddos_protection_plan}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan azurerm_network_ddos_protection_plan}
 */
 export class NetworkDdosProtectionPlan extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class NetworkDdosProtectionPlan extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan.html azurerm_network_ddos_protection_plan} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/network_ddos_protection_plan azurerm_network_ddos_protection_plan} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

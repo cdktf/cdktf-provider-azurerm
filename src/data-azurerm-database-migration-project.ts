@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/database_migration_project.html
+// https://www.terraform.io/docs/providers/azurerm/d/database_migration_project
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDatabaseMigrationProjectConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_project.html#name DataAzurermDatabaseMigrationProject#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_project#name DataAzurermDatabaseMigrationProject#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_project.html#resource_group_name DataAzurermDatabaseMigrationProject#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_project#resource_group_name DataAzurermDatabaseMigrationProject#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_project.html#service_name DataAzurermDatabaseMigrationProject#service_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_project#service_name DataAzurermDatabaseMigrationProject#service_name}
   */
   readonly serviceName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_project.html#timeouts DataAzurermDatabaseMigrationProject#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_project#timeouts DataAzurermDatabaseMigrationProject#timeouts}
   */
   readonly timeouts?: DataAzurermDatabaseMigrationProjectTimeouts;
 }
 export interface DataAzurermDatabaseMigrationProjectTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_project.html#read DataAzurermDatabaseMigrationProject#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_project#read DataAzurermDatabaseMigrationProject#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermDatabaseMigrationProjectTimeoutsOutputReference extends 
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_project.html azurerm_database_migration_project}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_project azurerm_database_migration_project}
 */
 export class DataAzurermDatabaseMigrationProject extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermDatabaseMigrationProject extends cdktf.TerraformDataSour
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_project.html azurerm_database_migration_project} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/database_migration_project azurerm_database_migration_project} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

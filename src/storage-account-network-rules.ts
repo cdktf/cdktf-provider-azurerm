@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html
+// https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,53 +8,53 @@ import * as cdktf from 'cdktf';
 
 export interface StorageAccountNetworkRulesAConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html#bypass StorageAccountNetworkRulesA#bypass}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules#bypass StorageAccountNetworkRulesA#bypass}
   */
   readonly bypass?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html#default_action StorageAccountNetworkRulesA#default_action}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules#default_action StorageAccountNetworkRulesA#default_action}
   */
   readonly defaultAction: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html#ip_rules StorageAccountNetworkRulesA#ip_rules}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules#ip_rules StorageAccountNetworkRulesA#ip_rules}
   */
   readonly ipRules?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html#resource_group_name StorageAccountNetworkRulesA#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules#resource_group_name StorageAccountNetworkRulesA#resource_group_name}
   */
   readonly resourceGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html#storage_account_id StorageAccountNetworkRulesA#storage_account_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules#storage_account_id StorageAccountNetworkRulesA#storage_account_id}
   */
   readonly storageAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html#storage_account_name StorageAccountNetworkRulesA#storage_account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules#storage_account_name StorageAccountNetworkRulesA#storage_account_name}
   */
   readonly storageAccountName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html#virtual_network_subnet_ids StorageAccountNetworkRulesA#virtual_network_subnet_ids}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules#virtual_network_subnet_ids StorageAccountNetworkRulesA#virtual_network_subnet_ids}
   */
   readonly virtualNetworkSubnetIds?: string[];
   /**
   * private_link_access block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html#private_link_access StorageAccountNetworkRulesA#private_link_access}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules#private_link_access StorageAccountNetworkRulesA#private_link_access}
   */
   readonly privateLinkAccess?: StorageAccountNetworkRulesPrivateLinkAccessA[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html#timeouts StorageAccountNetworkRulesA#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules#timeouts StorageAccountNetworkRulesA#timeouts}
   */
   readonly timeouts?: StorageAccountNetworkRulesTimeouts;
 }
 export interface StorageAccountNetworkRulesPrivateLinkAccessA {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html#endpoint_resource_id StorageAccountNetworkRulesA#endpoint_resource_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules#endpoint_resource_id StorageAccountNetworkRulesA#endpoint_resource_id}
   */
   readonly endpointResourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html#endpoint_tenant_id StorageAccountNetworkRulesA#endpoint_tenant_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules#endpoint_tenant_id StorageAccountNetworkRulesA#endpoint_tenant_id}
   */
   readonly endpointTenantId?: string;
 }
@@ -72,19 +72,19 @@ export function storageAccountNetworkRulesPrivateLinkAccessAToTerraform(struct?:
 
 export interface StorageAccountNetworkRulesTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html#create StorageAccountNetworkRulesA#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules#create StorageAccountNetworkRulesA#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html#delete StorageAccountNetworkRulesA#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules#delete StorageAccountNetworkRulesA#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html#read StorageAccountNetworkRulesA#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules#read StorageAccountNetworkRulesA#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html#update StorageAccountNetworkRulesA#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules#update StorageAccountNetworkRulesA#update}
   */
   readonly update?: string;
 }
@@ -219,7 +219,7 @@ export class StorageAccountNetworkRulesTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html azurerm_storage_account_network_rules}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules azurerm_storage_account_network_rules}
 */
 export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
 
@@ -233,7 +233,7 @@ export class StorageAccountNetworkRulesA extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules.html azurerm_storage_account_network_rules} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/storage_account_network_rules azurerm_storage_account_network_rules} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

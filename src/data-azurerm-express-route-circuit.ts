@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit.html
+// https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermExpressRouteCircuitConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit.html#name DataAzurermExpressRouteCircuit#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit#name DataAzurermExpressRouteCircuit#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit.html#resource_group_name DataAzurermExpressRouteCircuit#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit#resource_group_name DataAzurermExpressRouteCircuit#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit.html#timeouts DataAzurermExpressRouteCircuit#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit#timeouts DataAzurermExpressRouteCircuit#timeouts}
   */
   readonly timeouts?: DataAzurermExpressRouteCircuitTimeouts;
 }
@@ -90,7 +90,7 @@ export class DataAzurermExpressRouteCircuitSku extends cdktf.ComplexComputedList
 }
 export interface DataAzurermExpressRouteCircuitTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit.html#read DataAzurermExpressRouteCircuit#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit#read DataAzurermExpressRouteCircuit#read}
   */
   readonly read?: string;
 }
@@ -156,7 +156,7 @@ export class DataAzurermExpressRouteCircuitTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit.html azurerm_express_route_circuit}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit azurerm_express_route_circuit}
 */
 export class DataAzurermExpressRouteCircuit extends cdktf.TerraformDataSource {
 
@@ -170,7 +170,7 @@ export class DataAzurermExpressRouteCircuit extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit.html azurerm_express_route_circuit} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/express_route_circuit azurerm_express_route_circuit} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator.html
+// https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface SqlManagedInstanceActiveDirectoryAdministratorConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator.html#azuread_authentication_only SqlManagedInstanceActiveDirectoryAdministrator#azuread_authentication_only}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator#azuread_authentication_only SqlManagedInstanceActiveDirectoryAdministrator#azuread_authentication_only}
   */
   readonly azureadAuthenticationOnly?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator.html#login SqlManagedInstanceActiveDirectoryAdministrator#login}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator#login SqlManagedInstanceActiveDirectoryAdministrator#login}
   */
   readonly login: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator.html#managed_instance_name SqlManagedInstanceActiveDirectoryAdministrator#managed_instance_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator#managed_instance_name SqlManagedInstanceActiveDirectoryAdministrator#managed_instance_name}
   */
   readonly managedInstanceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator.html#object_id SqlManagedInstanceActiveDirectoryAdministrator#object_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator#object_id SqlManagedInstanceActiveDirectoryAdministrator#object_id}
   */
   readonly objectId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator.html#resource_group_name SqlManagedInstanceActiveDirectoryAdministrator#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator#resource_group_name SqlManagedInstanceActiveDirectoryAdministrator#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator.html#tenant_id SqlManagedInstanceActiveDirectoryAdministrator#tenant_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator#tenant_id SqlManagedInstanceActiveDirectoryAdministrator#tenant_id}
   */
   readonly tenantId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator.html#timeouts SqlManagedInstanceActiveDirectoryAdministrator#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator#timeouts SqlManagedInstanceActiveDirectoryAdministrator#timeouts}
   */
   readonly timeouts?: SqlManagedInstanceActiveDirectoryAdministratorTimeouts;
 }
 export interface SqlManagedInstanceActiveDirectoryAdministratorTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator.html#create SqlManagedInstanceActiveDirectoryAdministrator#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator#create SqlManagedInstanceActiveDirectoryAdministrator#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator.html#delete SqlManagedInstanceActiveDirectoryAdministrator#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator#delete SqlManagedInstanceActiveDirectoryAdministrator#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator.html#read SqlManagedInstanceActiveDirectoryAdministrator#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator#read SqlManagedInstanceActiveDirectoryAdministrator#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator.html#update SqlManagedInstanceActiveDirectoryAdministrator#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator#update SqlManagedInstanceActiveDirectoryAdministrator#update}
   */
   readonly update?: string;
 }
@@ -187,7 +187,7 @@ export class SqlManagedInstanceActiveDirectoryAdministratorTimeoutsOutputReferen
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator.html azurerm_sql_managed_instance_active_directory_administrator}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator azurerm_sql_managed_instance_active_directory_administrator}
 */
 export class SqlManagedInstanceActiveDirectoryAdministrator extends cdktf.TerraformResource {
 
@@ -201,7 +201,7 @@ export class SqlManagedInstanceActiveDirectoryAdministrator extends cdktf.Terraf
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator.html azurerm_sql_managed_instance_active_directory_administrator} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/sql_managed_instance_active_directory_administrator azurerm_sql_managed_instance_active_directory_administrator} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line.html
+// https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,37 +8,37 @@ import * as cdktf from 'cdktf';
 
 export interface BotChannelLineConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line.html#bot_name BotChannelLine#bot_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line#bot_name BotChannelLine#bot_name}
   */
   readonly botName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line.html#location BotChannelLine#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line#location BotChannelLine#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line.html#resource_group_name BotChannelLine#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line#resource_group_name BotChannelLine#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * line_channel block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line.html#line_channel BotChannelLine#line_channel}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line#line_channel BotChannelLine#line_channel}
   */
   readonly lineChannel: BotChannelLineLineChannel[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line.html#timeouts BotChannelLine#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line#timeouts BotChannelLine#timeouts}
   */
   readonly timeouts?: BotChannelLineTimeouts;
 }
 export interface BotChannelLineLineChannel {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line.html#access_token BotChannelLine#access_token}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line#access_token BotChannelLine#access_token}
   */
   readonly accessToken: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line.html#secret BotChannelLine#secret}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line#secret BotChannelLine#secret}
   */
   readonly secret: string;
 }
@@ -56,19 +56,19 @@ export function botChannelLineLineChannelToTerraform(struct?: BotChannelLineLine
 
 export interface BotChannelLineTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line.html#create BotChannelLine#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line#create BotChannelLine#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line.html#delete BotChannelLine#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line#delete BotChannelLine#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line.html#read BotChannelLine#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line#read BotChannelLine#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line.html#update BotChannelLine#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line#update BotChannelLine#update}
   */
   readonly update?: string;
 }
@@ -203,7 +203,7 @@ export class BotChannelLineTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line.html azurerm_bot_channel_line}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line azurerm_bot_channel_line}
 */
 export class BotChannelLine extends cdktf.TerraformResource {
 
@@ -217,7 +217,7 @@ export class BotChannelLine extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line.html azurerm_bot_channel_line} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/bot_channel_line azurerm_bot_channel_line} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

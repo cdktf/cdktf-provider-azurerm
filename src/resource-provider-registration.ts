@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html
+// https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,29 +8,29 @@ import * as cdktf from 'cdktf';
 
 export interface ResourceProviderRegistrationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#name ResourceProviderRegistration#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration#name ResourceProviderRegistration#name}
   */
   readonly name: string;
   /**
   * feature block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#feature ResourceProviderRegistration#feature}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration#feature ResourceProviderRegistration#feature}
   */
   readonly feature?: ResourceProviderRegistrationFeature[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#timeouts ResourceProviderRegistration#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration#timeouts ResourceProviderRegistration#timeouts}
   */
   readonly timeouts?: ResourceProviderRegistrationTimeouts;
 }
 export interface ResourceProviderRegistrationFeature {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#name ResourceProviderRegistration#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration#name ResourceProviderRegistration#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#registered ResourceProviderRegistration#registered}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration#registered ResourceProviderRegistration#registered}
   */
   readonly registered: boolean | cdktf.IResolvable;
 }
@@ -48,19 +48,19 @@ export function resourceProviderRegistrationFeatureToTerraform(struct?: Resource
 
 export interface ResourceProviderRegistrationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#create ResourceProviderRegistration#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration#create ResourceProviderRegistration#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#delete ResourceProviderRegistration#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration#delete ResourceProviderRegistration#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#read ResourceProviderRegistration#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration#read ResourceProviderRegistration#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html#update ResourceProviderRegistration#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration#update ResourceProviderRegistration#update}
   */
   readonly update?: string;
 }
@@ -195,7 +195,7 @@ export class ResourceProviderRegistrationTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html azurerm_resource_provider_registration}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration azurerm_resource_provider_registration}
 */
 export class ResourceProviderRegistration extends cdktf.TerraformResource {
 
@@ -209,7 +209,7 @@ export class ResourceProviderRegistration extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration.html azurerm_resource_provider_registration} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/resource_provider_registration azurerm_resource_provider_registration} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/data_lake_store.html
+// https://www.terraform.io/docs/providers/azurerm/d/data_lake_store
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDataLakeStoreConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_lake_store.html#name DataAzurermDataLakeStore#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_lake_store#name DataAzurermDataLakeStore#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_lake_store.html#resource_group_name DataAzurermDataLakeStore#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_lake_store#resource_group_name DataAzurermDataLakeStore#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_lake_store.html#timeouts DataAzurermDataLakeStore#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_lake_store#timeouts DataAzurermDataLakeStore#timeouts}
   */
   readonly timeouts?: DataAzurermDataLakeStoreTimeouts;
 }
 export interface DataAzurermDataLakeStoreTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_lake_store.html#read DataAzurermDataLakeStore#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_lake_store#read DataAzurermDataLakeStore#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermDataLakeStoreTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/data_lake_store.html azurerm_data_lake_store}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/data_lake_store azurerm_data_lake_store}
 */
 export class DataAzurermDataLakeStore extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermDataLakeStore extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/data_lake_store.html azurerm_data_lake_store} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/data_lake_store azurerm_data_lake_store} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

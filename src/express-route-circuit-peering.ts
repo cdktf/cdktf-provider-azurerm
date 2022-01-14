@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html
+// https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,71 +8,71 @@ import * as cdktf from 'cdktf';
 
 export interface ExpressRouteCircuitPeeringConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#express_route_circuit_name ExpressRouteCircuitPeering#express_route_circuit_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#express_route_circuit_name ExpressRouteCircuitPeering#express_route_circuit_name}
   */
   readonly expressRouteCircuitName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#peer_asn ExpressRouteCircuitPeering#peer_asn}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#peer_asn ExpressRouteCircuitPeering#peer_asn}
   */
   readonly peerAsn?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#peering_type ExpressRouteCircuitPeering#peering_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#peering_type ExpressRouteCircuitPeering#peering_type}
   */
   readonly peeringType: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#primary_peer_address_prefix ExpressRouteCircuitPeering#primary_peer_address_prefix}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#primary_peer_address_prefix ExpressRouteCircuitPeering#primary_peer_address_prefix}
   */
   readonly primaryPeerAddressPrefix: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#resource_group_name ExpressRouteCircuitPeering#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#resource_group_name ExpressRouteCircuitPeering#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#route_filter_id ExpressRouteCircuitPeering#route_filter_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#route_filter_id ExpressRouteCircuitPeering#route_filter_id}
   */
   readonly routeFilterId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#secondary_peer_address_prefix ExpressRouteCircuitPeering#secondary_peer_address_prefix}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#secondary_peer_address_prefix ExpressRouteCircuitPeering#secondary_peer_address_prefix}
   */
   readonly secondaryPeerAddressPrefix: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#shared_key ExpressRouteCircuitPeering#shared_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#shared_key ExpressRouteCircuitPeering#shared_key}
   */
   readonly sharedKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#vlan_id ExpressRouteCircuitPeering#vlan_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#vlan_id ExpressRouteCircuitPeering#vlan_id}
   */
   readonly vlanId: number;
   /**
   * ipv6 block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#ipv6 ExpressRouteCircuitPeering#ipv6}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#ipv6 ExpressRouteCircuitPeering#ipv6}
   */
   readonly ipv6?: ExpressRouteCircuitPeeringIpv6;
   /**
   * microsoft_peering_config block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#microsoft_peering_config ExpressRouteCircuitPeering#microsoft_peering_config}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#microsoft_peering_config ExpressRouteCircuitPeering#microsoft_peering_config}
   */
   readonly microsoftPeeringConfig?: ExpressRouteCircuitPeeringMicrosoftPeeringConfig;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#timeouts ExpressRouteCircuitPeering#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#timeouts ExpressRouteCircuitPeering#timeouts}
   */
   readonly timeouts?: ExpressRouteCircuitPeeringTimeouts;
 }
 export interface ExpressRouteCircuitPeeringIpv6MicrosoftPeering {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#advertised_public_prefixes ExpressRouteCircuitPeering#advertised_public_prefixes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_public_prefixes ExpressRouteCircuitPeering#advertised_public_prefixes}
   */
   readonly advertisedPublicPrefixes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#customer_asn ExpressRouteCircuitPeering#customer_asn}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#customer_asn ExpressRouteCircuitPeering#customer_asn}
   */
   readonly customerAsn?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#routing_registry_name ExpressRouteCircuitPeering#routing_registry_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#routing_registry_name ExpressRouteCircuitPeering#routing_registry_name}
   */
   readonly routingRegistryName?: string;
 }
@@ -184,21 +184,21 @@ export class ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference exten
 }
 export interface ExpressRouteCircuitPeeringIpv6 {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#primary_peer_address_prefix ExpressRouteCircuitPeering#primary_peer_address_prefix}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#primary_peer_address_prefix ExpressRouteCircuitPeering#primary_peer_address_prefix}
   */
   readonly primaryPeerAddressPrefix: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#route_filter_id ExpressRouteCircuitPeering#route_filter_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#route_filter_id ExpressRouteCircuitPeering#route_filter_id}
   */
   readonly routeFilterId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#secondary_peer_address_prefix ExpressRouteCircuitPeering#secondary_peer_address_prefix}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#secondary_peer_address_prefix ExpressRouteCircuitPeering#secondary_peer_address_prefix}
   */
   readonly secondaryPeerAddressPrefix: string;
   /**
   * microsoft_peering block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#microsoft_peering ExpressRouteCircuitPeering#microsoft_peering}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#microsoft_peering ExpressRouteCircuitPeering#microsoft_peering}
   */
   readonly microsoftPeering: ExpressRouteCircuitPeeringIpv6MicrosoftPeering;
 }
@@ -324,15 +324,15 @@ export class ExpressRouteCircuitPeeringIpv6OutputReference extends cdktf.Complex
 }
 export interface ExpressRouteCircuitPeeringMicrosoftPeeringConfig {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#advertised_public_prefixes ExpressRouteCircuitPeering#advertised_public_prefixes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#advertised_public_prefixes ExpressRouteCircuitPeering#advertised_public_prefixes}
   */
   readonly advertisedPublicPrefixes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#customer_asn ExpressRouteCircuitPeering#customer_asn}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#customer_asn ExpressRouteCircuitPeering#customer_asn}
   */
   readonly customerAsn?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#routing_registry_name ExpressRouteCircuitPeering#routing_registry_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#routing_registry_name ExpressRouteCircuitPeering#routing_registry_name}
   */
   readonly routingRegistryName?: string;
 }
@@ -441,19 +441,19 @@ export class ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference ext
 }
 export interface ExpressRouteCircuitPeeringTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#create ExpressRouteCircuitPeering#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#create ExpressRouteCircuitPeering#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#delete ExpressRouteCircuitPeering#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#delete ExpressRouteCircuitPeering#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#read ExpressRouteCircuitPeering#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#read ExpressRouteCircuitPeering#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html#update ExpressRouteCircuitPeering#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering#update ExpressRouteCircuitPeering#update}
   */
   readonly update?: string;
 }
@@ -588,7 +588,7 @@ export class ExpressRouteCircuitPeeringTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html azurerm_express_route_circuit_peering}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering azurerm_express_route_circuit_peering}
 */
 export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
 
@@ -602,7 +602,7 @@ export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering.html azurerm_express_route_circuit_peering} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_peering azurerm_express_route_circuit_peering} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

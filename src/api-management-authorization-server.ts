@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html
+// https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,105 +8,105 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementAuthorizationServerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#api_management_name ApiManagementAuthorizationServer#api_management_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#api_management_name ApiManagementAuthorizationServer#api_management_name}
   */
   readonly apiManagementName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#authorization_endpoint ApiManagementAuthorizationServer#authorization_endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#authorization_endpoint ApiManagementAuthorizationServer#authorization_endpoint}
   */
   readonly authorizationEndpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#authorization_methods ApiManagementAuthorizationServer#authorization_methods}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#authorization_methods ApiManagementAuthorizationServer#authorization_methods}
   */
   readonly authorizationMethods: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#bearer_token_sending_methods ApiManagementAuthorizationServer#bearer_token_sending_methods}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#bearer_token_sending_methods ApiManagementAuthorizationServer#bearer_token_sending_methods}
   */
   readonly bearerTokenSendingMethods?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#client_authentication_method ApiManagementAuthorizationServer#client_authentication_method}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#client_authentication_method ApiManagementAuthorizationServer#client_authentication_method}
   */
   readonly clientAuthenticationMethod?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#client_id ApiManagementAuthorizationServer#client_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#client_id ApiManagementAuthorizationServer#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#client_registration_endpoint ApiManagementAuthorizationServer#client_registration_endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#client_registration_endpoint ApiManagementAuthorizationServer#client_registration_endpoint}
   */
   readonly clientRegistrationEndpoint: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#client_secret ApiManagementAuthorizationServer#client_secret}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#client_secret ApiManagementAuthorizationServer#client_secret}
   */
   readonly clientSecret?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#default_scope ApiManagementAuthorizationServer#default_scope}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#default_scope ApiManagementAuthorizationServer#default_scope}
   */
   readonly defaultScope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#description ApiManagementAuthorizationServer#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#description ApiManagementAuthorizationServer#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#display_name ApiManagementAuthorizationServer#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#display_name ApiManagementAuthorizationServer#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#grant_types ApiManagementAuthorizationServer#grant_types}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#grant_types ApiManagementAuthorizationServer#grant_types}
   */
   readonly grantTypes: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#name ApiManagementAuthorizationServer#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#name ApiManagementAuthorizationServer#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#resource_group_name ApiManagementAuthorizationServer#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#resource_group_name ApiManagementAuthorizationServer#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#resource_owner_password ApiManagementAuthorizationServer#resource_owner_password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#resource_owner_password ApiManagementAuthorizationServer#resource_owner_password}
   */
   readonly resourceOwnerPassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#resource_owner_username ApiManagementAuthorizationServer#resource_owner_username}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#resource_owner_username ApiManagementAuthorizationServer#resource_owner_username}
   */
   readonly resourceOwnerUsername?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#support_state ApiManagementAuthorizationServer#support_state}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#support_state ApiManagementAuthorizationServer#support_state}
   */
   readonly supportState?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#token_endpoint ApiManagementAuthorizationServer#token_endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#token_endpoint ApiManagementAuthorizationServer#token_endpoint}
   */
   readonly tokenEndpoint?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#timeouts ApiManagementAuthorizationServer#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#timeouts ApiManagementAuthorizationServer#timeouts}
   */
   readonly timeouts?: ApiManagementAuthorizationServerTimeouts;
   /**
   * token_body_parameter block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#token_body_parameter ApiManagementAuthorizationServer#token_body_parameter}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#token_body_parameter ApiManagementAuthorizationServer#token_body_parameter}
   */
   readonly tokenBodyParameter?: ApiManagementAuthorizationServerTokenBodyParameter[];
 }
 export interface ApiManagementAuthorizationServerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#create ApiManagementAuthorizationServer#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#create ApiManagementAuthorizationServer#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#delete ApiManagementAuthorizationServer#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#delete ApiManagementAuthorizationServer#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#read ApiManagementAuthorizationServer#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#read ApiManagementAuthorizationServer#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#update ApiManagementAuthorizationServer#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#update ApiManagementAuthorizationServer#update}
   */
   readonly update?: string;
 }
@@ -241,11 +241,11 @@ export class ApiManagementAuthorizationServerTimeoutsOutputReference extends cdk
 }
 export interface ApiManagementAuthorizationServerTokenBodyParameter {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#name ApiManagementAuthorizationServer#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#name ApiManagementAuthorizationServer#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html#value ApiManagementAuthorizationServer#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server#value ApiManagementAuthorizationServer#value}
   */
   readonly value: string;
 }
@@ -263,7 +263,7 @@ export function apiManagementAuthorizationServerTokenBodyParameterToTerraform(st
 
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html azurerm_api_management_authorization_server}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server azurerm_api_management_authorization_server}
 */
 export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
 
@@ -277,7 +277,7 @@ export class ApiManagementAuthorizationServer extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server.html azurerm_api_management_authorization_server} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_authorization_server azurerm_api_management_authorization_server} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

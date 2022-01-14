@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/load_test.html
+// https://www.terraform.io/docs/providers/azurerm/r/load_test
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface LoadTestConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/load_test.html#location LoadTest#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/load_test#location LoadTest#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/load_test.html#name LoadTest#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/load_test#name LoadTest#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/load_test.html#resource_group_name LoadTest#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/load_test#resource_group_name LoadTest#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/load_test.html#tags LoadTest#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/load_test#tags LoadTest#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/load_test.html#timeouts LoadTest#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/load_test#timeouts LoadTest#timeouts}
   */
   readonly timeouts?: LoadTestTimeouts;
 }
 export interface LoadTestTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/load_test.html#create LoadTest#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/load_test#create LoadTest#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/load_test.html#delete LoadTest#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/load_test#delete LoadTest#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/load_test.html#read LoadTest#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/load_test#read LoadTest#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/load_test.html#update LoadTest#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/load_test#update LoadTest#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class LoadTestTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/load_test.html azurerm_load_test}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/load_test azurerm_load_test}
 */
 export class LoadTest extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class LoadTest extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/load_test.html azurerm_load_test} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/load_test azurerm_load_test} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

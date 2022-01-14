@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic.html
+// https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermServicebusTopicConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic.html#name DataAzurermServicebusTopic#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic#name DataAzurermServicebusTopic#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic.html#namespace_name DataAzurermServicebusTopic#namespace_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic#namespace_name DataAzurermServicebusTopic#namespace_name}
   */
   readonly namespaceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic.html#resource_group_name DataAzurermServicebusTopic#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic#resource_group_name DataAzurermServicebusTopic#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic.html#timeouts DataAzurermServicebusTopic#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic#timeouts DataAzurermServicebusTopic#timeouts}
   */
   readonly timeouts?: DataAzurermServicebusTopicTimeouts;
 }
 export interface DataAzurermServicebusTopicTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic.html#read DataAzurermServicebusTopic#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic#read DataAzurermServicebusTopic#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermServicebusTopicTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic.html azurerm_servicebus_topic}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic azurerm_servicebus_topic}
 */
 export class DataAzurermServicebusTopic extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermServicebusTopic extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic.html azurerm_servicebus_topic} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/servicebus_topic azurerm_servicebus_topic} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

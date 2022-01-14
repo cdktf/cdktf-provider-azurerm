@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface DataLakeStoreVirtualNetworkRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html#account_name DataLakeStoreVirtualNetworkRule#account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule#account_name DataLakeStoreVirtualNetworkRule#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html#name DataLakeStoreVirtualNetworkRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule#name DataLakeStoreVirtualNetworkRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html#resource_group_name DataLakeStoreVirtualNetworkRule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule#resource_group_name DataLakeStoreVirtualNetworkRule#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html#subnet_id DataLakeStoreVirtualNetworkRule#subnet_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule#subnet_id DataLakeStoreVirtualNetworkRule#subnet_id}
   */
   readonly subnetId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html#timeouts DataLakeStoreVirtualNetworkRule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule#timeouts DataLakeStoreVirtualNetworkRule#timeouts}
   */
   readonly timeouts?: DataLakeStoreVirtualNetworkRuleTimeouts;
 }
 export interface DataLakeStoreVirtualNetworkRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html#create DataLakeStoreVirtualNetworkRule#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule#create DataLakeStoreVirtualNetworkRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html#delete DataLakeStoreVirtualNetworkRule#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule#delete DataLakeStoreVirtualNetworkRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html#read DataLakeStoreVirtualNetworkRule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule#read DataLakeStoreVirtualNetworkRule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html#update DataLakeStoreVirtualNetworkRule#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule#update DataLakeStoreVirtualNetworkRule#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class DataLakeStoreVirtualNetworkRuleTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html azurerm_data_lake_store_virtual_network_rule}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule azurerm_data_lake_store_virtual_network_rule}
 */
 export class DataLakeStoreVirtualNetworkRule extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class DataLakeStoreVirtualNetworkRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule.html azurerm_data_lake_store_virtual_network_rule} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_lake_store_virtual_network_rule azurerm_data_lake_store_virtual_network_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

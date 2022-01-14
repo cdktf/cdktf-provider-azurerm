@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html
+// https://www.terraform.io/docs/providers/azurerm/r/network_security_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,99 +8,99 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkSecurityRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#access NetworkSecurityRule#access}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#access NetworkSecurityRule#access}
   */
   readonly access: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#description NetworkSecurityRule#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#description NetworkSecurityRule#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#destination_address_prefix NetworkSecurityRule#destination_address_prefix}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#destination_address_prefix NetworkSecurityRule#destination_address_prefix}
   */
   readonly destinationAddressPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#destination_address_prefixes NetworkSecurityRule#destination_address_prefixes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#destination_address_prefixes NetworkSecurityRule#destination_address_prefixes}
   */
   readonly destinationAddressPrefixes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#destination_application_security_group_ids NetworkSecurityRule#destination_application_security_group_ids}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#destination_application_security_group_ids NetworkSecurityRule#destination_application_security_group_ids}
   */
   readonly destinationApplicationSecurityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#destination_port_range NetworkSecurityRule#destination_port_range}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#destination_port_range NetworkSecurityRule#destination_port_range}
   */
   readonly destinationPortRange?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#destination_port_ranges NetworkSecurityRule#destination_port_ranges}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#destination_port_ranges NetworkSecurityRule#destination_port_ranges}
   */
   readonly destinationPortRanges?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#direction NetworkSecurityRule#direction}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#direction NetworkSecurityRule#direction}
   */
   readonly direction: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#name NetworkSecurityRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#name NetworkSecurityRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#network_security_group_name NetworkSecurityRule#network_security_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#network_security_group_name NetworkSecurityRule#network_security_group_name}
   */
   readonly networkSecurityGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#priority NetworkSecurityRule#priority}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#priority NetworkSecurityRule#priority}
   */
   readonly priority: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#protocol NetworkSecurityRule#protocol}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#protocol NetworkSecurityRule#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#resource_group_name NetworkSecurityRule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#resource_group_name NetworkSecurityRule#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#source_address_prefix NetworkSecurityRule#source_address_prefix}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#source_address_prefix NetworkSecurityRule#source_address_prefix}
   */
   readonly sourceAddressPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#source_address_prefixes NetworkSecurityRule#source_address_prefixes}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#source_address_prefixes NetworkSecurityRule#source_address_prefixes}
   */
   readonly sourceAddressPrefixes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#source_application_security_group_ids NetworkSecurityRule#source_application_security_group_ids}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#source_application_security_group_ids NetworkSecurityRule#source_application_security_group_ids}
   */
   readonly sourceApplicationSecurityGroupIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#source_port_range NetworkSecurityRule#source_port_range}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#source_port_range NetworkSecurityRule#source_port_range}
   */
   readonly sourcePortRange?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#source_port_ranges NetworkSecurityRule#source_port_ranges}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#source_port_ranges NetworkSecurityRule#source_port_ranges}
   */
   readonly sourcePortRanges?: string[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#timeouts NetworkSecurityRule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#timeouts NetworkSecurityRule#timeouts}
   */
   readonly timeouts?: NetworkSecurityRuleTimeouts;
 }
 export interface NetworkSecurityRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#create NetworkSecurityRule#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#create NetworkSecurityRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#delete NetworkSecurityRule#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#delete NetworkSecurityRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#read NetworkSecurityRule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#read NetworkSecurityRule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html#update NetworkSecurityRule#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule#update NetworkSecurityRule#update}
   */
   readonly update?: string;
 }
@@ -235,7 +235,7 @@ export class NetworkSecurityRuleTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html azurerm_network_security_rule}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule azurerm_network_security_rule}
 */
 export class NetworkSecurityRule extends cdktf.TerraformResource {
 
@@ -249,7 +249,7 @@ export class NetworkSecurityRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule.html azurerm_network_security_rule} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/network_security_rule azurerm_network_security_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

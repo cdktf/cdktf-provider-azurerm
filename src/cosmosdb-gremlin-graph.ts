@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html
+// https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,71 +8,71 @@ import * as cdktf from 'cdktf';
 
 export interface CosmosdbGremlinGraphConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#account_name CosmosdbGremlinGraph#account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#account_name CosmosdbGremlinGraph#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#database_name CosmosdbGremlinGraph#database_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#database_name CosmosdbGremlinGraph#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#default_ttl CosmosdbGremlinGraph#default_ttl}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#default_ttl CosmosdbGremlinGraph#default_ttl}
   */
   readonly defaultTtl?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#name CosmosdbGremlinGraph#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#name CosmosdbGremlinGraph#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#partition_key_path CosmosdbGremlinGraph#partition_key_path}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#partition_key_path CosmosdbGremlinGraph#partition_key_path}
   */
   readonly partitionKeyPath: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#partition_key_version CosmosdbGremlinGraph#partition_key_version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#partition_key_version CosmosdbGremlinGraph#partition_key_version}
   */
   readonly partitionKeyVersion?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#resource_group_name CosmosdbGremlinGraph#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#resource_group_name CosmosdbGremlinGraph#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#throughput CosmosdbGremlinGraph#throughput}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#throughput CosmosdbGremlinGraph#throughput}
   */
   readonly throughput?: number;
   /**
   * autoscale_settings block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#autoscale_settings CosmosdbGremlinGraph#autoscale_settings}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#autoscale_settings CosmosdbGremlinGraph#autoscale_settings}
   */
   readonly autoscaleSettings?: CosmosdbGremlinGraphAutoscaleSettings;
   /**
   * conflict_resolution_policy block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#conflict_resolution_policy CosmosdbGremlinGraph#conflict_resolution_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#conflict_resolution_policy CosmosdbGremlinGraph#conflict_resolution_policy}
   */
   readonly conflictResolutionPolicy?: CosmosdbGremlinGraphConflictResolutionPolicy;
   /**
   * index_policy block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#index_policy CosmosdbGremlinGraph#index_policy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#index_policy CosmosdbGremlinGraph#index_policy}
   */
   readonly indexPolicy?: CosmosdbGremlinGraphIndexPolicy;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#timeouts CosmosdbGremlinGraph#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#timeouts CosmosdbGremlinGraph#timeouts}
   */
   readonly timeouts?: CosmosdbGremlinGraphTimeouts;
   /**
   * unique_key block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#unique_key CosmosdbGremlinGraph#unique_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#unique_key CosmosdbGremlinGraph#unique_key}
   */
   readonly uniqueKey?: CosmosdbGremlinGraphUniqueKey[];
 }
 export interface CosmosdbGremlinGraphAutoscaleSettings {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#max_throughput CosmosdbGremlinGraph#max_throughput}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#max_throughput CosmosdbGremlinGraph#max_throughput}
   */
   readonly maxThroughput?: number;
 }
@@ -138,15 +138,15 @@ export class CosmosdbGremlinGraphAutoscaleSettingsOutputReference extends cdktf.
 }
 export interface CosmosdbGremlinGraphConflictResolutionPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#conflict_resolution_path CosmosdbGremlinGraph#conflict_resolution_path}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#conflict_resolution_path CosmosdbGremlinGraph#conflict_resolution_path}
   */
   readonly conflictResolutionPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#conflict_resolution_procedure CosmosdbGremlinGraph#conflict_resolution_procedure}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#conflict_resolution_procedure CosmosdbGremlinGraph#conflict_resolution_procedure}
   */
   readonly conflictResolutionProcedure?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#mode CosmosdbGremlinGraph#mode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#mode CosmosdbGremlinGraph#mode}
   */
   readonly mode: string;
 }
@@ -255,11 +255,11 @@ export class CosmosdbGremlinGraphConflictResolutionPolicyOutputReference extends
 }
 export interface CosmosdbGremlinGraphIndexPolicyCompositeIndexIndex {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#order CosmosdbGremlinGraph#order}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#order CosmosdbGremlinGraph#order}
   */
   readonly order: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#path CosmosdbGremlinGraph#path}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#path CosmosdbGremlinGraph#path}
   */
   readonly path: string;
 }
@@ -279,7 +279,7 @@ export interface CosmosdbGremlinGraphIndexPolicyCompositeIndex {
   /**
   * index block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#index CosmosdbGremlinGraph#index}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#index CosmosdbGremlinGraph#index}
   */
   readonly index: CosmosdbGremlinGraphIndexPolicyCompositeIndexIndex[];
 }
@@ -296,7 +296,7 @@ export function cosmosdbGremlinGraphIndexPolicyCompositeIndexToTerraform(struct?
 
 export interface CosmosdbGremlinGraphIndexPolicySpatialIndex {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#path CosmosdbGremlinGraph#path}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#path CosmosdbGremlinGraph#path}
   */
   readonly path: string;
 }
@@ -313,31 +313,31 @@ export function cosmosdbGremlinGraphIndexPolicySpatialIndexToTerraform(struct?: 
 
 export interface CosmosdbGremlinGraphIndexPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#automatic CosmosdbGremlinGraph#automatic}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#automatic CosmosdbGremlinGraph#automatic}
   */
   readonly automatic?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#excluded_paths CosmosdbGremlinGraph#excluded_paths}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#excluded_paths CosmosdbGremlinGraph#excluded_paths}
   */
   readonly excludedPaths?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#included_paths CosmosdbGremlinGraph#included_paths}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#included_paths CosmosdbGremlinGraph#included_paths}
   */
   readonly includedPaths?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#indexing_mode CosmosdbGremlinGraph#indexing_mode}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#indexing_mode CosmosdbGremlinGraph#indexing_mode}
   */
   readonly indexingMode: string;
   /**
   * composite_index block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#composite_index CosmosdbGremlinGraph#composite_index}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#composite_index CosmosdbGremlinGraph#composite_index}
   */
   readonly compositeIndex?: CosmosdbGremlinGraphIndexPolicyCompositeIndex[];
   /**
   * spatial_index block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#spatial_index CosmosdbGremlinGraph#spatial_index}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#spatial_index CosmosdbGremlinGraph#spatial_index}
   */
   readonly spatialIndex?: CosmosdbGremlinGraphIndexPolicySpatialIndex[];
 }
@@ -517,19 +517,19 @@ export class CosmosdbGremlinGraphIndexPolicyOutputReference extends cdktf.Comple
 }
 export interface CosmosdbGremlinGraphTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#create CosmosdbGremlinGraph#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#create CosmosdbGremlinGraph#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#delete CosmosdbGremlinGraph#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#delete CosmosdbGremlinGraph#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#read CosmosdbGremlinGraph#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#read CosmosdbGremlinGraph#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#update CosmosdbGremlinGraph#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#update CosmosdbGremlinGraph#update}
   */
   readonly update?: string;
 }
@@ -664,7 +664,7 @@ export class CosmosdbGremlinGraphTimeoutsOutputReference extends cdktf.ComplexOb
 }
 export interface CosmosdbGremlinGraphUniqueKey {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html#paths CosmosdbGremlinGraph#paths}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph#paths CosmosdbGremlinGraph#paths}
   */
   readonly paths: string[];
 }
@@ -681,7 +681,7 @@ export function cosmosdbGremlinGraphUniqueKeyToTerraform(struct?: CosmosdbGremli
 
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html azurerm_cosmosdb_gremlin_graph}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph azurerm_cosmosdb_gremlin_graph}
 */
 export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
 
@@ -695,7 +695,7 @@ export class CosmosdbGremlinGraph extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph.html azurerm_cosmosdb_gremlin_graph} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_gremlin_graph azurerm_cosmosdb_gremlin_graph} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

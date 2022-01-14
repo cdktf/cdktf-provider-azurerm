@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile.html
+// https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,25 +8,25 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermTrafficManagerProfileConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile.html#name DataAzurermTrafficManagerProfile#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#name DataAzurermTrafficManagerProfile#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile.html#resource_group_name DataAzurermTrafficManagerProfile#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#resource_group_name DataAzurermTrafficManagerProfile#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile.html#tags DataAzurermTrafficManagerProfile#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#tags DataAzurermTrafficManagerProfile#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile.html#traffic_view_enabled DataAzurermTrafficManagerProfile#traffic_view_enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#traffic_view_enabled DataAzurermTrafficManagerProfile#traffic_view_enabled}
   */
   readonly trafficViewEnabled?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile.html#timeouts DataAzurermTrafficManagerProfile#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#timeouts DataAzurermTrafficManagerProfile#timeouts}
   */
   readonly timeouts?: DataAzurermTrafficManagerProfileTimeouts;
 }
@@ -99,7 +99,7 @@ export class DataAzurermTrafficManagerProfileMonitorConfig extends cdktf.Complex
 }
 export interface DataAzurermTrafficManagerProfileTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile.html#read DataAzurermTrafficManagerProfile#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile#read DataAzurermTrafficManagerProfile#read}
   */
   readonly read?: string;
 }
@@ -165,7 +165,7 @@ export class DataAzurermTrafficManagerProfileTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile.html azurerm_traffic_manager_profile}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile azurerm_traffic_manager_profile}
 */
 export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource {
 
@@ -179,7 +179,7 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile.html azurerm_traffic_manager_profile} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/traffic_manager_profile azurerm_traffic_manager_profile} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

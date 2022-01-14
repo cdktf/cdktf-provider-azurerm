@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,57 +8,57 @@ import * as cdktf from 'cdktf';
 
 export interface DataFactoryLinkedCustomServiceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#additional_properties DataFactoryLinkedCustomService#additional_properties}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service#additional_properties DataFactoryLinkedCustomService#additional_properties}
   */
   readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#annotations DataFactoryLinkedCustomService#annotations}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service#annotations DataFactoryLinkedCustomService#annotations}
   */
   readonly annotations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#data_factory_id DataFactoryLinkedCustomService#data_factory_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service#data_factory_id DataFactoryLinkedCustomService#data_factory_id}
   */
   readonly dataFactoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#description DataFactoryLinkedCustomService#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service#description DataFactoryLinkedCustomService#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#name DataFactoryLinkedCustomService#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service#name DataFactoryLinkedCustomService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#parameters DataFactoryLinkedCustomService#parameters}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service#parameters DataFactoryLinkedCustomService#parameters}
   */
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#type DataFactoryLinkedCustomService#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service#type DataFactoryLinkedCustomService#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#type_properties_json DataFactoryLinkedCustomService#type_properties_json}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service#type_properties_json DataFactoryLinkedCustomService#type_properties_json}
   */
   readonly typePropertiesJson: string;
   /**
   * integration_runtime block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#integration_runtime DataFactoryLinkedCustomService#integration_runtime}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service#integration_runtime DataFactoryLinkedCustomService#integration_runtime}
   */
   readonly integrationRuntime?: DataFactoryLinkedCustomServiceIntegrationRuntime;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#timeouts DataFactoryLinkedCustomService#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service#timeouts DataFactoryLinkedCustomService#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedCustomServiceTimeouts;
 }
 export interface DataFactoryLinkedCustomServiceIntegrationRuntime {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#name DataFactoryLinkedCustomService#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service#name DataFactoryLinkedCustomService#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#parameters DataFactoryLinkedCustomService#parameters}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service#parameters DataFactoryLinkedCustomService#parameters}
   */
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
@@ -145,19 +145,19 @@ export class DataFactoryLinkedCustomServiceIntegrationRuntimeOutputReference ext
 }
 export interface DataFactoryLinkedCustomServiceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#create DataFactoryLinkedCustomService#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service#create DataFactoryLinkedCustomService#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#delete DataFactoryLinkedCustomService#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service#delete DataFactoryLinkedCustomService#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#read DataFactoryLinkedCustomService#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service#read DataFactoryLinkedCustomService#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html#update DataFactoryLinkedCustomService#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service#update DataFactoryLinkedCustomService#update}
   */
   readonly update?: string;
 }
@@ -292,7 +292,7 @@ export class DataFactoryLinkedCustomServiceTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html azurerm_data_factory_linked_custom_service}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service azurerm_data_factory_linked_custom_service}
 */
 export class DataFactoryLinkedCustomService extends cdktf.TerraformResource {
 
@@ -306,7 +306,7 @@ export class DataFactoryLinkedCustomService extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service.html azurerm_data_factory_linked_custom_service} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_linked_custom_service azurerm_data_factory_linked_custom_service} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

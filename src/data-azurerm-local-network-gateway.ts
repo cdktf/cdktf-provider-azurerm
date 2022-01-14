@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/local_network_gateway.html
+// https://www.terraform.io/docs/providers/azurerm/d/local_network_gateway
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermLocalNetworkGatewayConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/local_network_gateway.html#name DataAzurermLocalNetworkGateway#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/local_network_gateway#name DataAzurermLocalNetworkGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/local_network_gateway.html#resource_group_name DataAzurermLocalNetworkGateway#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/local_network_gateway#resource_group_name DataAzurermLocalNetworkGateway#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/local_network_gateway.html#timeouts DataAzurermLocalNetworkGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/local_network_gateway#timeouts DataAzurermLocalNetworkGateway#timeouts}
   */
   readonly timeouts?: DataAzurermLocalNetworkGatewayTimeouts;
 }
@@ -41,7 +41,7 @@ export class DataAzurermLocalNetworkGatewayBgpSettings extends cdktf.ComplexComp
 }
 export interface DataAzurermLocalNetworkGatewayTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/local_network_gateway.html#read DataAzurermLocalNetworkGateway#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/local_network_gateway#read DataAzurermLocalNetworkGateway#read}
   */
   readonly read?: string;
 }
@@ -107,7 +107,7 @@ export class DataAzurermLocalNetworkGatewayTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/local_network_gateway.html azurerm_local_network_gateway}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/local_network_gateway azurerm_local_network_gateway}
 */
 export class DataAzurermLocalNetworkGateway extends cdktf.TerraformDataSource {
 
@@ -121,7 +121,7 @@ export class DataAzurermLocalNetworkGateway extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/local_network_gateway.html azurerm_local_network_gateway} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/local_network_gateway azurerm_local_network_gateway} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

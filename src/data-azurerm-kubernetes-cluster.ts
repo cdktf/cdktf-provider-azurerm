@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster.html
+// https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermKubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster.html#name DataAzurermKubernetesCluster#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster#name DataAzurermKubernetesCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster.html#resource_group_name DataAzurermKubernetesCluster#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster#resource_group_name DataAzurermKubernetesCluster#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster.html#timeouts DataAzurermKubernetesCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster#timeouts DataAzurermKubernetesCluster#timeouts}
   */
   readonly timeouts?: DataAzurermKubernetesClusterTimeouts;
 }
@@ -547,7 +547,7 @@ export class DataAzurermKubernetesClusterWindowsProfile extends cdktf.ComplexCom
 }
 export interface DataAzurermKubernetesClusterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster.html#read DataAzurermKubernetesCluster#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster#read DataAzurermKubernetesCluster#read}
   */
   readonly read?: string;
 }
@@ -613,7 +613,7 @@ export class DataAzurermKubernetesClusterTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster.html azurerm_kubernetes_cluster}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster azurerm_kubernetes_cluster}
 */
 export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
 
@@ -627,7 +627,7 @@ export class DataAzurermKubernetesCluster extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster.html azurerm_kubernetes_cluster} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/kubernetes_cluster azurerm_kubernetes_cluster} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

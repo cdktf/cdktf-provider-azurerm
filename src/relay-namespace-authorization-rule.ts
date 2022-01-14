@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule.html
+// https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface RelayNamespaceAuthorizationRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule.html#listen RelayNamespaceAuthorizationRule#listen}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule#listen RelayNamespaceAuthorizationRule#listen}
   */
   readonly listen?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule.html#manage RelayNamespaceAuthorizationRule#manage}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule#manage RelayNamespaceAuthorizationRule#manage}
   */
   readonly manage?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule.html#name RelayNamespaceAuthorizationRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule#name RelayNamespaceAuthorizationRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule.html#namespace_name RelayNamespaceAuthorizationRule#namespace_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule#namespace_name RelayNamespaceAuthorizationRule#namespace_name}
   */
   readonly namespaceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule.html#resource_group_name RelayNamespaceAuthorizationRule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule#resource_group_name RelayNamespaceAuthorizationRule#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule.html#send RelayNamespaceAuthorizationRule#send}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule#send RelayNamespaceAuthorizationRule#send}
   */
   readonly send?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule.html#timeouts RelayNamespaceAuthorizationRule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule#timeouts RelayNamespaceAuthorizationRule#timeouts}
   */
   readonly timeouts?: RelayNamespaceAuthorizationRuleTimeouts;
 }
 export interface RelayNamespaceAuthorizationRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule.html#create RelayNamespaceAuthorizationRule#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule#create RelayNamespaceAuthorizationRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule.html#delete RelayNamespaceAuthorizationRule#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule#delete RelayNamespaceAuthorizationRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule.html#read RelayNamespaceAuthorizationRule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule#read RelayNamespaceAuthorizationRule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule.html#update RelayNamespaceAuthorizationRule#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule#update RelayNamespaceAuthorizationRule#update}
   */
   readonly update?: string;
 }
@@ -187,7 +187,7 @@ export class RelayNamespaceAuthorizationRuleTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule.html azurerm_relay_namespace_authorization_rule}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule azurerm_relay_namespace_authorization_rule}
 */
 export class RelayNamespaceAuthorizationRule extends cdktf.TerraformResource {
 
@@ -201,7 +201,7 @@ export class RelayNamespaceAuthorizationRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule.html azurerm_relay_namespace_authorization_rule} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/relay_namespace_authorization_rule azurerm_relay_namespace_authorization_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

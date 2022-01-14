@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3.html
+// https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermAppServiceEnvironmentV3Config extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3.html#name DataAzurermAppServiceEnvironmentV3#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3#name DataAzurermAppServiceEnvironmentV3#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3.html#resource_group_name DataAzurermAppServiceEnvironmentV3#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3#resource_group_name DataAzurermAppServiceEnvironmentV3#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3.html#timeouts DataAzurermAppServiceEnvironmentV3#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3#timeouts DataAzurermAppServiceEnvironmentV3#timeouts}
   */
   readonly timeouts?: DataAzurermAppServiceEnvironmentV3Timeouts;
 }
@@ -53,7 +53,7 @@ export class DataAzurermAppServiceEnvironmentV3InboundNetworkDependencies extend
 }
 export interface DataAzurermAppServiceEnvironmentV3Timeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3.html#read DataAzurermAppServiceEnvironmentV3#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3#read DataAzurermAppServiceEnvironmentV3#read}
   */
   readonly read?: string;
 }
@@ -119,7 +119,7 @@ export class DataAzurermAppServiceEnvironmentV3TimeoutsOutputReference extends c
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3.html azurerm_app_service_environment_v3}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3 azurerm_app_service_environment_v3}
 */
 export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSource {
 
@@ -133,7 +133,7 @@ export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSourc
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3.html azurerm_app_service_environment_v3} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/app_service_environment_v3 azurerm_app_service_environment_v3} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

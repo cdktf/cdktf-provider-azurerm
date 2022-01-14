@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_subscription.html
+// https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_subscription
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermConsumptionBudgetSubscriptionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_subscription.html#name DataAzurermConsumptionBudgetSubscription#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_subscription#name DataAzurermConsumptionBudgetSubscription#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_subscription.html#subscription_id DataAzurermConsumptionBudgetSubscription#subscription_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_subscription#subscription_id DataAzurermConsumptionBudgetSubscription#subscription_id}
   */
   readonly subscriptionId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_subscription.html#timeouts DataAzurermConsumptionBudgetSubscription#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_subscription#timeouts DataAzurermConsumptionBudgetSubscription#timeouts}
   */
   readonly timeouts?: DataAzurermConsumptionBudgetSubscriptionTimeouts;
 }
@@ -175,7 +175,7 @@ export class DataAzurermConsumptionBudgetSubscriptionTimePeriod extends cdktf.Co
 }
 export interface DataAzurermConsumptionBudgetSubscriptionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_subscription.html#read DataAzurermConsumptionBudgetSubscription#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_subscription#read DataAzurermConsumptionBudgetSubscription#read}
   */
   readonly read?: string;
 }
@@ -241,7 +241,7 @@ export class DataAzurermConsumptionBudgetSubscriptionTimeoutsOutputReference ext
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_subscription.html azurerm_consumption_budget_subscription}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_subscription azurerm_consumption_budget_subscription}
 */
 export class DataAzurermConsumptionBudgetSubscription extends cdktf.TerraformDataSource {
 
@@ -255,7 +255,7 @@ export class DataAzurermConsumptionBudgetSubscription extends cdktf.TerraformDat
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_subscription.html azurerm_consumption_budget_subscription} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/consumption_budget_subscription azurerm_consumption_budget_subscription} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

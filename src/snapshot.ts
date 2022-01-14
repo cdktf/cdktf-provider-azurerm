@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/snapshot.html
+// https://www.terraform.io/docs/providers/azurerm/r/snapshot
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,61 +8,61 @@ import * as cdktf from 'cdktf';
 
 export interface SnapshotConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#create_option Snapshot#create_option}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#create_option Snapshot#create_option}
   */
   readonly createOption: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#disk_size_gb Snapshot#disk_size_gb}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#disk_size_gb Snapshot#disk_size_gb}
   */
   readonly diskSizeGb?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#location Snapshot#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#location Snapshot#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#name Snapshot#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#name Snapshot#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#resource_group_name Snapshot#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#resource_group_name Snapshot#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#source_resource_id Snapshot#source_resource_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#source_resource_id Snapshot#source_resource_id}
   */
   readonly sourceResourceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#source_uri Snapshot#source_uri}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#source_uri Snapshot#source_uri}
   */
   readonly sourceUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#storage_account_id Snapshot#storage_account_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#storage_account_id Snapshot#storage_account_id}
   */
   readonly storageAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#tags Snapshot#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#tags Snapshot#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * encryption_settings block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#encryption_settings Snapshot#encryption_settings}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#encryption_settings Snapshot#encryption_settings}
   */
   readonly encryptionSettings?: SnapshotEncryptionSettings;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#timeouts Snapshot#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#timeouts Snapshot#timeouts}
   */
   readonly timeouts?: SnapshotTimeouts;
 }
 export interface SnapshotEncryptionSettingsDiskEncryptionKey {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#secret_url Snapshot#secret_url}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#secret_url Snapshot#secret_url}
   */
   readonly secretUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#source_vault_id Snapshot#source_vault_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#source_vault_id Snapshot#source_vault_id}
   */
   readonly sourceVaultId: string;
 }
@@ -145,11 +145,11 @@ export class SnapshotEncryptionSettingsDiskEncryptionKeyOutputReference extends 
 }
 export interface SnapshotEncryptionSettingsKeyEncryptionKey {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#key_url Snapshot#key_url}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#key_url Snapshot#key_url}
   */
   readonly keyUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#source_vault_id Snapshot#source_vault_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#source_vault_id Snapshot#source_vault_id}
   */
   readonly sourceVaultId: string;
 }
@@ -232,19 +232,19 @@ export class SnapshotEncryptionSettingsKeyEncryptionKeyOutputReference extends c
 }
 export interface SnapshotEncryptionSettings {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#enabled Snapshot#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#enabled Snapshot#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
   * disk_encryption_key block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#disk_encryption_key Snapshot#disk_encryption_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#disk_encryption_key Snapshot#disk_encryption_key}
   */
   readonly diskEncryptionKey?: SnapshotEncryptionSettingsDiskEncryptionKey;
   /**
   * key_encryption_key block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#key_encryption_key Snapshot#key_encryption_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#key_encryption_key Snapshot#key_encryption_key}
   */
   readonly keyEncryptionKey?: SnapshotEncryptionSettingsKeyEncryptionKey;
 }
@@ -353,19 +353,19 @@ export class SnapshotEncryptionSettingsOutputReference extends cdktf.ComplexObje
 }
 export interface SnapshotTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#create Snapshot#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#create Snapshot#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#delete Snapshot#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#delete Snapshot#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#read Snapshot#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#read Snapshot#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html#update Snapshot#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot#update Snapshot#update}
   */
   readonly update?: string;
 }
@@ -500,7 +500,7 @@ export class SnapshotTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html azurerm_snapshot}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot azurerm_snapshot}
 */
 export class Snapshot extends cdktf.TerraformResource {
 
@@ -514,7 +514,7 @@ export class Snapshot extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot.html azurerm_snapshot} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/snapshot azurerm_snapshot} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

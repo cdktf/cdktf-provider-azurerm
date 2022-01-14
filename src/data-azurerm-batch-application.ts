@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/batch_application.html
+// https://www.terraform.io/docs/providers/azurerm/d/batch_application
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermBatchApplicationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application.html#account_name DataAzurermBatchApplication#account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application#account_name DataAzurermBatchApplication#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application.html#name DataAzurermBatchApplication#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application#name DataAzurermBatchApplication#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application.html#resource_group_name DataAzurermBatchApplication#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application#resource_group_name DataAzurermBatchApplication#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application.html#timeouts DataAzurermBatchApplication#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application#timeouts DataAzurermBatchApplication#timeouts}
   */
   readonly timeouts?: DataAzurermBatchApplicationTimeouts;
 }
 export interface DataAzurermBatchApplicationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application.html#read DataAzurermBatchApplication#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application#read DataAzurermBatchApplication#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermBatchApplicationTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application.html azurerm_batch_application}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application azurerm_batch_application}
 */
 export class DataAzurermBatchApplication extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermBatchApplication extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application.html azurerm_batch_application} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/batch_application azurerm_batch_application} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

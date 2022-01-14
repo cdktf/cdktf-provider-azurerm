@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow.html
+// https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermLogicAppWorkflowConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow.html#name DataAzurermLogicAppWorkflow#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow#name DataAzurermLogicAppWorkflow#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow.html#resource_group_name DataAzurermLogicAppWorkflow#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow#resource_group_name DataAzurermLogicAppWorkflow#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow.html#timeouts DataAzurermLogicAppWorkflow#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow#timeouts DataAzurermLogicAppWorkflow#timeouts}
   */
   readonly timeouts?: DataAzurermLogicAppWorkflowTimeouts;
 }
 export interface DataAzurermLogicAppWorkflowTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow.html#read DataAzurermLogicAppWorkflow#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow#read DataAzurermLogicAppWorkflow#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermLogicAppWorkflowTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow.html azurerm_logic_app_workflow}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow azurerm_logic_app_workflow}
 */
 export class DataAzurermLogicAppWorkflow extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermLogicAppWorkflow extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow.html azurerm_logic_app_workflow} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/logic_app_workflow azurerm_logic_app_workflow} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

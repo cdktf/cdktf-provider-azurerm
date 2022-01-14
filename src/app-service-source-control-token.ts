@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token.html
+// https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface AppServiceSourceControlTokenConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token.html#token AppServiceSourceControlToken#token}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token#token AppServiceSourceControlToken#token}
   */
   readonly token: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token.html#token_secret AppServiceSourceControlToken#token_secret}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token#token_secret AppServiceSourceControlToken#token_secret}
   */
   readonly tokenSecret?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token.html#type AppServiceSourceControlToken#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token#type AppServiceSourceControlToken#type}
   */
   readonly type: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token.html#timeouts AppServiceSourceControlToken#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token#timeouts AppServiceSourceControlToken#timeouts}
   */
   readonly timeouts?: AppServiceSourceControlTokenTimeouts;
 }
 export interface AppServiceSourceControlTokenTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token.html#create AppServiceSourceControlToken#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token#create AppServiceSourceControlToken#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token.html#delete AppServiceSourceControlToken#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token#delete AppServiceSourceControlToken#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token.html#read AppServiceSourceControlToken#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token#read AppServiceSourceControlToken#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token.html#update AppServiceSourceControlToken#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token#update AppServiceSourceControlToken#update}
   */
   readonly update?: string;
 }
@@ -175,7 +175,7 @@ export class AppServiceSourceControlTokenTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token.html azurerm_app_service_source_control_token}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token azurerm_app_service_source_control_token}
 */
 export class AppServiceSourceControlToken extends cdktf.TerraformResource {
 
@@ -189,7 +189,7 @@ export class AppServiceSourceControlToken extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token.html azurerm_app_service_source_control_token} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_service_source_control_token azurerm_app_service_source_control_token} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

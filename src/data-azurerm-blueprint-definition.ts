@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition.html
+// https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermBlueprintDefinitionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition.html#name DataAzurermBlueprintDefinition#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition#name DataAzurermBlueprintDefinition#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition.html#scope_id DataAzurermBlueprintDefinition#scope_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition#scope_id DataAzurermBlueprintDefinition#scope_id}
   */
   readonly scopeId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition.html#timeouts DataAzurermBlueprintDefinition#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition#timeouts DataAzurermBlueprintDefinition#timeouts}
   */
   readonly timeouts?: DataAzurermBlueprintDefinitionTimeouts;
 }
 export interface DataAzurermBlueprintDefinitionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition.html#read DataAzurermBlueprintDefinition#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition#read DataAzurermBlueprintDefinition#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermBlueprintDefinitionTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition.html azurerm_blueprint_definition}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition azurerm_blueprint_definition}
 */
 export class DataAzurermBlueprintDefinition extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermBlueprintDefinition extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition.html azurerm_blueprint_definition} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/blueprint_definition azurerm_blueprint_definition} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

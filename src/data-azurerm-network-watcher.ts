@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/network_watcher.html
+// https://www.terraform.io/docs/providers/azurerm/d/network_watcher
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermNetworkWatcherConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_watcher.html#name DataAzurermNetworkWatcher#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_watcher#name DataAzurermNetworkWatcher#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_watcher.html#resource_group_name DataAzurermNetworkWatcher#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_watcher#resource_group_name DataAzurermNetworkWatcher#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_watcher.html#timeouts DataAzurermNetworkWatcher#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_watcher#timeouts DataAzurermNetworkWatcher#timeouts}
   */
   readonly timeouts?: DataAzurermNetworkWatcherTimeouts;
 }
 export interface DataAzurermNetworkWatcherTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_watcher.html#read DataAzurermNetworkWatcher#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/network_watcher#read DataAzurermNetworkWatcher#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermNetworkWatcherTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/network_watcher.html azurerm_network_watcher}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/network_watcher azurerm_network_watcher}
 */
 export class DataAzurermNetworkWatcher extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermNetworkWatcher extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/network_watcher.html azurerm_network_watcher} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/network_watcher azurerm_network_watcher} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

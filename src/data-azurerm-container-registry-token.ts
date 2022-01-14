@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/container_registry_token.html
+// https://www.terraform.io/docs/providers/azurerm/d/container_registry_token
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermContainerRegistryTokenConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token.html#container_registry_name DataAzurermContainerRegistryToken#container_registry_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token#container_registry_name DataAzurermContainerRegistryToken#container_registry_name}
   */
   readonly containerRegistryName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token.html#name DataAzurermContainerRegistryToken#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token#name DataAzurermContainerRegistryToken#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token.html#resource_group_name DataAzurermContainerRegistryToken#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token#resource_group_name DataAzurermContainerRegistryToken#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token.html#timeouts DataAzurermContainerRegistryToken#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token#timeouts DataAzurermContainerRegistryToken#timeouts}
   */
   readonly timeouts?: DataAzurermContainerRegistryTokenTimeouts;
 }
 export interface DataAzurermContainerRegistryTokenTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token.html#read DataAzurermContainerRegistryToken#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token#read DataAzurermContainerRegistryToken#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermContainerRegistryTokenTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token.html azurerm_container_registry_token}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token azurerm_container_registry_token}
 */
 export class DataAzurermContainerRegistryToken extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermContainerRegistryToken extends cdktf.TerraformDataSource
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token.html azurerm_container_registry_token} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/container_registry_token azurerm_container_registry_token} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

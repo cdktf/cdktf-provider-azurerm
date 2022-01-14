@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/route_table.html
+// https://www.terraform.io/docs/providers/azurerm/r/route_table
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface RouteTableConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html#disable_bgp_route_propagation RouteTable#disable_bgp_route_propagation}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table#disable_bgp_route_propagation RouteTable#disable_bgp_route_propagation}
   */
   readonly disableBgpRoutePropagation?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html#location RouteTable#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table#location RouteTable#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html#name RouteTable#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table#name RouteTable#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html#resource_group_name RouteTable#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table#resource_group_name RouteTable#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html#route RouteTable#route}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table#route RouteTable#route}
   */
   readonly route?: RouteTableRoute[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html#tags RouteTable#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table#tags RouteTable#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html#timeouts RouteTable#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table#timeouts RouteTable#timeouts}
   */
   readonly timeouts?: RouteTableTimeouts;
 }
 export interface RouteTableRoute {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html#address_prefix RouteTable#address_prefix}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table#address_prefix RouteTable#address_prefix}
   */
   readonly addressPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html#name RouteTable#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table#name RouteTable#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html#next_hop_in_ip_address RouteTable#next_hop_in_ip_address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table#next_hop_in_ip_address RouteTable#next_hop_in_ip_address}
   */
   readonly nextHopInIpAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html#next_hop_type RouteTable#next_hop_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table#next_hop_type RouteTable#next_hop_type}
   */
   readonly nextHopType?: string;
 }
@@ -72,19 +72,19 @@ export function routeTableRouteToTerraform(struct?: RouteTableRoute): any {
 
 export interface RouteTableTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html#create RouteTable#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table#create RouteTable#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html#delete RouteTable#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table#delete RouteTable#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html#read RouteTable#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table#read RouteTable#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html#update RouteTable#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/route_table#update RouteTable#update}
   */
   readonly update?: string;
 }
@@ -219,7 +219,7 @@ export class RouteTableTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html azurerm_route_table}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/route_table azurerm_route_table}
 */
 export class RouteTable extends cdktf.TerraformResource {
 
@@ -233,7 +233,7 @@ export class RouteTable extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/route_table.html azurerm_route_table} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/route_table azurerm_route_table} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

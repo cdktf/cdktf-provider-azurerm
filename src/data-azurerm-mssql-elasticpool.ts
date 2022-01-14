@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool.html
+// https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMssqlElasticpoolConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool.html#name DataAzurermMssqlElasticpool#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool#name DataAzurermMssqlElasticpool#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool.html#resource_group_name DataAzurermMssqlElasticpool#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool#resource_group_name DataAzurermMssqlElasticpool#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool.html#server_name DataAzurermMssqlElasticpool#server_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool#server_name DataAzurermMssqlElasticpool#server_name}
   */
   readonly serverName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool.html#timeouts DataAzurermMssqlElasticpool#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool#timeouts DataAzurermMssqlElasticpool#timeouts}
   */
   readonly timeouts?: DataAzurermMssqlElasticpoolTimeouts;
 }
@@ -50,7 +50,7 @@ export class DataAzurermMssqlElasticpoolSku extends cdktf.ComplexComputedList {
 }
 export interface DataAzurermMssqlElasticpoolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool.html#read DataAzurermMssqlElasticpool#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool#read DataAzurermMssqlElasticpool#read}
   */
   readonly read?: string;
 }
@@ -116,7 +116,7 @@ export class DataAzurermMssqlElasticpoolTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool.html azurerm_mssql_elasticpool}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool azurerm_mssql_elasticpool}
 */
 export class DataAzurermMssqlElasticpool extends cdktf.TerraformDataSource {
 
@@ -130,7 +130,7 @@ export class DataAzurermMssqlElasticpool extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool.html azurerm_mssql_elasticpool} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/mssql_elasticpool azurerm_mssql_elasticpool} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html
+// https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,59 +8,59 @@ import * as cdktf from 'cdktf';
 
 export interface MediaAssetFilterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#asset_id MediaAssetFilter#asset_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#asset_id MediaAssetFilter#asset_id}
   */
   readonly assetId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#first_quality_bitrate MediaAssetFilter#first_quality_bitrate}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#first_quality_bitrate MediaAssetFilter#first_quality_bitrate}
   */
   readonly firstQualityBitrate?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#name MediaAssetFilter#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#name MediaAssetFilter#name}
   */
   readonly name: string;
   /**
   * presentation_time_range block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#presentation_time_range MediaAssetFilter#presentation_time_range}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#presentation_time_range MediaAssetFilter#presentation_time_range}
   */
   readonly presentationTimeRange?: MediaAssetFilterPresentationTimeRange;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#timeouts MediaAssetFilter#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#timeouts MediaAssetFilter#timeouts}
   */
   readonly timeouts?: MediaAssetFilterTimeouts;
   /**
   * track_selection block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#track_selection MediaAssetFilter#track_selection}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#track_selection MediaAssetFilter#track_selection}
   */
   readonly trackSelection?: MediaAssetFilterTrackSelection[];
 }
 export interface MediaAssetFilterPresentationTimeRange {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#end_in_units MediaAssetFilter#end_in_units}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#end_in_units MediaAssetFilter#end_in_units}
   */
   readonly endInUnits?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#force_end MediaAssetFilter#force_end}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#force_end MediaAssetFilter#force_end}
   */
   readonly forceEnd?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#live_backoff_in_units MediaAssetFilter#live_backoff_in_units}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#live_backoff_in_units MediaAssetFilter#live_backoff_in_units}
   */
   readonly liveBackoffInUnits?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#presentation_window_in_units MediaAssetFilter#presentation_window_in_units}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#presentation_window_in_units MediaAssetFilter#presentation_window_in_units}
   */
   readonly presentationWindowInUnits?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#start_in_units MediaAssetFilter#start_in_units}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#start_in_units MediaAssetFilter#start_in_units}
   */
   readonly startInUnits?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#unit_timescale_in_miliseconds MediaAssetFilter#unit_timescale_in_miliseconds}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#unit_timescale_in_miliseconds MediaAssetFilter#unit_timescale_in_miliseconds}
   */
   readonly unitTimescaleInMiliseconds?: number;
 }
@@ -241,19 +241,19 @@ export class MediaAssetFilterPresentationTimeRangeOutputReference extends cdktf.
 }
 export interface MediaAssetFilterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#create MediaAssetFilter#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#create MediaAssetFilter#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#delete MediaAssetFilter#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#delete MediaAssetFilter#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#read MediaAssetFilter#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#read MediaAssetFilter#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#update MediaAssetFilter#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#update MediaAssetFilter#update}
   */
   readonly update?: string;
 }
@@ -388,15 +388,15 @@ export class MediaAssetFilterTimeoutsOutputReference extends cdktf.ComplexObject
 }
 export interface MediaAssetFilterTrackSelectionCondition {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#operation MediaAssetFilter#operation}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#operation MediaAssetFilter#operation}
   */
   readonly operation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#property MediaAssetFilter#property}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#property MediaAssetFilter#property}
   */
   readonly property?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#value MediaAssetFilter#value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#value MediaAssetFilter#value}
   */
   readonly value?: string;
 }
@@ -417,7 +417,7 @@ export interface MediaAssetFilterTrackSelection {
   /**
   * condition block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html#condition MediaAssetFilter#condition}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter#condition MediaAssetFilter#condition}
   */
   readonly condition: MediaAssetFilterTrackSelectionCondition[];
 }
@@ -434,7 +434,7 @@ export function mediaAssetFilterTrackSelectionToTerraform(struct?: MediaAssetFil
 
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html azurerm_media_asset_filter}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter azurerm_media_asset_filter}
 */
 export class MediaAssetFilter extends cdktf.TerraformResource {
 
@@ -448,7 +448,7 @@ export class MediaAssetFilter extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter.html azurerm_media_asset_filter} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/media_asset_filter azurerm_media_asset_filter} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

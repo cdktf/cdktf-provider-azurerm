@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html
+// https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,67 +8,67 @@ import * as cdktf from 'cdktf';
 
 export interface AppConfigurationFeatureConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#configuration_store_id AppConfigurationFeature#configuration_store_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#configuration_store_id AppConfigurationFeature#configuration_store_id}
   */
   readonly configurationStoreId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#description AppConfigurationFeature#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#description AppConfigurationFeature#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#enabled AppConfigurationFeature#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#enabled AppConfigurationFeature#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#etag AppConfigurationFeature#etag}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#etag AppConfigurationFeature#etag}
   */
   readonly etag?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#label AppConfigurationFeature#label}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#label AppConfigurationFeature#label}
   */
   readonly label?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#locked AppConfigurationFeature#locked}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#locked AppConfigurationFeature#locked}
   */
   readonly locked?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#name AppConfigurationFeature#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#name AppConfigurationFeature#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#percentage_filter_value AppConfigurationFeature#percentage_filter_value}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#percentage_filter_value AppConfigurationFeature#percentage_filter_value}
   */
   readonly percentageFilterValue?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#tags AppConfigurationFeature#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#tags AppConfigurationFeature#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * targeting_filter block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#targeting_filter AppConfigurationFeature#targeting_filter}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#targeting_filter AppConfigurationFeature#targeting_filter}
   */
   readonly targetingFilter?: AppConfigurationFeatureTargetingFilter[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#timeouts AppConfigurationFeature#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#timeouts AppConfigurationFeature#timeouts}
   */
   readonly timeouts?: AppConfigurationFeatureTimeouts;
   /**
   * timewindow_filter block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#timewindow_filter AppConfigurationFeature#timewindow_filter}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#timewindow_filter AppConfigurationFeature#timewindow_filter}
   */
   readonly timewindowFilter?: AppConfigurationFeatureTimewindowFilter[];
 }
 export interface AppConfigurationFeatureTargetingFilterGroups {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#name AppConfigurationFeature#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#name AppConfigurationFeature#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#rollout_percentage AppConfigurationFeature#rollout_percentage}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#rollout_percentage AppConfigurationFeature#rollout_percentage}
   */
   readonly rolloutPercentage: number;
 }
@@ -86,17 +86,17 @@ export function appConfigurationFeatureTargetingFilterGroupsToTerraform(struct?:
 
 export interface AppConfigurationFeatureTargetingFilter {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#default_rollout_percentage AppConfigurationFeature#default_rollout_percentage}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#default_rollout_percentage AppConfigurationFeature#default_rollout_percentage}
   */
   readonly defaultRolloutPercentage: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#users AppConfigurationFeature#users}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#users AppConfigurationFeature#users}
   */
   readonly users?: string[];
   /**
   * groups block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#groups AppConfigurationFeature#groups}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#groups AppConfigurationFeature#groups}
   */
   readonly groups?: AppConfigurationFeatureTargetingFilterGroups[];
 }
@@ -115,19 +115,19 @@ export function appConfigurationFeatureTargetingFilterToTerraform(struct?: AppCo
 
 export interface AppConfigurationFeatureTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#create AppConfigurationFeature#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#create AppConfigurationFeature#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#delete AppConfigurationFeature#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#delete AppConfigurationFeature#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#read AppConfigurationFeature#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#read AppConfigurationFeature#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#update AppConfigurationFeature#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#update AppConfigurationFeature#update}
   */
   readonly update?: string;
 }
@@ -262,11 +262,11 @@ export class AppConfigurationFeatureTimeoutsOutputReference extends cdktf.Comple
 }
 export interface AppConfigurationFeatureTimewindowFilter {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#end AppConfigurationFeature#end}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#end AppConfigurationFeature#end}
   */
   readonly end?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html#start AppConfigurationFeature#start}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature#start AppConfigurationFeature#start}
   */
   readonly start?: string;
 }
@@ -284,7 +284,7 @@ export function appConfigurationFeatureTimewindowFilterToTerraform(struct?: AppC
 
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html azurerm_app_configuration_feature}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature azurerm_app_configuration_feature}
 */
 export class AppConfigurationFeature extends cdktf.TerraformResource {
 
@@ -298,7 +298,7 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature.html azurerm_app_configuration_feature} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/app_configuration_feature azurerm_app_configuration_feature} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

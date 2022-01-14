@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/data_factory.html
+// https://www.terraform.io/docs/providers/azurerm/d/data_factory
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDataFactoryConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_factory.html#name DataAzurermDataFactory#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_factory#name DataAzurermDataFactory#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_factory.html#resource_group_name DataAzurermDataFactory#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_factory#resource_group_name DataAzurermDataFactory#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_factory.html#timeouts DataAzurermDataFactory#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_factory#timeouts DataAzurermDataFactory#timeouts}
   */
   readonly timeouts?: DataAzurermDataFactoryTimeouts;
 }
@@ -105,7 +105,7 @@ export class DataAzurermDataFactoryVstsConfiguration extends cdktf.ComplexComput
 }
 export interface DataAzurermDataFactoryTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_factory.html#read DataAzurermDataFactory#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_factory#read DataAzurermDataFactory#read}
   */
   readonly read?: string;
 }
@@ -171,7 +171,7 @@ export class DataAzurermDataFactoryTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/data_factory.html azurerm_data_factory}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/data_factory azurerm_data_factory}
 */
 export class DataAzurermDataFactory extends cdktf.TerraformDataSource {
 
@@ -185,7 +185,7 @@ export class DataAzurermDataFactory extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/data_factory.html azurerm_data_factory} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/data_factory azurerm_data_factory} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

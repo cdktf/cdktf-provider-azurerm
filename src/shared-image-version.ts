@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html
+// https://www.terraform.io/docs/providers/azurerm/r/shared_image_version
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,65 +8,65 @@ import * as cdktf from 'cdktf';
 
 export interface SharedImageVersionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#exclude_from_latest SharedImageVersion#exclude_from_latest}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#exclude_from_latest SharedImageVersion#exclude_from_latest}
   */
   readonly excludeFromLatest?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#gallery_name SharedImageVersion#gallery_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#gallery_name SharedImageVersion#gallery_name}
   */
   readonly galleryName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#image_name SharedImageVersion#image_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#image_name SharedImageVersion#image_name}
   */
   readonly imageName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#location SharedImageVersion#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#location SharedImageVersion#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#managed_image_id SharedImageVersion#managed_image_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#managed_image_id SharedImageVersion#managed_image_id}
   */
   readonly managedImageId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#name SharedImageVersion#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#name SharedImageVersion#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#os_disk_snapshot_id SharedImageVersion#os_disk_snapshot_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#os_disk_snapshot_id SharedImageVersion#os_disk_snapshot_id}
   */
   readonly osDiskSnapshotId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#resource_group_name SharedImageVersion#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#resource_group_name SharedImageVersion#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#tags SharedImageVersion#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#tags SharedImageVersion#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * target_region block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#target_region SharedImageVersion#target_region}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#target_region SharedImageVersion#target_region}
   */
   readonly targetRegion: SharedImageVersionTargetRegion[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#timeouts SharedImageVersion#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#timeouts SharedImageVersion#timeouts}
   */
   readonly timeouts?: SharedImageVersionTimeouts;
 }
 export interface SharedImageVersionTargetRegion {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#name SharedImageVersion#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#name SharedImageVersion#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#regional_replica_count SharedImageVersion#regional_replica_count}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#regional_replica_count SharedImageVersion#regional_replica_count}
   */
   readonly regionalReplicaCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#storage_account_type SharedImageVersion#storage_account_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#storage_account_type SharedImageVersion#storage_account_type}
   */
   readonly storageAccountType?: string;
 }
@@ -85,19 +85,19 @@ export function sharedImageVersionTargetRegionToTerraform(struct?: SharedImageVe
 
 export interface SharedImageVersionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#create SharedImageVersion#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#create SharedImageVersion#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#delete SharedImageVersion#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#delete SharedImageVersion#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#read SharedImageVersion#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#read SharedImageVersion#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html#update SharedImageVersion#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version#update SharedImageVersion#update}
   */
   readonly update?: string;
 }
@@ -232,7 +232,7 @@ export class SharedImageVersionTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html azurerm_shared_image_version}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version azurerm_shared_image_version}
 */
 export class SharedImageVersion extends cdktf.TerraformResource {
 
@@ -246,7 +246,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version.html azurerm_shared_image_version} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/shared_image_version azurerm_shared_image_version} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

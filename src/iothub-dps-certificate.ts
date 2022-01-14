@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate.html
+// https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface IothubDpsCertificateConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate.html#certificate_content IothubDpsCertificate#certificate_content}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate#certificate_content IothubDpsCertificate#certificate_content}
   */
   readonly certificateContent: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate.html#iot_dps_name IothubDpsCertificate#iot_dps_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate#iot_dps_name IothubDpsCertificate#iot_dps_name}
   */
   readonly iotDpsName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate.html#name IothubDpsCertificate#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate#name IothubDpsCertificate#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate.html#resource_group_name IothubDpsCertificate#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate#resource_group_name IothubDpsCertificate#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate.html#timeouts IothubDpsCertificate#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate#timeouts IothubDpsCertificate#timeouts}
   */
   readonly timeouts?: IothubDpsCertificateTimeouts;
 }
 export interface IothubDpsCertificateTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate.html#create IothubDpsCertificate#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate#create IothubDpsCertificate#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate.html#delete IothubDpsCertificate#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate#delete IothubDpsCertificate#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate.html#read IothubDpsCertificate#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate#read IothubDpsCertificate#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate.html#update IothubDpsCertificate#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate#update IothubDpsCertificate#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class IothubDpsCertificateTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate.html azurerm_iothub_dps_certificate}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate azurerm_iothub_dps_certificate}
 */
 export class IothubDpsCertificate extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class IothubDpsCertificate extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate.html azurerm_iothub_dps_certificate} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_dps_certificate azurerm_iothub_dps_certificate} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/attestation_provider.html
+// https://www.terraform.io/docs/providers/azurerm/r/attestation_provider
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface AttestationProviderConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider.html#location AttestationProvider#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider#location AttestationProvider#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider.html#name AttestationProvider#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider#name AttestationProvider#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider.html#policy_signing_certificate_data AttestationProvider#policy_signing_certificate_data}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider#policy_signing_certificate_data AttestationProvider#policy_signing_certificate_data}
   */
   readonly policySigningCertificateData?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider.html#resource_group_name AttestationProvider#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider#resource_group_name AttestationProvider#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider.html#tags AttestationProvider#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider#tags AttestationProvider#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider.html#timeouts AttestationProvider#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider#timeouts AttestationProvider#timeouts}
   */
   readonly timeouts?: AttestationProviderTimeouts;
 }
 export interface AttestationProviderTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider.html#create AttestationProvider#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider#create AttestationProvider#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider.html#delete AttestationProvider#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider#delete AttestationProvider#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider.html#read AttestationProvider#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider#read AttestationProvider#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider.html#update AttestationProvider#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider#update AttestationProvider#update}
   */
   readonly update?: string;
 }
@@ -183,7 +183,7 @@ export class AttestationProviderTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider.html azurerm_attestation_provider}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider azurerm_attestation_provider}
 */
 export class AttestationProvider extends cdktf.TerraformResource {
 
@@ -197,7 +197,7 @@ export class AttestationProvider extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider.html azurerm_attestation_provider} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/attestation_provider azurerm_attestation_provider} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

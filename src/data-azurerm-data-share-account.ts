@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/data_share_account.html
+// https://www.terraform.io/docs/providers/azurerm/d/data_share_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDataShareAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_account.html#name DataAzurermDataShareAccount#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_account#name DataAzurermDataShareAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_account.html#resource_group_name DataAzurermDataShareAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_account#resource_group_name DataAzurermDataShareAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_account.html#timeouts DataAzurermDataShareAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_account#timeouts DataAzurermDataShareAccount#timeouts}
   */
   readonly timeouts?: DataAzurermDataShareAccountTimeouts;
 }
@@ -41,7 +41,7 @@ export class DataAzurermDataShareAccountIdentity extends cdktf.ComplexComputedLi
 }
 export interface DataAzurermDataShareAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_account.html#read DataAzurermDataShareAccount#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_account#read DataAzurermDataShareAccount#read}
   */
   readonly read?: string;
 }
@@ -107,7 +107,7 @@ export class DataAzurermDataShareAccountTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_account.html azurerm_data_share_account}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_account azurerm_data_share_account}
 */
 export class DataAzurermDataShareAccount extends cdktf.TerraformDataSource {
 
@@ -121,7 +121,7 @@ export class DataAzurermDataShareAccount extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_account.html azurerm_data_share_account} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/data_share_account azurerm_data_share_account} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

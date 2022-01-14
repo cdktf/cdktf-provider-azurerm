@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment.html
+// https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface SpringCloudActiveDeploymentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment.html#deployment_name SpringCloudActiveDeployment#deployment_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment#deployment_name SpringCloudActiveDeployment#deployment_name}
   */
   readonly deploymentName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment.html#spring_cloud_app_id SpringCloudActiveDeployment#spring_cloud_app_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment#spring_cloud_app_id SpringCloudActiveDeployment#spring_cloud_app_id}
   */
   readonly springCloudAppId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment.html#timeouts SpringCloudActiveDeployment#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment#timeouts SpringCloudActiveDeployment#timeouts}
   */
   readonly timeouts?: SpringCloudActiveDeploymentTimeouts;
 }
 export interface SpringCloudActiveDeploymentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment.html#create SpringCloudActiveDeployment#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment#create SpringCloudActiveDeployment#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment.html#delete SpringCloudActiveDeployment#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment#delete SpringCloudActiveDeployment#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment.html#read SpringCloudActiveDeployment#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment#read SpringCloudActiveDeployment#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment.html#update SpringCloudActiveDeployment#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment#update SpringCloudActiveDeployment#update}
   */
   readonly update?: string;
 }
@@ -171,7 +171,7 @@ export class SpringCloudActiveDeploymentTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment.html azurerm_spring_cloud_active_deployment}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment azurerm_spring_cloud_active_deployment}
 */
 export class SpringCloudActiveDeployment extends cdktf.TerraformResource {
 
@@ -185,7 +185,7 @@ export class SpringCloudActiveDeployment extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment.html azurerm_spring_cloud_active_deployment} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/spring_cloud_active_deployment azurerm_spring_cloud_active_deployment} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

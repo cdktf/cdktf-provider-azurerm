@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html
+// https://www.terraform.io/docs/providers/azurerm/r/packet_capture
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,71 +8,71 @@ import * as cdktf from 'cdktf';
 
 export interface PacketCaptureConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#maximum_bytes_per_packet PacketCapture#maximum_bytes_per_packet}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#maximum_bytes_per_packet PacketCapture#maximum_bytes_per_packet}
   */
   readonly maximumBytesPerPacket?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#maximum_bytes_per_session PacketCapture#maximum_bytes_per_session}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#maximum_bytes_per_session PacketCapture#maximum_bytes_per_session}
   */
   readonly maximumBytesPerSession?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#maximum_capture_duration PacketCapture#maximum_capture_duration}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#maximum_capture_duration PacketCapture#maximum_capture_duration}
   */
   readonly maximumCaptureDuration?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#name PacketCapture#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#name PacketCapture#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#network_watcher_name PacketCapture#network_watcher_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#network_watcher_name PacketCapture#network_watcher_name}
   */
   readonly networkWatcherName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#resource_group_name PacketCapture#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#resource_group_name PacketCapture#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#target_resource_id PacketCapture#target_resource_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#target_resource_id PacketCapture#target_resource_id}
   */
   readonly targetResourceId: string;
   /**
   * filter block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#filter PacketCapture#filter}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#filter PacketCapture#filter}
   */
   readonly filter?: PacketCaptureFilter[];
   /**
   * storage_location block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#storage_location PacketCapture#storage_location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#storage_location PacketCapture#storage_location}
   */
   readonly storageLocation: PacketCaptureStorageLocation;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#timeouts PacketCapture#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#timeouts PacketCapture#timeouts}
   */
   readonly timeouts?: PacketCaptureTimeouts;
 }
 export interface PacketCaptureFilter {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#local_ip_address PacketCapture#local_ip_address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#local_ip_address PacketCapture#local_ip_address}
   */
   readonly localIpAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#local_port PacketCapture#local_port}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#local_port PacketCapture#local_port}
   */
   readonly localPort?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#protocol PacketCapture#protocol}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#protocol PacketCapture#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#remote_ip_address PacketCapture#remote_ip_address}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#remote_ip_address PacketCapture#remote_ip_address}
   */
   readonly remoteIpAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#remote_port PacketCapture#remote_port}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#remote_port PacketCapture#remote_port}
   */
   readonly remotePort?: string;
 }
@@ -93,11 +93,11 @@ export function packetCaptureFilterToTerraform(struct?: PacketCaptureFilter): an
 
 export interface PacketCaptureStorageLocation {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#file_path PacketCapture#file_path}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#file_path PacketCapture#file_path}
   */
   readonly filePath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#storage_account_id PacketCapture#storage_account_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#storage_account_id PacketCapture#storage_account_id}
   */
   readonly storageAccountId?: string;
 }
@@ -186,19 +186,19 @@ export class PacketCaptureStorageLocationOutputReference extends cdktf.ComplexOb
 }
 export interface PacketCaptureTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#create PacketCapture#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#create PacketCapture#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#delete PacketCapture#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#delete PacketCapture#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#read PacketCapture#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#read PacketCapture#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html#update PacketCapture#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture#update PacketCapture#update}
   */
   readonly update?: string;
 }
@@ -333,7 +333,7 @@ export class PacketCaptureTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html azurerm_packet_capture}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture azurerm_packet_capture}
 */
 export class PacketCapture extends cdktf.TerraformResource {
 
@@ -347,7 +347,7 @@ export class PacketCapture extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture.html azurerm_packet_capture} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/packet_capture azurerm_packet_capture} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

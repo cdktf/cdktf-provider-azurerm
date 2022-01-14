@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/policy_definition.html
+// https://www.terraform.io/docs/providers/azurerm/d/policy_definition
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,31 +8,31 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermPolicyDefinitionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition.html#display_name DataAzurermPolicyDefinition#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition#display_name DataAzurermPolicyDefinition#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition.html#management_group_id DataAzurermPolicyDefinition#management_group_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition#management_group_id DataAzurermPolicyDefinition#management_group_id}
   */
   readonly managementGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition.html#management_group_name DataAzurermPolicyDefinition#management_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition#management_group_name DataAzurermPolicyDefinition#management_group_name}
   */
   readonly managementGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition.html#name DataAzurermPolicyDefinition#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition#name DataAzurermPolicyDefinition#name}
   */
   readonly name?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition.html#timeouts DataAzurermPolicyDefinition#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition#timeouts DataAzurermPolicyDefinition#timeouts}
   */
   readonly timeouts?: DataAzurermPolicyDefinitionTimeouts;
 }
 export interface DataAzurermPolicyDefinitionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition.html#read DataAzurermPolicyDefinition#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition#read DataAzurermPolicyDefinition#read}
   */
   readonly read?: string;
 }
@@ -98,7 +98,7 @@ export class DataAzurermPolicyDefinitionTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition.html azurerm_policy_definition}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition azurerm_policy_definition}
 */
 export class DataAzurermPolicyDefinition extends cdktf.TerraformDataSource {
 
@@ -112,7 +112,7 @@ export class DataAzurermPolicyDefinition extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition.html azurerm_policy_definition} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/policy_definition azurerm_policy_definition} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

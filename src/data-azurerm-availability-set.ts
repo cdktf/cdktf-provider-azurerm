@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/availability_set.html
+// https://www.terraform.io/docs/providers/azurerm/d/availability_set
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermAvailabilitySetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/availability_set.html#name DataAzurermAvailabilitySet#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/availability_set#name DataAzurermAvailabilitySet#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/availability_set.html#resource_group_name DataAzurermAvailabilitySet#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/availability_set#resource_group_name DataAzurermAvailabilitySet#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/availability_set.html#timeouts DataAzurermAvailabilitySet#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/availability_set#timeouts DataAzurermAvailabilitySet#timeouts}
   */
   readonly timeouts?: DataAzurermAvailabilitySetTimeouts;
 }
 export interface DataAzurermAvailabilitySetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/availability_set.html#read DataAzurermAvailabilitySet#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/availability_set#read DataAzurermAvailabilitySet#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermAvailabilitySetTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/availability_set.html azurerm_availability_set}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/availability_set azurerm_availability_set}
 */
 export class DataAzurermAvailabilitySet extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermAvailabilitySet extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/availability_set.html azurerm_availability_set} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/availability_set azurerm_availability_set} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html
+// https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface ApplicationInsightsAnalyticsItemConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#application_insights_id ApplicationInsightsAnalyticsItem#application_insights_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item#application_insights_id ApplicationInsightsAnalyticsItem#application_insights_id}
   */
   readonly applicationInsightsId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#content ApplicationInsightsAnalyticsItem#content}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item#content ApplicationInsightsAnalyticsItem#content}
   */
   readonly content: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#function_alias ApplicationInsightsAnalyticsItem#function_alias}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item#function_alias ApplicationInsightsAnalyticsItem#function_alias}
   */
   readonly functionAlias?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#name ApplicationInsightsAnalyticsItem#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item#name ApplicationInsightsAnalyticsItem#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#scope ApplicationInsightsAnalyticsItem#scope}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item#scope ApplicationInsightsAnalyticsItem#scope}
   */
   readonly scope: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#type ApplicationInsightsAnalyticsItem#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item#type ApplicationInsightsAnalyticsItem#type}
   */
   readonly type: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#timeouts ApplicationInsightsAnalyticsItem#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item#timeouts ApplicationInsightsAnalyticsItem#timeouts}
   */
   readonly timeouts?: ApplicationInsightsAnalyticsItemTimeouts;
 }
 export interface ApplicationInsightsAnalyticsItemTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#create ApplicationInsightsAnalyticsItem#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item#create ApplicationInsightsAnalyticsItem#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#delete ApplicationInsightsAnalyticsItem#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item#delete ApplicationInsightsAnalyticsItem#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#read ApplicationInsightsAnalyticsItem#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item#read ApplicationInsightsAnalyticsItem#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html#update ApplicationInsightsAnalyticsItem#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item#update ApplicationInsightsAnalyticsItem#update}
   */
   readonly update?: string;
 }
@@ -187,7 +187,7 @@ export class ApplicationInsightsAnalyticsItemTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html azurerm_application_insights_analytics_item}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item azurerm_application_insights_analytics_item}
 */
 export class ApplicationInsightsAnalyticsItem extends cdktf.TerraformResource {
 
@@ -201,7 +201,7 @@ export class ApplicationInsightsAnalyticsItem extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item.html azurerm_application_insights_analytics_item} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/application_insights_analytics_item azurerm_application_insights_analytics_item} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

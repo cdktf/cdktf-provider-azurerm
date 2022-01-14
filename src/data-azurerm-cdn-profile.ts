@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/cdn_profile.html
+// https://www.terraform.io/docs/providers/azurerm/d/cdn_profile
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermCdnProfileConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_profile.html#name DataAzurermCdnProfile#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_profile#name DataAzurermCdnProfile#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_profile.html#resource_group_name DataAzurermCdnProfile#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_profile#resource_group_name DataAzurermCdnProfile#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_profile.html#timeouts DataAzurermCdnProfile#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_profile#timeouts DataAzurermCdnProfile#timeouts}
   */
   readonly timeouts?: DataAzurermCdnProfileTimeouts;
 }
 export interface DataAzurermCdnProfileTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_profile.html#read DataAzurermCdnProfile#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_profile#read DataAzurermCdnProfile#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermCdnProfileTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_profile.html azurerm_cdn_profile}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_profile azurerm_cdn_profile}
 */
 export class DataAzurermCdnProfile extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermCdnProfile extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_profile.html azurerm_cdn_profile} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/cdn_profile azurerm_cdn_profile} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

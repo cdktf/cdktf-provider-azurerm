@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association.html
+// https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface SubnetRouteTableAssociationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association.html#route_table_id SubnetRouteTableAssociation#route_table_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association#route_table_id SubnetRouteTableAssociation#route_table_id}
   */
   readonly routeTableId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association.html#subnet_id SubnetRouteTableAssociation#subnet_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association#subnet_id SubnetRouteTableAssociation#subnet_id}
   */
   readonly subnetId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association.html#timeouts SubnetRouteTableAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association#timeouts SubnetRouteTableAssociation#timeouts}
   */
   readonly timeouts?: SubnetRouteTableAssociationTimeouts;
 }
 export interface SubnetRouteTableAssociationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association.html#create SubnetRouteTableAssociation#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association#create SubnetRouteTableAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association.html#delete SubnetRouteTableAssociation#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association#delete SubnetRouteTableAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association.html#read SubnetRouteTableAssociation#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association#read SubnetRouteTableAssociation#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association.html#update SubnetRouteTableAssociation#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association#update SubnetRouteTableAssociation#update}
   */
   readonly update?: string;
 }
@@ -171,7 +171,7 @@ export class SubnetRouteTableAssociationTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association.html azurerm_subnet_route_table_association}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association azurerm_subnet_route_table_association}
 */
 export class SubnetRouteTableAssociation extends cdktf.TerraformResource {
 
@@ -185,7 +185,7 @@ export class SubnetRouteTableAssociation extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association.html azurerm_subnet_route_table_association} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_route_table_association azurerm_subnet_route_table_association} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

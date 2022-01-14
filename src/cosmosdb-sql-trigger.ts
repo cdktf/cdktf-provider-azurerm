@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html
+// https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface CosmosdbSqlTriggerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#body CosmosdbSqlTrigger#body}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger#body CosmosdbSqlTrigger#body}
   */
   readonly body: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#container_id CosmosdbSqlTrigger#container_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger#container_id CosmosdbSqlTrigger#container_id}
   */
   readonly containerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#name CosmosdbSqlTrigger#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger#name CosmosdbSqlTrigger#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#operation CosmosdbSqlTrigger#operation}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger#operation CosmosdbSqlTrigger#operation}
   */
   readonly operation: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#type CosmosdbSqlTrigger#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger#type CosmosdbSqlTrigger#type}
   */
   readonly type: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#timeouts CosmosdbSqlTrigger#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger#timeouts CosmosdbSqlTrigger#timeouts}
   */
   readonly timeouts?: CosmosdbSqlTriggerTimeouts;
 }
 export interface CosmosdbSqlTriggerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#create CosmosdbSqlTrigger#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger#create CosmosdbSqlTrigger#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#delete CosmosdbSqlTrigger#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger#delete CosmosdbSqlTrigger#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#read CosmosdbSqlTrigger#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger#read CosmosdbSqlTrigger#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html#update CosmosdbSqlTrigger#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger#update CosmosdbSqlTrigger#update}
   */
   readonly update?: string;
 }
@@ -183,7 +183,7 @@ export class CosmosdbSqlTriggerTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html azurerm_cosmosdb_sql_trigger}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger azurerm_cosmosdb_sql_trigger}
 */
 export class CosmosdbSqlTrigger extends cdktf.TerraformResource {
 
@@ -197,7 +197,7 @@ export class CosmosdbSqlTrigger extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger.html azurerm_cosmosdb_sql_trigger} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cosmosdb_sql_trigger azurerm_cosmosdb_sql_trigger} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

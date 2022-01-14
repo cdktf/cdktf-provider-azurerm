@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster.html
+// https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermHdinsightClusterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster.html#name DataAzurermHdinsightCluster#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster#name DataAzurermHdinsightCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster.html#resource_group_name DataAzurermHdinsightCluster#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster#resource_group_name DataAzurermHdinsightCluster#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster.html#timeouts DataAzurermHdinsightCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster#timeouts DataAzurermHdinsightCluster#timeouts}
   */
   readonly timeouts?: DataAzurermHdinsightClusterTimeouts;
 }
@@ -41,7 +41,7 @@ export class DataAzurermHdinsightClusterGateway extends cdktf.ComplexComputedLis
 }
 export interface DataAzurermHdinsightClusterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster.html#read DataAzurermHdinsightCluster#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster#read DataAzurermHdinsightCluster#read}
   */
   readonly read?: string;
 }
@@ -107,7 +107,7 @@ export class DataAzurermHdinsightClusterTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster.html azurerm_hdinsight_cluster}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster azurerm_hdinsight_cluster}
 */
 export class DataAzurermHdinsightCluster extends cdktf.TerraformDataSource {
 
@@ -121,7 +121,7 @@ export class DataAzurermHdinsightCluster extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster.html azurerm_hdinsight_cluster} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/hdinsight_cluster azurerm_hdinsight_cluster} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

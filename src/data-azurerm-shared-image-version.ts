@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/shared_image_version.html
+// https://www.terraform.io/docs/providers/azurerm/d/shared_image_version
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,29 +8,29 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSharedImageVersionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version.html#gallery_name DataAzurermSharedImageVersion#gallery_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version#gallery_name DataAzurermSharedImageVersion#gallery_name}
   */
   readonly galleryName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version.html#image_name DataAzurermSharedImageVersion#image_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version#image_name DataAzurermSharedImageVersion#image_name}
   */
   readonly imageName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version.html#name DataAzurermSharedImageVersion#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version#name DataAzurermSharedImageVersion#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version.html#resource_group_name DataAzurermSharedImageVersion#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version#resource_group_name DataAzurermSharedImageVersion#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version.html#sort_versions_by_semver DataAzurermSharedImageVersion#sort_versions_by_semver}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version#sort_versions_by_semver DataAzurermSharedImageVersion#sort_versions_by_semver}
   */
   readonly sortVersionsBySemver?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version.html#timeouts DataAzurermSharedImageVersion#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version#timeouts DataAzurermSharedImageVersion#timeouts}
   */
   readonly timeouts?: DataAzurermSharedImageVersionTimeouts;
 }
@@ -53,7 +53,7 @@ export class DataAzurermSharedImageVersionTargetRegion extends cdktf.ComplexComp
 }
 export interface DataAzurermSharedImageVersionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version.html#read DataAzurermSharedImageVersion#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version#read DataAzurermSharedImageVersion#read}
   */
   readonly read?: string;
 }
@@ -119,7 +119,7 @@ export class DataAzurermSharedImageVersionTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version.html azurerm_shared_image_version}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version azurerm_shared_image_version}
 */
 export class DataAzurermSharedImageVersion extends cdktf.TerraformDataSource {
 
@@ -133,7 +133,7 @@ export class DataAzurermSharedImageVersion extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version.html azurerm_shared_image_version} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/shared_image_version azurerm_shared_image_version} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

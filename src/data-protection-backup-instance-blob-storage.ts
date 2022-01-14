@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface DataProtectionBackupInstanceBlobStorageConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage.html#backup_policy_id DataProtectionBackupInstanceBlobStorage#backup_policy_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage#backup_policy_id DataProtectionBackupInstanceBlobStorage#backup_policy_id}
   */
   readonly backupPolicyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage.html#location DataProtectionBackupInstanceBlobStorage#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage#location DataProtectionBackupInstanceBlobStorage#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage.html#name DataProtectionBackupInstanceBlobStorage#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage#name DataProtectionBackupInstanceBlobStorage#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage.html#storage_account_id DataProtectionBackupInstanceBlobStorage#storage_account_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage#storage_account_id DataProtectionBackupInstanceBlobStorage#storage_account_id}
   */
   readonly storageAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage.html#vault_id DataProtectionBackupInstanceBlobStorage#vault_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage#vault_id DataProtectionBackupInstanceBlobStorage#vault_id}
   */
   readonly vaultId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage.html#timeouts DataProtectionBackupInstanceBlobStorage#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage#timeouts DataProtectionBackupInstanceBlobStorage#timeouts}
   */
   readonly timeouts?: DataProtectionBackupInstanceBlobStorageTimeouts;
 }
 export interface DataProtectionBackupInstanceBlobStorageTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage.html#create DataProtectionBackupInstanceBlobStorage#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage#create DataProtectionBackupInstanceBlobStorage#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage.html#delete DataProtectionBackupInstanceBlobStorage#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage#delete DataProtectionBackupInstanceBlobStorage#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage.html#read DataProtectionBackupInstanceBlobStorage#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage#read DataProtectionBackupInstanceBlobStorage#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage.html#update DataProtectionBackupInstanceBlobStorage#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage#update DataProtectionBackupInstanceBlobStorage#update}
   */
   readonly update?: string;
 }
@@ -183,7 +183,7 @@ export class DataProtectionBackupInstanceBlobStorageTimeoutsOutputReference exte
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage.html azurerm_data_protection_backup_instance_blob_storage}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage azurerm_data_protection_backup_instance_blob_storage}
 */
 export class DataProtectionBackupInstanceBlobStorage extends cdktf.TerraformResource {
 
@@ -197,7 +197,7 @@ export class DataProtectionBackupInstanceBlobStorage extends cdktf.TerraformReso
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage.html azurerm_data_protection_backup_instance_blob_storage} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_instance_blob_storage azurerm_data_protection_backup_instance_blob_storage} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

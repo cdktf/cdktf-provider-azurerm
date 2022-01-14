@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set.html
+// https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface ActiveDirectoryDomainServiceReplicaSetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set.html#domain_service_id ActiveDirectoryDomainServiceReplicaSet#domain_service_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set#domain_service_id ActiveDirectoryDomainServiceReplicaSet#domain_service_id}
   */
   readonly domainServiceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set.html#location ActiveDirectoryDomainServiceReplicaSet#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set#location ActiveDirectoryDomainServiceReplicaSet#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set.html#subnet_id ActiveDirectoryDomainServiceReplicaSet#subnet_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set#subnet_id ActiveDirectoryDomainServiceReplicaSet#subnet_id}
   */
   readonly subnetId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set.html#timeouts ActiveDirectoryDomainServiceReplicaSet#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set#timeouts ActiveDirectoryDomainServiceReplicaSet#timeouts}
   */
   readonly timeouts?: ActiveDirectoryDomainServiceReplicaSetTimeouts;
 }
 export interface ActiveDirectoryDomainServiceReplicaSetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set.html#create ActiveDirectoryDomainServiceReplicaSet#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set#create ActiveDirectoryDomainServiceReplicaSet#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set.html#delete ActiveDirectoryDomainServiceReplicaSet#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set#delete ActiveDirectoryDomainServiceReplicaSet#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set.html#read ActiveDirectoryDomainServiceReplicaSet#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set#read ActiveDirectoryDomainServiceReplicaSet#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set.html#update ActiveDirectoryDomainServiceReplicaSet#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set#update ActiveDirectoryDomainServiceReplicaSet#update}
   */
   readonly update?: string;
 }
@@ -175,7 +175,7 @@ export class ActiveDirectoryDomainServiceReplicaSetTimeoutsOutputReference exten
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set.html azurerm_active_directory_domain_service_replica_set}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set azurerm_active_directory_domain_service_replica_set}
 */
 export class ActiveDirectoryDomainServiceReplicaSet extends cdktf.TerraformResource {
 
@@ -189,7 +189,7 @@ export class ActiveDirectoryDomainServiceReplicaSet extends cdktf.TerraformResou
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set.html azurerm_active_directory_domain_service_replica_set} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/active_directory_domain_service_replica_set azurerm_active_directory_domain_service_replica_set} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

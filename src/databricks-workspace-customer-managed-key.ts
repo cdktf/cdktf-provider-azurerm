@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key.html
+// https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface DatabricksWorkspaceCustomerManagedKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key.html#key_vault_key_id DatabricksWorkspaceCustomerManagedKey#key_vault_key_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key#key_vault_key_id DatabricksWorkspaceCustomerManagedKey#key_vault_key_id}
   */
   readonly keyVaultKeyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key.html#workspace_id DatabricksWorkspaceCustomerManagedKey#workspace_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key#workspace_id DatabricksWorkspaceCustomerManagedKey#workspace_id}
   */
   readonly workspaceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key.html#timeouts DatabricksWorkspaceCustomerManagedKey#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key#timeouts DatabricksWorkspaceCustomerManagedKey#timeouts}
   */
   readonly timeouts?: DatabricksWorkspaceCustomerManagedKeyTimeouts;
 }
 export interface DatabricksWorkspaceCustomerManagedKeyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key.html#create DatabricksWorkspaceCustomerManagedKey#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key#create DatabricksWorkspaceCustomerManagedKey#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key.html#delete DatabricksWorkspaceCustomerManagedKey#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key#delete DatabricksWorkspaceCustomerManagedKey#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key.html#read DatabricksWorkspaceCustomerManagedKey#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key#read DatabricksWorkspaceCustomerManagedKey#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key.html#update DatabricksWorkspaceCustomerManagedKey#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key#update DatabricksWorkspaceCustomerManagedKey#update}
   */
   readonly update?: string;
 }
@@ -171,7 +171,7 @@ export class DatabricksWorkspaceCustomerManagedKeyTimeoutsOutputReference extend
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key.html azurerm_databricks_workspace_customer_managed_key}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key azurerm_databricks_workspace_customer_managed_key}
 */
 export class DatabricksWorkspaceCustomerManagedKey extends cdktf.TerraformResource {
 
@@ -185,7 +185,7 @@ export class DatabricksWorkspaceCustomerManagedKey extends cdktf.TerraformResour
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key.html azurerm_databricks_workspace_customer_managed_key} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/databricks_workspace_customer_managed_key azurerm_databricks_workspace_customer_managed_key} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

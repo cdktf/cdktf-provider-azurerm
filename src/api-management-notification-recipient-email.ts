@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email.html
+// https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementNotificationRecipientEmailConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email.html#api_management_id ApiManagementNotificationRecipientEmail#api_management_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email#api_management_id ApiManagementNotificationRecipientEmail#api_management_id}
   */
   readonly apiManagementId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email.html#email ApiManagementNotificationRecipientEmail#email}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email#email ApiManagementNotificationRecipientEmail#email}
   */
   readonly email: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email.html#notification_type ApiManagementNotificationRecipientEmail#notification_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email#notification_type ApiManagementNotificationRecipientEmail#notification_type}
   */
   readonly notificationType: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email.html#timeouts ApiManagementNotificationRecipientEmail#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email#timeouts ApiManagementNotificationRecipientEmail#timeouts}
   */
   readonly timeouts?: ApiManagementNotificationRecipientEmailTimeouts;
 }
 export interface ApiManagementNotificationRecipientEmailTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email.html#create ApiManagementNotificationRecipientEmail#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email#create ApiManagementNotificationRecipientEmail#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email.html#delete ApiManagementNotificationRecipientEmail#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email#delete ApiManagementNotificationRecipientEmail#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email.html#read ApiManagementNotificationRecipientEmail#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email#read ApiManagementNotificationRecipientEmail#read}
   */
   readonly read?: string;
 }
@@ -148,7 +148,7 @@ export class ApiManagementNotificationRecipientEmailTimeoutsOutputReference exte
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email.html azurerm_api_management_notification_recipient_email}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email azurerm_api_management_notification_recipient_email}
 */
 export class ApiManagementNotificationRecipientEmail extends cdktf.TerraformResource {
 
@@ -162,7 +162,7 @@ export class ApiManagementNotificationRecipientEmail extends cdktf.TerraformReso
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email.html azurerm_api_management_notification_recipient_email} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_notification_recipient_email azurerm_api_management_notification_recipient_email} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

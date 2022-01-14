@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag.html
+// https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementApiOperationTagConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag.html#api_operation_id ApiManagementApiOperationTag#api_operation_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag#api_operation_id ApiManagementApiOperationTag#api_operation_id}
   */
   readonly apiOperationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag.html#display_name ApiManagementApiOperationTag#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag#display_name ApiManagementApiOperationTag#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag.html#name ApiManagementApiOperationTag#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag#name ApiManagementApiOperationTag#name}
   */
   readonly name: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag.html#timeouts ApiManagementApiOperationTag#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag#timeouts ApiManagementApiOperationTag#timeouts}
   */
   readonly timeouts?: ApiManagementApiOperationTagTimeouts;
 }
 export interface ApiManagementApiOperationTagTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag.html#create ApiManagementApiOperationTag#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag#create ApiManagementApiOperationTag#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag.html#delete ApiManagementApiOperationTag#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag#delete ApiManagementApiOperationTag#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag.html#read ApiManagementApiOperationTag#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag#read ApiManagementApiOperationTag#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag.html#update ApiManagementApiOperationTag#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag#update ApiManagementApiOperationTag#update}
   */
   readonly update?: string;
 }
@@ -175,7 +175,7 @@ export class ApiManagementApiOperationTagTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag.html azurerm_api_management_api_operation_tag}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag azurerm_api_management_api_operation_tag}
 */
 export class ApiManagementApiOperationTag extends cdktf.TerraformResource {
 
@@ -189,7 +189,7 @@ export class ApiManagementApiOperationTag extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag.html azurerm_api_management_api_operation_tag} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/api_management_api_operation_tag azurerm_api_management_api_operation_tag} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

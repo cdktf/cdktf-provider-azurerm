@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/key_vault_secrets.html
+// https://www.terraform.io/docs/providers/azurerm/d/key_vault_secrets
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,19 +8,19 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermKeyVaultSecretsConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_secrets.html#key_vault_id DataAzurermKeyVaultSecrets#key_vault_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_secrets#key_vault_id DataAzurermKeyVaultSecrets#key_vault_id}
   */
   readonly keyVaultId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_secrets.html#timeouts DataAzurermKeyVaultSecrets#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_secrets#timeouts DataAzurermKeyVaultSecrets#timeouts}
   */
   readonly timeouts?: DataAzurermKeyVaultSecretsTimeouts;
 }
 export interface DataAzurermKeyVaultSecretsTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_secrets.html#read DataAzurermKeyVaultSecrets#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_secrets#read DataAzurermKeyVaultSecrets#read}
   */
   readonly read?: string;
 }
@@ -86,7 +86,7 @@ export class DataAzurermKeyVaultSecretsTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_secrets.html azurerm_key_vault_secrets}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_secrets azurerm_key_vault_secrets}
 */
 export class DataAzurermKeyVaultSecrets extends cdktf.TerraformDataSource {
 
@@ -100,7 +100,7 @@ export class DataAzurermKeyVaultSecrets extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_secrets.html azurerm_key_vault_secrets} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_secrets azurerm_key_vault_secrets} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

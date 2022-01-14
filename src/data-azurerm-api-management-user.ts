@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/api_management_user.html
+// https://www.terraform.io/docs/providers/azurerm/d/api_management_user
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermApiManagementUserConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_user.html#api_management_name DataAzurermApiManagementUser#api_management_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_user#api_management_name DataAzurermApiManagementUser#api_management_name}
   */
   readonly apiManagementName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_user.html#resource_group_name DataAzurermApiManagementUser#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_user#resource_group_name DataAzurermApiManagementUser#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_user.html#user_id DataAzurermApiManagementUser#user_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_user#user_id DataAzurermApiManagementUser#user_id}
   */
   readonly userId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_user.html#timeouts DataAzurermApiManagementUser#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_user#timeouts DataAzurermApiManagementUser#timeouts}
   */
   readonly timeouts?: DataAzurermApiManagementUserTimeouts;
 }
 export interface DataAzurermApiManagementUserTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_user.html#read DataAzurermApiManagementUser#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_user#read DataAzurermApiManagementUser#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermApiManagementUserTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_user.html azurerm_api_management_user}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_user azurerm_api_management_user}
 */
 export class DataAzurermApiManagementUser extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermApiManagementUser extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_user.html azurerm_api_management_user} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/api_management_user azurerm_api_management_user} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

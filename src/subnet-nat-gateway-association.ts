@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association.html
+// https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface SubnetNatGatewayAssociationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association.html#nat_gateway_id SubnetNatGatewayAssociation#nat_gateway_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association#nat_gateway_id SubnetNatGatewayAssociation#nat_gateway_id}
   */
   readonly natGatewayId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association.html#subnet_id SubnetNatGatewayAssociation#subnet_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association#subnet_id SubnetNatGatewayAssociation#subnet_id}
   */
   readonly subnetId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association.html#timeouts SubnetNatGatewayAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association#timeouts SubnetNatGatewayAssociation#timeouts}
   */
   readonly timeouts?: SubnetNatGatewayAssociationTimeouts;
 }
 export interface SubnetNatGatewayAssociationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association.html#create SubnetNatGatewayAssociation#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association#create SubnetNatGatewayAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association.html#delete SubnetNatGatewayAssociation#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association#delete SubnetNatGatewayAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association.html#read SubnetNatGatewayAssociation#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association#read SubnetNatGatewayAssociation#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association.html#update SubnetNatGatewayAssociation#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association#update SubnetNatGatewayAssociation#update}
   */
   readonly update?: string;
 }
@@ -171,7 +171,7 @@ export class SubnetNatGatewayAssociationTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association.html azurerm_subnet_nat_gateway_association}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association azurerm_subnet_nat_gateway_association}
 */
 export class SubnetNatGatewayAssociation extends cdktf.TerraformResource {
 
@@ -185,7 +185,7 @@ export class SubnetNatGatewayAssociation extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association.html azurerm_subnet_nat_gateway_association} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/subnet_nat_gateway_association azurerm_subnet_nat_gateway_association} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

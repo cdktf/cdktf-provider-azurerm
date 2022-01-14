@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic.html
+// https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermEventgridDomainTopicConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic.html#domain_name DataAzurermEventgridDomainTopic#domain_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic#domain_name DataAzurermEventgridDomainTopic#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic.html#name DataAzurermEventgridDomainTopic#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic#name DataAzurermEventgridDomainTopic#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic.html#resource_group_name DataAzurermEventgridDomainTopic#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic#resource_group_name DataAzurermEventgridDomainTopic#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic.html#timeouts DataAzurermEventgridDomainTopic#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic#timeouts DataAzurermEventgridDomainTopic#timeouts}
   */
   readonly timeouts?: DataAzurermEventgridDomainTopicTimeouts;
 }
 export interface DataAzurermEventgridDomainTopicTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic.html#read DataAzurermEventgridDomainTopic#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic#read DataAzurermEventgridDomainTopic#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermEventgridDomainTopicTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic.html azurerm_eventgrid_domain_topic}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic azurerm_eventgrid_domain_topic}
 */
 export class DataAzurermEventgridDomainTopic extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermEventgridDomainTopic extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic.html azurerm_eventgrid_domain_topic} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/eventgrid_domain_topic azurerm_eventgrid_domain_topic} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key.html
+// https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface PostgresqlServerKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key.html#key_vault_key_id PostgresqlServerKey#key_vault_key_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key#key_vault_key_id PostgresqlServerKey#key_vault_key_id}
   */
   readonly keyVaultKeyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key.html#server_id PostgresqlServerKey#server_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key#server_id PostgresqlServerKey#server_id}
   */
   readonly serverId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key.html#timeouts PostgresqlServerKey#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key#timeouts PostgresqlServerKey#timeouts}
   */
   readonly timeouts?: PostgresqlServerKeyTimeouts;
 }
 export interface PostgresqlServerKeyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key.html#create PostgresqlServerKey#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key#create PostgresqlServerKey#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key.html#delete PostgresqlServerKey#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key#delete PostgresqlServerKey#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key.html#read PostgresqlServerKey#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key#read PostgresqlServerKey#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key.html#update PostgresqlServerKey#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key#update PostgresqlServerKey#update}
   */
   readonly update?: string;
 }
@@ -171,7 +171,7 @@ export class PostgresqlServerKeyTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key.html azurerm_postgresql_server_key}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key azurerm_postgresql_server_key}
 */
 export class PostgresqlServerKey extends cdktf.TerraformResource {
 
@@ -185,7 +185,7 @@ export class PostgresqlServerKey extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key.html azurerm_postgresql_server_key} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/postgresql_server_key azurerm_postgresql_server_key} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

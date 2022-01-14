@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account.html
+// https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,39 +8,39 @@ import * as cdktf from 'cdktf';
 
 export interface BackupContainerStorageAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account.html#recovery_vault_name BackupContainerStorageAccount#recovery_vault_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#recovery_vault_name BackupContainerStorageAccount#recovery_vault_name}
   */
   readonly recoveryVaultName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account.html#resource_group_name BackupContainerStorageAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#resource_group_name BackupContainerStorageAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account.html#storage_account_id BackupContainerStorageAccount#storage_account_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#storage_account_id BackupContainerStorageAccount#storage_account_id}
   */
   readonly storageAccountId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account.html#timeouts BackupContainerStorageAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#timeouts BackupContainerStorageAccount#timeouts}
   */
   readonly timeouts?: BackupContainerStorageAccountTimeouts;
 }
 export interface BackupContainerStorageAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account.html#create BackupContainerStorageAccount#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#create BackupContainerStorageAccount#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account.html#delete BackupContainerStorageAccount#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#delete BackupContainerStorageAccount#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account.html#read BackupContainerStorageAccount#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#read BackupContainerStorageAccount#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account.html#update BackupContainerStorageAccount#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account#update BackupContainerStorageAccount#update}
   */
   readonly update?: string;
 }
@@ -175,7 +175,7 @@ export class BackupContainerStorageAccountTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account.html azurerm_backup_container_storage_account}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account azurerm_backup_container_storage_account}
 */
 export class BackupContainerStorageAccount extends cdktf.TerraformResource {
 
@@ -189,7 +189,7 @@ export class BackupContainerStorageAccount extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account.html azurerm_backup_container_storage_account} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/backup_container_storage_account azurerm_backup_container_storage_account} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

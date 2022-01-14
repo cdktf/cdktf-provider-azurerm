@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,45 +8,45 @@ import * as cdktf from 'cdktf';
 
 export interface DataProtectionBackupVaultConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault.html#datastore_type DataProtectionBackupVault#datastore_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault#datastore_type DataProtectionBackupVault#datastore_type}
   */
   readonly datastoreType: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault.html#location DataProtectionBackupVault#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault#location DataProtectionBackupVault#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault.html#name DataProtectionBackupVault#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault#name DataProtectionBackupVault#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault.html#redundancy DataProtectionBackupVault#redundancy}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault#redundancy DataProtectionBackupVault#redundancy}
   */
   readonly redundancy: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault.html#resource_group_name DataProtectionBackupVault#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault#resource_group_name DataProtectionBackupVault#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault.html#tags DataProtectionBackupVault#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault#tags DataProtectionBackupVault#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * identity block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault.html#identity DataProtectionBackupVault#identity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault#identity DataProtectionBackupVault#identity}
   */
   readonly identity?: DataProtectionBackupVaultIdentity;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault.html#timeouts DataProtectionBackupVault#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault#timeouts DataProtectionBackupVault#timeouts}
   */
   readonly timeouts?: DataProtectionBackupVaultTimeouts;
 }
 export interface DataProtectionBackupVaultIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault.html#type DataProtectionBackupVault#type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault#type DataProtectionBackupVault#type}
   */
   readonly type?: string;
 }
@@ -112,19 +112,19 @@ export class DataProtectionBackupVaultIdentityOutputReference extends cdktf.Comp
 }
 export interface DataProtectionBackupVaultTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault.html#create DataProtectionBackupVault#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault#create DataProtectionBackupVault#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault.html#delete DataProtectionBackupVault#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault#delete DataProtectionBackupVault#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault.html#read DataProtectionBackupVault#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault#read DataProtectionBackupVault#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault.html#update DataProtectionBackupVault#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault#update DataProtectionBackupVault#update}
   */
   readonly update?: string;
 }
@@ -259,7 +259,7 @@ export class DataProtectionBackupVaultTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault.html azurerm_data_protection_backup_vault}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault azurerm_data_protection_backup_vault}
 */
 export class DataProtectionBackupVault extends cdktf.TerraformResource {
 
@@ -273,7 +273,7 @@ export class DataProtectionBackupVault extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault.html azurerm_data_protection_backup_vault} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_protection_backup_vault azurerm_data_protection_backup_vault} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

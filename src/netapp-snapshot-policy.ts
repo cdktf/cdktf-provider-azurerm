@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html
+// https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,71 +8,71 @@ import * as cdktf from 'cdktf';
 
 export interface NetappSnapshotPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#account_name NetappSnapshotPolicy#account_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#account_name NetappSnapshotPolicy#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#enabled NetappSnapshotPolicy#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#enabled NetappSnapshotPolicy#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#location NetappSnapshotPolicy#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#location NetappSnapshotPolicy#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#name NetappSnapshotPolicy#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#name NetappSnapshotPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#resource_group_name NetappSnapshotPolicy#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#resource_group_name NetappSnapshotPolicy#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#tags NetappSnapshotPolicy#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#tags NetappSnapshotPolicy#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
   * daily_schedule block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#daily_schedule NetappSnapshotPolicy#daily_schedule}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#daily_schedule NetappSnapshotPolicy#daily_schedule}
   */
   readonly dailySchedule?: NetappSnapshotPolicyDailySchedule;
   /**
   * hourly_schedule block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#hourly_schedule NetappSnapshotPolicy#hourly_schedule}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#hourly_schedule NetappSnapshotPolicy#hourly_schedule}
   */
   readonly hourlySchedule?: NetappSnapshotPolicyHourlySchedule;
   /**
   * monthly_schedule block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#monthly_schedule NetappSnapshotPolicy#monthly_schedule}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#monthly_schedule NetappSnapshotPolicy#monthly_schedule}
   */
   readonly monthlySchedule?: NetappSnapshotPolicyMonthlySchedule;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#timeouts NetappSnapshotPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#timeouts NetappSnapshotPolicy#timeouts}
   */
   readonly timeouts?: NetappSnapshotPolicyTimeouts;
   /**
   * weekly_schedule block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#weekly_schedule NetappSnapshotPolicy#weekly_schedule}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#weekly_schedule NetappSnapshotPolicy#weekly_schedule}
   */
   readonly weeklySchedule?: NetappSnapshotPolicyWeeklySchedule;
 }
 export interface NetappSnapshotPolicyDailySchedule {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#hour NetappSnapshotPolicy#hour}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#hour NetappSnapshotPolicy#hour}
   */
   readonly hour: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#minute NetappSnapshotPolicy#minute}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#minute NetappSnapshotPolicy#minute}
   */
   readonly minute: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#snapshots_to_keep NetappSnapshotPolicy#snapshots_to_keep}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#snapshots_to_keep NetappSnapshotPolicy#snapshots_to_keep}
   */
   readonly snapshotsToKeep: number;
 }
@@ -175,11 +175,11 @@ export class NetappSnapshotPolicyDailyScheduleOutputReference extends cdktf.Comp
 }
 export interface NetappSnapshotPolicyHourlySchedule {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#minute NetappSnapshotPolicy#minute}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#minute NetappSnapshotPolicy#minute}
   */
   readonly minute: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#snapshots_to_keep NetappSnapshotPolicy#snapshots_to_keep}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#snapshots_to_keep NetappSnapshotPolicy#snapshots_to_keep}
   */
   readonly snapshotsToKeep: number;
 }
@@ -262,19 +262,19 @@ export class NetappSnapshotPolicyHourlyScheduleOutputReference extends cdktf.Com
 }
 export interface NetappSnapshotPolicyMonthlySchedule {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#days_of_month NetappSnapshotPolicy#days_of_month}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#days_of_month NetappSnapshotPolicy#days_of_month}
   */
   readonly daysOfMonth: number[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#hour NetappSnapshotPolicy#hour}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#hour NetappSnapshotPolicy#hour}
   */
   readonly hour: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#minute NetappSnapshotPolicy#minute}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#minute NetappSnapshotPolicy#minute}
   */
   readonly minute: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#snapshots_to_keep NetappSnapshotPolicy#snapshots_to_keep}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#snapshots_to_keep NetappSnapshotPolicy#snapshots_to_keep}
   */
   readonly snapshotsToKeep: number;
 }
@@ -398,19 +398,19 @@ export class NetappSnapshotPolicyMonthlyScheduleOutputReference extends cdktf.Co
 }
 export interface NetappSnapshotPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#create NetappSnapshotPolicy#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#create NetappSnapshotPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#delete NetappSnapshotPolicy#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#delete NetappSnapshotPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#read NetappSnapshotPolicy#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#read NetappSnapshotPolicy#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#update NetappSnapshotPolicy#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#update NetappSnapshotPolicy#update}
   */
   readonly update?: string;
 }
@@ -545,19 +545,19 @@ export class NetappSnapshotPolicyTimeoutsOutputReference extends cdktf.ComplexOb
 }
 export interface NetappSnapshotPolicyWeeklySchedule {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#days_of_week NetappSnapshotPolicy#days_of_week}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#days_of_week NetappSnapshotPolicy#days_of_week}
   */
   readonly daysOfWeek: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#hour NetappSnapshotPolicy#hour}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#hour NetappSnapshotPolicy#hour}
   */
   readonly hour: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#minute NetappSnapshotPolicy#minute}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#minute NetappSnapshotPolicy#minute}
   */
   readonly minute: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html#snapshots_to_keep NetappSnapshotPolicy#snapshots_to_keep}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy#snapshots_to_keep NetappSnapshotPolicy#snapshots_to_keep}
   */
   readonly snapshotsToKeep: number;
 }
@@ -680,7 +680,7 @@ export class NetappSnapshotPolicyWeeklyScheduleOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html azurerm_netapp_snapshot_policy}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy azurerm_netapp_snapshot_policy}
 */
 export class NetappSnapshotPolicy extends cdktf.TerraformResource {
 
@@ -694,7 +694,7 @@ export class NetappSnapshotPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy.html azurerm_netapp_snapshot_policy} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/netapp_snapshot_policy azurerm_netapp_snapshot_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

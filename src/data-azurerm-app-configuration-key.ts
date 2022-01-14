@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key.html
+// https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermAppConfigurationKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key.html#configuration_store_id DataAzurermAppConfigurationKey#configuration_store_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key#configuration_store_id DataAzurermAppConfigurationKey#configuration_store_id}
   */
   readonly configurationStoreId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key.html#key DataAzurermAppConfigurationKey#key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key#key DataAzurermAppConfigurationKey#key}
   */
   readonly key: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key.html#label DataAzurermAppConfigurationKey#label}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key#label DataAzurermAppConfigurationKey#label}
   */
   readonly label?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key.html#timeouts DataAzurermAppConfigurationKey#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key#timeouts DataAzurermAppConfigurationKey#timeouts}
   */
   readonly timeouts?: DataAzurermAppConfigurationKeyTimeouts;
 }
 export interface DataAzurermAppConfigurationKeyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key.html#read DataAzurermAppConfigurationKey#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key#read DataAzurermAppConfigurationKey#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermAppConfigurationKeyTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key.html azurerm_app_configuration_key}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key azurerm_app_configuration_key}
 */
 export class DataAzurermAppConfigurationKey extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermAppConfigurationKey extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key.html azurerm_app_configuration_key} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/app_configuration_key azurerm_app_configuration_key} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection.html
+// https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,17 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDatabricksWorkspacePrivateEndpointConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection.html#private_endpoint_id DataAzurermDatabricksWorkspacePrivateEndpointConnection#private_endpoint_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection#private_endpoint_id DataAzurermDatabricksWorkspacePrivateEndpointConnection#private_endpoint_id}
   */
   readonly privateEndpointId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection.html#workspace_id DataAzurermDatabricksWorkspacePrivateEndpointConnection#workspace_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection#workspace_id DataAzurermDatabricksWorkspacePrivateEndpointConnection#workspace_id}
   */
   readonly workspaceId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection.html#timeouts DataAzurermDatabricksWorkspacePrivateEndpointConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection#timeouts DataAzurermDatabricksWorkspacePrivateEndpointConnection#timeouts}
   */
   readonly timeouts?: DataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeouts;
 }
@@ -51,7 +51,7 @@ export class DataAzurermDatabricksWorkspacePrivateEndpointConnectionConnections 
 }
 export interface DataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection.html#read DataAzurermDatabricksWorkspacePrivateEndpointConnection#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection#read DataAzurermDatabricksWorkspacePrivateEndpointConnection#read}
   */
   readonly read?: string;
 }
@@ -117,7 +117,7 @@ export class DataAzurermDatabricksWorkspacePrivateEndpointConnectionTimeoutsOutp
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection.html azurerm_databricks_workspace_private_endpoint_connection}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection azurerm_databricks_workspace_private_endpoint_connection}
 */
 export class DataAzurermDatabricksWorkspacePrivateEndpointConnection extends cdktf.TerraformDataSource {
 
@@ -131,7 +131,7 @@ export class DataAzurermDatabricksWorkspacePrivateEndpointConnection extends cdk
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection.html azurerm_databricks_workspace_private_endpoint_connection} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/databricks_workspace_private_endpoint_connection azurerm_databricks_workspace_private_endpoint_connection} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

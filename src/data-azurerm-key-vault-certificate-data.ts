@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/key_vault_certificate_data.html
+// https://www.terraform.io/docs/providers/azurerm/d/key_vault_certificate_data
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermKeyVaultCertificateDataConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_certificate_data.html#key_vault_id DataAzurermKeyVaultCertificateData#key_vault_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_certificate_data#key_vault_id DataAzurermKeyVaultCertificateData#key_vault_id}
   */
   readonly keyVaultId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_certificate_data.html#name DataAzurermKeyVaultCertificateData#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_certificate_data#name DataAzurermKeyVaultCertificateData#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_certificate_data.html#version DataAzurermKeyVaultCertificateData#version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_certificate_data#version DataAzurermKeyVaultCertificateData#version}
   */
   readonly version?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_certificate_data.html#timeouts DataAzurermKeyVaultCertificateData#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_certificate_data#timeouts DataAzurermKeyVaultCertificateData#timeouts}
   */
   readonly timeouts?: DataAzurermKeyVaultCertificateDataTimeouts;
 }
 export interface DataAzurermKeyVaultCertificateDataTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_certificate_data.html#read DataAzurermKeyVaultCertificateData#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_certificate_data#read DataAzurermKeyVaultCertificateData#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermKeyVaultCertificateDataTimeoutsOutputReference extends c
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_certificate_data.html azurerm_key_vault_certificate_data}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_certificate_data azurerm_key_vault_certificate_data}
 */
 export class DataAzurermKeyVaultCertificateData extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermKeyVaultCertificateData extends cdktf.TerraformDataSourc
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_certificate_data.html azurerm_key_vault_certificate_data} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/key_vault_certificate_data azurerm_key_vault_certificate_data} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

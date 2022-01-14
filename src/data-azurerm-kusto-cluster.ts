@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster.html
+// https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,23 +8,23 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermKustoClusterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster.html#name DataAzurermKustoCluster#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster#name DataAzurermKustoCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster.html#resource_group_name DataAzurermKustoCluster#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster#resource_group_name DataAzurermKustoCluster#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster.html#timeouts DataAzurermKustoCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster#timeouts DataAzurermKustoCluster#timeouts}
   */
   readonly timeouts?: DataAzurermKustoClusterTimeouts;
 }
 export interface DataAzurermKustoClusterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster.html#read DataAzurermKustoCluster#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster#read DataAzurermKustoCluster#read}
   */
   readonly read?: string;
 }
@@ -90,7 +90,7 @@ export class DataAzurermKustoClusterTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster.html azurerm_kusto_cluster}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster azurerm_kusto_cluster}
 */
 export class DataAzurermKustoCluster extends cdktf.TerraformDataSource {
 
@@ -104,7 +104,7 @@ export class DataAzurermKustoCluster extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster.html azurerm_kusto_cluster} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/kusto_cluster azurerm_kusto_cluster} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

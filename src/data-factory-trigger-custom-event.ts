@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,65 +8,65 @@ import * as cdktf from 'cdktf';
 
 export interface DataFactoryTriggerCustomEventConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#activated DataFactoryTriggerCustomEvent#activated}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#activated DataFactoryTriggerCustomEvent#activated}
   */
   readonly activated?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#additional_properties DataFactoryTriggerCustomEvent#additional_properties}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#additional_properties DataFactoryTriggerCustomEvent#additional_properties}
   */
   readonly additionalProperties?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#annotations DataFactoryTriggerCustomEvent#annotations}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#annotations DataFactoryTriggerCustomEvent#annotations}
   */
   readonly annotations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#data_factory_id DataFactoryTriggerCustomEvent#data_factory_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#data_factory_id DataFactoryTriggerCustomEvent#data_factory_id}
   */
   readonly dataFactoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#description DataFactoryTriggerCustomEvent#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#description DataFactoryTriggerCustomEvent#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#eventgrid_topic_id DataFactoryTriggerCustomEvent#eventgrid_topic_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#eventgrid_topic_id DataFactoryTriggerCustomEvent#eventgrid_topic_id}
   */
   readonly eventgridTopicId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#events DataFactoryTriggerCustomEvent#events}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#events DataFactoryTriggerCustomEvent#events}
   */
   readonly events: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#name DataFactoryTriggerCustomEvent#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#name DataFactoryTriggerCustomEvent#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#subject_begins_with DataFactoryTriggerCustomEvent#subject_begins_with}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#subject_begins_with DataFactoryTriggerCustomEvent#subject_begins_with}
   */
   readonly subjectBeginsWith?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#subject_ends_with DataFactoryTriggerCustomEvent#subject_ends_with}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#subject_ends_with DataFactoryTriggerCustomEvent#subject_ends_with}
   */
   readonly subjectEndsWith?: string;
   /**
   * pipeline block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#pipeline DataFactoryTriggerCustomEvent#pipeline}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#pipeline DataFactoryTriggerCustomEvent#pipeline}
   */
   readonly pipeline: DataFactoryTriggerCustomEventPipeline[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#timeouts DataFactoryTriggerCustomEvent#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#timeouts DataFactoryTriggerCustomEvent#timeouts}
   */
   readonly timeouts?: DataFactoryTriggerCustomEventTimeouts;
 }
 export interface DataFactoryTriggerCustomEventPipeline {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#name DataFactoryTriggerCustomEvent#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#name DataFactoryTriggerCustomEvent#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#parameters DataFactoryTriggerCustomEvent#parameters}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#parameters DataFactoryTriggerCustomEvent#parameters}
   */
   readonly parameters?: { [key: string]: string } | cdktf.IResolvable;
 }
@@ -84,19 +84,19 @@ export function dataFactoryTriggerCustomEventPipelineToTerraform(struct?: DataFa
 
 export interface DataFactoryTriggerCustomEventTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#create DataFactoryTriggerCustomEvent#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#create DataFactoryTriggerCustomEvent#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#delete DataFactoryTriggerCustomEvent#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#delete DataFactoryTriggerCustomEvent#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#read DataFactoryTriggerCustomEvent#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#read DataFactoryTriggerCustomEvent#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html#update DataFactoryTriggerCustomEvent#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event#update DataFactoryTriggerCustomEvent#update}
   */
   readonly update?: string;
 }
@@ -231,7 +231,7 @@ export class DataFactoryTriggerCustomEventTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html azurerm_data_factory_trigger_custom_event}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event azurerm_data_factory_trigger_custom_event}
 */
 export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
 
@@ -245,7 +245,7 @@ export class DataFactoryTriggerCustomEvent extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event.html azurerm_data_factory_trigger_custom_event} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_factory_trigger_custom_event azurerm_data_factory_trigger_custom_event} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

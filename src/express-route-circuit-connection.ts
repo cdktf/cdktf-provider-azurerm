@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection.html
+// https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,51 +8,51 @@ import * as cdktf from 'cdktf';
 
 export interface ExpressRouteCircuitConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection.html#address_prefix_ipv4 ExpressRouteCircuitConnection#address_prefix_ipv4}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection#address_prefix_ipv4 ExpressRouteCircuitConnection#address_prefix_ipv4}
   */
   readonly addressPrefixIpv4: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection.html#address_prefix_ipv6 ExpressRouteCircuitConnection#address_prefix_ipv6}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection#address_prefix_ipv6 ExpressRouteCircuitConnection#address_prefix_ipv6}
   */
   readonly addressPrefixIpv6?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection.html#authorization_key ExpressRouteCircuitConnection#authorization_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection#authorization_key ExpressRouteCircuitConnection#authorization_key}
   */
   readonly authorizationKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection.html#name ExpressRouteCircuitConnection#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection#name ExpressRouteCircuitConnection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection.html#peer_peering_id ExpressRouteCircuitConnection#peer_peering_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection#peer_peering_id ExpressRouteCircuitConnection#peer_peering_id}
   */
   readonly peerPeeringId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection.html#peering_id ExpressRouteCircuitConnection#peering_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection#peering_id ExpressRouteCircuitConnection#peering_id}
   */
   readonly peeringId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection.html#timeouts ExpressRouteCircuitConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection#timeouts ExpressRouteCircuitConnection#timeouts}
   */
   readonly timeouts?: ExpressRouteCircuitConnectionTimeouts;
 }
 export interface ExpressRouteCircuitConnectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection.html#create ExpressRouteCircuitConnection#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection#create ExpressRouteCircuitConnection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection.html#delete ExpressRouteCircuitConnection#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection#delete ExpressRouteCircuitConnection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection.html#read ExpressRouteCircuitConnection#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection#read ExpressRouteCircuitConnection#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection.html#update ExpressRouteCircuitConnection#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection#update ExpressRouteCircuitConnection#update}
   */
   readonly update?: string;
 }
@@ -187,7 +187,7 @@ export class ExpressRouteCircuitConnectionTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection.html azurerm_express_route_circuit_connection}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection azurerm_express_route_circuit_connection}
 */
 export class ExpressRouteCircuitConnection extends cdktf.TerraformResource {
 
@@ -201,7 +201,7 @@ export class ExpressRouteCircuitConnection extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection.html azurerm_express_route_circuit_connection} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/express_route_circuit_connection azurerm_express_route_circuit_connection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

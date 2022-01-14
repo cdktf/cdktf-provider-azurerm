@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/notification_hub.html
+// https://www.terraform.io/docs/providers/azurerm/d/notification_hub
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,21 +8,21 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermNotificationHubConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub.html#name DataAzurermNotificationHub#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub#name DataAzurermNotificationHub#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub.html#namespace_name DataAzurermNotificationHub#namespace_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub#namespace_name DataAzurermNotificationHub#namespace_name}
   */
   readonly namespaceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub.html#resource_group_name DataAzurermNotificationHub#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub#resource_group_name DataAzurermNotificationHub#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub.html#timeouts DataAzurermNotificationHub#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub#timeouts DataAzurermNotificationHub#timeouts}
   */
   readonly timeouts?: DataAzurermNotificationHubTimeouts;
 }
@@ -62,7 +62,7 @@ export class DataAzurermNotificationHubGcmCredential extends cdktf.ComplexComput
 }
 export interface DataAzurermNotificationHubTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub.html#read DataAzurermNotificationHub#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub#read DataAzurermNotificationHub#read}
   */
   readonly read?: string;
 }
@@ -128,7 +128,7 @@ export class DataAzurermNotificationHubTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub.html azurerm_notification_hub}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub azurerm_notification_hub}
 */
 export class DataAzurermNotificationHub extends cdktf.TerraformDataSource {
 
@@ -142,7 +142,7 @@ export class DataAzurermNotificationHub extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub.html azurerm_notification_hub} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/notification_hub azurerm_notification_hub} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

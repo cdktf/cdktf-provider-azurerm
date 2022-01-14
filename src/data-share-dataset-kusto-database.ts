@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html
+// https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,35 +8,35 @@ import * as cdktf from 'cdktf';
 
 export interface DataShareDatasetKustoDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html#kusto_database_id DataShareDatasetKustoDatabase#kusto_database_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database#kusto_database_id DataShareDatasetKustoDatabase#kusto_database_id}
   */
   readonly kustoDatabaseId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html#name DataShareDatasetKustoDatabase#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database#name DataShareDatasetKustoDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html#share_id DataShareDatasetKustoDatabase#share_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database#share_id DataShareDatasetKustoDatabase#share_id}
   */
   readonly shareId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html#timeouts DataShareDatasetKustoDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database#timeouts DataShareDatasetKustoDatabase#timeouts}
   */
   readonly timeouts?: DataShareDatasetKustoDatabaseTimeouts;
 }
 export interface DataShareDatasetKustoDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html#create DataShareDatasetKustoDatabase#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database#create DataShareDatasetKustoDatabase#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html#delete DataShareDatasetKustoDatabase#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database#delete DataShareDatasetKustoDatabase#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html#read DataShareDatasetKustoDatabase#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database#read DataShareDatasetKustoDatabase#read}
   */
   readonly read?: string;
 }
@@ -148,7 +148,7 @@ export class DataShareDatasetKustoDatabaseTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html azurerm_data_share_dataset_kusto_database}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database azurerm_data_share_dataset_kusto_database}
 */
 export class DataShareDatasetKustoDatabase extends cdktf.TerraformResource {
 
@@ -162,7 +162,7 @@ export class DataShareDatasetKustoDatabase extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database.html azurerm_data_share_dataset_kusto_database} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/data_share_dataset_kusto_database azurerm_data_share_dataset_kusto_database} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule.html
+// https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,43 +8,43 @@ import * as cdktf from 'cdktf';
 
 export interface MssqlVirtualNetworkRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule.html#ignore_missing_vnet_service_endpoint MssqlVirtualNetworkRule#ignore_missing_vnet_service_endpoint}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule#ignore_missing_vnet_service_endpoint MssqlVirtualNetworkRule#ignore_missing_vnet_service_endpoint}
   */
   readonly ignoreMissingVnetServiceEndpoint?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule.html#name MssqlVirtualNetworkRule#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule#name MssqlVirtualNetworkRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule.html#server_id MssqlVirtualNetworkRule#server_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule#server_id MssqlVirtualNetworkRule#server_id}
   */
   readonly serverId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule.html#subnet_id MssqlVirtualNetworkRule#subnet_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule#subnet_id MssqlVirtualNetworkRule#subnet_id}
   */
   readonly subnetId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule.html#timeouts MssqlVirtualNetworkRule#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule#timeouts MssqlVirtualNetworkRule#timeouts}
   */
   readonly timeouts?: MssqlVirtualNetworkRuleTimeouts;
 }
 export interface MssqlVirtualNetworkRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule.html#create MssqlVirtualNetworkRule#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule#create MssqlVirtualNetworkRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule.html#delete MssqlVirtualNetworkRule#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule#delete MssqlVirtualNetworkRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule.html#read MssqlVirtualNetworkRule#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule#read MssqlVirtualNetworkRule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule.html#update MssqlVirtualNetworkRule#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule#update MssqlVirtualNetworkRule#update}
   */
   readonly update?: string;
 }
@@ -179,7 +179,7 @@ export class MssqlVirtualNetworkRuleTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule.html azurerm_mssql_virtual_network_rule}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule azurerm_mssql_virtual_network_rule}
 */
 export class MssqlVirtualNetworkRule extends cdktf.TerraformResource {
 
@@ -193,7 +193,7 @@ export class MssqlVirtualNetworkRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule.html azurerm_mssql_virtual_network_rule} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/mssql_virtual_network_rule azurerm_mssql_virtual_network_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

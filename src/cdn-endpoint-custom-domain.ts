@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain.html
+// https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,47 +8,47 @@ import * as cdktf from 'cdktf';
 
 export interface CdnEndpointCustomDomainConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain.html#cdn_endpoint_id CdnEndpointCustomDomain#cdn_endpoint_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain#cdn_endpoint_id CdnEndpointCustomDomain#cdn_endpoint_id}
   */
   readonly cdnEndpointId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain.html#host_name CdnEndpointCustomDomain#host_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain#host_name CdnEndpointCustomDomain#host_name}
   */
   readonly hostName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain.html#name CdnEndpointCustomDomain#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain#name CdnEndpointCustomDomain#name}
   */
   readonly name: string;
   /**
   * cdn_managed_https block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain.html#cdn_managed_https CdnEndpointCustomDomain#cdn_managed_https}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain#cdn_managed_https CdnEndpointCustomDomain#cdn_managed_https}
   */
   readonly cdnManagedHttps?: CdnEndpointCustomDomainCdnManagedHttps;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain.html#timeouts CdnEndpointCustomDomain#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain#timeouts CdnEndpointCustomDomain#timeouts}
   */
   readonly timeouts?: CdnEndpointCustomDomainTimeouts;
   /**
   * user_managed_https block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain.html#user_managed_https CdnEndpointCustomDomain#user_managed_https}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain#user_managed_https CdnEndpointCustomDomain#user_managed_https}
   */
   readonly userManagedHttps?: CdnEndpointCustomDomainUserManagedHttps;
 }
 export interface CdnEndpointCustomDomainCdnManagedHttps {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain.html#certificate_type CdnEndpointCustomDomain#certificate_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain#certificate_type CdnEndpointCustomDomain#certificate_type}
   */
   readonly certificateType: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain.html#protocol_type CdnEndpointCustomDomain#protocol_type}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain#protocol_type CdnEndpointCustomDomain#protocol_type}
   */
   readonly protocolType: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain.html#tls_version CdnEndpointCustomDomain#tls_version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain#tls_version CdnEndpointCustomDomain#tls_version}
   */
   readonly tlsVersion?: string;
 }
@@ -154,19 +154,19 @@ export class CdnEndpointCustomDomainCdnManagedHttpsOutputReference extends cdktf
 }
 export interface CdnEndpointCustomDomainTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain.html#create CdnEndpointCustomDomain#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain#create CdnEndpointCustomDomain#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain.html#delete CdnEndpointCustomDomain#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain#delete CdnEndpointCustomDomain#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain.html#read CdnEndpointCustomDomain#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain#read CdnEndpointCustomDomain#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain.html#update CdnEndpointCustomDomain#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain#update CdnEndpointCustomDomain#update}
   */
   readonly update?: string;
 }
@@ -301,11 +301,11 @@ export class CdnEndpointCustomDomainTimeoutsOutputReference extends cdktf.Comple
 }
 export interface CdnEndpointCustomDomainUserManagedHttps {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain.html#key_vault_certificate_id CdnEndpointCustomDomain#key_vault_certificate_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain#key_vault_certificate_id CdnEndpointCustomDomain#key_vault_certificate_id}
   */
   readonly keyVaultCertificateId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain.html#tls_version CdnEndpointCustomDomain#tls_version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain#tls_version CdnEndpointCustomDomain#tls_version}
   */
   readonly tlsVersion?: string;
 }
@@ -391,7 +391,7 @@ export class CdnEndpointCustomDomainUserManagedHttpsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain.html azurerm_cdn_endpoint_custom_domain}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain azurerm_cdn_endpoint_custom_domain}
 */
 export class CdnEndpointCustomDomain extends cdktf.TerraformResource {
 
@@ -405,7 +405,7 @@ export class CdnEndpointCustomDomain extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain.html azurerm_cdn_endpoint_custom_domain} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/cdn_endpoint_custom_domain azurerm_cdn_endpoint_custom_domain} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

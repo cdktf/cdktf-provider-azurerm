@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html
+// https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,79 +8,79 @@ import * as cdktf from 'cdktf';
 
 export interface HdinsightStormClusterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#cluster_version HdinsightStormCluster#cluster_version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#cluster_version HdinsightStormCluster#cluster_version}
   */
   readonly clusterVersion: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#location HdinsightStormCluster#location}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#location HdinsightStormCluster#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#name HdinsightStormCluster#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#name HdinsightStormCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#resource_group_name HdinsightStormCluster#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#resource_group_name HdinsightStormCluster#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#tags HdinsightStormCluster#tags}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#tags HdinsightStormCluster#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#tier HdinsightStormCluster#tier}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#tier HdinsightStormCluster#tier}
   */
   readonly tier: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#tls_min_version HdinsightStormCluster#tls_min_version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#tls_min_version HdinsightStormCluster#tls_min_version}
   */
   readonly tlsMinVersion?: string;
   /**
   * component_version block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#component_version HdinsightStormCluster#component_version}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#component_version HdinsightStormCluster#component_version}
   */
   readonly componentVersion: HdinsightStormClusterComponentVersion;
   /**
   * gateway block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#gateway HdinsightStormCluster#gateway}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#gateway HdinsightStormCluster#gateway}
   */
   readonly gateway: HdinsightStormClusterGateway;
   /**
   * metastores block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#metastores HdinsightStormCluster#metastores}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#metastores HdinsightStormCluster#metastores}
   */
   readonly metastores?: HdinsightStormClusterMetastores;
   /**
   * monitor block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#monitor HdinsightStormCluster#monitor}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#monitor HdinsightStormCluster#monitor}
   */
   readonly monitor?: HdinsightStormClusterMonitor;
   /**
   * roles block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#roles HdinsightStormCluster#roles}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#roles HdinsightStormCluster#roles}
   */
   readonly roles: HdinsightStormClusterRoles;
   /**
   * storage_account block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#storage_account HdinsightStormCluster#storage_account}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#storage_account HdinsightStormCluster#storage_account}
   */
   readonly storageAccount?: HdinsightStormClusterStorageAccount[];
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#timeouts HdinsightStormCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#timeouts HdinsightStormCluster#timeouts}
   */
   readonly timeouts?: HdinsightStormClusterTimeouts;
 }
 export interface HdinsightStormClusterComponentVersion {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#storm HdinsightStormCluster#storm}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#storm HdinsightStormCluster#storm}
   */
   readonly storm: string;
 }
@@ -143,15 +143,15 @@ export class HdinsightStormClusterComponentVersionOutputReference extends cdktf.
 }
 export interface HdinsightStormClusterGateway {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#enabled HdinsightStormCluster#enabled}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#enabled HdinsightStormCluster#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#password HdinsightStormCluster#password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#password HdinsightStormCluster#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#username HdinsightStormCluster#username}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#username HdinsightStormCluster#username}
   */
   readonly username: string;
 }
@@ -257,19 +257,19 @@ export class HdinsightStormClusterGatewayOutputReference extends cdktf.ComplexOb
 }
 export interface HdinsightStormClusterMetastoresAmbari {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#database_name HdinsightStormCluster#database_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#database_name HdinsightStormCluster#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#password HdinsightStormCluster#password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#password HdinsightStormCluster#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#server HdinsightStormCluster#server}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#server HdinsightStormCluster#server}
   */
   readonly server: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#username HdinsightStormCluster#username}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#username HdinsightStormCluster#username}
   */
   readonly username: string;
 }
@@ -392,19 +392,19 @@ export class HdinsightStormClusterMetastoresAmbariOutputReference extends cdktf.
 }
 export interface HdinsightStormClusterMetastoresHive {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#database_name HdinsightStormCluster#database_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#database_name HdinsightStormCluster#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#password HdinsightStormCluster#password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#password HdinsightStormCluster#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#server HdinsightStormCluster#server}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#server HdinsightStormCluster#server}
   */
   readonly server: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#username HdinsightStormCluster#username}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#username HdinsightStormCluster#username}
   */
   readonly username: string;
 }
@@ -527,19 +527,19 @@ export class HdinsightStormClusterMetastoresHiveOutputReference extends cdktf.Co
 }
 export interface HdinsightStormClusterMetastoresOozie {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#database_name HdinsightStormCluster#database_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#database_name HdinsightStormCluster#database_name}
   */
   readonly databaseName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#password HdinsightStormCluster#password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#password HdinsightStormCluster#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#server HdinsightStormCluster#server}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#server HdinsightStormCluster#server}
   */
   readonly server: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#username HdinsightStormCluster#username}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#username HdinsightStormCluster#username}
   */
   readonly username: string;
 }
@@ -664,19 +664,19 @@ export interface HdinsightStormClusterMetastores {
   /**
   * ambari block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#ambari HdinsightStormCluster#ambari}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#ambari HdinsightStormCluster#ambari}
   */
   readonly ambari?: HdinsightStormClusterMetastoresAmbari;
   /**
   * hive block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#hive HdinsightStormCluster#hive}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#hive HdinsightStormCluster#hive}
   */
   readonly hive?: HdinsightStormClusterMetastoresHive;
   /**
   * oozie block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#oozie HdinsightStormCluster#oozie}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#oozie HdinsightStormCluster#oozie}
   */
   readonly oozie?: HdinsightStormClusterMetastoresOozie;
 }
@@ -788,11 +788,11 @@ export class HdinsightStormClusterMetastoresOutputReference extends cdktf.Comple
 }
 export interface HdinsightStormClusterMonitor {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#log_analytics_workspace_id HdinsightStormCluster#log_analytics_workspace_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#log_analytics_workspace_id HdinsightStormCluster#log_analytics_workspace_id}
   */
   readonly logAnalyticsWorkspaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#primary_key HdinsightStormCluster#primary_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#primary_key HdinsightStormCluster#primary_key}
   */
   readonly primaryKey: string;
 }
@@ -875,27 +875,27 @@ export class HdinsightStormClusterMonitorOutputReference extends cdktf.ComplexOb
 }
 export interface HdinsightStormClusterRolesHeadNode {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#password HdinsightStormCluster#password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#password HdinsightStormCluster#password}
   */
   readonly password?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#ssh_keys HdinsightStormCluster#ssh_keys}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#ssh_keys HdinsightStormCluster#ssh_keys}
   */
   readonly sshKeys?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#subnet_id HdinsightStormCluster#subnet_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#subnet_id HdinsightStormCluster#subnet_id}
   */
   readonly subnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#username HdinsightStormCluster#username}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#username HdinsightStormCluster#username}
   */
   readonly username: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#virtual_network_id HdinsightStormCluster#virtual_network_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#virtual_network_id HdinsightStormCluster#virtual_network_id}
   */
   readonly virtualNetworkId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#vm_size HdinsightStormCluster#vm_size}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#vm_size HdinsightStormCluster#vm_size}
   */
   readonly vmSize: string;
 }
@@ -1070,35 +1070,35 @@ export class HdinsightStormClusterRolesHeadNodeOutputReference extends cdktf.Com
 }
 export interface HdinsightStormClusterRolesWorkerNode {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#min_instance_count HdinsightStormCluster#min_instance_count}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#min_instance_count HdinsightStormCluster#min_instance_count}
   */
   readonly minInstanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#password HdinsightStormCluster#password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#password HdinsightStormCluster#password}
   */
   readonly password?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#ssh_keys HdinsightStormCluster#ssh_keys}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#ssh_keys HdinsightStormCluster#ssh_keys}
   */
   readonly sshKeys?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#subnet_id HdinsightStormCluster#subnet_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#subnet_id HdinsightStormCluster#subnet_id}
   */
   readonly subnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#target_instance_count HdinsightStormCluster#target_instance_count}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#target_instance_count HdinsightStormCluster#target_instance_count}
   */
   readonly targetInstanceCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#username HdinsightStormCluster#username}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#username HdinsightStormCluster#username}
   */
   readonly username: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#virtual_network_id HdinsightStormCluster#virtual_network_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#virtual_network_id HdinsightStormCluster#virtual_network_id}
   */
   readonly virtualNetworkId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#vm_size HdinsightStormCluster#vm_size}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#vm_size HdinsightStormCluster#vm_size}
   */
   readonly vmSize: string;
 }
@@ -1316,27 +1316,27 @@ export class HdinsightStormClusterRolesWorkerNodeOutputReference extends cdktf.C
 }
 export interface HdinsightStormClusterRolesZookeeperNode {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#password HdinsightStormCluster#password}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#password HdinsightStormCluster#password}
   */
   readonly password?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#ssh_keys HdinsightStormCluster#ssh_keys}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#ssh_keys HdinsightStormCluster#ssh_keys}
   */
   readonly sshKeys?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#subnet_id HdinsightStormCluster#subnet_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#subnet_id HdinsightStormCluster#subnet_id}
   */
   readonly subnetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#username HdinsightStormCluster#username}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#username HdinsightStormCluster#username}
   */
   readonly username: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#virtual_network_id HdinsightStormCluster#virtual_network_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#virtual_network_id HdinsightStormCluster#virtual_network_id}
   */
   readonly virtualNetworkId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#vm_size HdinsightStormCluster#vm_size}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#vm_size HdinsightStormCluster#vm_size}
   */
   readonly vmSize: string;
 }
@@ -1513,19 +1513,19 @@ export interface HdinsightStormClusterRoles {
   /**
   * head_node block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#head_node HdinsightStormCluster#head_node}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#head_node HdinsightStormCluster#head_node}
   */
   readonly headNode: HdinsightStormClusterRolesHeadNode;
   /**
   * worker_node block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#worker_node HdinsightStormCluster#worker_node}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#worker_node HdinsightStormCluster#worker_node}
   */
   readonly workerNode: HdinsightStormClusterRolesWorkerNode;
   /**
   * zookeeper_node block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#zookeeper_node HdinsightStormCluster#zookeeper_node}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#zookeeper_node HdinsightStormCluster#zookeeper_node}
   */
   readonly zookeeperNode: HdinsightStormClusterRolesZookeeperNode;
 }
@@ -1628,15 +1628,15 @@ export class HdinsightStormClusterRolesOutputReference extends cdktf.ComplexObje
 }
 export interface HdinsightStormClusterStorageAccount {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#is_default HdinsightStormCluster#is_default}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#is_default HdinsightStormCluster#is_default}
   */
   readonly isDefault: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#storage_account_key HdinsightStormCluster#storage_account_key}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#storage_account_key HdinsightStormCluster#storage_account_key}
   */
   readonly storageAccountKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#storage_container_id HdinsightStormCluster#storage_container_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#storage_container_id HdinsightStormCluster#storage_container_id}
   */
   readonly storageContainerId: string;
 }
@@ -1655,19 +1655,19 @@ export function hdinsightStormClusterStorageAccountToTerraform(struct?: Hdinsigh
 
 export interface HdinsightStormClusterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#create HdinsightStormCluster#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#create HdinsightStormCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#delete HdinsightStormCluster#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#delete HdinsightStormCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#read HdinsightStormCluster#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#read HdinsightStormCluster#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html#update HdinsightStormCluster#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster#update HdinsightStormCluster#update}
   */
   readonly update?: string;
 }
@@ -1802,7 +1802,7 @@ export class HdinsightStormClusterTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html azurerm_hdinsight_storm_cluster}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster azurerm_hdinsight_storm_cluster}
 */
 export class HdinsightStormCluster extends cdktf.TerraformResource {
 
@@ -1816,7 +1816,7 @@ export class HdinsightStormCluster extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster.html azurerm_hdinsight_storm_cluster} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/hdinsight_storm_cluster azurerm_hdinsight_storm_cluster} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

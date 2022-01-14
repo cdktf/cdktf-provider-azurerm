@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html
+// https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,59 +8,59 @@ import * as cdktf from 'cdktf';
 
 export interface SecurityCenterAssessmentMetadataConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#categories SecurityCenterAssessmentMetadata#categories}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata#categories SecurityCenterAssessmentMetadata#categories}
   */
   readonly categories?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#description SecurityCenterAssessmentMetadata#description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata#description SecurityCenterAssessmentMetadata#description}
   */
   readonly description: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#display_name SecurityCenterAssessmentMetadata#display_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata#display_name SecurityCenterAssessmentMetadata#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#implementation_effort SecurityCenterAssessmentMetadata#implementation_effort}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata#implementation_effort SecurityCenterAssessmentMetadata#implementation_effort}
   */
   readonly implementationEffort?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#remediation_description SecurityCenterAssessmentMetadata#remediation_description}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata#remediation_description SecurityCenterAssessmentMetadata#remediation_description}
   */
   readonly remediationDescription?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#severity SecurityCenterAssessmentMetadata#severity}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata#severity SecurityCenterAssessmentMetadata#severity}
   */
   readonly severity?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#threats SecurityCenterAssessmentMetadata#threats}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata#threats SecurityCenterAssessmentMetadata#threats}
   */
   readonly threats?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#user_impact SecurityCenterAssessmentMetadata#user_impact}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata#user_impact SecurityCenterAssessmentMetadata#user_impact}
   */
   readonly userImpact?: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#timeouts SecurityCenterAssessmentMetadata#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata#timeouts SecurityCenterAssessmentMetadata#timeouts}
   */
   readonly timeouts?: SecurityCenterAssessmentMetadataTimeouts;
 }
 export interface SecurityCenterAssessmentMetadataTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#create SecurityCenterAssessmentMetadata#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata#create SecurityCenterAssessmentMetadata#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#delete SecurityCenterAssessmentMetadata#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata#delete SecurityCenterAssessmentMetadata#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#read SecurityCenterAssessmentMetadata#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata#read SecurityCenterAssessmentMetadata#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html#update SecurityCenterAssessmentMetadata#update}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata#update SecurityCenterAssessmentMetadata#update}
   */
   readonly update?: string;
 }
@@ -195,7 +195,7 @@ export class SecurityCenterAssessmentMetadataTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html azurerm_security_center_assessment_metadata}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata azurerm_security_center_assessment_metadata}
 */
 export class SecurityCenterAssessmentMetadata extends cdktf.TerraformResource {
 
@@ -209,7 +209,7 @@ export class SecurityCenterAssessmentMetadata extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata.html azurerm_security_center_assessment_metadata} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/security_center_assessment_metadata azurerm_security_center_assessment_metadata} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

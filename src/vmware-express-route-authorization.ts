@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/r/vmware_express_route_authorization.html
+// https://www.terraform.io/docs/providers/azurerm/r/vmware_express_route_authorization
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,31 +8,31 @@ import * as cdktf from 'cdktf';
 
 export interface VmwareExpressRouteAuthorizationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_express_route_authorization.html#name VmwareExpressRouteAuthorization#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_express_route_authorization#name VmwareExpressRouteAuthorization#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_express_route_authorization.html#private_cloud_id VmwareExpressRouteAuthorization#private_cloud_id}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_express_route_authorization#private_cloud_id VmwareExpressRouteAuthorization#private_cloud_id}
   */
   readonly privateCloudId: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_express_route_authorization.html#timeouts VmwareExpressRouteAuthorization#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_express_route_authorization#timeouts VmwareExpressRouteAuthorization#timeouts}
   */
   readonly timeouts?: VmwareExpressRouteAuthorizationTimeouts;
 }
 export interface VmwareExpressRouteAuthorizationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_express_route_authorization.html#create VmwareExpressRouteAuthorization#create}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_express_route_authorization#create VmwareExpressRouteAuthorization#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_express_route_authorization.html#delete VmwareExpressRouteAuthorization#delete}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_express_route_authorization#delete VmwareExpressRouteAuthorization#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_express_route_authorization.html#read VmwareExpressRouteAuthorization#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_express_route_authorization#read VmwareExpressRouteAuthorization#read}
   */
   readonly read?: string;
 }
@@ -144,7 +144,7 @@ export class VmwareExpressRouteAuthorizationTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_express_route_authorization.html azurerm_vmware_express_route_authorization}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_express_route_authorization azurerm_vmware_express_route_authorization}
 */
 export class VmwareExpressRouteAuthorization extends cdktf.TerraformResource {
 
@@ -158,7 +158,7 @@ export class VmwareExpressRouteAuthorization extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_express_route_authorization.html azurerm_vmware_express_route_authorization} Resource
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/r/vmware_express_route_authorization azurerm_vmware_express_route_authorization} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope

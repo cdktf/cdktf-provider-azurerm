@@ -1,4 +1,4 @@
-// https://www.terraform.io/docs/providers/azurerm/d/subnet.html
+// https://www.terraform.io/docs/providers/azurerm/d/subnet
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -8,27 +8,27 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSubnetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subnet.html#name DataAzurermSubnet#name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subnet#name DataAzurermSubnet#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subnet.html#resource_group_name DataAzurermSubnet#resource_group_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subnet#resource_group_name DataAzurermSubnet#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subnet.html#virtual_network_name DataAzurermSubnet#virtual_network_name}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subnet#virtual_network_name DataAzurermSubnet#virtual_network_name}
   */
   readonly virtualNetworkName: string;
   /**
   * timeouts block
   * 
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subnet.html#timeouts DataAzurermSubnet#timeouts}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subnet#timeouts DataAzurermSubnet#timeouts}
   */
   readonly timeouts?: DataAzurermSubnetTimeouts;
 }
 export interface DataAzurermSubnetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subnet.html#read DataAzurermSubnet#read}
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/d/subnet#read DataAzurermSubnet#read}
   */
   readonly read?: string;
 }
@@ -94,7 +94,7 @@ export class DataAzurermSubnetTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/subnet.html azurerm_subnet}
+* Represents a {@link https://www.terraform.io/docs/providers/azurerm/d/subnet azurerm_subnet}
 */
 export class DataAzurermSubnet extends cdktf.TerraformDataSource {
 
@@ -108,7 +108,7 @@ export class DataAzurermSubnet extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/subnet.html azurerm_subnet} Data Source
+  * Create a new {@link https://www.terraform.io/docs/providers/azurerm/d/subnet azurerm_subnet} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
