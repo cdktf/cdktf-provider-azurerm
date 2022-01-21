@@ -32,11 +32,107 @@ export interface StaticSiteConfig extends cdktf.TerraformMetaArguments {
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
   /**
+  * identity block
+  * 
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site#identity StaticSite#identity}
+  */
+  readonly identity?: StaticSiteIdentity;
+  /**
   * timeouts block
   * 
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site#timeouts StaticSite#timeouts}
   */
   readonly timeouts?: StaticSiteTimeouts;
+}
+export interface StaticSiteIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site#identity_ids StaticSite#identity_ids}
+  */
+  readonly identityIds?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/static_site#type StaticSite#type}
+  */
+  readonly type: string;
+}
+
+export function staticSiteIdentityToTerraform(struct?: StaticSiteIdentityOutputReference | StaticSiteIdentity): any {
+  if (!cdktf.canInspect(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+export class StaticSiteIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param isSingleItem True if this is a block, false if it's a list
+  */
+  public constructor(terraformResource: cdktf.ITerraformResource, terraformAttribute: string, isSingleItem: boolean) {
+    super(terraformResource, terraformAttribute, isSingleItem);
+  }
+
+  public get internalValue(): StaticSiteIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: StaticSiteIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
+  // identity_ids - computed: false, optional: true, required: false
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return this.getListAttribute('identity_ids');
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  public resetIdentityIds() {
+    this._identityIds = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
 }
 export interface StaticSiteTimeouts {
   /**
@@ -224,6 +320,7 @@ export class StaticSite extends cdktf.TerraformResource {
     this._skuSize = config.skuSize;
     this._skuTier = config.skuTier;
     this._tags = config.tags;
+    this._identity.internalValue = config.identity;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -334,6 +431,22 @@ export class StaticSite extends cdktf.TerraformResource {
     return this._tags;
   }
 
+  // identity - computed: false, optional: true, required: false
+  private _identity = new StaticSiteIdentityOutputReference(this as any, "identity", true);
+  public get identity() {
+    return this._identity;
+  }
+  public putIdentity(value: StaticSiteIdentity) {
+    this._identity.internalValue = value;
+  }
+  public resetIdentity() {
+    this._identity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new StaticSiteTimeoutsOutputReference(this as any, "timeouts", true);
   public get timeouts() {
@@ -362,6 +475,7 @@ export class StaticSite extends cdktf.TerraformResource {
       sku_size: cdktf.stringToTerraform(this._skuSize),
       sku_tier: cdktf.stringToTerraform(this._skuTier),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      identity: staticSiteIdentityToTerraform(this._identity.internalValue),
       timeouts: staticSiteTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

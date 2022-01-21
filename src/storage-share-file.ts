@@ -278,6 +278,11 @@ export class StorageShareFile extends cdktf.TerraformResource {
     return this._contentEncoding;
   }
 
+  // content_length - computed: true, optional: false, required: false
+  public get contentLength() {
+    return this.getNumberAttribute('content_length');
+  }
+
   // content_md5 - computed: false, optional: true, required: false
   private _contentMd5?: string; 
   public get contentMd5() {

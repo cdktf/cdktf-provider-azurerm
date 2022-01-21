@@ -8,13 +8,17 @@ import * as cdktf from 'cdktf';
 
 export interface IothubEndpointStorageContainerConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container#authentication_type IothubEndpointStorageContainer#authentication_type}
+  */
+  readonly authenticationType?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container#batch_frequency_in_seconds IothubEndpointStorageContainer#batch_frequency_in_seconds}
   */
   readonly batchFrequencyInSeconds?: number;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container#connection_string IothubEndpointStorageContainer#connection_string}
   */
-  readonly connectionString: string;
+  readonly connectionString?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container#container_name IothubEndpointStorageContainer#container_name}
   */
@@ -24,9 +28,17 @@ export interface IothubEndpointStorageContainerConfig extends cdktf.TerraformMet
   */
   readonly encoding?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container#endpoint_uri IothubEndpointStorageContainer#endpoint_uri}
+  */
+  readonly endpointUri?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container#file_name_format IothubEndpointStorageContainer#file_name_format}
   */
   readonly fileNameFormat?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container#identity_id IothubEndpointStorageContainer#identity_id}
+  */
+  readonly identityId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_storage_container#iothub_id IothubEndpointStorageContainer#iothub_id}
   */
@@ -234,11 +246,14 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._authenticationType = config.authenticationType;
     this._batchFrequencyInSeconds = config.batchFrequencyInSeconds;
     this._connectionString = config.connectionString;
     this._containerName = config.containerName;
     this._encoding = config.encoding;
+    this._endpointUri = config.endpointUri;
     this._fileNameFormat = config.fileNameFormat;
+    this._identityId = config.identityId;
     this._iothubId = config.iothubId;
     this._iothubName = config.iothubName;
     this._maxChunkSizeInBytes = config.maxChunkSizeInBytes;
@@ -250,6 +265,22 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // authentication_type - computed: false, optional: true, required: false
+  private _authenticationType?: string; 
+  public get authenticationType() {
+    return this.getStringAttribute('authentication_type');
+  }
+  public set authenticationType(value: string) {
+    this._authenticationType = value;
+  }
+  public resetAuthenticationType() {
+    this._authenticationType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationTypeInput() {
+    return this._authenticationType;
+  }
 
   // batch_frequency_in_seconds - computed: false, optional: true, required: false
   private _batchFrequencyInSeconds?: number; 
@@ -267,13 +298,16 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
     return this._batchFrequencyInSeconds;
   }
 
-  // connection_string - computed: false, optional: false, required: true
+  // connection_string - computed: false, optional: true, required: false
   private _connectionString?: string; 
   public get connectionString() {
     return this.getStringAttribute('connection_string');
   }
   public set connectionString(value: string) {
     this._connectionString = value;
+  }
+  public resetConnectionString() {
+    this._connectionString = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get connectionStringInput() {
@@ -309,6 +343,22 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
     return this._encoding;
   }
 
+  // endpoint_uri - computed: false, optional: true, required: false
+  private _endpointUri?: string; 
+  public get endpointUri() {
+    return this.getStringAttribute('endpoint_uri');
+  }
+  public set endpointUri(value: string) {
+    this._endpointUri = value;
+  }
+  public resetEndpointUri() {
+    this._endpointUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointUriInput() {
+    return this._endpointUri;
+  }
+
   // file_name_format - computed: false, optional: true, required: false
   private _fileNameFormat?: string; 
   public get fileNameFormat() {
@@ -328,6 +378,22 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // identity_id - computed: false, optional: true, required: false
+  private _identityId?: string; 
+  public get identityId() {
+    return this.getStringAttribute('identity_id');
+  }
+  public set identityId(value: string) {
+    this._identityId = value;
+  }
+  public resetIdentityId() {
+    this._identityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdInput() {
+    return this._identityId;
   }
 
   // iothub_id - computed: true, optional: true, required: false
@@ -426,11 +492,14 @@ export class IothubEndpointStorageContainer extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      authentication_type: cdktf.stringToTerraform(this._authenticationType),
       batch_frequency_in_seconds: cdktf.numberToTerraform(this._batchFrequencyInSeconds),
       connection_string: cdktf.stringToTerraform(this._connectionString),
       container_name: cdktf.stringToTerraform(this._containerName),
       encoding: cdktf.stringToTerraform(this._encoding),
+      endpoint_uri: cdktf.stringToTerraform(this._endpointUri),
       file_name_format: cdktf.stringToTerraform(this._fileNameFormat),
+      identity_id: cdktf.stringToTerraform(this._identityId),
       iothub_id: cdktf.stringToTerraform(this._iothubId),
       iothub_name: cdktf.stringToTerraform(this._iothubName),
       max_chunk_size_in_bytes: cdktf.numberToTerraform(this._maxChunkSizeInBytes),

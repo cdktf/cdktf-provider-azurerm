@@ -8,9 +8,25 @@ import * as cdktf from 'cdktf';
 
 export interface IothubEndpointEventhubConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub#authentication_type IothubEndpointEventhub#authentication_type}
+  */
+  readonly authenticationType?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub#connection_string IothubEndpointEventhub#connection_string}
   */
-  readonly connectionString: string;
+  readonly connectionString?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub#endpoint_uri IothubEndpointEventhub#endpoint_uri}
+  */
+  readonly endpointUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub#entity_path IothubEndpointEventhub#entity_path}
+  */
+  readonly entityPath?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub#identity_id IothubEndpointEventhub#identity_id}
+  */
+  readonly identityId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub_endpoint_eventhub#iothub_id IothubEndpointEventhub#iothub_id}
   */
@@ -214,7 +230,11 @@ export class IothubEndpointEventhub extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._authenticationType = config.authenticationType;
     this._connectionString = config.connectionString;
+    this._endpointUri = config.endpointUri;
+    this._entityPath = config.entityPath;
+    this._identityId = config.identityId;
     this._iothubId = config.iothubId;
     this._iothubName = config.iothubName;
     this._name = config.name;
@@ -226,7 +246,23 @@ export class IothubEndpointEventhub extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
-  // connection_string - computed: false, optional: false, required: true
+  // authentication_type - computed: false, optional: true, required: false
+  private _authenticationType?: string; 
+  public get authenticationType() {
+    return this.getStringAttribute('authentication_type');
+  }
+  public set authenticationType(value: string) {
+    this._authenticationType = value;
+  }
+  public resetAuthenticationType() {
+    this._authenticationType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationTypeInput() {
+    return this._authenticationType;
+  }
+
+  // connection_string - computed: false, optional: true, required: false
   private _connectionString?: string; 
   public get connectionString() {
     return this.getStringAttribute('connection_string');
@@ -234,14 +270,65 @@ export class IothubEndpointEventhub extends cdktf.TerraformResource {
   public set connectionString(value: string) {
     this._connectionString = value;
   }
+  public resetConnectionString() {
+    this._connectionString = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get connectionStringInput() {
     return this._connectionString;
   }
 
+  // endpoint_uri - computed: false, optional: true, required: false
+  private _endpointUri?: string; 
+  public get endpointUri() {
+    return this.getStringAttribute('endpoint_uri');
+  }
+  public set endpointUri(value: string) {
+    this._endpointUri = value;
+  }
+  public resetEndpointUri() {
+    this._endpointUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointUriInput() {
+    return this._endpointUri;
+  }
+
+  // entity_path - computed: false, optional: true, required: false
+  private _entityPath?: string; 
+  public get entityPath() {
+    return this.getStringAttribute('entity_path');
+  }
+  public set entityPath(value: string) {
+    this._entityPath = value;
+  }
+  public resetEntityPath() {
+    this._entityPath = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get entityPathInput() {
+    return this._entityPath;
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // identity_id - computed: false, optional: true, required: false
+  private _identityId?: string; 
+  public get identityId() {
+    return this.getStringAttribute('identity_id');
+  }
+  public set identityId(value: string) {
+    this._identityId = value;
+  }
+  public resetIdentityId() {
+    this._identityId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdInput() {
+    return this._identityId;
   }
 
   // iothub_id - computed: true, optional: true, required: false
@@ -324,7 +411,11 @@ export class IothubEndpointEventhub extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      authentication_type: cdktf.stringToTerraform(this._authenticationType),
       connection_string: cdktf.stringToTerraform(this._connectionString),
+      endpoint_uri: cdktf.stringToTerraform(this._endpointUri),
+      entity_path: cdktf.stringToTerraform(this._entityPath),
+      identity_id: cdktf.stringToTerraform(this._identityId),
       iothub_id: cdktf.stringToTerraform(this._iothubId),
       iothub_name: cdktf.stringToTerraform(this._iothubName),
       name: cdktf.stringToTerraform(this._name),

@@ -869,6 +869,7 @@ export * from './data-azurerm-monitor-scheduled-query-rules-log';
 export * from './data-azurerm-mssql-database';
 export * from './data-azurerm-mssql-elasticpool';
 export * from './data-azurerm-mssql-server';
+export * from './data-azurerm-mysql-flexible-server';
 export * from './data-azurerm-mysql-server';
 export * from './data-azurerm-nat-gateway';
 export * from './data-azurerm-netapp-account';

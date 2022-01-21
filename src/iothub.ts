@@ -96,6 +96,10 @@ export interface IothubConfig extends cdktf.TerraformMetaArguments {
 }
 export interface IothubEndpoint {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub#authentication_type Iothub#authentication_type}
+  */
+  readonly authenticationType?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub#batch_frequency_in_seconds Iothub#batch_frequency_in_seconds}
   */
   readonly batchFrequencyInSeconds?: number;
@@ -112,9 +116,21 @@ export interface IothubEndpoint {
   */
   readonly encoding?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub#endpoint_uri Iothub#endpoint_uri}
+  */
+  readonly endpointUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub#entity_path Iothub#entity_path}
+  */
+  readonly entityPath?: string;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub#file_name_format Iothub#file_name_format}
   */
   readonly fileNameFormat?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub#identity_id Iothub#identity_id}
+  */
+  readonly identityId?: string;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/iothub#max_chunk_size_in_bytes Iothub#max_chunk_size_in_bytes}
   */
@@ -139,11 +155,15 @@ export function iothubEndpointToTerraform(struct?: IothubEndpoint): any {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
+    authentication_type: cdktf.stringToTerraform(struct!.authenticationType),
     batch_frequency_in_seconds: struct!.batchFrequencyInSeconds === undefined ? null : cdktf.numberToTerraform(struct!.batchFrequencyInSeconds),
     connection_string: struct!.connectionString === undefined ? null : cdktf.stringToTerraform(struct!.connectionString),
     container_name: struct!.containerName === undefined ? null : cdktf.stringToTerraform(struct!.containerName),
     encoding: struct!.encoding === undefined ? null : cdktf.stringToTerraform(struct!.encoding),
+    endpoint_uri: cdktf.stringToTerraform(struct!.endpointUri),
+    entity_path: cdktf.stringToTerraform(struct!.entityPath),
     file_name_format: struct!.fileNameFormat === undefined ? null : cdktf.stringToTerraform(struct!.fileNameFormat),
+    identity_id: cdktf.stringToTerraform(struct!.identityId),
     max_chunk_size_in_bytes: struct!.maxChunkSizeInBytes === undefined ? null : cdktf.numberToTerraform(struct!.maxChunkSizeInBytes),
     name: struct!.name === undefined ? null : cdktf.stringToTerraform(struct!.name),
     resource_group_name: struct!.resourceGroupName === undefined ? null : cdktf.stringToTerraform(struct!.resourceGroupName),
