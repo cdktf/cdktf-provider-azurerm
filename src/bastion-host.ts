@@ -8,6 +8,18 @@ import * as cdktf from 'cdktf';
 
 export interface BastionHostConfig extends cdktf.TerraformMetaArguments {
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host#copy_paste_enabled BastionHost#copy_paste_enabled}
+  */
+  readonly copyPasteEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host#file_copy_enabled BastionHost#file_copy_enabled}
+  */
+  readonly fileCopyEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host#ip_connect_enabled BastionHost#ip_connect_enabled}
+  */
+  readonly ipConnectEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host#location BastionHost#location}
   */
   readonly location: string;
@@ -20,6 +32,14 @@ export interface BastionHostConfig extends cdktf.TerraformMetaArguments {
   */
   readonly resourceGroupName: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host#scale_units BastionHost#scale_units}
+  */
+  readonly scaleUnits?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host#shareable_link_enabled BastionHost#shareable_link_enabled}
+  */
+  readonly shareableLinkEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host#sku BastionHost#sku}
   */
   readonly sku?: string;
@@ -27,6 +47,10 @@ export interface BastionHostConfig extends cdktf.TerraformMetaArguments {
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host#tags BastionHost#tags}
   */
   readonly tags?: { [key: string]: string } | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/bastion_host#tunneling_enabled BastionHost#tunneling_enabled}
+  */
+  readonly tunnelingEnabled?: boolean | cdktf.IResolvable;
   /**
   * ip_configuration block
   * 
@@ -331,11 +355,17 @@ export class BastionHost extends cdktf.TerraformResource {
       count: config.count,
       lifecycle: config.lifecycle
     });
+    this._copyPasteEnabled = config.copyPasteEnabled;
+    this._fileCopyEnabled = config.fileCopyEnabled;
+    this._ipConnectEnabled = config.ipConnectEnabled;
     this._location = config.location;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
+    this._scaleUnits = config.scaleUnits;
+    this._shareableLinkEnabled = config.shareableLinkEnabled;
     this._sku = config.sku;
     this._tags = config.tags;
+    this._tunnelingEnabled = config.tunnelingEnabled;
     this._ipConfiguration.internalValue = config.ipConfiguration;
     this._timeouts.internalValue = config.timeouts;
   }
@@ -344,14 +374,62 @@ export class BastionHost extends cdktf.TerraformResource {
   // ATTRIBUTES
   // ==========
 
+  // copy_paste_enabled - computed: false, optional: true, required: false
+  private _copyPasteEnabled?: boolean | cdktf.IResolvable; 
+  public get copyPasteEnabled() {
+    return this.getBooleanAttribute('copy_paste_enabled') as any;
+  }
+  public set copyPasteEnabled(value: boolean | cdktf.IResolvable) {
+    this._copyPasteEnabled = value;
+  }
+  public resetCopyPasteEnabled() {
+    this._copyPasteEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get copyPasteEnabledInput() {
+    return this._copyPasteEnabled;
+  }
+
   // dns_name - computed: true, optional: false, required: false
   public get dnsName() {
     return this.getStringAttribute('dns_name');
   }
 
+  // file_copy_enabled - computed: false, optional: true, required: false
+  private _fileCopyEnabled?: boolean | cdktf.IResolvable; 
+  public get fileCopyEnabled() {
+    return this.getBooleanAttribute('file_copy_enabled') as any;
+  }
+  public set fileCopyEnabled(value: boolean | cdktf.IResolvable) {
+    this._fileCopyEnabled = value;
+  }
+  public resetFileCopyEnabled() {
+    this._fileCopyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fileCopyEnabledInput() {
+    return this._fileCopyEnabled;
+  }
+
   // id - computed: true, optional: true, required: false
   public get id() {
     return this.getStringAttribute('id');
+  }
+
+  // ip_connect_enabled - computed: false, optional: true, required: false
+  private _ipConnectEnabled?: boolean | cdktf.IResolvable; 
+  public get ipConnectEnabled() {
+    return this.getBooleanAttribute('ip_connect_enabled') as any;
+  }
+  public set ipConnectEnabled(value: boolean | cdktf.IResolvable) {
+    this._ipConnectEnabled = value;
+  }
+  public resetIpConnectEnabled() {
+    this._ipConnectEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipConnectEnabledInput() {
+    return this._ipConnectEnabled;
   }
 
   // location - computed: false, optional: false, required: true
@@ -393,6 +471,38 @@ export class BastionHost extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
+  // scale_units - computed: false, optional: true, required: false
+  private _scaleUnits?: number; 
+  public get scaleUnits() {
+    return this.getNumberAttribute('scale_units');
+  }
+  public set scaleUnits(value: number) {
+    this._scaleUnits = value;
+  }
+  public resetScaleUnits() {
+    this._scaleUnits = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scaleUnitsInput() {
+    return this._scaleUnits;
+  }
+
+  // shareable_link_enabled - computed: false, optional: true, required: false
+  private _shareableLinkEnabled?: boolean | cdktf.IResolvable; 
+  public get shareableLinkEnabled() {
+    return this.getBooleanAttribute('shareable_link_enabled') as any;
+  }
+  public set shareableLinkEnabled(value: boolean | cdktf.IResolvable) {
+    this._shareableLinkEnabled = value;
+  }
+  public resetShareableLinkEnabled() {
+    this._shareableLinkEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get shareableLinkEnabledInput() {
+    return this._shareableLinkEnabled;
+  }
+
   // sku - computed: false, optional: true, required: false
   private _sku?: string; 
   public get sku() {
@@ -424,6 +534,22 @@ export class BastionHost extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get tagsInput() {
     return this._tags;
+  }
+
+  // tunneling_enabled - computed: false, optional: true, required: false
+  private _tunnelingEnabled?: boolean | cdktf.IResolvable; 
+  public get tunnelingEnabled() {
+    return this.getBooleanAttribute('tunneling_enabled') as any;
+  }
+  public set tunnelingEnabled(value: boolean | cdktf.IResolvable) {
+    this._tunnelingEnabled = value;
+  }
+  public resetTunnelingEnabled() {
+    this._tunnelingEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tunnelingEnabledInput() {
+    return this._tunnelingEnabled;
   }
 
   // ip_configuration - computed: false, optional: true, required: false
@@ -464,11 +590,17 @@ export class BastionHost extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      copy_paste_enabled: cdktf.booleanToTerraform(this._copyPasteEnabled),
+      file_copy_enabled: cdktf.booleanToTerraform(this._fileCopyEnabled),
+      ip_connect_enabled: cdktf.booleanToTerraform(this._ipConnectEnabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
+      scale_units: cdktf.numberToTerraform(this._scaleUnits),
+      shareable_link_enabled: cdktf.booleanToTerraform(this._shareableLinkEnabled),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.anyToTerraform)(this._tags),
+      tunneling_enabled: cdktf.booleanToTerraform(this._tunnelingEnabled),
       ip_configuration: bastionHostIpConfigurationToTerraform(this._ipConfiguration.internalValue),
       timeouts: bastionHostTimeoutsToTerraform(this._timeouts.internalValue),
     };

@@ -24,6 +24,10 @@ export interface ServicebusNamespaceNetworkRuleSetConfig extends cdktf.Terraform
   */
   readonly namespaceName?: string;
   /**
+  * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set#public_network_access_enabled ServicebusNamespaceNetworkRuleSet#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/azurerm/r/servicebus_namespace_network_rule_set#resource_group_name ServicebusNamespaceNetworkRuleSet#resource_group_name}
   */
   readonly resourceGroupName?: string;
@@ -250,6 +254,7 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
     this._ipRules = config.ipRules;
     this._namespaceId = config.namespaceId;
     this._namespaceName = config.namespaceName;
+    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._trustedServicesAllowed = config.trustedServicesAllowed;
     this._networkRules = config.networkRules;
@@ -329,6 +334,22 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
     return this._namespaceName;
   }
 
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled') as any;
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled;
+  }
+
   // resource_group_name - computed: true, optional: true, required: false
   private _resourceGroupName?: string; 
   public get resourceGroupName() {
@@ -404,6 +425,7 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
       ip_rules: cdktf.listMapper(cdktf.stringToTerraform)(this._ipRules),
       namespace_id: cdktf.stringToTerraform(this._namespaceId),
       namespace_name: cdktf.stringToTerraform(this._namespaceName),
+      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       trusted_services_allowed: cdktf.booleanToTerraform(this._trustedServicesAllowed),
       network_rules: cdktf.listMapper(servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform)(this._networkRules),
